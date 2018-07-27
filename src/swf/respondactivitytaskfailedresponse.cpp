@@ -109,7 +109,7 @@ RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePriva
 void RespondActivityTaskFailedResponsePrivate::parseRespondActivityTaskFailedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskFailedResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

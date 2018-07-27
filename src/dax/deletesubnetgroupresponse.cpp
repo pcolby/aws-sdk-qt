@@ -97,7 +97,7 @@ DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
 void DeleteSubnetGroupResponsePrivate::parseDeleteSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubnetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DAX

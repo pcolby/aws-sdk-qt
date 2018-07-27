@@ -158,7 +158,7 @@ ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponseP
 void ListInstanceProfilesForRoleResponsePrivate::parseListInstanceProfilesForRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInstanceProfilesForRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

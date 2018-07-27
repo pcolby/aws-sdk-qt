@@ -268,7 +268,7 @@ PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultRespo
 void PutThirdPartyJobSuccessResultResponsePrivate::parsePutThirdPartyJobSuccessResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutThirdPartyJobSuccessResultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

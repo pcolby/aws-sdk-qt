@@ -104,7 +104,7 @@ CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
 void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

@@ -157,7 +157,7 @@ DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate
 void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBEngineVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

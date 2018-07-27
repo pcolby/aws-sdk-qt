@@ -121,7 +121,7 @@ CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsResponsePri
 void CancelSpotInstanceRequestsResponsePrivate::parseCancelSpotInstanceRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelSpotInstanceRequestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

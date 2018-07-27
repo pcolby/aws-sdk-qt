@@ -104,7 +104,7 @@ CreateThingResponsePrivate::CreateThingResponsePrivate(
 void CreateThingResponsePrivate::parseCreateThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateThingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

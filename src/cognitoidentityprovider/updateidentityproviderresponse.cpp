@@ -103,7 +103,7 @@ UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponsePrivate(
 void UpdateIdentityProviderResponsePrivate::parseUpdateIdentityProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateIdentityProviderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

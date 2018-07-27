@@ -158,7 +158,7 @@ DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponseP
 void DeleteAccountPasswordPolicyResponsePrivate::parseDeleteAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccountPasswordPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

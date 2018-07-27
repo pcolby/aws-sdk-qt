@@ -162,7 +162,7 @@ CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRe
 void CreateSnapshotFromVolumeRecoveryPointResponsePrivate::parseCreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotFromVolumeRecoveryPointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

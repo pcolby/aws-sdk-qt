@@ -98,7 +98,7 @@ SearchProfilesResponsePrivate::SearchProfilesResponsePrivate(
 void SearchProfilesResponsePrivate::parseSearchProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchProfilesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

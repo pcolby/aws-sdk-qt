@@ -161,7 +161,7 @@ RemoveListenerCertificatesResponsePrivate::RemoveListenerCertificatesResponsePri
 void RemoveListenerCertificatesResponsePrivate::parseRemoveListenerCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveListenerCertificatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

@@ -116,7 +116,7 @@ DisableRuleResponsePrivate::DisableRuleResponsePrivate(
 void DisableRuleResponsePrivate::parseDisableRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

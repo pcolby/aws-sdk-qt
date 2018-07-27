@@ -96,7 +96,7 @@ GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponsePriva
 void GetSubscriptionDefinitionResponsePrivate::parseGetSubscriptionDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSubscriptionDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

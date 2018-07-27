@@ -94,7 +94,7 @@ DeleteResolverResponsePrivate::DeleteResolverResponsePrivate(
 void DeleteResolverResponsePrivate::parseDeleteResolverResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteResolverResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

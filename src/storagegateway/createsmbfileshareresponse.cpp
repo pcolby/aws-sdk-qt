@@ -162,7 +162,7 @@ CreateSMBFileShareResponsePrivate::CreateSMBFileShareResponsePrivate(
 void CreateSMBFileShareResponsePrivate::parseCreateSMBFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSMBFileShareResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

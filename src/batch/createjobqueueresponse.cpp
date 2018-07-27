@@ -107,7 +107,7 @@ CreateJobQueueResponsePrivate::CreateJobQueueResponsePrivate(
 void CreateJobQueueResponsePrivate::parseCreateJobQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateJobQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

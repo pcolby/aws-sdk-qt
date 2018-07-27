@@ -96,7 +96,7 @@ BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponsePrivate(
 void BatchDetectKeyPhrasesResponsePrivate::parseBatchDetectKeyPhrasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectKeyPhrasesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

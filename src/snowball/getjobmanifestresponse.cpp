@@ -99,7 +99,7 @@ GetJobManifestResponsePrivate::GetJobManifestResponsePrivate(
 void GetJobManifestResponsePrivate::parseGetJobManifestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobManifestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

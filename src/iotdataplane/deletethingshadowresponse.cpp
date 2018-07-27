@@ -99,7 +99,7 @@ DeleteThingShadowResponsePrivate::DeleteThingShadowResponsePrivate(
 void DeleteThingShadowResponsePrivate::parseDeleteThingShadowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingShadowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTDataPlane

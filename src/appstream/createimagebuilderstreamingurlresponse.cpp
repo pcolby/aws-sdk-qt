@@ -96,7 +96,7 @@ CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLRes
 void CreateImageBuilderStreamingURLResponsePrivate::parseCreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateImageBuilderStreamingURLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

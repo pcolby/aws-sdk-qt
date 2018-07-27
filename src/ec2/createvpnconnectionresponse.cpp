@@ -121,7 +121,7 @@ CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponsePrivate(
 void CreateVpnConnectionResponsePrivate::parseCreateVpnConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpnConnectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

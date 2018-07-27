@@ -122,7 +122,7 @@ DeleteCommentResponsePrivate::DeleteCommentResponsePrivate(
 void DeleteCommentResponsePrivate::parseDeleteCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCommentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

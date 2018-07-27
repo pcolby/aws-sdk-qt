@@ -123,7 +123,7 @@ DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResponseP
 void DeleteClusterParameterGroupResponsePrivate::parseDeleteClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

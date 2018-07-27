@@ -94,7 +94,7 @@ UpdateVocabularyResponsePrivate::UpdateVocabularyResponsePrivate(
 void UpdateVocabularyResponsePrivate::parseUpdateVocabularyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateVocabularyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace TranscribeService

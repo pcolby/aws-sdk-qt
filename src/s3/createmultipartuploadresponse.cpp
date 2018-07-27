@@ -93,7 +93,7 @@ CreateMultipartUploadResponsePrivate::CreateMultipartUploadResponsePrivate(
 void CreateMultipartUploadResponsePrivate::parseCreateMultipartUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMultipartUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

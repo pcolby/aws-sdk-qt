@@ -157,7 +157,7 @@ BacktrackDBClusterResponsePrivate::BacktrackDBClusterResponsePrivate(
 void BacktrackDBClusterResponsePrivate::parseBacktrackDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BacktrackDBClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

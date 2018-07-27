@@ -93,7 +93,7 @@ GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponsePrivate(
 void GetBucketLifecycleResponsePrivate::parseGetBucketLifecycleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLifecycleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

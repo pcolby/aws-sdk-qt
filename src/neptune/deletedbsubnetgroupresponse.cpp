@@ -117,7 +117,7 @@ DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
 void DeleteDBSubnetGroupResponsePrivate::parseDeleteDBSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSubnetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

@@ -235,7 +235,7 @@ ListPoliciesForTargetResponsePrivate::ListPoliciesForTargetResponsePrivate(
 void ListPoliciesForTargetResponsePrivate::parseListPoliciesForTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPoliciesForTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

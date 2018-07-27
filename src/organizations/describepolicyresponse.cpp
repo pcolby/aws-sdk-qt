@@ -235,7 +235,7 @@ DescribePolicyResponsePrivate::DescribePolicyResponsePrivate(
 void DescribePolicyResponsePrivate::parseDescribePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

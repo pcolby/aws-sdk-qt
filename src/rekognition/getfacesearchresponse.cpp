@@ -94,7 +94,7 @@ GetFaceSearchResponsePrivate::GetFaceSearchResponsePrivate(
 void GetFaceSearchResponsePrivate::parseGetFaceSearchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFaceSearchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

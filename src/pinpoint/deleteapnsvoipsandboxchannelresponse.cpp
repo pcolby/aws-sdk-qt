@@ -93,7 +93,7 @@ DeleteApnsVoipSandboxChannelResponsePrivate::DeleteApnsVoipSandboxChannelRespons
 void DeleteApnsVoipSandboxChannelResponsePrivate::parseDeleteApnsVoipSandboxChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApnsVoipSandboxChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

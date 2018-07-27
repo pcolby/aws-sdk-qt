@@ -158,7 +158,7 @@ DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
 void DeactivateMFADeviceResponsePrivate::parseDeactivateMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeactivateMFADeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -118,7 +118,7 @@ GetDefaultPatchBaselineResponsePrivate::GetDefaultPatchBaselineResponsePrivate(
 void GetDefaultPatchBaselineResponsePrivate::parseGetDefaultPatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDefaultPatchBaselineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -98,7 +98,7 @@ ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponsePrivate
 void ImportDocumentationPartsResponsePrivate::parseImportDocumentationPartsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportDocumentationPartsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -162,7 +162,7 @@ SetSMBGuestPasswordResponsePrivate::SetSMBGuestPasswordResponsePrivate(
 void SetSMBGuestPasswordResponsePrivate::parseSetSMBGuestPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetSMBGuestPasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

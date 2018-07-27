@@ -112,7 +112,7 @@ RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponsePriva
 void RestoreTableToPointInTimeResponsePrivate::parseRestoreTableToPointInTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableToPointInTimeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

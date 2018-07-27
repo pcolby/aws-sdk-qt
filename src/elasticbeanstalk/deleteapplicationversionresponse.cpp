@@ -115,7 +115,7 @@ DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponsePrivate
 void DeleteApplicationVersionResponsePrivate::parseDeleteApplicationVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

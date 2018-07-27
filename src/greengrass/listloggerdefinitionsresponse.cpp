@@ -96,7 +96,7 @@ ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponsePrivate(
 void ListLoggerDefinitionsResponsePrivate::parseListLoggerDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLoggerDefinitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

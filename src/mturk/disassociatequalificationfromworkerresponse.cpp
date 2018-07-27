@@ -93,7 +93,7 @@ DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFro
 void DisassociateQualificationFromWorkerResponsePrivate::parseDisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateQualificationFromWorkerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

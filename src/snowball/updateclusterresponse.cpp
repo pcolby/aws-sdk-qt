@@ -99,7 +99,7 @@ UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
 void UpdateClusterResponsePrivate::parseUpdateClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

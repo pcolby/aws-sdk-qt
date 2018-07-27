@@ -123,7 +123,7 @@ MeterUsageResponsePrivate::MeterUsageResponsePrivate(
 void MeterUsageResponsePrivate::parseMeterUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MeterUsageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MarketplaceMetering

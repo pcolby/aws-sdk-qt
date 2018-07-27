@@ -100,7 +100,7 @@ UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
 void UpdateWebACLResponsePrivate::parseUpdateWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateWebACLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

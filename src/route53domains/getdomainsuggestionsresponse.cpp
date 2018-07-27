@@ -94,7 +94,7 @@ GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
 void GetDomainSuggestionsResponsePrivate::parseGetDomainSuggestionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDomainSuggestionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

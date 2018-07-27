@@ -121,7 +121,7 @@ RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalan
 void RegisterInstancesWithLoadBalancerResponsePrivate::parseRegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterInstancesWithLoadBalancerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

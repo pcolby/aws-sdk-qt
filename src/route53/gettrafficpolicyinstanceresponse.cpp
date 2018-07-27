@@ -93,7 +93,7 @@ GetTrafficPolicyInstanceResponsePrivate::GetTrafficPolicyInstanceResponsePrivate
 void GetTrafficPolicyInstanceResponsePrivate::parseGetTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTrafficPolicyInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

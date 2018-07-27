@@ -98,7 +98,7 @@ GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
 void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSampledRequestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

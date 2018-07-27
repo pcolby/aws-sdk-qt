@@ -107,7 +107,7 @@ DisableRadiusResponsePrivate::DisableRadiusResponsePrivate(
 void DisableRadiusResponsePrivate::parseDisableRadiusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableRadiusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

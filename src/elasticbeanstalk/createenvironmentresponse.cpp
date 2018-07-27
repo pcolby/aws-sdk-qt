@@ -115,7 +115,7 @@ CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
 void CreateEnvironmentResponsePrivate::parseCreateEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

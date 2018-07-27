@@ -158,7 +158,7 @@ DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponsePrivate(
 void DeleteRolePolicyResponsePrivate::parseDeleteRolePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRolePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

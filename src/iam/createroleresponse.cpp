@@ -158,7 +158,7 @@ CreateRoleResponsePrivate::CreateRoleResponsePrivate(
 void CreateRoleResponsePrivate::parseCreateRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

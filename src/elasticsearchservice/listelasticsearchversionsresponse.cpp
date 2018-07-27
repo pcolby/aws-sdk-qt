@@ -102,7 +102,7 @@ ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePriva
 void ListElasticsearchVersionsResponsePrivate::parseListElasticsearchVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

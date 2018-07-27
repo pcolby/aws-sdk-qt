@@ -115,7 +115,7 @@ UpdateTagsForResourceResponsePrivate::UpdateTagsForResourceResponsePrivate(
 void UpdateTagsForResourceResponsePrivate::parseUpdateTagsForResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTagsForResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

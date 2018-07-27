@@ -103,7 +103,7 @@ GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponsePrivate(
 void GetUserPoolMfaConfigResponsePrivate::parseGetUserPoolMfaConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserPoolMfaConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

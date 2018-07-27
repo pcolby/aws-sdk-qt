@@ -161,7 +161,7 @@ ResolveCaseResponsePrivate::ResolveCaseResponsePrivate(
 void ResolveCaseResponsePrivate::parseResolveCaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveCaseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

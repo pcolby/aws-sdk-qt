@@ -97,7 +97,7 @@ GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
 void GetAuthorizationTokenResponsePrivate::parseGetAuthorizationTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAuthorizationTokenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

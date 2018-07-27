@@ -121,7 +121,7 @@ ModifyVolumeResponsePrivate::ModifyVolumeResponsePrivate(
 void ModifyVolumeResponsePrivate::parseModifyVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

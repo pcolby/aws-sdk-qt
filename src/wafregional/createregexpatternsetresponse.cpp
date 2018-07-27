@@ -100,7 +100,7 @@ CreateRegexPatternSetResponsePrivate::CreateRegexPatternSetResponsePrivate(
 void CreateRegexPatternSetResponsePrivate::parseCreateRegexPatternSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRegexPatternSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

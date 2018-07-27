@@ -103,7 +103,7 @@ AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
 void AdminUpdateDeviceStatusResponsePrivate::parseAdminUpdateDeviceStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateDeviceStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

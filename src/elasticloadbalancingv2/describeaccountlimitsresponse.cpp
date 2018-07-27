@@ -161,7 +161,7 @@ DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
 void DescribeAccountLimitsResponsePrivate::parseDescribeAccountLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAccountLimitsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

@@ -235,7 +235,7 @@ ListParentsResponsePrivate::ListParentsResponsePrivate(
 void ListParentsResponsePrivate::parseListParentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListParentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

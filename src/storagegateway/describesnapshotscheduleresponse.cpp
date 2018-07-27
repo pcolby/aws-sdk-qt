@@ -162,7 +162,7 @@ DescribeSnapshotScheduleResponsePrivate::DescribeSnapshotScheduleResponsePrivate
 void DescribeSnapshotScheduleResponsePrivate::parseDescribeSnapshotScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotScheduleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

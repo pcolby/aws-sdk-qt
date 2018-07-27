@@ -118,7 +118,7 @@ RegisterPatchBaselineForPatchGroupResponsePrivate::RegisterPatchBaselineForPatch
 void RegisterPatchBaselineForPatchGroupResponsePrivate::parseRegisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterPatchBaselineForPatchGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

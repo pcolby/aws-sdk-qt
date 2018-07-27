@@ -94,7 +94,7 @@ CreateTypeResponsePrivate::CreateTypeResponsePrivate(
 void CreateTypeResponsePrivate::parseCreateTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

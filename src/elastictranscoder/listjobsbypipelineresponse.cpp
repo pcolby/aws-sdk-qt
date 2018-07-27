@@ -96,7 +96,7 @@ ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponsePrivate(
 void ListJobsByPipelineResponsePrivate::parseListJobsByPipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobsByPipelineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

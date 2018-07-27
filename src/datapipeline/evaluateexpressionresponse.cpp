@@ -111,7 +111,7 @@ EvaluateExpressionResponsePrivate::EvaluateExpressionResponsePrivate(
 void EvaluateExpressionResponsePrivate::parseEvaluateExpressionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EvaluateExpressionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

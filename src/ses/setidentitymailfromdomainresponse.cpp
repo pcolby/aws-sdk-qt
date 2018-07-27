@@ -104,7 +104,7 @@ SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePriva
 void SetIdentityMailFromDomainResponsePrivate::parseSetIdentityMailFromDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityMailFromDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

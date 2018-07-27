@@ -99,7 +99,7 @@ DeleteNotificationChannelResponsePrivate::DeleteNotificationChannelResponsePriva
 void DeleteNotificationChannelResponsePrivate::parseDeleteNotificationChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

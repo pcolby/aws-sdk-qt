@@ -104,7 +104,7 @@ ListPrincipalThingsResponsePrivate::ListPrincipalThingsResponsePrivate(
 void ListPrincipalThingsResponsePrivate::parseListPrincipalThingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPrincipalThingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

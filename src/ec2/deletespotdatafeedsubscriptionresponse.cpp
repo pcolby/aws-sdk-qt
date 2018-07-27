@@ -121,7 +121,7 @@ DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionRes
 void DeleteSpotDatafeedSubscriptionResponsePrivate::parseDeleteSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSpotDatafeedSubscriptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

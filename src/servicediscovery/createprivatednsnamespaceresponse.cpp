@@ -97,7 +97,7 @@ CreatePrivateDnsNamespaceResponsePrivate::CreatePrivateDnsNamespaceResponsePriva
 void CreatePrivateDnsNamespaceResponsePrivate::parseCreatePrivateDnsNamespaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePrivateDnsNamespaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceDiscovery

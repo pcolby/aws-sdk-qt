@@ -121,7 +121,7 @@ DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
 void DetachVolumeResponsePrivate::parseDetachVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

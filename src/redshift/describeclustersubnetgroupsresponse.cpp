@@ -123,7 +123,7 @@ DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponseP
 void DescribeClusterSubnetGroupsResponsePrivate::parseDescribeClusterSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterSubnetGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

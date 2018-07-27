@@ -121,7 +121,7 @@ ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
 void ConfirmProductInstanceResponsePrivate::parseConfirmProductInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmProductInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

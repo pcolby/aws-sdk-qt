@@ -93,7 +93,7 @@ AcceptQualificationRequestResponsePrivate::AcceptQualificationRequestResponsePri
 void AcceptQualificationRequestResponsePrivate::parseAcceptQualificationRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptQualificationRequestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

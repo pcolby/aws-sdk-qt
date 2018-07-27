@@ -98,7 +98,7 @@ GetDeploymentsResponsePrivate::GetDeploymentsResponsePrivate(
 void GetDeploymentsResponsePrivate::parseGetDeploymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeploymentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

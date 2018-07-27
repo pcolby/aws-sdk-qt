@@ -100,7 +100,7 @@ ListObjectChildrenResponsePrivate::ListObjectChildrenResponsePrivate(
 void ListObjectChildrenResponsePrivate::parseListObjectChildrenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListObjectChildrenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

@@ -107,7 +107,7 @@ AddIpRoutesResponsePrivate::AddIpRoutesResponsePrivate(
 void AddIpRoutesResponsePrivate::parseAddIpRoutesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddIpRoutesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

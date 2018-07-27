@@ -158,7 +158,7 @@ UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
 void UploadSSHPublicKeyResponsePrivate::parseUploadSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadSSHPublicKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

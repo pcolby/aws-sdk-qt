@@ -99,7 +99,7 @@ DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfoli
 void DisassociateProductFromPortfolioResponsePrivate::parseDisassociateProductFromPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateProductFromPortfolioResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

@@ -99,7 +99,7 @@ AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioR
 void AssociatePrincipalWithPortfolioResponsePrivate::parseAssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociatePrincipalWithPortfolioResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

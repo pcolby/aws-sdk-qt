@@ -181,7 +181,7 @@ TagProjectResponsePrivate::TagProjectResponsePrivate(
 void TagProjectResponsePrivate::parseTagProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

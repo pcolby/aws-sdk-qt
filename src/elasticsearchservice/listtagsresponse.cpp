@@ -102,7 +102,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

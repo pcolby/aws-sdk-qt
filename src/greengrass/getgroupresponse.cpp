@@ -96,7 +96,7 @@ GetGroupResponsePrivate::GetGroupResponsePrivate(
 void GetGroupResponsePrivate::parseGetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

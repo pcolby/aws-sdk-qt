@@ -96,7 +96,7 @@ PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
 void PutAutoScalingPolicyResponsePrivate::parsePutAutoScalingPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutAutoScalingPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

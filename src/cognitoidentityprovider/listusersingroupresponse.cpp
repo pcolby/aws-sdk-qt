@@ -103,7 +103,7 @@ ListUsersInGroupResponsePrivate::ListUsersInGroupResponsePrivate(
 void ListUsersInGroupResponsePrivate::parseListUsersInGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListUsersInGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

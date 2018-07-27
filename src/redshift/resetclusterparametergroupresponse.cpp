@@ -123,7 +123,7 @@ ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupResponsePri
 void ResetClusterParameterGroupResponsePrivate::parseResetClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetClusterParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

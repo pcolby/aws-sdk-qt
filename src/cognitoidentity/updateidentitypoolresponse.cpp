@@ -131,7 +131,7 @@ UpdateIdentityPoolResponsePrivate::UpdateIdentityPoolResponsePrivate(
 void UpdateIdentityPoolResponsePrivate::parseUpdateIdentityPoolResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateIdentityPoolResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

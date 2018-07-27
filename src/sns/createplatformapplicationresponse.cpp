@@ -107,7 +107,7 @@ CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePriva
 void CreatePlatformApplicationResponsePrivate::parseCreatePlatformApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

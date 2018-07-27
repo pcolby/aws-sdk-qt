@@ -107,7 +107,7 @@ CreateAliasResponsePrivate::CreateAliasResponsePrivate(
 void CreateAliasResponsePrivate::parseCreateAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

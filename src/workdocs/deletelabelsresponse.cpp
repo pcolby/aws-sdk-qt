@@ -122,7 +122,7 @@ DeleteLabelsResponsePrivate::DeleteLabelsResponsePrivate(
 void DeleteLabelsResponsePrivate::parseDeleteLabelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLabelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

@@ -93,7 +93,7 @@ GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponsePrivate(
 void GetBucketRequestPaymentResponsePrivate::parseGetBucketRequestPaymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketRequestPaymentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

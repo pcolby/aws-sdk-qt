@@ -158,7 +158,7 @@ GetUserPolicyResponsePrivate::GetUserPolicyResponsePrivate(
 void GetUserPolicyResponsePrivate::parseGetUserPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -94,7 +94,7 @@ ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailRes
 void ResendContactReachabilityEmailResponsePrivate::parseResendContactReachabilityEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResendContactReachabilityEmailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

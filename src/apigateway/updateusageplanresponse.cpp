@@ -98,7 +98,7 @@ UpdateUsagePlanResponsePrivate::UpdateUsagePlanResponsePrivate(
 void UpdateUsagePlanResponsePrivate::parseUpdateUsagePlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateUsagePlanResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -103,7 +103,7 @@ AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponsePrivate(
 void AdminResetUserPasswordResponsePrivate::parseAdminResetUserPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminResetUserPasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

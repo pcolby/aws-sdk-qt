@@ -126,7 +126,7 @@ GetRecordsResponsePrivate::GetRecordsResponsePrivate(
 void GetRecordsResponsePrivate::parseGetRecordsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRecordsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDBStreams

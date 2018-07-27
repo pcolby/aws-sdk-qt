@@ -109,7 +109,7 @@ ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePri
 void ListOpenWorkflowExecutionsResponsePrivate::parseListOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOpenWorkflowExecutionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

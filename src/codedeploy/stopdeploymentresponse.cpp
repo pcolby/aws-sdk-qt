@@ -174,7 +174,7 @@ StopDeploymentResponsePrivate::StopDeploymentResponsePrivate(
 void StopDeploymentResponsePrivate::parseStopDeploymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDeploymentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

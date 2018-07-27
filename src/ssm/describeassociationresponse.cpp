@@ -118,7 +118,7 @@ DescribeAssociationResponsePrivate::DescribeAssociationResponsePrivate(
 void DescribeAssociationResponsePrivate::parseDescribeAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAssociationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

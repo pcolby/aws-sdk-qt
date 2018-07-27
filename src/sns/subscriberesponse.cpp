@@ -107,7 +107,7 @@ SubscribeResponsePrivate::SubscribeResponsePrivate(
 void SubscribeResponsePrivate::parseSubscribeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubscribeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

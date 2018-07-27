@@ -102,7 +102,7 @@ DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePriva
 void DeleteElasticsearchDomainResponsePrivate::parseDeleteElasticsearchDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

@@ -159,7 +159,7 @@ SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
 void SendMessageBatchResponsePrivate::parseSendMessageBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendMessageBatchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

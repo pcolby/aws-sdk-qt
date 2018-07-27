@@ -110,7 +110,7 @@ DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponseP
 void DeregisterContainerInstanceResponsePrivate::parseDeregisterContainerInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterContainerInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

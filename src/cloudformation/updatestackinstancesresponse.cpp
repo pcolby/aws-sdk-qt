@@ -115,7 +115,7 @@ UpdateStackInstancesResponsePrivate::UpdateStackInstancesResponsePrivate(
 void UpdateStackInstancesResponsePrivate::parseUpdateStackInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStackInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

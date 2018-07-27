@@ -103,7 +103,7 @@ GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCod
 void GetUserAttributeVerificationCodeResponsePrivate::parseGetUserAttributeVerificationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserAttributeVerificationCodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

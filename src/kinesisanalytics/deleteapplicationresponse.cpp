@@ -93,7 +93,7 @@ DeleteApplicationResponsePrivate::DeleteApplicationResponsePrivate(
 void DeleteApplicationResponsePrivate::parseDeleteApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisAnalytics

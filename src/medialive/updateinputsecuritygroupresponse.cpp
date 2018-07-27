@@ -93,7 +93,7 @@ UpdateInputSecurityGroupResponsePrivate::UpdateInputSecurityGroupResponsePrivate
 void UpdateInputSecurityGroupResponsePrivate::parseUpdateInputSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateInputSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

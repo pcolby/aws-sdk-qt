@@ -98,7 +98,7 @@ CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
 void CreateSizeConstraintSetResponsePrivate::parseCreateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSizeConstraintSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

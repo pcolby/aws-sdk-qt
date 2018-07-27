@@ -235,7 +235,7 @@ DetachPolicyResponsePrivate::DetachPolicyResponsePrivate(
 void DetachPolicyResponsePrivate::parseDetachPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

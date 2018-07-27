@@ -99,7 +99,7 @@ DescribeProvisioningArtifactResponsePrivate::DescribeProvisioningArtifactRespons
 void DescribeProvisioningArtifactResponsePrivate::parseDescribeProvisioningArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeProvisioningArtifactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

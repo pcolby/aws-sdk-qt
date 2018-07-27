@@ -93,7 +93,7 @@ GetIPSetResponsePrivate::GetIPSetResponsePrivate(
 void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIPSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

@@ -121,7 +121,7 @@ GetPasswordDataResponsePrivate::GetPasswordDataResponsePrivate(
 void GetPasswordDataResponsePrivate::parseGetPasswordDataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPasswordDataResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -99,7 +99,7 @@ SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
 void SearchProductsAsAdminResponsePrivate::parseSearchProductsAsAdminResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchProductsAsAdminResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

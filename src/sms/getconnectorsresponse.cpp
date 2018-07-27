@@ -93,7 +93,7 @@ GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
 void GetConnectorsResponsePrivate::parseGetConnectorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConnectorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

@@ -100,7 +100,7 @@ GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationRespons
 void GetTypedLinkFacetInformationResponsePrivate::parseGetTypedLinkFacetInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTypedLinkFacetInformationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

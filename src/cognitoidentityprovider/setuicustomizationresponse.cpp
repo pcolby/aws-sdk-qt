@@ -103,7 +103,7 @@ SetUICustomizationResponsePrivate::SetUICustomizationResponsePrivate(
 void SetUICustomizationResponsePrivate::parseSetUICustomizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetUICustomizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

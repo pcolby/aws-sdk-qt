@@ -99,7 +99,7 @@ DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponsePrivate(
 void DescribeSubscriptionResponsePrivate::parseDescribeSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubscriptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

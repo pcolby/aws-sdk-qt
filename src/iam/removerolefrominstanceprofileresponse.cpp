@@ -158,7 +158,7 @@ RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileRespo
 void RemoveRoleFromInstanceProfileResponsePrivate::parseRemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromInstanceProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

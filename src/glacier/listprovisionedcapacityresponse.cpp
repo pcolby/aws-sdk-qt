@@ -131,7 +131,7 @@ ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponsePrivate(
 void ListProvisionedCapacityResponsePrivate::parseListProvisionedCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListProvisionedCapacityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

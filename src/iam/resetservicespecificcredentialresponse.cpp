@@ -158,7 +158,7 @@ ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialRes
 void ResetServiceSpecificCredentialResponsePrivate::parseResetServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetServiceSpecificCredentialResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

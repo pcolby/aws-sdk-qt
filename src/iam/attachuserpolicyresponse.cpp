@@ -158,7 +158,7 @@ AttachUserPolicyResponsePrivate::AttachUserPolicyResponsePrivate(
 void AttachUserPolicyResponsePrivate::parseAttachUserPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachUserPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

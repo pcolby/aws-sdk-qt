@@ -96,7 +96,7 @@ GetFunctionDefinitionVersionResponsePrivate::GetFunctionDefinitionVersionRespons
 void GetFunctionDefinitionVersionResponsePrivate::parseGetFunctionDefinitionVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFunctionDefinitionVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

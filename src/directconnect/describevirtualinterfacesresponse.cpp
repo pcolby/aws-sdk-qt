@@ -101,7 +101,7 @@ DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponsePriva
 void DescribeVirtualInterfacesResponsePrivate::parseDescribeVirtualInterfacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualInterfacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

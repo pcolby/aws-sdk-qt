@@ -117,7 +117,7 @@ RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotRespons
 void RestoreDBClusterFromSnapshotResponsePrivate::parseRestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterFromSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

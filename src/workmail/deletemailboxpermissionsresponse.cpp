@@ -126,7 +126,7 @@ DeleteMailboxPermissionsResponsePrivate::DeleteMailboxPermissionsResponsePrivate
 void DeleteMailboxPermissionsResponsePrivate::parseDeleteMailboxPermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMailboxPermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

@@ -97,7 +97,7 @@ UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
 void UpdateDestinationResponsePrivate::parseUpdateDestinationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDestinationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

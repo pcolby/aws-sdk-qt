@@ -121,7 +121,7 @@ ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponsePrivate
 void ModifyFpgaImageAttributeResponsePrivate::parseModifyFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyFpgaImageAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

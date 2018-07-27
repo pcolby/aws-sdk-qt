@@ -121,7 +121,7 @@ RevokeSecurityGroupIngressResponsePrivate::RevokeSecurityGroupIngressResponsePri
 void RevokeSecurityGroupIngressResponsePrivate::parseRevokeSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeSecurityGroupIngressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -95,7 +95,7 @@ ListUploadsResponsePrivate::ListUploadsResponsePrivate(
 void ListUploadsResponsePrivate::parseListUploadsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListUploadsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

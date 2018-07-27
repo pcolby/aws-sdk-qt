@@ -157,7 +157,7 @@ ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
 void ModifyDBParameterGroupResponsePrivate::parseModifyDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

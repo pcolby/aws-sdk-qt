@@ -98,7 +98,7 @@ DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponsePrivate(
 void DeleteXssMatchSetResponsePrivate::parseDeleteXssMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteXssMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

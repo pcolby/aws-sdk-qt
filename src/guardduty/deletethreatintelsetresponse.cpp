@@ -93,7 +93,7 @@ DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponsePrivate(
 void DeleteThreatIntelSetResponsePrivate::parseDeleteThreatIntelSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThreatIntelSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

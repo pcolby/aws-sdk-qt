@@ -121,7 +121,7 @@ ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
 void ResetFpgaImageAttributeResponsePrivate::parseResetFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetFpgaImageAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -104,7 +104,7 @@ SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
 void SetDefaultPolicyVersionResponsePrivate::parseSetDefaultPolicyVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetDefaultPolicyVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

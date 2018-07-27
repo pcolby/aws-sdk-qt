@@ -109,7 +109,7 @@ DetachStaticIpResponsePrivate::DetachStaticIpResponsePrivate(
 void DetachStaticIpResponsePrivate::parseDetachStaticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachStaticIpResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

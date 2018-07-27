@@ -104,7 +104,7 @@ DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate
 void DeleteEventSourceMappingResponsePrivate::parseDeleteEventSourceMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEventSourceMappingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

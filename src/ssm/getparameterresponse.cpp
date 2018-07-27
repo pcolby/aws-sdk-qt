@@ -118,7 +118,7 @@ GetParameterResponsePrivate::GetParameterResponsePrivate(
 void GetParameterResponsePrivate::parseGetParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetParameterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

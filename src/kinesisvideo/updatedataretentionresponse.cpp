@@ -93,7 +93,7 @@ UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponsePrivate(
 void UpdateDataRetentionResponsePrivate::parseUpdateDataRetentionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDataRetentionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideo

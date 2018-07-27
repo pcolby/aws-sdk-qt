@@ -98,7 +98,7 @@ AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
 void AttachLoadBalancersResponsePrivate::parseAttachLoadBalancersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

@@ -199,7 +199,7 @@ RegisterRdsDbInstanceResponsePrivate::RegisterRdsDbInstanceResponsePrivate(
 void RegisterRdsDbInstanceResponsePrivate::parseRegisterRdsDbInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterRdsDbInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

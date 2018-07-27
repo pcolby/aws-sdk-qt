@@ -93,7 +93,7 @@ ListTransformJobsResponsePrivate::ListTransformJobsResponsePrivate(
 void ListTransformJobsResponsePrivate::parseListTransformJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTransformJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

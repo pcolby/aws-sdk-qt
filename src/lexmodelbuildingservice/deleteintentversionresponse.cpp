@@ -97,7 +97,7 @@ DeleteIntentVersionResponsePrivate::DeleteIntentVersionResponsePrivate(
 void DeleteIntentVersionResponsePrivate::parseDeleteIntentVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntentVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

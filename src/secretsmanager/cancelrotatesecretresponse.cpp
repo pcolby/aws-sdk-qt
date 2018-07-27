@@ -169,7 +169,7 @@ CancelRotateSecretResponsePrivate::CancelRotateSecretResponsePrivate(
 void CancelRotateSecretResponsePrivate::parseCancelRotateSecretResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelRotateSecretResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

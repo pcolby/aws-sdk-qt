@@ -96,7 +96,7 @@ SplitShardResponsePrivate::SplitShardResponsePrivate(
 void SplitShardResponsePrivate::parseSplitShardResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SplitShardResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

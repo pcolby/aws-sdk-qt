@@ -118,7 +118,7 @@ SendCommandResponsePrivate::SendCommandResponsePrivate(
 void SendCommandResponsePrivate::parseSendCommandResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendCommandResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

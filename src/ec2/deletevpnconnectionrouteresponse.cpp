@@ -121,7 +121,7 @@ DeleteVpnConnectionRouteResponsePrivate::DeleteVpnConnectionRouteResponsePrivate
 void DeleteVpnConnectionRouteResponsePrivate::parseDeleteVpnConnectionRouteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpnConnectionRouteResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

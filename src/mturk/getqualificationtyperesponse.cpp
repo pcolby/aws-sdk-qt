@@ -93,7 +93,7 @@ GetQualificationTypeResponsePrivate::GetQualificationTypeResponsePrivate(
 void GetQualificationTypeResponsePrivate::parseGetQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetQualificationTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

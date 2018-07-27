@@ -102,7 +102,7 @@ DescribeReservedElasticsearchInstancesResponsePrivate::DescribeReservedElasticse
 void DescribeReservedElasticsearchInstancesResponsePrivate::parseDescribeReservedElasticsearchInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedElasticsearchInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

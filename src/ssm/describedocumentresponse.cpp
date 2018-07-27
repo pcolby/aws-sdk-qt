@@ -118,7 +118,7 @@ DescribeDocumentResponsePrivate::DescribeDocumentResponsePrivate(
 void DescribeDocumentResponsePrivate::parseDescribeDocumentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

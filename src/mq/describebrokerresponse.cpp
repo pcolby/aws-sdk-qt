@@ -95,7 +95,7 @@ DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
 void DescribeBrokerResponsePrivate::parseDescribeBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBrokerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

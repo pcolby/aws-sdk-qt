@@ -158,7 +158,7 @@ UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProvide
 void UpdateOpenIDConnectProviderThumbprintResponsePrivate::parseUpdateOpenIDConnectProviderThumbprintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateOpenIDConnectProviderThumbprintResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

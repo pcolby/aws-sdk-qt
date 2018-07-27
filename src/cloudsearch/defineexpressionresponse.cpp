@@ -104,7 +104,7 @@ DefineExpressionResponsePrivate::DefineExpressionResponsePrivate(
 void DefineExpressionResponsePrivate::parseDefineExpressionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineExpressionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

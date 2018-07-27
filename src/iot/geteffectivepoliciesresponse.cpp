@@ -104,7 +104,7 @@ GetEffectivePoliciesResponsePrivate::GetEffectivePoliciesResponsePrivate(
 void GetEffectivePoliciesResponsePrivate::parseGetEffectivePoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEffectivePoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

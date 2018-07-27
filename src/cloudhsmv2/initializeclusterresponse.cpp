@@ -95,7 +95,7 @@ InitializeClusterResponsePrivate::InitializeClusterResponsePrivate(
 void InitializeClusterResponsePrivate::parseInitializeClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitializeClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSMV2

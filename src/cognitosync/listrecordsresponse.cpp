@@ -113,7 +113,7 @@ ListRecordsResponsePrivate::ListRecordsResponsePrivate(
 void ListRecordsResponsePrivate::parseListRecordsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRecordsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

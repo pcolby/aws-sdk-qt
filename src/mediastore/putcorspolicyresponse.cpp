@@ -95,7 +95,7 @@ PutCorsPolicyResponsePrivate::PutCorsPolicyResponsePrivate(
 void PutCorsPolicyResponsePrivate::parsePutCorsPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutCorsPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStore

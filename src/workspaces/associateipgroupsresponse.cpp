@@ -96,7 +96,7 @@ AssociateIpGroupsResponsePrivate::AssociateIpGroupsResponsePrivate(
 void AssociateIpGroupsResponsePrivate::parseAssociateIpGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateIpGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

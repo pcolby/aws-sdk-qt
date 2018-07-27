@@ -98,7 +98,7 @@ DetachLoadBalancersResponsePrivate::DetachLoadBalancersResponsePrivate(
 void DetachLoadBalancersResponsePrivate::parseDetachLoadBalancersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

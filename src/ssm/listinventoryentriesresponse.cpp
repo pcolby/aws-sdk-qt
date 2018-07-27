@@ -118,7 +118,7 @@ ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponsePrivate(
 void ListInventoryEntriesResponsePrivate::parseListInventoryEntriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInventoryEntriesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

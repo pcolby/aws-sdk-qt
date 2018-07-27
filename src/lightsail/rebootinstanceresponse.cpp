@@ -109,7 +109,7 @@ RebootInstanceResponsePrivate::RebootInstanceResponsePrivate(
 void RebootInstanceResponsePrivate::parseRebootInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

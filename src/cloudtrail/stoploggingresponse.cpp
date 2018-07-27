@@ -116,7 +116,7 @@ StopLoggingResponsePrivate::StopLoggingResponsePrivate(
 void StopLoggingResponsePrivate::parseStopLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopLoggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

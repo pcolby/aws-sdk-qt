@@ -98,7 +98,7 @@ UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePri
 void UpdateSqlInjectionMatchSetResponsePrivate::parseUpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSqlInjectionMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

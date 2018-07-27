@@ -107,7 +107,7 @@ GetEndpointAttributesResponsePrivate::GetEndpointAttributesResponsePrivate(
 void GetEndpointAttributesResponsePrivate::parseGetEndpointAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEndpointAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

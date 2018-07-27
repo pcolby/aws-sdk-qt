@@ -199,7 +199,7 @@ CreateUserProfileResponsePrivate::CreateUserProfileResponsePrivate(
 void CreateUserProfileResponsePrivate::parseCreateUserProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateUserProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

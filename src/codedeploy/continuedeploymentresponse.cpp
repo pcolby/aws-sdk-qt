@@ -174,7 +174,7 @@ ContinueDeploymentResponsePrivate::ContinueDeploymentResponsePrivate(
 void ContinueDeploymentResponsePrivate::parseContinueDeploymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ContinueDeploymentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

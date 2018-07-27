@@ -199,7 +199,7 @@ UnassignVolumeResponsePrivate::UnassignVolumeResponsePrivate(
 void UnassignVolumeResponsePrivate::parseUnassignVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnassignVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

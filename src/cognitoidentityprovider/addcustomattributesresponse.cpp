@@ -103,7 +103,7 @@ AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
 void AddCustomAttributesResponsePrivate::parseAddCustomAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddCustomAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

@@ -104,7 +104,7 @@ DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponsePrivate(
 void DescribeIndexFieldsResponsePrivate::parseDescribeIndexFieldsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeIndexFieldsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

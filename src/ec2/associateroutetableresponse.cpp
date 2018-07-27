@@ -121,7 +121,7 @@ AssociateRouteTableResponsePrivate::AssociateRouteTableResponsePrivate(
 void AssociateRouteTableResponsePrivate::parseAssociateRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateRouteTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

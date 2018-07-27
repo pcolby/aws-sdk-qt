@@ -98,7 +98,7 @@ PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionRespo
 void PutScheduledUpdateGroupActionResponsePrivate::parsePutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutScheduledUpdateGroupActionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

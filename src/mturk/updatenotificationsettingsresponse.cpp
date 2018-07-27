@@ -93,7 +93,7 @@ UpdateNotificationSettingsResponsePrivate::UpdateNotificationSettingsResponsePri
 void UpdateNotificationSettingsResponsePrivate::parseUpdateNotificationSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotificationSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

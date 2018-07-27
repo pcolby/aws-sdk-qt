@@ -158,7 +158,7 @@ GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate
 void GetOpenIDConnectProviderResponsePrivate::parseGetOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIDConnectProviderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

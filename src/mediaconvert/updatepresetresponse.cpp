@@ -93,7 +93,7 @@ UpdatePresetResponsePrivate::UpdatePresetResponsePrivate(
 void UpdatePresetResponsePrivate::parseUpdatePresetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePresetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

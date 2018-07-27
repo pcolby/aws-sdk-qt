@@ -104,7 +104,7 @@ DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupRespons
 void DeleteReplicationSubnetGroupResponsePrivate::parseDeleteReplicationSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationSubnetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

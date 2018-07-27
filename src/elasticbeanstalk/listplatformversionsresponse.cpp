@@ -115,7 +115,7 @@ ListPlatformVersionsResponsePrivate::ListPlatformVersionsResponsePrivate(
 void ListPlatformVersionsResponsePrivate::parseListPlatformVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPlatformVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

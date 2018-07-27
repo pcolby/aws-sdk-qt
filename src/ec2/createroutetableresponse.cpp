@@ -121,7 +121,7 @@ CreateRouteTableResponsePrivate::CreateRouteTableResponsePrivate(
 void CreateRouteTableResponsePrivate::parseCreateRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRouteTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

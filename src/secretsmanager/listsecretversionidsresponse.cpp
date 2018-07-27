@@ -169,7 +169,7 @@ ListSecretVersionIdsResponsePrivate::ListSecretVersionIdsResponsePrivate(
 void ListSecretVersionIdsResponsePrivate::parseListSecretVersionIdsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSecretVersionIdsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

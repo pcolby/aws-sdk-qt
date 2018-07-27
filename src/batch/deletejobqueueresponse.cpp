@@ -107,7 +107,7 @@ DeleteJobQueueResponsePrivate::DeleteJobQueueResponsePrivate(
 void DeleteJobQueueResponsePrivate::parseDeleteJobQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

@@ -93,7 +93,7 @@ PutBucketLoggingResponsePrivate::PutBucketLoggingResponsePrivate(
 void PutBucketLoggingResponsePrivate::parsePutBucketLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketLoggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -104,7 +104,7 @@ GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
 void GetAccountSettingsResponsePrivate::parseGetAccountSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

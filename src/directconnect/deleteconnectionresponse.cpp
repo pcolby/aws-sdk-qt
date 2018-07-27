@@ -101,7 +101,7 @@ DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
 void DeleteConnectionResponsePrivate::parseDeleteConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConnectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

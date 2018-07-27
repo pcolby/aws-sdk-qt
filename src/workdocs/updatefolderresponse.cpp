@@ -122,7 +122,7 @@ UpdateFolderResponsePrivate::UpdateFolderResponsePrivate(
 void UpdateFolderResponsePrivate::parseUpdateFolderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFolderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

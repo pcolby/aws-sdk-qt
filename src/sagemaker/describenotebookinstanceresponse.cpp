@@ -93,7 +93,7 @@ DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponsePrivate
 void DescribeNotebookInstanceResponsePrivate::parseDescribeNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotebookInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

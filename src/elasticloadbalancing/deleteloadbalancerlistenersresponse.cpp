@@ -121,7 +121,7 @@ DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponseP
 void DeleteLoadBalancerListenersResponsePrivate::parseDeleteLoadBalancerListenersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerListenersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

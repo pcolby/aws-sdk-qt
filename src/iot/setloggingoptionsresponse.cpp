@@ -104,7 +104,7 @@ SetLoggingOptionsResponsePrivate::SetLoggingOptionsResponsePrivate(
 void SetLoggingOptionsResponsePrivate::parseSetLoggingOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLoggingOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

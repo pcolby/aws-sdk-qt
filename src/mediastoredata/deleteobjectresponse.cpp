@@ -95,7 +95,7 @@ DeleteObjectResponsePrivate::DeleteObjectResponsePrivate(
 void DeleteObjectResponsePrivate::parseDeleteObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStoreData

@@ -98,7 +98,7 @@ PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
 void PreviewAgentsResponsePrivate::parsePreviewAgentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PreviewAgentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

@@ -107,7 +107,7 @@ ModifyReplicationGroupResponsePrivate::ModifyReplicationGroupResponsePrivate(
 void ModifyReplicationGroupResponsePrivate::parseModifyReplicationGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

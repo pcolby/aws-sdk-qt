@@ -153,7 +153,7 @@ DescribeServersResponsePrivate::DescribeServersResponsePrivate(
 void DescribeServersResponsePrivate::parseDescribeServersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeServersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

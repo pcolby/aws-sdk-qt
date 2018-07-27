@@ -97,7 +97,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClustersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DAX

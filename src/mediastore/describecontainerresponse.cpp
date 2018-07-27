@@ -95,7 +95,7 @@ DescribeContainerResponsePrivate::DescribeContainerResponsePrivate(
 void DescribeContainerResponsePrivate::parseDescribeContainerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeContainerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStore

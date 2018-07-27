@@ -96,7 +96,7 @@ DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
 void DeletePartitionResponsePrivate::parseDeletePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePartitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

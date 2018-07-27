@@ -93,7 +93,7 @@ ListInvitationsResponsePrivate::ListInvitationsResponsePrivate(
 void ListInvitationsResponsePrivate::parseListInvitationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInvitationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

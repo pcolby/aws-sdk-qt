@@ -94,7 +94,7 @@ ViewBillingResponsePrivate::ViewBillingResponsePrivate(
 void ViewBillingResponsePrivate::parseViewBillingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ViewBillingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

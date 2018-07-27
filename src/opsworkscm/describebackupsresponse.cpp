@@ -153,7 +153,7 @@ DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
 void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBackupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

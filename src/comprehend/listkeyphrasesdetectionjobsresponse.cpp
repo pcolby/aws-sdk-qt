@@ -96,7 +96,7 @@ ListKeyPhrasesDetectionJobsResponsePrivate::ListKeyPhrasesDetectionJobsResponseP
 void ListKeyPhrasesDetectionJobsResponsePrivate::parseListKeyPhrasesDetectionJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListKeyPhrasesDetectionJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

@@ -100,7 +100,7 @@ DisassociateMemberAccountResponsePrivate::DisassociateMemberAccountResponsePriva
 void DisassociateMemberAccountResponsePrivate::parseDisassociateMemberAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateMemberAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Macie

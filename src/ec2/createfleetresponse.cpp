@@ -121,7 +121,7 @@ CreateFleetResponsePrivate::CreateFleetResponsePrivate(
 void CreateFleetResponsePrivate::parseCreateFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -111,7 +111,7 @@ ReportTaskProgressResponsePrivate::ReportTaskProgressResponsePrivate(
 void ReportTaskProgressResponsePrivate::parseReportTaskProgressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReportTaskProgressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

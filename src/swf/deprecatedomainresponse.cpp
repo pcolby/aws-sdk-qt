@@ -109,7 +109,7 @@ DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
 void DeprecateDomainResponsePrivate::parseDeprecateDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

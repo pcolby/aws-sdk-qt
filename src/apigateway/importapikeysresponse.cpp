@@ -98,7 +98,7 @@ ImportApiKeysResponsePrivate::ImportApiKeysResponsePrivate(
 void ImportApiKeysResponsePrivate::parseImportApiKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportApiKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

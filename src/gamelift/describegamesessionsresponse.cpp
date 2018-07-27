@@ -537,7 +537,7 @@ DescribeGameSessionsResponsePrivate::DescribeGameSessionsResponsePrivate(
 void DescribeGameSessionsResponsePrivate::parseDescribeGameSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGameSessionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

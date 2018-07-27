@@ -95,7 +95,7 @@ PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
 void PurchaseOfferingResponsePrivate::parsePurchaseOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

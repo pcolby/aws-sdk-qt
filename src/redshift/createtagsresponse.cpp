@@ -123,7 +123,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

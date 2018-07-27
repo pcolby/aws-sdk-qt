@@ -118,7 +118,7 @@ GetMaintenanceWindowResponsePrivate::GetMaintenanceWindowResponsePrivate(
 void GetMaintenanceWindowResponsePrivate::parseGetMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMaintenanceWindowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

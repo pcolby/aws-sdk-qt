@@ -102,7 +102,7 @@ CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePriva
 void CreateElasticsearchDomainResponsePrivate::parseCreateElasticsearchDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateElasticsearchDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

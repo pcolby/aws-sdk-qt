@@ -99,7 +99,7 @@ DisassociateAdminAccountResponsePrivate::DisassociateAdminAccountResponsePrivate
 void DisassociateAdminAccountResponsePrivate::parseDisassociateAdminAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateAdminAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

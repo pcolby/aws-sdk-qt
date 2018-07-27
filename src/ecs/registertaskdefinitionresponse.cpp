@@ -110,7 +110,7 @@ RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponsePrivate(
 void RegisterTaskDefinitionResponsePrivate::parseRegisterTaskDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTaskDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

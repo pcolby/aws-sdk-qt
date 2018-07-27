@@ -93,7 +93,7 @@ DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponseP
 void DeleteReusableDelegationSetResponsePrivate::parseDeleteReusableDelegationSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReusableDelegationSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

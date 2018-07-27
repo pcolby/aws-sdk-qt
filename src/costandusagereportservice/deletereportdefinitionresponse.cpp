@@ -93,7 +93,7 @@ DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
 void DeleteReportDefinitionResponsePrivate::parseDeleteReportDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReportDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostandUsageReportService

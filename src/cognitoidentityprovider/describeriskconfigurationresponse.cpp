@@ -103,7 +103,7 @@ DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponsePriva
 void DescribeRiskConfigurationResponsePrivate::parseDescribeRiskConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRiskConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

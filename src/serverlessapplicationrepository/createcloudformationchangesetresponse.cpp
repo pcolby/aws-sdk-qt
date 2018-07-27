@@ -114,7 +114,7 @@ CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetRespo
 void CreateCloudFormationChangeSetResponsePrivate::parseCreateCloudFormationChangeSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCloudFormationChangeSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServerlessApplicationRepository

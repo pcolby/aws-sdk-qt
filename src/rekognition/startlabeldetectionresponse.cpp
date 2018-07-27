@@ -94,7 +94,7 @@ StartLabelDetectionResponsePrivate::StartLabelDetectionResponsePrivate(
 void StartLabelDetectionResponsePrivate::parseStartLabelDetectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartLabelDetectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

@@ -116,7 +116,7 @@ DescribeTrailsResponsePrivate::DescribeTrailsResponsePrivate(
 void DescribeTrailsResponsePrivate::parseDescribeTrailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrailsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

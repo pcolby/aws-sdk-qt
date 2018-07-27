@@ -122,7 +122,7 @@ PutMetricFilterResponsePrivate::PutMetricFilterResponsePrivate(
 void PutMetricFilterResponsePrivate::parsePutMetricFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutMetricFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

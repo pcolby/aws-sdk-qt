@@ -96,7 +96,7 @@ GetUserDefinedFunctionResponsePrivate::GetUserDefinedFunctionResponsePrivate(
 void GetUserDefinedFunctionResponsePrivate::parseGetUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserDefinedFunctionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

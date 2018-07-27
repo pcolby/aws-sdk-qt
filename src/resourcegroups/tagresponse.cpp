@@ -137,7 +137,7 @@ TagResponsePrivate::TagResponsePrivate(
 void TagResponsePrivate::parseTagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

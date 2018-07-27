@@ -118,7 +118,7 @@ DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
 void DescribeParametersResponsePrivate::parseDescribeParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

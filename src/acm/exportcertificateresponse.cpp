@@ -102,7 +102,7 @@ ExportCertificateResponsePrivate::ExportCertificateResponsePrivate(
 void ExportCertificateResponsePrivate::parseExportCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACM

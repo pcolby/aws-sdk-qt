@@ -93,7 +93,7 @@ ListJobTemplatesResponsePrivate::ListJobTemplatesResponsePrivate(
 void ListJobTemplatesResponsePrivate::parseListJobTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobTemplatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

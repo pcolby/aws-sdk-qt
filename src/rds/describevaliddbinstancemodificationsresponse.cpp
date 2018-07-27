@@ -157,7 +157,7 @@ DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModi
 void DescribeValidDBInstanceModificationsResponsePrivate::parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeValidDBInstanceModificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

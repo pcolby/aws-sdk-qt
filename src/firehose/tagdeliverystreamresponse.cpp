@@ -97,7 +97,7 @@ TagDeliveryStreamResponsePrivate::TagDeliveryStreamResponsePrivate(
 void TagDeliveryStreamResponsePrivate::parseTagDeliveryStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagDeliveryStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

@@ -95,7 +95,7 @@ RenewOfferingResponsePrivate::RenewOfferingResponsePrivate(
 void RenewOfferingResponsePrivate::parseRenewOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RenewOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

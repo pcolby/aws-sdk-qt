@@ -162,7 +162,7 @@ UpdateSMBFileShareResponsePrivate::UpdateSMBFileShareResponsePrivate(
 void UpdateSMBFileShareResponsePrivate::parseUpdateSMBFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSMBFileShareResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

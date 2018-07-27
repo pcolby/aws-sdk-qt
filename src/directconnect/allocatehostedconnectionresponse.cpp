@@ -101,7 +101,7 @@ AllocateHostedConnectionResponsePrivate::AllocateHostedConnectionResponsePrivate
 void AllocateHostedConnectionResponsePrivate::parseAllocateHostedConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateHostedConnectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

@@ -93,7 +93,7 @@ CreateHITResponsePrivate::CreateHITResponsePrivate(
 void CreateHITResponsePrivate::parseCreateHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHITResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

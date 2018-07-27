@@ -114,7 +114,7 @@ ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponsePrivate(
 void ListApplicationVersionsResponsePrivate::parseListApplicationVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListApplicationVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServerlessApplicationRepository

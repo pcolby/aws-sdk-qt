@@ -162,7 +162,7 @@ NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponsePrivate(
 void NotifyWhenUploadedResponsePrivate::parseNotifyWhenUploadedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyWhenUploadedResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

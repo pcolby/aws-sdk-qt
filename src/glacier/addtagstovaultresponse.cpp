@@ -131,7 +131,7 @@ AddTagsToVaultResponsePrivate::AddTagsToVaultResponsePrivate(
 void AddTagsToVaultResponsePrivate::parseAddTagsToVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToVaultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

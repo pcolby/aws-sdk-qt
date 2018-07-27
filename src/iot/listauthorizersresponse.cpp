@@ -104,7 +104,7 @@ ListAuthorizersResponsePrivate::ListAuthorizersResponsePrivate(
 void ListAuthorizersResponsePrivate::parseListAuthorizersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAuthorizersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -93,7 +93,7 @@ DescribeApplicationResponsePrivate::DescribeApplicationResponsePrivate(
 void DescribeApplicationResponsePrivate::parseDescribeApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisAnalytics

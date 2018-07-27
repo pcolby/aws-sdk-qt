@@ -104,7 +104,7 @@ TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
 void TestInvokeAuthorizerResponsePrivate::parseTestInvokeAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestInvokeAuthorizerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

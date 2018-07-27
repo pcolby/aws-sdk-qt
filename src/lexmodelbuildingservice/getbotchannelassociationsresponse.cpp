@@ -97,7 +97,7 @@ GetBotChannelAssociationsResponsePrivate::GetBotChannelAssociationsResponsePriva
 void GetBotChannelAssociationsResponsePrivate::parseGetBotChannelAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBotChannelAssociationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

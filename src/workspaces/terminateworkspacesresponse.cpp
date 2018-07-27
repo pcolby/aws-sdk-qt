@@ -96,7 +96,7 @@ TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponsePrivate(
 void TerminateWorkspacesResponsePrivate::parseTerminateWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateWorkspacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

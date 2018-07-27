@@ -122,7 +122,7 @@ DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponsePrivate(
 void DeleteCustomMetadataResponsePrivate::parseDeleteCustomMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomMetadataResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

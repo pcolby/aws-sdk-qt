@@ -100,7 +100,7 @@ ListTypedLinkFacetAttributesResponsePrivate::ListTypedLinkFacetAttributesRespons
 void ListTypedLinkFacetAttributesResponsePrivate::parseListTypedLinkFacetAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTypedLinkFacetAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

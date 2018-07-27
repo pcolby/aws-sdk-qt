@@ -99,7 +99,7 @@ UpdateThingShadowResponsePrivate::UpdateThingShadowResponsePrivate(
 void UpdateThingShadowResponsePrivate::parseUpdateThingShadowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingShadowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTDataPlane

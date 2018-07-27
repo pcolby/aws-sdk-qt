@@ -173,7 +173,7 @@ ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesRespons
 void ListCuratedEnvironmentImagesResponsePrivate::parseListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCuratedEnvironmentImagesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

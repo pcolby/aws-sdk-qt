@@ -93,7 +93,7 @@ PredictResponsePrivate::PredictResponsePrivate(
 void PredictResponsePrivate::parsePredictResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PredictResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

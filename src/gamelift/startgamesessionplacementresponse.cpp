@@ -537,7 +537,7 @@ StartGameSessionPlacementResponsePrivate::StartGameSessionPlacementResponsePriva
 void StartGameSessionPlacementResponsePrivate::parseStartGameSessionPlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartGameSessionPlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

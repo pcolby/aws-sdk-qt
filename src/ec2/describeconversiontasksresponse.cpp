@@ -121,7 +121,7 @@ DescribeConversionTasksResponsePrivate::DescribeConversionTasksResponsePrivate(
 void DescribeConversionTasksResponsePrivate::parseDescribeConversionTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConversionTasksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

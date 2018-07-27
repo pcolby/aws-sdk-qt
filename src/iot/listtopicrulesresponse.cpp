@@ -104,7 +104,7 @@ ListTopicRulesResponsePrivate::ListTopicRulesResponsePrivate(
 void ListTopicRulesResponsePrivate::parseListTopicRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTopicRulesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -283,7 +283,7 @@ ListBranchesResponsePrivate::ListBranchesResponsePrivate(
 void ListBranchesResponsePrivate::parseListBranchesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBranchesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

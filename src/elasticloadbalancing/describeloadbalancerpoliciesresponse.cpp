@@ -121,7 +121,7 @@ DescribeLoadBalancerPoliciesResponsePrivate::DescribeLoadBalancerPoliciesRespons
 void DescribeLoadBalancerPoliciesResponsePrivate::parseDescribeLoadBalancerPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerPoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

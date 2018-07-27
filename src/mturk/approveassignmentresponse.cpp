@@ -93,7 +93,7 @@ ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
 void ApproveAssignmentResponsePrivate::parseApproveAssignmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ApproveAssignmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

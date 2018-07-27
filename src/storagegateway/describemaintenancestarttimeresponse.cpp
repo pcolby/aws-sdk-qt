@@ -162,7 +162,7 @@ DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeRespons
 void DescribeMaintenanceStartTimeResponsePrivate::parseDescribeMaintenanceStartTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceStartTimeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

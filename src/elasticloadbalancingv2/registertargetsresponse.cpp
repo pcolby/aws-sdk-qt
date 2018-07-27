@@ -161,7 +161,7 @@ RegisterTargetsResponsePrivate::RegisterTargetsResponsePrivate(
 void RegisterTargetsResponsePrivate::parseRegisterTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTargetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

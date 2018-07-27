@@ -158,7 +158,7 @@ ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponsePrivate(
 void ListEntitiesForPolicyResponsePrivate::parseListEntitiesForPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEntitiesForPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

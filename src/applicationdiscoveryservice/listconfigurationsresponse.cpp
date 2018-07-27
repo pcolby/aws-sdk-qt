@@ -157,7 +157,7 @@ ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
 void ListConfigurationsResponsePrivate::parseListConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

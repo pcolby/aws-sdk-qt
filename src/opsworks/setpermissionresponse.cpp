@@ -199,7 +199,7 @@ SetPermissionResponsePrivate::SetPermissionResponsePrivate(
 void SetPermissionResponsePrivate::parseSetPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetPermissionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

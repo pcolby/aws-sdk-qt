@@ -98,7 +98,7 @@ AttachLoadBalancerTargetGroupsResponsePrivate::AttachLoadBalancerTargetGroupsRes
 void AttachLoadBalancerTargetGroupsResponsePrivate::parseAttachLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerTargetGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

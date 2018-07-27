@@ -102,7 +102,7 @@ UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigR
 void UpdateElasticsearchDomainConfigResponsePrivate::parseUpdateElasticsearchDomainConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateElasticsearchDomainConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

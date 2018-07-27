@@ -109,7 +109,7 @@ ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
 void ImportKeyPairResponsePrivate::parseImportKeyPairResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportKeyPairResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

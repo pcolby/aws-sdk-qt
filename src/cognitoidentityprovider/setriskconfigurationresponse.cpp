@@ -103,7 +103,7 @@ SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponsePrivate(
 void SetRiskConfigurationResponsePrivate::parseSetRiskConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetRiskConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

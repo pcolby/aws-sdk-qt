@@ -117,7 +117,7 @@ DeleteDBClusterResponsePrivate::DeleteDBClusterResponsePrivate(
 void DeleteDBClusterResponsePrivate::parseDeleteDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

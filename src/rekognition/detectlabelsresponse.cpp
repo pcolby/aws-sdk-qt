@@ -94,7 +94,7 @@ DetectLabelsResponsePrivate::DetectLabelsResponsePrivate(
 void DetectLabelsResponsePrivate::parseDetectLabelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectLabelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

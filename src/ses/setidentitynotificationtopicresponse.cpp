@@ -104,7 +104,7 @@ SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicRespons
 void SetIdentityNotificationTopicResponsePrivate::parseSetIdentityNotificationTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityNotificationTopicResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

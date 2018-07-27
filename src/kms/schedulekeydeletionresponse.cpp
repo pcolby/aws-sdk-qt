@@ -192,7 +192,7 @@ ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
 void ScheduleKeyDeletionResponsePrivate::parseScheduleKeyDeletionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScheduleKeyDeletionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

@@ -158,7 +158,7 @@ UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
 void UpdateAccessKeyResponsePrivate::parseUpdateAccessKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccessKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -93,7 +93,7 @@ UploadPartResponsePrivate::UploadPartResponsePrivate(
 void UploadPartResponsePrivate::parseUploadPartResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadPartResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

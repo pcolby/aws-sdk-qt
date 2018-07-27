@@ -113,7 +113,7 @@ DescribeAggregateComplianceByConfigRulesResponsePrivate::DescribeAggregateCompli
 void DescribeAggregateComplianceByConfigRulesResponsePrivate::parseDescribeAggregateComplianceByConfigRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAggregateComplianceByConfigRulesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

@@ -93,7 +93,7 @@ GetUserEndpointsResponsePrivate::GetUserEndpointsResponsePrivate(
 void GetUserEndpointsResponsePrivate::parseGetUserEndpointsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserEndpointsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

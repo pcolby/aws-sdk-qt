@@ -94,7 +94,7 @@ FinalizeDeviceClaimResponsePrivate::FinalizeDeviceClaimResponsePrivate(
 void FinalizeDeviceClaimResponsePrivate::parseFinalizeDeviceClaimResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("FinalizeDeviceClaimResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickDevicesService

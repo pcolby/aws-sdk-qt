@@ -101,7 +101,7 @@ DeleteLagResponsePrivate::DeleteLagResponsePrivate(
 void DeleteLagResponsePrivate::parseDeleteLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

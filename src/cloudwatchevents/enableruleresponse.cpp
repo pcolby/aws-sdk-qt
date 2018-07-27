@@ -116,7 +116,7 @@ EnableRuleResponsePrivate::EnableRuleResponsePrivate(
 void EnableRuleResponsePrivate::parseEnableRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

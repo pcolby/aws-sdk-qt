@@ -94,7 +94,7 @@ PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
 void PutTraceSegmentsResponsePrivate::parsePutTraceSegmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutTraceSegmentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace XRay

@@ -96,7 +96,7 @@ StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
 void StopCrawlerResponsePrivate::parseStopCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopCrawlerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

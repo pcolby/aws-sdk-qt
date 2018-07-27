@@ -162,7 +162,7 @@ DisableGatewayResponsePrivate::DisableGatewayResponsePrivate(
 void DisableGatewayResponsePrivate::parseDisableGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

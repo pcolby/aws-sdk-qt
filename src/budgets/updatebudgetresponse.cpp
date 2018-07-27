@@ -136,7 +136,7 @@ UpdateBudgetResponsePrivate::UpdateBudgetResponsePrivate(
 void UpdateBudgetResponsePrivate::parseUpdateBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBudgetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

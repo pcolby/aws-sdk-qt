@@ -115,7 +115,7 @@ ValidateTemplateResponsePrivate::ValidateTemplateResponsePrivate(
 void ValidateTemplateResponsePrivate::parseValidateTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ValidateTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

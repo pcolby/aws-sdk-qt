@@ -235,7 +235,7 @@ AcceptHandshakeResponsePrivate::AcceptHandshakeResponsePrivate(
 void AcceptHandshakeResponsePrivate::parseAcceptHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptHandshakeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

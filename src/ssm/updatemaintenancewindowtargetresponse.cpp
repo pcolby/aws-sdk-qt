@@ -118,7 +118,7 @@ UpdateMaintenanceWindowTargetResponsePrivate::UpdateMaintenanceWindowTargetRespo
 void UpdateMaintenanceWindowTargetResponsePrivate::parseUpdateMaintenanceWindowTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateMaintenanceWindowTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

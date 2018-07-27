@@ -95,7 +95,7 @@ StopRunResponsePrivate::StopRunResponsePrivate(
 void StopRunResponsePrivate::parseStopRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopRunResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

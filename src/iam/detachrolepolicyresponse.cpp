@@ -158,7 +158,7 @@ DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
 void DetachRolePolicyResponsePrivate::parseDetachRolePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachRolePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

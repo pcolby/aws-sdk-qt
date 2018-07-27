@@ -104,7 +104,7 @@ SetV2LoggingLevelResponsePrivate::SetV2LoggingLevelResponsePrivate(
 void SetV2LoggingLevelResponsePrivate::parseSetV2LoggingLevelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetV2LoggingLevelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

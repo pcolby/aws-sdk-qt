@@ -151,7 +151,7 @@ GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
 void GetCallerIdentityResponsePrivate::parseGetCallerIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCallerIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace STS

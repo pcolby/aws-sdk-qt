@@ -93,7 +93,7 @@ CreateBatchPredictionResponsePrivate::CreateBatchPredictionResponsePrivate(
 void CreateBatchPredictionResponsePrivate::parseCreateBatchPredictionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBatchPredictionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

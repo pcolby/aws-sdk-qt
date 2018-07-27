@@ -93,7 +93,7 @@ GetFileUploadURLResponsePrivate::GetFileUploadURLResponsePrivate(
 void GetFileUploadURLResponsePrivate::parseGetFileUploadURLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFileUploadURLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

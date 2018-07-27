@@ -97,7 +97,7 @@ RegisterInstanceResponsePrivate::RegisterInstanceResponsePrivate(
 void RegisterInstanceResponsePrivate::parseRegisterInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceDiscovery

@@ -96,7 +96,7 @@ DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponsePrivate(
 void DetectKeyPhrasesResponsePrivate::parseDetectKeyPhrasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectKeyPhrasesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

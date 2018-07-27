@@ -110,7 +110,7 @@ GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
 void GetEntitlementsResponsePrivate::parseGetEntitlementsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEntitlementsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MarketplaceEntitlementService

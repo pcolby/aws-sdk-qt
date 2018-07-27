@@ -98,7 +98,7 @@ RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsRespons
 void RemoveAttributesFromFindingsResponsePrivate::parseRemoveAttributesFromFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAttributesFromFindingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

@@ -96,7 +96,7 @@ CreateDeviceDefinitionResponsePrivate::CreateDeviceDefinitionResponsePrivate(
 void CreateDeviceDefinitionResponsePrivate::parseCreateDeviceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeviceDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

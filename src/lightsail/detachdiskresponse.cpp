@@ -109,7 +109,7 @@ DetachDiskResponsePrivate::DetachDiskResponsePrivate(
 void DetachDiskResponsePrivate::parseDetachDiskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachDiskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

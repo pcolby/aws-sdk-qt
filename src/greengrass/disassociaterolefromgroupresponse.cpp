@@ -96,7 +96,7 @@ DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePriva
 void DisassociateRoleFromGroupResponsePrivate::parseDisassociateRoleFromGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateRoleFromGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

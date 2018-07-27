@@ -93,7 +93,7 @@ StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
 void StartSupportDataExportResponsePrivate::parseStartSupportDataExportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartSupportDataExportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MarketplaceCommerceAnalytics

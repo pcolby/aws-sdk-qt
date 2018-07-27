@@ -98,7 +98,7 @@ DescribeLifecycleHookTypesResponsePrivate::DescribeLifecycleHookTypesResponsePri
 void DescribeLifecycleHookTypesResponsePrivate::parseDescribeLifecycleHookTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLifecycleHookTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

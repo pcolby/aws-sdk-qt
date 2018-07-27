@@ -102,7 +102,7 @@ UpdateCertificateOptionsResponsePrivate::UpdateCertificateOptionsResponsePrivate
 void UpdateCertificateOptionsResponsePrivate::parseUpdateCertificateOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCertificateOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACM

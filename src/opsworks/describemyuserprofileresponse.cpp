@@ -199,7 +199,7 @@ DescribeMyUserProfileResponsePrivate::DescribeMyUserProfileResponsePrivate(
 void DescribeMyUserProfileResponsePrivate::parseDescribeMyUserProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMyUserProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

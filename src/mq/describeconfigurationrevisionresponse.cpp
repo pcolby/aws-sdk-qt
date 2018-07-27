@@ -95,7 +95,7 @@ DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionRespo
 void DescribeConfigurationRevisionResponsePrivate::parseDescribeConfigurationRevisionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationRevisionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

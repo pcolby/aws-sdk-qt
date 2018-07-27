@@ -93,7 +93,7 @@ UpdateDetectorResponsePrivate::UpdateDetectorResponsePrivate(
 void UpdateDetectorResponsePrivate::parseUpdateDetectorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDetectorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

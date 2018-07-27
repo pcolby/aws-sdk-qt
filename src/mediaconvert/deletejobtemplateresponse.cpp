@@ -93,7 +93,7 @@ DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
 void DeleteJobTemplateResponsePrivate::parseDeleteJobTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

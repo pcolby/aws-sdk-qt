@@ -100,7 +100,7 @@ ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
 void ListXssMatchSetsResponsePrivate::parseListXssMatchSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListXssMatchSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

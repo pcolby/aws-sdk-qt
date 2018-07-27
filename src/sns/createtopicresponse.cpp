@@ -107,7 +107,7 @@ CreateTopicResponsePrivate::CreateTopicResponsePrivate(
 void CreateTopicResponsePrivate::parseCreateTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTopicResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

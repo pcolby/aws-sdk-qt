@@ -98,7 +98,7 @@ DescribeCrossAccountAccessRoleResponsePrivate::DescribeCrossAccountAccessRoleRes
 void DescribeCrossAccountAccessRoleResponsePrivate::parseDescribeCrossAccountAccessRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCrossAccountAccessRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

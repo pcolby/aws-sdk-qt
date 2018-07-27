@@ -137,7 +137,7 @@ CreateGroupResponsePrivate::CreateGroupResponsePrivate(
 void CreateGroupResponsePrivate::parseCreateGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

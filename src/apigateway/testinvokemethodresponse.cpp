@@ -98,7 +98,7 @@ TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
 void TestInvokeMethodResponsePrivate::parseTestInvokeMethodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestInvokeMethodResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

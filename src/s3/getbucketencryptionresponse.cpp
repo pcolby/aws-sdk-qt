@@ -93,7 +93,7 @@ GetBucketEncryptionResponsePrivate::GetBucketEncryptionResponsePrivate(
 void GetBucketEncryptionResponsePrivate::parseGetBucketEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketEncryptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

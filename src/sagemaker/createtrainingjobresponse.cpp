@@ -93,7 +93,7 @@ CreateTrainingJobResponsePrivate::CreateTrainingJobResponsePrivate(
 void CreateTrainingJobResponsePrivate::parseCreateTrainingJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTrainingJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

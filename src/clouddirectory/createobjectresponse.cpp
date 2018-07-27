@@ -100,7 +100,7 @@ CreateObjectResponsePrivate::CreateObjectResponsePrivate(
 void CreateObjectResponsePrivate::parseCreateObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

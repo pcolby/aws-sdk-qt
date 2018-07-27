@@ -131,7 +131,7 @@ InitiateJobResponsePrivate::InitiateJobResponsePrivate(
 void InitiateJobResponsePrivate::parseInitiateJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

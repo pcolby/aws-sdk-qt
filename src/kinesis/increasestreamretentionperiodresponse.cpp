@@ -96,7 +96,7 @@ IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodRespo
 void IncreaseStreamRetentionPeriodResponsePrivate::parseIncreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IncreaseStreamRetentionPeriodResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

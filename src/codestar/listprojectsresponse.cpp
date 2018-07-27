@@ -181,7 +181,7 @@ ListProjectsResponsePrivate::ListProjectsResponsePrivate(
 void ListProjectsResponsePrivate::parseListProjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListProjectsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

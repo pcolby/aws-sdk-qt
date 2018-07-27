@@ -93,7 +93,7 @@ PutBucketReplicationResponsePrivate::PutBucketReplicationResponsePrivate(
 void PutBucketReplicationResponsePrivate::parsePutBucketReplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketReplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

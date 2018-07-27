@@ -94,7 +94,7 @@ GetTraceGraphResponsePrivate::GetTraceGraphResponsePrivate(
 void GetTraceGraphResponsePrivate::parseGetTraceGraphResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTraceGraphResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace XRay

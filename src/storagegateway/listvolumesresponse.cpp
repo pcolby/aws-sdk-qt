@@ -162,7 +162,7 @@ ListVolumesResponsePrivate::ListVolumesResponsePrivate(
 void ListVolumesResponsePrivate::parseListVolumesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVolumesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

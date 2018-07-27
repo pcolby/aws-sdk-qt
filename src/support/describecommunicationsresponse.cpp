@@ -161,7 +161,7 @@ DescribeCommunicationsResponsePrivate::DescribeCommunicationsResponsePrivate(
 void DescribeCommunicationsResponsePrivate::parseDescribeCommunicationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCommunicationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

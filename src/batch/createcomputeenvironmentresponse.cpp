@@ -107,7 +107,7 @@ CreateComputeEnvironmentResponsePrivate::CreateComputeEnvironmentResponsePrivate
 void CreateComputeEnvironmentResponsePrivate::parseCreateComputeEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateComputeEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

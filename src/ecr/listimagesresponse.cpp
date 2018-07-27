@@ -97,7 +97,7 @@ ListImagesResponsePrivate::ListImagesResponsePrivate(
 void ListImagesResponsePrivate::parseListImagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListImagesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

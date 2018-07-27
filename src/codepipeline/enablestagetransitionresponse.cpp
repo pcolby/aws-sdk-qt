@@ -268,7 +268,7 @@ EnableStageTransitionResponsePrivate::EnableStageTransitionResponsePrivate(
 void EnableStageTransitionResponsePrivate::parseEnableStageTransitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableStageTransitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

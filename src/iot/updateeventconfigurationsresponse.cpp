@@ -104,7 +104,7 @@ UpdateEventConfigurationsResponsePrivate::UpdateEventConfigurationsResponsePriva
 void UpdateEventConfigurationsResponsePrivate::parseUpdateEventConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEventConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -109,7 +109,7 @@ SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
 void SignalWorkflowExecutionResponsePrivate::parseSignalWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SignalWorkflowExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

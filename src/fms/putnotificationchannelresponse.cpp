@@ -99,7 +99,7 @@ PutNotificationChannelResponsePrivate::PutNotificationChannelResponsePrivate(
 void PutNotificationChannelResponsePrivate::parsePutNotificationChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutNotificationChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

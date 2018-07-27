@@ -113,7 +113,7 @@ DeleteDatasetContentResponsePrivate::DeleteDatasetContentResponsePrivate(
 void DeleteDatasetContentResponsePrivate::parseDeleteDatasetContentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDatasetContentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

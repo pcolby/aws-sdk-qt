@@ -107,7 +107,7 @@ RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponsePrivate(
 void RemoveIpRoutesResponsePrivate::parseRemoveIpRoutesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveIpRoutesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

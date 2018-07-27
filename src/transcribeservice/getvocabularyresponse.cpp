@@ -94,7 +94,7 @@ GetVocabularyResponsePrivate::GetVocabularyResponsePrivate(
 void GetVocabularyResponsePrivate::parseGetVocabularyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVocabularyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace TranscribeService

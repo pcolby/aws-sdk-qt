@@ -98,7 +98,7 @@ ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponsePrivate(
 void ListEventSubscriptionsResponsePrivate::parseListEventSubscriptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEventSubscriptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

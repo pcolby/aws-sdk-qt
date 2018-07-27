@@ -110,7 +110,7 @@ UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponsePrivate(
 void UpdateContainerAgentResponsePrivate::parseUpdateContainerAgentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContainerAgentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

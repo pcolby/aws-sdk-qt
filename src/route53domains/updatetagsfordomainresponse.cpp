@@ -94,7 +94,7 @@ UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponsePrivate(
 void UpdateTagsForDomainResponsePrivate::parseUpdateTagsForDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTagsForDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

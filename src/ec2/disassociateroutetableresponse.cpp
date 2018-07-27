@@ -121,7 +121,7 @@ DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
 void DisassociateRouteTableResponsePrivate::parseDisassociateRouteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateRouteTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -109,7 +109,7 @@ CreateDiskFromSnapshotResponsePrivate::CreateDiskFromSnapshotResponsePrivate(
 void CreateDiskFromSnapshotResponsePrivate::parseCreateDiskFromSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDiskFromSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

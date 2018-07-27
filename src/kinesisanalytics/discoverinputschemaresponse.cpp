@@ -93,7 +93,7 @@ DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
 void DiscoverInputSchemaResponsePrivate::parseDiscoverInputSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DiscoverInputSchemaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisAnalytics

@@ -96,7 +96,7 @@ GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponsePrivate
 void GetServiceRoleForAccountResponsePrivate::parseGetServiceRoleForAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServiceRoleForAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

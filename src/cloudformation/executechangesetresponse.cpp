@@ -115,7 +115,7 @@ ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponsePrivate(
 void ExecuteChangeSetResponsePrivate::parseExecuteChangeSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExecuteChangeSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

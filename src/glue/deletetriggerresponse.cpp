@@ -96,7 +96,7 @@ DeleteTriggerResponsePrivate::DeleteTriggerResponsePrivate(
 void DeleteTriggerResponsePrivate::parseDeleteTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTriggerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

@@ -93,7 +93,7 @@ UpdateInputResponsePrivate::UpdateInputResponsePrivate(
 void UpdateInputResponsePrivate::parseUpdateInputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateInputResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

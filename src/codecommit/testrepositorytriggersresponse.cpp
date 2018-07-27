@@ -283,7 +283,7 @@ TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponsePrivate(
 void TestRepositoryTriggersResponsePrivate::parseTestRepositoryTriggersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestRepositoryTriggersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

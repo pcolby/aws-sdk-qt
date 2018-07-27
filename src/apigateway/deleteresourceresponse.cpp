@@ -98,7 +98,7 @@ DeleteResourceResponsePrivate::DeleteResourceResponsePrivate(
 void DeleteResourceResponsePrivate::parseDeleteResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

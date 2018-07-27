@@ -157,7 +157,7 @@ ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttribut
 void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterSnapshotAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

@@ -97,7 +97,7 @@ GetBotAliasResponsePrivate::GetBotAliasResponsePrivate(
 void GetBotAliasResponsePrivate::parseGetBotAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBotAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

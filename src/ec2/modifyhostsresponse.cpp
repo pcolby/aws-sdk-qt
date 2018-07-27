@@ -121,7 +121,7 @@ ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
 void ModifyHostsResponsePrivate::parseModifyHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyHostsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

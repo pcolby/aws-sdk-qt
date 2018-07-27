@@ -101,7 +101,7 @@ AllocatePublicVirtualInterfaceResponsePrivate::AllocatePublicVirtualInterfaceRes
 void AllocatePublicVirtualInterfaceResponsePrivate::parseAllocatePublicVirtualInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocatePublicVirtualInterfaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

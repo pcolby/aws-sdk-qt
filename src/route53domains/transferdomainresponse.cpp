@@ -94,7 +94,7 @@ TransferDomainResponsePrivate::TransferDomainResponsePrivate(
 void TransferDomainResponsePrivate::parseTransferDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TransferDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

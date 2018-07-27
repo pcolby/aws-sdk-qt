@@ -104,7 +104,7 @@ DeleteReceiptRuleSetResponsePrivate::DeleteReceiptRuleSetResponsePrivate(
 void DeleteReceiptRuleSetResponsePrivate::parseDeleteReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptRuleSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

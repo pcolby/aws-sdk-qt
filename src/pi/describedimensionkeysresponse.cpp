@@ -107,7 +107,7 @@ DescribeDimensionKeysResponsePrivate::DescribeDimensionKeysResponsePrivate(
 void DescribeDimensionKeysResponsePrivate::parseDescribeDimensionKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDimensionKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace PI

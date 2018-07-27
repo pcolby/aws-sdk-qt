@@ -107,7 +107,7 @@ UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
 void UnsubscribeResponsePrivate::parseUnsubscribeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

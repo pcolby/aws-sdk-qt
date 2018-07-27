@@ -99,7 +99,7 @@ ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponsePriva
 void ListResourcesForTagOptionResponsePrivate::parseListResourcesForTagOptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourcesForTagOptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

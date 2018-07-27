@@ -93,7 +93,7 @@ DeleteBucketTaggingResponsePrivate::DeleteBucketTaggingResponsePrivate(
 void DeleteBucketTaggingResponsePrivate::parseDeleteBucketTaggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketTaggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -111,7 +111,7 @@ GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
 void GetCostAndUsageResponsePrivate::parseGetCostAndUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCostAndUsageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostExplorer

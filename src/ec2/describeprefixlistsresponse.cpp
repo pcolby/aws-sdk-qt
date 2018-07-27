@@ -121,7 +121,7 @@ DescribePrefixListsResponsePrivate::DescribePrefixListsResponsePrivate(
 void DescribePrefixListsResponsePrivate::parseDescribePrefixListsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePrefixListsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

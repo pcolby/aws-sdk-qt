@@ -118,7 +118,7 @@ GetCommandInvocationResponsePrivate::GetCommandInvocationResponsePrivate(
 void GetCommandInvocationResponsePrivate::parseGetCommandInvocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCommandInvocationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

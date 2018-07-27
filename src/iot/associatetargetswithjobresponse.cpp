@@ -104,7 +104,7 @@ AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponsePrivate(
 void AssociateTargetsWithJobResponsePrivate::parseAssociateTargetsWithJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateTargetsWithJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -96,7 +96,7 @@ BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponseP
 void BatchDetectDominantLanguageResponsePrivate::parseBatchDetectDominantLanguageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectDominantLanguageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

@@ -158,7 +158,7 @@ DeleteUserPermissionsBoundaryResponsePrivate::DeleteUserPermissionsBoundaryRespo
 void DeleteUserPermissionsBoundaryResponsePrivate::parseDeleteUserPermissionsBoundaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserPermissionsBoundaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

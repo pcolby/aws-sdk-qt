@@ -118,7 +118,7 @@ GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroupRespo
 void GetPatchBaselineForPatchGroupResponsePrivate::parseGetPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPatchBaselineForPatchGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

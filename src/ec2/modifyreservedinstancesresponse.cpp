@@ -121,7 +121,7 @@ ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
 void ModifyReservedInstancesResponsePrivate::parseModifyReservedInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyReservedInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

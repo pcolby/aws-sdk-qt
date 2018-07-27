@@ -93,7 +93,7 @@ StartMonitoringMembersResponsePrivate::StartMonitoringMembersResponsePrivate(
 void StartMonitoringMembersResponsePrivate::parseStartMonitoringMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartMonitoringMembersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

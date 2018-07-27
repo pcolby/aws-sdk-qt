@@ -96,7 +96,7 @@ ListShardsResponsePrivate::ListShardsResponsePrivate(
 void ListShardsResponsePrivate::parseListShardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListShardsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

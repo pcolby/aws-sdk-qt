@@ -116,7 +116,7 @@ ListRuleNamesByTargetResponsePrivate::ListRuleNamesByTargetResponsePrivate(
 void ListRuleNamesByTargetResponsePrivate::parseListRuleNamesByTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRuleNamesByTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

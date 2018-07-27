@@ -113,7 +113,7 @@ DescribeAggregationAuthorizationsResponsePrivate::DescribeAggregationAuthorizati
 void DescribeAggregationAuthorizationsResponsePrivate::parseDescribeAggregationAuthorizationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAggregationAuthorizationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

@@ -121,7 +121,7 @@ DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
 void DescribeElasticGpusResponsePrivate::parseDescribeElasticGpusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticGpusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

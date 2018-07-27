@@ -169,7 +169,7 @@ PutSecretValueResponsePrivate::PutSecretValueResponsePrivate(
 void PutSecretValueResponsePrivate::parsePutSecretValueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutSecretValueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

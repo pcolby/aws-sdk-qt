@@ -104,7 +104,7 @@ CreateReplicationTaskResponsePrivate::CreateReplicationTaskResponsePrivate(
 void CreateReplicationTaskResponsePrivate::parseCreateReplicationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

@@ -98,7 +98,7 @@ UpdateGatewayResponseResponsePrivate::UpdateGatewayResponseResponsePrivate(
 void UpdateGatewayResponseResponsePrivate::parseUpdateGatewayResponseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGatewayResponseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -107,7 +107,7 @@ DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponsePrivate(
 void DescribeCacheClustersResponsePrivate::parseDescribeCacheClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheClustersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

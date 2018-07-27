@@ -93,7 +93,7 @@ SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePriva
 void SendTestEventNotificationResponsePrivate::parseSendTestEventNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendTestEventNotificationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

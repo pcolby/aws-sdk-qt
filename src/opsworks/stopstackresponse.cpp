@@ -199,7 +199,7 @@ StopStackResponsePrivate::StopStackResponsePrivate(
 void StopStackResponsePrivate::parseStopStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopStackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

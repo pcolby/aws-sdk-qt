@@ -118,7 +118,7 @@ UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
 void UpdateAssociationResponsePrivate::parseUpdateAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAssociationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

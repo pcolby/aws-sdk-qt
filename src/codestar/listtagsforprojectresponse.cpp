@@ -181,7 +181,7 @@ ListTagsForProjectResponsePrivate::ListTagsForProjectResponsePrivate(
 void ListTagsForProjectResponsePrivate::parseListTagsForProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

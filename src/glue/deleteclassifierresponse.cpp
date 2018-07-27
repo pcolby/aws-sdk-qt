@@ -96,7 +96,7 @@ DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
 void DeleteClassifierResponsePrivate::parseDeleteClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClassifierResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

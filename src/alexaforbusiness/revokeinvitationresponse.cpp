@@ -98,7 +98,7 @@ RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
 void RevokeInvitationResponsePrivate::parseRevokeInvitationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeInvitationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

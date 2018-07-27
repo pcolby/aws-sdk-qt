@@ -93,7 +93,7 @@ CreateFilterResponsePrivate::CreateFilterResponsePrivate(
 void CreateFilterResponsePrivate::parseCreateFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

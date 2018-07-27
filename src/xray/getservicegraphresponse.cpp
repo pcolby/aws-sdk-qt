@@ -94,7 +94,7 @@ GetServiceGraphResponsePrivate::GetServiceGraphResponsePrivate(
 void GetServiceGraphResponsePrivate::parseGetServiceGraphResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServiceGraphResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace XRay

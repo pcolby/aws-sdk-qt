@@ -107,7 +107,7 @@ DescribeReservedCacheNodesResponsePrivate::DescribeReservedCacheNodesResponsePri
 void DescribeReservedCacheNodesResponsePrivate::parseDescribeReservedCacheNodesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedCacheNodesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

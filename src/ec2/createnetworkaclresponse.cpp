@@ -121,7 +121,7 @@ CreateNetworkAclResponsePrivate::CreateNetworkAclResponsePrivate(
 void CreateNetworkAclResponsePrivate::parseCreateNetworkAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkAclResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

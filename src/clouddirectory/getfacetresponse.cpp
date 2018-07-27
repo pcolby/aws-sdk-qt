@@ -100,7 +100,7 @@ GetFacetResponsePrivate::GetFacetResponsePrivate(
 void GetFacetResponsePrivate::parseGetFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFacetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

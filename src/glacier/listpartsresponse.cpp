@@ -131,7 +131,7 @@ ListPartsResponsePrivate::ListPartsResponsePrivate(
 void ListPartsResponsePrivate::parseListPartsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPartsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

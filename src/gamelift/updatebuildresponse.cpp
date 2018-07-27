@@ -537,7 +537,7 @@ UpdateBuildResponsePrivate::UpdateBuildResponsePrivate(
 void UpdateBuildResponsePrivate::parseUpdateBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBuildResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

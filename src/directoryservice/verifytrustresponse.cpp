@@ -107,7 +107,7 @@ VerifyTrustResponsePrivate::VerifyTrustResponsePrivate(
 void VerifyTrustResponsePrivate::parseVerifyTrustResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyTrustResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

@@ -235,7 +235,7 @@ ListAccountsResponsePrivate::ListAccountsResponsePrivate(
 void ListAccountsResponsePrivate::parseListAccountsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAccountsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

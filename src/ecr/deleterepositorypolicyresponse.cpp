@@ -97,7 +97,7 @@ DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponsePrivate(
 void DeleteRepositoryPolicyResponsePrivate::parseDeleteRepositoryPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRepositoryPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

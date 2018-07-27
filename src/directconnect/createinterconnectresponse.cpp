@@ -101,7 +101,7 @@ CreateInterconnectResponsePrivate::CreateInterconnectResponsePrivate(
 void CreateInterconnectResponsePrivate::parseCreateInterconnectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInterconnectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

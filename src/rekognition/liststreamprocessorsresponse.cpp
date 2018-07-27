@@ -94,7 +94,7 @@ ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponsePrivate(
 void ListStreamProcessorsResponsePrivate::parseListStreamProcessorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStreamProcessorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

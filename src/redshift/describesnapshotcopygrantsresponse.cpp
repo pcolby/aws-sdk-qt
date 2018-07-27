@@ -123,7 +123,7 @@ DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsResponsePri
 void DescribeSnapshotCopyGrantsResponsePrivate::parseDescribeSnapshotCopyGrantsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotCopyGrantsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

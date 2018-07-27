@@ -161,7 +161,7 @@ DescribeTrustedAdvisorCheckSummariesResponsePrivate::DescribeTrustedAdvisorCheck
 void DescribeTrustedAdvisorCheckSummariesResponsePrivate::parseDescribeTrustedAdvisorCheckSummariesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrustedAdvisorCheckSummariesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

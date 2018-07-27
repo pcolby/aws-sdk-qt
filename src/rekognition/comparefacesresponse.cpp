@@ -94,7 +94,7 @@ CompareFacesResponsePrivate::CompareFacesResponsePrivate(
 void CompareFacesResponsePrivate::parseCompareFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompareFacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

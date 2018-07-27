@@ -121,7 +121,7 @@ DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponsePrivate(
 void DetachNetworkInterfaceResponsePrivate::parseDetachNetworkInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachNetworkInterfaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

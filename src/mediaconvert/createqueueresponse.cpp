@@ -93,7 +93,7 @@ CreateQueueResponsePrivate::CreateQueueResponsePrivate(
 void CreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

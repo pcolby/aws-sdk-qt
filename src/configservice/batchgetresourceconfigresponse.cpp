@@ -113,7 +113,7 @@ BatchGetResourceConfigResponsePrivate::BatchGetResourceConfigResponsePrivate(
 void BatchGetResourceConfigResponsePrivate::parseBatchGetResourceConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetResourceConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

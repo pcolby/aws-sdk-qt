@@ -158,7 +158,7 @@ CreateAccountAliasResponsePrivate::CreateAccountAliasResponsePrivate(
 void CreateAccountAliasResponsePrivate::parseCreateAccountAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAccountAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

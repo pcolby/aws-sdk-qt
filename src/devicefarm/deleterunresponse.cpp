@@ -95,7 +95,7 @@ DeleteRunResponsePrivate::DeleteRunResponsePrivate(
 void DeleteRunResponsePrivate::parseDeleteRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRunResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

@@ -113,7 +113,7 @@ DescribePipelineResponsePrivate::DescribePipelineResponsePrivate(
 void DescribePipelineResponsePrivate::parseDescribePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePipelineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

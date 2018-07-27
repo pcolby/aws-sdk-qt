@@ -111,7 +111,7 @@ GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePriva
 void GetReservationUtilizationResponsePrivate::parseGetReservationUtilizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservationUtilizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostExplorer

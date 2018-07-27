@@ -110,7 +110,7 @@ ListAttributesResponsePrivate::ListAttributesResponsePrivate(
 void ListAttributesResponsePrivate::parseListAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

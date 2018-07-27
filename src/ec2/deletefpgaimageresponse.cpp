@@ -121,7 +121,7 @@ DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
 void DeleteFpgaImageResponsePrivate::parseDeleteFpgaImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFpgaImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

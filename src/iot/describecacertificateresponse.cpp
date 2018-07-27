@@ -104,7 +104,7 @@ DescribeCACertificateResponsePrivate::DescribeCACertificateResponsePrivate(
 void DescribeCACertificateResponsePrivate::parseDescribeCACertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCACertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

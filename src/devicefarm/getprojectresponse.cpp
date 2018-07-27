@@ -95,7 +95,7 @@ GetProjectResponsePrivate::GetProjectResponsePrivate(
 void GetProjectResponsePrivate::parseGetProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

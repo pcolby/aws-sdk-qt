@@ -137,7 +137,7 @@ GetGroupQueryResponsePrivate::GetGroupQueryResponsePrivate(
 void GetGroupQueryResponsePrivate::parseGetGroupQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGroupQueryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

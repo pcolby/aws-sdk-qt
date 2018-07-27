@@ -118,7 +118,7 @@ DescribeMaintenanceWindowTasksResponsePrivate::DescribeMaintenanceWindowTasksRes
 void DescribeMaintenanceWindowTasksResponsePrivate::parseDescribeMaintenanceWindowTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceWindowTasksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

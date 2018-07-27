@@ -235,7 +235,7 @@ DeclineHandshakeResponsePrivate::DeclineHandshakeResponsePrivate(
 void DeclineHandshakeResponsePrivate::parseDeclineHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeclineHandshakeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

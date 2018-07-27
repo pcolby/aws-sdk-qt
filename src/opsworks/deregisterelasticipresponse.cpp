@@ -199,7 +199,7 @@ DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponsePrivate(
 void DeregisterElasticIpResponsePrivate::parseDeregisterElasticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterElasticIpResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

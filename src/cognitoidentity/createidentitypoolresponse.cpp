@@ -131,7 +131,7 @@ CreateIdentityPoolResponsePrivate::CreateIdentityPoolResponsePrivate(
 void CreateIdentityPoolResponsePrivate::parseCreateIdentityPoolResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIdentityPoolResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

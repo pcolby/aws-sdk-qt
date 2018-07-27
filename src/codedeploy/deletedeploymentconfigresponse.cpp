@@ -174,7 +174,7 @@ DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponsePrivate(
 void DeleteDeploymentConfigResponsePrivate::parseDeleteDeploymentConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

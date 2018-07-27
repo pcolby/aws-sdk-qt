@@ -103,7 +103,7 @@ AdminConfirmSignUpResponsePrivate::AdminConfirmSignUpResponsePrivate(
 void AdminConfirmSignUpResponsePrivate::parseAdminConfirmSignUpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminConfirmSignUpResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

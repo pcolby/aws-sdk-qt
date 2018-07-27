@@ -104,7 +104,7 @@ DefineSuggesterResponsePrivate::DefineSuggesterResponsePrivate(
 void DefineSuggesterResponsePrivate::parseDefineSuggesterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineSuggesterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

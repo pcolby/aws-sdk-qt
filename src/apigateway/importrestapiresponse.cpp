@@ -98,7 +98,7 @@ ImportRestApiResponsePrivate::ImportRestApiResponsePrivate(
 void ImportRestApiResponsePrivate::parseImportRestApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportRestApiResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

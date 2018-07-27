@@ -174,7 +174,7 @@ RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceResponsePri
 void RegisterOnPremisesInstanceResponsePrivate::parseRegisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterOnPremisesInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

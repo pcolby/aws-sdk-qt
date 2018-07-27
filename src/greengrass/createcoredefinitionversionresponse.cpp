@@ -96,7 +96,7 @@ CreateCoreDefinitionVersionResponsePrivate::CreateCoreDefinitionVersionResponseP
 void CreateCoreDefinitionVersionResponsePrivate::parseCreateCoreDefinitionVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCoreDefinitionVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

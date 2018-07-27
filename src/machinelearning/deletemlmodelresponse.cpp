@@ -93,7 +93,7 @@ DeleteMLModelResponsePrivate::DeleteMLModelResponsePrivate(
 void DeleteMLModelResponsePrivate::parseDeleteMLModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMLModelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

@@ -117,7 +117,7 @@ DescribeDBInstancesResponsePrivate::DescribeDBInstancesResponsePrivate(
 void DescribeDBInstancesResponsePrivate::parseDescribeDBInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

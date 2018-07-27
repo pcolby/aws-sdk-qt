@@ -104,7 +104,7 @@ DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponsePrivate(
 void DeleteAnalysisSchemeResponsePrivate::parseDeleteAnalysisSchemeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAnalysisSchemeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

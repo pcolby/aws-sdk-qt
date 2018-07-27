@@ -158,7 +158,7 @@ ListRolePoliciesResponsePrivate::ListRolePoliciesResponsePrivate(
 void ListRolePoliciesResponsePrivate::parseListRolePoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRolePoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

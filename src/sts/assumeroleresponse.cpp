@@ -151,7 +151,7 @@ AssumeRoleResponsePrivate::AssumeRoleResponsePrivate(
 void AssumeRoleResponsePrivate::parseAssumeRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace STS

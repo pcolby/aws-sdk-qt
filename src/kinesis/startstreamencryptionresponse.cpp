@@ -96,7 +96,7 @@ StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponsePrivate(
 void StartStreamEncryptionResponsePrivate::parseStartStreamEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartStreamEncryptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

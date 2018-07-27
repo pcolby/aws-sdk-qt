@@ -93,7 +93,7 @@ ListHyperParameterTuningJobsResponsePrivate::ListHyperParameterTuningJobsRespons
 void ListHyperParameterTuningJobsResponsePrivate::parseListHyperParameterTuningJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHyperParameterTuningJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

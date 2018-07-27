@@ -235,7 +235,7 @@ CreateAccountResponsePrivate::CreateAccountResponsePrivate(
 void CreateAccountResponsePrivate::parseCreateAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

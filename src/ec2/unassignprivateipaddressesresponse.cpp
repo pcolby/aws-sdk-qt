@@ -121,7 +121,7 @@ UnassignPrivateIpAddressesResponsePrivate::UnassignPrivateIpAddressesResponsePri
 void UnassignPrivateIpAddressesResponsePrivate::parseUnassignPrivateIpAddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnassignPrivateIpAddressesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

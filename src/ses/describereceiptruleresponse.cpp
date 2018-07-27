@@ -104,7 +104,7 @@ DescribeReceiptRuleResponsePrivate::DescribeReceiptRuleResponsePrivate(
 void DescribeReceiptRuleResponsePrivate::parseDescribeReceiptRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReceiptRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

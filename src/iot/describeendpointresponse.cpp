@@ -104,7 +104,7 @@ DescribeEndpointResponsePrivate::DescribeEndpointResponsePrivate(
 void DescribeEndpointResponsePrivate::parseDescribeEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

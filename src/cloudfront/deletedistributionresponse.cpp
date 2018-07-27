@@ -98,7 +98,7 @@ DeleteDistributionResponsePrivate::DeleteDistributionResponsePrivate(
 void DeleteDistributionResponsePrivate::parseDeleteDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDistributionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

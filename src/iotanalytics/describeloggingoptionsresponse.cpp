@@ -113,7 +113,7 @@ DescribeLoggingOptionsResponsePrivate::DescribeLoggingOptionsResponsePrivate(
 void DescribeLoggingOptionsResponsePrivate::parseDescribeLoggingOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoggingOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

@@ -95,7 +95,7 @@ CreateUserResponsePrivate::CreateUserResponsePrivate(
 void CreateUserResponsePrivate::parseCreateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

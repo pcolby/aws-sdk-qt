@@ -109,7 +109,7 @@ GetDisksResponsePrivate::GetDisksResponsePrivate(
 void GetDisksResponsePrivate::parseGetDisksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDisksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

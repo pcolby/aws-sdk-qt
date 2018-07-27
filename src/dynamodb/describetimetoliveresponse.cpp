@@ -112,7 +112,7 @@ DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponsePrivate(
 void DescribeTimeToLiveResponsePrivate::parseDescribeTimeToLiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTimeToLiveResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

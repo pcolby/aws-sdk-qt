@@ -162,7 +162,7 @@ DescribeStorediSCSIVolumesResponsePrivate::DescribeStorediSCSIVolumesResponsePri
 void DescribeStorediSCSIVolumesResponsePrivate::parseDescribeStorediSCSIVolumesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStorediSCSIVolumesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

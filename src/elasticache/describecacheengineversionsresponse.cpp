@@ -107,7 +107,7 @@ DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponseP
 void DescribeCacheEngineVersionsResponsePrivate::parseDescribeCacheEngineVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheEngineVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

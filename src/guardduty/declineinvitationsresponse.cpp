@@ -93,7 +93,7 @@ DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
 void DeclineInvitationsResponsePrivate::parseDeclineInvitationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeclineInvitationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

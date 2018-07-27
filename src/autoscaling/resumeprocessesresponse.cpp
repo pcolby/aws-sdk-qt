@@ -98,7 +98,7 @@ ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
 void ResumeProcessesResponsePrivate::parseResumeProcessesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResumeProcessesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

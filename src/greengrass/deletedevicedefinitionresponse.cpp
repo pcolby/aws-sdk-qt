@@ -96,7 +96,7 @@ DeleteDeviceDefinitionResponsePrivate::DeleteDeviceDefinitionResponsePrivate(
 void DeleteDeviceDefinitionResponsePrivate::parseDeleteDeviceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeviceDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

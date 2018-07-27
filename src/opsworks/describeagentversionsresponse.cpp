@@ -199,7 +199,7 @@ DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponsePrivate(
 void DescribeAgentVersionsResponsePrivate::parseDescribeAgentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAgentVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

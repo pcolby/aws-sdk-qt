@@ -95,7 +95,7 @@ AssociateDiscoveredResourceResponsePrivate::AssociateDiscoveredResourceResponseP
 void AssociateDiscoveredResourceResponsePrivate::parseAssociateDiscoveredResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDiscoveredResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

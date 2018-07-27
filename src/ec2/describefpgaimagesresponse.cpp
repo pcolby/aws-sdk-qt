@@ -121,7 +121,7 @@ DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponsePrivate(
 void DescribeFpgaImagesResponsePrivate::parseDescribeFpgaImagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFpgaImagesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

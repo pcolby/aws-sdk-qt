@@ -181,7 +181,7 @@ ListUserProfilesResponsePrivate::ListUserProfilesResponsePrivate(
 void ListUserProfilesResponsePrivate::parseListUserProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListUserProfilesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

@@ -94,7 +94,7 @@ StartStreamProcessorResponsePrivate::StartStreamProcessorResponsePrivate(
 void StartStreamProcessorResponsePrivate::parseStartStreamProcessorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartStreamProcessorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

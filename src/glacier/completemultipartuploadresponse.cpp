@@ -131,7 +131,7 @@ CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponsePrivate(
 void CompleteMultipartUploadResponsePrivate::parseCompleteMultipartUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteMultipartUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

@@ -109,7 +109,7 @@ GetOperationResponsePrivate::GetOperationResponsePrivate(
 void GetOperationResponsePrivate::parseGetOperationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOperationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

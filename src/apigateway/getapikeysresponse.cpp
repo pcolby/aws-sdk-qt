@@ -98,7 +98,7 @@ GetApiKeysResponsePrivate::GetApiKeysResponsePrivate(
 void GetApiKeysResponsePrivate::parseGetApiKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApiKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

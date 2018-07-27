@@ -174,7 +174,7 @@ BatchGetApplicationRevisionsResponsePrivate::BatchGetApplicationRevisionsRespons
 void BatchGetApplicationRevisionsResponsePrivate::parseBatchGetApplicationRevisionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetApplicationRevisionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

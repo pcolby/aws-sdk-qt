@@ -98,7 +98,7 @@ GetVpcLinksResponsePrivate::GetVpcLinksResponsePrivate(
 void GetVpcLinksResponsePrivate::parseGetVpcLinksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVpcLinksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

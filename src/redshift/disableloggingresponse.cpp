@@ -123,7 +123,7 @@ DisableLoggingResponsePrivate::DisableLoggingResponsePrivate(
 void DisableLoggingResponsePrivate::parseDisableLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableLoggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

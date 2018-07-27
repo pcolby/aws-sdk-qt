@@ -103,7 +103,7 @@ AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponsePrivate(
 void AdminAddUserToGroupResponsePrivate::parseAdminAddUserToGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminAddUserToGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

@@ -109,7 +109,7 @@ DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
 void DescribeDomainResponsePrivate::parseDescribeDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

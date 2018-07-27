@@ -116,7 +116,7 @@ PutEventSelectorsResponsePrivate::PutEventSelectorsResponsePrivate(
 void PutEventSelectorsResponsePrivate::parsePutEventSelectorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutEventSelectorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

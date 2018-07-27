@@ -199,7 +199,7 @@ DescribeLayersResponsePrivate::DescribeLayersResponsePrivate(
 void DescribeLayersResponsePrivate::parseDescribeLayersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLayersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

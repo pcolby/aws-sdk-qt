@@ -122,7 +122,7 @@ FilterLogEventsResponsePrivate::FilterLogEventsResponsePrivate(
 void FilterLogEventsResponsePrivate::parseFilterLogEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("FilterLogEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

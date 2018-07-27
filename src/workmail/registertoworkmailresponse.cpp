@@ -126,7 +126,7 @@ RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponsePrivate(
 void RegisterToWorkMailResponsePrivate::parseRegisterToWorkMailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterToWorkMailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

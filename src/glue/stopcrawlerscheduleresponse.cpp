@@ -96,7 +96,7 @@ StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponsePrivate(
 void StopCrawlerScheduleResponsePrivate::parseStopCrawlerScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopCrawlerScheduleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

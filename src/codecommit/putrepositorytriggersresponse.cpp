@@ -283,7 +283,7 @@ PutRepositoryTriggersResponsePrivate::PutRepositoryTriggersResponsePrivate(
 void PutRepositoryTriggersResponsePrivate::parsePutRepositoryTriggersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRepositoryTriggersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

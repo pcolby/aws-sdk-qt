@@ -100,7 +100,7 @@ AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
 void AddFacetToObjectResponsePrivate::parseAddFacetToObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddFacetToObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

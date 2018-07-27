@@ -96,7 +96,7 @@ DeleteIpGroupResponsePrivate::DeleteIpGroupResponsePrivate(
 void DeleteIpGroupResponsePrivate::parseDeleteIpGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIpGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

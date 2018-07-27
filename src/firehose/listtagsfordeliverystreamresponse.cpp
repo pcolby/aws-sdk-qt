@@ -97,7 +97,7 @@ ListTagsForDeliveryStreamResponsePrivate::ListTagsForDeliveryStreamResponsePriva
 void ListTagsForDeliveryStreamResponsePrivate::parseListTagsForDeliveryStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForDeliveryStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

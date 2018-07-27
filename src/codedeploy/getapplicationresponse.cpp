@@ -174,7 +174,7 @@ GetApplicationResponsePrivate::GetApplicationResponsePrivate(
 void GetApplicationResponsePrivate::parseGetApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

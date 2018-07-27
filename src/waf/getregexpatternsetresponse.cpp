@@ -98,7 +98,7 @@ GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
 void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegexPatternSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

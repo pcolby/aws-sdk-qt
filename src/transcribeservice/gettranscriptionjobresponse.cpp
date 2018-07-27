@@ -94,7 +94,7 @@ GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponsePrivate(
 void GetTranscriptionJobResponsePrivate::parseGetTranscriptionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTranscriptionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace TranscribeService

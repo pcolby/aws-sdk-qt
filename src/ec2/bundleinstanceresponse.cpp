@@ -121,7 +121,7 @@ BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
 void BundleInstanceResponsePrivate::parseBundleInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BundleInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

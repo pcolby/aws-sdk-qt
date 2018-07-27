@@ -136,7 +136,7 @@ DescribeNotificationsForBudgetResponsePrivate::DescribeNotificationsForBudgetRes
 void DescribeNotificationsForBudgetResponsePrivate::parseDescribeNotificationsForBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotificationsForBudgetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

@@ -98,7 +98,7 @@ SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponsePrivate(
 void SetInstanceProtectionResponsePrivate::parseSetInstanceProtectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetInstanceProtectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

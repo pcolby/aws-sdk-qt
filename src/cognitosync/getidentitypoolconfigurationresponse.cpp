@@ -113,7 +113,7 @@ GetIdentityPoolConfigurationResponsePrivate::GetIdentityPoolConfigurationRespons
 void GetIdentityPoolConfigurationResponsePrivate::parseGetIdentityPoolConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityPoolConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

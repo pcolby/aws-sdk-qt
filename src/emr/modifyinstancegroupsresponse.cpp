@@ -96,7 +96,7 @@ ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
 void ModifyInstanceGroupsResponsePrivate::parseModifyInstanceGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

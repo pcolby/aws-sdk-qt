@@ -121,7 +121,7 @@ GetReservedInstancesExchangeQuoteResponsePrivate::GetReservedInstancesExchangeQu
 void GetReservedInstancesExchangeQuoteResponsePrivate::parseGetReservedInstancesExchangeQuoteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservedInstancesExchangeQuoteResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

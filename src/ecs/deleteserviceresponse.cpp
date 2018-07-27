@@ -110,7 +110,7 @@ DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
 void DeleteServiceResponsePrivate::parseDeleteServiceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServiceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

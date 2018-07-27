@@ -126,7 +126,7 @@ DescribeResourceResponsePrivate::DescribeResourceResponsePrivate(
 void DescribeResourceResponsePrivate::parseDescribeResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

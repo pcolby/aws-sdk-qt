@@ -147,7 +147,7 @@ CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2ResponsePrivate(
 void CreateEnvironmentEC2ResponsePrivate::parseCreateEnvironmentEC2Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentEC2Response"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Cloud9

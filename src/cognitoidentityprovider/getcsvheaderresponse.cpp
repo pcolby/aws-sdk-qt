@@ -103,7 +103,7 @@ GetCSVHeaderResponsePrivate::GetCSVHeaderResponsePrivate(
 void GetCSVHeaderResponsePrivate::parseGetCSVHeaderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCSVHeaderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

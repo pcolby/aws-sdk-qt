@@ -174,7 +174,7 @@ GetDeploymentInstanceResponsePrivate::GetDeploymentInstanceResponsePrivate(
 void GetDeploymentInstanceResponsePrivate::parseGetDeploymentInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeploymentInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

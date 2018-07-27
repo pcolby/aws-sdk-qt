@@ -99,7 +99,7 @@ GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
 void GetThingShadowResponsePrivate::parseGetThingShadowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetThingShadowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTDataPlane

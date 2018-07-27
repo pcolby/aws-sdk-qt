@@ -158,7 +158,7 @@ CreateServiceSpecificCredentialResponsePrivate::CreateServiceSpecificCredentialR
 void CreateServiceSpecificCredentialResponsePrivate::parseCreateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateServiceSpecificCredentialResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

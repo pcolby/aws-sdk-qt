@@ -173,7 +173,7 @@ ListBuildsResponsePrivate::ListBuildsResponsePrivate(
 void ListBuildsResponsePrivate::parseListBuildsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBuildsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

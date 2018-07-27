@@ -104,7 +104,7 @@ DescribeThingTypeResponsePrivate::DescribeThingTypeResponsePrivate(
 void DescribeThingTypeResponsePrivate::parseDescribeThingTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeThingTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

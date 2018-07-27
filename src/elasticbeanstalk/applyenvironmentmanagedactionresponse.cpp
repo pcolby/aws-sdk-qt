@@ -115,7 +115,7 @@ ApplyEnvironmentManagedActionResponsePrivate::ApplyEnvironmentManagedActionRespo
 void ApplyEnvironmentManagedActionResponsePrivate::parseApplyEnvironmentManagedActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ApplyEnvironmentManagedActionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

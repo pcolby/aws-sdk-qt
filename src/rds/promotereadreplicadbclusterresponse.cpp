@@ -157,7 +157,7 @@ PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponseP
 void PromoteReadReplicaDBClusterResponsePrivate::parsePromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaDBClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

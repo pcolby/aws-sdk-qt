@@ -131,7 +131,7 @@ DeleteVaultAccessPolicyResponsePrivate::DeleteVaultAccessPolicyResponsePrivate(
 void DeleteVaultAccessPolicyResponsePrivate::parseDeleteVaultAccessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultAccessPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

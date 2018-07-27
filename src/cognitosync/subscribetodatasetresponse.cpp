@@ -113,7 +113,7 @@ SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponsePrivate(
 void SubscribeToDatasetResponsePrivate::parseSubscribeToDatasetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubscribeToDatasetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

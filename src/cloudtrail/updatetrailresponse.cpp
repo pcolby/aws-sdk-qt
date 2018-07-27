@@ -116,7 +116,7 @@ UpdateTrailResponsePrivate::UpdateTrailResponsePrivate(
 void UpdateTrailResponsePrivate::parseUpdateTrailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTrailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

@@ -98,7 +98,7 @@ GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigRes
 void GetStreamingDistributionConfigResponsePrivate::parseGetStreamingDistributionConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetStreamingDistributionConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

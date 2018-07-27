@@ -98,7 +98,7 @@ DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponsePri
 void DisassociateDeviceFromRoomResponsePrivate::parseDisassociateDeviceFromRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDeviceFromRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

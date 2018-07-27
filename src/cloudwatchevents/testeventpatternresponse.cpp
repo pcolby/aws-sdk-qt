@@ -116,7 +116,7 @@ TestEventPatternResponsePrivate::TestEventPatternResponsePrivate(
 void TestEventPatternResponsePrivate::parseTestEventPatternResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestEventPatternResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

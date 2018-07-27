@@ -95,7 +95,7 @@ DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
 void DeleteBrokerResponsePrivate::parseDeleteBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBrokerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

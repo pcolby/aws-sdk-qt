@@ -104,7 +104,7 @@ ListCertificatesByCAResponsePrivate::ListCertificatesByCAResponsePrivate(
 void ListCertificatesByCAResponsePrivate::parseListCertificatesByCAResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCertificatesByCAResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

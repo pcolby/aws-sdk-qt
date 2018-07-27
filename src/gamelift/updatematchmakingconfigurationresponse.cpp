@@ -537,7 +537,7 @@ UpdateMatchmakingConfigurationResponsePrivate::UpdateMatchmakingConfigurationRes
 void UpdateMatchmakingConfigurationResponsePrivate::parseUpdateMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateMatchmakingConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

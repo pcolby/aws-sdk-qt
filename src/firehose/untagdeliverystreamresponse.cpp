@@ -97,7 +97,7 @@ UntagDeliveryStreamResponsePrivate::UntagDeliveryStreamResponsePrivate(
 void UntagDeliveryStreamResponsePrivate::parseUntagDeliveryStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagDeliveryStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

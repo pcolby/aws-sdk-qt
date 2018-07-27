@@ -109,7 +109,7 @@ RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
 void RegisterWorkflowTypeResponsePrivate::parseRegisterWorkflowTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterWorkflowTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

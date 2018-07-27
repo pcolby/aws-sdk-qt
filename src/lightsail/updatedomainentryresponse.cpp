@@ -109,7 +109,7 @@ UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponsePrivate(
 void UpdateDomainEntryResponsePrivate::parseUpdateDomainEntryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainEntryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

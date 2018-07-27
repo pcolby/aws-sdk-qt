@@ -113,7 +113,7 @@ DeletePendingAggregationRequestResponsePrivate::DeletePendingAggregationRequestR
 void DeletePendingAggregationRequestResponsePrivate::parseDeletePendingAggregationRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePendingAggregationRequestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

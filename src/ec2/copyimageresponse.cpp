@@ -121,7 +121,7 @@ CopyImageResponsePrivate::CopyImageResponsePrivate(
 void CopyImageResponsePrivate::parseCopyImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -104,7 +104,7 @@ DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponsePrivate(
 void DeleteTopicRuleResponsePrivate::parseDeleteTopicRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTopicRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

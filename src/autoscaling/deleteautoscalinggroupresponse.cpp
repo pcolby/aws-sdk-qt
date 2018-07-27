@@ -98,7 +98,7 @@ DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponsePrivate(
 void DeleteAutoScalingGroupResponsePrivate::parseDeleteAutoScalingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAutoScalingGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

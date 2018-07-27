@@ -112,7 +112,7 @@ UpdateGlobalTableSettingsResponsePrivate::UpdateGlobalTableSettingsResponsePriva
 void UpdateGlobalTableSettingsResponsePrivate::parseUpdateGlobalTableSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGlobalTableSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

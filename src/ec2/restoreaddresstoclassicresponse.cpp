@@ -121,7 +121,7 @@ RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
 void RestoreAddressToClassicResponsePrivate::parseRestoreAddressToClassicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreAddressToClassicResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

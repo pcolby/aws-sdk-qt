@@ -96,7 +96,7 @@ UpdatePipelineNotificationsResponsePrivate::UpdatePipelineNotificationsResponseP
 void UpdatePipelineNotificationsResponsePrivate::parseUpdatePipelineNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePipelineNotificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

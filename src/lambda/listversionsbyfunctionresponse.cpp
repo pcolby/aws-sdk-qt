@@ -104,7 +104,7 @@ ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
 void ListVersionsByFunctionResponsePrivate::parseListVersionsByFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVersionsByFunctionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

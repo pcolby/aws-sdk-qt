@@ -118,7 +118,7 @@ GetParametersByPathResponsePrivate::GetParametersByPathResponsePrivate(
 void GetParametersByPathResponsePrivate::parseGetParametersByPathResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetParametersByPathResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

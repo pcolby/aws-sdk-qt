@@ -93,7 +93,7 @@ CreateHyperParameterTuningJobResponsePrivate::CreateHyperParameterTuningJobRespo
 void CreateHyperParameterTuningJobResponsePrivate::parseCreateHyperParameterTuningJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHyperParameterTuningJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

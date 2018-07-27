@@ -162,7 +162,7 @@ ListVolumeInitiatorsResponsePrivate::ListVolumeInitiatorsResponsePrivate(
 void ListVolumeInitiatorsResponsePrivate::parseListVolumeInitiatorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVolumeInitiatorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

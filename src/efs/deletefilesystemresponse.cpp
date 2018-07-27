@@ -99,7 +99,7 @@ DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
 void DeleteFileSystemResponsePrivate::parseDeleteFileSystemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFileSystemResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EFS

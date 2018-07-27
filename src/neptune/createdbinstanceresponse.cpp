@@ -117,7 +117,7 @@ CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
 void CreateDBInstanceResponsePrivate::parseCreateDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

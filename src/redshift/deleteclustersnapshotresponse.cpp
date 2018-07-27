@@ -123,7 +123,7 @@ DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponsePrivate(
 void DeleteClusterSnapshotResponsePrivate::parseDeleteClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

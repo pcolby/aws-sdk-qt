@@ -106,7 +106,7 @@ SelectResponsePrivate::SelectResponsePrivate(
 void SelectResponsePrivate::parseSelectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SelectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SimpleDB

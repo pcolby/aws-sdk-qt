@@ -93,7 +93,7 @@ StopTransformJobResponsePrivate::StopTransformJobResponsePrivate(
 void StopTransformJobResponsePrivate::parseStopTransformJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopTransformJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

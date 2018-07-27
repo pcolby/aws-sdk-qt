@@ -94,7 +94,7 @@ DisableDomainTransferLockResponsePrivate::DisableDomainTransferLockResponsePriva
 void DisableDomainTransferLockResponsePrivate::parseDisableDomainTransferLockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableDomainTransferLockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

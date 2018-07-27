@@ -107,7 +107,7 @@ GetSMSAttributesResponsePrivate::GetSMSAttributesResponsePrivate(
 void GetSMSAttributesResponsePrivate::parseGetSMSAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSMSAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

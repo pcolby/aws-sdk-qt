@@ -104,7 +104,7 @@ DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsR
 void DescribeReplicationSubnetGroupsResponsePrivate::parseDescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationSubnetGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

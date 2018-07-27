@@ -158,7 +158,7 @@ DetachUserPolicyResponsePrivate::DetachUserPolicyResponsePrivate(
 void DetachUserPolicyResponsePrivate::parseDetachUserPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachUserPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -162,7 +162,7 @@ CancelArchivalResponsePrivate::CancelArchivalResponsePrivate(
 void CancelArchivalResponsePrivate::parseCancelArchivalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelArchivalResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

@@ -159,7 +159,7 @@ GetQueueUrlResponsePrivate::GetQueueUrlResponsePrivate(
 void GetQueueUrlResponsePrivate::parseGetQueueUrlResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetQueueUrlResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

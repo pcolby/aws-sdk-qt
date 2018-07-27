@@ -93,7 +93,7 @@ GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
 void GetGeoLocationResponsePrivate::parseGetGeoLocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGeoLocationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

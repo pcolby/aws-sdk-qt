@@ -98,7 +98,7 @@ ListStreamingDistributionsResponsePrivate::ListStreamingDistributionsResponsePri
 void ListStreamingDistributionsResponsePrivate::parseListStreamingDistributionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStreamingDistributionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

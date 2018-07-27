@@ -235,7 +235,7 @@ DescribeAccountResponsePrivate::DescribeAccountResponsePrivate(
 void DescribeAccountResponsePrivate::parseDescribeAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

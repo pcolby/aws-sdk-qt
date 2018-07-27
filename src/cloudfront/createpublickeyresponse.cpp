@@ -98,7 +98,7 @@ CreatePublicKeyResponsePrivate::CreatePublicKeyResponsePrivate(
 void CreatePublicKeyResponsePrivate::parseCreatePublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePublicKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

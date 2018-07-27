@@ -96,7 +96,7 @@ DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesRespons
 void DescribeWorkspaceDirectoriesResponsePrivate::parseDescribeWorkspaceDirectoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspaceDirectoriesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

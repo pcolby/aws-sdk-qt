@@ -98,7 +98,7 @@ CreateRoomResponsePrivate::CreateRoomResponsePrivate(
 void CreateRoomResponsePrivate::parseCreateRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

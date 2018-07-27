@@ -94,7 +94,7 @@ GetDeviceMethodsResponsePrivate::GetDeviceMethodsResponsePrivate(
 void GetDeviceMethodsResponsePrivate::parseGetDeviceMethodsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeviceMethodsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickDevicesService

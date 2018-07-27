@@ -96,7 +96,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 void CancelJobResponsePrivate::parseCancelJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

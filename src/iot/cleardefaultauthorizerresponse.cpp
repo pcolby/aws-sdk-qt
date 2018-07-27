@@ -104,7 +104,7 @@ ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponsePrivate(
 void ClearDefaultAuthorizerResponsePrivate::parseClearDefaultAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ClearDefaultAuthorizerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

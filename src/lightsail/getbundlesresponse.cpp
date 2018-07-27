@@ -109,7 +109,7 @@ GetBundlesResponsePrivate::GetBundlesResponsePrivate(
 void GetBundlesResponsePrivate::parseGetBundlesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBundlesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

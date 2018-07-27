@@ -109,7 +109,7 @@ GetActiveNamesResponsePrivate::GetActiveNamesResponsePrivate(
 void GetActiveNamesResponsePrivate::parseGetActiveNamesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetActiveNamesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

@@ -157,7 +157,7 @@ AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
 void AddRoleToDBClusterResponsePrivate::parseAddRoleToDBClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddRoleToDBClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

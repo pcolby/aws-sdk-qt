@@ -96,7 +96,7 @@ ListBundlesResponsePrivate::ListBundlesResponsePrivate(
 void ListBundlesResponsePrivate::parseListBundlesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBundlesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Mobile

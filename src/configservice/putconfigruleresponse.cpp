@@ -113,7 +113,7 @@ PutConfigRuleResponsePrivate::PutConfigRuleResponsePrivate(
 void PutConfigRuleResponsePrivate::parsePutConfigRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutConfigRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

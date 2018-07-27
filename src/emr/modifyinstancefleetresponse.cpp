@@ -96,7 +96,7 @@ ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
 void ModifyInstanceFleetResponsePrivate::parseModifyInstanceFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

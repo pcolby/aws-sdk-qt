@@ -98,7 +98,7 @@ UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
 void UnsubscribeFromEventResponsePrivate::parseUnsubscribeFromEventResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromEventResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

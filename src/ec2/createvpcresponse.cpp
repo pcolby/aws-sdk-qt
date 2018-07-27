@@ -121,7 +121,7 @@ CreateVpcResponsePrivate::CreateVpcResponsePrivate(
 void CreateVpcResponsePrivate::parseCreateVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

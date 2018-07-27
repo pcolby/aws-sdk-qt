@@ -104,7 +104,7 @@ TestConnectionResponsePrivate::TestConnectionResponsePrivate(
 void TestConnectionResponsePrivate::parseTestConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestConnectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

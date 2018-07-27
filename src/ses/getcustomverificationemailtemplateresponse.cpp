@@ -104,7 +104,7 @@ GetCustomVerificationEmailTemplateResponsePrivate::GetCustomVerificationEmailTem
 void GetCustomVerificationEmailTemplateResponsePrivate::parseGetCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCustomVerificationEmailTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

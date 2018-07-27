@@ -107,7 +107,7 @@ DescribeReplicationGroupsResponsePrivate::DescribeReplicationGroupsResponsePriva
 void DescribeReplicationGroupsResponsePrivate::parseDescribeReplicationGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

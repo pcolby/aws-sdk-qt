@@ -174,7 +174,7 @@ UpdateDeploymentGroupResponsePrivate::UpdateDeploymentGroupResponsePrivate(
 void UpdateDeploymentGroupResponsePrivate::parseUpdateDeploymentGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDeploymentGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

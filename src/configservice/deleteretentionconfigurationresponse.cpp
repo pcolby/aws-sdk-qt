@@ -113,7 +113,7 @@ DeleteRetentionConfigurationResponsePrivate::DeleteRetentionConfigurationRespons
 void DeleteRetentionConfigurationResponsePrivate::parseDeleteRetentionConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRetentionConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

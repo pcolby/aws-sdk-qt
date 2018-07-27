@@ -98,7 +98,7 @@ CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponsePrivate(
 void CreateOrUpdateTagsResponsePrivate::parseCreateOrUpdateTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOrUpdateTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

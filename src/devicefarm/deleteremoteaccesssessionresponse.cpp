@@ -95,7 +95,7 @@ DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponsePriva
 void DeleteRemoteAccessSessionResponsePrivate::parseDeleteRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRemoteAccessSessionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

@@ -94,7 +94,7 @@ StopStreamProcessorResponsePrivate::StopStreamProcessorResponsePrivate(
 void StopStreamProcessorResponsePrivate::parseStopStreamProcessorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopStreamProcessorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

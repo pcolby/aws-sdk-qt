@@ -100,7 +100,7 @@ EnableDirectoryResponsePrivate::EnableDirectoryResponsePrivate(
 void EnableDirectoryResponsePrivate::parseEnableDirectoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableDirectoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

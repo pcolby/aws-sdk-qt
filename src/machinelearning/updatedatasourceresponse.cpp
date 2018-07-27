@@ -93,7 +93,7 @@ UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
 void UpdateDataSourceResponsePrivate::parseUpdateDataSourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDataSourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

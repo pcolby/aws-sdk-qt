@@ -113,7 +113,7 @@ UpdatePipelineResponsePrivate::UpdatePipelineResponsePrivate(
 void UpdatePipelineResponsePrivate::parseUpdatePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePipelineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

@@ -94,7 +94,7 @@ PutEventsResponsePrivate::PutEventsResponsePrivate(
 void PutEventsResponsePrivate::parsePutEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MobileAnalytics

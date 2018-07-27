@@ -107,7 +107,7 @@ UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponsePrivate(
 void UpdateJobExecutionResponsePrivate::parseUpdateJobExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTJobsDataPlane

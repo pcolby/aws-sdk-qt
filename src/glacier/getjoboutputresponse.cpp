@@ -131,7 +131,7 @@ GetJobOutputResponsePrivate::GetJobOutputResponsePrivate(
 void GetJobOutputResponsePrivate::parseGetJobOutputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobOutputResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

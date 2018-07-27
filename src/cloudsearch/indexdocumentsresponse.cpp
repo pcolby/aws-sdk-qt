@@ -104,7 +104,7 @@ IndexDocumentsResponsePrivate::IndexDocumentsResponsePrivate(
 void IndexDocumentsResponsePrivate::parseIndexDocumentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IndexDocumentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

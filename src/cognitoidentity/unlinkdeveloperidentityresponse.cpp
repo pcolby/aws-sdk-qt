@@ -131,7 +131,7 @@ UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponsePrivate(
 void UnlinkDeveloperIdentityResponsePrivate::parseUnlinkDeveloperIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnlinkDeveloperIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

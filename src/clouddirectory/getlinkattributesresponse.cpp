@@ -100,7 +100,7 @@ GetLinkAttributesResponsePrivate::GetLinkAttributesResponsePrivate(
 void GetLinkAttributesResponsePrivate::parseGetLinkAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLinkAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

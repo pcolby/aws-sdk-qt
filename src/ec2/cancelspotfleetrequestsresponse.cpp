@@ -121,7 +121,7 @@ CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
 void CancelSpotFleetRequestsResponsePrivate::parseCancelSpotFleetRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelSpotFleetRequestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

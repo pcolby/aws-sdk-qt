@@ -122,7 +122,7 @@ DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResponseP
 void DescribeResourcePermissionsResponsePrivate::parseDescribeResourcePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourcePermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

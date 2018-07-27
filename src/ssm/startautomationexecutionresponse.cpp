@@ -118,7 +118,7 @@ StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponsePrivate
 void StartAutomationExecutionResponsePrivate::parseStartAutomationExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartAutomationExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

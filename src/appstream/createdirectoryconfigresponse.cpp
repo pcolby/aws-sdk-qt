@@ -96,7 +96,7 @@ CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponsePrivate(
 void CreateDirectoryConfigResponsePrivate::parseCreateDirectoryConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDirectoryConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

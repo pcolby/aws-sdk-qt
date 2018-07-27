@@ -157,7 +157,7 @@ DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponseP
 void DescribeReservedDBInstancesResponsePrivate::parseDescribeReservedDBInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedDBInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

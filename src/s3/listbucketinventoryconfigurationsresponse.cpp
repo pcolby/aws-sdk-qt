@@ -93,7 +93,7 @@ ListBucketInventoryConfigurationsResponsePrivate::ListBucketInventoryConfigurati
 void ListBucketInventoryConfigurationsResponsePrivate::parseListBucketInventoryConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBucketInventoryConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

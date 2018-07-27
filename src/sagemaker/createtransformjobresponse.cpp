@@ -93,7 +93,7 @@ CreateTransformJobResponsePrivate::CreateTransformJobResponsePrivate(
 void CreateTransformJobResponsePrivate::parseCreateTransformJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTransformJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

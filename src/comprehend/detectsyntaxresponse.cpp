@@ -96,7 +96,7 @@ DetectSyntaxResponsePrivate::DetectSyntaxResponsePrivate(
 void DetectSyntaxResponsePrivate::parseDetectSyntaxResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectSyntaxResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

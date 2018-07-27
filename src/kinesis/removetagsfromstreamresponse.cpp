@@ -96,7 +96,7 @@ RemoveTagsFromStreamResponsePrivate::RemoveTagsFromStreamResponsePrivate(
 void RemoveTagsFromStreamResponsePrivate::parseRemoveTagsFromStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

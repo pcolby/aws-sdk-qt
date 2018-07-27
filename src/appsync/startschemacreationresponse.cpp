@@ -94,7 +94,7 @@ StartSchemaCreationResponsePrivate::StartSchemaCreationResponsePrivate(
 void StartSchemaCreationResponsePrivate::parseStartSchemaCreationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartSchemaCreationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

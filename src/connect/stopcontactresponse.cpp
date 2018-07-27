@@ -96,7 +96,7 @@ StopContactResponsePrivate::StopContactResponsePrivate(
 void StopContactResponsePrivate::parseStopContactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopContactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Connect

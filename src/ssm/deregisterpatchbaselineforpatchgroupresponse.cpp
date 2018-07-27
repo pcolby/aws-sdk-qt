@@ -118,7 +118,7 @@ DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForP
 void DeregisterPatchBaselineForPatchGroupResponsePrivate::parseDeregisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterPatchBaselineForPatchGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

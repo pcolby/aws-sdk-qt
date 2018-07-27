@@ -98,7 +98,7 @@ ListSkillsResponsePrivate::ListSkillsResponsePrivate(
 void ListSkillsResponsePrivate::parseListSkillsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSkillsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

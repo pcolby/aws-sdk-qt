@@ -93,7 +93,7 @@ CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
 void CreateDataSourceFromRDSResponsePrivate::parseCreateDataSourceFromRDSResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRDSResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

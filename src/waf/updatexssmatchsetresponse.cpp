@@ -98,7 +98,7 @@ UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
 void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateXssMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

@@ -94,7 +94,7 @@ DeleteFacesResponsePrivate::DeleteFacesResponsePrivate(
 void DeleteFacesResponsePrivate::parseDeleteFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

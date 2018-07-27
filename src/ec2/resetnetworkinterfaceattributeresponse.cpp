@@ -121,7 +121,7 @@ ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeRes
 void ResetNetworkInterfaceAttributeResponsePrivate::parseResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetNetworkInterfaceAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

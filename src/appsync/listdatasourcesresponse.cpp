@@ -94,7 +94,7 @@ ListDataSourcesResponsePrivate::ListDataSourcesResponsePrivate(
 void ListDataSourcesResponsePrivate::parseListDataSourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDataSourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

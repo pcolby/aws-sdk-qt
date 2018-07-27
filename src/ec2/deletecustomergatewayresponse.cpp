@@ -121,7 +121,7 @@ DeleteCustomerGatewayResponsePrivate::DeleteCustomerGatewayResponsePrivate(
 void DeleteCustomerGatewayResponsePrivate::parseDeleteCustomerGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomerGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

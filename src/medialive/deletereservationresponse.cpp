@@ -93,7 +93,7 @@ DeleteReservationResponsePrivate::DeleteReservationResponsePrivate(
 void DeleteReservationResponsePrivate::parseDeleteReservationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteReservationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

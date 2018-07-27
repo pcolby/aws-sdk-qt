@@ -115,7 +115,7 @@ SignalResourceResponsePrivate::SignalResourceResponsePrivate(
 void SignalResourceResponsePrivate::parseSignalResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SignalResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

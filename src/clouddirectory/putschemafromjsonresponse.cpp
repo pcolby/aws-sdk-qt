@@ -100,7 +100,7 @@ PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
 void PutSchemaFromJsonResponsePrivate::parsePutSchemaFromJsonResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutSchemaFromJsonResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

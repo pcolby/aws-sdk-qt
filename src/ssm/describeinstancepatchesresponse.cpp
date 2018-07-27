@@ -118,7 +118,7 @@ DescribeInstancePatchesResponsePrivate::DescribeInstancePatchesResponsePrivate(
 void DescribeInstancePatchesResponsePrivate::parseDescribeInstancePatchesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstancePatchesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

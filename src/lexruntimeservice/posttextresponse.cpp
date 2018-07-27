@@ -100,7 +100,7 @@ PostTextResponsePrivate::PostTextResponsePrivate(
 void PostTextResponsePrivate::parsePostTextResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PostTextResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexRuntimeService

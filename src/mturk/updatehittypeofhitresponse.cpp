@@ -93,7 +93,7 @@ UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponsePrivate(
 void UpdateHITTypeOfHITResponsePrivate::parseUpdateHITTypeOfHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateHITTypeOfHITResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

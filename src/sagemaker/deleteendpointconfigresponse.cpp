@@ -93,7 +93,7 @@ DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponsePrivate(
 void DeleteEndpointConfigResponsePrivate::parseDeleteEndpointConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEndpointConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

@@ -100,7 +100,7 @@ DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponsePrivate(
 void DeleteTypedLinkFacetResponsePrivate::parseDeleteTypedLinkFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTypedLinkFacetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

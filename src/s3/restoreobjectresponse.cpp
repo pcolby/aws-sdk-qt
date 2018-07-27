@@ -93,7 +93,7 @@ RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
 void RestoreObjectResponsePrivate::parseRestoreObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

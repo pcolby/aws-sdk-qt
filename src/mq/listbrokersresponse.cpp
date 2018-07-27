@@ -95,7 +95,7 @@ ListBrokersResponsePrivate::ListBrokersResponsePrivate(
 void ListBrokersResponsePrivate::parseListBrokersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBrokersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

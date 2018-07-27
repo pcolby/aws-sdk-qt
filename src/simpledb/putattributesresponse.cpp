@@ -106,7 +106,7 @@ PutAttributesResponsePrivate::PutAttributesResponsePrivate(
 void PutAttributesResponsePrivate::parsePutAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SimpleDB

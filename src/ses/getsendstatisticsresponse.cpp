@@ -104,7 +104,7 @@ GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
 void GetSendStatisticsResponsePrivate::parseGetSendStatisticsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSendStatisticsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

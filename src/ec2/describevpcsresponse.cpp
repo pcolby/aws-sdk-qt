@@ -121,7 +121,7 @@ DescribeVpcsResponsePrivate::DescribeVpcsResponsePrivate(
 void DescribeVpcsResponsePrivate::parseDescribeVpcsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

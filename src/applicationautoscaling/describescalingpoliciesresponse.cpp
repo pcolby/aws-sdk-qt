@@ -173,7 +173,7 @@ DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponsePrivate(
 void DescribeScalingPoliciesResponsePrivate::parseDescribeScalingPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationAutoScaling

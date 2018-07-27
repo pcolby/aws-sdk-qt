@@ -96,7 +96,7 @@ DeleteImagePermissionsResponsePrivate::DeleteImagePermissionsResponsePrivate(
 void DeleteImagePermissionsResponsePrivate::parseDeleteImagePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteImagePermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

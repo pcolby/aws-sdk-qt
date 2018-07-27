@@ -181,7 +181,7 @@ DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponsePrivate(
 void DisassociateTeamMemberResponsePrivate::parseDisassociateTeamMemberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateTeamMemberResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

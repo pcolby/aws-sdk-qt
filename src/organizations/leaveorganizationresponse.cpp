@@ -235,7 +235,7 @@ LeaveOrganizationResponsePrivate::LeaveOrganizationResponsePrivate(
 void LeaveOrganizationResponsePrivate::parseLeaveOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LeaveOrganizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

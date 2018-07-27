@@ -116,7 +116,7 @@ GetTrailStatusResponsePrivate::GetTrailStatusResponsePrivate(
 void GetTrailStatusResponsePrivate::parseGetTrailStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTrailStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

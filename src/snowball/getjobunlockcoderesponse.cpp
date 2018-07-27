@@ -99,7 +99,7 @@ GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
 void GetJobUnlockCodeResponsePrivate::parseGetJobUnlockCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobUnlockCodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

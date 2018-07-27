@@ -96,7 +96,7 @@ ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
 void ResetJobBookmarkResponsePrivate::parseResetJobBookmarkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetJobBookmarkResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

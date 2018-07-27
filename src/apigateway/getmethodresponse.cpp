@@ -98,7 +98,7 @@ GetMethodResponsePrivate::GetMethodResponsePrivate(
 void GetMethodResponsePrivate::parseGetMethodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMethodResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

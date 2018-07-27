@@ -113,7 +113,7 @@ UpdateDatastoreResponsePrivate::UpdateDatastoreResponsePrivate(
 void UpdateDatastoreResponsePrivate::parseUpdateDatastoreResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDatastoreResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

@@ -93,7 +93,7 @@ UpdateMLModelResponsePrivate::UpdateMLModelResponsePrivate(
 void UpdateMLModelResponsePrivate::parseUpdateMLModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateMLModelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

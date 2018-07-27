@@ -96,7 +96,7 @@ DeleteImageBuilderResponsePrivate::DeleteImageBuilderResponsePrivate(
 void DeleteImageBuilderResponsePrivate::parseDeleteImageBuilderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteImageBuilderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

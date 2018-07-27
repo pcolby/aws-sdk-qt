@@ -283,7 +283,7 @@ GetDifferencesResponsePrivate::GetDifferencesResponsePrivate(
 void GetDifferencesResponsePrivate::parseGetDifferencesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDifferencesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

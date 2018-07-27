@@ -98,7 +98,7 @@ UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
 void UpdateDocumentationPartResponsePrivate::parseUpdateDocumentationPartResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentationPartResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

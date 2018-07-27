@@ -100,7 +100,7 @@ ListPolicyAttachmentsResponsePrivate::ListPolicyAttachmentsResponsePrivate(
 void ListPolicyAttachmentsResponsePrivate::parseListPolicyAttachmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPolicyAttachmentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

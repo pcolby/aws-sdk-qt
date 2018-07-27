@@ -95,7 +95,7 @@ GetContainerPolicyResponsePrivate::GetContainerPolicyResponsePrivate(
 void GetContainerPolicyResponsePrivate::parseGetContainerPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContainerPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStore

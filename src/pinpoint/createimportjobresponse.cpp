@@ -93,7 +93,7 @@ CreateImportJobResponsePrivate::CreateImportJobResponsePrivate(
 void CreateImportJobResponsePrivate::parseCreateImportJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateImportJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

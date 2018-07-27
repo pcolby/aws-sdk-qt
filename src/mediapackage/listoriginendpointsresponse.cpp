@@ -93,7 +93,7 @@ ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponsePrivate(
 void ListOriginEndpointsResponsePrivate::parseListOriginEndpointsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOriginEndpointsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

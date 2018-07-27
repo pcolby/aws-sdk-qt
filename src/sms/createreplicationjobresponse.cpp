@@ -93,7 +93,7 @@ CreateReplicationJobResponsePrivate::CreateReplicationJobResponsePrivate(
 void CreateReplicationJobResponsePrivate::parseCreateReplicationJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

@@ -93,7 +93,7 @@ AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorke
 void AssociateQualificationWithWorkerResponsePrivate::parseAssociateQualificationWithWorkerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateQualificationWithWorkerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

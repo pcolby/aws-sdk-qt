@@ -107,7 +107,7 @@ DescribeCacheSubnetGroupsResponsePrivate::DescribeCacheSubnetGroupsResponsePriva
 void DescribeCacheSubnetGroupsResponsePrivate::parseDescribeCacheSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheSubnetGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

@@ -118,7 +118,7 @@ GetParameterHistoryResponsePrivate::GetParameterHistoryResponsePrivate(
 void GetParameterHistoryResponsePrivate::parseGetParameterHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetParameterHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

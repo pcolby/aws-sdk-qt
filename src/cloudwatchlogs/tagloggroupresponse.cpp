@@ -122,7 +122,7 @@ TagLogGroupResponsePrivate::TagLogGroupResponsePrivate(
 void TagLogGroupResponsePrivate::parseTagLogGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagLogGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

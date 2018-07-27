@@ -123,7 +123,7 @@ ModifyClusterResponsePrivate::ModifyClusterResponsePrivate(
 void ModifyClusterResponsePrivate::parseModifyClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

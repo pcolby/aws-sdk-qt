@@ -192,7 +192,7 @@ GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
 void GenerateRandomResponsePrivate::parseGenerateRandomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateRandomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

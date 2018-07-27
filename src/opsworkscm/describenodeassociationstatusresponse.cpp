@@ -153,7 +153,7 @@ DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatusRespo
 void DescribeNodeAssociationStatusResponsePrivate::parseDescribeNodeAssociationStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNodeAssociationStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

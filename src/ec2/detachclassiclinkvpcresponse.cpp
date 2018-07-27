@@ -121,7 +121,7 @@ DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
 void DetachClassicLinkVpcResponsePrivate::parseDetachClassicLinkVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachClassicLinkVpcResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

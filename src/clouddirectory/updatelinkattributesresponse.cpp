@@ -100,7 +100,7 @@ UpdateLinkAttributesResponsePrivate::UpdateLinkAttributesResponsePrivate(
 void UpdateLinkAttributesResponsePrivate::parseUpdateLinkAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLinkAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

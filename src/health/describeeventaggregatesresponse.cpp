@@ -154,7 +154,7 @@ DescribeEventAggregatesResponsePrivate::DescribeEventAggregatesResponsePrivate(
 void DescribeEventAggregatesResponsePrivate::parseDescribeEventAggregatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventAggregatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Health

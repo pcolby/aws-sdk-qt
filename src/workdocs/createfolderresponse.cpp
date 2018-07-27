@@ -122,7 +122,7 @@ CreateFolderResponsePrivate::CreateFolderResponsePrivate(
 void CreateFolderResponsePrivate::parseCreateFolderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFolderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

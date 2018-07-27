@@ -162,7 +162,7 @@ DeleteFileShareResponsePrivate::DeleteFileShareResponsePrivate(
 void DeleteFileShareResponsePrivate::parseDeleteFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFileShareResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

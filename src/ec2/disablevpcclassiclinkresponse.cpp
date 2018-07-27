@@ -121,7 +121,7 @@ DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponsePrivate(
 void DisableVpcClassicLinkResponsePrivate::parseDisableVpcClassicLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableVpcClassicLinkResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

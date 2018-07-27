@@ -158,7 +158,7 @@ ListAttachedGroupPoliciesResponsePrivate::ListAttachedGroupPoliciesResponsePriva
 void ListAttachedGroupPoliciesResponsePrivate::parseListAttachedGroupPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAttachedGroupPoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

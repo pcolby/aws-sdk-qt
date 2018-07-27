@@ -157,7 +157,7 @@ GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponsePrivate(
 void GetDiscoverySummaryResponsePrivate::parseGetDiscoverySummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDiscoverySummaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

@@ -99,7 +99,7 @@ ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponseP
 void ListConstraintsForPortfolioResponsePrivate::parseListConstraintsForPortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConstraintsForPortfolioResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

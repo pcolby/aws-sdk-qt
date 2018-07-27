@@ -268,7 +268,7 @@ GetPipelineStateResponsePrivate::GetPipelineStateResponsePrivate(
 void GetPipelineStateResponsePrivate::parseGetPipelineStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPipelineStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

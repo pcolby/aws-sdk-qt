@@ -95,7 +95,7 @@ NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponsePrivate(
 void NotifyApplicationStateResponsePrivate::parseNotifyApplicationStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyApplicationStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

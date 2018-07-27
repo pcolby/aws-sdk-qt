@@ -104,7 +104,7 @@ CancelJobExecutionResponsePrivate::CancelJobExecutionResponsePrivate(
 void CancelJobExecutionResponsePrivate::parseCancelJobExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelJobExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

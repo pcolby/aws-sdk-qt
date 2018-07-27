@@ -121,7 +121,7 @@ ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
 void ReleaseAddressResponsePrivate::parseReleaseAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReleaseAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

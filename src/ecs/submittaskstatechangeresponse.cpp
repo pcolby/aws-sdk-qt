@@ -110,7 +110,7 @@ SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
 void SubmitTaskStateChangeResponsePrivate::parseSubmitTaskStateChangeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubmitTaskStateChangeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

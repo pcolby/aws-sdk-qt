@@ -94,7 +94,7 @@ CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponsePrivate(
 void CreateStreamProcessorResponsePrivate::parseCreateStreamProcessorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamProcessorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

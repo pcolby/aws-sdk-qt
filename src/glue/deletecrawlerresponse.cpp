@@ -96,7 +96,7 @@ DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
 void DeleteCrawlerResponsePrivate::parseDeleteCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCrawlerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

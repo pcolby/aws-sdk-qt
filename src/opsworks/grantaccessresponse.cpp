@@ -199,7 +199,7 @@ GrantAccessResponsePrivate::GrantAccessResponsePrivate(
 void GrantAccessResponsePrivate::parseGrantAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GrantAccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

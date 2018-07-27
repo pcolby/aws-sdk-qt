@@ -99,7 +99,7 @@ UpdatePortfolioResponsePrivate::UpdatePortfolioResponsePrivate(
 void UpdatePortfolioResponsePrivate::parseUpdatePortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePortfolioResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

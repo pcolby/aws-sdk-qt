@@ -93,7 +93,7 @@ CreateThreatIntelSetResponsePrivate::CreateThreatIntelSetResponsePrivate(
 void CreateThreatIntelSetResponsePrivate::parseCreateThreatIntelSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateThreatIntelSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

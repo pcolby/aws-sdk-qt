@@ -158,7 +158,7 @@ GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponsePrivate(
 void GetAccessKeyLastUsedResponsePrivate::parseGetAccessKeyLastUsedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccessKeyLastUsedResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

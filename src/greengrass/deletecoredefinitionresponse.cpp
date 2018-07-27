@@ -96,7 +96,7 @@ DeleteCoreDefinitionResponsePrivate::DeleteCoreDefinitionResponsePrivate(
 void DeleteCoreDefinitionResponsePrivate::parseDeleteCoreDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCoreDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

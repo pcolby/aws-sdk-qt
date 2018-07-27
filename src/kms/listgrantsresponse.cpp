@@ -192,7 +192,7 @@ ListGrantsResponsePrivate::ListGrantsResponsePrivate(
 void ListGrantsResponsePrivate::parseListGrantsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGrantsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

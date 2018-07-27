@@ -104,7 +104,7 @@ SendEmailResponsePrivate::SendEmailResponsePrivate(
 void SendEmailResponsePrivate::parseSendEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendEmailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

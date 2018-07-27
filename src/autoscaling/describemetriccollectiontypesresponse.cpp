@@ -98,7 +98,7 @@ DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesRespo
 void DescribeMetricCollectionTypesResponsePrivate::parseDescribeMetricCollectionTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMetricCollectionTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

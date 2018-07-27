@@ -98,7 +98,7 @@ EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponsePrivate(
 void EnableMetricsCollectionResponsePrivate::parseEnableMetricsCollectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableMetricsCollectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

@@ -97,7 +97,7 @@ GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
 void GetLifecyclePolicyResponsePrivate::parseGetLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLifecyclePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

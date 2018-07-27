@@ -105,7 +105,7 @@ StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
 void StartQueryExecutionResponsePrivate::parseStartQueryExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartQueryExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Athena

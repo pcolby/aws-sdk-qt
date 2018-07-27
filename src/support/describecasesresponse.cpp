@@ -161,7 +161,7 @@ DescribeCasesResponsePrivate::DescribeCasesResponsePrivate(
 void DescribeCasesResponsePrivate::parseDescribeCasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCasesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

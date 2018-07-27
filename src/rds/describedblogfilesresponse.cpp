@@ -157,7 +157,7 @@ DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
 void DescribeDBLogFilesResponsePrivate::parseDescribeDBLogFilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBLogFilesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

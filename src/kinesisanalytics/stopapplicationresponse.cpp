@@ -93,7 +93,7 @@ StopApplicationResponsePrivate::StopApplicationResponsePrivate(
 void StopApplicationResponsePrivate::parseStopApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisAnalytics

@@ -121,7 +121,7 @@ DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
 void DetachVpnGatewayResponsePrivate::parseDetachVpnGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachVpnGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

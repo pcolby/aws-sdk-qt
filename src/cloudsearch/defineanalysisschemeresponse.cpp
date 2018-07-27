@@ -104,7 +104,7 @@ DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
 void DefineAnalysisSchemeResponsePrivate::parseDefineAnalysisSchemeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineAnalysisSchemeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

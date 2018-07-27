@@ -99,7 +99,7 @@ PutPlaybackConfigurationResponsePrivate::PutPlaybackConfigurationResponsePrivate
 void PutPlaybackConfigurationResponsePrivate::parsePutPlaybackConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutPlaybackConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaTailor

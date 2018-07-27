@@ -103,7 +103,7 @@ DescribeUserPoolDomainResponsePrivate::DescribeUserPoolDomainResponsePrivate(
 void DescribeUserPoolDomainResponsePrivate::parseDescribeUserPoolDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserPoolDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

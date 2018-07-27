@@ -158,7 +158,7 @@ DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
 void DeleteSAMLProviderResponsePrivate::parseDeleteSAMLProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSAMLProviderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

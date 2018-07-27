@@ -95,7 +95,7 @@ DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
 void DescribeObjectResponsePrivate::parseDescribeObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStoreData

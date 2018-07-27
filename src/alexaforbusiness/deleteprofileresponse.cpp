@@ -98,7 +98,7 @@ DeleteProfileResponsePrivate::DeleteProfileResponsePrivate(
 void DeleteProfileResponsePrivate::parseDeleteProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

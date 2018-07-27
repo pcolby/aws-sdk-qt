@@ -94,7 +94,7 @@ DeleteTagsForDomainResponsePrivate::DeleteTagsForDomainResponsePrivate(
 void DeleteTagsForDomainResponsePrivate::parseDeleteTagsForDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTagsForDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

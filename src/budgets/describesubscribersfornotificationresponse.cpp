@@ -136,7 +136,7 @@ DescribeSubscribersForNotificationResponsePrivate::DescribeSubscribersForNotific
 void DescribeSubscribersForNotificationResponsePrivate::parseDescribeSubscribersForNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubscribersForNotificationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

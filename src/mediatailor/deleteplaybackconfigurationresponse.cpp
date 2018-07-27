@@ -99,7 +99,7 @@ DeletePlaybackConfigurationResponsePrivate::DeletePlaybackConfigurationResponseP
 void DeletePlaybackConfigurationResponsePrivate::parseDeletePlaybackConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePlaybackConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaTailor

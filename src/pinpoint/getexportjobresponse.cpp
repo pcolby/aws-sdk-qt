@@ -93,7 +93,7 @@ GetExportJobResponsePrivate::GetExportJobResponsePrivate(
 void GetExportJobResponsePrivate::parseGetExportJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetExportJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

@@ -93,7 +93,7 @@ PutBucketVersioningResponsePrivate::PutBucketVersioningResponsePrivate(
 void PutBucketVersioningResponsePrivate::parsePutBucketVersioningResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketVersioningResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

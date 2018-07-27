@@ -94,7 +94,7 @@ CreatePlacementResponsePrivate::CreatePlacementResponsePrivate(
 void CreatePlacementResponsePrivate::parseCreatePlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

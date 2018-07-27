@@ -95,7 +95,7 @@ DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate
 void DescribeApplicationStateResponsePrivate::parseDescribeApplicationStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

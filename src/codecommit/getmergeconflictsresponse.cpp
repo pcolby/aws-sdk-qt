@@ -283,7 +283,7 @@ GetMergeConflictsResponsePrivate::GetMergeConflictsResponsePrivate(
 void GetMergeConflictsResponsePrivate::parseGetMergeConflictsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMergeConflictsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

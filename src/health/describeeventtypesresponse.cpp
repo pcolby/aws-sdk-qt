@@ -154,7 +154,7 @@ DescribeEventTypesResponsePrivate::DescribeEventTypesResponsePrivate(
 void DescribeEventTypesResponsePrivate::parseDescribeEventTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Health

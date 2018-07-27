@@ -123,7 +123,7 @@ RebootClusterResponsePrivate::RebootClusterResponsePrivate(
 void RebootClusterResponsePrivate::parseRebootClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

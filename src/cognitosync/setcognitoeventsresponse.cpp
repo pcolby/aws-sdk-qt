@@ -113,7 +113,7 @@ SetCognitoEventsResponsePrivate::SetCognitoEventsResponsePrivate(
 void SetCognitoEventsResponsePrivate::parseSetCognitoEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetCognitoEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

@@ -97,7 +97,7 @@ SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponsePrivate(
 void SetRepositoryPolicyResponsePrivate::parseSetRepositoryPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetRepositoryPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

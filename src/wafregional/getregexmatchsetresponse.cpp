@@ -100,7 +100,7 @@ GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponsePrivate(
 void GetRegexMatchSetResponsePrivate::parseGetRegexMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegexMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

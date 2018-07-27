@@ -96,7 +96,7 @@ DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponsePriva
 void DisableEnhancedMonitoringResponsePrivate::parseDisableEnhancedMonitoringResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableEnhancedMonitoringResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

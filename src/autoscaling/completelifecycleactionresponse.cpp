@@ -98,7 +98,7 @@ CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
 void CompleteLifecycleActionResponsePrivate::parseCompleteLifecycleActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteLifecycleActionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

@@ -121,7 +121,7 @@ CreateFlowLogsResponsePrivate::CreateFlowLogsResponsePrivate(
 void CreateFlowLogsResponsePrivate::parseCreateFlowLogsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFlowLogsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

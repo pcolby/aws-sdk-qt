@@ -94,7 +94,7 @@ DeleteVocabularyResponsePrivate::DeleteVocabularyResponsePrivate(
 void DeleteVocabularyResponsePrivate::parseDeleteVocabularyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVocabularyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace TranscribeService

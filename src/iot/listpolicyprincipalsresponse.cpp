@@ -104,7 +104,7 @@ ListPolicyPrincipalsResponsePrivate::ListPolicyPrincipalsResponsePrivate(
 void ListPolicyPrincipalsResponsePrivate::parseListPolicyPrincipalsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPolicyPrincipalsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

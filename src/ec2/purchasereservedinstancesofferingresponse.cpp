@@ -121,7 +121,7 @@ PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOffer
 void PurchaseReservedInstancesOfferingResponsePrivate::parsePurchaseReservedInstancesOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedInstancesOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

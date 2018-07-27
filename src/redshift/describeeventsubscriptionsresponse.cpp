@@ -123,7 +123,7 @@ DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePri
 void DescribeEventSubscriptionsResponsePrivate::parseDescribeEventSubscriptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventSubscriptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

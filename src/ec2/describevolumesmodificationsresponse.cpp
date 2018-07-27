@@ -121,7 +121,7 @@ DescribeVolumesModificationsResponsePrivate::DescribeVolumesModificationsRespons
 void DescribeVolumesModificationsResponsePrivate::parseDescribeVolumesModificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumesModificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

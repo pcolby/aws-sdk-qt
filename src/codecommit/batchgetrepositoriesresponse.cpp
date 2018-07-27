@@ -283,7 +283,7 @@ BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponsePrivate(
 void BatchGetRepositoriesResponsePrivate::parseBatchGetRepositoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetRepositoriesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

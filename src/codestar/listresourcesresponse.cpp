@@ -181,7 +181,7 @@ ListResourcesResponsePrivate::ListResourcesResponsePrivate(
 void ListResourcesResponsePrivate::parseListResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

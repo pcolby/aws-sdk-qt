@@ -157,7 +157,7 @@ CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponseP
 void CopyDBClusterParameterGroupResponsePrivate::parseCopyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBClusterParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

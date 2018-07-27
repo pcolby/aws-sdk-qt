@@ -104,7 +104,7 @@ DeleteIdentityPolicyResponsePrivate::DeleteIdentityPolicyResponsePrivate(
 void DeleteIdentityPolicyResponsePrivate::parseDeleteIdentityPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIdentityPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

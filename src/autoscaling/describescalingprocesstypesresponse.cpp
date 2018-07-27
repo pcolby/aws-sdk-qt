@@ -98,7 +98,7 @@ DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponseP
 void DescribeScalingProcessTypesResponsePrivate::parseDescribeScalingProcessTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingProcessTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

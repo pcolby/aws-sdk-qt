@@ -115,7 +115,7 @@ DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponseP
 void DeleteConfigurationTemplateResponsePrivate::parseDeleteConfigurationTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

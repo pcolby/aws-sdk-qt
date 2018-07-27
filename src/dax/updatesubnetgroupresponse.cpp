@@ -97,7 +97,7 @@ UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
 void UpdateSubnetGroupResponsePrivate::parseUpdateSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSubnetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DAX

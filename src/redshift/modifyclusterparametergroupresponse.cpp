@@ -123,7 +123,7 @@ ModifyClusterParameterGroupResponsePrivate::ModifyClusterParameterGroupResponseP
 void ModifyClusterParameterGroupResponsePrivate::parseModifyClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

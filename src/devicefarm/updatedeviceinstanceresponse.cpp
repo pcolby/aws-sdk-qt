@@ -95,7 +95,7 @@ UpdateDeviceInstanceResponsePrivate::UpdateDeviceInstanceResponsePrivate(
 void UpdateDeviceInstanceResponsePrivate::parseUpdateDeviceInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

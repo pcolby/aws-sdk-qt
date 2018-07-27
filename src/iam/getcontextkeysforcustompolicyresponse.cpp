@@ -158,7 +158,7 @@ GetContextKeysForCustomPolicyResponsePrivate::GetContextKeysForCustomPolicyRespo
 void GetContextKeysForCustomPolicyResponsePrivate::parseGetContextKeysForCustomPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContextKeysForCustomPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -93,7 +93,7 @@ TagStreamResponsePrivate::TagStreamResponsePrivate(
 void TagStreamResponsePrivate::parseTagStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideo

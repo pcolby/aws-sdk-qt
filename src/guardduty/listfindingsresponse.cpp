@@ -93,7 +93,7 @@ ListFindingsResponsePrivate::ListFindingsResponsePrivate(
 void ListFindingsResponsePrivate::parseListFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFindingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

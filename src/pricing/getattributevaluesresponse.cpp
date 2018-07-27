@@ -119,7 +119,7 @@ GetAttributeValuesResponsePrivate::GetAttributeValuesResponsePrivate(
 void GetAttributeValuesResponsePrivate::parseGetAttributeValuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAttributeValuesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pricing

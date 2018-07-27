@@ -93,7 +93,7 @@ GetBaiduChannelResponsePrivate::GetBaiduChannelResponsePrivate(
 void GetBaiduChannelResponsePrivate::parseGetBaiduChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBaiduChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

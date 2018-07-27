@@ -93,7 +93,7 @@ GetChangeResponsePrivate::GetChangeResponsePrivate(
 void GetChangeResponsePrivate::parseGetChangeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetChangeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

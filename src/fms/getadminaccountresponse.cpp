@@ -99,7 +99,7 @@ GetAdminAccountResponsePrivate::GetAdminAccountResponsePrivate(
 void GetAdminAccountResponsePrivate::parseGetAdminAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAdminAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

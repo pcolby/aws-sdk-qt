@@ -115,7 +115,7 @@ ListExportsResponsePrivate::ListExportsResponsePrivate(
 void ListExportsResponsePrivate::parseListExportsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListExportsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

@@ -121,7 +121,7 @@ DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponsePrivate
 void DisassociateVpcCidrBlockResponsePrivate::parseDisassociateVpcCidrBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateVpcCidrBlockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

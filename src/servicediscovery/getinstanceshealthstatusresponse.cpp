@@ -97,7 +97,7 @@ GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponsePrivate
 void GetInstancesHealthStatusResponsePrivate::parseGetInstancesHealthStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstancesHealthStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceDiscovery

@@ -173,7 +173,7 @@ RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponsePrivate(
 void RegisterScalableTargetResponsePrivate::parseRegisterScalableTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterScalableTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationAutoScaling

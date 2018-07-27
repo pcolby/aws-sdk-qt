@@ -235,7 +235,7 @@ InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponseP
 void InviteAccountToOrganizationResponsePrivate::parseInviteAccountToOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InviteAccountToOrganizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

@@ -103,7 +103,7 @@ AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponsePriva
 void AdminUpdateUserAttributesResponsePrivate::parseAdminUpdateUserAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateUserAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

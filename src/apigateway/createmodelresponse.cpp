@@ -98,7 +98,7 @@ CreateModelResponsePrivate::CreateModelResponsePrivate(
 void CreateModelResponsePrivate::parseCreateModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateModelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

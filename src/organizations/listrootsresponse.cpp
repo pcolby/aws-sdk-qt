@@ -235,7 +235,7 @@ ListRootsResponsePrivate::ListRootsResponsePrivate(
 void ListRootsResponsePrivate::parseListRootsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRootsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

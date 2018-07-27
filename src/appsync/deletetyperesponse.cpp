@@ -94,7 +94,7 @@ DeleteTypeResponsePrivate::DeleteTypeResponsePrivate(
 void DeleteTypeResponsePrivate::parseDeleteTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

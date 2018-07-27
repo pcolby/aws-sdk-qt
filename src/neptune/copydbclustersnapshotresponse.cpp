@@ -117,7 +117,7 @@ CopyDBClusterSnapshotResponsePrivate::CopyDBClusterSnapshotResponsePrivate(
 void CopyDBClusterSnapshotResponsePrivate::parseCopyDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBClusterSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

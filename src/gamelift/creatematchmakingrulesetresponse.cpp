@@ -537,7 +537,7 @@ CreateMatchmakingRuleSetResponsePrivate::CreateMatchmakingRuleSetResponsePrivate
 void CreateMatchmakingRuleSetResponsePrivate::parseCreateMatchmakingRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMatchmakingRuleSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

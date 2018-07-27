@@ -121,7 +121,7 @@ DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
 void DescribeRouteTablesResponsePrivate::parseDescribeRouteTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRouteTablesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

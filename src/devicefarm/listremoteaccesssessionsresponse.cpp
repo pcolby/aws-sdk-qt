@@ -95,7 +95,7 @@ ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponsePrivate
 void ListRemoteAccessSessionsResponsePrivate::parseListRemoteAccessSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRemoteAccessSessionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

@@ -121,7 +121,7 @@ DeleteSecurityGroupResponsePrivate::DeleteSecurityGroupResponsePrivate(
 void DeleteSecurityGroupResponsePrivate::parseDeleteSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -106,7 +106,7 @@ BatchPutAttributesResponsePrivate::BatchPutAttributesResponsePrivate(
 void BatchPutAttributesResponsePrivate::parseBatchPutAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchPutAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SimpleDB

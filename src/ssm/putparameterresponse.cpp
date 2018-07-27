@@ -118,7 +118,7 @@ PutParameterResponsePrivate::PutParameterResponsePrivate(
 void PutParameterResponsePrivate::parsePutParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutParameterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

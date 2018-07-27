@@ -162,7 +162,7 @@ DescribeSMBSettingsResponsePrivate::DescribeSMBSettingsResponsePrivate(
 void DescribeSMBSettingsResponsePrivate::parseDescribeSMBSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSMBSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

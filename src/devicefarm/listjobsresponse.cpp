@@ -95,7 +95,7 @@ ListJobsResponsePrivate::ListJobsResponsePrivate(
 void ListJobsResponsePrivate::parseListJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

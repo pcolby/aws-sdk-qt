@@ -109,7 +109,7 @@ AttachStaticIpResponsePrivate::AttachStaticIpResponsePrivate(
 void AttachStaticIpResponsePrivate::parseAttachStaticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachStaticIpResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

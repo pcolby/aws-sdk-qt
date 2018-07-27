@@ -151,7 +151,7 @@ GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
 void GetSessionTokenResponsePrivate::parseGetSessionTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSessionTokenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace STS

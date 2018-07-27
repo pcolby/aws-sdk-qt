@@ -98,7 +98,7 @@ UpdateAuthorizerResponsePrivate::UpdateAuthorizerResponsePrivate(
 void UpdateAuthorizerResponsePrivate::parseUpdateAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAuthorizerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -96,7 +96,7 @@ ExportProjectResponsePrivate::ExportProjectResponsePrivate(
 void ExportProjectResponsePrivate::parseExportProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Mobile

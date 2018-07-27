@@ -113,7 +113,7 @@ DeleteAggregationAuthorizationResponsePrivate::DeleteAggregationAuthorizationRes
 void DeleteAggregationAuthorizationResponsePrivate::parseDeleteAggregationAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAggregationAuthorizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

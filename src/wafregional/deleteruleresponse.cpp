@@ -100,7 +100,7 @@ DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
 void DeleteRuleResponsePrivate::parseDeleteRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

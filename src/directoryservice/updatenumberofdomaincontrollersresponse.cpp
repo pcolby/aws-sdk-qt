@@ -107,7 +107,7 @@ UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersR
 void UpdateNumberOfDomainControllersResponsePrivate::parseUpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNumberOfDomainControllersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

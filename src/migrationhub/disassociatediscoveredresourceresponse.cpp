@@ -95,7 +95,7 @@ DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResourceRes
 void DisassociateDiscoveredResourceResponsePrivate::parseDisassociateDiscoveredResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDiscoveredResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

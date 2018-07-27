@@ -93,7 +93,7 @@ PutBucketLifecycleResponsePrivate::PutBucketLifecycleResponsePrivate(
 void PutBucketLifecycleResponsePrivate::parsePutBucketLifecycleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketLifecycleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

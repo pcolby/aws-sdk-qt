@@ -104,7 +104,7 @@ CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
 void CloneReceiptRuleSetResponsePrivate::parseCloneReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CloneReceiptRuleSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

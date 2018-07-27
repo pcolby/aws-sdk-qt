@@ -104,7 +104,7 @@ ListIndicesResponsePrivate::ListIndicesResponsePrivate(
 void ListIndicesResponsePrivate::parseListIndicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIndicesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -95,7 +95,7 @@ ListProgressUpdateStreamsResponsePrivate::ListProgressUpdateStreamsResponsePriva
 void ListProgressUpdateStreamsResponsePrivate::parseListProgressUpdateStreamsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListProgressUpdateStreamsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

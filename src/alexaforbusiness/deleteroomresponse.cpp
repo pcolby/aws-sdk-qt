@@ -98,7 +98,7 @@ DeleteRoomResponsePrivate::DeleteRoomResponsePrivate(
 void DeleteRoomResponsePrivate::parseDeleteRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

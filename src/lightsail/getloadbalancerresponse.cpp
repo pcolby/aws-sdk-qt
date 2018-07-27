@@ -109,7 +109,7 @@ GetLoadBalancerResponsePrivate::GetLoadBalancerResponsePrivate(
 void GetLoadBalancerResponsePrivate::parseGetLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLoadBalancerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

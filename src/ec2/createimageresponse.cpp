@@ -121,7 +121,7 @@ CreateImageResponsePrivate::CreateImageResponsePrivate(
 void CreateImageResponsePrivate::parseCreateImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

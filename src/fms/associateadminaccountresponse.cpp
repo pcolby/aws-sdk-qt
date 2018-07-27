@@ -99,7 +99,7 @@ AssociateAdminAccountResponsePrivate::AssociateAdminAccountResponsePrivate(
 void AssociateAdminAccountResponsePrivate::parseAssociateAdminAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateAdminAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

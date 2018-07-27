@@ -93,7 +93,7 @@ DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
 void DeleteOriginEndpointResponsePrivate::parseDeleteOriginEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOriginEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

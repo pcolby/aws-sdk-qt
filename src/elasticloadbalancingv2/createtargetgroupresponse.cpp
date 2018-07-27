@@ -161,7 +161,7 @@ CreateTargetGroupResponsePrivate::CreateTargetGroupResponsePrivate(
 void CreateTargetGroupResponsePrivate::parseCreateTargetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTargetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

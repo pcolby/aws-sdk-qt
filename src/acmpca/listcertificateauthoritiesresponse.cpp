@@ -123,7 +123,7 @@ ListCertificateAuthoritiesResponsePrivate::ListCertificateAuthoritiesResponsePri
 void ListCertificateAuthoritiesResponsePrivate::parseListCertificateAuthoritiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCertificateAuthoritiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACMPCA

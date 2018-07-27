@@ -96,7 +96,7 @@ BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponsePrivate(
 void BatchCreatePartitionResponsePrivate::parseBatchCreatePartitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchCreatePartitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

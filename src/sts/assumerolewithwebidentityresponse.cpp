@@ -151,7 +151,7 @@ AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePriva
 void AssumeRoleWithWebIdentityResponsePrivate::parseAssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithWebIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace STS

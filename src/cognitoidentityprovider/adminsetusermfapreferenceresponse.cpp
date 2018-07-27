@@ -103,7 +103,7 @@ AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponsePriva
 void AdminSetUserMFAPreferenceResponsePrivate::parseAdminSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminSetUserMFAPreferenceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

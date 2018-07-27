@@ -162,7 +162,7 @@ DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponsePrivate(
 void DeleteSnapshotScheduleResponsePrivate::parseDeleteSnapshotScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotScheduleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

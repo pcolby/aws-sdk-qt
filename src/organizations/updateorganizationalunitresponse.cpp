@@ -235,7 +235,7 @@ UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponsePrivate
 void UpdateOrganizationalUnitResponsePrivate::parseUpdateOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateOrganizationalUnitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

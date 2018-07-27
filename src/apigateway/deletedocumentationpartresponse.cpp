@@ -98,7 +98,7 @@ DeleteDocumentationPartResponsePrivate::DeleteDocumentationPartResponsePrivate(
 void DeleteDocumentationPartResponsePrivate::parseDeleteDocumentationPartResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentationPartResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -93,7 +93,7 @@ DescribeOfferingResponsePrivate::DescribeOfferingResponsePrivate(
 void DescribeOfferingResponsePrivate::parseDescribeOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

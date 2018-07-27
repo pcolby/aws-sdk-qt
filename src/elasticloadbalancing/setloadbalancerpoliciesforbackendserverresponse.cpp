@@ -121,7 +121,7 @@ SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesF
 void SetLoadBalancerPoliciesForBackendServerResponsePrivate::parseSetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerPoliciesForBackendServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

@@ -121,7 +121,7 @@ DescribeVpcPeeringConnectionsResponsePrivate::DescribeVpcPeeringConnectionsRespo
 void DescribeVpcPeeringConnectionsResponsePrivate::parseDescribeVpcPeeringConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcPeeringConnectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

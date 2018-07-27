@@ -97,7 +97,7 @@ BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
 void BatchGetImageResponsePrivate::parseBatchGetImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

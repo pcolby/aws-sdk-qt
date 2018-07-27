@@ -158,7 +158,7 @@ ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
 void ListGroupsForUserResponsePrivate::parseListGroupsForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupsForUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

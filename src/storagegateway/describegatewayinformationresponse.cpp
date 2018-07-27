@@ -162,7 +162,7 @@ DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponsePri
 void DescribeGatewayInformationResponsePrivate::parseDescribeGatewayInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGatewayInformationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

@@ -118,7 +118,7 @@ LabelParameterVersionResponsePrivate::LabelParameterVersionResponsePrivate(
 void LabelParameterVersionResponsePrivate::parseLabelParameterVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LabelParameterVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

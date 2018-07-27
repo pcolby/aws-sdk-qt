@@ -169,7 +169,7 @@ DescribeSecretResponsePrivate::DescribeSecretResponsePrivate(
 void DescribeSecretResponsePrivate::parseDescribeSecretResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSecretResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

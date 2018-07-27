@@ -107,7 +107,7 @@ ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponsePrivate
 void ResetCacheParameterGroupResponsePrivate::parseResetCacheParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetCacheParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

@@ -98,7 +98,7 @@ EnterStandbyResponsePrivate::EnterStandbyResponsePrivate(
 void EnterStandbyResponsePrivate::parseEnterStandbyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnterStandbyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

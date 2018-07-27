@@ -113,7 +113,7 @@ DeleteConfigurationAggregatorResponsePrivate::DeleteConfigurationAggregatorRespo
 void DeleteConfigurationAggregatorResponsePrivate::parseDeleteConfigurationAggregatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationAggregatorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

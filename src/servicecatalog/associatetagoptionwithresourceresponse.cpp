@@ -99,7 +99,7 @@ AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceRes
 void AssociateTagOptionWithResourceResponsePrivate::parseAssociateTagOptionWithResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateTagOptionWithResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

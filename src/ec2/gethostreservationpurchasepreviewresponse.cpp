@@ -121,7 +121,7 @@ GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePrev
 void GetHostReservationPurchasePreviewResponsePrivate::parseGetHostReservationPurchasePreviewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHostReservationPurchasePreviewResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

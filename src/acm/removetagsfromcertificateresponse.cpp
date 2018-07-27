@@ -102,7 +102,7 @@ RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePriva
 void RemoveTagsFromCertificateResponsePrivate::parseRemoveTagsFromCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACM

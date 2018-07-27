@@ -174,7 +174,7 @@ ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponseP
 void ListGitHubAccountTokenNamesResponsePrivate::parseListGitHubAccountTokenNamesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGitHubAccountTokenNamesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

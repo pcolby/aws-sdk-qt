@@ -537,7 +537,7 @@ DeleteScalingPolicyResponsePrivate::DeleteScalingPolicyResponsePrivate(
 void DeleteScalingPolicyResponsePrivate::parseDeleteScalingPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteScalingPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

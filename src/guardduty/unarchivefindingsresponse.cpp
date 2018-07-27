@@ -93,7 +93,7 @@ UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
 void UnarchiveFindingsResponsePrivate::parseUnarchiveFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnarchiveFindingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

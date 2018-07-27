@@ -199,7 +199,7 @@ UpdateAppResponsePrivate::UpdateAppResponsePrivate(
 void UpdateAppResponsePrivate::parseUpdateAppResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAppResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

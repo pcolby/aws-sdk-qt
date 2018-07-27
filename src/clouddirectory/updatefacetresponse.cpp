@@ -100,7 +100,7 @@ UpdateFacetResponsePrivate::UpdateFacetResponsePrivate(
 void UpdateFacetResponsePrivate::parseUpdateFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFacetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

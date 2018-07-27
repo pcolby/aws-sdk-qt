@@ -537,7 +537,7 @@ DescribeMatchmakingConfigurationsResponsePrivate::DescribeMatchmakingConfigurati
 void DescribeMatchmakingConfigurationsResponsePrivate::parseDescribeMatchmakingConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMatchmakingConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

@@ -93,7 +93,7 @@ GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
 void GetBucketWebsiteResponsePrivate::parseGetBucketWebsiteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketWebsiteResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

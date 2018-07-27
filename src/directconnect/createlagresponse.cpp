@@ -101,7 +101,7 @@ CreateLagResponsePrivate::CreateLagResponsePrivate(
 void CreateLagResponsePrivate::parseCreateLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

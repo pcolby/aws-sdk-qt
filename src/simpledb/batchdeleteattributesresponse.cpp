@@ -106,7 +106,7 @@ BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
 void BatchDeleteAttributesResponsePrivate::parseBatchDeleteAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SimpleDB

@@ -147,7 +147,7 @@ ListEnvironmentsResponsePrivate::ListEnvironmentsResponsePrivate(
 void ListEnvironmentsResponsePrivate::parseListEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEnvironmentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Cloud9

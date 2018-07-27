@@ -283,7 +283,7 @@ GetBlobResponsePrivate::GetBlobResponsePrivate(
 void GetBlobResponsePrivate::parseGetBlobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBlobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

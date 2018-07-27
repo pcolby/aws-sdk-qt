@@ -98,7 +98,7 @@ DescribeScalingActivitiesResponsePrivate::DescribeScalingActivitiesResponsePriva
 void DescribeScalingActivitiesResponsePrivate::parseDescribeScalingActivitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingActivitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

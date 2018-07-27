@@ -162,7 +162,7 @@ DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponsePrivate(
 void DeleteTapeArchiveResponsePrivate::parseDeleteTapeArchiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTapeArchiveResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

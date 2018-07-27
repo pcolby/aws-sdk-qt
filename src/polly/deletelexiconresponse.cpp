@@ -100,7 +100,7 @@ DeleteLexiconResponsePrivate::DeleteLexiconResponsePrivate(
 void DeleteLexiconResponsePrivate::parseDeleteLexiconResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLexiconResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Polly

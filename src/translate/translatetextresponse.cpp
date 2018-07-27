@@ -94,7 +94,7 @@ TranslateTextResponsePrivate::TranslateTextResponsePrivate(
 void TranslateTextResponsePrivate::parseTranslateTextResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TranslateTextResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Translate

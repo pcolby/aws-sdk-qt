@@ -109,7 +109,7 @@ DescribeWorkflowExecutionResponsePrivate::DescribeWorkflowExecutionResponsePriva
 void DescribeWorkflowExecutionResponsePrivate::parseDescribeWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkflowExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

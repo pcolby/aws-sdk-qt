@@ -159,7 +159,7 @@ ReceiveMessageResponsePrivate::ReceiveMessageResponsePrivate(
 void ReceiveMessageResponsePrivate::parseReceiveMessageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReceiveMessageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

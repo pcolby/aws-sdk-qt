@@ -100,7 +100,7 @@ ListManagedSchemaArnsResponsePrivate::ListManagedSchemaArnsResponsePrivate(
 void ListManagedSchemaArnsResponsePrivate::parseListManagedSchemaArnsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListManagedSchemaArnsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

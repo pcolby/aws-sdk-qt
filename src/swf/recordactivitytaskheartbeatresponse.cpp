@@ -109,7 +109,7 @@ RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponseP
 void RecordActivityTaskHeartbeatResponsePrivate::parseRecordActivityTaskHeartbeatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RecordActivityTaskHeartbeatResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

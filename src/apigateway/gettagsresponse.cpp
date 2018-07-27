@@ -98,7 +98,7 @@ GetTagsResponsePrivate::GetTagsResponsePrivate(
 void GetTagsResponsePrivate::parseGetTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

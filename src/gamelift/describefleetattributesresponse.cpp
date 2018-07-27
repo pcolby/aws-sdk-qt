@@ -537,7 +537,7 @@ DescribeFleetAttributesResponsePrivate::DescribeFleetAttributesResponsePrivate(
 void DescribeFleetAttributesResponsePrivate::parseDescribeFleetAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

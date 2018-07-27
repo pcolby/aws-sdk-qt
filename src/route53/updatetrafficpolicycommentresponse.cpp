@@ -93,7 +93,7 @@ UpdateTrafficPolicyCommentResponsePrivate::UpdateTrafficPolicyCommentResponsePri
 void UpdateTrafficPolicyCommentResponsePrivate::parseUpdateTrafficPolicyCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTrafficPolicyCommentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

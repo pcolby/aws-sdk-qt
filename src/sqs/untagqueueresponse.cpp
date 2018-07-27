@@ -159,7 +159,7 @@ UntagQueueResponsePrivate::UntagQueueResponsePrivate(
 void UntagQueueResponsePrivate::parseUntagQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

@@ -162,7 +162,7 @@ ListGatewaysResponsePrivate::ListGatewaysResponsePrivate(
 void ListGatewaysResponsePrivate::parseListGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGatewaysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

@@ -96,7 +96,7 @@ RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
 void RunJobFlowResponsePrivate::parseRunJobFlowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunJobFlowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

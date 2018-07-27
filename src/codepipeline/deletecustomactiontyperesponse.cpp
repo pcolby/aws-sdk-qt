@@ -268,7 +268,7 @@ DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponsePrivate(
 void DeleteCustomActionTypeResponsePrivate::parseDeleteCustomActionTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomActionTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

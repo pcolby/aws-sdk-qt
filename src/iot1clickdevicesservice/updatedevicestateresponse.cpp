@@ -94,7 +94,7 @@ UpdateDeviceStateResponsePrivate::UpdateDeviceStateResponsePrivate(
 void UpdateDeviceStateResponsePrivate::parseUpdateDeviceStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickDevicesService

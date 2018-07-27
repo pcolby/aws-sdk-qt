@@ -192,7 +192,7 @@ ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponsePrivate(
 void ListRetirableGrantsResponsePrivate::parseListRetirableGrantsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRetirableGrantsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

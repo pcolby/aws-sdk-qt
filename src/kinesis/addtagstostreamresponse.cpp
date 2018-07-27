@@ -96,7 +96,7 @@ AddTagsToStreamResponsePrivate::AddTagsToStreamResponsePrivate(
 void AddTagsToStreamResponsePrivate::parseAddTagsToStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

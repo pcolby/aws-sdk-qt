@@ -104,7 +104,7 @@ PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
 void PutIdentityPolicyResponsePrivate::parsePutIdentityPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutIdentityPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

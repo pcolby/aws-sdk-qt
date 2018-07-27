@@ -161,7 +161,7 @@ DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate::DescribeTrustedAdviso
 void DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate::parseDescribeTrustedAdvisorCheckRefreshStatusesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrustedAdvisorCheckRefreshStatusesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

@@ -109,7 +109,7 @@ DeleteDomainEntryResponsePrivate::DeleteDomainEntryResponsePrivate(
 void DeleteDomainEntryResponsePrivate::parseDeleteDomainEntryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDomainEntryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

@@ -121,7 +121,7 @@ DescribeFpgaImageAttributeResponsePrivate::DescribeFpgaImageAttributeResponsePri
 void DescribeFpgaImageAttributeResponsePrivate::parseDescribeFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFpgaImageAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -159,7 +159,7 @@ DeleteMessageResponsePrivate::DeleteMessageResponsePrivate(
 void DeleteMessageResponsePrivate::parseDeleteMessageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMessageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

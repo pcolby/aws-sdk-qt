@@ -105,7 +105,7 @@ ListQueryExecutionsResponsePrivate::ListQueryExecutionsResponsePrivate(
 void ListQueryExecutionsResponsePrivate::parseListQueryExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListQueryExecutionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Athena

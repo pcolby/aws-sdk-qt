@@ -112,7 +112,7 @@ UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
 void UpdateTimeToLiveResponsePrivate::parseUpdateTimeToLiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTimeToLiveResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

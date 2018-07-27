@@ -98,7 +98,7 @@ PutIntegrationResponseResponsePrivate::PutIntegrationResponseResponsePrivate(
 void PutIntegrationResponseResponsePrivate::parsePutIntegrationResponseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutIntegrationResponseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

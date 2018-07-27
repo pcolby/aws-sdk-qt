@@ -118,7 +118,7 @@ ListComplianceItemsResponsePrivate::ListComplianceItemsResponsePrivate(
 void ListComplianceItemsResponsePrivate::parseListComplianceItemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListComplianceItemsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

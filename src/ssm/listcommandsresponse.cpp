@@ -118,7 +118,7 @@ ListCommandsResponsePrivate::ListCommandsResponsePrivate(
 void ListCommandsResponsePrivate::parseListCommandsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCommandsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

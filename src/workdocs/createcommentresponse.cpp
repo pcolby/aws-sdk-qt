@@ -122,7 +122,7 @@ CreateCommentResponsePrivate::CreateCommentResponsePrivate(
 void CreateCommentResponsePrivate::parseCreateCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCommentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

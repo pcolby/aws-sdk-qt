@@ -122,7 +122,7 @@ GetDocumentVersionResponsePrivate::GetDocumentVersionResponsePrivate(
 void GetDocumentVersionResponsePrivate::parseGetDocumentVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

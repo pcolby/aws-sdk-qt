@@ -113,7 +113,7 @@ StartPipelineReprocessingResponsePrivate::StartPipelineReprocessingResponsePriva
 void StartPipelineReprocessingResponsePrivate::parseStartPipelineReprocessingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartPipelineReprocessingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

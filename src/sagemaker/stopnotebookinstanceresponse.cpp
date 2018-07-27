@@ -93,7 +93,7 @@ StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
 void StopNotebookInstanceResponsePrivate::parseStopNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopNotebookInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

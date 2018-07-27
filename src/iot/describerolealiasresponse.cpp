@@ -104,7 +104,7 @@ DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponsePrivate(
 void DescribeRoleAliasResponsePrivate::parseDescribeRoleAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRoleAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

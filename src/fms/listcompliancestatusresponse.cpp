@@ -99,7 +99,7 @@ ListComplianceStatusResponsePrivate::ListComplianceStatusResponsePrivate(
 void ListComplianceStatusResponsePrivate::parseListComplianceStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListComplianceStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

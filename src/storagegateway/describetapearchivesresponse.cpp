@@ -162,7 +162,7 @@ DescribeTapeArchivesResponsePrivate::DescribeTapeArchivesResponsePrivate(
 void DescribeTapeArchivesResponsePrivate::parseDescribeTapeArchivesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTapeArchivesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

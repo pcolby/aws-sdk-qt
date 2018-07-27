@@ -158,7 +158,7 @@ UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponsePrivate
 void UploadSigningCertificateResponsePrivate::parseUploadSigningCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadSigningCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

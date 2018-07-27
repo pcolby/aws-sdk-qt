@@ -99,7 +99,7 @@ ListProvisioningArtifactsResponsePrivate::ListProvisioningArtifactsResponsePriva
 void ListProvisioningArtifactsResponsePrivate::parseListProvisioningArtifactsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListProvisioningArtifactsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

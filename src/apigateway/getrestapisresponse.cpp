@@ -98,7 +98,7 @@ GetRestApisResponsePrivate::GetRestApisResponsePrivate(
 void GetRestApisResponsePrivate::parseGetRestApisResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRestApisResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

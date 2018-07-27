@@ -157,7 +157,7 @@ DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
 void DeleteOptionGroupResponsePrivate::parseDeleteOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOptionGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

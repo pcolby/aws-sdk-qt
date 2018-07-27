@@ -126,7 +126,7 @@ DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromResourc
 void DisassociateDelegateFromResourceResponsePrivate::parseDisassociateDelegateFromResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDelegateFromResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

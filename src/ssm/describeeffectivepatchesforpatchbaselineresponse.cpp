@@ -118,7 +118,7 @@ DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatche
 void DescribeEffectivePatchesForPatchBaselineResponsePrivate::parseDescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEffectivePatchesForPatchBaselineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

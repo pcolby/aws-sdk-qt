@@ -199,7 +199,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TagResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

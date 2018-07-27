@@ -159,7 +159,7 @@ ChangeMessageVisibilityResponsePrivate::ChangeMessageVisibilityResponsePrivate(
 void ChangeMessageVisibilityResponsePrivate::parseChangeMessageVisibilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangeMessageVisibilityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

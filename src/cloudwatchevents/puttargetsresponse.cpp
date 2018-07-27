@@ -116,7 +116,7 @@ PutTargetsResponsePrivate::PutTargetsResponsePrivate(
 void PutTargetsResponsePrivate::parsePutTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutTargetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

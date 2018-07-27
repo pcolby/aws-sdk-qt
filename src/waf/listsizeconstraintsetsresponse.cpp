@@ -98,7 +98,7 @@ ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
 void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSizeConstraintSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

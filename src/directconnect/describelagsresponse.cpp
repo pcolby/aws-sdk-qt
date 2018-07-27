@@ -101,7 +101,7 @@ DescribeLagsResponsePrivate::DescribeLagsResponsePrivate(
 void DescribeLagsResponsePrivate::parseDescribeLagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

@@ -93,7 +93,7 @@ UntagStreamResponsePrivate::UntagStreamResponsePrivate(
 void UntagStreamResponsePrivate::parseUntagStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideo

@@ -98,7 +98,7 @@ SendInvitationResponsePrivate::SendInvitationResponsePrivate(
 void SendInvitationResponsePrivate::parseSendInvitationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendInvitationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

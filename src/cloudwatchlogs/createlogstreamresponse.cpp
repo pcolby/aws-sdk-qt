@@ -122,7 +122,7 @@ CreateLogStreamResponsePrivate::CreateLogStreamResponsePrivate(
 void CreateLogStreamResponsePrivate::parseCreateLogStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLogStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

@@ -235,7 +235,7 @@ UpdatePolicyResponsePrivate::UpdatePolicyResponsePrivate(
 void UpdatePolicyResponsePrivate::parseUpdatePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

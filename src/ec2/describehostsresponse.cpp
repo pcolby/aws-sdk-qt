@@ -121,7 +121,7 @@ DescribeHostsResponsePrivate::DescribeHostsResponsePrivate(
 void DescribeHostsResponsePrivate::parseDescribeHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

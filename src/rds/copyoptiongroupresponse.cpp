@@ -157,7 +157,7 @@ CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
 void CopyOptionGroupResponsePrivate::parseCopyOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyOptionGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

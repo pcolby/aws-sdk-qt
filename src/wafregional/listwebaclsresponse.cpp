@@ -100,7 +100,7 @@ ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
 void ListWebACLsResponsePrivate::parseListWebACLsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWebACLsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

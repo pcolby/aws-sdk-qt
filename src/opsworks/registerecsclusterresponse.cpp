@@ -199,7 +199,7 @@ RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponsePrivate(
 void RegisterEcsClusterResponsePrivate::parseRegisterEcsClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterEcsClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

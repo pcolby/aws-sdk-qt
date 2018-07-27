@@ -93,7 +93,7 @@ GetJobTemplateResponsePrivate::GetJobTemplateResponsePrivate(
 void GetJobTemplateResponsePrivate::parseGetJobTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

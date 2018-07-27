@@ -103,7 +103,7 @@ RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponsePrivate(
 void RespondToAuthChallengeResponsePrivate::parseRespondToAuthChallengeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondToAuthChallengeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

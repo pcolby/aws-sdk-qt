@@ -161,7 +161,7 @@ CreateListenerResponsePrivate::CreateListenerResponsePrivate(
 void CreateListenerResponsePrivate::parseCreateListenerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateListenerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

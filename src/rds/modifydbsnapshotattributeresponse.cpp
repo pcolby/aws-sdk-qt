@@ -157,7 +157,7 @@ ModifyDBSnapshotAttributeResponsePrivate::ModifyDBSnapshotAttributeResponsePriva
 void ModifyDBSnapshotAttributeResponsePrivate::parseModifyDBSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBSnapshotAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

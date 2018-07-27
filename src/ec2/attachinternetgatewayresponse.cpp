@@ -121,7 +121,7 @@ AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponsePrivate(
 void AttachInternetGatewayResponsePrivate::parseAttachInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachInternetGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

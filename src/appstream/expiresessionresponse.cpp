@@ -96,7 +96,7 @@ ExpireSessionResponsePrivate::ExpireSessionResponsePrivate(
 void ExpireSessionResponsePrivate::parseExpireSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExpireSessionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

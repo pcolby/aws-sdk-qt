@@ -109,7 +109,7 @@ DeleteDiskSnapshotResponsePrivate::DeleteDiskSnapshotResponsePrivate(
 void DeleteDiskSnapshotResponsePrivate::parseDeleteDiskSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDiskSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

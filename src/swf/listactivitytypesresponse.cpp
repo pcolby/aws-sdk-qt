@@ -109,7 +109,7 @@ ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
 void ListActivityTypesResponsePrivate::parseListActivityTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListActivityTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

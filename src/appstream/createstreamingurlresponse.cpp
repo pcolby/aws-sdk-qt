@@ -96,7 +96,7 @@ CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
 void CreateStreamingURLResponsePrivate::parseCreateStreamingURLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamingURLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

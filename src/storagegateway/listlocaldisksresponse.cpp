@@ -162,7 +162,7 @@ ListLocalDisksResponsePrivate::ListLocalDisksResponsePrivate(
 void ListLocalDisksResponsePrivate::parseListLocalDisksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLocalDisksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

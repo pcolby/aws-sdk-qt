@@ -110,7 +110,7 @@ StopTaskResponsePrivate::StopTaskResponsePrivate(
 void StopTaskResponsePrivate::parseStopTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

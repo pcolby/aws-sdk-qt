@@ -181,7 +181,7 @@ UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponsePrivate(
 void UpdateTeamMemberResponsePrivate::parseUpdateTeamMemberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTeamMemberResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

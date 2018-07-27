@@ -96,7 +96,7 @@ ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
 void ResetDeploymentsResponsePrivate::parseResetDeploymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetDeploymentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

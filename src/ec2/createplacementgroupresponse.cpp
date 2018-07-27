@@ -121,7 +121,7 @@ CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponsePrivate(
 void CreatePlacementGroupResponsePrivate::parseCreatePlacementGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlacementGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

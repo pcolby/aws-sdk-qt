@@ -96,7 +96,7 @@ UpdateJobResponsePrivate::UpdateJobResponsePrivate(
 void UpdateJobResponsePrivate::parseUpdateJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ImportExport

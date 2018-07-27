@@ -192,7 +192,7 @@ GenerateDataKeyResponsePrivate::GenerateDataKeyResponsePrivate(
 void GenerateDataKeyResponsePrivate::parseGenerateDataKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

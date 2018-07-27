@@ -98,7 +98,7 @@ DeleteGatewayResponseResponsePrivate::DeleteGatewayResponseResponsePrivate(
 void DeleteGatewayResponseResponsePrivate::parseDeleteGatewayResponseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGatewayResponseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

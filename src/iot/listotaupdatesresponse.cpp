@@ -104,7 +104,7 @@ ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponsePrivate(
 void ListOTAUpdatesResponsePrivate::parseListOTAUpdatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOTAUpdatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -113,7 +113,7 @@ DescribeConfigurationAggregatorSourcesStatusResponsePrivate::DescribeConfigurati
 void DescribeConfigurationAggregatorSourcesStatusResponsePrivate::parseDescribeConfigurationAggregatorSourcesStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationAggregatorSourcesStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

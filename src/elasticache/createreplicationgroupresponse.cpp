@@ -107,7 +107,7 @@ CreateReplicationGroupResponsePrivate::CreateReplicationGroupResponsePrivate(
 void CreateReplicationGroupResponsePrivate::parseCreateReplicationGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

@@ -121,7 +121,7 @@ DescribeScheduledInstancesResponsePrivate::DescribeScheduledInstancesResponsePri
 void DescribeScheduledInstancesResponsePrivate::parseDescribeScheduledInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

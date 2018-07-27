@@ -99,7 +99,7 @@ DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
 void DescribeProductAsAdminResponsePrivate::parseDescribeProductAsAdminResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeProductAsAdminResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

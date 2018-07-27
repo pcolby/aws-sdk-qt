@@ -100,7 +100,7 @@ ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
 void ListRegexPatternSetsResponsePrivate::parseListRegexPatternSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRegexPatternSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

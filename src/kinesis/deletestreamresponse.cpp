@@ -96,7 +96,7 @@ DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
 void DeleteStreamResponsePrivate::parseDeleteStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

@@ -95,7 +95,7 @@ ListDevicesResponsePrivate::ListDevicesResponsePrivate(
 void ListDevicesResponsePrivate::parseListDevicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDevicesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

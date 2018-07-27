@@ -98,7 +98,7 @@ DeleteMethodResponsePrivate::DeleteMethodResponsePrivate(
 void DeleteMethodResponsePrivate::parseDeleteMethodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMethodResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

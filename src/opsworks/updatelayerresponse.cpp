@@ -199,7 +199,7 @@ UpdateLayerResponsePrivate::UpdateLayerResponsePrivate(
 void UpdateLayerResponsePrivate::parseUpdateLayerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLayerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

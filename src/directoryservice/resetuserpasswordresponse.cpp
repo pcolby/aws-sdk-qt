@@ -107,7 +107,7 @@ ResetUserPasswordResponsePrivate::ResetUserPasswordResponsePrivate(
 void ResetUserPasswordResponsePrivate::parseResetUserPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetUserPasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

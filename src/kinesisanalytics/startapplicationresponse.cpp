@@ -93,7 +93,7 @@ StartApplicationResponsePrivate::StartApplicationResponsePrivate(
 void StartApplicationResponsePrivate::parseStartApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisAnalytics

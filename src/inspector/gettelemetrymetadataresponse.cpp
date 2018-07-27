@@ -98,7 +98,7 @@ GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
 void GetTelemetryMetadataResponsePrivate::parseGetTelemetryMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTelemetryMetadataResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

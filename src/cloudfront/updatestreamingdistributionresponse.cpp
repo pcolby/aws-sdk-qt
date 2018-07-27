@@ -98,7 +98,7 @@ UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponseP
 void UpdateStreamingDistributionResponsePrivate::parseUpdateStreamingDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStreamingDistributionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

@@ -126,7 +126,7 @@ GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
 void GetShardIteratorResponsePrivate::parseGetShardIteratorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetShardIteratorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDBStreams

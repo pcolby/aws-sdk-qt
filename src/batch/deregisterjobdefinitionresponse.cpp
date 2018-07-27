@@ -107,7 +107,7 @@ DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponsePrivate(
 void DeregisterJobDefinitionResponsePrivate::parseDeregisterJobDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterJobDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

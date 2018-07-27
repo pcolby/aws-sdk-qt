@@ -117,7 +117,7 @@ ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupRespons
 void ResetDBClusterParameterGroupResponsePrivate::parseResetDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetDBClusterParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

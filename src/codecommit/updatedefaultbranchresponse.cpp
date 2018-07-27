@@ -283,7 +283,7 @@ UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponsePrivate(
 void UpdateDefaultBranchResponsePrivate::parseUpdateDefaultBranchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDefaultBranchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

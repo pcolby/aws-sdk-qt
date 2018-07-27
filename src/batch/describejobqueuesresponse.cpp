@@ -107,7 +107,7 @@ DescribeJobQueuesResponsePrivate::DescribeJobQueuesResponsePrivate(
 void DescribeJobQueuesResponsePrivate::parseDescribeJobQueuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobQueuesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

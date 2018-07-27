@@ -98,7 +98,7 @@ DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
 void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteWebACLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

@@ -93,7 +93,7 @@ ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
 void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIPSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

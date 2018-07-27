@@ -126,7 +126,7 @@ ListMailboxPermissionsResponsePrivate::ListMailboxPermissionsResponsePrivate(
 void ListMailboxPermissionsResponsePrivate::parseListMailboxPermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListMailboxPermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

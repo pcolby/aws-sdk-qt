@@ -94,7 +94,7 @@ GetEncryptionConfigResponsePrivate::GetEncryptionConfigResponsePrivate(
 void GetEncryptionConfigResponsePrivate::parseGetEncryptionConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEncryptionConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace XRay

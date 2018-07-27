@@ -162,7 +162,7 @@ ActivateGatewayResponsePrivate::ActivateGatewayResponsePrivate(
 void ActivateGatewayResponsePrivate::parseActivateGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ActivateGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

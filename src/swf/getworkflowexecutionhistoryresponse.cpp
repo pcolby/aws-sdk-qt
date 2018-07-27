@@ -109,7 +109,7 @@ GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponseP
 void GetWorkflowExecutionHistoryResponsePrivate::parseGetWorkflowExecutionHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetWorkflowExecutionHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

@@ -162,7 +162,7 @@ UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponsePrivate(
 void UpdateSnapshotScheduleResponsePrivate::parseUpdateSnapshotScheduleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSnapshotScheduleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

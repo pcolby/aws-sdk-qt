@@ -115,7 +115,7 @@ GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponsePrivate(
 void GetTemplateSummaryResponsePrivate::parseGetTemplateSummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTemplateSummaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

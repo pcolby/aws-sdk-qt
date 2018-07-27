@@ -107,7 +107,7 @@ ListDashboardsResponsePrivate::ListDashboardsResponsePrivate(
 void ListDashboardsResponsePrivate::parseListDashboardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDashboardsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

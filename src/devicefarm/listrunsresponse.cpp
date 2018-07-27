@@ -95,7 +95,7 @@ ListRunsResponsePrivate::ListRunsResponsePrivate(
 void ListRunsResponsePrivate::parseListRunsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRunsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

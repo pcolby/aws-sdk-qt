@@ -235,7 +235,7 @@ ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrgan
 void ListAWSServiceAccessForOrganizationResponsePrivate::parseListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAWSServiceAccessForOrganizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

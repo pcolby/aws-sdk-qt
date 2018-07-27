@@ -110,7 +110,7 @@ UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
 void UpdateServiceResponsePrivate::parseUpdateServiceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

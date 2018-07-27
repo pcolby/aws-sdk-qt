@@ -118,7 +118,7 @@ DeleteResourceDataSyncResponsePrivate::DeleteResourceDataSyncResponsePrivate(
 void DeleteResourceDataSyncResponsePrivate::parseDeleteResourceDataSyncResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceDataSyncResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -98,7 +98,7 @@ DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesRes
 void DescribeTerminationPolicyTypesResponsePrivate::parseDescribeTerminationPolicyTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTerminationPolicyTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

@@ -235,7 +235,7 @@ ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponsePrivate(
 void ListCreateAccountStatusResponsePrivate::parseListCreateAccountStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCreateAccountStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

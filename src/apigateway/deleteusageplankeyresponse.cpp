@@ -98,7 +98,7 @@ DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponsePrivate(
 void DeleteUsagePlanKeyResponsePrivate::parseDeleteUsagePlanKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUsagePlanKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

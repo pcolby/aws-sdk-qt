@@ -104,7 +104,7 @@ CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate
 void CreateKeysAndCertificateResponsePrivate::parseCreateKeysAndCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateKeysAndCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

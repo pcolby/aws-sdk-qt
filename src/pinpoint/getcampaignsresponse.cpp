@@ -93,7 +93,7 @@ GetCampaignsResponsePrivate::GetCampaignsResponsePrivate(
 void GetCampaignsResponsePrivate::parseGetCampaignsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCampaignsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

@@ -107,7 +107,7 @@ RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIngressR
 void RevokeCacheSecurityGroupIngressResponsePrivate::parseRevokeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeCacheSecurityGroupIngressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

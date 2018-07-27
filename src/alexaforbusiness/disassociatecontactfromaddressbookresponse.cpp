@@ -98,7 +98,7 @@ DisassociateContactFromAddressBookResponsePrivate::DisassociateContactFromAddres
 void DisassociateContactFromAddressBookResponsePrivate::parseDisassociateContactFromAddressBookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateContactFromAddressBookResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

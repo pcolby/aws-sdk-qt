@@ -98,7 +98,7 @@ GetAssessmentReportResponsePrivate::GetAssessmentReportResponsePrivate(
 void GetAssessmentReportResponsePrivate::parseGetAssessmentReportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAssessmentReportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

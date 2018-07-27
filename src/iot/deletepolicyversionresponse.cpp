@@ -104,7 +104,7 @@ DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
 void DeletePolicyVersionResponsePrivate::parseDeletePolicyVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePolicyVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

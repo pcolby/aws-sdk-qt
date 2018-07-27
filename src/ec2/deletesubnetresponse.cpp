@@ -121,7 +121,7 @@ DeleteSubnetResponsePrivate::DeleteSubnetResponsePrivate(
 void DeleteSubnetResponsePrivate::parseDeleteSubnetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubnetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

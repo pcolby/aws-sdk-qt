@@ -99,7 +99,7 @@ DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResou
 void DisassociateTagOptionFromResourceResponsePrivate::parseDisassociateTagOptionFromResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateTagOptionFromResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

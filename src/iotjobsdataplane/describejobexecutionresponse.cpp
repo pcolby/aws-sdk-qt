@@ -107,7 +107,7 @@ DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
 void DescribeJobExecutionResponsePrivate::parseDescribeJobExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTJobsDataPlane

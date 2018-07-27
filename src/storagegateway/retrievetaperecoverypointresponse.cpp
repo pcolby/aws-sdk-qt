@@ -162,7 +162,7 @@ RetrieveTapeRecoveryPointResponsePrivate::RetrieveTapeRecoveryPointResponsePriva
 void RetrieveTapeRecoveryPointResponsePrivate::parseRetrieveTapeRecoveryPointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetrieveTapeRecoveryPointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

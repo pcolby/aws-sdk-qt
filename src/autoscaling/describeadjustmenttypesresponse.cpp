@@ -98,7 +98,7 @@ DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponsePrivate(
 void DescribeAdjustmentTypesResponsePrivate::parseDescribeAdjustmentTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAdjustmentTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

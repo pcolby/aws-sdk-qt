@@ -158,7 +158,7 @@ UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
 void UpdateLoginProfileResponsePrivate::parseUpdateLoginProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoginProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

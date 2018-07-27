@@ -107,7 +107,7 @@ PublishResponsePrivate::PublishResponsePrivate(
 void PublishResponsePrivate::parsePublishResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PublishResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

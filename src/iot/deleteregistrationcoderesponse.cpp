@@ -104,7 +104,7 @@ DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponsePrivate(
 void DeleteRegistrationCodeResponsePrivate::parseDeleteRegistrationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegistrationCodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

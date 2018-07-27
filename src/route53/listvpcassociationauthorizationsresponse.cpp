@@ -93,7 +93,7 @@ ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorization
 void ListVPCAssociationAuthorizationsResponsePrivate::parseListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVPCAssociationAuthorizationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

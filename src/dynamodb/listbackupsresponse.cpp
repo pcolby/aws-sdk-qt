@@ -112,7 +112,7 @@ ListBackupsResponsePrivate::ListBackupsResponsePrivate(
 void ListBackupsResponsePrivate::parseListBackupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBackupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

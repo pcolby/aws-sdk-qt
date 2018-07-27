@@ -100,7 +100,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

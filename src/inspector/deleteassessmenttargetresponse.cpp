@@ -98,7 +98,7 @@ DeleteAssessmentTargetResponsePrivate::DeleteAssessmentTargetResponsePrivate(
 void DeleteAssessmentTargetResponsePrivate::parseDeleteAssessmentTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAssessmentTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

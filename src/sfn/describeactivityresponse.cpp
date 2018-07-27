@@ -112,7 +112,7 @@ DescribeActivityResponsePrivate::DescribeActivityResponsePrivate(
 void DescribeActivityResponsePrivate::parseDescribeActivityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeActivityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

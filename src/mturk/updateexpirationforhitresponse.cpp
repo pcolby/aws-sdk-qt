@@ -93,7 +93,7 @@ UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
 void UpdateExpirationForHITResponsePrivate::parseUpdateExpirationForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateExpirationForHITResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

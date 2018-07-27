@@ -283,7 +283,7 @@ MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardRespo
 void MergePullRequestByFastForwardResponsePrivate::parseMergePullRequestByFastForwardResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MergePullRequestByFastForwardResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

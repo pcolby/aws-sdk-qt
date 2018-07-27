@@ -157,7 +157,7 @@ ListServerNeighborsResponsePrivate::ListServerNeighborsResponsePrivate(
 void ListServerNeighborsResponsePrivate::parseListServerNeighborsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListServerNeighborsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

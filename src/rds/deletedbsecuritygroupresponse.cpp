@@ -157,7 +157,7 @@ DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
 void DeleteDBSecurityGroupResponsePrivate::parseDeleteDBSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

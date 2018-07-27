@@ -104,7 +104,7 @@ StopReplicationTaskResponsePrivate::StopReplicationTaskResponsePrivate(
 void StopReplicationTaskResponsePrivate::parseStopReplicationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopReplicationTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

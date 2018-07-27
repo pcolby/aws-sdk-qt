@@ -115,7 +115,7 @@ DescribeInstancesHealthResponsePrivate::DescribeInstancesHealthResponsePrivate(
 void DescribeInstancesHealthResponsePrivate::parseDescribeInstancesHealthResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstancesHealthResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

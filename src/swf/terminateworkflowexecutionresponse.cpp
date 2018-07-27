@@ -109,7 +109,7 @@ TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePri
 void TerminateWorkflowExecutionResponsePrivate::parseTerminateWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateWorkflowExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

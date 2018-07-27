@@ -98,7 +98,7 @@ AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponsePrivate(
 void AssociateDeviceWithRoomResponsePrivate::parseAssociateDeviceWithRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDeviceWithRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

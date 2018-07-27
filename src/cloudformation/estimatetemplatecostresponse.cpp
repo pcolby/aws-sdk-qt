@@ -115,7 +115,7 @@ EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponsePrivate(
 void EstimateTemplateCostResponsePrivate::parseEstimateTemplateCostResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EstimateTemplateCostResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

@@ -162,7 +162,7 @@ JoinDomainResponsePrivate::JoinDomainResponsePrivate(
 void JoinDomainResponsePrivate::parseJoinDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("JoinDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

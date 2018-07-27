@@ -123,7 +123,7 @@ CreateHsmClientCertificateResponsePrivate::CreateHsmClientCertificateResponsePri
 void CreateHsmClientCertificateResponsePrivate::parseCreateHsmClientCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHsmClientCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

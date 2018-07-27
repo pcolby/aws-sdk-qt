@@ -97,7 +97,7 @@ PutBotAliasResponsePrivate::PutBotAliasResponsePrivate(
 void PutBotAliasResponsePrivate::parsePutBotAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBotAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

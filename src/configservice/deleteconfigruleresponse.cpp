@@ -113,7 +113,7 @@ DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponsePrivate(
 void DeleteConfigRuleResponsePrivate::parseDeleteConfigRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

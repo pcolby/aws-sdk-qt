@@ -97,7 +97,7 @@ GetUtterancesViewResponsePrivate::GetUtterancesViewResponsePrivate(
 void GetUtterancesViewResponsePrivate::parseGetUtterancesViewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUtterancesViewResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

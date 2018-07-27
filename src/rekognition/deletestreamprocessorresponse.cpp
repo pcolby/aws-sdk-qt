@@ -94,7 +94,7 @@ DeleteStreamProcessorResponsePrivate::DeleteStreamProcessorResponsePrivate(
 void DeleteStreamProcessorResponsePrivate::parseDeleteStreamProcessorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStreamProcessorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

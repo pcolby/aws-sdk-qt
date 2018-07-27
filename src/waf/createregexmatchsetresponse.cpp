@@ -98,7 +98,7 @@ CreateRegexMatchSetResponsePrivate::CreateRegexMatchSetResponsePrivate(
 void CreateRegexMatchSetResponsePrivate::parseCreateRegexMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRegexMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

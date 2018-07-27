@@ -192,7 +192,7 @@ CancelKeyDeletionResponsePrivate::CancelKeyDeletionResponsePrivate(
 void CancelKeyDeletionResponsePrivate::parseCancelKeyDeletionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelKeyDeletionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

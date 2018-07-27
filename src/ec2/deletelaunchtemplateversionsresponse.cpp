@@ -121,7 +121,7 @@ DeleteLaunchTemplateVersionsResponsePrivate::DeleteLaunchTemplateVersionsRespons
 void DeleteLaunchTemplateVersionsResponsePrivate::parseDeleteLaunchTemplateVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchTemplateVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

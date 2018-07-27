@@ -104,7 +104,7 @@ GetPolicyResponsePrivate::GetPolicyResponsePrivate(
 void GetPolicyResponsePrivate::parseGetPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

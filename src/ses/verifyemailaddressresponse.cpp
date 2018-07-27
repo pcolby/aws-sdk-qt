@@ -104,7 +104,7 @@ VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponsePrivate(
 void VerifyEmailAddressResponsePrivate::parseVerifyEmailAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyEmailAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

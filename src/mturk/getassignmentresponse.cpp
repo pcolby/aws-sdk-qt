@@ -93,7 +93,7 @@ GetAssignmentResponsePrivate::GetAssignmentResponsePrivate(
 void GetAssignmentResponsePrivate::parseGetAssignmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAssignmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

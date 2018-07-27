@@ -192,7 +192,7 @@ UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponsePrivate(
 void UpdateKeyDescriptionResponsePrivate::parseUpdateKeyDescriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateKeyDescriptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

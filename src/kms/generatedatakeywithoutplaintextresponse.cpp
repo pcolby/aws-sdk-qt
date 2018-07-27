@@ -192,7 +192,7 @@ GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextR
 void GenerateDataKeyWithoutPlaintextResponsePrivate::parseGenerateDataKeyWithoutPlaintextResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataKeyWithoutPlaintextResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

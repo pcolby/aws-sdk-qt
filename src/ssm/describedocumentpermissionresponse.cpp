@@ -118,7 +118,7 @@ DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponsePri
 void DescribeDocumentPermissionResponsePrivate::parseDescribeDocumentPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentPermissionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

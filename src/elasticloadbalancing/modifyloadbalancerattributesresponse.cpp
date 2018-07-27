@@ -121,7 +121,7 @@ ModifyLoadBalancerAttributesResponsePrivate::ModifyLoadBalancerAttributesRespons
 void ModifyLoadBalancerAttributesResponsePrivate::parseModifyLoadBalancerAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyLoadBalancerAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

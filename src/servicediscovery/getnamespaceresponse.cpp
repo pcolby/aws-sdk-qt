@@ -97,7 +97,7 @@ GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
 void GetNamespaceResponsePrivate::parseGetNamespaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetNamespaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceDiscovery

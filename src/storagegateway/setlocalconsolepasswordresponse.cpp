@@ -162,7 +162,7 @@ SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponsePrivate(
 void SetLocalConsolePasswordResponsePrivate::parseSetLocalConsolePasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetLocalConsolePasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

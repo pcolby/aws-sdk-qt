@@ -104,7 +104,7 @@ InvokeAsyncResponsePrivate::InvokeAsyncResponsePrivate(
 void InvokeAsyncResponsePrivate::parseInvokeAsyncResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InvokeAsyncResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

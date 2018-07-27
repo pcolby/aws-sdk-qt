@@ -158,7 +158,7 @@ GetAccountSummaryResponsePrivate::GetAccountSummaryResponsePrivate(
 void GetAccountSummaryResponsePrivate::parseGetAccountSummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountSummaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -96,7 +96,7 @@ StartWorkspacesResponsePrivate::StartWorkspacesResponsePrivate(
 void StartWorkspacesResponsePrivate::parseStartWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartWorkspacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

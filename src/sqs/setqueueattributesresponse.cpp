@@ -159,7 +159,7 @@ SetQueueAttributesResponsePrivate::SetQueueAttributesResponsePrivate(
 void SetQueueAttributesResponsePrivate::parseSetQueueAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetQueueAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

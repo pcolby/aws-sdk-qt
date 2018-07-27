@@ -235,7 +235,7 @@ DescribeHandshakeResponsePrivate::DescribeHandshakeResponsePrivate(
 void DescribeHandshakeResponsePrivate::parseDescribeHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHandshakeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

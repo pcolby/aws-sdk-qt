@@ -122,7 +122,7 @@ CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
 void CancelExportTaskResponsePrivate::parseCancelExportTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelExportTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

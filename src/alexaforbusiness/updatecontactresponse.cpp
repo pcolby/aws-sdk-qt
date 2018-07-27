@@ -98,7 +98,7 @@ UpdateContactResponsePrivate::UpdateContactResponsePrivate(
 void UpdateContactResponsePrivate::parseUpdateContactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

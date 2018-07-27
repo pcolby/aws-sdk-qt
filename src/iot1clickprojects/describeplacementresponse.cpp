@@ -94,7 +94,7 @@ DescribePlacementResponsePrivate::DescribePlacementResponsePrivate(
 void DescribePlacementResponsePrivate::parseDescribePlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

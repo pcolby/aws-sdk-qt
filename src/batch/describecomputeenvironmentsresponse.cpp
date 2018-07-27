@@ -107,7 +107,7 @@ DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponseP
 void DescribeComputeEnvironmentsResponsePrivate::parseDescribeComputeEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeComputeEnvironmentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

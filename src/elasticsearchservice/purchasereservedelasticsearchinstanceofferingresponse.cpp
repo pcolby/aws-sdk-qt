@@ -102,7 +102,7 @@ PurchaseReservedElasticsearchInstanceOfferingResponsePrivate::PurchaseReservedEl
 void PurchaseReservedElasticsearchInstanceOfferingResponsePrivate::parsePurchaseReservedElasticsearchInstanceOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedElasticsearchInstanceOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

@@ -100,7 +100,7 @@ CreateRuleResponsePrivate::CreateRuleResponsePrivate(
 void CreateRuleResponsePrivate::parseCreateRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

@@ -106,7 +106,7 @@ SearchResponsePrivate::SearchResponsePrivate(
 void SearchResponsePrivate::parseSearchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearchDomain

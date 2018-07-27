@@ -107,7 +107,7 @@ GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponsePrivate(
 void GetDirectoryLimitsResponsePrivate::parseGetDirectoryLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDirectoryLimitsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

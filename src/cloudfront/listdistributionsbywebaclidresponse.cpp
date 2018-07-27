@@ -98,7 +98,7 @@ ListDistributionsByWebACLIdResponsePrivate::ListDistributionsByWebACLIdResponseP
 void ListDistributionsByWebACLIdResponsePrivate::parseListDistributionsByWebACLIdResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDistributionsByWebACLIdResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

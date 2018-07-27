@@ -131,7 +131,7 @@ GetDataRetrievalPolicyResponsePrivate::GetDataRetrievalPolicyResponsePrivate(
 void GetDataRetrievalPolicyResponsePrivate::parseGetDataRetrievalPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDataRetrievalPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

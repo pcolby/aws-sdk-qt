@@ -104,7 +104,7 @@ GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponsePrivate
 void GetIndexingConfigurationResponsePrivate::parseGetIndexingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIndexingConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -96,7 +96,7 @@ DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
 void DescribeJobFlowsResponsePrivate::parseDescribeJobFlowsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobFlowsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

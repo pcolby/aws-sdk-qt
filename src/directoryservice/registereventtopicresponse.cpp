@@ -107,7 +107,7 @@ RegisterEventTopicResponsePrivate::RegisterEventTopicResponsePrivate(
 void RegisterEventTopicResponsePrivate::parseRegisterEventTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterEventTopicResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

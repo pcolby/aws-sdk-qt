@@ -113,7 +113,7 @@ GetDatasetContentResponsePrivate::GetDatasetContentResponsePrivate(
 void GetDatasetContentResponsePrivate::parseGetDatasetContentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDatasetContentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

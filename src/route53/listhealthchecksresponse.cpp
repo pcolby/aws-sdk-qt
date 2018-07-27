@@ -93,7 +93,7 @@ ListHealthChecksResponsePrivate::ListHealthChecksResponsePrivate(
 void ListHealthChecksResponsePrivate::parseListHealthChecksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHealthChecksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

@@ -93,7 +93,7 @@ SendBonusResponsePrivate::SendBonusResponsePrivate(
 void SendBonusResponsePrivate::parseSendBonusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendBonusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

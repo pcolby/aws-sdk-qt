@@ -118,7 +118,7 @@ CreateDocumentResponsePrivate::CreateDocumentResponsePrivate(
 void CreateDocumentResponsePrivate::parseCreateDocumentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDocumentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

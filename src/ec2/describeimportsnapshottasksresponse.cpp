@@ -121,7 +121,7 @@ DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResponseP
 void DescribeImportSnapshotTasksResponsePrivate::parseDescribeImportSnapshotTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImportSnapshotTasksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

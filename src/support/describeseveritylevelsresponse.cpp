@@ -161,7 +161,7 @@ DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponsePrivate(
 void DescribeSeverityLevelsResponsePrivate::parseDescribeSeverityLevelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSeverityLevelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

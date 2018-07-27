@@ -93,7 +93,7 @@ PhoneNumberValidateResponsePrivate::PhoneNumberValidateResponsePrivate(
 void PhoneNumberValidateResponsePrivate::parsePhoneNumberValidateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PhoneNumberValidateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

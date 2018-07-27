@@ -98,7 +98,7 @@ DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAcces
 void DeleteCloudFrontOriginAccessIdentityResponsePrivate::parseDeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCloudFrontOriginAccessIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

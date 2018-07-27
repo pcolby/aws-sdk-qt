@@ -174,7 +174,7 @@ BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponseP
 void BatchGetOnPremisesInstancesResponsePrivate::parseBatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetOnPremisesInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

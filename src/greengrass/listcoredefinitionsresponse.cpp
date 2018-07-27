@@ -96,7 +96,7 @@ ListCoreDefinitionsResponsePrivate::ListCoreDefinitionsResponsePrivate(
 void ListCoreDefinitionsResponsePrivate::parseListCoreDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCoreDefinitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

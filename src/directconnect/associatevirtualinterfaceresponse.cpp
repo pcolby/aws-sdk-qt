@@ -101,7 +101,7 @@ AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponsePriva
 void AssociateVirtualInterfaceResponsePrivate::parseAssociateVirtualInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateVirtualInterfaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

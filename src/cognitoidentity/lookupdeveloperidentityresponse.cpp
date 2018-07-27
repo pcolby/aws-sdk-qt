@@ -131,7 +131,7 @@ LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponsePrivate(
 void LookupDeveloperIdentityResponsePrivate::parseLookupDeveloperIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LookupDeveloperIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

@@ -121,7 +121,7 @@ ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
 void ModifyLaunchTemplateResponsePrivate::parseModifyLaunchTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyLaunchTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

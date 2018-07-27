@@ -115,7 +115,7 @@ ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponsePrivate(
 void ComposeEnvironmentsResponsePrivate::parseComposeEnvironmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ComposeEnvironmentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

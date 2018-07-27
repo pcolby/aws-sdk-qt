@@ -104,7 +104,7 @@ DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
 void DefineIndexFieldResponsePrivate::parseDefineIndexFieldResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DefineIndexFieldResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

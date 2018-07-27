@@ -537,7 +537,7 @@ SearchGameSessionsResponsePrivate::SearchGameSessionsResponsePrivate(
 void SearchGameSessionsResponsePrivate::parseSearchGameSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchGameSessionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

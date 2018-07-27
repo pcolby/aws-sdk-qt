@@ -96,7 +96,7 @@ DescribeIpGroupsResponsePrivate::DescribeIpGroupsResponsePrivate(
 void DescribeIpGroupsResponsePrivate::parseDescribeIpGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeIpGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

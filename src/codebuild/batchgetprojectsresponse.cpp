@@ -173,7 +173,7 @@ BatchGetProjectsResponsePrivate::BatchGetProjectsResponsePrivate(
 void BatchGetProjectsResponsePrivate::parseBatchGetProjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetProjectsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

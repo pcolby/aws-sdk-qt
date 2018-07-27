@@ -93,7 +93,7 @@ ListResourceRecordSetsResponsePrivate::ListResourceRecordSetsResponsePrivate(
 void ListResourceRecordSetsResponsePrivate::parseListResourceRecordSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceRecordSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

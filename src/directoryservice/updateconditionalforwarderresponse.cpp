@@ -107,7 +107,7 @@ UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponsePri
 void UpdateConditionalForwarderResponsePrivate::parseUpdateConditionalForwarderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConditionalForwarderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

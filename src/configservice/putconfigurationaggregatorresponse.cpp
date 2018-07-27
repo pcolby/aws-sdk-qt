@@ -113,7 +113,7 @@ PutConfigurationAggregatorResponsePrivate::PutConfigurationAggregatorResponsePri
 void PutConfigurationAggregatorResponsePrivate::parsePutConfigurationAggregatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutConfigurationAggregatorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

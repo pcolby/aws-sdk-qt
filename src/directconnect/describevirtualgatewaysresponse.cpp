@@ -101,7 +101,7 @@ DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponsePrivate(
 void DescribeVirtualGatewaysResponsePrivate::parseDescribeVirtualGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualGatewaysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

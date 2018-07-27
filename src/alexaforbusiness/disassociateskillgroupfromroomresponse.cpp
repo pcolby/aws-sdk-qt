@@ -98,7 +98,7 @@ DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomRes
 void DisassociateSkillGroupFromRoomResponsePrivate::parseDisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateSkillGroupFromRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

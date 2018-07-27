@@ -107,7 +107,7 @@ DeleteTrustResponsePrivate::DeleteTrustResponsePrivate(
 void DeleteTrustResponsePrivate::parseDeleteTrustResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrustResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

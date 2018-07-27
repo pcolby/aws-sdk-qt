@@ -118,7 +118,7 @@ StartAssociationsOnceResponsePrivate::StartAssociationsOnceResponsePrivate(
 void StartAssociationsOnceResponsePrivate::parseStartAssociationsOnceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartAssociationsOnceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

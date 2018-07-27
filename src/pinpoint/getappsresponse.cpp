@@ -93,7 +93,7 @@ GetAppsResponsePrivate::GetAppsResponsePrivate(
 void GetAppsResponsePrivate::parseGetAppsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAppsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

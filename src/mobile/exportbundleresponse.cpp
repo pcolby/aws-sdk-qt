@@ -96,7 +96,7 @@ ExportBundleResponsePrivate::ExportBundleResponsePrivate(
 void ExportBundleResponsePrivate::parseExportBundleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportBundleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Mobile

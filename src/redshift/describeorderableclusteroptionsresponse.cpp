@@ -123,7 +123,7 @@ DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsR
 void DescribeOrderableClusterOptionsResponsePrivate::parseDescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableClusterOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

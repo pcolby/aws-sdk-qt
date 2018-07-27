@@ -109,7 +109,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
 void RegisterDomainResponsePrivate::parseRegisterDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

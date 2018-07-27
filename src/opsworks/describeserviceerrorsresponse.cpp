@@ -199,7 +199,7 @@ DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponsePrivate(
 void DescribeServiceErrorsResponsePrivate::parseDescribeServiceErrorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeServiceErrorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

@@ -118,7 +118,7 @@ CreatePatchBaselineResponsePrivate::CreatePatchBaselineResponsePrivate(
 void CreatePatchBaselineResponsePrivate::parseCreatePatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePatchBaselineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -107,7 +107,7 @@ GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
 void GetSnapshotLimitsResponsePrivate::parseGetSnapshotLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSnapshotLimitsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

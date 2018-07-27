@@ -96,7 +96,7 @@ UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
 void UpdateDirectoryConfigResponsePrivate::parseUpdateDirectoryConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDirectoryConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

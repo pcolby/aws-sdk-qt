@@ -112,7 +112,7 @@ ListTablesResponsePrivate::ListTablesResponsePrivate(
 void ListTablesResponsePrivate::parseListTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTablesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

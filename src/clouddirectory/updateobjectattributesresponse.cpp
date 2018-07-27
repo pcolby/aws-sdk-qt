@@ -100,7 +100,7 @@ UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponsePrivate(
 void UpdateObjectAttributesResponsePrivate::parseUpdateObjectAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateObjectAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

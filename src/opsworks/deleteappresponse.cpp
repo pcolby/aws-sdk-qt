@@ -199,7 +199,7 @@ DeleteAppResponsePrivate::DeleteAppResponsePrivate(
 void DeleteAppResponsePrivate::parseDeleteAppResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAppResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

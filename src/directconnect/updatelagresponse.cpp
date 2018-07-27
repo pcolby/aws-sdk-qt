@@ -101,7 +101,7 @@ UpdateLagResponsePrivate::UpdateLagResponsePrivate(
 void UpdateLagResponsePrivate::parseUpdateLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

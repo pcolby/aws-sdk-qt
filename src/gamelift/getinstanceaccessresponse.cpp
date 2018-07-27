@@ -537,7 +537,7 @@ GetInstanceAccessResponsePrivate::GetInstanceAccessResponsePrivate(
 void GetInstanceAccessResponsePrivate::parseGetInstanceAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceAccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

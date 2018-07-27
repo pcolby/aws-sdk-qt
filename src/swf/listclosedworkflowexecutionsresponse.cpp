@@ -109,7 +109,7 @@ ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsRespons
 void ListClosedWorkflowExecutionsResponsePrivate::parseListClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListClosedWorkflowExecutionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

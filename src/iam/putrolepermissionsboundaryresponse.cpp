@@ -158,7 +158,7 @@ PutRolePermissionsBoundaryResponsePrivate::PutRolePermissionsBoundaryResponsePri
 void PutRolePermissionsBoundaryResponsePrivate::parsePutRolePermissionsBoundaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRolePermissionsBoundaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

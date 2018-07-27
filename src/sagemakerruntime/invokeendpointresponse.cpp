@@ -94,7 +94,7 @@ InvokeEndpointResponsePrivate::InvokeEndpointResponsePrivate(
 void InvokeEndpointResponsePrivate::parseInvokeEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InvokeEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMakerRuntime

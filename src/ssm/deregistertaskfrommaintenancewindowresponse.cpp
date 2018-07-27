@@ -118,7 +118,7 @@ DeregisterTaskFromMaintenanceWindowResponsePrivate::DeregisterTaskFromMaintenanc
 void DeregisterTaskFromMaintenanceWindowResponsePrivate::parseDeregisterTaskFromMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTaskFromMaintenanceWindowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

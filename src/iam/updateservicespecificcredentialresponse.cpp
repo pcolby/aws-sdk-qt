@@ -158,7 +158,7 @@ UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialR
 void UpdateServiceSpecificCredentialResponsePrivate::parseUpdateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceSpecificCredentialResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

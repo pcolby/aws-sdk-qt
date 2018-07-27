@@ -121,7 +121,7 @@ ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponsePrivate(
 void ReportInstanceStatusResponsePrivate::parseReportInstanceStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReportInstanceStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

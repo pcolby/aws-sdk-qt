@@ -126,7 +126,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EKS

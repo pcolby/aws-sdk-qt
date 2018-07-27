@@ -111,7 +111,7 @@ PollForTaskResponsePrivate::PollForTaskResponsePrivate(
 void PollForTaskResponsePrivate::parsePollForTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PollForTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

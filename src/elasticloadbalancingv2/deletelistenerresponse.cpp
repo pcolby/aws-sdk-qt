@@ -161,7 +161,7 @@ DeleteListenerResponsePrivate::DeleteListenerResponsePrivate(
 void DeleteListenerResponsePrivate::parseDeleteListenerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteListenerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

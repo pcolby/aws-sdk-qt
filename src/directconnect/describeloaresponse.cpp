@@ -101,7 +101,7 @@ DescribeLoaResponsePrivate::DescribeLoaResponsePrivate(
 void DescribeLoaResponsePrivate::parseDescribeLoaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

@@ -123,7 +123,7 @@ IssueCertificateResponsePrivate::IssueCertificateResponsePrivate(
 void IssueCertificateResponsePrivate::parseIssueCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IssueCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACMPCA

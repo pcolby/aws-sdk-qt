@@ -121,7 +121,7 @@ DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesRespons
 void DescribeClassicLinkInstancesResponsePrivate::parseDescribeClassicLinkInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClassicLinkInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

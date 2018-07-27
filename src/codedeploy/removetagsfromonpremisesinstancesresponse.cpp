@@ -174,7 +174,7 @@ RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesInstan
 void RemoveTagsFromOnPremisesInstancesResponsePrivate::parseRemoveTagsFromOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromOnPremisesInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

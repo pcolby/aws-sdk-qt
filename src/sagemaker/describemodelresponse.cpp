@@ -93,7 +93,7 @@ DescribeModelResponsePrivate::DescribeModelResponsePrivate(
 void DescribeModelResponsePrivate::parseDescribeModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeModelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

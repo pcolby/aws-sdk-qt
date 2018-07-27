@@ -123,7 +123,7 @@ DeleteCertificateAuthorityResponsePrivate::DeleteCertificateAuthorityResponsePri
 void DeleteCertificateAuthorityResponsePrivate::parseDeleteCertificateAuthorityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCertificateAuthorityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACMPCA

@@ -122,7 +122,7 @@ DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponsePrivate(
 void DeleteMetricFilterResponsePrivate::parseDeleteMetricFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMetricFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

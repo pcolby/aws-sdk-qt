@@ -162,7 +162,7 @@ DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitResponsePri
 void DescribeBandwidthRateLimitResponsePrivate::parseDescribeBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBandwidthRateLimitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

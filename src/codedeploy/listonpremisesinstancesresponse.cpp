@@ -174,7 +174,7 @@ ListOnPremisesInstancesResponsePrivate::ListOnPremisesInstancesResponsePrivate(
 void ListOnPremisesInstancesResponsePrivate::parseListOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOnPremisesInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

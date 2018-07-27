@@ -283,7 +283,7 @@ GetPullRequestResponsePrivate::GetPullRequestResponsePrivate(
 void GetPullRequestResponsePrivate::parseGetPullRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPullRequestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

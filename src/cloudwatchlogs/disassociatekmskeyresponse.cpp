@@ -122,7 +122,7 @@ DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponsePrivate(
 void DisassociateKmsKeyResponsePrivate::parseDisassociateKmsKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateKmsKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

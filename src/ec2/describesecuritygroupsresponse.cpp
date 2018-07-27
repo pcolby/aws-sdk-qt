@@ -121,7 +121,7 @@ DescribeSecurityGroupsResponsePrivate::DescribeSecurityGroupsResponsePrivate(
 void DescribeSecurityGroupsResponsePrivate::parseDescribeSecurityGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSecurityGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

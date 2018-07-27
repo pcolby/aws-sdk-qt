@@ -113,7 +113,7 @@ CreateDatasetContentResponsePrivate::CreateDatasetContentResponsePrivate(
 void CreateDatasetContentResponsePrivate::parseCreateDatasetContentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDatasetContentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

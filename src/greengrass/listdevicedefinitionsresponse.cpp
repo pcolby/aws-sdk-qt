@@ -96,7 +96,7 @@ ListDeviceDefinitionsResponsePrivate::ListDeviceDefinitionsResponsePrivate(
 void ListDeviceDefinitionsResponsePrivate::parseListDeviceDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeviceDefinitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

@@ -93,7 +93,7 @@ PutBucketAnalyticsConfigurationResponsePrivate::PutBucketAnalyticsConfigurationR
 void PutBucketAnalyticsConfigurationResponsePrivate::parsePutBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketAnalyticsConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

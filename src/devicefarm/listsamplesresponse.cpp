@@ -95,7 +95,7 @@ ListSamplesResponsePrivate::ListSamplesResponsePrivate(
 void ListSamplesResponsePrivate::parseListSamplesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSamplesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

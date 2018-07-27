@@ -283,7 +283,7 @@ GetCommitResponsePrivate::GetCommitResponsePrivate(
 void GetCommitResponsePrivate::parseGetCommitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCommitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

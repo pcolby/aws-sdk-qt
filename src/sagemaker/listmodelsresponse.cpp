@@ -93,7 +93,7 @@ ListModelsResponsePrivate::ListModelsResponsePrivate(
 void ListModelsResponsePrivate::parseListModelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListModelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

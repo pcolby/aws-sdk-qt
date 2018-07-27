@@ -95,7 +95,7 @@ DeleteVPCEConfigurationResponsePrivate::DeleteVPCEConfigurationResponsePrivate(
 void DeleteVPCEConfigurationResponsePrivate::parseDeleteVPCEConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVPCEConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

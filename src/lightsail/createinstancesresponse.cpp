@@ -109,7 +109,7 @@ CreateInstancesResponsePrivate::CreateInstancesResponsePrivate(
 void CreateInstancesResponsePrivate::parseCreateInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

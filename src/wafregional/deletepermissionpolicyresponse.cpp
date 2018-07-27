@@ -100,7 +100,7 @@ DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
 void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePermissionPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

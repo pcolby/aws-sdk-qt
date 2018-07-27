@@ -96,7 +96,7 @@ StartSentimentDetectionJobResponsePrivate::StartSentimentDetectionJobResponsePri
 void StartSentimentDetectionJobResponsePrivate::parseStartSentimentDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartSentimentDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

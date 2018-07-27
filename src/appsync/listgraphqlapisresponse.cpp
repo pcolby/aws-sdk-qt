@@ -94,7 +94,7 @@ ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
 void ListGraphqlApisResponsePrivate::parseListGraphqlApisResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGraphqlApisResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

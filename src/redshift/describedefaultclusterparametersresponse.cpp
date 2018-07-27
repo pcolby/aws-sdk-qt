@@ -123,7 +123,7 @@ DescribeDefaultClusterParametersResponsePrivate::DescribeDefaultClusterParameter
 void DescribeDefaultClusterParametersResponsePrivate::parseDescribeDefaultClusterParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDefaultClusterParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

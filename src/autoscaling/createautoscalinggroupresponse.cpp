@@ -98,7 +98,7 @@ CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponsePrivate(
 void CreateAutoScalingGroupResponsePrivate::parseCreateAutoScalingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAutoScalingGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

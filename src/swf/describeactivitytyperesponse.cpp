@@ -109,7 +109,7 @@ DescribeActivityTypeResponsePrivate::DescribeActivityTypeResponsePrivate(
 void DescribeActivityTypeResponsePrivate::parseDescribeActivityTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeActivityTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

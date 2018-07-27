@@ -98,7 +98,7 @@ CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsResponsePri
 void CreateDistributionWithTagsResponsePrivate::parseCreateDistributionWithTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDistributionWithTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

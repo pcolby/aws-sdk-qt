@@ -162,7 +162,7 @@ DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponsePrivate
 void DeleteBandwidthRateLimitResponsePrivate::parseDeleteBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBandwidthRateLimitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

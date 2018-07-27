@@ -121,7 +121,7 @@ DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponsePrivate(
 void DescribeMovingAddressesResponsePrivate::parseDescribeMovingAddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMovingAddressesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

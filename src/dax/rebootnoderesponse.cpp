@@ -97,7 +97,7 @@ RebootNodeResponsePrivate::RebootNodeResponsePrivate(
 void RebootNodeResponsePrivate::parseRebootNodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootNodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DAX

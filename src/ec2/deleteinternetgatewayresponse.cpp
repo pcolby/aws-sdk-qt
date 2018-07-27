@@ -121,7 +121,7 @@ DeleteInternetGatewayResponsePrivate::DeleteInternetGatewayResponsePrivate(
 void DeleteInternetGatewayResponsePrivate::parseDeleteInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInternetGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

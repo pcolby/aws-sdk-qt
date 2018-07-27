@@ -122,7 +122,7 @@ AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadResponsePri
 void AbortDocumentVersionUploadResponsePrivate::parseAbortDocumentVersionUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortDocumentVersionUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

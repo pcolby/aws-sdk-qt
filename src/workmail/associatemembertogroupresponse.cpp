@@ -126,7 +126,7 @@ AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponsePrivate(
 void AssociateMemberToGroupResponsePrivate::parseAssociateMemberToGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateMemberToGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

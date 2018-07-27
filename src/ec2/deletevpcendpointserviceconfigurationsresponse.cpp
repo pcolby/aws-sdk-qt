@@ -121,7 +121,7 @@ DeleteVpcEndpointServiceConfigurationsResponsePrivate::DeleteVpcEndpointServiceC
 void DeleteVpcEndpointServiceConfigurationsResponsePrivate::parseDeleteVpcEndpointServiceConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointServiceConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

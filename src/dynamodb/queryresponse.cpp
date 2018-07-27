@@ -112,7 +112,7 @@ QueryResponsePrivate::QueryResponsePrivate(
 void QueryResponsePrivate::parseQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("QueryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

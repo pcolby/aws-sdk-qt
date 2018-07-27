@@ -118,7 +118,7 @@ DescribeAutomationExecutionsResponsePrivate::DescribeAutomationExecutionsRespons
 void DescribeAutomationExecutionsResponsePrivate::parseDescribeAutomationExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutomationExecutionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

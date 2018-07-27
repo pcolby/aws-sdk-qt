@@ -181,7 +181,7 @@ UntagProjectResponsePrivate::UntagProjectResponsePrivate(
 void UntagProjectResponsePrivate::parseUntagProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

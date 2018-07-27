@@ -157,7 +157,7 @@ DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponsePrivate(
 void DescribeSourceRegionsResponsePrivate::parseDescribeSourceRegionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSourceRegionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

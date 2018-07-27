@@ -115,7 +115,7 @@ StopStackSetOperationResponsePrivate::StopStackSetOperationResponsePrivate(
 void StopStackSetOperationResponsePrivate::parseStopStackSetOperationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopStackSetOperationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

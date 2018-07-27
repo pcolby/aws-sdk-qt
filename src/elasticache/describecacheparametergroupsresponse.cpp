@@ -107,7 +107,7 @@ DescribeCacheParameterGroupsResponsePrivate::DescribeCacheParameterGroupsRespons
 void DescribeCacheParameterGroupsResponsePrivate::parseDescribeCacheParameterGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheParameterGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

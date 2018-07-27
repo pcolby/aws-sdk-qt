@@ -101,7 +101,7 @@ AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnec
 void AllocateConnectionOnInterconnectResponsePrivate::parseAllocateConnectionOnInterconnectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateConnectionOnInterconnectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

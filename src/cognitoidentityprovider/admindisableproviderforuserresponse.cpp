@@ -103,7 +103,7 @@ AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponseP
 void AdminDisableProviderForUserResponsePrivate::parseAdminDisableProviderForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminDisableProviderForUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

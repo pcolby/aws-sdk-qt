@@ -104,7 +104,7 @@ CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponsePriva
 void CancelCertificateTransferResponsePrivate::parseCancelCertificateTransferResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelCertificateTransferResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

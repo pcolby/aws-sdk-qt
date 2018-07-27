@@ -121,7 +121,7 @@ ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponsePrivate(
 void ModifySubnetAttributeResponsePrivate::parseModifySubnetAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifySubnetAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

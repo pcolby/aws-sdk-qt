@@ -95,7 +95,7 @@ ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponsePrivate(
 void ImportMigrationTaskResponsePrivate::parseImportMigrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportMigrationTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

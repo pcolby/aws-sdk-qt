@@ -104,7 +104,7 @@ TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
 void TestRenderTemplateResponsePrivate::parseTestRenderTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestRenderTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

@@ -96,7 +96,7 @@ DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponsePrivate(
 void DetectDominantLanguageResponsePrivate::parseDetectDominantLanguageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectDominantLanguageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

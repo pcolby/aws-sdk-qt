@@ -115,7 +115,7 @@ RestartAppServerResponsePrivate::RestartAppServerResponsePrivate(
 void RestartAppServerResponsePrivate::parseRestartAppServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestartAppServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

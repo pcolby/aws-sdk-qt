@@ -104,7 +104,7 @@ ListThingsInThingGroupResponsePrivate::ListThingsInThingGroupResponsePrivate(
 void ListThingsInThingGroupResponsePrivate::parseListThingsInThingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListThingsInThingGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

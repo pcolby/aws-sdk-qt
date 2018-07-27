@@ -100,7 +100,7 @@ BatchWriteResponsePrivate::BatchWriteResponsePrivate(
 void BatchWriteResponsePrivate::parseBatchWriteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchWriteResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

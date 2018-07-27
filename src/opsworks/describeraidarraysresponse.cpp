@@ -199,7 +199,7 @@ DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponsePrivate(
 void DescribeRaidArraysResponsePrivate::parseDescribeRaidArraysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRaidArraysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

@@ -93,7 +93,7 @@ DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
 void DeleteHostedZoneResponsePrivate::parseDeleteHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHostedZoneResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

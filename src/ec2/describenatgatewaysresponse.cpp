@@ -121,7 +121,7 @@ DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponsePrivate(
 void DescribeNatGatewaysResponsePrivate::parseDescribeNatGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNatGatewaysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

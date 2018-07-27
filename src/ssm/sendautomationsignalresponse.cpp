@@ -118,7 +118,7 @@ SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
 void SendAutomationSignalResponsePrivate::parseSendAutomationSignalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendAutomationSignalResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

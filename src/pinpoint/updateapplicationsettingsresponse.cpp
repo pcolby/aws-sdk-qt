@@ -93,7 +93,7 @@ UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponsePriva
 void UpdateApplicationSettingsResponsePrivate::parseUpdateApplicationSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

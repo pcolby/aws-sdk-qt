@@ -104,7 +104,7 @@ UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponsePrivate
 void UpdateEventSourceMappingResponsePrivate::parseUpdateEventSourceMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEventSourceMappingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

@@ -105,7 +105,7 @@ CreateHapgResponsePrivate::CreateHapgResponsePrivate(
 void CreateHapgResponsePrivate::parseCreateHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHapgResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

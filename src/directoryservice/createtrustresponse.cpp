@@ -107,7 +107,7 @@ CreateTrustResponsePrivate::CreateTrustResponsePrivate(
 void CreateTrustResponsePrivate::parseCreateTrustResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTrustResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

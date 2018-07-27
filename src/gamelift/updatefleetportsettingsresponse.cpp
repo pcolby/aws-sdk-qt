@@ -537,7 +537,7 @@ UpdateFleetPortSettingsResponsePrivate::UpdateFleetPortSettingsResponsePrivate(
 void UpdateFleetPortSettingsResponsePrivate::parseUpdateFleetPortSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetPortSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

@@ -104,7 +104,7 @@ StartThingRegistrationTaskResponsePrivate::StartThingRegistrationTaskResponsePri
 void StartThingRegistrationTaskResponsePrivate::parseStartThingRegistrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartThingRegistrationTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

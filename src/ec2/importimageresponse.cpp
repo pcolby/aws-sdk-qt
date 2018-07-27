@@ -121,7 +121,7 @@ ImportImageResponsePrivate::ImportImageResponsePrivate(
 void ImportImageResponsePrivate::parseImportImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

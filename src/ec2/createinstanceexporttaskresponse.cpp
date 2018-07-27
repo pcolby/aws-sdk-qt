@@ -121,7 +121,7 @@ CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate
 void CreateInstanceExportTaskResponsePrivate::parseCreateInstanceExportTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInstanceExportTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

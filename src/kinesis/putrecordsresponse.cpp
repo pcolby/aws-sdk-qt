@@ -96,7 +96,7 @@ PutRecordsResponsePrivate::PutRecordsResponsePrivate(
 void PutRecordsResponsePrivate::parsePutRecordsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRecordsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

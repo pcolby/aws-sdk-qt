@@ -98,7 +98,7 @@ DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
 void DeleteAuthorizerResponsePrivate::parseDeleteAuthorizerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAuthorizerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

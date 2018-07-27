@@ -162,7 +162,7 @@ DescribeWorkingStorageResponsePrivate::DescribeWorkingStorageResponsePrivate(
 void DescribeWorkingStorageResponsePrivate::parseDescribeWorkingStorageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkingStorageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

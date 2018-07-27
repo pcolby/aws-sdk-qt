@@ -98,7 +98,7 @@ AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponsePrivate(
 void AddAttributesToFindingsResponsePrivate::parseAddAttributesToFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddAttributesToFindingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

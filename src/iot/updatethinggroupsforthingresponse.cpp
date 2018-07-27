@@ -104,7 +104,7 @@ UpdateThingGroupsForThingResponsePrivate::UpdateThingGroupsForThingResponsePriva
 void UpdateThingGroupsForThingResponsePrivate::parseUpdateThingGroupsForThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingGroupsForThingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

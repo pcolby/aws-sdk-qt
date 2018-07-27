@@ -104,7 +104,7 @@ ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePri
 void ListVerifiedEmailAddressesResponsePrivate::parseListVerifiedEmailAddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVerifiedEmailAddressesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

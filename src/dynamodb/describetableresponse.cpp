@@ -112,7 +112,7 @@ DescribeTableResponsePrivate::DescribeTableResponsePrivate(
 void DescribeTableResponsePrivate::parseDescribeTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

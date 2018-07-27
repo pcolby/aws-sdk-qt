@@ -93,7 +93,7 @@ DeleteObjectTaggingResponsePrivate::DeleteObjectTaggingResponsePrivate(
 void DeleteObjectTaggingResponsePrivate::parseDeleteObjectTaggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteObjectTaggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -104,7 +104,7 @@ DeleteCACertificateResponsePrivate::DeleteCACertificateResponsePrivate(
 void DeleteCACertificateResponsePrivate::parseDeleteCACertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCACertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

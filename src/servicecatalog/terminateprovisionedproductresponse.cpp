@@ -99,7 +99,7 @@ TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponseP
 void TerminateProvisionedProductResponsePrivate::parseTerminateProvisionedProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateProvisionedProductResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

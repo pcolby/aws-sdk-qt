@@ -268,7 +268,7 @@ DeregisterWebhookWithThirdPartyResponsePrivate::DeregisterWebhookWithThirdPartyR
 void DeregisterWebhookWithThirdPartyResponsePrivate::parseDeregisterWebhookWithThirdPartyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterWebhookWithThirdPartyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

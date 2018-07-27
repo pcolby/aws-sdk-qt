@@ -103,7 +103,7 @@ ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
 void ChangePasswordResponsePrivate::parseChangePasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangePasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

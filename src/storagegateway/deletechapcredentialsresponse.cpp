@@ -162,7 +162,7 @@ DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponsePrivate(
 void DeleteChapCredentialsResponsePrivate::parseDeleteChapCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteChapCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

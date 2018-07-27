@@ -157,7 +157,7 @@ StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
 void StopDBInstanceResponsePrivate::parseStopDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDBInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

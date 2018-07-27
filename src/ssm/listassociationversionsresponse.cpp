@@ -118,7 +118,7 @@ ListAssociationVersionsResponsePrivate::ListAssociationVersionsResponsePrivate(
 void ListAssociationVersionsResponsePrivate::parseListAssociationVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssociationVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

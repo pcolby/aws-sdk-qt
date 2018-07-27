@@ -162,7 +162,7 @@ UpdateGatewayInformationResponsePrivate::UpdateGatewayInformationResponsePrivate
 void UpdateGatewayInformationResponsePrivate::parseUpdateGatewayInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGatewayInformationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

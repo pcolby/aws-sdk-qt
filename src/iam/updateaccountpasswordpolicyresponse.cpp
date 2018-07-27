@@ -158,7 +158,7 @@ UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponseP
 void UpdateAccountPasswordPolicyResponsePrivate::parseUpdateAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccountPasswordPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -161,7 +161,7 @@ SetSubnetsResponsePrivate::SetSubnetsResponsePrivate(
 void SetSubnetsResponsePrivate::parseSetSubnetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetSubnetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

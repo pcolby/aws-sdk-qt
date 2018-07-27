@@ -93,7 +93,7 @@ GetBucketVersioningResponsePrivate::GetBucketVersioningResponsePrivate(
 void GetBucketVersioningResponsePrivate::parseGetBucketVersioningResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketVersioningResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -121,7 +121,7 @@ ModifyFleetResponsePrivate::ModifyFleetResponsePrivate(
 void ModifyFleetResponsePrivate::parseModifyFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

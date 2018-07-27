@@ -109,7 +109,7 @@ AttachDiskResponsePrivate::AttachDiskResponsePrivate(
 void AttachDiskResponsePrivate::parseAttachDiskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachDiskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

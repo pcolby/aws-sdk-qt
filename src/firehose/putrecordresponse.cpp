@@ -97,7 +97,7 @@ PutRecordResponsePrivate::PutRecordResponsePrivate(
 void PutRecordResponsePrivate::parsePutRecordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRecordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

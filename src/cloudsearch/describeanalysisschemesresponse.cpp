@@ -104,7 +104,7 @@ DescribeAnalysisSchemesResponsePrivate::DescribeAnalysisSchemesResponsePrivate(
 void DescribeAnalysisSchemesResponsePrivate::parseDescribeAnalysisSchemesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAnalysisSchemesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

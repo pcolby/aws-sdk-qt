@@ -96,7 +96,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 void RemoveTagsResponsePrivate::parseRemoveTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

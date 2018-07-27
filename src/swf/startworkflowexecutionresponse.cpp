@@ -109,7 +109,7 @@ StartWorkflowExecutionResponsePrivate::StartWorkflowExecutionResponsePrivate(
 void StartWorkflowExecutionResponsePrivate::parseStartWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartWorkflowExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

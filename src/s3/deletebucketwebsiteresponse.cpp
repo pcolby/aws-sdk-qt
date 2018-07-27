@@ -93,7 +93,7 @@ DeleteBucketWebsiteResponsePrivate::DeleteBucketWebsiteResponsePrivate(
 void DeleteBucketWebsiteResponsePrivate::parseDeleteBucketWebsiteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketWebsiteResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

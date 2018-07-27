@@ -98,7 +98,7 @@ GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponsePrivate(
 void GetRoomSkillParameterResponsePrivate::parseGetRoomSkillParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRoomSkillParameterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

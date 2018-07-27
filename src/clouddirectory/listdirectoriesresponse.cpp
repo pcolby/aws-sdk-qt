@@ -100,7 +100,7 @@ ListDirectoriesResponsePrivate::ListDirectoriesResponsePrivate(
 void ListDirectoriesResponsePrivate::parseListDirectoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDirectoriesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

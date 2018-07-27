@@ -96,7 +96,7 @@ CancelStepsResponsePrivate::CancelStepsResponsePrivate(
 void CancelStepsResponsePrivate::parseCancelStepsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelStepsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

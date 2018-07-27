@@ -121,7 +121,7 @@ DescribeVpcEndpointServiceConfigurationsResponsePrivate::DescribeVpcEndpointServ
 void DescribeVpcEndpointServiceConfigurationsResponsePrivate::parseDescribeVpcEndpointServiceConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointServiceConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

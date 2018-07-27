@@ -112,7 +112,7 @@ RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponsePrivate(
 void RestoreTableFromBackupResponsePrivate::parseRestoreTableFromBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableFromBackupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

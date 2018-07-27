@@ -123,7 +123,7 @@ DeleteClusterSubnetGroupResponsePrivate::DeleteClusterSubnetGroupResponsePrivate
 void DeleteClusterSubnetGroupResponsePrivate::parseDeleteClusterSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSubnetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

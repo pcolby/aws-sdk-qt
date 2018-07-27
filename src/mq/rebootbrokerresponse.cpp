@@ -95,7 +95,7 @@ RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
 void RebootBrokerResponsePrivate::parseRebootBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootBrokerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

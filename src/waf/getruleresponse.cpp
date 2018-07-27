@@ -98,7 +98,7 @@ GetRuleResponsePrivate::GetRuleResponsePrivate(
 void GetRuleResponsePrivate::parseGetRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

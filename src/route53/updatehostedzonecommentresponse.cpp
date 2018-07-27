@@ -93,7 +93,7 @@ UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
 void UpdateHostedZoneCommentResponsePrivate::parseUpdateHostedZoneCommentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateHostedZoneCommentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

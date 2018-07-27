@@ -174,7 +174,7 @@ CreateDeploymentConfigResponsePrivate::CreateDeploymentConfigResponsePrivate(
 void CreateDeploymentConfigResponsePrivate::parseCreateDeploymentConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

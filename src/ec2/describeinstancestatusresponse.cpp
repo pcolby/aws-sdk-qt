@@ -121,7 +121,7 @@ DescribeInstanceStatusResponsePrivate::DescribeInstanceStatusResponsePrivate(
 void DescribeInstanceStatusResponsePrivate::parseDescribeInstanceStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

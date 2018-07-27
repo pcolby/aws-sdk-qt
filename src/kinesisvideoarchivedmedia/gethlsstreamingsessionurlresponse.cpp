@@ -93,7 +93,7 @@ GetHLSStreamingSessionURLResponsePrivate::GetHLSStreamingSessionURLResponsePriva
 void GetHLSStreamingSessionURLResponsePrivate::parseGetHLSStreamingSessionURLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHLSStreamingSessionURLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideoArchivedMedia

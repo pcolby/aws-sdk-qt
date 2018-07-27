@@ -97,7 +97,7 @@ StartImportResponsePrivate::StartImportResponsePrivate(
 void StartImportResponsePrivate::parseStartImportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartImportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

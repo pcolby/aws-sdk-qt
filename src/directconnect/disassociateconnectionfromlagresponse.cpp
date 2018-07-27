@@ -101,7 +101,7 @@ DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLagRespo
 void DisassociateConnectionFromLagResponsePrivate::parseDisassociateConnectionFromLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectionFromLagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

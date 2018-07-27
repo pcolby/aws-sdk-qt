@@ -104,7 +104,7 @@ GetPolicyVersionResponsePrivate::GetPolicyVersionResponsePrivate(
 void GetPolicyVersionResponsePrivate::parseGetPolicyVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPolicyVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

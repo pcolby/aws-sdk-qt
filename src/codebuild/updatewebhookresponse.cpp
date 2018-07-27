@@ -173,7 +173,7 @@ UpdateWebhookResponsePrivate::UpdateWebhookResponsePrivate(
 void UpdateWebhookResponsePrivate::parseUpdateWebhookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateWebhookResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

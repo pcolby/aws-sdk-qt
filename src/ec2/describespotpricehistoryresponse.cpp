@@ -121,7 +121,7 @@ DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponsePrivate
 void DescribeSpotPriceHistoryResponsePrivate::parseDescribeSpotPriceHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotPriceHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

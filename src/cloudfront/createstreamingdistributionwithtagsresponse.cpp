@@ -98,7 +98,7 @@ CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionW
 void CreateStreamingDistributionWithTagsResponsePrivate::parseCreateStreamingDistributionWithTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamingDistributionWithTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

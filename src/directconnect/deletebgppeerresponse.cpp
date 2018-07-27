@@ -101,7 +101,7 @@ DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponsePrivate(
 void DeleteBGPPeerResponsePrivate::parseDeleteBGPPeerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBGPPeerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

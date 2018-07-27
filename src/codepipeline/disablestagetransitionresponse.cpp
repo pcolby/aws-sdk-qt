@@ -268,7 +268,7 @@ DisableStageTransitionResponsePrivate::DisableStageTransitionResponsePrivate(
 void DisableStageTransitionResponsePrivate::parseDisableStageTransitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableStageTransitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

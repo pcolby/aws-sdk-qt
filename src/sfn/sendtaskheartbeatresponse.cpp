@@ -112,7 +112,7 @@ SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponsePrivate(
 void SendTaskHeartbeatResponsePrivate::parseSendTaskHeartbeatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendTaskHeartbeatResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

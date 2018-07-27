@@ -235,7 +235,7 @@ DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponsePrivate(
 void DisableAWSServiceAccessResponsePrivate::parseDisableAWSServiceAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableAWSServiceAccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

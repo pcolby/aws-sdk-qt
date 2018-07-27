@@ -93,7 +93,7 @@ CreateQueryLoggingConfigResponsePrivate::CreateQueryLoggingConfigResponsePrivate
 void CreateQueryLoggingConfigResponsePrivate::parseCreateQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateQueryLoggingConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

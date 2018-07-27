@@ -109,7 +109,7 @@ GetInstanceAccessDetailsResponsePrivate::GetInstanceAccessDetailsResponsePrivate
 void GetInstanceAccessDetailsResponsePrivate::parseGetInstanceAccessDetailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceAccessDetailsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

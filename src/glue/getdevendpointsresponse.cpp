@@ -96,7 +96,7 @@ GetDevEndpointsResponsePrivate::GetDevEndpointsResponsePrivate(
 void GetDevEndpointsResponsePrivate::parseGetDevEndpointsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDevEndpointsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

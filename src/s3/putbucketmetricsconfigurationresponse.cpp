@@ -93,7 +93,7 @@ PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfigurationRespo
 void PutBucketMetricsConfigurationResponsePrivate::parsePutBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketMetricsConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

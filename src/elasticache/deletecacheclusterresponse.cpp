@@ -107,7 +107,7 @@ DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponsePrivate(
 void DeleteCacheClusterResponsePrivate::parseDeleteCacheClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

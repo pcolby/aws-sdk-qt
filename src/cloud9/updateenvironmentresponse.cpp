@@ -147,7 +147,7 @@ UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
 void UpdateEnvironmentResponsePrivate::parseUpdateEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Cloud9

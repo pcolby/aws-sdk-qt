@@ -109,7 +109,7 @@ DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponsePrivate(
 void DownloadDefaultKeyPairResponsePrivate::parseDownloadDefaultKeyPairResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DownloadDefaultKeyPairResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

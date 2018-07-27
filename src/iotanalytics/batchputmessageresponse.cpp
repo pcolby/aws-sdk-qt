@@ -113,7 +113,7 @@ BatchPutMessageResponsePrivate::BatchPutMessageResponsePrivate(
 void BatchPutMessageResponsePrivate::parseBatchPutMessageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchPutMessageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

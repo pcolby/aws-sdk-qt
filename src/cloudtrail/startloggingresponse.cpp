@@ -116,7 +116,7 @@ StartLoggingResponsePrivate::StartLoggingResponsePrivate(
 void StartLoggingResponsePrivate::parseStartLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartLoggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

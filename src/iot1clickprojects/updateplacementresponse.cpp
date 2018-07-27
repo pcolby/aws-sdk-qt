@@ -94,7 +94,7 @@ UpdatePlacementResponsePrivate::UpdatePlacementResponsePrivate(
 void UpdatePlacementResponsePrivate::parseUpdatePlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

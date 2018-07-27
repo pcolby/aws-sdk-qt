@@ -158,7 +158,7 @@ DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
 void DeleteAccessKeyResponsePrivate::parseDeleteAccessKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccessKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -107,7 +107,7 @@ ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
 void ConnectDirectoryResponsePrivate::parseConnectDirectoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConnectDirectoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

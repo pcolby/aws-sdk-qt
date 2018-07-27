@@ -98,7 +98,7 @@ UpdateProfileResponsePrivate::UpdateProfileResponsePrivate(
 void UpdateProfileResponsePrivate::parseUpdateProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

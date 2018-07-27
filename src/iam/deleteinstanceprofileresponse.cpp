@@ -158,7 +158,7 @@ DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
 void DeleteInstanceProfileResponsePrivate::parseDeleteInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

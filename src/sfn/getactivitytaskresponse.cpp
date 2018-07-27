@@ -112,7 +112,7 @@ GetActivityTaskResponsePrivate::GetActivityTaskResponsePrivate(
 void GetActivityTaskResponsePrivate::parseGetActivityTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetActivityTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

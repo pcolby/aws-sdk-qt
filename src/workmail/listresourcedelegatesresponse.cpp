@@ -126,7 +126,7 @@ ListResourceDelegatesResponsePrivate::ListResourceDelegatesResponsePrivate(
 void ListResourceDelegatesResponsePrivate::parseListResourceDelegatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceDelegatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

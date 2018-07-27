@@ -118,7 +118,7 @@ CreateActivationResponsePrivate::CreateActivationResponsePrivate(
 void CreateActivationResponsePrivate::parseCreateActivationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateActivationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

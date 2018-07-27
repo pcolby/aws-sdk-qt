@@ -131,7 +131,7 @@ ListTagsForVaultResponsePrivate::ListTagsForVaultResponsePrivate(
 void ListTagsForVaultResponsePrivate::parseListTagsForVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForVaultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

@@ -93,7 +93,7 @@ UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
 void UpdateStreamResponsePrivate::parseUpdateStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideo

@@ -157,7 +157,7 @@ CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
 void CreateOptionGroupResponsePrivate::parseCreateOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOptionGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

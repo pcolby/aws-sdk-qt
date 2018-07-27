@@ -131,7 +131,7 @@ DeleteVaultResponsePrivate::DeleteVaultResponsePrivate(
 void DeleteVaultResponsePrivate::parseDeleteVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

@@ -123,7 +123,7 @@ CreateClusterParameterGroupResponsePrivate::CreateClusterParameterGroupResponseP
 void CreateClusterParameterGroupResponsePrivate::parseCreateClusterParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

@@ -104,7 +104,7 @@ DetachThingPrincipalResponsePrivate::DetachThingPrincipalResponsePrivate(
 void DetachThingPrincipalResponsePrivate::parseDetachThingPrincipalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachThingPrincipalResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

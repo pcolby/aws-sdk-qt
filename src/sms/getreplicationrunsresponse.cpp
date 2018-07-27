@@ -93,7 +93,7 @@ GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
 void GetReplicationRunsResponsePrivate::parseGetReplicationRunsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReplicationRunsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

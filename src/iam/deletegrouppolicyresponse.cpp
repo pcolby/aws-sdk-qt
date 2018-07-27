@@ -158,7 +158,7 @@ DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponsePrivate(
 void DeleteGroupPolicyResponsePrivate::parseDeleteGroupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGroupPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

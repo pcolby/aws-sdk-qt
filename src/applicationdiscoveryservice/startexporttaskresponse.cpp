@@ -157,7 +157,7 @@ StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
 void StartExportTaskResponsePrivate::parseStartExportTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartExportTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

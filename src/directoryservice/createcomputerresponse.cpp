@@ -107,7 +107,7 @@ CreateComputerResponsePrivate::CreateComputerResponsePrivate(
 void CreateComputerResponsePrivate::parseCreateComputerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateComputerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

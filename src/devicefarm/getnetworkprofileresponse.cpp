@@ -95,7 +95,7 @@ GetNetworkProfileResponsePrivate::GetNetworkProfileResponsePrivate(
 void GetNetworkProfileResponsePrivate::parseGetNetworkProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetNetworkProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

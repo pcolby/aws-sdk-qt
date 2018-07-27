@@ -173,7 +173,7 @@ BatchDeleteBuildsResponsePrivate::BatchDeleteBuildsResponsePrivate(
 void BatchDeleteBuildsResponsePrivate::parseBatchDeleteBuildsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteBuildsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

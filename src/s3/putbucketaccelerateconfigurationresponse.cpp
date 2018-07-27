@@ -93,7 +93,7 @@ PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfiguratio
 void PutBucketAccelerateConfigurationResponsePrivate::parsePutBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketAccelerateConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

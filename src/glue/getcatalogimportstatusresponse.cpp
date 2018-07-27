@@ -96,7 +96,7 @@ GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
 void GetCatalogImportStatusResponsePrivate::parseGetCatalogImportStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCatalogImportStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

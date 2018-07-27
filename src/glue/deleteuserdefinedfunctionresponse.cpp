@@ -96,7 +96,7 @@ DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponsePriva
 void DeleteUserDefinedFunctionResponsePrivate::parseDeleteUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserDefinedFunctionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

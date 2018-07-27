@@ -122,7 +122,7 @@ CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponsePrivate(
 void CreateCustomMetadataResponsePrivate::parseCreateCustomMetadataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomMetadataResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

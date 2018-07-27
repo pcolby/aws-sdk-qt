@@ -123,7 +123,7 @@ RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponsePrivate(
 void RotateEncryptionKeyResponsePrivate::parseRotateEncryptionKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RotateEncryptionKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

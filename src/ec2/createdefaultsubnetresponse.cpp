@@ -121,7 +121,7 @@ CreateDefaultSubnetResponsePrivate::CreateDefaultSubnetResponsePrivate(
 void CreateDefaultSubnetResponsePrivate::parseCreateDefaultSubnetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDefaultSubnetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

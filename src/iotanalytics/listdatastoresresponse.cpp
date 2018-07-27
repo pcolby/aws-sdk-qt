@@ -113,7 +113,7 @@ ListDatastoresResponsePrivate::ListDatastoresResponsePrivate(
 void ListDatastoresResponsePrivate::parseListDatastoresResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDatastoresResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

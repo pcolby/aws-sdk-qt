@@ -121,7 +121,7 @@ DescribeNetworkInterfacesResponsePrivate::DescribeNetworkInterfacesResponsePriva
 void DescribeNetworkInterfacesResponsePrivate::parseDescribeNetworkInterfacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNetworkInterfacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

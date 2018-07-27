@@ -109,7 +109,7 @@ UnpeerVpcResponsePrivate::UnpeerVpcResponsePrivate(
 void UnpeerVpcResponsePrivate::parseUnpeerVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnpeerVpcResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

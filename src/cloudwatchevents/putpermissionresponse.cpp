@@ -116,7 +116,7 @@ PutPermissionResponsePrivate::PutPermissionResponsePrivate(
 void PutPermissionResponsePrivate::parsePutPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutPermissionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

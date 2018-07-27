@@ -122,7 +122,7 @@ DeactivateUserResponsePrivate::DeactivateUserResponsePrivate(
 void DeactivateUserResponsePrivate::parseDeactivateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeactivateUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

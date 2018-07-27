@@ -537,7 +537,7 @@ DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationRes
 void DeleteMatchmakingConfigurationResponsePrivate::parseDeleteMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMatchmakingConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

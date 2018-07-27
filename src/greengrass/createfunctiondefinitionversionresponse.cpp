@@ -96,7 +96,7 @@ CreateFunctionDefinitionVersionResponsePrivate::CreateFunctionDefinitionVersionR
 void CreateFunctionDefinitionVersionResponsePrivate::parseCreateFunctionDefinitionVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFunctionDefinitionVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

@@ -126,7 +126,7 @@ UpdateResourceResponsePrivate::UpdateResourceResponsePrivate(
 void UpdateResourceResponsePrivate::parseUpdateResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

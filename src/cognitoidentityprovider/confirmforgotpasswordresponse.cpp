@@ -103,7 +103,7 @@ ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
 void ConfirmForgotPasswordResponsePrivate::parseConfirmForgotPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfirmForgotPasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

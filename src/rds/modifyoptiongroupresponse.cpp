@@ -157,7 +157,7 @@ ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
 void ModifyOptionGroupResponsePrivate::parseModifyOptionGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyOptionGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

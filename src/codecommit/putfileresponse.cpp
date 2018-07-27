@@ -283,7 +283,7 @@ PutFileResponsePrivate::PutFileResponsePrivate(
 void PutFileResponsePrivate::parsePutFileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutFileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

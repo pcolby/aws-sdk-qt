@@ -158,7 +158,7 @@ RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
 void RemoveUserFromGroupResponsePrivate::parseRemoveUserFromGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveUserFromGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

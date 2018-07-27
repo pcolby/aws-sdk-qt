@@ -121,7 +121,7 @@ DeleteFleetsResponsePrivate::DeleteFleetsResponsePrivate(
 void DeleteFleetsResponsePrivate::parseDeleteFleetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFleetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -121,7 +121,7 @@ DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponsePriva
 void DescribeAggregateIdFormatResponsePrivate::parseDescribeAggregateIdFormatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAggregateIdFormatResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

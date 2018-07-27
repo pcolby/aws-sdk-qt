@@ -94,7 +94,7 @@ UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponsePrivate(
 void UpdateDomainNameserversResponsePrivate::parseUpdateDomainNameserversResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainNameserversResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

@@ -98,7 +98,7 @@ DescribeFindingsResponsePrivate::DescribeFindingsResponsePrivate(
 void DescribeFindingsResponsePrivate::parseDescribeFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFindingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

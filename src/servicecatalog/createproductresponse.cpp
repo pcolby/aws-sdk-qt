@@ -99,7 +99,7 @@ CreateProductResponsePrivate::CreateProductResponsePrivate(
 void CreateProductResponsePrivate::parseCreateProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProductResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

@@ -157,7 +157,7 @@ AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressR
 void AuthorizeDBSecurityGroupIngressResponsePrivate::parseAuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeDBSecurityGroupIngressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

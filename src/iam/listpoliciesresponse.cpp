@@ -158,7 +158,7 @@ ListPoliciesResponsePrivate::ListPoliciesResponsePrivate(
 void ListPoliciesResponsePrivate::parseListPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -118,7 +118,7 @@ UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponsePriva
 void UpdateManagedInstanceRoleResponsePrivate::parseUpdateManagedInstanceRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateManagedInstanceRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -112,7 +112,7 @@ ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
 void ListStateMachinesResponsePrivate::parseListStateMachinesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStateMachinesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

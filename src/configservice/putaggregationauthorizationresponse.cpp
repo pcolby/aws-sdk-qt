@@ -113,7 +113,7 @@ PutAggregationAuthorizationResponsePrivate::PutAggregationAuthorizationResponseP
 void PutAggregationAuthorizationResponsePrivate::parsePutAggregationAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutAggregationAuthorizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

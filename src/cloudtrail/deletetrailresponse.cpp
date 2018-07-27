@@ -116,7 +116,7 @@ DeleteTrailResponsePrivate::DeleteTrailResponsePrivate(
 void DeleteTrailResponsePrivate::parseDeleteTrailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

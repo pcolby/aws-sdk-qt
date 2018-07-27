@@ -93,7 +93,7 @@ ListChannelsResponsePrivate::ListChannelsResponsePrivate(
 void ListChannelsResponsePrivate::parseListChannelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListChannelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

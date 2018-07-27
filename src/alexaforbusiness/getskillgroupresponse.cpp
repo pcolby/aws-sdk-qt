@@ -98,7 +98,7 @@ GetSkillGroupResponsePrivate::GetSkillGroupResponsePrivate(
 void GetSkillGroupResponsePrivate::parseGetSkillGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSkillGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

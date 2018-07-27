@@ -107,7 +107,7 @@ OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
 void OptInPhoneNumberResponsePrivate::parseOptInPhoneNumberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("OptInPhoneNumberResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

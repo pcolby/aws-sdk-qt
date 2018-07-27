@@ -99,7 +99,7 @@ CreateConstraintResponsePrivate::CreateConstraintResponsePrivate(
 void CreateConstraintResponsePrivate::parseCreateConstraintResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConstraintResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

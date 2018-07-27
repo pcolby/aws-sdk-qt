@@ -99,7 +99,7 @@ ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
 void ListTagOptionsResponsePrivate::parseListTagOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTagOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

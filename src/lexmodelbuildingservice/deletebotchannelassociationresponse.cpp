@@ -97,7 +97,7 @@ DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponseP
 void DeleteBotChannelAssociationResponsePrivate::parseDeleteBotChannelAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotChannelAssociationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

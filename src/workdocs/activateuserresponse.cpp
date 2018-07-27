@@ -122,7 +122,7 @@ ActivateUserResponsePrivate::ActivateUserResponsePrivate(
 void ActivateUserResponsePrivate::parseActivateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ActivateUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

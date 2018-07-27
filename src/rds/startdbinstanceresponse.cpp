@@ -157,7 +157,7 @@ StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
 void StartDBInstanceResponsePrivate::parseStartDBInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartDBInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

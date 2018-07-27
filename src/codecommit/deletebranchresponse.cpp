@@ -283,7 +283,7 @@ DeleteBranchResponsePrivate::DeleteBranchResponsePrivate(
 void DeleteBranchResponsePrivate::parseDeleteBranchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBranchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

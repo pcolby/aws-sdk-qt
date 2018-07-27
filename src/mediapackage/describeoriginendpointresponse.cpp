@@ -93,7 +93,7 @@ DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponsePrivate(
 void DescribeOriginEndpointResponsePrivate::parseDescribeOriginEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOriginEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

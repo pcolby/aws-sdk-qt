@@ -113,7 +113,7 @@ GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponsePrivate
 void GetResourceConfigHistoryResponsePrivate::parseGetResourceConfigHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResourceConfigHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

@@ -93,7 +93,7 @@ GetDataSourceResponsePrivate::GetDataSourceResponsePrivate(
 void GetDataSourceResponsePrivate::parseGetDataSourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDataSourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

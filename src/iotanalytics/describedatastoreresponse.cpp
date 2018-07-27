@@ -113,7 +113,7 @@ DescribeDatastoreResponsePrivate::DescribeDatastoreResponsePrivate(
 void DescribeDatastoreResponsePrivate::parseDescribeDatastoreResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDatastoreResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

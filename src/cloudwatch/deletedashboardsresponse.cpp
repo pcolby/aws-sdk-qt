@@ -107,7 +107,7 @@ DeleteDashboardsResponsePrivate::DeleteDashboardsResponsePrivate(
 void DeleteDashboardsResponsePrivate::parseDeleteDashboardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDashboardsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

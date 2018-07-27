@@ -99,7 +99,7 @@ ListClusterJobsResponsePrivate::ListClusterJobsResponsePrivate(
 void ListClusterJobsResponsePrivate::parseListClusterJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListClusterJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

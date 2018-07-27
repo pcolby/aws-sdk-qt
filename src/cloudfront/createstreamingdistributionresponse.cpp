@@ -98,7 +98,7 @@ CreateStreamingDistributionResponsePrivate::CreateStreamingDistributionResponseP
 void CreateStreamingDistributionResponsePrivate::parseCreateStreamingDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamingDistributionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

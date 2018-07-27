@@ -98,7 +98,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
 void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIPSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

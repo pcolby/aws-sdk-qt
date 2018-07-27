@@ -123,7 +123,7 @@ DescribeClusterTracksResponsePrivate::DescribeClusterTracksResponsePrivate(
 void DescribeClusterTracksResponsePrivate::parseDescribeClusterTracksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterTracksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

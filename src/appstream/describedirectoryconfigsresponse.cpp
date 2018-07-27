@@ -96,7 +96,7 @@ DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate
 void DescribeDirectoryConfigsResponsePrivate::parseDescribeDirectoryConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectoryConfigsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

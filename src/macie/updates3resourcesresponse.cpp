@@ -100,7 +100,7 @@ UpdateS3ResourcesResponsePrivate::UpdateS3ResourcesResponsePrivate(
 void UpdateS3ResourcesResponsePrivate::parseUpdateS3ResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateS3ResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Macie

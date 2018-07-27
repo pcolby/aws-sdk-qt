@@ -94,7 +94,7 @@ CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePri
 void CheckDomainTransferabilityResponsePrivate::parseCheckDomainTransferabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckDomainTransferabilityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

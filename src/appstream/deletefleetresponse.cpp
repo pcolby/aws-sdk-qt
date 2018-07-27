@@ -96,7 +96,7 @@ DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
 void DeleteFleetResponsePrivate::parseDeleteFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

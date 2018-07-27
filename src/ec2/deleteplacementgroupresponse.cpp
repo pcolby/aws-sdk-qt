@@ -121,7 +121,7 @@ DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponsePrivate(
 void DeletePlacementGroupResponsePrivate::parseDeletePlacementGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePlacementGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

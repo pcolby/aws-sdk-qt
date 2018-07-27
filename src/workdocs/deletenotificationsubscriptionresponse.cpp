@@ -122,7 +122,7 @@ DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscriptionRes
 void DeleteNotificationSubscriptionResponsePrivate::parseDeleteNotificationSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationSubscriptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

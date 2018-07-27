@@ -96,7 +96,7 @@ DescribeKeyPhrasesDetectionJobResponsePrivate::DescribeKeyPhrasesDetectionJobRes
 void DescribeKeyPhrasesDetectionJobResponsePrivate::parseDescribeKeyPhrasesDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeKeyPhrasesDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

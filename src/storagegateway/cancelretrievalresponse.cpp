@@ -162,7 +162,7 @@ CancelRetrievalResponsePrivate::CancelRetrievalResponsePrivate(
 void CancelRetrievalResponsePrivate::parseCancelRetrievalResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelRetrievalResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

@@ -121,7 +121,7 @@ DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate
 void DescribeCustomerGatewaysResponsePrivate::parseDescribeCustomerGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCustomerGatewaysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

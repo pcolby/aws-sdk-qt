@@ -96,7 +96,7 @@ DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponsePrivate(
 void DescribeStreamSummaryResponsePrivate::parseDescribeStreamSummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStreamSummaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

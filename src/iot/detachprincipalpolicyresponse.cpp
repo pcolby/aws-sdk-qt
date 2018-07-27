@@ -104,7 +104,7 @@ DetachPrincipalPolicyResponsePrivate::DetachPrincipalPolicyResponsePrivate(
 void DetachPrincipalPolicyResponsePrivate::parseDetachPrincipalPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachPrincipalPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

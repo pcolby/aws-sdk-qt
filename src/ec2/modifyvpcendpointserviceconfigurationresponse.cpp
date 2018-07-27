@@ -121,7 +121,7 @@ ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceCo
 void ModifyVpcEndpointServiceConfigurationResponsePrivate::parseModifyVpcEndpointServiceConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointServiceConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

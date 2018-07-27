@@ -122,7 +122,7 @@ DescribeDestinationsResponsePrivate::DescribeDestinationsResponsePrivate(
 void DescribeDestinationsResponsePrivate::parseDescribeDestinationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDestinationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

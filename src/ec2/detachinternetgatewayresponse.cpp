@@ -121,7 +121,7 @@ DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
 void DetachInternetGatewayResponsePrivate::parseDetachInternetGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachInternetGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

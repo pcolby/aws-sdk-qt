@@ -113,7 +113,7 @@ UpdateRecordsResponsePrivate::UpdateRecordsResponsePrivate(
 void UpdateRecordsResponsePrivate::parseUpdateRecordsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRecordsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

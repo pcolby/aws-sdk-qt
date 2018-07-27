@@ -104,7 +104,7 @@ ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
 void ListTemplatesResponsePrivate::parseListTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTemplatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

@@ -93,7 +93,7 @@ ListDetectorsResponsePrivate::ListDetectorsResponsePrivate(
 void ListDetectorsResponsePrivate::parseListDetectorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDetectorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

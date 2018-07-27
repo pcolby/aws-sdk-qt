@@ -98,7 +98,7 @@ DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
 void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRateBasedRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

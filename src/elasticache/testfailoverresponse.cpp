@@ -107,7 +107,7 @@ TestFailoverResponsePrivate::TestFailoverResponsePrivate(
 void TestFailoverResponsePrivate::parseTestFailoverResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestFailoverResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

@@ -107,7 +107,7 @@ ListSchemaExtensionsResponsePrivate::ListSchemaExtensionsResponsePrivate(
 void ListSchemaExtensionsResponsePrivate::parseListSchemaExtensionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSchemaExtensionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

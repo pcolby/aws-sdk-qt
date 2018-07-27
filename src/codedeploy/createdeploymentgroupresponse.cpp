@@ -174,7 +174,7 @@ CreateDeploymentGroupResponsePrivate::CreateDeploymentGroupResponsePrivate(
 void CreateDeploymentGroupResponsePrivate::parseCreateDeploymentGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

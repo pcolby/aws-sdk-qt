@@ -118,7 +118,7 @@ UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
 void UpdatePatchBaselineResponsePrivate::parseUpdatePatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePatchBaselineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -109,7 +109,7 @@ AttachInstancesToLoadBalancerResponsePrivate::AttachInstancesToLoadBalancerRespo
 void AttachInstancesToLoadBalancerResponsePrivate::parseAttachInstancesToLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachInstancesToLoadBalancerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

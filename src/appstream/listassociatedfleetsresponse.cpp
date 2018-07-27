@@ -96,7 +96,7 @@ ListAssociatedFleetsResponsePrivate::ListAssociatedFleetsResponsePrivate(
 void ListAssociatedFleetsResponsePrivate::parseListAssociatedFleetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssociatedFleetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

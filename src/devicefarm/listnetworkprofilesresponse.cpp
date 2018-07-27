@@ -95,7 +95,7 @@ ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponsePrivate(
 void ListNetworkProfilesResponsePrivate::parseListNetworkProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListNetworkProfilesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

@@ -94,7 +94,7 @@ RenewDomainResponsePrivate::RenewDomainResponsePrivate(
 void RenewDomainResponsePrivate::parseRenewDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RenewDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

@@ -136,7 +136,7 @@ CreateNotificationResponsePrivate::CreateNotificationResponsePrivate(
 void CreateNotificationResponsePrivate::parseCreateNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNotificationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

@@ -157,7 +157,7 @@ DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate
 void DownloadDBLogFilePortionResponsePrivate::parseDownloadDBLogFilePortionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DownloadDBLogFilePortionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

@@ -93,7 +93,7 @@ UpdateFilterResponsePrivate::UpdateFilterResponsePrivate(
 void UpdateFilterResponsePrivate::parseUpdateFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

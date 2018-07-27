@@ -192,7 +192,7 @@ DisableKeyRotationResponsePrivate::DisableKeyRotationResponsePrivate(
 void DisableKeyRotationResponsePrivate::parseDisableKeyRotationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableKeyRotationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

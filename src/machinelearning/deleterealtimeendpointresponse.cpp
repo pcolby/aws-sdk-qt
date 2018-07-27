@@ -93,7 +93,7 @@ DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
 void DeleteRealtimeEndpointResponsePrivate::parseDeleteRealtimeEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRealtimeEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

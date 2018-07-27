@@ -123,7 +123,7 @@ DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponsePrivate(
 void DescribeLoggingStatusResponsePrivate::parseDescribeLoggingStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoggingStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

@@ -105,7 +105,7 @@ DeleteHapgResponsePrivate::DeleteHapgResponsePrivate(
 void DeleteHapgResponsePrivate::parseDeleteHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHapgResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

@@ -110,7 +110,7 @@ RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePriva
 void RegisterContainerInstanceResponsePrivate::parseRegisterContainerInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterContainerInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

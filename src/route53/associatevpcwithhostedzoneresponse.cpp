@@ -93,7 +93,7 @@ AssociateVPCWithHostedZoneResponsePrivate::AssociateVPCWithHostedZoneResponsePri
 void AssociateVPCWithHostedZoneResponsePrivate::parseAssociateVPCWithHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateVPCWithHostedZoneResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

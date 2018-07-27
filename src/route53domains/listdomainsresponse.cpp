@@ -94,7 +94,7 @@ ListDomainsResponsePrivate::ListDomainsResponsePrivate(
 void ListDomainsResponsePrivate::parseListDomainsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDomainsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

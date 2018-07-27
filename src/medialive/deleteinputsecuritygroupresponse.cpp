@@ -93,7 +93,7 @@ DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponsePrivate
 void DeleteInputSecurityGroupResponsePrivate::parseDeleteInputSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInputSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

@@ -95,7 +95,7 @@ GetVPCEConfigurationResponsePrivate::GetVPCEConfigurationResponsePrivate(
 void GetVPCEConfigurationResponsePrivate::parseGetVPCEConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVPCEConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

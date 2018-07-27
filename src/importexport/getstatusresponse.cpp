@@ -96,7 +96,7 @@ GetStatusResponsePrivate::GetStatusResponsePrivate(
 void GetStatusResponsePrivate::parseGetStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ImportExport

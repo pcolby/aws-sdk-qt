@@ -103,7 +103,7 @@ GetLifecyclePoliciesResponsePrivate::GetLifecyclePoliciesResponsePrivate(
 void GetLifecyclePoliciesResponsePrivate::parseGetLifecyclePoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLifecyclePoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DLM

@@ -537,7 +537,7 @@ DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponsePrivate(
 void DescribeFleetEventsResponsePrivate::parseDescribeFleetEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

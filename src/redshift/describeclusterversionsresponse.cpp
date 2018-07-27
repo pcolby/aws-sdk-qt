@@ -123,7 +123,7 @@ DescribeClusterVersionsResponsePrivate::DescribeClusterVersionsResponsePrivate(
 void DescribeClusterVersionsResponsePrivate::parseDescribeClusterVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

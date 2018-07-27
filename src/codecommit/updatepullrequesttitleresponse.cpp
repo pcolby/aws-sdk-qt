@@ -283,7 +283,7 @@ UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponsePrivate(
 void UpdatePullRequestTitleResponsePrivate::parseUpdatePullRequestTitleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePullRequestTitleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

@@ -95,7 +95,7 @@ DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResponseP
 void DisassociateCreatedArtifactResponsePrivate::parseDisassociateCreatedArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateCreatedArtifactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

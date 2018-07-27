@@ -113,7 +113,7 @@ RunPipelineActivityResponsePrivate::RunPipelineActivityResponsePrivate(
 void RunPipelineActivityResponsePrivate::parseRunPipelineActivityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunPipelineActivityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

@@ -95,7 +95,7 @@ ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponsePrivate(
 void ListOfferingPromotionsResponsePrivate::parseListOfferingPromotionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingPromotionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

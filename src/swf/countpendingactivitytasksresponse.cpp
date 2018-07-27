@@ -109,7 +109,7 @@ CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePriva
 void CountPendingActivityTasksResponsePrivate::parseCountPendingActivityTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CountPendingActivityTasksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

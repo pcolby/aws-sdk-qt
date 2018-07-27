@@ -109,7 +109,7 @@ IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
 void IsVpcPeeredResponsePrivate::parseIsVpcPeeredResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IsVpcPeeredResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

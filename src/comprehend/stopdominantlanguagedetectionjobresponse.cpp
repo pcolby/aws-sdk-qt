@@ -96,7 +96,7 @@ StopDominantLanguageDetectionJobResponsePrivate::StopDominantLanguageDetectionJo
 void StopDominantLanguageDetectionJobResponsePrivate::parseStopDominantLanguageDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDominantLanguageDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

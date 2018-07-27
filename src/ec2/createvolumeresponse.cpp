@@ -121,7 +121,7 @@ CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
 void CreateVolumeResponsePrivate::parseCreateVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

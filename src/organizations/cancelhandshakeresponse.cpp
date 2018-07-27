@@ -235,7 +235,7 @@ CancelHandshakeResponsePrivate::CancelHandshakeResponsePrivate(
 void CancelHandshakeResponsePrivate::parseCancelHandshakeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelHandshakeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

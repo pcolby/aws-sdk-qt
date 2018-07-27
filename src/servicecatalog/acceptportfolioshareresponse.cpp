@@ -99,7 +99,7 @@ AcceptPortfolioShareResponsePrivate::AcceptPortfolioShareResponsePrivate(
 void AcceptPortfolioShareResponsePrivate::parseAcceptPortfolioShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptPortfolioShareResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

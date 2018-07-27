@@ -101,7 +101,7 @@ AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponsePri
 void AssociateConnectionWithLagResponsePrivate::parseAssociateConnectionWithLagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateConnectionWithLagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

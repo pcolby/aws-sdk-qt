@@ -192,7 +192,7 @@ CreateGrantResponsePrivate::CreateGrantResponsePrivate(
 void CreateGrantResponsePrivate::parseCreateGrantResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGrantResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

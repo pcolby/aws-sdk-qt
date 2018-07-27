@@ -93,7 +93,7 @@ DeleteHITResponsePrivate::DeleteHITResponsePrivate(
 void DeleteHITResponsePrivate::parseDeleteHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHITResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

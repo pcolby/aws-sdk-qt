@@ -96,7 +96,7 @@ ListResourceDefinitionsResponsePrivate::ListResourceDefinitionsResponsePrivate(
 void ListResourceDefinitionsResponsePrivate::parseListResourceDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceDefinitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

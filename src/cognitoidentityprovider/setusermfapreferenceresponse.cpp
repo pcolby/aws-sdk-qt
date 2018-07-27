@@ -103,7 +103,7 @@ SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
 void SetUserMFAPreferenceResponsePrivate::parseSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetUserMFAPreferenceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

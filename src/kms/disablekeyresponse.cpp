@@ -192,7 +192,7 @@ DisableKeyResponsePrivate::DisableKeyResponsePrivate(
 void DisableKeyResponsePrivate::parseDisableKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

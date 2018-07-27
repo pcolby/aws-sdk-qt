@@ -162,7 +162,7 @@ DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponsePrivate(
 void DescribeChapCredentialsResponsePrivate::parseDescribeChapCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeChapCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

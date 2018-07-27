@@ -93,7 +93,7 @@ ListHITsResponsePrivate::ListHITsResponsePrivate(
 void ListHITsResponsePrivate::parseListHITsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHITsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

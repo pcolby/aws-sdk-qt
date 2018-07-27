@@ -537,7 +537,7 @@ StartFleetActionsResponsePrivate::StartFleetActionsResponsePrivate(
 void StartFleetActionsResponsePrivate::parseStartFleetActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartFleetActionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

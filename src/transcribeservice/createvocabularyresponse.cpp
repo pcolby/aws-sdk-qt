@@ -94,7 +94,7 @@ CreateVocabularyResponsePrivate::CreateVocabularyResponsePrivate(
 void CreateVocabularyResponsePrivate::parseCreateVocabularyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVocabularyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace TranscribeService

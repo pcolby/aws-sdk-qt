@@ -118,7 +118,7 @@ GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
 void GetInventorySchemaResponsePrivate::parseGetInventorySchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInventorySchemaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

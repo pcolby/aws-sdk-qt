@@ -94,7 +94,7 @@ UnclaimDeviceResponsePrivate::UnclaimDeviceResponsePrivate(
 void UnclaimDeviceResponsePrivate::parseUnclaimDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnclaimDeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickDevicesService

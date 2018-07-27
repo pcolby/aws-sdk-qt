@@ -161,7 +161,7 @@ AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponsePrivate(
 void AddAttachmentsToSetResponsePrivate::parseAddAttachmentsToSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddAttachmentsToSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

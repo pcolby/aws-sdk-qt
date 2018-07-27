@@ -101,7 +101,7 @@ CreateBGPPeerResponsePrivate::CreateBGPPeerResponsePrivate(
 void CreateBGPPeerResponsePrivate::parseCreateBGPPeerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBGPPeerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

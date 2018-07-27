@@ -93,7 +93,7 @@ UpdateApnsVoipChannelResponsePrivate::UpdateApnsVoipChannelResponsePrivate(
 void UpdateApnsVoipChannelResponsePrivate::parseUpdateApnsVoipChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateApnsVoipChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

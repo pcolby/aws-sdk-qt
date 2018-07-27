@@ -94,7 +94,7 @@ EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponsePrivate(
 void EnableDomainAutoRenewResponsePrivate::parseEnableDomainAutoRenewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableDomainAutoRenewResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

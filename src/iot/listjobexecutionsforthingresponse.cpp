@@ -104,7 +104,7 @@ ListJobExecutionsForThingResponsePrivate::ListJobExecutionsForThingResponsePriva
 void ListJobExecutionsForThingResponsePrivate::parseListJobExecutionsForThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListJobExecutionsForThingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

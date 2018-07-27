@@ -107,7 +107,7 @@ DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponsePrivate(
 void DescribeEventTopicsResponsePrivate::parseDescribeEventTopicsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventTopicsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

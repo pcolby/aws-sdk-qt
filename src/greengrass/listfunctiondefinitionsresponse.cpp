@@ -96,7 +96,7 @@ ListFunctionDefinitionsResponsePrivate::ListFunctionDefinitionsResponsePrivate(
 void ListFunctionDefinitionsResponsePrivate::parseListFunctionDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFunctionDefinitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

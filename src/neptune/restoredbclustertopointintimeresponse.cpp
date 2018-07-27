@@ -117,7 +117,7 @@ RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeRespo
 void RestoreDBClusterToPointInTimeResponsePrivate::parseRestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterToPointInTimeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

@@ -94,7 +94,7 @@ GetPersonTrackingResponsePrivate::GetPersonTrackingResponsePrivate(
 void GetPersonTrackingResponsePrivate::parseGetPersonTrackingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPersonTrackingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

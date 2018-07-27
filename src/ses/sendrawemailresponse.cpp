@@ -104,7 +104,7 @@ SendRawEmailResponsePrivate::SendRawEmailResponsePrivate(
 void SendRawEmailResponsePrivate::parseSendRawEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendRawEmailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

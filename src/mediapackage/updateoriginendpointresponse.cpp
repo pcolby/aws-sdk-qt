@@ -93,7 +93,7 @@ UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
 void UpdateOriginEndpointResponsePrivate::parseUpdateOriginEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateOriginEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

@@ -93,7 +93,7 @@ GetMediaForFragmentListResponsePrivate::GetMediaForFragmentListResponsePrivate(
 void GetMediaForFragmentListResponsePrivate::parseGetMediaForFragmentListResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMediaForFragmentListResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideoArchivedMedia

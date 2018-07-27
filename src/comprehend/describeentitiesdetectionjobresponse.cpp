@@ -96,7 +96,7 @@ DescribeEntitiesDetectionJobResponsePrivate::DescribeEntitiesDetectionJobRespons
 void DescribeEntitiesDetectionJobResponsePrivate::parseDescribeEntitiesDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEntitiesDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

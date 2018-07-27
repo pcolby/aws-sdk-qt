@@ -115,7 +115,7 @@ TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponsePrivate(
 void TerminateEnvironmentResponsePrivate::parseTerminateEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

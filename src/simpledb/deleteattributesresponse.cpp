@@ -106,7 +106,7 @@ DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
 void DeleteAttributesResponsePrivate::parseDeleteAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SimpleDB

@@ -131,7 +131,7 @@ ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponsePrivate(
 void ListMultipartUploadsResponsePrivate::parseListMultipartUploadsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListMultipartUploadsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

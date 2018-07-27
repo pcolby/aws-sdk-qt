@@ -157,7 +157,7 @@ CreateDBInstanceReadReplicaResponsePrivate::CreateDBInstanceReadReplicaResponseP
 void CreateDBInstanceReadReplicaResponsePrivate::parseCreateDBInstanceReadReplicaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBInstanceReadReplicaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

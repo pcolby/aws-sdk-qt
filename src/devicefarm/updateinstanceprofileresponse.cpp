@@ -95,7 +95,7 @@ UpdateInstanceProfileResponsePrivate::UpdateInstanceProfileResponsePrivate(
 void UpdateInstanceProfileResponsePrivate::parseUpdateInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

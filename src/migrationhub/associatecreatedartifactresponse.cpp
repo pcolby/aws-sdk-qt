@@ -95,7 +95,7 @@ AssociateCreatedArtifactResponsePrivate::AssociateCreatedArtifactResponsePrivate
 void AssociateCreatedArtifactResponsePrivate::parseAssociateCreatedArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateCreatedArtifactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

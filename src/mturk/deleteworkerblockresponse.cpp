@@ -93,7 +93,7 @@ DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponsePrivate(
 void DeleteWorkerBlockResponsePrivate::parseDeleteWorkerBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteWorkerBlockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

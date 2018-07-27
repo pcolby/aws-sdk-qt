@@ -126,7 +126,7 @@ ResetPasswordResponsePrivate::ResetPasswordResponsePrivate(
 void ResetPasswordResponsePrivate::parseResetPasswordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetPasswordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

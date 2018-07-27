@@ -118,7 +118,7 @@ DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePriva
 void DeregisterManagedInstanceResponsePrivate::parseDeregisterManagedInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterManagedInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

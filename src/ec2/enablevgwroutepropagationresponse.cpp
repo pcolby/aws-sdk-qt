@@ -121,7 +121,7 @@ EnableVgwRoutePropagationResponsePrivate::EnableVgwRoutePropagationResponsePriva
 void EnableVgwRoutePropagationResponsePrivate::parseEnableVgwRoutePropagationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableVgwRoutePropagationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

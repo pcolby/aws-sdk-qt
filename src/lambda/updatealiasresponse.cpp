@@ -104,7 +104,7 @@ UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
 void UpdateAliasResponsePrivate::parseUpdateAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

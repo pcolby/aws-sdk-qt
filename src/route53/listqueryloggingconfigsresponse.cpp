@@ -93,7 +93,7 @@ ListQueryLoggingConfigsResponsePrivate::ListQueryLoggingConfigsResponsePrivate(
 void ListQueryLoggingConfigsResponsePrivate::parseListQueryLoggingConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListQueryLoggingConfigsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

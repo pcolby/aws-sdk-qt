@@ -192,7 +192,7 @@ EncryptResponsePrivate::EncryptResponsePrivate(
 void EncryptResponsePrivate::parseEncryptResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EncryptResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

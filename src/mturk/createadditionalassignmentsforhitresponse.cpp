@@ -93,7 +93,7 @@ CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsFor
 void CreateAdditionalAssignmentsForHITResponsePrivate::parseCreateAdditionalAssignmentsForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAdditionalAssignmentsForHITResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

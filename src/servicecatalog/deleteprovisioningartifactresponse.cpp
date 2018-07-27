@@ -99,7 +99,7 @@ DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponsePri
 void DeleteProvisioningArtifactResponsePrivate::parseDeleteProvisioningArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProvisioningArtifactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

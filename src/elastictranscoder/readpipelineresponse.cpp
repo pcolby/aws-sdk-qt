@@ -96,7 +96,7 @@ ReadPipelineResponsePrivate::ReadPipelineResponsePrivate(
 void ReadPipelineResponsePrivate::parseReadPipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReadPipelineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

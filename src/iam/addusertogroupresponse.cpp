@@ -158,7 +158,7 @@ AddUserToGroupResponsePrivate::AddUserToGroupResponsePrivate(
 void AddUserToGroupResponsePrivate::parseAddUserToGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddUserToGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

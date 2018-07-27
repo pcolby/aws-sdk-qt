@@ -173,7 +173,7 @@ ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponsePrivate(
 void ListBuildsForProjectResponsePrivate::parseListBuildsForProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBuildsForProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

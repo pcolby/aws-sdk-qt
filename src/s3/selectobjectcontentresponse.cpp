@@ -93,7 +93,7 @@ SelectObjectContentResponsePrivate::SelectObjectContentResponsePrivate(
 void SelectObjectContentResponsePrivate::parseSelectObjectContentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SelectObjectContentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

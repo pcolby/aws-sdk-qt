@@ -121,7 +121,7 @@ ConfigureHealthCheckResponsePrivate::ConfigureHealthCheckResponsePrivate(
 void ConfigureHealthCheckResponsePrivate::parseConfigureHealthCheckResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ConfigureHealthCheckResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

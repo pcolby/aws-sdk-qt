@@ -283,7 +283,7 @@ DeleteCommentContentResponsePrivate::DeleteCommentContentResponsePrivate(
 void DeleteCommentContentResponsePrivate::parseDeleteCommentContentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCommentContentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

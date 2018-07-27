@@ -153,7 +153,7 @@ CreateServerResponsePrivate::CreateServerResponsePrivate(
 void CreateServerResponsePrivate::parseCreateServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

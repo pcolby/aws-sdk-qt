@@ -162,7 +162,7 @@ AddCacheResponsePrivate::AddCacheResponsePrivate(
 void AddCacheResponsePrivate::parseAddCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddCacheResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

@@ -115,7 +115,7 @@ CreateStorageLocationResponsePrivate::CreateStorageLocationResponsePrivate(
 void CreateStorageLocationResponsePrivate::parseCreateStorageLocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStorageLocationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

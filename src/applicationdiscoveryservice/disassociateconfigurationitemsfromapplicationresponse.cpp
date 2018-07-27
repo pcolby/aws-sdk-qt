@@ -157,7 +157,7 @@ DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfig
 void DisassociateConfigurationItemsFromApplicationResponsePrivate::parseDisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConfigurationItemsFromApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

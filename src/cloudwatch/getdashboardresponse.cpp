@@ -107,7 +107,7 @@ GetDashboardResponsePrivate::GetDashboardResponsePrivate(
 void GetDashboardResponsePrivate::parseGetDashboardResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDashboardResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

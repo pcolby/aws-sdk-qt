@@ -126,7 +126,7 @@ DescribeUserResponsePrivate::DescribeUserResponsePrivate(
 void DescribeUserResponsePrivate::parseDescribeUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

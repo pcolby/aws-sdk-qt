@@ -97,7 +97,7 @@ InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
 void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateLayerUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

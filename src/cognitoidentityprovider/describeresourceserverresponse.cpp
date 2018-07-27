@@ -103,7 +103,7 @@ DescribeResourceServerResponsePrivate::DescribeResourceServerResponsePrivate(
 void DescribeResourceServerResponsePrivate::parseDescribeResourceServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourceServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

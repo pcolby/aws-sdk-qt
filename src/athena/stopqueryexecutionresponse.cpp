@@ -105,7 +105,7 @@ StopQueryExecutionResponsePrivate::StopQueryExecutionResponsePrivate(
 void StopQueryExecutionResponsePrivate::parseStopQueryExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopQueryExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Athena

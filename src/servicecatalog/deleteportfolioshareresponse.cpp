@@ -99,7 +99,7 @@ DeletePortfolioShareResponsePrivate::DeletePortfolioShareResponsePrivate(
 void DeletePortfolioShareResponsePrivate::parseDeletePortfolioShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePortfolioShareResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

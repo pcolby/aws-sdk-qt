@@ -104,7 +104,7 @@ DescribeTableStatisticsResponsePrivate::DescribeTableStatisticsResponsePrivate(
 void DescribeTableStatisticsResponsePrivate::parseDescribeTableStatisticsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableStatisticsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

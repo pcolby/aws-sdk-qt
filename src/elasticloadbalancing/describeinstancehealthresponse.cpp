@@ -121,7 +121,7 @@ DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponsePrivate(
 void DescribeInstanceHealthResponsePrivate::parseDescribeInstanceHealthResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceHealthResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

@@ -93,7 +93,7 @@ GetBucketAclResponsePrivate::GetBucketAclResponsePrivate(
 void GetBucketAclResponsePrivate::parseGetBucketAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAclResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

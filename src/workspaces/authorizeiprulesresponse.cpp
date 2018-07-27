@@ -96,7 +96,7 @@ AuthorizeIpRulesResponsePrivate::AuthorizeIpRulesResponsePrivate(
 void AuthorizeIpRulesResponsePrivate::parseAuthorizeIpRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeIpRulesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

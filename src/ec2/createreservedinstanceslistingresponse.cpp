@@ -121,7 +121,7 @@ CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingRes
 void CreateReservedInstancesListingResponsePrivate::parseCreateReservedInstancesListingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReservedInstancesListingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

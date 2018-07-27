@@ -104,7 +104,7 @@ ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponsePrivate
 void ListOutgoingCertificatesResponsePrivate::parseListOutgoingCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOutgoingCertificatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

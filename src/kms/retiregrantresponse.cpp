@@ -192,7 +192,7 @@ RetireGrantResponsePrivate::RetireGrantResponsePrivate(
 void RetireGrantResponsePrivate::parseRetireGrantResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetireGrantResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

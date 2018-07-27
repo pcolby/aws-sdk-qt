@@ -100,7 +100,7 @@ DisassociateS3ResourcesResponsePrivate::DisassociateS3ResourcesResponsePrivate(
 void DisassociateS3ResourcesResponsePrivate::parseDisassociateS3ResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateS3ResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Macie

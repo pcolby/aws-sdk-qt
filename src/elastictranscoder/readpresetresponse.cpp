@@ -96,7 +96,7 @@ ReadPresetResponsePrivate::ReadPresetResponsePrivate(
 void ReadPresetResponsePrivate::parseReadPresetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReadPresetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

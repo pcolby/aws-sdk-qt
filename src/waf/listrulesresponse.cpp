@@ -98,7 +98,7 @@ ListRulesResponsePrivate::ListRulesResponsePrivate(
 void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRulesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

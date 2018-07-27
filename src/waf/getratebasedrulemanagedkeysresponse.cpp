@@ -98,7 +98,7 @@ GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponseP
 void GetRateBasedRuleManagedKeysResponsePrivate::parseGetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRateBasedRuleManagedKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

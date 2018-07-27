@@ -126,7 +126,7 @@ ListStreamsResponsePrivate::ListStreamsResponsePrivate(
 void ListStreamsResponsePrivate::parseListStreamsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStreamsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDBStreams

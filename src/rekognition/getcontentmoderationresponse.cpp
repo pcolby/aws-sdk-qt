@@ -94,7 +94,7 @@ GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
 void GetContentModerationResponsePrivate::parseGetContentModerationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContentModerationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

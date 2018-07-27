@@ -158,7 +158,7 @@ GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
 void GetCredentialReportResponsePrivate::parseGetCredentialReportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCredentialReportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

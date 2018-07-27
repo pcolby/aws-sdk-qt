@@ -96,7 +96,7 @@ GetPartitionsResponsePrivate::GetPartitionsResponsePrivate(
 void GetPartitionsResponsePrivate::parseGetPartitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPartitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

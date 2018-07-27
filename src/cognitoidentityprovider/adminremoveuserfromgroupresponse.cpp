@@ -103,7 +103,7 @@ AdminRemoveUserFromGroupResponsePrivate::AdminRemoveUserFromGroupResponsePrivate
 void AdminRemoveUserFromGroupResponsePrivate::parseAdminRemoveUserFromGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminRemoveUserFromGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

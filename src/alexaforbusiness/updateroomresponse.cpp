@@ -98,7 +98,7 @@ UpdateRoomResponsePrivate::UpdateRoomResponsePrivate(
 void UpdateRoomResponsePrivate::parseUpdateRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

@@ -153,7 +153,7 @@ DisassociateNodeResponsePrivate::DisassociateNodeResponsePrivate(
 void DisassociateNodeResponsePrivate::parseDisassociateNodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateNodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

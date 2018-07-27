@@ -98,7 +98,7 @@ DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePriva
 void DeleteLaunchConfigurationResponsePrivate::parseDeleteLaunchConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

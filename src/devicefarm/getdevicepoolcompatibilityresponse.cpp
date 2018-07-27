@@ -95,7 +95,7 @@ GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponsePri
 void GetDevicePoolCompatibilityResponsePrivate::parseGetDevicePoolCompatibilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDevicePoolCompatibilityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

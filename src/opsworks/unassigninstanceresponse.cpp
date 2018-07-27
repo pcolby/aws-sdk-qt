@@ -199,7 +199,7 @@ UnassignInstanceResponsePrivate::UnassignInstanceResponsePrivate(
 void UnassignInstanceResponsePrivate::parseUnassignInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnassignInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

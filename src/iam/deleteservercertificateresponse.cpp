@@ -158,7 +158,7 @@ DeleteServerCertificateResponsePrivate::DeleteServerCertificateResponsePrivate(
 void DeleteServerCertificateResponsePrivate::parseDeleteServerCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

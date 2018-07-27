@@ -93,7 +93,7 @@ GetBucketAnalyticsConfigurationResponsePrivate::GetBucketAnalyticsConfigurationR
 void GetBucketAnalyticsConfigurationResponsePrivate::parseGetBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAnalyticsConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

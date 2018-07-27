@@ -199,7 +199,7 @@ DeregisterVolumeResponsePrivate::DeregisterVolumeResponsePrivate(
 void DeregisterVolumeResponsePrivate::parseDeregisterVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

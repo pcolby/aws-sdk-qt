@@ -117,7 +117,7 @@ DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActi
 void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePendingMaintenanceActionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

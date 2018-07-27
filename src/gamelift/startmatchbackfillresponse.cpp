@@ -537,7 +537,7 @@ StartMatchBackfillResponsePrivate::StartMatchBackfillResponsePrivate(
 void StartMatchBackfillResponsePrivate::parseStartMatchBackfillResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartMatchBackfillResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

@@ -100,7 +100,7 @@ DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePri
 void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSqlInjectionMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

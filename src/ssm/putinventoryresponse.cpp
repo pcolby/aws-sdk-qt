@@ -118,7 +118,7 @@ PutInventoryResponsePrivate::PutInventoryResponsePrivate(
 void PutInventoryResponsePrivate::parsePutInventoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutInventoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -99,7 +99,7 @@ ListPortfoliosForProductResponsePrivate::ListPortfoliosForProductResponsePrivate
 void ListPortfoliosForProductResponsePrivate::parseListPortfoliosForProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPortfoliosForProductResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

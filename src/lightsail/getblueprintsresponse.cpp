@@ -109,7 +109,7 @@ GetBlueprintsResponsePrivate::GetBlueprintsResponsePrivate(
 void GetBlueprintsResponsePrivate::parseGetBlueprintsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBlueprintsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

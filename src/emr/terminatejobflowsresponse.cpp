@@ -96,7 +96,7 @@ TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
 void TerminateJobFlowsResponsePrivate::parseTerminateJobFlowsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TerminateJobFlowsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

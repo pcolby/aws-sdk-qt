@@ -181,7 +181,7 @@ AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponsePrivate(
 void AssociateTeamMemberResponsePrivate::parseAssociateTeamMemberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateTeamMemberResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

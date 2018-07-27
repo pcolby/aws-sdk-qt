@@ -113,7 +113,7 @@ UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponsePrivate(
 void UnsubscribeFromDatasetResponsePrivate::parseUnsubscribeFromDatasetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromDatasetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

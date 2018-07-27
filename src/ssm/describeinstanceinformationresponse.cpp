@@ -118,7 +118,7 @@ DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponseP
 void DescribeInstanceInformationResponsePrivate::parseDescribeInstanceInformationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceInformationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

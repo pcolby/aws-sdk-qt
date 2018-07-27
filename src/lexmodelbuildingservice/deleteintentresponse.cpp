@@ -97,7 +97,7 @@ DeleteIntentResponsePrivate::DeleteIntentResponsePrivate(
 void DeleteIntentResponsePrivate::parseDeleteIntentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

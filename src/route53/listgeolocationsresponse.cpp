@@ -93,7 +93,7 @@ ListGeoLocationsResponsePrivate::ListGeoLocationsResponsePrivate(
 void ListGeoLocationsResponsePrivate::parseListGeoLocationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGeoLocationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

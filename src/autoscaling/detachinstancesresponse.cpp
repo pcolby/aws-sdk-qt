@@ -98,7 +98,7 @@ DetachInstancesResponsePrivate::DetachInstancesResponsePrivate(
 void DetachInstancesResponsePrivate::parseDetachInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

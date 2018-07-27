@@ -121,7 +121,7 @@ UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponsePrivate(
 void UnassignIpv6AddressesResponsePrivate::parseUnassignIpv6AddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UnassignIpv6AddressesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

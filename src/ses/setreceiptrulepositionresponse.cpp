@@ -104,7 +104,7 @@ SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
 void SetReceiptRulePositionResponsePrivate::parseSetReceiptRulePositionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetReceiptRulePositionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

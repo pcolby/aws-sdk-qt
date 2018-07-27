@@ -93,7 +93,7 @@ GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
 void GenerateDataSetResponsePrivate::parseGenerateDataSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MarketplaceCommerceAnalytics

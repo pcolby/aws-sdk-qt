@@ -96,7 +96,7 @@ CreateStackResponsePrivate::CreateStackResponsePrivate(
 void CreateStackResponsePrivate::parseCreateStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

@@ -112,7 +112,7 @@ ListActivitiesResponsePrivate::ListActivitiesResponsePrivate(
 void ListActivitiesResponsePrivate::parseListActivitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListActivitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

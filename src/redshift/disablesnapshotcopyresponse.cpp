@@ -123,7 +123,7 @@ DisableSnapshotCopyResponsePrivate::DisableSnapshotCopyResponsePrivate(
 void DisableSnapshotCopyResponsePrivate::parseDisableSnapshotCopyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableSnapshotCopyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

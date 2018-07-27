@@ -157,7 +157,7 @@ DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponsePrivate(
 void DescribeOptionGroupsResponsePrivate::parseDescribeOptionGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOptionGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

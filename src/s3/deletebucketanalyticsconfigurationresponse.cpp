@@ -93,7 +93,7 @@ DeleteBucketAnalyticsConfigurationResponsePrivate::DeleteBucketAnalyticsConfigur
 void DeleteBucketAnalyticsConfigurationResponsePrivate::parseDeleteBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketAnalyticsConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

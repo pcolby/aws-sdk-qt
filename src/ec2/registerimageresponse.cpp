@@ -121,7 +121,7 @@ RegisterImageResponsePrivate::RegisterImageResponsePrivate(
 void RegisterImageResponsePrivate::parseRegisterImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

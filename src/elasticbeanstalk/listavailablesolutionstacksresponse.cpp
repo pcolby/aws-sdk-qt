@@ -115,7 +115,7 @@ ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponseP
 void ListAvailableSolutionStacksResponsePrivate::parseListAvailableSolutionStacksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAvailableSolutionStacksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

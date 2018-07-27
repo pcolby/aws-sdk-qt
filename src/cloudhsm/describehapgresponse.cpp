@@ -105,7 +105,7 @@ DescribeHapgResponsePrivate::DescribeHapgResponsePrivate(
 void DescribeHapgResponsePrivate::parseDescribeHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHapgResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

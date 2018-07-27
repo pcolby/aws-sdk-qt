@@ -121,7 +121,7 @@ AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressRespons
 void AuthorizeSecurityGroupEgressResponsePrivate::parseAuthorizeSecurityGroupEgressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeSecurityGroupEgressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

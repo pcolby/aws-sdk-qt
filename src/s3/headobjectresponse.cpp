@@ -93,7 +93,7 @@ HeadObjectResponsePrivate::HeadObjectResponsePrivate(
 void HeadObjectResponsePrivate::parseHeadObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("HeadObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

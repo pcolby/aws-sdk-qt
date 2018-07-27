@@ -104,7 +104,7 @@ DisableTopicRuleResponsePrivate::DisableTopicRuleResponsePrivate(
 void DisableTopicRuleResponsePrivate::parseDisableTopicRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableTopicRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

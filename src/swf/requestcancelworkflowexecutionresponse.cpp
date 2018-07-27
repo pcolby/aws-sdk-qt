@@ -109,7 +109,7 @@ RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionRes
 void RequestCancelWorkflowExecutionResponsePrivate::parseRequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestCancelWorkflowExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

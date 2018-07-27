@@ -105,7 +105,7 @@ ModifyHapgResponsePrivate::ModifyHapgResponsePrivate(
 void ModifyHapgResponsePrivate::parseModifyHapgResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyHapgResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

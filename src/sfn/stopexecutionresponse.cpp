@@ -112,7 +112,7 @@ StopExecutionResponsePrivate::StopExecutionResponsePrivate(
 void StopExecutionResponsePrivate::parseStopExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

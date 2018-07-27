@@ -93,7 +93,7 @@ UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
 void UpdateQualificationTypeResponsePrivate::parseUpdateQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateQualificationTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

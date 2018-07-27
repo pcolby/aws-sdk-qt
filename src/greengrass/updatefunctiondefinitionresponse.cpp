@@ -96,7 +96,7 @@ UpdateFunctionDefinitionResponsePrivate::UpdateFunctionDefinitionResponsePrivate
 void UpdateFunctionDefinitionResponsePrivate::parseUpdateFunctionDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

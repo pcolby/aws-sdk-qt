@@ -118,7 +118,7 @@ DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate
 void DescribeAvailablePatchesResponsePrivate::parseDescribeAvailablePatchesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailablePatchesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

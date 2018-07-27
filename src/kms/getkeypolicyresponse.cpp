@@ -192,7 +192,7 @@ GetKeyPolicyResponsePrivate::GetKeyPolicyResponsePrivate(
 void GetKeyPolicyResponsePrivate::parseGetKeyPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetKeyPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

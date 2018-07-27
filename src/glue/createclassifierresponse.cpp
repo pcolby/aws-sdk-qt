@@ -96,7 +96,7 @@ CreateClassifierResponsePrivate::CreateClassifierResponsePrivate(
 void CreateClassifierResponsePrivate::parseCreateClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClassifierResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

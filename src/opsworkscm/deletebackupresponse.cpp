@@ -153,7 +153,7 @@ DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
 void DeleteBackupResponsePrivate::parseDeleteBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBackupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

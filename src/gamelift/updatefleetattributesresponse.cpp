@@ -537,7 +537,7 @@ UpdateFleetAttributesResponsePrivate::UpdateFleetAttributesResponsePrivate(
 void UpdateFleetAttributesResponsePrivate::parseUpdateFleetAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

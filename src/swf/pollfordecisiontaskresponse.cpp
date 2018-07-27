@@ -109,7 +109,7 @@ PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponsePrivate(
 void PollForDecisionTaskResponsePrivate::parsePollForDecisionTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PollForDecisionTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

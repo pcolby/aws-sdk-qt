@@ -104,7 +104,7 @@ VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
 void VerifyDomainDkimResponsePrivate::parseVerifyDomainDkimResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyDomainDkimResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

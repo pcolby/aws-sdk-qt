@@ -96,7 +96,7 @@ ListStepsResponsePrivate::ListStepsResponsePrivate(
 void ListStepsResponsePrivate::parseListStepsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStepsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

@@ -235,7 +235,7 @@ EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponsePrivate(
 void EnableAllFeaturesResponsePrivate::parseEnableAllFeaturesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableAllFeaturesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

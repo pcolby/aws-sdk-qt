@@ -159,7 +159,7 @@ AddPermissionResponsePrivate::AddPermissionResponsePrivate(
 void AddPermissionResponsePrivate::parseAddPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddPermissionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

@@ -95,7 +95,7 @@ UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponsePrivate(
 void UpdateNetworkProfileResponsePrivate::parseUpdateNetworkProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNetworkProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

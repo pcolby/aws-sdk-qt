@@ -104,7 +104,7 @@ BuildSuggestersResponsePrivate::BuildSuggestersResponsePrivate(
 void BuildSuggestersResponsePrivate::parseBuildSuggestersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BuildSuggestersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

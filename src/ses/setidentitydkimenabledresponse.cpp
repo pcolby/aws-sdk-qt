@@ -104,7 +104,7 @@ SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponsePrivate(
 void SetIdentityDkimEnabledResponsePrivate::parseSetIdentityDkimEnabledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityDkimEnabledResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

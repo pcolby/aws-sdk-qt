@@ -537,7 +537,7 @@ RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponsePrivate
 void RequestUploadCredentialsResponsePrivate::parseRequestUploadCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestUploadCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

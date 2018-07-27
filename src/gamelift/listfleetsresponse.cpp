@@ -537,7 +537,7 @@ ListFleetsResponsePrivate::ListFleetsResponsePrivate(
 void ListFleetsResponsePrivate::parseListFleetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFleetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

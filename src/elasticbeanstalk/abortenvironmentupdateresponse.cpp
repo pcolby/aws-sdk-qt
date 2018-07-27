@@ -115,7 +115,7 @@ AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponsePrivate(
 void AbortEnvironmentUpdateResponsePrivate::parseAbortEnvironmentUpdateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortEnvironmentUpdateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

@@ -107,7 +107,7 @@ UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponsePrivate
 void UpdateComputeEnvironmentResponsePrivate::parseUpdateComputeEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateComputeEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

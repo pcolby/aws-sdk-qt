@@ -268,7 +268,7 @@ ListWebhooksResponsePrivate::ListWebhooksResponsePrivate(
 void ListWebhooksResponsePrivate::parseListWebhooksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWebhooksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

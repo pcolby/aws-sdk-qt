@@ -173,7 +173,7 @@ DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
 void DeleteScheduledActionResponsePrivate::parseDeleteScheduledActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteScheduledActionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationAutoScaling

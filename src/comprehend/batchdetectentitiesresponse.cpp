@@ -96,7 +96,7 @@ BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponsePrivate(
 void BatchDetectEntitiesResponsePrivate::parseBatchDetectEntitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectEntitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

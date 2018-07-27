@@ -109,7 +109,7 @@ CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
 void CreateKeyPairResponsePrivate::parseCreateKeyPairResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateKeyPairResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

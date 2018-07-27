@@ -118,7 +118,7 @@ StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponsePrivate(
 void StopAutomationExecutionResponsePrivate::parseStopAutomationExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopAutomationExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

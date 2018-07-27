@@ -123,7 +123,7 @@ BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
 void BatchMeterUsageResponsePrivate::parseBatchMeterUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchMeterUsageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MarketplaceMetering

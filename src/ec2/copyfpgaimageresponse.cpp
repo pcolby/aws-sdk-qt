@@ -121,7 +121,7 @@ CopyFpgaImageResponsePrivate::CopyFpgaImageResponsePrivate(
 void CopyFpgaImageResponsePrivate::parseCopyFpgaImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyFpgaImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

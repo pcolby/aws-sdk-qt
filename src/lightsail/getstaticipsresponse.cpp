@@ -109,7 +109,7 @@ GetStaticIpsResponsePrivate::GetStaticIpsResponsePrivate(
 void GetStaticIpsResponsePrivate::parseGetStaticIpsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetStaticIpsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

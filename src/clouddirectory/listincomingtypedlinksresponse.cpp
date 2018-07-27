@@ -100,7 +100,7 @@ ListIncomingTypedLinksResponsePrivate::ListIncomingTypedLinksResponsePrivate(
 void ListIncomingTypedLinksResponsePrivate::parseListIncomingTypedLinksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIncomingTypedLinksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

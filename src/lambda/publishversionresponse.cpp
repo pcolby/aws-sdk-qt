@@ -104,7 +104,7 @@ PublishVersionResponsePrivate::PublishVersionResponsePrivate(
 void PublishVersionResponsePrivate::parsePublishVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PublishVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

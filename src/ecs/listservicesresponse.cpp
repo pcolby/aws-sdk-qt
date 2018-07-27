@@ -110,7 +110,7 @@ ListServicesResponsePrivate::ListServicesResponsePrivate(
 void ListServicesResponsePrivate::parseListServicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListServicesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

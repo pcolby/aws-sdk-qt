@@ -158,7 +158,7 @@ ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponsePrivate(
 void ListVirtualMFADevicesResponsePrivate::parseListVirtualMFADevicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVirtualMFADevicesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

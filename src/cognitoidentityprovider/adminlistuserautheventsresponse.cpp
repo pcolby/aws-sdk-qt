@@ -103,7 +103,7 @@ AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponsePrivate(
 void AdminListUserAuthEventsResponsePrivate::parseAdminListUserAuthEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminListUserAuthEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

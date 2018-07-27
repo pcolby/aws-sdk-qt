@@ -113,7 +113,7 @@ DescribeChannelResponsePrivate::DescribeChannelResponsePrivate(
 void DescribeChannelResponsePrivate::parseDescribeChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

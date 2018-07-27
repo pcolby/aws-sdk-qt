@@ -113,7 +113,7 @@ DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
 void DeleteChannelResponsePrivate::parseDeleteChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

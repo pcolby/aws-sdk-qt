@@ -99,7 +99,7 @@ ListCompatibleImagesResponsePrivate::ListCompatibleImagesResponsePrivate(
 void ListCompatibleImagesResponsePrivate::parseListCompatibleImagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCompatibleImagesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

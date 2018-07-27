@@ -107,7 +107,7 @@ DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponsePrivate(
 void DescribeAlarmHistoryResponsePrivate::parseDescribeAlarmHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

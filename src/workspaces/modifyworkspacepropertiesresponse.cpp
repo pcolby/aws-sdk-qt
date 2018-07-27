@@ -96,7 +96,7 @@ ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponsePriva
 void ModifyWorkspacePropertiesResponsePrivate::parseModifyWorkspacePropertiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyWorkspacePropertiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

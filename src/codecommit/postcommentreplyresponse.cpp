@@ -283,7 +283,7 @@ PostCommentReplyResponsePrivate::PostCommentReplyResponsePrivate(
 void PostCommentReplyResponsePrivate::parsePostCommentReplyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PostCommentReplyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

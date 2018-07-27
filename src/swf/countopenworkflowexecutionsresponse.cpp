@@ -109,7 +109,7 @@ CountOpenWorkflowExecutionsResponsePrivate::CountOpenWorkflowExecutionsResponseP
 void CountOpenWorkflowExecutionsResponsePrivate::parseCountOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CountOpenWorkflowExecutionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

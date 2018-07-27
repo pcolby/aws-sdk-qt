@@ -112,7 +112,7 @@ DescribeBackupResponsePrivate::DescribeBackupResponsePrivate(
 void DescribeBackupResponsePrivate::parseDescribeBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBackupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

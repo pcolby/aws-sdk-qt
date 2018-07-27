@@ -153,7 +153,7 @@ StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
 void StartMaintenanceResponsePrivate::parseStartMaintenanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartMaintenanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

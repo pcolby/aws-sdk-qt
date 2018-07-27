@@ -157,7 +157,7 @@ DescribeAgentsResponsePrivate::DescribeAgentsResponsePrivate(
 void DescribeAgentsResponsePrivate::parseDescribeAgentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAgentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

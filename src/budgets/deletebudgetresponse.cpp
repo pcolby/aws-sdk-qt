@@ -136,7 +136,7 @@ DeleteBudgetResponsePrivate::DeleteBudgetResponsePrivate(
 void DeleteBudgetResponsePrivate::parseDeleteBudgetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBudgetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

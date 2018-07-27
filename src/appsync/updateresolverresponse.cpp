@@ -94,7 +94,7 @@ UpdateResolverResponsePrivate::UpdateResolverResponsePrivate(
 void UpdateResolverResponsePrivate::parseUpdateResolverResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateResolverResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

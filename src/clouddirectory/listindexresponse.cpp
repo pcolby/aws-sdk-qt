@@ -100,7 +100,7 @@ ListIndexResponsePrivate::ListIndexResponsePrivate(
 void ListIndexResponsePrivate::parseListIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIndexResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

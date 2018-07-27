@@ -95,7 +95,7 @@ ScheduleRunResponsePrivate::ScheduleRunResponsePrivate(
 void ScheduleRunResponsePrivate::parseScheduleRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScheduleRunResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

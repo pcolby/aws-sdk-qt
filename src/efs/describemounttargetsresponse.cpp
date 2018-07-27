@@ -99,7 +99,7 @@ DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
 void DescribeMountTargetsResponsePrivate::parseDescribeMountTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMountTargetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EFS

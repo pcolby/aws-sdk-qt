@@ -93,7 +93,7 @@ ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
 void ListBonusPaymentsResponsePrivate::parseListBonusPaymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBonusPaymentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

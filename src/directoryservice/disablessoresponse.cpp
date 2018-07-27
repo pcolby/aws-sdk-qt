@@ -107,7 +107,7 @@ DisableSsoResponsePrivate::DisableSsoResponsePrivate(
 void DisableSsoResponsePrivate::parseDisableSsoResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableSsoResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

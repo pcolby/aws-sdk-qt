@@ -109,7 +109,7 @@ ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponsePrivate(
 void ReleaseStaticIpResponsePrivate::parseReleaseStaticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReleaseStaticIpResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

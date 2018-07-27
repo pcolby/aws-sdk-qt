@@ -93,7 +93,7 @@ ListObjectsResponsePrivate::ListObjectsResponsePrivate(
 void ListObjectsResponsePrivate::parseListObjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListObjectsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

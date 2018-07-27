@@ -96,7 +96,7 @@ StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponsePrivate(
 void StopStreamEncryptionResponsePrivate::parseStopStreamEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopStreamEncryptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

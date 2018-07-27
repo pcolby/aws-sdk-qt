@@ -107,7 +107,7 @@ GetResourceMetricsResponsePrivate::GetResourceMetricsResponsePrivate(
 void GetResourceMetricsResponsePrivate::parseGetResourceMetricsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResourceMetricsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace PI

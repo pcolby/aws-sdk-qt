@@ -122,7 +122,7 @@ DeleteLogStreamResponsePrivate::DeleteLogStreamResponsePrivate(
 void DeleteLogStreamResponsePrivate::parseDeleteLogStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLogStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

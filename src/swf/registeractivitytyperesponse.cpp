@@ -109,7 +109,7 @@ RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
 void RegisterActivityTypeResponsePrivate::parseRegisterActivityTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterActivityTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

@@ -97,7 +97,7 @@ BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponseP
 void BatchCheckLayerAvailabilityResponsePrivate::parseBatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchCheckLayerAvailabilityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

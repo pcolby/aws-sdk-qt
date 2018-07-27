@@ -122,7 +122,7 @@ UntagLogGroupResponsePrivate::UntagLogGroupResponsePrivate(
 void UntagLogGroupResponsePrivate::parseUntagLogGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagLogGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

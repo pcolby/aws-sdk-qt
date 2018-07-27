@@ -96,7 +96,7 @@ GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
 void GetShippingLabelResponsePrivate::parseGetShippingLabelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetShippingLabelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ImportExport

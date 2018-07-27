@@ -115,7 +115,7 @@ RequestEnvironmentInfoResponsePrivate::RequestEnvironmentInfoResponsePrivate(
 void RequestEnvironmentInfoResponsePrivate::parseRequestEnvironmentInfoResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestEnvironmentInfoResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

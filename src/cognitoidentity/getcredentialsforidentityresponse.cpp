@@ -131,7 +131,7 @@ GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponsePriva
 void GetCredentialsForIdentityResponsePrivate::parseGetCredentialsForIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCredentialsForIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

@@ -96,7 +96,7 @@ AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountRespo
 void AssociateServiceRoleToAccountResponsePrivate::parseAssociateServiceRoleToAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateServiceRoleToAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

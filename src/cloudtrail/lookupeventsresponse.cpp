@@ -116,7 +116,7 @@ LookupEventsResponsePrivate::LookupEventsResponsePrivate(
 void LookupEventsResponsePrivate::parseLookupEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LookupEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudTrail

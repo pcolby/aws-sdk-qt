@@ -157,7 +157,7 @@ RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3ResponsePrivate(
 void RestoreDBClusterFromS3ResponsePrivate::parseRestoreDBClusterFromS3Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterFromS3Response"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

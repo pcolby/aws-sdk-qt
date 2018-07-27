@@ -96,7 +96,7 @@ GetConnectionsResponsePrivate::GetConnectionsResponsePrivate(
 void GetConnectionsResponsePrivate::parseGetConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConnectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

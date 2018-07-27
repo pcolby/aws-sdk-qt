@@ -98,7 +98,7 @@ StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
 void StopAssessmentRunResponsePrivate::parseStopAssessmentRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopAssessmentRunResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

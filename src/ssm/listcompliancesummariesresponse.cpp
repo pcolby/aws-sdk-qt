@@ -118,7 +118,7 @@ ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponsePrivate(
 void ListComplianceSummariesResponsePrivate::parseListComplianceSummariesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListComplianceSummariesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

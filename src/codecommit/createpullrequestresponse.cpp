@@ -283,7 +283,7 @@ CreatePullRequestResponsePrivate::CreatePullRequestResponsePrivate(
 void CreatePullRequestResponsePrivate::parseCreatePullRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePullRequestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

@@ -161,7 +161,7 @@ DescribeListenersResponsePrivate::DescribeListenersResponsePrivate(
 void DescribeListenersResponsePrivate::parseDescribeListenersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeListenersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

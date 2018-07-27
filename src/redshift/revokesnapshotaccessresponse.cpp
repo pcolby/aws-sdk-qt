@@ -123,7 +123,7 @@ RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponsePrivate(
 void RevokeSnapshotAccessResponsePrivate::parseRevokeSnapshotAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeSnapshotAccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

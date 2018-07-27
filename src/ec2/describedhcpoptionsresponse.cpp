@@ -121,7 +121,7 @@ DescribeDhcpOptionsResponsePrivate::DescribeDhcpOptionsResponsePrivate(
 void DescribeDhcpOptionsResponsePrivate::parseDescribeDhcpOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDhcpOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

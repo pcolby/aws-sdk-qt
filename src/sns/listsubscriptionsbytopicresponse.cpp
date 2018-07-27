@@ -107,7 +107,7 @@ ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponsePrivate
 void ListSubscriptionsByTopicResponsePrivate::parseListSubscriptionsByTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionsByTopicResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

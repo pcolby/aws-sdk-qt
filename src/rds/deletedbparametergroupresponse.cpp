@@ -157,7 +157,7 @@ DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponsePrivate(
 void DeleteDBParameterGroupResponsePrivate::parseDeleteDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

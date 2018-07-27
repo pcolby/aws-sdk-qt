@@ -100,7 +100,7 @@ DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
 void DeleteRegexMatchSetResponsePrivate::parseDeleteRegexMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegexMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

@@ -98,7 +98,7 @@ AssociateContactWithAddressBookResponsePrivate::AssociateContactWithAddressBookR
 void AssociateContactWithAddressBookResponsePrivate::parseAssociateContactWithAddressBookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateContactWithAddressBookResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

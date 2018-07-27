@@ -104,7 +104,7 @@ DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResponseP
 void DescribeAvailabilityOptionsResponsePrivate::parseDescribeAvailabilityOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailabilityOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

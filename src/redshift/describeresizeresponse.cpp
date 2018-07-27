@@ -123,7 +123,7 @@ DescribeResizeResponsePrivate::DescribeResizeResponsePrivate(
 void DescribeResizeResponsePrivate::parseDescribeResizeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResizeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

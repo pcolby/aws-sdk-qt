@@ -147,7 +147,7 @@ UpdateEnvironmentMembershipResponsePrivate::UpdateEnvironmentMembershipResponseP
 void UpdateEnvironmentMembershipResponsePrivate::parseUpdateEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEnvironmentMembershipResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Cloud9

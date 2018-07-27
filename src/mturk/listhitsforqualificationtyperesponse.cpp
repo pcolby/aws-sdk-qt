@@ -93,7 +93,7 @@ ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeRespons
 void ListHITsForQualificationTypeResponsePrivate::parseListHITsForQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHITsForQualificationTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

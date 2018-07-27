@@ -157,7 +157,7 @@ CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
 void CreateDBSnapshotResponsePrivate::parseCreateDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

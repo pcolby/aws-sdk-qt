@@ -283,7 +283,7 @@ GetCommentsForPullRequestResponsePrivate::GetCommentsForPullRequestResponsePriva
 void GetCommentsForPullRequestResponsePrivate::parseGetCommentsForPullRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCommentsForPullRequestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

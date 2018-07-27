@@ -93,7 +93,7 @@ DescribeEvaluationsResponsePrivate::DescribeEvaluationsResponsePrivate(
 void DescribeEvaluationsResponsePrivate::parseDescribeEvaluationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEvaluationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

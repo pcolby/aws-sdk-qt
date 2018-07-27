@@ -174,7 +174,7 @@ ListDeploymentConfigsResponsePrivate::ListDeploymentConfigsResponsePrivate(
 void ListDeploymentConfigsResponsePrivate::parseListDeploymentConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentConfigsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

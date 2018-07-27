@@ -122,7 +122,7 @@ DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponsePrivate(
 void DeleteRetentionPolicyResponsePrivate::parseDeleteRetentionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRetentionPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

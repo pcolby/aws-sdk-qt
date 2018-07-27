@@ -95,7 +95,7 @@ UpdateVPCEConfigurationResponsePrivate::UpdateVPCEConfigurationResponsePrivate(
 void UpdateVPCEConfigurationResponsePrivate::parseUpdateVPCEConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateVPCEConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

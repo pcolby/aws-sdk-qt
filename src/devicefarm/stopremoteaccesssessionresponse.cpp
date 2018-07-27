@@ -95,7 +95,7 @@ StopRemoteAccessSessionResponsePrivate::StopRemoteAccessSessionResponsePrivate(
 void StopRemoteAccessSessionResponsePrivate::parseStopRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopRemoteAccessSessionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

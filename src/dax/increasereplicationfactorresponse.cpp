@@ -97,7 +97,7 @@ IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePriva
 void IncreaseReplicationFactorResponsePrivate::parseIncreaseReplicationFactorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IncreaseReplicationFactorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DAX

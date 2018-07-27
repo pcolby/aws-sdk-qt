@@ -113,7 +113,7 @@ DescribeConfigurationAggregatorsResponsePrivate::DescribeConfigurationAggregator
 void DescribeConfigurationAggregatorsResponsePrivate::parseDescribeConfigurationAggregatorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationAggregatorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

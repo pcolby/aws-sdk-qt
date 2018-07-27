@@ -123,7 +123,7 @@ RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngr
 void RevokeClusterSecurityGroupIngressResponsePrivate::parseRevokeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeClusterSecurityGroupIngressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

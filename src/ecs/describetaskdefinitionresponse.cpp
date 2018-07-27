@@ -110,7 +110,7 @@ DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponsePrivate(
 void DescribeTaskDefinitionResponsePrivate::parseDescribeTaskDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTaskDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

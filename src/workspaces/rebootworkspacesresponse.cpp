@@ -96,7 +96,7 @@ RebootWorkspacesResponsePrivate::RebootWorkspacesResponsePrivate(
 void RebootWorkspacesResponsePrivate::parseRebootWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebootWorkspacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

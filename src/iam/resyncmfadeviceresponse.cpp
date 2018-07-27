@@ -158,7 +158,7 @@ ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
 void ResyncMFADeviceResponsePrivate::parseResyncMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResyncMFADeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

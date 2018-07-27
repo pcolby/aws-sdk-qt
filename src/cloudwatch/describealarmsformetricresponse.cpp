@@ -107,7 +107,7 @@ DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponsePrivate(
 void DescribeAlarmsForMetricResponsePrivate::parseDescribeAlarmsForMetricResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmsForMetricResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

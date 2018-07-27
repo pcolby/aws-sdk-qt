@@ -98,7 +98,7 @@ GetUsagePlanKeysResponsePrivate::GetUsagePlanKeysResponsePrivate(
 void GetUsagePlanKeysResponsePrivate::parseGetUsagePlanKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUsagePlanKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

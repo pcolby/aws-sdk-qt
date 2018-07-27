@@ -157,7 +157,7 @@ DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersR
 void DescribeEngineDefaultParametersResponsePrivate::parseDescribeEngineDefaultParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEngineDefaultParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

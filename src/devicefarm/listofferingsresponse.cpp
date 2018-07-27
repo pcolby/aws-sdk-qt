@@ -95,7 +95,7 @@ ListOfferingsResponsePrivate::ListOfferingsResponsePrivate(
 void ListOfferingsResponsePrivate::parseListOfferingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

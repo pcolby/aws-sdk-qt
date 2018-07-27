@@ -96,7 +96,7 @@ UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePriva
 void UpdateUserDefinedFunctionResponsePrivate::parseUpdateUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserDefinedFunctionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

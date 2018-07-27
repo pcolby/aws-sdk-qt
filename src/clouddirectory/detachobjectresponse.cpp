@@ -100,7 +100,7 @@ DetachObjectResponsePrivate::DetachObjectResponsePrivate(
 void DetachObjectResponsePrivate::parseDetachObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

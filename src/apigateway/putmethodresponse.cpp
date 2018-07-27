@@ -98,7 +98,7 @@ PutMethodResponsePrivate::PutMethodResponsePrivate(
 void PutMethodResponsePrivate::parsePutMethodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutMethodResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

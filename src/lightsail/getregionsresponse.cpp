@@ -109,7 +109,7 @@ GetRegionsResponsePrivate::GetRegionsResponsePrivate(
 void GetRegionsResponsePrivate::parseGetRegionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

@@ -104,7 +104,7 @@ DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResponseP
 void DescribeEventConfigurationsResponsePrivate::parseDescribeEventConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -109,7 +109,7 @@ GetDomainResponsePrivate::GetDomainResponsePrivate(
 void GetDomainResponsePrivate::parseGetDomainResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDomainResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

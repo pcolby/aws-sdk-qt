@@ -103,7 +103,7 @@ VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponsePrivate(
 void VerifySoftwareTokenResponsePrivate::parseVerifySoftwareTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifySoftwareTokenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

@@ -103,7 +103,7 @@ StartUserImportJobResponsePrivate::StartUserImportJobResponsePrivate(
 void StartUserImportJobResponsePrivate::parseStartUserImportJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartUserImportJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

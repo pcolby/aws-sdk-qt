@@ -100,7 +100,7 @@ CreateWebACLResponsePrivate::CreateWebACLResponsePrivate(
 void CreateWebACLResponsePrivate::parseCreateWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateWebACLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

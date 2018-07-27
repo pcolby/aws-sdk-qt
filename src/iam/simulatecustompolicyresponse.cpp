@@ -158,7 +158,7 @@ SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
 void SimulateCustomPolicyResponsePrivate::parseSimulateCustomPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SimulateCustomPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

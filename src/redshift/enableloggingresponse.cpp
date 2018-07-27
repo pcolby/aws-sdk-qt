@@ -123,7 +123,7 @@ EnableLoggingResponsePrivate::EnableLoggingResponsePrivate(
 void EnableLoggingResponsePrivate::parseEnableLoggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableLoggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

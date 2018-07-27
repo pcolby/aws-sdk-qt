@@ -122,7 +122,7 @@ DescribeFolderContentsResponsePrivate::DescribeFolderContentsResponsePrivate(
 void DescribeFolderContentsResponsePrivate::parseDescribeFolderContentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFolderContentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

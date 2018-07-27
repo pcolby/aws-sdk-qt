@@ -158,7 +158,7 @@ UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponsePrivate(
 void UpdateSSHPublicKeyResponsePrivate::parseUpdateSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSSHPublicKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

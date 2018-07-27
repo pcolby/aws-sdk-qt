@@ -93,7 +93,7 @@ GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitRespo
 void GetReusableDelegationSetLimitResponsePrivate::parseGetReusableDelegationSetLimitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReusableDelegationSetLimitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

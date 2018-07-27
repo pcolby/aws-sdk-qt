@@ -105,7 +105,7 @@ ListAvailableZonesResponsePrivate::ListAvailableZonesResponsePrivate(
 void ListAvailableZonesResponsePrivate::parseListAvailableZonesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAvailableZonesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

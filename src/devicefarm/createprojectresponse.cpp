@@ -95,7 +95,7 @@ CreateProjectResponsePrivate::CreateProjectResponsePrivate(
 void CreateProjectResponsePrivate::parseCreateProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

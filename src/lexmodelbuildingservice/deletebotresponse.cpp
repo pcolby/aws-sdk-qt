@@ -97,7 +97,7 @@ DeleteBotResponsePrivate::DeleteBotResponsePrivate(
 void DeleteBotResponsePrivate::parseDeleteBotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

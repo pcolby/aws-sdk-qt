@@ -100,7 +100,7 @@ GetSchemaAsJsonResponsePrivate::GetSchemaAsJsonResponsePrivate(
 void GetSchemaAsJsonResponsePrivate::parseGetSchemaAsJsonResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSchemaAsJsonResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

@@ -104,7 +104,7 @@ UpdateScalingPlanResponsePrivate::UpdateScalingPlanResponsePrivate(
 void UpdateScalingPlanResponsePrivate::parseUpdateScalingPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateScalingPlanResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScalingPlans

@@ -97,7 +97,7 @@ GetSlotTypeVersionsResponsePrivate::GetSlotTypeVersionsResponsePrivate(
 void GetSlotTypeVersionsResponsePrivate::parseGetSlotTypeVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSlotTypeVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

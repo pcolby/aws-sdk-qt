@@ -121,7 +121,7 @@ CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnect
 void CreateVpcEndpointConnectionNotificationResponsePrivate::parseCreateVpcEndpointConnectionNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointConnectionNotificationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

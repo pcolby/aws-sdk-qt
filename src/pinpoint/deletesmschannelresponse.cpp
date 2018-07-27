@@ -93,7 +93,7 @@ DeleteSmsChannelResponsePrivate::DeleteSmsChannelResponsePrivate(
 void DeleteSmsChannelResponsePrivate::parseDeleteSmsChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSmsChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

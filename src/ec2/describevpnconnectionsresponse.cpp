@@ -121,7 +121,7 @@ DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponsePrivate(
 void DescribeVpnConnectionsResponsePrivate::parseDescribeVpnConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpnConnectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

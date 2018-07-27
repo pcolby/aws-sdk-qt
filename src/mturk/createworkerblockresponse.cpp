@@ -93,7 +93,7 @@ CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
 void CreateWorkerBlockResponsePrivate::parseCreateWorkerBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateWorkerBlockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

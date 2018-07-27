@@ -100,7 +100,7 @@ DeleteFacetResponsePrivate::DeleteFacetResponsePrivate(
 void DeleteFacetResponsePrivate::parseDeleteFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFacetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

@@ -98,7 +98,7 @@ SearchAddressBooksResponsePrivate::SearchAddressBooksResponsePrivate(
 void SearchAddressBooksResponsePrivate::parseSearchAddressBooksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchAddressBooksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

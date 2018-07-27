@@ -107,7 +107,7 @@ RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponsePrivate(
 void RegisterJobDefinitionResponsePrivate::parseRegisterJobDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterJobDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

@@ -199,7 +199,7 @@ UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponsePrivate(
 void UpdateRdsDbInstanceResponsePrivate::parseUpdateRdsDbInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRdsDbInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

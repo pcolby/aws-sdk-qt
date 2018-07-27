@@ -99,7 +99,7 @@ CreateProvisioningArtifactResponsePrivate::CreateProvisioningArtifactResponsePri
 void CreateProvisioningArtifactResponsePrivate::parseCreateProvisioningArtifactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateProvisioningArtifactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

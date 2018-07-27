@@ -199,7 +199,7 @@ DetachElasticLoadBalancerResponsePrivate::DetachElasticLoadBalancerResponsePriva
 void DetachElasticLoadBalancerResponsePrivate::parseDetachElasticLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachElasticLoadBalancerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

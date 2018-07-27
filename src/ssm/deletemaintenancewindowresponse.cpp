@@ -118,7 +118,7 @@ DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
 void DeleteMaintenanceWindowResponsePrivate::parseDeleteMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteMaintenanceWindowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

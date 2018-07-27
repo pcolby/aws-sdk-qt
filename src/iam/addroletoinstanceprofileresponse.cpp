@@ -158,7 +158,7 @@ AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponsePrivate
 void AddRoleToInstanceProfileResponsePrivate::parseAddRoleToInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddRoleToInstanceProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

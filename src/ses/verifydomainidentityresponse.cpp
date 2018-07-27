@@ -104,7 +104,7 @@ VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
 void VerifyDomainIdentityResponsePrivate::parseVerifyDomainIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("VerifyDomainIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

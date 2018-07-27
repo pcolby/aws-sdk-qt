@@ -159,7 +159,7 @@ ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponsePri
 void ListDeadLetterSourceQueuesResponsePrivate::parseListDeadLetterSourceQueuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeadLetterSourceQueuesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

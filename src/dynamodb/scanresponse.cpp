@@ -112,7 +112,7 @@ ScanResponsePrivate::ScanResponsePrivate(
 void ScanResponsePrivate::parseScanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ScanResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

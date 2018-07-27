@@ -101,7 +101,7 @@ CreateDirectConnectGatewayAssociationResponsePrivate::CreateDirectConnectGateway
 void CreateDirectConnectGatewayAssociationResponsePrivate::parseCreateDirectConnectGatewayAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDirectConnectGatewayAssociationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

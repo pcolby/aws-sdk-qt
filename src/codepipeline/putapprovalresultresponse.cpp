@@ -268,7 +268,7 @@ PutApprovalResultResponsePrivate::PutApprovalResultResponsePrivate(
 void PutApprovalResultResponsePrivate::parsePutApprovalResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutApprovalResultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

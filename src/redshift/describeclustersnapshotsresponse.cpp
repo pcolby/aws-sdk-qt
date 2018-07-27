@@ -123,7 +123,7 @@ DescribeClusterSnapshotsResponsePrivate::DescribeClusterSnapshotsResponsePrivate
 void DescribeClusterSnapshotsResponsePrivate::parseDescribeClusterSnapshotsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterSnapshotsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

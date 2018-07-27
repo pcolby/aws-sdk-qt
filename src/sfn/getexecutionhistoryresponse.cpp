@@ -112,7 +112,7 @@ GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
 void GetExecutionHistoryResponsePrivate::parseGetExecutionHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetExecutionHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

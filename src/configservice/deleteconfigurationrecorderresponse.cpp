@@ -113,7 +113,7 @@ DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResponseP
 void DeleteConfigurationRecorderResponsePrivate::parseDeleteConfigurationRecorderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationRecorderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

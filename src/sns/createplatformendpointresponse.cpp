@@ -107,7 +107,7 @@ CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
 void CreatePlatformEndpointResponsePrivate::parseCreatePlatformEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

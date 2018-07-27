@@ -121,7 +121,7 @@ CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
 void CopySnapshotResponsePrivate::parseCopySnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopySnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -169,7 +169,7 @@ DeleteSecretResponsePrivate::DeleteSecretResponsePrivate(
 void DeleteSecretResponsePrivate::parseDeleteSecretResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSecretResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

@@ -199,7 +199,7 @@ DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponsePrivate(
 void DescribeEcsClustersResponsePrivate::parseDescribeEcsClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEcsClustersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

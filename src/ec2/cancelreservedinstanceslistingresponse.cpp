@@ -121,7 +121,7 @@ CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingRes
 void CancelReservedInstancesListingResponsePrivate::parseCancelReservedInstancesListingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelReservedInstancesListingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

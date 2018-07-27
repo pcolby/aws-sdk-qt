@@ -157,7 +157,7 @@ DescribeDBParameterGroupsResponsePrivate::DescribeDBParameterGroupsResponsePriva
 void DescribeDBParameterGroupsResponsePrivate::parseDescribeDBParameterGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBParameterGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

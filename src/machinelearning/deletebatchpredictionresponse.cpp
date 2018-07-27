@@ -93,7 +93,7 @@ DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponsePrivate(
 void DeleteBatchPredictionResponsePrivate::parseDeleteBatchPredictionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBatchPredictionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

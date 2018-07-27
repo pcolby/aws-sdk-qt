@@ -157,7 +157,7 @@ CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
 void CreateDBSecurityGroupResponsePrivate::parseCreateDBSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

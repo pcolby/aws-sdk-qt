@@ -181,7 +181,7 @@ DescribeUserProfileResponsePrivate::DescribeUserProfileResponsePrivate(
 void DescribeUserProfileResponsePrivate::parseDescribeUserProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeStar

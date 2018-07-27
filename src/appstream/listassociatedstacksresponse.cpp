@@ -96,7 +96,7 @@ ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponsePrivate(
 void ListAssociatedStacksResponsePrivate::parseListAssociatedStacksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssociatedStacksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

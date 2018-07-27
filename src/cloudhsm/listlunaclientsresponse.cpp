@@ -105,7 +105,7 @@ ListLunaClientsResponsePrivate::ListLunaClientsResponsePrivate(
 void ListLunaClientsResponsePrivate::parseListLunaClientsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLunaClientsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

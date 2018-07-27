@@ -121,7 +121,7 @@ AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
 void AssociateAddressResponsePrivate::parseAssociateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

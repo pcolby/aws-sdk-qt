@@ -104,7 +104,7 @@ UpdateScalingParametersResponsePrivate::UpdateScalingParametersResponsePrivate(
 void UpdateScalingParametersResponsePrivate::parseUpdateScalingParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateScalingParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

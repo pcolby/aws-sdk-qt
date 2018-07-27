@@ -174,7 +174,7 @@ DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponsePrivate
 void DeleteGitHubAccountTokenResponsePrivate::parseDeleteGitHubAccountTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGitHubAccountTokenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

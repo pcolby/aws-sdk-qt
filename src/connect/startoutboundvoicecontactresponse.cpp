@@ -96,7 +96,7 @@ StartOutboundVoiceContactResponsePrivate::StartOutboundVoiceContactResponsePriva
 void StartOutboundVoiceContactResponsePrivate::parseStartOutboundVoiceContactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartOutboundVoiceContactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Connect

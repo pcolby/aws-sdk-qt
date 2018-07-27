@@ -96,7 +96,7 @@ CreateIpGroupResponsePrivate::CreateIpGroupResponsePrivate(
 void CreateIpGroupResponsePrivate::parseCreateIpGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIpGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

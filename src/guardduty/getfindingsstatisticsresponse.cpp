@@ -93,7 +93,7 @@ GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponsePrivate(
 void GetFindingsStatisticsResponsePrivate::parseGetFindingsStatisticsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFindingsStatisticsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

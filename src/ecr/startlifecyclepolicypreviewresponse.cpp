@@ -97,7 +97,7 @@ StartLifecyclePolicyPreviewResponsePrivate::StartLifecyclePolicyPreviewResponseP
 void StartLifecyclePolicyPreviewResponsePrivate::parseStartLifecyclePolicyPreviewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartLifecyclePolicyPreviewResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

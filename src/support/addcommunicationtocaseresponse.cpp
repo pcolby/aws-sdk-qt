@@ -161,7 +161,7 @@ AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponsePrivate(
 void AddCommunicationToCaseResponsePrivate::parseAddCommunicationToCaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddCommunicationToCaseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

@@ -157,7 +157,7 @@ StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsRespons
 void StopDataCollectionByAgentIdsResponsePrivate::parseStopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopDataCollectionByAgentIdsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

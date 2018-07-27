@@ -93,7 +93,7 @@ GetChannelsResponsePrivate::GetChannelsResponsePrivate(
 void GetChannelsResponsePrivate::parseGetChannelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetChannelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

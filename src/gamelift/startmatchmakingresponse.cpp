@@ -537,7 +537,7 @@ StartMatchmakingResponsePrivate::StartMatchmakingResponsePrivate(
 void StartMatchmakingResponsePrivate::parseStartMatchmakingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartMatchmakingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

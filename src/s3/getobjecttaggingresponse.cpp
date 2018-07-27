@@ -93,7 +93,7 @@ GetObjectTaggingResponsePrivate::GetObjectTaggingResponsePrivate(
 void GetObjectTaggingResponsePrivate::parseGetObjectTaggingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetObjectTaggingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

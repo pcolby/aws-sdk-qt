@@ -93,7 +93,7 @@ CreateEndpointConfigResponsePrivate::CreateEndpointConfigResponsePrivate(
 void CreateEndpointConfigResponsePrivate::parseCreateEndpointConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEndpointConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

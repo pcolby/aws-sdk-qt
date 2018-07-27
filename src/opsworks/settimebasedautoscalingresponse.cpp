@@ -199,7 +199,7 @@ SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponsePrivate(
 void SetTimeBasedAutoScalingResponsePrivate::parseSetTimeBasedAutoScalingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetTimeBasedAutoScalingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

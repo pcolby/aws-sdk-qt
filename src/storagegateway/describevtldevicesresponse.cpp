@@ -162,7 +162,7 @@ DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponsePrivate(
 void DescribeVTLDevicesResponsePrivate::parseDescribeVTLDevicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVTLDevicesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

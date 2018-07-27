@@ -109,7 +109,7 @@ DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
 void DeprecateActivityTypeResponsePrivate::parseDeprecateActivityTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateActivityTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

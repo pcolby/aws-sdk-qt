@@ -159,7 +159,7 @@ PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
 void PurgeQueueResponsePrivate::parsePurgeQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurgeQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

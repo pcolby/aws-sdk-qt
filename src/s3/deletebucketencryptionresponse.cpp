@@ -93,7 +93,7 @@ DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponsePrivate(
 void DeleteBucketEncryptionResponsePrivate::parseDeleteBucketEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketEncryptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

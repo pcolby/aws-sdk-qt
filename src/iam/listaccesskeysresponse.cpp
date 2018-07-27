@@ -158,7 +158,7 @@ ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
 void ListAccessKeysResponsePrivate::parseListAccessKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAccessKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

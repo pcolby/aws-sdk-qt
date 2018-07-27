@@ -104,7 +104,7 @@ StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponsePriva
 void StopThingRegistrationTaskResponsePrivate::parseStopThingRegistrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopThingRegistrationTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

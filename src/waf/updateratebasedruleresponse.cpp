@@ -98,7 +98,7 @@ UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
 void UpdateRateBasedRuleResponsePrivate::parseUpdateRateBasedRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRateBasedRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

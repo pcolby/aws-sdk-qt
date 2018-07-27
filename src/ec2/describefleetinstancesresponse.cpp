@@ -121,7 +121,7 @@ DescribeFleetInstancesResponsePrivate::DescribeFleetInstancesResponsePrivate(
 void DescribeFleetInstancesResponsePrivate::parseDescribeFleetInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

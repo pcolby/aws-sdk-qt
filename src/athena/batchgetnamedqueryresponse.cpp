@@ -105,7 +105,7 @@ BatchGetNamedQueryResponsePrivate::BatchGetNamedQueryResponsePrivate(
 void BatchGetNamedQueryResponsePrivate::parseBatchGetNamedQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetNamedQueryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Athena

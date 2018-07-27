@@ -115,7 +115,7 @@ ListStackSetOperationsResponsePrivate::ListStackSetOperationsResponsePrivate(
 void ListStackSetOperationsResponsePrivate::parseListStackSetOperationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListStackSetOperationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

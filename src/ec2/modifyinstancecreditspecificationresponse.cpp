@@ -121,7 +121,7 @@ ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificat
 void ModifyInstanceCreditSpecificationResponsePrivate::parseModifyInstanceCreditSpecificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceCreditSpecificationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

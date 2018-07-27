@@ -174,7 +174,7 @@ RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponseP
 void RegisterApplicationRevisionResponsePrivate::parseRegisterApplicationRevisionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterApplicationRevisionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

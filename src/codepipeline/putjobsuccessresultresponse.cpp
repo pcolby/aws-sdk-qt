@@ -268,7 +268,7 @@ PutJobSuccessResultResponsePrivate::PutJobSuccessResultResponsePrivate(
 void PutJobSuccessResultResponsePrivate::parsePutJobSuccessResultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutJobSuccessResultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

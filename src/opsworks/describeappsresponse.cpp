@@ -199,7 +199,7 @@ DescribeAppsResponsePrivate::DescribeAppsResponsePrivate(
 void DescribeAppsResponsePrivate::parseDescribeAppsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAppsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

@@ -97,7 +97,7 @@ CreateServiceResponsePrivate::CreateServiceResponsePrivate(
 void CreateServiceResponsePrivate::parseCreateServiceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateServiceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceDiscovery

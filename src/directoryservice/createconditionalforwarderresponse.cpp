@@ -107,7 +107,7 @@ CreateConditionalForwarderResponsePrivate::CreateConditionalForwarderResponsePri
 void CreateConditionalForwarderResponsePrivate::parseCreateConditionalForwarderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConditionalForwarderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

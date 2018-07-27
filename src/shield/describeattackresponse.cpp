@@ -99,7 +99,7 @@ DescribeAttackResponsePrivate::DescribeAttackResponsePrivate(
 void DescribeAttackResponsePrivate::parseDescribeAttackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAttackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

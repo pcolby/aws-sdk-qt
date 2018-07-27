@@ -103,7 +103,7 @@ AdminDisableUserResponsePrivate::AdminDisableUserResponsePrivate(
 void AdminDisableUserResponsePrivate::parseAdminDisableUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminDisableUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

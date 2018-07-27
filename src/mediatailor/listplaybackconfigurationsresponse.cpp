@@ -99,7 +99,7 @@ ListPlaybackConfigurationsResponsePrivate::ListPlaybackConfigurationsResponsePri
 void ListPlaybackConfigurationsResponsePrivate::parseListPlaybackConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPlaybackConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaTailor

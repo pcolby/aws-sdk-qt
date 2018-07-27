@@ -96,7 +96,7 @@ UpdateCoreDefinitionResponsePrivate::UpdateCoreDefinitionResponsePrivate(
 void UpdateCoreDefinitionResponsePrivate::parseUpdateCoreDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCoreDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

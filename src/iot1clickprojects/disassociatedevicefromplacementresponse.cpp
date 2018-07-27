@@ -94,7 +94,7 @@ DisassociateDeviceFromPlacementResponsePrivate::DisassociateDeviceFromPlacementR
 void DisassociateDeviceFromPlacementResponsePrivate::parseDisassociateDeviceFromPlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDeviceFromPlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

@@ -100,7 +100,7 @@ UpgradeAppliedSchemaResponsePrivate::UpgradeAppliedSchemaResponsePrivate(
 void UpgradeAppliedSchemaResponsePrivate::parseUpgradeAppliedSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpgradeAppliedSchemaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

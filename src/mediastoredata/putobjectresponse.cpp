@@ -95,7 +95,7 @@ PutObjectResponsePrivate::PutObjectResponsePrivate(
 void PutObjectResponsePrivate::parsePutObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStoreData

@@ -115,7 +115,7 @@ DeleteStackResponsePrivate::DeleteStackResponsePrivate(
 void DeleteStackResponsePrivate::parseDeleteStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

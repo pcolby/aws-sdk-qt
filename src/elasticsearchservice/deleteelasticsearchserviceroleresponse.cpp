@@ -102,7 +102,7 @@ DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleRes
 void DeleteElasticsearchServiceRoleResponsePrivate::parseDeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchServiceRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

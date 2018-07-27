@@ -104,7 +104,7 @@ UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponsePriva
 void UpdateAvailabilityOptionsResponsePrivate::parseUpdateAvailabilityOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateAvailabilityOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

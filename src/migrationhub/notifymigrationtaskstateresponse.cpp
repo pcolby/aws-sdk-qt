@@ -95,7 +95,7 @@ NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponsePrivate
 void NotifyMigrationTaskStateResponsePrivate::parseNotifyMigrationTaskStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("NotifyMigrationTaskStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

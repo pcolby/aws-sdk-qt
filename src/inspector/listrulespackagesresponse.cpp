@@ -98,7 +98,7 @@ ListRulesPackagesResponsePrivate::ListRulesPackagesResponsePrivate(
 void ListRulesPackagesResponsePrivate::parseListRulesPackagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRulesPackagesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

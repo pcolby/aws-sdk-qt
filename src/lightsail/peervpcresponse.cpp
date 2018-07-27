@@ -109,7 +109,7 @@ PeerVpcResponsePrivate::PeerVpcResponsePrivate(
 void PeerVpcResponsePrivate::parsePeerVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PeerVpcResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

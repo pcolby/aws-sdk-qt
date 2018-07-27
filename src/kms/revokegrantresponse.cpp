@@ -192,7 +192,7 @@ RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
 void RevokeGrantResponsePrivate::parseRevokeGrantResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeGrantResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

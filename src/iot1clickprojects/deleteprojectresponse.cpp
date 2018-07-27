@@ -94,7 +94,7 @@ DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
 void DeleteProjectResponsePrivate::parseDeleteProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

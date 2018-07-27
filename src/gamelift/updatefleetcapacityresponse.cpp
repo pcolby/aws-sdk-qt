@@ -537,7 +537,7 @@ UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponsePrivate(
 void UpdateFleetCapacityResponsePrivate::parseUpdateFleetCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetCapacityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

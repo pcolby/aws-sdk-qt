@@ -98,7 +98,7 @@ RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatRes
 void RecordLifecycleActionHeartbeatResponsePrivate::parseRecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RecordLifecycleActionHeartbeatResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

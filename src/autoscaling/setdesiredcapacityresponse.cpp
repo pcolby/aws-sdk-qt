@@ -98,7 +98,7 @@ SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
 void SetDesiredCapacityResponsePrivate::parseSetDesiredCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetDesiredCapacityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

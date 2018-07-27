@@ -107,7 +107,7 @@ DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponsePrivate(
 void DeregisterEventTopicResponsePrivate::parseDeregisterEventTopicResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterEventTopicResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

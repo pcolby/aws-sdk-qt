@@ -103,7 +103,7 @@ AdminInitiateAuthResponsePrivate::AdminInitiateAuthResponsePrivate(
 void AdminInitiateAuthResponsePrivate::parseAdminInitiateAuthResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminInitiateAuthResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

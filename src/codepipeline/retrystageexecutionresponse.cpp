@@ -268,7 +268,7 @@ RetryStageExecutionResponsePrivate::RetryStageExecutionResponsePrivate(
 void RetryStageExecutionResponsePrivate::parseRetryStageExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetryStageExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

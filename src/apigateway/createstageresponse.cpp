@@ -98,7 +98,7 @@ CreateStageResponsePrivate::CreateStageResponsePrivate(
 void CreateStageResponsePrivate::parseCreateStageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

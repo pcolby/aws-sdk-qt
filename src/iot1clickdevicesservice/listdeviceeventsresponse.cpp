@@ -94,7 +94,7 @@ ListDeviceEventsResponsePrivate::ListDeviceEventsResponsePrivate(
 void ListDeviceEventsResponsePrivate::parseListDeviceEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeviceEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickDevicesService

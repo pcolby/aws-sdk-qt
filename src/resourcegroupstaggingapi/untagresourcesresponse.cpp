@@ -148,7 +148,7 @@ UntagResourcesResponsePrivate::UntagResourcesResponsePrivate(
 void UntagResourcesResponsePrivate::parseUntagResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroupsTaggingAPI

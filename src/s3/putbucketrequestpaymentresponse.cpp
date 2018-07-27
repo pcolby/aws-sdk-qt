@@ -93,7 +93,7 @@ PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponsePrivate(
 void PutBucketRequestPaymentResponsePrivate::parsePutBucketRequestPaymentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketRequestPaymentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -93,7 +93,7 @@ InviteMembersResponsePrivate::InviteMembersResponsePrivate(
 void InviteMembersResponsePrivate::parseInviteMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InviteMembersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

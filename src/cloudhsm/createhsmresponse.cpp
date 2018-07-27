@@ -105,7 +105,7 @@ CreateHsmResponsePrivate::CreateHsmResponsePrivate(
 void CreateHsmResponsePrivate::parseCreateHsmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateHsmResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

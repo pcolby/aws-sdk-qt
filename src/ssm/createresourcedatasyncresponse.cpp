@@ -118,7 +118,7 @@ CreateResourceDataSyncResponsePrivate::CreateResourceDataSyncResponsePrivate(
 void CreateResourceDataSyncResponsePrivate::parseCreateResourceDataSyncResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceDataSyncResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

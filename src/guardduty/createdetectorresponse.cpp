@@ -93,7 +93,7 @@ CreateDetectorResponsePrivate::CreateDetectorResponsePrivate(
 void CreateDetectorResponsePrivate::parseCreateDetectorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDetectorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

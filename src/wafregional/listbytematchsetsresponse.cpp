@@ -100,7 +100,7 @@ ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
 void ListByteMatchSetsResponsePrivate::parseListByteMatchSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListByteMatchSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

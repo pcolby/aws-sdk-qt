@@ -162,7 +162,7 @@ UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponsePrivate(
 void UpdateVTLDeviceTypeResponsePrivate::parseUpdateVTLDeviceTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateVTLDeviceTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

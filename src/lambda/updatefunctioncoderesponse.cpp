@@ -104,7 +104,7 @@ UpdateFunctionCodeResponsePrivate::UpdateFunctionCodeResponsePrivate(
 void UpdateFunctionCodeResponsePrivate::parseUpdateFunctionCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionCodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

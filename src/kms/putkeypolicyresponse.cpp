@@ -192,7 +192,7 @@ PutKeyPolicyResponsePrivate::PutKeyPolicyResponsePrivate(
 void PutKeyPolicyResponsePrivate::parsePutKeyPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutKeyPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

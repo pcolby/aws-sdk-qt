@@ -122,7 +122,7 @@ DeleteFolderContentsResponsePrivate::DeleteFolderContentsResponsePrivate(
 void DeleteFolderContentsResponsePrivate::parseDeleteFolderContentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFolderContentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

@@ -99,7 +99,7 @@ PutPolicyResponsePrivate::PutPolicyResponsePrivate(
 void PutPolicyResponsePrivate::parsePutPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace FMS

@@ -109,7 +109,7 @@ OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponsePrivate(
 void OpenInstancePublicPortsResponsePrivate::parseOpenInstancePublicPortsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("OpenInstancePublicPortsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

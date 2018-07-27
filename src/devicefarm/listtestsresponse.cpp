@@ -95,7 +95,7 @@ ListTestsResponsePrivate::ListTestsResponsePrivate(
 void ListTestsResponsePrivate::parseListTestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

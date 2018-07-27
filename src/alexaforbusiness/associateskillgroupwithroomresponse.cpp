@@ -98,7 +98,7 @@ AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponseP
 void AssociateSkillGroupWithRoomResponsePrivate::parseAssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateSkillGroupWithRoomResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

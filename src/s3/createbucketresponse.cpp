@@ -93,7 +93,7 @@ CreateBucketResponsePrivate::CreateBucketResponsePrivate(
 void CreateBucketResponsePrivate::parseCreateBucketResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBucketResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

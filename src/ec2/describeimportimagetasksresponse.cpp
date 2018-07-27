@@ -121,7 +121,7 @@ DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponsePrivate
 void DescribeImportImageTasksResponsePrivate::parseDescribeImportImageTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImportImageTasksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

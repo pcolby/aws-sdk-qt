@@ -283,7 +283,7 @@ PostCommentForPullRequestResponsePrivate::PostCommentForPullRequestResponsePriva
 void PostCommentForPullRequestResponsePrivate::parsePostCommentForPullRequestResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PostCommentForPullRequestResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

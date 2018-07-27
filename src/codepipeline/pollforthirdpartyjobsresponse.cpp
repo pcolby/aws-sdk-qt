@@ -268,7 +268,7 @@ PollForThirdPartyJobsResponsePrivate::PollForThirdPartyJobsResponsePrivate(
 void PollForThirdPartyJobsResponsePrivate::parsePollForThirdPartyJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PollForThirdPartyJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

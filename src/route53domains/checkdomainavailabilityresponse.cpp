@@ -94,7 +94,7 @@ CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponsePrivate(
 void CheckDomainAvailabilityResponsePrivate::parseCheckDomainAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckDomainAvailabilityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

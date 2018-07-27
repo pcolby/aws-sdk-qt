@@ -98,7 +98,7 @@ DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationR
 void DeleteNotificationConfigurationResponsePrivate::parseDeleteNotificationConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

@@ -111,7 +111,7 @@ GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponsePrivate(
 void GetPipelineDefinitionResponsePrivate::parseGetPipelineDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPipelineDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

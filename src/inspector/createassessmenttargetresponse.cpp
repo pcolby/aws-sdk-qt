@@ -98,7 +98,7 @@ CreateAssessmentTargetResponsePrivate::CreateAssessmentTargetResponsePrivate(
 void CreateAssessmentTargetResponsePrivate::parseCreateAssessmentTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAssessmentTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

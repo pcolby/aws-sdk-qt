@@ -123,7 +123,7 @@ CopyClusterSnapshotResponsePrivate::CopyClusterSnapshotResponsePrivate(
 void CopyClusterSnapshotResponsePrivate::parseCopyClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyClusterSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

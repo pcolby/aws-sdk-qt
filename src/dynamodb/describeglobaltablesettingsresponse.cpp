@@ -112,7 +112,7 @@ DescribeGlobalTableSettingsResponsePrivate::DescribeGlobalTableSettingsResponseP
 void DescribeGlobalTableSettingsResponsePrivate::parseDescribeGlobalTableSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGlobalTableSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

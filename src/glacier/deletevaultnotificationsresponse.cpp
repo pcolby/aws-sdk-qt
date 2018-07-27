@@ -131,7 +131,7 @@ DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponsePrivate
 void DeleteVaultNotificationsResponsePrivate::parseDeleteVaultNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultNotificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

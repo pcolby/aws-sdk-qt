@@ -115,7 +115,7 @@ DescribeConfigurationSettingsResponsePrivate::DescribeConfigurationSettingsRespo
 void DescribeConfigurationSettingsResponsePrivate::parseDescribeConfigurationSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

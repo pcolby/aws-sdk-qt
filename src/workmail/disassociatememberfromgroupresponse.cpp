@@ -126,7 +126,7 @@ DisassociateMemberFromGroupResponsePrivate::DisassociateMemberFromGroupResponseP
 void DisassociateMemberFromGroupResponsePrivate::parseDisassociateMemberFromGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateMemberFromGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

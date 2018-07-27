@@ -537,7 +537,7 @@ ValidateMatchmakingRuleSetResponsePrivate::ValidateMatchmakingRuleSetResponsePri
 void ValidateMatchmakingRuleSetResponsePrivate::parseValidateMatchmakingRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ValidateMatchmakingRuleSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

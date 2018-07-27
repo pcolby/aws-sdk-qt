@@ -103,7 +103,7 @@ GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierR
 void GetIdentityProviderByIdentifierResponsePrivate::parseGetIdentityProviderByIdentifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityProviderByIdentifierResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

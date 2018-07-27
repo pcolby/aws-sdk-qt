@@ -98,7 +98,7 @@ SearchContactsResponsePrivate::SearchContactsResponsePrivate(
 void SearchContactsResponsePrivate::parseSearchContactsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchContactsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

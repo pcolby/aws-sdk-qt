@@ -93,7 +93,7 @@ ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
 void ListFragmentsResponsePrivate::parseListFragmentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFragmentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideoArchivedMedia

@@ -121,7 +121,7 @@ DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFromLoadB
 void DeregisterInstancesFromLoadBalancerResponsePrivate::parseDeregisterInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterInstancesFromLoadBalancerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

@@ -121,7 +121,7 @@ AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponsePrivate
 void AssignPrivateIpAddressesResponsePrivate::parseAssignPrivateIpAddressesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssignPrivateIpAddressesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

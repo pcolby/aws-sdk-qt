@@ -94,7 +94,7 @@ InitiateDeviceClaimResponsePrivate::InitiateDeviceClaimResponsePrivate(
 void InitiateDeviceClaimResponsePrivate::parseInitiateDeviceClaimResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateDeviceClaimResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickDevicesService

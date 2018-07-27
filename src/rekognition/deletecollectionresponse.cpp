@@ -94,7 +94,7 @@ DeleteCollectionResponsePrivate::DeleteCollectionResponsePrivate(
 void DeleteCollectionResponsePrivate::parseDeleteCollectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteCollectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

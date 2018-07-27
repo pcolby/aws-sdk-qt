@@ -158,7 +158,7 @@ PutGroupPolicyResponsePrivate::PutGroupPolicyResponsePrivate(
 void PutGroupPolicyResponsePrivate::parsePutGroupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutGroupPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

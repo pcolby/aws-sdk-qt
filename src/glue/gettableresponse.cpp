@@ -96,7 +96,7 @@ GetTableResponsePrivate::GetTableResponsePrivate(
 void GetTableResponsePrivate::parseGetTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

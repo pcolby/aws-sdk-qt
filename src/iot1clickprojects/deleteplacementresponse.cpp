@@ -94,7 +94,7 @@ DeletePlacementResponsePrivate::DeletePlacementResponsePrivate(
 void DeletePlacementResponsePrivate::parseDeletePlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

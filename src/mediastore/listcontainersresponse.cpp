@@ -95,7 +95,7 @@ ListContainersResponsePrivate::ListContainersResponsePrivate(
 void ListContainersResponsePrivate::parseListContainersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListContainersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaStore

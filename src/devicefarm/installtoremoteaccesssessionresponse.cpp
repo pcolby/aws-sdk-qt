@@ -95,7 +95,7 @@ InstallToRemoteAccessSessionResponsePrivate::InstallToRemoteAccessSessionRespons
 void InstallToRemoteAccessSessionResponsePrivate::parseInstallToRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InstallToRemoteAccessSessionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

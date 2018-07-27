@@ -93,7 +93,7 @@ StopChannelResponsePrivate::StopChannelResponsePrivate(
 void StopChannelResponsePrivate::parseStopChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

@@ -137,7 +137,7 @@ SearchResourcesResponsePrivate::SearchResourcesResponsePrivate(
 void SearchResourcesResponsePrivate::parseSearchResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

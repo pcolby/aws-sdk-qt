@@ -93,7 +93,7 @@ SendUsersMessagesResponsePrivate::SendUsersMessagesResponsePrivate(
 void SendUsersMessagesResponsePrivate::parseSendUsersMessagesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendUsersMessagesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

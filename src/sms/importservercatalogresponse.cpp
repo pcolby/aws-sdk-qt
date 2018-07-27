@@ -93,7 +93,7 @@ ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
 void ImportServerCatalogResponsePrivate::parseImportServerCatalogResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportServerCatalogResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

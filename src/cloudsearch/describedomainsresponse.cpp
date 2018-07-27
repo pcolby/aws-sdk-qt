@@ -104,7 +104,7 @@ DescribeDomainsResponsePrivate::DescribeDomainsResponsePrivate(
 void DescribeDomainsResponsePrivate::parseDescribeDomainsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDomainsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

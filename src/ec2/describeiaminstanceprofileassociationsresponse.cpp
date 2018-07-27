@@ -121,7 +121,7 @@ DescribeIamInstanceProfileAssociationsResponsePrivate::DescribeIamInstanceProfil
 void DescribeIamInstanceProfileAssociationsResponsePrivate::parseDescribeIamInstanceProfileAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeIamInstanceProfileAssociationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

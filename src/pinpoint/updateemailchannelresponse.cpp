@@ -93,7 +93,7 @@ UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponsePrivate(
 void UpdateEmailChannelResponsePrivate::parseUpdateEmailChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEmailChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

@@ -161,7 +161,7 @@ SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponsePrivate(
 void SetRulePrioritiesResponsePrivate::parseSetRulePrioritiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetRulePrioritiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

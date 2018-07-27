@@ -157,7 +157,7 @@ DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate
 void DescribeDBSecurityGroupsResponsePrivate::parseDescribeDBSecurityGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBSecurityGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

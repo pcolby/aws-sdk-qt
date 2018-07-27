@@ -113,7 +113,7 @@ DeleteDeliveryChannelResponsePrivate::DeleteDeliveryChannelResponsePrivate(
 void DeleteDeliveryChannelResponsePrivate::parseDeleteDeliveryChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeliveryChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

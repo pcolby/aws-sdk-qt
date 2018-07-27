@@ -121,7 +121,7 @@ ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationRespons
 void ReplaceNetworkAclAssociationResponsePrivate::parseReplaceNetworkAclAssociationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReplaceNetworkAclAssociationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

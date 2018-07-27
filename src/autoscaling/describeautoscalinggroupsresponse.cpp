@@ -98,7 +98,7 @@ DescribeAutoScalingGroupsResponsePrivate::DescribeAutoScalingGroupsResponsePriva
 void DescribeAutoScalingGroupsResponsePrivate::parseDescribeAutoScalingGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutoScalingGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

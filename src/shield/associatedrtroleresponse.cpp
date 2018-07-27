@@ -99,7 +99,7 @@ AssociateDRTRoleResponsePrivate::AssociateDRTRoleResponsePrivate(
 void AssociateDRTRoleResponsePrivate::parseAssociateDRTRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDRTRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

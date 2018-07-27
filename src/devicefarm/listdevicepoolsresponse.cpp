@@ -95,7 +95,7 @@ ListDevicePoolsResponsePrivate::ListDevicePoolsResponsePrivate(
 void ListDevicePoolsResponsePrivate::parseListDevicePoolsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDevicePoolsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

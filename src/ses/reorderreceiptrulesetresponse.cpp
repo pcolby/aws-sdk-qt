@@ -104,7 +104,7 @@ ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
 void ReorderReceiptRuleSetResponsePrivate::parseReorderReceiptRuleSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReorderReceiptRuleSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

@@ -151,7 +151,7 @@ AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
 void AssumeRoleWithSAMLResponsePrivate::parseAssumeRoleWithSAMLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithSAMLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace STS

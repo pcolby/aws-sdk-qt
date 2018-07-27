@@ -93,7 +93,7 @@ GetBucketCorsResponsePrivate::GetBucketCorsResponsePrivate(
 void GetBucketCorsResponsePrivate::parseGetBucketCorsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketCorsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

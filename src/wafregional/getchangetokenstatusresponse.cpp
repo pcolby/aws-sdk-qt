@@ -100,7 +100,7 @@ GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponsePrivate(
 void GetChangeTokenStatusResponsePrivate::parseGetChangeTokenStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetChangeTokenStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

@@ -93,7 +93,7 @@ CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookInstan
 void CreatePresignedNotebookInstanceUrlResponsePrivate::parseCreatePresignedNotebookInstanceUrlResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePresignedNotebookInstanceUrlResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

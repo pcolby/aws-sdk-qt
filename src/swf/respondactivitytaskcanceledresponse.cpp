@@ -109,7 +109,7 @@ RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponseP
 void RespondActivityTaskCanceledResponsePrivate::parseRespondActivityTaskCanceledResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCanceledResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

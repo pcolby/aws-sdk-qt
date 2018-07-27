@@ -537,7 +537,7 @@ GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponsePrivate(
 void GetGameSessionLogUrlResponsePrivate::parseGetGameSessionLogUrlResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetGameSessionLogUrlResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

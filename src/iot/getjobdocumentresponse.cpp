@@ -104,7 +104,7 @@ GetJobDocumentResponsePrivate::GetJobDocumentResponsePrivate(
 void GetJobDocumentResponsePrivate::parseGetJobDocumentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobDocumentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

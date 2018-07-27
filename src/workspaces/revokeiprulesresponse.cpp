@@ -96,7 +96,7 @@ RevokeIpRulesResponsePrivate::RevokeIpRulesResponsePrivate(
 void RevokeIpRulesResponsePrivate::parseRevokeIpRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeIpRulesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

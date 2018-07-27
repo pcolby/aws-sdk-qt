@@ -100,7 +100,7 @@ CreateIndexResponsePrivate::CreateIndexResponsePrivate(
 void CreateIndexResponsePrivate::parseCreateIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateIndexResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

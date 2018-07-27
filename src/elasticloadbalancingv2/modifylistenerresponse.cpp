@@ -161,7 +161,7 @@ ModifyListenerResponsePrivate::ModifyListenerResponsePrivate(
 void ModifyListenerResponsePrivate::parseModifyListenerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyListenerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

@@ -96,7 +96,7 @@ GetTriggerResponsePrivate::GetTriggerResponsePrivate(
 void GetTriggerResponsePrivate::parseGetTriggerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTriggerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

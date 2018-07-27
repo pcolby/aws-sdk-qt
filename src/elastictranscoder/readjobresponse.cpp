@@ -96,7 +96,7 @@ ReadJobResponsePrivate::ReadJobResponsePrivate(
 void ReadJobResponsePrivate::parseReadJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReadJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

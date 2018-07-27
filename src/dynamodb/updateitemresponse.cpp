@@ -112,7 +112,7 @@ UpdateItemResponsePrivate::UpdateItemResponsePrivate(
 void UpdateItemResponsePrivate::parseUpdateItemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateItemResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

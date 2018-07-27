@@ -94,7 +94,7 @@ DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponsePrivate(
 void DeleteGraphqlApiResponsePrivate::parseDeleteGraphqlApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGraphqlApiResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

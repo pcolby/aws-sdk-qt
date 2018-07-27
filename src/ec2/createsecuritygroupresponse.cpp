@@ -121,7 +121,7 @@ CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
 void CreateSecurityGroupResponsePrivate::parseCreateSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

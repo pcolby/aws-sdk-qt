@@ -96,7 +96,7 @@ DisassociateIpGroupsResponsePrivate::DisassociateIpGroupsResponsePrivate(
 void DisassociateIpGroupsResponsePrivate::parseDisassociateIpGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateIpGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

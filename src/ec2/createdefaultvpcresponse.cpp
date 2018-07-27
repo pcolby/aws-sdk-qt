@@ -121,7 +121,7 @@ CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
 void CreateDefaultVpcResponsePrivate::parseCreateDefaultVpcResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDefaultVpcResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

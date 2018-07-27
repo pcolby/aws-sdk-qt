@@ -121,7 +121,7 @@ DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnetsRespo
 void DetachLoadBalancerFromSubnetsResponsePrivate::parseDetachLoadBalancerFromSubnetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancerFromSubnetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

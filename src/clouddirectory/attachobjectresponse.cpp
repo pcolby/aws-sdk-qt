@@ -100,7 +100,7 @@ AttachObjectResponsePrivate::AttachObjectResponsePrivate(
 void AttachObjectResponsePrivate::parseAttachObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

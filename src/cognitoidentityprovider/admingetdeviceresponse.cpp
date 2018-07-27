@@ -103,7 +103,7 @@ AdminGetDeviceResponsePrivate::AdminGetDeviceResponsePrivate(
 void AdminGetDeviceResponsePrivate::parseAdminGetDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminGetDeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

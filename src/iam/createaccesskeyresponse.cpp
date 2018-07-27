@@ -158,7 +158,7 @@ CreateAccessKeyResponsePrivate::CreateAccessKeyResponsePrivate(
 void CreateAccessKeyResponsePrivate::parseCreateAccessKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAccessKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

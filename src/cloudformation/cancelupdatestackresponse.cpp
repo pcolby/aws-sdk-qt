@@ -115,7 +115,7 @@ CancelUpdateStackResponsePrivate::CancelUpdateStackResponsePrivate(
 void CancelUpdateStackResponsePrivate::parseCancelUpdateStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelUpdateStackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

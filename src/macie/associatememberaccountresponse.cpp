@@ -100,7 +100,7 @@ AssociateMemberAccountResponsePrivate::AssociateMemberAccountResponsePrivate(
 void AssociateMemberAccountResponsePrivate::parseAssociateMemberAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateMemberAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Macie

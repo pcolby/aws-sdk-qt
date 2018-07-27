@@ -537,7 +537,7 @@ DescribeVpcPeeringAuthorizationsResponsePrivate::DescribeVpcPeeringAuthorization
 void DescribeVpcPeeringAuthorizationsResponsePrivate::parseDescribeVpcPeeringAuthorizationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcPeeringAuthorizationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

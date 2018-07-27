@@ -123,7 +123,7 @@ CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponsePrivate
 void CreateClusterSubnetGroupResponsePrivate::parseCreateClusterSubnetGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterSubnetGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

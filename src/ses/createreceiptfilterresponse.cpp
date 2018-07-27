@@ -104,7 +104,7 @@ CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponsePrivate(
 void CreateReceiptFilterResponsePrivate::parseCreateReceiptFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReceiptFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

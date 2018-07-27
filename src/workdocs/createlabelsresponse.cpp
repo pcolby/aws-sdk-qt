@@ -122,7 +122,7 @@ CreateLabelsResponsePrivate::CreateLabelsResponsePrivate(
 void CreateLabelsResponsePrivate::parseCreateLabelsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLabelsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

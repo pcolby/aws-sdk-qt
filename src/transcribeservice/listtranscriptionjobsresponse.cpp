@@ -94,7 +94,7 @@ ListTranscriptionJobsResponsePrivate::ListTranscriptionJobsResponsePrivate(
 void ListTranscriptionJobsResponsePrivate::parseListTranscriptionJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTranscriptionJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace TranscribeService

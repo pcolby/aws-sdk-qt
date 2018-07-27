@@ -110,7 +110,7 @@ DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponsePrivate
 void DeregisterTaskDefinitionResponsePrivate::parseDeregisterTaskDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTaskDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

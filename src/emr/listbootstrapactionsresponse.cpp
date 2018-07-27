@@ -96,7 +96,7 @@ ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
 void ListBootstrapActionsResponsePrivate::parseListBootstrapActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListBootstrapActionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

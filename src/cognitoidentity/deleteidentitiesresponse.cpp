@@ -131,7 +131,7 @@ DeleteIdentitiesResponsePrivate::DeleteIdentitiesResponsePrivate(
 void DeleteIdentitiesResponsePrivate::parseDeleteIdentitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIdentitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

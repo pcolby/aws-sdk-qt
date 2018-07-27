@@ -118,7 +118,7 @@ DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceA
 void DescribeEffectiveInstanceAssociationsResponsePrivate::parseDescribeEffectiveInstanceAssociationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEffectiveInstanceAssociationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

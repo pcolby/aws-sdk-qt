@@ -121,7 +121,7 @@ RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsRespons
 void RejectVpcEndpointConnectionsResponsePrivate::parseRejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RejectVpcEndpointConnectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

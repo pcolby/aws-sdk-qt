@@ -93,7 +93,7 @@ ChangeTagsForResourceResponsePrivate::ChangeTagsForResourceResponsePrivate(
 void ChangeTagsForResourceResponsePrivate::parseChangeTagsForResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ChangeTagsForResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

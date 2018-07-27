@@ -235,7 +235,7 @@ ListHandshakesForAccountResponsePrivate::ListHandshakesForAccountResponsePrivate
 void ListHandshakesForAccountResponsePrivate::parseListHandshakesForAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHandshakesForAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

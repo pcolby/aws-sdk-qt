@@ -158,7 +158,7 @@ DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialR
 void DeleteServiceSpecificCredentialResponsePrivate::parseDeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServiceSpecificCredentialResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

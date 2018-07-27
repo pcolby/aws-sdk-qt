@@ -93,7 +93,7 @@ StartChannelResponsePrivate::StartChannelResponsePrivate(
 void StartChannelResponsePrivate::parseStartChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

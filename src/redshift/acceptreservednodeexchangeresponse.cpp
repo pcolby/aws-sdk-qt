@@ -123,7 +123,7 @@ AcceptReservedNodeExchangeResponsePrivate::AcceptReservedNodeExchangeResponsePri
 void AcceptReservedNodeExchangeResponsePrivate::parseAcceptReservedNodeExchangeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptReservedNodeExchangeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

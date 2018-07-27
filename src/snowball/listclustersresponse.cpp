@@ -99,7 +99,7 @@ ListClustersResponsePrivate::ListClustersResponsePrivate(
 void ListClustersResponsePrivate::parseListClustersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListClustersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

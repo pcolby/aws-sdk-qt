@@ -107,7 +107,7 @@ DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
 void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

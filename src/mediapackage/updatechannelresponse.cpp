@@ -93,7 +93,7 @@ UpdateChannelResponsePrivate::UpdateChannelResponsePrivate(
 void UpdateChannelResponsePrivate::parseUpdateChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

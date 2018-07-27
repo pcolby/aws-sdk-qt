@@ -121,7 +121,7 @@ AcceptVpcEndpointConnectionsResponsePrivate::AcceptVpcEndpointConnectionsRespons
 void AcceptVpcEndpointConnectionsResponsePrivate::parseAcceptVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptVpcEndpointConnectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

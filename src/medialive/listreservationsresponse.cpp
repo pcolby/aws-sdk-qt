@@ -93,7 +93,7 @@ ListReservationsResponsePrivate::ListReservationsResponsePrivate(
 void ListReservationsResponsePrivate::parseListReservationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReservationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

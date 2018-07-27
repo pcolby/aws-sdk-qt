@@ -111,7 +111,7 @@ GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
 void GetDimensionValuesResponsePrivate::parseGetDimensionValuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDimensionValuesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostExplorer

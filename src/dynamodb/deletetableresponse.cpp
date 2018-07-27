@@ -112,7 +112,7 @@ DeleteTableResponsePrivate::DeleteTableResponsePrivate(
 void DeleteTableResponsePrivate::parseDeleteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

@@ -121,7 +121,7 @@ AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate
 void AssociateSubnetCidrBlockResponsePrivate::parseAssociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateSubnetCidrBlockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

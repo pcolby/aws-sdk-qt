@@ -109,7 +109,7 @@ RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedRespons
 void RespondActivityTaskCompletedResponsePrivate::parseRespondActivityTaskCompletedResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCompletedResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

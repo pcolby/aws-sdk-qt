@@ -104,7 +104,7 @@ GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
 void GetSendQuotaResponsePrivate::parseGetSendQuotaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSendQuotaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

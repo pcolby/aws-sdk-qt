@@ -98,7 +98,7 @@ GetContactResponsePrivate::GetContactResponsePrivate(
 void GetContactResponsePrivate::parseGetContactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

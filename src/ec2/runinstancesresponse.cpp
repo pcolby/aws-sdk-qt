@@ -121,7 +121,7 @@ RunInstancesResponsePrivate::RunInstancesResponsePrivate(
 void RunInstancesResponsePrivate::parseRunInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

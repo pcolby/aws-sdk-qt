@@ -121,7 +121,7 @@ DescribeFleetHistoryResponsePrivate::DescribeFleetHistoryResponsePrivate(
 void DescribeFleetHistoryResponsePrivate::parseDescribeFleetHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

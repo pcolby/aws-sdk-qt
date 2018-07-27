@@ -121,7 +121,7 @@ ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
 void ResetInstanceAttributeResponsePrivate::parseResetInstanceAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetInstanceAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

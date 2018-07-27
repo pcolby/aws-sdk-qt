@@ -110,7 +110,7 @@ DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
 void DiscoverPollEndpointResponsePrivate::parseDiscoverPollEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DiscoverPollEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

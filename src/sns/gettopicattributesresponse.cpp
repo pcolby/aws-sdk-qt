@@ -107,7 +107,7 @@ GetTopicAttributesResponsePrivate::GetTopicAttributesResponsePrivate(
 void GetTopicAttributesResponsePrivate::parseGetTopicAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTopicAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

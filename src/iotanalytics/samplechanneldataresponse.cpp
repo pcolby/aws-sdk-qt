@@ -113,7 +113,7 @@ SampleChannelDataResponsePrivate::SampleChannelDataResponsePrivate(
 void SampleChannelDataResponsePrivate::parseSampleChannelDataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SampleChannelDataResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

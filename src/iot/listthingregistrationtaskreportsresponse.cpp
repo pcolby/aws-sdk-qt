@@ -104,7 +104,7 @@ ListThingRegistrationTaskReportsResponsePrivate::ListThingRegistrationTaskReport
 void ListThingRegistrationTaskReportsResponsePrivate::parseListThingRegistrationTaskReportsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListThingRegistrationTaskReportsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

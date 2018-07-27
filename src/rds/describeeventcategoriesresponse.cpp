@@ -157,7 +157,7 @@ DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponsePrivate(
 void DescribeEventCategoriesResponsePrivate::parseDescribeEventCategoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventCategoriesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

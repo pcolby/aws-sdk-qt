@@ -93,7 +93,7 @@ GetBucketInventoryConfigurationResponsePrivate::GetBucketInventoryConfigurationR
 void GetBucketInventoryConfigurationResponsePrivate::parseGetBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketInventoryConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -96,7 +96,7 @@ StartFleetResponsePrivate::StartFleetResponsePrivate(
 void StartFleetResponsePrivate::parseStartFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

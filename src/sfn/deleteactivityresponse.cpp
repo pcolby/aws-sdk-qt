@@ -112,7 +112,7 @@ DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
 void DeleteActivityResponsePrivate::parseDeleteActivityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteActivityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

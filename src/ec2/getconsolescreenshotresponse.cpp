@@ -121,7 +121,7 @@ GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
 void GetConsoleScreenshotResponsePrivate::parseGetConsoleScreenshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConsoleScreenshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

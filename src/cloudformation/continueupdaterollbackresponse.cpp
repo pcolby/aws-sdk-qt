@@ -115,7 +115,7 @@ ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponsePrivate(
 void ContinueUpdateRollbackResponsePrivate::parseContinueUpdateRollbackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ContinueUpdateRollbackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

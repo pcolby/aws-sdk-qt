@@ -94,7 +94,7 @@ GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponsePrivate(
 void GetIntrospectionSchemaResponsePrivate::parseGetIntrospectionSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIntrospectionSchemaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

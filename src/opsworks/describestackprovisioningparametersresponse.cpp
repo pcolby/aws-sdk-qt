@@ -199,7 +199,7 @@ DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningPar
 void DescribeStackProvisioningParametersResponsePrivate::parseDescribeStackProvisioningParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackProvisioningParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

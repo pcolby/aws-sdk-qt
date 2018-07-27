@@ -94,7 +94,7 @@ ListFacesResponsePrivate::ListFacesResponsePrivate(
 void ListFacesResponsePrivate::parseListFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

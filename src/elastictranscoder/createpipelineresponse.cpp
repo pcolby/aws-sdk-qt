@@ -96,7 +96,7 @@ CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
 void CreatePipelineResponsePrivate::parseCreatePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePipelineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

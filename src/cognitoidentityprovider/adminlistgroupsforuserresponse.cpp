@@ -103,7 +103,7 @@ AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponsePrivate(
 void AdminListGroupsForUserResponsePrivate::parseAdminListGroupsForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminListGroupsForUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

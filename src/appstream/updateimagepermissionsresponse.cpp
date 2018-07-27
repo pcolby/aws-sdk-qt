@@ -96,7 +96,7 @@ UpdateImagePermissionsResponsePrivate::UpdateImagePermissionsResponsePrivate(
 void UpdateImagePermissionsResponsePrivate::parseUpdateImagePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateImagePermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

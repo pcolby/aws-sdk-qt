@@ -93,7 +93,7 @@ ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITRespo
 void ListReviewPolicyResultsForHITResponsePrivate::parseListReviewPolicyResultsForHITResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReviewPolicyResultsForHITResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

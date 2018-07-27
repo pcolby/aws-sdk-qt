@@ -96,7 +96,7 @@ GetJobRunsResponsePrivate::GetJobRunsResponsePrivate(
 void GetJobRunsResponsePrivate::parseGetJobRunsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetJobRunsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

@@ -161,7 +161,7 @@ RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponsePri
 void RefreshTrustedAdvisorCheckResponsePrivate::parseRefreshTrustedAdvisorCheckResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RefreshTrustedAdvisorCheckResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Support

@@ -104,7 +104,7 @@ ListIdentityPoliciesResponsePrivate::ListIdentityPoliciesResponsePrivate(
 void ListIdentityPoliciesResponsePrivate::parseListIdentityPoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListIdentityPoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

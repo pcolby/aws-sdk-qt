@@ -116,7 +116,7 @@ PutRuleResponsePrivate::PutRuleResponsePrivate(
 void PutRuleResponsePrivate::parsePutRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

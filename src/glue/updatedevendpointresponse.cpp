@@ -96,7 +96,7 @@ UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
 void UpdateDevEndpointResponsePrivate::parseUpdateDevEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDevEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

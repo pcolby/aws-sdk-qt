@@ -96,7 +96,7 @@ DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponsePrivate
 void DeleteResourceDefinitionResponsePrivate::parseDeleteResourceDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

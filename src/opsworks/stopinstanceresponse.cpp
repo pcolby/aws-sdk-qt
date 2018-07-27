@@ -199,7 +199,7 @@ StopInstanceResponsePrivate::StopInstanceResponsePrivate(
 void StopInstanceResponsePrivate::parseStopInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

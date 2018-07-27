@@ -99,7 +99,7 @@ CancelClusterResponsePrivate::CancelClusterResponsePrivate(
 void CancelClusterResponsePrivate::parseCancelClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

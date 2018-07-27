@@ -100,7 +100,7 @@ PutLexiconResponsePrivate::PutLexiconResponsePrivate(
 void PutLexiconResponsePrivate::parsePutLexiconResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutLexiconResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Polly

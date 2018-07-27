@@ -99,7 +99,7 @@ ListRecordHistoryResponsePrivate::ListRecordHistoryResponsePrivate(
 void ListRecordHistoryResponsePrivate::parseListRecordHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRecordHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

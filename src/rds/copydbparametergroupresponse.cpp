@@ -157,7 +157,7 @@ CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
 void CopyDBParameterGroupResponsePrivate::parseCopyDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

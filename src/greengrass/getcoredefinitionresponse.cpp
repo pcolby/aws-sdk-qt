@@ -96,7 +96,7 @@ GetCoreDefinitionResponsePrivate::GetCoreDefinitionResponsePrivate(
 void GetCoreDefinitionResponsePrivate::parseGetCoreDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCoreDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

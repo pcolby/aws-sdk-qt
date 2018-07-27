@@ -110,7 +110,7 @@ DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
 void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

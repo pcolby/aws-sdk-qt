@@ -126,7 +126,7 @@ AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponseP
 void AssociateDelegateToResourceResponsePrivate::parseAssociateDelegateToResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateDelegateToResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

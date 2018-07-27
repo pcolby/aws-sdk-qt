@@ -157,7 +157,7 @@ RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotR
 void RestoreDBInstanceFromDBSnapshotResponsePrivate::parseRestoreDBInstanceFromDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromDBSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

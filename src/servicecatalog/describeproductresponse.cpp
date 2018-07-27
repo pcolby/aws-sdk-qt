@@ -99,7 +99,7 @@ DescribeProductResponsePrivate::DescribeProductResponsePrivate(
 void DescribeProductResponsePrivate::parseDescribeProductResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeProductResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

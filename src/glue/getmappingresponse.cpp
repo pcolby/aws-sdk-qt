@@ -96,7 +96,7 @@ GetMappingResponsePrivate::GetMappingResponsePrivate(
 void GetMappingResponsePrivate::parseGetMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMappingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

@@ -158,7 +158,7 @@ DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponseP
 void DeleteOpenIDConnectProviderResponsePrivate::parseDeleteOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOpenIDConnectProviderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

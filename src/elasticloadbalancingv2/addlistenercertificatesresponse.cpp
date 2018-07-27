@@ -161,7 +161,7 @@ AddListenerCertificatesResponsePrivate::AddListenerCertificatesResponsePrivate(
 void AddListenerCertificatesResponsePrivate::parseAddListenerCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddListenerCertificatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

@@ -162,7 +162,7 @@ CreateTapesResponsePrivate::CreateTapesResponsePrivate(
 void CreateTapesResponsePrivate::parseCreateTapesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTapesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

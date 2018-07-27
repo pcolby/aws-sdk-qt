@@ -157,7 +157,7 @@ PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesO
 void PurchaseReservedDBInstancesOfferingResponsePrivate::parsePurchaseReservedDBInstancesOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedDBInstancesOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

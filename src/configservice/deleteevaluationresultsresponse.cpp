@@ -113,7 +113,7 @@ DeleteEvaluationResultsResponsePrivate::DeleteEvaluationResultsResponsePrivate(
 void DeleteEvaluationResultsResponsePrivate::parseDeleteEvaluationResultsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEvaluationResultsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

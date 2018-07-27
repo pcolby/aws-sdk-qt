@@ -268,7 +268,7 @@ GetThirdPartyJobDetailsResponsePrivate::GetThirdPartyJobDetailsResponsePrivate(
 void GetThirdPartyJobDetailsResponsePrivate::parseGetThirdPartyJobDetailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetThirdPartyJobDetailsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

@@ -98,7 +98,7 @@ GetExclusionsPreviewResponsePrivate::GetExclusionsPreviewResponsePrivate(
 void GetExclusionsPreviewResponsePrivate::parseGetExclusionsPreviewResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetExclusionsPreviewResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

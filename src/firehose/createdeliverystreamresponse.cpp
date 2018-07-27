@@ -97,7 +97,7 @@ CreateDeliveryStreamResponsePrivate::CreateDeliveryStreamResponsePrivate(
 void CreateDeliveryStreamResponsePrivate::parseCreateDeliveryStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDeliveryStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

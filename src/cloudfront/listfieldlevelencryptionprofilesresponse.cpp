@@ -98,7 +98,7 @@ ListFieldLevelEncryptionProfilesResponsePrivate::ListFieldLevelEncryptionProfile
 void ListFieldLevelEncryptionProfilesResponsePrivate::parseListFieldLevelEncryptionProfilesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFieldLevelEncryptionProfilesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

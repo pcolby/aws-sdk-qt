@@ -103,7 +103,7 @@ InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
 void InitiateAuthResponsePrivate::parseInitiateAuthResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateAuthResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

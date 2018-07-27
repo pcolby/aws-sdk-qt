@@ -98,7 +98,7 @@ ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
 void ListGeoMatchSetsResponsePrivate::parseListGeoMatchSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGeoMatchSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

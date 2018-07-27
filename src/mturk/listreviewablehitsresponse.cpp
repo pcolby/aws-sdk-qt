@@ -93,7 +93,7 @@ ListReviewableHITsResponsePrivate::ListReviewableHITsResponsePrivate(
 void ListReviewableHITsResponsePrivate::parseListReviewableHITsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReviewableHITsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

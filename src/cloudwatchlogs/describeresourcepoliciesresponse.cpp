@@ -122,7 +122,7 @@ DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponsePrivate
 void DescribeResourcePoliciesResponsePrivate::parseDescribeResourcePoliciesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourcePoliciesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

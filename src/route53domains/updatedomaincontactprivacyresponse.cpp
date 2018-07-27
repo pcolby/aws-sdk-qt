@@ -94,7 +94,7 @@ UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponsePri
 void UpdateDomainContactPrivacyResponsePrivate::parseUpdateDomainContactPrivacyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainContactPrivacyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

@@ -99,7 +99,7 @@ UpdateEmergencyContactSettingsResponsePrivate::UpdateEmergencyContactSettingsRes
 void UpdateEmergencyContactSettingsResponsePrivate::parseUpdateEmergencyContactSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEmergencyContactSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

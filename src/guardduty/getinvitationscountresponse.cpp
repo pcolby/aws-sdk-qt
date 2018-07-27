@@ -93,7 +93,7 @@ GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
 void GetInvitationsCountResponsePrivate::parseGetInvitationsCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInvitationsCountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

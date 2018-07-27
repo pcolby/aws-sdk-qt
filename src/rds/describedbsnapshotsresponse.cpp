@@ -157,7 +157,7 @@ DescribeDBSnapshotsResponsePrivate::DescribeDBSnapshotsResponsePrivate(
 void DescribeDBSnapshotsResponsePrivate::parseDescribeDBSnapshotsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBSnapshotsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

@@ -110,7 +110,7 @@ SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePri
 void SubmitContainerStateChangeResponsePrivate::parseSubmitContainerStateChangeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SubmitContainerStateChangeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

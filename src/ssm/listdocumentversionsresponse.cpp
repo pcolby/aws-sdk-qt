@@ -118,7 +118,7 @@ ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponsePrivate(
 void ListDocumentVersionsResponsePrivate::parseListDocumentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDocumentVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

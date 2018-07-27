@@ -103,7 +103,7 @@ AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponsePrivate(
 void AssociateSoftwareTokenResponsePrivate::parseAssociateSoftwareTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateSoftwareTokenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

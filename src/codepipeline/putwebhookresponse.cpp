@@ -268,7 +268,7 @@ PutWebhookResponsePrivate::PutWebhookResponsePrivate(
 void PutWebhookResponsePrivate::parsePutWebhookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutWebhookResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

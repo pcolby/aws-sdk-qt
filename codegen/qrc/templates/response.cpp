@@ -78,7 +78,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
 void {{ClassName}}Private::parse{{ClassName}}(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("{{ClassName}}"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace {{NameSpaceName}}

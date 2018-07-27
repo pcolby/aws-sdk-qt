@@ -107,7 +107,7 @@ ModifyCacheParameterGroupResponsePrivate::ModifyCacheParameterGroupResponsePriva
 void ModifyCacheParameterGroupResponsePrivate::parseModifyCacheParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyCacheParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

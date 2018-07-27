@@ -93,7 +93,7 @@ DeleteInputResponsePrivate::DeleteInputResponsePrivate(
 void DeleteInputResponsePrivate::parseDeleteInputResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInputResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

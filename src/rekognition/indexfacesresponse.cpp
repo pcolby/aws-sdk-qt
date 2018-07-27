@@ -94,7 +94,7 @@ IndexFacesResponsePrivate::IndexFacesResponsePrivate(
 void IndexFacesResponsePrivate::parseIndexFacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("IndexFacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

@@ -103,7 +103,7 @@ UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
 void UpdateGroupResponsePrivate::parseUpdateGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

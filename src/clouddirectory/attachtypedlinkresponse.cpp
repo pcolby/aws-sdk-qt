@@ -100,7 +100,7 @@ AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
 void AttachTypedLinkResponsePrivate::parseAttachTypedLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachTypedLinkResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

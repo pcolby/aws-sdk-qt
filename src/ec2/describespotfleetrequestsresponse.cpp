@@ -121,7 +121,7 @@ DescribeSpotFleetRequestsResponsePrivate::DescribeSpotFleetRequestsResponsePriva
 void DescribeSpotFleetRequestsResponsePrivate::parseDescribeSpotFleetRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotFleetRequestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

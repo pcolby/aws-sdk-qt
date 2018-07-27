@@ -99,7 +99,7 @@ CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
 void CreateFileSystemResponsePrivate::parseCreateFileSystemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFileSystemResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EFS

@@ -98,7 +98,7 @@ CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponsePrivate(
 void CreateByteMatchSetResponsePrivate::parseCreateByteMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateByteMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

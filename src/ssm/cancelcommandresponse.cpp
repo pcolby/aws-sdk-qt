@@ -118,7 +118,7 @@ CancelCommandResponsePrivate::CancelCommandResponsePrivate(
 void CancelCommandResponsePrivate::parseCancelCommandResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelCommandResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

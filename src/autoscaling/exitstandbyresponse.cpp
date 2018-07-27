@@ -98,7 +98,7 @@ ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
 void ExitStandbyResponsePrivate::parseExitStandbyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExitStandbyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

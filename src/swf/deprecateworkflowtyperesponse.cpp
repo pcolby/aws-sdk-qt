@@ -109,7 +109,7 @@ DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
 void DeprecateWorkflowTypeResponsePrivate::parseDeprecateWorkflowTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeprecateWorkflowTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

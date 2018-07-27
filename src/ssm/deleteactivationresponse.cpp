@@ -118,7 +118,7 @@ DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
 void DeleteActivationResponsePrivate::parseDeleteActivationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteActivationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

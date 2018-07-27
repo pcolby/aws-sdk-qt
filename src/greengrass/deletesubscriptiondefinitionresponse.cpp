@@ -96,7 +96,7 @@ DeleteSubscriptionDefinitionResponsePrivate::DeleteSubscriptionDefinitionRespons
 void DeleteSubscriptionDefinitionResponsePrivate::parseDeleteSubscriptionDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

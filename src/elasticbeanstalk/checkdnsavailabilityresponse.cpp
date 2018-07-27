@@ -115,7 +115,7 @@ CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponsePrivate(
 void CheckDNSAvailabilityResponsePrivate::parseCheckDNSAvailabilityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckDNSAvailabilityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

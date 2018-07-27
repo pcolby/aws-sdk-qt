@@ -158,7 +158,7 @@ CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponsePrivate(
 void CreateVirtualMFADeviceResponsePrivate::parseCreateVirtualMFADeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVirtualMFADeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

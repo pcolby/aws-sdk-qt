@@ -107,7 +107,7 @@ SetAlarmStateResponsePrivate::SetAlarmStateResponsePrivate(
 void SetAlarmStateResponsePrivate::parseSetAlarmStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetAlarmStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

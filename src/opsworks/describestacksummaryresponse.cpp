@@ -199,7 +199,7 @@ DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponsePrivate(
 void DescribeStackSummaryResponsePrivate::parseDescribeStackSummaryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackSummaryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

@@ -111,7 +111,7 @@ GetReservationPurchaseRecommendationResponsePrivate::GetReservationPurchaseRecom
 void GetReservationPurchaseRecommendationResponsePrivate::parseGetReservationPurchaseRecommendationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservationPurchaseRecommendationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostExplorer

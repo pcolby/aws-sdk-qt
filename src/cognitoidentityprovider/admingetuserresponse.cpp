@@ -103,7 +103,7 @@ AdminGetUserResponsePrivate::AdminGetUserResponsePrivate(
 void AdminGetUserResponsePrivate::parseAdminGetUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminGetUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

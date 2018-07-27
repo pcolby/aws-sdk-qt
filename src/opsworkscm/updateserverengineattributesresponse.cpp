@@ -153,7 +153,7 @@ UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesRespons
 void UpdateServerEngineAttributesResponsePrivate::parseUpdateServerEngineAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServerEngineAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

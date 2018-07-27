@@ -96,7 +96,7 @@ BatchDeleteTableResponsePrivate::BatchDeleteTableResponsePrivate(
 void BatchDeleteTableResponsePrivate::parseBatchDeleteTableResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteTableResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

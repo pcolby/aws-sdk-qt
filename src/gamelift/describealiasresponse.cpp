@@ -537,7 +537,7 @@ DescribeAliasResponsePrivate::DescribeAliasResponsePrivate(
 void DescribeAliasResponsePrivate::parseDescribeAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

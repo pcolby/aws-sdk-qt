@@ -115,7 +115,7 @@ RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponsePrivate(
 void RebuildEnvironmentResponsePrivate::parseRebuildEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebuildEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

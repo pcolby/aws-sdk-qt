@@ -169,7 +169,7 @@ UpdateSecretResponsePrivate::UpdateSecretResponsePrivate(
 void UpdateSecretResponsePrivate::parseUpdateSecretResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSecretResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

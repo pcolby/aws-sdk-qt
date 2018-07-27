@@ -96,7 +96,7 @@ BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponsePrivate(
 void BatchDetectSentimentResponsePrivate::parseBatchDetectSentimentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectSentimentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

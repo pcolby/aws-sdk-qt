@@ -136,7 +136,7 @@ CreateSubscriberResponsePrivate::CreateSubscriberResponsePrivate(
 void CreateSubscriberResponsePrivate::parseCreateSubscriberResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSubscriberResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

@@ -104,7 +104,7 @@ CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponsePriva
 void CreateReplicationInstanceResponsePrivate::parseCreateReplicationInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

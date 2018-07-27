@@ -97,7 +97,7 @@ UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
 void UploadLayerPartResponsePrivate::parseUploadLayerPartResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadLayerPartResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

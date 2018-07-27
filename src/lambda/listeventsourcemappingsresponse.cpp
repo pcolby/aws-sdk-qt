@@ -104,7 +104,7 @@ ListEventSourceMappingsResponsePrivate::ListEventSourceMappingsResponsePrivate(
 void ListEventSourceMappingsResponsePrivate::parseListEventSourceMappingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListEventSourceMappingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

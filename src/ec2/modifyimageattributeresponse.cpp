@@ -121,7 +121,7 @@ ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
 void ModifyImageAttributeResponsePrivate::parseModifyImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyImageAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

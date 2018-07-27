@@ -123,7 +123,7 @@ DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificatesRespo
 void DescribeHsmClientCertificatesResponsePrivate::parseDescribeHsmClientCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmClientCertificatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

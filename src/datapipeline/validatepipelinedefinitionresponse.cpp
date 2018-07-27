@@ -111,7 +111,7 @@ ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionResponsePri
 void ValidatePipelineDefinitionResponsePrivate::parseValidatePipelineDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ValidatePipelineDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

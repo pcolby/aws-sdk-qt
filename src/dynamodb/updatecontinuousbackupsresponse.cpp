@@ -112,7 +112,7 @@ UpdateContinuousBackupsResponsePrivate::UpdateContinuousBackupsResponsePrivate(
 void UpdateContinuousBackupsResponsePrivate::parseUpdateContinuousBackupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContinuousBackupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

@@ -98,7 +98,7 @@ GetDocumentationVersionResponsePrivate::GetDocumentationVersionResponsePrivate(
 void GetDocumentationVersionResponsePrivate::parseGetDocumentationVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentationVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

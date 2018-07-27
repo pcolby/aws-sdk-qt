@@ -95,7 +95,7 @@ DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponsePri
 void DeleteProgressUpdateStreamResponsePrivate::parseDeleteProgressUpdateStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProgressUpdateStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

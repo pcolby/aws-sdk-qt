@@ -107,7 +107,7 @@ CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponsePrivate(
 void CancelSchemaExtensionResponsePrivate::parseCancelSchemaExtensionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelSchemaExtensionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

@@ -131,7 +131,7 @@ GetVaultNotificationsResponsePrivate::GetVaultNotificationsResponsePrivate(
 void GetVaultNotificationsResponsePrivate::parseGetVaultNotificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVaultNotificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

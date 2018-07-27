@@ -98,7 +98,7 @@ DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
 void DeletePolicyResponsePrivate::parseDeletePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

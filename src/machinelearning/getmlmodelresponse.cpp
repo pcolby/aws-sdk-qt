@@ -93,7 +93,7 @@ GetMLModelResponsePrivate::GetMLModelResponsePrivate(
 void GetMLModelResponsePrivate::parseGetMLModelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMLModelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

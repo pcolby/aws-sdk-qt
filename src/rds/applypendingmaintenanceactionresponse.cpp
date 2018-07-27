@@ -157,7 +157,7 @@ ApplyPendingMaintenanceActionResponsePrivate::ApplyPendingMaintenanceActionRespo
 void ApplyPendingMaintenanceActionResponsePrivate::parseApplyPendingMaintenanceActionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ApplyPendingMaintenanceActionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

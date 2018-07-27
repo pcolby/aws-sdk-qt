@@ -121,7 +121,7 @@ DeregisterImageResponsePrivate::DeregisterImageResponsePrivate(
 void DeregisterImageResponsePrivate::parseDeregisterImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

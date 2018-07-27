@@ -157,7 +157,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

@@ -94,7 +94,7 @@ GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusRespons
 void GetContactReachabilityStatusResponsePrivate::parseGetContactReachabilityStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetContactReachabilityStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

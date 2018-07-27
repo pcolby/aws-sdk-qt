@@ -114,7 +114,7 @@ GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponsePrivate(
 void GetApplicationPolicyResponsePrivate::parseGetApplicationPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApplicationPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServerlessApplicationRepository

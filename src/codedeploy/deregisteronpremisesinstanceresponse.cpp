@@ -174,7 +174,7 @@ DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceRespons
 void DeregisterOnPremisesInstanceResponsePrivate::parseDeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterOnPremisesInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

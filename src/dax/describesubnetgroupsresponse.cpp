@@ -97,7 +97,7 @@ DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponsePrivate(
 void DescribeSubnetGroupsResponsePrivate::parseDescribeSubnetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubnetGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DAX

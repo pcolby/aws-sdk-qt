@@ -121,7 +121,7 @@ CancelConversionTaskResponsePrivate::CancelConversionTaskResponsePrivate(
 void CancelConversionTaskResponsePrivate::parseCancelConversionTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelConversionTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

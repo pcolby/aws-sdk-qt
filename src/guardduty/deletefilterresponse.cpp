@@ -93,7 +93,7 @@ DeleteFilterResponsePrivate::DeleteFilterResponsePrivate(
 void DeleteFilterResponsePrivate::parseDeleteFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

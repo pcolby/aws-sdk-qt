@@ -121,7 +121,7 @@ CreateLaunchTemplateResponsePrivate::CreateLaunchTemplateResponsePrivate(
 void CreateLaunchTemplateResponsePrivate::parseCreateLaunchTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLaunchTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

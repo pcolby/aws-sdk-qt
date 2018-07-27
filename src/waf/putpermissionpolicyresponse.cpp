@@ -98,7 +98,7 @@ PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponsePrivate(
 void PutPermissionPolicyResponsePrivate::parsePutPermissionPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutPermissionPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

@@ -537,7 +537,7 @@ DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponsePri
 void DeleteVpcPeeringConnectionResponsePrivate::parseDeleteVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcPeeringConnectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

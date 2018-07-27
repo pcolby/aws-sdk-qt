@@ -268,7 +268,7 @@ CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponsePrivate(
 void CreateCustomActionTypeResponsePrivate::parseCreateCustomActionTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomActionTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

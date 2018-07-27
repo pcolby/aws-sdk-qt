@@ -103,7 +103,7 @@ ResendConfirmationCodeResponsePrivate::ResendConfirmationCodeResponsePrivate(
 void ResendConfirmationCodeResponsePrivate::parseResendConfirmationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResendConfirmationCodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

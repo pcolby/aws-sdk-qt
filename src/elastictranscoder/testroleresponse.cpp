@@ -96,7 +96,7 @@ TestRoleResponsePrivate::TestRoleResponsePrivate(
 void TestRoleResponsePrivate::parseTestRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("TestRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticTranscoder

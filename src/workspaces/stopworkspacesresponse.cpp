@@ -96,7 +96,7 @@ StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
 void StopWorkspacesResponsePrivate::parseStopWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopWorkspacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

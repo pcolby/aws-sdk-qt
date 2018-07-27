@@ -96,7 +96,7 @@ SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
 void SetVisibleToAllUsersResponsePrivate::parseSetVisibleToAllUsersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetVisibleToAllUsersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

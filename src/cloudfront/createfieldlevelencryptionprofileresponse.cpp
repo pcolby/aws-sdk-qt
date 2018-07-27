@@ -98,7 +98,7 @@ CreateFieldLevelEncryptionProfileResponsePrivate::CreateFieldLevelEncryptionProf
 void CreateFieldLevelEncryptionProfileResponsePrivate::parseCreateFieldLevelEncryptionProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFieldLevelEncryptionProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

@@ -122,7 +122,7 @@ DeleteSubscriptionFilterResponsePrivate::DeleteSubscriptionFilterResponsePrivate
 void DeleteSubscriptionFilterResponsePrivate::parseDeleteSubscriptionFilterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionFilterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

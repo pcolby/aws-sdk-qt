@@ -96,7 +96,7 @@ UpdateFleetResponsePrivate::UpdateFleetResponsePrivate(
 void UpdateFleetResponsePrivate::parseUpdateFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

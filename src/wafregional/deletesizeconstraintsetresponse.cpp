@@ -100,7 +100,7 @@ DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponsePrivate(
 void DeleteSizeConstraintSetResponsePrivate::parseDeleteSizeConstraintSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSizeConstraintSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

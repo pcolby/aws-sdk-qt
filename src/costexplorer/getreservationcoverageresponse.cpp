@@ -111,7 +111,7 @@ GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
 void GetReservationCoverageResponsePrivate::parseGetReservationCoverageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetReservationCoverageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostExplorer

@@ -235,7 +235,7 @@ DescribeOrganizationalUnitResponsePrivate::DescribeOrganizationalUnitResponsePri
 void DescribeOrganizationalUnitResponsePrivate::parseDescribeOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrganizationalUnitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

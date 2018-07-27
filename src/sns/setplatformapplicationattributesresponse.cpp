@@ -107,7 +107,7 @@ SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttribute
 void SetPlatformApplicationAttributesResponsePrivate::parseSetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetPlatformApplicationAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

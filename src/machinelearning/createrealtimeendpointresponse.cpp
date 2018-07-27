@@ -93,7 +93,7 @@ CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponsePrivate(
 void CreateRealtimeEndpointResponsePrivate::parseCreateRealtimeEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRealtimeEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

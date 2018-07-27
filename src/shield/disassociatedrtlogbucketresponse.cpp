@@ -99,7 +99,7 @@ DisassociateDRTLogBucketResponsePrivate::DisassociateDRTLogBucketResponsePrivate
 void DisassociateDRTLogBucketResponsePrivate::parseDisassociateDRTLogBucketResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDRTLogBucketResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

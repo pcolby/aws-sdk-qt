@@ -131,7 +131,7 @@ GetIdentityPoolRolesResponsePrivate::GetIdentityPoolRolesResponsePrivate(
 void GetIdentityPoolRolesResponsePrivate::parseGetIdentityPoolRolesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityPoolRolesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

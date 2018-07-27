@@ -109,7 +109,7 @@ DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
 void DeleteInstanceSnapshotResponsePrivate::parseDeleteInstanceSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

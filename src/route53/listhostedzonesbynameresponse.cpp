@@ -93,7 +93,7 @@ ListHostedZonesByNameResponsePrivate::ListHostedZonesByNameResponsePrivate(
 void ListHostedZonesByNameResponsePrivate::parseListHostedZonesByNameResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHostedZonesByNameResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

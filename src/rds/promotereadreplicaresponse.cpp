@@ -157,7 +157,7 @@ PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
 void PromoteReadReplicaResponsePrivate::parsePromoteReadReplicaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

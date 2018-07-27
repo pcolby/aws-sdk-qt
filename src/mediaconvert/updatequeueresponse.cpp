@@ -93,7 +93,7 @@ UpdateQueueResponsePrivate::UpdateQueueResponsePrivate(
 void UpdateQueueResponsePrivate::parseUpdateQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

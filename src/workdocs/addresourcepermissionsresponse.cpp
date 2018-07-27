@@ -122,7 +122,7 @@ AddResourcePermissionsResponsePrivate::AddResourcePermissionsResponsePrivate(
 void AddResourcePermissionsResponsePrivate::parseAddResourcePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddResourcePermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

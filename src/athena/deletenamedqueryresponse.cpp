@@ -105,7 +105,7 @@ DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponsePrivate(
 void DeleteNamedQueryResponsePrivate::parseDeleteNamedQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNamedQueryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Athena

@@ -121,7 +121,7 @@ AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
 void AllocateAddressResponsePrivate::parseAllocateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -111,7 +111,7 @@ DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
 void DeletePipelineResponsePrivate::parseDeletePipelineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePipelineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

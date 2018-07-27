@@ -283,7 +283,7 @@ PostCommentForComparedCommitResponsePrivate::PostCommentForComparedCommitRespons
 void PostCommentForComparedCommitResponsePrivate::parsePostCommentForComparedCommitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PostCommentForComparedCommitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

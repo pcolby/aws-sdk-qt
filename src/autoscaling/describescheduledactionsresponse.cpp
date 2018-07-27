@@ -98,7 +98,7 @@ DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponsePrivate
 void DescribeScheduledActionsResponsePrivate::parseDescribeScheduledActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledActionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

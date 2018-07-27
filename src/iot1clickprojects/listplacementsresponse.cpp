@@ -94,7 +94,7 @@ ListPlacementsResponsePrivate::ListPlacementsResponsePrivate(
 void ListPlacementsResponsePrivate::parseListPlacementsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPlacementsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects

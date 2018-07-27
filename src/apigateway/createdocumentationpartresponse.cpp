@@ -98,7 +98,7 @@ CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponsePrivate(
 void CreateDocumentationPartResponsePrivate::parseCreateDocumentationPartResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDocumentationPartResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -94,7 +94,7 @@ ListOperationsResponsePrivate::ListOperationsResponsePrivate(
 void ListOperationsResponsePrivate::parseListOperationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOperationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53Domains

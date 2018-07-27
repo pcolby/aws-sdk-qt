@@ -96,7 +96,7 @@ UpdateCrawlerResponsePrivate::UpdateCrawlerResponsePrivate(
 void UpdateCrawlerResponsePrivate::parseUpdateCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCrawlerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

@@ -93,7 +93,7 @@ ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponsePrivate(
 void ListNotebookInstancesResponsePrivate::parseListNotebookInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListNotebookInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

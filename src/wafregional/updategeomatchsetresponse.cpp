@@ -100,7 +100,7 @@ UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponsePrivate(
 void UpdateGeoMatchSetResponsePrivate::parseUpdateGeoMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGeoMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

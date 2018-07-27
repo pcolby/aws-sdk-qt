@@ -98,7 +98,7 @@ UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
 void UpdateBasePathMappingResponsePrivate::parseUpdateBasePathMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateBasePathMappingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

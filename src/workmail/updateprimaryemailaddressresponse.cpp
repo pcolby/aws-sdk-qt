@@ -126,7 +126,7 @@ UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponsePriva
 void UpdatePrimaryEmailAddressResponsePrivate::parseUpdatePrimaryEmailAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdatePrimaryEmailAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

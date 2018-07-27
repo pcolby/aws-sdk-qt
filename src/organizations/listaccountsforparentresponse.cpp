@@ -235,7 +235,7 @@ ListAccountsForParentResponsePrivate::ListAccountsForParentResponsePrivate(
 void ListAccountsForParentResponsePrivate::parseListAccountsForParentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAccountsForParentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

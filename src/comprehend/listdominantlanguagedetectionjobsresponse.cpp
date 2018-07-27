@@ -96,7 +96,7 @@ ListDominantLanguageDetectionJobsResponsePrivate::ListDominantLanguageDetectionJ
 void ListDominantLanguageDetectionJobsResponsePrivate::parseListDominantLanguageDetectionJobsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDominantLanguageDetectionJobsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

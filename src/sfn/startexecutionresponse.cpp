@@ -112,7 +112,7 @@ StartExecutionResponsePrivate::StartExecutionResponsePrivate(
 void StartExecutionResponsePrivate::parseStartExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

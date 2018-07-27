@@ -96,7 +96,7 @@ ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
 void ListGroupVersionsResponsePrivate::parseListGroupVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

@@ -95,7 +95,7 @@ ListArtifactsResponsePrivate::ListArtifactsResponsePrivate(
 void ListArtifactsResponsePrivate::parseListArtifactsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListArtifactsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

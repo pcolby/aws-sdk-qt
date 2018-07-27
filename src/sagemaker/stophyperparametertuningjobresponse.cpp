@@ -93,7 +93,7 @@ StopHyperParameterTuningJobResponsePrivate::StopHyperParameterTuningJobResponseP
 void StopHyperParameterTuningJobResponsePrivate::parseStopHyperParameterTuningJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopHyperParameterTuningJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

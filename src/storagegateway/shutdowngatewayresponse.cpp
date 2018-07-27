@@ -162,7 +162,7 @@ ShutdownGatewayResponsePrivate::ShutdownGatewayResponsePrivate(
 void ShutdownGatewayResponsePrivate::parseShutdownGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ShutdownGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

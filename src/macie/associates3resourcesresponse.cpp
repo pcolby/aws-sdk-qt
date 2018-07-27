@@ -100,7 +100,7 @@ AssociateS3ResourcesResponsePrivate::AssociateS3ResourcesResponsePrivate(
 void AssociateS3ResourcesResponsePrivate::parseAssociateS3ResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateS3ResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Macie

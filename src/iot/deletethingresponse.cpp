@@ -104,7 +104,7 @@ DeleteThingResponsePrivate::DeleteThingResponsePrivate(
 void DeleteThingResponsePrivate::parseDeleteThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

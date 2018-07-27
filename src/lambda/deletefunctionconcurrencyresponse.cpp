@@ -104,7 +104,7 @@ DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponsePriva
 void DeleteFunctionConcurrencyResponsePrivate::parseDeleteFunctionConcurrencyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionConcurrencyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

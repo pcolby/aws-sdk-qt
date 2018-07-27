@@ -93,7 +93,7 @@ GetMediaResponsePrivate::GetMediaResponsePrivate(
 void GetMediaResponsePrivate::parseGetMediaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMediaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KinesisVideoMedia

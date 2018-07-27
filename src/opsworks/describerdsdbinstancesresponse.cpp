@@ -199,7 +199,7 @@ DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponsePrivate(
 void DescribeRdsDbInstancesResponsePrivate::parseDescribeRdsDbInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRdsDbInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

@@ -98,7 +98,7 @@ UpdateFieldLevelEncryptionConfigResponsePrivate::UpdateFieldLevelEncryptionConfi
 void UpdateFieldLevelEncryptionConfigResponsePrivate::parseUpdateFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFieldLevelEncryptionConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

@@ -93,7 +93,7 @@ DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
 void DeleteBaiduChannelResponsePrivate::parseDeleteBaiduChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBaiduChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

@@ -268,7 +268,7 @@ ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponsePrivate(
 void ListPipelineExecutionsResponsePrivate::parseListPipelineExecutionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPipelineExecutionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

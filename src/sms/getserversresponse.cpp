@@ -93,7 +93,7 @@ GetServersResponsePrivate::GetServersResponsePrivate(
 void GetServersResponsePrivate::parseGetServersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetServersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

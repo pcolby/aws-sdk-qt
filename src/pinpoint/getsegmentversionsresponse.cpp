@@ -93,7 +93,7 @@ GetSegmentVersionsResponsePrivate::GetSegmentVersionsResponsePrivate(
 void GetSegmentVersionsResponsePrivate::parseGetSegmentVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

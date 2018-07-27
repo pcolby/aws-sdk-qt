@@ -102,7 +102,7 @@ RequestCertificateResponsePrivate::RequestCertificateResponsePrivate(
 void RequestCertificateResponsePrivate::parseRequestCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACM

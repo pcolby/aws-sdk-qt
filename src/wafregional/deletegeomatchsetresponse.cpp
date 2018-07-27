@@ -100,7 +100,7 @@ DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
 void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGeoMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

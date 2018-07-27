@@ -103,7 +103,7 @@ ForgetDeviceResponsePrivate::ForgetDeviceResponsePrivate(
 void ForgetDeviceResponsePrivate::parseForgetDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ForgetDeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

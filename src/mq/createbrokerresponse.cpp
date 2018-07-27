@@ -95,7 +95,7 @@ CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
 void CreateBrokerResponsePrivate::parseCreateBrokerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBrokerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

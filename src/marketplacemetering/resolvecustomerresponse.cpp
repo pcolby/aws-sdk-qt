@@ -123,7 +123,7 @@ ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
 void ResolveCustomerResponsePrivate::parseResolveCustomerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveCustomerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MarketplaceMetering

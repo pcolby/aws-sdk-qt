@@ -158,7 +158,7 @@ ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsRes
 void ListServiceSpecificCredentialsResponsePrivate::parseListServiceSpecificCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListServiceSpecificCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

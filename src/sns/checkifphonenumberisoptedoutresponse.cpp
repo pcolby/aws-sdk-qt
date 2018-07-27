@@ -107,7 +107,7 @@ CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutRespons
 void CheckIfPhoneNumberIsOptedOutResponsePrivate::parseCheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CheckIfPhoneNumberIsOptedOutResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

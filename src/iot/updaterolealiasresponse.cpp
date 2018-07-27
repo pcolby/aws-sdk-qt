@@ -104,7 +104,7 @@ UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponsePrivate(
 void UpdateRoleAliasResponsePrivate::parseUpdateRoleAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRoleAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

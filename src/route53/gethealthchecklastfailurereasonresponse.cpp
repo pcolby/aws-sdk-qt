@@ -93,7 +93,7 @@ GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonR
 void GetHealthCheckLastFailureReasonResponsePrivate::parseGetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckLastFailureReasonResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

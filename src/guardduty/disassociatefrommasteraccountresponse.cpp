@@ -93,7 +93,7 @@ DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountRespo
 void DisassociateFromMasterAccountResponsePrivate::parseDisassociateFromMasterAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateFromMasterAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

@@ -162,7 +162,7 @@ RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponsePrivate(
 void RetrieveTapeArchiveResponsePrivate::parseRetrieveTapeArchiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RetrieveTapeArchiveResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

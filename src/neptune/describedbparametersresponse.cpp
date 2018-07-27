@@ -117,7 +117,7 @@ DescribeDBParametersResponsePrivate::DescribeDBParametersResponsePrivate(
 void DescribeDBParametersResponsePrivate::parseDescribeDBParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

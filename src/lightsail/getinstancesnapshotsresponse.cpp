@@ -109,7 +109,7 @@ GetInstanceSnapshotsResponsePrivate::GetInstanceSnapshotsResponsePrivate(
 void GetInstanceSnapshotsResponsePrivate::parseGetInstanceSnapshotsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceSnapshotsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

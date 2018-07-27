@@ -122,7 +122,7 @@ GetLogEventsResponsePrivate::GetLogEventsResponsePrivate(
 void GetLogEventsResponsePrivate::parseGetLogEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetLogEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

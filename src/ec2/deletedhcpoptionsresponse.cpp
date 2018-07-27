@@ -121,7 +121,7 @@ DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
 void DeleteDhcpOptionsResponsePrivate::parseDeleteDhcpOptionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDhcpOptionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

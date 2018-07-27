@@ -111,7 +111,7 @@ ListPipelinesResponsePrivate::ListPipelinesResponsePrivate(
 void ListPipelinesResponsePrivate::parseListPipelinesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPipelinesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

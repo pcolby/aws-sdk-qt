@@ -158,7 +158,7 @@ UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
 void UpdateSAMLProviderResponsePrivate::parseUpdateSAMLProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSAMLProviderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -96,7 +96,7 @@ SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate
 void SetTerminationProtectionResponsePrivate::parseSetTerminationProtectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetTerminationProtectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

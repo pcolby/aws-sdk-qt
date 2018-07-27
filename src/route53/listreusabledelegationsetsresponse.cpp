@@ -93,7 +93,7 @@ ListReusableDelegationSetsResponsePrivate::ListReusableDelegationSetsResponsePri
 void ListReusableDelegationSetsResponsePrivate::parseListReusableDelegationSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListReusableDelegationSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

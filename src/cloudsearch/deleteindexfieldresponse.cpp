@@ -104,7 +104,7 @@ DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
 void DeleteIndexFieldResponsePrivate::parseDeleteIndexFieldResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteIndexFieldResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudSearch

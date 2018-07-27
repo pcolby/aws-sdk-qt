@@ -115,7 +115,7 @@ DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManag
 void DescribeEnvironmentManagedActionHistoryResponsePrivate::parseDescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentManagedActionHistoryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

@@ -123,7 +123,7 @@ AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponsePrivate(
 void AuthorizeSnapshotAccessResponsePrivate::parseAuthorizeSnapshotAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeSnapshotAccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

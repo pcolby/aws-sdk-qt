@@ -537,7 +537,7 @@ DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponsePrivate(
 void DeleteGameSessionQueueResponsePrivate::parseDeleteGameSessionQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGameSessionQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

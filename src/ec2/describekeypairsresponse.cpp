@@ -121,7 +121,7 @@ DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
 void DescribeKeyPairsResponsePrivate::parseDescribeKeyPairsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeKeyPairsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

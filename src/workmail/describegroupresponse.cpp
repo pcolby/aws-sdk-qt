@@ -126,7 +126,7 @@ DescribeGroupResponsePrivate::DescribeGroupResponsePrivate(
 void DescribeGroupResponsePrivate::parseDescribeGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

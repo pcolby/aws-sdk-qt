@@ -104,7 +104,7 @@ ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
 void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

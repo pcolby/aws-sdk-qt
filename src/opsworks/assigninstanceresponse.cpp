@@ -199,7 +199,7 @@ AssignInstanceResponsePrivate::AssignInstanceResponsePrivate(
 void AssignInstanceResponsePrivate::parseAssignInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssignInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

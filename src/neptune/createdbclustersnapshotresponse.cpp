@@ -117,7 +117,7 @@ CreateDBClusterSnapshotResponsePrivate::CreateDBClusterSnapshotResponsePrivate(
 void CreateDBClusterSnapshotResponsePrivate::parseCreateDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Neptune

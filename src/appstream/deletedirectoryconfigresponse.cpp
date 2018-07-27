@@ -96,7 +96,7 @@ DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponsePrivate(
 void DeleteDirectoryConfigResponsePrivate::parseDeleteDirectoryConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

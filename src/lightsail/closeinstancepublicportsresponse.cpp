@@ -109,7 +109,7 @@ CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponsePrivate
 void CloseInstancePublicPortsResponsePrivate::parseCloseInstancePublicPortsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CloseInstancePublicPortsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

@@ -126,7 +126,7 @@ ListGroupMembersResponsePrivate::ListGroupMembersResponsePrivate(
 void ListGroupMembersResponsePrivate::parseListGroupMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupMembersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

@@ -93,7 +93,7 @@ GetApnsSandboxChannelResponsePrivate::GetApnsSandboxChannelResponsePrivate(
 void GetApnsSandboxChannelResponsePrivate::parseGetApnsSandboxChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApnsSandboxChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

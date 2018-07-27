@@ -192,7 +192,7 @@ ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponsePrivate(
 void ImportKeyMaterialResponsePrivate::parseImportKeyMaterialResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportKeyMaterialResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

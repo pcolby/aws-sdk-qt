@@ -113,7 +113,7 @@ PutEvaluationsResponsePrivate::PutEvaluationsResponsePrivate(
 void PutEvaluationsResponsePrivate::parsePutEvaluationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutEvaluationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

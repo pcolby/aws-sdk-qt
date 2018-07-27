@@ -113,7 +113,7 @@ GetComplianceSummaryByConfigRuleResponsePrivate::GetComplianceSummaryByConfigRul
 void GetComplianceSummaryByConfigRuleResponsePrivate::parseGetComplianceSummaryByConfigRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetComplianceSummaryByConfigRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

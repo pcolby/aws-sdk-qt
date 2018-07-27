@@ -121,7 +121,7 @@ DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePriva
 void DescribeAvailabilityZonesResponsePrivate::parseDescribeAvailabilityZonesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailabilityZonesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

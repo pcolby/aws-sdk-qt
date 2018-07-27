@@ -95,7 +95,7 @@ DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponsePrivate(
 void DescribeMigrationTaskResponsePrivate::parseDescribeMigrationTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMigrationTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

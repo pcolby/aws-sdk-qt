@@ -103,7 +103,7 @@ DeleteUserPoolClientResponsePrivate::DeleteUserPoolClientResponsePrivate(
 void DeleteUserPoolClientResponsePrivate::parseDeleteUserPoolClientResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserPoolClientResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

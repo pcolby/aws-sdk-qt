@@ -96,7 +96,7 @@ StartImageBuilderResponsePrivate::StartImageBuilderResponsePrivate(
 void StartImageBuilderResponsePrivate::parseStartImageBuilderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartImageBuilderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

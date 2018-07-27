@@ -158,7 +158,7 @@ GetUserResponsePrivate::GetUserResponsePrivate(
 void GetUserResponsePrivate::parseGetUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -100,7 +100,7 @@ ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
 void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRateBasedRulesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

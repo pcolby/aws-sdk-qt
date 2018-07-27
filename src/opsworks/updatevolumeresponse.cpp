@@ -199,7 +199,7 @@ UpdateVolumeResponsePrivate::UpdateVolumeResponsePrivate(
 void UpdateVolumeResponsePrivate::parseUpdateVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

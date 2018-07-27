@@ -104,7 +104,7 @@ UpdateCACertificateResponsePrivate::UpdateCACertificateResponsePrivate(
 void UpdateCACertificateResponsePrivate::parseUpdateCACertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateCACertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

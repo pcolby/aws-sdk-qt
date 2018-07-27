@@ -98,7 +98,7 @@ PutLifecycleHookResponsePrivate::PutLifecycleHookResponsePrivate(
 void PutLifecycleHookResponsePrivate::parsePutLifecycleHookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutLifecycleHookResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

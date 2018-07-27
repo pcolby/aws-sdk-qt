@@ -121,7 +121,7 @@ ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
 void ResetSnapshotAttributeResponsePrivate::parseResetSnapshotAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetSnapshotAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -113,7 +113,7 @@ DeleteDatastoreResponsePrivate::DeleteDatastoreResponsePrivate(
 void DeleteDatastoreResponsePrivate::parseDeleteDatastoreResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDatastoreResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

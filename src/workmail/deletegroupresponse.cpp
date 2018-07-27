@@ -126,7 +126,7 @@ DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
 void DeleteGroupResponsePrivate::parseDeleteGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkMail

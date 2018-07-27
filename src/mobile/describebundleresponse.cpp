@@ -96,7 +96,7 @@ DescribeBundleResponsePrivate::DescribeBundleResponsePrivate(
 void DescribeBundleResponsePrivate::parseDescribeBundleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBundleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Mobile

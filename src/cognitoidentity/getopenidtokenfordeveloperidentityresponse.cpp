@@ -131,7 +131,7 @@ GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDeveloperIde
 void GetOpenIdTokenForDeveloperIdentityResponsePrivate::parseGetOpenIdTokenForDeveloperIdentityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIdTokenForDeveloperIdentityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

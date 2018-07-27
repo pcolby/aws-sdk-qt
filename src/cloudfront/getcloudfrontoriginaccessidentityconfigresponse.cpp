@@ -98,7 +98,7 @@ GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAcces
 void GetCloudFrontOriginAccessIdentityConfigResponsePrivate::parseGetCloudFrontOriginAccessIdentityConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCloudFrontOriginAccessIdentityConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

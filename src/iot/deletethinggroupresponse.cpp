@@ -104,7 +104,7 @@ DeleteThingGroupResponsePrivate::DeleteThingGroupResponsePrivate(
 void DeleteThingGroupResponsePrivate::parseDeleteThingGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -98,7 +98,7 @@ GetFieldLevelEncryptionResponsePrivate::GetFieldLevelEncryptionResponsePrivate(
 void GetFieldLevelEncryptionResponsePrivate::parseGetFieldLevelEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFieldLevelEncryptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

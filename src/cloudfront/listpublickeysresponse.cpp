@@ -98,7 +98,7 @@ ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
 void ListPublicKeysResponsePrivate::parseListPublicKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPublicKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

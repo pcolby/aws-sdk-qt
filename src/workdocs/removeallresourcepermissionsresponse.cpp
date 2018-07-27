@@ -122,7 +122,7 @@ RemoveAllResourcePermissionsResponsePrivate::RemoveAllResourcePermissionsRespons
 void RemoveAllResourcePermissionsResponsePrivate::parseRemoveAllResourcePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAllResourcePermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

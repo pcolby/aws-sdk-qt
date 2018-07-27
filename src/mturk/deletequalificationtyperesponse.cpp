@@ -93,7 +93,7 @@ DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponsePrivate(
 void DeleteQualificationTypeResponsePrivate::parseDeleteQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteQualificationTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

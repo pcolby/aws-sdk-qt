@@ -122,7 +122,7 @@ DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponsePrivate(
 void DescribeMetricFiltersResponsePrivate::parseDescribeMetricFiltersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeMetricFiltersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

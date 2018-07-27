@@ -174,7 +174,7 @@ AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesRespons
 void AddTagsToOnPremisesInstancesResponsePrivate::parseAddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToOnPremisesInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

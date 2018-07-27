@@ -93,7 +93,7 @@ UpdateGcmChannelResponsePrivate::UpdateGcmChannelResponsePrivate(
 void UpdateGcmChannelResponsePrivate::parseUpdateGcmChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGcmChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

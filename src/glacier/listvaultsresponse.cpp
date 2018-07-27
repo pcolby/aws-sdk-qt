@@ -131,7 +131,7 @@ ListVaultsResponsePrivate::ListVaultsResponsePrivate(
 void ListVaultsResponsePrivate::parseListVaultsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListVaultsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

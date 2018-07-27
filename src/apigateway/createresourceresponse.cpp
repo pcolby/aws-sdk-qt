@@ -98,7 +98,7 @@ CreateResourceResponsePrivate::CreateResourceResponsePrivate(
 void CreateResourceResponsePrivate::parseCreateResourceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

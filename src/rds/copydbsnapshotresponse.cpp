@@ -157,7 +157,7 @@ CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponsePrivate(
 void CopyDBSnapshotResponsePrivate::parseCopyDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyDBSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

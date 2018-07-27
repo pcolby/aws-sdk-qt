@@ -112,7 +112,7 @@ ListGlobalTablesResponsePrivate::ListGlobalTablesResponsePrivate(
 void ListGlobalTablesResponsePrivate::parseListGlobalTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGlobalTablesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

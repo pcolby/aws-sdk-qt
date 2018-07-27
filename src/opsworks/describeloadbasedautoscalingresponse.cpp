@@ -199,7 +199,7 @@ DescribeLoadBasedAutoScalingResponsePrivate::DescribeLoadBasedAutoScalingRespons
 void DescribeLoadBasedAutoScalingResponsePrivate::parseDescribeLoadBasedAutoScalingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBasedAutoScalingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

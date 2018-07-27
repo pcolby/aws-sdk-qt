@@ -104,7 +104,7 @@ DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusRespons
 void DescribeRefreshSchemasStatusResponsePrivate::parseDescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRefreshSchemasStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

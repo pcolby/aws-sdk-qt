@@ -93,7 +93,7 @@ DeleteTrafficPolicyInstanceResponsePrivate::DeleteTrafficPolicyInstanceResponseP
 void DeleteTrafficPolicyInstanceResponsePrivate::parseDeleteTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrafficPolicyInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

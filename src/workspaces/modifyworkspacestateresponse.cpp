@@ -96,7 +96,7 @@ ModifyWorkspaceStateResponsePrivate::ModifyWorkspaceStateResponsePrivate(
 void ModifyWorkspaceStateResponsePrivate::parseModifyWorkspaceStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyWorkspaceStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

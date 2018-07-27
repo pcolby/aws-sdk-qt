@@ -131,7 +131,7 @@ RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponsePrivate(
 void RemoveTagsFromVaultResponsePrivate::parseRemoveTagsFromVaultResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromVaultResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

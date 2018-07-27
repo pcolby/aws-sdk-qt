@@ -104,7 +104,7 @@ GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponsePrivate(
 void GetRegistrationCodeResponsePrivate::parseGetRegistrationCodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRegistrationCodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

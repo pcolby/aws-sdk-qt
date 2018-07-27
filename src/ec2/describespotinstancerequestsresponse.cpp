@@ -121,7 +121,7 @@ DescribeSpotInstanceRequestsResponsePrivate::DescribeSpotInstanceRequestsRespons
 void DescribeSpotInstanceRequestsResponsePrivate::parseDescribeSpotInstanceRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotInstanceRequestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

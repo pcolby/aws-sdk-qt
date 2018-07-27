@@ -96,7 +96,7 @@ MergeShardsResponsePrivate::MergeShardsResponsePrivate(
 void MergeShardsResponsePrivate::parseMergeShardsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MergeShardsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Kinesis

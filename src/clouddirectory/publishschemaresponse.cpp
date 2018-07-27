@@ -100,7 +100,7 @@ PublishSchemaResponsePrivate::PublishSchemaResponsePrivate(
 void PublishSchemaResponsePrivate::parsePublishSchemaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PublishSchemaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

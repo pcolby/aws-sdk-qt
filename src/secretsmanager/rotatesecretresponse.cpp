@@ -169,7 +169,7 @@ RotateSecretResponsePrivate::RotateSecretResponsePrivate(
 void RotateSecretResponsePrivate::parseRotateSecretResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RotateSecretResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

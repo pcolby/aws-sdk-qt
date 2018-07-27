@@ -173,7 +173,7 @@ DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponsePrivate
 void DeregisterScalableTargetResponsePrivate::parseDeregisterScalableTargetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterScalableTargetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationAutoScaling

@@ -98,7 +98,7 @@ DeleteFieldLevelEncryptionConfigResponsePrivate::DeleteFieldLevelEncryptionConfi
 void DeleteFieldLevelEncryptionConfigResponsePrivate::parseDeleteFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFieldLevelEncryptionConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

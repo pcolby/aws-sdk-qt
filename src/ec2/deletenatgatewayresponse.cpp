@@ -121,7 +121,7 @@ DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
 void DeleteNatGatewayResponsePrivate::parseDeleteNatGatewayResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNatGatewayResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

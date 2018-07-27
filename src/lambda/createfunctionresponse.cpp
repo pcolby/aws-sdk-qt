@@ -104,7 +104,7 @@ CreateFunctionResponsePrivate::CreateFunctionResponsePrivate(
 void CreateFunctionResponsePrivate::parseCreateFunctionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFunctionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

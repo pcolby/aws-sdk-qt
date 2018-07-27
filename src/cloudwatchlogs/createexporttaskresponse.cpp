@@ -122,7 +122,7 @@ CreateExportTaskResponsePrivate::CreateExportTaskResponsePrivate(
 void CreateExportTaskResponsePrivate::parseCreateExportTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateExportTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

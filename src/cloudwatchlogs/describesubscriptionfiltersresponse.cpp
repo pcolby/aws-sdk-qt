@@ -122,7 +122,7 @@ DescribeSubscriptionFiltersResponsePrivate::DescribeSubscriptionFiltersResponseP
 void DescribeSubscriptionFiltersResponsePrivate::parseDescribeSubscriptionFiltersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubscriptionFiltersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

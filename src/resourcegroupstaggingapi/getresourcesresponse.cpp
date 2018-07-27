@@ -148,7 +148,7 @@ GetResourcesResponsePrivate::GetResourcesResponsePrivate(
 void GetResourcesResponsePrivate::parseGetResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroupsTaggingAPI

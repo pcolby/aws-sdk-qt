@@ -96,7 +96,7 @@ UpdateConnectivityInfoResponsePrivate::UpdateConnectivityInfoResponsePrivate(
 void UpdateConnectivityInfoResponsePrivate::parseUpdateConnectivityInfoResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateConnectivityInfoResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

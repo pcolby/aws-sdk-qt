@@ -107,7 +107,7 @@ ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModification
 void ListAllowedNodeTypeModificationsResponsePrivate::parseListAllowedNodeTypeModificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAllowedNodeTypeModificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElastiCache

@@ -93,7 +93,7 @@ ArchiveFindingsResponsePrivate::ArchiveFindingsResponsePrivate(
 void ArchiveFindingsResponsePrivate::parseArchiveFindingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ArchiveFindingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

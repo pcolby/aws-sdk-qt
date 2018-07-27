@@ -162,7 +162,7 @@ UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponsePrivate(
 void UpdateNFSFileShareResponsePrivate::parseUpdateNFSFileShareResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNFSFileShareResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

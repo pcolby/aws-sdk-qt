@@ -161,7 +161,7 @@ ModifyTargetGroupAttributesResponsePrivate::ModifyTargetGroupAttributesResponseP
 void ModifyTargetGroupAttributesResponsePrivate::parseModifyTargetGroupAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyTargetGroupAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

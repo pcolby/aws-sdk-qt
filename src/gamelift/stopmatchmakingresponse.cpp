@@ -537,7 +537,7 @@ StopMatchmakingResponsePrivate::StopMatchmakingResponsePrivate(
 void StopMatchmakingResponsePrivate::parseStopMatchmakingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopMatchmakingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

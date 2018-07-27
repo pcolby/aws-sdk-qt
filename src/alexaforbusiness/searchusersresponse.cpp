@@ -98,7 +98,7 @@ SearchUsersResponsePrivate::SearchUsersResponsePrivate(
 void SearchUsersResponsePrivate::parseSearchUsersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SearchUsersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

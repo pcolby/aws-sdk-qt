@@ -93,7 +93,7 @@ DeleteQueueResponsePrivate::DeleteQueueResponsePrivate(
 void DeleteQueueResponsePrivate::parseDeleteQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

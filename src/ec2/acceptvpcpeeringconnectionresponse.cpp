@@ -121,7 +121,7 @@ AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponsePri
 void AcceptVpcPeeringConnectionResponsePrivate::parseAcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptVpcPeeringConnectionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

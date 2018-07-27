@@ -121,7 +121,7 @@ EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
 void EnableVolumeIOResponsePrivate::parseEnableVolumeIOResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableVolumeIOResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

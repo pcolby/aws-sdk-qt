@@ -107,7 +107,7 @@ DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderResponsePri
 void DeleteConditionalForwarderResponsePrivate::parseDeleteConditionalForwarderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteConditionalForwarderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

@@ -96,7 +96,7 @@ DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
 void DescribeProjectResponsePrivate::parseDescribeProjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeProjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Mobile

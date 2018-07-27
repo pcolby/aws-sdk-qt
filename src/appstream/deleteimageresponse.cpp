@@ -96,7 +96,7 @@ DeleteImageResponsePrivate::DeleteImageResponsePrivate(
 void DeleteImageResponsePrivate::parseDeleteImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

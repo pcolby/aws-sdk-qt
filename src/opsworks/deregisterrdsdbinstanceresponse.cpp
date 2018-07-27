@@ -199,7 +199,7 @@ DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponsePrivate(
 void DeregisterRdsDbInstanceResponsePrivate::parseDeregisterRdsDbInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeregisterRdsDbInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

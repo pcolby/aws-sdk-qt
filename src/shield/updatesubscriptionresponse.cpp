@@ -99,7 +99,7 @@ UpdateSubscriptionResponsePrivate::UpdateSubscriptionResponsePrivate(
 void UpdateSubscriptionResponsePrivate::parseUpdateSubscriptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSubscriptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

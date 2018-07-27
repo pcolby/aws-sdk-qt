@@ -123,7 +123,7 @@ CreateClusterSecurityGroupResponsePrivate::CreateClusterSecurityGroupResponsePri
 void CreateClusterSecurityGroupResponsePrivate::parseCreateClusterSecurityGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterSecurityGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

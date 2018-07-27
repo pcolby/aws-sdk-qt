@@ -537,7 +537,7 @@ DeleteBuildResponsePrivate::DeleteBuildResponsePrivate(
 void DeleteBuildResponsePrivate::parseDeleteBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBuildResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

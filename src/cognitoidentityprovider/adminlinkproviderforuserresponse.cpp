@@ -103,7 +103,7 @@ AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate
 void AdminLinkProviderForUserResponsePrivate::parseAdminLinkProviderForUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminLinkProviderForUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

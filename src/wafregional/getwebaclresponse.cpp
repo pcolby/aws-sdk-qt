@@ -100,7 +100,7 @@ GetWebACLResponsePrivate::GetWebACLResponsePrivate(
 void GetWebACLResponsePrivate::parseGetWebACLResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetWebACLResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

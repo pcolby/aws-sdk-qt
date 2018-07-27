@@ -93,7 +93,7 @@ RemoveAttributesResponsePrivate::RemoveAttributesResponsePrivate(
 void RemoveAttributesResponsePrivate::parseRemoveAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

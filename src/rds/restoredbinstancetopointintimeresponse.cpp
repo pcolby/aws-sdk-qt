@@ -157,7 +157,7 @@ RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTimeRes
 void RestoreDBInstanceToPointInTimeResponsePrivate::parseRestoreDBInstanceToPointInTimeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceToPointInTimeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

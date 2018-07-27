@@ -104,7 +104,7 @@ DescribeJobResponsePrivate::DescribeJobResponsePrivate(
 void DescribeJobResponsePrivate::parseDescribeJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

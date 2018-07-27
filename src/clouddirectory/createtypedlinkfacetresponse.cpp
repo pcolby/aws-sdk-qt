@@ -100,7 +100,7 @@ CreateTypedLinkFacetResponsePrivate::CreateTypedLinkFacetResponsePrivate(
 void CreateTypedLinkFacetResponsePrivate::parseCreateTypedLinkFacetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTypedLinkFacetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

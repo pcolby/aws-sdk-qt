@@ -97,7 +97,7 @@ GetInstanceResponsePrivate::GetInstanceResponsePrivate(
 void GetInstanceResponsePrivate::parseGetInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceDiscovery

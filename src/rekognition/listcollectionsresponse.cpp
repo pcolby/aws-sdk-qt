@@ -94,7 +94,7 @@ ListCollectionsResponsePrivate::ListCollectionsResponsePrivate(
 void ListCollectionsResponsePrivate::parseListCollectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCollectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

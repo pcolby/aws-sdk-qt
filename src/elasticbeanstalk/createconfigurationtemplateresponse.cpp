@@ -115,7 +115,7 @@ CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResponseP
 void CreateConfigurationTemplateResponsePrivate::parseCreateConfigurationTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

@@ -113,7 +113,7 @@ CreateChannelResponsePrivate::CreateChannelResponsePrivate(
 void CreateChannelResponsePrivate::parseCreateChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

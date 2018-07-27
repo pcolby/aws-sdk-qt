@@ -96,7 +96,7 @@ ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponsePrivate(
 void ListInstanceGroupsResponsePrivate::parseListInstanceGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInstanceGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

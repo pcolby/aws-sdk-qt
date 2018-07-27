@@ -121,7 +121,7 @@ CreateVpcEndpointServiceConfigurationResponsePrivate::CreateVpcEndpointServiceCo
 void CreateVpcEndpointServiceConfigurationResponsePrivate::parseCreateVpcEndpointServiceConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointServiceConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

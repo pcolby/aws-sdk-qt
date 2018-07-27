@@ -148,7 +148,7 @@ GetTagValuesResponsePrivate::GetTagValuesResponsePrivate(
 void GetTagValuesResponsePrivate::parseGetTagValuesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTagValuesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroupsTaggingAPI

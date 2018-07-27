@@ -283,7 +283,7 @@ ListRepositoriesResponsePrivate::ListRepositoriesResponsePrivate(
 void ListRepositoriesResponsePrivate::parseListRepositoriesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListRepositoriesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

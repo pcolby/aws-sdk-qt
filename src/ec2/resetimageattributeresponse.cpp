@@ -121,7 +121,7 @@ ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
 void ResetImageAttributeResponsePrivate::parseResetImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetImageAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

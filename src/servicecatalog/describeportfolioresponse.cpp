@@ -99,7 +99,7 @@ DescribePortfolioResponsePrivate::DescribePortfolioResponsePrivate(
 void DescribePortfolioResponsePrivate::parseDescribePortfolioResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePortfolioResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

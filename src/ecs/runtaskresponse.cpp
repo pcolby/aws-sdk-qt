@@ -110,7 +110,7 @@ RunTaskResponsePrivate::RunTaskResponsePrivate(
 void RunTaskResponsePrivate::parseRunTaskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunTaskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

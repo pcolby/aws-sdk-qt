@@ -104,7 +104,7 @@ AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponsePriva
 void AcceptCertificateTransferResponsePrivate::parseAcceptCertificateTransferResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptCertificateTransferResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

@@ -122,7 +122,7 @@ DescribeActivitiesResponsePrivate::DescribeActivitiesResponsePrivate(
 void DescribeActivitiesResponsePrivate::parseDescribeActivitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeActivitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

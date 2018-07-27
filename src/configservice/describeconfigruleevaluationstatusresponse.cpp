@@ -113,7 +113,7 @@ DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvaluationS
 void DescribeConfigRuleEvaluationStatusResponsePrivate::parseDescribeConfigRuleEvaluationStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigRuleEvaluationStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

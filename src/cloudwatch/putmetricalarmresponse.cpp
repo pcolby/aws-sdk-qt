@@ -107,7 +107,7 @@ PutMetricAlarmResponsePrivate::PutMetricAlarmResponsePrivate(
 void PutMetricAlarmResponsePrivate::parsePutMetricAlarmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutMetricAlarmResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

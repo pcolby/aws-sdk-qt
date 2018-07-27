@@ -104,7 +104,7 @@ DescribeStreamResponsePrivate::DescribeStreamResponsePrivate(
 void DescribeStreamResponsePrivate::parseDescribeStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

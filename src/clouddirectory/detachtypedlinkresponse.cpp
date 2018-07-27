@@ -100,7 +100,7 @@ DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
 void DetachTypedLinkResponsePrivate::parseDetachTypedLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachTypedLinkResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

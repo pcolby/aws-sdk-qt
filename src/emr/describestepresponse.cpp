@@ -96,7 +96,7 @@ DescribeStepResponsePrivate::DescribeStepResponsePrivate(
 void DescribeStepResponsePrivate::parseDescribeStepResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeStepResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

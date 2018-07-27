@@ -109,7 +109,7 @@ CreateInstanceSnapshotResponsePrivate::CreateInstanceSnapshotResponsePrivate(
 void CreateInstanceSnapshotResponsePrivate::parseCreateInstanceSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateInstanceSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

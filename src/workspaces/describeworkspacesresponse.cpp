@@ -96,7 +96,7 @@ DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponsePrivate(
 void DescribeWorkspacesResponsePrivate::parseDescribeWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

@@ -103,7 +103,7 @@ CreateLifecyclePolicyResponsePrivate::CreateLifecyclePolicyResponsePrivate(
 void CreateLifecyclePolicyResponsePrivate::parseCreateLifecyclePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLifecyclePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DLM

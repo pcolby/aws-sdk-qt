@@ -96,7 +96,7 @@ DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponsePrivate
 void DescribeWorkspaceBundlesResponsePrivate::parseDescribeWorkspaceBundlesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspaceBundlesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

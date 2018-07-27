@@ -105,7 +105,7 @@ ListHsmsResponsePrivate::ListHsmsResponsePrivate(
 void ListHsmsResponsePrivate::parseListHsmsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListHsmsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

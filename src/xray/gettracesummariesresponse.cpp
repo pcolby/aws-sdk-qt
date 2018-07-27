@@ -94,7 +94,7 @@ GetTraceSummariesResponsePrivate::GetTraceSummariesResponsePrivate(
 void GetTraceSummariesResponsePrivate::parseGetTraceSummariesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTraceSummariesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace XRay

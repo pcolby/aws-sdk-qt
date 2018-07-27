@@ -199,7 +199,7 @@ UpdateInstanceResponsePrivate::UpdateInstanceResponsePrivate(
 void UpdateInstanceResponsePrivate::parseUpdateInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

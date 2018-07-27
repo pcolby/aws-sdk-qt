@@ -104,7 +104,7 @@ ModifyEndpointResponsePrivate::ModifyEndpointResponsePrivate(
 void ModifyEndpointResponsePrivate::parseModifyEndpointResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyEndpointResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

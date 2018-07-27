@@ -121,7 +121,7 @@ DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCreditSpeci
 void DescribeInstanceCreditSpecificationsResponsePrivate::parseDescribeInstanceCreditSpecificationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceCreditSpecificationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

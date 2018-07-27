@@ -199,7 +199,7 @@ DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponsePrivate
 void DescribeOperatingSystemsResponsePrivate::parseDescribeOperatingSystemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeOperatingSystemsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

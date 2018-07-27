@@ -96,7 +96,7 @@ DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
 void DetectSentimentResponsePrivate::parseDetectSentimentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetectSentimentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

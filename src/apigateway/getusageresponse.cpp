@@ -98,7 +98,7 @@ GetUsageResponsePrivate::GetUsageResponsePrivate(
 void GetUsageResponsePrivate::parseGetUsageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUsageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

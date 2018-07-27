@@ -537,7 +537,7 @@ StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponsePrivate
 void StopGameSessionPlacementResponsePrivate::parseStopGameSessionPlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopGameSessionPlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

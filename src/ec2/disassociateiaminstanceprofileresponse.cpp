@@ -121,7 +121,7 @@ DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileRes
 void DisassociateIamInstanceProfileResponsePrivate::parseDisassociateIamInstanceProfileResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateIamInstanceProfileResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

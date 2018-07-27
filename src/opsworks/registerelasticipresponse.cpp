@@ -199,7 +199,7 @@ RegisterElasticIpResponsePrivate::RegisterElasticIpResponsePrivate(
 void RegisterElasticIpResponsePrivate::parseRegisterElasticIpResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterElasticIpResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

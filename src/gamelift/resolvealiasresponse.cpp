@@ -537,7 +537,7 @@ ResolveAliasResponsePrivate::ResolveAliasResponsePrivate(
 void ResolveAliasResponsePrivate::parseResolveAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResolveAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

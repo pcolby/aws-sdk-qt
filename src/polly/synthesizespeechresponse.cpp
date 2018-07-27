@@ -100,7 +100,7 @@ SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
 void SynthesizeSpeechResponsePrivate::parseSynthesizeSpeechResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SynthesizeSpeechResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Polly

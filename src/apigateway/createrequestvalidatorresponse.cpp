@@ -98,7 +98,7 @@ CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponsePrivate(
 void CreateRequestValidatorResponsePrivate::parseCreateRequestValidatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateRequestValidatorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

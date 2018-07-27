@@ -100,7 +100,7 @@ GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponsePrivate(
 void GetAppliedSchemaVersionResponsePrivate::parseGetAppliedSchemaVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAppliedSchemaVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

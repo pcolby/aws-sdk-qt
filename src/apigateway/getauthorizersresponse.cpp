@@ -98,7 +98,7 @@ GetAuthorizersResponsePrivate::GetAuthorizersResponsePrivate(
 void GetAuthorizersResponsePrivate::parseGetAuthorizersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAuthorizersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -105,7 +105,7 @@ GetNamedQueryResponsePrivate::GetNamedQueryResponsePrivate(
 void GetNamedQueryResponsePrivate::parseGetNamedQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetNamedQueryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Athena

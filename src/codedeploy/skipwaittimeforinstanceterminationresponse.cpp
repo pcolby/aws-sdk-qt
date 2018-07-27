@@ -174,7 +174,7 @@ SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceTermin
 void SkipWaitTimeForInstanceTerminationResponsePrivate::parseSkipWaitTimeForInstanceTerminationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SkipWaitTimeForInstanceTerminationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

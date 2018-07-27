@@ -104,7 +104,7 @@ ReloadTablesResponsePrivate::ReloadTablesResponsePrivate(
 void ReloadTablesResponsePrivate::parseReloadTablesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReloadTablesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

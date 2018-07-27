@@ -131,7 +131,7 @@ CompleteVaultLockResponsePrivate::CompleteVaultLockResponsePrivate(
 void CompleteVaultLockResponsePrivate::parseCompleteVaultLockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteVaultLockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

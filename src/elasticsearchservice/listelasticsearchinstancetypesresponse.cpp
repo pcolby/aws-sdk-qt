@@ -102,7 +102,7 @@ ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesRes
 void ListElasticsearchInstanceTypesResponsePrivate::parseListElasticsearchInstanceTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchInstanceTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticsearchService

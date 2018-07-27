@@ -96,7 +96,7 @@ ListFunctionDefinitionVersionsResponsePrivate::ListFunctionDefinitionVersionsRes
 void ListFunctionDefinitionVersionsResponsePrivate::parseListFunctionDefinitionVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListFunctionDefinitionVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

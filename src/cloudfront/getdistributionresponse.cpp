@@ -98,7 +98,7 @@ GetDistributionResponsePrivate::GetDistributionResponsePrivate(
 void GetDistributionResponsePrivate::parseGetDistributionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDistributionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

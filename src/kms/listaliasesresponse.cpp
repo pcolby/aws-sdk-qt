@@ -192,7 +192,7 @@ ListAliasesResponsePrivate::ListAliasesResponsePrivate(
 void ListAliasesResponsePrivate::parseListAliasesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAliasesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

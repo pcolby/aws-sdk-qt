@@ -174,7 +174,7 @@ BatchGetApplicationsResponsePrivate::BatchGetApplicationsResponsePrivate(
 void BatchGetApplicationsResponsePrivate::parseBatchGetApplicationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetApplicationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

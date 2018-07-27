@@ -96,7 +96,7 @@ ListSecurityConfigurationsResponsePrivate::ListSecurityConfigurationsResponsePri
 void ListSecurityConfigurationsResponsePrivate::parseListSecurityConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSecurityConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

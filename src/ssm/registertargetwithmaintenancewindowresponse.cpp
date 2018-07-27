@@ -118,7 +118,7 @@ RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaintenanc
 void RegisterTargetWithMaintenanceWindowResponsePrivate::parseRegisterTargetWithMaintenanceWindowResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RegisterTargetWithMaintenanceWindowResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -95,7 +95,7 @@ GetRunResponsePrivate::GetRunResponsePrivate(
 void GetRunResponsePrivate::parseGetRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetRunResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

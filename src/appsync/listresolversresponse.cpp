@@ -94,7 +94,7 @@ ListResolversResponsePrivate::ListResolversResponsePrivate(
 void ListResolversResponsePrivate::parseListResolversResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResolversResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

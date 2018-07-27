@@ -537,7 +537,7 @@ UpdateGameSessionQueueResponsePrivate::UpdateGameSessionQueueResponsePrivate(
 void UpdateGameSessionQueueResponsePrivate::parseUpdateGameSessionQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGameSessionQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

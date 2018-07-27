@@ -158,7 +158,7 @@ GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponsePrivate
 void GetAccountPasswordPolicyResponsePrivate::parseGetAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountPasswordPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

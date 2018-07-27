@@ -105,7 +105,7 @@ GetConfigResponsePrivate::GetConfigResponsePrivate(
 void GetConfigResponsePrivate::parseGetConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

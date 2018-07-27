@@ -121,7 +121,7 @@ DescribeVpcClassicLinkResponsePrivate::DescribeVpcClassicLinkResponsePrivate(
 void DescribeVpcClassicLinkResponsePrivate::parseDescribeVpcClassicLinkResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcClassicLinkResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

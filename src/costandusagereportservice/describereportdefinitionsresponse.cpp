@@ -93,7 +93,7 @@ DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponsePriva
 void DescribeReportDefinitionsResponsePrivate::parseDescribeReportDefinitionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeReportDefinitionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CostandUsageReportService

@@ -93,7 +93,7 @@ PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
 void PutBucketEncryptionResponsePrivate::parsePutBucketEncryptionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketEncryptionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

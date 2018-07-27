@@ -115,7 +115,7 @@ DescribeApplicationVersionsResponsePrivate::DescribeApplicationVersionsResponseP
 void DescribeApplicationVersionsResponsePrivate::parseDescribeApplicationVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

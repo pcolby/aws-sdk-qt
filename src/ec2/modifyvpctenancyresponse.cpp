@@ -121,7 +121,7 @@ ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
 void ModifyVpcTenancyResponsePrivate::parseModifyVpcTenancyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcTenancyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

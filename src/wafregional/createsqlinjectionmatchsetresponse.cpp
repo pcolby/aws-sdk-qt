@@ -100,7 +100,7 @@ CreateSqlInjectionMatchSetResponsePrivate::CreateSqlInjectionMatchSetResponsePri
 void CreateSqlInjectionMatchSetResponsePrivate::parseCreateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSqlInjectionMatchSetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAFRegional

@@ -173,7 +173,7 @@ InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponsePrivate(
 void InvalidateProjectCacheResponsePrivate::parseInvalidateProjectCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InvalidateProjectCacheResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeBuild

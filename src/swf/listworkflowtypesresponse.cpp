@@ -109,7 +109,7 @@ ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponsePrivate(
 void ListWorkflowTypesResponsePrivate::parseListWorkflowTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWorkflowTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SWF

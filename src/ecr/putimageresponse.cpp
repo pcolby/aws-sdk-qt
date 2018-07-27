@@ -97,7 +97,7 @@ PutImageResponsePrivate::PutImageResponsePrivate(
 void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

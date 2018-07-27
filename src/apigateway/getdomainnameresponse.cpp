@@ -98,7 +98,7 @@ GetDomainNameResponsePrivate::GetDomainNameResponsePrivate(
 void GetDomainNameResponsePrivate::parseGetDomainNameResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDomainNameResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

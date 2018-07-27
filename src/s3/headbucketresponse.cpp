@@ -93,7 +93,7 @@ HeadBucketResponsePrivate::HeadBucketResponsePrivate(
 void HeadBucketResponsePrivate::parseHeadBucketResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("HeadBucketResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

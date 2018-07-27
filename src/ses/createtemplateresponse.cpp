@@ -104,7 +104,7 @@ CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
 void CreateTemplateResponsePrivate::parseCreateTemplateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateTemplateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

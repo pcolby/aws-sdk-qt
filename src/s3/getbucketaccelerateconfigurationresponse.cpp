@@ -93,7 +93,7 @@ GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfiguratio
 void GetBucketAccelerateConfigurationResponsePrivate::parseGetBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAccelerateConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

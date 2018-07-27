@@ -174,7 +174,7 @@ GetOnPremisesInstanceResponsePrivate::GetOnPremisesInstanceResponsePrivate(
 void GetOnPremisesInstanceResponsePrivate::parseGetOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOnPremisesInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

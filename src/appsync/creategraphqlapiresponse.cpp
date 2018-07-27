@@ -94,7 +94,7 @@ CreateGraphqlApiResponsePrivate::CreateGraphqlApiResponsePrivate(
 void CreateGraphqlApiResponsePrivate::parseCreateGraphqlApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGraphqlApiResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

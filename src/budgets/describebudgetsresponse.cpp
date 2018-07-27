@@ -136,7 +136,7 @@ DescribeBudgetsResponsePrivate::DescribeBudgetsResponsePrivate(
 void DescribeBudgetsResponsePrivate::parseDescribeBudgetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBudgetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Budgets

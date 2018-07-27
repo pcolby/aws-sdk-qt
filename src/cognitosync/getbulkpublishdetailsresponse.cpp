@@ -113,7 +113,7 @@ GetBulkPublishDetailsResponsePrivate::GetBulkPublishDetailsResponsePrivate(
 void GetBulkPublishDetailsResponsePrivate::parseGetBulkPublishDetailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBulkPublishDetailsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoSync

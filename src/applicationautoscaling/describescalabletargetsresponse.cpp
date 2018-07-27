@@ -173,7 +173,7 @@ DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponsePrivate(
 void DescribeScalableTargetsResponsePrivate::parseDescribeScalableTargetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalableTargetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationAutoScaling

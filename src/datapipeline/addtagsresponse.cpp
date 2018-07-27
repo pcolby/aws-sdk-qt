@@ -111,7 +111,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

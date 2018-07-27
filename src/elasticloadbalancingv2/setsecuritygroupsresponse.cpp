@@ -161,7 +161,7 @@ SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponsePrivate(
 void SetSecurityGroupsResponsePrivate::parseSetSecurityGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetSecurityGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

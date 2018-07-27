@@ -101,7 +101,7 @@ DescribeInterconnectLoaResponsePrivate::DescribeInterconnectLoaResponsePrivate(
 void DescribeInterconnectLoaResponsePrivate::parseDescribeInterconnectLoaResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInterconnectLoaResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

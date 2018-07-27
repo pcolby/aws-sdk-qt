@@ -107,7 +107,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemovePermissionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

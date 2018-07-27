@@ -123,7 +123,7 @@ DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponsePriva
 void DescribeHsmConfigurationsResponsePrivate::parseDescribeHsmConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

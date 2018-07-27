@@ -199,7 +199,7 @@ DescribeElasticLoadBalancersResponsePrivate::DescribeElasticLoadBalancersRespons
 void DescribeElasticLoadBalancersResponsePrivate::parseDescribeElasticLoadBalancersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticLoadBalancersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

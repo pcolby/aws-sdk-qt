@@ -98,7 +98,7 @@ ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate
 void ListSubscribedRuleGroupsResponsePrivate::parseListSubscribedRuleGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSubscribedRuleGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

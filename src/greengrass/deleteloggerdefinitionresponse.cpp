@@ -96,7 +96,7 @@ DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
 void DeleteLoggerDefinitionResponsePrivate::parseDeleteLoggerDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoggerDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

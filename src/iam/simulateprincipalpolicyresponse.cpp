@@ -158,7 +158,7 @@ SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponsePrivate(
 void SimulatePrincipalPolicyResponsePrivate::parseSimulatePrincipalPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SimulatePrincipalPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

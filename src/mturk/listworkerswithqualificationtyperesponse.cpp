@@ -93,7 +93,7 @@ ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificationTyp
 void ListWorkersWithQualificationTypeResponsePrivate::parseListWorkersWithQualificationTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWorkersWithQualificationTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

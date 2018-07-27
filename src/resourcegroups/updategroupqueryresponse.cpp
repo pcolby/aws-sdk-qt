@@ -137,7 +137,7 @@ UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponsePrivate(
 void UpdateGroupQueryResponsePrivate::parseUpdateGroupQueryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGroupQueryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

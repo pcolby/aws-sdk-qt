@@ -157,7 +157,7 @@ AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationI
 void AssociateConfigurationItemsToApplicationResponsePrivate::parseAssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateConfigurationItemsToApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

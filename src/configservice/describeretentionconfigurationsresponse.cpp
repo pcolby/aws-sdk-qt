@@ -113,7 +113,7 @@ DescribeRetentionConfigurationsResponsePrivate::DescribeRetentionConfigurationsR
 void DescribeRetentionConfigurationsResponsePrivate::parseDescribeRetentionConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRetentionConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

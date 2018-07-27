@@ -162,7 +162,7 @@ DescribeNFSFileSharesResponsePrivate::DescribeNFSFileSharesResponsePrivate(
 void DescribeNFSFileSharesResponsePrivate::parseDescribeNFSFileSharesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeNFSFileSharesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

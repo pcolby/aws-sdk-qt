@@ -96,7 +96,7 @@ RebuildWorkspacesResponsePrivate::RebuildWorkspacesResponsePrivate(
 void RebuildWorkspacesResponsePrivate::parseRebuildWorkspacesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RebuildWorkspacesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

@@ -112,7 +112,7 @@ BatchGetItemResponsePrivate::BatchGetItemResponsePrivate(
 void BatchGetItemResponsePrivate::parseBatchGetItemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchGetItemResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

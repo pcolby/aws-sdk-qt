@@ -115,7 +115,7 @@ ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsRespo
 void ValidateConfigurationSettingsResponsePrivate::parseValidateConfigurationSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ValidateConfigurationSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

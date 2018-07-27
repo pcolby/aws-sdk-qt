@@ -101,7 +101,7 @@ DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponsePriva
 void DescribeHostedConnectionsResponsePrivate::parseDescribeHostedConnectionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostedConnectionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

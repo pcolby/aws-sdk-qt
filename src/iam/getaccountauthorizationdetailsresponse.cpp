@@ -158,7 +158,7 @@ GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsRes
 void GetAccountAuthorizationDetailsResponsePrivate::parseGetAccountAuthorizationDetailsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetAccountAuthorizationDetailsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

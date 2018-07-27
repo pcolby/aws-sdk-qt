@@ -105,7 +105,7 @@ ModifyHsmResponsePrivate::ModifyHsmResponsePrivate(
 void ModifyHsmResponsePrivate::parseModifyHsmResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyHsmResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudHSM

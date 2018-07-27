@@ -121,7 +121,7 @@ AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
 void AllocateHostsResponsePrivate::parseAllocateHostsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AllocateHostsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

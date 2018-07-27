@@ -96,7 +96,7 @@ DescribeImageBuildersResponsePrivate::DescribeImageBuildersResponsePrivate(
 void DescribeImageBuildersResponsePrivate::parseDescribeImageBuildersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImageBuildersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

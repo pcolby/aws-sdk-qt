@@ -199,7 +199,7 @@ CloneStackResponsePrivate::CloneStackResponsePrivate(
 void CloneStackResponsePrivate::parseCloneStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CloneStackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

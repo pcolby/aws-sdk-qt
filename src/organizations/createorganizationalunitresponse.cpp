@@ -235,7 +235,7 @@ CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponsePrivate
 void CreateOrganizationalUnitResponsePrivate::parseCreateOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateOrganizationalUnitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

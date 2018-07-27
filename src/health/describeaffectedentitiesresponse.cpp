@@ -154,7 +154,7 @@ DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponsePrivate
 void DescribeAffectedEntitiesResponsePrivate::parseDescribeAffectedEntitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeAffectedEntitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Health

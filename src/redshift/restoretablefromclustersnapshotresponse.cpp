@@ -123,7 +123,7 @@ RestoreTableFromClusterSnapshotResponsePrivate::RestoreTableFromClusterSnapshotR
 void RestoreTableFromClusterSnapshotResponsePrivate::parseRestoreTableFromClusterSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableFromClusterSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

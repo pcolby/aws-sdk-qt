@@ -104,7 +104,7 @@ StartReplicationTaskAssessmentResponsePrivate::StartReplicationTaskAssessmentRes
 void StartReplicationTaskAssessmentResponsePrivate::parseStartReplicationTaskAssessmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartReplicationTaskAssessmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DatabaseMigrationService

@@ -121,7 +121,7 @@ RunScheduledInstancesResponsePrivate::RunScheduledInstancesResponsePrivate(
 void RunScheduledInstancesResponsePrivate::parseRunScheduledInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RunScheduledInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

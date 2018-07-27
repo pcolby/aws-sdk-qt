@@ -115,7 +115,7 @@ ListChangeSetsResponsePrivate::ListChangeSetsResponsePrivate(
 void ListChangeSetsResponsePrivate::parseListChangeSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListChangeSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFormation

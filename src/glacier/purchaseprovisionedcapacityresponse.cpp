@@ -131,7 +131,7 @@ PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponseP
 void PurchaseProvisionedCapacityResponsePrivate::parsePurchaseProvisionedCapacityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseProvisionedCapacityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

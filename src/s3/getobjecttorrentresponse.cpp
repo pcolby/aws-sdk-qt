@@ -93,7 +93,7 @@ GetObjectTorrentResponsePrivate::GetObjectTorrentResponsePrivate(
 void GetObjectTorrentResponsePrivate::parseGetObjectTorrentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetObjectTorrentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

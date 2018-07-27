@@ -98,7 +98,7 @@ DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
 void DeleteBasePathMappingResponsePrivate::parseDeleteBasePathMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBasePathMappingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

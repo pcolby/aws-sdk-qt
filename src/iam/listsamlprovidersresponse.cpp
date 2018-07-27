@@ -158,7 +158,7 @@ ListSAMLProvidersResponsePrivate::ListSAMLProvidersResponsePrivate(
 void ListSAMLProvidersResponsePrivate::parseListSAMLProvidersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSAMLProvidersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

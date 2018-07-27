@@ -104,7 +104,7 @@ UpdateThingResponsePrivate::UpdateThingResponsePrivate(
 void UpdateThingResponsePrivate::parseUpdateThingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

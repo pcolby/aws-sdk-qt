@@ -112,7 +112,7 @@ SendTaskSuccessResponsePrivate::SendTaskSuccessResponsePrivate(
 void SendTaskSuccessResponsePrivate::parseSendTaskSuccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendTaskSuccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

@@ -96,7 +96,7 @@ BatchDetectSyntaxResponsePrivate::BatchDetectSyntaxResponsePrivate(
 void BatchDetectSyntaxResponsePrivate::parseBatchDetectSyntaxResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectSyntaxResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

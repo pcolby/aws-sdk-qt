@@ -123,7 +123,7 @@ PurchaseReservedNodeOfferingResponsePrivate::PurchaseReservedNodeOfferingRespons
 void PurchaseReservedNodeOfferingResponsePrivate::parsePurchaseReservedNodeOfferingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedNodeOfferingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

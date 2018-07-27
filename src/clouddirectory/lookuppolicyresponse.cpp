@@ -100,7 +100,7 @@ LookupPolicyResponsePrivate::LookupPolicyResponsePrivate(
 void LookupPolicyResponsePrivate::parseLookupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("LookupPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

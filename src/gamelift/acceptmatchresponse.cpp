@@ -537,7 +537,7 @@ AcceptMatchResponsePrivate::AcceptMatchResponsePrivate(
 void AcceptMatchResponsePrivate::parseAcceptMatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AcceptMatchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

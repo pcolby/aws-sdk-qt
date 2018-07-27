@@ -110,7 +110,7 @@ ListTaskDefinitionFamiliesResponsePrivate::ListTaskDefinitionFamiliesResponsePri
 void ListTaskDefinitionFamiliesResponsePrivate::parseListTaskDefinitionFamiliesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTaskDefinitionFamiliesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

@@ -98,7 +98,7 @@ DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
 void DeleteRequestValidatorResponsePrivate::parseDeleteRequestValidatorResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRequestValidatorResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

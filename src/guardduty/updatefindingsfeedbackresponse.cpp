@@ -93,7 +93,7 @@ UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponsePrivate(
 void UpdateFindingsFeedbackResponsePrivate::parseUpdateFindingsFeedbackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFindingsFeedbackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

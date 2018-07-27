@@ -98,7 +98,7 @@ ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponsePrivate(
 void ListAssessmentRunAgentsResponsePrivate::parseListAssessmentRunAgentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssessmentRunAgentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

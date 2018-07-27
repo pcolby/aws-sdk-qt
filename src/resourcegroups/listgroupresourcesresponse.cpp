@@ -137,7 +137,7 @@ ListGroupResourcesResponsePrivate::ListGroupResourcesResponsePrivate(
 void ListGroupResourcesResponsePrivate::parseListGroupResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListGroupResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

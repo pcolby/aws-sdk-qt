@@ -109,7 +109,7 @@ DeleteDiskResponsePrivate::DeleteDiskResponsePrivate(
 void DeleteDiskResponsePrivate::parseDeleteDiskResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDiskResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

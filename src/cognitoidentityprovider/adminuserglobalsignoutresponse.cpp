@@ -103,7 +103,7 @@ AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponsePrivate(
 void AdminUserGlobalSignOutResponsePrivate::parseAdminUserGlobalSignOutResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AdminUserGlobalSignOutResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

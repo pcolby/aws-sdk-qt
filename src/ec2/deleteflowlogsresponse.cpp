@@ -121,7 +121,7 @@ DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
 void DeleteFlowLogsResponsePrivate::parseDeleteFlowLogsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFlowLogsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

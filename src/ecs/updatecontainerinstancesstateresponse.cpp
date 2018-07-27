@@ -110,7 +110,7 @@ UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateRespo
 void UpdateContainerInstancesStateResponsePrivate::parseUpdateContainerInstancesStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateContainerInstancesStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECS

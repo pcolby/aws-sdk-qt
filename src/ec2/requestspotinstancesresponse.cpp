@@ -121,7 +121,7 @@ RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
 void RequestSpotInstancesResponsePrivate::parseRequestSpotInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RequestSpotInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

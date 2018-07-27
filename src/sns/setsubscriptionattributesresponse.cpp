@@ -107,7 +107,7 @@ SetSubscriptionAttributesResponsePrivate::SetSubscriptionAttributesResponsePriva
 void SetSubscriptionAttributesResponsePrivate::parseSetSubscriptionAttributesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetSubscriptionAttributesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

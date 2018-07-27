@@ -103,7 +103,7 @@ CreateUserPoolClientResponsePrivate::CreateUserPoolClientResponsePrivate(
 void CreateUserPoolClientResponsePrivate::parseCreateUserPoolClientResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateUserPoolClientResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

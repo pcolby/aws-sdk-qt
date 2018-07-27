@@ -93,7 +93,7 @@ UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
 void UpdateNotebookInstanceResponsePrivate::parseUpdateNotebookInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotebookInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

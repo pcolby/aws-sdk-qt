@@ -94,7 +94,7 @@ UpdateTypeResponsePrivate::UpdateTypeResponsePrivate(
 void UpdateTypeResponsePrivate::parseUpdateTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

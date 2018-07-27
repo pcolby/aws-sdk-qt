@@ -147,7 +147,7 @@ DeleteEnvironmentMembershipResponsePrivate::DeleteEnvironmentMembershipResponseP
 void DeleteEnvironmentMembershipResponsePrivate::parseDeleteEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentMembershipResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Cloud9

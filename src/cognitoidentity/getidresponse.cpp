@@ -131,7 +131,7 @@ GetIdResponsePrivate::GetIdResponsePrivate(
 void GetIdResponsePrivate::parseGetIdResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIdResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

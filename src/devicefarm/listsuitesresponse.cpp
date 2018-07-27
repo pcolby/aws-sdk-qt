@@ -95,7 +95,7 @@ ListSuitesResponsePrivate::ListSuitesResponsePrivate(
 void ListSuitesResponsePrivate::parseListSuitesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSuitesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

@@ -93,7 +93,7 @@ UpdateEvaluationResponsePrivate::UpdateEvaluationResponsePrivate(
 void UpdateEvaluationResponsePrivate::parseUpdateEvaluationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEvaluationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

@@ -104,7 +104,7 @@ DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponsePrivate(
 void DeleteV2LoggingLevelResponsePrivate::parseDeleteV2LoggingLevelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteV2LoggingLevelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

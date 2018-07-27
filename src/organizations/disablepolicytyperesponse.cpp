@@ -235,7 +235,7 @@ DisablePolicyTypeResponsePrivate::DisablePolicyTypeResponsePrivate(
 void DisablePolicyTypeResponsePrivate::parseDisablePolicyTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisablePolicyTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

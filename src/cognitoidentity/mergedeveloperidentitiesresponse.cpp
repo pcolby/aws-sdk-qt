@@ -131,7 +131,7 @@ MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponsePrivate
 void MergeDeveloperIdentitiesResponsePrivate::parseMergeDeveloperIdentitiesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MergeDeveloperIdentitiesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

@@ -199,7 +199,7 @@ DeleteLayerResponsePrivate::DeleteLayerResponsePrivate(
 void DeleteLayerResponsePrivate::parseDeleteLayerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLayerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

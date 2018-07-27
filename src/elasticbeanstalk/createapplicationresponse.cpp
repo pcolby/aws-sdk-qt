@@ -115,7 +115,7 @@ CreateApplicationResponsePrivate::CreateApplicationResponsePrivate(
 void CreateApplicationResponsePrivate::parseCreateApplicationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateApplicationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

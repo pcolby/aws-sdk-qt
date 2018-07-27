@@ -537,7 +537,7 @@ DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponsePriva
 void DescribeFleetPortSettingsResponsePrivate::parseDescribeFleetPortSettingsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetPortSettingsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

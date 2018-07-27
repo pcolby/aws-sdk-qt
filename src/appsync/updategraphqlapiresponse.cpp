@@ -94,7 +94,7 @@ UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponsePrivate(
 void UpdateGraphqlApiResponsePrivate::parseUpdateGraphqlApiResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateGraphqlApiResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

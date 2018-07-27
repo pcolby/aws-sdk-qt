@@ -98,7 +98,7 @@ GetDeviceResponsePrivate::GetDeviceResponsePrivate(
 void GetDeviceResponsePrivate::parseGetDeviceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDeviceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

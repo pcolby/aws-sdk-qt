@@ -157,7 +157,7 @@ RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
 void RestoreDBInstanceFromS3ResponsePrivate::parseRestoreDBInstanceFromS3Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromS3Response"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

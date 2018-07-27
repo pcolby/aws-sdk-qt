@@ -119,7 +119,7 @@ GetProductsResponsePrivate::GetProductsResponsePrivate(
 void GetProductsResponsePrivate::parseGetProductsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetProductsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pricing

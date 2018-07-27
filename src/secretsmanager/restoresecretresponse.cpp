@@ -169,7 +169,7 @@ RestoreSecretResponsePrivate::RestoreSecretResponsePrivate(
 void RestoreSecretResponsePrivate::parseRestoreSecretResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RestoreSecretResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

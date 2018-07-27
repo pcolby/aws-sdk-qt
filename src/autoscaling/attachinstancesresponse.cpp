@@ -98,7 +98,7 @@ AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
 void AttachInstancesResponsePrivate::parseAttachInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

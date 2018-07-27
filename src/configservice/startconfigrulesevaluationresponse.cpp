@@ -113,7 +113,7 @@ StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationResponsePri
 void StartConfigRulesEvaluationResponsePrivate::parseStartConfigRulesEvaluationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartConfigRulesEvaluationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

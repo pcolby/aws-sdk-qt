@@ -97,7 +97,7 @@ GetImportResponsePrivate::GetImportResponsePrivate(
 void GetImportResponsePrivate::parseGetImportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetImportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

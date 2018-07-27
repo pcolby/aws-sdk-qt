@@ -96,7 +96,7 @@ UpdateRulesOfIpGroupResponsePrivate::UpdateRulesOfIpGroupResponsePrivate(
 void UpdateRulesOfIpGroupResponsePrivate::parseUpdateRulesOfIpGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRulesOfIpGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkSpaces

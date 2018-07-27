@@ -192,7 +192,7 @@ ListResourceTagsResponsePrivate::ListResourceTagsResponsePrivate(
 void ListResourceTagsResponsePrivate::parseListResourceTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListResourceTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

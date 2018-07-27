@@ -93,7 +93,7 @@ RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponsePrivate
 void RotateChannelCredentialsResponsePrivate::parseRotateChannelCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RotateChannelCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaPackage

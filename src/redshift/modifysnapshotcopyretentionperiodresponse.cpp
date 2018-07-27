@@ -123,7 +123,7 @@ ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetentionPer
 void ModifySnapshotCopyRetentionPeriodResponsePrivate::parseModifySnapshotCopyRetentionPeriodResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifySnapshotCopyRetentionPeriodResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

@@ -162,7 +162,7 @@ CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponsePrivate(
 void CreateStorediSCSIVolumeResponsePrivate::parseCreateStorediSCSIVolumeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateStorediSCSIVolumeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

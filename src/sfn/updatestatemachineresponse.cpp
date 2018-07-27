@@ -112,7 +112,7 @@ UpdateStateMachineResponsePrivate::UpdateStateMachineResponsePrivate(
 void UpdateStateMachineResponsePrivate::parseUpdateStateMachineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateStateMachineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

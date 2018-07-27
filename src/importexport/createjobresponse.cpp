@@ -96,7 +96,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 void CreateJobResponsePrivate::parseCreateJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ImportExport

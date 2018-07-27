@@ -111,7 +111,7 @@ SetStatusResponsePrivate::SetStatusResponsePrivate(
 void SetStatusResponsePrivate::parseSetStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SetStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

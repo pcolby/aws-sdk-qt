@@ -107,7 +107,7 @@ DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponsePrivate
 void DeleteComputeEnvironmentResponsePrivate::parseDeleteComputeEnvironmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteComputeEnvironmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Batch

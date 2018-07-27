@@ -122,7 +122,7 @@ UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponsePrivate(
 void UpdateDocumentVersionResponsePrivate::parseUpdateDocumentVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

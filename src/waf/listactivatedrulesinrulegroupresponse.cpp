@@ -98,7 +98,7 @@ ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupRespo
 void ListActivatedRulesInRuleGroupResponsePrivate::parseListActivatedRulesInRuleGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListActivatedRulesInRuleGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WAF

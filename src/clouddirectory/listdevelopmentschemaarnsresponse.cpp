@@ -100,7 +100,7 @@ ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponsePriva
 void ListDevelopmentSchemaArnsResponsePrivate::parseListDevelopmentSchemaArnsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDevelopmentSchemaArnsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

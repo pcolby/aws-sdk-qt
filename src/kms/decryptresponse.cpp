@@ -192,7 +192,7 @@ DecryptResponsePrivate::DecryptResponsePrivate(
 void DecryptResponsePrivate::parseDecryptResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DecryptResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

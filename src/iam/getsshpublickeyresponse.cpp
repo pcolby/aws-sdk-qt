@@ -158,7 +158,7 @@ GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponsePrivate(
 void GetSSHPublicKeyResponsePrivate::parseGetSSHPublicKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSSHPublicKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -121,7 +121,7 @@ AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponseP
 void AttachLoadBalancerToSubnetsResponsePrivate::parseAttachLoadBalancerToSubnetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerToSubnetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

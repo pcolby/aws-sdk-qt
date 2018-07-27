@@ -93,7 +93,7 @@ UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponsePrivate(
 void UpdateReplicationJobResponsePrivate::parseUpdateReplicationJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateReplicationJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

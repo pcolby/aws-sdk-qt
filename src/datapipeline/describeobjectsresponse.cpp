@@ -111,7 +111,7 @@ DescribeObjectsResponsePrivate::DescribeObjectsResponsePrivate(
 void DescribeObjectsResponsePrivate::parseDescribeObjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeObjectsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

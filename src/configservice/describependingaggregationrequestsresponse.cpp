@@ -113,7 +113,7 @@ DescribePendingAggregationRequestsResponsePrivate::DescribePendingAggregationReq
 void DescribePendingAggregationRequestsResponsePrivate::parseDescribePendingAggregationRequestsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePendingAggregationRequestsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

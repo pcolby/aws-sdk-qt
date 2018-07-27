@@ -97,7 +97,7 @@ DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponsePrivate(
 void DeleteSlotTypeVersionResponsePrivate::parseDeleteSlotTypeVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteSlotTypeVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

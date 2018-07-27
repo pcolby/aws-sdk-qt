@@ -121,7 +121,7 @@ ImportInstanceResponsePrivate::ImportInstanceResponsePrivate(
 void ImportInstanceResponsePrivate::parseImportInstanceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ImportInstanceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

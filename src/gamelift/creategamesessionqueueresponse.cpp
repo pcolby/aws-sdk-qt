@@ -537,7 +537,7 @@ CreateGameSessionQueueResponsePrivate::CreateGameSessionQueueResponsePrivate(
 void CreateGameSessionQueueResponsePrivate::parseCreateGameSessionQueueResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGameSessionQueueResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

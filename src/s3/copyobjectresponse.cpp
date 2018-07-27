@@ -93,7 +93,7 @@ CopyObjectResponsePrivate::CopyObjectResponsePrivate(
 void CopyObjectResponsePrivate::parseCopyObjectResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CopyObjectResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

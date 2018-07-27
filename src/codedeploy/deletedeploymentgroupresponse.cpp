@@ -174,7 +174,7 @@ DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponsePrivate(
 void DeleteDeploymentGroupResponsePrivate::parseDeleteDeploymentGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

@@ -93,7 +93,7 @@ CreateMembersResponsePrivate::CreateMembersResponsePrivate(
 void CreateMembersResponsePrivate::parseCreateMembersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMembersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GuardDuty

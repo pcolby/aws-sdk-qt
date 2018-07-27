@@ -104,7 +104,7 @@ DeleteRoleAliasResponsePrivate::DeleteRoleAliasResponsePrivate(
 void DeleteRoleAliasResponsePrivate::parseDeleteRoleAliasResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoleAliasResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

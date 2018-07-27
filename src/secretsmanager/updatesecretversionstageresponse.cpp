@@ -169,7 +169,7 @@ UpdateSecretVersionStageResponsePrivate::UpdateSecretVersionStageResponsePrivate
 void UpdateSecretVersionStageResponsePrivate::parseUpdateSecretVersionStageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateSecretVersionStageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

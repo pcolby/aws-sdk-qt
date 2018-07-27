@@ -113,7 +113,7 @@ GetComplianceSummaryByResourceTypeResponsePrivate::GetComplianceSummaryByResourc
 void GetComplianceSummaryByResourceTypeResponsePrivate::parseGetComplianceSummaryByResourceTypeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetComplianceSummaryByResourceTypeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

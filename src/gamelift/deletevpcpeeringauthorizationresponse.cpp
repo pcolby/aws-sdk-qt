@@ -537,7 +537,7 @@ DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorizationRespo
 void DeleteVpcPeeringAuthorizationResponsePrivate::parseDeleteVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcPeeringAuthorizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

@@ -99,7 +99,7 @@ UpdateFileSystemResponsePrivate::UpdateFileSystemResponsePrivate(
 void UpdateFileSystemResponsePrivate::parseUpdateFileSystemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateFileSystemResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EFS

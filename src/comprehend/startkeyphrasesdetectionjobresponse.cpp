@@ -96,7 +96,7 @@ StartKeyPhrasesDetectionJobResponsePrivate::StartKeyPhrasesDetectionJobResponseP
 void StartKeyPhrasesDetectionJobResponsePrivate::parseStartKeyPhrasesDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartKeyPhrasesDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

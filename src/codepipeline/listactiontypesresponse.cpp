@@ -268,7 +268,7 @@ ListActionTypesResponsePrivate::ListActionTypesResponsePrivate(
 void ListActionTypesResponsePrivate::parseListActionTypesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListActionTypesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

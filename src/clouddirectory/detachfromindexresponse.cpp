@@ -100,7 +100,7 @@ DetachFromIndexResponsePrivate::DetachFromIndexResponsePrivate(
 void DetachFromIndexResponsePrivate::parseDetachFromIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachFromIndexResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

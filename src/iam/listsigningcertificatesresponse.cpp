@@ -158,7 +158,7 @@ ListSigningCertificatesResponsePrivate::ListSigningCertificatesResponsePrivate(
 void ListSigningCertificatesResponsePrivate::parseListSigningCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSigningCertificatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

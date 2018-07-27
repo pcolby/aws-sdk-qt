@@ -107,7 +107,7 @@ ListTopicsResponsePrivate::ListTopicsResponsePrivate(
 void ListTopicsResponsePrivate::parseListTopicsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListTopicsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

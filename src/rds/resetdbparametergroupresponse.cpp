@@ -157,7 +157,7 @@ ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
 void ResetDBParameterGroupResponsePrivate::parseResetDBParameterGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResetDBParameterGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

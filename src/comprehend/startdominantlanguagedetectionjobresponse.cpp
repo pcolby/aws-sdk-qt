@@ -96,7 +96,7 @@ StartDominantLanguageDetectionJobResponsePrivate::StartDominantLanguageDetection
 void StartDominantLanguageDetectionJobResponsePrivate::parseStartDominantLanguageDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartDominantLanguageDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

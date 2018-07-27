@@ -107,7 +107,7 @@ ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate
 void ListPlatformApplicationsResponsePrivate::parseListPlatformApplicationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListPlatformApplicationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SNS

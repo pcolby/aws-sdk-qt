@@ -96,7 +96,7 @@ DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAc
 void DisassociateServiceRoleFromAccountResponsePrivate::parseDisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateServiceRoleFromAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

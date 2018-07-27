@@ -103,7 +103,7 @@ UpdateResourceServerResponsePrivate::UpdateResourceServerResponsePrivate(
 void UpdateResourceServerResponsePrivate::parseUpdateResourceServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateResourceServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentityProvider

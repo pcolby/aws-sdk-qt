@@ -93,7 +93,7 @@ DeletePresetResponsePrivate::DeletePresetResponsePrivate(
 void DeletePresetResponsePrivate::parseDeletePresetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePresetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaConvert

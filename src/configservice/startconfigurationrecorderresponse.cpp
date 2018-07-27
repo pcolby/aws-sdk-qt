@@ -113,7 +113,7 @@ StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponsePri
 void StartConfigurationRecorderResponsePrivate::parseStartConfigurationRecorderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartConfigurationRecorderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

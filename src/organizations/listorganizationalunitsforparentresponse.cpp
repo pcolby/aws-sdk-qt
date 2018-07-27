@@ -235,7 +235,7 @@ ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParen
 void ListOrganizationalUnitsForParentResponsePrivate::parseListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListOrganizationalUnitsForParentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

@@ -131,7 +131,7 @@ GetOpenIdTokenResponsePrivate::GetOpenIdTokenResponsePrivate(
 void GetOpenIdTokenResponsePrivate::parseGetOpenIdTokenResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIdTokenResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CognitoIdentity

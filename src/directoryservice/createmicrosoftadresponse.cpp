@@ -107,7 +107,7 @@ CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponsePrivate(
 void CreateMicrosoftADResponsePrivate::parseCreateMicrosoftADResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateMicrosoftADResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

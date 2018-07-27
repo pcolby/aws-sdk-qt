@@ -98,7 +98,7 @@ ListAssessmentTemplatesResponsePrivate::ListAssessmentTemplatesResponsePrivate(
 void ListAssessmentTemplatesResponsePrivate::parseListAssessmentTemplatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListAssessmentTemplatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Inspector

@@ -118,7 +118,7 @@ DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsS
 void DescribeInstanceAssociationsStatusResponsePrivate::parseDescribeInstanceAssociationsStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAssociationsStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

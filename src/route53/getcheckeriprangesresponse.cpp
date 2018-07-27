@@ -93,7 +93,7 @@ GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponsePrivate(
 void GetCheckerIpRangesResponsePrivate::parseGetCheckerIpRangesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCheckerIpRangesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

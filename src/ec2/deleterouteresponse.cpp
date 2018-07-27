@@ -121,7 +121,7 @@ DeleteRouteResponsePrivate::DeleteRouteResponsePrivate(
 void DeleteRouteResponsePrivate::parseDeleteRouteResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRouteResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

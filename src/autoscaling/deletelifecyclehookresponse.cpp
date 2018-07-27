@@ -98,7 +98,7 @@ DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
 void DeleteLifecycleHookResponsePrivate::parseDeleteLifecycleHookResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteLifecycleHookResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AutoScaling

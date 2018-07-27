@@ -121,7 +121,7 @@ AssociateVpcCidrBlockResponsePrivate::AssociateVpcCidrBlockResponsePrivate(
 void AssociateVpcCidrBlockResponsePrivate::parseAssociateVpcCidrBlockResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateVpcCidrBlockResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

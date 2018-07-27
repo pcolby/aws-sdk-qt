@@ -93,7 +93,7 @@ ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponsePrivate(
 void ListWorkerBlocksResponsePrivate::parseListWorkerBlocksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListWorkerBlocksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MTurk

@@ -98,7 +98,7 @@ GetExportResponsePrivate::GetExportResponsePrivate(
 void GetExportResponsePrivate::parseGetExportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetExportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

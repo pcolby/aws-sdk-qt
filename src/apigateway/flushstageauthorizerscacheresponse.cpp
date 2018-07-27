@@ -98,7 +98,7 @@ FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePri
 void FlushStageAuthorizersCacheResponsePrivate::parseFlushStageAuthorizersCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("FlushStageAuthorizersCacheResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

@@ -96,7 +96,7 @@ DescribeImagePermissionsResponsePrivate::DescribeImagePermissionsResponsePrivate
 void DescribeImagePermissionsResponsePrivate::parseDescribeImagePermissionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImagePermissionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

@@ -96,7 +96,7 @@ AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponsePrivate(
 void AssociateRoleToGroupResponsePrivate::parseAssociateRoleToGroupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateRoleToGroupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

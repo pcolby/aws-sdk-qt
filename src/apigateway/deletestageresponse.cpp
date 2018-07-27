@@ -98,7 +98,7 @@ DeleteStageResponsePrivate::DeleteStageResponsePrivate(
 void DeleteStageResponsePrivate::parseDeleteStageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

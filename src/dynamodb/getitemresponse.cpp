@@ -112,7 +112,7 @@ GetItemResponsePrivate::GetItemResponsePrivate(
 void GetItemResponsePrivate::parseGetItemResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetItemResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DynamoDB

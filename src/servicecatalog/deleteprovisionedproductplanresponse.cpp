@@ -99,7 +99,7 @@ DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanRespons
 void DeleteProvisionedProductPlanResponsePrivate::parseDeleteProvisionedProductPlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteProvisionedProductPlanResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

@@ -96,7 +96,7 @@ StopImageBuilderResponsePrivate::StopImageBuilderResponsePrivate(
 void StopImageBuilderResponsePrivate::parseStopImageBuilderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopImageBuilderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

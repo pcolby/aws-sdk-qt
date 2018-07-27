@@ -101,7 +101,7 @@ DescribeDirectConnectGatewaysResponsePrivate::DescribeDirectConnectGatewaysRespo
 void DescribeDirectConnectGatewaysResponsePrivate::parseDescribeDirectConnectGatewaysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectConnectGatewaysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectConnect

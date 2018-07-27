@@ -121,7 +121,7 @@ CreateLBCookieStickinessPolicyResponsePrivate::CreateLBCookieStickinessPolicyRes
 void CreateLBCookieStickinessPolicyResponsePrivate::parseCreateLBCookieStickinessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLBCookieStickinessPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancing

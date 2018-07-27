@@ -159,7 +159,7 @@ ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
 void ListQueueTagsResponsePrivate::parseListQueueTagsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListQueueTagsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SQS

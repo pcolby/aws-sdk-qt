@@ -104,7 +104,7 @@ InvokeResponsePrivate::InvokeResponsePrivate(
 void InvokeResponsePrivate::parseInvokeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InvokeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lambda

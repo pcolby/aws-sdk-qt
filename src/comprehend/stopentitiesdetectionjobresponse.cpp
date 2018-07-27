@@ -96,7 +96,7 @@ StopEntitiesDetectionJobResponsePrivate::StopEntitiesDetectionJobResponsePrivate
 void StopEntitiesDetectionJobResponsePrivate::parseStopEntitiesDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopEntitiesDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

@@ -93,7 +93,7 @@ DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate
 void DeleteQueryLoggingConfigResponsePrivate::parseDeleteQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteQueryLoggingConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

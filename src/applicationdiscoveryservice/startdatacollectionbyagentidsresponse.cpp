@@ -157,7 +157,7 @@ StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsRespo
 void StartDataCollectionByAgentIdsResponsePrivate::parseStartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartDataCollectionByAgentIdsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

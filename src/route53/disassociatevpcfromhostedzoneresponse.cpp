@@ -93,7 +93,7 @@ DisassociateVPCFromHostedZoneResponsePrivate::DisassociateVPCFromHostedZoneRespo
 void DisassociateVPCFromHostedZoneResponsePrivate::parseDisassociateVPCFromHostedZoneResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisassociateVPCFromHostedZoneResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

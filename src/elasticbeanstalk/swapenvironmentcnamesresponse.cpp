@@ -115,7 +115,7 @@ SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponsePrivate(
 void SwapEnvironmentCNAMEsResponsePrivate::parseSwapEnvironmentCNAMEsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SwapEnvironmentCNAMEsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

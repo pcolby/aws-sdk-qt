@@ -118,7 +118,7 @@ ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate
 void ModifyDocumentPermissionResponsePrivate::parseModifyDocumentPermissionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyDocumentPermissionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

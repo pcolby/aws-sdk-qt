@@ -93,7 +93,7 @@ DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponsePrivate(
 void DeleteHealthCheckResponsePrivate::parseDeleteHealthCheckResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHealthCheckResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

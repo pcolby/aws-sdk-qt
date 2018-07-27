@@ -118,7 +118,7 @@ DescribePatchGroupsResponsePrivate::DescribePatchGroupsResponsePrivate(
 void DescribePatchGroupsResponsePrivate::parseDescribePatchGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePatchGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

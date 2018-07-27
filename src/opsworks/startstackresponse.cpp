@@ -199,7 +199,7 @@ StartStackResponsePrivate::StartStackResponsePrivate(
 void StartStackResponsePrivate::parseStartStackResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartStackResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

@@ -121,7 +121,7 @@ CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
 void CreateNetworkInterfaceResponsePrivate::parseCreateNetworkInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkInterfaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

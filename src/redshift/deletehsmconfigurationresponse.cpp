@@ -123,7 +123,7 @@ DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponsePrivate(
 void DeleteHsmConfigurationResponsePrivate::parseDeleteHsmConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHsmConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

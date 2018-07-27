@@ -158,7 +158,7 @@ GetSAMLProviderResponsePrivate::GetSAMLProviderResponsePrivate(
 void GetSAMLProviderResponsePrivate::parseGetSAMLProviderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSAMLProviderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

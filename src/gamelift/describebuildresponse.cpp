@@ -537,7 +537,7 @@ DescribeBuildResponsePrivate::DescribeBuildResponsePrivate(
 void DescribeBuildResponsePrivate::parseDescribeBuildResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBuildResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

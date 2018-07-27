@@ -96,7 +96,7 @@ CreateLoggerDefinitionVersionResponsePrivate::CreateLoggerDefinitionVersionRespo
 void CreateLoggerDefinitionVersionResponsePrivate::parseCreateLoggerDefinitionVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLoggerDefinitionVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

@@ -96,7 +96,7 @@ UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
 void UpdateClassifierResponsePrivate::parseUpdateClassifierResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateClassifierResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

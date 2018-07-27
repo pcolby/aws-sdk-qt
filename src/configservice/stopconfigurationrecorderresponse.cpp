@@ -113,7 +113,7 @@ StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponsePriva
 void StopConfigurationRecorderResponsePrivate::parseStopConfigurationRecorderResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopConfigurationRecorderResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

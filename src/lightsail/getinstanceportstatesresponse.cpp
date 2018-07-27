@@ -109,7 +109,7 @@ GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponsePrivate(
 void GetInstancePortStatesResponsePrivate::parseGetInstancePortStatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetInstancePortStatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

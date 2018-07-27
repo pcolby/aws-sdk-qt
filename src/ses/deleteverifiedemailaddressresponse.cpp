@@ -104,7 +104,7 @@ DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressResponsePri
 void DeleteVerifiedEmailAddressResponsePrivate::parseDeleteVerifiedEmailAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteVerifiedEmailAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

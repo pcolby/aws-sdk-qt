@@ -104,7 +104,7 @@ DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
 void DescribeIndexResponsePrivate::parseDescribeIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeIndexResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

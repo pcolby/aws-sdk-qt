@@ -96,7 +96,7 @@ DeleteFunctionDefinitionResponsePrivate::DeleteFunctionDefinitionResponsePrivate
 void DeleteFunctionDefinitionResponsePrivate::parseDeleteFunctionDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

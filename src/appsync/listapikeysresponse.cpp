@@ -94,7 +94,7 @@ ListApiKeysResponsePrivate::ListApiKeysResponsePrivate(
 void ListApiKeysResponsePrivate::parseListApiKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListApiKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

@@ -174,7 +174,7 @@ PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecut
 void PutLifecycleEventHookExecutionStatusResponsePrivate::parsePutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutLifecycleEventHookExecutionStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeDeploy

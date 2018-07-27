@@ -153,7 +153,7 @@ DeleteServerResponsePrivate::DeleteServerResponsePrivate(
 void DeleteServerResponsePrivate::parseDeleteServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

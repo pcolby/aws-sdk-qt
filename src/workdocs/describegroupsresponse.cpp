@@ -122,7 +122,7 @@ DescribeGroupsResponsePrivate::DescribeGroupsResponsePrivate(
 void DescribeGroupsResponsePrivate::parseDescribeGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

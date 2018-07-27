@@ -96,7 +96,7 @@ DeleteDatabaseResponsePrivate::DeleteDatabaseResponsePrivate(
 void DeleteDatabaseResponsePrivate::parseDeleteDatabaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDatabaseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

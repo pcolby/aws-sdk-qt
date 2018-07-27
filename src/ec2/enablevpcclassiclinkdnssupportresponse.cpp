@@ -121,7 +121,7 @@ EnableVpcClassicLinkDnsSupportResponsePrivate::EnableVpcClassicLinkDnsSupportRes
 void EnableVpcClassicLinkDnsSupportResponsePrivate::parseEnableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("EnableVpcClassicLinkDnsSupportResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

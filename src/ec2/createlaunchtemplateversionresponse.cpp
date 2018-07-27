@@ -121,7 +121,7 @@ CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponseP
 void CreateLaunchTemplateVersionResponsePrivate::parseCreateLaunchTemplateVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateLaunchTemplateVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

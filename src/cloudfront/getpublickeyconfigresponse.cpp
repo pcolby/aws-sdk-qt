@@ -98,7 +98,7 @@ GetPublicKeyConfigResponsePrivate::GetPublicKeyConfigResponsePrivate(
 void GetPublicKeyConfigResponsePrivate::parseGetPublicKeyConfigResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetPublicKeyConfigResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudFront

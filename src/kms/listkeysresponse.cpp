@@ -192,7 +192,7 @@ ListKeysResponsePrivate::ListKeysResponsePrivate(
 void ListKeysResponsePrivate::parseListKeysResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListKeysResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace KMS

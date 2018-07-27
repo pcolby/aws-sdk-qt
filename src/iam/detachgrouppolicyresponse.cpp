@@ -158,7 +158,7 @@ DetachGroupPolicyResponsePrivate::DetachGroupPolicyResponsePrivate(
 void DetachGroupPolicyResponsePrivate::parseDetachGroupPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DetachGroupPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

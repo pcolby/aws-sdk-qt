@@ -118,7 +118,7 @@ DescribeInventoryDeletionsResponsePrivate::DescribeInventoryDeletionsResponsePri
 void DescribeInventoryDeletionsResponsePrivate::parseDescribeInventoryDeletionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeInventoryDeletionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

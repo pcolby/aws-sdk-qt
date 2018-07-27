@@ -537,7 +537,7 @@ DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationRespons
 void DescribeRuntimeConfigurationResponsePrivate::parseDescribeRuntimeConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRuntimeConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

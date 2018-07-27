@@ -100,7 +100,7 @@ DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
 void DescribeVoicesResponsePrivate::parseDescribeVoicesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeVoicesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Polly

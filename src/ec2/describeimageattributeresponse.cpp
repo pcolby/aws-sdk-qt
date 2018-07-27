@@ -121,7 +121,7 @@ DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
 void DescribeImageAttributeResponsePrivate::parseDescribeImageAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeImageAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

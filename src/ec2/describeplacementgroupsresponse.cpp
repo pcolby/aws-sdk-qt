@@ -121,7 +121,7 @@ DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponsePrivate(
 void DescribePlacementGroupsResponsePrivate::parseDescribePlacementGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePlacementGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -109,7 +109,7 @@ CreateDomainEntryResponsePrivate::CreateDomainEntryResponsePrivate(
 void CreateDomainEntryResponsePrivate::parseCreateDomainEntryResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDomainEntryResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

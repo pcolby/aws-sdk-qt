@@ -161,7 +161,7 @@ DescribeTargetGroupsResponsePrivate::DescribeTargetGroupsResponsePrivate(
 void DescribeTargetGroupsResponsePrivate::parseDescribeTargetGroupsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTargetGroupsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

@@ -97,7 +97,7 @@ CompleteLayerUploadResponsePrivate::CompleteLayerUploadResponsePrivate(
 void CompleteLayerUploadResponsePrivate::parseCompleteLayerUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CompleteLayerUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

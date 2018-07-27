@@ -93,7 +93,7 @@ GetBucketLocationResponsePrivate::GetBucketLocationResponsePrivate(
 void GetBucketLocationResponsePrivate::parseGetBucketLocationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLocationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -94,7 +94,7 @@ GetResolverResponsePrivate::GetResolverResponsePrivate(
 void GetResolverResponsePrivate::parseGetResolverResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetResolverResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

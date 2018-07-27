@@ -118,7 +118,7 @@ UpdateDocumentDefaultVersionResponsePrivate::UpdateDocumentDefaultVersionRespons
 void UpdateDocumentDefaultVersionResponsePrivate::parseUpdateDocumentDefaultVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentDefaultVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

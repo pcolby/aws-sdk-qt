@@ -537,7 +537,7 @@ DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponsePriva
 void DescribeEC2InstanceLimitsResponsePrivate::parseDescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeEC2InstanceLimitsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

@@ -151,7 +151,7 @@ DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePri
 void DecodeAuthorizationMessageResponsePrivate::parseDecodeAuthorizationMessageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DecodeAuthorizationMessageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace STS

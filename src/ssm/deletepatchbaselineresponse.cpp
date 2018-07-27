@@ -118,7 +118,7 @@ DeletePatchBaselineResponsePrivate::DeletePatchBaselineResponsePrivate(
 void DeletePatchBaselineResponsePrivate::parseDeletePatchBaselineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeletePatchBaselineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

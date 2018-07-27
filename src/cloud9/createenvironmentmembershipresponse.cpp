@@ -147,7 +147,7 @@ CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponseP
 void CreateEnvironmentMembershipResponsePrivate::parseCreateEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentMembershipResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Cloud9

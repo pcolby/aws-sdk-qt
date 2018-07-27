@@ -94,7 +94,7 @@ GetCelebrityRecognitionResponsePrivate::GetCelebrityRecognitionResponsePrivate(
 void GetCelebrityRecognitionResponsePrivate::parseGetCelebrityRecognitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetCelebrityRecognitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Rekognition

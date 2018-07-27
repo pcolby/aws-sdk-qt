@@ -93,7 +93,7 @@ AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
 void AbortMultipartUploadResponsePrivate::parseAbortMultipartUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AbortMultipartUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

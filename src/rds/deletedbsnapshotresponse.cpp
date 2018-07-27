@@ -157,7 +157,7 @@ DeleteDBSnapshotResponsePrivate::DeleteDBSnapshotResponsePrivate(
 void DeleteDBSnapshotResponsePrivate::parseDeleteDBSnapshotResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSnapshotResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace RDS

@@ -122,7 +122,7 @@ PutDestinationPolicyResponsePrivate::PutDestinationPolicyResponsePrivate(
 void PutDestinationPolicyResponsePrivate::parsePutDestinationPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutDestinationPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

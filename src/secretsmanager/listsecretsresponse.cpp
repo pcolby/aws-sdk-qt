@@ -169,7 +169,7 @@ ListSecretsResponsePrivate::ListSecretsResponsePrivate(
 void ListSecretsResponsePrivate::parseListSecretsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListSecretsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SecretsManager

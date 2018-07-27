@@ -123,7 +123,7 @@ DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusResponsePri
 void DescribeTableRestoreStatusResponsePrivate::parseDescribeTableRestoreStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableRestoreStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

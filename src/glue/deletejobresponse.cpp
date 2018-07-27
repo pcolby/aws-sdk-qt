@@ -96,7 +96,7 @@ DeleteJobResponsePrivate::DeleteJobResponsePrivate(
 void DeleteJobResponsePrivate::parseDeleteJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

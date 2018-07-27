@@ -99,7 +99,7 @@ CreateAddressResponsePrivate::CreateAddressResponsePrivate(
 void CreateAddressResponsePrivate::parseCreateAddressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateAddressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Snowball

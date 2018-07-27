@@ -162,7 +162,7 @@ DescribeCacheResponsePrivate::DescribeCacheResponsePrivate(
 void DescribeCacheResponsePrivate::parseDescribeCacheResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

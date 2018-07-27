@@ -102,7 +102,7 @@ ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
 void ResendValidationEmailResponsePrivate::parseResendValidationEmailResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ResendValidationEmailResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ACM

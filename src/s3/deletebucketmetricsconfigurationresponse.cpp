@@ -93,7 +93,7 @@ DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfiguratio
 void DeleteBucketMetricsConfigurationResponsePrivate::parseDeleteBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketMetricsConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -112,7 +112,7 @@ DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
 void DeleteStateMachineResponsePrivate::parseDeleteStateMachineResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteStateMachineResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SFN

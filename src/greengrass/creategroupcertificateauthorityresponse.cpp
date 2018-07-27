@@ -96,7 +96,7 @@ CreateGroupCertificateAuthorityResponsePrivate::CreateGroupCertificateAuthorityR
 void CreateGroupCertificateAuthorityResponsePrivate::parseCreateGroupCertificateAuthorityResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateGroupCertificateAuthorityResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

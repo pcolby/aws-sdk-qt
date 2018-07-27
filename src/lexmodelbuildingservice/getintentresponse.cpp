@@ -97,7 +97,7 @@ GetIntentResponsePrivate::GetIntentResponsePrivate(
 void GetIntentResponsePrivate::parseGetIntentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetIntentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace LexModelBuildingService

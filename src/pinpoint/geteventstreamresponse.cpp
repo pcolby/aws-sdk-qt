@@ -93,7 +93,7 @@ GetEventStreamResponsePrivate::GetEventStreamResponsePrivate(
 void GetEventStreamResponsePrivate::parseGetEventStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetEventStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

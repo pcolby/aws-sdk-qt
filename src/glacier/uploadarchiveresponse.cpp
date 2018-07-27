@@ -131,7 +131,7 @@ UploadArchiveResponsePrivate::UploadArchiveResponsePrivate(
 void UploadArchiveResponsePrivate::parseUploadArchiveResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UploadArchiveResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

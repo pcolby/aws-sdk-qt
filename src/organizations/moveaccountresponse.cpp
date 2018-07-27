@@ -235,7 +235,7 @@ MoveAccountResponsePrivate::MoveAccountResponsePrivate(
 void MoveAccountResponsePrivate::parseMoveAccountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("MoveAccountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

@@ -104,7 +104,7 @@ SendBounceResponsePrivate::SendBounceResponsePrivate(
 void SendBounceResponsePrivate::parseSendBounceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("SendBounceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

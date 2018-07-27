@@ -96,7 +96,7 @@ BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
 void BatchStopJobRunResponsePrivate::parseBatchStopJobRunResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("BatchStopJobRunResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

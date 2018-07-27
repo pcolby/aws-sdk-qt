@@ -104,7 +104,7 @@ AttachPolicyResponsePrivate::AttachPolicyResponsePrivate(
 void AttachPolicyResponsePrivate::parseAttachPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

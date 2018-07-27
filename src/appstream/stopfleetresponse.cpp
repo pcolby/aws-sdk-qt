@@ -96,7 +96,7 @@ StopFleetResponsePrivate::StopFleetResponsePrivate(
 void StopFleetResponsePrivate::parseStopFleetResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopFleetResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppStream

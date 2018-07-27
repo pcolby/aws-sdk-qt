@@ -162,7 +162,7 @@ UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponsePrivate(
 void UpdateChapCredentialsResponsePrivate::parseUpdateChapCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateChapCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

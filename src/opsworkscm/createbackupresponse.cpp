@@ -153,7 +153,7 @@ CreateBackupResponsePrivate::CreateBackupResponsePrivate(
 void CreateBackupResponsePrivate::parseCreateBackupResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBackupResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

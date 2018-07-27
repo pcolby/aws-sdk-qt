@@ -107,7 +107,7 @@ GetMetricDataResponsePrivate::GetMetricDataResponsePrivate(
 void GetMetricDataResponsePrivate::parseGetMetricDataResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetMetricDataResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

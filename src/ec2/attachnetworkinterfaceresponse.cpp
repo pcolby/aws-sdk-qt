@@ -121,7 +121,7 @@ AttachNetworkInterfaceResponsePrivate::AttachNetworkInterfaceResponsePrivate(
 void AttachNetworkInterfaceResponsePrivate::parseAttachNetworkInterfaceResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachNetworkInterfaceResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

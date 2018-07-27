@@ -98,7 +98,7 @@ CreateUsagePlanResponsePrivate::CreateUsagePlanResponsePrivate(
 void CreateUsagePlanResponsePrivate::parseCreateUsagePlanResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateUsagePlanResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

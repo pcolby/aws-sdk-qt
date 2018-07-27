@@ -96,7 +96,7 @@ StartCrawlerResponsePrivate::StartCrawlerResponsePrivate(
 void StartCrawlerResponsePrivate::parseStartCrawlerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartCrawlerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

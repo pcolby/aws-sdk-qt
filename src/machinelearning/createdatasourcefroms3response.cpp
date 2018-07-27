@@ -93,7 +93,7 @@ CreateDataSourceFromS3ResponsePrivate::CreateDataSourceFromS3ResponsePrivate(
 void CreateDataSourceFromS3ResponsePrivate::parseCreateDataSourceFromS3Response(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromS3Response"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MachineLearning

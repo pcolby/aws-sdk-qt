@@ -122,7 +122,7 @@ InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadRespo
 void InitiateDocumentVersionUploadResponsePrivate::parseInitiateDocumentVersionUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("InitiateDocumentVersionUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

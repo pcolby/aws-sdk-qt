@@ -268,7 +268,7 @@ PutActionRevisionResponsePrivate::PutActionRevisionResponsePrivate(
 void PutActionRevisionResponsePrivate::parsePutActionRevisionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutActionRevisionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodePipeline

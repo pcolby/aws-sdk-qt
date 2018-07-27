@@ -121,7 +121,7 @@ DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
 void DescribeBundleTasksResponsePrivate::parseDescribeBundleTasksResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeBundleTasksResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

@@ -123,7 +123,7 @@ DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateResponsePri
 void DeleteHsmClientCertificateResponsePrivate::parseDeleteHsmClientCertificateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteHsmClientCertificateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

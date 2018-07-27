@@ -121,7 +121,7 @@ RevokeSecurityGroupEgressResponsePrivate::RevokeSecurityGroupEgressResponsePriva
 void RevokeSecurityGroupEgressResponsePrivate::parseRevokeSecurityGroupEgressResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RevokeSecurityGroupEgressResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

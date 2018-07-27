@@ -113,7 +113,7 @@ PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponsePrivate(
 void PutDeliveryChannelResponsePrivate::parsePutDeliveryChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutDeliveryChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

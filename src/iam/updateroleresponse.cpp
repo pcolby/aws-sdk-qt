@@ -158,7 +158,7 @@ UpdateRoleResponsePrivate::UpdateRoleResponsePrivate(
 void UpdateRoleResponsePrivate::parseUpdateRoleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRoleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

@@ -158,7 +158,7 @@ UpdateUserResponsePrivate::UpdateUserResponsePrivate(
 void UpdateUserResponsePrivate::parseUpdateUserResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

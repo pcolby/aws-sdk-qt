@@ -153,7 +153,7 @@ AssociateNodeResponsePrivate::AssociateNodeResponsePrivate(
 void AssociateNodeResponsePrivate::parseAssociateNodeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateNodeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

@@ -199,7 +199,7 @@ DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponsePrivate(
 void DescribeElasticIpsResponsePrivate::parseDescribeElasticIpsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticIpsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

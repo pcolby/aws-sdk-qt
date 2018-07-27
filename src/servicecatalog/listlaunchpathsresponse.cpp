@@ -99,7 +99,7 @@ ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
 void ListLaunchPathsResponsePrivate::parseListLaunchPathsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListLaunchPathsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

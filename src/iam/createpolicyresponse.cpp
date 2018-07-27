@@ -158,7 +158,7 @@ CreatePolicyResponsePrivate::CreatePolicyResponsePrivate(
 void CreatePolicyResponsePrivate::parseCreatePolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IAM

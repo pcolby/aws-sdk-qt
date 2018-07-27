@@ -93,7 +93,7 @@ GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponsePrivate(
 void GetHostedZoneCountResponsePrivate::parseGetHostedZoneCountResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetHostedZoneCountResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Route53

@@ -93,7 +93,7 @@ ListObjectVersionsResponsePrivate::ListObjectVersionsResponsePrivate(
 void ListObjectVersionsResponsePrivate::parseListObjectVersionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListObjectVersionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

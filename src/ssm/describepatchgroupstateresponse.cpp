@@ -118,7 +118,7 @@ DescribePatchGroupStateResponsePrivate::DescribePatchGroupStateResponsePrivate(
 void DescribePatchGroupStateResponsePrivate::parseDescribePatchGroupStateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePatchGroupStateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -109,7 +109,7 @@ UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResponseP
 void UpdateLoadBalancerAttributeResponsePrivate::parseUpdateLoadBalancerAttributeResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoadBalancerAttributeResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Lightsail

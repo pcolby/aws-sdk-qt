@@ -153,7 +153,7 @@ UpdateServerResponsePrivate::UpdateServerResponsePrivate(
 void UpdateServerResponsePrivate::parseUpdateServerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateServerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorksCM

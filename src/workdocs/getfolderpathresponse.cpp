@@ -122,7 +122,7 @@ GetFolderPathResponsePrivate::GetFolderPathResponsePrivate(
 void GetFolderPathResponsePrivate::parseGetFolderPathResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetFolderPathResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace WorkDocs

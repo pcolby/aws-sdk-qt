@@ -93,7 +93,7 @@ GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponsePriva
 void GetApnsVoipSandboxChannelResponsePrivate::parseGetApnsVoipSandboxChannelResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetApnsVoipSandboxChannelResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

@@ -96,7 +96,7 @@ ListDeploymentsResponsePrivate::ListDeploymentsResponsePrivate(
 void ListDeploymentsResponsePrivate::parseListDeploymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

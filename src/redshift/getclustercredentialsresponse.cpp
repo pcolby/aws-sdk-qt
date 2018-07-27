@@ -123,7 +123,7 @@ GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponsePrivate(
 void GetClusterCredentialsResponsePrivate::parseGetClusterCredentialsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetClusterCredentialsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Redshift

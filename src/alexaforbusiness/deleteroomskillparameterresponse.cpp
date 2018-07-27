@@ -98,7 +98,7 @@ DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponsePrivate
 void DeleteRoomSkillParameterResponsePrivate::parseDeleteRoomSkillParameterResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoomSkillParameterResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

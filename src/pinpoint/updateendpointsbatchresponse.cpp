@@ -93,7 +93,7 @@ UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
 void UpdateEndpointsBatchResponsePrivate::parseUpdateEndpointsBatchResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointsBatchResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

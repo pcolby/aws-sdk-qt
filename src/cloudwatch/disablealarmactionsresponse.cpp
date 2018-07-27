@@ -107,7 +107,7 @@ DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponsePrivate(
 void DisableAlarmActionsResponsePrivate::parseDisableAlarmActionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DisableAlarmActionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatch

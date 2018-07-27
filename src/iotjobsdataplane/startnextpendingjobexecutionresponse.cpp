@@ -107,7 +107,7 @@ StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionRespons
 void StartNextPendingJobExecutionResponsePrivate::parseStartNextPendingJobExecutionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartNextPendingJobExecutionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTJobsDataPlane

@@ -161,7 +161,7 @@ DescribeListenerCertificatesResponsePrivate::DescribeListenerCertificatesRespons
 void DescribeListenerCertificatesResponsePrivate::parseDescribeListenerCertificatesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeListenerCertificatesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

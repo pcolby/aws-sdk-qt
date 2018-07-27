@@ -235,7 +235,7 @@ RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationRespo
 void RemoveAccountFromOrganizationResponsePrivate::parseRemoveAccountFromOrganizationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("RemoveAccountFromOrganizationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

@@ -98,7 +98,7 @@ DeleteContactResponsePrivate::DeleteContactResponsePrivate(
 void DeleteContactResponsePrivate::parseDeleteContactResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteContactResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AlexaForBusiness

@@ -118,7 +118,7 @@ GetDocumentResponsePrivate::GetDocumentResponsePrivate(
 void GetDocumentResponsePrivate::parseGetDocumentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

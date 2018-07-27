@@ -104,7 +104,7 @@ ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
 void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationSetsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SES

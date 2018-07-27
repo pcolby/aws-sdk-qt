@@ -95,7 +95,7 @@ GetUploadResponsePrivate::GetUploadResponsePrivate(
 void GetUploadResponsePrivate::parseGetUploadResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetUploadResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DeviceFarm

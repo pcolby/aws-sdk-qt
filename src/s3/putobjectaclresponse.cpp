@@ -93,7 +93,7 @@ PutObjectAclResponsePrivate::PutObjectAclResponsePrivate(
 void PutObjectAclResponsePrivate::parsePutObjectAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutObjectAclResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

@@ -95,7 +95,7 @@ ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePri
 void ListConfigurationRevisionsResponsePrivate::parseListConfigurationRevisionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationRevisionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MQ

@@ -131,7 +131,7 @@ GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponsePrivate(
 void GetVaultAccessPolicyResponsePrivate::parseGetVaultAccessPolicyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetVaultAccessPolicyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glacier

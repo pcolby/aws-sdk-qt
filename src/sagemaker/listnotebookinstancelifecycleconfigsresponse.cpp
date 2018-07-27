@@ -93,7 +93,7 @@ ListNotebookInstanceLifecycleConfigsResponsePrivate::ListNotebookInstanceLifecyc
 void ListNotebookInstanceLifecycleConfigsResponsePrivate::parseListNotebookInstanceLifecycleConfigsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListNotebookInstanceLifecycleConfigsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SageMaker

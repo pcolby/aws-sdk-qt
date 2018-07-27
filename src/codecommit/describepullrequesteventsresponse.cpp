@@ -283,7 +283,7 @@ DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponsePriva
 void DescribePullRequestEventsResponsePrivate::parseDescribePullRequestEventsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribePullRequestEventsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

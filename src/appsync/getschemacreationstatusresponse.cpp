@@ -94,7 +94,7 @@ GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
 void GetSchemaCreationStatusResponsePrivate::parseGetSchemaCreationStatusResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetSchemaCreationStatusResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace AppSync

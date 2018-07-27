@@ -96,7 +96,7 @@ UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponsePrivate(
 void UpdateLoggerDefinitionResponsePrivate::parseUpdateLoggerDefinitionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoggerDefinitionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Greengrass

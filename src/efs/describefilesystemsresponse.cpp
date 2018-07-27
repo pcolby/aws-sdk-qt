@@ -99,7 +99,7 @@ DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
 void DescribeFileSystemsResponsePrivate::parseDescribeFileSystemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeFileSystemsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EFS

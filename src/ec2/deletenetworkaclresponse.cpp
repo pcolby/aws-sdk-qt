@@ -121,7 +121,7 @@ DeleteNetworkAclResponsePrivate::DeleteNetworkAclResponsePrivate(
 void DeleteNetworkAclResponsePrivate::parseDeleteNetworkAclResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkAclResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

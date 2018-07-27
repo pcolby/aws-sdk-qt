@@ -96,7 +96,7 @@ GetDatabaseResponsePrivate::GetDatabaseResponsePrivate(
 void GetDatabaseResponsePrivate::parseGetDatabaseResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDatabaseResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

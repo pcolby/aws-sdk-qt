@@ -121,7 +121,7 @@ StopInstancesResponsePrivate::StopInstancesResponsePrivate(
 void StopInstancesResponsePrivate::parseStopInstancesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StopInstancesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

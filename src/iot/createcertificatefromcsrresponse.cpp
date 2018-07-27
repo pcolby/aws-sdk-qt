@@ -104,7 +104,7 @@ CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponsePrivate
 void CreateCertificateFromCsrResponsePrivate::parseCreateCertificateFromCsrResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateCertificateFromCsrResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

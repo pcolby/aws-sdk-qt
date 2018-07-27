@@ -157,7 +157,7 @@ ExportConfigurationsResponsePrivate::ExportConfigurationsResponsePrivate(
 void ExportConfigurationsResponsePrivate::parseExportConfigurationsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ExportConfigurationsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ApplicationDiscoveryService

@@ -95,7 +95,7 @@ ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponsePrivate(
 void ListCreatedArtifactsResponsePrivate::parseListCreatedArtifactsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListCreatedArtifactsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

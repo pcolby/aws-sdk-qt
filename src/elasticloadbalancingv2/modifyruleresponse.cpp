@@ -161,7 +161,7 @@ ModifyRuleResponsePrivate::ModifyRuleResponsePrivate(
 void ModifyRuleResponsePrivate::parseModifyRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticLoadBalancingv2

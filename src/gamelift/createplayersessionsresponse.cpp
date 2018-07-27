@@ -537,7 +537,7 @@ CreatePlayerSessionsResponsePrivate::CreatePlayerSessionsResponsePrivate(
 void CreatePlayerSessionsResponsePrivate::parseCreatePlayerSessionsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreatePlayerSessionsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace GameLift

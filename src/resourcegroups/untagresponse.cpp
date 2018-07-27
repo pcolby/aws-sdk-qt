@@ -137,7 +137,7 @@ UntagResponsePrivate::UntagResponsePrivate(
 void UntagResponsePrivate::parseUntagResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UntagResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ResourceGroups

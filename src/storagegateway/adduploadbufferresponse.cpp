@@ -162,7 +162,7 @@ AddUploadBufferResponsePrivate::AddUploadBufferResponsePrivate(
 void AddUploadBufferResponsePrivate::parseAddUploadBufferResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddUploadBufferResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace StorageGateway

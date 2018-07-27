@@ -111,7 +111,7 @@ QueryObjectsResponsePrivate::QueryObjectsResponsePrivate(
 void QueryObjectsResponsePrivate::parseQueryObjectsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("QueryObjectsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

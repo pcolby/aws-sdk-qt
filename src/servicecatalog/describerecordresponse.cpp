@@ -99,7 +99,7 @@ DescribeRecordResponsePrivate::DescribeRecordResponsePrivate(
 void DescribeRecordResponsePrivate::parseDescribeRecordResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRecordResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ServiceCatalog

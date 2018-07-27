@@ -107,7 +107,7 @@ StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
 void StartSchemaExtensionResponsePrivate::parseStartSchemaExtensionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("StartSchemaExtensionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DirectoryService

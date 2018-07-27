@@ -113,7 +113,7 @@ CancelPipelineReprocessingResponsePrivate::CancelPipelineReprocessingResponsePri
 void CancelPipelineReprocessingResponsePrivate::parseCancelPipelineReprocessingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CancelPipelineReprocessingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoTAnalytics

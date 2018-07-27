@@ -93,7 +93,7 @@ ListInputsResponsePrivate::ListInputsResponsePrivate(
 void ListInputsResponsePrivate::parseListInputsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListInputsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MediaLive

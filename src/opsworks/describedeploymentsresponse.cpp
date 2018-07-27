@@ -199,7 +199,7 @@ DescribeDeploymentsResponsePrivate::DescribeDeploymentsResponsePrivate(
 void DescribeDeploymentsResponsePrivate::parseDescribeDeploymentsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDeploymentsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace OpsWorks

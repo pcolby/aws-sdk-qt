@@ -97,7 +97,7 @@ DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponsePrivate(
 void DeleteDeliveryStreamResponsePrivate::parseDeleteDeliveryStreamResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeliveryStreamResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Firehose

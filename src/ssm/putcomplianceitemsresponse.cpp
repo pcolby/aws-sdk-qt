@@ -118,7 +118,7 @@ PutComplianceItemsResponsePrivate::PutComplianceItemsResponsePrivate(
 void PutComplianceItemsResponsePrivate::parsePutComplianceItemsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutComplianceItemsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

@@ -235,7 +235,7 @@ DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponsePrivate
 void DeleteOrganizationalUnitResponsePrivate::parseDeleteOrganizationalUnitResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOrganizationalUnitResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Organizations

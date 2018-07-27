@@ -100,7 +100,7 @@ AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
 void AttachToIndexResponsePrivate::parseAttachToIndexResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AttachToIndexResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudDirectory

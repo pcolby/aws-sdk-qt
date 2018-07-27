@@ -99,7 +99,7 @@ DescribeDRTAccessResponsePrivate::DescribeDRTAccessResponsePrivate(
 void DescribeDRTAccessResponsePrivate::parseDescribeDRTAccessResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeDRTAccessResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Shield

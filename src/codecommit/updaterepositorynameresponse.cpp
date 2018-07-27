@@ -283,7 +283,7 @@ UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponsePrivate(
 void UpdateRepositoryNameResponsePrivate::parseUpdateRepositoryNameResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("UpdateRepositoryNameResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CodeCommit

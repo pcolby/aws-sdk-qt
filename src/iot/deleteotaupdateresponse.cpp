@@ -104,7 +104,7 @@ DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponsePrivate(
 void DeleteOTAUpdateResponsePrivate::parseDeleteOTAUpdateResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteOTAUpdateResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT

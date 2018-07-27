@@ -121,7 +121,7 @@ CreateFpgaImageResponsePrivate::CreateFpgaImageResponsePrivate(
 void CreateFpgaImageResponsePrivate::parseCreateFpgaImageResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateFpgaImageResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

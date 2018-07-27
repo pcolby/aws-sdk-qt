@@ -96,7 +96,7 @@ DescribeSentimentDetectionJobResponsePrivate::DescribeSentimentDetectionJobRespo
 void DescribeSentimentDetectionJobResponsePrivate::parseDescribeSentimentDetectionJobResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeSentimentDetectionJobResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Comprehend

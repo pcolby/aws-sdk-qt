@@ -96,7 +96,7 @@ AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
 void AddJobFlowStepsResponsePrivate::parseAddJobFlowStepsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AddJobFlowStepsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EMR

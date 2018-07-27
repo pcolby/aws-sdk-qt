@@ -96,7 +96,7 @@ CreateScriptResponsePrivate::CreateScriptResponsePrivate(
 void CreateScriptResponsePrivate::parseCreateScriptResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateScriptResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

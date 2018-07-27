@@ -93,7 +93,7 @@ PutBucketNotificationResponsePrivate::PutBucketNotificationResponsePrivate(
 void PutBucketNotificationResponsePrivate::parsePutBucketNotificationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("PutBucketNotificationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace S3

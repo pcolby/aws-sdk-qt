@@ -97,7 +97,7 @@ GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
 void GetDownloadUrlForLayerResponsePrivate::parseGetDownloadUrlForLayerResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDownloadUrlForLayerResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ECR

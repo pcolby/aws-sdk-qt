@@ -118,7 +118,7 @@ DeleteParametersResponsePrivate::DeleteParametersResponsePrivate(
 void DeleteParametersResponsePrivate::parseDeleteParametersResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteParametersResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SSM

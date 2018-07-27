@@ -98,7 +98,7 @@ CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponsePrivate(
 void CreateBasePathMappingResponsePrivate::parseCreateBasePathMappingResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateBasePathMappingResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace APIGateway

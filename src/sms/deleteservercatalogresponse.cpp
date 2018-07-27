@@ -93,7 +93,7 @@ DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponsePrivate(
 void DeleteServerCatalogResponsePrivate::parseDeleteServerCatalogResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerCatalogResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace SMS

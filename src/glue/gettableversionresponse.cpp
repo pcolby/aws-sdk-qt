@@ -96,7 +96,7 @@ GetTableVersionResponsePrivate::GetTableVersionResponsePrivate(
 void GetTableVersionResponsePrivate::parseGetTableVersionResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetTableVersionResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Glue

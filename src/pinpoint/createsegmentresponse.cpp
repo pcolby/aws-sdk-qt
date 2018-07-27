@@ -93,7 +93,7 @@ CreateSegmentResponsePrivate::CreateSegmentResponsePrivate(
 void CreateSegmentResponsePrivate::parseCreateSegmentResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("CreateSegmentResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace Pinpoint

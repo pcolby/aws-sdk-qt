@@ -121,7 +121,7 @@ ModifyIdentityIdFormatResponsePrivate::ModifyIdentityIdFormatResponsePrivate(
 void ModifyIdentityIdFormatResponsePrivate::parseModifyIdentityIdFormatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ModifyIdentityIdFormatResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace EC2

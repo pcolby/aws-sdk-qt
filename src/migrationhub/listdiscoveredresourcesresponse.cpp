@@ -95,7 +95,7 @@ ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponsePrivate(
 void ListDiscoveredResourcesResponsePrivate::parseListDiscoveredResourcesResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ListDiscoveredResourcesResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace MigrationHub

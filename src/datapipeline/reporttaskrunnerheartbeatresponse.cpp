@@ -111,7 +111,7 @@ ReportTaskRunnerHeartbeatResponsePrivate::ReportTaskRunnerHeartbeatResponsePriva
 void ReportTaskRunnerHeartbeatResponsePrivate::parseReportTaskRunnerHeartbeatResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("ReportTaskRunnerHeartbeatResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace DataPipeline

@@ -113,7 +113,7 @@ GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResponseP
 void GetDiscoveredResourceCountsResponsePrivate::parseGetDiscoveredResourceCountsResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDiscoveredResourceCountsResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ConfigService

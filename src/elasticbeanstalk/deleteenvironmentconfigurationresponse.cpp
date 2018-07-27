@@ -115,7 +115,7 @@ DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationRes
 void DeleteEnvironmentConfigurationResponsePrivate::parseDeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentConfigurationResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace ElasticBeanstalk

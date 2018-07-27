@@ -122,7 +122,7 @@ AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponsePrivate(
 void AssociateKmsKeyResponsePrivate::parseAssociateKmsKeyResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("AssociateKmsKeyResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchLogs

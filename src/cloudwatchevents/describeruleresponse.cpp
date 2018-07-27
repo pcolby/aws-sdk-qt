@@ -116,7 +116,7 @@ DescribeRuleResponsePrivate::DescribeRuleResponsePrivate(
 void DescribeRuleResponsePrivate::parseDescribeRuleResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("DescribeRuleResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace CloudWatchEvents

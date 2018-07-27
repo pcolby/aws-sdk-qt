@@ -94,7 +94,7 @@ GetDevicesInPlacementResponsePrivate::GetDevicesInPlacementResponsePrivate(
 void GetDevicesInPlacementResponsePrivate::parseGetDevicesInPlacementResponse(QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.name() == QLatin1String("GetDevicesInPlacementResponse"));
-    /// @todo
+    Q_UNUSED(xml) ///< @todo
 }
 
 } // namespace IoT1ClickProjects
