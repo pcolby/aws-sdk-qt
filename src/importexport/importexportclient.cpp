@@ -20,7 +20,7 @@
 #include "importexportclient.h"
 #include "importexportclient_p.h"
 
-#include "core/awssignaturev4.h"
+#include "core/awssignaturev2.h"
 #include "canceljobrequest.h"
 #include "canceljobresponse.h"
 #include "createjobrequest.h"

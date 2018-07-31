@@ -2,7 +2,11 @@
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 
+{% if metadata.signatureVersion == "s3" %}
 #include "core/awssignaturev4.h"
+{% else %}
+#include "core/awssignature{{metadata.signatureVersion|lower}}.h"
+{% endif %}
 {% for name,op in operations.items %}
 #include "{{name|lower}}request.h"
 #include "{{name|lower}}response.h"

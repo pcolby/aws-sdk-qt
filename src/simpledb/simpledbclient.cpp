@@ -20,7 +20,7 @@
 #include "simpledbclient.h"
 #include "simpledbclient_p.h"
 
-#include "core/awssignaturev4.h"
+#include "core/awssignaturev2.h"
 #include "batchdeleteattributesrequest.h"
 #include "batchdeleteattributesresponse.h"
 #include "batchputattributesrequest.h"
