@@ -141,7 +141,11 @@ namespace {{NameSpaceName}} {
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
+{% if metadata.signatureVersion == "s3" %}
+    signature = new QtAws::Core::AwsSignatureV4();
+{% else %}
     signature = new QtAws::Core::AwsSignature{{metadata.signatureVersion|upper}}();
+{% endif %}
 }
 
 } // namespace {{NameSpaceName}}

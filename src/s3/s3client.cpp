@@ -1328,7 +1328,7 @@ UploadPartCopyResponse * S3Client::uploadPartCopy(const UploadPartCopyRequest &r
 S3ClientPrivate::S3ClientPrivate(S3Client * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new QtAws::Core::AwsSignatureS3();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace S3
