@@ -47,6 +47,7 @@ namespace OpsWorksCM {
  * \value DescribeNodeAssociationStatusAction OpsWorksCM DescribeNodeAssociationStatus action.
  * \value DescribeServersAction OpsWorksCM DescribeServers action.
  * \value DisassociateNodeAction OpsWorksCM DisassociateNode action.
+ * \value ExportServerEngineAttributeAction OpsWorksCM ExportServerEngineAttribute action.
  * \value RestoreServerAction OpsWorksCM RestoreServer action.
  * \value StartMaintenanceAction OpsWorksCM StartMaintenance action.
  * \value UpdateServerAction OpsWorksCM UpdateServer action.

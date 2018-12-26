@@ -38,6 +38,7 @@ namespace ECS {
  *
  * \value CreateClusterAction ECS CreateCluster action.
  * \value CreateServiceAction ECS CreateService action.
+ * \value DeleteAccountSettingAction ECS DeleteAccountSetting action.
  * \value DeleteAttributesAction ECS DeleteAttributes action.
  * \value DeleteClusterAction ECS DeleteCluster action.
  * \value DeleteServiceAction ECS DeleteService action.
@@ -49,13 +50,16 @@ namespace ECS {
  * \value DescribeTaskDefinitionAction ECS DescribeTaskDefinition action.
  * \value DescribeTasksAction ECS DescribeTasks action.
  * \value DiscoverPollEndpointAction ECS DiscoverPollEndpoint action.
+ * \value ListAccountSettingsAction ECS ListAccountSettings action.
  * \value ListAttributesAction ECS ListAttributes action.
  * \value ListClustersAction ECS ListClusters action.
  * \value ListContainerInstancesAction ECS ListContainerInstances action.
  * \value ListServicesAction ECS ListServices action.
+ * \value ListTagsForResourceAction ECS ListTagsForResource action.
  * \value ListTaskDefinitionFamiliesAction ECS ListTaskDefinitionFamilies action.
  * \value ListTaskDefinitionsAction ECS ListTaskDefinitions action.
  * \value ListTasksAction ECS ListTasks action.
+ * \value PutAccountSettingAction ECS PutAccountSetting action.
  * \value PutAttributesAction ECS PutAttributes action.
  * \value RegisterContainerInstanceAction ECS RegisterContainerInstance action.
  * \value RegisterTaskDefinitionAction ECS RegisterTaskDefinition action.
@@ -64,6 +68,8 @@ namespace ECS {
  * \value StopTaskAction ECS StopTask action.
  * \value SubmitContainerStateChangeAction ECS SubmitContainerStateChange action.
  * \value SubmitTaskStateChangeAction ECS SubmitTaskStateChange action.
+ * \value TagResourceAction ECS TagResource action.
+ * \value UntagResourceAction ECS UntagResource action.
  * \value UpdateContainerAgentAction ECS UpdateContainerAgent action.
  * \value UpdateContainerInstancesStateAction ECS UpdateContainerInstancesState action.
  * \value UpdateServiceAction ECS UpdateService action.

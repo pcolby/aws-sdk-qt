@@ -43,13 +43,22 @@ namespace WorkSpaces {
  * \value CreateWorkspacesAction WorkSpaces CreateWorkspaces action.
  * \value DeleteIpGroupAction WorkSpaces DeleteIpGroup action.
  * \value DeleteTagsAction WorkSpaces DeleteTags action.
+ * \value DeleteWorkspaceImageAction WorkSpaces DeleteWorkspaceImage action.
+ * \value DescribeAccountAction WorkSpaces DescribeAccount action.
+ * \value DescribeAccountModificationsAction WorkSpaces DescribeAccountModifications action.
+ * \value DescribeClientPropertiesAction WorkSpaces DescribeClientProperties action.
  * \value DescribeIpGroupsAction WorkSpaces DescribeIpGroups action.
  * \value DescribeTagsAction WorkSpaces DescribeTags action.
  * \value DescribeWorkspaceBundlesAction WorkSpaces DescribeWorkspaceBundles action.
  * \value DescribeWorkspaceDirectoriesAction WorkSpaces DescribeWorkspaceDirectories action.
+ * \value DescribeWorkspaceImagesAction WorkSpaces DescribeWorkspaceImages action.
  * \value DescribeWorkspacesAction WorkSpaces DescribeWorkspaces action.
  * \value DescribeWorkspacesConnectionStatusAction WorkSpaces DescribeWorkspacesConnectionStatus action.
  * \value DisassociateIpGroupsAction WorkSpaces DisassociateIpGroups action.
+ * \value ImportWorkspaceImageAction WorkSpaces ImportWorkspaceImage action.
+ * \value ListAvailableManagementCidrRangesAction WorkSpaces ListAvailableManagementCidrRanges action.
+ * \value ModifyAccountAction WorkSpaces ModifyAccount action.
+ * \value ModifyClientPropertiesAction WorkSpaces ModifyClientProperties action.
  * \value ModifyWorkspacePropertiesAction WorkSpaces ModifyWorkspaceProperties action.
  * \value ModifyWorkspaceStateAction WorkSpaces ModifyWorkspaceState action.
  * \value RebootWorkspacesAction WorkSpaces RebootWorkspaces action.

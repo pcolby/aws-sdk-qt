@@ -33,6 +33,10 @@
 #include "attachstaticipresponse.h"
 #include "closeinstancepublicportsrequest.h"
 #include "closeinstancepublicportsresponse.h"
+#include "copysnapshotrequest.h"
+#include "copysnapshotresponse.h"
+#include "createcloudformationstackrequest.h"
+#include "createcloudformationstackresponse.h"
 #include "creatediskrequest.h"
 #include "creatediskresponse.h"
 #include "creatediskfromsnapshotrequest.h"
@@ -55,6 +59,12 @@
 #include "createloadbalancerresponse.h"
 #include "createloadbalancertlscertificaterequest.h"
 #include "createloadbalancertlscertificateresponse.h"
+#include "createrelationaldatabaserequest.h"
+#include "createrelationaldatabaseresponse.h"
+#include "createrelationaldatabasefromsnapshotrequest.h"
+#include "createrelationaldatabasefromsnapshotresponse.h"
+#include "createrelationaldatabasesnapshotrequest.h"
+#include "createrelationaldatabasesnapshotresponse.h"
 #include "deletediskrequest.h"
 #include "deletediskresponse.h"
 #include "deletedisksnapshotrequest.h"
@@ -73,6 +83,10 @@
 #include "deleteloadbalancerresponse.h"
 #include "deleteloadbalancertlscertificaterequest.h"
 #include "deleteloadbalancertlscertificateresponse.h"
+#include "deleterelationaldatabaserequest.h"
+#include "deleterelationaldatabaseresponse.h"
+#include "deleterelationaldatabasesnapshotrequest.h"
+#include "deleterelationaldatabasesnapshotresponse.h"
 #include "detachdiskrequest.h"
 #include "detachdiskresponse.h"
 #include "detachinstancesfromloadbalancerrequest.h"
@@ -81,12 +95,16 @@
 #include "detachstaticipresponse.h"
 #include "downloaddefaultkeypairrequest.h"
 #include "downloaddefaultkeypairresponse.h"
+#include "exportsnapshotrequest.h"
+#include "exportsnapshotresponse.h"
 #include "getactivenamesrequest.h"
 #include "getactivenamesresponse.h"
 #include "getblueprintsrequest.h"
 #include "getblueprintsresponse.h"
 #include "getbundlesrequest.h"
 #include "getbundlesresponse.h"
+#include "getcloudformationstackrecordsrequest.h"
+#include "getcloudformationstackrecordsresponse.h"
 #include "getdiskrequest.h"
 #include "getdiskresponse.h"
 #include "getdisksnapshotrequest.h"
@@ -99,6 +117,8 @@
 #include "getdomainresponse.h"
 #include "getdomainsrequest.h"
 #include "getdomainsresponse.h"
+#include "getexportsnapshotrecordsrequest.h"
+#include "getexportsnapshotrecordsresponse.h"
 #include "getinstancerequest.h"
 #include "getinstanceresponse.h"
 #include "getinstanceaccessdetailsrequest.h"
@@ -135,6 +155,30 @@
 #include "getoperationsforresourceresponse.h"
 #include "getregionsrequest.h"
 #include "getregionsresponse.h"
+#include "getrelationaldatabaserequest.h"
+#include "getrelationaldatabaseresponse.h"
+#include "getrelationaldatabaseblueprintsrequest.h"
+#include "getrelationaldatabaseblueprintsresponse.h"
+#include "getrelationaldatabasebundlesrequest.h"
+#include "getrelationaldatabasebundlesresponse.h"
+#include "getrelationaldatabaseeventsrequest.h"
+#include "getrelationaldatabaseeventsresponse.h"
+#include "getrelationaldatabaselogeventsrequest.h"
+#include "getrelationaldatabaselogeventsresponse.h"
+#include "getrelationaldatabaselogstreamsrequest.h"
+#include "getrelationaldatabaselogstreamsresponse.h"
+#include "getrelationaldatabasemasteruserpasswordrequest.h"
+#include "getrelationaldatabasemasteruserpasswordresponse.h"
+#include "getrelationaldatabasemetricdatarequest.h"
+#include "getrelationaldatabasemetricdataresponse.h"
+#include "getrelationaldatabaseparametersrequest.h"
+#include "getrelationaldatabaseparametersresponse.h"
+#include "getrelationaldatabasesnapshotrequest.h"
+#include "getrelationaldatabasesnapshotresponse.h"
+#include "getrelationaldatabasesnapshotsrequest.h"
+#include "getrelationaldatabasesnapshotsresponse.h"
+#include "getrelationaldatabasesrequest.h"
+#include "getrelationaldatabasesresponse.h"
 #include "getstaticiprequest.h"
 #include "getstaticipresponse.h"
 #include "getstaticipsrequest.h"
@@ -151,18 +195,32 @@
 #include "putinstancepublicportsresponse.h"
 #include "rebootinstancerequest.h"
 #include "rebootinstanceresponse.h"
+#include "rebootrelationaldatabaserequest.h"
+#include "rebootrelationaldatabaseresponse.h"
 #include "releasestaticiprequest.h"
 #include "releasestaticipresponse.h"
 #include "startinstancerequest.h"
 #include "startinstanceresponse.h"
+#include "startrelationaldatabaserequest.h"
+#include "startrelationaldatabaseresponse.h"
 #include "stopinstancerequest.h"
 #include "stopinstanceresponse.h"
+#include "stoprelationaldatabaserequest.h"
+#include "stoprelationaldatabaseresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "unpeervpcrequest.h"
 #include "unpeervpcresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatedomainentryrequest.h"
 #include "updatedomainentryresponse.h"
 #include "updateloadbalancerattributerequest.h"
 #include "updateloadbalancerattributeresponse.h"
+#include "updaterelationaldatabaserequest.h"
+#include "updaterelationaldatabaseresponse.h"
+#include "updaterelationaldatabaseparametersrequest.h"
+#include "updaterelationaldatabaseparametersresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -278,6 +336,12 @@ AllocateStaticIpResponse * LightsailClient::allocateStaticIp(const AllocateStati
  *
  * Attaches a block storage disk to a running or stopped Lightsail instance and exposes it to the instance with the
  * specified disk
+ *
+ * name>
+ *
+ * The <code>attach disk</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by diskName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 AttachDiskResponse * LightsailClient::attachDisk(const AttachDiskRequest &request)
 {
@@ -295,6 +359,12 @@ AttachDiskResponse * LightsailClient::attachDisk(const AttachDiskRequest &reques
  * balancer>
  *
  * After some time, the instances are attached to the load balancer and the health check status is
+ *
+ * available>
+ *
+ * The <code>attach instances to load balancer</code> operation supports tag-based access control via resource tags applied
+ * to the resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 AttachInstancesToLoadBalancerResponse * LightsailClient::attachInstancesToLoadBalancer(const AttachInstancesToLoadBalancerRequest &request)
 {
@@ -315,6 +385,12 @@ AttachInstancesToLoadBalancerResponse * LightsailClient::attachInstancesToLoadBa
  * Once you create and validate your certificate, you can attach it to your load balancer. You can also use this API to
  * rotate the certificates on your account. Use the <code>AttachLoadBalancerTlsCertificate</code> operation with the
  * non-attached certificate, and it will replace the existing one and become the attached
+ *
+ * certificate>
+ *
+ * The <code>attach load balancer tls certificate</code> operation supports tag-based access control via resource tags
+ * applied to the resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 AttachLoadBalancerTlsCertificateResponse * LightsailClient::attachLoadBalancerTlsCertificate(const AttachLoadBalancerTlsCertificateRequest &request)
 {
@@ -341,10 +417,49 @@ AttachStaticIpResponse * LightsailClient::attachStaticIp(const AttachStaticIpReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Closes the public ports on a specific Amazon Lightsail
+ *
+ * instance>
+ *
+ * The <code>close instance public ports</code> operation supports tag-based access control via resource tags applied to
+ * the resource identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CloseInstancePublicPortsResponse * LightsailClient::closeInstancePublicPorts(const CloseInstancePublicPortsRequest &request)
 {
     return qobject_cast<CloseInstancePublicPortsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * CopySnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Copies an instance or disk snapshot from one AWS Region to another in Amazon
+ */
+CopySnapshotResponse * LightsailClient::copySnapshot(const CopySnapshotRequest &request)
+{
+    return qobject_cast<CopySnapshotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * CreateCloudFormationStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an AWS CloudFormation stack, which creates a new Amazon EC2 instance from an exported Amazon Lightsail snapshot.
+ * This operation results in a CloudFormation stack record that can be used to track the AWS CloudFormation stack created.
+ * Use the <code>get cloud formation stack records</code> operation to get a list of the CloudFormation stacks
+ *
+ * created> <b>
+ *
+ * Wait until after your new Amazon EC2 instance is created before running the <code>create cloud formation stack</code>
+ * operation again with the same export snapshot
+ */
+CreateCloudFormationStackResponse * LightsailClient::createCloudFormationStack(const CreateCloudFormationStackRequest &request)
+{
+    return qobject_cast<CreateCloudFormationStackResponse *>(send(request));
 }
 
 /*!
@@ -358,6 +473,12 @@ CloseInstancePublicPortsResponse * LightsailClient::closeInstancePublicPorts(con
  * information, see <a
  * href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">Regions
  * and Availability Zones in
+ *
+ * Lightsail</a>>
+ *
+ * The <code>create disk</code> operation supports tag-based access control via request tags. For more information, see the
+ * <a href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail
+ * Dev
  */
 CreateDiskResponse * LightsailClient::createDisk(const CreateDiskRequest &request)
 {
@@ -375,6 +496,12 @@ CreateDiskResponse * LightsailClient::createDisk(const CreateDiskRequest &reques
  * For more information, see <a
  * href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">Regions
  * and Availability Zones in
+ *
+ * Lightsail</a>>
+ *
+ * The <code>create disk from snapshot</code> operation supports tag-based access control via request tags and resource
+ * tags applied to the resource identified by diskSnapshotName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const CreateDiskFromSnapshotRequest &request)
 {
@@ -398,6 +525,12 @@ CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const C
  * snapshot should be complete. Nevertheless, if you cannot pause all file writes to the disk, you should unmount the disk
  * from within the Lightsail instance, issue the create disk snapshot command, and then remount the disk to ensure a
  * consistent and complete snapshot. You may remount and use your disk while the snapshot status is
+ *
+ * pending>
+ *
+ * The <code>create disk snapshot</code> operation supports tag-based access control via request tags. For more
+ * information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateDiskSnapshotResponse * LightsailClient::createDiskSnapshot(const CreateDiskSnapshotRequest &request)
 {
@@ -411,6 +544,12 @@ CreateDiskSnapshotResponse * LightsailClient::createDiskSnapshot(const CreateDis
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a domain resource for the specified domain (e.g.,
+ *
+ * example.com)>
+ *
+ * The <code>create domain</code> operation supports tag-based access control via request tags. For more information, see
+ * the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &request)
 {
@@ -424,6 +563,12 @@ CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates one of the following entry records associated with the domain: A record, CNAME record, TXT record, or MX
+ *
+ * record>
+ *
+ * The <code>create domain entry</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by domainName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateDomainEntryResponse * LightsailClient::createDomainEntry(const CreateDomainEntryRequest &request)
 {
@@ -438,6 +583,12 @@ CreateDomainEntryResponse * LightsailClient::createDomainEntry(const CreateDomai
  *
  * Creates a snapshot of a specific virtual private server, or <i>instance</i>. You can use a snapshot to create a new
  * instance that is based on that
+ *
+ * snapshot>
+ *
+ * The <code>create instance snapshot</code> operation supports tag-based access control via request tags. For more
+ * information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateInstanceSnapshotResponse * LightsailClient::createInstanceSnapshot(const CreateInstanceSnapshotRequest &request)
 {
@@ -450,7 +601,16 @@ CreateInstanceSnapshotResponse * LightsailClient::createInstanceSnapshot(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates one or more Amazon Lightsail virtual private servers, or
+ * Creates one or more Amazon Lightsail virtual private servers, or <i>instances</i>. Create instances using active
+ * blueprints. Inactive blueprints are listed to support customers with existing instances but are not necessarily
+ * available for launch of new instances. Blueprints are marked inactive when they become outdated due to operating system
+ * updates or new application releases. Use the get blueprints operation to return a list of available
+ *
+ * blueprints>
+ *
+ * The <code>create instances</code> operation supports tag-based access control via request tags. For more information,
+ * see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateInstancesResponse * LightsailClient::createInstances(const CreateInstancesRequest &request)
 {
@@ -464,6 +624,12 @@ CreateInstancesResponse * LightsailClient::createInstances(const CreateInstances
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Uses a specific snapshot as a blueprint for creating one or more new instances that are based on that identical
+ *
+ * configuration>
+ *
+ * The <code>create instances from snapshot</code> operation supports tag-based access control via request tags and
+ * resource tags applied to the resource identified by instanceSnapshotName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateInstancesFromSnapshotResponse * LightsailClient::createInstancesFromSnapshot(const CreateInstancesFromSnapshotRequest &request)
 {
@@ -476,7 +642,13 @@ CreateInstancesFromSnapshotResponse * LightsailClient::createInstancesFromSnapsh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates sn SSH key
+ * Creates an SSH key
+ *
+ * pair>
+ *
+ * The <code>create key pair</code> operation supports tag-based access control via request tags. For more information, see
+ * the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateKeyPairResponse * LightsailClient::createKeyPair(const CreateKeyPairRequest &request)
 {
@@ -497,6 +669,12 @@ CreateKeyPairResponse * LightsailClient::createKeyPair(const CreateKeyPairReques
  *
  * When you create a load balancer, you can specify a unique name and port settings. To change additional load balancer
  * settings, use the <code>UpdateLoadBalancerAttribute</code>
+ *
+ * operation>
+ *
+ * The <code>create load balancer</code> operation supports tag-based access control via request tags. For more
+ * information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateLoadBalancerResponse * LightsailClient::createLoadBalancer(const CreateLoadBalancerRequest &request)
 {
@@ -514,10 +692,79 @@ CreateLoadBalancerResponse * LightsailClient::createLoadBalancer(const CreateLoa
  * certificate>
  *
  * TLS is just an updated, more secure version of Secure Socket Layer
+ *
+ * (SSL)>
+ *
+ * The <code>create load balancer tls certificate</code> operation supports tag-based access control via resource tags
+ * applied to the resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 CreateLoadBalancerTlsCertificateResponse * LightsailClient::createLoadBalancerTlsCertificate(const CreateLoadBalancerTlsCertificateRequest &request)
 {
     return qobject_cast<CreateLoadBalancerTlsCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * CreateRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new database in Amazon
+ *
+ * Lightsail>
+ *
+ * The <code>create relational database</code> operation supports tag-based access control via request tags. For more
+ * information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+CreateRelationalDatabaseResponse * LightsailClient::createRelationalDatabase(const CreateRelationalDatabaseRequest &request)
+{
+    return qobject_cast<CreateRelationalDatabaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * CreateRelationalDatabaseFromSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new database from an existing database snapshot in Amazon
+ *
+ * Lightsail>
+ *
+ * You can create a new database from a snapshot in if something goes wrong with your original database, or to change it to
+ * a different plan, such as a high availability or standard
+ *
+ * plan>
+ *
+ * The <code>create relational database from snapshot</code> operation supports tag-based access control via request tags
+ * and resource tags applied to the resource identified by relationalDatabaseSnapshotName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+CreateRelationalDatabaseFromSnapshotResponse * LightsailClient::createRelationalDatabaseFromSnapshot(const CreateRelationalDatabaseFromSnapshotRequest &request)
+{
+    return qobject_cast<CreateRelationalDatabaseFromSnapshotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * CreateRelationalDatabaseSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a snapshot of your database in Amazon Lightsail. You can use snapshots for backups, to make copies of a
+ * database, and to save data before deleting a
+ *
+ * database>
+ *
+ * The <code>create relational database snapshot</code> operation supports tag-based access control via request tags. For
+ * more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+CreateRelationalDatabaseSnapshotResponse * LightsailClient::createRelationalDatabaseSnapshot(const CreateRelationalDatabaseSnapshotRequest &request)
+{
+    return qobject_cast<CreateRelationalDatabaseSnapshotResponse *>(send(request));
 }
 
 /*!
@@ -532,6 +779,12 @@ CreateLoadBalancerTlsCertificateResponse * LightsailClient::createLoadBalancerTl
  * instance)> <note>
  *
  * The disk may remain in the <code>deleting</code> state for several
+ *
+ * minutes> </note>
+ *
+ * The <code>delete disk</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by diskName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteDiskResponse * LightsailClient::deleteDisk(const DeleteDiskRequest &request)
 {
@@ -552,6 +805,12 @@ DeleteDiskResponse * LightsailClient::deleteDisk(const DeleteDiskRequest &reques
  * changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for
  * any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have
  * access to all the information needed to restore the
+ *
+ * disk>
+ *
+ * The <code>delete disk snapshot</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by diskSnapshotName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteDiskSnapshotResponse * LightsailClient::deleteDiskSnapshot(const DeleteDiskSnapshotRequest &request)
 {
@@ -565,6 +824,12 @@ DeleteDiskSnapshotResponse * LightsailClient::deleteDiskSnapshot(const DeleteDis
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified domain recordset and all of its domain
+ *
+ * records>
+ *
+ * The <code>delete domain</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by domainName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteDomainResponse * LightsailClient::deleteDomain(const DeleteDomainRequest &request)
 {
@@ -578,6 +843,12 @@ DeleteDomainResponse * LightsailClient::deleteDomain(const DeleteDomainRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a specific domain
+ *
+ * entry>
+ *
+ * The <code>delete domain entry</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by domainName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteDomainEntryResponse * LightsailClient::deleteDomainEntry(const DeleteDomainEntryRequest &request)
 {
@@ -591,6 +862,12 @@ DeleteDomainEntryResponse * LightsailClient::deleteDomainEntry(const DeleteDomai
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a specific Amazon Lightsail virtual private server, or
+ *
+ * <i>instance</i>>
+ *
+ * The <code>delete instance</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteInstanceResponse * LightsailClient::deleteInstance(const DeleteInstanceRequest &request)
 {
@@ -604,6 +881,12 @@ DeleteInstanceResponse * LightsailClient::deleteInstance(const DeleteInstanceReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a specific snapshot of a virtual private server (or
+ *
+ * <i>instance</i>)>
+ *
+ * The <code>delete instance snapshot</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by instanceSnapshotName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteInstanceSnapshotResponse * LightsailClient::deleteInstanceSnapshot(const DeleteInstanceSnapshotRequest &request)
 {
@@ -617,6 +900,12 @@ DeleteInstanceSnapshotResponse * LightsailClient::deleteInstanceSnapshot(const D
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a specific SSH key
+ *
+ * pair>
+ *
+ * The <code>delete key pair</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by keyPairName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairRequest &request)
 {
@@ -631,6 +920,12 @@ DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairReques
  *
  * Deletes a Lightsail load balancer and all its associated SSL/TLS certificates. Once the load balancer is deleted, you
  * will need to create a new load balancer, create a new certificate, and verify domain ownership
+ *
+ * again>
+ *
+ * The <code>delete load balancer</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteLoadBalancerResponse * LightsailClient::deleteLoadBalancer(const DeleteLoadBalancerRequest &request)
 {
@@ -644,10 +939,54 @@ DeleteLoadBalancerResponse * LightsailClient::deleteLoadBalancer(const DeleteLoa
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an SSL/TLS certificate associated with a Lightsail load
+ *
+ * balancer>
+ *
+ * The <code>delete load balancer tls certificate</code> operation supports tag-based access control via resource tags
+ * applied to the resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DeleteLoadBalancerTlsCertificateResponse * LightsailClient::deleteLoadBalancerTlsCertificate(const DeleteLoadBalancerTlsCertificateRequest &request)
 {
     return qobject_cast<DeleteLoadBalancerTlsCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * DeleteRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a database in Amazon
+ *
+ * Lightsail>
+ *
+ * The <code>delete relational database</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+DeleteRelationalDatabaseResponse * LightsailClient::deleteRelationalDatabase(const DeleteRelationalDatabaseRequest &request)
+{
+    return qobject_cast<DeleteRelationalDatabaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * DeleteRelationalDatabaseSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a database snapshot in Amazon
+ *
+ * Lightsail>
+ *
+ * The <code>delete relational database snapshot</code> operation supports tag-based access control via resource tags
+ * applied to the resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+DeleteRelationalDatabaseSnapshotResponse * LightsailClient::deleteRelationalDatabaseSnapshot(const DeleteRelationalDatabaseSnapshotRequest &request)
+{
+    return qobject_cast<DeleteRelationalDatabaseSnapshotResponse *>(send(request));
 }
 
 /*!
@@ -658,6 +997,12 @@ DeleteLoadBalancerTlsCertificateResponse * LightsailClient::deleteLoadBalancerTl
  *
  * Detaches a stopped block storage disk from a Lightsail instance. Make sure to unmount any file systems on the device
  * within your operating system before stopping the instance and detaching the
+ *
+ * disk>
+ *
+ * The <code>detach disk</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by diskName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DetachDiskResponse * LightsailClient::detachDisk(const DetachDiskRequest &request)
 {
@@ -675,6 +1020,12 @@ DetachDiskResponse * LightsailClient::detachDisk(const DetachDiskRequest &reques
  * balancer>
  *
  * This operation waits until the instances are no longer needed before they are detached from the load
+ *
+ * balancer>
+ *
+ * The <code>detach instances from load balancer</code> operation supports tag-based access control via resource tags
+ * applied to the resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 DetachInstancesFromLoadBalancerResponse * LightsailClient::detachInstancesFromLoadBalancer(const DetachInstancesFromLoadBalancerRequest &request)
 {
@@ -705,6 +1056,38 @@ DetachStaticIpResponse * LightsailClient::detachStaticIp(const DetachStaticIpReq
 DownloadDefaultKeyPairResponse * LightsailClient::downloadDefaultKeyPair(const DownloadDefaultKeyPairRequest &request)
 {
     return qobject_cast<DownloadDefaultKeyPairResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * ExportSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Exports a Amazon Lightsail instance or block storage disk snapshot to Amazon Elastic Compute Cloud (Amazon EC2). This
+ * operation results in an export snapshot record that can be used with the <code>create cloud formation stack</code>
+ * operation to create new Amazon EC2
+ *
+ * instances>
+ *
+ * Exported instance snapshots appear in Amazon EC2 as Amazon Machine Images (AMIs), and the instance system disk appears
+ * as an Amazon Elastic Block Store (Amazon EBS) volume. Exported disk snapshots appear in Amazon EC2 as Amazon EBS
+ * volumes. Snapshots are exported to the same Amazon Web Services Region in Amazon EC2 as the source Lightsail
+ *
+ * snapshot> <p/>
+ *
+ * The <code>export snapshot</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by sourceSnapshotName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ *
+ * Guide</a>> <note>
+ *
+ * Use the <code>get instance snapshots</code> or <code>get disk snapshots</code> operations to get a list of snapshots
+ * that you can export to Amazon
+ */
+ExportSnapshotResponse * LightsailClient::exportSnapshot(const ExportSnapshotRequest &request)
+{
+    return qobject_cast<ExportSnapshotResponse *>(send(request));
 }
 
 /*!
@@ -747,6 +1130,23 @@ GetBlueprintsResponse * LightsailClient::getBlueprints(const GetBlueprintsReques
 GetBundlesResponse * LightsailClient::getBundles(const GetBundlesRequest &request)
 {
     return qobject_cast<GetBundlesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetCloudFormationStackRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the CloudFormation stack record created as a result of the <code>create cloud formation stack</code>
+ *
+ * operation>
+ *
+ * An AWS CloudFormation stack is used to create a new Amazon EC2 instance from an exported Lightsail
+ */
+GetCloudFormationStackRecordsResponse * LightsailClient::getCloudFormationStackRecords(const GetCloudFormationStackRecordsRequest &request)
+{
+    return qobject_cast<GetCloudFormationStackRecordsResponse *>(send(request));
 }
 
 /*!
@@ -839,6 +1239,24 @@ GetDomainsResponse * LightsailClient::getDomains(const GetDomainsRequest &reques
 
 /*!
  * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetExportSnapshotRecordsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the export snapshot record created as a result of the <code>export snapshot</code>
+ *
+ * operation>
+ *
+ * An export snapshot record can be used to create a new Amazon EC2 instance and its related resources with the
+ * <code>create cloud formation stack</code>
+ */
+GetExportSnapshotRecordsResponse * LightsailClient::getExportSnapshotRecords(const GetExportSnapshotRecordsRequest &request)
+{
+    return qobject_cast<GetExportSnapshotRecordsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
  * GetInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -857,6 +1275,12 @@ GetInstanceResponse * LightsailClient::getInstance(const GetInstanceRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns temporary SSH keys you can use to connect to a specific virtual private server, or
+ *
+ * <i>instance</i>>
+ *
+ * The <code>get instance access details</code> operation supports tag-based access control via resource tags applied to
+ * the resource identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 GetInstanceAccessDetailsResponse * LightsailClient::getInstanceAccessDetails(const GetInstanceAccessDetailsRequest &request)
 {
@@ -1084,11 +1508,188 @@ GetOperationsForResourceResponse * LightsailClient::getOperationsForResource(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of all valid regions for Amazon Lightsail. Use the <code>include availability zones</code> parameter to
- * also return the availability zones in a
+ * also return the Availability Zones in a
  */
 GetRegionsResponse * LightsailClient::getRegions(const GetRegionsRequest &request)
 {
     return qobject_cast<GetRegionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a specific database in Amazon
+ */
+GetRelationalDatabaseResponse * LightsailClient::getRelationalDatabase(const GetRelationalDatabaseRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseBlueprintsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of available database blueprints in Amazon Lightsail. A blueprint describes the major engine version of a
+ *
+ * database>
+ *
+ * You can use a blueprint ID to create a new database that runs a specific database
+ */
+GetRelationalDatabaseBlueprintsResponse * LightsailClient::getRelationalDatabaseBlueprints(const GetRelationalDatabaseBlueprintsRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseBlueprintsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseBundlesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the list of bundles that are available in Amazon Lightsail. A bundle describes the performance specifications
+ * for a
+ *
+ * database>
+ *
+ * You can use a bundle ID to create a new database with explicit performance
+ */
+GetRelationalDatabaseBundlesResponse * LightsailClient::getRelationalDatabaseBundles(const GetRelationalDatabaseBundlesRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseBundlesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of events for a specific database in Amazon
+ */
+GetRelationalDatabaseEventsResponse * LightsailClient::getRelationalDatabaseEvents(const GetRelationalDatabaseEventsRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseLogEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of log events for a database in Amazon
+ */
+GetRelationalDatabaseLogEventsResponse * LightsailClient::getRelationalDatabaseLogEvents(const GetRelationalDatabaseLogEventsRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseLogEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseLogStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of available log streams for a specific database in Amazon
+ */
+GetRelationalDatabaseLogStreamsResponse * LightsailClient::getRelationalDatabaseLogStreams(const GetRelationalDatabaseLogStreamsRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseLogStreamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseMasterUserPasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the current, previous, or pending versions of the master user password for a Lightsail
+ *
+ * database>
+ *
+ * The <code>asdf</code> operation GetRelationalDatabaseMasterUserPassword supports tag-based access control via resource
+ * tags applied to the resource identified by
+ */
+GetRelationalDatabaseMasterUserPasswordResponse * LightsailClient::getRelationalDatabaseMasterUserPassword(const GetRelationalDatabaseMasterUserPasswordRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseMasterUserPasswordResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseMetricDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the data points of the specified metric for a database in Amazon
+ */
+GetRelationalDatabaseMetricDataResponse * LightsailClient::getRelationalDatabaseMetricData(const GetRelationalDatabaseMetricDataRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseMetricDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns all of the runtime parameters offered by the underlying database software, or engine, for a specific database in
+ * Amazon
+ *
+ * Lightsail>
+ *
+ * In addition to the parameter names and values, this operation returns other information about each parameter. This
+ * information includes whether changes require a reboot, whether the parameter is modifiable, the allowed values, and the
+ * data
+ */
+GetRelationalDatabaseParametersResponse * LightsailClient::getRelationalDatabaseParameters(const GetRelationalDatabaseParametersRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseParametersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseSnapshotResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a specific database snapshot in Amazon
+ */
+GetRelationalDatabaseSnapshotResponse * LightsailClient::getRelationalDatabaseSnapshot(const GetRelationalDatabaseSnapshotRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseSnapshotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabaseSnapshotsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about all of your database snapshots in Amazon
+ */
+GetRelationalDatabaseSnapshotsResponse * LightsailClient::getRelationalDatabaseSnapshots(const GetRelationalDatabaseSnapshotsRequest &request)
+{
+    return qobject_cast<GetRelationalDatabaseSnapshotsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * GetRelationalDatabasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about all of your databases in Amazon
+ */
+GetRelationalDatabasesResponse * LightsailClient::getRelationalDatabases(const GetRelationalDatabasesRequest &request)
+{
+    return qobject_cast<GetRelationalDatabasesResponse *>(send(request));
 }
 
 /*!
@@ -1150,6 +1751,12 @@ IsVpcPeeredResponse * LightsailClient::isVpcPeered(const IsVpcPeeredRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds public ports to an Amazon Lightsail
+ *
+ * instance>
+ *
+ * The <code>open instance public ports</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 OpenInstancePublicPortsResponse * LightsailClient::openInstancePublicPorts(const OpenInstancePublicPortsRequest &request)
 {
@@ -1177,6 +1784,12 @@ PeerVpcResponse * LightsailClient::peerVpc(const PeerVpcRequest &request)
  *
  * Sets the specified open ports for an Amazon Lightsail instance, and closes all ports for every protocol not included in
  * the current
+ *
+ * request>
+ *
+ * The <code>put instance public ports</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const PutInstancePublicPortsRequest &request)
 {
@@ -1191,10 +1804,35 @@ PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const P
  *
  * Restarts a specific instance. When your Amazon Lightsail instance is finished rebooting, Lightsail assigns a new public
  * IP address. To use the same IP address after restarting, create a static IP address and attach it to the
+ *
+ * instance>
+ *
+ * The <code>reboot instance</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 RebootInstanceResponse * LightsailClient::rebootInstance(const RebootInstanceRequest &request)
 {
     return qobject_cast<RebootInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * RebootRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Restarts a specific database in Amazon
+ *
+ * Lightsail>
+ *
+ * The <code>reboot relational database</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+RebootRelationalDatabaseResponse * LightsailClient::rebootRelationalDatabase(const RebootRelationalDatabaseRequest &request)
+{
+    return qobject_cast<RebootRelationalDatabaseResponse *>(send(request));
 }
 
 /*!
@@ -1217,10 +1855,36 @@ ReleaseStaticIpResponse * LightsailClient::releaseStaticIp(const ReleaseStaticIp
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the reboot instance
+ *
+ * operation>
+ *
+ * The <code>start instance</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 StartInstanceResponse * LightsailClient::startInstance(const StartInstanceRequest &request)
 {
     return qobject_cast<StartInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * StartRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a specific database from a stopped state in Amazon Lightsail. To restart a database, use the <code>reboot
+ * relational database</code>
+ *
+ * operation>
+ *
+ * The <code>start relational database</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+StartRelationalDatabaseResponse * LightsailClient::startRelationalDatabase(const StartRelationalDatabaseRequest &request)
+{
+    return qobject_cast<StartRelationalDatabaseResponse *>(send(request));
 }
 
 /*!
@@ -1230,10 +1894,56 @@ StartInstanceResponse * LightsailClient::startInstance(const StartInstanceReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stops a specific Amazon Lightsail instance that is currently
+ *
+ * running>
+ *
+ * The <code>stop instance</code> operation supports tag-based access control via resource tags applied to the resource
+ * identified by instanceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 StopInstanceResponse * LightsailClient::stopInstance(const StopInstanceRequest &request)
 {
     return qobject_cast<StopInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * StopRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a specific database that is currently running in Amazon
+ *
+ * Lightsail>
+ *
+ * The <code>stop relational database</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+StopRelationalDatabaseResponse * LightsailClient::stopRelationalDatabase(const StopRelationalDatabaseRequest &request)
+{
+    return qobject_cast<StopRelationalDatabaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to the specified Amazon Lightsail resource. Each resource can have a maximum of 50 tags. Each tag
+ * consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags, see the
+ * <a href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-tags">Lightsail Dev
+ *
+ * Guide</a>>
+ *
+ * The <code>tag resource</code> operation supports tag-based access control via request tags and resource tags applied to
+ * the resource identified by resourceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+TagResourceResponse * LightsailClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
@@ -1251,11 +1961,36 @@ UnpeerVpcResponse * LightsailClient::unpeerVpc(const UnpeerVpcRequest &request)
 
 /*!
  * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified set of tag keys and their values from the specified Amazon Lightsail
+ *
+ * resource>
+ *
+ * The <code>untag resource</code> operation supports tag-based access control via request tags and resource tags applied
+ * to the resource identified by resourceName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+UntagResourceResponse * LightsailClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
  * UpdateDomainEntryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a domain recordset after it is
+ *
+ * created>
+ *
+ * The <code>update domain entry</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by domainName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 UpdateDomainEntryResponse * LightsailClient::updateDomainEntry(const UpdateDomainEntryRequest &request)
 {
@@ -1269,10 +2004,67 @@ UpdateDomainEntryResponse * LightsailClient::updateDomainEntry(const UpdateDomai
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the specified attribute for a load balancer. You can only update one attribute at a
+ *
+ * time>
+ *
+ * The <code>update load balancer attribute</code> operation supports tag-based access control via resource tags applied to
+ * the resource identified by loadBalancerName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
  */
 UpdateLoadBalancerAttributeResponse * LightsailClient::updateLoadBalancerAttribute(const UpdateLoadBalancerAttributeRequest &request)
 {
     return qobject_cast<UpdateLoadBalancerAttributeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * UpdateRelationalDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows the update of one or more attributes of a database in Amazon
+ *
+ * Lightsail>
+ *
+ * Updates are applied immediately, or in cases where the updates could result in an outage, are applied during the
+ * database's predefined maintenance
+ *
+ * window>
+ *
+ * The <code>update relational database</code> operation supports tag-based access control via resource tags applied to the
+ * resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+UpdateRelationalDatabaseResponse * LightsailClient::updateRelationalDatabase(const UpdateRelationalDatabaseRequest &request)
+{
+    return qobject_cast<UpdateRelationalDatabaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * UpdateRelationalDatabaseParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows the update of one or more parameters of a database in Amazon
+ *
+ * Lightsail>
+ *
+ * Parameter updates don't cause outages; therefore, their application is not subject to the preferred maintenance window.
+ * However, there are two ways in which paramater updates are applied: <code>dynamic</code> or <code>pending-reboot</code>.
+ * Parameters marked with a <code>dynamic</code> apply type are applied immediately. Parameters marked with a
+ * <code>pending-reboot</code> apply type are applied only after the database is rebooted using the <code>reboot relational
+ * database</code>
+ *
+ * operation>
+ *
+ * The <code>update relational database parameters</code> operation supports tag-based access control via resource tags
+ * applied to the resource identified by relationalDatabaseName. For more information, see the <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
+ */
+UpdateRelationalDatabaseParametersResponse * LightsailClient::updateRelationalDatabaseParameters(const UpdateRelationalDatabaseParametersRequest &request)
+{
+    return qobject_cast<UpdateRelationalDatabaseParametersResponse *>(send(request));
 }
 
 /*!

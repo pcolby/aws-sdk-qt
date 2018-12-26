@@ -40,6 +40,10 @@ HEADERS += \
     deletesubscriberrequest_p.h \
     deletesubscriberresponse.h \
     deletesubscriberresponse_p.h \
+    describebudgetperformancehistoryrequest.h \
+    describebudgetperformancehistoryrequest_p.h \
+    describebudgetperformancehistoryresponse.h \
+    describebudgetperformancehistoryresponse_p.h \
     describebudgetrequest.h \
     describebudgetrequest_p.h \
     describebudgetresponse.h \
@@ -85,6 +89,8 @@ SOURCES += \
     deletenotificationresponse.cpp \
     deletesubscriberrequest.cpp \
     deletesubscriberresponse.cpp \
+    describebudgetperformancehistoryrequest.cpp \
+    describebudgetperformancehistoryresponse.cpp \
     describebudgetrequest.cpp \
     describebudgetresponse.cpp \
     describebudgetsrequest.cpp \

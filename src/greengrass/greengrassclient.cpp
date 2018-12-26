@@ -25,6 +25,10 @@
 #include "associateroletogroupresponse.h"
 #include "associateserviceroletoaccountrequest.h"
 #include "associateserviceroletoaccountresponse.h"
+#include "createconnectordefinitionrequest.h"
+#include "createconnectordefinitionresponse.h"
+#include "createconnectordefinitionversionrequest.h"
+#include "createconnectordefinitionversionresponse.h"
 #include "createcoredefinitionrequest.h"
 #include "createcoredefinitionresponse.h"
 #include "createcoredefinitionversionrequest.h"
@@ -59,6 +63,8 @@
 #include "createsubscriptiondefinitionresponse.h"
 #include "createsubscriptiondefinitionversionrequest.h"
 #include "createsubscriptiondefinitionversionresponse.h"
+#include "deleteconnectordefinitionrequest.h"
+#include "deleteconnectordefinitionresponse.h"
 #include "deletecoredefinitionrequest.h"
 #include "deletecoredefinitionresponse.h"
 #include "deletedevicedefinitionrequest.h"
@@ -79,8 +85,14 @@
 #include "disassociateservicerolefromaccountresponse.h"
 #include "getassociatedrolerequest.h"
 #include "getassociatedroleresponse.h"
+#include "getbulkdeploymentstatusrequest.h"
+#include "getbulkdeploymentstatusresponse.h"
 #include "getconnectivityinforequest.h"
 #include "getconnectivityinforesponse.h"
+#include "getconnectordefinitionrequest.h"
+#include "getconnectordefinitionresponse.h"
+#include "getconnectordefinitionversionrequest.h"
+#include "getconnectordefinitionversionresponse.h"
 #include "getcoredefinitionrequest.h"
 #include "getcoredefinitionresponse.h"
 #include "getcoredefinitionversionrequest.h"
@@ -117,6 +129,14 @@
 #include "getsubscriptiondefinitionresponse.h"
 #include "getsubscriptiondefinitionversionrequest.h"
 #include "getsubscriptiondefinitionversionresponse.h"
+#include "listbulkdeploymentdetailedreportsrequest.h"
+#include "listbulkdeploymentdetailedreportsresponse.h"
+#include "listbulkdeploymentsrequest.h"
+#include "listbulkdeploymentsresponse.h"
+#include "listconnectordefinitionversionsrequest.h"
+#include "listconnectordefinitionversionsresponse.h"
+#include "listconnectordefinitionsrequest.h"
+#include "listconnectordefinitionsresponse.h"
 #include "listcoredefinitionversionsrequest.h"
 #include "listcoredefinitionversionsresponse.h"
 #include "listcoredefinitionsrequest.h"
@@ -151,8 +171,14 @@
 #include "listsubscriptiondefinitionsresponse.h"
 #include "resetdeploymentsrequest.h"
 #include "resetdeploymentsresponse.h"
+#include "startbulkdeploymentrequest.h"
+#include "startbulkdeploymentresponse.h"
+#include "stopbulkdeploymentrequest.h"
+#include "stopbulkdeploymentresponse.h"
 #include "updateconnectivityinforequest.h"
 #include "updateconnectivityinforesponse.h"
+#include "updateconnectordefinitionrequest.h"
+#include "updateconnectordefinitionresponse.h"
 #include "updatecoredefinitionrequest.h"
 #include "updatecoredefinitionresponse.h"
 #include "updatedevicedefinitionrequest.h"
@@ -192,9 +218,9 @@ namespace Greengrass {
  * \ingroup aws-clients
  * \inmodule QtAwsGreengrass
  *
- *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
- *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
- *  quickly to local events and operate with intermittent connectivity. AWS Greengrass minimizes the cost of transmitting
+ *  AWS IoT Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
+ *  still using the cloud for management, analytics, and durable storage. AWS IoT Greengrass ensures your devices can
+ *  respond quickly to local events and operate with intermittent connectivity. AWS IoT Greengrass minimizes the cost of
  */
 
 /*!
@@ -256,7 +282,7 @@ GreengrassClient::GreengrassClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a role with a group. Your AWS Greengrass core will use the role to access AWS cloud services. The role's
+ * Associates a role with a group. Your Greengrass core will use the role to access AWS cloud services. The role's
  */
 AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const AssociateRoleToGroupRequest &request)
 {
@@ -269,7 +295,7 @@ AssociateRoleToGroupResponse * GreengrassClient::associateRoleToGroup(const Asso
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a role with your account. AWS Greengrass will use the role to access your Lambda functions and AWS IoT
+ * Associates a role with your account. AWS IoT Greengrass will use the role to access your Lambda functions and AWS IoT
  * resources. This is necessary for deployments to succeed. The role must have at least minimum permissions in the policy
  */
 AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleToAccount(const AssociateServiceRoleToAccountRequest &request)
@@ -279,12 +305,36 @@ AssociateServiceRoleToAccountResponse * GreengrassClient::associateServiceRoleTo
 
 /*!
  * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateConnectorDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a connector definition. You may provide the initial version of the connector definition now or use
+ */
+CreateConnectorDefinitionResponse * GreengrassClient::createConnectorDefinition(const CreateConnectorDefinitionRequest &request)
+{
+    return qobject_cast<CreateConnectorDefinitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * CreateConnectorDefinitionVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateConnectorDefinitionVersionResponse * GreengrassClient::createConnectorDefinitionVersion(const CreateConnectorDefinitionVersionRequest &request)
+{
+    return qobject_cast<CreateConnectorDefinitionVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
  * CreateCoreDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a core definition. You may provide the initial version of the core definition now or use
- * ''CreateCoreDefinitionVersion'' at a later time. AWS Greengrass groups must each contain exactly one AWS Greengrass
  */
 CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const CreateCoreDefinitionRequest &request)
 {
@@ -297,7 +347,7 @@ CreateCoreDefinitionResponse * GreengrassClient::createCoreDefinition(const Crea
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a version of a core definition that has already been defined. AWS Greengrass groups must each contain exactly
+ * Creates a version of a core definition that has already been defined. Greengrass groups must each contain exactly one
  */
 CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVersion(const CreateCoreDefinitionVersionRequest &request)
 {
@@ -310,6 +360,7 @@ CreateCoreDefinitionVersionResponse * GreengrassClient::createCoreDefinitionVers
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a deployment. ''CreateDeployment'' requests are idempotent with respect to the ''X-Amzn-Client-Token'' token and
  */
 CreateDeploymentResponse * GreengrassClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -373,6 +424,8 @@ CreateFunctionDefinitionVersionResponse * GreengrassClient::createFunctionDefini
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a group. You may provide the initial version of the group or use ''CreateGroupVersion'' at a later time. Tip:
+ * You can use the ''gg_group_setup'' package (https://github.com/awslabs/aws-greengrass-group-setup) as a library or
  */
 CreateGroupResponse * GreengrassClient::createGroup(const CreateGroupRequest &request)
 {
@@ -490,6 +543,18 @@ CreateSubscriptionDefinitionResponse * GreengrassClient::createSubscriptionDefin
 CreateSubscriptionDefinitionVersionResponse * GreengrassClient::createSubscriptionDefinitionVersion(const CreateSubscriptionDefinitionVersionRequest &request)
 {
     return qobject_cast<CreateSubscriptionDefinitionVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * DeleteConnectorDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteConnectorDefinitionResponse * GreengrassClient::deleteConnectorDefinition(const DeleteConnectorDefinitionRequest &request)
+{
+    return qobject_cast<DeleteConnectorDefinitionResponse *>(send(request));
 }
 
 /*!
@@ -614,6 +679,18 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
 
 /*!
  * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetBulkDeploymentStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetBulkDeploymentStatusResponse * GreengrassClient::getBulkDeploymentStatus(const GetBulkDeploymentStatusRequest &request)
+{
+    return qobject_cast<GetBulkDeploymentStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
  * GetConnectivityInfoResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -622,6 +699,32 @@ GetAssociatedRoleResponse * GreengrassClient::getAssociatedRole(const GetAssocia
 GetConnectivityInfoResponse * GreengrassClient::getConnectivityInfo(const GetConnectivityInfoRequest &request)
 {
     return qobject_cast<GetConnectivityInfoResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetConnectorDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetConnectorDefinitionResponse * GreengrassClient::getConnectorDefinition(const GetConnectorDefinitionRequest &request)
+{
+    return qobject_cast<GetConnectorDefinitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetConnectorDefinitionVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about a connector definition version, including the connectors that the version contains.
+ * Connectors are prebuilt modules that interact with local infrastructure, device protocols, AWS, and other cloud
+ */
+GetConnectorDefinitionVersionResponse * GreengrassClient::getConnectorDefinitionVersion(const GetConnectorDefinitionVersionRequest &request)
+{
+    return qobject_cast<GetConnectorDefinitionVersionResponse *>(send(request));
 }
 
 /*!
@@ -843,6 +946,56 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
 
 /*!
  * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListBulkDeploymentDetailedReportsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a paginated list of the deployments that have been started in a bulk deployment operation, and their current
+ */
+ListBulkDeploymentDetailedReportsResponse * GreengrassClient::listBulkDeploymentDetailedReports(const ListBulkDeploymentDetailedReportsRequest &request)
+{
+    return qobject_cast<ListBulkDeploymentDetailedReportsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListBulkDeploymentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListBulkDeploymentsResponse * GreengrassClient::listBulkDeployments(const ListBulkDeploymentsRequest &request)
+{
+    return qobject_cast<ListBulkDeploymentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListConnectorDefinitionVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the versions of a connector definition, which are containers for connectors. Connectors run on the Greengrass core
+ */
+ListConnectorDefinitionVersionsResponse * GreengrassClient::listConnectorDefinitionVersions(const ListConnectorDefinitionVersionsRequest &request)
+{
+    return qobject_cast<ListConnectorDefinitionVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListConnectorDefinitionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListConnectorDefinitionsResponse * GreengrassClient::listConnectorDefinitions(const ListConnectorDefinitionsRequest &request)
+{
+    return qobject_cast<ListConnectorDefinitionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
  * ListCoreDefinitionVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1047,6 +1200,35 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
 
 /*!
  * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * StartBulkDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deploys multiple groups in one operation. This action starts the bulk deployment of a specified set of group versions.
+ * Each group version deployment will be triggered with an adaptive rate that has a fixed upper limit. We recommend that
+ * you include an ''X-Amzn-Client-Token'' token in every ''StartBulkDeployment'' request. These requests are idempotent
+ */
+StartBulkDeploymentResponse * GreengrassClient::startBulkDeployment(const StartBulkDeploymentRequest &request)
+{
+    return qobject_cast<StartBulkDeploymentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * StopBulkDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the execution of a bulk deployment. This action returns a status of ''Stopping'' until the deployment is stopped.
+ * You cannot start a new bulk deployment while a previous deployment is in the ''Stopping'' state. This action doesn't
+ */
+StopBulkDeploymentResponse * GreengrassClient::stopBulkDeployment(const StopBulkDeploymentRequest &request)
+{
+    return qobject_cast<StopBulkDeploymentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
  * UpdateConnectivityInfoResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1056,6 +1238,18 @@ ResetDeploymentsResponse * GreengrassClient::resetDeployments(const ResetDeploym
 UpdateConnectivityInfoResponse * GreengrassClient::updateConnectivityInfo(const UpdateConnectivityInfoRequest &request)
 {
     return qobject_cast<UpdateConnectivityInfoResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateConnectorDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateConnectorDefinitionResponse * GreengrassClient::updateConnectorDefinition(const UpdateConnectorDefinitionRequest &request)
+{
+    return qobject_cast<UpdateConnectorDefinitionResponse *>(send(request));
 }
 
 /*!

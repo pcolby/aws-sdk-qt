@@ -40,10 +40,18 @@ HEADERS += \
     deleteprojectrequest_p.h \
     deleteprojectresponse.h \
     deleteprojectresponse_p.h \
+    deletesourcecredentialsrequest.h \
+    deletesourcecredentialsrequest_p.h \
+    deletesourcecredentialsresponse.h \
+    deletesourcecredentialsresponse_p.h \
     deletewebhookrequest.h \
     deletewebhookrequest_p.h \
     deletewebhookresponse.h \
     deletewebhookresponse_p.h \
+    importsourcecredentialsrequest.h \
+    importsourcecredentialsrequest_p.h \
+    importsourcecredentialsresponse.h \
+    importsourcecredentialsresponse_p.h \
     invalidateprojectcacherequest.h \
     invalidateprojectcacherequest_p.h \
     invalidateprojectcacheresponse.h \
@@ -64,6 +72,10 @@ HEADERS += \
     listprojectsrequest_p.h \
     listprojectsresponse.h \
     listprojectsresponse_p.h \
+    listsourcecredentialsrequest.h \
+    listsourcecredentialsrequest_p.h \
+    listsourcecredentialsresponse.h \
+    listsourcecredentialsresponse_p.h \
     startbuildrequest.h \
     startbuildrequest_p.h \
     startbuildresponse.h \
@@ -97,8 +109,12 @@ SOURCES += \
     createwebhookresponse.cpp \
     deleteprojectrequest.cpp \
     deleteprojectresponse.cpp \
+    deletesourcecredentialsrequest.cpp \
+    deletesourcecredentialsresponse.cpp \
     deletewebhookrequest.cpp \
     deletewebhookresponse.cpp \
+    importsourcecredentialsrequest.cpp \
+    importsourcecredentialsresponse.cpp \
     invalidateprojectcacherequest.cpp \
     invalidateprojectcacheresponse.cpp \
     listbuildsforprojectrequest.cpp \
@@ -109,6 +125,8 @@ SOURCES += \
     listcuratedenvironmentimagesresponse.cpp \
     listprojectsrequest.cpp \
     listprojectsresponse.cpp \
+    listsourcecredentialsrequest.cpp \
+    listsourcecredentialsresponse.cpp \
     startbuildrequest.cpp \
     startbuildresponse.cpp \
     stopbuildrequest.cpp \

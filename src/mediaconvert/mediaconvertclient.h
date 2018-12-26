@@ -28,6 +28,8 @@ namespace QtAws {
 namespace MediaConvert {
 
 class MediaConvertClientPrivate;
+class AssociateCertificateRequest;
+class AssociateCertificateResponse;
 class CancelJobRequest;
 class CancelJobResponse;
 class CreateJobRequest;
@@ -46,6 +48,8 @@ class DeleteQueueRequest;
 class DeleteQueueResponse;
 class DescribeEndpointsRequest;
 class DescribeEndpointsResponse;
+class DisassociateCertificateRequest;
+class DisassociateCertificateResponse;
 class GetJobRequest;
 class GetJobResponse;
 class GetJobTemplateRequest;
@@ -91,6 +95,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateCertificateResponse * associateCertificate(const AssociateCertificateRequest &request);
     CancelJobResponse * cancelJob(const CancelJobRequest &request);
     CreateJobResponse * createJob(const CreateJobRequest &request);
     CreateJobTemplateResponse * createJobTemplate(const CreateJobTemplateRequest &request);
@@ -100,6 +105,7 @@ public slots:
     DeletePresetResponse * deletePreset(const DeletePresetRequest &request);
     DeleteQueueResponse * deleteQueue(const DeleteQueueRequest &request);
     DescribeEndpointsResponse * describeEndpoints(const DescribeEndpointsRequest &request);
+    DisassociateCertificateResponse * disassociateCertificate(const DisassociateCertificateRequest &request);
     GetJobResponse * getJob(const GetJobRequest &request);
     GetJobTemplateResponse * getJobTemplate(const GetJobTemplateRequest &request);
     GetPresetResponse * getPreset(const GetPresetRequest &request);

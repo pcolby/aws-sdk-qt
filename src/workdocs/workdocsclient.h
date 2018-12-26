@@ -94,6 +94,8 @@ class GetFolderRequest;
 class GetFolderResponse;
 class GetFolderPathRequest;
 class GetFolderPathResponse;
+class GetResourcesRequest;
+class GetResourcesResponse;
 class InitiateDocumentVersionUploadRequest;
 class InitiateDocumentVersionUploadResponse;
 class RemoveAllResourcePermissionsRequest;
@@ -158,6 +160,7 @@ public slots:
     GetDocumentVersionResponse * getDocumentVersion(const GetDocumentVersionRequest &request);
     GetFolderResponse * getFolder(const GetFolderRequest &request);
     GetFolderPathResponse * getFolderPath(const GetFolderPathRequest &request);
+    GetResourcesResponse * getResources(const GetResourcesRequest &request);
     InitiateDocumentVersionUploadResponse * initiateDocumentVersionUpload(const InitiateDocumentVersionUploadRequest &request);
     RemoveAllResourcePermissionsResponse * removeAllResourcePermissions(const RemoveAllResourcePermissionsRequest &request);
     RemoveResourcePermissionResponse * removeResourcePermission(const RemoveResourcePermissionRequest &request);

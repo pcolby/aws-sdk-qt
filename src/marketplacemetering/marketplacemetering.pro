@@ -24,6 +24,10 @@ HEADERS += \
     meterusagerequest_p.h \
     meterusageresponse.h \
     meterusageresponse_p.h \
+    registerusagerequest.h \
+    registerusagerequest_p.h \
+    registerusageresponse.h \
+    registerusageresponse_p.h \
     resolvecustomerrequest.h \
     resolvecustomerrequest_p.h \
     resolvecustomerresponse.h \
@@ -37,6 +41,8 @@ SOURCES += \
     marketplacemeteringresponse.cpp \
     meterusagerequest.cpp \
     meterusageresponse.cpp \
+    registerusagerequest.cpp \
+    registerusageresponse.cpp \
     resolvecustomerrequest.cpp \
     resolvecustomerresponse.cpp \
 

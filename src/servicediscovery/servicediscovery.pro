@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    createhttpnamespacerequest.h \
+    createhttpnamespacerequest_p.h \
+    createhttpnamespaceresponse.h \
+    createhttpnamespaceresponse_p.h \
     createprivatednsnamespacerequest.h \
     createprivatednsnamespacerequest_p.h \
     createprivatednsnamespaceresponse.h \
@@ -34,6 +38,10 @@ HEADERS += \
     deregisterinstancerequest_p.h \
     deregisterinstanceresponse.h \
     deregisterinstanceresponse_p.h \
+    discoverinstancesrequest.h \
+    discoverinstancesrequest_p.h \
+    discoverinstancesresponse.h \
+    discoverinstancesresponse_p.h \
     getinstancerequest.h \
     getinstancerequest_p.h \
     getinstanceresponse.h \
@@ -90,6 +98,8 @@ HEADERS += \
     updateserviceresponse_p.h \
 
 SOURCES += \
+    createhttpnamespacerequest.cpp \
+    createhttpnamespaceresponse.cpp \
     createprivatednsnamespacerequest.cpp \
     createprivatednsnamespaceresponse.cpp \
     createpublicdnsnamespacerequest.cpp \
@@ -102,6 +112,8 @@ SOURCES += \
     deleteserviceresponse.cpp \
     deregisterinstancerequest.cpp \
     deregisterinstanceresponse.cpp \
+    discoverinstancesrequest.cpp \
+    discoverinstancesresponse.cpp \
     getinstancerequest.cpp \
     getinstanceresponse.cpp \
     getinstanceshealthstatusrequest.cpp \

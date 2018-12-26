@@ -44,6 +44,7 @@ public:
         DeleteNotificationAction,
         DeleteSubscriberAction,
         DescribeBudgetAction,
+        DescribeBudgetPerformanceHistoryAction,
         DescribeBudgetsAction,
         DescribeNotificationsForBudgetAction,
         DescribeSubscribersForNotificationAction,

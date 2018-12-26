@@ -59,6 +59,8 @@
 #include "deleteobjecttaggingresponse.h"
 #include "deleteobjectsrequest.h"
 #include "deleteobjectsresponse.h"
+#include "deletepublicaccessblockrequest.h"
+#include "deletepublicaccessblockresponse.h"
 #include "getbucketaccelerateconfigurationrequest.h"
 #include "getbucketaccelerateconfigurationresponse.h"
 #include "getbucketaclrequest.h"
@@ -87,6 +89,8 @@
 #include "getbucketnotificationconfigurationresponse.h"
 #include "getbucketpolicyrequest.h"
 #include "getbucketpolicyresponse.h"
+#include "getbucketpolicystatusrequest.h"
+#include "getbucketpolicystatusresponse.h"
 #include "getbucketreplicationrequest.h"
 #include "getbucketreplicationresponse.h"
 #include "getbucketrequestpaymentrequest.h"
@@ -101,10 +105,18 @@
 #include "getobjectresponse.h"
 #include "getobjectaclrequest.h"
 #include "getobjectaclresponse.h"
+#include "getobjectlegalholdrequest.h"
+#include "getobjectlegalholdresponse.h"
+#include "getobjectlockconfigurationrequest.h"
+#include "getobjectlockconfigurationresponse.h"
+#include "getobjectretentionrequest.h"
+#include "getobjectretentionresponse.h"
 #include "getobjecttaggingrequest.h"
 #include "getobjecttaggingresponse.h"
 #include "getobjecttorrentrequest.h"
 #include "getobjecttorrentresponse.h"
+#include "getpublicaccessblockrequest.h"
+#include "getpublicaccessblockresponse.h"
 #include "headbucketrequest.h"
 #include "headbucketresponse.h"
 #include "headobjectrequest.h"
@@ -167,8 +179,16 @@
 #include "putobjectresponse.h"
 #include "putobjectaclrequest.h"
 #include "putobjectaclresponse.h"
+#include "putobjectlegalholdrequest.h"
+#include "putobjectlegalholdresponse.h"
+#include "putobjectlockconfigurationrequest.h"
+#include "putobjectlockconfigurationresponse.h"
+#include "putobjectretentionrequest.h"
+#include "putobjectretentionresponse.h"
 #include "putobjecttaggingrequest.h"
 #include "putobjecttaggingresponse.h"
+#include "putpublicaccessblockrequest.h"
+#include "putpublicaccessblockresponse.h"
 #include "restoreobjectrequest.h"
 #include "restoreobjectresponse.h"
 #include "selectobjectcontentrequest.h"
@@ -364,7 +384,7 @@ DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the cors configuration information set for the
+ * Deletes the CORS configuration information set for the
  */
 DeleteBucketCorsResponse * S3Client::deleteBucketCors(const DeleteBucketCorsRequest &request)
 {
@@ -442,7 +462,9 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the replication configuration from the
+ * Deletes the replication configuration from the bucket. For information about replication configuration, see <a href="
+ * https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">Cross-Region Replication (CRR)</a> in the <i>Amazon S3
+ * Developer Guide</i>.
  */
 DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const DeleteBucketReplicationRequest &request)
 {
@@ -518,6 +540,19 @@ DeleteObjectsResponse * S3Client::deleteObjects(const DeleteObjectsRequest &requ
 
 /*!
  * Sends \a request to the S3Client service, and returns a pointer to an
+ * DeletePublicAccessBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the <code>PublicAccessBlock</code> configuration from an Amazon S3
+ */
+DeletePublicAccessBlockResponse * S3Client::deletePublicAccessBlock(const DeletePublicAccessBlockRequest &request)
+{
+    return qobject_cast<DeletePublicAccessBlockResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
  * GetBucketAccelerateConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -561,7 +596,7 @@ GetBucketAnalyticsConfigurationResponse * S3Client::getBucketAnalyticsConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the cors configuration for the
+ * Returns the CORS configuration for the
  */
 GetBucketCorsResponse * S3Client::getBucketCors(const GetBucketCorsRequest &request)
 {
@@ -701,11 +736,29 @@ GetBucketPolicyResponse * S3Client::getBucketPolicy(const GetBucketPolicyRequest
 
 /*!
  * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetBucketPolicyStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the policy status for an Amazon S3 bucket, indicating whether the bucket is
+ */
+GetBucketPolicyStatusResponse * S3Client::getBucketPolicyStatus(const GetBucketPolicyStatusRequest &request)
+{
+    return qobject_cast<GetBucketPolicyStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
  * GetBucketReplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the replication configuration of a
+ *
+ * bucket> <note>
+ *
+ * It can take a while to propagate the put or delete a replication configuration to all Amazon S3 systems. Therefore, a
+ * get request soon after put or delete can return a wrong result.
  */
 GetBucketReplicationResponse * S3Client::getBucketReplication(const GetBucketReplicationRequest &request)
 {
@@ -792,6 +845,46 @@ GetObjectAclResponse * S3Client::getObjectAcl(const GetObjectAclRequest &request
 
 /*!
  * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectLegalHoldResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets an object's current Legal Hold
+ */
+GetObjectLegalHoldResponse * S3Client::getObjectLegalHold(const GetObjectLegalHoldRequest &request)
+{
+    return qobject_cast<GetObjectLegalHoldResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectLockConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the Object Lock configuration for a bucket. The rule specified in the Object Lock configuration will be applied by
+ * default to every new object placed in the specified
+ */
+GetObjectLockConfigurationResponse * S3Client::getObjectLockConfiguration(const GetObjectLockConfigurationRequest &request)
+{
+    return qobject_cast<GetObjectLockConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetObjectRetentionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves an object's retention
+ */
+GetObjectRetentionResponse * S3Client::getObjectRetention(const GetObjectRetentionRequest &request)
+{
+    return qobject_cast<GetObjectRetentionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
  * GetObjectTaggingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -814,6 +907,19 @@ GetObjectTaggingResponse * S3Client::getObjectTagging(const GetObjectTaggingRequ
 GetObjectTorrentResponse * S3Client::getObjectTorrent(const GetObjectTorrentRequest &request)
 {
     return qobject_cast<GetObjectTorrentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * GetPublicAccessBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon S3
+ */
+GetPublicAccessBlockResponse * S3Client::getPublicAccessBlock(const GetPublicAccessBlockRequest &request)
+{
+    return qobject_cast<GetPublicAccessBlockResponse *>(send(request));
 }
 
 /*!
@@ -1021,7 +1127,7 @@ PutBucketAnalyticsConfigurationResponse * S3Client::putBucketAnalyticsConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the cors configuration for a
+ * Sets the CORS configuration for a
  */
 PutBucketCorsResponse * S3Client::putBucketCors(const PutBucketCorsRequest &request)
 {
@@ -1152,7 +1258,9 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new replication configuration (or replaces an existing one, if
+ * Creates a replication configuration or replaces an existing one. For more information, see <a href="
+ * https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">Cross-Region Replication (CRR)</a> in the <i>Amazon S3
+ * Developer Guide</i>.
  */
 PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketReplicationRequest &request)
 {
@@ -1241,6 +1349,46 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
 
 /*!
  * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutObjectLegalHoldResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies a Legal Hold configuration to the specified
+ */
+PutObjectLegalHoldResponse * S3Client::putObjectLegalHold(const PutObjectLegalHoldRequest &request)
+{
+    return qobject_cast<PutObjectLegalHoldResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutObjectLockConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Places an Object Lock configuration on the specified bucket. The rule specified in the Object Lock configuration will be
+ * applied by default to every new object placed in the specified
+ */
+PutObjectLockConfigurationResponse * S3Client::putObjectLockConfiguration(const PutObjectLockConfigurationRequest &request)
+{
+    return qobject_cast<PutObjectLockConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutObjectRetentionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Places an Object Retention configuration on an
+ */
+PutObjectRetentionResponse * S3Client::putObjectRetention(const PutObjectRetentionRequest &request)
+{
+    return qobject_cast<PutObjectRetentionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
  * PutObjectTaggingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1250,6 +1398,19 @@ PutObjectAclResponse * S3Client::putObjectAcl(const PutObjectAclRequest &request
 PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequest &request)
 {
     return qobject_cast<PutObjectTaggingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3Client service, and returns a pointer to an
+ * PutPublicAccessBlockResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or modifies the <code>PublicAccessBlock</code> configuration for an Amazon S3
+ */
+PutPublicAccessBlockResponse * S3Client::putPublicAccessBlock(const PutPublicAccessBlockRequest &request)
+{
+    return qobject_cast<PutPublicAccessBlockResponse *>(send(request));
 }
 
 /*!

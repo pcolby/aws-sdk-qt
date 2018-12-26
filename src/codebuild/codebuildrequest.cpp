@@ -42,12 +42,15 @@ namespace CodeBuild {
  * \value CreateProjectAction CodeBuild CreateProject action.
  * \value CreateWebhookAction CodeBuild CreateWebhook action.
  * \value DeleteProjectAction CodeBuild DeleteProject action.
+ * \value DeleteSourceCredentialsAction CodeBuild DeleteSourceCredentials action.
  * \value DeleteWebhookAction CodeBuild DeleteWebhook action.
+ * \value ImportSourceCredentialsAction CodeBuild ImportSourceCredentials action.
  * \value InvalidateProjectCacheAction CodeBuild InvalidateProjectCache action.
  * \value ListBuildsAction CodeBuild ListBuilds action.
  * \value ListBuildsForProjectAction CodeBuild ListBuildsForProject action.
  * \value ListCuratedEnvironmentImagesAction CodeBuild ListCuratedEnvironmentImages action.
  * \value ListProjectsAction CodeBuild ListProjects action.
+ * \value ListSourceCredentialsAction CodeBuild ListSourceCredentials action.
  * \value StartBuildAction CodeBuild StartBuild action.
  * \value StopBuildAction CodeBuild StopBuild action.
  * \value UpdateProjectAction CodeBuild UpdateProject action.

@@ -41,12 +41,15 @@ public:
         DeleteContainerAction,
         DeleteContainerPolicyAction,
         DeleteCorsPolicyAction,
+        DeleteLifecyclePolicyAction,
         DescribeContainerAction,
         GetContainerPolicyAction,
         GetCorsPolicyAction,
+        GetLifecyclePolicyAction,
         ListContainersAction,
         PutContainerPolicyAction,
         PutCorsPolicyAction,
+        PutLifecyclePolicyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -232,6 +232,10 @@ HEADERS += \
     schedulerunrequest_p.h \
     schedulerunresponse.h \
     schedulerunresponse_p.h \
+    stopjobrequest.h \
+    stopjobrequest_p.h \
+    stopjobresponse.h \
+    stopjobresponse_p.h \
     stopremoteaccesssessionrequest.h \
     stopremoteaccesssessionrequest_p.h \
     stopremoteaccesssessionresponse.h \
@@ -260,6 +264,10 @@ HEADERS += \
     updateprojectrequest_p.h \
     updateprojectresponse.h \
     updateprojectresponse_p.h \
+    updateuploadrequest.h \
+    updateuploadrequest_p.h \
+    updateuploadresponse.h \
+    updateuploadresponse_p.h \
     updatevpceconfigurationrequest.h \
     updatevpceconfigurationrequest_p.h \
     updatevpceconfigurationresponse.h \
@@ -377,6 +385,8 @@ SOURCES += \
     renewofferingresponse.cpp \
     schedulerunrequest.cpp \
     schedulerunresponse.cpp \
+    stopjobrequest.cpp \
+    stopjobresponse.cpp \
     stopremoteaccesssessionrequest.cpp \
     stopremoteaccesssessionresponse.cpp \
     stoprunrequest.cpp \
@@ -391,6 +401,8 @@ SOURCES += \
     updatenetworkprofileresponse.cpp \
     updateprojectrequest.cpp \
     updateprojectresponse.cpp \
+    updateuploadrequest.cpp \
+    updateuploadresponse.cpp \
     updatevpceconfigurationrequest.cpp \
     updatevpceconfigurationresponse.cpp \
 

@@ -18,6 +18,10 @@ HEADERS += \
     createservicerequest_p.h \
     createserviceresponse.h \
     createserviceresponse_p.h \
+    deleteaccountsettingrequest.h \
+    deleteaccountsettingrequest_p.h \
+    deleteaccountsettingresponse.h \
+    deleteaccountsettingresponse_p.h \
     deleteattributesrequest.h \
     deleteattributesrequest_p.h \
     deleteattributesresponse.h \
@@ -68,6 +72,10 @@ HEADERS += \
     ecsrequest_p.h \
     ecsresponse.h \
     ecsresponse_p.h \
+    listaccountsettingsrequest.h \
+    listaccountsettingsrequest_p.h \
+    listaccountsettingsresponse.h \
+    listaccountsettingsresponse_p.h \
     listattributesrequest.h \
     listattributesrequest_p.h \
     listattributesresponse.h \
@@ -84,6 +92,10 @@ HEADERS += \
     listservicesrequest_p.h \
     listservicesresponse.h \
     listservicesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtaskdefinitionfamiliesrequest.h \
     listtaskdefinitionfamiliesrequest_p.h \
     listtaskdefinitionfamiliesresponse.h \
@@ -96,6 +108,10 @@ HEADERS += \
     listtasksrequest_p.h \
     listtasksresponse.h \
     listtasksresponse_p.h \
+    putaccountsettingrequest.h \
+    putaccountsettingrequest_p.h \
+    putaccountsettingresponse.h \
+    putaccountsettingresponse_p.h \
     putattributesrequest.h \
     putattributesrequest_p.h \
     putattributesresponse.h \
@@ -128,6 +144,14 @@ HEADERS += \
     submittaskstatechangerequest_p.h \
     submittaskstatechangeresponse.h \
     submittaskstatechangeresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatecontaineragentrequest.h \
     updatecontaineragentrequest_p.h \
     updatecontaineragentresponse.h \
@@ -146,6 +170,8 @@ SOURCES += \
     createclusterresponse.cpp \
     createservicerequest.cpp \
     createserviceresponse.cpp \
+    deleteaccountsettingrequest.cpp \
+    deleteaccountsettingresponse.cpp \
     deleteattributesrequest.cpp \
     deleteattributesresponse.cpp \
     deleteclusterrequest.cpp \
@@ -171,6 +197,8 @@ SOURCES += \
     ecsclient.cpp \
     ecsrequest.cpp \
     ecsresponse.cpp \
+    listaccountsettingsrequest.cpp \
+    listaccountsettingsresponse.cpp \
     listattributesrequest.cpp \
     listattributesresponse.cpp \
     listclustersrequest.cpp \
@@ -179,12 +207,16 @@ SOURCES += \
     listcontainerinstancesresponse.cpp \
     listservicesrequest.cpp \
     listservicesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtaskdefinitionfamiliesrequest.cpp \
     listtaskdefinitionfamiliesresponse.cpp \
     listtaskdefinitionsrequest.cpp \
     listtaskdefinitionsresponse.cpp \
     listtasksrequest.cpp \
     listtasksresponse.cpp \
+    putaccountsettingrequest.cpp \
+    putaccountsettingresponse.cpp \
     putattributesrequest.cpp \
     putattributesresponse.cpp \
     registercontainerinstancerequest.cpp \
@@ -201,6 +233,10 @@ SOURCES += \
     submitcontainerstatechangeresponse.cpp \
     submittaskstatechangerequest.cpp \
     submittaskstatechangeresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatecontaineragentrequest.cpp \
     updatecontaineragentresponse.cpp \
     updatecontainerinstancesstaterequest.cpp \

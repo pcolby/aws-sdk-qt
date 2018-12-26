@@ -51,6 +51,7 @@ namespace Glue {
  * \value CreateJobAction Glue CreateJob action.
  * \value CreatePartitionAction Glue CreatePartition action.
  * \value CreateScriptAction Glue CreateScript action.
+ * \value CreateSecurityConfigurationAction Glue CreateSecurityConfiguration action.
  * \value CreateTableAction Glue CreateTable action.
  * \value CreateTriggerAction Glue CreateTrigger action.
  * \value CreateUserDefinedFunctionAction Glue CreateUserDefinedFunction action.
@@ -61,6 +62,8 @@ namespace Glue {
  * \value DeleteDevEndpointAction Glue DeleteDevEndpoint action.
  * \value DeleteJobAction Glue DeleteJob action.
  * \value DeletePartitionAction Glue DeletePartition action.
+ * \value DeleteResourcePolicyAction Glue DeleteResourcePolicy action.
+ * \value DeleteSecurityConfigurationAction Glue DeleteSecurityConfiguration action.
  * \value DeleteTableAction Glue DeleteTable action.
  * \value DeleteTableVersionAction Glue DeleteTableVersion action.
  * \value DeleteTriggerAction Glue DeleteTrigger action.
@@ -73,6 +76,7 @@ namespace Glue {
  * \value GetCrawlerAction Glue GetCrawler action.
  * \value GetCrawlerMetricsAction Glue GetCrawlerMetrics action.
  * \value GetCrawlersAction Glue GetCrawlers action.
+ * \value GetDataCatalogEncryptionSettingsAction Glue GetDataCatalogEncryptionSettings action.
  * \value GetDatabaseAction Glue GetDatabase action.
  * \value GetDatabasesAction Glue GetDatabases action.
  * \value GetDataflowGraphAction Glue GetDataflowGraph action.
@@ -86,6 +90,9 @@ namespace Glue {
  * \value GetPartitionAction Glue GetPartition action.
  * \value GetPartitionsAction Glue GetPartitions action.
  * \value GetPlanAction Glue GetPlan action.
+ * \value GetResourcePolicyAction Glue GetResourcePolicy action.
+ * \value GetSecurityConfigurationAction Glue GetSecurityConfiguration action.
+ * \value GetSecurityConfigurationsAction Glue GetSecurityConfigurations action.
  * \value GetTableAction Glue GetTable action.
  * \value GetTableVersionAction Glue GetTableVersion action.
  * \value GetTableVersionsAction Glue GetTableVersions action.
@@ -95,6 +102,8 @@ namespace Glue {
  * \value GetUserDefinedFunctionAction Glue GetUserDefinedFunction action.
  * \value GetUserDefinedFunctionsAction Glue GetUserDefinedFunctions action.
  * \value ImportCatalogToGlueAction Glue ImportCatalogToGlue action.
+ * \value PutDataCatalogEncryptionSettingsAction Glue PutDataCatalogEncryptionSettings action.
+ * \value PutResourcePolicyAction Glue PutResourcePolicy action.
  * \value ResetJobBookmarkAction Glue ResetJobBookmark action.
  * \value StartCrawlerAction Glue StartCrawler action.
  * \value StartCrawlerScheduleAction Glue StartCrawlerSchedule action.

@@ -37,48 +37,80 @@ namespace SageMaker {
  * requests.
  *
  * \value AddTagsAction SageMaker AddTags action.
+ * \value CreateAlgorithmAction SageMaker CreateAlgorithm action.
+ * \value CreateCodeRepositoryAction SageMaker CreateCodeRepository action.
+ * \value CreateCompilationJobAction SageMaker CreateCompilationJob action.
  * \value CreateEndpointAction SageMaker CreateEndpoint action.
  * \value CreateEndpointConfigAction SageMaker CreateEndpointConfig action.
  * \value CreateHyperParameterTuningJobAction SageMaker CreateHyperParameterTuningJob action.
+ * \value CreateLabelingJobAction SageMaker CreateLabelingJob action.
  * \value CreateModelAction SageMaker CreateModel action.
+ * \value CreateModelPackageAction SageMaker CreateModelPackage action.
  * \value CreateNotebookInstanceAction SageMaker CreateNotebookInstance action.
  * \value CreateNotebookInstanceLifecycleConfigAction SageMaker CreateNotebookInstanceLifecycleConfig action.
  * \value CreatePresignedNotebookInstanceUrlAction SageMaker CreatePresignedNotebookInstanceUrl action.
  * \value CreateTrainingJobAction SageMaker CreateTrainingJob action.
  * \value CreateTransformJobAction SageMaker CreateTransformJob action.
+ * \value CreateWorkteamAction SageMaker CreateWorkteam action.
+ * \value DeleteAlgorithmAction SageMaker DeleteAlgorithm action.
+ * \value DeleteCodeRepositoryAction SageMaker DeleteCodeRepository action.
  * \value DeleteEndpointAction SageMaker DeleteEndpoint action.
  * \value DeleteEndpointConfigAction SageMaker DeleteEndpointConfig action.
  * \value DeleteModelAction SageMaker DeleteModel action.
+ * \value DeleteModelPackageAction SageMaker DeleteModelPackage action.
  * \value DeleteNotebookInstanceAction SageMaker DeleteNotebookInstance action.
  * \value DeleteNotebookInstanceLifecycleConfigAction SageMaker DeleteNotebookInstanceLifecycleConfig action.
  * \value DeleteTagsAction SageMaker DeleteTags action.
+ * \value DeleteWorkteamAction SageMaker DeleteWorkteam action.
+ * \value DescribeAlgorithmAction SageMaker DescribeAlgorithm action.
+ * \value DescribeCodeRepositoryAction SageMaker DescribeCodeRepository action.
+ * \value DescribeCompilationJobAction SageMaker DescribeCompilationJob action.
  * \value DescribeEndpointAction SageMaker DescribeEndpoint action.
  * \value DescribeEndpointConfigAction SageMaker DescribeEndpointConfig action.
  * \value DescribeHyperParameterTuningJobAction SageMaker DescribeHyperParameterTuningJob action.
+ * \value DescribeLabelingJobAction SageMaker DescribeLabelingJob action.
  * \value DescribeModelAction SageMaker DescribeModel action.
+ * \value DescribeModelPackageAction SageMaker DescribeModelPackage action.
  * \value DescribeNotebookInstanceAction SageMaker DescribeNotebookInstance action.
  * \value DescribeNotebookInstanceLifecycleConfigAction SageMaker DescribeNotebookInstanceLifecycleConfig action.
+ * \value DescribeSubscribedWorkteamAction SageMaker DescribeSubscribedWorkteam action.
  * \value DescribeTrainingJobAction SageMaker DescribeTrainingJob action.
  * \value DescribeTransformJobAction SageMaker DescribeTransformJob action.
+ * \value DescribeWorkteamAction SageMaker DescribeWorkteam action.
+ * \value GetSearchSuggestionsAction SageMaker GetSearchSuggestions action.
+ * \value ListAlgorithmsAction SageMaker ListAlgorithms action.
+ * \value ListCodeRepositoriesAction SageMaker ListCodeRepositories action.
+ * \value ListCompilationJobsAction SageMaker ListCompilationJobs action.
  * \value ListEndpointConfigsAction SageMaker ListEndpointConfigs action.
  * \value ListEndpointsAction SageMaker ListEndpoints action.
  * \value ListHyperParameterTuningJobsAction SageMaker ListHyperParameterTuningJobs action.
+ * \value ListLabelingJobsAction SageMaker ListLabelingJobs action.
+ * \value ListLabelingJobsForWorkteamAction SageMaker ListLabelingJobsForWorkteam action.
+ * \value ListModelPackagesAction SageMaker ListModelPackages action.
  * \value ListModelsAction SageMaker ListModels action.
  * \value ListNotebookInstanceLifecycleConfigsAction SageMaker ListNotebookInstanceLifecycleConfigs action.
  * \value ListNotebookInstancesAction SageMaker ListNotebookInstances action.
+ * \value ListSubscribedWorkteamsAction SageMaker ListSubscribedWorkteams action.
  * \value ListTagsAction SageMaker ListTags action.
  * \value ListTrainingJobsAction SageMaker ListTrainingJobs action.
  * \value ListTrainingJobsForHyperParameterTuningJobAction SageMaker ListTrainingJobsForHyperParameterTuningJob action.
  * \value ListTransformJobsAction SageMaker ListTransformJobs action.
+ * \value ListWorkteamsAction SageMaker ListWorkteams action.
+ * \value RenderUiTemplateAction SageMaker RenderUiTemplate action.
+ * \value SearchAction SageMaker Search action.
  * \value StartNotebookInstanceAction SageMaker StartNotebookInstance action.
+ * \value StopCompilationJobAction SageMaker StopCompilationJob action.
  * \value StopHyperParameterTuningJobAction SageMaker StopHyperParameterTuningJob action.
+ * \value StopLabelingJobAction SageMaker StopLabelingJob action.
  * \value StopNotebookInstanceAction SageMaker StopNotebookInstance action.
  * \value StopTrainingJobAction SageMaker StopTrainingJob action.
  * \value StopTransformJobAction SageMaker StopTransformJob action.
+ * \value UpdateCodeRepositoryAction SageMaker UpdateCodeRepository action.
  * \value UpdateEndpointAction SageMaker UpdateEndpoint action.
  * \value UpdateEndpointWeightsAndCapacitiesAction SageMaker UpdateEndpointWeightsAndCapacities action.
  * \value UpdateNotebookInstanceAction SageMaker UpdateNotebookInstance action.
  * \value UpdateNotebookInstanceLifecycleConfigAction SageMaker UpdateNotebookInstanceLifecycleConfig action.
+ * \value UpdateWorkteamAction SageMaker UpdateWorkteam action.
  */
 
 /*!

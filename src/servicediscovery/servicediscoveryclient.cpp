@@ -21,6 +21,8 @@
 #include "servicediscoveryclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createhttpnamespacerequest.h"
+#include "createhttpnamespaceresponse.h"
 #include "createprivatednsnamespacerequest.h"
 #include "createprivatednsnamespaceresponse.h"
 #include "createpublicdnsnamespacerequest.h"
@@ -33,6 +35,8 @@
 #include "deleteserviceresponse.h"
 #include "deregisterinstancerequest.h"
 #include "deregisterinstanceresponse.h"
+#include "discoverinstancesrequest.h"
+#include "discoverinstancesresponse.h"
 #include "getinstancerequest.h"
 #include "getinstanceresponse.h"
 #include "getinstanceshealthstatusrequest.h"
@@ -63,7 +67,7 @@
 
 /*!
  * \namespace QtAws::ServiceDiscovery
- * \brief Contains classess for accessing Amazon Route 53 Auto Naming (ServiceDiscovery).
+ * \brief Contains classess for accessing AWS Cloud Map (ServiceDiscovery).
  *
  * \inmodule QtAwsServiceDiscovery
  *
@@ -75,15 +79,16 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryClient
- * \brief The ServiceDiscoveryClient class provides access to the Amazon Route 53 Auto Naming (ServiceDiscovery) service.
+ * \brief The ServiceDiscoveryClient class provides access to the AWS Cloud Map (ServiceDiscovery) service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsServiceDiscovery
  *
- *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
- *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
- *  automatically creates up to five DNS records and an optional health check. Clients that submit DNS queries for the
- *  service receive an answer that contains up to eight healthy
+ *  AWS Cloud Map lets you configure public DNS, private DNS, or HTTP namespaces that your microservice applications run in.
+ *  When an instance of the service becomes available, you can call the AWS Cloud Map API to register the instance with AWS
+ *  Cloud Map. For public or private DNS namespaces, AWS Cloud Map automatically creates DNS records and an optional health
+ *  check. Clients that submit public or private DNS queries, or HTTP requests, for the service receive an answer that
+ *  contains up to eight healthy records.
  */
 
 /*!
@@ -107,7 +112,7 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->endpointPrefix = QStringLiteral("servicediscovery");
     d->networkAccessManager = manager;
     d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Route 53 Auto Naming");
+    d->serviceFullName = QStringLiteral("AWS Cloud Map");
     d->serviceName = QStringLiteral("servicediscovery");
 }
 
@@ -135,8 +140,28 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("servicediscovery");
     d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Route 53 Auto Naming");
+    d->serviceFullName = QStringLiteral("AWS Cloud Map");
     d->serviceName = QStringLiteral("servicediscovery");
+}
+
+/*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * CreateHttpNamespaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an HTTP namespace. Service instances that you register using an HTTP namespace can be discovered using a
+ * <code>DiscoverInstances</code> request but can't be discovered using DNS.
+ *
+ * </p
+ *
+ * For the current limit on the number of namespaces that you can create using the same AWS account, see <a
+ * href="http://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html">AWS Cloud Map Limits</a> in the <i>AWS Cloud
+ * Map Developer
+ */
+CreateHttpNamespaceResponse * ServiceDiscoveryClient::createHttpNamespace(const CreateHttpNamespaceRequest &request)
+{
+    return qobject_cast<CreateHttpNamespaceResponse *>(send(request));
 }
 
 /*!
@@ -149,8 +174,8 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
  * defines your service naming scheme. For example, if you name your namespace <code>example.com</code> and name your
  * service <code>backend</code>, the resulting DNS name for the service will be <code>backend.example.com</code>. For the
  * current limit on the number of namespaces that you can create using the same AWS account, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
- * on Auto Naming</a> in the <i>Route 53 Developer
+ * href="http://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html">AWS Cloud Map Limits</a> in the <i>AWS Cloud
+ * Map Developer
  */
 CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsNamespace(const CreatePrivateDnsNamespaceRequest &request)
 {
@@ -167,8 +192,8 @@ CreatePrivateDnsNamespaceResponse * ServiceDiscoveryClient::createPrivateDnsName
  * naming scheme. For example, if you name your namespace <code>example.com</code> and name your service
  * <code>backend</code>, the resulting DNS name for the service will be <code>backend.example.com</code>. For the current
  * limit on the number of namespaces that you can create using the same AWS account, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
- * on Auto Naming</a> in the <i>Route 53 Developer
+ * href="http://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html">AWS Cloud Map Limits</a> in the <i>AWS Cloud
+ * Map Developer
  */
 CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamespace(const CreatePublicDnsNamespaceRequest &request)
 {
@@ -185,23 +210,34 @@ CreatePublicDnsNamespaceResponse * ServiceDiscoveryClient::createPublicDnsNamesp
  *
  * entities> <ul> <li>
  *
- * Up to three records (A, AAAA, and SRV) or one CNAME
+ * For public and private DNS namespaces, one of the following combinations of DNS records in Amazon Route
  *
- * recor> </li> <li>
+ * 53> <ul> <li>
+ *
+ * > </li> <li>
+ *
+ * AAA> </li> <li>
+ *
+ * A and
+ *
+ * AAA> </li> <li>
+ *
+ * SR> </li> <li>
+ *
+ * CNAM> </li> </ul> </li> <li>
  *
  * Optionally, a health
  *
  * chec> </li> </ul>
  *
- * After you create the service, you can submit a <a>RegisterInstance</a> request, and Amazon Route 53 uses the values in
- * the configuration to create the specified
+ * After you create the service, you can submit a <a>RegisterInstance</a> request, and AWS Cloud Map uses the values in the
+ * configuration to create the specified
  *
  * entities>
  *
  * For the current limit on the number of instances that you can register using the same namespace and using the same
- * service, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
- * on Auto Naming</a> in the <i>Route 53 Developer
+ * service, see <a href="http://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html">AWS Cloud Map Limits</a> in
+ * the <i>AWS Cloud Map Developer
  */
 CreateServiceResponse * ServiceDiscoveryClient::createService(const CreateServiceRequest &request)
 {
@@ -240,11 +276,24 @@ DeleteServiceResponse * ServiceDiscoveryClient::deleteService(const DeleteServic
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the records and the health check, if any, that Amazon Route 53 created for the specified
+ * Deletes the Amazon Route 53 DNS records and health check, if any, that AWS Cloud Map created for the specified
  */
 DeregisterInstanceResponse * ServiceDiscoveryClient::deregisterInstance(const DeregisterInstanceRequest &request)
 {
     return qobject_cast<DeregisterInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceDiscoveryClient service, and returns a pointer to an
+ * DiscoverInstancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Discovers registered instances for a specified namespace and
+ */
+DiscoverInstancesResponse * ServiceDiscoveryClient::discoverInstances(const DiscoverInstancesRequest &request)
+{
+    return qobject_cast<DiscoverInstancesResponse *>(send(request));
 }
 
 /*!
@@ -379,24 +428,24 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates one or more records and optionally a health check based on the settings in a specified service. When
- * you submit a <code>RegisterInstance</code> request, Amazon Route 53 does the
+ * Creates or updates one or more records and, optionally, creates a health check based on the settings in a specified
+ * service. When you submit a <code>RegisterInstance</code> request, the following
  *
- * following> <ul> <li>
+ * occurs> <ul> <li>
  *
- * For each DNS record that you define in the service specified by <code>ServiceId</code>, creates or updates a record in
- * the hosted zone that is associated with the corresponding
+ * For each DNS record that you define in the service that is specified by <code>ServiceId</code>, a record is created or
+ * updated in the hosted zone that is associated with the corresponding
  *
- * namespac> </li> <li>
+ * namespace> </li> <li>
  *
- * If the service includes <code>HealthCheckConfig</code>, creates or updates a health check based on the settings in the
- * health check
+ * If the service includes <code>HealthCheckConfig</code>, a health check is created based on the settings in the health
+ * check
  *
- * configuratio> </li> <li>
+ * configuration> </li> <li>
  *
- * Associates the health check, if any, with each of the
+ * The health check, if any, is associated with each of the new or updated
  *
- * record> </li> </ul> <b>
+ * records> </li> </ul> <b>
  *
  * One <code>RegisterInstance</code> request must complete before you can submit another request and specify the same
  * service ID and instance
@@ -407,7 +456,7 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  *
  * <a>CreateService</a>>
  *
- * When Route 53 receives a DNS query for the specified DNS name, it returns the applicable
+ * When AWS Cloud Map receives a DNS query for the specified DNS name, it returns the applicable
  *
  * value> <ul> <li>
  *
@@ -424,9 +473,8 @@ ListServicesResponse * ServiceDiscoveryClient::listServices(const ListServicesRe
  * record> </li> </ul>
  *
  * For the current limit on the number of instances that you can register using the same namespace and using the same
- * service, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html#limits-api-entities-autonaming">Limits
- * on Auto Naming</a> in the <i>Route 53 Developer
+ * service, see <a href="http://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html">AWS Cloud Map Limits</a> in
+ * the <i>AWS Cloud Map Developer
  */
 RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const RegisterInstanceRequest &request)
 {
@@ -439,6 +487,17 @@ RegisterInstanceResponse * ServiceDiscoveryClient::registerInstance(const Regist
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Submits a request to change the health status of a custom health check to healthy or
+ *
+ * unhealthy>
+ *
+ * You can use <code>UpdateInstanceCustomHealthStatus</code> to change the status only for custom health checks, which you
+ * define using <code>HealthCheckCustomConfig</code> when you create a service. You can't use it to change the status for
+ * Route 53 health checks, which you define using
+ *
+ * <code>HealthCheckConfig</code>>
+ *
+ * For more information, see
  */
 UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanceCustomHealthStatus(const UpdateInstanceCustomHealthStatusRequest &request)
 {
@@ -467,14 +526,14 @@ UpdateInstanceCustomHealthStatusResponse * ServiceDiscoveryClient::updateInstanc
  *
  * servic> </li> </ul>
  *
- * You must specify all <code>DnsRecords</code> configurations (and, optionally, <code>HealthCheckConfig</code>) that you
- * want to appear in the updated service. Any current configurations that don't appear in an <code>UpdateService</code>
- * request are
+ * For public and private DNS namespaces, you must specify all <code>DnsRecords</code> configurations (and, optionally,
+ * <code>HealthCheckConfig</code>) that you want to appear in the updated service. Any current configurations that don't
+ * appear in an <code>UpdateService</code> request are
  *
  * deleted>
  *
- * When you update the TTL setting for a service, Amazon Route 53 also updates the corresponding settings in all the
- * records and health checks that were created by using the specified
+ * When you update the TTL setting for a service, AWS Cloud Map also updates the corresponding settings in all the records
+ * and health checks that were created by using the specified
  */
 UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServiceRequest &request)
 {

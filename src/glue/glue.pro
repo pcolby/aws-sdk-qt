@@ -70,6 +70,10 @@ HEADERS += \
     createscriptrequest_p.h \
     createscriptresponse.h \
     createscriptresponse_p.h \
+    createsecurityconfigurationrequest.h \
+    createsecurityconfigurationrequest_p.h \
+    createsecurityconfigurationresponse.h \
+    createsecurityconfigurationresponse_p.h \
     createtablerequest.h \
     createtablerequest_p.h \
     createtableresponse.h \
@@ -110,6 +114,14 @@ HEADERS += \
     deletepartitionrequest_p.h \
     deletepartitionresponse.h \
     deletepartitionresponse_p.h \
+    deleteresourcepolicyrequest.h \
+    deleteresourcepolicyrequest_p.h \
+    deleteresourcepolicyresponse.h \
+    deleteresourcepolicyresponse_p.h \
+    deletesecurityconfigurationrequest.h \
+    deletesecurityconfigurationrequest_p.h \
+    deletesecurityconfigurationresponse.h \
+    deletesecurityconfigurationresponse_p.h \
     deletetablerequest.h \
     deletetablerequest_p.h \
     deletetableresponse.h \
@@ -166,6 +178,10 @@ HEADERS += \
     getdatabasesrequest_p.h \
     getdatabasesresponse.h \
     getdatabasesresponse_p.h \
+    getdatacatalogencryptionsettingsrequest.h \
+    getdatacatalogencryptionsettingsrequest_p.h \
+    getdatacatalogencryptionsettingsresponse.h \
+    getdatacatalogencryptionsettingsresponse_p.h \
     getdataflowgraphrequest.h \
     getdataflowgraphrequest_p.h \
     getdataflowgraphresponse.h \
@@ -210,6 +226,18 @@ HEADERS += \
     getplanrequest_p.h \
     getplanresponse.h \
     getplanresponse_p.h \
+    getresourcepolicyrequest.h \
+    getresourcepolicyrequest_p.h \
+    getresourcepolicyresponse.h \
+    getresourcepolicyresponse_p.h \
+    getsecurityconfigurationrequest.h \
+    getsecurityconfigurationrequest_p.h \
+    getsecurityconfigurationresponse.h \
+    getsecurityconfigurationresponse_p.h \
+    getsecurityconfigurationsrequest.h \
+    getsecurityconfigurationsrequest_p.h \
+    getsecurityconfigurationsresponse.h \
+    getsecurityconfigurationsresponse_p.h \
     gettablerequest.h \
     gettablerequest_p.h \
     gettableresponse.h \
@@ -252,6 +280,14 @@ HEADERS += \
     importcatalogtogluerequest_p.h \
     importcatalogtoglueresponse.h \
     importcatalogtoglueresponse_p.h \
+    putdatacatalogencryptionsettingsrequest.h \
+    putdatacatalogencryptionsettingsrequest_p.h \
+    putdatacatalogencryptionsettingsresponse.h \
+    putdatacatalogencryptionsettingsresponse_p.h \
+    putresourcepolicyrequest.h \
+    putresourcepolicyrequest_p.h \
+    putresourcepolicyresponse.h \
+    putresourcepolicyresponse_p.h \
     resetjobbookmarkrequest.h \
     resetjobbookmarkrequest_p.h \
     resetjobbookmarkresponse.h \
@@ -360,6 +396,8 @@ SOURCES += \
     createpartitionresponse.cpp \
     createscriptrequest.cpp \
     createscriptresponse.cpp \
+    createsecurityconfigurationrequest.cpp \
+    createsecurityconfigurationresponse.cpp \
     createtablerequest.cpp \
     createtableresponse.cpp \
     createtriggerrequest.cpp \
@@ -380,6 +418,10 @@ SOURCES += \
     deletejobresponse.cpp \
     deletepartitionrequest.cpp \
     deletepartitionresponse.cpp \
+    deleteresourcepolicyrequest.cpp \
+    deleteresourcepolicyresponse.cpp \
+    deletesecurityconfigurationrequest.cpp \
+    deletesecurityconfigurationresponse.cpp \
     deletetablerequest.cpp \
     deletetableresponse.cpp \
     deletetableversionrequest.cpp \
@@ -408,6 +450,8 @@ SOURCES += \
     getdatabaseresponse.cpp \
     getdatabasesrequest.cpp \
     getdatabasesresponse.cpp \
+    getdatacatalogencryptionsettingsrequest.cpp \
+    getdatacatalogencryptionsettingsresponse.cpp \
     getdataflowgraphrequest.cpp \
     getdataflowgraphresponse.cpp \
     getdevendpointrequest.cpp \
@@ -430,6 +474,12 @@ SOURCES += \
     getpartitionsresponse.cpp \
     getplanrequest.cpp \
     getplanresponse.cpp \
+    getresourcepolicyrequest.cpp \
+    getresourcepolicyresponse.cpp \
+    getsecurityconfigurationrequest.cpp \
+    getsecurityconfigurationresponse.cpp \
+    getsecurityconfigurationsrequest.cpp \
+    getsecurityconfigurationsresponse.cpp \
     gettablerequest.cpp \
     gettableresponse.cpp \
     gettablesrequest.cpp \
@@ -451,6 +501,10 @@ SOURCES += \
     glueresponse.cpp \
     importcatalogtogluerequest.cpp \
     importcatalogtoglueresponse.cpp \
+    putdatacatalogencryptionsettingsrequest.cpp \
+    putdatacatalogencryptionsettingsresponse.cpp \
+    putresourcepolicyrequest.cpp \
+    putresourcepolicyresponse.cpp \
     resetjobbookmarkrequest.cpp \
     resetjobbookmarkresponse.cpp \
     startcrawlerrequest.cpp \

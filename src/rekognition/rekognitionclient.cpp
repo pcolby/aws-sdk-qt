@@ -33,6 +33,8 @@
 #include "deletefacesresponse.h"
 #include "deletestreamprocessorrequest.h"
 #include "deletestreamprocessorresponse.h"
+#include "describecollectionrequest.h"
+#include "describecollectionresponse.h"
 #include "describestreamprocessorrequest.h"
 #include "describestreamprocessorresponse.h"
 #include "detectfacesrequest.h"
@@ -182,9 +184,9 @@ RekognitionClient::RekognitionClient(
  *
  * </p </note>
  *
- * You pass the input and target images either as base64-encoded image bytes or as a references to images in an Amazon S3
- * bucket. If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image
- * must be either a PNG or JPEG formatted file.
+ * You pass the input and target images either as base64-encoded image bytes or as references to images in an Amazon S3
+ * bucket. If you use the AWS CLI to call Amazon Rekognition operations, passing image bytes isn't supported. The image
+ * must be formatted as a PNG or JPEG file.
  *
  * </p
  *
@@ -245,7 +247,11 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
  * <code>IndexFaces</code> operation and persist results in a specific collection. Then, a user can search the collection
  * for faces in the user-specific container.
  *
- * </p <note>
+ * </p
+ *
+ * When you create a collection, it is associated with the latest version of the face model
+ *
+ * version> <note>
  *
  * Collection names are
  *
@@ -340,6 +346,24 @@ DeleteStreamProcessorResponse * RekognitionClient::deleteStreamProcessor(const D
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DescribeCollectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified collection. You can use <code>DescribeCollection</code> to get information, such as the number
+ * of faces indexed into a collection and the version of the model used by the collection for face
+ *
+ * detection>
+ *
+ * For more information, see Describing a Collection in the Amazon Rekognition Developer
+ */
+DescribeCollectionResponse * RekognitionClient::describeCollection(const DescribeCollectionRequest &request)
+{
+    return qobject_cast<DescribeCollectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * DescribeStreamProcessorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -363,20 +387,20 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  * input>
  *
  * <code>DetectFaces</code> detects the 100 largest faces in the image. For each face detected, the operation returns face
- * details including a bounding box of the face, a confidence value (that the bounding box contains a face), and a fixed
- * set of attributes such as facial landmarks (for example, coordinates of eye and mouth), gender, presence of beard,
- * sunglasses, etc.
+ * details. These details include a bounding box of the face, a confidence value (that the bounding box contains a face),
+ * and a fixed set of attributes such as facial landmarks (for example, coordinates of eye and mouth), gender, presence of
+ * beard, sunglasses, and so on.
  *
  * </p
  *
- * The face-detection algorithm is most effective on frontal faces. For non-frontal or obscured faces, the algorithm may
+ * The face-detection algorithm is most effective on frontal faces. For non-frontal or obscured faces, the algorithm might
  * not detect the faces or might detect faces with lower confidence.
  *
  * </p
  *
  * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
- * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
- * either a PNG or JPEG formatted file.
+ * you use the to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG
+ * or JPEG formatted file.
  *
  * </p <note>
  *
@@ -413,14 +437,14 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  * Guide> </note>
  *
  * You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use
- * the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a
- * PNG or JPEG formatted file.
+ * the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG
+ * or JPEG formatted file.
  *
  * </p
  *
  * For each object, scene, and concept the API returns one or more labels. Each label provides the object name, and the
  * level of confidence that the image contains the object. For example, suppose the input image has a lighthouse, the sea,
- * and a rock. The response will include all three labels, one for each object.
+ * and a rock. The response includes all three labels, one for each object.
  *
  * </p
  *
@@ -469,6 +493,20 @@ DetectFacesResponse * RekognitionClient::detectFaces(const DetectFacesRequest &r
  *
  * provides> </note>
  *
+ * <code>DetectLabels</code> returns bounding boxes for instances of common object labels in an array of objects. An
+ * <code>Instance</code> object contains a object, for the location of the label on the image. It also includes the
+ * confidence by which the bounding box was
+ *
+ * detected>
+ *
+ * <code>DetectLabels</code> also returns a hierarchical taxonomy of detected labels. For example, a detected car might be
+ * assigned the label <i>car</i>. The label <i>car</i> has two parent labels: <i>Vehicle</i> (its parent) and
+ * <i>Transportation</i> (its grandparent). The response returns the entire list of ancestors for a label. Each ancestor is
+ * a unique label in the response. In the previous example, <i>Car</i>, <i>Vehicle</i>, and <i>Transportation</i> are
+ * returned as unique labels in the response.
+ *
+ * </p
+ *
  * This is a stateless API operation. That is, the operation does not persist any
  *
  * data>
@@ -501,7 +539,7 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
  * Guide>
  *
  * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
- * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
+ * you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
  * either a PNG or JPEG formatted file.
  */
 DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const DetectModerationLabelsRequest &request)
@@ -549,7 +587,7 @@ DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const
  *
  * </p
  *
- * To be detected, text must be within +/- 30 degrees orientation of the horizontal
+ * To be detected, text must be within +/- 90 degrees orientation of the horizontal
  *
  * axis>
  *
@@ -566,7 +604,7 @@ DetectTextResponse * RekognitionClient::detectText(const DetectTextRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the name and additional information about a celebrity based on his or her Rekognition ID. The additional
+ * Gets the name and additional information about a celebrity based on his or her Amazon Rekognition ID. The additional
  * information is returned as an array of URLs. If there is no additional information about the celebrity, this list is
  *
  * empty>
@@ -801,6 +839,12 @@ GetFaceSearchResponse * RekognitionClient::getFaceSearch(const GetFaceSearchRequ
  * <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a pagination token for
  * getting the next set of results. To get the next page of results, call <code>GetlabelDetection</code> and populate the
  * <code>NextToken</code> request parameter with the token value returned from the previous call to
+ *
+ * <code>GetLabelDetection</code>> <note>
+ *
+ * <code>GetLabelDetection</code> doesn't return a hierarchical taxonomy, or bounding box information, for detected labels.
+ * <code>GetLabelDetection</code> returns <code>null</code> for the <code>Parents</code> and <code>Instances</code>
+ * attributes of the object which is returned in the <code>Labels</code> array.
  */
 GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelDetectionRequest &request)
 {
@@ -813,23 +857,23 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the person tracking results of a Amazon Rekognition Video analysis started by
+ * Gets the path tracking results of a Amazon Rekognition Video analysis started by
  *
  * >
  *
- * The person detection operation is started by a call to <code>StartPersonTracking</code> which returns a job identifier
- * (<code>JobId</code>). When the person detection operation finishes, Amazon Rekognition Video publishes a completion
- * status to the Amazon Simple Notification Service topic registered in the initial call to
+ * The person path tracking operation is started by a call to <code>StartPersonTracking</code> which returns a job
+ * identifier (<code>JobId</code>). When the operation finishes, Amazon Rekognition Video publishes a completion status to
+ * the Amazon Simple Notification Service topic registered in the initial call to
  *
  * <code>StartPersonTracking</code>>
  *
- * To get the results of the person tracking operation, first check that the status value published to the Amazon SNS topic
- * is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
+ * To get the results of the person path tracking operation, first check that the status value published to the Amazon SNS
+ * topic is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  *
  * <code>StartPersonTracking</code>>
  *
- * <code>GetPersonTracking</code> returns an array, <code>Persons</code>, of tracked persons and the time(s) they were
- * tracked in the video.
+ * <code>GetPersonTracking</code> returns an array, <code>Persons</code>, of tracked persons and the time(s) their paths
+ * were tracked in the video.
  *
  * </p <note>
  *
@@ -843,8 +887,8 @@ GetLabelDetectionResponse * RekognitionClient::getLabelDetection(const GetLabelD
  *
  * Guide> </note>
  *
- * By default, the array is sorted by the time(s) a person is tracked in the video. You can sort by tracked persons by
- * specifying <code>INDEX</code> for the <code>SortBy</code> input
+ * By default, the array is sorted by the time(s) a person's path is tracked in the video. You can sort by tracked persons
+ * by specifying <code>INDEX</code> for the <code>SortBy</code> input
  *
  * parameter>
  *
@@ -869,17 +913,33 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * </p
  *
- * Amazon Rekognition does not save the actual faces detected. Instead, the underlying detection algorithm first detects
- * the faces in the input image, and for each face extracts facial features into a feature vector, and stores it in the
- * back-end database. Amazon Rekognition uses feature vectors when performing face match and search operations using the
- * and
+ * Amazon Rekognition doesn't save the actual faces that are detected. Instead, the underlying detection algorithm first
+ * detects the faces in the input image. For each face, the algorithm extracts facial features into a feature vector, and
+ * stores it in the backend database. Amazon Rekognition uses feature vectors when it performs face match and search
+ * operations using the and
  *
  * operations>
  *
- * If you are using version 1.0 of the face detection model, <code>IndexFaces</code> indexes the 15 largest faces in the
- * input image. Later versions of the face detection model index the 100 largest faces in the input image. To determine
- * which version of the model you are using, check the the value of <code>FaceModelVersion</code> in the response from
- * <code>IndexFaces</code>.
+ * For more information, see Adding Faces to a Collection in the Amazon Rekognition Developer
+ *
+ * Guide>
+ *
+ * To get the number of faces in a collection, call .
+ *
+ * </p
+ *
+ * If you're using version 1.0 of the face detection model, <code>IndexFaces</code> indexes the 15 largest faces in the
+ * input image. Later versions of the face detection model index the 100 largest faces in the input image.
+ *
+ * </p
+ *
+ * If you're using version 4 or later of the face model, image orientation information is not returned in the
+ * <code>OrientationCorrection</code> field.
+ *
+ * </p
+ *
+ * To determine which version of the model you're using, call and supply the collection ID. You can also get the model
+ * version from the value of <code>FaceModelVersion</code> in the response from <code>IndexFaces</code>
  *
  * </p
  *
@@ -890,27 +950,85 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  * If you provide the optional <code>ExternalImageID</code> for the input image you provided, Amazon Rekognition associates
  * this ID with all faces that it detects. When you call the operation, the response returns the external ID. You can use
  * this external image ID to create a client-side index to associate the faces with each image. You can then use the index
- * to find all faces in an image.
+ * to find all faces in an
  *
- * </p
+ * image>
  *
- * In response, the operation returns an array of metadata for all detected faces. This includes, the bounding box of the
- * detected face, confidence value (indicating the bounding box contains a face), a face ID assigned by the service for
- * each face that is detected and stored, and an image ID assigned by the service for the input image. If you request all
- * facial attributes (using the <code>detectionAttributes</code> parameter, Amazon Rekognition returns detailed facial
- * attributes such as facial landmarks (for example, location of eye and mount) and other facial attributes such gender. If
- * you provide the same image, specify the same collection, and use the same external ID in the <code>IndexFaces</code>
- * operation, Amazon Rekognition doesn't save duplicate face
+ * You can specify the maximum number of faces to index with the <code>MaxFaces</code> input parameter. This is useful when
+ * you want to index the largest faces in an image and don't want to index smaller faces, such as those belonging to people
+ * standing in the
  *
- * metadata>
+ * background>
  *
- * For more information, see Adding Faces to a Collection in the Amazon Rekognition Developer
+ * The <code>QualityFilter</code> input parameter allows you to filter out detected faces that don’t meet the required
+ * quality bar chosen by Amazon Rekognition. The quality bar is based on a variety of common use cases. By default,
+ * <code>IndexFaces</code> filters detected faces. You can also explicitly filter detected faces by specifying
+ * <code>AUTO</code> for the value of <code>QualityFilter</code>. If you do not want to filter detected faces, specify
+ * <code>NONE</code>.
  *
- * Guide>
+ * </p <note>
  *
- * The input image is passed either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
- * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
- * either a PNG or JPEG formatted file.
+ * To use quality filtering, you need a collection associated with version 3 of the face model. To get the version of the
+ * face model associated with a collection, call .
+ *
+ * </p </note>
+ *
+ * Information about faces detected in an image, but not indexed, is returned in an array of objects,
+ * <code>UnindexedFaces</code>. Faces aren't indexed for reasons such
+ *
+ * as> <ul> <li>
+ *
+ * The number of faces detected exceeds the value of the <code>MaxFaces</code> request
+ *
+ * parameter> </li> <li>
+ *
+ * The face is too small compared to the image
+ *
+ * dimensions> </li> <li>
+ *
+ * The face is too
+ *
+ * blurry> </li> <li>
+ *
+ * The image is too
+ *
+ * dark> </li> <li>
+ *
+ * The face has an extreme
+ *
+ * pose> </li> </ul>
+ *
+ * In response, the <code>IndexFaces</code> operation returns an array of metadata for all detected faces,
+ * <code>FaceRecords</code>. This includes:
+ *
+ * </p <ul> <li>
+ *
+ * The bounding box, <code>BoundingBox</code>, of the detected face.
+ *
+ * </p </li> <li>
+ *
+ * A confidence value, <code>Confidence</code>, which indicates the confidence that the bounding box contains a
+ *
+ * face> </li> <li>
+ *
+ * A face ID, <code>faceId</code>, assigned by the service for each face that's detected and
+ *
+ * stored> </li> <li>
+ *
+ * An image ID, <code>ImageId</code>, assigned by the service for the input
+ *
+ * image> </li> </ul>
+ *
+ * If you request all facial attributes (by using the <code>detectionAttributes</code> parameter), Amazon Rekognition
+ * returns detailed facial attributes, such as facial landmarks (for example, location of eye and mouth) and other facial
+ * attributes like gender. If you provide the same image, specify the same collection, and use the same external ID in the
+ * <code>IndexFaces</code> operation, Amazon Rekognition doesn't save duplicate face
+ *
+ * metadata> <p/>
+ *
+ * The input image is passed either as base64-encoded image bytes, or as a reference to an image in an Amazon S3 bucket. If
+ * you use the AWS CLI to call Amazon Rekognition operations, passing image bytes isn't supported. The image must be
+ * formatted as a PNG or JPEG file.
  *
  * </p
  *
@@ -988,25 +1106,25 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  *
  * <code>RecognizeCelebrities</code> returns the 100 largest faces in the image. It lists recognized celebrities in the
  * <code>CelebrityFaces</code> array and unrecognized faces in the <code>UnrecognizedFaces</code> array.
- * <code>RecognizeCelebrities</code> doesn't return celebrities whose faces are not amongst the largest 100 faces in the
+ * <code>RecognizeCelebrities</code> doesn't return celebrities whose faces aren't among the largest 100 faces in the
  *
  * image>
  *
- * For each celebrity recognized, the <code>RecognizeCelebrities</code> returns a <code>Celebrity</code> object. The
+ * For each celebrity recognized, <code>RecognizeCelebrities</code> returns a <code>Celebrity</code> object. The
  * <code>Celebrity</code> object contains the celebrity name, ID, URL links to additional information, match confidence,
  * and a <code>ComparedFace</code> object that you can use to locate the celebrity's face on the
  *
  * image>
  *
- * Rekognition does not retain information about which images a celebrity has been recognized in. Your application must
- * store this information and use the <code>Celebrity</code> ID property as a unique identifier for the celebrity. If you
- * don't store the celebrity name or additional information URLs returned by <code>RecognizeCelebrities</code>, you will
- * need the ID to identify the celebrity in a call to the
+ * Amazon Rekognition doesn't retain information about which images a celebrity has been recognized in. Your application
+ * must store this information and use the <code>Celebrity</code> ID property as a unique identifier for the celebrity. If
+ * you don't store the celebrity name or additional information URLs returned by <code>RecognizeCelebrities</code>, you
+ * will need the ID to identify the celebrity in a call to the
  *
  * operation>
  *
- * You pass the imput image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
- * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
+ * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
+ * you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
  * either a PNG or JPEG formatted file.
  *
  * </p
@@ -1078,7 +1196,7 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
  * </p </note>
  *
  * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
- * you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
+ * you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
  * either a PNG or JPEG formatted file.
  *
  * </p
@@ -1174,7 +1292,7 @@ StartContentModerationResponse * RekognitionClient::startContentModeration(const
  * bucket name and the filename of the video. <code>StartFaceDetection</code> returns a job identifier (<code>JobId</code>)
  * that you use to get the results of the operation. When face detection is finished, Amazon Rekognition Video publishes a
  * completion status to the Amazon Simple Notification Service topic that you specify in <code>NotificationChannel</code>.
- * To get the results of the label detection operation, first check that the status value published to the Amazon SNS topic
+ * To get the results of the face detection operation, first check that the status value published to the Amazon SNS topic
  * is <code>SUCCEEDED</code>. If so, call and pass the job identifier (<code>JobId</code>) from the initial call to
  *
  * <code>StartFaceDetection</code>>
@@ -1246,12 +1364,12 @@ StartLabelDetectionResponse * RekognitionClient::startLabelDetection(const Start
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts the asynchronous tracking of persons in a stored
+ * Starts the asynchronous tracking of a person's path in a stored
  *
  * video>
  *
- * Amazon Rekognition Video can track persons in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
- * bucket name and the filename of the video. <code>StartPersonTracking</code> returns a job identifier
+ * Amazon Rekognition Video can track the path of people in a video stored in an Amazon S3 bucket. Use <a>Video</a> to
+ * specify the bucket name and the filename of the video. <code>StartPersonTracking</code> returns a job identifier
  * (<code>JobId</code>) which you use to get the results of the operation. When label detection is finished, Amazon
  * Rekognition publishes a completion status to the Amazon Simple Notification Service topic that you specify in
  * <code>NotificationChannel</code>.

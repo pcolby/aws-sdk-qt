@@ -35,6 +35,8 @@
 #include "describeagentsresponse.h"
 #include "describeconfigurationsrequest.h"
 #include "describeconfigurationsresponse.h"
+#include "describecontinuousexportsrequest.h"
+#include "describecontinuousexportsresponse.h"
 #include "describeexportconfigurationsrequest.h"
 #include "describeexportconfigurationsresponse.h"
 #include "describeexporttasksrequest.h"
@@ -51,10 +53,14 @@
 #include "listconfigurationsresponse.h"
 #include "listserverneighborsrequest.h"
 #include "listserverneighborsresponse.h"
+#include "startcontinuousexportrequest.h"
+#include "startcontinuousexportresponse.h"
 #include "startdatacollectionbyagentidsrequest.h"
 #include "startdatacollectionbyagentidsresponse.h"
 #include "startexporttaskrequest.h"
 #include "startexporttaskresponse.h"
+#include "stopcontinuousexportrequest.h"
+#include "stopcontinuousexportresponse.h"
 #include "stopdatacollectionbyagentidsrequest.h"
 #include "stopdatacollectionbyagentidsresponse.h"
 #include "updateapplicationrequest.h"
@@ -274,8 +280,8 @@ DeleteTagsResponse * ApplicationDiscoveryServiceClient::deleteTags(const DeleteT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists agents or the Connector by ID or lists all agents/Connectors associated with your user account if you did not
- * specify an
+ * Lists agents or connectors as specified by ID or other filters. All agents/connectors associated with your user account
+ * can be listed if you call <code>DescribeAgents</code> as is without passing any
  */
 DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const DescribeAgentsRequest &request)
 {
@@ -288,12 +294,26 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves attributes for a list of configuration item IDs. All of the supplied IDs must be for the same asset type
- * (server, application, process, or connection). Output fields are specific to the asset type selected. For example, the
- * output for a <i>server</i> configuration item includes a list of attributes about the server, such as host name,
- * operating system, and number of network
+ * Retrieves attributes for a list of configuration item
  *
- * cards>
+ * IDs> <note>
+ *
+ * All of the supplied IDs must be for the same asset type from one of the
+ *
+ * follwoing> <ul> <li>
+ *
+ * serve> </li> <li>
+ *
+ * applicatio> </li> <li>
+ *
+ * proces> </li> <li>
+ *
+ * connectio> </li> </ul>
+ *
+ * Output fields are specific to the asset type specified. For example, the output for a <i>server</i> configuration item
+ * includes a list of attributes about the server, such as host name, operating system, number of network cards,
+ *
+ * etc>
  *
  * For a complete list of outputs for each asset type, see <a
  * href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/discovery-api-queries.html#DescribeConfigurations">Using
@@ -306,15 +326,30 @@ DescribeConfigurationsResponse * ApplicationDiscoveryServiceClient::describeConf
 
 /*!
  * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeContinuousExportsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists exports as specified by ID. All continuous exports associated with your user account can be listed if you call
+ * <code>DescribeContinuousExports</code> as is without passing any
+ */
+DescribeContinuousExportsResponse * ApplicationDiscoveryServiceClient::describeContinuousExports(const DescribeContinuousExportsRequest &request)
+{
+    return qobject_cast<DescribeContinuousExportsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
  * DescribeExportConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deprecated. Use <code>DescribeExportTasks</code>
+ * <code>DescribeExportConfigurations</code> is
  *
- * instead>
+ * deprecated>
  *
- * Retrieves the status of a given export process. You can retrieve status from a maximum of 100
+ * Use instead <a href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeExportTasks.html">
+ * <code>DescribeExportTasks</code>
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
@@ -340,8 +375,23 @@ DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list of configuration items that are tagged with a specific tag. Or retrieves a list of all tags assigned to
- * a specific configuration
+ * Retrieves a list of configuration items that have tags as specified by the key-value pairs, name and value, passed to
+ * the optional parameter
+ *
+ * <code>filters</code>>
+ *
+ * There are three valid tag filter
+ *
+ * names> <ul> <li>
+ *
+ * tagKe> </li> <li>
+ *
+ * tagValu> </li> <li>
+ *
+ * configurationI> </li> </ul>
+ *
+ * Also, all configuration items associated with your user account that have tags can be listed if you call
+ * <code>DescribeTags</code> as is without passing any
  */
 DescribeTagsResponse * ApplicationDiscoveryServiceClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -408,6 +458,10 @@ ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigur
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves a short summary of discovered
+ *
+ * assets>
+ *
+ * This API operation takes no request parameters and is called as is at the command prompt as shown in the
  */
 GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySummary(const GetDiscoverySummaryRequest &request)
 {
@@ -420,8 +474,8 @@ GetDiscoverySummaryResponse * ApplicationDiscoveryServiceClient::getDiscoverySum
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list of configuration items according to criteria that you specify in a filter. The filter criteria
- * identifies the relationship
+ * Retrieves a list of configuration items as specified by the value passed to the required paramater
+ * <code>configurationType</code>. Optional filtering may be applied to refine search
  */
 ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfigurations(const ListConfigurationsRequest &request)
 {
@@ -439,6 +493,19 @@ ListConfigurationsResponse * ApplicationDiscoveryServiceClient::listConfiguratio
 ListServerNeighborsResponse * ApplicationDiscoveryServiceClient::listServerNeighbors(const ListServerNeighborsRequest &request)
 {
     return qobject_cast<ListServerNeighborsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * StartContinuousExportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Start the continuous flow of agent's discovered data into Amazon
+ */
+StartContinuousExportResponse * ApplicationDiscoveryServiceClient::startContinuousExport(const StartContinuousExportRequest &request)
+{
+    return qobject_cast<StartContinuousExportResponse *>(send(request));
 }
 
 /*!
@@ -478,6 +545,19 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
     return qobject_cast<StartExportTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * StopContinuousExportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stop the continuous flow of agent's discovered data into Amazon
+ */
+StopContinuousExportResponse * ApplicationDiscoveryServiceClient::stopContinuousExport(const StopContinuousExportRequest &request)
+{
+    return qobject_cast<StopContinuousExportResponse *>(send(request));
 }
 
 /*!

@@ -43,6 +43,7 @@ namespace ApplicationDiscoveryService {
  * \value DeleteTagsAction ApplicationDiscoveryService DeleteTags action.
  * \value DescribeAgentsAction ApplicationDiscoveryService DescribeAgents action.
  * \value DescribeConfigurationsAction ApplicationDiscoveryService DescribeConfigurations action.
+ * \value DescribeContinuousExportsAction ApplicationDiscoveryService DescribeContinuousExports action.
  * \value DescribeExportConfigurationsAction ApplicationDiscoveryService DescribeExportConfigurations action.
  * \value DescribeExportTasksAction ApplicationDiscoveryService DescribeExportTasks action.
  * \value DescribeTagsAction ApplicationDiscoveryService DescribeTags action.
@@ -51,8 +52,10 @@ namespace ApplicationDiscoveryService {
  * \value GetDiscoverySummaryAction ApplicationDiscoveryService GetDiscoverySummary action.
  * \value ListConfigurationsAction ApplicationDiscoveryService ListConfigurations action.
  * \value ListServerNeighborsAction ApplicationDiscoveryService ListServerNeighbors action.
+ * \value StartContinuousExportAction ApplicationDiscoveryService StartContinuousExport action.
  * \value StartDataCollectionByAgentIdsAction ApplicationDiscoveryService StartDataCollectionByAgentIds action.
  * \value StartExportTaskAction ApplicationDiscoveryService StartExportTask action.
+ * \value StopContinuousExportAction ApplicationDiscoveryService StopContinuousExport action.
  * \value StopDataCollectionByAgentIdsAction ApplicationDiscoveryService StopDataCollectionByAgentIds action.
  * \value UpdateApplicationAction ApplicationDiscoveryService UpdateApplication action.
  */

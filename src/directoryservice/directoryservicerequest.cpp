@@ -36,6 +36,7 @@ namespace DirectoryService {
  * This enum describes the actions that can be performed as DirectoryService
  * requests.
  *
+ * \value AcceptSharedDirectoryAction DirectoryService AcceptSharedDirectory action.
  * \value AddIpRoutesAction DirectoryService AddIpRoutes action.
  * \value AddTagsToResourceAction DirectoryService AddTagsToResource action.
  * \value CancelSchemaExtensionAction DirectoryService CancelSchemaExtension action.
@@ -44,11 +45,13 @@ namespace DirectoryService {
  * \value CreateComputerAction DirectoryService CreateComputer action.
  * \value CreateConditionalForwarderAction DirectoryService CreateConditionalForwarder action.
  * \value CreateDirectoryAction DirectoryService CreateDirectory action.
+ * \value CreateLogSubscriptionAction DirectoryService CreateLogSubscription action.
  * \value CreateMicrosoftADAction DirectoryService CreateMicrosoftAD action.
  * \value CreateSnapshotAction DirectoryService CreateSnapshot action.
  * \value CreateTrustAction DirectoryService CreateTrust action.
  * \value DeleteConditionalForwarderAction DirectoryService DeleteConditionalForwarder action.
  * \value DeleteDirectoryAction DirectoryService DeleteDirectory action.
+ * \value DeleteLogSubscriptionAction DirectoryService DeleteLogSubscription action.
  * \value DeleteSnapshotAction DirectoryService DeleteSnapshot action.
  * \value DeleteTrustAction DirectoryService DeleteTrust action.
  * \value DeregisterEventTopicAction DirectoryService DeregisterEventTopic action.
@@ -56,6 +59,7 @@ namespace DirectoryService {
  * \value DescribeDirectoriesAction DirectoryService DescribeDirectories action.
  * \value DescribeDomainControllersAction DirectoryService DescribeDomainControllers action.
  * \value DescribeEventTopicsAction DirectoryService DescribeEventTopics action.
+ * \value DescribeSharedDirectoriesAction DirectoryService DescribeSharedDirectories action.
  * \value DescribeSnapshotsAction DirectoryService DescribeSnapshots action.
  * \value DescribeTrustsAction DirectoryService DescribeTrusts action.
  * \value DisableRadiusAction DirectoryService DisableRadius action.
@@ -65,17 +69,22 @@ namespace DirectoryService {
  * \value GetDirectoryLimitsAction DirectoryService GetDirectoryLimits action.
  * \value GetSnapshotLimitsAction DirectoryService GetSnapshotLimits action.
  * \value ListIpRoutesAction DirectoryService ListIpRoutes action.
+ * \value ListLogSubscriptionsAction DirectoryService ListLogSubscriptions action.
  * \value ListSchemaExtensionsAction DirectoryService ListSchemaExtensions action.
  * \value ListTagsForResourceAction DirectoryService ListTagsForResource action.
  * \value RegisterEventTopicAction DirectoryService RegisterEventTopic action.
+ * \value RejectSharedDirectoryAction DirectoryService RejectSharedDirectory action.
  * \value RemoveIpRoutesAction DirectoryService RemoveIpRoutes action.
  * \value RemoveTagsFromResourceAction DirectoryService RemoveTagsFromResource action.
  * \value ResetUserPasswordAction DirectoryService ResetUserPassword action.
  * \value RestoreFromSnapshotAction DirectoryService RestoreFromSnapshot action.
+ * \value ShareDirectoryAction DirectoryService ShareDirectory action.
  * \value StartSchemaExtensionAction DirectoryService StartSchemaExtension action.
+ * \value UnshareDirectoryAction DirectoryService UnshareDirectory action.
  * \value UpdateConditionalForwarderAction DirectoryService UpdateConditionalForwarder action.
  * \value UpdateNumberOfDomainControllersAction DirectoryService UpdateNumberOfDomainControllers action.
  * \value UpdateRadiusAction DirectoryService UpdateRadius action.
+ * \value UpdateTrustAction DirectoryService UpdateTrust action.
  * \value VerifyTrustAction DirectoryService VerifyTrust action.
  */
 

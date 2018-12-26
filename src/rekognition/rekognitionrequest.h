@@ -43,6 +43,7 @@ public:
         DeleteCollectionAction,
         DeleteFacesAction,
         DeleteStreamProcessorAction,
+        DescribeCollectionAction,
         DescribeStreamProcessorAction,
         DetectFacesAction,
         DetectLabelsAction,

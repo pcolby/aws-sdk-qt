@@ -25,6 +25,8 @@
 #include "addtagstoresourceresponse.h"
 #include "cancelcommandrequest.h"
 #include "cancelcommandresponse.h"
+#include "cancelmaintenancewindowexecutionrequest.h"
+#include "cancelmaintenancewindowexecutionresponse.h"
 #include "createactivationrequest.h"
 #include "createactivationresponse.h"
 #include "createassociationrequest.h"
@@ -105,12 +107,16 @@
 #include "describemaintenancewindowexecutiontasksresponse.h"
 #include "describemaintenancewindowexecutionsrequest.h"
 #include "describemaintenancewindowexecutionsresponse.h"
+#include "describemaintenancewindowschedulerequest.h"
+#include "describemaintenancewindowscheduleresponse.h"
 #include "describemaintenancewindowtargetsrequest.h"
 #include "describemaintenancewindowtargetsresponse.h"
 #include "describemaintenancewindowtasksrequest.h"
 #include "describemaintenancewindowtasksresponse.h"
 #include "describemaintenancewindowsrequest.h"
 #include "describemaintenancewindowsresponse.h"
+#include "describemaintenancewindowsfortargetrequest.h"
+#include "describemaintenancewindowsfortargetresponse.h"
 #include "describeparametersrequest.h"
 #include "describeparametersresponse.h"
 #include "describepatchbaselinesrequest.h"
@@ -119,10 +125,14 @@
 #include "describepatchgroupstateresponse.h"
 #include "describepatchgroupsrequest.h"
 #include "describepatchgroupsresponse.h"
+#include "describesessionsrequest.h"
+#include "describesessionsresponse.h"
 #include "getautomationexecutionrequest.h"
 #include "getautomationexecutionresponse.h"
 #include "getcommandinvocationrequest.h"
 #include "getcommandinvocationresponse.h"
+#include "getconnectionstatusrequest.h"
+#include "getconnectionstatusresponse.h"
 #include "getdefaultpatchbaselinerequest.h"
 #include "getdefaultpatchbaselineresponse.h"
 #include "getdeployablepatchsnapshotforinstancerequest.h"
@@ -199,6 +209,8 @@
 #include "registertaskwithmaintenancewindowresponse.h"
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourceresponse.h"
+#include "resumesessionrequest.h"
+#include "resumesessionresponse.h"
 #include "sendautomationsignalrequest.h"
 #include "sendautomationsignalresponse.h"
 #include "sendcommandrequest.h"
@@ -207,8 +219,12 @@
 #include "startassociationsonceresponse.h"
 #include "startautomationexecutionrequest.h"
 #include "startautomationexecutionresponse.h"
+#include "startsessionrequest.h"
+#include "startsessionresponse.h"
 #include "stopautomationexecutionrequest.h"
 #include "stopautomationexecutionresponse.h"
+#include "terminatesessionrequest.h"
+#include "terminatesessionresponse.h"
 #include "updateassociationrequest.h"
 #include "updateassociationresponse.h"
 #include "updateassociationstatusrequest.h"
@@ -380,6 +396,20 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CancelMaintenanceWindowExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a Maintenance Window execution that is already in progress and cancels any tasks in the window that have not
+ * already starting running. (Tasks already in progress will continue to
+ */
+CancelMaintenanceWindowExecutionResponse * SsmClient::cancelMaintenanceWindowExecution(const CancelMaintenanceWindowExecutionRequest &request)
+{
+    return qobject_cast<CancelMaintenanceWindowExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * CreateActivationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -405,12 +435,12 @@ CreateActivationResponse * SsmClient::createActivation(const CreateActivationReq
  *
  * targets>
  *
- * When you associate a document with one or more instances using instance IDs or tags, the SSM Agent running on the
- * instance processes the document and configures the instance as
+ * When you associate a document with one or more instances using instance IDs or tags, SSM Agent running on the instance
+ * processes the document and configures the instance as
  *
  * specified>
  *
- * If you associate a document with an instance that already has an associated document, the system throws the
+ * If you associate a document with an instance that already has an associated document, the system returns the
  * AssociationAlreadyExists
  */
 CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociationRequest &request)
@@ -428,12 +458,12 @@ CreateAssociationResponse * SsmClient::createAssociation(const CreateAssociation
  *
  * targets>
  *
- * When you associate a document with one or more instances using instance IDs or tags, the SSM Agent running on the
- * instance processes the document and configures the instance as
+ * When you associate a document with one or more instances using instance IDs or tags, SSM Agent running on the instance
+ * processes the document and configures the instance as
  *
  * specified>
  *
- * If you associate a document with an instance that already has an associated document, the system throws the
+ * If you associate a document with an instance that already has an associated document, the system returns the
  * AssociationAlreadyExists
  */
 CreateAssociationBatchResponse * SsmClient::createAssociationBatch(const CreateAssociationBatchRequest &request)
@@ -976,6 +1006,19 @@ DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWind
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about upcoming executions of a Maintenance
+ */
+DescribeMaintenanceWindowScheduleResponse * SsmClient::describeMaintenanceWindowSchedule(const DescribeMaintenanceWindowScheduleRequest &request)
+{
+    return qobject_cast<DescribeMaintenanceWindowScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * DescribeMaintenanceWindowTargetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1011,6 +1054,19 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
 DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const DescribeMaintenanceWindowsRequest &request)
 {
     return qobject_cast<DescribeMaintenanceWindowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeMaintenanceWindowsForTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the Maintenance Windows targets or tasks that an instance is associated
+ */
+DescribeMaintenanceWindowsForTargetResponse * SsmClient::describeMaintenanceWindowsForTarget(const DescribeMaintenanceWindowsForTargetRequest &request)
+{
+    return qobject_cast<DescribeMaintenanceWindowsForTargetResponse *>(send(request));
 }
 
 /*!
@@ -1075,6 +1131,19 @@ DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatch
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of all active sessions (both connected and disconnected) or terminated sessions from the past 30
+ */
+DescribeSessionsResponse * SsmClient::describeSessions(const DescribeSessionsRequest &request)
+{
+    return qobject_cast<DescribeSessionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * GetAutomationExecutionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1097,6 +1166,20 @@ GetAutomationExecutionResponse * SsmClient::getAutomationExecution(const GetAuto
 GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandInvocationRequest &request)
 {
     return qobject_cast<GetCommandInvocationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetConnectionStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the Session Manager connection status for an instance to determine whether it is connected and ready to
+ * receive Session Manager
+ */
+GetConnectionStatusResponse * SsmClient::getConnectionStatus(const GetConnectionStatusRequest &request)
+{
+    return qobject_cast<GetConnectionStatusResponse *>(send(request));
 }
 
 /*!
@@ -1336,6 +1419,48 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * A parameter label is a user-defined alias to help you manage different versions of a parameter. When you modify a
+ * parameter, Systems Manager automatically saves a new version and increments the version number by one. A label can help
+ * you remember the purpose of a parameter when there are multiple versions.
+ *
+ * </p
+ *
+ * Parameter labels have the following requirements and
+ *
+ * restrictions> <ul> <li>
+ *
+ * A version of a parameter can have a maximum of 10
+ *
+ * labels> </li> <li>
+ *
+ * You can't attach the same label to different versions of the same parameter. For example, if version 1 has the label
+ * Production, then you can't attach Production to version
+ *
+ * 2> </li> <li>
+ *
+ * You can move a label from one version of a parameter to
+ *
+ * another> </li> <li>
+ *
+ * You can't create a label when you create a new parameter. You must attach a label to a specific version of a
+ *
+ * parameter> </li> <li>
+ *
+ * You can't delete a parameter label. If you no longer want to use a parameter label, then you must move it to a different
+ * version of a
+ *
+ * parameter> </li> <li>
+ *
+ * A label can have a maximum of 100
+ *
+ * characters> </li> <li>
+ *
+ * Labels can contain letters (case sensitive), numbers, periods (.), hyphens (-), or underscores
+ *
+ * (_)> </li> <li>
+ *
+ * Labels can't begin with a number, "aws," or "ssm" (not case sensitive). If a label fails to meet these requirements,
+ * then the label is not associated with a parameter and the system displays it in the list of
  */
 LabelParameterVersionResponse * SsmClient::labelParameterVersion(const LabelParameterVersionRequest &request)
 {
@@ -1702,6 +1827,25 @@ RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveT
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ResumeSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Reconnects a session to an instance after it has been disconnected. Connections can be resumed for disconnected
+ * sessions, but not terminated
+ *
+ * sessions> <note>
+ *
+ * This command is primarily for use by client machines to automatically reconnect during intermittent network issues. It
+ * is not intended for any other
+ */
+ResumeSessionResponse * SsmClient::resumeSession(const ResumeSessionRequest &request)
+{
+    return qobject_cast<ResumeSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * SendAutomationSignalResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1755,6 +1899,27 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * StartSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Initiates a connection to a target (for example, an instance) for a Session Manager session. Returns a URL and token
+ * that can be used to open a WebSocket connection for sending input and receiving
+ *
+ * outputs> <note>
+ *
+ * AWS CLI usage: <code>start-session</code> is an interactive command that requires the Session Manager plugin to be
+ * installed on the client machine making the call. For information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html">
+ * Install the Session Manager Plugin for the AWS CLI</a> in the <i>AWS Systems Manager User
+ */
+StartSessionResponse * SsmClient::startSession(const StartSessionRequest &request)
+{
+    return qobject_cast<StartSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * StopAutomationExecutionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1764,6 +1929,20 @@ StartAutomationExecutionResponse * SsmClient::startAutomationExecution(const Sta
 StopAutomationExecutionResponse * SsmClient::stopAutomationExecution(const StopAutomationExecutionRequest &request)
 {
     return qobject_cast<StopAutomationExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * TerminateSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Permanently ends a session and closes the data connection between the Session Manager client and SSM Agent on the
+ * instance. A terminated session cannot be
+ */
+TerminateSessionResponse * SsmClient::terminateSession(const TerminateSessionRequest &request)
+{
+    return qobject_cast<TerminateSessionResponse *>(send(request));
 }
 
 /*!

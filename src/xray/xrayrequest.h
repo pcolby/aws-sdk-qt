@@ -38,13 +38,24 @@ public:
     /// Actions supported by XRay.
     enum Action {
         BatchGetTracesAction,
+        CreateGroupAction,
+        CreateSamplingRuleAction,
+        DeleteGroupAction,
+        DeleteSamplingRuleAction,
         GetEncryptionConfigAction,
+        GetGroupAction,
+        GetGroupsAction,
+        GetSamplingRulesAction,
+        GetSamplingStatisticSummariesAction,
+        GetSamplingTargetsAction,
         GetServiceGraphAction,
         GetTraceGraphAction,
         GetTraceSummariesAction,
         PutEncryptionConfigAction,
         PutTelemetryRecordsAction,
         PutTraceSegmentsAction,
+        UpdateGroupAction,
+        UpdateSamplingRuleAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

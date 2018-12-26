@@ -28,10 +28,14 @@ namespace QtAws {
 namespace CloudHSMV2 {
 
 class CloudHSMV2ClientPrivate;
+class CopyBackupToRegionRequest;
+class CopyBackupToRegionResponse;
 class CreateClusterRequest;
 class CreateClusterResponse;
 class CreateHsmRequest;
 class CreateHsmResponse;
+class DeleteBackupRequest;
+class DeleteBackupResponse;
 class DeleteClusterRequest;
 class DeleteClusterResponse;
 class DeleteHsmRequest;
@@ -44,6 +48,8 @@ class InitializeClusterRequest;
 class InitializeClusterResponse;
 class ListTagsRequest;
 class ListTagsResponse;
+class RestoreBackupRequest;
+class RestoreBackupResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
@@ -65,14 +71,17 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CopyBackupToRegionResponse * copyBackupToRegion(const CopyBackupToRegionRequest &request);
     CreateClusterResponse * createCluster(const CreateClusterRequest &request);
     CreateHsmResponse * createHsm(const CreateHsmRequest &request);
+    DeleteBackupResponse * deleteBackup(const DeleteBackupRequest &request);
     DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
     DeleteHsmResponse * deleteHsm(const DeleteHsmRequest &request);
     DescribeBackupsResponse * describeBackups(const DescribeBackupsRequest &request);
     DescribeClustersResponse * describeClusters(const DescribeClustersRequest &request);
     InitializeClusterResponse * initializeCluster(const InitializeClusterRequest &request);
     ListTagsResponse * listTags(const ListTagsRequest &request);
+    RestoreBackupResponse * restoreBackup(const RestoreBackupRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 

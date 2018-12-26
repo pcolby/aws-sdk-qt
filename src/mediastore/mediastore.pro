@@ -26,6 +26,10 @@ HEADERS += \
     deletecorspolicyrequest_p.h \
     deletecorspolicyresponse.h \
     deletecorspolicyresponse_p.h \
+    deletelifecyclepolicyrequest.h \
+    deletelifecyclepolicyrequest_p.h \
+    deletelifecyclepolicyresponse.h \
+    deletelifecyclepolicyresponse_p.h \
     describecontainerrequest.h \
     describecontainerrequest_p.h \
     describecontainerresponse.h \
@@ -38,6 +42,10 @@ HEADERS += \
     getcorspolicyrequest_p.h \
     getcorspolicyresponse.h \
     getcorspolicyresponse_p.h \
+    getlifecyclepolicyrequest.h \
+    getlifecyclepolicyrequest_p.h \
+    getlifecyclepolicyresponse.h \
+    getlifecyclepolicyresponse_p.h \
     listcontainersrequest.h \
     listcontainersrequest_p.h \
     listcontainersresponse.h \
@@ -56,6 +64,10 @@ HEADERS += \
     putcorspolicyrequest_p.h \
     putcorspolicyresponse.h \
     putcorspolicyresponse_p.h \
+    putlifecyclepolicyrequest.h \
+    putlifecyclepolicyrequest_p.h \
+    putlifecyclepolicyresponse.h \
+    putlifecyclepolicyresponse_p.h \
 
 SOURCES += \
     createcontainerrequest.cpp \
@@ -66,12 +78,16 @@ SOURCES += \
     deletecontainerresponse.cpp \
     deletecorspolicyrequest.cpp \
     deletecorspolicyresponse.cpp \
+    deletelifecyclepolicyrequest.cpp \
+    deletelifecyclepolicyresponse.cpp \
     describecontainerrequest.cpp \
     describecontainerresponse.cpp \
     getcontainerpolicyrequest.cpp \
     getcontainerpolicyresponse.cpp \
     getcorspolicyrequest.cpp \
     getcorspolicyresponse.cpp \
+    getlifecyclepolicyrequest.cpp \
+    getlifecyclepolicyresponse.cpp \
     listcontainersrequest.cpp \
     listcontainersresponse.cpp \
     mediastoreclient.cpp \
@@ -81,5 +97,7 @@ SOURCES += \
     putcontainerpolicyresponse.cpp \
     putcorspolicyrequest.cpp \
     putcorspolicyresponse.cpp \
+    putlifecyclepolicyrequest.cpp \
+    putlifecyclepolicyresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

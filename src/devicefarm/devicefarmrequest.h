@@ -91,6 +91,7 @@ public:
         PurchaseOfferingAction,
         RenewOfferingAction,
         ScheduleRunAction,
+        StopJobAction,
         StopRemoteAccessSessionAction,
         StopRunAction,
         UpdateDeviceInstanceAction,
@@ -98,6 +99,7 @@ public:
         UpdateInstanceProfileAction,
         UpdateNetworkProfileAction,
         UpdateProjectAction,
+        UpdateUploadAction,
         UpdateVPCEConfigurationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

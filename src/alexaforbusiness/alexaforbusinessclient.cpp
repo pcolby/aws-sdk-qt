@@ -21,14 +21,24 @@
 #include "alexaforbusinessclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "approveskillrequest.h"
+#include "approveskillresponse.h"
 #include "associatecontactwithaddressbookrequest.h"
 #include "associatecontactwithaddressbookresponse.h"
 #include "associatedevicewithroomrequest.h"
 #include "associatedevicewithroomresponse.h"
 #include "associateskillgroupwithroomrequest.h"
 #include "associateskillgroupwithroomresponse.h"
+#include "associateskillwithskillgrouprequest.h"
+#include "associateskillwithskillgroupresponse.h"
+#include "associateskillwithusersrequest.h"
+#include "associateskillwithusersresponse.h"
 #include "createaddressbookrequest.h"
 #include "createaddressbookresponse.h"
+#include "createbusinessreportschedulerequest.h"
+#include "createbusinessreportscheduleresponse.h"
+#include "createconferenceproviderrequest.h"
+#include "createconferenceproviderresponse.h"
 #include "createcontactrequest.h"
 #include "createcontactresponse.h"
 #include "createprofilerequest.h"
@@ -41,14 +51,22 @@
 #include "createuserresponse.h"
 #include "deleteaddressbookrequest.h"
 #include "deleteaddressbookresponse.h"
+#include "deletebusinessreportschedulerequest.h"
+#include "deletebusinessreportscheduleresponse.h"
+#include "deleteconferenceproviderrequest.h"
+#include "deleteconferenceproviderresponse.h"
 #include "deletecontactrequest.h"
 #include "deletecontactresponse.h"
+#include "deletedevicerequest.h"
+#include "deletedeviceresponse.h"
 #include "deleteprofilerequest.h"
 #include "deleteprofileresponse.h"
 #include "deleteroomrequest.h"
 #include "deleteroomresponse.h"
 #include "deleteroomskillparameterrequest.h"
 #include "deleteroomskillparameterresponse.h"
+#include "deleteskillauthorizationrequest.h"
+#include "deleteskillauthorizationresponse.h"
 #include "deleteskillgrouprequest.h"
 #include "deleteskillgroupresponse.h"
 #include "deleteuserrequest.h"
@@ -57,10 +75,20 @@
 #include "disassociatecontactfromaddressbookresponse.h"
 #include "disassociatedevicefromroomrequest.h"
 #include "disassociatedevicefromroomresponse.h"
+#include "disassociateskillfromskillgrouprequest.h"
+#include "disassociateskillfromskillgroupresponse.h"
+#include "disassociateskillfromusersrequest.h"
+#include "disassociateskillfromusersresponse.h"
 #include "disassociateskillgroupfromroomrequest.h"
 #include "disassociateskillgroupfromroomresponse.h"
+#include "forgetsmarthomeappliancesrequest.h"
+#include "forgetsmarthomeappliancesresponse.h"
 #include "getaddressbookrequest.h"
 #include "getaddressbookresponse.h"
+#include "getconferencepreferencerequest.h"
+#include "getconferencepreferenceresponse.h"
+#include "getconferenceproviderrequest.h"
+#include "getconferenceproviderresponse.h"
 #include "getcontactrequest.h"
 #include "getcontactresponse.h"
 #include "getdevicerequest.h"
@@ -73,14 +101,32 @@
 #include "getroomskillparameterresponse.h"
 #include "getskillgrouprequest.h"
 #include "getskillgroupresponse.h"
+#include "listbusinessreportschedulesrequest.h"
+#include "listbusinessreportschedulesresponse.h"
+#include "listconferenceprovidersrequest.h"
+#include "listconferenceprovidersresponse.h"
 #include "listdeviceeventsrequest.h"
 #include "listdeviceeventsresponse.h"
 #include "listskillsrequest.h"
 #include "listskillsresponse.h"
+#include "listskillsstorecategoriesrequest.h"
+#include "listskillsstorecategoriesresponse.h"
+#include "listskillsstoreskillsbycategoryrequest.h"
+#include "listskillsstoreskillsbycategoryresponse.h"
+#include "listsmarthomeappliancesrequest.h"
+#include "listsmarthomeappliancesresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
+#include "putconferencepreferencerequest.h"
+#include "putconferencepreferenceresponse.h"
 #include "putroomskillparameterrequest.h"
 #include "putroomskillparameterresponse.h"
+#include "putskillauthorizationrequest.h"
+#include "putskillauthorizationresponse.h"
+#include "registeravsdevicerequest.h"
+#include "registeravsdeviceresponse.h"
+#include "rejectskillrequest.h"
+#include "rejectskillresponse.h"
 #include "resolveroomrequest.h"
 #include "resolveroomresponse.h"
 #include "revokeinvitationrequest.h"
@@ -103,12 +149,18 @@
 #include "sendinvitationresponse.h"
 #include "startdevicesyncrequest.h"
 #include "startdevicesyncresponse.h"
+#include "startsmarthomeappliancediscoveryrequest.h"
+#include "startsmarthomeappliancediscoveryresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
 #include "updateaddressbookrequest.h"
 #include "updateaddressbookresponse.h"
+#include "updatebusinessreportschedulerequest.h"
+#include "updatebusinessreportscheduleresponse.h"
+#include "updateconferenceproviderrequest.h"
+#include "updateconferenceproviderresponse.h"
 #include "updatecontactrequest.h"
 #include "updatecontactresponse.h"
 #include "updatedevicerequest.h"
@@ -142,11 +194,13 @@ namespace AlexaForBusiness {
  * \ingroup aws-clients
  * \inmodule QtAwsAlexaForBusiness
  *
- *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
- *  need for managing Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware
- *  voice skills using the Alexa Skills Kit and the Alexa for Business API operations. You can make also these available as
- *  private skills for your organization. Alexa for Business makes it easy to voice-enable your products and services,
- *  providing context-aware voice experiences for your
+ *  Alexa for Business helps you use Alexa in your organization. Alexa for Business provides you with the tools to manage
+ *  Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice skills using
+ *  the Alexa Skills Kit and the Alexa for Business API operations. You can also make these available as private skills for
+ *  your organization. Alexa for Business makes it efficient to voice-enable your products and services, thus providing
+ *  context-aware voice experiences for your customers. Device makers building with the Alexa Voice Service (AVS) can create
+ *  fully integrated solutions, register their products with Alexa for Business, and manage them as shared devices in their
+ *  organization.
  */
 
 /*!
@@ -204,6 +258,20 @@ AlexaForBusinessClient::AlexaForBusinessClient(
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ApproveSkillResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a skill with the organization under the customer's AWS account. If a skill is private, the user implicitly
+ * accepts access to this skill during
+ */
+ApproveSkillResponse * AlexaForBusinessClient::approveSkill(const ApproveSkillRequest &request)
+{
+    return qobject_cast<ApproveSkillResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * AssociateContactWithAddressBookResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -245,6 +313,32 @@ AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGrou
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * AssociateSkillWithSkillGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a skill with a skill
+ */
+AssociateSkillWithSkillGroupResponse * AlexaForBusinessClient::associateSkillWithSkillGroup(const AssociateSkillWithSkillGroupRequest &request)
+{
+    return qobject_cast<AssociateSkillWithSkillGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * AssociateSkillWithUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Makes a private skill available for enrolled users to enable on their
+ */
+AssociateSkillWithUsersResponse * AlexaForBusinessClient::associateSkillWithUsers(const AssociateSkillWithUsersRequest &request)
+{
+    return qobject_cast<AssociateSkillWithUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * CreateAddressBookResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -254,6 +348,32 @@ AssociateSkillGroupWithRoomResponse * AlexaForBusinessClient::associateSkillGrou
 CreateAddressBookResponse * AlexaForBusinessClient::createAddressBook(const CreateAddressBookRequest &request)
 {
     return qobject_cast<CreateAddressBookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * CreateBusinessReportScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a recurring schedule for usage reports to deliver to the specified S3 location with a specified daily or weekly
+ */
+CreateBusinessReportScheduleResponse * AlexaForBusinessClient::createBusinessReportSchedule(const CreateBusinessReportScheduleRequest &request)
+{
+    return qobject_cast<CreateBusinessReportScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * CreateConferenceProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a new conference provider under the user's AWS
+ */
+CreateConferenceProviderResponse * AlexaForBusinessClient::createConferenceProvider(const CreateConferenceProviderRequest &request)
+{
+    return qobject_cast<CreateConferenceProviderResponse *>(send(request));
 }
 
 /*!
@@ -336,6 +456,32 @@ DeleteAddressBookResponse * AlexaForBusinessClient::deleteAddressBook(const Dele
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteBusinessReportScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the recurring report delivery schedule with the specified schedule
+ */
+DeleteBusinessReportScheduleResponse * AlexaForBusinessClient::deleteBusinessReportSchedule(const DeleteBusinessReportScheduleRequest &request)
+{
+    return qobject_cast<DeleteBusinessReportScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteConferenceProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a conference
+ */
+DeleteConferenceProviderResponse * AlexaForBusinessClient::deleteConferenceProvider(const DeleteConferenceProviderRequest &request)
+{
+    return qobject_cast<DeleteConferenceProviderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * DeleteContactResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -345,6 +491,19 @@ DeleteAddressBookResponse * AlexaForBusinessClient::deleteAddressBook(const Dele
 DeleteContactResponse * AlexaForBusinessClient::deleteContact(const DeleteContactRequest &request)
 {
     return qobject_cast<DeleteContactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a device from Alexa For
+ */
+DeleteDeviceResponse * AlexaForBusinessClient::deleteDevice(const DeleteDeviceRequest &request)
+{
+    return qobject_cast<DeleteDeviceResponse *>(send(request));
 }
 
 /*!
@@ -384,6 +543,19 @@ DeleteRoomResponse * AlexaForBusinessClient::deleteRoom(const DeleteRoomRequest 
 DeleteRoomSkillParameterResponse * AlexaForBusinessClient::deleteRoomSkillParameter(const DeleteRoomSkillParameterRequest &request)
 {
     return qobject_cast<DeleteRoomSkillParameterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteSkillAuthorizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Unlinks a third-party account from a
+ */
+DeleteSkillAuthorizationResponse * AlexaForBusinessClient::deleteSkillAuthorization(const DeleteSkillAuthorizationRequest &request)
+{
+    return qobject_cast<DeleteSkillAuthorizationResponse *>(send(request));
 }
 
 /*!
@@ -441,6 +613,32 @@ DisassociateDeviceFromRoomResponse * AlexaForBusinessClient::disassociateDeviceF
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DisassociateSkillFromSkillGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a skill from a skill
+ */
+DisassociateSkillFromSkillGroupResponse * AlexaForBusinessClient::disassociateSkillFromSkillGroup(const DisassociateSkillFromSkillGroupRequest &request)
+{
+    return qobject_cast<DisassociateSkillFromSkillGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DisassociateSkillFromUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Makes a private skill unavailable for enrolled users and prevents them from enabling it on their
+ */
+DisassociateSkillFromUsersResponse * AlexaForBusinessClient::disassociateSkillFromUsers(const DisassociateSkillFromUsersRequest &request)
+{
+    return qobject_cast<DisassociateSkillFromUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * DisassociateSkillGroupFromRoomResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -454,6 +652,19 @@ DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSki
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ForgetSmartHomeAppliancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Forgets smart home appliances associated to a
+ */
+ForgetSmartHomeAppliancesResponse * AlexaForBusinessClient::forgetSmartHomeAppliances(const ForgetSmartHomeAppliancesRequest &request)
+{
+    return qobject_cast<ForgetSmartHomeAppliancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * GetAddressBookResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -463,6 +674,32 @@ DisassociateSkillGroupFromRoomResponse * AlexaForBusinessClient::disassociateSki
 GetAddressBookResponse * AlexaForBusinessClient::getAddressBook(const GetAddressBookRequest &request)
 {
     return qobject_cast<GetAddressBookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * GetConferencePreferenceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the existing conference
+ */
+GetConferencePreferenceResponse * AlexaForBusinessClient::getConferencePreference(const GetConferencePreferenceRequest &request)
+{
+    return qobject_cast<GetConferencePreferenceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * GetConferenceProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details about a specific conference
+ */
+GetConferenceProviderResponse * AlexaForBusinessClient::getConferenceProvider(const GetConferenceProviderRequest &request)
+{
+    return qobject_cast<GetConferenceProviderResponse *>(send(request));
 }
 
 /*!
@@ -545,13 +782,37 @@ GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGrou
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListBusinessReportSchedulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the details of the schedules that a user
+ */
+ListBusinessReportSchedulesResponse * AlexaForBusinessClient::listBusinessReportSchedules(const ListBusinessReportSchedulesRequest &request)
+{
+    return qobject_cast<ListBusinessReportSchedulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListConferenceProvidersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists conference providers under a specific AWS
+ */
+ListConferenceProvidersResponse * AlexaForBusinessClient::listConferenceProviders(const ListConferenceProvidersRequest &request)
+{
+    return qobject_cast<ListConferenceProvidersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * ListDeviceEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the Device Event history for up to 30 days. If EventType isn't specified in the request, this returns a list of
- * all device events in reverse chronological order. If EventType is specified, this returns a list of device events for
- * that EventType in reverse chronological order.
+ * Lists the device event history, including device connection status, for up to 30
  */
 ListDeviceEventsResponse * AlexaForBusinessClient::listDeviceEvents(const ListDeviceEventsRequest &request)
 {
@@ -573,15 +834,67 @@ ListSkillsResponse * AlexaForBusinessClient::listSkills(const ListSkillsRequest 
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListSkillsStoreCategoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all categories in the Alexa skill
+ */
+ListSkillsStoreCategoriesResponse * AlexaForBusinessClient::listSkillsStoreCategories(const ListSkillsStoreCategoriesRequest &request)
+{
+    return qobject_cast<ListSkillsStoreCategoriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListSkillsStoreSkillsByCategoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all skills in the Alexa skill store by
+ */
+ListSkillsStoreSkillsByCategoryResponse * AlexaForBusinessClient::listSkillsStoreSkillsByCategory(const ListSkillsStoreSkillsByCategoryRequest &request)
+{
+    return qobject_cast<ListSkillsStoreSkillsByCategoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListSmartHomeAppliancesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all of the smart home appliances associated with a
+ */
+ListSmartHomeAppliancesResponse * AlexaForBusinessClient::listSmartHomeAppliances(const ListSmartHomeAppliancesRequest &request)
+{
+    return qobject_cast<ListSmartHomeAppliancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * ListTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all tags for a specific
+ * Lists all tags for the specified
  */
 ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &request)
 {
     return qobject_cast<ListTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * PutConferencePreferenceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets the conference preferences on a specific conference provider at the account
+ */
+PutConferencePreferenceResponse * AlexaForBusinessClient::putConferencePreference(const PutConferencePreferenceRequest &request)
+{
+    return qobject_cast<PutConferencePreferenceResponse *>(send(request));
 }
 
 /*!
@@ -595,6 +908,48 @@ ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &reque
 PutRoomSkillParameterResponse * AlexaForBusinessClient::putRoomSkillParameter(const PutRoomSkillParameterRequest &request)
 {
     return qobject_cast<PutRoomSkillParameterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * PutSkillAuthorizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Links a user's account to a third-party skill provider. If this API operation is called by an assumed IAM role, the
+ * skill being linked must be a private skill. Also, the skill must be owned by the AWS account that assumed the IAM
+ */
+PutSkillAuthorizationResponse * AlexaForBusinessClient::putSkillAuthorization(const PutSkillAuthorizationRequest &request)
+{
+    return qobject_cast<PutSkillAuthorizationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * RegisterAVSDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Registers an Alexa-enabled device built by an Original Equipment Manufacturer (OEM) using Alexa Voice Service
+ */
+RegisterAVSDeviceResponse * AlexaForBusinessClient::registerAVSDevice(const RegisterAVSDeviceRequest &request)
+{
+    return qobject_cast<RegisterAVSDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * RejectSkillResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a skill from the organization under a user's AWS account. If the skill is a private skill, it moves to an
+ * AcceptStatus of PENDING. Any private or public skill that is rejected can be added later by calling the ApproveSkill
+ * API.
+ */
+RejectSkillResponse * AlexaForBusinessClient::rejectSkill(const RejectSkillRequest &request)
+{
+    return qobject_cast<RejectSkillResponse *>(send(request));
 }
 
 /*!
@@ -743,6 +1098,19 @@ StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDev
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * StartSmartHomeApplianceDiscoveryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Initiates the discovery of any smart home appliances associated with the
+ */
+StartSmartHomeApplianceDiscoveryResponse * AlexaForBusinessClient::startSmartHomeApplianceDiscovery(const StartSmartHomeApplianceDiscoveryRequest &request)
+{
+    return qobject_cast<StartSmartHomeApplianceDiscoveryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -778,6 +1146,32 @@ UntagResourceResponse * AlexaForBusinessClient::untagResource(const UntagResourc
 UpdateAddressBookResponse * AlexaForBusinessClient::updateAddressBook(const UpdateAddressBookRequest &request)
 {
     return qobject_cast<UpdateAddressBookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * UpdateBusinessReportScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the configuration of the report delivery schedule with the specified schedule
+ */
+UpdateBusinessReportScheduleResponse * AlexaForBusinessClient::updateBusinessReportSchedule(const UpdateBusinessReportScheduleRequest &request)
+{
+    return qobject_cast<UpdateBusinessReportScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * UpdateConferenceProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing conference provider's
+ */
+UpdateConferenceProviderResponse * AlexaForBusinessClient::updateConferenceProvider(const UpdateConferenceProviderRequest &request)
+{
+    return qobject_cast<UpdateConferenceProviderResponse *>(send(request));
 }
 
 /*!

@@ -10,10 +10,26 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    createapprequest.h \
+    createapprequest_p.h \
+    createappresponse.h \
+    createappresponse_p.h \
     createreplicationjobrequest.h \
     createreplicationjobrequest_p.h \
     createreplicationjobresponse.h \
     createreplicationjobresponse_p.h \
+    deleteapplaunchconfigurationrequest.h \
+    deleteapplaunchconfigurationrequest_p.h \
+    deleteapplaunchconfigurationresponse.h \
+    deleteapplaunchconfigurationresponse_p.h \
+    deleteappreplicationconfigurationrequest.h \
+    deleteappreplicationconfigurationrequest_p.h \
+    deleteappreplicationconfigurationresponse.h \
+    deleteappreplicationconfigurationresponse_p.h \
+    deleteapprequest.h \
+    deleteapprequest_p.h \
+    deleteappresponse.h \
+    deleteappresponse_p.h \
     deletereplicationjobrequest.h \
     deletereplicationjobrequest_p.h \
     deletereplicationjobresponse.h \
@@ -26,6 +42,26 @@ HEADERS += \
     disassociateconnectorrequest_p.h \
     disassociateconnectorresponse.h \
     disassociateconnectorresponse_p.h \
+    generatechangesetrequest.h \
+    generatechangesetrequest_p.h \
+    generatechangesetresponse.h \
+    generatechangesetresponse_p.h \
+    generatetemplaterequest.h \
+    generatetemplaterequest_p.h \
+    generatetemplateresponse.h \
+    generatetemplateresponse_p.h \
+    getapplaunchconfigurationrequest.h \
+    getapplaunchconfigurationrequest_p.h \
+    getapplaunchconfigurationresponse.h \
+    getapplaunchconfigurationresponse_p.h \
+    getappreplicationconfigurationrequest.h \
+    getappreplicationconfigurationrequest_p.h \
+    getappreplicationconfigurationresponse.h \
+    getappreplicationconfigurationresponse_p.h \
+    getapprequest.h \
+    getapprequest_p.h \
+    getappresponse.h \
+    getappresponse_p.h \
     getconnectorsrequest.h \
     getconnectorsrequest_p.h \
     getconnectorsresponse.h \
@@ -46,30 +82,80 @@ HEADERS += \
     importservercatalogrequest_p.h \
     importservercatalogresponse.h \
     importservercatalogresponse_p.h \
+    launchapprequest.h \
+    launchapprequest_p.h \
+    launchappresponse.h \
+    launchappresponse_p.h \
+    listappsrequest.h \
+    listappsrequest_p.h \
+    listappsresponse.h \
+    listappsresponse_p.h \
+    putapplaunchconfigurationrequest.h \
+    putapplaunchconfigurationrequest_p.h \
+    putapplaunchconfigurationresponse.h \
+    putapplaunchconfigurationresponse_p.h \
+    putappreplicationconfigurationrequest.h \
+    putappreplicationconfigurationrequest_p.h \
+    putappreplicationconfigurationresponse.h \
+    putappreplicationconfigurationresponse_p.h \
     smsclient.h \
     smsclient_p.h \
     smsrequest.h \
     smsrequest_p.h \
     smsresponse.h \
     smsresponse_p.h \
+    startappreplicationrequest.h \
+    startappreplicationrequest_p.h \
+    startappreplicationresponse.h \
+    startappreplicationresponse_p.h \
     startondemandreplicationrunrequest.h \
     startondemandreplicationrunrequest_p.h \
     startondemandreplicationrunresponse.h \
     startondemandreplicationrunresponse_p.h \
+    stopappreplicationrequest.h \
+    stopappreplicationrequest_p.h \
+    stopappreplicationresponse.h \
+    stopappreplicationresponse_p.h \
+    terminateapprequest.h \
+    terminateapprequest_p.h \
+    terminateappresponse.h \
+    terminateappresponse_p.h \
+    updateapprequest.h \
+    updateapprequest_p.h \
+    updateappresponse.h \
+    updateappresponse_p.h \
     updatereplicationjobrequest.h \
     updatereplicationjobrequest_p.h \
     updatereplicationjobresponse.h \
     updatereplicationjobresponse_p.h \
 
 SOURCES += \
+    createapprequest.cpp \
+    createappresponse.cpp \
     createreplicationjobrequest.cpp \
     createreplicationjobresponse.cpp \
+    deleteapplaunchconfigurationrequest.cpp \
+    deleteapplaunchconfigurationresponse.cpp \
+    deleteappreplicationconfigurationrequest.cpp \
+    deleteappreplicationconfigurationresponse.cpp \
+    deleteapprequest.cpp \
+    deleteappresponse.cpp \
     deletereplicationjobrequest.cpp \
     deletereplicationjobresponse.cpp \
     deleteservercatalogrequest.cpp \
     deleteservercatalogresponse.cpp \
     disassociateconnectorrequest.cpp \
     disassociateconnectorresponse.cpp \
+    generatechangesetrequest.cpp \
+    generatechangesetresponse.cpp \
+    generatetemplaterequest.cpp \
+    generatetemplateresponse.cpp \
+    getapplaunchconfigurationrequest.cpp \
+    getapplaunchconfigurationresponse.cpp \
+    getappreplicationconfigurationrequest.cpp \
+    getappreplicationconfigurationresponse.cpp \
+    getapprequest.cpp \
+    getappresponse.cpp \
     getconnectorsrequest.cpp \
     getconnectorsresponse.cpp \
     getreplicationjobsrequest.cpp \
@@ -80,11 +166,27 @@ SOURCES += \
     getserversresponse.cpp \
     importservercatalogrequest.cpp \
     importservercatalogresponse.cpp \
+    launchapprequest.cpp \
+    launchappresponse.cpp \
+    listappsrequest.cpp \
+    listappsresponse.cpp \
+    putapplaunchconfigurationrequest.cpp \
+    putapplaunchconfigurationresponse.cpp \
+    putappreplicationconfigurationrequest.cpp \
+    putappreplicationconfigurationresponse.cpp \
     smsclient.cpp \
     smsrequest.cpp \
     smsresponse.cpp \
+    startappreplicationrequest.cpp \
+    startappreplicationresponse.cpp \
     startondemandreplicationrunrequest.cpp \
     startondemandreplicationrunresponse.cpp \
+    stopappreplicationrequest.cpp \
+    stopappreplicationresponse.cpp \
+    terminateapprequest.cpp \
+    terminateappresponse.cpp \
+    updateapprequest.cpp \
+    updateappresponse.cpp \
     updatereplicationjobrequest.cpp \
     updatereplicationjobresponse.cpp \
 

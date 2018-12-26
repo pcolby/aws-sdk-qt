@@ -20,6 +20,14 @@ HEADERS += \
     associatefleetrequest_p.h \
     associatefleetresponse.h \
     associatefleetresponse_p.h \
+    batchassociateuserstackrequest.h \
+    batchassociateuserstackrequest_p.h \
+    batchassociateuserstackresponse.h \
+    batchassociateuserstackresponse_p.h \
+    batchdisassociateuserstackrequest.h \
+    batchdisassociateuserstackrequest_p.h \
+    batchdisassociateuserstackresponse.h \
+    batchdisassociateuserstackresponse_p.h \
     copyimagerequest.h \
     copyimagerequest_p.h \
     copyimageresponse.h \
@@ -48,6 +56,10 @@ HEADERS += \
     createstreamingurlrequest_p.h \
     createstreamingurlresponse.h \
     createstreamingurlresponse_p.h \
+    createuserrequest.h \
+    createuserrequest_p.h \
+    createuserresponse.h \
+    createuserresponse_p.h \
     deletedirectoryconfigrequest.h \
     deletedirectoryconfigrequest_p.h \
     deletedirectoryconfigresponse.h \
@@ -72,6 +84,10 @@ HEADERS += \
     deletestackrequest_p.h \
     deletestackresponse.h \
     deletestackresponse_p.h \
+    deleteuserrequest.h \
+    deleteuserrequest_p.h \
+    deleteuserresponse.h \
+    deleteuserresponse_p.h \
     describedirectoryconfigsrequest.h \
     describedirectoryconfigsrequest_p.h \
     describedirectoryconfigsresponse.h \
@@ -100,10 +116,26 @@ HEADERS += \
     describestacksrequest_p.h \
     describestacksresponse.h \
     describestacksresponse_p.h \
+    describeusersrequest.h \
+    describeusersrequest_p.h \
+    describeusersresponse.h \
+    describeusersresponse_p.h \
+    describeuserstackassociationsrequest.h \
+    describeuserstackassociationsrequest_p.h \
+    describeuserstackassociationsresponse.h \
+    describeuserstackassociationsresponse_p.h \
+    disableuserrequest.h \
+    disableuserrequest_p.h \
+    disableuserresponse.h \
+    disableuserresponse_p.h \
     disassociatefleetrequest.h \
     disassociatefleetrequest_p.h \
     disassociatefleetresponse.h \
     disassociatefleetresponse_p.h \
+    enableuserrequest.h \
+    enableuserrequest_p.h \
+    enableuserresponse.h \
+    enableuserresponse_p.h \
     expiresessionrequest.h \
     expiresessionrequest_p.h \
     expiresessionresponse.h \
@@ -167,6 +199,10 @@ SOURCES += \
     appstreamresponse.cpp \
     associatefleetrequest.cpp \
     associatefleetresponse.cpp \
+    batchassociateuserstackrequest.cpp \
+    batchassociateuserstackresponse.cpp \
+    batchdisassociateuserstackrequest.cpp \
+    batchdisassociateuserstackresponse.cpp \
     copyimagerequest.cpp \
     copyimageresponse.cpp \
     createdirectoryconfigrequest.cpp \
@@ -181,6 +217,8 @@ SOURCES += \
     createstackresponse.cpp \
     createstreamingurlrequest.cpp \
     createstreamingurlresponse.cpp \
+    createuserrequest.cpp \
+    createuserresponse.cpp \
     deletedirectoryconfigrequest.cpp \
     deletedirectoryconfigresponse.cpp \
     deletefleetrequest.cpp \
@@ -193,6 +231,8 @@ SOURCES += \
     deleteimageresponse.cpp \
     deletestackrequest.cpp \
     deletestackresponse.cpp \
+    deleteuserrequest.cpp \
+    deleteuserresponse.cpp \
     describedirectoryconfigsrequest.cpp \
     describedirectoryconfigsresponse.cpp \
     describefleetsrequest.cpp \
@@ -207,8 +247,16 @@ SOURCES += \
     describesessionsresponse.cpp \
     describestacksrequest.cpp \
     describestacksresponse.cpp \
+    describeusersrequest.cpp \
+    describeusersresponse.cpp \
+    describeuserstackassociationsrequest.cpp \
+    describeuserstackassociationsresponse.cpp \
+    disableuserrequest.cpp \
+    disableuserresponse.cpp \
     disassociatefleetrequest.cpp \
     disassociatefleetresponse.cpp \
+    enableuserrequest.cpp \
+    enableuserresponse.cpp \
     expiresessionrequest.cpp \
     expiresessionresponse.cpp \
     listassociatedfleetsrequest.cpp \

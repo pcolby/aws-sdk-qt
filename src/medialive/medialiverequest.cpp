@@ -36,6 +36,7 @@ namespace MediaLive {
  * This enum describes the actions that can be performed as MediaLive
  * requests.
  *
+ * \value BatchUpdateScheduleAction MediaLive BatchUpdateSchedule action.
  * \value CreateChannelAction MediaLive CreateChannel action.
  * \value CreateInputAction MediaLive CreateInput action.
  * \value CreateInputSecurityGroupAction MediaLive CreateInputSecurityGroup action.
@@ -48,6 +49,7 @@ namespace MediaLive {
  * \value DescribeInputSecurityGroupAction MediaLive DescribeInputSecurityGroup action.
  * \value DescribeOfferingAction MediaLive DescribeOffering action.
  * \value DescribeReservationAction MediaLive DescribeReservation action.
+ * \value DescribeScheduleAction MediaLive DescribeSchedule action.
  * \value ListChannelsAction MediaLive ListChannels action.
  * \value ListInputSecurityGroupsAction MediaLive ListInputSecurityGroups action.
  * \value ListInputsAction MediaLive ListInputs action.

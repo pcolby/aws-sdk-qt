@@ -22,6 +22,10 @@ HEADERS += \
     createcloudformationchangesetrequest_p.h \
     createcloudformationchangesetresponse.h \
     createcloudformationchangesetresponse_p.h \
+    createcloudformationtemplaterequest.h \
+    createcloudformationtemplaterequest_p.h \
+    createcloudformationtemplateresponse.h \
+    createcloudformationtemplateresponse_p.h \
     deleteapplicationrequest.h \
     deleteapplicationrequest_p.h \
     deleteapplicationresponse.h \
@@ -34,6 +38,14 @@ HEADERS += \
     getapplicationrequest_p.h \
     getapplicationresponse.h \
     getapplicationresponse_p.h \
+    getcloudformationtemplaterequest.h \
+    getcloudformationtemplaterequest_p.h \
+    getcloudformationtemplateresponse.h \
+    getcloudformationtemplateresponse_p.h \
+    listapplicationdependenciesrequest.h \
+    listapplicationdependenciesrequest_p.h \
+    listapplicationdependenciesresponse.h \
+    listapplicationdependenciesresponse_p.h \
     listapplicationsrequest.h \
     listapplicationsrequest_p.h \
     listapplicationsresponse.h \
@@ -64,12 +76,18 @@ SOURCES += \
     createapplicationversionresponse.cpp \
     createcloudformationchangesetrequest.cpp \
     createcloudformationchangesetresponse.cpp \
+    createcloudformationtemplaterequest.cpp \
+    createcloudformationtemplateresponse.cpp \
     deleteapplicationrequest.cpp \
     deleteapplicationresponse.cpp \
     getapplicationpolicyrequest.cpp \
     getapplicationpolicyresponse.cpp \
     getapplicationrequest.cpp \
     getapplicationresponse.cpp \
+    getcloudformationtemplaterequest.cpp \
+    getcloudformationtemplateresponse.cpp \
+    listapplicationdependenciesrequest.cpp \
+    listapplicationdependenciesresponse.cpp \
     listapplicationsrequest.cpp \
     listapplicationsresponse.cpp \
     listapplicationversionsrequest.cpp \

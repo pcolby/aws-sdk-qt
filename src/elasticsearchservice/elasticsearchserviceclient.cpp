@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "addtagsrequest.h"
 #include "addtagsresponse.h"
+#include "cancelelasticsearchservicesoftwareupdaterequest.h"
+#include "cancelelasticsearchservicesoftwareupdateresponse.h"
 #include "createelasticsearchdomainrequest.h"
 #include "createelasticsearchdomainresponse.h"
 #include "deleteelasticsearchdomainrequest.h"
@@ -41,6 +43,12 @@
 #include "describereservedelasticsearchinstanceofferingsresponse.h"
 #include "describereservedelasticsearchinstancesrequest.h"
 #include "describereservedelasticsearchinstancesresponse.h"
+#include "getcompatibleelasticsearchversionsrequest.h"
+#include "getcompatibleelasticsearchversionsresponse.h"
+#include "getupgradehistoryrequest.h"
+#include "getupgradehistoryresponse.h"
+#include "getupgradestatusrequest.h"
+#include "getupgradestatusresponse.h"
 #include "listdomainnamesrequest.h"
 #include "listdomainnamesresponse.h"
 #include "listelasticsearchinstancetypesrequest.h"
@@ -53,8 +61,12 @@
 #include "purchasereservedelasticsearchinstanceofferingresponse.h"
 #include "removetagsrequest.h"
 #include "removetagsresponse.h"
+#include "startelasticsearchservicesoftwareupdaterequest.h"
+#include "startelasticsearchservicesoftwareupdateresponse.h"
 #include "updateelasticsearchdomainconfigrequest.h"
 #include "updateelasticsearchdomainconfigresponse.h"
+#include "upgradeelasticsearchdomainrequest.h"
+#include "upgradeelasticsearchdomainresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -156,6 +168,20 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
 AddTagsResponse * ElasticsearchServiceClient::addTags(const AddTagsRequest &request)
 {
     return qobject_cast<AddTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * CancelElasticsearchServiceSoftwareUpdateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels a scheduled service software update for an Amazon ES domain. You can only perform this operation before the
+ * <code>AutomatedUpdateDate</code> and when the <code>UpdateStatus</code> is in the <code>PENDING_UPDATE</code>
+ */
+CancelElasticsearchServiceSoftwareUpdateResponse * ElasticsearchServiceClient::cancelElasticsearchServiceSoftwareUpdate(const CancelElasticsearchServiceSoftwareUpdateRequest &request)
+{
+    return qobject_cast<CancelElasticsearchServiceSoftwareUpdateResponse *>(send(request));
 }
 
 /*!
@@ -302,6 +328,46 @@ DescribeReservedElasticsearchInstancesResponse * ElasticsearchServiceClient::des
 
 /*!
  * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * GetCompatibleElasticsearchVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of upgrade compatible Elastisearch versions. You can optionally pass a <code> <a>DomainName</a> </code>
+ * to get all upgrade compatible Elasticsearch versions for that specific domain.
+ */
+GetCompatibleElasticsearchVersionsResponse * ElasticsearchServiceClient::getCompatibleElasticsearchVersions(const GetCompatibleElasticsearchVersionsRequest &request)
+{
+    return qobject_cast<GetCompatibleElasticsearchVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * GetUpgradeHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the complete history of the last 10 upgrades that were performed on the
+ */
+GetUpgradeHistoryResponse * ElasticsearchServiceClient::getUpgradeHistory(const GetUpgradeHistoryRequest &request)
+{
+    return qobject_cast<GetUpgradeHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * GetUpgradeStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the latest status of the last upgrade or upgrade eligibility check that was performed on the
+ */
+GetUpgradeStatusResponse * ElasticsearchServiceClient::getUpgradeStatus(const GetUpgradeStatusRequest &request)
+{
+    return qobject_cast<GetUpgradeStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
  * ListDomainNamesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -393,6 +459,19 @@ RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequ
 
 /*!
  * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * StartElasticsearchServiceSoftwareUpdateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Schedules a service software update for an Amazon ES
+ */
+StartElasticsearchServiceSoftwareUpdateResponse * ElasticsearchServiceClient::startElasticsearchServiceSoftwareUpdate(const StartElasticsearchServiceSoftwareUpdateRequest &request)
+{
+    return qobject_cast<StartElasticsearchServiceSoftwareUpdateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
  * UpdateElasticsearchDomainConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -403,6 +482,19 @@ RemoveTagsResponse * ElasticsearchServiceClient::removeTags(const RemoveTagsRequ
 UpdateElasticsearchDomainConfigResponse * ElasticsearchServiceClient::updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request)
 {
     return qobject_cast<UpdateElasticsearchDomainConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElasticsearchServiceClient service, and returns a pointer to an
+ * UpgradeElasticsearchDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows you to either upgrade your domain or perform an Upgrade eligibility check to a compatible Elasticsearch
+ */
+UpgradeElasticsearchDomainResponse * ElasticsearchServiceClient::upgradeElasticsearchDomain(const UpgradeElasticsearchDomainRequest &request)
+{
+    return qobject_cast<UpgradeElasticsearchDomainResponse *>(send(request));
 }
 
 /*!

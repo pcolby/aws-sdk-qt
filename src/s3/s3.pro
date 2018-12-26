@@ -86,6 +86,10 @@ HEADERS += \
     deleteobjecttaggingrequest_p.h \
     deleteobjecttaggingresponse.h \
     deleteobjecttaggingresponse_p.h \
+    deletepublicaccessblockrequest.h \
+    deletepublicaccessblockrequest_p.h \
+    deletepublicaccessblockresponse.h \
+    deletepublicaccessblockresponse_p.h \
     getbucketaccelerateconfigurationrequest.h \
     getbucketaccelerateconfigurationrequest_p.h \
     getbucketaccelerateconfigurationresponse.h \
@@ -142,6 +146,10 @@ HEADERS += \
     getbucketpolicyrequest_p.h \
     getbucketpolicyresponse.h \
     getbucketpolicyresponse_p.h \
+    getbucketpolicystatusrequest.h \
+    getbucketpolicystatusrequest_p.h \
+    getbucketpolicystatusresponse.h \
+    getbucketpolicystatusresponse_p.h \
     getbucketreplicationrequest.h \
     getbucketreplicationrequest_p.h \
     getbucketreplicationresponse.h \
@@ -166,10 +174,22 @@ HEADERS += \
     getobjectaclrequest_p.h \
     getobjectaclresponse.h \
     getobjectaclresponse_p.h \
+    getobjectlegalholdrequest.h \
+    getobjectlegalholdrequest_p.h \
+    getobjectlegalholdresponse.h \
+    getobjectlegalholdresponse_p.h \
+    getobjectlockconfigurationrequest.h \
+    getobjectlockconfigurationrequest_p.h \
+    getobjectlockconfigurationresponse.h \
+    getobjectlockconfigurationresponse_p.h \
     getobjectrequest.h \
     getobjectrequest_p.h \
     getobjectresponse.h \
     getobjectresponse_p.h \
+    getobjectretentionrequest.h \
+    getobjectretentionrequest_p.h \
+    getobjectretentionresponse.h \
+    getobjectretentionresponse_p.h \
     getobjecttaggingrequest.h \
     getobjecttaggingrequest_p.h \
     getobjecttaggingresponse.h \
@@ -178,6 +198,10 @@ HEADERS += \
     getobjecttorrentrequest_p.h \
     getobjecttorrentresponse.h \
     getobjecttorrentresponse_p.h \
+    getpublicaccessblockrequest.h \
+    getpublicaccessblockrequest_p.h \
+    getpublicaccessblockresponse.h \
+    getpublicaccessblockresponse_p.h \
     headbucketrequest.h \
     headbucketrequest_p.h \
     headbucketresponse.h \
@@ -298,14 +322,30 @@ HEADERS += \
     putobjectaclrequest_p.h \
     putobjectaclresponse.h \
     putobjectaclresponse_p.h \
+    putobjectlegalholdrequest.h \
+    putobjectlegalholdrequest_p.h \
+    putobjectlegalholdresponse.h \
+    putobjectlegalholdresponse_p.h \
+    putobjectlockconfigurationrequest.h \
+    putobjectlockconfigurationrequest_p.h \
+    putobjectlockconfigurationresponse.h \
+    putobjectlockconfigurationresponse_p.h \
     putobjectrequest.h \
     putobjectrequest_p.h \
     putobjectresponse.h \
     putobjectresponse_p.h \
+    putobjectretentionrequest.h \
+    putobjectretentionrequest_p.h \
+    putobjectretentionresponse.h \
+    putobjectretentionresponse_p.h \
     putobjecttaggingrequest.h \
     putobjecttaggingrequest_p.h \
     putobjecttaggingresponse.h \
     putobjecttaggingresponse_p.h \
+    putpublicaccessblockrequest.h \
+    putpublicaccessblockrequest_p.h \
+    putpublicaccessblockresponse.h \
+    putpublicaccessblockresponse_p.h \
     restoreobjectrequest.h \
     restoreobjectrequest_p.h \
     restoreobjectresponse.h \
@@ -368,6 +408,8 @@ SOURCES += \
     deleteobjectsresponse.cpp \
     deleteobjecttaggingrequest.cpp \
     deleteobjecttaggingresponse.cpp \
+    deletepublicaccessblockrequest.cpp \
+    deletepublicaccessblockresponse.cpp \
     getbucketaccelerateconfigurationrequest.cpp \
     getbucketaccelerateconfigurationresponse.cpp \
     getbucketaclrequest.cpp \
@@ -396,6 +438,8 @@ SOURCES += \
     getbucketnotificationresponse.cpp \
     getbucketpolicyrequest.cpp \
     getbucketpolicyresponse.cpp \
+    getbucketpolicystatusrequest.cpp \
+    getbucketpolicystatusresponse.cpp \
     getbucketreplicationrequest.cpp \
     getbucketreplicationresponse.cpp \
     getbucketrequestpaymentrequest.cpp \
@@ -408,12 +452,20 @@ SOURCES += \
     getbucketwebsiteresponse.cpp \
     getobjectaclrequest.cpp \
     getobjectaclresponse.cpp \
+    getobjectlegalholdrequest.cpp \
+    getobjectlegalholdresponse.cpp \
+    getobjectlockconfigurationrequest.cpp \
+    getobjectlockconfigurationresponse.cpp \
     getobjectrequest.cpp \
     getobjectresponse.cpp \
+    getobjectretentionrequest.cpp \
+    getobjectretentionresponse.cpp \
     getobjecttaggingrequest.cpp \
     getobjecttaggingresponse.cpp \
     getobjecttorrentrequest.cpp \
     getobjecttorrentresponse.cpp \
+    getpublicaccessblockrequest.cpp \
+    getpublicaccessblockresponse.cpp \
     headbucketrequest.cpp \
     headbucketresponse.cpp \
     headobjectrequest.cpp \
@@ -474,10 +526,18 @@ SOURCES += \
     putbucketwebsiteresponse.cpp \
     putobjectaclrequest.cpp \
     putobjectaclresponse.cpp \
+    putobjectlegalholdrequest.cpp \
+    putobjectlegalholdresponse.cpp \
+    putobjectlockconfigurationrequest.cpp \
+    putobjectlockconfigurationresponse.cpp \
     putobjectrequest.cpp \
     putobjectresponse.cpp \
+    putobjectretentionrequest.cpp \
+    putobjectretentionresponse.cpp \
     putobjecttaggingrequest.cpp \
     putobjecttaggingresponse.cpp \
+    putpublicaccessblockrequest.cpp \
+    putpublicaccessblockresponse.cpp \
     restoreobjectrequest.cpp \
     restoreobjectresponse.cpp \
     s3client.cpp \

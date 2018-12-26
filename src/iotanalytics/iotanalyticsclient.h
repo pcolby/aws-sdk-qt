@@ -66,6 +66,8 @@ class GetDatasetContentRequest;
 class GetDatasetContentResponse;
 class ListChannelsRequest;
 class ListChannelsResponse;
+class ListDatasetContentsRequest;
+class ListDatasetContentsResponse;
 class ListDatasetsRequest;
 class ListDatasetsResponse;
 class ListDatastoresRequest;
@@ -130,6 +132,7 @@ public slots:
     DescribePipelineResponse * describePipeline(const DescribePipelineRequest &request);
     GetDatasetContentResponse * getDatasetContent(const GetDatasetContentRequest &request);
     ListChannelsResponse * listChannels(const ListChannelsRequest &request);
+    ListDatasetContentsResponse * listDatasetContents(const ListDatasetContentsRequest &request);
     ListDatasetsResponse * listDatasets(const ListDatasetsRequest &request);
     ListDatastoresResponse * listDatastores(const ListDatastoresRequest &request);
     ListPipelinesResponse * listPipelines(const ListPipelinesRequest &request);

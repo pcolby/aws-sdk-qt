@@ -62,6 +62,10 @@ HEADERS += \
     liststatemachinesrequest_p.h \
     liststatemachinesresponse.h \
     liststatemachinesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     sendtaskfailurerequest.h \
     sendtaskfailurerequest_p.h \
     sendtaskfailureresponse.h \
@@ -88,6 +92,14 @@ HEADERS += \
     stopexecutionrequest_p.h \
     stopexecutionresponse.h \
     stopexecutionresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatestatemachinerequest.h \
     updatestatemachinerequest_p.h \
     updatestatemachineresponse.h \
@@ -120,6 +132,8 @@ SOURCES += \
     listexecutionsresponse.cpp \
     liststatemachinesrequest.cpp \
     liststatemachinesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     sendtaskfailurerequest.cpp \
     sendtaskfailureresponse.cpp \
     sendtaskheartbeatrequest.cpp \
@@ -133,6 +147,10 @@ SOURCES += \
     startexecutionresponse.cpp \
     stopexecutionrequest.cpp \
     stopexecutionresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatestatemachinerequest.cpp \
     updatestatemachineresponse.cpp \
 

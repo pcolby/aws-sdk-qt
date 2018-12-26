@@ -22,10 +22,22 @@ HEADERS += \
     associateproductwithportfoliorequest_p.h \
     associateproductwithportfolioresponse.h \
     associateproductwithportfolioresponse_p.h \
+    associateserviceactionwithprovisioningartifactrequest.h \
+    associateserviceactionwithprovisioningartifactrequest_p.h \
+    associateserviceactionwithprovisioningartifactresponse.h \
+    associateserviceactionwithprovisioningartifactresponse_p.h \
     associatetagoptionwithresourcerequest.h \
     associatetagoptionwithresourcerequest_p.h \
     associatetagoptionwithresourceresponse.h \
     associatetagoptionwithresourceresponse_p.h \
+    batchassociateserviceactionwithprovisioningartifactrequest.h \
+    batchassociateserviceactionwithprovisioningartifactrequest_p.h \
+    batchassociateserviceactionwithprovisioningartifactresponse.h \
+    batchassociateserviceactionwithprovisioningartifactresponse_p.h \
+    batchdisassociateserviceactionfromprovisioningartifactrequest.h \
+    batchdisassociateserviceactionfromprovisioningartifactrequest_p.h \
+    batchdisassociateserviceactionfromprovisioningartifactresponse.h \
+    batchdisassociateserviceactionfromprovisioningartifactresponse_p.h \
     copyproductrequest.h \
     copyproductrequest_p.h \
     copyproductresponse.h \
@@ -54,6 +66,10 @@ HEADERS += \
     createprovisioningartifactrequest_p.h \
     createprovisioningartifactresponse.h \
     createprovisioningartifactresponse_p.h \
+    createserviceactionrequest.h \
+    createserviceactionrequest_p.h \
+    createserviceactionresponse.h \
+    createserviceactionresponse_p.h \
     createtagoptionrequest.h \
     createtagoptionrequest_p.h \
     createtagoptionresponse.h \
@@ -82,6 +98,10 @@ HEADERS += \
     deleteprovisioningartifactrequest_p.h \
     deleteprovisioningartifactresponse.h \
     deleteprovisioningartifactresponse_p.h \
+    deleteserviceactionrequest.h \
+    deleteserviceactionrequest_p.h \
+    deleteserviceactionresponse.h \
+    deleteserviceactionresponse_p.h \
     deletetagoptionrequest.h \
     deletetagoptionrequest_p.h \
     deletetagoptionresponse.h \
@@ -98,6 +118,10 @@ HEADERS += \
     describeportfoliorequest_p.h \
     describeportfolioresponse.h \
     describeportfolioresponse_p.h \
+    describeportfoliosharestatusrequest.h \
+    describeportfoliosharestatusrequest_p.h \
+    describeportfoliosharestatusresponse.h \
+    describeportfoliosharestatusresponse_p.h \
     describeproductasadminrequest.h \
     describeproductasadminrequest_p.h \
     describeproductasadminresponse.h \
@@ -130,10 +154,18 @@ HEADERS += \
     describerecordrequest_p.h \
     describerecordresponse.h \
     describerecordresponse_p.h \
+    describeserviceactionrequest.h \
+    describeserviceactionrequest_p.h \
+    describeserviceactionresponse.h \
+    describeserviceactionresponse_p.h \
     describetagoptionrequest.h \
     describetagoptionrequest_p.h \
     describetagoptionresponse.h \
     describetagoptionresponse_p.h \
+    disableawsorganizationsaccessrequest.h \
+    disableawsorganizationsaccessrequest_p.h \
+    disableawsorganizationsaccessresponse.h \
+    disableawsorganizationsaccessresponse_p.h \
     disassociateprincipalfromportfoliorequest.h \
     disassociateprincipalfromportfoliorequest_p.h \
     disassociateprincipalfromportfolioresponse.h \
@@ -142,14 +174,30 @@ HEADERS += \
     disassociateproductfromportfoliorequest_p.h \
     disassociateproductfromportfolioresponse.h \
     disassociateproductfromportfolioresponse_p.h \
+    disassociateserviceactionfromprovisioningartifactrequest.h \
+    disassociateserviceactionfromprovisioningartifactrequest_p.h \
+    disassociateserviceactionfromprovisioningartifactresponse.h \
+    disassociateserviceactionfromprovisioningartifactresponse_p.h \
     disassociatetagoptionfromresourcerequest.h \
     disassociatetagoptionfromresourcerequest_p.h \
     disassociatetagoptionfromresourceresponse.h \
     disassociatetagoptionfromresourceresponse_p.h \
+    enableawsorganizationsaccessrequest.h \
+    enableawsorganizationsaccessrequest_p.h \
+    enableawsorganizationsaccessresponse.h \
+    enableawsorganizationsaccessresponse_p.h \
     executeprovisionedproductplanrequest.h \
     executeprovisionedproductplanrequest_p.h \
     executeprovisionedproductplanresponse.h \
     executeprovisionedproductplanresponse_p.h \
+    executeprovisionedproductserviceactionrequest.h \
+    executeprovisionedproductserviceactionrequest_p.h \
+    executeprovisionedproductserviceactionresponse.h \
+    executeprovisionedproductserviceactionresponse_p.h \
+    getawsorganizationsaccessstatusrequest.h \
+    getawsorganizationsaccessstatusrequest_p.h \
+    getawsorganizationsaccessstatusresponse.h \
+    getawsorganizationsaccessstatusresponse_p.h \
     listacceptedportfoliosharesrequest.h \
     listacceptedportfoliosharesrequest_p.h \
     listacceptedportfoliosharesresponse.h \
@@ -162,6 +210,10 @@ HEADERS += \
     listlaunchpathsrequest_p.h \
     listlaunchpathsresponse.h \
     listlaunchpathsresponse_p.h \
+    listorganizationportfolioaccessrequest.h \
+    listorganizationportfolioaccessrequest_p.h \
+    listorganizationportfolioaccessresponse.h \
+    listorganizationportfolioaccessresponse_p.h \
     listportfolioaccessrequest.h \
     listportfolioaccessrequest_p.h \
     listportfolioaccessresponse.h \
@@ -182,6 +234,10 @@ HEADERS += \
     listprovisionedproductplansrequest_p.h \
     listprovisionedproductplansresponse.h \
     listprovisionedproductplansresponse_p.h \
+    listprovisioningartifactsforserviceactionrequest.h \
+    listprovisioningartifactsforserviceactionrequest_p.h \
+    listprovisioningartifactsforserviceactionresponse.h \
+    listprovisioningartifactsforserviceactionresponse_p.h \
     listprovisioningartifactsrequest.h \
     listprovisioningartifactsrequest_p.h \
     listprovisioningartifactsresponse.h \
@@ -194,6 +250,14 @@ HEADERS += \
     listresourcesfortagoptionrequest_p.h \
     listresourcesfortagoptionresponse.h \
     listresourcesfortagoptionresponse_p.h \
+    listserviceactionsforprovisioningartifactrequest.h \
+    listserviceactionsforprovisioningartifactrequest_p.h \
+    listserviceactionsforprovisioningartifactresponse.h \
+    listserviceactionsforprovisioningartifactresponse_p.h \
+    listserviceactionsrequest.h \
+    listserviceactionsrequest_p.h \
+    listserviceactionsresponse.h \
+    listserviceactionsresponse_p.h \
     listtagoptionsrequest.h \
     listtagoptionsrequest_p.h \
     listtagoptionsresponse.h \
@@ -252,6 +316,10 @@ HEADERS += \
     updateprovisioningartifactrequest_p.h \
     updateprovisioningartifactresponse.h \
     updateprovisioningartifactresponse_p.h \
+    updateserviceactionrequest.h \
+    updateserviceactionrequest_p.h \
+    updateserviceactionresponse.h \
+    updateserviceactionresponse_p.h \
     updatetagoptionrequest.h \
     updatetagoptionrequest_p.h \
     updatetagoptionresponse.h \
@@ -264,8 +332,14 @@ SOURCES += \
     associateprincipalwithportfolioresponse.cpp \
     associateproductwithportfoliorequest.cpp \
     associateproductwithportfolioresponse.cpp \
+    associateserviceactionwithprovisioningartifactrequest.cpp \
+    associateserviceactionwithprovisioningartifactresponse.cpp \
     associatetagoptionwithresourcerequest.cpp \
     associatetagoptionwithresourceresponse.cpp \
+    batchassociateserviceactionwithprovisioningartifactrequest.cpp \
+    batchassociateserviceactionwithprovisioningartifactresponse.cpp \
+    batchdisassociateserviceactionfromprovisioningartifactrequest.cpp \
+    batchdisassociateserviceactionfromprovisioningartifactresponse.cpp \
     copyproductrequest.cpp \
     copyproductresponse.cpp \
     createconstraintrequest.cpp \
@@ -280,6 +354,8 @@ SOURCES += \
     createprovisionedproductplanresponse.cpp \
     createprovisioningartifactrequest.cpp \
     createprovisioningartifactresponse.cpp \
+    createserviceactionrequest.cpp \
+    createserviceactionresponse.cpp \
     createtagoptionrequest.cpp \
     createtagoptionresponse.cpp \
     deleteconstraintrequest.cpp \
@@ -294,6 +370,8 @@ SOURCES += \
     deleteprovisionedproductplanresponse.cpp \
     deleteprovisioningartifactrequest.cpp \
     deleteprovisioningartifactresponse.cpp \
+    deleteserviceactionrequest.cpp \
+    deleteserviceactionresponse.cpp \
     deletetagoptionrequest.cpp \
     deletetagoptionresponse.cpp \
     describeconstraintrequest.cpp \
@@ -302,6 +380,8 @@ SOURCES += \
     describecopyproductstatusresponse.cpp \
     describeportfoliorequest.cpp \
     describeportfolioresponse.cpp \
+    describeportfoliosharestatusrequest.cpp \
+    describeportfoliosharestatusresponse.cpp \
     describeproductasadminrequest.cpp \
     describeproductasadminresponse.cpp \
     describeproductrequest.cpp \
@@ -318,22 +398,36 @@ SOURCES += \
     describeprovisioningparametersresponse.cpp \
     describerecordrequest.cpp \
     describerecordresponse.cpp \
+    describeserviceactionrequest.cpp \
+    describeserviceactionresponse.cpp \
     describetagoptionrequest.cpp \
     describetagoptionresponse.cpp \
+    disableawsorganizationsaccessrequest.cpp \
+    disableawsorganizationsaccessresponse.cpp \
     disassociateprincipalfromportfoliorequest.cpp \
     disassociateprincipalfromportfolioresponse.cpp \
     disassociateproductfromportfoliorequest.cpp \
     disassociateproductfromportfolioresponse.cpp \
+    disassociateserviceactionfromprovisioningartifactrequest.cpp \
+    disassociateserviceactionfromprovisioningartifactresponse.cpp \
     disassociatetagoptionfromresourcerequest.cpp \
     disassociatetagoptionfromresourceresponse.cpp \
+    enableawsorganizationsaccessrequest.cpp \
+    enableawsorganizationsaccessresponse.cpp \
     executeprovisionedproductplanrequest.cpp \
     executeprovisionedproductplanresponse.cpp \
+    executeprovisionedproductserviceactionrequest.cpp \
+    executeprovisionedproductserviceactionresponse.cpp \
+    getawsorganizationsaccessstatusrequest.cpp \
+    getawsorganizationsaccessstatusresponse.cpp \
     listacceptedportfoliosharesrequest.cpp \
     listacceptedportfoliosharesresponse.cpp \
     listconstraintsforportfoliorequest.cpp \
     listconstraintsforportfolioresponse.cpp \
     listlaunchpathsrequest.cpp \
     listlaunchpathsresponse.cpp \
+    listorganizationportfolioaccessrequest.cpp \
+    listorganizationportfolioaccessresponse.cpp \
     listportfolioaccessrequest.cpp \
     listportfolioaccessresponse.cpp \
     listportfoliosforproductrequest.cpp \
@@ -344,12 +438,18 @@ SOURCES += \
     listprincipalsforportfolioresponse.cpp \
     listprovisionedproductplansrequest.cpp \
     listprovisionedproductplansresponse.cpp \
+    listprovisioningartifactsforserviceactionrequest.cpp \
+    listprovisioningartifactsforserviceactionresponse.cpp \
     listprovisioningartifactsrequest.cpp \
     listprovisioningartifactsresponse.cpp \
     listrecordhistoryrequest.cpp \
     listrecordhistoryresponse.cpp \
     listresourcesfortagoptionrequest.cpp \
     listresourcesfortagoptionresponse.cpp \
+    listserviceactionsforprovisioningartifactrequest.cpp \
+    listserviceactionsforprovisioningartifactresponse.cpp \
+    listserviceactionsrequest.cpp \
+    listserviceactionsresponse.cpp \
     listtagoptionsrequest.cpp \
     listtagoptionsresponse.cpp \
     provisionproductrequest.cpp \
@@ -379,6 +479,8 @@ SOURCES += \
     updateprovisionedproductresponse.cpp \
     updateprovisioningartifactrequest.cpp \
     updateprovisioningartifactresponse.cpp \
+    updateserviceactionrequest.cpp \
+    updateserviceactionresponse.cpp \
     updatetagoptionrequest.cpp \
     updatetagoptionresponse.cpp \
 

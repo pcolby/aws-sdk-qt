@@ -54,6 +54,10 @@ HEADERS += \
     copyoptiongrouprequest_p.h \
     copyoptiongroupresponse.h \
     copyoptiongroupresponse_p.h \
+    createdbclusterendpointrequest.h \
+    createdbclusterendpointrequest_p.h \
+    createdbclusterendpointresponse.h \
+    createdbclusterendpointresponse_p.h \
     createdbclusterparametergrouprequest.h \
     createdbclusterparametergrouprequest_p.h \
     createdbclusterparametergroupresponse.h \
@@ -94,10 +98,18 @@ HEADERS += \
     createeventsubscriptionrequest_p.h \
     createeventsubscriptionresponse.h \
     createeventsubscriptionresponse_p.h \
+    createglobalclusterrequest.h \
+    createglobalclusterrequest_p.h \
+    createglobalclusterresponse.h \
+    createglobalclusterresponse_p.h \
     createoptiongrouprequest.h \
     createoptiongrouprequest_p.h \
     createoptiongroupresponse.h \
     createoptiongroupresponse_p.h \
+    deletedbclusterendpointrequest.h \
+    deletedbclusterendpointrequest_p.h \
+    deletedbclusterendpointresponse.h \
+    deletedbclusterendpointresponse_p.h \
     deletedbclusterparametergrouprequest.h \
     deletedbclusterparametergrouprequest_p.h \
     deletedbclusterparametergroupresponse.h \
@@ -110,6 +122,10 @@ HEADERS += \
     deletedbclustersnapshotrequest_p.h \
     deletedbclustersnapshotresponse.h \
     deletedbclustersnapshotresponse_p.h \
+    deletedbinstanceautomatedbackuprequest.h \
+    deletedbinstanceautomatedbackuprequest_p.h \
+    deletedbinstanceautomatedbackupresponse.h \
+    deletedbinstanceautomatedbackupresponse_p.h \
     deletedbinstancerequest.h \
     deletedbinstancerequest_p.h \
     deletedbinstanceresponse.h \
@@ -134,6 +150,10 @@ HEADERS += \
     deleteeventsubscriptionrequest_p.h \
     deleteeventsubscriptionresponse.h \
     deleteeventsubscriptionresponse_p.h \
+    deleteglobalclusterrequest.h \
+    deleteglobalclusterrequest_p.h \
+    deleteglobalclusterresponse.h \
+    deleteglobalclusterresponse_p.h \
     deleteoptiongrouprequest.h \
     deleteoptiongrouprequest_p.h \
     deleteoptiongroupresponse.h \
@@ -150,6 +170,10 @@ HEADERS += \
     describedbclusterbacktracksrequest_p.h \
     describedbclusterbacktracksresponse.h \
     describedbclusterbacktracksresponse_p.h \
+    describedbclusterendpointsrequest.h \
+    describedbclusterendpointsrequest_p.h \
+    describedbclusterendpointsresponse.h \
+    describedbclusterendpointsresponse_p.h \
     describedbclusterparametergroupsrequest.h \
     describedbclusterparametergroupsrequest_p.h \
     describedbclusterparametergroupsresponse.h \
@@ -174,6 +198,10 @@ HEADERS += \
     describedbengineversionsrequest_p.h \
     describedbengineversionsresponse.h \
     describedbengineversionsresponse_p.h \
+    describedbinstanceautomatedbackupsrequest.h \
+    describedbinstanceautomatedbackupsrequest_p.h \
+    describedbinstanceautomatedbackupsresponse.h \
+    describedbinstanceautomatedbackupsresponse_p.h \
     describedbinstancesrequest.h \
     describedbinstancesrequest_p.h \
     describedbinstancesresponse.h \
@@ -226,6 +254,10 @@ HEADERS += \
     describeeventsubscriptionsrequest_p.h \
     describeeventsubscriptionsresponse.h \
     describeeventsubscriptionsresponse_p.h \
+    describeglobalclustersrequest.h \
+    describeglobalclustersrequest_p.h \
+    describeglobalclustersresponse.h \
+    describeglobalclustersresponse_p.h \
     describeoptiongroupoptionsrequest.h \
     describeoptiongroupoptionsrequest_p.h \
     describeoptiongroupoptionsresponse.h \
@@ -270,6 +302,14 @@ HEADERS += \
     listtagsforresourcerequest_p.h \
     listtagsforresourceresponse.h \
     listtagsforresourceresponse_p.h \
+    modifycurrentdbclustercapacityrequest.h \
+    modifycurrentdbclustercapacityrequest_p.h \
+    modifycurrentdbclustercapacityresponse.h \
+    modifycurrentdbclustercapacityresponse_p.h \
+    modifydbclusterendpointrequest.h \
+    modifydbclusterendpointrequest_p.h \
+    modifydbclusterendpointresponse.h \
+    modifydbclusterendpointresponse_p.h \
     modifydbclusterparametergrouprequest.h \
     modifydbclusterparametergrouprequest_p.h \
     modifydbclusterparametergroupresponse.h \
@@ -306,6 +346,10 @@ HEADERS += \
     modifyeventsubscriptionrequest_p.h \
     modifyeventsubscriptionresponse.h \
     modifyeventsubscriptionresponse_p.h \
+    modifyglobalclusterrequest.h \
+    modifyglobalclusterrequest_p.h \
+    modifyglobalclusterresponse.h \
+    modifyglobalclusterresponse_p.h \
     modifyoptiongrouprequest.h \
     modifyoptiongrouprequest_p.h \
     modifyoptiongroupresponse.h \
@@ -332,6 +376,10 @@ HEADERS += \
     rebootdbinstancerequest_p.h \
     rebootdbinstanceresponse.h \
     rebootdbinstanceresponse_p.h \
+    removefromglobalclusterrequest.h \
+    removefromglobalclusterrequest_p.h \
+    removefromglobalclusterresponse.h \
+    removefromglobalclusterresponse_p.h \
     removerolefromdbclusterrequest.h \
     removerolefromdbclusterrequest_p.h \
     removerolefromdbclusterresponse.h \
@@ -380,10 +428,18 @@ HEADERS += \
     revokedbsecuritygroupingressrequest_p.h \
     revokedbsecuritygroupingressresponse.h \
     revokedbsecuritygroupingressresponse_p.h \
+    startdbclusterrequest.h \
+    startdbclusterrequest_p.h \
+    startdbclusterresponse.h \
+    startdbclusterresponse_p.h \
     startdbinstancerequest.h \
     startdbinstancerequest_p.h \
     startdbinstanceresponse.h \
     startdbinstanceresponse_p.h \
+    stopdbclusterrequest.h \
+    stopdbclusterrequest_p.h \
+    stopdbclusterresponse.h \
+    stopdbclusterresponse_p.h \
     stopdbinstancerequest.h \
     stopdbinstancerequest_p.h \
     stopdbinstanceresponse.h \
@@ -412,6 +468,8 @@ SOURCES += \
     copydbsnapshotresponse.cpp \
     copyoptiongrouprequest.cpp \
     copyoptiongroupresponse.cpp \
+    createdbclusterendpointrequest.cpp \
+    createdbclusterendpointresponse.cpp \
     createdbclusterparametergrouprequest.cpp \
     createdbclusterparametergroupresponse.cpp \
     createdbclusterrequest.cpp \
@@ -432,14 +490,20 @@ SOURCES += \
     createdbsubnetgroupresponse.cpp \
     createeventsubscriptionrequest.cpp \
     createeventsubscriptionresponse.cpp \
+    createglobalclusterrequest.cpp \
+    createglobalclusterresponse.cpp \
     createoptiongrouprequest.cpp \
     createoptiongroupresponse.cpp \
+    deletedbclusterendpointrequest.cpp \
+    deletedbclusterendpointresponse.cpp \
     deletedbclusterparametergrouprequest.cpp \
     deletedbclusterparametergroupresponse.cpp \
     deletedbclusterrequest.cpp \
     deletedbclusterresponse.cpp \
     deletedbclustersnapshotrequest.cpp \
     deletedbclustersnapshotresponse.cpp \
+    deletedbinstanceautomatedbackuprequest.cpp \
+    deletedbinstanceautomatedbackupresponse.cpp \
     deletedbinstancerequest.cpp \
     deletedbinstanceresponse.cpp \
     deletedbparametergrouprequest.cpp \
@@ -452,6 +516,8 @@ SOURCES += \
     deletedbsubnetgroupresponse.cpp \
     deleteeventsubscriptionrequest.cpp \
     deleteeventsubscriptionresponse.cpp \
+    deleteglobalclusterrequest.cpp \
+    deleteglobalclusterresponse.cpp \
     deleteoptiongrouprequest.cpp \
     deleteoptiongroupresponse.cpp \
     describeaccountattributesrequest.cpp \
@@ -460,6 +526,8 @@ SOURCES += \
     describecertificatesresponse.cpp \
     describedbclusterbacktracksrequest.cpp \
     describedbclusterbacktracksresponse.cpp \
+    describedbclusterendpointsrequest.cpp \
+    describedbclusterendpointsresponse.cpp \
     describedbclusterparametergroupsrequest.cpp \
     describedbclusterparametergroupsresponse.cpp \
     describedbclusterparametersrequest.cpp \
@@ -472,6 +540,8 @@ SOURCES += \
     describedbclustersresponse.cpp \
     describedbengineversionsrequest.cpp \
     describedbengineversionsresponse.cpp \
+    describedbinstanceautomatedbackupsrequest.cpp \
+    describedbinstanceautomatedbackupsresponse.cpp \
     describedbinstancesrequest.cpp \
     describedbinstancesresponse.cpp \
     describedblogfilesrequest.cpp \
@@ -498,6 +568,8 @@ SOURCES += \
     describeeventsresponse.cpp \
     describeeventsubscriptionsrequest.cpp \
     describeeventsubscriptionsresponse.cpp \
+    describeglobalclustersrequest.cpp \
+    describeglobalclustersresponse.cpp \
     describeoptiongroupoptionsrequest.cpp \
     describeoptiongroupoptionsresponse.cpp \
     describeoptiongroupsrequest.cpp \
@@ -520,6 +592,10 @@ SOURCES += \
     failoverdbclusterresponse.cpp \
     listtagsforresourcerequest.cpp \
     listtagsforresourceresponse.cpp \
+    modifycurrentdbclustercapacityrequest.cpp \
+    modifycurrentdbclustercapacityresponse.cpp \
+    modifydbclusterendpointrequest.cpp \
+    modifydbclusterendpointresponse.cpp \
     modifydbclusterparametergrouprequest.cpp \
     modifydbclusterparametergroupresponse.cpp \
     modifydbclusterrequest.cpp \
@@ -538,6 +614,8 @@ SOURCES += \
     modifydbsubnetgroupresponse.cpp \
     modifyeventsubscriptionrequest.cpp \
     modifyeventsubscriptionresponse.cpp \
+    modifyglobalclusterrequest.cpp \
+    modifyglobalclusterresponse.cpp \
     modifyoptiongrouprequest.cpp \
     modifyoptiongroupresponse.cpp \
     promotereadreplicadbclusterrequest.cpp \
@@ -551,6 +629,8 @@ SOURCES += \
     rdsresponse.cpp \
     rebootdbinstancerequest.cpp \
     rebootdbinstanceresponse.cpp \
+    removefromglobalclusterrequest.cpp \
+    removefromglobalclusterresponse.cpp \
     removerolefromdbclusterrequest.cpp \
     removerolefromdbclusterresponse.cpp \
     removesourceidentifierfromsubscriptionrequest.cpp \
@@ -575,8 +655,12 @@ SOURCES += \
     restoredbinstancetopointintimeresponse.cpp \
     revokedbsecuritygroupingressrequest.cpp \
     revokedbsecuritygroupingressresponse.cpp \
+    startdbclusterrequest.cpp \
+    startdbclusterresponse.cpp \
     startdbinstancerequest.cpp \
     startdbinstanceresponse.cpp \
+    stopdbclusterrequest.cpp \
+    stopdbclusterresponse.cpp \
     stopdbinstancerequest.cpp \
     stopdbinstanceresponse.cpp \
 

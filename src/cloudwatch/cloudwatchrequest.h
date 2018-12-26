@@ -47,6 +47,7 @@ public:
         GetDashboardAction,
         GetMetricDataAction,
         GetMetricStatisticsAction,
+        GetMetricWidgetImageAction,
         ListDashboardsAction,
         ListMetricsAction,
         PutDashboardAction,

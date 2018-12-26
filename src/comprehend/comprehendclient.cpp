@@ -31,10 +31,24 @@
 #include "batchdetectsentimentresponse.h"
 #include "batchdetectsyntaxrequest.h"
 #include "batchdetectsyntaxresponse.h"
+#include "createdocumentclassifierrequest.h"
+#include "createdocumentclassifierresponse.h"
+#include "createentityrecognizerrequest.h"
+#include "createentityrecognizerresponse.h"
+#include "deletedocumentclassifierrequest.h"
+#include "deletedocumentclassifierresponse.h"
+#include "deleteentityrecognizerrequest.h"
+#include "deleteentityrecognizerresponse.h"
+#include "describedocumentclassificationjobrequest.h"
+#include "describedocumentclassificationjobresponse.h"
+#include "describedocumentclassifierrequest.h"
+#include "describedocumentclassifierresponse.h"
 #include "describedominantlanguagedetectionjobrequest.h"
 #include "describedominantlanguagedetectionjobresponse.h"
 #include "describeentitiesdetectionjobrequest.h"
 #include "describeentitiesdetectionjobresponse.h"
+#include "describeentityrecognizerrequest.h"
+#include "describeentityrecognizerresponse.h"
 #include "describekeyphrasesdetectionjobrequest.h"
 #include "describekeyphrasesdetectionjobresponse.h"
 #include "describesentimentdetectionjobrequest.h"
@@ -51,16 +65,24 @@
 #include "detectsentimentresponse.h"
 #include "detectsyntaxrequest.h"
 #include "detectsyntaxresponse.h"
+#include "listdocumentclassificationjobsrequest.h"
+#include "listdocumentclassificationjobsresponse.h"
+#include "listdocumentclassifiersrequest.h"
+#include "listdocumentclassifiersresponse.h"
 #include "listdominantlanguagedetectionjobsrequest.h"
 #include "listdominantlanguagedetectionjobsresponse.h"
 #include "listentitiesdetectionjobsrequest.h"
 #include "listentitiesdetectionjobsresponse.h"
+#include "listentityrecognizersrequest.h"
+#include "listentityrecognizersresponse.h"
 #include "listkeyphrasesdetectionjobsrequest.h"
 #include "listkeyphrasesdetectionjobsresponse.h"
 #include "listsentimentdetectionjobsrequest.h"
 #include "listsentimentdetectionjobsresponse.h"
 #include "listtopicsdetectionjobsrequest.h"
 #include "listtopicsdetectionjobsresponse.h"
+#include "startdocumentclassificationjobrequest.h"
+#include "startdocumentclassificationjobresponse.h"
 #include "startdominantlanguagedetectionjobrequest.h"
 #include "startdominantlanguagedetectionjobresponse.h"
 #include "startentitiesdetectionjobrequest.h"
@@ -79,6 +101,10 @@
 #include "stopkeyphrasesdetectionjobresponse.h"
 #include "stopsentimentdetectionjobrequest.h"
 #include "stopsentimentdetectionjobresponse.h"
+#include "stoptrainingdocumentclassifierrequest.h"
+#include "stoptrainingdocumentclassifierresponse.h"
+#include "stoptrainingentityrecognizerrequest.h"
+#include "stoptrainingentityrecognizerresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -232,6 +258,108 @@ BatchDetectSyntaxResponse * ComprehendClient::batchDetectSyntax(const BatchDetec
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * CreateDocumentClassifierResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new document classifier that you can use to categorize documents. To create a classifier you provide a set of
+ * training documents that labeled with the categories that you want to use. After the classifier is trained you can use it
+ * to categorize a set of labeled documents into the categories. For more information, see
+ */
+CreateDocumentClassifierResponse * ComprehendClient::createDocumentClassifier(const CreateDocumentClassifierRequest &request)
+{
+    return qobject_cast<CreateDocumentClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * CreateEntityRecognizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an entity recognizer using submitted files. After your <code>CreateEntityRecognizer</code> request is submitted,
+ * you can check job status using the API.
+ */
+CreateEntityRecognizerResponse * ComprehendClient::createEntityRecognizer(const CreateEntityRecognizerRequest &request)
+{
+    return qobject_cast<CreateEntityRecognizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DeleteDocumentClassifierResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a previously created document
+ *
+ * classifie>
+ *
+ * Only those classifiers that are in terminated states (IN_ERROR, TRAINED) will be deleted. If an active inference job is
+ * using the model, a <code>ResourceInUseException</code> will be
+ *
+ * returned>
+ *
+ * This is an asynchronous action that puts the classifier into a DELETING state, and it is then removed by a background
+ * job. Once removed, the classifier disappears from your account and is no longer available for use.
+ */
+DeleteDocumentClassifierResponse * ComprehendClient::deleteDocumentClassifier(const DeleteDocumentClassifierRequest &request)
+{
+    return qobject_cast<DeleteDocumentClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DeleteEntityRecognizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an entity
+ *
+ * recognizer>
+ *
+ * Only those recognizers that are in terminated states (IN_ERROR, TRAINED) will be deleted. If an active inference job is
+ * using the model, a <code>ResourceInUseException</code> will be
+ *
+ * returned>
+ *
+ * This is an asynchronous action that puts the recognizer into a DELETING state, and it is then removed by a background
+ * job. Once removed, the recognizer disappears from your account and is no longer available for use.
+ */
+DeleteEntityRecognizerResponse * ComprehendClient::deleteEntityRecognizer(const DeleteEntityRecognizerRequest &request)
+{
+    return qobject_cast<DeleteEntityRecognizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeDocumentClassificationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with a document classification job. Use this operation to get the status of a
+ * classification
+ */
+DescribeDocumentClassificationJobResponse * ComprehendClient::describeDocumentClassificationJob(const DescribeDocumentClassificationJobRequest &request)
+{
+    return qobject_cast<DescribeDocumentClassificationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeDocumentClassifierResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with a document
+ */
+DescribeDocumentClassifierResponse * ComprehendClient::describeDocumentClassifier(const DescribeDocumentClassifierRequest &request)
+{
+    return qobject_cast<DescribeDocumentClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * DescribeDominantLanguageDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -255,6 +383,20 @@ DescribeDominantLanguageDetectionJobResponse * ComprehendClient::describeDominan
 DescribeEntitiesDetectionJobResponse * ComprehendClient::describeEntitiesDetectionJob(const DescribeEntitiesDetectionJobRequest &request)
 {
     return qobject_cast<DescribeEntitiesDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeEntityRecognizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides details about an entity recognizer including status, S3 buckets containing training data, recognizer metadata,
+ * metrics, and so
+ */
+DescribeEntityRecognizerResponse * ComprehendClient::describeEntityRecognizer(const DescribeEntityRecognizerRequest &request)
+{
+    return qobject_cast<DescribeEntityRecognizerResponse *>(send(request));
 }
 
 /*!
@@ -366,6 +508,32 @@ DetectSyntaxResponse * ComprehendClient::detectSyntax(const DetectSyntaxRequest 
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListDocumentClassificationJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the documentation classification jobs that you have
+ */
+ListDocumentClassificationJobsResponse * ComprehendClient::listDocumentClassificationJobs(const ListDocumentClassificationJobsRequest &request)
+{
+    return qobject_cast<ListDocumentClassificationJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListDocumentClassifiersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the document classifiers that you have
+ */
+ListDocumentClassifiersResponse * ComprehendClient::listDocumentClassifiers(const ListDocumentClassifiersRequest &request)
+{
+    return qobject_cast<ListDocumentClassifiersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * ListDominantLanguageDetectionJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -388,6 +556,25 @@ ListDominantLanguageDetectionJobsResponse * ComprehendClient::listDominantLangua
 ListEntitiesDetectionJobsResponse * ComprehendClient::listEntitiesDetectionJobs(const ListEntitiesDetectionJobsRequest &request)
 {
     return qobject_cast<ListEntitiesDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListEntityRecognizersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the properties of all entity recognizers that you created, including recognizers currently in training.
+ * Allows you to filter the list of recognizers based on criteria such as status and submission time. This call returns up
+ * to 500 entity recognizers in the list, with a default number of 100 recognizers in the
+ *
+ * list>
+ *
+ * The results of this list are not in any particular order. Please get the list and sort locally if
+ */
+ListEntityRecognizersResponse * ComprehendClient::listEntityRecognizers(const ListEntityRecognizersRequest &request)
+{
+    return qobject_cast<ListEntityRecognizersResponse *>(send(request));
 }
 
 /*!
@@ -431,6 +618,19 @@ ListTopicsDetectionJobsResponse * ComprehendClient::listTopicsDetectionJobs(cons
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StartDocumentClassificationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an asynchronous document classification job. Use the operation to track the progress of the
+ */
+StartDocumentClassificationJobResponse * ComprehendClient::startDocumentClassificationJob(const StartDocumentClassificationJobRequest &request)
+{
+    return qobject_cast<StartDocumentClassificationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * StartDominantLanguageDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -450,6 +650,12 @@ StartDominantLanguageDetectionJobResponse * ComprehendClient::startDominantLangu
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts an asynchronous entity detection job for a collection of documents. Use the operation to track the status of a
+ *
+ * job>
+ *
+ * This API can be used for either standard entity detection or custom entity recognition. In order to be used for custom
+ * entity recognition, the optional <code>EntityRecognizerArn</code> must be used in order to provide access to the
+ * recognizer being used to detect the custom
  */
 StartEntitiesDetectionJobResponse * ComprehendClient::startEntitiesDetectionJob(const StartEntitiesDetectionJobRequest &request)
 {
@@ -607,6 +813,46 @@ StopKeyPhrasesDetectionJobResponse * ComprehendClient::stopKeyPhrasesDetectionJo
 StopSentimentDetectionJobResponse * ComprehendClient::stopSentimentDetectionJob(const StopSentimentDetectionJobRequest &request)
 {
     return qobject_cast<StopSentimentDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StopTrainingDocumentClassifierResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a document classifier training job while in
+ *
+ * progress>
+ *
+ * If the training job state is <code>TRAINING</code>, the job is marked for termination and put into the
+ * <code>STOP_REQUESTED</code> state. If the training job completes before it can be stopped, it is put into the
+ * <code>TRAINED</code>; otherwise the training job is stopped and put into the <code>STOPPED</code> state and the service
+ * sends back an HTTP 200 response with an empty HTTP body.
+ */
+StopTrainingDocumentClassifierResponse * ComprehendClient::stopTrainingDocumentClassifier(const StopTrainingDocumentClassifierRequest &request)
+{
+    return qobject_cast<StopTrainingDocumentClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StopTrainingEntityRecognizerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an entity recognizer training job while in
+ *
+ * progress>
+ *
+ * If the training job state is <code>TRAINING</code>, the job is marked for termination and put into the
+ * <code>STOP_REQUESTED</code> state. If the training job completes before it can be stopped, it is put into the
+ * <code>TRAINED</code>; otherwise the training job is stopped and putted into the <code>STOPPED</code> state and the
+ * service sends back an HTTP 200 response with an empty HTTP
+ */
+StopTrainingEntityRecognizerResponse * ComprehendClient::stopTrainingEntityRecognizer(const StopTrainingEntityRecognizerRequest &request)
+{
+    return qobject_cast<StopTrainingEntityRecognizerResponse *>(send(request));
 }
 
 /*!

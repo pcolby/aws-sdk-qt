@@ -90,6 +90,10 @@ HEADERS += \
     deleteuserendpointsrequest_p.h \
     deleteuserendpointsresponse.h \
     deleteuserendpointsresponse_p.h \
+    deletevoicechannelrequest.h \
+    deletevoicechannelrequest_p.h \
+    deletevoicechannelresponse.h \
+    deletevoicechannelresponse_p.h \
     getadmchannelrequest.h \
     getadmchannelrequest_p.h \
     getadmchannelresponse.h \
@@ -214,6 +218,10 @@ HEADERS += \
     getuserendpointsrequest_p.h \
     getuserendpointsresponse.h \
     getuserendpointsresponse_p.h \
+    getvoicechannelrequest.h \
+    getvoicechannelrequest_p.h \
+    getvoicechannelresponse.h \
+    getvoicechannelresponse_p.h \
     phonenumbervalidaterequest.h \
     phonenumbervalidaterequest_p.h \
     phonenumbervalidateresponse.h \
@@ -224,6 +232,10 @@ HEADERS += \
     pinpointrequest_p.h \
     pinpointresponse.h \
     pinpointresponse_p.h \
+    puteventsrequest.h \
+    puteventsrequest_p.h \
+    puteventsresponse.h \
+    puteventsresponse_p.h \
     puteventstreamrequest.h \
     puteventstreamrequest_p.h \
     puteventstreamresponse.h \
@@ -296,6 +308,10 @@ HEADERS += \
     updatesmschannelrequest_p.h \
     updatesmschannelresponse.h \
     updatesmschannelresponse_p.h \
+    updatevoicechannelrequest.h \
+    updatevoicechannelrequest_p.h \
+    updatevoicechannelresponse.h \
+    updatevoicechannelresponse_p.h \
 
 SOURCES += \
     createapprequest.cpp \
@@ -338,6 +354,8 @@ SOURCES += \
     deletesmschannelresponse.cpp \
     deleteuserendpointsrequest.cpp \
     deleteuserendpointsresponse.cpp \
+    deletevoicechannelrequest.cpp \
+    deletevoicechannelresponse.cpp \
     getadmchannelrequest.cpp \
     getadmchannelresponse.cpp \
     getapnschannelrequest.cpp \
@@ -400,11 +418,15 @@ SOURCES += \
     getsmschannelresponse.cpp \
     getuserendpointsrequest.cpp \
     getuserendpointsresponse.cpp \
+    getvoicechannelrequest.cpp \
+    getvoicechannelresponse.cpp \
     phonenumbervalidaterequest.cpp \
     phonenumbervalidateresponse.cpp \
     pinpointclient.cpp \
     pinpointrequest.cpp \
     pinpointresponse.cpp \
+    puteventsrequest.cpp \
+    puteventsresponse.cpp \
     puteventstreamrequest.cpp \
     puteventstreamresponse.cpp \
     removeattributesrequest.cpp \
@@ -441,5 +463,7 @@ SOURCES += \
     updatesegmentresponse.cpp \
     updatesmschannelrequest.cpp \
     updatesmschannelresponse.cpp \
+    updatevoicechannelrequest.cpp \
+    updatevoicechannelresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    associatecertificaterequest.h \
+    associatecertificaterequest_p.h \
+    associatecertificateresponse.h \
+    associatecertificateresponse_p.h \
     canceljobrequest.h \
     canceljobrequest_p.h \
     canceljobresponse.h \
@@ -46,6 +50,10 @@ HEADERS += \
     describeendpointsrequest_p.h \
     describeendpointsresponse.h \
     describeendpointsresponse_p.h \
+    disassociatecertificaterequest.h \
+    disassociatecertificaterequest_p.h \
+    disassociatecertificateresponse.h \
+    disassociatecertificateresponse_p.h \
     getjobrequest.h \
     getjobrequest_p.h \
     getjobresponse.h \
@@ -110,6 +118,8 @@ HEADERS += \
     updatequeueresponse_p.h \
 
 SOURCES += \
+    associatecertificaterequest.cpp \
+    associatecertificateresponse.cpp \
     canceljobrequest.cpp \
     canceljobresponse.cpp \
     createjobrequest.cpp \
@@ -128,6 +138,8 @@ SOURCES += \
     deletequeueresponse.cpp \
     describeendpointsrequest.cpp \
     describeendpointsresponse.cpp \
+    disassociatecertificaterequest.cpp \
+    disassociatecertificateresponse.cpp \
     getjobrequest.cpp \
     getjobresponse.cpp \
     getjobtemplaterequest.cpp \

@@ -28,14 +28,32 @@ namespace QtAws {
 namespace SMS {
 
 class SmsClientPrivate;
+class CreateAppRequest;
+class CreateAppResponse;
 class CreateReplicationJobRequest;
 class CreateReplicationJobResponse;
+class DeleteAppRequest;
+class DeleteAppResponse;
+class DeleteAppLaunchConfigurationRequest;
+class DeleteAppLaunchConfigurationResponse;
+class DeleteAppReplicationConfigurationRequest;
+class DeleteAppReplicationConfigurationResponse;
 class DeleteReplicationJobRequest;
 class DeleteReplicationJobResponse;
 class DeleteServerCatalogRequest;
 class DeleteServerCatalogResponse;
 class DisassociateConnectorRequest;
 class DisassociateConnectorResponse;
+class GenerateChangeSetRequest;
+class GenerateChangeSetResponse;
+class GenerateTemplateRequest;
+class GenerateTemplateResponse;
+class GetAppRequest;
+class GetAppResponse;
+class GetAppLaunchConfigurationRequest;
+class GetAppLaunchConfigurationResponse;
+class GetAppReplicationConfigurationRequest;
+class GetAppReplicationConfigurationResponse;
 class GetConnectorsRequest;
 class GetConnectorsResponse;
 class GetReplicationJobsRequest;
@@ -46,8 +64,24 @@ class GetServersRequest;
 class GetServersResponse;
 class ImportServerCatalogRequest;
 class ImportServerCatalogResponse;
+class LaunchAppRequest;
+class LaunchAppResponse;
+class ListAppsRequest;
+class ListAppsResponse;
+class PutAppLaunchConfigurationRequest;
+class PutAppLaunchConfigurationResponse;
+class PutAppReplicationConfigurationRequest;
+class PutAppReplicationConfigurationResponse;
+class StartAppReplicationRequest;
+class StartAppReplicationResponse;
 class StartOnDemandReplicationRunRequest;
 class StartOnDemandReplicationRunResponse;
+class StopAppReplicationRequest;
+class StopAppReplicationResponse;
+class TerminateAppRequest;
+class TerminateAppResponse;
+class UpdateAppRequest;
+class UpdateAppResponse;
 class UpdateReplicationJobRequest;
 class UpdateReplicationJobResponse;
 
@@ -67,16 +101,33 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateAppResponse * createApp(const CreateAppRequest &request);
     CreateReplicationJobResponse * createReplicationJob(const CreateReplicationJobRequest &request);
+    DeleteAppResponse * deleteApp(const DeleteAppRequest &request);
+    DeleteAppLaunchConfigurationResponse * deleteAppLaunchConfiguration(const DeleteAppLaunchConfigurationRequest &request);
+    DeleteAppReplicationConfigurationResponse * deleteAppReplicationConfiguration(const DeleteAppReplicationConfigurationRequest &request);
     DeleteReplicationJobResponse * deleteReplicationJob(const DeleteReplicationJobRequest &request);
     DeleteServerCatalogResponse * deleteServerCatalog(const DeleteServerCatalogRequest &request);
     DisassociateConnectorResponse * disassociateConnector(const DisassociateConnectorRequest &request);
+    GenerateChangeSetResponse * generateChangeSet(const GenerateChangeSetRequest &request);
+    GenerateTemplateResponse * generateTemplate(const GenerateTemplateRequest &request);
+    GetAppResponse * getApp(const GetAppRequest &request);
+    GetAppLaunchConfigurationResponse * getAppLaunchConfiguration(const GetAppLaunchConfigurationRequest &request);
+    GetAppReplicationConfigurationResponse * getAppReplicationConfiguration(const GetAppReplicationConfigurationRequest &request);
     GetConnectorsResponse * getConnectors(const GetConnectorsRequest &request);
     GetReplicationJobsResponse * getReplicationJobs(const GetReplicationJobsRequest &request);
     GetReplicationRunsResponse * getReplicationRuns(const GetReplicationRunsRequest &request);
     GetServersResponse * getServers(const GetServersRequest &request);
     ImportServerCatalogResponse * importServerCatalog(const ImportServerCatalogRequest &request);
+    LaunchAppResponse * launchApp(const LaunchAppRequest &request);
+    ListAppsResponse * listApps(const ListAppsRequest &request);
+    PutAppLaunchConfigurationResponse * putAppLaunchConfiguration(const PutAppLaunchConfigurationRequest &request);
+    PutAppReplicationConfigurationResponse * putAppReplicationConfiguration(const PutAppReplicationConfigurationRequest &request);
+    StartAppReplicationResponse * startAppReplication(const StartAppReplicationRequest &request);
     StartOnDemandReplicationRunResponse * startOnDemandReplicationRun(const StartOnDemandReplicationRunRequest &request);
+    StopAppReplicationResponse * stopAppReplication(const StopAppReplicationRequest &request);
+    TerminateAppResponse * terminateApp(const TerminateAppRequest &request);
+    UpdateAppResponse * updateApp(const UpdateAppRequest &request);
     UpdateReplicationJobResponse * updateReplicationJob(const UpdateReplicationJobRequest &request);
 
 private:

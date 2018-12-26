@@ -36,36 +36,59 @@ namespace AlexaForBusiness {
  * This enum describes the actions that can be performed as AlexaForBusiness
  * requests.
  *
+ * \value ApproveSkillAction AlexaForBusiness ApproveSkill action.
  * \value AssociateContactWithAddressBookAction AlexaForBusiness AssociateContactWithAddressBook action.
  * \value AssociateDeviceWithRoomAction AlexaForBusiness AssociateDeviceWithRoom action.
  * \value AssociateSkillGroupWithRoomAction AlexaForBusiness AssociateSkillGroupWithRoom action.
+ * \value AssociateSkillWithSkillGroupAction AlexaForBusiness AssociateSkillWithSkillGroup action.
+ * \value AssociateSkillWithUsersAction AlexaForBusiness AssociateSkillWithUsers action.
  * \value CreateAddressBookAction AlexaForBusiness CreateAddressBook action.
+ * \value CreateBusinessReportScheduleAction AlexaForBusiness CreateBusinessReportSchedule action.
+ * \value CreateConferenceProviderAction AlexaForBusiness CreateConferenceProvider action.
  * \value CreateContactAction AlexaForBusiness CreateContact action.
  * \value CreateProfileAction AlexaForBusiness CreateProfile action.
  * \value CreateRoomAction AlexaForBusiness CreateRoom action.
  * \value CreateSkillGroupAction AlexaForBusiness CreateSkillGroup action.
  * \value CreateUserAction AlexaForBusiness CreateUser action.
  * \value DeleteAddressBookAction AlexaForBusiness DeleteAddressBook action.
+ * \value DeleteBusinessReportScheduleAction AlexaForBusiness DeleteBusinessReportSchedule action.
+ * \value DeleteConferenceProviderAction AlexaForBusiness DeleteConferenceProvider action.
  * \value DeleteContactAction AlexaForBusiness DeleteContact action.
+ * \value DeleteDeviceAction AlexaForBusiness DeleteDevice action.
  * \value DeleteProfileAction AlexaForBusiness DeleteProfile action.
  * \value DeleteRoomAction AlexaForBusiness DeleteRoom action.
  * \value DeleteRoomSkillParameterAction AlexaForBusiness DeleteRoomSkillParameter action.
+ * \value DeleteSkillAuthorizationAction AlexaForBusiness DeleteSkillAuthorization action.
  * \value DeleteSkillGroupAction AlexaForBusiness DeleteSkillGroup action.
  * \value DeleteUserAction AlexaForBusiness DeleteUser action.
  * \value DisassociateContactFromAddressBookAction AlexaForBusiness DisassociateContactFromAddressBook action.
  * \value DisassociateDeviceFromRoomAction AlexaForBusiness DisassociateDeviceFromRoom action.
+ * \value DisassociateSkillFromSkillGroupAction AlexaForBusiness DisassociateSkillFromSkillGroup action.
+ * \value DisassociateSkillFromUsersAction AlexaForBusiness DisassociateSkillFromUsers action.
  * \value DisassociateSkillGroupFromRoomAction AlexaForBusiness DisassociateSkillGroupFromRoom action.
+ * \value ForgetSmartHomeAppliancesAction AlexaForBusiness ForgetSmartHomeAppliances action.
  * \value GetAddressBookAction AlexaForBusiness GetAddressBook action.
+ * \value GetConferencePreferenceAction AlexaForBusiness GetConferencePreference action.
+ * \value GetConferenceProviderAction AlexaForBusiness GetConferenceProvider action.
  * \value GetContactAction AlexaForBusiness GetContact action.
  * \value GetDeviceAction AlexaForBusiness GetDevice action.
  * \value GetProfileAction AlexaForBusiness GetProfile action.
  * \value GetRoomAction AlexaForBusiness GetRoom action.
  * \value GetRoomSkillParameterAction AlexaForBusiness GetRoomSkillParameter action.
  * \value GetSkillGroupAction AlexaForBusiness GetSkillGroup action.
+ * \value ListBusinessReportSchedulesAction AlexaForBusiness ListBusinessReportSchedules action.
+ * \value ListConferenceProvidersAction AlexaForBusiness ListConferenceProviders action.
  * \value ListDeviceEventsAction AlexaForBusiness ListDeviceEvents action.
  * \value ListSkillsAction AlexaForBusiness ListSkills action.
+ * \value ListSkillsStoreCategoriesAction AlexaForBusiness ListSkillsStoreCategories action.
+ * \value ListSkillsStoreSkillsByCategoryAction AlexaForBusiness ListSkillsStoreSkillsByCategory action.
+ * \value ListSmartHomeAppliancesAction AlexaForBusiness ListSmartHomeAppliances action.
  * \value ListTagsAction AlexaForBusiness ListTags action.
+ * \value PutConferencePreferenceAction AlexaForBusiness PutConferencePreference action.
  * \value PutRoomSkillParameterAction AlexaForBusiness PutRoomSkillParameter action.
+ * \value PutSkillAuthorizationAction AlexaForBusiness PutSkillAuthorization action.
+ * \value RegisterAVSDeviceAction AlexaForBusiness RegisterAVSDevice action.
+ * \value RejectSkillAction AlexaForBusiness RejectSkill action.
  * \value ResolveRoomAction AlexaForBusiness ResolveRoom action.
  * \value RevokeInvitationAction AlexaForBusiness RevokeInvitation action.
  * \value SearchAddressBooksAction AlexaForBusiness SearchAddressBooks action.
@@ -77,9 +100,12 @@ namespace AlexaForBusiness {
  * \value SearchUsersAction AlexaForBusiness SearchUsers action.
  * \value SendInvitationAction AlexaForBusiness SendInvitation action.
  * \value StartDeviceSyncAction AlexaForBusiness StartDeviceSync action.
+ * \value StartSmartHomeApplianceDiscoveryAction AlexaForBusiness StartSmartHomeApplianceDiscovery action.
  * \value TagResourceAction AlexaForBusiness TagResource action.
  * \value UntagResourceAction AlexaForBusiness UntagResource action.
  * \value UpdateAddressBookAction AlexaForBusiness UpdateAddressBook action.
+ * \value UpdateBusinessReportScheduleAction AlexaForBusiness UpdateBusinessReportSchedule action.
+ * \value UpdateConferenceProviderAction AlexaForBusiness UpdateConferenceProvider action.
  * \value UpdateContactAction AlexaForBusiness UpdateContact action.
  * \value UpdateDeviceAction AlexaForBusiness UpdateDevice action.
  * \value UpdateProfileAction AlexaForBusiness UpdateProfile action.

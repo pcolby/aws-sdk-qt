@@ -1,0 +1,226 @@
+/*
+    Copyright 2013-2018 Paul Colby
+
+    This file is part of QtAws.
+
+    QtAws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QtAws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#ifndef QTAWS_APIGATEWAYV2CLIENT_H
+#define QTAWS_APIGATEWAYV2CLIENT_H
+
+#include "core/awsabstractclient.h"
+
+class QNetworkReply;
+
+namespace QtAws {
+namespace ApiGatewayV2 {
+
+class ApiGatewayV2ClientPrivate;
+class CreateApiRequest;
+class CreateApiResponse;
+class CreateApiMappingRequest;
+class CreateApiMappingResponse;
+class CreateAuthorizerRequest;
+class CreateAuthorizerResponse;
+class CreateDeploymentRequest;
+class CreateDeploymentResponse;
+class CreateDomainNameRequest;
+class CreateDomainNameResponse;
+class CreateIntegrationRequest;
+class CreateIntegrationResponse;
+class CreateIntegrationResponseRequest;
+class CreateIntegrationResponseResponse;
+class CreateModelRequest;
+class CreateModelResponse;
+class CreateRouteRequest;
+class CreateRouteResponse;
+class CreateRouteResponseRequest;
+class CreateRouteResponseResponse;
+class CreateStageRequest;
+class CreateStageResponse;
+class DeleteApiRequest;
+class DeleteApiResponse;
+class DeleteApiMappingRequest;
+class DeleteApiMappingResponse;
+class DeleteAuthorizerRequest;
+class DeleteAuthorizerResponse;
+class DeleteDeploymentRequest;
+class DeleteDeploymentResponse;
+class DeleteDomainNameRequest;
+class DeleteDomainNameResponse;
+class DeleteIntegrationRequest;
+class DeleteIntegrationResponse;
+class DeleteIntegrationResponseRequest;
+class DeleteIntegrationResponseResponse;
+class DeleteModelRequest;
+class DeleteModelResponse;
+class DeleteRouteRequest;
+class DeleteRouteResponse;
+class DeleteRouteResponseRequest;
+class DeleteRouteResponseResponse;
+class DeleteStageRequest;
+class DeleteStageResponse;
+class GetApiRequest;
+class GetApiResponse;
+class GetApiMappingRequest;
+class GetApiMappingResponse;
+class GetApiMappingsRequest;
+class GetApiMappingsResponse;
+class GetApisRequest;
+class GetApisResponse;
+class GetAuthorizerRequest;
+class GetAuthorizerResponse;
+class GetAuthorizersRequest;
+class GetAuthorizersResponse;
+class GetDeploymentRequest;
+class GetDeploymentResponse;
+class GetDeploymentsRequest;
+class GetDeploymentsResponse;
+class GetDomainNameRequest;
+class GetDomainNameResponse;
+class GetDomainNamesRequest;
+class GetDomainNamesResponse;
+class GetIntegrationRequest;
+class GetIntegrationResponse;
+class GetIntegrationResponseRequest;
+class GetIntegrationResponseResponse;
+class GetIntegrationResponsesRequest;
+class GetIntegrationResponsesResponse;
+class GetIntegrationsRequest;
+class GetIntegrationsResponse;
+class GetModelRequest;
+class GetModelResponse;
+class GetModelTemplateRequest;
+class GetModelTemplateResponse;
+class GetModelsRequest;
+class GetModelsResponse;
+class GetRouteRequest;
+class GetRouteResponse;
+class GetRouteResponseRequest;
+class GetRouteResponseResponse;
+class GetRouteResponsesRequest;
+class GetRouteResponsesResponse;
+class GetRoutesRequest;
+class GetRoutesResponse;
+class GetStageRequest;
+class GetStageResponse;
+class GetStagesRequest;
+class GetStagesResponse;
+class UpdateApiRequest;
+class UpdateApiResponse;
+class UpdateApiMappingRequest;
+class UpdateApiMappingResponse;
+class UpdateAuthorizerRequest;
+class UpdateAuthorizerResponse;
+class UpdateDeploymentRequest;
+class UpdateDeploymentResponse;
+class UpdateDomainNameRequest;
+class UpdateDomainNameResponse;
+class UpdateIntegrationRequest;
+class UpdateIntegrationResponse;
+class UpdateIntegrationResponseRequest;
+class UpdateIntegrationResponseResponse;
+class UpdateModelRequest;
+class UpdateModelResponse;
+class UpdateRouteRequest;
+class UpdateRouteResponse;
+class UpdateRouteResponseRequest;
+class UpdateRouteResponseResponse;
+class UpdateStageRequest;
+class UpdateStageResponse;
+
+class QTAWS_EXPORT ApiGatewayV2Client : public QtAws::Core::AwsAbstractClient {
+    Q_OBJECT
+
+public:
+    ApiGatewayV2Client(
+        const QtAws::Core::AwsRegion::Region region = QtAws::Core::AwsRegion::InvalidRegion,
+        QtAws::Core::AwsAbstractCredentials * credentials = NULL,
+        QNetworkAccessManager * const manager = NULL,
+        QObject * const parent = 0);
+
+    ApiGatewayV2Client(
+        const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
+        QNetworkAccessManager * const manager = NULL,
+        QObject * const parent = 0);
+
+public slots:
+    CreateApiResponse * createApi(const CreateApiRequest &request);
+    CreateApiMappingResponse * createApiMapping(const CreateApiMappingRequest &request);
+    CreateAuthorizerResponse * createAuthorizer(const CreateAuthorizerRequest &request);
+    CreateDeploymentResponse * createDeployment(const CreateDeploymentRequest &request);
+    CreateDomainNameResponse * createDomainName(const CreateDomainNameRequest &request);
+    CreateIntegrationResponse * createIntegration(const CreateIntegrationRequest &request);
+    CreateIntegrationResponseResponse * createIntegrationResponse(const CreateIntegrationResponseRequest &request);
+    CreateModelResponse * createModel(const CreateModelRequest &request);
+    CreateRouteResponse * createRoute(const CreateRouteRequest &request);
+    CreateRouteResponseResponse * createRouteResponse(const CreateRouteResponseRequest &request);
+    CreateStageResponse * createStage(const CreateStageRequest &request);
+    DeleteApiResponse * deleteApi(const DeleteApiRequest &request);
+    DeleteApiMappingResponse * deleteApiMapping(const DeleteApiMappingRequest &request);
+    DeleteAuthorizerResponse * deleteAuthorizer(const DeleteAuthorizerRequest &request);
+    DeleteDeploymentResponse * deleteDeployment(const DeleteDeploymentRequest &request);
+    DeleteDomainNameResponse * deleteDomainName(const DeleteDomainNameRequest &request);
+    DeleteIntegrationResponse * deleteIntegration(const DeleteIntegrationRequest &request);
+    DeleteIntegrationResponseResponse * deleteIntegrationResponse(const DeleteIntegrationResponseRequest &request);
+    DeleteModelResponse * deleteModel(const DeleteModelRequest &request);
+    DeleteRouteResponse * deleteRoute(const DeleteRouteRequest &request);
+    DeleteRouteResponseResponse * deleteRouteResponse(const DeleteRouteResponseRequest &request);
+    DeleteStageResponse * deleteStage(const DeleteStageRequest &request);
+    GetApiResponse * getApi(const GetApiRequest &request);
+    GetApiMappingResponse * getApiMapping(const GetApiMappingRequest &request);
+    GetApiMappingsResponse * getApiMappings(const GetApiMappingsRequest &request);
+    GetApisResponse * getApis(const GetApisRequest &request);
+    GetAuthorizerResponse * getAuthorizer(const GetAuthorizerRequest &request);
+    GetAuthorizersResponse * getAuthorizers(const GetAuthorizersRequest &request);
+    GetDeploymentResponse * getDeployment(const GetDeploymentRequest &request);
+    GetDeploymentsResponse * getDeployments(const GetDeploymentsRequest &request);
+    GetDomainNameResponse * getDomainName(const GetDomainNameRequest &request);
+    GetDomainNamesResponse * getDomainNames(const GetDomainNamesRequest &request);
+    GetIntegrationResponse * getIntegration(const GetIntegrationRequest &request);
+    GetIntegrationResponseResponse * getIntegrationResponse(const GetIntegrationResponseRequest &request);
+    GetIntegrationResponsesResponse * getIntegrationResponses(const GetIntegrationResponsesRequest &request);
+    GetIntegrationsResponse * getIntegrations(const GetIntegrationsRequest &request);
+    GetModelResponse * getModel(const GetModelRequest &request);
+    GetModelTemplateResponse * getModelTemplate(const GetModelTemplateRequest &request);
+    GetModelsResponse * getModels(const GetModelsRequest &request);
+    GetRouteResponse * getRoute(const GetRouteRequest &request);
+    GetRouteResponseResponse * getRouteResponse(const GetRouteResponseRequest &request);
+    GetRouteResponsesResponse * getRouteResponses(const GetRouteResponsesRequest &request);
+    GetRoutesResponse * getRoutes(const GetRoutesRequest &request);
+    GetStageResponse * getStage(const GetStageRequest &request);
+    GetStagesResponse * getStages(const GetStagesRequest &request);
+    UpdateApiResponse * updateApi(const UpdateApiRequest &request);
+    UpdateApiMappingResponse * updateApiMapping(const UpdateApiMappingRequest &request);
+    UpdateAuthorizerResponse * updateAuthorizer(const UpdateAuthorizerRequest &request);
+    UpdateDeploymentResponse * updateDeployment(const UpdateDeploymentRequest &request);
+    UpdateDomainNameResponse * updateDomainName(const UpdateDomainNameRequest &request);
+    UpdateIntegrationResponse * updateIntegration(const UpdateIntegrationRequest &request);
+    UpdateIntegrationResponseResponse * updateIntegrationResponse(const UpdateIntegrationResponseRequest &request);
+    UpdateModelResponse * updateModel(const UpdateModelRequest &request);
+    UpdateRouteResponse * updateRoute(const UpdateRouteRequest &request);
+    UpdateRouteResponseResponse * updateRouteResponse(const UpdateRouteResponseRequest &request);
+    UpdateStageResponse * updateStage(const UpdateStageRequest &request);
+
+private:
+    Q_DECLARE_PRIVATE(ApiGatewayV2Client)
+    Q_DISABLE_COPY(ApiGatewayV2Client)
+
+};
+
+} // namespace ApiGatewayV2
+} // namespace QtAws
+
+#endif

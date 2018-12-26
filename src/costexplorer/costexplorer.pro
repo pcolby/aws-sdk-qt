@@ -20,6 +20,10 @@ HEADERS += \
     getcostandusagerequest_p.h \
     getcostandusageresponse.h \
     getcostandusageresponse_p.h \
+    getcostforecastrequest.h \
+    getcostforecastrequest_p.h \
+    getcostforecastresponse.h \
+    getcostforecastresponse_p.h \
     getdimensionvaluesrequest.h \
     getdimensionvaluesrequest_p.h \
     getdimensionvaluesresponse.h \
@@ -47,6 +51,8 @@ SOURCES += \
     costexplorerresponse.cpp \
     getcostandusagerequest.cpp \
     getcostandusageresponse.cpp \
+    getcostforecastrequest.cpp \
+    getcostforecastresponse.cpp \
     getdimensionvaluesrequest.cpp \
     getdimensionvaluesresponse.cpp \
     getreservationcoveragerequest.cpp \

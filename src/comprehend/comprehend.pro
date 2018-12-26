@@ -36,6 +36,30 @@ HEADERS += \
     comprehendrequest_p.h \
     comprehendresponse.h \
     comprehendresponse_p.h \
+    createdocumentclassifierrequest.h \
+    createdocumentclassifierrequest_p.h \
+    createdocumentclassifierresponse.h \
+    createdocumentclassifierresponse_p.h \
+    createentityrecognizerrequest.h \
+    createentityrecognizerrequest_p.h \
+    createentityrecognizerresponse.h \
+    createentityrecognizerresponse_p.h \
+    deletedocumentclassifierrequest.h \
+    deletedocumentclassifierrequest_p.h \
+    deletedocumentclassifierresponse.h \
+    deletedocumentclassifierresponse_p.h \
+    deleteentityrecognizerrequest.h \
+    deleteentityrecognizerrequest_p.h \
+    deleteentityrecognizerresponse.h \
+    deleteentityrecognizerresponse_p.h \
+    describedocumentclassificationjobrequest.h \
+    describedocumentclassificationjobrequest_p.h \
+    describedocumentclassificationjobresponse.h \
+    describedocumentclassificationjobresponse_p.h \
+    describedocumentclassifierrequest.h \
+    describedocumentclassifierrequest_p.h \
+    describedocumentclassifierresponse.h \
+    describedocumentclassifierresponse_p.h \
     describedominantlanguagedetectionjobrequest.h \
     describedominantlanguagedetectionjobrequest_p.h \
     describedominantlanguagedetectionjobresponse.h \
@@ -44,6 +68,10 @@ HEADERS += \
     describeentitiesdetectionjobrequest_p.h \
     describeentitiesdetectionjobresponse.h \
     describeentitiesdetectionjobresponse_p.h \
+    describeentityrecognizerrequest.h \
+    describeentityrecognizerrequest_p.h \
+    describeentityrecognizerresponse.h \
+    describeentityrecognizerresponse_p.h \
     describekeyphrasesdetectionjobrequest.h \
     describekeyphrasesdetectionjobrequest_p.h \
     describekeyphrasesdetectionjobresponse.h \
@@ -76,6 +104,14 @@ HEADERS += \
     detectsyntaxrequest_p.h \
     detectsyntaxresponse.h \
     detectsyntaxresponse_p.h \
+    listdocumentclassificationjobsrequest.h \
+    listdocumentclassificationjobsrequest_p.h \
+    listdocumentclassificationjobsresponse.h \
+    listdocumentclassificationjobsresponse_p.h \
+    listdocumentclassifiersrequest.h \
+    listdocumentclassifiersrequest_p.h \
+    listdocumentclassifiersresponse.h \
+    listdocumentclassifiersresponse_p.h \
     listdominantlanguagedetectionjobsrequest.h \
     listdominantlanguagedetectionjobsrequest_p.h \
     listdominantlanguagedetectionjobsresponse.h \
@@ -84,6 +120,10 @@ HEADERS += \
     listentitiesdetectionjobsrequest_p.h \
     listentitiesdetectionjobsresponse.h \
     listentitiesdetectionjobsresponse_p.h \
+    listentityrecognizersrequest.h \
+    listentityrecognizersrequest_p.h \
+    listentityrecognizersresponse.h \
+    listentityrecognizersresponse_p.h \
     listkeyphrasesdetectionjobsrequest.h \
     listkeyphrasesdetectionjobsrequest_p.h \
     listkeyphrasesdetectionjobsresponse.h \
@@ -96,6 +136,10 @@ HEADERS += \
     listtopicsdetectionjobsrequest_p.h \
     listtopicsdetectionjobsresponse.h \
     listtopicsdetectionjobsresponse_p.h \
+    startdocumentclassificationjobrequest.h \
+    startdocumentclassificationjobrequest_p.h \
+    startdocumentclassificationjobresponse.h \
+    startdocumentclassificationjobresponse_p.h \
     startdominantlanguagedetectionjobrequest.h \
     startdominantlanguagedetectionjobrequest_p.h \
     startdominantlanguagedetectionjobresponse.h \
@@ -132,6 +176,14 @@ HEADERS += \
     stopsentimentdetectionjobrequest_p.h \
     stopsentimentdetectionjobresponse.h \
     stopsentimentdetectionjobresponse_p.h \
+    stoptrainingdocumentclassifierrequest.h \
+    stoptrainingdocumentclassifierrequest_p.h \
+    stoptrainingdocumentclassifierresponse.h \
+    stoptrainingdocumentclassifierresponse_p.h \
+    stoptrainingentityrecognizerrequest.h \
+    stoptrainingentityrecognizerrequest_p.h \
+    stoptrainingentityrecognizerresponse.h \
+    stoptrainingentityrecognizerresponse_p.h \
 
 SOURCES += \
     batchdetectdominantlanguagerequest.cpp \
@@ -147,10 +199,24 @@ SOURCES += \
     comprehendclient.cpp \
     comprehendrequest.cpp \
     comprehendresponse.cpp \
+    createdocumentclassifierrequest.cpp \
+    createdocumentclassifierresponse.cpp \
+    createentityrecognizerrequest.cpp \
+    createentityrecognizerresponse.cpp \
+    deletedocumentclassifierrequest.cpp \
+    deletedocumentclassifierresponse.cpp \
+    deleteentityrecognizerrequest.cpp \
+    deleteentityrecognizerresponse.cpp \
+    describedocumentclassificationjobrequest.cpp \
+    describedocumentclassificationjobresponse.cpp \
+    describedocumentclassifierrequest.cpp \
+    describedocumentclassifierresponse.cpp \
     describedominantlanguagedetectionjobrequest.cpp \
     describedominantlanguagedetectionjobresponse.cpp \
     describeentitiesdetectionjobrequest.cpp \
     describeentitiesdetectionjobresponse.cpp \
+    describeentityrecognizerrequest.cpp \
+    describeentityrecognizerresponse.cpp \
     describekeyphrasesdetectionjobrequest.cpp \
     describekeyphrasesdetectionjobresponse.cpp \
     describesentimentdetectionjobrequest.cpp \
@@ -167,16 +233,24 @@ SOURCES += \
     detectsentimentresponse.cpp \
     detectsyntaxrequest.cpp \
     detectsyntaxresponse.cpp \
+    listdocumentclassificationjobsrequest.cpp \
+    listdocumentclassificationjobsresponse.cpp \
+    listdocumentclassifiersrequest.cpp \
+    listdocumentclassifiersresponse.cpp \
     listdominantlanguagedetectionjobsrequest.cpp \
     listdominantlanguagedetectionjobsresponse.cpp \
     listentitiesdetectionjobsrequest.cpp \
     listentitiesdetectionjobsresponse.cpp \
+    listentityrecognizersrequest.cpp \
+    listentityrecognizersresponse.cpp \
     listkeyphrasesdetectionjobsrequest.cpp \
     listkeyphrasesdetectionjobsresponse.cpp \
     listsentimentdetectionjobsrequest.cpp \
     listsentimentdetectionjobsresponse.cpp \
     listtopicsdetectionjobsrequest.cpp \
     listtopicsdetectionjobsresponse.cpp \
+    startdocumentclassificationjobrequest.cpp \
+    startdocumentclassificationjobresponse.cpp \
     startdominantlanguagedetectionjobrequest.cpp \
     startdominantlanguagedetectionjobresponse.cpp \
     startentitiesdetectionjobrequest.cpp \
@@ -195,5 +269,9 @@ SOURCES += \
     stopkeyphrasesdetectionjobresponse.cpp \
     stopsentimentdetectionjobrequest.cpp \
     stopsentimentdetectionjobresponse.cpp \
+    stoptrainingdocumentclassifierrequest.cpp \
+    stoptrainingdocumentclassifierresponse.cpp \
+    stoptrainingentityrecognizerrequest.cpp \
+    stoptrainingentityrecognizerresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

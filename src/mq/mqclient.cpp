@@ -25,10 +25,14 @@
 #include "createbrokerresponse.h"
 #include "createconfigurationrequest.h"
 #include "createconfigurationresponse.h"
+#include "createtagsrequest.h"
+#include "createtagsresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
 #include "deletebrokerrequest.h"
 #include "deletebrokerresponse.h"
+#include "deletetagsrequest.h"
+#include "deletetagsresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
 #include "describebrokerrequest.h"
@@ -45,6 +49,8 @@
 #include "listconfigurationrevisionsresponse.h"
 #include "listconfigurationsrequest.h"
 #include "listconfigurationsresponse.h"
+#include "listtagsrequest.h"
+#include "listtagsresponse.h"
 #include "listusersrequest.h"
 #include "listusersresponse.h"
 #include "rebootbrokerrequest.h"
@@ -162,6 +168,18 @@ CreateConfigurationResponse * MqClient::createConfiguration(const CreateConfigur
 
 /*!
  * Sends \a request to the MqClient service, and returns a pointer to an
+ * CreateTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateTagsResponse * MqClient::createTags(const CreateTagsRequest &request)
+{
+    return qobject_cast<CreateTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
  * CreateUserResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -182,6 +200,18 @@ CreateUserResponse * MqClient::createUser(const CreateUserRequest &request)
 DeleteBrokerResponse * MqClient::deleteBroker(const DeleteBrokerRequest &request)
 {
     return qobject_cast<DeleteBrokerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DeleteTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteTagsResponse * MqClient::deleteTags(const DeleteTagsRequest &request)
+{
+    return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
 /*!
@@ -278,6 +308,18 @@ ListConfigurationRevisionsResponse * MqClient::listConfigurationRevisions(const 
 ListConfigurationsResponse * MqClient::listConfigurations(const ListConfigurationsRequest &request)
 {
     return qobject_cast<ListConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * ListTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsResponse * MqClient::listTags(const ListTagsRequest &request)
+{
+    return qobject_cast<ListTagsResponse *>(send(request));
 }
 
 /*!

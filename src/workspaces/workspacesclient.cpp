@@ -35,6 +35,14 @@
 #include "deleteipgroupresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "deleteworkspaceimagerequest.h"
+#include "deleteworkspaceimageresponse.h"
+#include "describeaccountrequest.h"
+#include "describeaccountresponse.h"
+#include "describeaccountmodificationsrequest.h"
+#include "describeaccountmodificationsresponse.h"
+#include "describeclientpropertiesrequest.h"
+#include "describeclientpropertiesresponse.h"
 #include "describeipgroupsrequest.h"
 #include "describeipgroupsresponse.h"
 #include "describetagsrequest.h"
@@ -43,12 +51,22 @@
 #include "describeworkspacebundlesresponse.h"
 #include "describeworkspacedirectoriesrequest.h"
 #include "describeworkspacedirectoriesresponse.h"
+#include "describeworkspaceimagesrequest.h"
+#include "describeworkspaceimagesresponse.h"
 #include "describeworkspacesrequest.h"
 #include "describeworkspacesresponse.h"
 #include "describeworkspacesconnectionstatusrequest.h"
 #include "describeworkspacesconnectionstatusresponse.h"
 #include "disassociateipgroupsrequest.h"
 #include "disassociateipgroupsresponse.h"
+#include "importworkspaceimagerequest.h"
+#include "importworkspaceimageresponse.h"
+#include "listavailablemanagementcidrrangesrequest.h"
+#include "listavailablemanagementcidrrangesresponse.h"
+#include "modifyaccountrequest.h"
+#include "modifyaccountresponse.h"
+#include "modifyclientpropertiesrequest.h"
+#include "modifyclientpropertiesresponse.h"
 #include "modifyworkspacepropertiesrequest.h"
 #include "modifyworkspacepropertiesresponse.h"
 #include "modifyworkspacestaterequest.h"
@@ -92,7 +110,7 @@ namespace WorkSpaces {
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
- *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your
  */
 
 /*!
@@ -265,6 +283,59 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DeleteWorkspaceImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified image from your account. To delete an image, you must first delete any bundles that are associated
+ * with the image.
+ */
+DeleteWorkspaceImageResponse * WorkSpacesClient::deleteWorkspaceImage(const DeleteWorkspaceImageRequest &request)
+{
+    return qobject_cast<DeleteWorkspaceImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes the configuration of bring your own license (BYOL) for the specified
+ */
+DescribeAccountResponse * WorkSpacesClient::describeAccount(const DescribeAccountRequest &request)
+{
+    return qobject_cast<DescribeAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeAccountModificationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes modifications to the configuration of bring your own license (BYOL) for the specified
+ */
+DescribeAccountModificationsResponse * WorkSpacesClient::describeAccountModifications(const DescribeAccountModificationsRequest &request)
+{
+    return qobject_cast<DescribeAccountModificationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeClientPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more specified Amazon WorkSpaces
+ */
+DescribeClientPropertiesResponse * WorkSpacesClient::describeClientProperties(const DescribeClientPropertiesRequest &request)
+{
+    return qobject_cast<DescribeClientPropertiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * DescribeIpGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -295,7 +366,7 @@ DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the available WorkSpace
+ * Retrieves a list that describes the available WorkSpace
  *
  * bundles>
  *
@@ -321,6 +392,20 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * DescribeWorkspaceImagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more specified images, if the image identifiers are provided. Otherwise, all
+ * images in the account are described.
+ */
+DescribeWorkspaceImagesResponse * WorkSpacesClient::describeWorkspaceImages(const DescribeWorkspaceImagesRequest &request)
+{
+    return qobject_cast<DescribeWorkspaceImagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * DescribeWorkspacesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -329,7 +414,8 @@ DescribeWorkspaceDirectoriesResponse * WorkSpacesClient::describeWorkspaceDirect
  *
  * WorkSpaces>
  *
- * You can filter the results using bundle ID, directory ID, or owner, but you can specify only one filter at a
+ * You can filter the results by using the bundle identifier, directory identifier, or owner, but you can specify only one
+ * filter at a
  */
 DescribeWorkspacesResponse * WorkSpacesClient::describeWorkspaces(const DescribeWorkspacesRequest &request)
 {
@@ -360,6 +446,66 @@ DescribeWorkspacesConnectionStatusResponse * WorkSpacesClient::describeWorkspace
 DisassociateIpGroupsResponse * WorkSpacesClient::disassociateIpGroups(const DisassociateIpGroupsRequest &request)
 {
     return qobject_cast<DisassociateIpGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ImportWorkspaceImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports the specified Windows 7 or Windows 10 bring your own license (BYOL) image into Amazon WorkSpaces. The image must
+ * be an already licensed EC2 image that is in your AWS account, and you must own the image.
+ */
+ImportWorkspaceImageResponse * WorkSpacesClient::importWorkspaceImage(const ImportWorkspaceImageRequest &request)
+{
+    return qobject_cast<ImportWorkspaceImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ListAvailableManagementCidrRangesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of IP address ranges, specified as IPv4 CIDR blocks, that you can use for the network management
+ * interface when you enable bring your own license (BYOL).
+ *
+ * </p
+ *
+ * The management network interface is connected to a secure Amazon WorkSpaces management network. It is used for
+ * interactive streaming of the WorkSpace desktop to Amazon WorkSpaces clients, and to allow Amazon WorkSpaces to manage
+ * the
+ */
+ListAvailableManagementCidrRangesResponse * WorkSpacesClient::listAvailableManagementCidrRanges(const ListAvailableManagementCidrRangesRequest &request)
+{
+    return qobject_cast<ListAvailableManagementCidrRangesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ModifyAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the configuration of bring your own license (BYOL) for the specified
+ */
+ModifyAccountResponse * WorkSpacesClient::modifyAccount(const ModifyAccountRequest &request)
+{
+    return qobject_cast<ModifyAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * ModifyClientPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the properties of the specified Amazon WorkSpaces
+ */
+ModifyClientPropertiesResponse * WorkSpacesClient::modifyClientProperties(const ModifyClientPropertiesRequest &request)
+{
+    return qobject_cast<ModifyClientPropertiesResponse *>(send(request));
 }
 
 /*!

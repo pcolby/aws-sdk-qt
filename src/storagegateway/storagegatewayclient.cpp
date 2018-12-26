@@ -220,7 +220,7 @@ namespace StorageGateway {
  *  responses> </li> <li>
  * 
  *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sg_region">AWS Storage Gateway Regions and
- *  Endpoints:</a> Provides a list of each region and endpoints available for use with AWS Storage Gateway.
+ *  Endpoints:</a> Provides a list of each AWS region and endpoints available for use with AWS Storage Gateway.
  * 
  *  </p </li> </ul> <note>
  * 
@@ -490,9 +490,9 @@ CreateCachediSCSIVolumeResponse * StorageGatewayClient::createCachediSCSIVolume(
  *
  * Creates a Network File System (NFS) file share on an existing file gateway. In Storage Gateway, a file share is a file
  * system mount point backed by Amazon S3 cloud storage. Storage Gateway exposes file shares using a NFS interface. This
- * operation is only supported in the file gateway
+ * operation is only supported for file
  *
- * type> <b>
+ * gateways> <b>
  *
  * File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure
  * AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region,
@@ -516,18 +516,19 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
  *
  * Creates a Server Message Block (SMB) file share on an existing file gateway. In Storage Gateway, a file share is a file
  * system mount point backed by Amazon S3 cloud storage. Storage Gateway expose file shares using a SMB interface. This
- * operation is only supported in the file gateway
+ * operation is only supported for file
  *
- * type> <b>
+ * gateways> <b>
  *
- * File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure
- * AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region,
- * activate it. For information about how to activate AWS STS, see Activating and Deactivating AWS STS in an AWS Region in
- * the AWS Identity and Access Management User Guide.
+ * File gateways require AWS Security Token Service (AWS STS) to be activated to enable you to create a file share. Make
+ * sure that AWS STS is activated in the AWS Region you are creating your file gateway in. If AWS STS is not activated in
+ * this AWS Region, activate it. For information about how to activate AWS STS, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+ * Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access Management User Guide.</i>
  *
  * </p
  *
- * File gateway does not support creating hard or symbolic links on a file
+ * File gateways don't support creating hard or symbolic links on a file
  */
 CreateSMBFileShareResponse * StorageGatewayClient::createSMBFileShare(const CreateSMBFileShareRequest &request)
 {
@@ -704,7 +705,7 @@ DeleteChapCredentialsResponse * StorageGatewayClient::deleteChapCredentials(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a file share from a file gateway. This operation is only supported in the file gateway
+ * Deletes a file share from a file gateway. This operation is only supported for file
  */
 DeleteFileShareResponse * StorageGatewayClient::deleteFileShare(const DeleteFileShareRequest &request)
 {
@@ -926,7 +927,7 @@ DescribeMaintenanceStartTimeResponse * StorageGatewayClient::describeMaintenance
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a description for one or more Network File System (NFS) file shares from a file gateway. This operation is only
- * supported in the file gateway
+ * supported for file
  */
 DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(const DescribeNFSFileSharesRequest &request)
 {
@@ -940,7 +941,7 @@ DescribeNFSFileSharesResponse * StorageGatewayClient::describeNFSFileShares(cons
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a description for one or more Server Message Block (SMB) file shares from a file gateway. This operation is only
- * supported in the file gateway
+ * supported for file
  */
 DescribeSMBFileSharesResponse * StorageGatewayClient::describeSMBFileShares(const DescribeSMBFileSharesRequest &request)
 {
@@ -954,7 +955,7 @@ DescribeSMBFileSharesResponse * StorageGatewayClient::describeSMBFileShares(cons
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a description of a Server Message Block (SMB) file share settings from a file gateway. This operation is only
- * supported in the file gateway
+ * supported for file
  */
 DescribeSMBSettingsResponse * StorageGatewayClient::describeSMBSettings(const DescribeSMBSettingsRequest &request)
 {
@@ -1134,8 +1135,8 @@ DisableGatewayResponse * StorageGatewayClient::disableGateway(const DisableGatew
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a file gateway to an Active Directory domain. This operation is only supported in the file gateway type that
- * supports the SMB file
+ * Adds a file gateway to an Active Directory domain. This operation is only supported for file gateways that support the
+ * SMB file
  */
 JoinDomainResponse * StorageGatewayClient::joinDomain(const JoinDomainRequest &request)
 {
@@ -1149,7 +1150,7 @@ JoinDomainResponse * StorageGatewayClient::joinDomain(const JoinDomainRequest &r
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a list of the file shares for a specific file gateway, or the list of file shares that belong to the calling user
- * account. This operation is only supported in the file gateway
+ * account. This operation is only supported for file
  */
 ListFileSharesResponse * StorageGatewayClient::listFileShares(const ListFileSharesRequest &request)
 {
@@ -1308,9 +1309,9 @@ ListVolumesResponse * StorageGatewayClient::listVolumes(const ListVolumesRequest
  * up to that point in time have been uploaded to Amazon S3. These files include files written to the NFS file share up to
  * the time that you make a request for notification. When the upload is done, Storage Gateway sends you notification
  * through an Amazon CloudWatch Event. You can configure CloudWatch Events to send the notification through event targets
- * such as Amazon SNS or AWS Lambda function. This operation is only supported in the file gateway
+ * such as Amazon SNS or AWS Lambda function. This operation is only supported for file
  *
- * type>
+ * gateways>
  *
  * For more information, see Getting File Upload Notification in the Storage Gateway User Guide
  * (https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-upload-notification).
@@ -1328,7 +1329,10 @@ NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const Noti
  *
  * Refreshes the cache for the specified file share. This operation finds objects in the Amazon S3 bucket that were added,
  * removed or replaced since the gateway last listed the bucket's contents and cached the results. This operation is only
- * supported in the file gateway
+ * supported in the file gateway type. You can subscribe to be notified through an Amazon CloudWatch event when your
+ * RefreshCache operation completes. For more information, see <a
+ * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
+ * Notified About File
  */
 RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequest &request)
 {
@@ -1436,8 +1440,8 @@ SetLocalConsolePasswordResponse * StorageGatewayClient::setLocalConsolePassword(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the password for the guest user “smbguest”. "smbguest" is the user when the Authentication method for the file
- * share is
+ * Sets the password for the guest user <code>smbguest</code>. The <code>smbguest</code> user is the user when the
+ * authentication method for the file share is set to
  */
 SetSMBGuestPasswordResponse * StorageGatewayClient::setSMBGuestPassword(const SetSMBGuestPasswordRequest &request)
 {
@@ -1665,23 +1669,24 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a Server Message Block (SMB) file share. This operation is only supported in the file gateway
+ * Updates a Server Message Block (SMB) file
  *
- * type> <note>
+ * share> <note>
  *
- * To leave a file share field unchanged, set the corresponding input field to null. This operation is only supported in
- * the file gateway
+ * To leave a file share field unchanged, set the corresponding input field to null. This operation is only supported for
+ * file
  *
- * type> </note> <b>
+ * gateways> </note> <b>
  *
- * File gateway requires AWS Security Token Service (AWS STS) to be activated to enable you create a file share. Make sure
- * AWS STS is activated in the region you are creating your file gateway in. If AWS STS is not activated in the region,
- * activate it. For information about how to activate AWS STS, see Activating and Deactivating AWS STS in an AWS Region in
- * the AWS Identity and Access Management User Guide.
+ * File gateways require AWS Security Token Service (AWS STS) to be activated to enable you to create a file share. Make
+ * sure that AWS STS is activated in the AWS Region you are creating your file gateway in. If AWS STS is not activated in
+ * this AWS Region, activate it. For information about how to activate AWS STS, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+ * Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access Management User Guide.</i>
  *
  * </p
  *
- * File gateway does not support creating hard or symbolic links on a file
+ * File gateways don't support creating hard or symbolic links on a file
  */
 UpdateSMBFileShareResponse * StorageGatewayClient::updateSMBFileShare(const UpdateSMBFileShareRequest &request)
 {

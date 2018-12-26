@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsPinpointEmail
+description = AWS PinpointEmail SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawspinpointemail-index.html"
+navigation.landingtitle = "PinpointEmail"
+navigation.cppclassespage = "PinpointEmail C++ Classes"

@@ -39,6 +39,8 @@
 #include "listoriginendpointsresponse.h"
 #include "rotatechannelcredentialsrequest.h"
 #include "rotatechannelcredentialsresponse.h"
+#include "rotateingestendpointcredentialsrequest.h"
+#include "rotateingestendpointcredentialsresponse.h"
 #include "updatechannelrequest.h"
 #include "updatechannelresponse.h"
 #include "updateoriginendpointrequest.h"
@@ -223,10 +225,23 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Changes the Channel's first IngestEndpoint's username and password. WARNING - This API is deprecated. Please use
  */
 RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(const RotateChannelCredentialsRequest &request)
 {
     return qobject_cast<RotateChannelCredentialsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * RotateIngestEndpointCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+RotateIngestEndpointCredentialsResponse * MediaPackageClient::rotateIngestEndpointCredentials(const RotateIngestEndpointCredentialsRequest &request)
+{
+    return qobject_cast<RotateIngestEndpointCredentialsResponse *>(send(request));
 }
 
 /*!

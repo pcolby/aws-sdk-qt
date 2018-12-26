@@ -25,6 +25,8 @@
 #include "createapikeyresponse.h"
 #include "createdatasourcerequest.h"
 #include "createdatasourceresponse.h"
+#include "createfunctionrequest.h"
+#include "createfunctionresponse.h"
 #include "creategraphqlapirequest.h"
 #include "creategraphqlapiresponse.h"
 #include "createresolverrequest.h"
@@ -35,6 +37,8 @@
 #include "deleteapikeyresponse.h"
 #include "deletedatasourcerequest.h"
 #include "deletedatasourceresponse.h"
+#include "deletefunctionrequest.h"
+#include "deletefunctionresponse.h"
 #include "deletegraphqlapirequest.h"
 #include "deletegraphqlapiresponse.h"
 #include "deleteresolverrequest.h"
@@ -43,6 +47,8 @@
 #include "deletetyperesponse.h"
 #include "getdatasourcerequest.h"
 #include "getdatasourceresponse.h"
+#include "getfunctionrequest.h"
+#include "getfunctionresponse.h"
 #include "getgraphqlapirequest.h"
 #include "getgraphqlapiresponse.h"
 #include "getintrospectionschemarequest.h"
@@ -57,10 +63,14 @@
 #include "listapikeysresponse.h"
 #include "listdatasourcesrequest.h"
 #include "listdatasourcesresponse.h"
+#include "listfunctionsrequest.h"
+#include "listfunctionsresponse.h"
 #include "listgraphqlapisrequest.h"
 #include "listgraphqlapisresponse.h"
 #include "listresolversrequest.h"
 #include "listresolversresponse.h"
+#include "listresolversbyfunctionrequest.h"
+#include "listresolversbyfunctionresponse.h"
 #include "listtypesrequest.h"
 #include "listtypesresponse.h"
 #include "startschemacreationrequest.h"
@@ -69,6 +79,8 @@
 #include "updateapikeyresponse.h"
 #include "updatedatasourcerequest.h"
 #include "updatedatasourceresponse.h"
+#include "updatefunctionrequest.h"
+#include "updatefunctionresponse.h"
 #include "updategraphqlapirequest.h"
 #include "updategraphqlapiresponse.h"
 #include "updateresolverrequest.h"
@@ -182,6 +194,23 @@ CreateDataSourceResponse * AppSyncClient::createDataSource(const CreateDataSourc
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a <code>Function</code>
+ *
+ * object>
+ *
+ * A function is a reusable entity. Multiple functions can be used to compose the resolver
+ */
+CreateFunctionResponse * AppSyncClient::createFunction(const CreateFunctionRequest &request)
+{
+    return qobject_cast<CreateFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * CreateGraphqlApiResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -252,6 +281,19 @@ DeleteDataSourceResponse * AppSyncClient::deleteDataSource(const DeleteDataSourc
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a
+ */
+DeleteFunctionResponse * AppSyncClient::deleteFunction(const DeleteFunctionRequest &request)
+{
+    return qobject_cast<DeleteFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * DeleteGraphqlApiResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -300,6 +342,19 @@ DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 GetDataSourceResponse * AppSyncClient::getDataSource(const GetDataSourceRequest &request)
 {
     return qobject_cast<GetDataSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get a
+ */
+GetFunctionResponse * AppSyncClient::getFunction(const GetFunctionRequest &request)
+{
+    return qobject_cast<GetFunctionResponse *>(send(request));
 }
 
 /*!
@@ -401,6 +456,19 @@ ListDataSourcesResponse * AppSyncClient::listDataSources(const ListDataSourcesRe
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListFunctionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List multiple
+ */
+ListFunctionsResponse * AppSyncClient::listFunctions(const ListFunctionsRequest &request)
+{
+    return qobject_cast<ListFunctionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * ListGraphqlApisResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -423,6 +491,19 @@ ListGraphqlApisResponse * AppSyncClient::listGraphqlApis(const ListGraphqlApisRe
 ListResolversResponse * AppSyncClient::listResolvers(const ListResolversRequest &request)
 {
     return qobject_cast<ListResolversResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListResolversByFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the resolvers that are associated with a specific
+ */
+ListResolversByFunctionResponse * AppSyncClient::listResolversByFunction(const ListResolversByFunctionRequest &request)
+{
+    return qobject_cast<ListResolversByFunctionResponse *>(send(request));
 }
 
 /*!
@@ -479,6 +560,19 @@ UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &re
 UpdateDataSourceResponse * AppSyncClient::updateDataSource(const UpdateDataSourceRequest &request)
 {
     return qobject_cast<UpdateDataSourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a <code>Function</code>
+ */
+UpdateFunctionResponse * AppSyncClient::updateFunction(const UpdateFunctionRequest &request)
+{
+    return qobject_cast<UpdateFunctionResponse *>(send(request));
 }
 
 /*!

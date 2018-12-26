@@ -38,15 +38,18 @@ namespace AppSync {
  *
  * \value CreateApiKeyAction AppSync CreateApiKey action.
  * \value CreateDataSourceAction AppSync CreateDataSource action.
+ * \value CreateFunctionAction AppSync CreateFunction action.
  * \value CreateGraphqlApiAction AppSync CreateGraphqlApi action.
  * \value CreateResolverAction AppSync CreateResolver action.
  * \value CreateTypeAction AppSync CreateType action.
  * \value DeleteApiKeyAction AppSync DeleteApiKey action.
  * \value DeleteDataSourceAction AppSync DeleteDataSource action.
+ * \value DeleteFunctionAction AppSync DeleteFunction action.
  * \value DeleteGraphqlApiAction AppSync DeleteGraphqlApi action.
  * \value DeleteResolverAction AppSync DeleteResolver action.
  * \value DeleteTypeAction AppSync DeleteType action.
  * \value GetDataSourceAction AppSync GetDataSource action.
+ * \value GetFunctionAction AppSync GetFunction action.
  * \value GetGraphqlApiAction AppSync GetGraphqlApi action.
  * \value GetIntrospectionSchemaAction AppSync GetIntrospectionSchema action.
  * \value GetResolverAction AppSync GetResolver action.
@@ -54,12 +57,15 @@ namespace AppSync {
  * \value GetTypeAction AppSync GetType action.
  * \value ListApiKeysAction AppSync ListApiKeys action.
  * \value ListDataSourcesAction AppSync ListDataSources action.
+ * \value ListFunctionsAction AppSync ListFunctions action.
  * \value ListGraphqlApisAction AppSync ListGraphqlApis action.
  * \value ListResolversAction AppSync ListResolvers action.
+ * \value ListResolversByFunctionAction AppSync ListResolversByFunction action.
  * \value ListTypesAction AppSync ListTypes action.
  * \value StartSchemaCreationAction AppSync StartSchemaCreation action.
  * \value UpdateApiKeyAction AppSync UpdateApiKey action.
  * \value UpdateDataSourceAction AppSync UpdateDataSource action.
+ * \value UpdateFunctionAction AppSync UpdateFunction action.
  * \value UpdateGraphqlApiAction AppSync UpdateGraphqlApi action.
  * \value UpdateResolverAction AppSync UpdateResolver action.
  * \value UpdateTypeAction AppSync UpdateType action.

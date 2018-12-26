@@ -44,6 +44,7 @@ public:
         DeleteTagsAction,
         DescribeAgentsAction,
         DescribeConfigurationsAction,
+        DescribeContinuousExportsAction,
         DescribeExportConfigurationsAction,
         DescribeExportTasksAction,
         DescribeTagsAction,
@@ -52,8 +53,10 @@ public:
         GetDiscoverySummaryAction,
         ListConfigurationsAction,
         ListServerNeighborsAction,
+        StartContinuousExportAction,
         StartDataCollectionByAgentIdsAction,
         StartExportTaskAction,
+        StopContinuousExportAction,
         StopDataCollectionByAgentIdsAction,
         UpdateApplicationAction,
     };

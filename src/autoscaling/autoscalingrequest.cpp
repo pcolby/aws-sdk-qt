@@ -39,6 +39,8 @@ namespace AutoScaling {
  * \value AttachInstancesAction AutoScaling AttachInstances action.
  * \value AttachLoadBalancerTargetGroupsAction AutoScaling AttachLoadBalancerTargetGroups action.
  * \value AttachLoadBalancersAction AutoScaling AttachLoadBalancers action.
+ * \value BatchDeleteScheduledActionAction AutoScaling BatchDeleteScheduledAction action.
+ * \value BatchPutScheduledUpdateGroupActionAction AutoScaling BatchPutScheduledUpdateGroupAction action.
  * \value CompleteLifecycleActionAction AutoScaling CompleteLifecycleAction action.
  * \value CreateAutoScalingGroupAction AutoScaling CreateAutoScalingGroup action.
  * \value CreateLaunchConfigurationAction AutoScaling CreateLaunchConfiguration action.

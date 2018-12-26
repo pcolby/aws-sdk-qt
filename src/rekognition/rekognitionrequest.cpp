@@ -42,6 +42,7 @@ namespace Rekognition {
  * \value DeleteCollectionAction Rekognition DeleteCollection action.
  * \value DeleteFacesAction Rekognition DeleteFaces action.
  * \value DeleteStreamProcessorAction Rekognition DeleteStreamProcessor action.
+ * \value DescribeCollectionAction Rekognition DescribeCollection action.
  * \value DescribeStreamProcessorAction Rekognition DescribeStreamProcessor action.
  * \value DetectFacesAction Rekognition DetectFaces action.
  * \value DetectLabelsAction Rekognition DetectLabels action.

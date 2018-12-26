@@ -36,6 +36,7 @@ namespace Lambda {
  * This enum describes the actions that can be performed as Lambda
  * requests.
  *
+ * \value AddLayerVersionPermissionAction Lambda AddLayerVersionPermission action.
  * \value AddPermissionAction Lambda AddPermission action.
  * \value CreateAliasAction Lambda CreateAlias action.
  * \value CreateEventSourceMappingAction Lambda CreateEventSourceMapping action.
@@ -44,21 +45,28 @@ namespace Lambda {
  * \value DeleteEventSourceMappingAction Lambda DeleteEventSourceMapping action.
  * \value DeleteFunctionAction Lambda DeleteFunction action.
  * \value DeleteFunctionConcurrencyAction Lambda DeleteFunctionConcurrency action.
+ * \value DeleteLayerVersionAction Lambda DeleteLayerVersion action.
  * \value GetAccountSettingsAction Lambda GetAccountSettings action.
  * \value GetAliasAction Lambda GetAlias action.
  * \value GetEventSourceMappingAction Lambda GetEventSourceMapping action.
  * \value GetFunctionAction Lambda GetFunction action.
  * \value GetFunctionConfigurationAction Lambda GetFunctionConfiguration action.
+ * \value GetLayerVersionAction Lambda GetLayerVersion action.
+ * \value GetLayerVersionPolicyAction Lambda GetLayerVersionPolicy action.
  * \value GetPolicyAction Lambda GetPolicy action.
  * \value InvokeAction Lambda Invoke action.
  * \value InvokeAsyncAction Lambda InvokeAsync action.
  * \value ListAliasesAction Lambda ListAliases action.
  * \value ListEventSourceMappingsAction Lambda ListEventSourceMappings action.
  * \value ListFunctionsAction Lambda ListFunctions action.
+ * \value ListLayerVersionsAction Lambda ListLayerVersions action.
+ * \value ListLayersAction Lambda ListLayers action.
  * \value ListTagsAction Lambda ListTags action.
  * \value ListVersionsByFunctionAction Lambda ListVersionsByFunction action.
+ * \value PublishLayerVersionAction Lambda PublishLayerVersion action.
  * \value PublishVersionAction Lambda PublishVersion action.
  * \value PutFunctionConcurrencyAction Lambda PutFunctionConcurrency action.
+ * \value RemoveLayerVersionPermissionAction Lambda RemoveLayerVersionPermission action.
  * \value RemovePermissionAction Lambda RemovePermission action.
  * \value TagResourceAction Lambda TagResource action.
  * \value UntagResourceAction Lambda UntagResource action.

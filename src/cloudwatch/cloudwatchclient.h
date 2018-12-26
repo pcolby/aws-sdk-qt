@@ -48,6 +48,8 @@ class GetMetricDataRequest;
 class GetMetricDataResponse;
 class GetMetricStatisticsRequest;
 class GetMetricStatisticsResponse;
+class GetMetricWidgetImageRequest;
+class GetMetricWidgetImageResponse;
 class ListDashboardsRequest;
 class ListDashboardsResponse;
 class ListMetricsRequest;
@@ -87,6 +89,7 @@ public slots:
     GetDashboardResponse * getDashboard(const GetDashboardRequest &request);
     GetMetricDataResponse * getMetricData(const GetMetricDataRequest &request);
     GetMetricStatisticsResponse * getMetricStatistics(const GetMetricStatisticsRequest &request);
+    GetMetricWidgetImageResponse * getMetricWidgetImage(const GetMetricWidgetImageRequest &request);
     ListDashboardsResponse * listDashboards(const ListDashboardsRequest &request);
     ListMetricsResponse * listMetrics(const ListMetricsRequest &request);
     PutDashboardResponse * putDashboard(const PutDashboardRequest &request);

@@ -51,6 +51,7 @@ namespace WAF {
  * \value DeleteByteMatchSetAction WAF DeleteByteMatchSet action.
  * \value DeleteGeoMatchSetAction WAF DeleteGeoMatchSet action.
  * \value DeleteIPSetAction WAF DeleteIPSet action.
+ * \value DeleteLoggingConfigurationAction WAF DeleteLoggingConfiguration action.
  * \value DeletePermissionPolicyAction WAF DeletePermissionPolicy action.
  * \value DeleteRateBasedRuleAction WAF DeleteRateBasedRule action.
  * \value DeleteRegexMatchSetAction WAF DeleteRegexMatchSet action.
@@ -66,6 +67,7 @@ namespace WAF {
  * \value GetChangeTokenStatusAction WAF GetChangeTokenStatus action.
  * \value GetGeoMatchSetAction WAF GetGeoMatchSet action.
  * \value GetIPSetAction WAF GetIPSet action.
+ * \value GetLoggingConfigurationAction WAF GetLoggingConfiguration action.
  * \value GetPermissionPolicyAction WAF GetPermissionPolicy action.
  * \value GetRateBasedRuleAction WAF GetRateBasedRule action.
  * \value GetRateBasedRuleManagedKeysAction WAF GetRateBasedRuleManagedKeys action.
@@ -82,6 +84,7 @@ namespace WAF {
  * \value ListByteMatchSetsAction WAF ListByteMatchSets action.
  * \value ListGeoMatchSetsAction WAF ListGeoMatchSets action.
  * \value ListIPSetsAction WAF ListIPSets action.
+ * \value ListLoggingConfigurationsAction WAF ListLoggingConfigurations action.
  * \value ListRateBasedRulesAction WAF ListRateBasedRules action.
  * \value ListRegexMatchSetsAction WAF ListRegexMatchSets action.
  * \value ListRegexPatternSetsAction WAF ListRegexPatternSets action.
@@ -92,6 +95,7 @@ namespace WAF {
  * \value ListSubscribedRuleGroupsAction WAF ListSubscribedRuleGroups action.
  * \value ListWebACLsAction WAF ListWebACLs action.
  * \value ListXssMatchSetsAction WAF ListXssMatchSets action.
+ * \value PutLoggingConfigurationAction WAF PutLoggingConfiguration action.
  * \value PutPermissionPolicyAction WAF PutPermissionPolicy action.
  * \value UpdateByteMatchSetAction WAF UpdateByteMatchSet action.
  * \value UpdateGeoMatchSetAction WAF UpdateGeoMatchSet action.

@@ -44,6 +44,10 @@ HEADERS += \
     describeconfigurationsrequest_p.h \
     describeconfigurationsresponse.h \
     describeconfigurationsresponse_p.h \
+    describecontinuousexportsrequest.h \
+    describecontinuousexportsrequest_p.h \
+    describecontinuousexportsresponse.h \
+    describecontinuousexportsresponse_p.h \
     describeexportconfigurationsrequest.h \
     describeexportconfigurationsrequest_p.h \
     describeexportconfigurationsresponse.h \
@@ -76,6 +80,10 @@ HEADERS += \
     listserverneighborsrequest_p.h \
     listserverneighborsresponse.h \
     listserverneighborsresponse_p.h \
+    startcontinuousexportrequest.h \
+    startcontinuousexportrequest_p.h \
+    startcontinuousexportresponse.h \
+    startcontinuousexportresponse_p.h \
     startdatacollectionbyagentidsrequest.h \
     startdatacollectionbyagentidsrequest_p.h \
     startdatacollectionbyagentidsresponse.h \
@@ -84,6 +92,10 @@ HEADERS += \
     startexporttaskrequest_p.h \
     startexporttaskresponse.h \
     startexporttaskresponse_p.h \
+    stopcontinuousexportrequest.h \
+    stopcontinuousexportrequest_p.h \
+    stopcontinuousexportresponse.h \
+    stopcontinuousexportresponse_p.h \
     stopdatacollectionbyagentidsrequest.h \
     stopdatacollectionbyagentidsrequest_p.h \
     stopdatacollectionbyagentidsresponse.h \
@@ -111,6 +123,8 @@ SOURCES += \
     describeagentsresponse.cpp \
     describeconfigurationsrequest.cpp \
     describeconfigurationsresponse.cpp \
+    describecontinuousexportsrequest.cpp \
+    describecontinuousexportsresponse.cpp \
     describeexportconfigurationsrequest.cpp \
     describeexportconfigurationsresponse.cpp \
     describeexporttasksrequest.cpp \
@@ -127,10 +141,14 @@ SOURCES += \
     listconfigurationsresponse.cpp \
     listserverneighborsrequest.cpp \
     listserverneighborsresponse.cpp \
+    startcontinuousexportrequest.cpp \
+    startcontinuousexportresponse.cpp \
     startdatacollectionbyagentidsrequest.cpp \
     startdatacollectionbyagentidsresponse.cpp \
     startexporttaskrequest.cpp \
     startexporttaskresponse.cpp \
+    stopcontinuousexportrequest.cpp \
+    stopcontinuousexportresponse.cpp \
     stopdatacollectionbyagentidsrequest.cpp \
     stopdatacollectionbyagentidsresponse.cpp \
     updateapplicationrequest.cpp \

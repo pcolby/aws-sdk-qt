@@ -55,6 +55,7 @@ namespace S3 {
  * \value DeleteObjectAction S3 DeleteObject action.
  * \value DeleteObjectTaggingAction S3 DeleteObjectTagging action.
  * \value DeleteObjectsAction S3 DeleteObjects action.
+ * \value DeletePublicAccessBlockAction S3 DeletePublicAccessBlock action.
  * \value GetBucketAccelerateConfigurationAction S3 GetBucketAccelerateConfiguration action.
  * \value GetBucketAclAction S3 GetBucketAcl action.
  * \value GetBucketAnalyticsConfigurationAction S3 GetBucketAnalyticsConfiguration action.
@@ -69,6 +70,7 @@ namespace S3 {
  * \value GetBucketNotificationAction S3 GetBucketNotification action.
  * \value GetBucketNotificationConfigurationAction S3 GetBucketNotificationConfiguration action.
  * \value GetBucketPolicyAction S3 GetBucketPolicy action.
+ * \value GetBucketPolicyStatusAction S3 GetBucketPolicyStatus action.
  * \value GetBucketReplicationAction S3 GetBucketReplication action.
  * \value GetBucketRequestPaymentAction S3 GetBucketRequestPayment action.
  * \value GetBucketTaggingAction S3 GetBucketTagging action.
@@ -76,8 +78,12 @@ namespace S3 {
  * \value GetBucketWebsiteAction S3 GetBucketWebsite action.
  * \value GetObjectAction S3 GetObject action.
  * \value GetObjectAclAction S3 GetObjectAcl action.
+ * \value GetObjectLegalHoldAction S3 GetObjectLegalHold action.
+ * \value GetObjectLockConfigurationAction S3 GetObjectLockConfiguration action.
+ * \value GetObjectRetentionAction S3 GetObjectRetention action.
  * \value GetObjectTaggingAction S3 GetObjectTagging action.
  * \value GetObjectTorrentAction S3 GetObjectTorrent action.
+ * \value GetPublicAccessBlockAction S3 GetPublicAccessBlock action.
  * \value HeadBucketAction S3 HeadBucket action.
  * \value HeadObjectAction S3 HeadObject action.
  * \value ListBucketAnalyticsConfigurationsAction S3 ListBucketAnalyticsConfigurations action.
@@ -109,7 +115,11 @@ namespace S3 {
  * \value PutBucketWebsiteAction S3 PutBucketWebsite action.
  * \value PutObjectAction S3 PutObject action.
  * \value PutObjectAclAction S3 PutObjectAcl action.
+ * \value PutObjectLegalHoldAction S3 PutObjectLegalHold action.
+ * \value PutObjectLockConfigurationAction S3 PutObjectLockConfiguration action.
+ * \value PutObjectRetentionAction S3 PutObjectRetention action.
  * \value PutObjectTaggingAction S3 PutObjectTagging action.
+ * \value PutPublicAccessBlockAction S3 PutPublicAccessBlock action.
  * \value RestoreObjectAction S3 RestoreObject action.
  * \value SelectObjectContentAction S3 SelectObjectContent action.
  * \value UploadPartAction S3 UploadPart action.

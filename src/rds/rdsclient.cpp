@@ -45,6 +45,8 @@
 #include "copyoptiongroupresponse.h"
 #include "createdbclusterrequest.h"
 #include "createdbclusterresponse.h"
+#include "createdbclusterendpointrequest.h"
+#include "createdbclusterendpointresponse.h"
 #include "createdbclusterparametergrouprequest.h"
 #include "createdbclusterparametergroupresponse.h"
 #include "createdbclustersnapshotrequest.h"
@@ -63,16 +65,22 @@
 #include "createdbsubnetgroupresponse.h"
 #include "createeventsubscriptionrequest.h"
 #include "createeventsubscriptionresponse.h"
+#include "createglobalclusterrequest.h"
+#include "createglobalclusterresponse.h"
 #include "createoptiongrouprequest.h"
 #include "createoptiongroupresponse.h"
 #include "deletedbclusterrequest.h"
 #include "deletedbclusterresponse.h"
+#include "deletedbclusterendpointrequest.h"
+#include "deletedbclusterendpointresponse.h"
 #include "deletedbclusterparametergrouprequest.h"
 #include "deletedbclusterparametergroupresponse.h"
 #include "deletedbclustersnapshotrequest.h"
 #include "deletedbclustersnapshotresponse.h"
 #include "deletedbinstancerequest.h"
 #include "deletedbinstanceresponse.h"
+#include "deletedbinstanceautomatedbackuprequest.h"
+#include "deletedbinstanceautomatedbackupresponse.h"
 #include "deletedbparametergrouprequest.h"
 #include "deletedbparametergroupresponse.h"
 #include "deletedbsecuritygrouprequest.h"
@@ -83,6 +91,8 @@
 #include "deletedbsubnetgroupresponse.h"
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionresponse.h"
+#include "deleteglobalclusterrequest.h"
+#include "deleteglobalclusterresponse.h"
 #include "deleteoptiongrouprequest.h"
 #include "deleteoptiongroupresponse.h"
 #include "describeaccountattributesrequest.h"
@@ -91,6 +101,8 @@
 #include "describecertificatesresponse.h"
 #include "describedbclusterbacktracksrequest.h"
 #include "describedbclusterbacktracksresponse.h"
+#include "describedbclusterendpointsrequest.h"
+#include "describedbclusterendpointsresponse.h"
 #include "describedbclusterparametergroupsrequest.h"
 #include "describedbclusterparametergroupsresponse.h"
 #include "describedbclusterparametersrequest.h"
@@ -103,6 +115,8 @@
 #include "describedbclustersresponse.h"
 #include "describedbengineversionsrequest.h"
 #include "describedbengineversionsresponse.h"
+#include "describedbinstanceautomatedbackupsrequest.h"
+#include "describedbinstanceautomatedbackupsresponse.h"
 #include "describedbinstancesrequest.h"
 #include "describedbinstancesresponse.h"
 #include "describedblogfilesrequest.h"
@@ -129,6 +143,8 @@
 #include "describeeventsubscriptionsresponse.h"
 #include "describeeventsrequest.h"
 #include "describeeventsresponse.h"
+#include "describeglobalclustersrequest.h"
+#include "describeglobalclustersresponse.h"
 #include "describeoptiongroupoptionsrequest.h"
 #include "describeoptiongroupoptionsresponse.h"
 #include "describeoptiongroupsrequest.h"
@@ -151,8 +167,12 @@
 #include "failoverdbclusterresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "modifycurrentdbclustercapacityrequest.h"
+#include "modifycurrentdbclustercapacityresponse.h"
 #include "modifydbclusterrequest.h"
 #include "modifydbclusterresponse.h"
+#include "modifydbclusterendpointrequest.h"
+#include "modifydbclusterendpointresponse.h"
 #include "modifydbclusterparametergrouprequest.h"
 #include "modifydbclusterparametergroupresponse.h"
 #include "modifydbclustersnapshotattributerequest.h"
@@ -169,6 +189,8 @@
 #include "modifydbsubnetgroupresponse.h"
 #include "modifyeventsubscriptionrequest.h"
 #include "modifyeventsubscriptionresponse.h"
+#include "modifyglobalclusterrequest.h"
+#include "modifyglobalclusterresponse.h"
 #include "modifyoptiongrouprequest.h"
 #include "modifyoptiongroupresponse.h"
 #include "promotereadreplicarequest.h"
@@ -179,6 +201,8 @@
 #include "purchasereserveddbinstancesofferingresponse.h"
 #include "rebootdbinstancerequest.h"
 #include "rebootdbinstanceresponse.h"
+#include "removefromglobalclusterrequest.h"
+#include "removefromglobalclusterresponse.h"
 #include "removerolefromdbclusterrequest.h"
 #include "removerolefromdbclusterresponse.h"
 #include "removesourceidentifierfromsubscriptionrequest.h"
@@ -203,8 +227,12 @@
 #include "restoredbinstancetopointintimeresponse.h"
 #include "revokedbsecuritygroupingressrequest.h"
 #include "revokedbsecuritygroupingressresponse.h"
+#include "startdbclusterrequest.h"
+#include "startdbclusterresponse.h"
 #include "startdbinstancerequest.h"
 #include "startdbinstanceresponse.h"
+#include "stopdbclusterrequest.h"
+#include "stopdbclusterresponse.h"
 #include "stopdbinstancerequest.h"
 #include "stopdbinstanceresponse.h"
 
@@ -356,8 +384,8 @@ RdsClient::RdsClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon
- * Aurora to Access Other AWS Services On Your
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.html">Authorizing
+ * Amazon Aurora MySQL to Access Other AWS Services on Your Behalf</a> in the <i>Amazon Aurora User
  */
 AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClusterRequest &request)
 {
@@ -447,8 +475,8 @@ AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIng
  * cluster>
  *
  * For more information on backtracking, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Managing.Backtrack.html"> Backtracking an Aurora
- * DB Cluster</a> in the <i>Amazon RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html"> Backtracking an
+ * Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide.</i>
  */
 BacktrackDBClusterResponse * RdsClient::backtrackDBCluster(const BacktrackDBClusterRequest &request)
 {
@@ -546,15 +574,14 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  * status>
  *
  * For more information on copying encrypted DB cluster snapshots from one AWS Region to another, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBClusterSnapshot.CrossRegion">
- * Copying a DB Cluster Snapshot in the Same Account, Either in the Same Region or Across Regions</a> in the <i>Amazon RDS
- * User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html"> Copying a Snapshot</a> in the
+ * <i>Amazon Aurora User Guide.</i>
  *
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
@@ -628,12 +655,25 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
  * parameter>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterRequest &request)
 {
     return qobject_cast<CreateDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * CreateDBClusterEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new custom endpoint and associates it with an Amazon Aurora DB
+ */
+CreateDBClusterEndpointResponse * RdsClient::createDBClusterEndpoint(const CreateDBClusterEndpointRequest &request)
+{
+    return qobject_cast<CreateDBClusterEndpointResponse *>(send(request));
 }
 
 /*!
@@ -670,8 +710,8 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
  * modified> </b>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request)
 {
@@ -685,8 +725,8 @@ CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a snapshot of a DB cluster. For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request)
 {
@@ -715,7 +755,7 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
  * Creates a new DB instance that acts as a Read Replica for an existing source DB instance. You can create a Read Replica
  * for a DB instance running MySQL, MariaDB, or PostgreSQL. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with PostgreSQL, MySQL, and
- * MariaDB Read Replicas</a>.
+ * MariaDB Read Replicas</a> in the <i>Amazon RDS User Guide</i>.
  *
  * </p
  *
@@ -842,6 +882,29 @@ CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const Creat
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * CreateGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * </p
+ *
+ * Creates an Aurora global database spread across multiple regions. The global database contains a single primary cluster
+ * with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through
+ * high-speed replication performed by the Aurora storage subsystem.
+ *
+ * </p
+ *
+ * You can create a global database that is initially empty, and then add a primary cluster and a secondary cluster to it.
+ * Or you can specify an existing Aurora cluster during the create operation, and this cluster becomes the primary cluster
+ * of the global database.
+ */
+CreateGlobalClusterResponse * RdsClient::createGlobalCluster(const CreateGlobalClusterRequest &request)
+{
+    return qobject_cast<CreateGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * CreateOptionGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -866,12 +929,25 @@ CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroup
  * deleted> <p/>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterRequest &request)
 {
     return qobject_cast<DeleteDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteDBClusterEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a custom endpoint and removes it from an Amazon Aurora DB
+ */
+DeleteDBClusterEndpointResponse * RdsClient::deleteDBClusterEndpoint(const DeleteDBClusterEndpointRequest &request)
+{
+    return qobject_cast<DeleteDBClusterEndpointResponse *>(send(request));
 }
 
 /*!
@@ -886,8 +962,8 @@ DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterReques
  * clusters>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request)
 {
@@ -909,8 +985,8 @@ DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup
  * deleted> </note>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request)
 {
@@ -965,11 +1041,25 @@ DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceReq
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteDBInstanceAutomatedBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes automated backups based on the source instance's <code>DbiResourceId</code> value or the restorable instance's
+ * resource
+ */
+DeleteDBInstanceAutomatedBackupResponse * RdsClient::deleteDBInstanceAutomatedBackup(const DeleteDBInstanceAutomatedBackupRequest &request)
+{
+    return qobject_cast<DeleteDBInstanceAutomatedBackupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * DeleteDBParameterGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a specified DBParameterGroup. The DBParameterGroup to be deleted can't be associated with any DB
+ * Deletes a specified DB parameter group. The DB parameter group to be deleted can't be associated with any DB
  */
 DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteDBParameterGroupRequest &request)
 {
@@ -999,11 +1089,11 @@ DeleteDBSecurityGroupResponse * RdsClient::deleteDBSecurityGroup(const DeleteDBS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a DBSnapshot. If the snapshot is being copied, the copy operation is
+ * Deletes a DB snapshot. If the snapshot is being copied, the copy operation is
  *
  * terminated> <note>
  *
- * The DBSnapshot must be in the <code>available</code> state to be
+ * The DB snapshot must be in the <code>available</code> state to be
  */
 DeleteDBSnapshotResponse * RdsClient::deleteDBSnapshot(const DeleteDBSnapshotRequest &request)
 {
@@ -1038,6 +1128,19 @@ DeleteDBSubnetGroupResponse * RdsClient::deleteDBSubnetGroup(const DeleteDBSubne
 DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
 {
     return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a global database cluster. The primary and secondary clusters must already be detached or destroyed first.
+ */
+DeleteGlobalClusterResponse * RdsClient::deleteGlobalCluster(const DeleteGlobalClusterRequest &request)
+{
+    return qobject_cast<DeleteGlobalClusterResponse *>(send(request));
 }
 
 /*!
@@ -1096,12 +1199,25 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
  * cluster>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeDBClusterBacktracksResponse * RdsClient::describeDBClusterBacktracks(const DescribeDBClusterBacktracksRequest &request)
 {
     return qobject_cast<DescribeDBClusterBacktracksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBClusterEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about endpoints for an Amazon Aurora DB
+ */
+DescribeDBClusterEndpointsResponse * RdsClient::describeDBClusterEndpoints(const DescribeDBClusterEndpointsRequest &request)
+{
+    return qobject_cast<DescribeDBClusterEndpointsResponse *>(send(request));
 }
 
 /*!
@@ -1116,8 +1232,8 @@ DescribeDBClusterBacktracksResponse * RdsClient::describeDBClusterBacktracks(con
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request)
 {
@@ -1135,8 +1251,8 @@ DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameter
  * group>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(const DescribeDBClusterParametersRequest &request)
 {
@@ -1179,8 +1295,8 @@ DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapsh
  * pagination>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const DescribeDBClusterSnapshotsRequest &request)
 {
@@ -1198,8 +1314,8 @@ DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const
  * pagination>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
@@ -1217,6 +1333,25 @@ DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClust
 DescribeDBEngineVersionsResponse * RdsClient::describeDBEngineVersions(const DescribeDBEngineVersionsRequest &request)
 {
     return qobject_cast<DescribeDBEngineVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBInstanceAutomatedBackupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Displays backups for both current and deleted instances. For example, use this operation to find details about automated
+ * backups for previously deleted instances. Current instances with retention periods greater than zero (0) are returned
+ * for both the <code>DescribeDBInstanceAutomatedBackups</code> and <code>DescribeDBInstances</code>
+ *
+ * operations>
+ *
+ * All parameters are
+ */
+DescribeDBInstanceAutomatedBackupsResponse * RdsClient::describeDBInstanceAutomatedBackups(const DescribeDBInstanceAutomatedBackupsRequest &request)
+{
+    return qobject_cast<DescribeDBInstanceAutomatedBackupsResponse *>(send(request));
 }
 
 /*!
@@ -1354,8 +1489,8 @@ DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const Describ
  * engine>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaultClusterParameters(const DescribeEngineDefaultClusterParametersRequest &request)
 {
@@ -1422,6 +1557,25 @@ DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const
 DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &request)
 {
     return qobject_cast<DescribeEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeGlobalClustersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about Aurora global database clusters. This API supports pagination.
+ *
+ * </p
+ *
+ * For more information on Amazon Aurora, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
+ */
+DescribeGlobalClustersResponse * RdsClient::describeGlobalClusters(const DescribeGlobalClustersRequest &request)
+{
+    return qobject_cast<DescribeGlobalClustersResponse *>(send(request));
 }
 
 /*!
@@ -1566,8 +1720,8 @@ DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const Dow
  * complete>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBClusterRequest &request)
 {
@@ -1585,11 +1739,50 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
  * resource>
  *
  * For an overview on tagging an Amazon RDS resource, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS Resources</a> in
+ * the <i>Amazon RDS User
  */
 ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyCurrentDBClusterCapacityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Set the capacity of an Aurora Serverless DB cluster to a specific
+ *
+ * value>
+ *
+ * Aurora Serverless scales seamlessly based on the workload on the DB cluster. In some cases, the capacity might not scale
+ * fast enough to meet a sudden change in workload, such as a large number of new transactions. Call
+ * <code>ModifyCurrentDBClusterCapacity</code> to set the capacity
+ *
+ * explicitly>
+ *
+ * After this call sets the DB cluster capacity, Aurora Serverless can automatically scale the DB cluster based on the
+ * cooldown period for scaling up and the cooldown period for scaling
+ *
+ * down>
+ *
+ * For more information about Aurora Serverless, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
+ * Serverless</a> in the <i>Amazon Aurora User
+ *
+ * Guide</i>> <b>
+ *
+ * If you call <code>ModifyCurrentDBClusterCapacity</code> with the default <code>TimeoutAction</code>, connections that
+ * prevent Aurora Serverless from finding a scaling point might be dropped. For more information about scaling points, see
+ * <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling">
+ * Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User
+ */
+ModifyCurrentDBClusterCapacityResponse * RdsClient::modifyCurrentDBClusterCapacity(const ModifyCurrentDBClusterCapacityRequest &request)
+{
+    return qobject_cast<ModifyCurrentDBClusterCapacityResponse *>(send(request));
 }
 
 /*!
@@ -1600,12 +1793,25 @@ ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForRe
  *
  * Modify a setting for an Amazon Aurora DB cluster. You can change one or more database configuration parameters by
  * specifying these parameters and the new values in the request. For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterRequest &request)
 {
     return qobject_cast<ModifyDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyDBClusterEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the properties of an endpoint in an Amazon Aurora DB
+ */
+ModifyDBClusterEndpointResponse * RdsClient::modifyDBClusterEndpoint(const ModifyDBClusterEndpointRequest &request)
+{
+    return qobject_cast<ModifyDBClusterEndpointResponse *>(send(request));
 }
 
 /*!
@@ -1621,8 +1827,8 @@ ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterReques
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  *
  * </p <note>
  *
@@ -1789,12 +1995,28 @@ ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubne
  * calls>
  *
  * You can see a list of the event categories for a given SourceType in the <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> topic in the Amazon RDS User
- * Guide or by using the <b>DescribeEventCategories</b>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> topic in the <i>Amazon RDS User
+ * Guide</i> or by using the <b>DescribeEventCategories</b>
  */
 ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
     return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify a setting for an Amazon Aurora global cluster. You can change one or more database configuration parameters by
+ * specifying these parameters and the new values in the request. For more information on Amazon Aurora, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
+ */
+ModifyGlobalClusterResponse * RdsClient::modifyGlobalCluster(const ModifyGlobalClusterRequest &request)
+{
+    return qobject_cast<ModifyGlobalClusterResponse *>(send(request));
 }
 
 /*!
@@ -1879,11 +2101,26 @@ PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInsta
  * </p
  *
  * For more information about rebooting, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html">Rebooting a DB Instance</a>.
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html">Rebooting a DB Instance</a> in the
+ * <i>Amazon RDS User Guide.</i>
  */
 RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
     return qobject_cast<RebootDBInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * RemoveFromGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detaches an Aurora secondary cluster from an Aurora global database cluster. The cluster becomes a standalone cluster
+ * with read-write capability instead of being read-only and receiving data from a primary cluster in a different region.
+ */
+RemoveFromGlobalClusterResponse * RdsClient::removeFromGlobalCluster(const RemoveFromGlobalClusterRequest &request)
+{
+    return qobject_cast<RemoveFromGlobalClusterResponse *>(send(request));
 }
 
 /*!
@@ -1893,8 +2130,8 @@ RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Authorizing.AWSServices.html">Authorizing Amazon
- * Aurora to Access Other AWS Services On Your
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.html">Authorizing
+ * Amazon Aurora MySQL to Access Other AWS Services on Your Behalf </a> in the <i>Amazon Aurora User
  */
 RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request)
 {
@@ -1925,7 +2162,8 @@ RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifi
  * resource>
  *
  * For an overview on tagging an Amazon RDS resource, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS Resources</a> in
+ * the <i>Amazon RDS User Guide.</i>
  */
 RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -1952,8 +2190,8 @@ RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveT
  * to>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request)
 {
@@ -1985,8 +2223,8 @@ ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBPa
  *
  * Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket. Amazon RDS must be authorized to access the
  * Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Migrate.MySQL.html#Aurora.Migrate.MySQL.S3">Migrating
- * Data from MySQL by Using an Amazon S3
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.html"> Migrating Data to an
+ * Amazon Aurora MySQL DB Cluster</a> in the <i>Amazon Aurora User
  */
 RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const RestoreDBClusterFromS3Request &request)
 {
@@ -2015,8 +2253,8 @@ RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const Restore
  * group>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request)
 {
@@ -2044,8 +2282,8 @@ RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(c
  * available> </note>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Aurora.html">Aurora on Amazon RDS</a> in the <i>Amazon
- * RDS User Guide.</i>
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
  */
 RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request)
 {
@@ -2096,7 +2334,7 @@ RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnap
  * a backup of your on-premises database, store it on Amazon Simple Storage Service (Amazon S3), and then restore the
  * backup file onto a new Amazon RDS DB instance running MySQL. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an
- * Amazon RDS MySQL DB Instance</a>.
+ * Amazon RDS MySQL DB Instance</a> in the <i>Amazon RDS User Guide.</i>
  */
 RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const RestoreDBInstanceFromS3Request &request)
 {
@@ -2146,16 +2384,42 @@ RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(c
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StartDBClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an Amazon Aurora DB cluster that was stopped using the AWS console, the stop-db-cluster AWS CLI command, or the
+ * StopDBCluster
+ *
+ * action>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and Starting
+ * an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ */
+StartDBClusterResponse * RdsClient::startDBCluster(const StartDBClusterRequest &request)
+{
+    return qobject_cast<StartDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * StartDBInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a DB instance that was stopped using the AWS console, the stop-db-instance AWS CLI command, or the StopDBInstance
- * action. For more information, see Stopping and Starting a DB instance in the AWS RDS user guide.
+ * Starts an Amazon RDS DB instance that was stopped using the AWS console, the stop-db-instance AWS CLI command, or the
+ * StopDBInstance action.
+ *
+ * </p
+ *
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_StartInstance.html">
+ * Starting an Amazon RDS DB instance That Was Previously Stopped</a> in the <i>Amazon RDS User Guide.</i>
  *
  * </p <note>
  *
- * This command doesn't apply to Aurora MySQL and Aurora
+ * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora DB clusters, use <a>StartDBCluster</a>
+ * instead.
  */
 StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceRequest &request)
 {
@@ -2164,18 +2428,43 @@ StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceReques
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StopDBClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an Amazon Aurora DB cluster. When you stop a DB cluster, Aurora retains the DB cluster's metadata, including its
+ * endpoints and DB parameter groups. Aurora also retains the transaction logs so you can do a point-in-time restore if
+ * necessary.
+ *
+ * </p
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and Starting
+ * an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ */
+StopDBClusterResponse * RdsClient::stopDBCluster(const StopDBClusterRequest &request)
+{
+    return qobject_cast<StopDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * StopDBInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a DB instance. When you stop a DB instance, Amazon RDS retains the DB instance's metadata, including its endpoint,
- * DB parameter group, and option group membership. Amazon RDS also retains the transaction logs so you can do a
- * point-in-time restore if necessary. For more information, see Stopping and Starting a DB instance in the AWS RDS user
- * guide.
+ * Stops an Amazon RDS DB instance. When you stop a DB instance, Amazon RDS retains the DB instance's metadata, including
+ * its endpoint, DB parameter group, and option group membership. Amazon RDS also retains the transaction logs so you can
+ * do a point-in-time restore if necessary.
+ *
+ * </p
+ *
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_StopInstance.html">
+ * Stopping an Amazon RDS DB Instance Temporarily</a> in the <i>Amazon RDS User Guide.</i>
  *
  * </p <note>
  *
- * This command doesn't apply to Aurora MySQL and Aurora
+ * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora clusters, use <a>StopDBCluster</a> instead.
  */
 StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &request)
 {

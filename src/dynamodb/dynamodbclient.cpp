@@ -41,6 +41,8 @@
 #include "describebackupresponse.h"
 #include "describecontinuousbackupsrequest.h"
 #include "describecontinuousbackupsresponse.h"
+#include "describeendpointsrequest.h"
+#include "describeendpointsresponse.h"
 #include "describeglobaltablerequest.h"
 #include "describeglobaltableresponse.h"
 #include "describeglobaltablesettingsrequest.h"
@@ -73,6 +75,10 @@
 #include "scanresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
+#include "transactgetitemsrequest.h"
+#include "transactgetitemsresponse.h"
+#include "transactwriteitemsrequest.h"
+#include "transactwriteitemsresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
 #include "updatecontinuousbackupsrequest.h"
@@ -630,6 +636,18 @@ DescribeBackupResponse * DynamoDBClient::describeBackup(const DescribeBackupRequ
 DescribeContinuousBackupsResponse * DynamoDBClient::describeContinuousBackups(const DescribeContinuousBackupsRequest &request)
 {
     return qobject_cast<DescribeContinuousBackupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * DescribeEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeEndpointsResponse * DynamoDBClient::describeEndpoints(const DescribeEndpointsRequest &request)
+{
+    return qobject_cast<DescribeEndpointsResponse *>(send(request));
 }
 
 /*!
@@ -1209,6 +1227,112 @@ ScanResponse * DynamoDBClient::scan(const ScanRequest &request)
 TagResourceResponse * DynamoDBClient::tagResource(const TagResourceRequest &request)
 {
     return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * TransactGetItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <code>TransactGetItems</code> is a synchronous operation that atomically retrieves multiple items from one or more
+ * tables (but not from indexes) in a single account and region. A <code>TransactGetItems</code> call can contain up to 10
+ * <code>TransactGetItem</code> objects, each of which contains a <code>Get</code> structure that specifies an item to
+ * retrieve from a table in the account and region. A call to <code>TransactGetItems</code> cannot retrieve items from
+ * tables in more than one AWS account or
+ *
+ * region>
+ *
+ * DynamoDB rejects the entire <code>TransactGetItems</code> request if any of the following is
+ *
+ * true> <ul> <li>
+ *
+ * A conflicting operation is in the process of updating an item to be
+ *
+ * read> </li> <li>
+ *
+ * There is insufficient provisioned capacity for the transaction to be
+ *
+ * completed> </li> <li>
+ *
+ * There is a user error, such as an invalid data
+ */
+TransactGetItemsResponse * DynamoDBClient::transactGetItems(const TransactGetItemsRequest &request)
+{
+    return qobject_cast<TransactGetItemsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DynamoDBClient service, and returns a pointer to an
+ * TransactWriteItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <code>TransactWriteItems</code> is a synchronous write operation that groups up to 10 action requests. These actions can
+ * target items in different tables, but not in different AWS accounts or regions, and no two actions can target the same
+ * item. For example, you cannot both <code>ConditionCheck</code> and <code>Update</code> the same
+ *
+ * item>
+ *
+ * The actions are completed atomically so that either all of them succeed, or all of them fail. They are defined by the
+ * following
+ *
+ * objects> <ul> <li>
+ *
+ * <code>Put</code>  &#x97;   Initiates a <code>PutItem</code> operation to write a new item. This structure specifies the
+ * primary key of the item to be written, the name of the table to write it in, an optional condition expression that must
+ * be satisfied for the write to succeed, a list of the item's attributes, and a field indicating whether or not to
+ * retrieve the item's attributes if the condition is not
+ *
+ * met> </li> <li>
+ *
+ * <code>Update</code>  &#x97;   Initiates an <code>UpdateItem</code> operation to update an existing item. This structure
+ * specifies the primary key of the item to be updated, the name of the table where it resides, an optional condition
+ * expression that must be satisfied for the update to succeed, an expression that defines one or more attributes to be
+ * updated, and a field indicating whether or not to retrieve the item's attributes if the condition is not
+ *
+ * met> </li> <li>
+ *
+ * <code>Delete</code>  &#x97;   Initiates a <code>DeleteItem</code> operation to delete an existing item. This structure
+ * specifies the primary key of the item to be deleted, the name of the table where it resides, an optional condition
+ * expression that must be satisfied for the deletion to succeed, and a field indicating whether or not to retrieve the
+ * item's attributes if the condition is not
+ *
+ * met> </li> <li>
+ *
+ * <code>ConditionCheck</code>  &#x97;   Applies a condition to an item that is not being modified by the transaction. This
+ * structure specifies the primary key of the item to be checked, the name of the table where it resides, a condition
+ * expression that must be satisfied for the transaction to succeed, and a field indicating whether or not to retrieve the
+ * item's attributes if the condition is not
+ *
+ * met> </li> </ul>
+ *
+ * DynamoDB rejects the entire <code>TransactWriteItems</code> request if any of the following is
+ *
+ * true> <ul> <li>
+ *
+ * A condition in one of the condition expressions is not
+ *
+ * met> </li> <li>
+ *
+ * A conflicting operation is in the process of updating the same
+ *
+ * item> </li> <li>
+ *
+ * There is insufficient provisioned capacity for the transaction to be
+ *
+ * completed> </li> <li>
+ *
+ * An item size becomes too large (bigger than 400 KB), a Local Secondary Index (LSI) becomes too large, or a similar
+ * validation error occurs because of changes made by the
+ *
+ * transaction> </li> <li>
+ *
+ * There is a user error, such as an invalid data
+ */
+TransactWriteItemsResponse * DynamoDBClient::transactWriteItems(const TransactWriteItemsRequest &request)
+{
+    return qobject_cast<TransactWriteItemsResponse *>(send(request));
 }
 
 /*!

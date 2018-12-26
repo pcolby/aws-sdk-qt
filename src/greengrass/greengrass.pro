@@ -18,6 +18,14 @@ HEADERS += \
     associateserviceroletoaccountrequest_p.h \
     associateserviceroletoaccountresponse.h \
     associateserviceroletoaccountresponse_p.h \
+    createconnectordefinitionrequest.h \
+    createconnectordefinitionrequest_p.h \
+    createconnectordefinitionresponse.h \
+    createconnectordefinitionresponse_p.h \
+    createconnectordefinitionversionrequest.h \
+    createconnectordefinitionversionrequest_p.h \
+    createconnectordefinitionversionresponse.h \
+    createconnectordefinitionversionresponse_p.h \
     createcoredefinitionrequest.h \
     createcoredefinitionrequest_p.h \
     createcoredefinitionresponse.h \
@@ -86,6 +94,10 @@ HEADERS += \
     createsubscriptiondefinitionversionrequest_p.h \
     createsubscriptiondefinitionversionresponse.h \
     createsubscriptiondefinitionversionresponse_p.h \
+    deleteconnectordefinitionrequest.h \
+    deleteconnectordefinitionrequest_p.h \
+    deleteconnectordefinitionresponse.h \
+    deleteconnectordefinitionresponse_p.h \
     deletecoredefinitionrequest.h \
     deletecoredefinitionrequest_p.h \
     deletecoredefinitionresponse.h \
@@ -126,10 +138,22 @@ HEADERS += \
     getassociatedrolerequest_p.h \
     getassociatedroleresponse.h \
     getassociatedroleresponse_p.h \
+    getbulkdeploymentstatusrequest.h \
+    getbulkdeploymentstatusrequest_p.h \
+    getbulkdeploymentstatusresponse.h \
+    getbulkdeploymentstatusresponse_p.h \
     getconnectivityinforequest.h \
     getconnectivityinforequest_p.h \
     getconnectivityinforesponse.h \
     getconnectivityinforesponse_p.h \
+    getconnectordefinitionrequest.h \
+    getconnectordefinitionrequest_p.h \
+    getconnectordefinitionresponse.h \
+    getconnectordefinitionresponse_p.h \
+    getconnectordefinitionversionrequest.h \
+    getconnectordefinitionversionrequest_p.h \
+    getconnectordefinitionversionresponse.h \
+    getconnectordefinitionversionresponse_p.h \
     getcoredefinitionrequest.h \
     getcoredefinitionrequest_p.h \
     getcoredefinitionresponse.h \
@@ -208,6 +232,22 @@ HEADERS += \
     greengrassrequest_p.h \
     greengrassresponse.h \
     greengrassresponse_p.h \
+    listbulkdeploymentdetailedreportsrequest.h \
+    listbulkdeploymentdetailedreportsrequest_p.h \
+    listbulkdeploymentdetailedreportsresponse.h \
+    listbulkdeploymentdetailedreportsresponse_p.h \
+    listbulkdeploymentsrequest.h \
+    listbulkdeploymentsrequest_p.h \
+    listbulkdeploymentsresponse.h \
+    listbulkdeploymentsresponse_p.h \
+    listconnectordefinitionsrequest.h \
+    listconnectordefinitionsrequest_p.h \
+    listconnectordefinitionsresponse.h \
+    listconnectordefinitionsresponse_p.h \
+    listconnectordefinitionversionsrequest.h \
+    listconnectordefinitionversionsrequest_p.h \
+    listconnectordefinitionversionsresponse.h \
+    listconnectordefinitionversionsresponse_p.h \
     listcoredefinitionsrequest.h \
     listcoredefinitionsrequest_p.h \
     listcoredefinitionsresponse.h \
@@ -276,10 +316,22 @@ HEADERS += \
     resetdeploymentsrequest_p.h \
     resetdeploymentsresponse.h \
     resetdeploymentsresponse_p.h \
+    startbulkdeploymentrequest.h \
+    startbulkdeploymentrequest_p.h \
+    startbulkdeploymentresponse.h \
+    startbulkdeploymentresponse_p.h \
+    stopbulkdeploymentrequest.h \
+    stopbulkdeploymentrequest_p.h \
+    stopbulkdeploymentresponse.h \
+    stopbulkdeploymentresponse_p.h \
     updateconnectivityinforequest.h \
     updateconnectivityinforequest_p.h \
     updateconnectivityinforesponse.h \
     updateconnectivityinforesponse_p.h \
+    updateconnectordefinitionrequest.h \
+    updateconnectordefinitionrequest_p.h \
+    updateconnectordefinitionresponse.h \
+    updateconnectordefinitionresponse_p.h \
     updatecoredefinitionrequest.h \
     updatecoredefinitionrequest_p.h \
     updatecoredefinitionresponse.h \
@@ -318,6 +370,10 @@ SOURCES += \
     associateroletogroupresponse.cpp \
     associateserviceroletoaccountrequest.cpp \
     associateserviceroletoaccountresponse.cpp \
+    createconnectordefinitionrequest.cpp \
+    createconnectordefinitionresponse.cpp \
+    createconnectordefinitionversionrequest.cpp \
+    createconnectordefinitionversionresponse.cpp \
     createcoredefinitionrequest.cpp \
     createcoredefinitionresponse.cpp \
     createcoredefinitionversionrequest.cpp \
@@ -352,6 +408,8 @@ SOURCES += \
     createsubscriptiondefinitionresponse.cpp \
     createsubscriptiondefinitionversionrequest.cpp \
     createsubscriptiondefinitionversionresponse.cpp \
+    deleteconnectordefinitionrequest.cpp \
+    deleteconnectordefinitionresponse.cpp \
     deletecoredefinitionrequest.cpp \
     deletecoredefinitionresponse.cpp \
     deletedevicedefinitionrequest.cpp \
@@ -372,8 +430,14 @@ SOURCES += \
     disassociateservicerolefromaccountresponse.cpp \
     getassociatedrolerequest.cpp \
     getassociatedroleresponse.cpp \
+    getbulkdeploymentstatusrequest.cpp \
+    getbulkdeploymentstatusresponse.cpp \
     getconnectivityinforequest.cpp \
     getconnectivityinforesponse.cpp \
+    getconnectordefinitionrequest.cpp \
+    getconnectordefinitionresponse.cpp \
+    getconnectordefinitionversionrequest.cpp \
+    getconnectordefinitionversionresponse.cpp \
     getcoredefinitionrequest.cpp \
     getcoredefinitionresponse.cpp \
     getcoredefinitionversionrequest.cpp \
@@ -413,6 +477,14 @@ SOURCES += \
     greengrassclient.cpp \
     greengrassrequest.cpp \
     greengrassresponse.cpp \
+    listbulkdeploymentdetailedreportsrequest.cpp \
+    listbulkdeploymentdetailedreportsresponse.cpp \
+    listbulkdeploymentsrequest.cpp \
+    listbulkdeploymentsresponse.cpp \
+    listconnectordefinitionsrequest.cpp \
+    listconnectordefinitionsresponse.cpp \
+    listconnectordefinitionversionsrequest.cpp \
+    listconnectordefinitionversionsresponse.cpp \
     listcoredefinitionsrequest.cpp \
     listcoredefinitionsresponse.cpp \
     listcoredefinitionversionsrequest.cpp \
@@ -447,8 +519,14 @@ SOURCES += \
     listsubscriptiondefinitionversionsresponse.cpp \
     resetdeploymentsrequest.cpp \
     resetdeploymentsresponse.cpp \
+    startbulkdeploymentrequest.cpp \
+    startbulkdeploymentresponse.cpp \
+    stopbulkdeploymentrequest.cpp \
+    stopbulkdeploymentresponse.cpp \
     updateconnectivityinforequest.cpp \
     updateconnectivityinforesponse.cpp \
+    updateconnectordefinitionrequest.cpp \
+    updateconnectordefinitionresponse.cpp \
     updatecoredefinitionrequest.cpp \
     updatecoredefinitionresponse.cpp \
     updatedevicedefinitionrequest.cpp \

@@ -210,6 +210,10 @@ HEADERS += \
     generatecredentialreportrequest_p.h \
     generatecredentialreportresponse.h \
     generatecredentialreportresponse_p.h \
+    generateservicelastaccesseddetailsrequest.h \
+    generateservicelastaccesseddetailsrequest_p.h \
+    generateservicelastaccesseddetailsresponse.h \
+    generateservicelastaccesseddetailsresponse_p.h \
     getaccesskeylastusedrequest.h \
     getaccesskeylastusedrequest_p.h \
     getaccesskeylastusedresponse.h \
@@ -282,6 +286,14 @@ HEADERS += \
     getservercertificaterequest_p.h \
     getservercertificateresponse.h \
     getservercertificateresponse_p.h \
+    getservicelastaccesseddetailsrequest.h \
+    getservicelastaccesseddetailsrequest_p.h \
+    getservicelastaccesseddetailsresponse.h \
+    getservicelastaccesseddetailsresponse_p.h \
+    getservicelastaccesseddetailswithentitiesrequest.h \
+    getservicelastaccesseddetailswithentitiesrequest_p.h \
+    getservicelastaccesseddetailswithentitiesresponse.h \
+    getservicelastaccesseddetailswithentitiesresponse_p.h \
     getservicelinkedroledeletionstatusrequest.h \
     getservicelinkedroledeletionstatusrequest_p.h \
     getservicelinkedroledeletionstatusresponse.h \
@@ -356,6 +368,10 @@ HEADERS += \
     listopenidconnectprovidersrequest_p.h \
     listopenidconnectprovidersresponse.h \
     listopenidconnectprovidersresponse_p.h \
+    listpoliciesgrantingserviceaccessrequest.h \
+    listpoliciesgrantingserviceaccessrequest_p.h \
+    listpoliciesgrantingserviceaccessresponse.h \
+    listpoliciesgrantingserviceaccessresponse_p.h \
     listpoliciesrequest.h \
     listpoliciesrequest_p.h \
     listpoliciesresponse.h \
@@ -372,6 +388,10 @@ HEADERS += \
     listrolesrequest_p.h \
     listrolesresponse.h \
     listrolesresponse_p.h \
+    listroletagsrequest.h \
+    listroletagsrequest_p.h \
+    listroletagsresponse.h \
+    listroletagsresponse_p.h \
     listsamlprovidersrequest.h \
     listsamlprovidersrequest_p.h \
     listsamlprovidersresponse.h \
@@ -400,6 +420,10 @@ HEADERS += \
     listusersrequest_p.h \
     listusersresponse.h \
     listusersresponse_p.h \
+    listusertagsrequest.h \
+    listusertagsrequest_p.h \
+    listusertagsresponse.h \
+    listusertagsresponse_p.h \
     listvirtualmfadevicesrequest.h \
     listvirtualmfadevicesrequest_p.h \
     listvirtualmfadevicesresponse.h \
@@ -456,6 +480,22 @@ HEADERS += \
     simulateprincipalpolicyrequest_p.h \
     simulateprincipalpolicyresponse.h \
     simulateprincipalpolicyresponse_p.h \
+    tagrolerequest.h \
+    tagrolerequest_p.h \
+    tagroleresponse.h \
+    tagroleresponse_p.h \
+    taguserrequest.h \
+    taguserrequest_p.h \
+    taguserresponse.h \
+    taguserresponse_p.h \
+    untagrolerequest.h \
+    untagrolerequest_p.h \
+    untagroleresponse.h \
+    untagroleresponse_p.h \
+    untaguserrequest.h \
+    untaguserrequest_p.h \
+    untaguserresponse.h \
+    untaguserresponse_p.h \
     updateaccesskeyrequest.h \
     updateaccesskeyrequest_p.h \
     updateaccesskeyresponse.h \
@@ -626,6 +666,8 @@ SOURCES += \
     enablemfadeviceresponse.cpp \
     generatecredentialreportrequest.cpp \
     generatecredentialreportresponse.cpp \
+    generateservicelastaccesseddetailsrequest.cpp \
+    generateservicelastaccesseddetailsresponse.cpp \
     getaccesskeylastusedrequest.cpp \
     getaccesskeylastusedresponse.cpp \
     getaccountauthorizationdetailsrequest.cpp \
@@ -662,6 +704,10 @@ SOURCES += \
     getsamlproviderresponse.cpp \
     getservercertificaterequest.cpp \
     getservercertificateresponse.cpp \
+    getservicelastaccesseddetailsrequest.cpp \
+    getservicelastaccesseddetailsresponse.cpp \
+    getservicelastaccesseddetailswithentitiesrequest.cpp \
+    getservicelastaccesseddetailswithentitiesresponse.cpp \
     getservicelinkedroledeletionstatusrequest.cpp \
     getservicelinkedroledeletionstatusresponse.cpp \
     getsshpublickeyrequest.cpp \
@@ -699,6 +745,8 @@ SOURCES += \
     listmfadevicesresponse.cpp \
     listopenidconnectprovidersrequest.cpp \
     listopenidconnectprovidersresponse.cpp \
+    listpoliciesgrantingserviceaccessrequest.cpp \
+    listpoliciesgrantingserviceaccessresponse.cpp \
     listpoliciesrequest.cpp \
     listpoliciesresponse.cpp \
     listpolicyversionsrequest.cpp \
@@ -707,6 +755,8 @@ SOURCES += \
     listrolepoliciesresponse.cpp \
     listrolesrequest.cpp \
     listrolesresponse.cpp \
+    listroletagsrequest.cpp \
+    listroletagsresponse.cpp \
     listsamlprovidersrequest.cpp \
     listsamlprovidersresponse.cpp \
     listservercertificatesrequest.cpp \
@@ -721,6 +771,8 @@ SOURCES += \
     listuserpoliciesresponse.cpp \
     listusersrequest.cpp \
     listusersresponse.cpp \
+    listusertagsrequest.cpp \
+    listusertagsresponse.cpp \
     listvirtualmfadevicesrequest.cpp \
     listvirtualmfadevicesresponse.cpp \
     putgrouppolicyrequest.cpp \
@@ -749,6 +801,14 @@ SOURCES += \
     simulatecustompolicyresponse.cpp \
     simulateprincipalpolicyrequest.cpp \
     simulateprincipalpolicyresponse.cpp \
+    tagrolerequest.cpp \
+    tagroleresponse.cpp \
+    taguserrequest.cpp \
+    taguserresponse.cpp \
+    untagrolerequest.cpp \
+    untagroleresponse.cpp \
+    untaguserrequest.cpp \
+    untaguserresponse.cpp \
     updateaccesskeyrequest.cpp \
     updateaccesskeyresponse.cpp \
     updateaccountpasswordpolicyrequest.cpp \

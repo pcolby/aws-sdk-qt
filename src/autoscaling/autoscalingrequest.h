@@ -40,6 +40,8 @@ public:
         AttachInstancesAction,
         AttachLoadBalancerTargetGroupsAction,
         AttachLoadBalancersAction,
+        BatchDeleteScheduledActionAction,
+        BatchPutScheduledUpdateGroupActionAction,
         CompleteLifecycleActionAction,
         CreateAutoScalingGroupAction,
         CreateLaunchConfigurationAction,

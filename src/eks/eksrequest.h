@@ -40,7 +40,10 @@ public:
         CreateClusterAction,
         DeleteClusterAction,
         DescribeClusterAction,
+        DescribeUpdateAction,
         ListClustersAction,
+        ListUpdatesAction,
+        UpdateClusterVersionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

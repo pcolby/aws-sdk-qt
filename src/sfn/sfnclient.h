@@ -54,6 +54,8 @@ class ListExecutionsRequest;
 class ListExecutionsResponse;
 class ListStateMachinesRequest;
 class ListStateMachinesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class SendTaskFailureRequest;
 class SendTaskFailureResponse;
 class SendTaskHeartbeatRequest;
@@ -64,6 +66,10 @@ class StartExecutionRequest;
 class StartExecutionResponse;
 class StopExecutionRequest;
 class StopExecutionResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateStateMachineRequest;
 class UpdateStateMachineResponse;
 
@@ -96,11 +102,14 @@ public slots:
     ListActivitiesResponse * listActivities(const ListActivitiesRequest &request);
     ListExecutionsResponse * listExecutions(const ListExecutionsRequest &request);
     ListStateMachinesResponse * listStateMachines(const ListStateMachinesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     SendTaskFailureResponse * sendTaskFailure(const SendTaskFailureRequest &request);
     SendTaskHeartbeatResponse * sendTaskHeartbeat(const SendTaskHeartbeatRequest &request);
     SendTaskSuccessResponse * sendTaskSuccess(const SendTaskSuccessRequest &request);
     StartExecutionResponse * startExecution(const StartExecutionRequest &request);
     StopExecutionResponse * stopExecution(const StopExecutionRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateStateMachineResponse * updateStateMachine(const UpdateStateMachineRequest &request);
 
 private:

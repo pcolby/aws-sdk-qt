@@ -326,6 +326,10 @@ CreateApplicationVersionResponse * ElasticBeanstalkClient::createApplicationVers
  *
  * settings>
  *
+ * Templates aren't associated with any environment. The <code>EnvironmentName</code> response element is always
+ *
+ * <code>null</code>>
+ *
  * Related
  *
  * Topic> <ul> <li>

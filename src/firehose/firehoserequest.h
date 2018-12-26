@@ -44,6 +44,8 @@ public:
         ListTagsForDeliveryStreamAction,
         PutRecordAction,
         PutRecordBatchAction,
+        StartDeliveryStreamEncryptionAction,
+        StopDeliveryStreamEncryptionAction,
         TagDeliveryStreamAction,
         UntagDeliveryStreamAction,
         UpdateDestinationAction,

@@ -92,6 +92,10 @@ HEADERS += \
     listchannelsrequest_p.h \
     listchannelsresponse.h \
     listchannelsresponse_p.h \
+    listdatasetcontentsrequest.h \
+    listdatasetcontentsrequest_p.h \
+    listdatasetcontentsresponse.h \
+    listdatasetcontentsresponse_p.h \
     listdatasetsrequest.h \
     listdatasetsrequest_p.h \
     listdatasetsresponse.h \
@@ -191,6 +195,8 @@ SOURCES += \
     iotanalyticsresponse.cpp \
     listchannelsrequest.cpp \
     listchannelsresponse.cpp \
+    listdatasetcontentsrequest.cpp \
+    listdatasetcontentsresponse.cpp \
     listdatasetsrequest.cpp \
     listdatasetsresponse.cpp \
     listdatastoresrequest.cpp \

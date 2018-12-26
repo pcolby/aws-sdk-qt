@@ -48,6 +48,7 @@ public:
         DescribeNodeAssociationStatusAction,
         DescribeServersAction,
         DisassociateNodeAction,
+        ExportServerEngineAttributeAction,
         RestoreServerAction,
         StartMaintenanceAction,
         UpdateServerAction,

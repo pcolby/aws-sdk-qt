@@ -265,8 +265,8 @@ DeleteCertificateAuthorityResponse * AcmpcaClient::deleteCertificateAuthority(co
  *
  * </p </li> <li>
  *
- * <code>DELETED</code> - Your private CA is within the restoration period, after which it will be permanently deleted. The
- * length of time remaining in the CA's restoration period will also be included in this operation's
+ * <code>DELETED</code> - Your private CA is within the restoration period, after which it is permanently deleted. The
+ * length of time remaining in the CA's restoration period is also included in this operation's
  */
 DescribeCertificateAuthorityResponse * AcmpcaClient::describeCertificateAuthority(const DescribeCertificateAuthorityRequest &request)
 {

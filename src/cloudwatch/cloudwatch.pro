@@ -56,6 +56,10 @@ HEADERS += \
     getmetricstatisticsrequest_p.h \
     getmetricstatisticsresponse.h \
     getmetricstatisticsresponse_p.h \
+    getmetricwidgetimagerequest.h \
+    getmetricwidgetimagerequest_p.h \
+    getmetricwidgetimageresponse.h \
+    getmetricwidgetimageresponse_p.h \
     listdashboardsrequest.h \
     listdashboardsrequest_p.h \
     listdashboardsresponse.h \
@@ -105,6 +109,8 @@ SOURCES += \
     getmetricdataresponse.cpp \
     getmetricstatisticsrequest.cpp \
     getmetricstatisticsresponse.cpp \
+    getmetricwidgetimagerequest.cpp \
+    getmetricwidgetimageresponse.cpp \
     listdashboardsrequest.cpp \
     listdashboardsresponse.cpp \
     listmetricsrequest.cpp \

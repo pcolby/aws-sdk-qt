@@ -37,6 +37,7 @@ class QTAWS_EXPORT MediaLiveRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by MediaLive.
     enum Action {
+        BatchUpdateScheduleAction,
         CreateChannelAction,
         CreateInputAction,
         CreateInputSecurityGroupAction,
@@ -49,6 +50,7 @@ public:
         DescribeInputSecurityGroupAction,
         DescribeOfferingAction,
         DescribeReservationAction,
+        DescribeScheduleAction,
         ListChannelsAction,
         ListInputSecurityGroupsAction,
         ListInputsAction,

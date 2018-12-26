@@ -28,6 +28,8 @@ namespace QtAws {
 namespace DirectoryService {
 
 class DirectoryServiceClientPrivate;
+class AcceptSharedDirectoryRequest;
+class AcceptSharedDirectoryResponse;
 class AddIpRoutesRequest;
 class AddIpRoutesResponse;
 class AddTagsToResourceRequest;
@@ -44,6 +46,8 @@ class CreateConditionalForwarderRequest;
 class CreateConditionalForwarderResponse;
 class CreateDirectoryRequest;
 class CreateDirectoryResponse;
+class CreateLogSubscriptionRequest;
+class CreateLogSubscriptionResponse;
 class CreateMicrosoftADRequest;
 class CreateMicrosoftADResponse;
 class CreateSnapshotRequest;
@@ -54,6 +58,8 @@ class DeleteConditionalForwarderRequest;
 class DeleteConditionalForwarderResponse;
 class DeleteDirectoryRequest;
 class DeleteDirectoryResponse;
+class DeleteLogSubscriptionRequest;
+class DeleteLogSubscriptionResponse;
 class DeleteSnapshotRequest;
 class DeleteSnapshotResponse;
 class DeleteTrustRequest;
@@ -68,6 +74,8 @@ class DescribeDomainControllersRequest;
 class DescribeDomainControllersResponse;
 class DescribeEventTopicsRequest;
 class DescribeEventTopicsResponse;
+class DescribeSharedDirectoriesRequest;
+class DescribeSharedDirectoriesResponse;
 class DescribeSnapshotsRequest;
 class DescribeSnapshotsResponse;
 class DescribeTrustsRequest;
@@ -86,12 +94,16 @@ class GetSnapshotLimitsRequest;
 class GetSnapshotLimitsResponse;
 class ListIpRoutesRequest;
 class ListIpRoutesResponse;
+class ListLogSubscriptionsRequest;
+class ListLogSubscriptionsResponse;
 class ListSchemaExtensionsRequest;
 class ListSchemaExtensionsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class RegisterEventTopicRequest;
 class RegisterEventTopicResponse;
+class RejectSharedDirectoryRequest;
+class RejectSharedDirectoryResponse;
 class RemoveIpRoutesRequest;
 class RemoveIpRoutesResponse;
 class RemoveTagsFromResourceRequest;
@@ -100,14 +112,20 @@ class ResetUserPasswordRequest;
 class ResetUserPasswordResponse;
 class RestoreFromSnapshotRequest;
 class RestoreFromSnapshotResponse;
+class ShareDirectoryRequest;
+class ShareDirectoryResponse;
 class StartSchemaExtensionRequest;
 class StartSchemaExtensionResponse;
+class UnshareDirectoryRequest;
+class UnshareDirectoryResponse;
 class UpdateConditionalForwarderRequest;
 class UpdateConditionalForwarderResponse;
 class UpdateNumberOfDomainControllersRequest;
 class UpdateNumberOfDomainControllersResponse;
 class UpdateRadiusRequest;
 class UpdateRadiusResponse;
+class UpdateTrustRequest;
+class UpdateTrustResponse;
 class VerifyTrustRequest;
 class VerifyTrustResponse;
 
@@ -127,6 +145,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AcceptSharedDirectoryResponse * acceptSharedDirectory(const AcceptSharedDirectoryRequest &request);
     AddIpRoutesResponse * addIpRoutes(const AddIpRoutesRequest &request);
     AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
     CancelSchemaExtensionResponse * cancelSchemaExtension(const CancelSchemaExtensionRequest &request);
@@ -135,11 +154,13 @@ public slots:
     CreateComputerResponse * createComputer(const CreateComputerRequest &request);
     CreateConditionalForwarderResponse * createConditionalForwarder(const CreateConditionalForwarderRequest &request);
     CreateDirectoryResponse * createDirectory(const CreateDirectoryRequest &request);
+    CreateLogSubscriptionResponse * createLogSubscription(const CreateLogSubscriptionRequest &request);
     CreateMicrosoftADResponse * createMicrosoftAD(const CreateMicrosoftADRequest &request);
     CreateSnapshotResponse * createSnapshot(const CreateSnapshotRequest &request);
     CreateTrustResponse * createTrust(const CreateTrustRequest &request);
     DeleteConditionalForwarderResponse * deleteConditionalForwarder(const DeleteConditionalForwarderRequest &request);
     DeleteDirectoryResponse * deleteDirectory(const DeleteDirectoryRequest &request);
+    DeleteLogSubscriptionResponse * deleteLogSubscription(const DeleteLogSubscriptionRequest &request);
     DeleteSnapshotResponse * deleteSnapshot(const DeleteSnapshotRequest &request);
     DeleteTrustResponse * deleteTrust(const DeleteTrustRequest &request);
     DeregisterEventTopicResponse * deregisterEventTopic(const DeregisterEventTopicRequest &request);
@@ -147,6 +168,7 @@ public slots:
     DescribeDirectoriesResponse * describeDirectories(const DescribeDirectoriesRequest &request);
     DescribeDomainControllersResponse * describeDomainControllers(const DescribeDomainControllersRequest &request);
     DescribeEventTopicsResponse * describeEventTopics(const DescribeEventTopicsRequest &request);
+    DescribeSharedDirectoriesResponse * describeSharedDirectories(const DescribeSharedDirectoriesRequest &request);
     DescribeSnapshotsResponse * describeSnapshots(const DescribeSnapshotsRequest &request);
     DescribeTrustsResponse * describeTrusts(const DescribeTrustsRequest &request);
     DisableRadiusResponse * disableRadius(const DisableRadiusRequest &request);
@@ -156,17 +178,22 @@ public slots:
     GetDirectoryLimitsResponse * getDirectoryLimits(const GetDirectoryLimitsRequest &request);
     GetSnapshotLimitsResponse * getSnapshotLimits(const GetSnapshotLimitsRequest &request);
     ListIpRoutesResponse * listIpRoutes(const ListIpRoutesRequest &request);
+    ListLogSubscriptionsResponse * listLogSubscriptions(const ListLogSubscriptionsRequest &request);
     ListSchemaExtensionsResponse * listSchemaExtensions(const ListSchemaExtensionsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RegisterEventTopicResponse * registerEventTopic(const RegisterEventTopicRequest &request);
+    RejectSharedDirectoryResponse * rejectSharedDirectory(const RejectSharedDirectoryRequest &request);
     RemoveIpRoutesResponse * removeIpRoutes(const RemoveIpRoutesRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     ResetUserPasswordResponse * resetUserPassword(const ResetUserPasswordRequest &request);
     RestoreFromSnapshotResponse * restoreFromSnapshot(const RestoreFromSnapshotRequest &request);
+    ShareDirectoryResponse * shareDirectory(const ShareDirectoryRequest &request);
     StartSchemaExtensionResponse * startSchemaExtension(const StartSchemaExtensionRequest &request);
+    UnshareDirectoryResponse * unshareDirectory(const UnshareDirectoryRequest &request);
     UpdateConditionalForwarderResponse * updateConditionalForwarder(const UpdateConditionalForwarderRequest &request);
     UpdateNumberOfDomainControllersResponse * updateNumberOfDomainControllers(const UpdateNumberOfDomainControllersRequest &request);
     UpdateRadiusResponse * updateRadius(const UpdateRadiusRequest &request);
+    UpdateTrustResponse * updateTrust(const UpdateTrustRequest &request);
     VerifyTrustResponse * verifyTrust(const VerifyTrustRequest &request);
 
 private:

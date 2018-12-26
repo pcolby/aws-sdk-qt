@@ -27,8 +27,14 @@
 #include "deleteclusterresponse.h"
 #include "describeclusterrequest.h"
 #include "describeclusterresponse.h"
+#include "describeupdaterequest.h"
+#include "describeupdateresponse.h"
 #include "listclustersrequest.h"
 #include "listclustersresponse.h"
+#include "listupdatesrequest.h"
+#include "listupdatesresponse.h"
+#include "updateclusterversionrequest.h"
+#include "updateclusterversionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -58,30 +64,7 @@ namespace EKS {
  * 
  *  </p
  * 
- *  Amazon EKS runs three Kubernetes control plane instances across three Availability Zones to ensure high availability.
- *  Amazon EKS automatically detects and replaces unhealthy control plane instances, and it provides automated version
- *  upgrades and patching for
- * 
- *  them>
- * 
- *  Amazon EKS is also integrated with many AWS services to provide scalability and security for your applications,
- *  including the following:
- * 
- *  </p <ul> <li>
- * 
- *  Elastic Load Balancing for load
- * 
- *  distributio> </li> <li>
- * 
- *  IAM for
- * 
- *  authenticatio> </li> <li>
- * 
- *  Amazon VPC for
- * 
- *  isolatio> </li> </ul>
- * 
- *  Amazon EKS runs up to date versions of the open-source Kubernetes software, so you can use all the existing plugins and
+ *  Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
  *  tooling from the Kubernetes community. Applications running on Amazon EKS are fully compatible with applications running
  *  on any standard Kubernetes environment, whether running in on-premises data centers or public clouds. This means that
  *  you can easily migrate any standard Kubernetes application to Amazon EKS without any code modification
@@ -226,6 +209,24 @@ DescribeClusterResponse * EksClient::describeCluster(const DescribeClusterReques
 
 /*!
  * Sends \a request to the EksClient service, and returns a pointer to an
+ * DescribeUpdateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns descriptive information about an update against your Amazon EKS
+ *
+ * cluster>
+ *
+ * When the status of the update is <code>Succeeded</code>, the update is complete. If an update fails, the status is
+ * <code>Failed</code>, and an error detail explains the reason for the
+ */
+DescribeUpdateResponse * EksClient::describeUpdate(const DescribeUpdateRequest &request)
+{
+    return qobject_cast<DescribeUpdateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EksClient service, and returns a pointer to an
  * ListClustersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -235,6 +236,40 @@ DescribeClusterResponse * EksClient::describeCluster(const DescribeClusterReques
 ListClustersResponse * EksClient::listClusters(const ListClustersRequest &request)
 {
     return qobject_cast<ListClustersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EksClient service, and returns a pointer to an
+ * ListUpdatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the updates associated with an Amazon EKS cluster in your AWS account, in the specified
+ */
+ListUpdatesResponse * EksClient::listUpdates(const ListUpdatesRequest &request)
+{
+    return qobject_cast<ListUpdatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EksClient service, and returns a pointer to an
+ * UpdateClusterVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an Amazon EKS cluster to the specified Kubernetes version. Your cluster continues to function during the update.
+ * The response output includes an update ID that you can use to track the status of your cluster update with the
+ * <a>DescribeUpdate</a> API
+ *
+ * operation>
+ *
+ * Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster status
+ * moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is complete (either
+ * <code>Failed</code> or <code>Successful</code>), the cluster status moves to
+ */
+UpdateClusterVersionResponse * EksClient::updateClusterVersion(const UpdateClusterVersionRequest &request)
+{
+    return qobject_cast<UpdateClusterVersionResponse *>(send(request));
 }
 
 /*!

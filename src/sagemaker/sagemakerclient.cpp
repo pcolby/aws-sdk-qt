@@ -23,14 +23,24 @@
 #include "core/awssignaturev4.h"
 #include "addtagsrequest.h"
 #include "addtagsresponse.h"
+#include "createalgorithmrequest.h"
+#include "createalgorithmresponse.h"
+#include "createcoderepositoryrequest.h"
+#include "createcoderepositoryresponse.h"
+#include "createcompilationjobrequest.h"
+#include "createcompilationjobresponse.h"
 #include "createendpointrequest.h"
 #include "createendpointresponse.h"
 #include "createendpointconfigrequest.h"
 #include "createendpointconfigresponse.h"
 #include "createhyperparametertuningjobrequest.h"
 #include "createhyperparametertuningjobresponse.h"
+#include "createlabelingjobrequest.h"
+#include "createlabelingjobresponse.h"
 #include "createmodelrequest.h"
 #include "createmodelresponse.h"
+#include "createmodelpackagerequest.h"
+#include "createmodelpackageresponse.h"
 #include "createnotebookinstancerequest.h"
 #include "createnotebookinstanceresponse.h"
 #include "createnotebookinstancelifecycleconfigrequest.h"
@@ -41,46 +51,86 @@
 #include "createtrainingjobresponse.h"
 #include "createtransformjobrequest.h"
 #include "createtransformjobresponse.h"
+#include "createworkteamrequest.h"
+#include "createworkteamresponse.h"
+#include "deletealgorithmrequest.h"
+#include "deletealgorithmresponse.h"
+#include "deletecoderepositoryrequest.h"
+#include "deletecoderepositoryresponse.h"
 #include "deleteendpointrequest.h"
 #include "deleteendpointresponse.h"
 #include "deleteendpointconfigrequest.h"
 #include "deleteendpointconfigresponse.h"
 #include "deletemodelrequest.h"
 #include "deletemodelresponse.h"
+#include "deletemodelpackagerequest.h"
+#include "deletemodelpackageresponse.h"
 #include "deletenotebookinstancerequest.h"
 #include "deletenotebookinstanceresponse.h"
 #include "deletenotebookinstancelifecycleconfigrequest.h"
 #include "deletenotebookinstancelifecycleconfigresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "deleteworkteamrequest.h"
+#include "deleteworkteamresponse.h"
+#include "describealgorithmrequest.h"
+#include "describealgorithmresponse.h"
+#include "describecoderepositoryrequest.h"
+#include "describecoderepositoryresponse.h"
+#include "describecompilationjobrequest.h"
+#include "describecompilationjobresponse.h"
 #include "describeendpointrequest.h"
 #include "describeendpointresponse.h"
 #include "describeendpointconfigrequest.h"
 #include "describeendpointconfigresponse.h"
 #include "describehyperparametertuningjobrequest.h"
 #include "describehyperparametertuningjobresponse.h"
+#include "describelabelingjobrequest.h"
+#include "describelabelingjobresponse.h"
 #include "describemodelrequest.h"
 #include "describemodelresponse.h"
+#include "describemodelpackagerequest.h"
+#include "describemodelpackageresponse.h"
 #include "describenotebookinstancerequest.h"
 #include "describenotebookinstanceresponse.h"
 #include "describenotebookinstancelifecycleconfigrequest.h"
 #include "describenotebookinstancelifecycleconfigresponse.h"
+#include "describesubscribedworkteamrequest.h"
+#include "describesubscribedworkteamresponse.h"
 #include "describetrainingjobrequest.h"
 #include "describetrainingjobresponse.h"
 #include "describetransformjobrequest.h"
 #include "describetransformjobresponse.h"
+#include "describeworkteamrequest.h"
+#include "describeworkteamresponse.h"
+#include "getsearchsuggestionsrequest.h"
+#include "getsearchsuggestionsresponse.h"
+#include "listalgorithmsrequest.h"
+#include "listalgorithmsresponse.h"
+#include "listcoderepositoriesrequest.h"
+#include "listcoderepositoriesresponse.h"
+#include "listcompilationjobsrequest.h"
+#include "listcompilationjobsresponse.h"
 #include "listendpointconfigsrequest.h"
 #include "listendpointconfigsresponse.h"
 #include "listendpointsrequest.h"
 #include "listendpointsresponse.h"
 #include "listhyperparametertuningjobsrequest.h"
 #include "listhyperparametertuningjobsresponse.h"
+#include "listlabelingjobsrequest.h"
+#include "listlabelingjobsresponse.h"
+#include "listlabelingjobsforworkteamrequest.h"
+#include "listlabelingjobsforworkteamresponse.h"
+#include "listmodelpackagesrequest.h"
+#include "listmodelpackagesresponse.h"
 #include "listmodelsrequest.h"
 #include "listmodelsresponse.h"
 #include "listnotebookinstancelifecycleconfigsrequest.h"
 #include "listnotebookinstancelifecycleconfigsresponse.h"
 #include "listnotebookinstancesrequest.h"
 #include "listnotebookinstancesresponse.h"
+#include "listsubscribedworkteamsrequest.h"
+#include "listsubscribedworkteamsresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
 #include "listtrainingjobsrequest.h"
@@ -89,16 +139,28 @@
 #include "listtrainingjobsforhyperparametertuningjobresponse.h"
 #include "listtransformjobsrequest.h"
 #include "listtransformjobsresponse.h"
+#include "listworkteamsrequest.h"
+#include "listworkteamsresponse.h"
+#include "renderuitemplaterequest.h"
+#include "renderuitemplateresponse.h"
+#include "searchrequest.h"
+#include "searchresponse.h"
 #include "startnotebookinstancerequest.h"
 #include "startnotebookinstanceresponse.h"
+#include "stopcompilationjobrequest.h"
+#include "stopcompilationjobresponse.h"
 #include "stophyperparametertuningjobrequest.h"
 #include "stophyperparametertuningjobresponse.h"
+#include "stoplabelingjobrequest.h"
+#include "stoplabelingjobresponse.h"
 #include "stopnotebookinstancerequest.h"
 #include "stopnotebookinstanceresponse.h"
 #include "stoptrainingjobrequest.h"
 #include "stoptrainingjobresponse.h"
 #include "stoptransformjobrequest.h"
 #include "stoptransformjobresponse.h"
+#include "updatecoderepositoryrequest.h"
+#include "updatecoderepositoryresponse.h"
 #include "updateendpointrequest.h"
 #include "updateendpointresponse.h"
 #include "updateendpointweightsandcapacitiesrequest.h"
@@ -107,6 +169,8 @@
 #include "updatenotebookinstanceresponse.h"
 #include "updatenotebookinstancelifecycleconfigrequest.h"
 #include "updatenotebookinstancelifecycleconfigresponse.h"
+#include "updateworkteamrequest.h"
+#include "updateworkteamresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -150,7 +214,7 @@ SageMakerClient::SageMakerClient(
     Q_D(SageMakerClient);
     d->apiVersion = QStringLiteral("2017-07-24");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sagemaker");
+    d->endpointPrefix = QStringLiteral("api.sagemaker");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("Amazon SageMaker Service");
@@ -179,7 +243,7 @@ SageMakerClient::SageMakerClient(
     d->apiVersion = QStringLiteral("2017-07-24");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sagemaker");
+    d->endpointPrefix = QStringLiteral("api.sagemaker");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("Amazon SageMaker Service");
     d->serviceName = QStringLiteral("sagemaker");
@@ -192,17 +256,109 @@ SageMakerClient::SageMakerClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,
- * training jobs, models, endpoint configurations, and endpoints.
+ * training jobs, hyperparameter tuning jobs, models, endpoint configurations, and
  *
- * </p
+ * endpoints>
  *
  * Each tag consists of a key and an optional value. Tag keys must be unique per resource. For more information about tags,
- * see <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what">Using
- * Cost Allocation Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+ * see For more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS
+ * Tagging
+ *
+ * Strategies</a>> <note>
+ *
+ * Tags that you add to a hyperparameter tuning job by calling this API are also added to any training jobs that the
+ * hyperparameter tuning job launches after you call this API, but not to training jobs that the hyperparameter tuning job
+ * launched before you called this API. To make sure that the tags associated with a hyperparameter tuning job are also
+ * added to all training jobs that the hyperparameter tuning job launches, add the tags when you first create the tuning
+ * job by specifying them in the <code>Tags</code> parameter of <a>CreateHyperParameterTuningJob</a>
  */
 AddTagsResponse * SageMakerClient::addTags(const AddTagsRequest &request)
 {
     return qobject_cast<AddTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateAlgorithmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create a machine learning algorithm that you can use in Amazon SageMaker and list in the AWS
+ */
+CreateAlgorithmResponse * SageMakerClient::createAlgorithm(const CreateAlgorithmRequest &request)
+{
+    return qobject_cast<CreateAlgorithmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateCodeRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create a git repository as a resource in your Amazon SageMaker account. You can associate the repository with notebook
+ * instances so that you can use git source control for the notebooks you create. The git repository is a resource in your
+ * Amazon SageMaker account, so it can be associated with more than one notebook instance, and it persists independently
+ * from the lifecycle of any notebook instances it is associated
+ *
+ * with>
+ *
+ * The repository can be hosted either in <a href="http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS
+ * CodeCommit</a> or in any other git
+ */
+CreateCodeRepositoryResponse * SageMakerClient::createCodeRepository(const CreateCodeRepositoryRequest &request)
+{
+    return qobject_cast<CreateCodeRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateCompilationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a model compilation job. After the model has been compiled, Amazon SageMaker saves the resulting model artifacts
+ * to an Amazon Simple Storage Service (Amazon S3) bucket that you specify.
+ *
+ * </p
+ *
+ * If you choose to host your model using Amazon SageMaker hosting services, you can use the resulting model artifacts as
+ * part of the model. You can also use the artifacts with AWS IoT Greengrass. In that case, deploy them as an ML
+ *
+ * resource>
+ *
+ * In the request body, you provide the
+ *
+ * following> <ul> <li>
+ *
+ * A name for the compilation
+ *
+ * jo> </li> <li>
+ *
+ * Information about the input model artifacts
+ *
+ * </p </li> <li>
+ *
+ * The output location for the compiled model and the device (target) that the model runs on
+ *
+ * </p </li> <li>
+ *
+ * <code>The Amazon Resource Name (ARN) of the IAM role that Amazon SageMaker assumes to perform the model compilation
+ * job</code>
+ *
+ * </p </li> </ul>
+ *
+ * You can also provide a <code>Tag</code> to track the model compilation job's resource use and costs. The response body
+ * contains the <code>CompilationJobArn</code> for the compiled
+ *
+ * job>
+ *
+ * To stop a model compilation job, use <a>StopCompilationJob</a>. To get information about a particular model compilation
+ * job, use <a>DescribeCompilationJob</a>. To get information about multiple model compilation jobs, use
+ */
+CreateCompilationJobResponse * SageMakerClient::createCompilationJob(const CreateCompilationJobRequest &request)
+{
+    return qobject_cast<CreateCompilationJobResponse *>(send(request));
 }
 
 /*!
@@ -293,7 +449,10 @@ CreateEndpointConfigResponse * SageMakerClient::createEndpointConfig(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a hyperparameter tuning
+ * Starts a hyperparameter tuning job. A hyperparameter tuning job finds the best version of a model by running many
+ * training jobs on your dataset using the algorithm you choose and values for hyperparameters within ranges that you
+ * specify. It then chooses the hyperparameter values that result in a model that performs the best, as measured by an
+ * objective metric that you
  */
 CreateHyperParameterTuningJobResponse * SageMakerClient::createHyperParameterTuningJob(const CreateHyperParameterTuningJobRequest &request)
 {
@@ -302,38 +461,112 @@ CreateHyperParameterTuningJobResponse * SageMakerClient::createHyperParameterTun
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateLabelingJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a job that uses workers to label the data objects in your input dataset. You can use the labeled data to train
+ * machine learning
+ *
+ * models>
+ *
+ * You can select your workforce from one of three
+ *
+ * providers> <ul> <li>
+ *
+ * A private workforce that you create. It can include employees, contractors, and outside experts. Use a private workforce
+ * when want the data to stay within your organization or when a specific set of skills is
+ *
+ * required> </li> <li>
+ *
+ * One or more vendors that you select from the AWS Marketplace. Vendors provide expertise in specific areas.
+ *
+ * </p </li> <li>
+ *
+ * The Amazon Mechanical Turk workforce. This is the largest workforce, but it should only be used for public data or data
+ * that has been stripped of any personally identifiable
+ *
+ * information> </li> </ul>
+ *
+ * You can also use <i>automated data labeling</i> to reduce the number of data objects that need to be labeled by a human.
+ * Automated data labeling uses <i>active learning</i> to determine if a data object can be labeled by machine or if it
+ * needs to be sent to a human worker. For more information, see <a
+ * href="http://docs.aws.amazon.com/sagemaker/latest/dg/sms-automated-labeling.html">Using Automated Data
+ *
+ * Labeling</a>>
+ *
+ * The data objects to be labeled are contained in an Amazon S3 bucket. You create a <i>manifest file</i> that describes
+ * the location of each object. For more information, see <a
+ * href="http://docs.aws.amazon.com/sagemaker/latest/dg/sms-data.html">Using Input and Output
+ *
+ * Data</a>>
+ *
+ * The output can be used as the manifest file for another labeling job or as training data for your machine learning
+ */
+CreateLabelingJobResponse * SageMakerClient::createLabelingJob(const CreateLabelingJobRequest &request)
+{
+    return qobject_cast<CreateLabelingJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * CreateModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a model in Amazon SageMaker. In the request, you name the model and describe one or more containers. For each
- * container, you specify the docker image containing inference code, artifacts (from prior training), and custom
- * environment map that the inference code uses when you deploy the model into production.
+ * Creates a model in Amazon SageMaker. In the request, you name the model and describe a primary container. For the
+ * primary container, you specify the docker image containing inference code, artifacts (from prior training), and custom
+ * environment map that the inference code uses when you deploy the model for
+ *
+ * predictions>
+ *
+ * Use this API to create a model if you want to use Amazon SageMaker hosting services or run a batch transform
+ *
+ * job>
+ *
+ * To host your model, you create an endpoint configuration with the <code>CreateEndpointConfig</code> API, and then create
+ * an endpoint with the <code>CreateEndpoint</code> API. Amazon SageMaker then deploys all of the containers that you
+ * defined for the model in the hosting environment.
  *
  * </p
  *
- * Use this API to create a model only if you want to use Amazon SageMaker hosting services. To host your model, you create
- * an endpoint configuration with the <code>CreateEndpointConfig</code> API, and then create an endpoint with the
- * <code>CreateEndpoint</code> API.
+ * To run a batch transform using your model, you start a job with the <code>CreateTransformJob</code> API. Amazon
+ * SageMaker uses your model and your dataset to get inferences which are then saved to a specified S3
  *
- * </p
+ * location>
  *
- * Amazon SageMaker then deploys all of the containers that you defined for the model in the hosting environment.
+ * In the <code>CreateModel</code> request, you must define a container with the <code>PrimaryContainer</code>
  *
- * </p
- *
- * In the <code>CreateModel</code> request, you must define a container with the <code>PrimaryContainer</code> parameter.
- *
- * </p
+ * parameter>
  *
  * In the request, you also provide an IAM role that Amazon SageMaker can assume to access model artifacts and docker image
- * for deployment on ML compute hosting instances. In addition, you also use the IAM role to manage permissions the
- * inference code needs. For example, if the inference code access any other AWS resources, you grant necessary permissions
- * via this
+ * for deployment on ML compute hosting instances or for batch transform jobs. In addition, you also use the IAM role to
+ * manage permissions the inference code needs. For example, if the inference code access any other AWS resources, you
+ * grant necessary permissions via this
  */
 CreateModelResponse * SageMakerClient::createModel(const CreateModelRequest &request)
 {
     return qobject_cast<CreateModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateModelPackageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a model package that you can use to create Amazon SageMaker models or list on AWS Marketplace. Buyers can
+ * subscribe to model packages listed on AWS Marketplace to create models in Amazon
+ *
+ * SageMaker>
+ *
+ * To create a model package by specifying a Docker container that contains your inference code and the Amazon S3 location
+ * of your model artifacts, provide values for <code>InferenceSpecification</code>. To create a model from an algorithm
+ * resource that you created or subscribed to in AWS Marketplace, provide a value for
+ */
+CreateModelPackageResponse * SageMakerClient::createModelPackage(const CreateModelPackageRequest &request)
+{
+    return qobject_cast<CreateModelPackageResponse *>(send(request));
 }
 
 /*!
@@ -424,7 +657,9 @@ CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const C
  *
  * started>
  *
- * For information about notebook instance lifestyle configurations, see
+ * For information about notebook instance lifestyle configurations, see <a
+ * href="http://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html">Step 2.1: (Optional) Customize a
+ * Notebook
  */
 CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookInstanceLifecycleConfig(const CreateNotebookInstanceLifecycleConfigRequest &request)
 {
@@ -439,7 +674,17 @@ CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookI
  *
  * Returns a URL that you can use to connect to the Jupyter server from a notebook instance. In the Amazon SageMaker
  * console, when you choose <code>Open</code> next to a notebook instance, Amazon SageMaker opens a new tab showing the
- * Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the page.
+ * Jupyter server home page from the notebook instance. The console uses this API to get the URL and show the
+ *
+ * page>
+ *
+ * You can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. To
+ * restrict access, attach an IAM policy that denies access to this API unless the call comes from an IP address in the
+ * specified list to every AWS Identity and Access Management user, group, or role used to access the notebook instance.
+ * Use the <code>NotIpAddress</code> condition operator and the <code>aws:SourceIP</code> condition context key to specify
+ * the list of IP addresses that you want to have access to the notebook instance. For more information, see <a
+ * href="http://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-access-ws.html#nbi-ip-filter">Limit Access to a Notebook
+ * Instance by IP
  */
 CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNotebookInstanceUrl(const CreatePresignedNotebookInstanceUrlRequest &request)
 {
@@ -515,7 +760,8 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a transform job. After the results are obtained, Amazon SageMaker saves them to an Amazon S3 location that you
+ * Starts a transform job. A transform job uses a trained model to get inferences on a dataset and saves these results to
+ * an Amazon S3 location that you
  *
  * specify>
  *
@@ -531,9 +777,10 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
  *
  * account> </li> <li>
  *
- * <code>ModelName</code> - Identifies the model to
+ * <code>ModelName</code> - Identifies the model to use. <code>ModelName</code> must be the name of an existing Amazon
+ * SageMaker model in the same AWS Region and AWS account. For information on creating a model, see
  *
- * use> </li> <li>
+ * <a>CreateModel</a>> </li> <li>
  *
  * <code>TransformInput</code> - Describes the dataset to be transformed and the Amazon S3 location where it is
  *
@@ -558,11 +805,60 @@ CreateTransformJobResponse * SageMakerClient::createTransformJob(const CreateTra
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * CreateWorkteamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new work team for labeling your data. A work team is defined by one or more Amazon Cognito user pools. You
+ * must first create the user pools before you can create a work
+ *
+ * team>
+ *
+ * You cannot create more than 25 work teams in an account and
+ */
+CreateWorkteamResponse * SageMakerClient::createWorkteam(const CreateWorkteamRequest &request)
+{
+    return qobject_cast<CreateWorkteamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteAlgorithmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified algorithm from your
+ */
+DeleteAlgorithmResponse * SageMakerClient::deleteAlgorithm(const DeleteAlgorithmRequest &request)
+{
+    return qobject_cast<DeleteAlgorithmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteCodeRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified git repository from your
+ */
+DeleteCodeRepositoryResponse * SageMakerClient::deleteCodeRepository(const DeleteCodeRepositoryRequest &request)
+{
+    return qobject_cast<DeleteCodeRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DeleteEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an endpoint. Amazon SageMaker frees up all of the resources that were deployed when the endpoint was created.
+ *
+ * </p
+ *
+ * Amazon SageMaker retires any custom KMS key grants associated with the endpoint, meaning you don't need to use the <a
+ * href="http://docs.aws.amazon.com/kms/latest/APIReference/API_RevokeGrant.html">RevokeGrant</a> API
  */
 DeleteEndpointResponse * SageMakerClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -596,6 +892,24 @@ DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const Delet
 DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &request)
 {
     return qobject_cast<DeleteModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteModelPackageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a model
+ *
+ * package>
+ *
+ * A model package is used to create Amazon SageMaker models or list on AWS Marketplace. Buyers can subscribe to model
+ * packages listed on AWS Marketplace to create models in Amazon
+ */
+DeleteModelPackageResponse * SageMakerClient::deleteModelPackage(const DeleteModelPackageRequest &request)
+{
+    return qobject_cast<DeleteModelPackageResponse *>(send(request));
 }
 
 /*!
@@ -641,10 +955,72 @@ DeleteNotebookInstanceLifecycleConfigResponse * SageMakerClient::deleteNotebookI
  * resource>
  *
  * To list a resource's tags, use the <code>ListTags</code> API.
+ *
+ * </p <note>
+ *
+ * When you call this API to delete tags from a hyperparameter tuning job, the deleted tags are not removed from training
+ * jobs that the hyperparameter tuning job launched before you called this
  */
 DeleteTagsResponse * SageMakerClient::deleteTags(const DeleteTagsRequest &request)
 {
     return qobject_cast<DeleteTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DeleteWorkteamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing work team. This operation can't be
+ */
+DeleteWorkteamResponse * SageMakerClient::deleteWorkteam(const DeleteWorkteamRequest &request)
+{
+    return qobject_cast<DeleteWorkteamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeAlgorithmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a description of the specified algorithm that is in your
+ */
+DescribeAlgorithmResponse * SageMakerClient::describeAlgorithm(const DescribeAlgorithmRequest &request)
+{
+    return qobject_cast<DescribeAlgorithmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeCodeRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details about the specified git
+ */
+DescribeCodeRepositoryResponse * SageMakerClient::describeCodeRepository(const DescribeCodeRepositoryRequest &request)
+{
+    return qobject_cast<DescribeCodeRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeCompilationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a model compilation
+ *
+ * job>
+ *
+ * To create a model compilation job, use <a>CreateCompilationJob</a>. To get information about multiple model compilation
+ * jobs, use
+ */
+DescribeCompilationJobResponse * SageMakerClient::describeCompilationJob(const DescribeCompilationJobRequest &request)
+{
+    return qobject_cast<DescribeCompilationJobResponse *>(send(request));
 }
 
 /*!
@@ -688,6 +1064,19 @@ DescribeHyperParameterTuningJobResponse * SageMakerClient::describeHyperParamete
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeLabelingJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a labeling
+ */
+DescribeLabelingJobResponse * SageMakerClient::describeLabelingJob(const DescribeLabelingJobRequest &request)
+{
+    return qobject_cast<DescribeLabelingJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * DescribeModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -697,6 +1086,24 @@ DescribeHyperParameterTuningJobResponse * SageMakerClient::describeHyperParamete
 DescribeModelResponse * SageMakerClient::describeModel(const DescribeModelRequest &request)
 {
     return qobject_cast<DescribeModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeModelPackageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a description of the specified model package, which is used to create Amazon SageMaker models or list them on
+ * AWS
+ *
+ * Marketplace>
+ *
+ * To create models in Amazon SageMaker, buyers can subscribe to model packages listed on AWS
+ */
+DescribeModelPackageResponse * SageMakerClient::describeModelPackage(const DescribeModelPackageRequest &request)
+{
+    return qobject_cast<DescribeModelPackageResponse *>(send(request));
 }
 
 /*!
@@ -722,11 +1129,27 @@ DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(con
  *
  * configuration>
  *
- * For information about notebook instance lifestyle configurations, see
+ * For information about notebook instance lifestyle configurations, see <a
+ * href="http://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html">Step 2.1: (Optional) Customize a
+ * Notebook
  */
 DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNotebookInstanceLifecycleConfig(const DescribeNotebookInstanceLifecycleConfigRequest &request)
 {
     return qobject_cast<DescribeNotebookInstanceLifecycleConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeSubscribedWorkteamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a work team provided by a vendor. It returns details about the subscription with a vendor in the
+ * AWS
+ */
+DescribeSubscribedWorkteamResponse * SageMakerClient::describeSubscribedWorkteam(const DescribeSubscribedWorkteamRequest &request)
+{
+    return qobject_cast<DescribeSubscribedWorkteamResponse *>(send(request));
 }
 
 /*!
@@ -753,6 +1176,79 @@ DescribeTrainingJobResponse * SageMakerClient::describeTrainingJob(const Describ
 DescribeTransformJobResponse * SageMakerClient::describeTransformJob(const DescribeTransformJobRequest &request)
 {
     return qobject_cast<DescribeTransformJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * DescribeWorkteamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a specific work team. You can see information such as the create date, the last updated date,
+ * membership information, and the work team's Amazon Resource Name
+ */
+DescribeWorkteamResponse * SageMakerClient::describeWorkteam(const DescribeWorkteamRequest &request)
+{
+    return qobject_cast<DescribeWorkteamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * GetSearchSuggestionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * An auto-complete API for the search functionality in the Amazon SageMaker console. It returns suggestions of possible
+ * matches for the property name to use in <code>Search</code> queries. Provides suggestions for
+ * <code>HyperParameters</code>, <code>Tags</code>, and
+ */
+GetSearchSuggestionsResponse * SageMakerClient::getSearchSuggestions(const GetSearchSuggestionsRequest &request)
+{
+    return qobject_cast<GetSearchSuggestionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListAlgorithmsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the machine learning algorithms that have been
+ */
+ListAlgorithmsResponse * SageMakerClient::listAlgorithms(const ListAlgorithmsRequest &request)
+{
+    return qobject_cast<ListAlgorithmsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListCodeRepositoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the git repositories in your
+ */
+ListCodeRepositoriesResponse * SageMakerClient::listCodeRepositories(const ListCodeRepositoriesRequest &request)
+{
+    return qobject_cast<ListCodeRepositoriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListCompilationJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists model compilation jobs that satisfy various
+ *
+ * filters>
+ *
+ * To create a model compilation job, use <a>CreateCompilationJob</a>. To get information about a particular model
+ * compilation job you have created, use
+ */
+ListCompilationJobsResponse * SageMakerClient::listCompilationJobs(const ListCompilationJobsRequest &request)
+{
+    return qobject_cast<ListCompilationJobsResponse *>(send(request));
 }
 
 /*!
@@ -797,6 +1293,45 @@ ListHyperParameterTuningJobsResponse * SageMakerClient::listHyperParameterTuning
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListLabelingJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of labeling
+ */
+ListLabelingJobsResponse * SageMakerClient::listLabelingJobs(const ListLabelingJobsRequest &request)
+{
+    return qobject_cast<ListLabelingJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListLabelingJobsForWorkteamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of labeling jobs assigned to a specified work
+ */
+ListLabelingJobsForWorkteamResponse * SageMakerClient::listLabelingJobsForWorkteam(const ListLabelingJobsForWorkteamRequest &request)
+{
+    return qobject_cast<ListLabelingJobsForWorkteamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListModelPackagesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the model packages that have been
+ */
+ListModelPackagesResponse * SageMakerClient::listModelPackages(const ListModelPackagesRequest &request)
+{
+    return qobject_cast<ListModelPackagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * ListModelsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -833,6 +1368,20 @@ ListNotebookInstanceLifecycleConfigsResponse * SageMakerClient::listNotebookInst
 ListNotebookInstancesResponse * SageMakerClient::listNotebookInstances(const ListNotebookInstancesRequest &request)
 {
     return qobject_cast<ListNotebookInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListSubscribedWorkteamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the work teams that you are subscribed to in the AWS Marketplace. The list may be empty if no work team
+ * satisfies the filter specified in the <code>NameContains</code>
+ */
+ListSubscribedWorkteamsResponse * SageMakerClient::listSubscribedWorkteams(const ListSubscribedWorkteamsRequest &request)
+{
+    return qobject_cast<ListSubscribedWorkteamsResponse *>(send(request));
 }
 
 /*!
@@ -889,6 +1438,52 @@ ListTransformJobsResponse * SageMakerClient::listTransformJobs(const ListTransfo
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * ListWorkteamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of work teams that you have defined in a region. The list may be empty if no work team satisfies the filter
+ * specified in the <code>NameContains</code>
+ */
+ListWorkteamsResponse * SageMakerClient::listWorkteams(const ListWorkteamsRequest &request)
+{
+    return qobject_cast<ListWorkteamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * RenderUiTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Renders the UI template so that you can preview the worker's experience.
+ */
+RenderUiTemplateResponse * SageMakerClient::renderUiTemplate(const RenderUiTemplateRequest &request)
+{
+    return qobject_cast<RenderUiTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * SearchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Finds Amazon SageMaker resources that match a search query. Matching resource objects are returned as a list of
+ * <code>SearchResult</code> objects in the response. You can sort the search results by any resource property in a
+ * ascending or descending
+ *
+ * order>
+ *
+ * You can query against the following value types: numerical, text, Booleans, and
+ */
+SearchResponse * SageMakerClient::search(const SearchRequest &request)
+{
+    return qobject_cast<SearchResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * StartNotebookInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -900,6 +1495,30 @@ ListTransformJobsResponse * SageMakerClient::listTransformJobs(const ListTransfo
 StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const StartNotebookInstanceRequest &request)
 {
     return qobject_cast<StartNotebookInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopCompilationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a model compilation
+ *
+ * job>
+ *
+ * To stop a job, Amazon SageMaker sends the algorithm the SIGTERM signal. This gracefully shuts the job down. If the job
+ * hasn't stopped, it sends the SIGKILL
+ *
+ * signal>
+ *
+ * When it receives a <code>StopCompilationJob</code> request, Amazon SageMaker changes the
+ * <a>CompilationJobSummary$CompilationJobStatus</a> of the job to <code>Stopping</code>. After Amazon SageMaker stops the
+ * job, it sets the <a>CompilationJobSummary$CompilationJobStatus</a> to <code>Stopped</code>.
+ */
+StopCompilationJobResponse * SageMakerClient::stopCompilationJob(const StopCompilationJobRequest &request)
+{
+    return qobject_cast<StopCompilationJobResponse *>(send(request));
 }
 
 /*!
@@ -919,6 +1538,20 @@ StartNotebookInstanceResponse * SageMakerClient::startNotebookInstance(const Sta
 StopHyperParameterTuningJobResponse * SageMakerClient::stopHyperParameterTuningJob(const StopHyperParameterTuningJobRequest &request)
 {
     return qobject_cast<StopHyperParameterTuningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * StopLabelingJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a running labeling job. A job that is stopped cannot be restarted. Any results obtained before the job is stopped
+ * are placed in the Amazon S3 output
+ */
+StopLabelingJobResponse * SageMakerClient::stopLabelingJob(const StopLabelingJobRequest &request)
+{
+    return qobject_cast<StopLabelingJobResponse *>(send(request));
 }
 
 /*!
@@ -988,6 +1621,19 @@ StopTransformJobResponse * SageMakerClient::stopTransformJob(const StopTransform
 
 /*!
  * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateCodeRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the specified git repository with the specified
+ */
+UpdateCodeRepositoryResponse * SageMakerClient::updateCodeRepository(const UpdateCodeRepositoryRequest &request)
+{
+    return qobject_cast<UpdateCodeRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
  * UpdateEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1053,6 +1699,19 @@ UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const U
 UpdateNotebookInstanceLifecycleConfigResponse * SageMakerClient::updateNotebookInstanceLifecycleConfig(const UpdateNotebookInstanceLifecycleConfigRequest &request)
 {
     return qobject_cast<UpdateNotebookInstanceLifecycleConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SageMakerClient service, and returns a pointer to an
+ * UpdateWorkteamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing work team with new member definitions or
+ */
+UpdateWorkteamResponse * SageMakerClient::updateWorkteam(const UpdateWorkteamRequest &request)
+{
+    return qobject_cast<UpdateWorkteamResponse *>(send(request));
 }
 
 /*!

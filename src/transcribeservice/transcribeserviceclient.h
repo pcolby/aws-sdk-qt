@@ -30,6 +30,8 @@ namespace TranscribeService {
 class TranscribeServiceClientPrivate;
 class CreateVocabularyRequest;
 class CreateVocabularyResponse;
+class DeleteTranscriptionJobRequest;
+class DeleteTranscriptionJobResponse;
 class DeleteVocabularyRequest;
 class DeleteVocabularyResponse;
 class GetTranscriptionJobRequest;
@@ -62,6 +64,7 @@ public:
 
 public slots:
     CreateVocabularyResponse * createVocabulary(const CreateVocabularyRequest &request);
+    DeleteTranscriptionJobResponse * deleteTranscriptionJob(const DeleteTranscriptionJobRequest &request);
     DeleteVocabularyResponse * deleteVocabulary(const DeleteVocabularyRequest &request);
     GetTranscriptionJobResponse * getTranscriptionJob(const GetTranscriptionJobRequest &request);
     GetVocabularyResponse * getVocabulary(const GetVocabularyRequest &request);

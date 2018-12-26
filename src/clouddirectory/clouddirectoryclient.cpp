@@ -180,9 +180,10 @@ namespace CloudDirectory {
  * 
  *  Amazon Cloud Directory is a component of the AWS Directory Service that simplifies the development and management of
  *  cloud-scale web, mobile, and IoT applications. This guide describes the Cloud Directory operations that you can call
- *  programmatically and includes detailed information on data types and errors. For information about AWS Directory
- *  Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
- *  href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service Administration
+ *  programmatically and includes detailed information on data types and errors. For information about Cloud Directory
+ *  features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the <a
+ *  href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/what_is_cloud_directory.html">Amazon Cloud
+ *  Directory Developer
  */
 
 /*!
@@ -319,7 +320,7 @@ AttachToIndexResponse * CloudDirectoryClient::attachToIndex(const AttachToIndexR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Attaches a typed link to a specified source and target object. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 AttachTypedLinkResponse * CloudDirectoryClient::attachTypedLink(const AttachTypedLinkRequest &request)
 {
@@ -359,6 +360,12 @@ BatchWriteResponse * CloudDirectoryClient::batchWrite(const BatchWriteRequest &r
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a <a>Directory</a> by copying the published schema into the directory. A directory cannot be created without a
+ *
+ * schema>
+ *
+ * You can also quickly create a directory using a managed schema, called the <code>QuickStartSchema</code>. For more
+ * information, see <a href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/schemas_managed.html">Managed
+ * Schema</a> in the <i>Amazon Cloud Directory Developer
  */
 CreateDirectoryResponse * CloudDirectoryClient::createDirectory(const CreateDirectoryRequest &request)
 {
@@ -385,7 +392,8 @@ CreateFacetResponse * CloudDirectoryClient::createFacet(const CreateFacetRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an index object. See <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_indexing.html">Indexing</a> for more
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/indexing_search.html">Indexing and search</a> for
+ * more
  */
 CreateIndexResponse * CloudDirectoryClient::createIndex(const CreateIndexRequest &request)
 {
@@ -441,7 +449,7 @@ CreateSchemaResponse * CloudDirectoryClient::createSchema(const CreateSchemaRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a <a>TypedLinkFacet</a>. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 CreateTypedLinkFacetResponse * CloudDirectoryClient::createTypedLinkFacet(const CreateTypedLinkFacetRequest &request)
 {
@@ -482,7 +490,9 @@ DeleteFacetResponse * CloudDirectoryClient::deleteFacet(const DeleteFacetRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an object and its associated attributes. Only objects with no children and no parents can be
+ * Deletes an object and its associated attributes. Only objects with no children and no parents can be deleted. The
+ * maximum number of attributes that can be deleted during an object deletion is 30. For more information, see <a
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/limits.html">Amazon Cloud Directory
  */
 DeleteObjectResponse * CloudDirectoryClient::deleteObject(const DeleteObjectRequest &request)
 {
@@ -509,7 +519,7 @@ DeleteSchemaResponse * CloudDirectoryClient::deleteSchema(const DeleteSchemaRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a <a>TypedLinkFacet</a>. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 DeleteTypedLinkFacetResponse * CloudDirectoryClient::deleteTypedLinkFacet(const DeleteTypedLinkFacetRequest &request)
 {
@@ -563,7 +573,7 @@ DetachPolicyResponse * CloudDirectoryClient::detachPolicy(const DetachPolicyRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Detaches a typed link from a specified source and target object. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 DetachTypedLinkResponse * CloudDirectoryClient::detachTypedLink(const DetachTypedLinkRequest &request)
 {
@@ -684,8 +694,8 @@ GetObjectInformationResponse * CloudDirectoryClient::getObjectInformation(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves a JSON representation of the schema. See <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat">JSON Schema Format</a>
- * for more
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/schemas_jsonformat.html#schemas_json">JSON Schema
+ * Format</a> for more
  */
 GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaAsJsonRequest &request)
 {
@@ -699,7 +709,7 @@ GetSchemaAsJsonResponse * CloudDirectoryClient::getSchemaAsJson(const GetSchemaA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the identity attribute order for a specific <a>TypedLinkFacet</a>. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 GetTypedLinkFacetInformationResponse * CloudDirectoryClient::getTypedLinkFacetInformation(const GetTypedLinkFacetInformationRequest &request)
 {
@@ -792,7 +802,7 @@ ListFacetNamesResponse * CloudDirectoryClient::listFacetNames(const ListFacetNam
  *
  * Returns a paginated list of all the incoming <a>TypedLinkSpecifier</a> information for an object. It also supports
  * filtering by typed link facet and identity attributes. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(const ListIncomingTypedLinksRequest &request)
 {
@@ -860,7 +870,7 @@ ListObjectChildrenResponse * CloudDirectoryClient::listObjectChildren(const List
  *
  * Retrieves all available parent paths for any object type such as node, leaf node, policy node, and index node objects.
  * For more information about objects, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_key_concepts.html#dirstructure">Directory
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/key_concepts_directorystructure.html">Directory
  *
  * Structure</a>>
  *
@@ -908,7 +918,7 @@ ListObjectPoliciesResponse * CloudDirectoryClient::listObjectPolicies(const List
  *
  * Returns a paginated list of all the outgoing <a>TypedLinkSpecifier</a> information for an object. It also supports
  * filtering by typed link facet and identity attributes. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 ListOutgoingTypedLinksResponse * CloudDirectoryClient::listOutgoingTypedLinks(const ListOutgoingTypedLinksRequest &request)
 {
@@ -963,7 +973,8 @@ ListTagsForResourceResponse * CloudDirectoryClient::listTagsForResource(const Li
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a paginated list of all attribute definitions for a particular <a>TypedLinkFacet</a>. For more information, see
- * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * <a
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetAttributes(const ListTypedLinkFacetAttributesRequest &request)
 {
@@ -977,7 +988,7 @@ ListTypedLinkFacetAttributesResponse * CloudDirectoryClient::listTypedLinkFacetA
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a paginated list of <code>TypedLink</code> facet names for a particular schema. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 ListTypedLinkFacetNamesResponse * CloudDirectoryClient::listTypedLinkFacetNames(const ListTypedLinkFacetNamesRequest &request)
 {
@@ -1021,8 +1032,8 @@ PublishSchemaResponse * CloudDirectoryClient::publishSchema(const PublishSchemaR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Allows a schema to be updated using JSON upload. Only available for development schemas. See <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_schemas.html#jsonformat">JSON Schema Format</a>
- * for more
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/schemas_jsonformat.html#schemas_json">JSON Schema
+ * Format</a> for more
  */
 PutSchemaFromJsonResponse * CloudDirectoryClient::putSchemaFromJson(const PutSchemaFromJsonRequest &request)
 {
@@ -1140,7 +1151,7 @@ UpdateSchemaResponse * CloudDirectoryClient::updateSchema(const UpdateSchemaRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a <a>TypedLinkFacet</a>. For more information, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed
+ * href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed
  */
 UpdateTypedLinkFacetResponse * CloudDirectoryClient::updateTypedLinkFacet(const UpdateTypedLinkFacetRequest &request)
 {

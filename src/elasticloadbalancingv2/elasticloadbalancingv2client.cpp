@@ -250,7 +250,7 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
  * again>
  *
  * To list the certificates for your listener, use <a>DescribeListenerCertificates</a>. To remove certificates from your
- * listener, use
+ * listener, use <a>RemoveListenerCertificates</a>. To specify the default SSL server certificate, use
  */
 AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCertificates(const AddListenerCertificatesRequest &request)
 {
@@ -790,8 +790,7 @@ ModifyTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::modifyTarget
  *
  * group>
  *
- * You can register targets by instance ID or by IP address. If the target is an EC2 instance, it must be in the
- * <code>running</code> state when you register
+ * If the target is an EC2 instance, it must be in the <code>running</code> state when you register
  *
  * it>
  *

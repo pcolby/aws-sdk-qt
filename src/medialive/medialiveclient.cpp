@@ -21,6 +21,8 @@
 #include "medialiveclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchupdateschedulerequest.h"
+#include "batchupdatescheduleresponse.h"
 #include "createchannelrequest.h"
 #include "createchannelresponse.h"
 #include "createinputrequest.h"
@@ -45,6 +47,8 @@
 #include "describeofferingresponse.h"
 #include "describereservationrequest.h"
 #include "describereservationresponse.h"
+#include "describeschedulerequest.h"
+#include "describescheduleresponse.h"
 #include "listchannelsrequest.h"
 #include "listchannelsresponse.h"
 #include "listinputsecuritygroupsrequest.h"
@@ -143,6 +147,18 @@ MediaLiveClient::MediaLiveClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Elemental MediaLive");
     d->serviceName = QStringLiteral("medialive");
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * BatchUpdateScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+BatchUpdateScheduleResponse * MediaLiveClient::batchUpdateSchedule(const BatchUpdateScheduleRequest &request)
+{
+    return qobject_cast<BatchUpdateScheduleResponse *>(send(request));
 }
 
 /*!
@@ -287,6 +303,18 @@ DescribeOfferingResponse * MediaLiveClient::describeOffering(const DescribeOffer
 DescribeReservationResponse * MediaLiveClient::describeReservation(const DescribeReservationRequest &request)
 {
     return qobject_cast<DescribeReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeScheduleResponse * MediaLiveClient::describeSchedule(const DescribeScheduleRequest &request)
+{
+    return qobject_cast<DescribeScheduleResponse *>(send(request));
 }
 
 /*!

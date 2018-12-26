@@ -36,6 +36,7 @@ namespace ConfigService {
  * This enum describes the actions that can be performed as ConfigService
  * requests.
  *
+ * \value BatchGetAggregateResourceConfigAction ConfigService BatchGetAggregateResourceConfig action.
  * \value BatchGetResourceConfigAction ConfigService BatchGetResourceConfig action.
  * \value DeleteAggregationAuthorizationAction ConfigService DeleteAggregationAuthorization action.
  * \value DeleteConfigRuleAction ConfigService DeleteConfigRule action.
@@ -62,12 +63,15 @@ namespace ConfigService {
  * \value DescribeRetentionConfigurationsAction ConfigService DescribeRetentionConfigurations action.
  * \value GetAggregateComplianceDetailsByConfigRuleAction ConfigService GetAggregateComplianceDetailsByConfigRule action.
  * \value GetAggregateConfigRuleComplianceSummaryAction ConfigService GetAggregateConfigRuleComplianceSummary action.
+ * \value GetAggregateDiscoveredResourceCountsAction ConfigService GetAggregateDiscoveredResourceCounts action.
+ * \value GetAggregateResourceConfigAction ConfigService GetAggregateResourceConfig action.
  * \value GetComplianceDetailsByConfigRuleAction ConfigService GetComplianceDetailsByConfigRule action.
  * \value GetComplianceDetailsByResourceAction ConfigService GetComplianceDetailsByResource action.
  * \value GetComplianceSummaryByConfigRuleAction ConfigService GetComplianceSummaryByConfigRule action.
  * \value GetComplianceSummaryByResourceTypeAction ConfigService GetComplianceSummaryByResourceType action.
  * \value GetDiscoveredResourceCountsAction ConfigService GetDiscoveredResourceCounts action.
  * \value GetResourceConfigHistoryAction ConfigService GetResourceConfigHistory action.
+ * \value ListAggregateDiscoveredResourcesAction ConfigService ListAggregateDiscoveredResources action.
  * \value ListDiscoveredResourcesAction ConfigService ListDiscoveredResources action.
  * \value PutAggregationAuthorizationAction ConfigService PutAggregationAuthorization action.
  * \value PutConfigRuleAction ConfigService PutConfigRule action.

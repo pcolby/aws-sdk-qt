@@ -36,14 +36,17 @@ namespace CloudHSMV2 {
  * This enum describes the actions that can be performed as CloudHSMV2
  * requests.
  *
+ * \value CopyBackupToRegionAction CloudHSMV2 CopyBackupToRegion action.
  * \value CreateClusterAction CloudHSMV2 CreateCluster action.
  * \value CreateHsmAction CloudHSMV2 CreateHsm action.
+ * \value DeleteBackupAction CloudHSMV2 DeleteBackup action.
  * \value DeleteClusterAction CloudHSMV2 DeleteCluster action.
  * \value DeleteHsmAction CloudHSMV2 DeleteHsm action.
  * \value DescribeBackupsAction CloudHSMV2 DescribeBackups action.
  * \value DescribeClustersAction CloudHSMV2 DescribeClusters action.
  * \value InitializeClusterAction CloudHSMV2 InitializeCluster action.
  * \value ListTagsAction CloudHSMV2 ListTags action.
+ * \value RestoreBackupAction CloudHSMV2 RestoreBackup action.
  * \value TagResourceAction CloudHSMV2 TagResource action.
  * \value UntagResourceAction CloudHSMV2 UntagResource action.
  */

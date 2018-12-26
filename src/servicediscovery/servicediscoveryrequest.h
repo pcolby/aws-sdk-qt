@@ -37,12 +37,14 @@ class QTAWS_EXPORT ServiceDiscoveryRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by ServiceDiscovery.
     enum Action {
+        CreateHttpNamespaceAction,
         CreatePrivateDnsNamespaceAction,
         CreatePublicDnsNamespaceAction,
         CreateServiceAction,
         DeleteNamespaceAction,
         DeleteServiceAction,
         DeregisterInstanceAction,
+        DiscoverInstancesAction,
         GetInstanceAction,
         GetInstancesHealthStatusAction,
         GetNamespaceAction,

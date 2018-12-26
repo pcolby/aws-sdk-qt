@@ -384,6 +384,10 @@ HEADERS += \
     updateuserpoolclientrequest_p.h \
     updateuserpoolclientresponse.h \
     updateuserpoolclientresponse_p.h \
+    updateuserpooldomainrequest.h \
+    updateuserpooldomainrequest_p.h \
+    updateuserpooldomainresponse.h \
+    updateuserpooldomainresponse_p.h \
     updateuserpoolrequest.h \
     updateuserpoolrequest_p.h \
     updateuserpoolresponse.h \
@@ -585,6 +589,8 @@ SOURCES += \
     updateuserattributesresponse.cpp \
     updateuserpoolclientrequest.cpp \
     updateuserpoolclientresponse.cpp \
+    updateuserpooldomainrequest.cpp \
+    updateuserpooldomainresponse.cpp \
     updateuserpoolrequest.cpp \
     updateuserpoolresponse.cpp \
     verifysoftwaretokenrequest.cpp \

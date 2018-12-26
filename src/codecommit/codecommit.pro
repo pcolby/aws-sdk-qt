@@ -40,6 +40,10 @@ HEADERS += \
     deletecommentcontentrequest_p.h \
     deletecommentcontentresponse.h \
     deletecommentcontentresponse_p.h \
+    deletefilerequest.h \
+    deletefilerequest_p.h \
+    deletefileresponse.h \
+    deletefileresponse_p.h \
     deleterepositoryrequest.h \
     deleterepositoryrequest_p.h \
     deleterepositoryresponse.h \
@@ -76,6 +80,14 @@ HEADERS += \
     getdifferencesrequest_p.h \
     getdifferencesresponse.h \
     getdifferencesresponse_p.h \
+    getfilerequest.h \
+    getfilerequest_p.h \
+    getfileresponse.h \
+    getfileresponse_p.h \
+    getfolderrequest.h \
+    getfolderrequest_p.h \
+    getfolderresponse.h \
+    getfolderresponse_p.h \
     getmergeconflictsrequest.h \
     getmergeconflictsrequest_p.h \
     getmergeconflictsresponse.h \
@@ -177,6 +189,8 @@ SOURCES += \
     deletebranchresponse.cpp \
     deletecommentcontentrequest.cpp \
     deletecommentcontentresponse.cpp \
+    deletefilerequest.cpp \
+    deletefileresponse.cpp \
     deleterepositoryrequest.cpp \
     deleterepositoryresponse.cpp \
     describepullrequesteventsrequest.cpp \
@@ -195,6 +209,10 @@ SOURCES += \
     getcommitresponse.cpp \
     getdifferencesrequest.cpp \
     getdifferencesresponse.cpp \
+    getfilerequest.cpp \
+    getfileresponse.cpp \
+    getfolderrequest.cpp \
+    getfolderresponse.cpp \
     getmergeconflictsrequest.cpp \
     getmergeconflictsresponse.cpp \
     getpullrequestrequest.cpp \

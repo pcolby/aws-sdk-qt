@@ -28,6 +28,14 @@ HEADERS += \
     autoscalingrequest_p.h \
     autoscalingresponse.h \
     autoscalingresponse_p.h \
+    batchdeletescheduledactionrequest.h \
+    batchdeletescheduledactionrequest_p.h \
+    batchdeletescheduledactionresponse.h \
+    batchdeletescheduledactionresponse_p.h \
+    batchputscheduledupdategroupactionrequest.h \
+    batchputscheduledupdategroupactionrequest_p.h \
+    batchputscheduledupdategroupactionresponse.h \
+    batchputscheduledupdategroupactionresponse_p.h \
     completelifecycleactionrequest.h \
     completelifecycleactionrequest_p.h \
     completelifecycleactionresponse.h \
@@ -235,6 +243,10 @@ SOURCES += \
     autoscalingclient.cpp \
     autoscalingrequest.cpp \
     autoscalingresponse.cpp \
+    batchdeletescheduledactionrequest.cpp \
+    batchdeletescheduledactionresponse.cpp \
+    batchputscheduledupdategroupactionrequest.cpp \
+    batchputscheduledupdategroupactionresponse.cpp \
     completelifecycleactionrequest.cpp \
     completelifecycleactionresponse.cpp \
     createautoscalinggrouprequest.cpp \

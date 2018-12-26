@@ -34,6 +34,10 @@ HEADERS += \
     batchgetdeploymentsrequest_p.h \
     batchgetdeploymentsresponse.h \
     batchgetdeploymentsresponse_p.h \
+    batchgetdeploymenttargetsrequest.h \
+    batchgetdeploymenttargetsrequest_p.h \
+    batchgetdeploymenttargetsresponse.h \
+    batchgetdeploymenttargetsresponse_p.h \
     batchgetonpremisesinstancesrequest.h \
     batchgetonpremisesinstancesrequest_p.h \
     batchgetonpremisesinstancesresponse.h \
@@ -108,6 +112,10 @@ HEADERS += \
     getdeploymentrequest_p.h \
     getdeploymentresponse.h \
     getdeploymentresponse_p.h \
+    getdeploymenttargetrequest.h \
+    getdeploymenttargetrequest_p.h \
+    getdeploymenttargetresponse.h \
+    getdeploymenttargetresponse_p.h \
     getonpremisesinstancerequest.h \
     getonpremisesinstancerequest_p.h \
     getonpremisesinstanceresponse.h \
@@ -136,6 +144,10 @@ HEADERS += \
     listdeploymentsrequest_p.h \
     listdeploymentsresponse.h \
     listdeploymentsresponse_p.h \
+    listdeploymenttargetsrequest.h \
+    listdeploymenttargetsrequest_p.h \
+    listdeploymenttargetsresponse.h \
+    listdeploymenttargetsresponse_p.h \
     listgithubaccounttokennamesrequest.h \
     listgithubaccounttokennamesrequest_p.h \
     listgithubaccounttokennamesresponse.h \
@@ -190,6 +202,8 @@ SOURCES += \
     batchgetdeploymentinstancesresponse.cpp \
     batchgetdeploymentsrequest.cpp \
     batchgetdeploymentsresponse.cpp \
+    batchgetdeploymenttargetsrequest.cpp \
+    batchgetdeploymenttargetsresponse.cpp \
     batchgetonpremisesinstancesrequest.cpp \
     batchgetonpremisesinstancesresponse.cpp \
     codedeployclient.cpp \
@@ -227,6 +241,8 @@ SOURCES += \
     getdeploymentinstanceresponse.cpp \
     getdeploymentrequest.cpp \
     getdeploymentresponse.cpp \
+    getdeploymenttargetrequest.cpp \
+    getdeploymenttargetresponse.cpp \
     getonpremisesinstancerequest.cpp \
     getonpremisesinstanceresponse.cpp \
     listapplicationrevisionsrequest.cpp \
@@ -241,6 +257,8 @@ SOURCES += \
     listdeploymentinstancesresponse.cpp \
     listdeploymentsrequest.cpp \
     listdeploymentsresponse.cpp \
+    listdeploymenttargetsrequest.cpp \
+    listdeploymenttargetsresponse.cpp \
     listgithubaccounttokennamesrequest.cpp \
     listgithubaccounttokennamesresponse.cpp \
     listonpremisesinstancesrequest.cpp \

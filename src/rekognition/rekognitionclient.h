@@ -40,6 +40,8 @@ class DeleteFacesRequest;
 class DeleteFacesResponse;
 class DeleteStreamProcessorRequest;
 class DeleteStreamProcessorResponse;
+class DescribeCollectionRequest;
+class DescribeCollectionResponse;
 class DescribeStreamProcessorRequest;
 class DescribeStreamProcessorResponse;
 class DetectFacesRequest;
@@ -117,6 +119,7 @@ public slots:
     DeleteCollectionResponse * deleteCollection(const DeleteCollectionRequest &request);
     DeleteFacesResponse * deleteFaces(const DeleteFacesRequest &request);
     DeleteStreamProcessorResponse * deleteStreamProcessor(const DeleteStreamProcessorRequest &request);
+    DescribeCollectionResponse * describeCollection(const DescribeCollectionRequest &request);
     DescribeStreamProcessorResponse * describeStreamProcessor(const DescribeStreamProcessorRequest &request);
     DetectFacesResponse * detectFaces(const DetectFacesRequest &request);
     DetectLabelsResponse * detectLabels(const DetectLabelsRequest &request);

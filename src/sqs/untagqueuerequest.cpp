@@ -77,20 +77,25 @@ namespace SQS {
  * 
  *  </p <ul> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/MakingRequestsArticle.html">Making
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html">Making
  *  API Requests</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Using
- *  Amazon SQS Message Attributes</a>
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-attributes.html">Amazon
+ *  SQS Message Attributes</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
- *  Amazon SQS Dead-Letter Queues</a>
+ *  <a href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Amazon
+ *  SQS Dead-Letter Queues</a>
  * 
  *  </p </li> </ul> </li> <li>
+ * 
+ *  <a href="http://docs.aws.amazon.com/cli/latest/reference/sqs/index.html">Amazon SQS in the <i>AWS CLI Command
+ *  Reference</i> </a>
+ * 
+ *  </p </li> <li>
  * 
  *  <i>Amazon Web Services General Reference</i>
  * 

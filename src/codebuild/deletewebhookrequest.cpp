@@ -37,8 +37,8 @@ namespace CodeBuild {
  *  and produces artifacts that are ready to deploy. AWS CodeBuild eliminates the need to provision, manage, and scale your
  *  own build servers. It provides prepackaged build environments for the most popular programming languages and build
  *  tools, such as Apache Maven, Gradle, and more. You can also fully customize build environments in AWS CodeBuild to use
- *  your own build tools. AWS CodeBuild scales automatically to meet peak build requests, and you pay only for the build
- *  time you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
+ *  your own build tools. AWS CodeBuild scales automatically to meet peak build requests. You pay only for the build time
+ *  you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
  * 
  *  Guide</i>>
  * 
@@ -51,10 +51,10 @@ namespace CodeBuild {
  *  builds> </li> <li>
  * 
  *  <code>BatchGetProjects</code>: Gets information about one or more build projects. A <i>build project</i> defines how AWS
- *  CodeBuild will run a build. This includes information such as where to get the source code to build, the build
- *  environment to use, the build commands to run, and where to store the build output. A <i>build environment</i>
- *  represents a combination of operating system, programming language runtime, and tools that AWS CodeBuild will use to run
- *  a build. Also, you can add tags to build projects to help manage your resources and
+ *  CodeBuild runs a build. This includes information such as where to get the source code to build, the build environment
+ *  to use, the build commands to run, and where to store the build output. A <i>build environment</i> is a representation
+ *  of operating system, programming language runtime, and tools that AWS CodeBuild uses to run a build. You can add tags to
+ *  build projects to help manage your resources and
  * 
  *  costs> </li> <li>
  * 
@@ -62,9 +62,9 @@ namespace CodeBuild {
  * 
  *  project> </li> <li>
  * 
- *  <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
- *  repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed
- *  to the
+ *  <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub or
+ *  Bitbucket repository, enables AWS CodeBuild to start rebuilding the source code every time a code change is pushed to
+ *  the
  * 
  *  repository> </li> <li>
  * 
@@ -76,8 +76,8 @@ namespace CodeBuild {
  * 
  *  project> </li> <li>
  * 
- *  <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
- *  repository, stops AWS CodeBuild from automatically rebuilding the source code every time a code change is pushed to the
+ *  <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub or
+ *  Bitbucket repository, stops AWS CodeBuild from rebuilding the source code every time a code change is pushed to the
  * 
  *  repository> </li> <li>
  * 
@@ -111,6 +111,21 @@ namespace CodeBuild {
  *  build> </li> <li>
  * 
  *  <code>ListCuratedEnvironmentImages</code>: Gets information about Docker images that are managed by AWS
+ * 
+ *  CodeBuild> </li> <li>
+ * 
+ *  <code>DeleteSourceCredentials</code>: Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source
+ * 
+ *  credentials> </li> <li>
+ * 
+ *  <code>ImportSourceCredentials</code>: Imports the source repository credentials for an AWS CodeBuild project that has
+ *  its source code stored in a GitHub, GitHub Enterprise, or Bitbucket
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <code>ListSourceCredentials</code>: Returns a list of <code>SourceCredentialsInfo</code> objects. Each
+ *  <code>SourceCredentialsInfo</code> object includes the authentication type, token ARN, and type of source provider for
+ *  one set of
  *
  * \sa CodeBuildClient::deleteWebhook
  */

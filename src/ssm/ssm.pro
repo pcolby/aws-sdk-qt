@@ -18,6 +18,10 @@ HEADERS += \
     cancelcommandrequest_p.h \
     cancelcommandresponse.h \
     cancelcommandresponse_p.h \
+    cancelmaintenancewindowexecutionrequest.h \
+    cancelmaintenancewindowexecutionrequest_p.h \
+    cancelmaintenancewindowexecutionresponse.h \
+    cancelmaintenancewindowexecutionresponse_p.h \
     createactivationrequest.h \
     createactivationrequest_p.h \
     createactivationresponse.h \
@@ -178,6 +182,14 @@ HEADERS += \
     describemaintenancewindowexecutiontasksrequest_p.h \
     describemaintenancewindowexecutiontasksresponse.h \
     describemaintenancewindowexecutiontasksresponse_p.h \
+    describemaintenancewindowschedulerequest.h \
+    describemaintenancewindowschedulerequest_p.h \
+    describemaintenancewindowscheduleresponse.h \
+    describemaintenancewindowscheduleresponse_p.h \
+    describemaintenancewindowsfortargetrequest.h \
+    describemaintenancewindowsfortargetrequest_p.h \
+    describemaintenancewindowsfortargetresponse.h \
+    describemaintenancewindowsfortargetresponse_p.h \
     describemaintenancewindowsrequest.h \
     describemaintenancewindowsrequest_p.h \
     describemaintenancewindowsresponse.h \
@@ -206,6 +218,10 @@ HEADERS += \
     describepatchgroupstaterequest_p.h \
     describepatchgroupstateresponse.h \
     describepatchgroupstateresponse_p.h \
+    describesessionsrequest.h \
+    describesessionsrequest_p.h \
+    describesessionsresponse.h \
+    describesessionsresponse_p.h \
     getautomationexecutionrequest.h \
     getautomationexecutionrequest_p.h \
     getautomationexecutionresponse.h \
@@ -214,6 +230,10 @@ HEADERS += \
     getcommandinvocationrequest_p.h \
     getcommandinvocationresponse.h \
     getcommandinvocationresponse_p.h \
+    getconnectionstatusrequest.h \
+    getconnectionstatusrequest_p.h \
+    getconnectionstatusresponse.h \
+    getconnectionstatusresponse_p.h \
     getdefaultpatchbaselinerequest.h \
     getdefaultpatchbaselinerequest_p.h \
     getdefaultpatchbaselineresponse.h \
@@ -366,6 +386,10 @@ HEADERS += \
     removetagsfromresourcerequest_p.h \
     removetagsfromresourceresponse.h \
     removetagsfromresourceresponse_p.h \
+    resumesessionrequest.h \
+    resumesessionrequest_p.h \
+    resumesessionresponse.h \
+    resumesessionresponse_p.h \
     sendautomationsignalrequest.h \
     sendautomationsignalrequest_p.h \
     sendautomationsignalresponse.h \
@@ -388,10 +412,18 @@ HEADERS += \
     startautomationexecutionrequest_p.h \
     startautomationexecutionresponse.h \
     startautomationexecutionresponse_p.h \
+    startsessionrequest.h \
+    startsessionrequest_p.h \
+    startsessionresponse.h \
+    startsessionresponse_p.h \
     stopautomationexecutionrequest.h \
     stopautomationexecutionrequest_p.h \
     stopautomationexecutionresponse.h \
     stopautomationexecutionresponse_p.h \
+    terminatesessionrequest.h \
+    terminatesessionrequest_p.h \
+    terminatesessionresponse.h \
+    terminatesessionresponse_p.h \
     updateassociationrequest.h \
     updateassociationrequest_p.h \
     updateassociationresponse.h \
@@ -434,6 +466,8 @@ SOURCES += \
     addtagstoresourceresponse.cpp \
     cancelcommandrequest.cpp \
     cancelcommandresponse.cpp \
+    cancelmaintenancewindowexecutionrequest.cpp \
+    cancelmaintenancewindowexecutionresponse.cpp \
     createactivationrequest.cpp \
     createactivationresponse.cpp \
     createassociationbatchrequest.cpp \
@@ -514,6 +548,10 @@ SOURCES += \
     describemaintenancewindowexecutiontaskinvocationsresponse.cpp \
     describemaintenancewindowexecutiontasksrequest.cpp \
     describemaintenancewindowexecutiontasksresponse.cpp \
+    describemaintenancewindowschedulerequest.cpp \
+    describemaintenancewindowscheduleresponse.cpp \
+    describemaintenancewindowsfortargetrequest.cpp \
+    describemaintenancewindowsfortargetresponse.cpp \
     describemaintenancewindowsrequest.cpp \
     describemaintenancewindowsresponse.cpp \
     describemaintenancewindowtargetsrequest.cpp \
@@ -528,10 +566,14 @@ SOURCES += \
     describepatchgroupsresponse.cpp \
     describepatchgroupstaterequest.cpp \
     describepatchgroupstateresponse.cpp \
+    describesessionsrequest.cpp \
+    describesessionsresponse.cpp \
     getautomationexecutionrequest.cpp \
     getautomationexecutionresponse.cpp \
     getcommandinvocationrequest.cpp \
     getcommandinvocationresponse.cpp \
+    getconnectionstatusrequest.cpp \
+    getconnectionstatusresponse.cpp \
     getdefaultpatchbaselinerequest.cpp \
     getdefaultpatchbaselineresponse.cpp \
     getdeployablepatchsnapshotforinstancerequest.cpp \
@@ -608,6 +650,8 @@ SOURCES += \
     registertaskwithmaintenancewindowresponse.cpp \
     removetagsfromresourcerequest.cpp \
     removetagsfromresourceresponse.cpp \
+    resumesessionrequest.cpp \
+    resumesessionresponse.cpp \
     sendautomationsignalrequest.cpp \
     sendautomationsignalresponse.cpp \
     sendcommandrequest.cpp \
@@ -619,8 +663,12 @@ SOURCES += \
     startassociationsonceresponse.cpp \
     startautomationexecutionrequest.cpp \
     startautomationexecutionresponse.cpp \
+    startsessionrequest.cpp \
+    startsessionresponse.cpp \
     stopautomationexecutionrequest.cpp \
     stopautomationexecutionresponse.cpp \
+    terminatesessionrequest.cpp \
+    terminatesessionresponse.cpp \
     updateassociationrequest.cpp \
     updateassociationresponse.cpp \
     updateassociationstatusrequest.cpp \

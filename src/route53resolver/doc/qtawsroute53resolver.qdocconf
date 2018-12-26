@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsRoute53Resolver
+description = AWS Route53Resolver SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsroute53resolver-index.html"
+navigation.landingtitle = "Route53Resolver"
+navigation.cppclassespage = "Route53Resolver C++ Classes"

@@ -103,6 +103,18 @@ namespace CodeCommit {
  * 
  *  following> <ul> <li>
  * 
+ *  <a>DeleteFile</a>, which deletes the content of a specified file from a specified
+ * 
+ *  branch> </li> <li>
+ * 
+ *  <a>GetFile</a>, which returns the base-64 encoded content of a specified
+ * 
+ *  file> </li> <li>
+ * 
+ *  <a>GetFolder</a>, which returns the contents of a specified folder or
+ * 
+ *  directory> </li> <li>
+ * 
  *  <a>PutFile</a>, which adds or modifies a file in a specified repository and
  * 
  *  branch> </li> </ul>

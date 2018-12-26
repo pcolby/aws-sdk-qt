@@ -129,6 +129,8 @@
 #include "renewofferingresponse.h"
 #include "schedulerunrequest.h"
 #include "schedulerunresponse.h"
+#include "stopjobrequest.h"
+#include "stopjobresponse.h"
 #include "stopremoteaccesssessionrequest.h"
 #include "stopremoteaccesssessionresponse.h"
 #include "stoprunrequest.h"
@@ -143,6 +145,8 @@
 #include "updatenetworkprofileresponse.h"
 #include "updateprojectrequest.h"
 #include "updateprojectresponse.h"
+#include "updateuploadrequest.h"
+#include "updateuploadresponse.h"
 #include "updatevpceconfigurationrequest.h"
 #include "updatevpceconfigurationresponse.h"
 
@@ -840,7 +844,7 @@ ListRunsResponse * DeviceFarmClient::listRuns(const ListRunsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about samples, given an AWS Device Farm project
+ * Gets information about samples, given an AWS Device Farm job
  */
 ListSamplesResponse * DeviceFarmClient::listSamples(const ListSamplesRequest &request)
 {
@@ -960,6 +964,22 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
 
 /*!
  * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * StopJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Initiates a stop request for the current job. AWS Device Farm will immediately stop the job on the device where tests
+ * have not started executing, and you will not be billed for this device. On the device where tests have started
+ * executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on the device. You will
+ * be billed for Setup, Teardown, and any tests that were in progress or already
+ */
+StopJobResponse * DeviceFarmClient::stopJob(const StopJobRequest &request)
+{
+    return qobject_cast<StopJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
  * StopRemoteAccessSessionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1051,6 +1071,19 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
 UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectRequest &request)
 {
     return qobject_cast<UpdateProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateUploadResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update an uploaded test specification (test
+ */
+UpdateUploadResponse * DeviceFarmClient::updateUpload(const UpdateUploadRequest &request)
+{
+    return qobject_cast<UpdateUploadResponse *>(send(request));
 }
 
 /*!

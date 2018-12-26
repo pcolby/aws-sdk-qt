@@ -23,6 +23,10 @@
 #include "core/awssignaturev4.h"
 #include "associatefleetrequest.h"
 #include "associatefleetresponse.h"
+#include "batchassociateuserstackrequest.h"
+#include "batchassociateuserstackresponse.h"
+#include "batchdisassociateuserstackrequest.h"
+#include "batchdisassociateuserstackresponse.h"
 #include "copyimagerequest.h"
 #include "copyimageresponse.h"
 #include "createdirectoryconfigrequest.h"
@@ -37,6 +41,8 @@
 #include "createstackresponse.h"
 #include "createstreamingurlrequest.h"
 #include "createstreamingurlresponse.h"
+#include "createuserrequest.h"
+#include "createuserresponse.h"
 #include "deletedirectoryconfigrequest.h"
 #include "deletedirectoryconfigresponse.h"
 #include "deletefleetrequest.h"
@@ -49,6 +55,8 @@
 #include "deleteimagepermissionsresponse.h"
 #include "deletestackrequest.h"
 #include "deletestackresponse.h"
+#include "deleteuserrequest.h"
+#include "deleteuserresponse.h"
 #include "describedirectoryconfigsrequest.h"
 #include "describedirectoryconfigsresponse.h"
 #include "describefleetsrequest.h"
@@ -63,8 +71,16 @@
 #include "describesessionsresponse.h"
 #include "describestacksrequest.h"
 #include "describestacksresponse.h"
+#include "describeuserstackassociationsrequest.h"
+#include "describeuserstackassociationsresponse.h"
+#include "describeusersrequest.h"
+#include "describeusersresponse.h"
+#include "disableuserrequest.h"
+#include "disableuserresponse.h"
 #include "disassociatefleetrequest.h"
 #include "disassociatefleetresponse.h"
+#include "enableuserrequest.h"
+#include "enableuserresponse.h"
 #include "expiresessionrequest.h"
 #include "expiresessionresponse.h"
 #include "listassociatedfleetsrequest.h"
@@ -189,6 +205,33 @@ AssociateFleetResponse * AppStreamClient::associateFleet(const AssociateFleetReq
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * BatchAssociateUserStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified users with the specified stacks. Users in a user pool cannot be assigned to stacks with fleets
+ * that are joined to an Active Directory
+ */
+BatchAssociateUserStackResponse * AppStreamClient::batchAssociateUserStack(const BatchAssociateUserStackRequest &request)
+{
+    return qobject_cast<BatchAssociateUserStackResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * BatchDisassociateUserStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates the specified users from the specified
+ */
+BatchDisassociateUserStackResponse * AppStreamClient::batchDisassociateUserStack(const BatchDisassociateUserStackRequest &request)
+{
+    return qobject_cast<BatchDisassociateUserStackResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * CopyImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -288,6 +331,19 @@ CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStr
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new user in the user
+ */
+CreateUserResponse * AppStreamClient::createUser(const CreateUserRequest &request)
+{
+    return qobject_cast<CreateUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DeleteDirectoryConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -370,6 +426,19 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a user from the user
+ */
+DeleteUserResponse * AppStreamClient::deleteUser(const DeleteUserRequest &request)
+{
+    return qobject_cast<DeleteUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DescribeDirectoryConfigsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -421,7 +490,7 @@ DescribeImageBuildersResponse * AppStreamClient::describeImageBuilders(const Des
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list that describes the permissions for a private image that you own.
+ * Retrieves a list that describes the permissions for shared AWS account IDs on a private image that you own.
  */
 DescribeImagePermissionsResponse * AppStreamClient::describeImagePermissions(const DescribeImagePermissionsRequest &request)
 {
@@ -434,8 +503,8 @@ DescribeImagePermissionsResponse * AppStreamClient::describeImagePermissions(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list that describes one or more specified images, if the image names are provided. Otherwise, all images in
- * the account are
+ * Retrieves a list that describes one or more specified images, if the image names or image ARNs are provided. Otherwise,
+ * all images in the account are
  */
 DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesRequest &request)
 {
@@ -473,6 +542,55 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeUserStackAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes the UserStackAssociation objects. You must specify either or both of the
+ *
+ * following> <ul> <li>
+ *
+ * The stack
+ *
+ * nam> </li> <li>
+ *
+ * The user name (email address of the user associated with the stack) and the authentication type for the
+ */
+DescribeUserStackAssociationsResponse * AppStreamClient::describeUserStackAssociations(const DescribeUserStackAssociationsRequest &request)
+{
+    return qobject_cast<DescribeUserStackAssociationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more specified users in the user pool, if user names are provided. Otherwise, all
+ * users in the user pool are
+ */
+DescribeUsersResponse * AppStreamClient::describeUsers(const DescribeUsersRequest &request)
+{
+    return qobject_cast<DescribeUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DisableUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables the specified user in the user pool. Users can't sign in to AppStream 2.0 until they are re-enabled. This
+ * action does not delete the user.
+ */
+DisableUserResponse * AppStreamClient::disableUser(const DisableUserRequest &request)
+{
+    return qobject_cast<DisableUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DisassociateFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -482,6 +600,20 @@ DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksReq
 DisassociateFleetResponse * AppStreamClient::disassociateFleet(const DisassociateFleetRequest &request)
 {
     return qobject_cast<DisassociateFleetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * EnableUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables a user in the user pool. After being enabled, users can sign in to AppStream 2.0 and open applications from the
+ * stacks to which they are
+ */
+EnableUserResponse * AppStreamClient::enableUser(const EnableUserRequest &request)
+{
+    return qobject_cast<EnableUserResponse *>(send(request));
 }
 
 /*!

@@ -53,6 +53,8 @@
 #include "deletegeomatchsetresponse.h"
 #include "deleteipsetrequest.h"
 #include "deleteipsetresponse.h"
+#include "deleteloggingconfigurationrequest.h"
+#include "deleteloggingconfigurationresponse.h"
 #include "deletepermissionpolicyrequest.h"
 #include "deletepermissionpolicyresponse.h"
 #include "deleteratebasedrulerequest.h"
@@ -85,6 +87,8 @@
 #include "getgeomatchsetresponse.h"
 #include "getipsetrequest.h"
 #include "getipsetresponse.h"
+#include "getloggingconfigurationrequest.h"
+#include "getloggingconfigurationresponse.h"
 #include "getpermissionpolicyrequest.h"
 #include "getpermissionpolicyresponse.h"
 #include "getratebasedrulerequest.h"
@@ -119,6 +123,8 @@
 #include "listgeomatchsetsresponse.h"
 #include "listipsetsrequest.h"
 #include "listipsetsresponse.h"
+#include "listloggingconfigurationsrequest.h"
+#include "listloggingconfigurationsresponse.h"
 #include "listratebasedrulesrequest.h"
 #include "listratebasedrulesresponse.h"
 #include "listregexmatchsetsrequest.h"
@@ -141,6 +147,8 @@
 #include "listwebaclsresponse.h"
 #include "listxssmatchsetsrequest.h"
 #include "listxssmatchsetsresponse.h"
+#include "putloggingconfigurationrequest.h"
+#include "putloggingconfigurationresponse.h"
 #include "putpermissionpolicyrequest.h"
 #include "putpermissionpolicyresponse.h"
 #include "updatebytematchsetrequest.h"
@@ -258,7 +266,7 @@ WAFRegionalClient::WAFRegionalClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a web ACL with a
+ * Associates a web ACL with a resource, either an application load balancer or Amazon API Gateway
  */
 AssociateWebACLResponse * WAFRegionalClient::associateWebACL(const AssociateWebACLRequest &request)
 {
@@ -358,7 +366,7 @@ CreateGeoMatchSetResponse * WAFRegionalClient::createGeoMatchSet(const CreateGeo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an <a>IPSet</a>, which you use to specify which web requests you want to allow or block based on the IP
+ * Creates an <a>IPSet</a>, which you use to specify which web requests that you want to allow or block based on the IP
  * addresses that the requests originate from. For example, if you're receiving a lot of requests from one or more
  * individual IP addresses or one or more ranges of IP addresses and you want to block the requests, you can create an
  * <code>IPSet</code> that contains those IP addresses and then configure AWS WAF to block the requests.
@@ -595,7 +603,8 @@ CreateRegexPatternSetResponse * WAFRegionalClient::createRegexPatternSet(const C
  *
  * Creates a <code>Rule</code>, which contains the <code>IPSet</code> objects, <code>ByteMatchSet</code> objects, and other
  * predicates that identify the requests that you want to block. If you add more than one predicate to a <code>Rule</code>,
- * a request must match all of the specifications to be allowed or blocked. For example, suppose you add the following to a
+ * a request must match all of the specifications to be allowed or blocked. For example, suppose that you add the following
+ * to a
  *
  * <code>Rule</code>> <ul> <li>
  *
@@ -981,6 +990,19 @@ DeleteIPSetResponse * WAFRegionalClient::deleteIPSet(const DeleteIPSetRequest &r
 
 /*!
  * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * DeleteLoggingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Permanently deletes the <a>LoggingConfiguration</a> from the specified web
+ */
+DeleteLoggingConfigurationResponse * WAFRegionalClient::deleteLoggingConfiguration(const DeleteLoggingConfigurationRequest &request)
+{
+    return qobject_cast<DeleteLoggingConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
  * DeletePermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1291,7 +1313,7 @@ DeleteXssMatchSetResponse * WAFRegionalClient::deleteXssMatchSet(const DeleteXss
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a web ACL from the specified
+ * Removes a web ACL from the specified resource, either an application load balancer or Amazon API Gateway
  */
 DisassociateWebACLResponse * WAFRegionalClient::disassociateWebACL(const DisassociateWebACLRequest &request)
 {
@@ -1389,6 +1411,19 @@ GetGeoMatchSetResponse * WAFRegionalClient::getGeoMatchSet(const GetGeoMatchSetR
 GetIPSetResponse * WAFRegionalClient::getIPSet(const GetIPSetRequest &request)
 {
     return qobject_cast<GetIPSetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * GetLoggingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the <a>LoggingConfiguration</a> for the specified web
+ */
+GetLoggingConfigurationResponse * WAFRegionalClient::getLoggingConfiguration(const GetLoggingConfigurationRequest &request)
+{
+    return qobject_cast<GetLoggingConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -1557,7 +1592,7 @@ GetWebACLResponse * WAFRegionalClient::getWebACL(const GetWebACLRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the web ACL for the specified
+ * Returns the web ACL for the specified resource, either an application load balancer or Amazon API Gateway
  */
 GetWebACLForResourceResponse * WAFRegionalClient::getWebACLForResource(const GetWebACLForResourceRequest &request)
 {
@@ -1627,6 +1662,19 @@ ListGeoMatchSetsResponse * WAFRegionalClient::listGeoMatchSets(const ListGeoMatc
 ListIPSetsResponse * WAFRegionalClient::listIPSets(const ListIPSetsRequest &request)
 {
     return qobject_cast<ListIPSetsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * ListLoggingConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of <a>LoggingConfiguration</a>
+ */
+ListLoggingConfigurationsResponse * WAFRegionalClient::listLoggingConfigurations(const ListLoggingConfigurationsRequest &request)
+{
+    return qobject_cast<ListLoggingConfigurationsResponse *>(send(request));
 }
 
 /*!
@@ -1774,6 +1822,38 @@ ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatc
 
 /*!
  * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * PutLoggingConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a <a>LoggingConfiguration</a> with a specified web
+ *
+ * ACL>
+ *
+ * You can access information about all traffic that AWS WAF inspects using the following
+ *
+ * steps> <ol> <li>
+ *
+ * Create an Amazon Kinesis Data Firehose .
+ *
+ * </p </li> <li>
+ *
+ * Associate that firehose to your web ACL using a <code>PutLoggingConfiguration</code>
+ *
+ * request> </li> </ol>
+ *
+ * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, AWS WAF will create a service
+ * linked role with the necessary permissions to write logs to the Amazon Kinesis Data Firehose. For more information, see
+ * <a href="http://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging Web ACL Traffic Information</a> in
+ * the <i>AWS WAF Developer
+ */
+PutLoggingConfigurationResponse * WAFRegionalClient::putLoggingConfiguration(const PutLoggingConfigurationRequest &request)
+{
+    return qobject_cast<PutLoggingConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
  * PutPermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1798,8 +1878,9 @@ ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatc
  *
  * <code>Allow</code>> </li> <li>
  *
- * The <code>Action</code> in the policy must be <code>waf:UpdateWebACL</code> and <code>waf-regional:UpdateWebACL</code>.
- * Any extra or wildcard actions in the policy will be
+ * The <code>Action</code> in the policy must be <code>waf:UpdateWebACL</code>, <code>waf-regional:UpdateWebACL</code>,
+ * <code>waf:GetRuleGroup</code> and <code>waf-regional:GetRuleGroup</code> . Any extra or wildcard actions in the policy
+ * will be
  *
  * rejected> </li> <li>
  *
@@ -1979,8 +2060,8 @@ UpdateGeoMatchSetResponse * WAFRegionalClient::updateGeoMatchSet(const UpdateGeo
  *
  * </p </li> </ul>
  *
- * AWS WAF supports /8, /16, /24, and /32 IP address ranges for IPv4, and /24, /32, /48, /56, /64 and /128 for IPv6. For
- * more information about CIDR notation, see the Wikipedia entry <a
+ * AWS WAF supports IPv4 address ranges: /8 and any range between /16 through /32. AWS WAF supports IPv6 address ranges:
+ * /16, /24, /32, /48, /56, /64, and /128. For more information about CIDR notation, see the Wikipedia entry <a
  * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain
  *
  * Routing</a>>
@@ -2025,6 +2106,10 @@ UpdateGeoMatchSetResponse * WAFRegionalClient::updateGeoMatchSet(const UpdateGeo
  * you want to delete. If you want to change an IP address, you delete the existing IP address and add the new
  *
  * one>
+ *
+ * You can insert a maximum of 1000 addresses in a single
+ *
+ * request>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
  * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
@@ -2234,7 +2319,8 @@ UpdateRegexPatternSetResponse * WAFRegionalClient::updateRegexPatternSet(const U
  * Inserts or deletes <a>Predicate</a> objects in a <code>Rule</code>. Each <code>Predicate</code> object identifies a
  * predicate, such as a <a>ByteMatchSet</a> or an <a>IPSet</a>, that specifies the web requests that you want to allow,
  * block, or count. If you add more than one predicate to a <code>Rule</code>, a request must match all of the
- * specifications to be allowed, blocked, or counted. For example, suppose you add the following to a <code>Rule</code>:
+ * specifications to be allowed, blocked, or counted. For example, suppose that you add the following to a
+ * <code>Rule</code>:
  *
  * </p <ul> <li>
  *
@@ -2366,7 +2452,11 @@ UpdateRuleGroupResponse * WAFRegionalClient::updateRuleGroup(const UpdateRuleGro
  * Note that transformations of the request body are not supported because the AWS resource forwards only the first
  * <code>8192</code> bytes of your request to AWS
  *
- * WAF> </li> <li>
+ * WAF>
+ *
+ * You can only specify a single type of
+ *
+ * TextTransformation> </li> <li>
  *
  * A <code>ComparisonOperator</code> used for evaluating the selected part of the request against the specified
  * <code>Size</code>, such as equals, greater than, less than, and so
@@ -2426,16 +2516,20 @@ UpdateSizeConstraintSetResponse * WAFRegionalClient::updateSizeConstraintSet(con
  * one> </li> <li>
  *
  * <code>FieldToMatch</code>: The part of web requests that you want AWS WAF to inspect and, if you want AWS WAF to inspect
- * a header, the name of the
+ * a header or custom query parameter, the name of the header or
  *
- * header> </li> <li>
+ * parameter> </li> <li>
  *
  * <code>TextTransformation</code>: Which text transformation, if any, to perform on the web request before inspecting the
  * request for snippets of malicious SQL
  *
- * code> </li> </ul>
+ * code>
  *
- * You use <code>SqlInjectionMatchSet</code> objects to specify which CloudFront requests you want to allow, block, or
+ * You can only specify a single type of
+ *
+ * TextTransformation> </li> </ul>
+ *
+ * You use <code>SqlInjectionMatchSet</code> objects to specify which CloudFront requests that you want to allow, block, or
  * count. For example, if you're receiving requests that contain snippets of SQL code in the query string and you want to
  * block the requests, you can create a <code>SqlInjectionMatchSet</code> with the applicable settings, and then configure
  * AWS WAF to block the requests.
@@ -2484,8 +2578,8 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  *
  * <code>WebACL</code>> </li> <li>
  *
- * The <code>Rules</code> that you want to add and/or delete. If you want to replace one <code>Rule</code> with another,
- * you delete the existing <code>Rule</code> and add the new
+ * The <code>Rules</code> that you want to add or delete. If you want to replace one <code>Rule</code> with another, you
+ * delete the existing <code>Rule</code> and add the new
  *
  * one> </li> <li>
  *
@@ -2497,7 +2591,7 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  * The order in which you want AWS WAF to evaluate the <code>Rules</code> in a <code>WebACL</code>. If you add more than
  * one <code>Rule</code> to a <code>WebACL</code>, AWS WAF evaluates each request against the <code>Rules</code> in order
  * based on the value of <code>Priority</code>. (The <code>Rule</code> that has the lowest value for <code>Priority</code>
- * is evaluated first.) When a web request matches all of the predicates (such as <code>ByteMatchSets</code> and
+ * is evaluated first.) When a web request matches all the predicates (such as <code>ByteMatchSets</code> and
  * <code>IPSets</code>) in a <code>Rule</code>, AWS WAF immediately takes the corresponding action, allow or block, and
  * doesn't evaluate the request against the remaining <code>Rules</code> in the <code>WebACL</code>, if any.
  *
@@ -2531,6 +2625,17 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  * <code>WebACL</code>, to specify the default action, and to associate the <code>WebACL</code> with a CloudFront
  * distribution.
  *
+ * </p
+ *
+ * The <code>ActivatedRule</code> can be a rule group. If you specify a rule group as your <code>ActivatedRule</code>, you
+ * can exclude specific rules from that rule
+ *
+ * group>
+ *
+ * If you already have a rule group associated with a web ACL and want to submit an <code>UpdateWebACL</code> request to
+ * exclude certain rules from that rule group, you must first remove the rule group from the web ACL, the re-insert it
+ * again, specifying the excluded rules. For details, see <a>ActivatedRule$ExcludedRules</a>.
+ *
  * </p </li> </ol>
  *
  * Be aware that if you try to add a RATE_BASED rule to a web ACL without setting the rule type when first creating the
@@ -2558,23 +2663,27 @@ UpdateWebACLResponse * WAFRegionalClient::updateWebACL(const UpdateWebACLRequest
  *
  * values> <ul> <li>
  *
- * <code>Action</code>: Whether to insert the object into or delete the object from the array. To change a
+ * <code>Action</code>: Whether to insert the object into or delete the object from the array. To change an
  * <code>XssMatchTuple</code>, you delete the existing object and add a new
  *
  * one> </li> <li>
  *
  * <code>FieldToMatch</code>: The part of web requests that you want AWS WAF to inspect and, if you want AWS WAF to inspect
- * a header, the name of the
+ * a header or custom query parameter, the name of the header or
  *
- * header> </li> <li>
+ * parameter> </li> <li>
  *
  * <code>TextTransformation</code>: Which text transformation, if any, to perform on the web request before inspecting the
  * request for cross-site scripting
  *
- * attacks> </li> </ul>
+ * attacks>
  *
- * You use <code>XssMatchSet</code> objects to specify which CloudFront requests you want to allow, block, or count. For
- * example, if you're receiving requests that contain cross-site scripting attacks in the request body and you want to
+ * You can only specify a single type of
+ *
+ * TextTransformation> </li> </ul>
+ *
+ * You use <code>XssMatchSet</code> objects to specify which CloudFront requests that you want to allow, block, or count.
+ * For example, if you're receiving requests that contain cross-site scripting attacks in the request body and you want to
  * block the requests, you can create an <code>XssMatchSet</code> with the applicable settings, and then configure AWS WAF
  * to block the requests.
  *

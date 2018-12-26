@@ -169,7 +169,7 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Uploads an object to the specified path. Object sizes are limited to 10
+ * Uploads an object to the specified path. Object sizes are limited to 25
  */
 PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &request)
 {

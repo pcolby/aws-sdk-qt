@@ -46,6 +46,10 @@ HEADERS += \
     createsnapshotrequest_p.h \
     createsnapshotresponse.h \
     createsnapshotresponse_p.h \
+    decreasereplicacountrequest.h \
+    decreasereplicacountrequest_p.h \
+    decreasereplicacountresponse.h \
+    decreasereplicacountresponse_p.h \
     deletecacheclusterrequest.h \
     deletecacheclusterrequest_p.h \
     deletecacheclusterresponse.h \
@@ -124,6 +128,10 @@ HEADERS += \
     elasticacherequest_p.h \
     elasticacheresponse.h \
     elasticacheresponse_p.h \
+    increasereplicacountrequest.h \
+    increasereplicacountrequest_p.h \
+    increasereplicacountresponse.h \
+    increasereplicacountresponse_p.h \
     listallowednodetypemodificationsrequest.h \
     listallowednodetypemodificationsrequest_p.h \
     listallowednodetypemodificationsresponse.h \
@@ -196,6 +204,8 @@ SOURCES += \
     createreplicationgroupresponse.cpp \
     createsnapshotrequest.cpp \
     createsnapshotresponse.cpp \
+    decreasereplicacountrequest.cpp \
+    decreasereplicacountresponse.cpp \
     deletecacheclusterrequest.cpp \
     deletecacheclusterresponse.cpp \
     deletecacheparametergrouprequest.cpp \
@@ -235,6 +245,8 @@ SOURCES += \
     elasticacheclient.cpp \
     elasticacherequest.cpp \
     elasticacheresponse.cpp \
+    increasereplicacountrequest.cpp \
+    increasereplicacountresponse.cpp \
     listallowednodetypemodificationsrequest.cpp \
     listallowednodetypemodificationsresponse.cpp \
     listtagsforresourcerequest.cpp \

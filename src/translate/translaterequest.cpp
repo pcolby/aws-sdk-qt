@@ -36,6 +36,10 @@ namespace Translate {
  * This enum describes the actions that can be performed as Translate
  * requests.
  *
+ * \value DeleteTerminologyAction Translate DeleteTerminology action.
+ * \value GetTerminologyAction Translate GetTerminology action.
+ * \value ImportTerminologyAction Translate ImportTerminology action.
+ * \value ListTerminologiesAction Translate ListTerminologies action.
  * \value TranslateTextAction Translate TranslateText action.
  */
 

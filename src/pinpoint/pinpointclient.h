@@ -68,6 +68,8 @@ class DeleteSmsChannelRequest;
 class DeleteSmsChannelResponse;
 class DeleteUserEndpointsRequest;
 class DeleteUserEndpointsResponse;
+class DeleteVoiceChannelRequest;
+class DeleteVoiceChannelResponse;
 class GetAdmChannelRequest;
 class GetAdmChannelResponse;
 class GetApnsChannelRequest;
@@ -130,10 +132,14 @@ class GetSmsChannelRequest;
 class GetSmsChannelResponse;
 class GetUserEndpointsRequest;
 class GetUserEndpointsResponse;
+class GetVoiceChannelRequest;
+class GetVoiceChannelResponse;
 class PhoneNumberValidateRequest;
 class PhoneNumberValidateResponse;
 class PutEventStreamRequest;
 class PutEventStreamResponse;
+class PutEventsRequest;
+class PutEventsResponse;
 class RemoveAttributesRequest;
 class RemoveAttributesResponse;
 class SendMessagesRequest;
@@ -168,6 +174,8 @@ class UpdateSegmentRequest;
 class UpdateSegmentResponse;
 class UpdateSmsChannelRequest;
 class UpdateSmsChannelResponse;
+class UpdateVoiceChannelRequest;
+class UpdateVoiceChannelResponse;
 
 class QTAWS_EXPORT PinpointClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -205,6 +213,7 @@ public slots:
     DeleteSegmentResponse * deleteSegment(const DeleteSegmentRequest &request);
     DeleteSmsChannelResponse * deleteSmsChannel(const DeleteSmsChannelRequest &request);
     DeleteUserEndpointsResponse * deleteUserEndpoints(const DeleteUserEndpointsRequest &request);
+    DeleteVoiceChannelResponse * deleteVoiceChannel(const DeleteVoiceChannelRequest &request);
     GetAdmChannelResponse * getAdmChannel(const GetAdmChannelRequest &request);
     GetApnsChannelResponse * getApnsChannel(const GetApnsChannelRequest &request);
     GetApnsSandboxChannelResponse * getApnsSandboxChannel(const GetApnsSandboxChannelRequest &request);
@@ -236,8 +245,10 @@ public slots:
     GetSegmentsResponse * getSegments(const GetSegmentsRequest &request);
     GetSmsChannelResponse * getSmsChannel(const GetSmsChannelRequest &request);
     GetUserEndpointsResponse * getUserEndpoints(const GetUserEndpointsRequest &request);
+    GetVoiceChannelResponse * getVoiceChannel(const GetVoiceChannelRequest &request);
     PhoneNumberValidateResponse * phoneNumberValidate(const PhoneNumberValidateRequest &request);
     PutEventStreamResponse * putEventStream(const PutEventStreamRequest &request);
+    PutEventsResponse * putEvents(const PutEventsRequest &request);
     RemoveAttributesResponse * removeAttributes(const RemoveAttributesRequest &request);
     SendMessagesResponse * sendMessages(const SendMessagesRequest &request);
     SendUsersMessagesResponse * sendUsersMessages(const SendUsersMessagesRequest &request);
@@ -255,6 +266,7 @@ public slots:
     UpdateGcmChannelResponse * updateGcmChannel(const UpdateGcmChannelRequest &request);
     UpdateSegmentResponse * updateSegment(const UpdateSegmentRequest &request);
     UpdateSmsChannelResponse * updateSmsChannel(const UpdateSmsChannelRequest &request);
+    UpdateVoiceChannelResponse * updateVoiceChannel(const UpdateVoiceChannelRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(PinpointClient)

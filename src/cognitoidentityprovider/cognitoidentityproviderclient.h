@@ -214,6 +214,8 @@ class UpdateUserPoolRequest;
 class UpdateUserPoolResponse;
 class UpdateUserPoolClientRequest;
 class UpdateUserPoolClientResponse;
+class UpdateUserPoolDomainRequest;
+class UpdateUserPoolDomainResponse;
 class VerifySoftwareTokenRequest;
 class VerifySoftwareTokenResponse;
 class VerifyUserAttributeRequest;
@@ -328,6 +330,7 @@ public slots:
     UpdateUserAttributesResponse * updateUserAttributes(const UpdateUserAttributesRequest &request);
     UpdateUserPoolResponse * updateUserPool(const UpdateUserPoolRequest &request);
     UpdateUserPoolClientResponse * updateUserPoolClient(const UpdateUserPoolClientRequest &request);
+    UpdateUserPoolDomainResponse * updateUserPoolDomain(const UpdateUserPoolDomainRequest &request);
     VerifySoftwareTokenResponse * verifySoftwareToken(const VerifySoftwareTokenRequest &request);
     VerifyUserAttributeResponse * verifyUserAttribute(const VerifyUserAttributeRequest &request);
 

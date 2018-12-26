@@ -90,6 +90,7 @@ namespace DeviceFarm {
  * \value PurchaseOfferingAction DeviceFarm PurchaseOffering action.
  * \value RenewOfferingAction DeviceFarm RenewOffering action.
  * \value ScheduleRunAction DeviceFarm ScheduleRun action.
+ * \value StopJobAction DeviceFarm StopJob action.
  * \value StopRemoteAccessSessionAction DeviceFarm StopRemoteAccessSession action.
  * \value StopRunAction DeviceFarm StopRun action.
  * \value UpdateDeviceInstanceAction DeviceFarm UpdateDeviceInstance action.
@@ -97,6 +98,7 @@ namespace DeviceFarm {
  * \value UpdateInstanceProfileAction DeviceFarm UpdateInstanceProfile action.
  * \value UpdateNetworkProfileAction DeviceFarm UpdateNetworkProfile action.
  * \value UpdateProjectAction DeviceFarm UpdateProject action.
+ * \value UpdateUploadAction DeviceFarm UpdateUpload action.
  * \value UpdateVPCEConfigurationAction DeviceFarm UpdateVPCEConfiguration action.
  */
 

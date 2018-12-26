@@ -1,0 +1,122 @@
+/*
+    Copyright 2013-2018 Paul Colby
+
+    This file is part of QtAws.
+
+    QtAws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QtAws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "getblacklistreportsresponse.h"
+#include "getblacklistreportsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace QtAws {
+namespace PinpointEmail {
+
+/*!
+ * \class QtAws::PinpointEmail::GetBlacklistReportsResponse
+ * \brief The GetBlacklistReportsResponse class provides an interace for PinpointEmail GetBlacklistReports responses.
+ *
+ * \inmodule QtAwsPinpointEmail
+ *
+ *  <fullname>Amazon Pinpoint Email Service</fullname>
+ * 
+ *  This document contains reference information for the <a href="https://aws.amazon.com/pinpoint">Amazon Pinpoint</a> Email
+ *  API, version 1.0. This document is best used in conjunction with the <a
+ *  href="http://docs.aws.amazon.com/pinpoint/latest/developerguide/welcome.html">Amazon Pinpoint Developer
+ * 
+ *  Guide</a>>
+ * 
+ *  The Amazon Pinpoint Email API is available in the US East (N. Virginia), US West (Oregon) and the EU (Ireland) Regions
+ *  at the following
+ * 
+ *  endpoints> <ul> <li>
+ * 
+ *  <b>US East (N. Virginia)</b>: <code>email.us-east-1.amazonaws.com</code>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <b>US West (Oregon)</b>: <code>email.us-west-2.amazonaws.com</code>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <b>EU (Ireland)</b>: <code>email.eu-west-1.amazonaws.com</code>
+ *
+ * \sa PinpointEmailClient::getBlacklistReports
+ */
+
+/*!
+ * Constructs a GetBlacklistReportsResponse object for \a reply to \a request, with parent \a parent.
+ */
+GetBlacklistReportsResponse::GetBlacklistReportsResponse(
+        const GetBlacklistReportsRequest &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointEmailResponse(new GetBlacklistReportsResponsePrivate(this), parent)
+{
+    setRequest(new GetBlacklistReportsRequest(request));
+    setReply(reply);
+}
+
+/*!
+ * \reimp
+ */
+const GetBlacklistReportsRequest * GetBlacklistReportsResponse::request() const
+{
+    Q_D(const GetBlacklistReportsResponse);
+    return static_cast<const GetBlacklistReportsRequest *>(d->request);
+}
+
+/*!
+ * \reimp
+ * Parses a successful PinpointEmail GetBlacklistReports \a response.
+ */
+void GetBlacklistReportsResponse::parseSuccess(QIODevice &response)
+{
+    //Q_D(GetBlacklistReportsResponse);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/*!
+ * \class QtAws::PinpointEmail::GetBlacklistReportsResponsePrivate
+ * \brief The GetBlacklistReportsResponsePrivate class provides private implementation for GetBlacklistReportsResponse.
+ * \internal
+ *
+ * \inmodule QtAwsPinpointEmail
+ */
+
+/*!
+ * Constructs a GetBlacklistReportsResponsePrivate object with public implementation \a q.
+ */
+GetBlacklistReportsResponsePrivate::GetBlacklistReportsResponsePrivate(
+    GetBlacklistReportsResponse * const q) : PinpointEmailResponsePrivate(q)
+{
+
+}
+
+/*!
+ * Parses a PinpointEmail GetBlacklistReports response element from \a xml.
+ */
+void GetBlacklistReportsResponsePrivate::parseGetBlacklistReportsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBlacklistReportsResponse"));
+    Q_UNUSED(xml) ///< @todo
+}
+
+} // namespace PinpointEmail
+} // namespace QtAws

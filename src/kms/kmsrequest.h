@@ -38,15 +38,20 @@ public:
     /// Actions supported by KMS.
     enum Action {
         CancelKeyDeletionAction,
+        ConnectCustomKeyStoreAction,
         CreateAliasAction,
+        CreateCustomKeyStoreAction,
         CreateGrantAction,
         CreateKeyAction,
         DecryptAction,
         DeleteAliasAction,
+        DeleteCustomKeyStoreAction,
         DeleteImportedKeyMaterialAction,
+        DescribeCustomKeyStoresAction,
         DescribeKeyAction,
         DisableKeyAction,
         DisableKeyRotationAction,
+        DisconnectCustomKeyStoreAction,
         EnableKeyAction,
         EnableKeyRotationAction,
         EncryptAction,
@@ -71,6 +76,7 @@ public:
         TagResourceAction,
         UntagResourceAction,
         UpdateAliasAction,
+        UpdateCustomKeyStoreAction,
         UpdateKeyDescriptionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

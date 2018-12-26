@@ -37,15 +37,20 @@ namespace KMS {
  * requests.
  *
  * \value CancelKeyDeletionAction KMS CancelKeyDeletion action.
+ * \value ConnectCustomKeyStoreAction KMS ConnectCustomKeyStore action.
  * \value CreateAliasAction KMS CreateAlias action.
+ * \value CreateCustomKeyStoreAction KMS CreateCustomKeyStore action.
  * \value CreateGrantAction KMS CreateGrant action.
  * \value CreateKeyAction KMS CreateKey action.
  * \value DecryptAction KMS Decrypt action.
  * \value DeleteAliasAction KMS DeleteAlias action.
+ * \value DeleteCustomKeyStoreAction KMS DeleteCustomKeyStore action.
  * \value DeleteImportedKeyMaterialAction KMS DeleteImportedKeyMaterial action.
+ * \value DescribeCustomKeyStoresAction KMS DescribeCustomKeyStores action.
  * \value DescribeKeyAction KMS DescribeKey action.
  * \value DisableKeyAction KMS DisableKey action.
  * \value DisableKeyRotationAction KMS DisableKeyRotation action.
+ * \value DisconnectCustomKeyStoreAction KMS DisconnectCustomKeyStore action.
  * \value EnableKeyAction KMS EnableKey action.
  * \value EnableKeyRotationAction KMS EnableKeyRotation action.
  * \value EncryptAction KMS Encrypt action.
@@ -70,6 +75,7 @@ namespace KMS {
  * \value TagResourceAction KMS TagResource action.
  * \value UntagResourceAction KMS UntagResource action.
  * \value UpdateAliasAction KMS UpdateAlias action.
+ * \value UpdateCustomKeyStoreAction KMS UpdateCustomKeyStore action.
  * \value UpdateKeyDescriptionAction KMS UpdateKeyDescription action.
  */
 

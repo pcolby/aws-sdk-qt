@@ -28,6 +28,14 @@ namespace QtAws {
 namespace Translate {
 
 class TranslateClientPrivate;
+class DeleteTerminologyRequest;
+class DeleteTerminologyResponse;
+class GetTerminologyRequest;
+class GetTerminologyResponse;
+class ImportTerminologyRequest;
+class ImportTerminologyResponse;
+class ListTerminologiesRequest;
+class ListTerminologiesResponse;
 class TranslateTextRequest;
 class TranslateTextResponse;
 
@@ -47,6 +55,10 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    DeleteTerminologyResponse * deleteTerminology(const DeleteTerminologyRequest &request);
+    GetTerminologyResponse * getTerminology(const GetTerminologyRequest &request);
+    ImportTerminologyResponse * importTerminology(const ImportTerminologyRequest &request);
+    ListTerminologiesResponse * listTerminologies(const ListTerminologiesRequest &request);
     TranslateTextResponse * translateText(const TranslateTextRequest &request);
 
 private:

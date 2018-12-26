@@ -84,6 +84,10 @@ HEADERS += \
     describemetricfiltersrequest_p.h \
     describemetricfiltersresponse.h \
     describemetricfiltersresponse_p.h \
+    describequeriesrequest.h \
+    describequeriesrequest_p.h \
+    describequeriesresponse.h \
+    describequeriesresponse_p.h \
     describeresourcepoliciesrequest.h \
     describeresourcepoliciesrequest_p.h \
     describeresourcepoliciesresponse.h \
@@ -104,6 +108,18 @@ HEADERS += \
     getlogeventsrequest_p.h \
     getlogeventsresponse.h \
     getlogeventsresponse_p.h \
+    getloggroupfieldsrequest.h \
+    getloggroupfieldsrequest_p.h \
+    getloggroupfieldsresponse.h \
+    getloggroupfieldsresponse_p.h \
+    getlogrecordrequest.h \
+    getlogrecordrequest_p.h \
+    getlogrecordresponse.h \
+    getlogrecordresponse_p.h \
+    getqueryresultsrequest.h \
+    getqueryresultsrequest_p.h \
+    getqueryresultsresponse.h \
+    getqueryresultsresponse_p.h \
     listtagsloggrouprequest.h \
     listtagsloggrouprequest_p.h \
     listtagsloggroupresponse.h \
@@ -136,6 +152,14 @@ HEADERS += \
     putsubscriptionfilterrequest_p.h \
     putsubscriptionfilterresponse.h \
     putsubscriptionfilterresponse_p.h \
+    startqueryrequest.h \
+    startqueryrequest_p.h \
+    startqueryresponse.h \
+    startqueryresponse_p.h \
+    stopqueryrequest.h \
+    stopqueryrequest_p.h \
+    stopqueryresponse.h \
+    stopqueryresponse_p.h \
     tagloggrouprequest.h \
     tagloggrouprequest_p.h \
     tagloggroupresponse.h \
@@ -187,6 +211,8 @@ SOURCES += \
     describelogstreamsresponse.cpp \
     describemetricfiltersrequest.cpp \
     describemetricfiltersresponse.cpp \
+    describequeriesrequest.cpp \
+    describequeriesresponse.cpp \
     describeresourcepoliciesrequest.cpp \
     describeresourcepoliciesresponse.cpp \
     describesubscriptionfiltersrequest.cpp \
@@ -197,6 +223,12 @@ SOURCES += \
     filterlogeventsresponse.cpp \
     getlogeventsrequest.cpp \
     getlogeventsresponse.cpp \
+    getloggroupfieldsrequest.cpp \
+    getloggroupfieldsresponse.cpp \
+    getlogrecordrequest.cpp \
+    getlogrecordresponse.cpp \
+    getqueryresultsrequest.cpp \
+    getqueryresultsresponse.cpp \
     listtagsloggrouprequest.cpp \
     listtagsloggroupresponse.cpp \
     putdestinationpolicyrequest.cpp \
@@ -213,6 +245,10 @@ SOURCES += \
     putretentionpolicyresponse.cpp \
     putsubscriptionfilterrequest.cpp \
     putsubscriptionfilterresponse.cpp \
+    startqueryrequest.cpp \
+    startqueryresponse.cpp \
+    stopqueryrequest.cpp \
+    stopqueryresponse.cpp \
     tagloggrouprequest.cpp \
     tagloggroupresponse.cpp \
     testmetricfilterrequest.cpp \

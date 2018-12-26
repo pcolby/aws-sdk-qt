@@ -37,6 +37,8 @@ namespace AppStream {
  * requests.
  *
  * \value AssociateFleetAction AppStream AssociateFleet action.
+ * \value BatchAssociateUserStackAction AppStream BatchAssociateUserStack action.
+ * \value BatchDisassociateUserStackAction AppStream BatchDisassociateUserStack action.
  * \value CopyImageAction AppStream CopyImage action.
  * \value CreateDirectoryConfigAction AppStream CreateDirectoryConfig action.
  * \value CreateFleetAction AppStream CreateFleet action.
@@ -44,12 +46,14 @@ namespace AppStream {
  * \value CreateImageBuilderStreamingURLAction AppStream CreateImageBuilderStreamingURL action.
  * \value CreateStackAction AppStream CreateStack action.
  * \value CreateStreamingURLAction AppStream CreateStreamingURL action.
+ * \value CreateUserAction AppStream CreateUser action.
  * \value DeleteDirectoryConfigAction AppStream DeleteDirectoryConfig action.
  * \value DeleteFleetAction AppStream DeleteFleet action.
  * \value DeleteImageAction AppStream DeleteImage action.
  * \value DeleteImageBuilderAction AppStream DeleteImageBuilder action.
  * \value DeleteImagePermissionsAction AppStream DeleteImagePermissions action.
  * \value DeleteStackAction AppStream DeleteStack action.
+ * \value DeleteUserAction AppStream DeleteUser action.
  * \value DescribeDirectoryConfigsAction AppStream DescribeDirectoryConfigs action.
  * \value DescribeFleetsAction AppStream DescribeFleets action.
  * \value DescribeImageBuildersAction AppStream DescribeImageBuilders action.
@@ -57,7 +61,11 @@ namespace AppStream {
  * \value DescribeImagesAction AppStream DescribeImages action.
  * \value DescribeSessionsAction AppStream DescribeSessions action.
  * \value DescribeStacksAction AppStream DescribeStacks action.
+ * \value DescribeUserStackAssociationsAction AppStream DescribeUserStackAssociations action.
+ * \value DescribeUsersAction AppStream DescribeUsers action.
+ * \value DisableUserAction AppStream DisableUser action.
  * \value DisassociateFleetAction AppStream DisassociateFleet action.
+ * \value EnableUserAction AppStream EnableUser action.
  * \value ExpireSessionAction AppStream ExpireSession action.
  * \value ListAssociatedFleetsAction AppStream ListAssociatedFleets action.
  * \value ListAssociatedStacksAction AppStream ListAssociatedStacks action.

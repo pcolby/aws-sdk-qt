@@ -37,8 +37,27 @@ class QTAWS_EXPORT ConnectRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Connect.
     enum Action {
+        CreateUserAction,
+        DeleteUserAction,
+        DescribeUserAction,
+        DescribeUserHierarchyGroupAction,
+        DescribeUserHierarchyStructureAction,
+        GetContactAttributesAction,
+        GetCurrentMetricDataAction,
+        GetFederationTokenAction,
+        GetMetricDataAction,
+        ListRoutingProfilesAction,
+        ListSecurityProfilesAction,
+        ListUserHierarchyGroupsAction,
+        ListUsersAction,
         StartOutboundVoiceContactAction,
         StopContactAction,
+        UpdateContactAttributesAction,
+        UpdateUserHierarchyAction,
+        UpdateUserIdentityInfoAction,
+        UpdateUserPhoneConfigAction,
+        UpdateUserRoutingProfileAction,
+        UpdateUserSecurityProfilesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

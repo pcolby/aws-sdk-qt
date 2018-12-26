@@ -38,6 +38,7 @@ namespace SSM {
  *
  * \value AddTagsToResourceAction SSM AddTagsToResource action.
  * \value CancelCommandAction SSM CancelCommand action.
+ * \value CancelMaintenanceWindowExecutionAction SSM CancelMaintenanceWindowExecution action.
  * \value CreateActivationAction SSM CreateActivation action.
  * \value CreateAssociationAction SSM CreateAssociation action.
  * \value CreateAssociationBatchAction SSM CreateAssociationBatch action.
@@ -78,15 +79,19 @@ namespace SSM {
  * \value DescribeMaintenanceWindowExecutionTaskInvocationsAction SSM DescribeMaintenanceWindowExecutionTaskInvocations action.
  * \value DescribeMaintenanceWindowExecutionTasksAction SSM DescribeMaintenanceWindowExecutionTasks action.
  * \value DescribeMaintenanceWindowExecutionsAction SSM DescribeMaintenanceWindowExecutions action.
+ * \value DescribeMaintenanceWindowScheduleAction SSM DescribeMaintenanceWindowSchedule action.
  * \value DescribeMaintenanceWindowTargetsAction SSM DescribeMaintenanceWindowTargets action.
  * \value DescribeMaintenanceWindowTasksAction SSM DescribeMaintenanceWindowTasks action.
  * \value DescribeMaintenanceWindowsAction SSM DescribeMaintenanceWindows action.
+ * \value DescribeMaintenanceWindowsForTargetAction SSM DescribeMaintenanceWindowsForTarget action.
  * \value DescribeParametersAction SSM DescribeParameters action.
  * \value DescribePatchBaselinesAction SSM DescribePatchBaselines action.
  * \value DescribePatchGroupStateAction SSM DescribePatchGroupState action.
  * \value DescribePatchGroupsAction SSM DescribePatchGroups action.
+ * \value DescribeSessionsAction SSM DescribeSessions action.
  * \value GetAutomationExecutionAction SSM GetAutomationExecution action.
  * \value GetCommandInvocationAction SSM GetCommandInvocation action.
+ * \value GetConnectionStatusAction SSM GetConnectionStatus action.
  * \value GetDefaultPatchBaselineAction SSM GetDefaultPatchBaseline action.
  * \value GetDeployablePatchSnapshotForInstanceAction SSM GetDeployablePatchSnapshotForInstance action.
  * \value GetDocumentAction SSM GetDocument action.
@@ -125,11 +130,14 @@ namespace SSM {
  * \value RegisterTargetWithMaintenanceWindowAction SSM RegisterTargetWithMaintenanceWindow action.
  * \value RegisterTaskWithMaintenanceWindowAction SSM RegisterTaskWithMaintenanceWindow action.
  * \value RemoveTagsFromResourceAction SSM RemoveTagsFromResource action.
+ * \value ResumeSessionAction SSM ResumeSession action.
  * \value SendAutomationSignalAction SSM SendAutomationSignal action.
  * \value SendCommandAction SSM SendCommand action.
  * \value StartAssociationsOnceAction SSM StartAssociationsOnce action.
  * \value StartAutomationExecutionAction SSM StartAutomationExecution action.
+ * \value StartSessionAction SSM StartSession action.
  * \value StopAutomationExecutionAction SSM StopAutomationExecution action.
+ * \value TerminateSessionAction SSM TerminateSession action.
  * \value UpdateAssociationAction SSM UpdateAssociation action.
  * \value UpdateAssociationStatusAction SSM UpdateAssociationStatus action.
  * \value UpdateDocumentAction SSM UpdateDocument action.

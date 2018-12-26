@@ -36,12 +36,14 @@ namespace ServiceDiscovery {
  * This enum describes the actions that can be performed as ServiceDiscovery
  * requests.
  *
+ * \value CreateHttpNamespaceAction ServiceDiscovery CreateHttpNamespace action.
  * \value CreatePrivateDnsNamespaceAction ServiceDiscovery CreatePrivateDnsNamespace action.
  * \value CreatePublicDnsNamespaceAction ServiceDiscovery CreatePublicDnsNamespace action.
  * \value CreateServiceAction ServiceDiscovery CreateService action.
  * \value DeleteNamespaceAction ServiceDiscovery DeleteNamespace action.
  * \value DeleteServiceAction ServiceDiscovery DeleteService action.
  * \value DeregisterInstanceAction ServiceDiscovery DeregisterInstance action.
+ * \value DiscoverInstancesAction ServiceDiscovery DiscoverInstances action.
  * \value GetInstanceAction ServiceDiscovery GetInstance action.
  * \value GetInstancesHealthStatusAction ServiceDiscovery GetInstancesHealthStatus action.
  * \value GetNamespaceAction ServiceDiscovery GetNamespace action.

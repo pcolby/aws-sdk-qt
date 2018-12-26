@@ -38,8 +38,10 @@ namespace MQ {
  *
  * \value CreateBrokerAction MQ CreateBroker action.
  * \value CreateConfigurationAction MQ CreateConfiguration action.
+ * \value CreateTagsAction MQ CreateTags action.
  * \value CreateUserAction MQ CreateUser action.
  * \value DeleteBrokerAction MQ DeleteBroker action.
+ * \value DeleteTagsAction MQ DeleteTags action.
  * \value DeleteUserAction MQ DeleteUser action.
  * \value DescribeBrokerAction MQ DescribeBroker action.
  * \value DescribeConfigurationAction MQ DescribeConfiguration action.
@@ -48,6 +50,7 @@ namespace MQ {
  * \value ListBrokersAction MQ ListBrokers action.
  * \value ListConfigurationRevisionsAction MQ ListConfigurationRevisions action.
  * \value ListConfigurationsAction MQ ListConfigurations action.
+ * \value ListTagsAction MQ ListTags action.
  * \value ListUsersAction MQ ListUsers action.
  * \value RebootBrokerAction MQ RebootBroker action.
  * \value UpdateBrokerAction MQ UpdateBroker action.

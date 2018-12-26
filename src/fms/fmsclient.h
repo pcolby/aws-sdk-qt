@@ -46,6 +46,8 @@ class GetPolicyRequest;
 class GetPolicyResponse;
 class ListComplianceStatusRequest;
 class ListComplianceStatusResponse;
+class ListMemberAccountsRequest;
+class ListMemberAccountsResponse;
 class ListPoliciesRequest;
 class ListPoliciesResponse;
 class PutNotificationChannelRequest;
@@ -78,6 +80,7 @@ public slots:
     GetNotificationChannelResponse * getNotificationChannel(const GetNotificationChannelRequest &request);
     GetPolicyResponse * getPolicy(const GetPolicyRequest &request);
     ListComplianceStatusResponse * listComplianceStatus(const ListComplianceStatusRequest &request);
+    ListMemberAccountsResponse * listMemberAccounts(const ListMemberAccountsRequest &request);
     ListPoliciesResponse * listPolicies(const ListPoliciesRequest &request);
     PutNotificationChannelResponse * putNotificationChannel(const PutNotificationChannelRequest &request);
     PutPolicyResponse * putPolicy(const PutPolicyRequest &request);

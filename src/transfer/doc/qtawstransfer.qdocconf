@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsTransfer
+description = AWS Transfer SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawstransfer-index.html"
+navigation.landingtitle = "Transfer"
+navigation.cppclassespage = "Transfer C++ Classes"

@@ -42,6 +42,8 @@ namespace Lightsail {
  * \value AttachLoadBalancerTlsCertificateAction Lightsail AttachLoadBalancerTlsCertificate action.
  * \value AttachStaticIpAction Lightsail AttachStaticIp action.
  * \value CloseInstancePublicPortsAction Lightsail CloseInstancePublicPorts action.
+ * \value CopySnapshotAction Lightsail CopySnapshot action.
+ * \value CreateCloudFormationStackAction Lightsail CreateCloudFormationStack action.
  * \value CreateDiskAction Lightsail CreateDisk action.
  * \value CreateDiskFromSnapshotAction Lightsail CreateDiskFromSnapshot action.
  * \value CreateDiskSnapshotAction Lightsail CreateDiskSnapshot action.
@@ -53,6 +55,9 @@ namespace Lightsail {
  * \value CreateKeyPairAction Lightsail CreateKeyPair action.
  * \value CreateLoadBalancerAction Lightsail CreateLoadBalancer action.
  * \value CreateLoadBalancerTlsCertificateAction Lightsail CreateLoadBalancerTlsCertificate action.
+ * \value CreateRelationalDatabaseAction Lightsail CreateRelationalDatabase action.
+ * \value CreateRelationalDatabaseFromSnapshotAction Lightsail CreateRelationalDatabaseFromSnapshot action.
+ * \value CreateRelationalDatabaseSnapshotAction Lightsail CreateRelationalDatabaseSnapshot action.
  * \value DeleteDiskAction Lightsail DeleteDisk action.
  * \value DeleteDiskSnapshotAction Lightsail DeleteDiskSnapshot action.
  * \value DeleteDomainAction Lightsail DeleteDomain action.
@@ -62,19 +67,24 @@ namespace Lightsail {
  * \value DeleteKeyPairAction Lightsail DeleteKeyPair action.
  * \value DeleteLoadBalancerAction Lightsail DeleteLoadBalancer action.
  * \value DeleteLoadBalancerTlsCertificateAction Lightsail DeleteLoadBalancerTlsCertificate action.
+ * \value DeleteRelationalDatabaseAction Lightsail DeleteRelationalDatabase action.
+ * \value DeleteRelationalDatabaseSnapshotAction Lightsail DeleteRelationalDatabaseSnapshot action.
  * \value DetachDiskAction Lightsail DetachDisk action.
  * \value DetachInstancesFromLoadBalancerAction Lightsail DetachInstancesFromLoadBalancer action.
  * \value DetachStaticIpAction Lightsail DetachStaticIp action.
  * \value DownloadDefaultKeyPairAction Lightsail DownloadDefaultKeyPair action.
+ * \value ExportSnapshotAction Lightsail ExportSnapshot action.
  * \value GetActiveNamesAction Lightsail GetActiveNames action.
  * \value GetBlueprintsAction Lightsail GetBlueprints action.
  * \value GetBundlesAction Lightsail GetBundles action.
+ * \value GetCloudFormationStackRecordsAction Lightsail GetCloudFormationStackRecords action.
  * \value GetDiskAction Lightsail GetDisk action.
  * \value GetDiskSnapshotAction Lightsail GetDiskSnapshot action.
  * \value GetDiskSnapshotsAction Lightsail GetDiskSnapshots action.
  * \value GetDisksAction Lightsail GetDisks action.
  * \value GetDomainAction Lightsail GetDomain action.
  * \value GetDomainsAction Lightsail GetDomains action.
+ * \value GetExportSnapshotRecordsAction Lightsail GetExportSnapshotRecords action.
  * \value GetInstanceAction Lightsail GetInstance action.
  * \value GetInstanceAccessDetailsAction Lightsail GetInstanceAccessDetails action.
  * \value GetInstanceMetricDataAction Lightsail GetInstanceMetricData action.
@@ -93,6 +103,18 @@ namespace Lightsail {
  * \value GetOperationsAction Lightsail GetOperations action.
  * \value GetOperationsForResourceAction Lightsail GetOperationsForResource action.
  * \value GetRegionsAction Lightsail GetRegions action.
+ * \value GetRelationalDatabaseAction Lightsail GetRelationalDatabase action.
+ * \value GetRelationalDatabaseBlueprintsAction Lightsail GetRelationalDatabaseBlueprints action.
+ * \value GetRelationalDatabaseBundlesAction Lightsail GetRelationalDatabaseBundles action.
+ * \value GetRelationalDatabaseEventsAction Lightsail GetRelationalDatabaseEvents action.
+ * \value GetRelationalDatabaseLogEventsAction Lightsail GetRelationalDatabaseLogEvents action.
+ * \value GetRelationalDatabaseLogStreamsAction Lightsail GetRelationalDatabaseLogStreams action.
+ * \value GetRelationalDatabaseMasterUserPasswordAction Lightsail GetRelationalDatabaseMasterUserPassword action.
+ * \value GetRelationalDatabaseMetricDataAction Lightsail GetRelationalDatabaseMetricData action.
+ * \value GetRelationalDatabaseParametersAction Lightsail GetRelationalDatabaseParameters action.
+ * \value GetRelationalDatabaseSnapshotAction Lightsail GetRelationalDatabaseSnapshot action.
+ * \value GetRelationalDatabaseSnapshotsAction Lightsail GetRelationalDatabaseSnapshots action.
+ * \value GetRelationalDatabasesAction Lightsail GetRelationalDatabases action.
  * \value GetStaticIpAction Lightsail GetStaticIp action.
  * \value GetStaticIpsAction Lightsail GetStaticIps action.
  * \value ImportKeyPairAction Lightsail ImportKeyPair action.
@@ -101,12 +123,19 @@ namespace Lightsail {
  * \value PeerVpcAction Lightsail PeerVpc action.
  * \value PutInstancePublicPortsAction Lightsail PutInstancePublicPorts action.
  * \value RebootInstanceAction Lightsail RebootInstance action.
+ * \value RebootRelationalDatabaseAction Lightsail RebootRelationalDatabase action.
  * \value ReleaseStaticIpAction Lightsail ReleaseStaticIp action.
  * \value StartInstanceAction Lightsail StartInstance action.
+ * \value StartRelationalDatabaseAction Lightsail StartRelationalDatabase action.
  * \value StopInstanceAction Lightsail StopInstance action.
+ * \value StopRelationalDatabaseAction Lightsail StopRelationalDatabase action.
+ * \value TagResourceAction Lightsail TagResource action.
  * \value UnpeerVpcAction Lightsail UnpeerVpc action.
+ * \value UntagResourceAction Lightsail UntagResource action.
  * \value UpdateDomainEntryAction Lightsail UpdateDomainEntry action.
  * \value UpdateLoadBalancerAttributeAction Lightsail UpdateLoadBalancerAttribute action.
+ * \value UpdateRelationalDatabaseAction Lightsail UpdateRelationalDatabase action.
+ * \value UpdateRelationalDatabaseParametersAction Lightsail UpdateRelationalDatabaseParameters action.
  */
 
 /*!

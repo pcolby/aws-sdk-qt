@@ -36,18 +36,24 @@ class DeleteContainerPolicyRequest;
 class DeleteContainerPolicyResponse;
 class DeleteCorsPolicyRequest;
 class DeleteCorsPolicyResponse;
+class DeleteLifecyclePolicyRequest;
+class DeleteLifecyclePolicyResponse;
 class DescribeContainerRequest;
 class DescribeContainerResponse;
 class GetContainerPolicyRequest;
 class GetContainerPolicyResponse;
 class GetCorsPolicyRequest;
 class GetCorsPolicyResponse;
+class GetLifecyclePolicyRequest;
+class GetLifecyclePolicyResponse;
 class ListContainersRequest;
 class ListContainersResponse;
 class PutContainerPolicyRequest;
 class PutContainerPolicyResponse;
 class PutCorsPolicyRequest;
 class PutCorsPolicyResponse;
+class PutLifecyclePolicyRequest;
+class PutLifecyclePolicyResponse;
 
 class QTAWS_EXPORT MediaStoreClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -69,12 +75,15 @@ public slots:
     DeleteContainerResponse * deleteContainer(const DeleteContainerRequest &request);
     DeleteContainerPolicyResponse * deleteContainerPolicy(const DeleteContainerPolicyRequest &request);
     DeleteCorsPolicyResponse * deleteCorsPolicy(const DeleteCorsPolicyRequest &request);
+    DeleteLifecyclePolicyResponse * deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request);
     DescribeContainerResponse * describeContainer(const DescribeContainerRequest &request);
     GetContainerPolicyResponse * getContainerPolicy(const GetContainerPolicyRequest &request);
     GetCorsPolicyResponse * getCorsPolicy(const GetCorsPolicyRequest &request);
+    GetLifecyclePolicyResponse * getLifecyclePolicy(const GetLifecyclePolicyRequest &request);
     ListContainersResponse * listContainers(const ListContainersRequest &request);
     PutContainerPolicyResponse * putContainerPolicy(const PutContainerPolicyRequest &request);
     PutCorsPolicyResponse * putCorsPolicy(const PutCorsPolicyRequest &request);
+    PutLifecyclePolicyResponse * putLifecyclePolicy(const PutLifecyclePolicyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaStoreClient)

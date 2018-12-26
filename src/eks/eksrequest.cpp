@@ -39,7 +39,10 @@ namespace EKS {
  * \value CreateClusterAction EKS CreateCluster action.
  * \value DeleteClusterAction EKS DeleteCluster action.
  * \value DescribeClusterAction EKS DescribeCluster action.
+ * \value DescribeUpdateAction EKS DescribeUpdate action.
  * \value ListClustersAction EKS ListClusters action.
+ * \value ListUpdatesAction EKS ListUpdates action.
+ * \value UpdateClusterVersionAction EKS UpdateClusterVersion action.
  */
 
 /*!

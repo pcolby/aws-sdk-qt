@@ -38,6 +38,7 @@ public:
     /// Actions supported by ElasticsearchService.
     enum Action {
         AddTagsAction,
+        CancelElasticsearchServiceSoftwareUpdateAction,
         CreateElasticsearchDomainAction,
         DeleteElasticsearchDomainAction,
         DeleteElasticsearchServiceRoleAction,
@@ -47,13 +48,18 @@ public:
         DescribeElasticsearchInstanceTypeLimitsAction,
         DescribeReservedElasticsearchInstanceOfferingsAction,
         DescribeReservedElasticsearchInstancesAction,
+        GetCompatibleElasticsearchVersionsAction,
+        GetUpgradeHistoryAction,
+        GetUpgradeStatusAction,
         ListDomainNamesAction,
         ListElasticsearchInstanceTypesAction,
         ListElasticsearchVersionsAction,
         ListTagsAction,
         PurchaseReservedElasticsearchInstanceOfferingAction,
         RemoveTagsAction,
+        StartElasticsearchServiceSoftwareUpdateAction,
         UpdateElasticsearchDomainConfigAction,
+        UpgradeElasticsearchDomainAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -38,6 +38,7 @@ public:
     /// Actions supported by CostExplorer.
     enum Action {
         GetCostAndUsageAction,
+        GetCostForecastAction,
         GetDimensionValuesAction,
         GetReservationCoverageAction,
         GetReservationPurchaseRecommendationAction,

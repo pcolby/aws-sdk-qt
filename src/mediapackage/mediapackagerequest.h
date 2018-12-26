@@ -46,6 +46,7 @@ public:
         ListChannelsAction,
         ListOriginEndpointsAction,
         RotateChannelCredentialsAction,
+        RotateIngestEndpointCredentialsAction,
         UpdateChannelAction,
         UpdateOriginEndpointAction,
     };

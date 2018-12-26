@@ -18,6 +18,10 @@ HEADERS += \
     createconfigurationrequest_p.h \
     createconfigurationresponse.h \
     createconfigurationresponse_p.h \
+    createtagsrequest.h \
+    createtagsrequest_p.h \
+    createtagsresponse.h \
+    createtagsresponse_p.h \
     createuserrequest.h \
     createuserrequest_p.h \
     createuserresponse.h \
@@ -26,6 +30,10 @@ HEADERS += \
     deletebrokerrequest_p.h \
     deletebrokerresponse.h \
     deletebrokerresponse_p.h \
+    deletetagsrequest.h \
+    deletetagsrequest_p.h \
+    deletetagsresponse.h \
+    deletetagsresponse_p.h \
     deleteuserrequest.h \
     deleteuserrequest_p.h \
     deleteuserresponse.h \
@@ -58,6 +66,10 @@ HEADERS += \
     listconfigurationsrequest_p.h \
     listconfigurationsresponse.h \
     listconfigurationsresponse_p.h \
+    listtagsrequest.h \
+    listtagsrequest_p.h \
+    listtagsresponse.h \
+    listtagsresponse_p.h \
     listusersrequest.h \
     listusersrequest_p.h \
     listusersresponse.h \
@@ -90,10 +102,14 @@ SOURCES += \
     createbrokerresponse.cpp \
     createconfigurationrequest.cpp \
     createconfigurationresponse.cpp \
+    createtagsrequest.cpp \
+    createtagsresponse.cpp \
     createuserrequest.cpp \
     createuserresponse.cpp \
     deletebrokerrequest.cpp \
     deletebrokerresponse.cpp \
+    deletetagsrequest.cpp \
+    deletetagsresponse.cpp \
     deleteuserrequest.cpp \
     deleteuserresponse.cpp \
     describebrokerrequest.cpp \
@@ -110,6 +126,8 @@ SOURCES += \
     listconfigurationrevisionsresponse.cpp \
     listconfigurationsrequest.cpp \
     listconfigurationsresponse.cpp \
+    listtagsrequest.cpp \
+    listtagsresponse.cpp \
     listusersrequest.cpp \
     listusersresponse.cpp \
     mqclient.cpp \

@@ -202,7 +202,7 @@ ElasticLoadBalancingClient::ElasticLoadBalancingClient(
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/add-remove-tags.html">Tag Your Classic Load
- * Balancer</a> in the <i>Classic Load Balancer
+ * Balancer</a> in the <i>Classic Load Balancers
  */
 AddTagsResponse * ElasticLoadBalancingClient::addTags(const AddTagsRequest &request)
 {
@@ -222,7 +222,7 @@ AddTagsResponse * ElasticLoadBalancingClient::addTags(const AddTagsRequest &requ
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-groups.html#elb-vpc-security-groups">Security
- * Groups for Load Balancers in a VPC</a> in the <i>Classic Load Balancer
+ * Groups for Load Balancers in a VPC</a> in the <i>Classic Load Balancers
  */
 ApplySecurityGroupsToLoadBalancerResponse * ElasticLoadBalancingClient::applySecurityGroupsToLoadBalancer(const ApplySecurityGroupsToLoadBalancerRequest &request)
 {
@@ -241,7 +241,7 @@ ApplySecurityGroupsToLoadBalancerResponse * ElasticLoadBalancingClient::applySec
  *
  * The load balancer evenly distributes requests across all registered subnets. For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-manage-subnets.html">Add or Remove Subnets for
- * Your Load Balancer in a VPC</a> in the <i>Classic Load Balancer
+ * Your Load Balancer in a VPC</a> in the <i>Classic Load Balancers
  */
 AttachLoadBalancerToSubnetsResponse * ElasticLoadBalancingClient::attachLoadBalancerToSubnets(const AttachLoadBalancerToSubnetsRequest &request)
 {
@@ -260,7 +260,7 @@ AttachLoadBalancerToSubnetsResponse * ElasticLoadBalancingClient::attachLoadBala
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html">Configure Health Checks for
- * Your Load Balancer</a> in the <i>Classic Load Balancer
+ * Your Load Balancer</a> in the <i>Classic Load Balancers
  */
 ConfigureHealthCheckResponse * ElasticLoadBalancingClient::configureHealthCheck(const ConfigureHealthCheckRequest &request)
 {
@@ -292,7 +292,7 @@ ConfigureHealthCheckResponse * ElasticLoadBalancingClient::configureHealthCheck(
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-application">Application-Controlled
- * Session Stickiness</a> in the <i>Classic Load Balancer
+ * Session Stickiness</a> in the <i>Classic Load Balancers
  */
 CreateAppCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createAppCookieStickinessPolicy(const CreateAppCookieStickinessPolicyRequest &request)
 {
@@ -324,7 +324,7 @@ CreateAppCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createAppC
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-duration">Duration-Based
- * Session Stickiness</a> in the <i>Classic Load Balancer
+ * Session Stickiness</a> in the <i>Classic Load Balancers
  */
 CreateLBCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createLBCookieStickinessPolicy(const CreateLBCookieStickinessPolicyRequest &request)
 {
@@ -355,7 +355,7 @@ CreateLBCookieStickinessPolicyResponse * ElasticLoadBalancingClient::createLBCoo
  * You can create up to 20 load balancers per region per account. You can request an increase for the number of load
  * balancers for your account. For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-limits.html">Limits for Your Classic Load
- * Balancer</a> in the <i>Classic Load Balancer
+ * Balancer</a> in the <i>Classic Load Balancers
  */
 CreateLoadBalancerResponse * ElasticLoadBalancingClient::createLoadBalancer(const CreateLoadBalancerRequest &request)
 {
@@ -375,7 +375,7 @@ CreateLoadBalancerResponse * ElasticLoadBalancingClient::createLoadBalancer(cons
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html">Listeners for Your
- * Classic Load Balancer</a> in the <i>Classic Load Balancer
+ * Classic Load Balancer</a> in the <i>Classic Load Balancers
  */
 CreateLoadBalancerListenersResponse * ElasticLoadBalancingClient::createLoadBalancerListeners(const CreateLoadBalancerListenersRequest &request)
 {
@@ -466,7 +466,7 @@ DeleteLoadBalancerPolicyResponse * ElasticLoadBalancingClient::deleteLoadBalance
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-deregister-register-instances.html">Register or
- * De-Register EC2 Instances</a> in the <i>Classic Load Balancer
+ * De-Register EC2 Instances</a> in the <i>Classic Load Balancers
  */
 DeregisterInstancesFromLoadBalancerResponse * ElasticLoadBalancingClient::deregisterInstancesFromLoadBalancer(const DeregisterInstancesFromLoadBalancerRequest &request)
 {
@@ -485,7 +485,7 @@ DeregisterInstancesFromLoadBalancerResponse * ElasticLoadBalancingClient::deregi
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-limits.html">Limits for Your Classic Load
- * Balancer</a> in the <i>Classic Load Balancer
+ * Balancer</a> in the <i>Classic Load Balancers
  */
 DescribeAccountLimitsResponse * ElasticLoadBalancingClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
@@ -615,9 +615,14 @@ DetachLoadBalancerFromSubnetsResponse * ElasticLoadBalancingClient::detachLoadBa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified Availability Zones from the set of Availability Zones for the specified load
+ * Removes the specified Availability Zones from the set of Availability Zones for the specified load balancer in
+ * EC2-Classic or a default
  *
- * balancer>
+ * VPC>
+ *
+ * For load balancers in a non-default VPC, use
+ *
+ * <a>DetachLoadBalancerFromSubnets</a>>
  *
  * There must be at least one Availability Zone registered with a load balancer at all times. After an Availability Zone is
  * removed, all instances registered with the load balancer that are in the removed Availability Zone go into the
@@ -628,7 +633,7 @@ DetachLoadBalancerFromSubnetsResponse * ElasticLoadBalancingClient::detachLoadBa
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-az.html">Add or Remove Availability
- * Zones</a> in the <i>Classic Load Balancer
+ * Zones</a> in the <i>Classic Load Balancers
  */
 DisableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::disableAvailabilityZonesForLoadBalancer(const DisableAvailabilityZonesForLoadBalancerRequest &request)
 {
@@ -641,17 +646,19 @@ DisableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::di
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds the specified Availability Zones to the set of Availability Zones for the specified load
+ * Adds the specified Availability Zones to the set of Availability Zones for the specified load balancer in EC2-Classic or
+ * a default
  *
- * balancer>
+ * VPC>
  *
- * The load balancer evenly distributes requests across all its registered Availability Zones that contain
+ * For load balancers in a non-default VPC, use
  *
- * instances>
+ * <a>AttachLoadBalancerToSubnets</a>>
  *
- * For more information, see <a
+ * The load balancer evenly distributes requests across all its registered Availability Zones that contain instances. For
+ * more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-az.html">Add or Remove Availability
- * Zones</a> in the <i>Classic Load Balancer
+ * Zones</a> in the <i>Classic Load Balancers
  */
 EnableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::enableAvailabilityZonesForLoadBalancer(const EnableAvailabilityZonesForLoadBalancerRequest &request)
 {
@@ -674,7 +681,7 @@ EnableAvailabilityZonesForLoadBalancerResponse * ElasticLoadBalancingClient::ena
  *
  * balancer>
  *
- * For more information, see the following in the <i>Classic Load Balancer
+ * For more information, see the following in the <i>Classic Load Balancers
  *
  * Guide</i>> <ul> <li>
  *
@@ -734,7 +741,7 @@ ModifyLoadBalancerAttributesResponse * ElasticLoadBalancingClient::modifyLoadBal
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-deregister-register-instances.html">Register or
- * De-Register EC2 Instances</a> in the <i>Classic Load Balancer
+ * De-Register EC2 Instances</a> in the <i>Classic Load Balancers
  */
 RegisterInstancesWithLoadBalancerResponse * ElasticLoadBalancingClient::registerInstancesWithLoadBalancer(const RegisterInstancesWithLoadBalancerRequest &request)
 {
@@ -767,7 +774,7 @@ RemoveTagsResponse * ElasticLoadBalancingClient::removeTags(const RemoveTagsRequ
  *
  * For more information about updating your SSL certificate, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-update-ssl-cert.html">Replace the SSL
- * Certificate for Your Load Balancer</a> in the <i>Classic Load Balancer
+ * Certificate for Your Load Balancer</a> in the <i>Classic Load Balancers
  */
 SetLoadBalancerListenerSSLCertificateResponse * ElasticLoadBalancingClient::setLoadBalancerListenerSSLCertificate(const SetLoadBalancerListenerSSLCertificateRequest &request)
 {
@@ -798,10 +805,10 @@ SetLoadBalancerListenerSSLCertificateResponse * ElasticLoadBalancingClient::setL
  *
  * For more information about enabling back-end instance authentication, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-create-https-ssl-load-balancer.html#configure_backendauth_clt">Configure
- * Back-end Instance Authentication</a> in the <i>Classic Load Balancer Guide</i>. For more information about Proxy
+ * Back-end Instance Authentication</a> in the <i>Classic Load Balancers Guide</i>. For more information about Proxy
  * Protocol, see <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-proxy-protocol.html">Configure Proxy
- * Protocol Support</a> in the <i>Classic Load Balancer
+ * Protocol Support</a> in the <i>Classic Load Balancers
  */
 SetLoadBalancerPoliciesForBackendServerResponse * ElasticLoadBalancingClient::setLoadBalancerPoliciesForBackendServer(const SetLoadBalancerPoliciesForBackendServerRequest &request)
 {
@@ -828,7 +835,7 @@ SetLoadBalancerPoliciesForBackendServerResponse * ElasticLoadBalancingClient::se
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-duration">Duration-Based
  * Session Stickiness</a>, and <a
  * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-application">Application-Controlled
- * Session Stickiness</a> in the <i>Classic Load Balancer
+ * Session Stickiness</a> in the <i>Classic Load Balancers
  */
 SetLoadBalancerPoliciesOfListenerResponse * ElasticLoadBalancingClient::setLoadBalancerPoliciesOfListener(const SetLoadBalancerPoliciesOfListenerRequest &request)
 {

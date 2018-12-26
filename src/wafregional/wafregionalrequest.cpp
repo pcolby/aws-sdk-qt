@@ -52,6 +52,7 @@ namespace WAFRegional {
  * \value DeleteByteMatchSetAction WAFRegional DeleteByteMatchSet action.
  * \value DeleteGeoMatchSetAction WAFRegional DeleteGeoMatchSet action.
  * \value DeleteIPSetAction WAFRegional DeleteIPSet action.
+ * \value DeleteLoggingConfigurationAction WAFRegional DeleteLoggingConfiguration action.
  * \value DeletePermissionPolicyAction WAFRegional DeletePermissionPolicy action.
  * \value DeleteRateBasedRuleAction WAFRegional DeleteRateBasedRule action.
  * \value DeleteRegexMatchSetAction WAFRegional DeleteRegexMatchSet action.
@@ -68,6 +69,7 @@ namespace WAFRegional {
  * \value GetChangeTokenStatusAction WAFRegional GetChangeTokenStatus action.
  * \value GetGeoMatchSetAction WAFRegional GetGeoMatchSet action.
  * \value GetIPSetAction WAFRegional GetIPSet action.
+ * \value GetLoggingConfigurationAction WAFRegional GetLoggingConfiguration action.
  * \value GetPermissionPolicyAction WAFRegional GetPermissionPolicy action.
  * \value GetRateBasedRuleAction WAFRegional GetRateBasedRule action.
  * \value GetRateBasedRuleManagedKeysAction WAFRegional GetRateBasedRuleManagedKeys action.
@@ -85,6 +87,7 @@ namespace WAFRegional {
  * \value ListByteMatchSetsAction WAFRegional ListByteMatchSets action.
  * \value ListGeoMatchSetsAction WAFRegional ListGeoMatchSets action.
  * \value ListIPSetsAction WAFRegional ListIPSets action.
+ * \value ListLoggingConfigurationsAction WAFRegional ListLoggingConfigurations action.
  * \value ListRateBasedRulesAction WAFRegional ListRateBasedRules action.
  * \value ListRegexMatchSetsAction WAFRegional ListRegexMatchSets action.
  * \value ListRegexPatternSetsAction WAFRegional ListRegexPatternSets action.
@@ -96,6 +99,7 @@ namespace WAFRegional {
  * \value ListSubscribedRuleGroupsAction WAFRegional ListSubscribedRuleGroups action.
  * \value ListWebACLsAction WAFRegional ListWebACLs action.
  * \value ListXssMatchSetsAction WAFRegional ListXssMatchSets action.
+ * \value PutLoggingConfigurationAction WAFRegional PutLoggingConfiguration action.
  * \value PutPermissionPolicyAction WAFRegional PutPermissionPolicy action.
  * \value UpdateByteMatchSetAction WAFRegional UpdateByteMatchSet action.
  * \value UpdateGeoMatchSetAction WAFRegional UpdateGeoMatchSet action.

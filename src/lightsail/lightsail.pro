@@ -34,6 +34,14 @@ HEADERS += \
     closeinstancepublicportsrequest_p.h \
     closeinstancepublicportsresponse.h \
     closeinstancepublicportsresponse_p.h \
+    copysnapshotrequest.h \
+    copysnapshotrequest_p.h \
+    copysnapshotresponse.h \
+    copysnapshotresponse_p.h \
+    createcloudformationstackrequest.h \
+    createcloudformationstackrequest_p.h \
+    createcloudformationstackresponse.h \
+    createcloudformationstackresponse_p.h \
     creatediskfromsnapshotrequest.h \
     creatediskfromsnapshotrequest_p.h \
     creatediskfromsnapshotresponse.h \
@@ -78,6 +86,18 @@ HEADERS += \
     createloadbalancertlscertificaterequest_p.h \
     createloadbalancertlscertificateresponse.h \
     createloadbalancertlscertificateresponse_p.h \
+    createrelationaldatabasefromsnapshotrequest.h \
+    createrelationaldatabasefromsnapshotrequest_p.h \
+    createrelationaldatabasefromsnapshotresponse.h \
+    createrelationaldatabasefromsnapshotresponse_p.h \
+    createrelationaldatabaserequest.h \
+    createrelationaldatabaserequest_p.h \
+    createrelationaldatabaseresponse.h \
+    createrelationaldatabaseresponse_p.h \
+    createrelationaldatabasesnapshotrequest.h \
+    createrelationaldatabasesnapshotrequest_p.h \
+    createrelationaldatabasesnapshotresponse.h \
+    createrelationaldatabasesnapshotresponse_p.h \
     deletediskrequest.h \
     deletediskrequest_p.h \
     deletediskresponse.h \
@@ -114,6 +134,14 @@ HEADERS += \
     deleteloadbalancertlscertificaterequest_p.h \
     deleteloadbalancertlscertificateresponse.h \
     deleteloadbalancertlscertificateresponse_p.h \
+    deleterelationaldatabaserequest.h \
+    deleterelationaldatabaserequest_p.h \
+    deleterelationaldatabaseresponse.h \
+    deleterelationaldatabaseresponse_p.h \
+    deleterelationaldatabasesnapshotrequest.h \
+    deleterelationaldatabasesnapshotrequest_p.h \
+    deleterelationaldatabasesnapshotresponse.h \
+    deleterelationaldatabasesnapshotresponse_p.h \
     detachdiskrequest.h \
     detachdiskrequest_p.h \
     detachdiskresponse.h \
@@ -130,6 +158,10 @@ HEADERS += \
     downloaddefaultkeypairrequest_p.h \
     downloaddefaultkeypairresponse.h \
     downloaddefaultkeypairresponse_p.h \
+    exportsnapshotrequest.h \
+    exportsnapshotrequest_p.h \
+    exportsnapshotresponse.h \
+    exportsnapshotresponse_p.h \
     getactivenamesrequest.h \
     getactivenamesrequest_p.h \
     getactivenamesresponse.h \
@@ -142,6 +174,10 @@ HEADERS += \
     getbundlesrequest_p.h \
     getbundlesresponse.h \
     getbundlesresponse_p.h \
+    getcloudformationstackrecordsrequest.h \
+    getcloudformationstackrecordsrequest_p.h \
+    getcloudformationstackrecordsresponse.h \
+    getcloudformationstackrecordsresponse_p.h \
     getdiskrequest.h \
     getdiskrequest_p.h \
     getdiskresponse.h \
@@ -166,6 +202,10 @@ HEADERS += \
     getdomainsrequest_p.h \
     getdomainsresponse.h \
     getdomainsresponse_p.h \
+    getexportsnapshotrecordsrequest.h \
+    getexportsnapshotrecordsrequest_p.h \
+    getexportsnapshotrecordsresponse.h \
+    getexportsnapshotrecordsresponse_p.h \
     getinstanceaccessdetailsrequest.h \
     getinstanceaccessdetailsrequest_p.h \
     getinstanceaccessdetailsresponse.h \
@@ -238,6 +278,54 @@ HEADERS += \
     getregionsrequest_p.h \
     getregionsresponse.h \
     getregionsresponse_p.h \
+    getrelationaldatabaseblueprintsrequest.h \
+    getrelationaldatabaseblueprintsrequest_p.h \
+    getrelationaldatabaseblueprintsresponse.h \
+    getrelationaldatabaseblueprintsresponse_p.h \
+    getrelationaldatabasebundlesrequest.h \
+    getrelationaldatabasebundlesrequest_p.h \
+    getrelationaldatabasebundlesresponse.h \
+    getrelationaldatabasebundlesresponse_p.h \
+    getrelationaldatabaseeventsrequest.h \
+    getrelationaldatabaseeventsrequest_p.h \
+    getrelationaldatabaseeventsresponse.h \
+    getrelationaldatabaseeventsresponse_p.h \
+    getrelationaldatabaselogeventsrequest.h \
+    getrelationaldatabaselogeventsrequest_p.h \
+    getrelationaldatabaselogeventsresponse.h \
+    getrelationaldatabaselogeventsresponse_p.h \
+    getrelationaldatabaselogstreamsrequest.h \
+    getrelationaldatabaselogstreamsrequest_p.h \
+    getrelationaldatabaselogstreamsresponse.h \
+    getrelationaldatabaselogstreamsresponse_p.h \
+    getrelationaldatabasemasteruserpasswordrequest.h \
+    getrelationaldatabasemasteruserpasswordrequest_p.h \
+    getrelationaldatabasemasteruserpasswordresponse.h \
+    getrelationaldatabasemasteruserpasswordresponse_p.h \
+    getrelationaldatabasemetricdatarequest.h \
+    getrelationaldatabasemetricdatarequest_p.h \
+    getrelationaldatabasemetricdataresponse.h \
+    getrelationaldatabasemetricdataresponse_p.h \
+    getrelationaldatabaseparametersrequest.h \
+    getrelationaldatabaseparametersrequest_p.h \
+    getrelationaldatabaseparametersresponse.h \
+    getrelationaldatabaseparametersresponse_p.h \
+    getrelationaldatabaserequest.h \
+    getrelationaldatabaserequest_p.h \
+    getrelationaldatabaseresponse.h \
+    getrelationaldatabaseresponse_p.h \
+    getrelationaldatabasesnapshotrequest.h \
+    getrelationaldatabasesnapshotrequest_p.h \
+    getrelationaldatabasesnapshotresponse.h \
+    getrelationaldatabasesnapshotresponse_p.h \
+    getrelationaldatabasesnapshotsrequest.h \
+    getrelationaldatabasesnapshotsrequest_p.h \
+    getrelationaldatabasesnapshotsresponse.h \
+    getrelationaldatabasesnapshotsresponse_p.h \
+    getrelationaldatabasesrequest.h \
+    getrelationaldatabasesrequest_p.h \
+    getrelationaldatabasesresponse.h \
+    getrelationaldatabasesresponse_p.h \
     getstaticiprequest.h \
     getstaticiprequest_p.h \
     getstaticipresponse.h \
@@ -276,6 +364,10 @@ HEADERS += \
     rebootinstancerequest_p.h \
     rebootinstanceresponse.h \
     rebootinstanceresponse_p.h \
+    rebootrelationaldatabaserequest.h \
+    rebootrelationaldatabaserequest_p.h \
+    rebootrelationaldatabaseresponse.h \
+    rebootrelationaldatabaseresponse_p.h \
     releasestaticiprequest.h \
     releasestaticiprequest_p.h \
     releasestaticipresponse.h \
@@ -284,14 +376,30 @@ HEADERS += \
     startinstancerequest_p.h \
     startinstanceresponse.h \
     startinstanceresponse_p.h \
+    startrelationaldatabaserequest.h \
+    startrelationaldatabaserequest_p.h \
+    startrelationaldatabaseresponse.h \
+    startrelationaldatabaseresponse_p.h \
     stopinstancerequest.h \
     stopinstancerequest_p.h \
     stopinstanceresponse.h \
     stopinstanceresponse_p.h \
+    stoprelationaldatabaserequest.h \
+    stoprelationaldatabaserequest_p.h \
+    stoprelationaldatabaseresponse.h \
+    stoprelationaldatabaseresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     unpeervpcrequest.h \
     unpeervpcrequest_p.h \
     unpeervpcresponse.h \
     unpeervpcresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatedomainentryrequest.h \
     updatedomainentryrequest_p.h \
     updatedomainentryresponse.h \
@@ -300,6 +408,14 @@ HEADERS += \
     updateloadbalancerattributerequest_p.h \
     updateloadbalancerattributeresponse.h \
     updateloadbalancerattributeresponse_p.h \
+    updaterelationaldatabaseparametersrequest.h \
+    updaterelationaldatabaseparametersrequest_p.h \
+    updaterelationaldatabaseparametersresponse.h \
+    updaterelationaldatabaseparametersresponse_p.h \
+    updaterelationaldatabaserequest.h \
+    updaterelationaldatabaserequest_p.h \
+    updaterelationaldatabaseresponse.h \
+    updaterelationaldatabaseresponse_p.h \
 
 SOURCES += \
     allocatestaticiprequest.cpp \
@@ -314,6 +430,10 @@ SOURCES += \
     attachstaticipresponse.cpp \
     closeinstancepublicportsrequest.cpp \
     closeinstancepublicportsresponse.cpp \
+    copysnapshotrequest.cpp \
+    copysnapshotresponse.cpp \
+    createcloudformationstackrequest.cpp \
+    createcloudformationstackresponse.cpp \
     creatediskfromsnapshotrequest.cpp \
     creatediskfromsnapshotresponse.cpp \
     creatediskrequest.cpp \
@@ -336,6 +456,12 @@ SOURCES += \
     createloadbalancerresponse.cpp \
     createloadbalancertlscertificaterequest.cpp \
     createloadbalancertlscertificateresponse.cpp \
+    createrelationaldatabasefromsnapshotrequest.cpp \
+    createrelationaldatabasefromsnapshotresponse.cpp \
+    createrelationaldatabaserequest.cpp \
+    createrelationaldatabaseresponse.cpp \
+    createrelationaldatabasesnapshotrequest.cpp \
+    createrelationaldatabasesnapshotresponse.cpp \
     deletediskrequest.cpp \
     deletediskresponse.cpp \
     deletedisksnapshotrequest.cpp \
@@ -354,6 +480,10 @@ SOURCES += \
     deleteloadbalancerresponse.cpp \
     deleteloadbalancertlscertificaterequest.cpp \
     deleteloadbalancertlscertificateresponse.cpp \
+    deleterelationaldatabaserequest.cpp \
+    deleterelationaldatabaseresponse.cpp \
+    deleterelationaldatabasesnapshotrequest.cpp \
+    deleterelationaldatabasesnapshotresponse.cpp \
     detachdiskrequest.cpp \
     detachdiskresponse.cpp \
     detachinstancesfromloadbalancerrequest.cpp \
@@ -362,12 +492,16 @@ SOURCES += \
     detachstaticipresponse.cpp \
     downloaddefaultkeypairrequest.cpp \
     downloaddefaultkeypairresponse.cpp \
+    exportsnapshotrequest.cpp \
+    exportsnapshotresponse.cpp \
     getactivenamesrequest.cpp \
     getactivenamesresponse.cpp \
     getblueprintsrequest.cpp \
     getblueprintsresponse.cpp \
     getbundlesrequest.cpp \
     getbundlesresponse.cpp \
+    getcloudformationstackrecordsrequest.cpp \
+    getcloudformationstackrecordsresponse.cpp \
     getdiskrequest.cpp \
     getdiskresponse.cpp \
     getdisksnapshotrequest.cpp \
@@ -380,6 +514,8 @@ SOURCES += \
     getdomainresponse.cpp \
     getdomainsrequest.cpp \
     getdomainsresponse.cpp \
+    getexportsnapshotrecordsrequest.cpp \
+    getexportsnapshotrecordsresponse.cpp \
     getinstanceaccessdetailsrequest.cpp \
     getinstanceaccessdetailsresponse.cpp \
     getinstancemetricdatarequest.cpp \
@@ -416,6 +552,30 @@ SOURCES += \
     getoperationsresponse.cpp \
     getregionsrequest.cpp \
     getregionsresponse.cpp \
+    getrelationaldatabaseblueprintsrequest.cpp \
+    getrelationaldatabaseblueprintsresponse.cpp \
+    getrelationaldatabasebundlesrequest.cpp \
+    getrelationaldatabasebundlesresponse.cpp \
+    getrelationaldatabaseeventsrequest.cpp \
+    getrelationaldatabaseeventsresponse.cpp \
+    getrelationaldatabaselogeventsrequest.cpp \
+    getrelationaldatabaselogeventsresponse.cpp \
+    getrelationaldatabaselogstreamsrequest.cpp \
+    getrelationaldatabaselogstreamsresponse.cpp \
+    getrelationaldatabasemasteruserpasswordrequest.cpp \
+    getrelationaldatabasemasteruserpasswordresponse.cpp \
+    getrelationaldatabasemetricdatarequest.cpp \
+    getrelationaldatabasemetricdataresponse.cpp \
+    getrelationaldatabaseparametersrequest.cpp \
+    getrelationaldatabaseparametersresponse.cpp \
+    getrelationaldatabaserequest.cpp \
+    getrelationaldatabaseresponse.cpp \
+    getrelationaldatabasesnapshotrequest.cpp \
+    getrelationaldatabasesnapshotresponse.cpp \
+    getrelationaldatabasesnapshotsrequest.cpp \
+    getrelationaldatabasesnapshotsresponse.cpp \
+    getrelationaldatabasesrequest.cpp \
+    getrelationaldatabasesresponse.cpp \
     getstaticiprequest.cpp \
     getstaticipresponse.cpp \
     getstaticipsrequest.cpp \
@@ -435,17 +595,31 @@ SOURCES += \
     putinstancepublicportsresponse.cpp \
     rebootinstancerequest.cpp \
     rebootinstanceresponse.cpp \
+    rebootrelationaldatabaserequest.cpp \
+    rebootrelationaldatabaseresponse.cpp \
     releasestaticiprequest.cpp \
     releasestaticipresponse.cpp \
     startinstancerequest.cpp \
     startinstanceresponse.cpp \
+    startrelationaldatabaserequest.cpp \
+    startrelationaldatabaseresponse.cpp \
     stopinstancerequest.cpp \
     stopinstanceresponse.cpp \
+    stoprelationaldatabaserequest.cpp \
+    stoprelationaldatabaseresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     unpeervpcrequest.cpp \
     unpeervpcresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatedomainentryrequest.cpp \
     updatedomainentryresponse.cpp \
     updateloadbalancerattributerequest.cpp \
     updateloadbalancerattributeresponse.cpp \
+    updaterelationaldatabaseparametersrequest.cpp \
+    updaterelationaldatabaseparametersresponse.cpp \
+    updaterelationaldatabaserequest.cpp \
+    updaterelationaldatabaseresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsDataSync
+description = AWS DataSync SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsdatasync-index.html"
+navigation.landingtitle = "DataSync"
+navigation.cppclassespage = "DataSync C++ Classes"

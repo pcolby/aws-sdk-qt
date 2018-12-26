@@ -122,10 +122,9 @@ namespace Glacier {
  * 
  *  migrations>
  * 
- *  Amazon Glacier is a great storage choice when low storage cost is paramount, your data is rarely retrieved, and
- *  retrieval latency of several hours is acceptable. If your application requires fast or frequent access to your data,
- *  consider using Amazon S3. For more information, see <a href="http://aws.amazon.com/s3/">Amazon Simple Storage Service
- *  (Amazon
+ *  Amazon Glacier is a great storage choice when low storage cost is paramount and your data is rarely retrieved. If your
+ *  application requires fast or frequent access to your data, consider using Amazon S3. For more information, see <a
+ *  href="http://aws.amazon.com/s3/">Amazon Simple Storage Service (Amazon
  * 
  *  S3)</a>>
  * 
@@ -954,7 +953,7 @@ InitiateVaultLockResponse * GlacierClient::initiateVaultLock(const InitiateVault
  * request>
  *
  * You can set a maximum limit for the number of jobs returned in the response by specifying the <code>limit</code>
- * parameter in the request. The default limit is 1000. The number of jobs returned might be fewer than the limit, but the
+ * parameter in the request. The default limit is 50. The number of jobs returned might be fewer than the limit, but the
  * number of returned jobs never exceeds the
  *
  * limit>
@@ -987,12 +986,12 @@ ListJobsResponse * GlacierClient::listJobs(const ListJobsRequest &request)
  *
  * </p
  *
- * The List Multipart Uploads operation supports pagination. By default, this operation returns up to 1,000 multipart
- * uploads in the response. You should always check the response for a <code>marker</code> at which to continue the list;
- * if there are no more items the <code>marker</code> is <code>null</code>. To return a list of multipart uploads that
- * begins at a specific upload, set the <code>marker</code> request parameter to the value you obtained from a previous
- * List Multipart Upload request. You can also limit the number of uploads returned in the response by specifying the
- * <code>limit</code> parameter in the
+ * The List Multipart Uploads operation supports pagination. By default, this operation returns up to 50 multipart uploads
+ * in the response. You should always check the response for a <code>marker</code> at which to continue the list; if there
+ * are no more items the <code>marker</code> is <code>null</code>. To return a list of multipart uploads that begins at a
+ * specific upload, set the <code>marker</code> request parameter to the value you obtained from a previous List Multipart
+ * Upload request. You can also limit the number of uploads returned in the response by specifying the <code>limit</code>
+ * parameter in the
  *
  * request>
  *
@@ -1033,7 +1032,7 @@ ListMultipartUploadsResponse * GlacierClient::listMultipartUploads(const ListMul
  *
  * </p
  *
- * The List Parts operation supports pagination. By default, this operation returns up to 1,000 uploaded parts in the
+ * The List Parts operation supports pagination. By default, this operation returns up to 50 uploaded parts in the
  * response. You should always check the response for a <code>marker</code> at which to continue the list; if there are no
  * more items the <code>marker</code> is <code>null</code>. To return a list of parts that begins at a specific part, set
  * the <code>marker</code> request parameter to the value you obtained from a previous List Parts request. You can also
@@ -1098,7 +1097,7 @@ ListTagsForVaultResponse * GlacierClient::listTagsForVault(const ListTagsForVaul
  *
  * name>
  *
- * By default, this operation returns up to 1,000 items. If there are more vaults to list, the response <code>marker</code>
+ * By default, this operation returns up to 10 items. If there are more vaults to list, the response <code>marker</code>
  * field contains the vault Amazon Resource Name (ARN) at which to continue the list with a new List Vaults request;
  * otherwise, the <code>marker</code> field is <code>null</code>. To return a list of vaults that begins at a specific
  * vault, set the <code>marker</code> request parameter to the vault ARN you obtained from a previous List Vaults request.

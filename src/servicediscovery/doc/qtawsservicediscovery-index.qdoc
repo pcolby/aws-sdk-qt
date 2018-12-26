@@ -3,7 +3,7 @@
     \page qtawsservicediscovery-index.html
     \title Qt Aws ServiceDiscovery
 
-    \brief Classes for the Amazon Route 53 Auto Naming (ServiceDiscovery) service
+    \brief Classes for the AWS Cloud Map (ServiceDiscovery) service
 
     (This is the page the forms the overview for the servce.)
 */

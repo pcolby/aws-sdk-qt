@@ -33,8 +33,12 @@
 #include "createwebhookresponse.h"
 #include "deleteprojectrequest.h"
 #include "deleteprojectresponse.h"
+#include "deletesourcecredentialsrequest.h"
+#include "deletesourcecredentialsresponse.h"
 #include "deletewebhookrequest.h"
 #include "deletewebhookresponse.h"
+#include "importsourcecredentialsrequest.h"
+#include "importsourcecredentialsresponse.h"
 #include "invalidateprojectcacherequest.h"
 #include "invalidateprojectcacheresponse.h"
 #include "listbuildsrequest.h"
@@ -45,6 +49,8 @@
 #include "listcuratedenvironmentimagesresponse.h"
 #include "listprojectsrequest.h"
 #include "listprojectsresponse.h"
+#include "listsourcecredentialsrequest.h"
+#include "listsourcecredentialsresponse.h"
 #include "startbuildrequest.h"
 #include "startbuildresponse.h"
 #include "stopbuildrequest.h"
@@ -82,8 +88,8 @@ namespace CodeBuild {
  *  and produces artifacts that are ready to deploy. AWS CodeBuild eliminates the need to provision, manage, and scale your
  *  own build servers. It provides prepackaged build environments for the most popular programming languages and build
  *  tools, such as Apache Maven, Gradle, and more. You can also fully customize build environments in AWS CodeBuild to use
- *  your own build tools. AWS CodeBuild scales automatically to meet peak build requests, and you pay only for the build
- *  time you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
+ *  your own build tools. AWS CodeBuild scales automatically to meet peak build requests. You pay only for the build time
+ *  you consume. For more information about AWS CodeBuild, see the <i>AWS CodeBuild User
  * 
  *  Guide</i>>
  * 
@@ -96,10 +102,10 @@ namespace CodeBuild {
  *  builds> </li> <li>
  * 
  *  <code>BatchGetProjects</code>: Gets information about one or more build projects. A <i>build project</i> defines how AWS
- *  CodeBuild will run a build. This includes information such as where to get the source code to build, the build
- *  environment to use, the build commands to run, and where to store the build output. A <i>build environment</i>
- *  represents a combination of operating system, programming language runtime, and tools that AWS CodeBuild will use to run
- *  a build. Also, you can add tags to build projects to help manage your resources and
+ *  CodeBuild runs a build. This includes information such as where to get the source code to build, the build environment
+ *  to use, the build commands to run, and where to store the build output. A <i>build environment</i> is a representation
+ *  of operating system, programming language runtime, and tools that AWS CodeBuild uses to run a build. You can add tags to
+ *  build projects to help manage your resources and
  * 
  *  costs> </li> <li>
  * 
@@ -107,9 +113,9 @@ namespace CodeBuild {
  * 
  *  project> </li> <li>
  * 
- *  <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
- *  repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed
- *  to the
+ *  <code>CreateWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub or
+ *  Bitbucket repository, enables AWS CodeBuild to start rebuilding the source code every time a code change is pushed to
+ *  the
  * 
  *  repository> </li> <li>
  * 
@@ -121,8 +127,8 @@ namespace CodeBuild {
  * 
  *  project> </li> <li>
  * 
- *  <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub
- *  repository, stops AWS CodeBuild from automatically rebuilding the source code every time a code change is pushed to the
+ *  <code>DeleteWebhook</code>: For an existing AWS CodeBuild build project that has its source code stored in a GitHub or
+ *  Bitbucket repository, stops AWS CodeBuild from rebuilding the source code every time a code change is pushed to the
  * 
  *  repository> </li> <li>
  * 
@@ -156,6 +162,21 @@ namespace CodeBuild {
  *  build> </li> <li>
  * 
  *  <code>ListCuratedEnvironmentImages</code>: Gets information about Docker images that are managed by AWS
+ * 
+ *  CodeBuild> </li> <li>
+ * 
+ *  <code>DeleteSourceCredentials</code>: Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source
+ * 
+ *  credentials> </li> <li>
+ * 
+ *  <code>ImportSourceCredentials</code>: Imports the source repository credentials for an AWS CodeBuild project that has
+ *  its source code stored in a GitHub, GitHub Enterprise, or Bitbucket
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <code>ListSourceCredentials</code>: Returns a list of <code>SourceCredentialsInfo</code> objects. Each
+ *  <code>SourceCredentialsInfo</code> object includes the authentication type, token ARN, and type of source provider for
+ *  one set of
  */
 
 /*!
@@ -269,15 +290,15 @@ CreateProjectResponse * CodeBuildClient::createProject(const CreateProjectReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS
- * CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the
+ * For an existing AWS CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, enables
+ * AWS CodeBuild to start rebuilding the source code every time a code change is pushed to the
  *
  * repository> <b>
  *
  * If you enable webhooks for an AWS CodeBuild project, and the project is used as a build step in AWS CodePipeline, then
- * two identical builds will be created for each commit. One build is triggered through webhooks, and one through AWS
- * CodePipeline. Because billing is on a per-build basis, you will be billed for both builds. Therefore, if you are using
- * AWS CodePipeline, we recommend that you disable webhooks in CodeBuild. In the AWS CodeBuild console, clear the Webhook
+ * two identical builds are created for each commit. One build is triggered through webhooks, and one through AWS
+ * CodePipeline. Because billing is on a per-build basis, you are billed for both builds. Therefore, if you are using AWS
+ * CodePipeline, we recommend that you disable webhooks in AWS CodeBuild. In the AWS CodeBuild console, clear the Webhook
  * box. For more information, see step 5 in <a
  * href="http://docs.aws.amazon.com/codebuild/latest/userguide/change-project.html#change-project-console">Change a Build
  * Project's
@@ -302,16 +323,43 @@ DeleteProjectResponse * CodeBuildClient::deleteProject(const DeleteProjectReques
 
 /*!
  * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * DeleteSourceCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source credentials.
+ */
+DeleteSourceCredentialsResponse * CodeBuildClient::deleteSourceCredentials(const DeleteSourceCredentialsRequest &request)
+{
+    return qobject_cast<DeleteSourceCredentialsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
  * DeleteWebhookResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, stops AWS CodeBuild
- * from automatically rebuilding the source code every time a code change is pushed to the
+ * For an existing AWS CodeBuild build project that has its source code stored in a GitHub or Bitbucket repository, stops
+ * AWS CodeBuild from rebuilding the source code every time a code change is pushed to the
  */
 DeleteWebhookResponse * CodeBuildClient::deleteWebhook(const DeleteWebhookRequest &request)
 {
     return qobject_cast<DeleteWebhookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * ImportSourceCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports the source repository credentials for an AWS CodeBuild project that has its source code stored in a GitHub,
+ * GitHub Enterprise, or Bitbucket repository.
+ */
+ImportSourceCredentialsResponse * CodeBuildClient::importSourceCredentials(const ImportSourceCredentialsRequest &request)
+{
+    return qobject_cast<ImportSourceCredentialsResponse *>(send(request));
 }
 
 /*!
@@ -381,6 +429,19 @@ ListProjectsResponse * CodeBuildClient::listProjects(const ListProjectsRequest &
 
 /*!
  * Sends \a request to the CodeBuildClient service, and returns a pointer to an
+ * ListSourceCredentialsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of <code>SourceCredentialsInfo</code> objects.
+ */
+ListSourceCredentialsResponse * CodeBuildClient::listSourceCredentials(const ListSourceCredentialsRequest &request)
+{
+    return qobject_cast<ListSourceCredentialsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeBuildClient service, and returns a pointer to an
  * StartBuildResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -425,6 +486,10 @@ UpdateProjectResponse * CodeBuildClient::updateProject(const UpdateProjectReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the webhook associated with an AWS CodeBuild build project.
+ *
+ * </p <note>
+ *
+ * If you use Bitbucket for your repository, <code>rotateSecret</code> is ignored.
  */
 UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookRequest &request)
 {

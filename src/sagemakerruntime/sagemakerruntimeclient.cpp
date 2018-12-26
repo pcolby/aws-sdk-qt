@@ -46,7 +46,7 @@ namespace SageMakerRuntime {
  * \ingroup aws-clients
  * \inmodule QtAwsSageMakerRuntime
  *
- *  Amazon SageMaker runtime API.
+ *  The Amazon SageMaker runtime API.
  */
 
 /*!
@@ -114,12 +114,23 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
  * </p
  *
  * For an overview of Amazon SageMaker, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How
- * It Works</a>
+ * It Works</a>.
  *
  * </p
  *
  * Amazon SageMaker strips all POST headers except those supported by the API. Amazon SageMaker might add additional
  * headers. You should not rely on the behavior of headers outside those enumerated in the request syntax.
+ *
+ * </p
+ *
+ * Cals to <code>InvokeEndpoint</code> are authenticated by using AWS Signature Version 4. For information, see <a
+ * href="http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating Requests (AWS
+ * Signature Version 4)</a> in the <i>Amazon S3 API
+ *
+ * Reference</i>> <note>
+ *
+ * Endpoints are scoped to an individual account, and are not public. The URL does not contain the account ID, but Amazon
+ * SageMaker determines the account ID from the authentication token that is supplied by the
  */
 InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndpointRequest &request)
 {

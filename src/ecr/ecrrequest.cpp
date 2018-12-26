@@ -53,10 +53,13 @@ namespace ECR {
  * \value GetRepositoryPolicyAction ECR GetRepositoryPolicy action.
  * \value InitiateLayerUploadAction ECR InitiateLayerUpload action.
  * \value ListImagesAction ECR ListImages action.
+ * \value ListTagsForResourceAction ECR ListTagsForResource action.
  * \value PutImageAction ECR PutImage action.
  * \value PutLifecyclePolicyAction ECR PutLifecyclePolicy action.
  * \value SetRepositoryPolicyAction ECR SetRepositoryPolicy action.
  * \value StartLifecyclePolicyPreviewAction ECR StartLifecyclePolicyPreview action.
+ * \value TagResourceAction ECR TagResource action.
+ * \value UntagResourceAction ECR UntagResource action.
  * \value UploadLayerPartAction ECR UploadLayerPart action.
  */
 

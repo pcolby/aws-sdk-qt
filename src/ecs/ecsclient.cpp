@@ -25,6 +25,8 @@
 #include "createclusterresponse.h"
 #include "createservicerequest.h"
 #include "createserviceresponse.h"
+#include "deleteaccountsettingrequest.h"
+#include "deleteaccountsettingresponse.h"
 #include "deleteattributesrequest.h"
 #include "deleteattributesresponse.h"
 #include "deleteclusterrequest.h"
@@ -47,6 +49,8 @@
 #include "describetasksresponse.h"
 #include "discoverpollendpointrequest.h"
 #include "discoverpollendpointresponse.h"
+#include "listaccountsettingsrequest.h"
+#include "listaccountsettingsresponse.h"
 #include "listattributesrequest.h"
 #include "listattributesresponse.h"
 #include "listclustersrequest.h"
@@ -55,12 +59,16 @@
 #include "listcontainerinstancesresponse.h"
 #include "listservicesrequest.h"
 #include "listservicesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtaskdefinitionfamiliesrequest.h"
 #include "listtaskdefinitionfamiliesresponse.h"
 #include "listtaskdefinitionsrequest.h"
 #include "listtaskdefinitionsresponse.h"
 #include "listtasksrequest.h"
 #include "listtasksresponse.h"
+#include "putaccountsettingrequest.h"
+#include "putaccountsettingresponse.h"
 #include "putattributesrequest.h"
 #include "putattributesresponse.h"
 #include "registercontainerinstancerequest.h"
@@ -77,6 +85,10 @@
 #include "submitcontainerstatechangeresponse.h"
 #include "submittaskstatechangerequest.h"
 #include "submittaskstatechangeresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatecontaineragentrequest.h"
 #include "updatecontaineragentresponse.h"
 #include "updatecontainerinstancesstaterequest.h"
@@ -221,37 +233,49 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
  *
  * Guide</i>>
  *
- * You can optionally specify a deployment configuration for your service. During a deployment, the service scheduler uses
- * the <code>minimumHealthyPercent</code> and <code>maximumPercent</code> parameters to determine the deployment strategy.
- * The deployment is triggered by changing the task definition or the desired count of a service with an
- * <a>UpdateService</a>
+ * You can optionally specify a deployment configuration for your service. The deployment is triggered by changing
+ * properties, such as the task definition or the desired count of a service, with an <a>UpdateService</a>
  *
  * operation>
  *
- * The <code>minimumHealthyPercent</code> represents a lower limit on the number of your service's tasks that must remain
- * in the <code>RUNNING</code> state during a deployment, as a percentage of the <code>desiredCount</code> (rounded up to
- * the nearest integer). This parameter enables you to deploy without using additional cluster capacity. For example, if
- * your service has a <code>desiredCount</code> of four tasks and a <code>minimumHealthyPercent</code> of 50%, the
- * scheduler can stop two existing tasks to free up cluster capacity before starting two new tasks. Tasks for services that
- * <i>do not</i> use a load balancer are considered healthy if they are in the <code>RUNNING</code> state. Tasks for
- * services that <i>do</i> use a load balancer are considered healthy if they are in the <code>RUNNING</code> state and the
- * container instance they are hosted on is reported as healthy by the load balancer. The default value for a replica
- * service for <code>minimumHealthyPercent</code> is 50% in the console and 100% for the AWS CLI, the AWS SDKs, and the
- * APIs. The default value for a daemon service for <code>minimumHealthyPercent</code> is 0% for the AWS CLI, the AWS SDKs,
- * and the APIs and 50% for the
+ * If a service is using the <code>ECS</code> deployment controller, the <b>minimum healthy percent</b> represents a lower
+ * limit on the number of tasks in a service that must remain in the <code>RUNNING</code> state during a deployment, as a
+ * percentage of the desired number of tasks (rounded up to the nearest integer), and while any container instances are in
+ * the <code>DRAINING</code> state if the service contains tasks using the EC2 launch type. This parameter enables you to
+ * deploy without using additional cluster capacity. For example, if your service has a desired number of four tasks and a
+ * minimum healthy percent of 50%, the scheduler may stop two existing tasks to free up cluster capacity before starting
+ * two new tasks. Tasks for services that <i>do not</i> use a load balancer are considered healthy if they are in the
+ * <code>RUNNING</code> state; tasks for services that <i>do</i> use a load balancer are considered healthy if they are in
+ * the <code>RUNNING</code> state and they are reported as healthy by the load balancer. The default value for minimum
+ * healthy percent is
  *
- * console>
+ * 100%>
  *
- * The <code>maximumPercent</code> parameter represents an upper limit on the number of your service's tasks that are
- * allowed in the <code>RUNNING</code> or <code>PENDING</code> state during a deployment, as a percentage of the
- * <code>desiredCount</code> (rounded down to the nearest integer). This parameter enables you to define the deployment
- * batch size. For example, if your replica service has a <code>desiredCount</code> of four tasks and a
- * <code>maximumPercent</code> value of 200%, the scheduler can start four new tasks before stopping the four older tasks
- * (provided that the cluster resources required to do this are available). The default value for a replica service for
- * <code>maximumPercent</code> is 200%. If you are using a daemon service type, the <code>maximumPercent</code> should
- * remain at 100%, which is the default
+ * If a service is using the <code>ECS</code> deployment controller, the <b>maximum percent</b> parameter represents an
+ * upper limit on the number of tasks in a service that are allowed in the <code>RUNNING</code> or <code>PENDING</code>
+ * state during a deployment, as a percentage of the desired number of tasks (rounded down to the nearest integer), and
+ * while any container instances are in the <code>DRAINING</code> state if the service contains tasks using the EC2 launch
+ * type. This parameter enables you to define the deployment batch size. For example, if your service has a desired number
+ * of four tasks and a maximum percent value of 200%, the scheduler may start four new tasks before stopping the four older
+ * tasks (provided that the cluster resources required to do this are available). The default value for maximum percent is
  *
- * value>
+ * 200%>
+ *
+ * If a service is using the <code>CODE_DEPLOY</code> deployment controller and tasks that use the EC2 launch type, the
+ * <b>minimum healthy percent</b> and <b>maximum percent</b> values are only used to define the lower and upper limit on
+ * the number of the tasks in the service that remain in the <code>RUNNING</code> state while the container instances are
+ * in the <code>DRAINING</code> state. If the tasks in the service use the Fargate launch type, the minimum healthy percent
+ * and maximum percent values are not used, although they are currently visible when describing your
+ *
+ * service>
+ *
+ * Tasks for services that <i>do not</i> use a load balancer are considered healthy if they are in the <code>RUNNING</code>
+ * state. Tasks for services that <i>do</i> use a load balancer are considered healthy if they are in the
+ * <code>RUNNING</code> state and the container instance they are hosted on is reported as healthy by the load balancer.
+ * The default value for a replica service for <code>minimumHealthyPercent</code> is 100%. The default value for a daemon
+ * service for <code>minimumHealthyPercent</code> is
+ *
+ * 0%>
  *
  * When the service scheduler launches new tasks, it determines task placement in your cluster using the following
  *
@@ -279,6 +303,20 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
 CreateServiceResponse * EcsClient::createService(const CreateServiceRequest &request)
 {
     return qobject_cast<CreateServiceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * DeleteAccountSettingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the ARN and resource ID format of a resource for a specified IAM user, IAM role, or the root user for an
+ * account. You can specify whether the new ARN and resource ID format are disabled for new resources that are
+ */
+DeleteAccountSettingResponse * EcsClient::deleteAccountSetting(const DeleteAccountSettingRequest &request)
+{
+    return qobject_cast<DeleteAccountSettingResponse *>(send(request));
 }
 
 /*!
@@ -321,12 +359,17 @@ DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &req
  * <a>UpdateService</a>> <note>
  *
  * When you delete a service, if there are still running tasks that require cleanup, the service status moves from
- * <code>ACTIVE</code> to <code>DRAINING</code>, and the service is no longer visible in the console or in
- * <a>ListServices</a> API operations. After the tasks have stopped, then the service status moves from
+ * <code>ACTIVE</code> to <code>DRAINING</code>, and the service is no longer visible in the console or in the
+ * <a>ListServices</a> API operation. After the tasks have stopped, then the service status moves from
  * <code>DRAINING</code> to <code>INACTIVE</code>. Services in the <code>DRAINING</code> or <code>INACTIVE</code> status
- * can still be viewed with <a>DescribeServices</a> API operations. However, in the future, <code>INACTIVE</code> services
- * may be cleaned up and purged from Amazon ECS record keeping, and <a>DescribeServices</a> API operations on those
+ * can still be viewed with the <a>DescribeServices</a> API operation. However, in the future, <code>INACTIVE</code>
+ * services may be cleaned up and purged from Amazon ECS record keeping, and <a>DescribeServices</a> calls on those
  * services return a <code>ServiceNotFoundException</code>
+ *
+ * error> </note> <b>
+ *
+ * If you attempt to create a new service with the same name as an existing service in either <code>ACTIVE</code> or
+ * <code>DRAINING</code> status, you receive an
  */
 DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &request)
 {
@@ -348,7 +391,7 @@ DeleteServiceResponse * EcsClient::deleteService(const DeleteServiceRequest &req
  *
  * resources>
  *
- * Deregistering a container instance removes the instance from a cluster, but it does not terminate the EC2 instance; if
+ * Deregistering a container instance removes the instance from a cluster, but it does not terminate the EC2 instance. If
  * you are finished using the instance, be sure to terminate it in the Amazon EC2 console to stop
  *
  * billing> <note>
@@ -375,12 +418,12 @@ DeregisterContainerInstanceResponse * EcsClient::deregisterContainerInstance(con
  * count>
  *
  * You cannot use an <code>INACTIVE</code> task definition to run new tasks or create new services, and you cannot update
- * an existing service to reference an <code>INACTIVE</code> task definition (although there may be up to a 10-minute
+ * an existing service to reference an <code>INACTIVE</code> task definition. However, there may be up to a 10-minute
  * window following deregistration where these restrictions have not yet taken
  *
- * effect)> <note>
+ * effect> <note>
  *
- * At this time, <code>INACTIVE</code> task definitions remain discoverable in your account indefinitely; however, this
+ * At this time, <code>INACTIVE</code> task definitions remain discoverable in your account indefinitely. However, this
  * behavior is subject to change in the future, so you should not rely on <code>INACTIVE</code> task definitions persisting
  * beyond the lifecycle of any associated tasks and
  */
@@ -481,6 +524,19 @@ DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPol
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * ListAccountSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the account settings for an Amazon ECS resource for a specified
+ */
+ListAccountSettingsResponse * EcsClient::listAccountSettings(const ListAccountSettingsRequest &request)
+{
+    return qobject_cast<ListAccountSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * ListAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -541,6 +597,19 @@ ListServicesResponse * EcsClient::listServices(const ListServicesRequest &reques
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the tags for an Amazon ECS
+ */
+ListTagsForResourceResponse * EcsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * ListTaskDefinitionFamiliesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -591,6 +660,21 @@ ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefin
 ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
 {
     return qobject_cast<ListTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * PutAccountSettingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the ARN and resource ID format of a resource for a specified IAM user, IAM role, or the root user for an
+ * account. You can specify whether the new ARN and resource ID format are enabled for new resources that are created.
+ * Enabling this setting is required to use new Amazon ECS features such as resource
+ */
+PutAccountSettingResponse * EcsClient::putAccountSetting(const PutAccountSettingRequest &request)
+{
+    return qobject_cast<PutAccountSettingResponse *>(send(request));
 }
 
 /*!
@@ -687,8 +771,8 @@ RegisterTaskDefinitionResponse * EcsClient::registerTaskDefinition(const Registe
  *
  * The Amazon ECS API follows an eventual consistency model, due to the distributed nature of the system supporting the
  * API. This means that the result of an API command you run that affects your Amazon ECS resources might not be
- * immediately visible to all subsequent commands you run. You should keep this in mind when you carry out an API command
- * that immediately follows a previous API
+ * immediately visible to all subsequent commands you run. Keep this in mind when you carry out an API command that
+ * immediately follows a previous API
  *
  * command>
  *
@@ -737,14 +821,14 @@ StartTaskResponse * EcsClient::startTask(const StartTaskRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a running
+ * Stops a running task. Any tags associated with the task will be
  *
- * task>
+ * deleted>
  *
  * When <a>StopTask</a> is called on a task, the equivalent of <code>docker stop</code> is issued to the containers running
- * in the task. This results in a <code>SIGTERM</code> and a default 30-second timeout, after which <code>SIGKILL</code> is
- * sent and the containers are forcibly stopped. If the container handles the <code>SIGTERM</code> gracefully and exits
- * within 30 seconds from receiving it, no <code>SIGKILL</code> is
+ * in the task. This results in a <code>SIGTERM</code> value and a default 30-second timeout, after which the
+ * <code>SIGKILL</code> value is sent and the containers are forcibly stopped. If the container handles the
+ * <code>SIGTERM</code> value gracefully and exits within 30 seconds from receiving it, no <code>SIGKILL</code> value is
  *
  * sent> <note>
  *
@@ -794,6 +878,34 @@ SubmitContainerStateChangeResponse * EcsClient::submitContainerStateChange(const
 SubmitTaskStateChangeResponse * EcsClient::submitTaskStateChange(const SubmitTaskStateChangeRequest &request)
 {
     return qobject_cast<SubmitTaskStateChangeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource
+ * are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with
+ * that resource are deleted as
+ */
+TagResourceResponse * EcsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes specified tags from a
+ */
+UntagResourceResponse * EcsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
@@ -857,14 +969,14 @@ UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateConta
  * balancer> </li> <li>
  *
  * The <code>maximumPercent</code> parameter represents an upper limit on the number of running tasks during task
- * replacement, which enables you to define the replacement batch size. For example, if <code>desiredCount</code> of four
- * tasks, a maximum of 200% starts four new tasks before stopping the four tasks to be drained (provided that the cluster
- * resources required to do this are available). If the maximum is 100%, then replacement tasks can't start until the
+ * replacement, which enables you to define the replacement batch size. For example, if <code>desiredCount</code> is four
+ * tasks, a maximum of 200% starts four new tasks before stopping the four tasks to be drained, provided that the cluster
+ * resources required to do this are available. If the maximum is 100%, then replacement tasks can't start until the
  * draining tasks have
  *
  * stopped> </li> </ul>
  *
- * Any <code>PENDING</code> or <code>RUNNING</code> tasks that do not belong to a service are not affected; you must wait
+ * Any <code>PENDING</code> or <code>RUNNING</code> tasks that do not belong to a service are not affected. You must wait
  * for them to finish or stop them
  *
  * manually>
@@ -887,9 +999,22 @@ UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the desired count, deployment configuration, network configuration, or task definition used in a
+ * Modifies the parameters of a
  *
  * service>
+ *
+ * For services using the rolling update (<code>ECS</code>) deployment controller, the desired count, deployment
+ * configuration, network configuration, or task definition used can be
+ *
+ * updated>
+ *
+ * For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller, only the desired count, deployment
+ * configuration, and health check grace period can be updated using this API. If the network configuration, platform
+ * version, or task definition need to be updated, a new AWS CodeDeploy deployment should be created. For more information,
+ * see <a href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html">CreateDeployment</a>
+ * in the <i>AWS CodeDeploy API
+ *
+ * Reference</i>>
  *
  * You can add to or subtract from the number of instantiations of a task definition in a service by specifying the cluster
  * that the service is running in and a new <code>desiredCount</code>

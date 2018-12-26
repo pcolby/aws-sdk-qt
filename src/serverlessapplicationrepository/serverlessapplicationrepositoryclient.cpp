@@ -27,12 +27,18 @@
 #include "createapplicationversionresponse.h"
 #include "createcloudformationchangesetrequest.h"
 #include "createcloudformationchangesetresponse.h"
+#include "createcloudformationtemplaterequest.h"
+#include "createcloudformationtemplateresponse.h"
 #include "deleteapplicationrequest.h"
 #include "deleteapplicationresponse.h"
 #include "getapplicationrequest.h"
 #include "getapplicationresponse.h"
 #include "getapplicationpolicyrequest.h"
 #include "getapplicationpolicyresponse.h"
+#include "getcloudformationtemplaterequest.h"
+#include "getcloudformationtemplateresponse.h"
+#include "listapplicationdependenciesrequest.h"
+#include "listapplicationdependenciesresponse.h"
 #include "listapplicationversionsrequest.h"
 #include "listapplicationversionsresponse.h"
 #include "listapplicationsrequest.h"
@@ -181,6 +187,19 @@ CreateCloudFormationChangeSetResponse * ServerlessApplicationRepositoryClient::c
 
 /*!
  * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * CreateCloudFormationTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an AWS CloudFormation
+ */
+CreateCloudFormationTemplateResponse * ServerlessApplicationRepositoryClient::createCloudFormationTemplate(const CreateCloudFormationTemplateRequest &request)
+{
+    return qobject_cast<CreateCloudFormationTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
  * DeleteApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -220,6 +239,32 @@ GetApplicationPolicyResponse * ServerlessApplicationRepositoryClient::getApplica
 
 /*!
  * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * GetCloudFormationTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the specified AWS CloudFormation
+ */
+GetCloudFormationTemplateResponse * ServerlessApplicationRepositoryClient::getCloudFormationTemplate(const GetCloudFormationTemplateRequest &request)
+{
+    return qobject_cast<GetCloudFormationTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * ListApplicationDependenciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the list of applications nested in the containing
+ */
+ListApplicationDependenciesResponse * ServerlessApplicationRepositoryClient::listApplicationDependencies(const ListApplicationDependenciesRequest &request)
+{
+    return qobject_cast<ListApplicationDependenciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
  * ListApplicationVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -250,9 +295,9 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the permission policy for an application. See <a
+ * Sets the permission policy for an application. For the list of actions supported for this operation, see <a
  * href="https://docs.aws.amazon.com/serverlessrepo/latest/devguide/access-control-resource-based.html#application-permissions">Application
- * Permissions</a> for the list of supported actions that can be used with this
+ * Permissions</a>
  */
 PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
 {

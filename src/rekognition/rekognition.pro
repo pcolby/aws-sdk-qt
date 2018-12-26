@@ -34,6 +34,10 @@ HEADERS += \
     deletestreamprocessorrequest_p.h \
     deletestreamprocessorresponse.h \
     deletestreamprocessorresponse_p.h \
+    describecollectionrequest.h \
+    describecollectionrequest_p.h \
+    describecollectionresponse.h \
+    describecollectionresponse_p.h \
     describestreamprocessorrequest.h \
     describestreamprocessorrequest_p.h \
     describestreamprocessorresponse.h \
@@ -162,6 +166,8 @@ SOURCES += \
     deletefacesresponse.cpp \
     deletestreamprocessorrequest.cpp \
     deletestreamprocessorresponse.cpp \
+    describecollectionrequest.cpp \
+    describecollectionresponse.cpp \
     describestreamprocessorrequest.cpp \
     describestreamprocessorresponse.cpp \
     detectfacesrequest.cpp \

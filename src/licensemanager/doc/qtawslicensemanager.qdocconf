@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsLicenseManager
+description = AWS LicenseManager SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawslicensemanager-index.html"
+navigation.landingtitle = "LicenseManager"
+navigation.cppclassespage = "LicenseManager C++ Classes"

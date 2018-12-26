@@ -39,8 +39,10 @@ public:
     enum Action {
         CreateBrokerAction,
         CreateConfigurationAction,
+        CreateTagsAction,
         CreateUserAction,
         DeleteBrokerAction,
+        DeleteTagsAction,
         DeleteUserAction,
         DescribeBrokerAction,
         DescribeConfigurationAction,
@@ -49,6 +51,7 @@ public:
         ListBrokersAction,
         ListConfigurationRevisionsAction,
         ListConfigurationsAction,
+        ListTagsAction,
         ListUsersAction,
         RebootBrokerAction,
         UpdateBrokerAction,

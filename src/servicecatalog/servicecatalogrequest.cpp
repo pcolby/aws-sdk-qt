@@ -39,7 +39,10 @@ namespace ServiceCatalog {
  * \value AcceptPortfolioShareAction ServiceCatalog AcceptPortfolioShare action.
  * \value AssociatePrincipalWithPortfolioAction ServiceCatalog AssociatePrincipalWithPortfolio action.
  * \value AssociateProductWithPortfolioAction ServiceCatalog AssociateProductWithPortfolio action.
+ * \value AssociateServiceActionWithProvisioningArtifactAction ServiceCatalog AssociateServiceActionWithProvisioningArtifact action.
  * \value AssociateTagOptionWithResourceAction ServiceCatalog AssociateTagOptionWithResource action.
+ * \value BatchAssociateServiceActionWithProvisioningArtifactAction ServiceCatalog BatchAssociateServiceActionWithProvisioningArtifact action.
+ * \value BatchDisassociateServiceActionFromProvisioningArtifactAction ServiceCatalog BatchDisassociateServiceActionFromProvisioningArtifact action.
  * \value CopyProductAction ServiceCatalog CopyProduct action.
  * \value CreateConstraintAction ServiceCatalog CreateConstraint action.
  * \value CreatePortfolioAction ServiceCatalog CreatePortfolio action.
@@ -47,6 +50,7 @@ namespace ServiceCatalog {
  * \value CreateProductAction ServiceCatalog CreateProduct action.
  * \value CreateProvisionedProductPlanAction ServiceCatalog CreateProvisionedProductPlan action.
  * \value CreateProvisioningArtifactAction ServiceCatalog CreateProvisioningArtifact action.
+ * \value CreateServiceActionAction ServiceCatalog CreateServiceAction action.
  * \value CreateTagOptionAction ServiceCatalog CreateTagOption action.
  * \value DeleteConstraintAction ServiceCatalog DeleteConstraint action.
  * \value DeletePortfolioAction ServiceCatalog DeletePortfolio action.
@@ -54,10 +58,12 @@ namespace ServiceCatalog {
  * \value DeleteProductAction ServiceCatalog DeleteProduct action.
  * \value DeleteProvisionedProductPlanAction ServiceCatalog DeleteProvisionedProductPlan action.
  * \value DeleteProvisioningArtifactAction ServiceCatalog DeleteProvisioningArtifact action.
+ * \value DeleteServiceActionAction ServiceCatalog DeleteServiceAction action.
  * \value DeleteTagOptionAction ServiceCatalog DeleteTagOption action.
  * \value DescribeConstraintAction ServiceCatalog DescribeConstraint action.
  * \value DescribeCopyProductStatusAction ServiceCatalog DescribeCopyProductStatus action.
  * \value DescribePortfolioAction ServiceCatalog DescribePortfolio action.
+ * \value DescribePortfolioShareStatusAction ServiceCatalog DescribePortfolioShareStatus action.
  * \value DescribeProductAction ServiceCatalog DescribeProduct action.
  * \value DescribeProductAsAdminAction ServiceCatalog DescribeProductAsAdmin action.
  * \value DescribeProductViewAction ServiceCatalog DescribeProductView action.
@@ -66,22 +72,32 @@ namespace ServiceCatalog {
  * \value DescribeProvisioningArtifactAction ServiceCatalog DescribeProvisioningArtifact action.
  * \value DescribeProvisioningParametersAction ServiceCatalog DescribeProvisioningParameters action.
  * \value DescribeRecordAction ServiceCatalog DescribeRecord action.
+ * \value DescribeServiceActionAction ServiceCatalog DescribeServiceAction action.
  * \value DescribeTagOptionAction ServiceCatalog DescribeTagOption action.
+ * \value DisableAWSOrganizationsAccessAction ServiceCatalog DisableAWSOrganizationsAccess action.
  * \value DisassociatePrincipalFromPortfolioAction ServiceCatalog DisassociatePrincipalFromPortfolio action.
  * \value DisassociateProductFromPortfolioAction ServiceCatalog DisassociateProductFromPortfolio action.
+ * \value DisassociateServiceActionFromProvisioningArtifactAction ServiceCatalog DisassociateServiceActionFromProvisioningArtifact action.
  * \value DisassociateTagOptionFromResourceAction ServiceCatalog DisassociateTagOptionFromResource action.
+ * \value EnableAWSOrganizationsAccessAction ServiceCatalog EnableAWSOrganizationsAccess action.
  * \value ExecuteProvisionedProductPlanAction ServiceCatalog ExecuteProvisionedProductPlan action.
+ * \value ExecuteProvisionedProductServiceActionAction ServiceCatalog ExecuteProvisionedProductServiceAction action.
+ * \value GetAWSOrganizationsAccessStatusAction ServiceCatalog GetAWSOrganizationsAccessStatus action.
  * \value ListAcceptedPortfolioSharesAction ServiceCatalog ListAcceptedPortfolioShares action.
  * \value ListConstraintsForPortfolioAction ServiceCatalog ListConstraintsForPortfolio action.
  * \value ListLaunchPathsAction ServiceCatalog ListLaunchPaths action.
+ * \value ListOrganizationPortfolioAccessAction ServiceCatalog ListOrganizationPortfolioAccess action.
  * \value ListPortfolioAccessAction ServiceCatalog ListPortfolioAccess action.
  * \value ListPortfoliosAction ServiceCatalog ListPortfolios action.
  * \value ListPortfoliosForProductAction ServiceCatalog ListPortfoliosForProduct action.
  * \value ListPrincipalsForPortfolioAction ServiceCatalog ListPrincipalsForPortfolio action.
  * \value ListProvisionedProductPlansAction ServiceCatalog ListProvisionedProductPlans action.
  * \value ListProvisioningArtifactsAction ServiceCatalog ListProvisioningArtifacts action.
+ * \value ListProvisioningArtifactsForServiceActionAction ServiceCatalog ListProvisioningArtifactsForServiceAction action.
  * \value ListRecordHistoryAction ServiceCatalog ListRecordHistory action.
  * \value ListResourcesForTagOptionAction ServiceCatalog ListResourcesForTagOption action.
+ * \value ListServiceActionsAction ServiceCatalog ListServiceActions action.
+ * \value ListServiceActionsForProvisioningArtifactAction ServiceCatalog ListServiceActionsForProvisioningArtifact action.
  * \value ListTagOptionsAction ServiceCatalog ListTagOptions action.
  * \value ProvisionProductAction ServiceCatalog ProvisionProduct action.
  * \value RejectPortfolioShareAction ServiceCatalog RejectPortfolioShare action.
@@ -95,6 +111,7 @@ namespace ServiceCatalog {
  * \value UpdateProductAction ServiceCatalog UpdateProduct action.
  * \value UpdateProvisionedProductAction ServiceCatalog UpdateProvisionedProduct action.
  * \value UpdateProvisioningArtifactAction ServiceCatalog UpdateProvisioningArtifact action.
+ * \value UpdateServiceActionAction ServiceCatalog UpdateServiceAction action.
  * \value UpdateTagOptionAction ServiceCatalog UpdateTagOption action.
  */
 

@@ -59,6 +59,8 @@
 #include "getdatasetcontentresponse.h"
 #include "listchannelsrequest.h"
 #include "listchannelsresponse.h"
+#include "listdatasetcontentsrequest.h"
+#include "listdatasetcontentsresponse.h"
 #include "listdatasetsrequest.h"
 #include "listdatasetsresponse.h"
 #include "listdatastoresrequest.h"
@@ -231,11 +233,9 @@ CreateChannelResponse * IoTAnalyticsClient::createChannel(const CreateChannelReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a data set. A data set stores data retrieved from a data store by applying an SQL
- *
- * action> <note>
- *
- * This operation creates the skeleton of a data set. To populate the data set, call
+ * Creates a data set. A data set stores data retrieved from a data store by applying a "queryAction" (a SQL query) or a
+ * "containerAction" (executing a containerized application). This operation creates the skeleton of a data set. The data
+ * set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you
  */
 CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetRequest &request)
 {
@@ -248,7 +248,7 @@ CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates the content of a data set by applying an SQL
+ * Creates the content of a data set by applying a SQL
  */
 CreateDatasetContentResponse * IoTAnalyticsClient::createDatasetContent(const CreateDatasetContentRequest &request)
 {
@@ -440,6 +440,19 @@ GetDatasetContentResponse * IoTAnalyticsClient::getDatasetContent(const GetDatas
 ListChannelsResponse * IoTAnalyticsClient::listChannels(const ListChannelsRequest &request)
 {
     return qobject_cast<ListChannelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTAnalyticsClient service, and returns a pointer to an
+ * ListDatasetContentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists information about data set contents that have been
+ */
+ListDatasetContentsResponse * IoTAnalyticsClient::listDatasetContents(const ListDatasetContentsRequest &request)
+{
+    return qobject_cast<ListDatasetContentsResponse *>(send(request));
 }
 
 /*!

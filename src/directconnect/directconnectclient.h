@@ -116,6 +116,8 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateLagRequest;
 class UpdateLagResponse;
+class UpdateVirtualInterfaceAttributesRequest;
+class UpdateVirtualInterfaceAttributesResponse;
 
 class QTAWS_EXPORT DirectConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -179,6 +181,7 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateLagResponse * updateLag(const UpdateLagRequest &request);
+    UpdateVirtualInterfaceAttributesResponse * updateVirtualInterfaceAttributes(const UpdateVirtualInterfaceAttributesRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DirectConnectClient)

@@ -22,6 +22,18 @@ HEADERS += \
     authorizesnapshotaccessrequest_p.h \
     authorizesnapshotaccessresponse.h \
     authorizesnapshotaccessresponse_p.h \
+    batchdeleteclustersnapshotsrequest.h \
+    batchdeleteclustersnapshotsrequest_p.h \
+    batchdeleteclustersnapshotsresponse.h \
+    batchdeleteclustersnapshotsresponse_p.h \
+    batchmodifyclustersnapshotsrequest.h \
+    batchmodifyclustersnapshotsrequest_p.h \
+    batchmodifyclustersnapshotsresponse.h \
+    batchmodifyclustersnapshotsresponse_p.h \
+    cancelresizerequest.h \
+    cancelresizerequest_p.h \
+    cancelresizeresponse.h \
+    cancelresizeresponse_p.h \
     copyclustersnapshotrequest.h \
     copyclustersnapshotrequest_p.h \
     copyclustersnapshotresponse.h \
@@ -62,6 +74,10 @@ HEADERS += \
     createsnapshotcopygrantrequest_p.h \
     createsnapshotcopygrantresponse.h \
     createsnapshotcopygrantresponse_p.h \
+    createsnapshotschedulerequest.h \
+    createsnapshotschedulerequest_p.h \
+    createsnapshotscheduleresponse.h \
+    createsnapshotscheduleresponse_p.h \
     createtagsrequest.h \
     createtagsrequest_p.h \
     createtagsresponse.h \
@@ -102,10 +118,18 @@ HEADERS += \
     deletesnapshotcopygrantrequest_p.h \
     deletesnapshotcopygrantresponse.h \
     deletesnapshotcopygrantresponse_p.h \
+    deletesnapshotschedulerequest.h \
+    deletesnapshotschedulerequest_p.h \
+    deletesnapshotscheduleresponse.h \
+    deletesnapshotscheduleresponse_p.h \
     deletetagsrequest.h \
     deletetagsrequest_p.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
+    describeaccountattributesrequest.h \
+    describeaccountattributesrequest_p.h \
+    describeaccountattributesresponse.h \
+    describeaccountattributesresponse_p.h \
     describeclusterdbrevisionsrequest.h \
     describeclusterdbrevisionsrequest_p.h \
     describeclusterdbrevisionsresponse.h \
@@ -190,6 +214,14 @@ HEADERS += \
     describesnapshotcopygrantsrequest_p.h \
     describesnapshotcopygrantsresponse.h \
     describesnapshotcopygrantsresponse_p.h \
+    describesnapshotschedulesrequest.h \
+    describesnapshotschedulesrequest_p.h \
+    describesnapshotschedulesresponse.h \
+    describesnapshotschedulesresponse_p.h \
+    describestoragerequest.h \
+    describestoragerequest_p.h \
+    describestorageresponse.h \
+    describestorageresponse_p.h \
     describetablerestorestatusrequest.h \
     describetablerestorestatusrequest_p.h \
     describetablerestorestatusresponse.h \
@@ -230,6 +262,10 @@ HEADERS += \
     modifyclusteriamrolesrequest_p.h \
     modifyclusteriamrolesresponse.h \
     modifyclusteriamrolesresponse_p.h \
+    modifyclustermaintenancerequest.h \
+    modifyclustermaintenancerequest_p.h \
+    modifyclustermaintenanceresponse.h \
+    modifyclustermaintenanceresponse_p.h \
     modifyclusterparametergrouprequest.h \
     modifyclusterparametergrouprequest_p.h \
     modifyclusterparametergroupresponse.h \
@@ -238,6 +274,14 @@ HEADERS += \
     modifyclusterrequest_p.h \
     modifyclusterresponse.h \
     modifyclusterresponse_p.h \
+    modifyclustersnapshotrequest.h \
+    modifyclustersnapshotrequest_p.h \
+    modifyclustersnapshotresponse.h \
+    modifyclustersnapshotresponse_p.h \
+    modifyclustersnapshotschedulerequest.h \
+    modifyclustersnapshotschedulerequest_p.h \
+    modifyclustersnapshotscheduleresponse.h \
+    modifyclustersnapshotscheduleresponse_p.h \
     modifyclustersubnetgrouprequest.h \
     modifyclustersubnetgrouprequest_p.h \
     modifyclustersubnetgroupresponse.h \
@@ -250,6 +294,10 @@ HEADERS += \
     modifysnapshotcopyretentionperiodrequest_p.h \
     modifysnapshotcopyretentionperiodresponse.h \
     modifysnapshotcopyretentionperiodresponse_p.h \
+    modifysnapshotschedulerequest.h \
+    modifysnapshotschedulerequest_p.h \
+    modifysnapshotscheduleresponse.h \
+    modifysnapshotscheduleresponse_p.h \
     purchasereservednodeofferingrequest.h \
     purchasereservednodeofferingrequest_p.h \
     purchasereservednodeofferingresponse.h \
@@ -268,6 +316,10 @@ HEADERS += \
     resetclusterparametergrouprequest_p.h \
     resetclusterparametergroupresponse.h \
     resetclusterparametergroupresponse_p.h \
+    resizeclusterrequest.h \
+    resizeclusterrequest_p.h \
+    resizeclusterresponse.h \
+    resizeclusterresponse_p.h \
     restorefromclustersnapshotrequest.h \
     restorefromclustersnapshotrequest_p.h \
     restorefromclustersnapshotresponse.h \
@@ -296,6 +348,12 @@ SOURCES += \
     authorizeclustersecuritygroupingressresponse.cpp \
     authorizesnapshotaccessrequest.cpp \
     authorizesnapshotaccessresponse.cpp \
+    batchdeleteclustersnapshotsrequest.cpp \
+    batchdeleteclustersnapshotsresponse.cpp \
+    batchmodifyclustersnapshotsrequest.cpp \
+    batchmodifyclustersnapshotsresponse.cpp \
+    cancelresizerequest.cpp \
+    cancelresizeresponse.cpp \
     copyclustersnapshotrequest.cpp \
     copyclustersnapshotresponse.cpp \
     createclusterparametergrouprequest.cpp \
@@ -316,6 +374,8 @@ SOURCES += \
     createhsmconfigurationresponse.cpp \
     createsnapshotcopygrantrequest.cpp \
     createsnapshotcopygrantresponse.cpp \
+    createsnapshotschedulerequest.cpp \
+    createsnapshotscheduleresponse.cpp \
     createtagsrequest.cpp \
     createtagsresponse.cpp \
     deleteclusterparametergrouprequest.cpp \
@@ -336,8 +396,12 @@ SOURCES += \
     deletehsmconfigurationresponse.cpp \
     deletesnapshotcopygrantrequest.cpp \
     deletesnapshotcopygrantresponse.cpp \
+    deletesnapshotschedulerequest.cpp \
+    deletesnapshotscheduleresponse.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
+    describeaccountattributesrequest.cpp \
+    describeaccountattributesresponse.cpp \
     describeclusterdbrevisionsrequest.cpp \
     describeclusterdbrevisionsresponse.cpp \
     describeclusterparametergroupsrequest.cpp \
@@ -380,6 +444,10 @@ SOURCES += \
     describeresizeresponse.cpp \
     describesnapshotcopygrantsrequest.cpp \
     describesnapshotcopygrantsresponse.cpp \
+    describesnapshotschedulesrequest.cpp \
+    describesnapshotschedulesresponse.cpp \
+    describestoragerequest.cpp \
+    describestorageresponse.cpp \
     describetablerestorestatusrequest.cpp \
     describetablerestorestatusresponse.cpp \
     describetagsrequest.cpp \
@@ -400,16 +468,24 @@ SOURCES += \
     modifyclusterdbrevisionresponse.cpp \
     modifyclusteriamrolesrequest.cpp \
     modifyclusteriamrolesresponse.cpp \
+    modifyclustermaintenancerequest.cpp \
+    modifyclustermaintenanceresponse.cpp \
     modifyclusterparametergrouprequest.cpp \
     modifyclusterparametergroupresponse.cpp \
     modifyclusterrequest.cpp \
     modifyclusterresponse.cpp \
+    modifyclustersnapshotrequest.cpp \
+    modifyclustersnapshotresponse.cpp \
+    modifyclustersnapshotschedulerequest.cpp \
+    modifyclustersnapshotscheduleresponse.cpp \
     modifyclustersubnetgrouprequest.cpp \
     modifyclustersubnetgroupresponse.cpp \
     modifyeventsubscriptionrequest.cpp \
     modifyeventsubscriptionresponse.cpp \
     modifysnapshotcopyretentionperiodrequest.cpp \
     modifysnapshotcopyretentionperiodresponse.cpp \
+    modifysnapshotschedulerequest.cpp \
+    modifysnapshotscheduleresponse.cpp \
     purchasereservednodeofferingrequest.cpp \
     purchasereservednodeofferingresponse.cpp \
     rebootclusterrequest.cpp \
@@ -419,6 +495,8 @@ SOURCES += \
     redshiftresponse.cpp \
     resetclusterparametergrouprequest.cpp \
     resetclusterparametergroupresponse.cpp \
+    resizeclusterrequest.cpp \
+    resizeclusterresponse.cpp \
     restorefromclustersnapshotrequest.cpp \
     restorefromclustersnapshotresponse.cpp \
     restoretablefromclustersnapshotrequest.cpp \

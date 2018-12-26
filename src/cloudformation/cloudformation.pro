@@ -64,6 +64,10 @@ HEADERS += \
     describechangesetrequest_p.h \
     describechangesetresponse.h \
     describechangesetresponse_p.h \
+    describestackdriftdetectionstatusrequest.h \
+    describestackdriftdetectionstatusrequest_p.h \
+    describestackdriftdetectionstatusresponse.h \
+    describestackdriftdetectionstatusresponse_p.h \
     describestackeventsrequest.h \
     describestackeventsrequest_p.h \
     describestackeventsresponse.h \
@@ -72,6 +76,10 @@ HEADERS += \
     describestackinstancerequest_p.h \
     describestackinstanceresponse.h \
     describestackinstanceresponse_p.h \
+    describestackresourcedriftsrequest.h \
+    describestackresourcedriftsrequest_p.h \
+    describestackresourcedriftsresponse.h \
+    describestackresourcedriftsresponse_p.h \
     describestackresourcerequest.h \
     describestackresourcerequest_p.h \
     describestackresourceresponse.h \
@@ -92,6 +100,14 @@ HEADERS += \
     describestacksrequest_p.h \
     describestacksresponse.h \
     describestacksresponse_p.h \
+    detectstackdriftrequest.h \
+    detectstackdriftrequest_p.h \
+    detectstackdriftresponse.h \
+    detectstackdriftresponse_p.h \
+    detectstackresourcedriftrequest.h \
+    detectstackresourcedriftrequest_p.h \
+    detectstackresourcedriftresponse.h \
+    detectstackresourcedriftresponse_p.h \
     estimatetemplatecostrequest.h \
     estimatetemplatecostrequest_p.h \
     estimatetemplatecostresponse.h \
@@ -209,10 +225,14 @@ SOURCES += \
     describeaccountlimitsresponse.cpp \
     describechangesetrequest.cpp \
     describechangesetresponse.cpp \
+    describestackdriftdetectionstatusrequest.cpp \
+    describestackdriftdetectionstatusresponse.cpp \
     describestackeventsrequest.cpp \
     describestackeventsresponse.cpp \
     describestackinstancerequest.cpp \
     describestackinstanceresponse.cpp \
+    describestackresourcedriftsrequest.cpp \
+    describestackresourcedriftsresponse.cpp \
     describestackresourcerequest.cpp \
     describestackresourceresponse.cpp \
     describestackresourcesrequest.cpp \
@@ -223,6 +243,10 @@ SOURCES += \
     describestacksetresponse.cpp \
     describestacksrequest.cpp \
     describestacksresponse.cpp \
+    detectstackdriftrequest.cpp \
+    detectstackdriftresponse.cpp \
+    detectstackresourcedriftrequest.cpp \
+    detectstackresourcedriftresponse.cpp \
     estimatetemplatecostrequest.cpp \
     estimatetemplatecostresponse.cpp \
     executechangesetrequest.cpp \

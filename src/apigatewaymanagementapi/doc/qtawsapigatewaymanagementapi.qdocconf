@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsApiGatewayManagementApi
+description = AWS ApiGatewayManagementApi SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsapigatewaymanagementapi-index.html"
+navigation.landingtitle = "ApiGatewayManagementApi"
+navigation.cppclassespage = "ApiGatewayManagementApi C++ Classes"

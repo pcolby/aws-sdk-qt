@@ -53,11 +53,15 @@ namespace CloudWatchLogs {
  * \value DescribeLogGroupsAction CloudWatchLogs DescribeLogGroups action.
  * \value DescribeLogStreamsAction CloudWatchLogs DescribeLogStreams action.
  * \value DescribeMetricFiltersAction CloudWatchLogs DescribeMetricFilters action.
+ * \value DescribeQueriesAction CloudWatchLogs DescribeQueries action.
  * \value DescribeResourcePoliciesAction CloudWatchLogs DescribeResourcePolicies action.
  * \value DescribeSubscriptionFiltersAction CloudWatchLogs DescribeSubscriptionFilters action.
  * \value DisassociateKmsKeyAction CloudWatchLogs DisassociateKmsKey action.
  * \value FilterLogEventsAction CloudWatchLogs FilterLogEvents action.
  * \value GetLogEventsAction CloudWatchLogs GetLogEvents action.
+ * \value GetLogGroupFieldsAction CloudWatchLogs GetLogGroupFields action.
+ * \value GetLogRecordAction CloudWatchLogs GetLogRecord action.
+ * \value GetQueryResultsAction CloudWatchLogs GetQueryResults action.
  * \value ListTagsLogGroupAction CloudWatchLogs ListTagsLogGroup action.
  * \value PutDestinationAction CloudWatchLogs PutDestination action.
  * \value PutDestinationPolicyAction CloudWatchLogs PutDestinationPolicy action.
@@ -66,6 +70,8 @@ namespace CloudWatchLogs {
  * \value PutResourcePolicyAction CloudWatchLogs PutResourcePolicy action.
  * \value PutRetentionPolicyAction CloudWatchLogs PutRetentionPolicy action.
  * \value PutSubscriptionFilterAction CloudWatchLogs PutSubscriptionFilter action.
+ * \value StartQueryAction CloudWatchLogs StartQuery action.
+ * \value StopQueryAction CloudWatchLogs StopQuery action.
  * \value TagLogGroupAction CloudWatchLogs TagLogGroup action.
  * \value TestMetricFilterAction CloudWatchLogs TestMetricFilter action.
  * \value UntagLogGroupAction CloudWatchLogs UntagLogGroup action.

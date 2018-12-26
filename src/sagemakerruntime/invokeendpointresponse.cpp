@@ -33,7 +33,7 @@ namespace SageMakerRuntime {
  *
  * \inmodule QtAwsSageMakerRuntime
  *
- *  Amazon SageMaker runtime API.
+ *  The Amazon SageMaker runtime API.
  *
  * \sa SageMakerRuntimeClient::invokeEndpoint
  */

@@ -43,6 +43,8 @@
 #include "describeserversresponse.h"
 #include "disassociatenoderequest.h"
 #include "disassociatenoderesponse.h"
+#include "exportserverengineattributerequest.h"
+#include "exportserverengineattributeresponse.h"
 #include "restoreserverrequest.h"
 #include "restoreserverresponse.h"
 #include "startmaintenancerequest.h"
@@ -76,9 +78,11 @@ namespace OpsWorksCM {
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
- *  AWS OpsWorks for configuration management (CM) is a service that runs and manages configuration management servers.
+ *  AWS OpsWorks for configuration management (CM) is a service that runs and manages configuration management servers. You
+ *  can use AWS OpsWorks CM to create and manage AWS OpsWorks for Chef Automate and AWS OpsWorks for Puppet Enterprise
+ *  servers, and add or remove nodes for the servers to
  * 
- *  </p
+ *  manage>
  * 
  *  <b>Glossary of terms</b>
  * 
@@ -125,7 +129,19 @@ namespace OpsWorksCM {
  * 
  *  opsworks-cm.us-east-1.amazonaws.co> </li> <li>
  * 
+ *  opsworks-cm.us-east-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks-cm.us-west-1.amazonaws.co> </li> <li>
+ * 
  *  opsworks-cm.us-west-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks-cm.ap-northeast-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks-cm.ap-southeast-1.amazonaws.co> </li> <li>
+ * 
+ *  opsworks-cm.ap-southeast-2.amazonaws.co> </li> <li>
+ * 
+ *  opsworks-cm.eu-central-1.amazonaws.co> </li> <li>
  * 
  *  opsworks-cm.eu-west-1.amazonaws.co> </li> </ul>
  * 
@@ -475,6 +491,30 @@ DescribeServersResponse * OpsWorksCMClient::describeServers(const DescribeServer
 DisassociateNodeResponse * OpsWorksCMClient::disassociateNode(const DisassociateNodeRequest &request)
 {
     return qobject_cast<DisassociateNodeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * ExportServerEngineAttributeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Exports a specified server engine attribute as a base64-encoded string. For example, you can export user data that you
+ * can use in EC2 to associate nodes with a server.
+ *
+ * </p
+ *
+ * This operation is synchronous.
+ *
+ * </p
+ *
+ * A <code>ValidationException</code> is raised when parameters of the request are not valid. A
+ * <code>ResourceNotFoundException</code> is thrown when the server does not exist. An <code>InvalidStateException</code>
+ * is thrown when the server is in any of the following states: CREATING, TERMINATED, FAILED or DELETING.
+ */
+ExportServerEngineAttributeResponse * OpsWorksCMClient::exportServerEngineAttribute(const ExportServerEngineAttributeRequest &request)
+{
+    return qobject_cast<ExportServerEngineAttributeResponse *>(send(request));
 }
 
 /*!

@@ -136,6 +136,8 @@ class RenewOfferingRequest;
 class RenewOfferingResponse;
 class ScheduleRunRequest;
 class ScheduleRunResponse;
+class StopJobRequest;
+class StopJobResponse;
 class StopRemoteAccessSessionRequest;
 class StopRemoteAccessSessionResponse;
 class StopRunRequest;
@@ -150,6 +152,8 @@ class UpdateNetworkProfileRequest;
 class UpdateNetworkProfileResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
+class UpdateUploadRequest;
+class UpdateUploadResponse;
 class UpdateVPCEConfigurationRequest;
 class UpdateVPCEConfigurationResponse;
 
@@ -223,6 +227,7 @@ public slots:
     PurchaseOfferingResponse * purchaseOffering(const PurchaseOfferingRequest &request);
     RenewOfferingResponse * renewOffering(const RenewOfferingRequest &request);
     ScheduleRunResponse * scheduleRun(const ScheduleRunRequest &request);
+    StopJobResponse * stopJob(const StopJobRequest &request);
     StopRemoteAccessSessionResponse * stopRemoteAccessSession(const StopRemoteAccessSessionRequest &request);
     StopRunResponse * stopRun(const StopRunRequest &request);
     UpdateDeviceInstanceResponse * updateDeviceInstance(const UpdateDeviceInstanceRequest &request);
@@ -230,6 +235,7 @@ public slots:
     UpdateInstanceProfileResponse * updateInstanceProfile(const UpdateInstanceProfileRequest &request);
     UpdateNetworkProfileResponse * updateNetworkProfile(const UpdateNetworkProfileRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
+    UpdateUploadResponse * updateUpload(const UpdateUploadRequest &request);
     UpdateVPCEConfigurationResponse * updateVPCEConfiguration(const UpdateVPCEConfigurationRequest &request);
 
 private:

@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "createvocabularyrequest.h"
 #include "createvocabularyresponse.h"
+#include "deletetranscriptionjobrequest.h"
+#include "deletetranscriptionjobresponse.h"
 #include "deletevocabularyrequest.h"
 #include "deletevocabularyresponse.h"
 #include "gettranscriptionjobrequest.h"
@@ -123,10 +125,25 @@ TranscribeServiceClient::TranscribeServiceClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio
+ * file.
  */
 CreateVocabularyResponse * TranscribeServiceClient::createVocabulary(const CreateVocabularyRequest &request)
 {
     return qobject_cast<CreateVocabularyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranscribeServiceClient service, and returns a pointer to an
+ * DeleteTranscriptionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a previously submitted transcription job along with any other generated results such as the transcription,
+ * models, and so
+ */
+DeleteTranscriptionJobResponse * TranscribeServiceClient::deleteTranscriptionJob(const DeleteTranscriptionJobRequest &request)
+{
+    return qobject_cast<DeleteTranscriptionJobResponse *>(send(request));
 }
 
 /*!
@@ -163,7 +180,7 @@ GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about a
+ * Gets information about a vocabulary.
  */
 GetVocabularyResponse * TranscribeServiceClient::getVocabulary(const GetVocabularyRequest &request)
 {
@@ -203,7 +220,7 @@ ListVocabulariesResponse * TranscribeServiceClient::listVocabularies(const ListV
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts an asynchronous job to transcribe speech to
+ * Starts an asynchronous job to transcribe speech to text.
  */
 StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(const StartTranscriptionJobRequest &request)
 {
@@ -217,7 +234,7 @@ StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(c
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates an existing vocabulary with new values. The <code>UpdateVocabulary</code> operation overwrites all of the
- * existing information with the values that you provide in the
+ * existing information with the values that you provide in the request.
  */
 UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const UpdateVocabularyRequest &request)
 {

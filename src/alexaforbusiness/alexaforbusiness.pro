@@ -16,6 +16,10 @@ HEADERS += \
     alexaforbusinessrequest_p.h \
     alexaforbusinessresponse.h \
     alexaforbusinessresponse_p.h \
+    approveskillrequest.h \
+    approveskillrequest_p.h \
+    approveskillresponse.h \
+    approveskillresponse_p.h \
     associatecontactwithaddressbookrequest.h \
     associatecontactwithaddressbookrequest_p.h \
     associatecontactwithaddressbookresponse.h \
@@ -28,10 +32,26 @@ HEADERS += \
     associateskillgroupwithroomrequest_p.h \
     associateskillgroupwithroomresponse.h \
     associateskillgroupwithroomresponse_p.h \
+    associateskillwithskillgrouprequest.h \
+    associateskillwithskillgrouprequest_p.h \
+    associateskillwithskillgroupresponse.h \
+    associateskillwithskillgroupresponse_p.h \
+    associateskillwithusersrequest.h \
+    associateskillwithusersrequest_p.h \
+    associateskillwithusersresponse.h \
+    associateskillwithusersresponse_p.h \
     createaddressbookrequest.h \
     createaddressbookrequest_p.h \
     createaddressbookresponse.h \
     createaddressbookresponse_p.h \
+    createbusinessreportschedulerequest.h \
+    createbusinessreportschedulerequest_p.h \
+    createbusinessreportscheduleresponse.h \
+    createbusinessreportscheduleresponse_p.h \
+    createconferenceproviderrequest.h \
+    createconferenceproviderrequest_p.h \
+    createconferenceproviderresponse.h \
+    createconferenceproviderresponse_p.h \
     createcontactrequest.h \
     createcontactrequest_p.h \
     createcontactresponse.h \
@@ -56,10 +76,22 @@ HEADERS += \
     deleteaddressbookrequest_p.h \
     deleteaddressbookresponse.h \
     deleteaddressbookresponse_p.h \
+    deletebusinessreportschedulerequest.h \
+    deletebusinessreportschedulerequest_p.h \
+    deletebusinessreportscheduleresponse.h \
+    deletebusinessreportscheduleresponse_p.h \
+    deleteconferenceproviderrequest.h \
+    deleteconferenceproviderrequest_p.h \
+    deleteconferenceproviderresponse.h \
+    deleteconferenceproviderresponse_p.h \
     deletecontactrequest.h \
     deletecontactrequest_p.h \
     deletecontactresponse.h \
     deletecontactresponse_p.h \
+    deletedevicerequest.h \
+    deletedevicerequest_p.h \
+    deletedeviceresponse.h \
+    deletedeviceresponse_p.h \
     deleteprofilerequest.h \
     deleteprofilerequest_p.h \
     deleteprofileresponse.h \
@@ -72,6 +104,10 @@ HEADERS += \
     deleteroomskillparameterrequest_p.h \
     deleteroomskillparameterresponse.h \
     deleteroomskillparameterresponse_p.h \
+    deleteskillauthorizationrequest.h \
+    deleteskillauthorizationrequest_p.h \
+    deleteskillauthorizationresponse.h \
+    deleteskillauthorizationresponse_p.h \
     deleteskillgrouprequest.h \
     deleteskillgrouprequest_p.h \
     deleteskillgroupresponse.h \
@@ -88,14 +124,34 @@ HEADERS += \
     disassociatedevicefromroomrequest_p.h \
     disassociatedevicefromroomresponse.h \
     disassociatedevicefromroomresponse_p.h \
+    disassociateskillfromskillgrouprequest.h \
+    disassociateskillfromskillgrouprequest_p.h \
+    disassociateskillfromskillgroupresponse.h \
+    disassociateskillfromskillgroupresponse_p.h \
+    disassociateskillfromusersrequest.h \
+    disassociateskillfromusersrequest_p.h \
+    disassociateskillfromusersresponse.h \
+    disassociateskillfromusersresponse_p.h \
     disassociateskillgroupfromroomrequest.h \
     disassociateskillgroupfromroomrequest_p.h \
     disassociateskillgroupfromroomresponse.h \
     disassociateskillgroupfromroomresponse_p.h \
+    forgetsmarthomeappliancesrequest.h \
+    forgetsmarthomeappliancesrequest_p.h \
+    forgetsmarthomeappliancesresponse.h \
+    forgetsmarthomeappliancesresponse_p.h \
     getaddressbookrequest.h \
     getaddressbookrequest_p.h \
     getaddressbookresponse.h \
     getaddressbookresponse_p.h \
+    getconferencepreferencerequest.h \
+    getconferencepreferencerequest_p.h \
+    getconferencepreferenceresponse.h \
+    getconferencepreferenceresponse_p.h \
+    getconferenceproviderrequest.h \
+    getconferenceproviderrequest_p.h \
+    getconferenceproviderresponse.h \
+    getconferenceproviderresponse_p.h \
     getcontactrequest.h \
     getcontactrequest_p.h \
     getcontactresponse.h \
@@ -120,6 +176,14 @@ HEADERS += \
     getskillgrouprequest_p.h \
     getskillgroupresponse.h \
     getskillgroupresponse_p.h \
+    listbusinessreportschedulesrequest.h \
+    listbusinessreportschedulesrequest_p.h \
+    listbusinessreportschedulesresponse.h \
+    listbusinessreportschedulesresponse_p.h \
+    listconferenceprovidersrequest.h \
+    listconferenceprovidersrequest_p.h \
+    listconferenceprovidersresponse.h \
+    listconferenceprovidersresponse_p.h \
     listdeviceeventsrequest.h \
     listdeviceeventsrequest_p.h \
     listdeviceeventsresponse.h \
@@ -128,14 +192,42 @@ HEADERS += \
     listskillsrequest_p.h \
     listskillsresponse.h \
     listskillsresponse_p.h \
+    listskillsstorecategoriesrequest.h \
+    listskillsstorecategoriesrequest_p.h \
+    listskillsstorecategoriesresponse.h \
+    listskillsstorecategoriesresponse_p.h \
+    listskillsstoreskillsbycategoryrequest.h \
+    listskillsstoreskillsbycategoryrequest_p.h \
+    listskillsstoreskillsbycategoryresponse.h \
+    listskillsstoreskillsbycategoryresponse_p.h \
+    listsmarthomeappliancesrequest.h \
+    listsmarthomeappliancesrequest_p.h \
+    listsmarthomeappliancesresponse.h \
+    listsmarthomeappliancesresponse_p.h \
     listtagsrequest.h \
     listtagsrequest_p.h \
     listtagsresponse.h \
     listtagsresponse_p.h \
+    putconferencepreferencerequest.h \
+    putconferencepreferencerequest_p.h \
+    putconferencepreferenceresponse.h \
+    putconferencepreferenceresponse_p.h \
     putroomskillparameterrequest.h \
     putroomskillparameterrequest_p.h \
     putroomskillparameterresponse.h \
     putroomskillparameterresponse_p.h \
+    putskillauthorizationrequest.h \
+    putskillauthorizationrequest_p.h \
+    putskillauthorizationresponse.h \
+    putskillauthorizationresponse_p.h \
+    registeravsdevicerequest.h \
+    registeravsdevicerequest_p.h \
+    registeravsdeviceresponse.h \
+    registeravsdeviceresponse_p.h \
+    rejectskillrequest.h \
+    rejectskillrequest_p.h \
+    rejectskillresponse.h \
+    rejectskillresponse_p.h \
     resolveroomrequest.h \
     resolveroomrequest_p.h \
     resolveroomresponse.h \
@@ -180,6 +272,10 @@ HEADERS += \
     startdevicesyncrequest_p.h \
     startdevicesyncresponse.h \
     startdevicesyncresponse_p.h \
+    startsmarthomeappliancediscoveryrequest.h \
+    startsmarthomeappliancediscoveryrequest_p.h \
+    startsmarthomeappliancediscoveryresponse.h \
+    startsmarthomeappliancediscoveryresponse_p.h \
     tagresourcerequest.h \
     tagresourcerequest_p.h \
     tagresourceresponse.h \
@@ -192,6 +288,14 @@ HEADERS += \
     updateaddressbookrequest_p.h \
     updateaddressbookresponse.h \
     updateaddressbookresponse_p.h \
+    updatebusinessreportschedulerequest.h \
+    updatebusinessreportschedulerequest_p.h \
+    updatebusinessreportscheduleresponse.h \
+    updatebusinessreportscheduleresponse_p.h \
+    updateconferenceproviderrequest.h \
+    updateconferenceproviderrequest_p.h \
+    updateconferenceproviderresponse.h \
+    updateconferenceproviderresponse_p.h \
     updatecontactrequest.h \
     updatecontactrequest_p.h \
     updatecontactresponse.h \
@@ -217,14 +321,24 @@ SOURCES += \
     alexaforbusinessclient.cpp \
     alexaforbusinessrequest.cpp \
     alexaforbusinessresponse.cpp \
+    approveskillrequest.cpp \
+    approveskillresponse.cpp \
     associatecontactwithaddressbookrequest.cpp \
     associatecontactwithaddressbookresponse.cpp \
     associatedevicewithroomrequest.cpp \
     associatedevicewithroomresponse.cpp \
     associateskillgroupwithroomrequest.cpp \
     associateskillgroupwithroomresponse.cpp \
+    associateskillwithskillgrouprequest.cpp \
+    associateskillwithskillgroupresponse.cpp \
+    associateskillwithusersrequest.cpp \
+    associateskillwithusersresponse.cpp \
     createaddressbookrequest.cpp \
     createaddressbookresponse.cpp \
+    createbusinessreportschedulerequest.cpp \
+    createbusinessreportscheduleresponse.cpp \
+    createconferenceproviderrequest.cpp \
+    createconferenceproviderresponse.cpp \
     createcontactrequest.cpp \
     createcontactresponse.cpp \
     createprofilerequest.cpp \
@@ -237,14 +351,22 @@ SOURCES += \
     createuserresponse.cpp \
     deleteaddressbookrequest.cpp \
     deleteaddressbookresponse.cpp \
+    deletebusinessreportschedulerequest.cpp \
+    deletebusinessreportscheduleresponse.cpp \
+    deleteconferenceproviderrequest.cpp \
+    deleteconferenceproviderresponse.cpp \
     deletecontactrequest.cpp \
     deletecontactresponse.cpp \
+    deletedevicerequest.cpp \
+    deletedeviceresponse.cpp \
     deleteprofilerequest.cpp \
     deleteprofileresponse.cpp \
     deleteroomrequest.cpp \
     deleteroomresponse.cpp \
     deleteroomskillparameterrequest.cpp \
     deleteroomskillparameterresponse.cpp \
+    deleteskillauthorizationrequest.cpp \
+    deleteskillauthorizationresponse.cpp \
     deleteskillgrouprequest.cpp \
     deleteskillgroupresponse.cpp \
     deleteuserrequest.cpp \
@@ -253,10 +375,20 @@ SOURCES += \
     disassociatecontactfromaddressbookresponse.cpp \
     disassociatedevicefromroomrequest.cpp \
     disassociatedevicefromroomresponse.cpp \
+    disassociateskillfromskillgrouprequest.cpp \
+    disassociateskillfromskillgroupresponse.cpp \
+    disassociateskillfromusersrequest.cpp \
+    disassociateskillfromusersresponse.cpp \
     disassociateskillgroupfromroomrequest.cpp \
     disassociateskillgroupfromroomresponse.cpp \
+    forgetsmarthomeappliancesrequest.cpp \
+    forgetsmarthomeappliancesresponse.cpp \
     getaddressbookrequest.cpp \
     getaddressbookresponse.cpp \
+    getconferencepreferencerequest.cpp \
+    getconferencepreferenceresponse.cpp \
+    getconferenceproviderrequest.cpp \
+    getconferenceproviderresponse.cpp \
     getcontactrequest.cpp \
     getcontactresponse.cpp \
     getdevicerequest.cpp \
@@ -269,14 +401,32 @@ SOURCES += \
     getroomskillparameterresponse.cpp \
     getskillgrouprequest.cpp \
     getskillgroupresponse.cpp \
+    listbusinessreportschedulesrequest.cpp \
+    listbusinessreportschedulesresponse.cpp \
+    listconferenceprovidersrequest.cpp \
+    listconferenceprovidersresponse.cpp \
     listdeviceeventsrequest.cpp \
     listdeviceeventsresponse.cpp \
     listskillsrequest.cpp \
     listskillsresponse.cpp \
+    listskillsstorecategoriesrequest.cpp \
+    listskillsstorecategoriesresponse.cpp \
+    listskillsstoreskillsbycategoryrequest.cpp \
+    listskillsstoreskillsbycategoryresponse.cpp \
+    listsmarthomeappliancesrequest.cpp \
+    listsmarthomeappliancesresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
+    putconferencepreferencerequest.cpp \
+    putconferencepreferenceresponse.cpp \
     putroomskillparameterrequest.cpp \
     putroomskillparameterresponse.cpp \
+    putskillauthorizationrequest.cpp \
+    putskillauthorizationresponse.cpp \
+    registeravsdevicerequest.cpp \
+    registeravsdeviceresponse.cpp \
+    rejectskillrequest.cpp \
+    rejectskillresponse.cpp \
     resolveroomrequest.cpp \
     resolveroomresponse.cpp \
     revokeinvitationrequest.cpp \
@@ -299,12 +449,18 @@ SOURCES += \
     sendinvitationresponse.cpp \
     startdevicesyncrequest.cpp \
     startdevicesyncresponse.cpp \
+    startsmarthomeappliancediscoveryrequest.cpp \
+    startsmarthomeappliancediscoveryresponse.cpp \
     tagresourcerequest.cpp \
     tagresourceresponse.cpp \
     untagresourcerequest.cpp \
     untagresourceresponse.cpp \
     updateaddressbookrequest.cpp \
     updateaddressbookresponse.cpp \
+    updatebusinessreportschedulerequest.cpp \
+    updatebusinessreportscheduleresponse.cpp \
+    updateconferenceproviderrequest.cpp \
+    updateconferenceproviderresponse.cpp \
     updatecontactrequest.cpp \
     updatecontactresponse.cpp \
     updatedevicerequest.cpp \

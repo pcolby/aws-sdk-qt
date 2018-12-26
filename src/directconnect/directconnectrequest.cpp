@@ -80,6 +80,7 @@ namespace DirectConnect {
  * \value TagResourceAction DirectConnect TagResource action.
  * \value UntagResourceAction DirectConnect UntagResource action.
  * \value UpdateLagAction DirectConnect UpdateLag action.
+ * \value UpdateVirtualInterfaceAttributesAction DirectConnect UpdateVirtualInterfaceAttributes action.
  */
 
 /*!

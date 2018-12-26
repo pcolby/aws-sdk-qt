@@ -37,6 +37,7 @@ namespace ElasticsearchService {
  * requests.
  *
  * \value AddTagsAction ElasticsearchService AddTags action.
+ * \value CancelElasticsearchServiceSoftwareUpdateAction ElasticsearchService CancelElasticsearchServiceSoftwareUpdate action.
  * \value CreateElasticsearchDomainAction ElasticsearchService CreateElasticsearchDomain action.
  * \value DeleteElasticsearchDomainAction ElasticsearchService DeleteElasticsearchDomain action.
  * \value DeleteElasticsearchServiceRoleAction ElasticsearchService DeleteElasticsearchServiceRole action.
@@ -46,13 +47,18 @@ namespace ElasticsearchService {
  * \value DescribeElasticsearchInstanceTypeLimitsAction ElasticsearchService DescribeElasticsearchInstanceTypeLimits action.
  * \value DescribeReservedElasticsearchInstanceOfferingsAction ElasticsearchService DescribeReservedElasticsearchInstanceOfferings action.
  * \value DescribeReservedElasticsearchInstancesAction ElasticsearchService DescribeReservedElasticsearchInstances action.
+ * \value GetCompatibleElasticsearchVersionsAction ElasticsearchService GetCompatibleElasticsearchVersions action.
+ * \value GetUpgradeHistoryAction ElasticsearchService GetUpgradeHistory action.
+ * \value GetUpgradeStatusAction ElasticsearchService GetUpgradeStatus action.
  * \value ListDomainNamesAction ElasticsearchService ListDomainNames action.
  * \value ListElasticsearchInstanceTypesAction ElasticsearchService ListElasticsearchInstanceTypes action.
  * \value ListElasticsearchVersionsAction ElasticsearchService ListElasticsearchVersions action.
  * \value ListTagsAction ElasticsearchService ListTags action.
  * \value PurchaseReservedElasticsearchInstanceOfferingAction ElasticsearchService PurchaseReservedElasticsearchInstanceOffering action.
  * \value RemoveTagsAction ElasticsearchService RemoveTags action.
+ * \value StartElasticsearchServiceSoftwareUpdateAction ElasticsearchService StartElasticsearchServiceSoftwareUpdate action.
  * \value UpdateElasticsearchDomainConfigAction ElasticsearchService UpdateElasticsearchDomainConfig action.
+ * \value UpgradeElasticsearchDomainAction ElasticsearchService UpgradeElasticsearchDomain action.
  */
 
 /*!

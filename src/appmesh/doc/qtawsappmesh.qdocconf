@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsAppMesh
+description = AWS AppMesh SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsappmesh-index.html"
+navigation.landingtitle = "AppMesh"
+navigation.cppclassespage = "AppMesh C++ Classes"

@@ -31,6 +31,8 @@
 #include "batchgetdeploymentgroupsresponse.h"
 #include "batchgetdeploymentinstancesrequest.h"
 #include "batchgetdeploymentinstancesresponse.h"
+#include "batchgetdeploymenttargetsrequest.h"
+#include "batchgetdeploymenttargetsresponse.h"
 #include "batchgetdeploymentsrequest.h"
 #include "batchgetdeploymentsresponse.h"
 #include "batchgetonpremisesinstancesrequest.h"
@@ -67,6 +69,8 @@
 #include "getdeploymentgroupresponse.h"
 #include "getdeploymentinstancerequest.h"
 #include "getdeploymentinstanceresponse.h"
+#include "getdeploymenttargetrequest.h"
+#include "getdeploymenttargetresponse.h"
 #include "getonpremisesinstancerequest.h"
 #include "getonpremisesinstanceresponse.h"
 #include "listapplicationrevisionsrequest.h"
@@ -79,6 +83,8 @@
 #include "listdeploymentgroupsresponse.h"
 #include "listdeploymentinstancesrequest.h"
 #include "listdeploymentinstancesresponse.h"
+#include "listdeploymenttargetsrequest.h"
+#include "listdeploymenttargetsresponse.h"
 #include "listdeploymentsrequest.h"
 #include "listdeploymentsresponse.h"
 #include "listgithubaccounttokennamesrequest.h"
@@ -318,11 +324,48 @@ BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about one or more instance that are part of a deployment
+ * <note>
+ *
+ * This method works, but is considered deprecated. Use <code>BatchGetDeploymentTargets</code> instead.
+ *
+ * </p </note>
+ *
+ * Returns an array of instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda
+ * compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms.
  */
 BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request)
 {
     return qobject_cast<BatchGetDeploymentInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * BatchGetDeploymentTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of targets associated with a deployment. This method works with all compute types and should be used
+ * instead of the deprecated <code>BatchGetDeploymentInstances</code>.
+ *
+ * </p
+ *
+ * The type of targets returned depends on the deployment's compute platform:
+ *
+ * </p <ul> <li>
+ *
+ * <b>EC2/On-premises</b> - Information about EC2 instance targets.
+ *
+ * </p </li> <li>
+ *
+ * <b>AWS Lambda</b> - Information about Lambda functions targets.
+ *
+ * </p </li> <li>
+ *
+ * <b>Amazon ECS</b> - Information about ECS service targets.
+ */
+BatchGetDeploymentTargetsResponse * CodeDeployClient::batchGetDeploymentTargets(const BatchGetDeploymentTargetsRequest &request)
+{
+    return qobject_cast<BatchGetDeploymentTargetsResponse *>(send(request));
 }
 
 /*!
@@ -399,7 +442,7 @@ CreateDeploymentResponse * CodeDeployClient::createDeployment(const CreateDeploy
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a deployment
+ * Creates a deployment configuration.
  */
 CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const CreateDeploymentConfigRequest &request)
 {
@@ -568,11 +611,24 @@ GetDeploymentInstanceResponse * CodeDeployClient::getDeploymentInstance(const Ge
 
 /*!
  * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * GetDeploymentTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a deployment target.
+ */
+GetDeploymentTargetResponse * CodeDeployClient::getDeploymentTarget(const GetDeploymentTargetRequest &request)
+{
+    return qobject_cast<GetDeploymentTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
  * GetOnPremisesInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about an on-premises
+ * Gets information about an on-premises instance.
  */
 GetOnPremisesInstanceResponse * CodeDeployClient::getOnPremisesInstance(const GetOnPremisesInstanceRequest &request)
 {
@@ -637,11 +693,32 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the instance for a deployment associated with the applicable IAM user or AWS
+ * <note>
+ *
+ * The newer BatchGetDeploymentTargets should be used instead because it works with all compute types.
+ * <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than
+ * EC2/On-premises or AWS Lambda.
+ *
+ * </p </note>
+ *
+ * Lists the instance for a deployment associated with the applicable IAM user or AWS account.
  */
 ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(const ListDeploymentInstancesRequest &request)
 {
     return qobject_cast<ListDeploymentInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListDeploymentTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of target IDs that are associated a deployment.
+ */
+ListDeploymentTargetsResponse * CodeDeployClient::listDeploymentTargets(const ListDeploymentTargetsRequest &request)
+{
+    return qobject_cast<ListDeploymentTargetsResponse *>(send(request));
 }
 
 /*!
@@ -696,6 +773,7 @@ ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(cons
  *
  * Sets the result of a Lambda validation function. The function validates one or both lifecycle events
  * (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or
+ * <code>Failed</code>.
  */
 PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request)
 {

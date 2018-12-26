@@ -52,6 +52,10 @@ HEADERS += \
     rotatechannelcredentialsrequest_p.h \
     rotatechannelcredentialsresponse.h \
     rotatechannelcredentialsresponse_p.h \
+    rotateingestendpointcredentialsrequest.h \
+    rotateingestendpointcredentialsrequest_p.h \
+    rotateingestendpointcredentialsresponse.h \
+    rotateingestendpointcredentialsresponse_p.h \
     updatechannelrequest.h \
     updatechannelrequest_p.h \
     updatechannelresponse.h \
@@ -83,6 +87,8 @@ SOURCES += \
     mediapackageresponse.cpp \
     rotatechannelcredentialsrequest.cpp \
     rotatechannelcredentialsresponse.cpp \
+    rotateingestendpointcredentialsrequest.cpp \
+    rotateingestendpointcredentialsresponse.cpp \
     updatechannelrequest.cpp \
     updatechannelresponse.cpp \
     updateoriginendpointrequest.cpp \

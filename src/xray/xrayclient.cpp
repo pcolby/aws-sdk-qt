@@ -23,8 +23,26 @@
 #include "core/awssignaturev4.h"
 #include "batchgettracesrequest.h"
 #include "batchgettracesresponse.h"
+#include "creategrouprequest.h"
+#include "creategroupresponse.h"
+#include "createsamplingrulerequest.h"
+#include "createsamplingruleresponse.h"
+#include "deletegrouprequest.h"
+#include "deletegroupresponse.h"
+#include "deletesamplingrulerequest.h"
+#include "deletesamplingruleresponse.h"
 #include "getencryptionconfigrequest.h"
 #include "getencryptionconfigresponse.h"
+#include "getgrouprequest.h"
+#include "getgroupresponse.h"
+#include "getgroupsrequest.h"
+#include "getgroupsresponse.h"
+#include "getsamplingrulesrequest.h"
+#include "getsamplingrulesresponse.h"
+#include "getsamplingstatisticsummariesrequest.h"
+#include "getsamplingstatisticsummariesresponse.h"
+#include "getsamplingtargetsrequest.h"
+#include "getsamplingtargetsresponse.h"
 #include "getservicegraphrequest.h"
 #include "getservicegraphresponse.h"
 #include "gettracegraphrequest.h"
@@ -37,6 +55,10 @@
 #include "puttelemetryrecordsresponse.h"
 #include "puttracesegmentsrequest.h"
 #include "puttracesegmentsresponse.h"
+#include "updategrouprequest.h"
+#include "updategroupresponse.h"
+#include "updatesamplingrulerequest.h"
+#include "updatesamplingruleresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -132,6 +154,62 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
 
 /*!
  * Sends \a request to the XRayClient service, and returns a pointer to an
+ * CreateGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a group resource with a name and a filter expression.
+ */
+CreateGroupResponse * XRayClient::createGroup(const CreateGroupRequest &request)
+{
+    return qobject_cast<CreateGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * CreateSamplingRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a rule to control sampling behavior for instrumented applications. Services retrieve rules with
+ * <a>GetSamplingRules</a>, and evaluate each rule in ascending order of <i>priority</i> for each request. If a rule
+ * matches, the service records a trace, borrowing it from the reservoir size. After 10 seconds, the service reports back
+ * to X-Ray with <a>GetSamplingTargets</a> to get updated versions of each in-use rule. The updated rule contains a trace
+ * quota that the service can use instead of borrowing from the
+ */
+CreateSamplingRuleResponse * XRayClient::createSamplingRule(const CreateSamplingRuleRequest &request)
+{
+    return qobject_cast<CreateSamplingRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * DeleteGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a group
+ */
+DeleteGroupResponse * XRayClient::deleteGroup(const DeleteGroupRequest &request)
+{
+    return qobject_cast<DeleteGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * DeleteSamplingRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a sampling
+ */
+DeleteSamplingRuleResponse * XRayClient::deleteSamplingRule(const DeleteSamplingRuleRequest &request)
+{
+    return qobject_cast<DeleteSamplingRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
  * GetEncryptionConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -141,6 +219,71 @@ BatchGetTracesResponse * XRayClient::batchGetTraces(const BatchGetTracesRequest 
 GetEncryptionConfigResponse * XRayClient::getEncryptionConfig(const GetEncryptionConfigRequest &request)
 {
     return qobject_cast<GetEncryptionConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves group resource
+ */
+GetGroupResponse * XRayClient::getGroup(const GetGroupRequest &request)
+{
+    return qobject_cast<GetGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves all active group
+ */
+GetGroupsResponse * XRayClient::getGroups(const GetGroupsRequest &request)
+{
+    return qobject_cast<GetGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetSamplingRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves all sampling
+ */
+GetSamplingRulesResponse * XRayClient::getSamplingRules(const GetSamplingRulesRequest &request)
+{
+    return qobject_cast<GetSamplingRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetSamplingStatisticSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about recent sampling results for all sampling
+ */
+GetSamplingStatisticSummariesResponse * XRayClient::getSamplingStatisticSummaries(const GetSamplingStatisticSummariesRequest &request)
+{
+    return qobject_cast<GetSamplingStatisticSummariesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetSamplingTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Requests a sampling quota for rules that the service is using to sample requests.
+ */
+GetSamplingTargetsResponse * XRayClient::getSamplingTargets(const GetSamplingTargetsRequest &request)
+{
+    return qobject_cast<GetSamplingTargetsResponse *>(send(request));
 }
 
 /*!
@@ -303,6 +446,32 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
 PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRequest &request)
 {
     return qobject_cast<PutTraceSegmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * UpdateGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a group
+ */
+UpdateGroupResponse * XRayClient::updateGroup(const UpdateGroupRequest &request)
+{
+    return qobject_cast<UpdateGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * UpdateSamplingRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies a sampling rule's
+ */
+UpdateSamplingRuleResponse * XRayClient::updateSamplingRule(const UpdateSamplingRuleRequest &request)
+{
+    return qobject_cast<UpdateSamplingRuleResponse *>(send(request));
 }
 
 /*!

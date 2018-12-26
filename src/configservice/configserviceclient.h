@@ -28,6 +28,8 @@ namespace QtAws {
 namespace ConfigService {
 
 class ConfigServiceClientPrivate;
+class BatchGetAggregateResourceConfigRequest;
+class BatchGetAggregateResourceConfigResponse;
 class BatchGetResourceConfigRequest;
 class BatchGetResourceConfigResponse;
 class DeleteAggregationAuthorizationRequest;
@@ -80,6 +82,10 @@ class GetAggregateComplianceDetailsByConfigRuleRequest;
 class GetAggregateComplianceDetailsByConfigRuleResponse;
 class GetAggregateConfigRuleComplianceSummaryRequest;
 class GetAggregateConfigRuleComplianceSummaryResponse;
+class GetAggregateDiscoveredResourceCountsRequest;
+class GetAggregateDiscoveredResourceCountsResponse;
+class GetAggregateResourceConfigRequest;
+class GetAggregateResourceConfigResponse;
 class GetComplianceDetailsByConfigRuleRequest;
 class GetComplianceDetailsByConfigRuleResponse;
 class GetComplianceDetailsByResourceRequest;
@@ -92,6 +98,8 @@ class GetDiscoveredResourceCountsRequest;
 class GetDiscoveredResourceCountsResponse;
 class GetResourceConfigHistoryRequest;
 class GetResourceConfigHistoryResponse;
+class ListAggregateDiscoveredResourcesRequest;
+class ListAggregateDiscoveredResourcesResponse;
 class ListDiscoveredResourcesRequest;
 class ListDiscoveredResourcesResponse;
 class PutAggregationAuthorizationRequest;
@@ -131,6 +139,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    BatchGetAggregateResourceConfigResponse * batchGetAggregateResourceConfig(const BatchGetAggregateResourceConfigRequest &request);
     BatchGetResourceConfigResponse * batchGetResourceConfig(const BatchGetResourceConfigRequest &request);
     DeleteAggregationAuthorizationResponse * deleteAggregationAuthorization(const DeleteAggregationAuthorizationRequest &request);
     DeleteConfigRuleResponse * deleteConfigRule(const DeleteConfigRuleRequest &request);
@@ -157,6 +166,8 @@ public slots:
     DescribeRetentionConfigurationsResponse * describeRetentionConfigurations(const DescribeRetentionConfigurationsRequest &request);
     GetAggregateComplianceDetailsByConfigRuleResponse * getAggregateComplianceDetailsByConfigRule(const GetAggregateComplianceDetailsByConfigRuleRequest &request);
     GetAggregateConfigRuleComplianceSummaryResponse * getAggregateConfigRuleComplianceSummary(const GetAggregateConfigRuleComplianceSummaryRequest &request);
+    GetAggregateDiscoveredResourceCountsResponse * getAggregateDiscoveredResourceCounts(const GetAggregateDiscoveredResourceCountsRequest &request);
+    GetAggregateResourceConfigResponse * getAggregateResourceConfig(const GetAggregateResourceConfigRequest &request);
     GetComplianceDetailsByConfigRuleResponse * getComplianceDetailsByConfigRule(const GetComplianceDetailsByConfigRuleRequest &request);
     GetComplianceDetailsByResourceResponse * getComplianceDetailsByResource(const GetComplianceDetailsByResourceRequest &request);
     GetComplianceSummaryByConfigRuleResponse * getComplianceSummaryByConfigRule(const GetComplianceSummaryByConfigRuleRequest &request);
@@ -164,6 +175,7 @@ public slots:
     GetComplianceSummaryByResourceTypeResponse * getComplianceSummaryByResourceType(const GetComplianceSummaryByResourceTypeRequest &request);
     GetDiscoveredResourceCountsResponse * getDiscoveredResourceCounts(const GetDiscoveredResourceCountsRequest &request);
     GetResourceConfigHistoryResponse * getResourceConfigHistory(const GetResourceConfigHistoryRequest &request);
+    ListAggregateDiscoveredResourcesResponse * listAggregateDiscoveredResources(const ListAggregateDiscoveredResourcesRequest &request);
     ListDiscoveredResourcesResponse * listDiscoveredResources(const ListDiscoveredResourcesRequest &request);
     PutAggregationAuthorizationResponse * putAggregationAuthorization(const PutAggregationAuthorizationRequest &request);
     PutConfigRuleResponse * putConfigRule(const PutConfigRuleRequest &request);

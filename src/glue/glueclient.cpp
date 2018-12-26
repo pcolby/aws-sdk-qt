@@ -51,6 +51,8 @@
 #include "createpartitionresponse.h"
 #include "createscriptrequest.h"
 #include "createscriptresponse.h"
+#include "createsecurityconfigurationrequest.h"
+#include "createsecurityconfigurationresponse.h"
 #include "createtablerequest.h"
 #include "createtableresponse.h"
 #include "createtriggerrequest.h"
@@ -71,6 +73,10 @@
 #include "deletejobresponse.h"
 #include "deletepartitionrequest.h"
 #include "deletepartitionresponse.h"
+#include "deleteresourcepolicyrequest.h"
+#include "deleteresourcepolicyresponse.h"
+#include "deletesecurityconfigurationrequest.h"
+#include "deletesecurityconfigurationresponse.h"
 #include "deletetablerequest.h"
 #include "deletetableresponse.h"
 #include "deletetableversionrequest.h"
@@ -95,6 +101,8 @@
 #include "getcrawlermetricsresponse.h"
 #include "getcrawlersrequest.h"
 #include "getcrawlersresponse.h"
+#include "getdatacatalogencryptionsettingsrequest.h"
+#include "getdatacatalogencryptionsettingsresponse.h"
 #include "getdatabaserequest.h"
 #include "getdatabaseresponse.h"
 #include "getdatabasesrequest.h"
@@ -121,6 +129,12 @@
 #include "getpartitionsresponse.h"
 #include "getplanrequest.h"
 #include "getplanresponse.h"
+#include "getresourcepolicyrequest.h"
+#include "getresourcepolicyresponse.h"
+#include "getsecurityconfigurationrequest.h"
+#include "getsecurityconfigurationresponse.h"
+#include "getsecurityconfigurationsrequest.h"
+#include "getsecurityconfigurationsresponse.h"
 #include "gettablerequest.h"
 #include "gettableresponse.h"
 #include "gettableversionrequest.h"
@@ -139,6 +153,10 @@
 #include "getuserdefinedfunctionsresponse.h"
 #include "importcatalogtogluerequest.h"
 #include "importcatalogtoglueresponse.h"
+#include "putdatacatalogencryptionsettingsrequest.h"
+#include "putdatacatalogencryptionsettingsresponse.h"
+#include "putresourcepolicyrequest.h"
+#include "putresourcepolicyresponse.h"
 #include "resetjobbookmarkrequest.h"
 #include "resetjobbookmarkresponse.h"
 #include "startcrawlerrequest.h"
@@ -304,6 +322,17 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes multiple tables at
+ *
+ * once> <note>
+ *
+ * After completing this operation, you will no longer have access to the table versions and partitions that belong to the
+ * deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
+ *
+ * service>
+ *
+ * To ensure immediate deletion of all related resources, before calling <code>BatchDeleteTable</code>, use
+ * <code>DeleteTableVersion</code> or <code>BatchDeleteTableVersion</code>, and <code>DeletePartition</code> or
+ * <code>BatchDeletePartition</code>, to delete any resources that belong to the
  */
 BatchDeleteTableResponse * GlueClient::batchDeleteTable(const BatchDeleteTableRequest &request)
 {
@@ -457,6 +486,19 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateSecurityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new security
+ */
+CreateSecurityConfigurationResponse * GlueClient::createSecurityConfiguration(const CreateSecurityConfigurationRequest &request)
+{
+    return qobject_cast<CreateSecurityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * CreateTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -540,6 +582,19 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes a specified Database from a Data
+ *
+ * Catalog> <note>
+ *
+ * After completing this operation, you will no longer have access to the tables (and all table versions and partitions
+ * that might belong to the tables) and the user-defined functions in the deleted database. AWS Glue deletes these
+ * "orphaned" resources asynchronously in a timely manner, at the discretion of the
+ *
+ * service>
+ *
+ * To ensure immediate deletion of all related resources, before calling <code>DeleteDatabase</code>, use
+ * <code>DeleteTableVersion</code> or <code>BatchDeleteTableVersion</code>, <code>DeletePartition</code> or
+ * <code>BatchDeletePartition</code>, <code>DeleteUserDefinedFunction</code>, and <code>DeleteTable</code> or
+ * <code>BatchDeleteTable</code>, to delete any resources that belong to the
  */
 DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest &request)
 {
@@ -587,11 +642,48 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified
+ */
+DeleteResourcePolicyResponse * GlueClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
+{
+    return qobject_cast<DeleteResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteSecurityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified security
+ */
+DeleteSecurityConfigurationResponse * GlueClient::deleteSecurityConfiguration(const DeleteSecurityConfigurationRequest &request)
+{
+    return qobject_cast<DeleteSecurityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * DeleteTableResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes a table definition from the Data
+ *
+ * Catalog> <note>
+ *
+ * After completing this operation, you will no longer have access to the table versions and partitions that belong to the
+ * deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
+ *
+ * service>
+ *
+ * To ensure immediate deletion of all related resources, before calling <code>DeleteTable</code>, use
+ * <code>DeleteTableVersion</code> or <code>BatchDeleteTableVersion</code>, and <code>DeletePartition</code> or
+ * <code>BatchDeletePartition</code>, to delete any resources that belong to the
  */
 DeleteTableResponse * GlueClient::deleteTable(const DeleteTableRequest &request)
 {
@@ -743,6 +835,19 @@ GetCrawlersResponse * GlueClient::getCrawlers(const GetCrawlersRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetDataCatalogEncryptionSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the security configuration for a specified
+ */
+GetDataCatalogEncryptionSettingsResponse * GlueClient::getDataCatalogEncryptionSettings(const GetDataCatalogEncryptionSettingsRequest &request)
+{
+    return qobject_cast<GetDataCatalogEncryptionSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetDatabaseResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -787,6 +892,12 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves information about a specified
+ *
+ * DevEndpoint> <note>
+ *
+ * When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address, and
+ * the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a
+ * public IP
  */
 GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest &request)
 {
@@ -800,6 +911,12 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves all the DevEndpoints in this AWS
+ *
+ * account> <note>
+ *
+ * When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address and
+ * the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a
+ * public IP
  */
 GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsRequest &request)
 {
@@ -908,6 +1025,45 @@ GetPartitionsResponse * GlueClient::getPartitions(const GetPartitionsRequest &re
 GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 {
     return qobject_cast<GetPlanResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a specified resource
+ */
+GetResourcePolicyResponse * GlueClient::getResourcePolicy(const GetResourcePolicyRequest &request)
+{
+    return qobject_cast<GetResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSecurityConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a specified security
+ */
+GetSecurityConfigurationResponse * GlueClient::getSecurityConfiguration(const GetSecurityConfigurationRequest &request)
+{
+    return qobject_cast<GetSecurityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSecurityConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of all security
+ */
+GetSecurityConfigurationsResponse * GlueClient::getSecurityConfigurations(const GetSecurityConfigurationsRequest &request)
+{
+    return qobject_cast<GetSecurityConfigurationsResponse *>(send(request));
 }
 
 /*!
@@ -1025,6 +1181,33 @@ GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetU
 ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalogToGlueRequest &request)
 {
     return qobject_cast<ImportCatalogToGlueResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * PutDataCatalogEncryptionSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets the security configuration for a specified catalog. Once the configuration has been set, the specified encryption
+ * is applied to every catalog write
+ */
+PutDataCatalogEncryptionSettingsResponse * GlueClient::putDataCatalogEncryptionSettings(const PutDataCatalogEncryptionSettingsRequest &request)
+{
+    return qobject_cast<PutDataCatalogEncryptionSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * PutResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets the Data Catalog resource policy for access
+ */
+PutResourcePolicyResponse * GlueClient::putResourcePolicy(const PutResourcePolicyRequest &request)
+{
+    return qobject_cast<PutResourcePolicyResponse *>(send(request));
 }
 
 /*!

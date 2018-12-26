@@ -21,6 +21,8 @@
 #include "directoryserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "acceptshareddirectoryrequest.h"
+#include "acceptshareddirectoryresponse.h"
 #include "addiproutesrequest.h"
 #include "addiproutesresponse.h"
 #include "addtagstoresourcerequest.h"
@@ -37,6 +39,8 @@
 #include "createconditionalforwarderresponse.h"
 #include "createdirectoryrequest.h"
 #include "createdirectoryresponse.h"
+#include "createlogsubscriptionrequest.h"
+#include "createlogsubscriptionresponse.h"
 #include "createmicrosoftadrequest.h"
 #include "createmicrosoftadresponse.h"
 #include "createsnapshotrequest.h"
@@ -47,6 +51,8 @@
 #include "deleteconditionalforwarderresponse.h"
 #include "deletedirectoryrequest.h"
 #include "deletedirectoryresponse.h"
+#include "deletelogsubscriptionrequest.h"
+#include "deletelogsubscriptionresponse.h"
 #include "deletesnapshotrequest.h"
 #include "deletesnapshotresponse.h"
 #include "deletetrustrequest.h"
@@ -61,6 +67,8 @@
 #include "describedomaincontrollersresponse.h"
 #include "describeeventtopicsrequest.h"
 #include "describeeventtopicsresponse.h"
+#include "describeshareddirectoriesrequest.h"
+#include "describeshareddirectoriesresponse.h"
 #include "describesnapshotsrequest.h"
 #include "describesnapshotsresponse.h"
 #include "describetrustsrequest.h"
@@ -79,12 +87,16 @@
 #include "getsnapshotlimitsresponse.h"
 #include "listiproutesrequest.h"
 #include "listiproutesresponse.h"
+#include "listlogsubscriptionsrequest.h"
+#include "listlogsubscriptionsresponse.h"
 #include "listschemaextensionsrequest.h"
 #include "listschemaextensionsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "registereventtopicrequest.h"
 #include "registereventtopicresponse.h"
+#include "rejectshareddirectoryrequest.h"
+#include "rejectshareddirectoryresponse.h"
 #include "removeiproutesrequest.h"
 #include "removeiproutesresponse.h"
 #include "removetagsfromresourcerequest.h"
@@ -93,14 +105,20 @@
 #include "resetuserpasswordresponse.h"
 #include "restorefromsnapshotrequest.h"
 #include "restorefromsnapshotresponse.h"
+#include "sharedirectoryrequest.h"
+#include "sharedirectoryresponse.h"
 #include "startschemaextensionrequest.h"
 #include "startschemaextensionresponse.h"
+#include "unsharedirectoryrequest.h"
+#include "unsharedirectoryresponse.h"
 #include "updateconditionalforwarderrequest.h"
 #include "updateconditionalforwarderresponse.h"
 #include "updatenumberofdomaincontrollersrequest.h"
 #include "updatenumberofdomaincontrollersresponse.h"
 #include "updateradiusrequest.h"
 #include "updateradiusresponse.h"
+#include "updatetrustrequest.h"
+#include "updatetrustresponse.h"
 #include "verifytrustrequest.h"
 #include "verifytrustresponse.h"
 
@@ -197,6 +215,19 @@ DirectoryServiceClient::DirectoryServiceClient(
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * AcceptSharedDirectoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts a directory sharing request that was sent from the directory owner
+ */
+AcceptSharedDirectoryResponse * DirectoryServiceClient::acceptSharedDirectory(const AcceptSharedDirectoryRequest &request)
+{
+    return qobject_cast<AcceptSharedDirectoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * AddIpRoutesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -257,8 +288,9 @@ CancelSchemaExtensionResponse * DirectoryServiceClient::cancelSchemaExtension(co
  *
  * directory>
  *
- * Before you call <i>ConnectDirectory</i>, ensure that all of the required permissions have been explicitly granted
- * through a policy. For details about what permissions are required to run the <i>ConnectDirectory</i> operation, see <a
+ * Before you call <code>ConnectDirectory</code>, ensure that all of the required permissions have been explicitly granted
+ * through a policy. For details about what permissions are required to run the <code>ConnectDirectory</code> operation,
+ * see <a
  * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
  */
@@ -322,9 +354,9 @@ CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalFo
  *
  * directory>
  *
- * Before you call <i>CreateDirectory</i>, ensure that all of the required permissions have been explicitly granted through
- * a policy. For details about what permissions are required to run the <i>CreateDirectory</i> operation, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Before you call <code>CreateDirectory</code>, ensure that all of the required permissions have been explicitly granted
+ * through a policy. For details about what permissions are required to run the <code>CreateDirectory</code> operation, see
+ * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
  */
 CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDirectoryRequest &request)
@@ -334,13 +366,27 @@ CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDi
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * CreateLogSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a subscription to forward real time Directory Service domain controller security logs to the specified
+ * CloudWatch log group in your AWS
+ */
+CreateLogSubscriptionResponse * DirectoryServiceClient::createLogSubscription(const CreateLogSubscriptionRequest &request)
+{
+    return qobject_cast<CreateLogSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * CreateMicrosoftADResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Microsoft AD in the AWS
+ * Creates an AWS Managed Microsoft AD
  *
- * cloud>
+ * directory>
  *
  * Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a
@@ -376,13 +422,13 @@ CreateSnapshotResponse * DirectoryServiceClient::createSnapshot(const CreateSnap
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can
- * establish a trust between your Microsoft AD in the AWS cloud, and your existing on-premises Microsoft Active Directory.
- * This would allow you to provide users and groups access to resources in either domain, with a single set of
+ * establish a trust between your AWS Managed Microsoft AD directory, and your existing on-premises Microsoft Active
+ * Directory. This would allow you to provide users and groups access to resources in either domain, with a single set of
  *
  * credentials>
  *
- * This action initiates the creation of the AWS side of a trust relationship between a Microsoft AD in the AWS cloud and
- * an external
+ * This action initiates the creation of the AWS side of a trust relationship between an AWS Managed Microsoft AD directory
+ * and an external domain. You can create either a forest trust or an external
  */
 CreateTrustResponse * DirectoryServiceClient::createTrust(const CreateTrustRequest &request)
 {
@@ -412,14 +458,27 @@ DeleteConditionalForwarderResponse * DirectoryServiceClient::deleteConditionalFo
  *
  * directory>
  *
- * Before you call <i>DeleteDirectory</i>, ensure that all of the required permissions have been explicitly granted through
- * a policy. For details about what permissions are required to run the <i>DeleteDirectory</i> operation, see <a
- * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+ * Before you call <code>DeleteDirectory</code>, ensure that all of the required permissions have been explicitly granted
+ * through a policy. For details about what permissions are required to run the <code>DeleteDirectory</code> operation, see
+ * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
  * Directory Service API Permissions: Actions, Resources, and Conditions
  */
 DeleteDirectoryResponse * DirectoryServiceClient::deleteDirectory(const DeleteDirectoryRequest &request)
 {
     return qobject_cast<DeleteDirectoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DeleteLogSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified log
+ */
+DeleteLogSubscriptionResponse * DirectoryServiceClient::deleteLogSubscription(const DeleteLogSubscriptionRequest &request)
+{
+    return qobject_cast<DeleteLogSubscriptionResponse *>(send(request));
 }
 
 /*!
@@ -441,7 +500,7 @@ DeleteSnapshotResponse * DirectoryServiceClient::deleteSnapshot(const DeleteSnap
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an existing trust relationship between your Microsoft AD in the AWS cloud and an external
+ * Deletes an existing trust relationship between your AWS Managed Microsoft AD directory and an external
  */
 DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustRequest &request)
 {
@@ -489,18 +548,18 @@ DescribeConditionalForwardersResponse * DirectoryServiceClient::describeConditio
  *
  * account>
  *
- * You can retrieve information about specific directories by passing the directory identifiers in the <i>DirectoryIds</i>
- * parameter. Otherwise, all directories that belong to the current account are
+ * You can retrieve information about specific directories by passing the directory identifiers in the
+ * <code>DirectoryIds</code> parameter. Otherwise, all directories that belong to the current account are
  *
  * returned>
  *
- * This operation supports pagination with the use of the <i>NextToken</i> request and response parameters. If more results
- * are available, the <i>DescribeDirectoriesResult.NextToken</i> member contains a token that you pass in the next call to
- * <a>DescribeDirectories</a> to retrieve the next set of
+ * This operation supports pagination with the use of the <code>NextToken</code> request and response parameters. If more
+ * results are available, the <code>DescribeDirectoriesResult.NextToken</code> member contains a token that you pass in the
+ * next call to <a>DescribeDirectories</a> to retrieve the next set of
  *
  * items>
  *
- * You can also specify a maximum number of return results with the <i>Limit</i>
+ * You can also specify a maximum number of return results with the <code>Limit</code>
  */
 DescribeDirectoriesResponse * DirectoryServiceClient::describeDirectories(const DescribeDirectoriesRequest &request)
 {
@@ -536,6 +595,19 @@ DescribeDomainControllersResponse * DirectoryServiceClient::describeDomainContro
 DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const DescribeEventTopicsRequest &request)
 {
     return qobject_cast<DescribeEventTopicsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DescribeSharedDirectoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the shared directories in your account.
+ */
+DescribeSharedDirectoriesResponse * DirectoryServiceClient::describeSharedDirectories(const DescribeSharedDirectoriesRequest &request)
+{
+    return qobject_cast<DescribeSharedDirectoriesResponse *>(send(request));
 }
 
 /*!
@@ -586,7 +658,7 @@ DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
- * Connector
+ * Connector or Microsoft AD
  */
 DisableRadiusResponse * DirectoryServiceClient::disableRadius(const DisableRadiusRequest &request)
 {
@@ -613,7 +685,7 @@ DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD
- * Connector
+ * Connector or Microsoft AD
  */
 EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRequest &request)
 {
@@ -674,6 +746,19 @@ ListIpRoutesResponse * DirectoryServiceClient::listIpRoutes(const ListIpRoutesRe
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * ListLogSubscriptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the active log subscriptions for the AWS
+ */
+ListLogSubscriptionsResponse * DirectoryServiceClient::listLogSubscriptions(const ListLogSubscriptionsRequest &request)
+{
+    return qobject_cast<ListLogSubscriptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * ListSchemaExtensionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -712,6 +797,19 @@ ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const 
 RegisterEventTopicResponse * DirectoryServiceClient::registerEventTopic(const RegisterEventTopicRequest &request)
 {
     return qobject_cast<RegisterEventTopicResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * RejectSharedDirectoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Rejects a directory sharing request that was sent from the directory owner
+ */
+RejectSharedDirectoryResponse * DirectoryServiceClient::rejectSharedDirectory(const RejectSharedDirectoryRequest &request)
+{
+    return qobject_cast<RejectSharedDirectoryResponse *>(send(request));
 }
 
 /*!
@@ -778,6 +876,38 @@ RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const 
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * ShareDirectoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Shares a specified directory (<code>DirectoryId</code>) in your AWS account (directory owner) with another AWS account
+ * (directory consumer). With this operation you can use your directory from any AWS account and from any Amazon VPC within
+ * an AWS
+ *
+ * Region>
+ *
+ * When you share your AWS Managed Microsoft AD directory, AWS Directory Service creates a shared directory in the
+ * directory consumer account. This shared directory contains the metadata to provide access to the directory within the
+ * directory owner account. The shared directory is visible in all VPCs in the directory consumer
+ *
+ * account>
+ *
+ * The <code>ShareMethod</code> parameter determines whether the specified directory can be shared between AWS accounts
+ * inside the same AWS organization (<code>ORGANIZATIONS</code>). It also determines whether you can share the directory
+ * with any other AWS account either inside or outside of the organization
+ *
+ * (<code>HANDSHAKE</code>)>
+ *
+ * The <code>ShareNotes</code> parameter is only used when <code>HANDSHAKE</code> is called, which sends a directory
+ * sharing request to the directory consumer.
+ */
+ShareDirectoryResponse * DirectoryServiceClient::shareDirectory(const ShareDirectoryRequest &request)
+{
+    return qobject_cast<ShareDirectoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * StartSchemaExtensionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -787,6 +917,19 @@ RestoreFromSnapshotResponse * DirectoryServiceClient::restoreFromSnapshot(const 
 StartSchemaExtensionResponse * DirectoryServiceClient::startSchemaExtension(const StartSchemaExtensionRequest &request)
 {
     return qobject_cast<StartSchemaExtensionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * UnshareDirectoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the directory sharing between the directory owner and consumer accounts.
+ */
+UnshareDirectoryResponse * DirectoryServiceClient::unshareDirectory(const UnshareDirectoryRequest &request)
+{
+    return qobject_cast<UnshareDirectoryResponse *>(send(request));
 }
 
 /*!
@@ -824,11 +967,24 @@ UpdateNumberOfDomainControllersResponse * DirectoryServiceClient::updateNumberOf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector
+ * Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector or Microsoft AD
  */
 UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRequest &request)
 {
     return qobject_cast<UpdateRadiusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * UpdateTrustResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the trust that has been set up between your AWS Managed Microsoft AD directory and an on-premises Active
+ */
+UpdateTrustResponse * DirectoryServiceClient::updateTrust(const UpdateTrustRequest &request)
+{
+    return qobject_cast<UpdateTrustResponse *>(send(request));
 }
 
 /*!
@@ -841,7 +997,7 @@ UpdateRadiusResponse * DirectoryServiceClient::updateRadius(const UpdateRadiusRe
  *
  * relationships>
  *
- * This action verifies a trust relationship between your Microsoft AD in the AWS cloud and an external
+ * This action verifies a trust relationship between your AWS Managed Microsoft AD directory and an external
  */
 VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustRequest &request)
 {

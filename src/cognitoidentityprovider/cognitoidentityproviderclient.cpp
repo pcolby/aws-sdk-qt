@@ -207,6 +207,8 @@
 #include "updateuserpoolresponse.h"
 #include "updateuserpoolclientrequest.h"
 #include "updateuserpoolclientresponse.h"
+#include "updateuserpooldomainrequest.h"
+#include "updateuserpooldomainresponse.h"
 #include "verifysoftwaretokenrequest.h"
 #include "verifysoftwaretokenresponse.h"
 #include "verifyuserattributerequest.h"
@@ -1148,7 +1150,7 @@ DescribeUserPoolResponse * CognitoIdentityProviderClient::describeUserPool(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Client method for returning the configuration information and metadata of the specified user pool
+ * Client method for returning the configuration information and metadata of the specified user pool app
  */
 DescribeUserPoolClientResponse * CognitoIdentityProviderClient::describeUserPoolClient(const DescribeUserPoolClientRequest &request)
 {
@@ -1713,7 +1715,8 @@ UpdateUserAttributesResponse * CognitoIdentityProviderClient::updateUserAttribut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified user pool with the specified
+ * Updates the specified user pool with the specified attributes. If you don't provide a value for an attribute, it will be
+ * set to the default value. You can get a list of the current user pool settings with
  */
 UpdateUserPoolResponse * CognitoIdentityProviderClient::updateUserPool(const UpdateUserPoolRequest &request)
 {
@@ -1726,11 +1729,60 @@ UpdateUserPoolResponse * CognitoIdentityProviderClient::updateUserPool(const Upd
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allows the developer to update the specified user pool client and password
+ * Updates the specified user pool app client with the specified attributes. If you don't provide a value for an attribute,
+ * it will be set to the default value. You can get a list of the current user pool app client settings with
  */
 UpdateUserPoolClientResponse * CognitoIdentityProviderClient::updateUserPoolClient(const UpdateUserPoolClientRequest &request)
 {
     return qobject_cast<UpdateUserPoolClientResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
+ * UpdateUserPoolDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the Secure Sockets Layer (SSL) certificate for the custom domain for your user
+ *
+ * pool>
+ *
+ * You can use this operation to provide the Amazon Resource Name (ARN) of a new certificate to Amazon Cognito. You cannot
+ * use it to change the domain for a user
+ *
+ * pool>
+ *
+ * A custom domain is used to host the Amazon Cognito hosted UI, which provides sign-up and sign-in pages for your
+ * application. When you set up a custom domain, you provide a certificate that you manage with AWS Certificate Manager
+ * (ACM). When necessary, you can use this operation to change the certificate that you applied to your custom
+ *
+ * domain>
+ *
+ * Usually, this is unnecessary following routine certificate renewal with ACM. When you renew your existing certificate in
+ * ACM, the ARN for your certificate remains the same, and your custom domain uses the new certificate
+ *
+ * automatically>
+ *
+ * However, if you replace your existing certificate with a new one, ACM gives the new certificate a new ARN. To apply the
+ * new certificate to your custom domain, you must provide this ARN to Amazon
+ *
+ * Cognito>
+ *
+ * When you add your new certificate in ACM, you must choose US East (N. Virginia) as the AWS
+ *
+ * Region>
+ *
+ * After you submit your request, Amazon Cognito requires up to 1 hour to distribute your new certificate to your custom
+ *
+ * domain>
+ *
+ * For more information about adding a custom domain to your user pool, see <a
+ * href="http://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html">Using Your Own
+ * Domain for the Hosted
+ */
+UpdateUserPoolDomainResponse * CognitoIdentityProviderClient::updateUserPoolDomain(const UpdateUserPoolDomainRequest &request)
+{
+    return qobject_cast<UpdateUserPoolDomainResponse *>(send(request));
 }
 
 /*!

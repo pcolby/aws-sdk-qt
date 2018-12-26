@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsPinpointSMSVoice
+description = AWS PinpointSMSVoice SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawspinpointsmsvoice-index.html"
+navigation.landingtitle = "PinpointSMSVoice"
+navigation.cppclassespage = "PinpointSMSVoice C++ Classes"

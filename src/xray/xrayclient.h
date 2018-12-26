@@ -30,8 +30,26 @@ namespace XRay {
 class XRayClientPrivate;
 class BatchGetTracesRequest;
 class BatchGetTracesResponse;
+class CreateGroupRequest;
+class CreateGroupResponse;
+class CreateSamplingRuleRequest;
+class CreateSamplingRuleResponse;
+class DeleteGroupRequest;
+class DeleteGroupResponse;
+class DeleteSamplingRuleRequest;
+class DeleteSamplingRuleResponse;
 class GetEncryptionConfigRequest;
 class GetEncryptionConfigResponse;
+class GetGroupRequest;
+class GetGroupResponse;
+class GetGroupsRequest;
+class GetGroupsResponse;
+class GetSamplingRulesRequest;
+class GetSamplingRulesResponse;
+class GetSamplingStatisticSummariesRequest;
+class GetSamplingStatisticSummariesResponse;
+class GetSamplingTargetsRequest;
+class GetSamplingTargetsResponse;
 class GetServiceGraphRequest;
 class GetServiceGraphResponse;
 class GetTraceGraphRequest;
@@ -44,6 +62,10 @@ class PutTelemetryRecordsRequest;
 class PutTelemetryRecordsResponse;
 class PutTraceSegmentsRequest;
 class PutTraceSegmentsResponse;
+class UpdateGroupRequest;
+class UpdateGroupResponse;
+class UpdateSamplingRuleRequest;
+class UpdateSamplingRuleResponse;
 
 class QTAWS_EXPORT XRayClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -62,13 +84,24 @@ public:
 
 public slots:
     BatchGetTracesResponse * batchGetTraces(const BatchGetTracesRequest &request);
+    CreateGroupResponse * createGroup(const CreateGroupRequest &request);
+    CreateSamplingRuleResponse * createSamplingRule(const CreateSamplingRuleRequest &request);
+    DeleteGroupResponse * deleteGroup(const DeleteGroupRequest &request);
+    DeleteSamplingRuleResponse * deleteSamplingRule(const DeleteSamplingRuleRequest &request);
     GetEncryptionConfigResponse * getEncryptionConfig(const GetEncryptionConfigRequest &request);
+    GetGroupResponse * getGroup(const GetGroupRequest &request);
+    GetGroupsResponse * getGroups(const GetGroupsRequest &request);
+    GetSamplingRulesResponse * getSamplingRules(const GetSamplingRulesRequest &request);
+    GetSamplingStatisticSummariesResponse * getSamplingStatisticSummaries(const GetSamplingStatisticSummariesRequest &request);
+    GetSamplingTargetsResponse * getSamplingTargets(const GetSamplingTargetsRequest &request);
     GetServiceGraphResponse * getServiceGraph(const GetServiceGraphRequest &request);
     GetTraceGraphResponse * getTraceGraph(const GetTraceGraphRequest &request);
     GetTraceSummariesResponse * getTraceSummaries(const GetTraceSummariesRequest &request);
     PutEncryptionConfigResponse * putEncryptionConfig(const PutEncryptionConfigRequest &request);
     PutTelemetryRecordsResponse * putTelemetryRecords(const PutTelemetryRecordsRequest &request);
     PutTraceSegmentsResponse * putTraceSegments(const PutTraceSegmentsRequest &request);
+    UpdateGroupResponse * updateGroup(const UpdateGroupRequest &request);
+    UpdateSamplingRuleResponse * updateSamplingRule(const UpdateSamplingRuleRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(XRayClient)

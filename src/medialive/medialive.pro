@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    batchupdateschedulerequest.h \
+    batchupdateschedulerequest_p.h \
+    batchupdatescheduleresponse.h \
+    batchupdatescheduleresponse_p.h \
     createchannelrequest.h \
     createchannelrequest_p.h \
     createchannelresponse.h \
@@ -58,6 +62,10 @@ HEADERS += \
     describereservationrequest_p.h \
     describereservationresponse.h \
     describereservationresponse_p.h \
+    describeschedulerequest.h \
+    describeschedulerequest_p.h \
+    describescheduleresponse.h \
+    describescheduleresponse_p.h \
     listchannelsrequest.h \
     listchannelsrequest_p.h \
     listchannelsresponse.h \
@@ -110,6 +118,8 @@ HEADERS += \
     updateinputsecuritygroupresponse_p.h \
 
 SOURCES += \
+    batchupdateschedulerequest.cpp \
+    batchupdatescheduleresponse.cpp \
     createchannelrequest.cpp \
     createchannelresponse.cpp \
     createinputrequest.cpp \
@@ -134,6 +144,8 @@ SOURCES += \
     describeofferingresponse.cpp \
     describereservationrequest.cpp \
     describereservationresponse.cpp \
+    describeschedulerequest.cpp \
+    describescheduleresponse.cpp \
     listchannelsrequest.cpp \
     listchannelsresponse.cpp \
     listinputsecuritygroupsrequest.cpp \

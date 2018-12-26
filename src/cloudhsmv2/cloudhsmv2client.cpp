@@ -21,10 +21,14 @@
 #include "cloudhsmv2client_p.h"
 
 #include "core/awssignaturev4.h"
+#include "copybackuptoregionrequest.h"
+#include "copybackuptoregionresponse.h"
 #include "createclusterrequest.h"
 #include "createclusterresponse.h"
 #include "createhsmrequest.h"
 #include "createhsmresponse.h"
+#include "deletebackuprequest.h"
+#include "deletebackupresponse.h"
 #include "deleteclusterrequest.h"
 #include "deleteclusterresponse.h"
 #include "deletehsmrequest.h"
@@ -37,6 +41,8 @@
 #include "initializeclusterresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
+#include "restorebackuprequest.h"
+#include "restorebackupresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -123,6 +129,19 @@ CloudHSMV2Client::CloudHSMV2Client(
 
 /*!
  * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * CopyBackupToRegionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Copy an AWS CloudHSM cluster backup to a different
+ */
+CopyBackupToRegionResponse * CloudHSMV2Client::copyBackupToRegion(const CopyBackupToRegionRequest &request)
+{
+    return qobject_cast<CopyBackupToRegionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
  * CreateClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -145,6 +164,20 @@ CreateClusterResponse * CloudHSMV2Client::createCluster(const CreateClusterReque
 CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
 {
     return qobject_cast<CreateHsmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * DeleteBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified AWS CloudHSM backup. A backup can be restored up to 7 days after the DeleteBackup request. For more
+ * information on restoring a backup, see <a>RestoreBackup</a>
+ */
+DeleteBackupResponse * CloudHSMV2Client::deleteBackup(const DeleteBackupRequest &request)
+{
+    return qobject_cast<DeleteBackupResponse *>(send(request));
 }
 
 /*!
@@ -249,6 +282,20 @@ InitializeClusterResponse * CloudHSMV2Client::initializeCluster(const Initialize
 ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 {
     return qobject_cast<ListTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * RestoreBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Restores a specified AWS CloudHSM backup that is in the <code>PENDING_DELETION</code> state. For more information on
+ * deleting a backup, see
+ */
+RestoreBackupResponse * CloudHSMV2Client::restoreBackup(const RestoreBackupRequest &request)
+{
+    return qobject_cast<RestoreBackupResponse *>(send(request));
 }
 
 /*!

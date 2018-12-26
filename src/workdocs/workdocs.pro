@@ -142,6 +142,10 @@ HEADERS += \
     getfolderrequest_p.h \
     getfolderresponse.h \
     getfolderresponse_p.h \
+    getresourcesrequest.h \
+    getresourcesrequest_p.h \
+    getresourcesresponse.h \
+    getresourcesresponse_p.h \
     initiatedocumentversionuploadrequest.h \
     initiatedocumentversionuploadrequest_p.h \
     initiatedocumentversionuploadresponse.h \
@@ -244,6 +248,8 @@ SOURCES += \
     getfolderpathresponse.cpp \
     getfolderrequest.cpp \
     getfolderresponse.cpp \
+    getresourcesrequest.cpp \
+    getresourcesresponse.cpp \
     initiatedocumentversionuploadrequest.cpp \
     initiatedocumentversionuploadresponse.cpp \
     removeallresourcepermissionsrequest.cpp \

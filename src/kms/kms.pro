@@ -14,10 +14,18 @@ HEADERS += \
     cancelkeydeletionrequest_p.h \
     cancelkeydeletionresponse.h \
     cancelkeydeletionresponse_p.h \
+    connectcustomkeystorerequest.h \
+    connectcustomkeystorerequest_p.h \
+    connectcustomkeystoreresponse.h \
+    connectcustomkeystoreresponse_p.h \
     createaliasrequest.h \
     createaliasrequest_p.h \
     createaliasresponse.h \
     createaliasresponse_p.h \
+    createcustomkeystorerequest.h \
+    createcustomkeystorerequest_p.h \
+    createcustomkeystoreresponse.h \
+    createcustomkeystoreresponse_p.h \
     creategrantrequest.h \
     creategrantrequest_p.h \
     creategrantresponse.h \
@@ -34,10 +42,18 @@ HEADERS += \
     deletealiasrequest_p.h \
     deletealiasresponse.h \
     deletealiasresponse_p.h \
+    deletecustomkeystorerequest.h \
+    deletecustomkeystorerequest_p.h \
+    deletecustomkeystoreresponse.h \
+    deletecustomkeystoreresponse_p.h \
     deleteimportedkeymaterialrequest.h \
     deleteimportedkeymaterialrequest_p.h \
     deleteimportedkeymaterialresponse.h \
     deleteimportedkeymaterialresponse_p.h \
+    describecustomkeystoresrequest.h \
+    describecustomkeystoresrequest_p.h \
+    describecustomkeystoresresponse.h \
+    describecustomkeystoresresponse_p.h \
     describekeyrequest.h \
     describekeyrequest_p.h \
     describekeyresponse.h \
@@ -50,6 +66,10 @@ HEADERS += \
     disablekeyrotationrequest_p.h \
     disablekeyrotationresponse.h \
     disablekeyrotationresponse_p.h \
+    disconnectcustomkeystorerequest.h \
+    disconnectcustomkeystorerequest_p.h \
+    disconnectcustomkeystoreresponse.h \
+    disconnectcustomkeystoreresponse_p.h \
     enablekeyrequest.h \
     enablekeyrequest_p.h \
     enablekeyresponse.h \
@@ -152,6 +172,10 @@ HEADERS += \
     updatealiasrequest_p.h \
     updatealiasresponse.h \
     updatealiasresponse_p.h \
+    updatecustomkeystorerequest.h \
+    updatecustomkeystorerequest_p.h \
+    updatecustomkeystoreresponse.h \
+    updatecustomkeystoreresponse_p.h \
     updatekeydescriptionrequest.h \
     updatekeydescriptionrequest_p.h \
     updatekeydescriptionresponse.h \
@@ -160,8 +184,12 @@ HEADERS += \
 SOURCES += \
     cancelkeydeletionrequest.cpp \
     cancelkeydeletionresponse.cpp \
+    connectcustomkeystorerequest.cpp \
+    connectcustomkeystoreresponse.cpp \
     createaliasrequest.cpp \
     createaliasresponse.cpp \
+    createcustomkeystorerequest.cpp \
+    createcustomkeystoreresponse.cpp \
     creategrantrequest.cpp \
     creategrantresponse.cpp \
     createkeyrequest.cpp \
@@ -170,14 +198,20 @@ SOURCES += \
     decryptresponse.cpp \
     deletealiasrequest.cpp \
     deletealiasresponse.cpp \
+    deletecustomkeystorerequest.cpp \
+    deletecustomkeystoreresponse.cpp \
     deleteimportedkeymaterialrequest.cpp \
     deleteimportedkeymaterialresponse.cpp \
+    describecustomkeystoresrequest.cpp \
+    describecustomkeystoresresponse.cpp \
     describekeyrequest.cpp \
     describekeyresponse.cpp \
     disablekeyrequest.cpp \
     disablekeyresponse.cpp \
     disablekeyrotationrequest.cpp \
     disablekeyrotationresponse.cpp \
+    disconnectcustomkeystorerequest.cpp \
+    disconnectcustomkeystoreresponse.cpp \
     enablekeyrequest.cpp \
     enablekeyresponse.cpp \
     enablekeyrotationrequest.cpp \
@@ -229,6 +263,8 @@ SOURCES += \
     untagresourceresponse.cpp \
     updatealiasrequest.cpp \
     updatealiasresponse.cpp \
+    updatecustomkeystorerequest.cpp \
+    updatecustomkeystoreresponse.cpp \
     updatekeydescriptionrequest.cpp \
     updatekeydescriptionresponse.cpp \
 

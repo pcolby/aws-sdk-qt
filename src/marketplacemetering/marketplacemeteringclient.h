@@ -32,6 +32,8 @@ class BatchMeterUsageRequest;
 class BatchMeterUsageResponse;
 class MeterUsageRequest;
 class MeterUsageResponse;
+class RegisterUsageRequest;
+class RegisterUsageResponse;
 class ResolveCustomerRequest;
 class ResolveCustomerResponse;
 
@@ -53,6 +55,7 @@ public:
 public slots:
     BatchMeterUsageResponse * batchMeterUsage(const BatchMeterUsageRequest &request);
     MeterUsageResponse * meterUsage(const MeterUsageRequest &request);
+    RegisterUsageResponse * registerUsage(const RegisterUsageRequest &request);
     ResolveCustomerResponse * resolveCustomer(const ResolveCustomerRequest &request);
 
 private:

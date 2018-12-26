@@ -42,6 +42,7 @@ namespace CodeCommit {
  * \value CreateRepositoryAction CodeCommit CreateRepository action.
  * \value DeleteBranchAction CodeCommit DeleteBranch action.
  * \value DeleteCommentContentAction CodeCommit DeleteCommentContent action.
+ * \value DeleteFileAction CodeCommit DeleteFile action.
  * \value DeleteRepositoryAction CodeCommit DeleteRepository action.
  * \value DescribePullRequestEventsAction CodeCommit DescribePullRequestEvents action.
  * \value GetBlobAction CodeCommit GetBlob action.
@@ -51,6 +52,8 @@ namespace CodeCommit {
  * \value GetCommentsForPullRequestAction CodeCommit GetCommentsForPullRequest action.
  * \value GetCommitAction CodeCommit GetCommit action.
  * \value GetDifferencesAction CodeCommit GetDifferences action.
+ * \value GetFileAction CodeCommit GetFile action.
+ * \value GetFolderAction CodeCommit GetFolder action.
  * \value GetMergeConflictsAction CodeCommit GetMergeConflicts action.
  * \value GetPullRequestAction CodeCommit GetPullRequest action.
  * \value GetRepositoryAction CodeCommit GetRepository action.

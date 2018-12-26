@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsQuickSight
+    \title QuickSight C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS QuickSight functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

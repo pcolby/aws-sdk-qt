@@ -28,6 +28,8 @@ namespace QtAws {
 namespace ServiceDiscovery {
 
 class ServiceDiscoveryClientPrivate;
+class CreateHttpNamespaceRequest;
+class CreateHttpNamespaceResponse;
 class CreatePrivateDnsNamespaceRequest;
 class CreatePrivateDnsNamespaceResponse;
 class CreatePublicDnsNamespaceRequest;
@@ -40,6 +42,8 @@ class DeleteServiceRequest;
 class DeleteServiceResponse;
 class DeregisterInstanceRequest;
 class DeregisterInstanceResponse;
+class DiscoverInstancesRequest;
+class DiscoverInstancesResponse;
 class GetInstanceRequest;
 class GetInstanceResponse;
 class GetInstancesHealthStatusRequest;
@@ -81,12 +85,14 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateHttpNamespaceResponse * createHttpNamespace(const CreateHttpNamespaceRequest &request);
     CreatePrivateDnsNamespaceResponse * createPrivateDnsNamespace(const CreatePrivateDnsNamespaceRequest &request);
     CreatePublicDnsNamespaceResponse * createPublicDnsNamespace(const CreatePublicDnsNamespaceRequest &request);
     CreateServiceResponse * createService(const CreateServiceRequest &request);
     DeleteNamespaceResponse * deleteNamespace(const DeleteNamespaceRequest &request);
     DeleteServiceResponse * deleteService(const DeleteServiceRequest &request);
     DeregisterInstanceResponse * deregisterInstance(const DeregisterInstanceRequest &request);
+    DiscoverInstancesResponse * discoverInstances(const DiscoverInstancesRequest &request);
     GetInstanceResponse * getInstance(const GetInstanceRequest &request);
     GetInstancesHealthStatusResponse * getInstancesHealthStatus(const GetInstancesHealthStatusRequest &request);
     GetNamespaceResponse * getNamespace(const GetNamespaceRequest &request);

@@ -36,6 +36,7 @@ namespace MediaConvert {
  * This enum describes the actions that can be performed as MediaConvert
  * requests.
  *
+ * \value AssociateCertificateAction MediaConvert AssociateCertificate action.
  * \value CancelJobAction MediaConvert CancelJob action.
  * \value CreateJobAction MediaConvert CreateJob action.
  * \value CreateJobTemplateAction MediaConvert CreateJobTemplate action.
@@ -45,6 +46,7 @@ namespace MediaConvert {
  * \value DeletePresetAction MediaConvert DeletePreset action.
  * \value DeleteQueueAction MediaConvert DeleteQueue action.
  * \value DescribeEndpointsAction MediaConvert DescribeEndpoints action.
+ * \value DisassociateCertificateAction MediaConvert DisassociateCertificate action.
  * \value GetJobAction MediaConvert GetJob action.
  * \value GetJobTemplateAction MediaConvert GetJobTemplate action.
  * \value GetPresetAction MediaConvert GetPreset action.

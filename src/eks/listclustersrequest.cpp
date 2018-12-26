@@ -37,30 +37,7 @@ namespace EKS {
  * 
  *  </p
  * 
- *  Amazon EKS runs three Kubernetes control plane instances across three Availability Zones to ensure high availability.
- *  Amazon EKS automatically detects and replaces unhealthy control plane instances, and it provides automated version
- *  upgrades and patching for
- * 
- *  them>
- * 
- *  Amazon EKS is also integrated with many AWS services to provide scalability and security for your applications,
- *  including the following:
- * 
- *  </p <ul> <li>
- * 
- *  Elastic Load Balancing for load
- * 
- *  distributio> </li> <li>
- * 
- *  IAM for
- * 
- *  authenticatio> </li> <li>
- * 
- *  Amazon VPC for
- * 
- *  isolatio> </li> </ul>
- * 
- *  Amazon EKS runs up to date versions of the open-source Kubernetes software, so you can use all the existing plugins and
+ *  Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and
  *  tooling from the Kubernetes community. Applications running on Amazon EKS are fully compatible with applications running
  *  on any standard Kubernetes environment, whether running in on-premises data centers or public clouds. This means that
  *  you can easily migrate any standard Kubernetes application to Amazon EKS without any code modification

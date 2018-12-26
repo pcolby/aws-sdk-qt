@@ -39,6 +39,8 @@
 #include "getpolicyresponse.h"
 #include "listcompliancestatusrequest.h"
 #include "listcompliancestatusresponse.h"
+#include "listmemberaccountsrequest.h"
+#include "listmemberaccountsresponse.h"
 #include "listpoliciesrequest.h"
 #include "listpoliciesresponse.h"
 #include "putnotificationchannelrequest.h"
@@ -135,14 +137,14 @@ FmsClient::FmsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with a master account in
- * AWS Organizations or associated with a member account that has the appropriate permissions. If the account ID that you
- * submit is not an AWS Organizations master account, AWS Firewall Manager will set the appropriate permissions for the
+ * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with the master account
+ * your AWS organization or associated with a member account that has the appropriate permissions. If the account ID that
+ * you submit is not an AWS Organizations master account, AWS Firewall Manager will set the appropriate permissions for the
  * given member
  *
  * account>
  *
- * The account that you associate with AWS Firewall Manager is called the AWS Firewall manager administrator account.
+ * The account that you associate with AWS Firewall Manager is called the AWS Firewall Manager administrator account.
  */
 AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const AssociateAdminAccountRequest &request)
 {
@@ -257,6 +259,23 @@ GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
 ListComplianceStatusResponse * FmsClient::listComplianceStatus(const ListComplianceStatusRequest &request)
 {
     return qobject_cast<ListComplianceStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListMemberAccountsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a <code>MemberAccounts</code> object that lists the member accounts in the administrator's AWS
+ *
+ * organization>
+ *
+ * The <code>ListMemberAccounts</code> must be submitted by the account that is set as the AWS Firewall Manager
+ */
+ListMemberAccountsResponse * FmsClient::listMemberAccounts(const ListMemberAccountsRequest &request)
+{
+    return qobject_cast<ListMemberAccountsResponse *>(send(request));
 }
 
 /*!

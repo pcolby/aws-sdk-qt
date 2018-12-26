@@ -38,6 +38,7 @@ public:
     /// Actions supported by TranscribeService.
     enum Action {
         CreateVocabularyAction,
+        DeleteTranscriptionJobAction,
         DeleteVocabularyAction,
         GetTranscriptionJobAction,
         GetVocabularyAction,

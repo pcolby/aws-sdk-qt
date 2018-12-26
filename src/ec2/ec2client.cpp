@@ -23,20 +23,28 @@
 #include "core/awssignaturev4.h"
 #include "acceptreservedinstancesexchangequoterequest.h"
 #include "acceptreservedinstancesexchangequoteresponse.h"
+#include "accepttransitgatewayvpcattachmentrequest.h"
+#include "accepttransitgatewayvpcattachmentresponse.h"
 #include "acceptvpcendpointconnectionsrequest.h"
 #include "acceptvpcendpointconnectionsresponse.h"
 #include "acceptvpcpeeringconnectionrequest.h"
 #include "acceptvpcpeeringconnectionresponse.h"
+#include "advertisebyoipcidrrequest.h"
+#include "advertisebyoipcidrresponse.h"
 #include "allocateaddressrequest.h"
 #include "allocateaddressresponse.h"
 #include "allocatehostsrequest.h"
 #include "allocatehostsresponse.h"
+#include "applysecuritygroupstoclientvpntargetnetworkrequest.h"
+#include "applysecuritygroupstoclientvpntargetnetworkresponse.h"
 #include "assignipv6addressesrequest.h"
 #include "assignipv6addressesresponse.h"
 #include "assignprivateipaddressesrequest.h"
 #include "assignprivateipaddressesresponse.h"
 #include "associateaddressrequest.h"
 #include "associateaddressresponse.h"
+#include "associateclientvpntargetnetworkrequest.h"
+#include "associateclientvpntargetnetworkresponse.h"
 #include "associatedhcpoptionsrequest.h"
 #include "associatedhcpoptionsresponse.h"
 #include "associateiaminstanceprofilerequest.h"
@@ -45,6 +53,8 @@
 #include "associateroutetableresponse.h"
 #include "associatesubnetcidrblockrequest.h"
 #include "associatesubnetcidrblockresponse.h"
+#include "associatetransitgatewayroutetablerequest.h"
+#include "associatetransitgatewayroutetableresponse.h"
 #include "associatevpccidrblockrequest.h"
 #include "associatevpccidrblockresponse.h"
 #include "attachclassiclinkvpcrequest.h"
@@ -57,6 +67,8 @@
 #include "attachvolumeresponse.h"
 #include "attachvpngatewayrequest.h"
 #include "attachvpngatewayresponse.h"
+#include "authorizeclientvpningressrequest.h"
+#include "authorizeclientvpningressresponse.h"
 #include "authorizesecuritygroupegressrequest.h"
 #include "authorizesecuritygroupegressresponse.h"
 #include "authorizesecuritygroupingressrequest.h"
@@ -65,6 +77,8 @@
 #include "bundleinstanceresponse.h"
 #include "cancelbundletaskrequest.h"
 #include "cancelbundletaskresponse.h"
+#include "cancelcapacityreservationrequest.h"
+#include "cancelcapacityreservationresponse.h"
 #include "cancelconversiontaskrequest.h"
 #include "cancelconversiontaskresponse.h"
 #include "cancelexporttaskrequest.h"
@@ -85,6 +99,12 @@
 #include "copyimageresponse.h"
 #include "copysnapshotrequest.h"
 #include "copysnapshotresponse.h"
+#include "createcapacityreservationrequest.h"
+#include "createcapacityreservationresponse.h"
+#include "createclientvpnendpointrequest.h"
+#include "createclientvpnendpointresponse.h"
+#include "createclientvpnrouterequest.h"
+#include "createclientvpnrouteresponse.h"
 #include "createcustomergatewayrequest.h"
 #include "createcustomergatewayresponse.h"
 #include "createdefaultsubnetrequest.h"
@@ -141,6 +161,14 @@
 #include "createsubnetresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
+#include "createtransitgatewayrequest.h"
+#include "createtransitgatewayresponse.h"
+#include "createtransitgatewayrouterequest.h"
+#include "createtransitgatewayrouteresponse.h"
+#include "createtransitgatewayroutetablerequest.h"
+#include "createtransitgatewayroutetableresponse.h"
+#include "createtransitgatewayvpcattachmentrequest.h"
+#include "createtransitgatewayvpcattachmentresponse.h"
 #include "createvolumerequest.h"
 #include "createvolumeresponse.h"
 #include "createvpcrequest.h"
@@ -159,6 +187,10 @@
 #include "createvpnconnectionrouteresponse.h"
 #include "createvpngatewayrequest.h"
 #include "createvpngatewayresponse.h"
+#include "deleteclientvpnendpointrequest.h"
+#include "deleteclientvpnendpointresponse.h"
+#include "deleteclientvpnrouterequest.h"
+#include "deleteclientvpnrouteresponse.h"
 #include "deletecustomergatewayrequest.h"
 #include "deletecustomergatewayresponse.h"
 #include "deletedhcpoptionsrequest.h"
@@ -205,6 +237,14 @@
 #include "deletesubnetresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "deletetransitgatewayrequest.h"
+#include "deletetransitgatewayresponse.h"
+#include "deletetransitgatewayrouterequest.h"
+#include "deletetransitgatewayrouteresponse.h"
+#include "deletetransitgatewayroutetablerequest.h"
+#include "deletetransitgatewayroutetableresponse.h"
+#include "deletetransitgatewayvpcattachmentrequest.h"
+#include "deletetransitgatewayvpcattachmentresponse.h"
 #include "deletevolumerequest.h"
 #include "deletevolumeresponse.h"
 #include "deletevpcrequest.h"
@@ -223,6 +263,8 @@
 #include "deletevpnconnectionrouteresponse.h"
 #include "deletevpngatewayrequest.h"
 #include "deletevpngatewayresponse.h"
+#include "deprovisionbyoipcidrrequest.h"
+#include "deprovisionbyoipcidrresponse.h"
 #include "deregisterimagerequest.h"
 #include "deregisterimageresponse.h"
 #include "describeaccountattributesrequest.h"
@@ -235,8 +277,22 @@
 #include "describeavailabilityzonesresponse.h"
 #include "describebundletasksrequest.h"
 #include "describebundletasksresponse.h"
+#include "describebyoipcidrsrequest.h"
+#include "describebyoipcidrsresponse.h"
+#include "describecapacityreservationsrequest.h"
+#include "describecapacityreservationsresponse.h"
 #include "describeclassiclinkinstancesrequest.h"
 #include "describeclassiclinkinstancesresponse.h"
+#include "describeclientvpnauthorizationrulesrequest.h"
+#include "describeclientvpnauthorizationrulesresponse.h"
+#include "describeclientvpnconnectionsrequest.h"
+#include "describeclientvpnconnectionsresponse.h"
+#include "describeclientvpnendpointsrequest.h"
+#include "describeclientvpnendpointsresponse.h"
+#include "describeclientvpnroutesrequest.h"
+#include "describeclientvpnroutesresponse.h"
+#include "describeclientvpntargetnetworksrequest.h"
+#include "describeclientvpntargetnetworksresponse.h"
 #include "describeconversiontasksrequest.h"
 #include "describeconversiontasksresponse.h"
 #include "describecustomergatewaysrequest.h"
@@ -315,6 +371,8 @@
 #include "describeprefixlistsresponse.h"
 #include "describeprincipalidformatrequest.h"
 #include "describeprincipalidformatresponse.h"
+#include "describepublicipv4poolsrequest.h"
+#include "describepublicipv4poolsresponse.h"
 #include "describeregionsrequest.h"
 #include "describeregionsresponse.h"
 #include "describereservedinstancesrequest.h"
@@ -357,6 +415,14 @@
 #include "describesubnetsresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
+#include "describetransitgatewayattachmentsrequest.h"
+#include "describetransitgatewayattachmentsresponse.h"
+#include "describetransitgatewayroutetablesrequest.h"
+#include "describetransitgatewayroutetablesresponse.h"
+#include "describetransitgatewayvpcattachmentsrequest.h"
+#include "describetransitgatewayvpcattachmentsresponse.h"
+#include "describetransitgatewaysrequest.h"
+#include "describetransitgatewaysresponse.h"
 #include "describevolumeattributerequest.h"
 #include "describevolumeattributeresponse.h"
 #include "describevolumestatusrequest.h"
@@ -401,6 +467,8 @@
 #include "detachvolumeresponse.h"
 #include "detachvpngatewayrequest.h"
 #include "detachvpngatewayresponse.h"
+#include "disabletransitgatewayroutetablepropagationrequest.h"
+#include "disabletransitgatewayroutetablepropagationresponse.h"
 #include "disablevgwroutepropagationrequest.h"
 #include "disablevgwroutepropagationresponse.h"
 #include "disablevpcclassiclinkrequest.h"
@@ -409,14 +477,20 @@
 #include "disablevpcclassiclinkdnssupportresponse.h"
 #include "disassociateaddressrequest.h"
 #include "disassociateaddressresponse.h"
+#include "disassociateclientvpntargetnetworkrequest.h"
+#include "disassociateclientvpntargetnetworkresponse.h"
 #include "disassociateiaminstanceprofilerequest.h"
 #include "disassociateiaminstanceprofileresponse.h"
 #include "disassociateroutetablerequest.h"
 #include "disassociateroutetableresponse.h"
 #include "disassociatesubnetcidrblockrequest.h"
 #include "disassociatesubnetcidrblockresponse.h"
+#include "disassociatetransitgatewayroutetablerequest.h"
+#include "disassociatetransitgatewayroutetableresponse.h"
 #include "disassociatevpccidrblockrequest.h"
 #include "disassociatevpccidrblockresponse.h"
+#include "enabletransitgatewayroutetablepropagationrequest.h"
+#include "enabletransitgatewayroutetablepropagationresponse.h"
 #include "enablevgwroutepropagationrequest.h"
 #include "enablevgwroutepropagationresponse.h"
 #include "enablevolumeiorequest.h"
@@ -425,6 +499,12 @@
 #include "enablevpcclassiclinkresponse.h"
 #include "enablevpcclassiclinkdnssupportrequest.h"
 #include "enablevpcclassiclinkdnssupportresponse.h"
+#include "exportclientvpnclientcertificaterevocationlistrequest.h"
+#include "exportclientvpnclientcertificaterevocationlistresponse.h"
+#include "exportclientvpnclientconfigurationrequest.h"
+#include "exportclientvpnclientconfigurationresponse.h"
+#include "exporttransitgatewayroutesrequest.h"
+#include "exporttransitgatewayroutesresponse.h"
 #include "getconsoleoutputrequest.h"
 #include "getconsoleoutputresponse.h"
 #include "getconsolescreenshotrequest.h"
@@ -437,6 +517,14 @@
 #include "getpassworddataresponse.h"
 #include "getreservedinstancesexchangequoterequest.h"
 #include "getreservedinstancesexchangequoteresponse.h"
+#include "gettransitgatewayattachmentpropagationsrequest.h"
+#include "gettransitgatewayattachmentpropagationsresponse.h"
+#include "gettransitgatewayroutetableassociationsrequest.h"
+#include "gettransitgatewayroutetableassociationsresponse.h"
+#include "gettransitgatewayroutetablepropagationsrequest.h"
+#include "gettransitgatewayroutetablepropagationsresponse.h"
+#include "importclientvpnclientcertificaterevocationlistrequest.h"
+#include "importclientvpnclientcertificaterevocationlistresponse.h"
 #include "importimagerequest.h"
 #include "importimageresponse.h"
 #include "importinstancerequest.h"
@@ -447,6 +535,10 @@
 #include "importsnapshotresponse.h"
 #include "importvolumerequest.h"
 #include "importvolumeresponse.h"
+#include "modifycapacityreservationrequest.h"
+#include "modifycapacityreservationresponse.h"
+#include "modifyclientvpnendpointrequest.h"
+#include "modifyclientvpnendpointresponse.h"
 #include "modifyfleetrequest.h"
 #include "modifyfleetresponse.h"
 #include "modifyfpgaimageattributerequest.h"
@@ -461,6 +553,8 @@
 #include "modifyimageattributeresponse.h"
 #include "modifyinstanceattributerequest.h"
 #include "modifyinstanceattributeresponse.h"
+#include "modifyinstancecapacityreservationattributesrequest.h"
+#include "modifyinstancecapacityreservationattributesresponse.h"
 #include "modifyinstancecreditspecificationrequest.h"
 #include "modifyinstancecreditspecificationresponse.h"
 #include "modifyinstanceplacementrequest.h"
@@ -477,6 +571,8 @@
 #include "modifyspotfleetrequestresponse.h"
 #include "modifysubnetattributerequest.h"
 #include "modifysubnetattributeresponse.h"
+#include "modifytransitgatewayvpcattachmentrequest.h"
+#include "modifytransitgatewayvpcattachmentresponse.h"
 #include "modifyvolumerequest.h"
 #include "modifyvolumeresponse.h"
 #include "modifyvolumeattributerequest.h"
@@ -499,6 +595,8 @@
 #include "monitorinstancesresponse.h"
 #include "moveaddresstovpcrequest.h"
 #include "moveaddresstovpcresponse.h"
+#include "provisionbyoipcidrrequest.h"
+#include "provisionbyoipcidrresponse.h"
 #include "purchasehostreservationrequest.h"
 #include "purchasehostreservationresponse.h"
 #include "purchasereservedinstancesofferingrequest.h"
@@ -509,6 +607,8 @@
 #include "rebootinstancesresponse.h"
 #include "registerimagerequest.h"
 #include "registerimageresponse.h"
+#include "rejecttransitgatewayvpcattachmentrequest.h"
+#include "rejecttransitgatewayvpcattachmentresponse.h"
 #include "rejectvpcendpointconnectionsrequest.h"
 #include "rejectvpcendpointconnectionsresponse.h"
 #include "rejectvpcpeeringconnectionrequest.h"
@@ -527,6 +627,8 @@
 #include "replacerouteresponse.h"
 #include "replaceroutetableassociationrequest.h"
 #include "replaceroutetableassociationresponse.h"
+#include "replacetransitgatewayrouterequest.h"
+#include "replacetransitgatewayrouteresponse.h"
 #include "reportinstancestatusrequest.h"
 #include "reportinstancestatusresponse.h"
 #include "requestspotfleetrequest.h"
@@ -545,6 +647,8 @@
 #include "resetsnapshotattributeresponse.h"
 #include "restoreaddresstoclassicrequest.h"
 #include "restoreaddresstoclassicresponse.h"
+#include "revokeclientvpningressrequest.h"
+#include "revokeclientvpningressresponse.h"
 #include "revokesecuritygroupegressrequest.h"
 #include "revokesecuritygroupegressresponse.h"
 #include "revokesecuritygroupingressrequest.h"
@@ -553,10 +657,14 @@
 #include "runinstancesresponse.h"
 #include "runscheduledinstancesrequest.h"
 #include "runscheduledinstancesresponse.h"
+#include "searchtransitgatewayroutesrequest.h"
+#include "searchtransitgatewayroutesresponse.h"
 #include "startinstancesrequest.h"
 #include "startinstancesresponse.h"
 #include "stopinstancesrequest.h"
 #include "stopinstancesresponse.h"
+#include "terminateclientvpnconnectionsrequest.h"
+#include "terminateclientvpnconnectionsresponse.h"
 #include "terminateinstancesrequest.h"
 #include "terminateinstancesresponse.h"
 #include "unassignipv6addressesrequest.h"
@@ -569,6 +677,8 @@
 #include "updatesecuritygroupruledescriptionsegressresponse.h"
 #include "updatesecuritygroupruledescriptionsingressrequest.h"
 #include "updatesecuritygroupruledescriptionsingressresponse.h"
+#include "withdrawbyoipcidrrequest.h"
+#include "withdrawbyoipcidrresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -690,6 +800,24 @@ AcceptReservedInstancesExchangeQuoteResponse * Ec2Client::acceptReservedInstance
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AcceptTransitGatewayVpcAttachmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts a request to attach a VPC to a transit
+ *
+ * gateway>
+ *
+ * The VPC attachment must be in the <code>pendingAcceptance</code> state. Use <a>DescribeTransitGatewayVpcAttachments</a>
+ * to view your pending VPC attachment requests. Use <a>RejectTransitGatewayVpcAttachment</a> to reject a VPC attachment
+ */
+AcceptTransitGatewayVpcAttachmentResponse * Ec2Client::acceptTransitGatewayVpcAttachment(const AcceptTransitGatewayVpcAttachmentRequest &request)
+{
+    return qobject_cast<AcceptTransitGatewayVpcAttachmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * AcceptVpcEndpointConnectionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -723,24 +851,64 @@ AcceptVpcPeeringConnectionResponse * Ec2Client::acceptVpcPeeringConnection(const
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AdvertiseByoipCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Advertises an IPv4 address range that is provisioned for use with your AWS resources through bring your own IP addresses
+ *
+ * (BYOIP)>
+ *
+ * You can perform this operation at most once every 10 seconds, even if you specify different address ranges each
+ *
+ * time>
+ *
+ * We recommend that you stop advertising the BYOIP CIDR from other locations when you advertise it from AWS. To minimize
+ * down time, you can configure your AWS resources to use an address from a BYOIP CIDR before it is advertised, and then
+ * simultaneously stop advertising it from the current location and start advertising it through
+ *
+ * AWS>
+ *
+ * It can take a few minutes before traffic to the specified addresses starts routing to AWS because of BGP propagation
+ *
+ * delays>
+ *
+ * To stop advertising the BYOIP CIDR, use
+ */
+AdvertiseByoipCidrResponse * Ec2Client::advertiseByoipCidr(const AdvertiseByoipCidrRequest &request)
+{
+    return qobject_cast<AdvertiseByoipCidrResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * AllocateAddressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allocates an Elastic IP
+ * Allocates an Elastic IP address to your AWS account. After you allocate the Elastic IP address you can associate it with
+ * an instance or network interface. After you release an Elastic IP address, it is released to the IP address pool and can
+ * be allocated to a different AWS
  *
- * address>
+ * account>
+ *
+ * You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public
+ * IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses
+ * (BYOIP). For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring
+ * Your Own IP Addresses (BYOIP)</a> in the <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>>
+ *
+ * [EC2-VPC] If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP
+ * address that you released after it is allocated to another AWS account. You cannot recover an Elastic IP address for
+ * EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this
+ *
+ * operation>
  *
  * An Elastic IP address is for use either in the EC2-Classic platform or in a VPC. By default, you can allocate 5 Elastic
  * IP addresses for EC2-Classic per region and 5 Elastic IP addresses for EC2-VPC per
  *
  * region>
- *
- * If you release an Elastic IP address for use in a VPC, you might be able to recover it. To recover an Elastic IP address
- * that you released, specify it in the <code>Address</code> parameter. Note that you cannot recover an Elastic IP address
- * that you released after it is allocated to another AWS
- *
- * account>
  *
  * For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
@@ -767,6 +935,20 @@ AllocateHostsResponse * Ec2Client::allocateHosts(const AllocateHostsRequest &req
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ApplySecurityGroupsToClientVpnTargetNetworkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies a security group to the association between the target network and the Client VPN endpoint. This action replaces
+ * the existing security groups with the specified security
+ */
+ApplySecurityGroupsToClientVpnTargetNetworkResponse * Ec2Client::applySecurityGroupsToClientVpnTargetNetwork(const ApplySecurityGroupsToClientVpnTargetNetworkRequest &request)
+{
+    return qobject_cast<ApplySecurityGroupsToClientVpnTargetNetworkResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * AssignIpv6AddressesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -789,10 +971,13 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Assigns one or more secondary private IP addresses to the specified network interface. You can specify one or more
- * specific secondary IP addresses, or you can specify the number of secondary IP addresses to be automatically assigned
- * within the subnet's CIDR block range. The number of secondary IP addresses that you can assign to an instance varies by
- * instance type. For information about instance types, see <a
+ * Assigns one or more secondary private IP addresses to the specified network
+ *
+ * interface>
+ *
+ * You can specify one or more specific secondary IP addresses, or you can specify the number of secondary IP addresses to
+ * be automatically assigned within the subnet's CIDR block range. The number of secondary IP addresses that you can assign
+ * to an instance varies by instance type. For information about instance types, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the <i>Amazon
  * Elastic Compute Cloud User Guide</i>. For more information about Elastic IP addresses, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
@@ -800,7 +985,13 @@ AssignIpv6AddressesResponse * Ec2Client::assignIpv6Addresses(const AssignIpv6Add
  *
  * Guide</i>>
  *
- * AssignPrivateIpAddresses is available only in
+ * When you move a secondary private IP address to another network interface, any Elastic IP address that is associated
+ * with the IP address is also
+ *
+ * moved>
+ *
+ * Remapping an IP address is an asynchronous operation. When you move an IP address from one network interface to another,
+ * check <code>network/interfaces/macs/mac/local-ipv4s</code> in the instance metadata to confirm that the remapping is
  */
 AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const AssignPrivateIpAddressesRequest &request)
 {
@@ -813,9 +1004,10 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates an Elastic IP address with an instance or a network
+ * Associates an Elastic IP address with an instance or a network interface. Before you can use an Elastic IP address, you
+ * must allocate it to your
  *
- * interface>
+ * account>
  *
  * An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the
@@ -844,6 +1036,21 @@ AssignPrivateIpAddressesResponse * Ec2Client::assignPrivateIpAddresses(const Ass
 AssociateAddressResponse * Ec2Client::associateAddress(const AssociateAddressRequest &request)
 {
     return qobject_cast<AssociateAddressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateClientVpnTargetNetworkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a target network with a Client VPN endpoint. A target network is a subnet in a VPC. You can associate
+ * multiple subnets from the same VPC with a Client VPN endpoint. You can associate only one subnet in each Availability
+ * Zone. We recommend that you associate at least two subnets to provide Availability Zone
+ */
+AssociateClientVpnTargetNetworkResponse * Ec2Client::associateClientVpnTargetNetwork(const AssociateClientVpnTargetNetworkRequest &request)
+{
+    return qobject_cast<AssociateClientVpnTargetNetworkResponse *>(send(request));
 }
 
 /*!
@@ -899,9 +1106,8 @@ AssociateIamInstanceProfileResponse * Ec2Client::associateIamInstanceProfile(con
  *
  * subnets>
  *
- * For more information about route tables, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
- * Virtual Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route
+ * Tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRouteTableRequest &request)
 {
@@ -920,6 +1126,20 @@ AssociateRouteTableResponse * Ec2Client::associateRouteTable(const AssociateRout
 AssociateSubnetCidrBlockResponse * Ec2Client::associateSubnetCidrBlock(const AssociateSubnetCidrBlockRequest &request)
 {
     return qobject_cast<AssociateSubnetCidrBlockResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AssociateTransitGatewayRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified attachment with the specified transit gateway route table. You can associate only one route
+ * table with an
+ */
+AssociateTransitGatewayRouteTableResponse * Ec2Client::associateTransitGatewayRouteTable(const AssociateTransitGatewayRouteTableRequest &request)
+{
+    return qobject_cast<AssociateTransitGatewayRouteTableResponse *>(send(request));
 }
 
 /*!
@@ -973,8 +1193,8 @@ AttachClassicLinkVpcResponse * Ec2Client::attachClassicLinkVpc(const AttachClass
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches an Internet gateway to a VPC, enabling connectivity between the Internet and the VPC. For more information
- * about your VPC and Internet gateway, see the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/">Amazon
+ * Attaches an internet gateway to a VPC, enabling connectivity between the internet and the VPC. For more information
+ * about your VPC and internet gateway, see the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/">Amazon
  * Virtual Private Cloud User
  */
 AttachInternetGatewayResponse * Ec2Client::attachInternetGateway(const AttachInternetGatewayRequest &request)
@@ -1065,6 +1285,21 @@ AttachVolumeResponse * Ec2Client::attachVolume(const AttachVolumeRequest &reques
 AttachVpnGatewayResponse * Ec2Client::attachVpnGateway(const AttachVpnGatewayRequest &request)
 {
     return qobject_cast<AttachVpnGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * AuthorizeClientVpnIngressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds an ingress authorization rule to a Client VPN endpoint. Ingress authorization rules act as firewall rules that
+ * grant access to networks. You must configure ingress authorization rules to enable clients to access resources in AWS or
+ * on-premises
+ */
+AuthorizeClientVpnIngressResponse * Ec2Client::authorizeClientVpnIngress(const AuthorizeClientVpnIngressRequest &request)
+{
+    return qobject_cast<AuthorizeClientVpnIngressResponse *>(send(request));
 }
 
 /*!
@@ -1163,6 +1398,26 @@ BundleInstanceResponse * Ec2Client::bundleInstance(const BundleInstanceRequest &
 CancelBundleTaskResponse * Ec2Client::cancelBundleTask(const CancelBundleTaskRequest &request)
 {
     return qobject_cast<CancelBundleTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CancelCapacityReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels the specified Capacity Reservation, releases the reserved capacity, and changes the Capacity Reservation's state
+ * to
+ *
+ * <code>cancelled</code>>
+ *
+ * Instances running in the reserved capacity continue running until you stop them. Stopped instances that target the
+ * Capacity Reservation can no longer launch. Modify these instances to either target a different Capacity Reservation,
+ * launch On-Demand Instance capacity, or run in any open Capacity Reservation that has matching attributes and sufficient
+ */
+CancelCapacityReservationResponse * Ec2Client::cancelCapacityReservation(const CancelCapacityReservationRequest &request)
+{
+    return qobject_cast<CancelCapacityReservationResponse *>(send(request));
 }
 
 /*!
@@ -1307,6 +1562,12 @@ CopyFpgaImageResponse * Ec2Client::copyFpgaImage(const CopyFpgaImageRequest &req
  *
  * request>
  *
+ * Copies of encrypted backing snapshots for the AMI are encrypted. Copies of unencrypted backing snapshots remain
+ * unencrypted, unless you set <code>Encrypted</code> during the copy operation. You cannot create an unencrypted copy of
+ * an encrypted backing
+ *
+ * snapshot>
+ *
  * For more information about the prerequisites and limits when copying an AMI, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/CopyingAMIs.html">Copying an AMI</a> in the <i>Amazon Elastic
  * Compute Cloud User
@@ -1331,9 +1592,9 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
  * Copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted snapshots remain unencrypted, unless the
  * <code>Encrypted</code> flag is specified during the snapshot copy operation. By default, encrypted snapshot copies use
  * the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a non-default CMK
- * with the <code>KmsKeyId</code> parameter.
+ * with the <code>KmsKeyId</code>
  *
- * </p
+ * parameter>
  *
  * To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used to
  * encrypt the
@@ -1350,6 +1611,71 @@ CopyImageResponse * Ec2Client::copyImage(const CopyImageRequest &request)
 CopySnapshotResponse * Ec2Client::copySnapshot(const CopySnapshotRequest &request)
 {
     return qobject_cast<CopySnapshotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateCapacityReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new Capacity Reservation with the specified
+ *
+ * attributes>
+ *
+ * Capacity Reservations enable you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for
+ * any duration. This gives you the flexibility to selectively add capacity reservations and still get the Regional RI
+ * discounts for that usage. By creating Capacity Reservations, you ensure that you always have access to Amazon EC2
+ * capacity when you need it, for as long as you need it. For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html">Capacity Reservations</a> in
+ * the <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>>
+ *
+ * Your request to create a Capacity Reservation could fail if Amazon EC2 does not have sufficient capacity to fulfill the
+ * request. If your request fails due to Amazon EC2 capacity constraints, either try again at a later time, try in a
+ * different Availability Zone, or request a smaller capacity reservation. If your application is flexible across instance
+ * types and sizes, try to create a Capacity Reservation with different instance
+ *
+ * attributes>
+ *
+ * Your request could also fail if the requested quantity exceeds your On-Demand Instance limit for the selected instance
+ * type. If your request fails due to limit constraints, increase your On-Demand Instance limit for the required instance
+ * type and try again. For more information about increasing your instance limits, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">Amazon EC2 Service Limits</a> in the
+ * <i>Amazon Elastic Compute Cloud User
+ */
+CreateCapacityReservationResponse * Ec2Client::createCapacityReservation(const CreateCapacityReservationRequest &request)
+{
+    return qobject_cast<CreateCapacityReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateClientVpnEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Client VPN endpoint. A Client VPN endpoint is the resource you create and configure to enable and manage
+ * client VPN sessions. It is the destination endpoint at which all client VPN sessions are
+ */
+CreateClientVpnEndpointResponse * Ec2Client::createClientVpnEndpoint(const CreateClientVpnEndpointRequest &request)
+{
+    return qobject_cast<CreateClientVpnEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateClientVpnRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a route to a network to a Client VPN endpoint. Each Client VPN endpoint has a route table that describes the
+ * available destination network routes. Each route in the route table specifies the path for traﬃc to speciﬁc resources or
+ */
+CreateClientVpnRouteResponse * Ec2Client::createClientVpnRoute(const CreateClientVpnRouteRequest &request)
+{
+    return qobject_cast<CreateClientVpnRouteResponse *>(send(request));
 }
 
 /*!
@@ -1420,13 +1746,12 @@ CreateDefaultSubnetResponse * Ec2Client::createDefaultSubnet(const CreateDefault
  *
  * yourself>
  *
- * You can create a default VPC if you deleted your previous default VPC. You cannot have more than one default VPC per
- * region.
+ * If you deleted your previous default VPC, you can create a default VPC. You cannot have more than one default VPC per
  *
- * </p
+ * Region>
  *
- * If your account supports EC2-Classic, you cannot use this action to create a default VPC in a region that supports
- * EC2-Classic. If you want a default VPC in a region that supports EC2-Classic, see "I really want a default VPC for my
+ * If your account supports EC2-Classic, you cannot use this action to create a default VPC in a Region that supports
+ * EC2-Classic. If you want a default VPC in a Region that supports EC2-Classic, see "I really want a default VPC for my
  * existing EC2 account. Is that possible?" in the <a href="http://aws.amazon.com/vpc/faqs/#Default_VPCs">Default VPCs
  */
 CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcRequest &request)
@@ -1449,7 +1774,7 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
  *
  * <code>domain-name-servers</code> - The IP addresses of up to four domain name servers, or AmazonProvidedDNS. The default
  * DHCP option set specifies AmazonProvidedDNS. If specifying more than one domain name server, specify the IP addresses in
- * a single parameter, separated by commas. If you want your instance to receive a custom DNS hostname as specified in
+ * a single parameter, separated by commas. ITo have your instance to receive a custom DNS hostname as specified in
  * <code>domain-name</code>, you must set <code>domain-name-servers</code> to a custom DNS
  *
  * server> </li> <li>
@@ -1479,9 +1804,9 @@ CreateDefaultVpcResponse * Ec2Client::createDefaultVpc(const CreateDefaultVpcReq
  * 2132</a>> </li> </ul>
  *
  * Your VPC automatically starts out with a set of DHCP options that includes only a DNS server that we provide
- * (AmazonProvidedDNS). If you create a set of options, and if your VPC has an Internet gateway, make sure to set the
+ * (AmazonProvidedDNS). If you create a set of options, and if your VPC has an internet gateway, make sure to set the
  * <code>domain-name-servers</code> option either to <code>AmazonProvidedDNS</code> or to a domain name server of your
- * choice. For more information about DHCP options, see <a
+ * choice. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP Options Sets</a> in the
  * <i>Amazon Virtual Private Cloud User
  */
@@ -1496,8 +1821,8 @@ CreateDhcpOptionsResponse * Ec2Client::createDhcpOptions(const CreateDhcpOptions
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * [IPv6 only] Creates an egress-only Internet gateway for your VPC. An egress-only Internet gateway is used to enable
- * outbound communication over IPv6 from instances in your VPC to the Internet, and prevents hosts outside of your VPC from
+ * [IPv6 only] Creates an egress-only internet gateway for your VPC. An egress-only internet gateway is used to enable
+ * outbound communication over IPv6 from instances in your VPC to the internet, and prevents hosts outside of your VPC from
  * initiating an IPv6 connection with your
  */
 CreateEgressOnlyInternetGatewayResponse * Ec2Client::createEgressOnlyInternetGateway(const CreateEgressOnlyInternetGatewayRequest &request)
@@ -1534,17 +1859,22 @@ CreateFleetResponse * Ec2Client::createFleet(const CreateFleetRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates one or more flow logs to capture IP traffic for a specific network interface, subnet, or VPC. Flow logs are
- * delivered to a specified log group in Amazon CloudWatch Logs. If you specify a VPC or subnet in the request, a log
- * stream is created in CloudWatch Logs for each network interface in the subnet or VPC. Log streams can include
- * information about accepted and rejected traffic to a network interface. You can view the data in your log streams using
- * Amazon CloudWatch
+ * Creates one or more flow logs to capture information about IP traffic for a specific network interface, subnet, or VPC.
  *
- * Logs>
+ * </p
  *
- * In your request, you must also specify an IAM role that has permission to publish logs to CloudWatch
+ * Flow log data for a monitored network interface is recorded as flow log records, which are log events consisting of
+ * fields that describe the traffic flow. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/flow-logs.html#flow-log-records">Flow Log Records</a> in the
+ * <i>Amazon Virtual Private Cloud User
  *
- * Logs>
+ * Guide</i>>
+ *
+ * When publishing to CloudWatch Logs, flow log records are published to a log group, and each network interface has a
+ * unique log stream in the log group. When publishing to Amazon S3, flow log records for all of the monitored network
+ * interfaces are published to a single log file object that is stored in the specified
+ *
+ * bucket>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/flow-logs.html">VPC Flow
  * Logs</a> in the <i>Amazon Virtual Private Cloud User
@@ -1626,11 +1956,11 @@ CreateInstanceExportTaskResponse * Ec2Client::createInstanceExportTask(const Cre
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Internet gateway for use with a VPC. After creating the Internet gateway, you attach it to a VPC using
+ * Creates an internet gateway for use with a VPC. After creating the internet gateway, you attach it to a VPC using
  *
  * <a>AttachInternetGateway</a>>
  *
- * For more information about your VPC and Internet gateway, see the <a
+ * For more information about your VPC and internet gateway, see the <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/">Amazon Virtual Private Cloud User
  */
 CreateInternetGatewayResponse * Ec2Client::createInternetGateway(const CreateInternetGatewayRequest &request)
@@ -1728,9 +2058,8 @@ CreateNatGatewayResponse * Ec2Client::createNatGateway(const CreateNatGatewayReq
  *
  * VPC>
  *
- * For more information about network ACLs, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
- * Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a>
+ * in the <i>Amazon Virtual Private Cloud User
  */
 CreateNetworkAclResponse * Ec2Client::createNetworkAcl(const CreateNetworkAclRequest &request)
 {
@@ -1818,8 +2147,10 @@ CreateNetworkInterfacePermissionResponse * Ec2Client::createNetworkInterfacePerm
  *
  * A <code>cluster</code> placement group is a logical grouping of instances within a single Availability Zone that benefit
  * from low network latency, high network throughput. A <code>spread</code> placement group places instances on distinct
+ * hardware. A <code>partition</code> placement group places groups of instances in different partitions, where instances
+ * in one partition do not share the same hardware with instances in another
  *
- * hardware>
+ * partition>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement
  * Groups</a> in the <i>Amazon Elastic Compute Cloud User
@@ -1878,8 +2209,8 @@ CreateReservedInstancesListingResponse * Ec2Client::createReservedInstancesListi
  *
  * VPC>
  *
- * You must specify one of the following targets: Internet gateway or virtual private gateway, NAT instance, NAT gateway,
- * VPC peering connection, network interface, or egress-only Internet
+ * You must specify one of the following targets: internet gateway or virtual private gateway, NAT instance, NAT gateway,
+ * VPC peering connection, network interface, or egress-only internet
  *
  * gateway>
  *
@@ -1921,9 +2252,8 @@ CreateRouteResponse * Ec2Client::createRoute(const CreateRouteRequest &request)
  *
  * subnet>
  *
- * For more information about route tables, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
- * Virtual Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route
+ * Tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 CreateRouteTableResponse * Ec2Client::createRouteTable(const CreateRouteTableRequest &request)
 {
@@ -2051,11 +2381,11 @@ CreateSpotDatafeedSubscriptionResponse * Ec2Client::createSpotDatafeedSubscripti
  *
  * VPC>
  *
- * When you create each subnet, you provide the VPC ID and the IPv4 CIDR block you want for the subnet. After you create a
- * subnet, you can't change its CIDR block. The size of the subnet's IPv4 CIDR block can be the same as a VPC's IPv4 CIDR
- * block, or a subset of a VPC's IPv4 CIDR block. If you create more than one subnet in a VPC, the subnets' CIDR blocks
- * must not overlap. The smallest IPv4 subnet (and VPC) you can create uses a /28 netmask (16 IPv4 addresses), and the
- * largest uses a /16 netmask (65,536 IPv4
+ * When you create each subnet, you provide the VPC ID and IPv4 CIDR block for the subnet. After you create a subnet, you
+ * can't change its CIDR block. The size of the subnet's IPv4 CIDR block can be the same as a VPC's IPv4 CIDR block, or a
+ * subset of a VPC's IPv4 CIDR block. If you create more than one subnet in a VPC, the subnets' CIDR blocks must not
+ * overlap. The smallest IPv4 subnet (and VPC) you can create uses a /28 netmask (16 IPv4 addresses), and the largest uses
+ * a /16 netmask (65,536 IPv4
  *
  * addresses)>
  *
@@ -2112,6 +2442,90 @@ CreateTagsResponse * Ec2Client::createTags(const CreateTagsRequest &request)
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTransitGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a transit
+ *
+ * gateway>
+ *
+ * You can use a transit gateway to interconnect your virtual private clouds (VPC) and on-premises networks. After the
+ * transit gateway enters the <code>available</code> state, you can attach your VPCs and VPN connections to the transit
+ *
+ * gateway>
+ *
+ * To attach your VPCs, use
+ *
+ * <a>CreateTransitGatewayVpcAttachment</a>>
+ *
+ * To attach a VPN connection, use <a>CreateCustomerGateway</a> to create a customer gateway and specify the ID of the
+ * customer gateway and the ID of the transit gateway in a call to
+ *
+ * <a>CreateVpnConnection</a>>
+ *
+ * When you create a transit gateway, we create a default transit gateway route table and use it as the default association
+ * route table and the default propagation route table. You can use <a>CreateTransitGatewayRouteTable</a> to create
+ * additional transit gateway route tables. If you disable automatic route propagation, we do not create a default transit
+ * gateway route table. You can use <a>EnableTransitGatewayRouteTablePropagation</a> to propagate routes from a resource
+ * attachment to a transit gateway route table. If you disable automatic associations, you can use
+ * <a>AssociateTransitGatewayRouteTable</a> to associate a resource attachment with a transit gateway route
+ */
+CreateTransitGatewayResponse * Ec2Client::createTransitGateway(const CreateTransitGatewayRequest &request)
+{
+    return qobject_cast<CreateTransitGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTransitGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a static route for the specified transit gateway route
+ */
+CreateTransitGatewayRouteResponse * Ec2Client::createTransitGatewayRoute(const CreateTransitGatewayRouteRequest &request)
+{
+    return qobject_cast<CreateTransitGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTransitGatewayRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a route table for the specified transit
+ */
+CreateTransitGatewayRouteTableResponse * Ec2Client::createTransitGatewayRouteTable(const CreateTransitGatewayRouteTableRequest &request)
+{
+    return qobject_cast<CreateTransitGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * CreateTransitGatewayVpcAttachmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attaches the specified VPC to the specified transit
+ *
+ * gateway>
+ *
+ * If you attach a VPC with a CIDR range that overlaps the CIDR range of a VPC that is already attached, the new VPC CIDR
+ * range is not propagated to the default propagation route
+ *
+ * table>
+ *
+ * To send VPC traffic to an attached transit gateway, add a route to the VPC route table using
+ */
+CreateTransitGatewayVpcAttachmentResponse * Ec2Client::createTransitGatewayVpcAttachment(const CreateTransitGatewayVpcAttachmentRequest &request)
+{
+    return qobject_cast<CreateTransitGatewayVpcAttachmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * CreateVolumeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2156,9 +2570,9 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a VPC with the specified IPv4 CIDR block. The smallest VPC you can create uses a /28 netmask (16 IPv4
- * addresses), and the largest uses a /16 netmask (65,536 IPv4 addresses). To help you decide how big to make your VPC, see
- * <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a> in the
- * <i>Amazon Virtual Private Cloud User
+ * addresses), and the largest uses a /16 netmask (65,536 IPv4 addresses). For more information about how large to make
+ * your VPC, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a>
+ * in the <i>Amazon Virtual Private Cloud User
  *
  * Guide</i>>
  *
@@ -2167,8 +2581,8 @@ CreateVolumeResponse * Ec2Client::createVolume(const CreateVolumeRequest &reques
  *
  * VPC>
  *
- * By default, each instance you launch in the VPC has the default DHCP options, which includes only a default DNS server
- * that we provide (AmazonProvidedDNS). For more information about DHCP options, see <a
+ * By default, each instance you launch in the VPC has the default DHCP options, which include only a default DNS server
+ * that we provide (AmazonProvidedDNS). For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP Options Sets</a> in the
  * <i>Amazon Virtual Private Cloud User
  *
@@ -2263,7 +2677,7 @@ CreateVpcEndpointServiceConfigurationResponse * Ec2Client::createVpcEndpointServ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Requests a VPC peering connection between two VPCs: a requester VPC that you own and an accepter VPC with which to
- * create the connection. The accepter VPC can belong to another AWS account and can be in a different region to the
+ * create the connection. The accepter VPC can belong to another AWS account and can be in a different Region to the
  * requester VPC. The requester VPC and accepter VPC cannot have overlapping CIDR
  *
  * blocks> <note>
@@ -2366,6 +2780,34 @@ CreateVpnGatewayResponse * Ec2Client::createVpnGateway(const CreateVpnGatewayReq
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteClientVpnEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified Client VPN endpoint. You must disassociate all target networks before you can delete a Client VPN
+ */
+DeleteClientVpnEndpointResponse * Ec2Client::deleteClientVpnEndpoint(const DeleteClientVpnEndpointRequest &request)
+{
+    return qobject_cast<DeleteClientVpnEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteClientVpnRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a route from a Client VPN endpoint. You can only delete routes that you manually added using the
+ * <b>CreateClientVpnRoute</b> action. You cannot delete routes that were automatically added when associating a subnet. To
+ * remove routes that have been automatically added, disassociate the target subnet from the Client VPN
+ */
+DeleteClientVpnRouteResponse * Ec2Client::deleteClientVpnRoute(const DeleteClientVpnRouteRequest &request)
+{
+    return qobject_cast<DeleteClientVpnRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteCustomerGatewayResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2398,7 +2840,7 @@ DeleteDhcpOptionsResponse * Ec2Client::deleteDhcpOptions(const DeleteDhcpOptions
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an egress-only Internet
+ * Deletes an egress-only internet
  */
 DeleteEgressOnlyInternetGatewayResponse * Ec2Client::deleteEgressOnlyInternetGateway(const DeleteEgressOnlyInternetGatewayRequest &request)
 {
@@ -2457,7 +2899,7 @@ DeleteFpgaImageResponse * Ec2Client::deleteFpgaImage(const DeleteFpgaImageReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified Internet gateway. You must detach the Internet gateway from the VPC before you can delete
+ * Deletes the specified internet gateway. You must detach the internet gateway from the VPC before you can delete
  */
 DeleteInternetGatewayResponse * Ec2Client::deleteInternetGateway(const DeleteInternetGatewayRequest &request)
 {
@@ -2713,6 +3155,59 @@ DeleteTagsResponse * Ec2Client::deleteTags(const DeleteTagsRequest &request)
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTransitGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified transit
+ */
+DeleteTransitGatewayResponse * Ec2Client::deleteTransitGateway(const DeleteTransitGatewayRequest &request)
+{
+    return qobject_cast<DeleteTransitGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTransitGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified route from the specified transit gateway route
+ */
+DeleteTransitGatewayRouteResponse * Ec2Client::deleteTransitGatewayRoute(const DeleteTransitGatewayRouteRequest &request)
+{
+    return qobject_cast<DeleteTransitGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTransitGatewayRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified transit gateway route table. You must disassociate the route table from any transit gateway route
+ * tables before you can delete
+ */
+DeleteTransitGatewayRouteTableResponse * Ec2Client::deleteTransitGatewayRouteTable(const DeleteTransitGatewayRouteTableRequest &request)
+{
+    return qobject_cast<DeleteTransitGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeleteTransitGatewayVpcAttachmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified VPC
+ */
+DeleteTransitGatewayVpcAttachmentResponse * Ec2Client::deleteTransitGatewayVpcAttachment(const DeleteTransitGatewayVpcAttachmentRequest &request)
+{
+    return qobject_cast<DeleteTransitGatewayVpcAttachmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DeleteVolumeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2855,6 +3350,25 @@ DeleteVpnConnectionRouteResponse * Ec2Client::deleteVpnConnectionRoute(const Del
 DeleteVpnGatewayResponse * Ec2Client::deleteVpnGateway(const DeleteVpnGatewayRequest &request)
 {
     return qobject_cast<DeleteVpnGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DeprovisionByoipCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Releases the specified address range that you provisioned for use with your AWS resources through bring your own IP
+ * addresses (BYOIP) and deletes the corresponding address
+ *
+ * pool>
+ *
+ * Before you can release an address range, you must stop advertising it using <a>WithdrawByoipCidr</a> and you must not
+ * have any IP addresses allocated from its address
+ */
+DeprovisionByoipCidrResponse * Ec2Client::deprovisionByoipCidr(const DeprovisionByoipCidrRequest &request)
+{
+    return qobject_cast<DeprovisionByoipCidrResponse *>(send(request));
 }
 
 /*!
@@ -3008,16 +3522,113 @@ DescribeBundleTasksResponse * Ec2Client::describeBundleTasks(const DescribeBundl
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeByoipCidrsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the IP address ranges that were specified in calls to
+ *
+ * <a>ProvisionByoipCidr</a>>
+ *
+ * To describe the address pools that were created when you provisioned the address ranges, use
+ */
+DescribeByoipCidrsResponse * Ec2Client::describeByoipCidrs(const DescribeByoipCidrsRequest &request)
+{
+    return qobject_cast<DescribeByoipCidrsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeCapacityReservationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more of your Capacity Reservations. The results describe only the Capacity Reservations in the AWS
+ * Region that you're currently
+ */
+DescribeCapacityReservationsResponse * Ec2Client::describeCapacityReservations(const DescribeCapacityReservationsRequest &request)
+{
+    return qobject_cast<DescribeCapacityReservationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DescribeClassicLinkInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes one or more of your linked EC2-Classic instances. This request only returns information about EC2-Classic
- * instances linked to a VPC through ClassicLink; you cannot use this request to return information about other
+ * instances linked to a VPC through ClassicLink. You cannot use this request to return information about other
  */
 DescribeClassicLinkInstancesResponse * Ec2Client::describeClassicLinkInstances(const DescribeClassicLinkInstancesRequest &request)
 {
     return qobject_cast<DescribeClassicLinkInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeClientVpnAuthorizationRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the authorization rules for a specified Client VPN
+ */
+DescribeClientVpnAuthorizationRulesResponse * Ec2Client::describeClientVpnAuthorizationRules(const DescribeClientVpnAuthorizationRulesRequest &request)
+{
+    return qobject_cast<DescribeClientVpnAuthorizationRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeClientVpnConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes active client connections and connections that have been terminated within the last 60 minutes for the
+ * specified Client VPN
+ */
+DescribeClientVpnConnectionsResponse * Ec2Client::describeClientVpnConnections(const DescribeClientVpnConnectionsRequest &request)
+{
+    return qobject_cast<DescribeClientVpnConnectionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeClientVpnEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more Client VPN endpoints in the
+ */
+DescribeClientVpnEndpointsResponse * Ec2Client::describeClientVpnEndpoints(const DescribeClientVpnEndpointsRequest &request)
+{
+    return qobject_cast<DescribeClientVpnEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeClientVpnRoutesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the routes for the specified Client VPN
+ */
+DescribeClientVpnRoutesResponse * Ec2Client::describeClientVpnRoutes(const DescribeClientVpnRoutesRequest &request)
+{
+    return qobject_cast<DescribeClientVpnRoutesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeClientVpnTargetNetworksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the target networks associated with the specified Client VPN
+ */
+DescribeClientVpnTargetNetworksResponse * Ec2Client::describeClientVpnTargetNetworks(const DescribeClientVpnTargetNetworksRequest &request)
+{
+    return qobject_cast<DescribeClientVpnTargetNetworksResponse *>(send(request));
 }
 
 /*!
@@ -3068,9 +3679,8 @@ DescribeCustomerGatewaysResponse * Ec2Client::describeCustomerGateways(const Des
  *
  * sets>
  *
- * For more information about DHCP options sets, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP Options Sets</a> in the
- * <i>Amazon Virtual Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP
+ * Options Sets</a> in the <i>Amazon Virtual Private Cloud User
  */
 DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpOptionsRequest &request)
 {
@@ -3083,7 +3693,7 @@ DescribeDhcpOptionsResponse * Ec2Client::describeDhcpOptions(const DescribeDhcpO
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more of your egress-only Internet
+ * Describes one or more of your egress-only internet
  */
 DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyInternetGateways(const DescribeEgressOnlyInternetGatewaysRequest &request)
 {
@@ -3096,8 +3706,8 @@ DescribeEgressOnlyInternetGatewaysResponse * Ec2Client::describeEgressOnlyIntern
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the Elastic GPUs associated with your instances. For more information about Elastic GPUs, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html">Amazon EC2 Elastic
+ * Describes the Elastic Graphics accelerator associated with your instances. For more information about Elastic Graphics,
+ * see <a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html">Amazon Elastic
  */
 DescribeElasticGpusResponse * Ec2Client::describeElasticGpus(const DescribeElasticGpusRequest &request)
 {
@@ -3208,11 +3818,10 @@ DescribeFpgaImagesResponse * Ec2Client::describeFpgaImages(const DescribeFpgaIma
  * purchase>
  *
  * The results describe all the Dedicated Host reservation offerings, including offerings that may not match the instance
- * family and region of your Dedicated Hosts. When purchasing an offering, ensure that the instance family and Region of
- * the offering matches that of the Dedicated Hosts with which it is to be associated . For more information about
- * supported instance types, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html">Dedicated Hosts Overview</a> in
- * the <i>Amazon Elastic Compute Cloud User Guide</i>.
+ * family and Region of your Dedicated Hosts. When purchasing an offering, ensure that the instance family and Region of
+ * the offering matches that of the Dedicated Hosts with which it is to be associated. For more information about supported
+ * instance types, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html">Dedicated
+ * Hosts Overview</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
  */
 DescribeHostReservationOfferingsResponse * Ec2Client::describeHostReservationOfferings(const DescribeHostReservationOfferingsRequest &request)
 {
@@ -3242,7 +3851,7 @@ DescribeHostReservationsResponse * Ec2Client::describeHostReservations(const Des
  *
  * Hosts>
  *
- * The results describe only the Dedicated Hosts in the region you're currently using. All listed instances consume
+ * The results describe only the Dedicated Hosts in the Region you're currently using. All listed instances consume
  * capacity on your Dedicated Host. Dedicated Hosts that have recently been released are listed with the state
  */
 DescribeHostsResponse * Ec2Client::describeHosts(const DescribeHostsRequest &request)
@@ -3411,15 +4020,21 @@ DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the credit option for CPU usage of one or more of your T2 instances. The credit options are
+ * Describes the credit option for CPU usage of one or more of your T2 or T3 instances. The credit options are
  * <code>standard</code> and
  *
  * <code>unlimited</code>>
  *
- * If you do not specify an instance ID, Amazon EC2 returns only the T2 instances with the <code>unlimited</code> credit
- * option. If you specify one or more instance IDs, Amazon EC2 returns the credit option (<code>standard</code> or
+ * If you do not specify an instance ID, Amazon EC2 returns T2 and T3 instances with the <code>unlimited</code> credit
+ * option, as well as instances that were previously configured as T2 or T3 with the <code>unlimited</code> credit option.
+ * For example, if you resize a T2 instance, while it is configured as <code>unlimited</code>, to an M4 instance, Amazon
+ * EC2 returns the M4
+ *
+ * instance>
+ *
+ * If you specify one or more instance IDs, Amazon EC2 returns the credit option (<code>standard</code> or
  * <code>unlimited</code>) of those instances. If you specify an instance ID that is not valid, such as an instance that is
- * not a T2 instance, an error is
+ * not a T2 or T3 instance, an error is
  *
  * returned>
  *
@@ -3433,7 +4048,8 @@ DescribeInstanceAttributeResponse * Ec2Client::describeInstanceAttribute(const D
  *
  * normally>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/t2-instances.html">T2
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable Performance
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
  */
 DescribeInstanceCreditSpecificationsResponse * Ec2Client::describeInstanceCreditSpecifications(const DescribeInstanceCreditSpecificationsRequest &request)
@@ -3516,7 +4132,7 @@ DescribeInstancesResponse * Ec2Client::describeInstances(const DescribeInstances
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more of your Internet
+ * Describes one or more of your internet
  */
 DescribeInternetGatewaysResponse * Ec2Client::describeInternetGateways(const DescribeInternetGatewaysRequest &request)
 {
@@ -3589,7 +4205,7 @@ DescribeMovingAddressesResponse * Ec2Client::describeMovingAddresses(const Descr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more of the your NAT
+ * Describes one or more of your NAT
  */
 DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGatewaysRequest &request)
 {
@@ -3606,9 +4222,8 @@ DescribeNatGatewaysResponse * Ec2Client::describeNatGateways(const DescribeNatGa
  *
  * ACLs>
  *
- * For more information about network ACLs, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
- * Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a>
+ * in the <i>Amazon Virtual Private Cloud User
  */
 DescribeNetworkAclsResponse * Ec2Client::describeNetworkAcls(const DescribeNetworkAclsRequest &request)
 {
@@ -3715,6 +4330,19 @@ DescribePrefixListsResponse * Ec2Client::describePrefixLists(const DescribePrefi
 DescribePrincipalIdFormatResponse * Ec2Client::describePrincipalIdFormat(const DescribePrincipalIdFormatRequest &request)
 {
     return qobject_cast<DescribePrincipalIdFormatResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribePublicIpv4PoolsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified IPv4 address
+ */
+DescribePublicIpv4PoolsResponse * Ec2Client::describePublicIpv4Pools(const DescribePublicIpv4PoolsRequest &request)
+{
+    return qobject_cast<DescribePublicIpv4PoolsResponse *>(send(request));
 }
 
 /*!
@@ -3850,9 +4478,8 @@ DescribeReservedInstancesOfferingsResponse * Ec2Client::describeReservedInstance
  *
  * associations>
  *
- * For more information about route tables, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
- * Virtual Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route
+ * Tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 DescribeRouteTablesResponse * Ec2Client::describeRouteTables(const DescribeRouteTablesRequest &request)
 {
@@ -4057,7 +4684,7 @@ DescribeSpotFleetInstancesResponse * Ec2Client::describeSpotFleetInstances(const
  * time>
  *
  * Spot Fleet events are delayed by up to 30 seconds before they can be described. This ensures that you can query by the
- * last evaluated time and not miss a recorded
+ * last evaluated time and not miss a recorded event. Spot Fleet events are available for 48
  */
 DescribeSpotFleetRequestHistoryResponse * Ec2Client::describeSpotFleetRequestHistory(const DescribeSpotFleetRequestHistoryRequest &request)
 {
@@ -4151,9 +4778,8 @@ DescribeStaleSecurityGroupsResponse * Ec2Client::describeStaleSecurityGroups(con
  *
  * subnets>
  *
- * For more information about subnets, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and Subnets</a> in the <i>Amazon
- * Virtual Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html">Your VPC and
+ * Subnets</a> in the <i>Amazon Virtual Private Cloud User
  */
 DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsRequest &request)
 {
@@ -4177,6 +4803,61 @@ DescribeSubnetsResponse * Ec2Client::describeSubnets(const DescribeSubnetsReques
 DescribeTagsResponse * Ec2Client::describeTags(const DescribeTagsRequest &request)
 {
     return qobject_cast<DescribeTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTransitGatewayAttachmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more attachments between resources and transit gateways. By default, all attachments are described.
+ * Alternatively, you can filter the results by attachment ID, attachment state, resource ID, or resource
+ */
+DescribeTransitGatewayAttachmentsResponse * Ec2Client::describeTransitGatewayAttachments(const DescribeTransitGatewayAttachmentsRequest &request)
+{
+    return qobject_cast<DescribeTransitGatewayAttachmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTransitGatewayRouteTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more transit gateway route tables. By default, all transit gateway route tables are described.
+ * Alternatively, you can filter the
+ */
+DescribeTransitGatewayRouteTablesResponse * Ec2Client::describeTransitGatewayRouteTables(const DescribeTransitGatewayRouteTablesRequest &request)
+{
+    return qobject_cast<DescribeTransitGatewayRouteTablesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTransitGatewayVpcAttachmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more VPC attachments. By default, all VPC attachments are described. Alternatively, you can filter the
+ */
+DescribeTransitGatewayVpcAttachmentsResponse * Ec2Client::describeTransitGatewayVpcAttachments(const DescribeTransitGatewayVpcAttachmentsRequest &request)
+{
+    return qobject_cast<DescribeTransitGatewayVpcAttachmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DescribeTransitGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more transit gateways. By default, all transit gateways are described. Alternatively, you can filter
+ * the
+ */
+DescribeTransitGatewaysResponse * Ec2Client::describeTransitGateways(const DescribeTransitGatewaysRequest &request)
+{
+    return qobject_cast<DescribeTransitGatewaysResponse *>(send(request));
 }
 
 /*!
@@ -4509,7 +5190,7 @@ DetachClassicLinkVpcResponse * Ec2Client::detachClassicLinkVpc(const DetachClass
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Detaches an Internet gateway from a VPC, disabling connectivity between the Internet and the VPC. The VPC must not
+ * Detaches an internet gateway from a VPC, disabling connectivity between the internet and the VPC. The VPC must not
  * contain any running instances with Elastic IP addresses or public IPv4
  */
 DetachInternetGatewayResponse * Ec2Client::detachInternetGateway(const DetachInternetGatewayRequest &request)
@@ -4580,6 +5261,19 @@ DetachVpnGatewayResponse * Ec2Client::detachVpnGateway(const DetachVpnGatewayReq
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisableTransitGatewayRouteTablePropagationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables the specified resource attachment from propagating routes to the specified propagation route
+ */
+DisableTransitGatewayRouteTablePropagationResponse * Ec2Client::disableTransitGatewayRouteTablePropagation(const DisableTransitGatewayRouteTablePropagationRequest &request)
+{
+    return qobject_cast<DisableTransitGatewayRouteTablePropagationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DisableVgwRoutePropagationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4611,9 +5305,9 @@ DisableVpcClassicLinkResponse * Ec2Client::disableVpcClassicLink(const DisableVp
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disables ClassicLink DNS support for a VPC. If disabled, DNS hostnames resolve to public IP addresses when addressed
- * between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information about
- * ClassicLink, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in
- * the <i>Amazon Elastic Compute Cloud User
+ * between a linked EC2-Classic instance and instances in the VPC to which it's linked. For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic
+ * Compute Cloud User
  */
 DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSupport(const DisableVpcClassicLinkDnsSupportRequest &request)
 {
@@ -4641,6 +5335,36 @@ DisableVpcClassicLinkDnsSupportResponse * Ec2Client::disableVpcClassicLinkDnsSup
 DisassociateAddressResponse * Ec2Client::disassociateAddress(const DisassociateAddressRequest &request)
 {
     return qobject_cast<DisassociateAddressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateClientVpnTargetNetworkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a target network from the specified Client VPN endpoint. When you disassociate the last target network
+ * from a Client VPN, the following
+ *
+ * happens> <ul> <li>
+ *
+ * The route that was automatically added for the VPC is
+ *
+ * delete> </li> <li>
+ *
+ * All active client connections are
+ *
+ * terminate> </li> <li>
+ *
+ * New client connections are
+ *
+ * disallowe> </li> <li>
+ *
+ * The Client VPN endpoint's status changes to <code>pending-associate</code>
+ */
+DisassociateClientVpnTargetNetworkResponse * Ec2Client::disassociateClientVpnTargetNetwork(const DisassociateClientVpnTargetNetworkRequest &request)
+{
+    return qobject_cast<DisassociateClientVpnTargetNetworkResponse *>(send(request));
 }
 
 /*!
@@ -4696,6 +5420,19 @@ DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(con
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * DisassociateTransitGatewayRouteTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a resource attachment from a transit gateway route
+ */
+DisassociateTransitGatewayRouteTableResponse * Ec2Client::disassociateTransitGatewayRouteTable(const DisassociateTransitGatewayRouteTableRequest &request)
+{
+    return qobject_cast<DisassociateTransitGatewayRouteTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * DisassociateVpcCidrBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4711,6 +5448,19 @@ DisassociateSubnetCidrBlockResponse * Ec2Client::disassociateSubnetCidrBlock(con
 DisassociateVpcCidrBlockResponse * Ec2Client::disassociateVpcCidrBlock(const DisassociateVpcCidrBlockRequest &request)
 {
     return qobject_cast<DisassociateVpcCidrBlockResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * EnableTransitGatewayRouteTablePropagationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables the specified attachment to propagate routes to the specified propagation route
+ */
+EnableTransitGatewayRouteTablePropagationResponse * Ec2Client::enableTransitGatewayRouteTablePropagation(const EnableTransitGatewayRouteTablePropagationRequest &request)
+{
+    return qobject_cast<EnableTransitGatewayRouteTablePropagationResponse *>(send(request));
 }
 
 /*!
@@ -4746,9 +5496,9 @@ EnableVolumeIOResponse * Ec2Client::enableVolumeIO(const EnableVolumeIORequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables a VPC for ClassicLink. You can then link EC2-Classic instances to your ClassicLink-enabled VPC to allow
- * communication over private IP addresses. You cannot enable your VPC for ClassicLink if any of your VPC's route tables
- * have existing routes for address ranges within the <code>10.0.0.0/8</code> IP address range, excluding local routes for
- * VPCs in the <code>10.0.0.0/16</code> and <code>10.1.0.0/16</code> IP address ranges. For more information, see <a
+ * communication over private IP addresses. You cannot enable your VPC for ClassicLink if any of your VPC route tables have
+ * existing routes for address ranges within the <code>10.0.0.0/8</code> IP address range, excluding local routes for VPCs
+ * in the <code>10.0.0.0/16</code> and <code>10.1.0.0/16</code> IP address ranges. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic
  * Compute Cloud User
  */
@@ -4766,7 +5516,7 @@ EnableVpcClassicLinkResponse * Ec2Client::enableVpcClassicLink(const EnableVpcCl
  * Enables a VPC to support DNS hostname resolution for ClassicLink. If enabled, the DNS hostname of a linked EC2-Classic
  * instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly,
  * the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic
- * instance. For more information about ClassicLink, see <a
+ * instance. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic
  * Compute Cloud User
  */
@@ -4777,27 +5527,72 @@ EnableVpcClassicLinkDnsSupportResponse * Ec2Client::enableVpcClassicLinkDnsSuppo
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ExportClientVpnClientCertificateRevocationListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Downloads the client certificate revocation list for the specified Client VPN
+ */
+ExportClientVpnClientCertificateRevocationListResponse * Ec2Client::exportClientVpnClientCertificateRevocationList(const ExportClientVpnClientCertificateRevocationListRequest &request)
+{
+    return qobject_cast<ExportClientVpnClientCertificateRevocationListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ExportClientVpnClientConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Downloads the contents of the Client VPN endpoint configuration file for the specified Client VPN endpoint. The Client
+ * VPN endpoint configuration file includes the Client VPN endpoint and certificate information clients need to establish a
+ * connection with the Client VPN
+ */
+ExportClientVpnClientConfigurationResponse * Ec2Client::exportClientVpnClientConfiguration(const ExportClientVpnClientConfigurationRequest &request)
+{
+    return qobject_cast<ExportClientVpnClientConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ExportTransitGatewayRoutesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Exports routes from the specified transit gateway route table to the specified S3 bucket. By default, all routes are
+ * exported. Alternatively, you can filter by CIDR
+ */
+ExportTransitGatewayRoutesResponse * Ec2Client::exportTransitGatewayRoutes(const ExportTransitGatewayRoutesRequest &request)
+{
+    return qobject_cast<ExportTransitGatewayRoutesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * GetConsoleOutputResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets the console output for the specified instance. For Linux instances, the instance console output displays the exact
  * console output that would normally be displayed on a physical monitor attached to a computer. For Windows instances, the
- * instance console output includes output from the EC2Config
+ * instance console output includes the last three system event log
  *
- * service>
- *
- * <a>GetConsoleOutput</a> returns up to 64 KB of console output shortly after it's generated by the
- *
- * instance>
+ * errors>
  *
  * By default, the console output returns buffered information that was posted shortly after an instance transition state
- * (start, stop, reboot, or terminate). This information is available for at least one hour after the most recent
+ * (start, stop, reboot, or terminate). This information is available for at least one hour after the most recent post.
+ * Only the most recent 64 KB of console output is
  *
- * post>
+ * available>
  *
  * You can optionally retrieve the latest serial console output at any time during the instance lifecycle. This option is
- * only supported on C5, M5, and <code>i3.metal</code>
+ * supported on instance types that use the Nitro
+ *
+ * hypervisor>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html#instance-console-console-output">Instance
+ * Console Output</a> in the <i>Amazon Elastic Compute Cloud User
  */
 GetConsoleOutputResponse * Ec2Client::getConsoleOutput(const GetConsoleOutputRequest &request)
 {
@@ -4906,6 +5701,63 @@ GetReservedInstancesExchangeQuoteResponse * Ec2Client::getReservedInstancesExcha
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetTransitGatewayAttachmentPropagationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the route tables to which the specified resource attachment propagates
+ */
+GetTransitGatewayAttachmentPropagationsResponse * Ec2Client::getTransitGatewayAttachmentPropagations(const GetTransitGatewayAttachmentPropagationsRequest &request)
+{
+    return qobject_cast<GetTransitGatewayAttachmentPropagationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetTransitGatewayRouteTableAssociationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the associations for the specified transit gateway route
+ */
+GetTransitGatewayRouteTableAssociationsResponse * Ec2Client::getTransitGatewayRouteTableAssociations(const GetTransitGatewayRouteTableAssociationsRequest &request)
+{
+    return qobject_cast<GetTransitGatewayRouteTableAssociationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * GetTransitGatewayRouteTablePropagationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the route table propagations for the specified transit gateway route
+ */
+GetTransitGatewayRouteTablePropagationsResponse * Ec2Client::getTransitGatewayRouteTablePropagations(const GetTransitGatewayRouteTablePropagationsRequest &request)
+{
+    return qobject_cast<GetTransitGatewayRouteTablePropagationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ImportClientVpnClientCertificateRevocationListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate
+ * revocation list overwrites the existing client certificate revocation
+ *
+ * list>
+ *
+ * Uploading a client certificate revocation list resets existing client
+ */
+ImportClientVpnClientCertificateRevocationListResponse * Ec2Client::importClientVpnClientCertificateRevocationList(const ImportClientVpnClientCertificateRevocationListRequest &request)
+{
+    return qobject_cast<ImportClientVpnClientCertificateRevocationListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ImportImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -4997,6 +5849,36 @@ ImportVolumeResponse * Ec2Client::importVolume(const ImportVolumeRequest &reques
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyCapacityReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies a Capacity Reservation's capacity and the conditions under which it is to be released. You cannot change a
+ * Capacity Reservation's instance type, EBS optimization, instance store settings, platform, Availability Zone, or
+ * instance eligibility. If you need to modify any of these attributes, we recommend that you cancel the Capacity
+ * Reservation, and then create a new one with the required
+ */
+ModifyCapacityReservationResponse * Ec2Client::modifyCapacityReservation(const ModifyCapacityReservationRequest &request)
+{
+    return qobject_cast<ModifyCapacityReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyClientVpnEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the specified Client VPN endpoint. You can only modify an endpoint's server certificate information, client
+ * connection logging information, DNS server, and description. Modifying the DNS server resets existing client
+ */
+ModifyClientVpnEndpointResponse * Ec2Client::modifyClientVpnEndpoint(const ModifyClientVpnEndpointRequest &request)
+{
+    return qobject_cast<ModifyClientVpnEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -5033,7 +5915,7 @@ ModifyFpgaImageAttributeResponse * Ec2Client::modifyFpgaImageAttribute(const Mod
  *
  * Modify the auto-placement setting of a Dedicated Host. When auto-placement is enabled, any instances that you launch
  * with a tenancy of <code>host</code> but without a specific host ID are placed onto any available Dedicated Host in your
- * account that has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID ito have the
+ * account that has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID to have the
  * instance launch onto a specific host. If no host ID is provided, the instance is launched onto a suitable host with
  * auto-placement
  */
@@ -5070,9 +5952,9 @@ ModifyHostsResponse * Ec2Client::modifyHosts(const ModifyHostsRequest &request)
  * IAM user defaults to the same settings as the root user. If you're using this action as the root user, then these
  * settings apply to the entire account, unless an IAM user explicitly overrides these settings for themselves. For more
  * information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html">Resource IDs</a> in the
- * <i>Amazon Elastic Compute Cloud User Guide</i>.
+ * <i>Amazon Elastic Compute Cloud User
  *
- * </p
+ * Guide</i>>
  *
  * Resources created with longer IDs are visible to all IAM roles and users, regardless of these settings and provided that
  * they have permission to use the relevant <code>Describe</code> command for the resource
@@ -5177,16 +6059,32 @@ ModifyInstanceAttributeResponse * Ec2Client::modifyInstanceAttribute(const Modif
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyInstanceCapacityReservationAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the Capacity Reservation settings for a stopped instance. Use this action to configure an instance to target a
+ * specific Capacity Reservation, run in any <code>open</code> Capacity Reservation with matching attributes, or run
+ * On-Demand Instance
+ */
+ModifyInstanceCapacityReservationAttributesResponse * Ec2Client::modifyInstanceCapacityReservationAttributes(const ModifyInstanceCapacityReservationAttributesRequest &request)
+{
+    return qobject_cast<ModifyInstanceCapacityReservationAttributesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * ModifyInstanceCreditSpecificationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the credit option for CPU usage on a running or stopped T2 instance. The credit options are
+ * Modifies the credit option for CPU usage on a running or stopped T2 or T3 instance. The credit options are
  * <code>standard</code> and
  *
  * <code>unlimited</code>>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/t2-instances.html">T2
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable Performance
  * Instances</a> in the <i>Amazon Elastic Compute Cloud User
  */
 ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpecification(const ModifyInstanceCreditSpecificationRequest &request)
@@ -5231,7 +6129,8 @@ ModifyInstanceCreditSpecificationResponse * Ec2Client::modifyInstanceCreditSpeci
  *
  * request>
  *
- * To modify the host ID, tenancy, or placement group for an instance, the instance must be in the <code>stopped</code>
+ * To modify the host ID, tenancy, placement group, or partition for an instance, the instance must be in the
+ * <code>stopped</code>
  */
 ModifyInstancePlacementResponse * Ec2Client::modifyInstancePlacement(const ModifyInstancePlacementRequest &request)
 {
@@ -5359,6 +6258,19 @@ ModifySpotFleetRequestResponse * Ec2Client::modifySpotFleetRequest(const ModifyS
 ModifySubnetAttributeResponse * Ec2Client::modifySubnetAttribute(const ModifySubnetAttributeRequest &request)
 {
     return qobject_cast<ModifySubnetAttributeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ModifyTransitGatewayVpcAttachmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the specified VPC
+ */
+ModifyTransitGatewayVpcAttachmentResponse * Ec2Client::modifyTransitGatewayVpcAttachment(const ModifyTransitGatewayVpcAttachmentRequest &request)
+{
+    return qobject_cast<ModifyTransitGatewayVpcAttachmentResponse *>(send(request));
 }
 
 /*!
@@ -5503,6 +6415,11 @@ ModifyVpcEndpointServiceConfigurationResponse * Ec2Client::modifyVpcEndpointServ
  * Modifies the permissions for your <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html">VPC endpoint service</a>. You can add
  * or remove permissions for service consumers (IAM users, IAM roles, and AWS accounts) to connect to your endpoint
+ *
+ * service>
+ *
+ * If you grant permissions to all principals, the service is public. Any users who know the name of a public service can
+ * send a request to attach an endpoint. If the service does not require manual approval, attachments are automatically
  */
 ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServicePermissions(const ModifyVpcEndpointServicePermissionsRequest &request)
 {
@@ -5534,10 +6451,13 @@ ModifyVpcEndpointServicePermissionsResponse * Ec2Client::modifyVpcEndpointServic
  *
  * VPC> </li> </ul>
  *
- * If the peered VPCs are in different accounts, each owner must initiate a separate request to modify the peering
- * connection options, depending on whether their VPC was the requester or accepter for the VPC peering connection. If the
- * peered VPCs are in the same account, you can modify the requester and accepter options in the same request. To confirm
- * which VPC is the accepter and requester for a VPC peering connection, use the <a>DescribeVpcPeeringConnections</a>
+ * If the peered VPCs are in the same AWS account, you can enable DNS resolution for queries from the local VPC. This
+ * ensures that queries from the local VPC resolve to private IP addresses in the peer VPC. This option is not available if
+ * the peered VPCs are in different AWS accounts or different regions. For peered VPCs in different AWS accounts, each AWS
+ * account owner must initiate a separate request to modify the peering connection options. For inter-region peering
+ * connections, you must use the region for the requester VPC to modify the requester VPC peering options and the region
+ * for the accepter VPC to modify the accepter VPC peering options. To verify which VPCs are the accepter and the requester
+ * for a VPC peering connection, use the <a>DescribeVpcPeeringConnections</a>
  */
 ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectionOptions(const ModifyVpcPeeringConnectionOptionsRequest &request)
 {
@@ -5561,9 +6481,8 @@ ModifyVpcPeeringConnectionOptionsResponse * Ec2Client::modifyVpcPeeringConnectio
  *
  * affected>
  *
- * For more information about Dedicated Instances, see <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html">Dedicated Instances</a> in the
- * <i>Amazon Elastic Compute Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html">Dedicated
+ * Instances</a> in the <i>Amazon Elastic Compute Cloud User
  */
 ModifyVpcTenancyResponse * Ec2Client::modifyVpcTenancy(const ModifyVpcTenancyRequest &request)
 {
@@ -5604,6 +6523,34 @@ MonitorInstancesResponse * Ec2Client::monitorInstances(const MonitorInstancesReq
 MoveAddressToVpcResponse * Ec2Client::moveAddressToVpc(const MoveAddressToVpcRequest &request)
 {
     return qobject_cast<MoveAddressToVpcResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ProvisionByoipCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provisions an address range for use with your AWS resources through bring your own IP addresses (BYOIP) and creates a
+ * corresponding address pool. After the address range is provisioned, it is ready to be advertised using
+ *
+ * <a>AdvertiseByoipCidr</a>>
+ *
+ * AWS verifies that you own the address range and are authorized to advertise it. You must ensure that the address range
+ * is registered to you and that you created an RPKI ROA to authorize Amazon ASNs 16509 and 14618 to advertise the address
+ * range. For more information, see <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">Bring Your
+ * Own IP Addresses (BYOIP)</a> in the <i>Amazon Elastic Compute Cloud User
+ *
+ * Guide</i>>
+ *
+ * Provisioning an address range is an asynchronous operation, so the call returns immediately, but the address range is
+ * not ready to use until its status changes from <code>pending-provision</code> to <code>provisioned</code>. To monitor
+ * the status of an address range, use <a>DescribeByoipCidrs</a>. To allocate an Elastic IP address from your address pool,
+ * use <a>AllocateAddress</a> with either the specific address from the address pool or the ID of the address
+ */
+ProvisionByoipCidrResponse * Ec2Client::provisionByoipCidr(const ProvisionByoipCidrRequest &request)
+{
+    return qobject_cast<ProvisionByoipCidrResponse *>(send(request));
 }
 
 /*!
@@ -5748,6 +6695,24 @@ RegisterImageResponse * Ec2Client::registerImage(const RegisterImageRequest &req
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RejectTransitGatewayVpcAttachmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Rejects a request to attach a VPC to a transit
+ *
+ * gateway>
+ *
+ * The VPC attachment must be in the <code>pendingAcceptance</code> state. Use <a>DescribeTransitGatewayVpcAttachments</a>
+ * to view your pending VPC attachment requests. Use <a>AcceptTransitGatewayVpcAttachment</a> to accept a VPC attachment
+ */
+RejectTransitGatewayVpcAttachmentResponse * Ec2Client::rejectTransitGatewayVpcAttachment(const RejectTransitGatewayVpcAttachmentRequest &request)
+{
+    return qobject_cast<RejectTransitGatewayVpcAttachmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * RejectVpcEndpointConnectionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -5816,7 +6781,7 @@ ReleaseAddressResponse * Ec2Client::releaseAddress(const ReleaseAddressRequest &
  *
  * When you no longer want to use an On-Demand Dedicated Host it can be released. On-Demand billing is stopped and the host
  * goes into <code>released</code> state. The host ID of Dedicated Hosts that have been released can no longer be specified
- * in another request, for example, ModifyHosts. You must stop or terminate all instances on a host before it can be
+ * in another request, for example, to modify the host. You must stop or terminate all instances on a host before it can be
  *
  * released>
  *
@@ -5857,7 +6822,7 @@ ReplaceIamInstanceProfileAssociationResponse * Ec2Client::replaceIamInstanceProf
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Changes which network ACL a subnet is associated with. By default when you create a subnet, it's automatically
- * associated with the default network ACL. For more information about network ACLs, see <a
+ * associated with the default network ACL. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
  *
@@ -5876,7 +6841,7 @@ ReplaceNetworkAclAssociationResponse * Ec2Client::replaceNetworkAclAssociation(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Replaces an entry (rule) in a network ACL. For more information about network ACLs, see <a
+ * Replaces an entry (rule) in a network ACL. For more information, see <a
  * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual
  * Private Cloud User
  */
@@ -5891,15 +6856,14 @@ ReplaceNetworkAclEntryResponse * Ec2Client::replaceNetworkAclEntry(const Replace
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Replaces an existing route within a route table in a VPC. You must provide only one of the following: Internet gateway
+ * Replaces an existing route within a route table in a VPC. You must provide only one of the following: internet gateway
  * or virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface, or egress-only
- * Internet
+ * internet
  *
  * gateway>
  *
- * For more information about route tables, see <a
- * href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route Tables</a> in the <i>Amazon
- * Virtual Private Cloud User
+ * For more information, see <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html">Route
+ * Tables</a> in the <i>Amazon Virtual Private Cloud User
  */
 ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &request)
 {
@@ -5925,6 +6889,19 @@ ReplaceRouteResponse * Ec2Client::replaceRoute(const ReplaceRouteRequest &reques
 ReplaceRouteTableAssociationResponse * Ec2Client::replaceRouteTableAssociation(const ReplaceRouteTableAssociationRequest &request)
 {
     return qobject_cast<ReplaceRouteTableAssociationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * ReplaceTransitGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Replaces the specified route in the specified transit gateway route
+ */
+ReplaceTransitGatewayRouteResponse * Ec2Client::replaceTransitGatewayRoute(const ReplaceTransitGatewayRouteRequest &request)
+{
+    return qobject_cast<ReplaceTransitGatewayRouteResponse *>(send(request));
 }
 
 /*!
@@ -6110,6 +7087,19 @@ RestoreAddressToClassicResponse * Ec2Client::restoreAddressToClassic(const Resto
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * RevokeClientVpnIngressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an ingress authorization rule from a Client VPN endpoint.
+ */
+RevokeClientVpnIngressResponse * Ec2Client::revokeClientVpnIngress(const RevokeClientVpnIngressRequest &request)
+{
+    return qobject_cast<RevokeClientVpnIngressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * RevokeSecurityGroupEgressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -6275,6 +7265,19 @@ RunScheduledInstancesResponse * Ec2Client::runScheduledInstances(const RunSchedu
 
 /*!
  * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * SearchTransitGatewayRoutesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches for routes in the specified transit gateway route
+ */
+SearchTransitGatewayRoutesResponse * Ec2Client::searchTransitGatewayRoutes(const SearchTransitGatewayRoutesRequest &request)
+{
+    return qobject_cast<SearchTransitGatewayRoutesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
  * StartInstancesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -6321,6 +7324,16 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
  *
  * instance>
  *
+ * You can use the Stop action to hibernate an instance if the instance is <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#enabling-hibernation">enabled for
+ * hibernation</a> and it meets the <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites">hibernation
+ * prerequisites</a>. For more information, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate Your Instance</a> in the <i>Amazon
+ * Elastic Compute Cloud User
+ *
+ * Guide</i>>
+ *
  * We don't charge usage for a stopped instance, or data transfer fees; however, your root partition Amazon EBS volume
  * remains and continues to persist your data, and you are charged for Amazon EBS volume usage. Every time you start your
  * Windows instance, Amazon EC2 charges you for a full instance hour. If you stop and restart your Windows instance, a new
@@ -6330,19 +7343,24 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
  *
  * usage>
  *
- * You can't start or stop Spot Instances, and you can't stop instance store-backed
+ * You can't start, stop, or hibernate Spot Instances, and you can't stop or hibernate instance store-backed instances. For
+ * information about using hibernation for Spot Instances, see <a
+ * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#hibernate-spot-instances">Hibernating
+ * Interrupted Spot Instances</a> in the <i>Amazon Elastic Compute Cloud User
  *
- * instances>
+ * Guide</i>>
  *
- * When you stop an instance, we shut it down. You can restart your instance at any time. Before stopping an instance, make
- * sure it is in a state from which it can be restarted. Stopping an instance does not preserve data stored in
+ * When you stop or hibernate an instance, we shut it down. You can restart your instance at any time. Before stopping or
+ * hibernating an instance, make sure it is in a state from which it can be restarted. Stopping an instance does not
+ * preserve data stored in RAM, but hibernating an instance does preserve data stored in RAM. If an instance cannot
+ * hibernate successfully, a normal shutdown
  *
- * RAM>
+ * occurs>
  *
- * Stopping an instance is different to rebooting or terminating it. For example, when you stop an instance, the root
- * device and any other devices attached to the instance persist. When you terminate an instance, the root device and any
- * other devices attached during the instance launch are automatically deleted. For more information about the differences
- * between rebooting, stopping, and terminating instances, see <a
+ * Stopping and hibernating an instance is different to rebooting or terminating it. For example, when you stop or
+ * hibernate an instance, the root device and any other devices attached to the instance persist. When you terminate an
+ * instance, the root device and any other devices attached during the instance launch are automatically deleted. For more
+ * information about the differences between rebooting, stopping, hibernating, and terminating instances, see <a
  * href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance Lifecycle</a> in the
  * <i>Amazon Elastic Compute Cloud User
  *
@@ -6357,6 +7375,20 @@ StartInstancesResponse * Ec2Client::startInstances(const StartInstancesRequest &
 StopInstancesResponse * Ec2Client::stopInstances(const StopInstancesRequest &request)
 {
     return qobject_cast<StopInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * TerminateClientVpnConnectionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Terminates active Client VPN endpoint connections. This action can be used to terminate a specific client connection, or
+ * up to five connections established by a specific
+ */
+TerminateClientVpnConnectionsResponse * Ec2Client::terminateClientVpnConnections(const TerminateClientVpnConnectionsRequest &request)
+{
+    return qobject_cast<TerminateClientVpnConnectionsResponse *>(send(request));
 }
 
 /*!
@@ -6480,6 +7512,27 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse * Ec2Client::updateSecurityGro
 UpdateSecurityGroupRuleDescriptionsIngressResponse * Ec2Client::updateSecurityGroupRuleDescriptionsIngress(const UpdateSecurityGroupRuleDescriptionsIngressRequest &request)
 {
     return qobject_cast<UpdateSecurityGroupRuleDescriptionsIngressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Ec2Client service, and returns a pointer to an
+ * WithdrawByoipCidrResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops advertising an IPv4 address range that is provisioned as an address
+ *
+ * pool>
+ *
+ * You can perform this operation at most once every 10 seconds, even if you specify different address ranges each
+ *
+ * time>
+ *
+ * It can take a few minutes before traffic to the specified addresses stops routing to AWS because of BGP propagation
+ */
+WithdrawByoipCidrResponse * Ec2Client::withdrawByoipCidr(const WithdrawByoipCidrRequest &request)
+{
+    return qobject_cast<WithdrawByoipCidrResponse *>(send(request));
 }
 
 /*!

@@ -56,6 +56,7 @@ namespace Pinpoint {
  * \value DeleteSegmentAction Pinpoint DeleteSegment action.
  * \value DeleteSmsChannelAction Pinpoint DeleteSmsChannel action.
  * \value DeleteUserEndpointsAction Pinpoint DeleteUserEndpoints action.
+ * \value DeleteVoiceChannelAction Pinpoint DeleteVoiceChannel action.
  * \value GetAdmChannelAction Pinpoint GetAdmChannel action.
  * \value GetApnsChannelAction Pinpoint GetApnsChannel action.
  * \value GetApnsSandboxChannelAction Pinpoint GetApnsSandboxChannel action.
@@ -87,8 +88,10 @@ namespace Pinpoint {
  * \value GetSegmentsAction Pinpoint GetSegments action.
  * \value GetSmsChannelAction Pinpoint GetSmsChannel action.
  * \value GetUserEndpointsAction Pinpoint GetUserEndpoints action.
+ * \value GetVoiceChannelAction Pinpoint GetVoiceChannel action.
  * \value PhoneNumberValidateAction Pinpoint PhoneNumberValidate action.
  * \value PutEventStreamAction Pinpoint PutEventStream action.
+ * \value PutEventsAction Pinpoint PutEvents action.
  * \value RemoveAttributesAction Pinpoint RemoveAttributes action.
  * \value SendMessagesAction Pinpoint SendMessages action.
  * \value SendUsersMessagesAction Pinpoint SendUsersMessages action.
@@ -106,6 +109,7 @@ namespace Pinpoint {
  * \value UpdateGcmChannelAction Pinpoint UpdateGcmChannel action.
  * \value UpdateSegmentAction Pinpoint UpdateSegment action.
  * \value UpdateSmsChannelAction Pinpoint UpdateSmsChannel action.
+ * \value UpdateVoiceChannelAction Pinpoint UpdateVoiceChannel action.
  */
 
 /*!

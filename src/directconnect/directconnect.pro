@@ -192,6 +192,10 @@ HEADERS += \
     updatelagrequest_p.h \
     updatelagresponse.h \
     updatelagresponse_p.h \
+    updatevirtualinterfaceattributesrequest.h \
+    updatevirtualinterfaceattributesrequest_p.h \
+    updatevirtualinterfaceattributesresponse.h \
+    updatevirtualinterfaceattributesresponse_p.h \
 
 SOURCES += \
     allocateconnectiononinterconnectrequest.cpp \
@@ -285,5 +289,7 @@ SOURCES += \
     untagresourceresponse.cpp \
     updatelagrequest.cpp \
     updatelagresponse.cpp \
+    updatevirtualinterfaceattributesrequest.cpp \
+    updatevirtualinterfaceattributesresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

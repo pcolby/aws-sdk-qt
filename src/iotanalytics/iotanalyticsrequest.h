@@ -56,6 +56,7 @@ public:
         DescribePipelineAction,
         GetDatasetContentAction,
         ListChannelsAction,
+        ListDatasetContentsAction,
         ListDatasetsAction,
         ListDatastoresAction,
         ListPipelinesAction,

@@ -21,14 +21,32 @@
 #include "smsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createapprequest.h"
+#include "createappresponse.h"
 #include "createreplicationjobrequest.h"
 #include "createreplicationjobresponse.h"
+#include "deleteapprequest.h"
+#include "deleteappresponse.h"
+#include "deleteapplaunchconfigurationrequest.h"
+#include "deleteapplaunchconfigurationresponse.h"
+#include "deleteappreplicationconfigurationrequest.h"
+#include "deleteappreplicationconfigurationresponse.h"
 #include "deletereplicationjobrequest.h"
 #include "deletereplicationjobresponse.h"
 #include "deleteservercatalogrequest.h"
 #include "deleteservercatalogresponse.h"
 #include "disassociateconnectorrequest.h"
 #include "disassociateconnectorresponse.h"
+#include "generatechangesetrequest.h"
+#include "generatechangesetresponse.h"
+#include "generatetemplaterequest.h"
+#include "generatetemplateresponse.h"
+#include "getapprequest.h"
+#include "getappresponse.h"
+#include "getapplaunchconfigurationrequest.h"
+#include "getapplaunchconfigurationresponse.h"
+#include "getappreplicationconfigurationrequest.h"
+#include "getappreplicationconfigurationresponse.h"
 #include "getconnectorsrequest.h"
 #include "getconnectorsresponse.h"
 #include "getreplicationjobsrequest.h"
@@ -39,8 +57,24 @@
 #include "getserversresponse.h"
 #include "importservercatalogrequest.h"
 #include "importservercatalogresponse.h"
+#include "launchapprequest.h"
+#include "launchappresponse.h"
+#include "listappsrequest.h"
+#include "listappsresponse.h"
+#include "putapplaunchconfigurationrequest.h"
+#include "putapplaunchconfigurationresponse.h"
+#include "putappreplicationconfigurationrequest.h"
+#include "putappreplicationconfigurationresponse.h"
+#include "startappreplicationrequest.h"
+#include "startappreplicationresponse.h"
 #include "startondemandreplicationrunrequest.h"
 #include "startondemandreplicationrunresponse.h"
+#include "stopappreplicationrequest.h"
+#include "stopappreplicationresponse.h"
+#include "terminateapprequest.h"
+#include "terminateappresponse.h"
+#include "updateapprequest.h"
+#include "updateappresponse.h"
 #include "updatereplicationjobrequest.h"
 #include "updatereplicationjobresponse.h"
 
@@ -66,6 +100,29 @@ namespace SMS {
  * \ingroup aws-clients
  * \inmodule QtAwsSMS
  *
+ *  <fullname>AAWS Sever Migration Service</fullname>
+ * 
+ *  This is the <i>AWS Sever Migration Service API Reference</i>. It provides descriptions, syntax, and usage examples for
+ *  each of the actions and data types for the AWS Sever Migration Service (AWS SMS). The topic for each action shows the
+ *  Query API request parameters and the XML response. You can also view the XML request elements in the
+ * 
+ *  WSDL>
+ * 
+ *  Alternatively, you can use one of the AWS SDKs to access an API that's tailored to the programming language or platform
+ *  that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS
+ * 
+ *  SDKs</a>>
+ * 
+ *  To learn more about the Server Migration Service, see the following
+ * 
+ *  resources> <ul> <li>
+ * 
+ *  <a href="https://aws.amazon.com/server-migration-service/">AWS Sever Migration Service product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="https://docs.aws.amazon.com/server-migration-service/latest/userguide/server-migration.html">AWS Sever
+ *  Migration Service User Guide</a>
  */
 
 /*!
@@ -123,12 +180,25 @@ SmsClient::SmsClient(
 
 /*!
  * Sends \a request to the SmsClient service, and returns a pointer to an
+ * CreateAppResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an application. An application consists of one or more server groups. Each server group contain one or more
+ */
+CreateAppResponse * SmsClient::createApp(const CreateAppRequest &request)
+{
+    return qobject_cast<CreateAppResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
  * CreateReplicationJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The CreateReplicationJob API is used to create a ReplicationJob to replicate a server on AWS. Call this API to first
- * create a ReplicationJob, which will then schedule periodic ReplicationRuns to replicate your server to AWS. Each
+ * Creates a replication job. The replication job schedules periodic replication runs to replicate your server to AWS. Each
+ * replication run creates an Amazon Machine Image
  */
 CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateReplicationJobRequest &request)
 {
@@ -137,12 +207,56 @@ CreateReplicationJobResponse * SmsClient::createReplicationJob(const CreateRepli
 
 /*!
  * Sends \a request to the SmsClient service, and returns a pointer to an
+ * DeleteAppResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing application. Optionally deletes the launched stack associated with the application and all AWS SMS
+ * replication jobs for servers in the
+ */
+DeleteAppResponse * SmsClient::deleteApp(const DeleteAppRequest &request)
+{
+    return qobject_cast<DeleteAppResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * DeleteAppLaunchConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes existing launch configuration for an
+ */
+DeleteAppLaunchConfigurationResponse * SmsClient::deleteAppLaunchConfiguration(const DeleteAppLaunchConfigurationRequest &request)
+{
+    return qobject_cast<DeleteAppLaunchConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * DeleteAppReplicationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes existing replication configuration for an
+ */
+DeleteAppReplicationConfigurationResponse * SmsClient::deleteAppReplicationConfiguration(const DeleteAppReplicationConfigurationRequest &request)
+{
+    return qobject_cast<DeleteAppReplicationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
  * DeleteReplicationJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The DeleteReplicationJob API is used to delete a ReplicationJob, resulting in no further ReplicationRuns. This will
- * delete the contents of the S3 bucket used to store SMS artifacts, but will not delete any AMIs created by the SMS
+ * Deletes the specified replication
+ *
+ * job>
+ *
+ * After you delete a replication job, there are no further replication runs. AWS deletes the contents of the Amazon S3
+ * bucket used to store AWS SMS artifacts. The AMIs created by the replication runs are not
  */
 DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteReplicationJobRequest &request)
 {
@@ -155,7 +269,7 @@ DeleteReplicationJobResponse * SmsClient::deleteReplicationJob(const DeleteRepli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The DeleteServerCatalog API clears all servers from your server catalog. This means that these servers will no longer be
+ * Deletes all servers from your server
  */
 DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerCatalogRequest &request)
 {
@@ -168,7 +282,11 @@ DeleteServerCatalogResponse * SmsClient::deleteServerCatalog(const DeleteServerC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The DisassociateConnector API will disassociate a connector from the Server Migration Service, rendering it unavailable
+ * Disassociates the specified connector from AWS
+ *
+ * SMS>
+ *
+ * After you disassociate a connector, it is no longer available to support replication
  */
 DisassociateConnectorResponse * SmsClient::disassociateConnector(const DisassociateConnectorRequest &request)
 {
@@ -177,10 +295,78 @@ DisassociateConnectorResponse * SmsClient::disassociateConnector(const Disassoci
 
 /*!
  * Sends \a request to the SmsClient service, and returns a pointer to an
+ * GenerateChangeSetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s
+ * Amazon S3
+ */
+GenerateChangeSetResponse * SmsClient::generateChangeSet(const GenerateChangeSetRequest &request)
+{
+    return qobject_cast<GenerateChangeSetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * GenerateTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Generates an Amazon CloudFormation template based on the current launch configuration and writes it to an Amazon S3
+ * object in the customer’s Amazon S3
+ */
+GenerateTemplateResponse * SmsClient::generateTemplate(const GenerateTemplateRequest &request)
+{
+    return qobject_cast<GenerateTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * GetAppResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve information about an
+ */
+GetAppResponse * SmsClient::getApp(const GetAppRequest &request)
+{
+    return qobject_cast<GetAppResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * GetAppLaunchConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the application launch configuration associated with an
+ */
+GetAppLaunchConfigurationResponse * SmsClient::getAppLaunchConfiguration(const GetAppLaunchConfigurationRequest &request)
+{
+    return qobject_cast<GetAppLaunchConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * GetAppReplicationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves an application replication configuration associatd with an
+ */
+GetAppReplicationConfigurationResponse * SmsClient::getAppReplicationConfiguration(const GetAppReplicationConfigurationRequest &request)
+{
+    return qobject_cast<GetAppReplicationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
  * GetConnectorsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Describes the connectors registered with the AWS
  */
 GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &request)
 {
@@ -193,7 +379,7 @@ GetConnectorsResponse * SmsClient::getConnectors(const GetConnectorsRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The GetReplicationJobs API will return all of your ReplicationJobs and their details. This API returns a paginated list,
+ * Describes the specified replication job or all of your replication
  */
 GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJobsRequest &request)
 {
@@ -206,7 +392,7 @@ GetReplicationJobsResponse * SmsClient::getReplicationJobs(const GetReplicationJ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The GetReplicationRuns API will return all ReplicationRuns for a given ReplicationJob. This API returns a paginated
+ * Describes the replication runs for the specified replication
  */
 GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationRunsRequest &request)
 {
@@ -219,7 +405,11 @@ GetReplicationRunsResponse * SmsClient::getReplicationRuns(const GetReplicationR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The GetServers API returns a list of all servers in your server catalog. For this call to succeed, you must previously
+ * Describes the servers in your server
+ *
+ * catalog>
+ *
+ * Before you can describe your servers, you must import them using
  */
 GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
 {
@@ -232,8 +422,11 @@ GetServersResponse * SmsClient::getServers(const GetServersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The ImportServerCatalog API is used to gather the complete list of on-premises servers on your premises. This API call
- * requires connectors to be installed and monitoring all servers you would like imported. This API call returns
+ * Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers that you want to
+ *
+ * import>
+ *
+ * This call returns immediately, but might take additional time to retrieve all the
  */
 ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerCatalogRequest &request)
 {
@@ -242,12 +435,81 @@ ImportServerCatalogResponse * SmsClient::importServerCatalog(const ImportServerC
 
 /*!
  * Sends \a request to the SmsClient service, and returns a pointer to an
+ * LaunchAppResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Launches an application
+ */
+LaunchAppResponse * SmsClient::launchApp(const LaunchAppRequest &request)
+{
+    return qobject_cast<LaunchAppResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * ListAppsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of summaries for all
+ */
+ListAppsResponse * SmsClient::listApps(const ListAppsRequest &request)
+{
+    return qobject_cast<ListAppsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * PutAppLaunchConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a launch configuration for an
+ */
+PutAppLaunchConfigurationResponse * SmsClient::putAppLaunchConfiguration(const PutAppLaunchConfigurationRequest &request)
+{
+    return qobject_cast<PutAppLaunchConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * PutAppReplicationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a replication configuration for an
+ */
+PutAppReplicationConfigurationResponse * SmsClient::putAppReplicationConfiguration(const PutAppReplicationConfigurationRequest &request)
+{
+    return qobject_cast<PutAppReplicationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * StartAppReplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts replicating an
+ */
+StartAppReplicationResponse * SmsClient::startAppReplication(const StartAppReplicationRequest &request)
+{
+    return qobject_cast<StartAppReplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
  * StartOnDemandReplicationRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The StartOnDemandReplicationRun API is used to start a ReplicationRun on demand (in addition to those that are scheduled
- * based on your frequency). This ReplicationRun will start immediately. StartOnDemandReplicationRun is subject to limits
+ * Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This
+ * replication run is in addition to the ones already
+ *
+ * scheduled>
+ *
+ * There is a limit on the number of on-demand replications runs you can request in a 24-hour
  */
 StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(const StartOnDemandReplicationRunRequest &request)
 {
@@ -256,11 +518,50 @@ StartOnDemandReplicationRunResponse * SmsClient::startOnDemandReplicationRun(con
 
 /*!
  * Sends \a request to the SmsClient service, and returns a pointer to an
+ * StopAppReplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops replicating an
+ */
+StopAppReplicationResponse * SmsClient::stopAppReplication(const StopAppReplicationRequest &request)
+{
+    return qobject_cast<StopAppReplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * TerminateAppResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Terminates the stack for an
+ */
+TerminateAppResponse * SmsClient::terminateApp(const TerminateAppRequest &request)
+{
+    return qobject_cast<TerminateAppResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
+ * UpdateAppResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an
+ */
+UpdateAppResponse * SmsClient::updateApp(const UpdateAppRequest &request)
+{
+    return qobject_cast<UpdateAppResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SmsClient service, and returns a pointer to an
  * UpdateReplicationJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The UpdateReplicationJob API is used to change the settings of your existing ReplicationJob created using
+ * Updates the specified settings for the specified replication
  */
 UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateReplicationJobRequest &request)
 {

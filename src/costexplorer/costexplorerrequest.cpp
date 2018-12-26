@@ -37,6 +37,7 @@ namespace CostExplorer {
  * requests.
  *
  * \value GetCostAndUsageAction CostExplorer GetCostAndUsage action.
+ * \value GetCostForecastAction CostExplorer GetCostForecast action.
  * \value GetDimensionValuesAction CostExplorer GetDimensionValues action.
  * \value GetReservationCoverageAction CostExplorer GetReservationCoverage action.
  * \value GetReservationPurchaseRecommendationAction CostExplorer GetReservationPurchaseRecommendation action.

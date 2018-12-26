@@ -69,6 +69,7 @@ namespace WorkDocs {
  * \value GetDocumentVersionAction WorkDocs GetDocumentVersion action.
  * \value GetFolderAction WorkDocs GetFolder action.
  * \value GetFolderPathAction WorkDocs GetFolderPath action.
+ * \value GetResourcesAction WorkDocs GetResources action.
  * \value InitiateDocumentVersionUploadAction WorkDocs InitiateDocumentVersionUpload action.
  * \value RemoveAllResourcePermissionsAction WorkDocs RemoveAllResourcePermissions action.
  * \value RemoveResourcePermissionAction WorkDocs RemoveResourcePermission action.

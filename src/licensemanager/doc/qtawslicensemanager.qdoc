@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsLicenseManager
+    \title LicenseManager C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS LicenseManager functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

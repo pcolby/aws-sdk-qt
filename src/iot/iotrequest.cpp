@@ -37,31 +37,41 @@ namespace IoT {
  * requests.
  *
  * \value AcceptCertificateTransferAction IoT AcceptCertificateTransfer action.
+ * \value AddThingToBillingGroupAction IoT AddThingToBillingGroup action.
  * \value AddThingToThingGroupAction IoT AddThingToThingGroup action.
  * \value AssociateTargetsWithJobAction IoT AssociateTargetsWithJob action.
  * \value AttachPolicyAction IoT AttachPolicy action.
  * \value AttachPrincipalPolicyAction IoT AttachPrincipalPolicy action.
+ * \value AttachSecurityProfileAction IoT AttachSecurityProfile action.
  * \value AttachThingPrincipalAction IoT AttachThingPrincipal action.
+ * \value CancelAuditTaskAction IoT CancelAuditTask action.
  * \value CancelCertificateTransferAction IoT CancelCertificateTransfer action.
  * \value CancelJobAction IoT CancelJob action.
  * \value CancelJobExecutionAction IoT CancelJobExecution action.
  * \value ClearDefaultAuthorizerAction IoT ClearDefaultAuthorizer action.
  * \value CreateAuthorizerAction IoT CreateAuthorizer action.
+ * \value CreateBillingGroupAction IoT CreateBillingGroup action.
  * \value CreateCertificateFromCsrAction IoT CreateCertificateFromCsr action.
+ * \value CreateDynamicThingGroupAction IoT CreateDynamicThingGroup action.
  * \value CreateJobAction IoT CreateJob action.
  * \value CreateKeysAndCertificateAction IoT CreateKeysAndCertificate action.
  * \value CreateOTAUpdateAction IoT CreateOTAUpdate action.
  * \value CreatePolicyAction IoT CreatePolicy action.
  * \value CreatePolicyVersionAction IoT CreatePolicyVersion action.
  * \value CreateRoleAliasAction IoT CreateRoleAlias action.
+ * \value CreateScheduledAuditAction IoT CreateScheduledAudit action.
+ * \value CreateSecurityProfileAction IoT CreateSecurityProfile action.
  * \value CreateStreamAction IoT CreateStream action.
  * \value CreateThingAction IoT CreateThing action.
  * \value CreateThingGroupAction IoT CreateThingGroup action.
  * \value CreateThingTypeAction IoT CreateThingType action.
  * \value CreateTopicRuleAction IoT CreateTopicRule action.
+ * \value DeleteAccountAuditConfigurationAction IoT DeleteAccountAuditConfiguration action.
  * \value DeleteAuthorizerAction IoT DeleteAuthorizer action.
+ * \value DeleteBillingGroupAction IoT DeleteBillingGroup action.
  * \value DeleteCACertificateAction IoT DeleteCACertificate action.
  * \value DeleteCertificateAction IoT DeleteCertificate action.
+ * \value DeleteDynamicThingGroupAction IoT DeleteDynamicThingGroup action.
  * \value DeleteJobAction IoT DeleteJob action.
  * \value DeleteJobExecutionAction IoT DeleteJobExecution action.
  * \value DeleteOTAUpdateAction IoT DeleteOTAUpdate action.
@@ -69,6 +79,8 @@ namespace IoT {
  * \value DeletePolicyVersionAction IoT DeletePolicyVersion action.
  * \value DeleteRegistrationCodeAction IoT DeleteRegistrationCode action.
  * \value DeleteRoleAliasAction IoT DeleteRoleAlias action.
+ * \value DeleteScheduledAuditAction IoT DeleteScheduledAudit action.
+ * \value DeleteSecurityProfileAction IoT DeleteSecurityProfile action.
  * \value DeleteStreamAction IoT DeleteStream action.
  * \value DeleteThingAction IoT DeleteThing action.
  * \value DeleteThingGroupAction IoT DeleteThingGroup action.
@@ -76,7 +88,10 @@ namespace IoT {
  * \value DeleteTopicRuleAction IoT DeleteTopicRule action.
  * \value DeleteV2LoggingLevelAction IoT DeleteV2LoggingLevel action.
  * \value DeprecateThingTypeAction IoT DeprecateThingType action.
+ * \value DescribeAccountAuditConfigurationAction IoT DescribeAccountAuditConfiguration action.
+ * \value DescribeAuditTaskAction IoT DescribeAuditTask action.
  * \value DescribeAuthorizerAction IoT DescribeAuthorizer action.
+ * \value DescribeBillingGroupAction IoT DescribeBillingGroup action.
  * \value DescribeCACertificateAction IoT DescribeCACertificate action.
  * \value DescribeCertificateAction IoT DescribeCertificate action.
  * \value DescribeDefaultAuthorizerAction IoT DescribeDefaultAuthorizer action.
@@ -86,6 +101,8 @@ namespace IoT {
  * \value DescribeJobAction IoT DescribeJob action.
  * \value DescribeJobExecutionAction IoT DescribeJobExecution action.
  * \value DescribeRoleAliasAction IoT DescribeRoleAlias action.
+ * \value DescribeScheduledAuditAction IoT DescribeScheduledAudit action.
+ * \value DescribeSecurityProfileAction IoT DescribeSecurityProfile action.
  * \value DescribeStreamAction IoT DescribeStream action.
  * \value DescribeThingAction IoT DescribeThing action.
  * \value DescribeThingGroupAction IoT DescribeThingGroup action.
@@ -93,6 +110,7 @@ namespace IoT {
  * \value DescribeThingTypeAction IoT DescribeThingType action.
  * \value DetachPolicyAction IoT DetachPolicy action.
  * \value DetachPrincipalPolicyAction IoT DetachPrincipalPolicy action.
+ * \value DetachSecurityProfileAction IoT DetachSecurityProfile action.
  * \value DetachThingPrincipalAction IoT DetachThingPrincipal action.
  * \value DisableTopicRuleAction IoT DisableTopicRule action.
  * \value EnableTopicRuleAction IoT EnableTopicRule action.
@@ -106,8 +124,12 @@ namespace IoT {
  * \value GetRegistrationCodeAction IoT GetRegistrationCode action.
  * \value GetTopicRuleAction IoT GetTopicRule action.
  * \value GetV2LoggingOptionsAction IoT GetV2LoggingOptions action.
+ * \value ListActiveViolationsAction IoT ListActiveViolations action.
  * \value ListAttachedPoliciesAction IoT ListAttachedPolicies action.
+ * \value ListAuditFindingsAction IoT ListAuditFindings action.
+ * \value ListAuditTasksAction IoT ListAuditTasks action.
  * \value ListAuthorizersAction IoT ListAuthorizers action.
+ * \value ListBillingGroupsAction IoT ListBillingGroups action.
  * \value ListCACertificatesAction IoT ListCACertificates action.
  * \value ListCertificatesAction IoT ListCertificates action.
  * \value ListCertificatesByCAAction IoT ListCertificatesByCA action.
@@ -123,8 +145,13 @@ namespace IoT {
  * \value ListPrincipalPoliciesAction IoT ListPrincipalPolicies action.
  * \value ListPrincipalThingsAction IoT ListPrincipalThings action.
  * \value ListRoleAliasesAction IoT ListRoleAliases action.
+ * \value ListScheduledAuditsAction IoT ListScheduledAudits action.
+ * \value ListSecurityProfilesAction IoT ListSecurityProfiles action.
+ * \value ListSecurityProfilesForTargetAction IoT ListSecurityProfilesForTarget action.
  * \value ListStreamsAction IoT ListStreams action.
+ * \value ListTagsForResourceAction IoT ListTagsForResource action.
  * \value ListTargetsForPolicyAction IoT ListTargetsForPolicy action.
+ * \value ListTargetsForSecurityProfileAction IoT ListTargetsForSecurityProfile action.
  * \value ListThingGroupsAction IoT ListThingGroups action.
  * \value ListThingGroupsForThingAction IoT ListThingGroupsForThing action.
  * \value ListThingPrincipalsAction IoT ListThingPrincipals action.
@@ -132,13 +159,16 @@ namespace IoT {
  * \value ListThingRegistrationTasksAction IoT ListThingRegistrationTasks action.
  * \value ListThingTypesAction IoT ListThingTypes action.
  * \value ListThingsAction IoT ListThings action.
+ * \value ListThingsInBillingGroupAction IoT ListThingsInBillingGroup action.
  * \value ListThingsInThingGroupAction IoT ListThingsInThingGroup action.
  * \value ListTopicRulesAction IoT ListTopicRules action.
  * \value ListV2LoggingLevelsAction IoT ListV2LoggingLevels action.
+ * \value ListViolationEventsAction IoT ListViolationEvents action.
  * \value RegisterCACertificateAction IoT RegisterCACertificate action.
  * \value RegisterCertificateAction IoT RegisterCertificate action.
  * \value RegisterThingAction IoT RegisterThing action.
  * \value RejectCertificateTransferAction IoT RejectCertificateTransfer action.
+ * \value RemoveThingFromBillingGroupAction IoT RemoveThingFromBillingGroup action.
  * \value RemoveThingFromThingGroupAction IoT RemoveThingFromThingGroup action.
  * \value ReplaceTopicRuleAction IoT ReplaceTopicRule action.
  * \value SearchIndexAction IoT SearchIndex action.
@@ -147,21 +177,31 @@ namespace IoT {
  * \value SetLoggingOptionsAction IoT SetLoggingOptions action.
  * \value SetV2LoggingLevelAction IoT SetV2LoggingLevel action.
  * \value SetV2LoggingOptionsAction IoT SetV2LoggingOptions action.
+ * \value StartOnDemandAuditTaskAction IoT StartOnDemandAuditTask action.
  * \value StartThingRegistrationTaskAction IoT StartThingRegistrationTask action.
  * \value StopThingRegistrationTaskAction IoT StopThingRegistrationTask action.
+ * \value TagResourceAction IoT TagResource action.
  * \value TestAuthorizationAction IoT TestAuthorization action.
  * \value TestInvokeAuthorizerAction IoT TestInvokeAuthorizer action.
  * \value TransferCertificateAction IoT TransferCertificate action.
+ * \value UntagResourceAction IoT UntagResource action.
+ * \value UpdateAccountAuditConfigurationAction IoT UpdateAccountAuditConfiguration action.
  * \value UpdateAuthorizerAction IoT UpdateAuthorizer action.
+ * \value UpdateBillingGroupAction IoT UpdateBillingGroup action.
  * \value UpdateCACertificateAction IoT UpdateCACertificate action.
  * \value UpdateCertificateAction IoT UpdateCertificate action.
+ * \value UpdateDynamicThingGroupAction IoT UpdateDynamicThingGroup action.
  * \value UpdateEventConfigurationsAction IoT UpdateEventConfigurations action.
  * \value UpdateIndexingConfigurationAction IoT UpdateIndexingConfiguration action.
+ * \value UpdateJobAction IoT UpdateJob action.
  * \value UpdateRoleAliasAction IoT UpdateRoleAlias action.
+ * \value UpdateScheduledAuditAction IoT UpdateScheduledAudit action.
+ * \value UpdateSecurityProfileAction IoT UpdateSecurityProfile action.
  * \value UpdateStreamAction IoT UpdateStream action.
  * \value UpdateThingAction IoT UpdateThing action.
  * \value UpdateThingGroupAction IoT UpdateThingGroup action.
  * \value UpdateThingGroupsForThingAction IoT UpdateThingGroupsForThing action.
+ * \value ValidateSecurityProfileBehaviorsAction IoT ValidateSecurityProfileBehaviors action.
  */
 
 /*!

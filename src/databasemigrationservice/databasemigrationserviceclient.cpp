@@ -141,8 +141,8 @@ namespace DatabaseMigrationService {
  * 
  *  PostgreSQL>
  * 
- *  For more information about AWS DMS, see the AWS DMS user guide at <a
- *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *  For more information about AWS DMS, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
+ *  AWS Database Migration Service?</a> in the <i>AWS Database Migration User Guide.</i>
  */
 
 /*!
@@ -249,8 +249,8 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
  * account>
  *
  * For more information about AWS DMS events, see <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working with Events and Notifications </a> in
- * the AWS Database MIgration Service User
+ * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in the
+ * <i>AWS Database Migration Service User Guide.</i>
  */
 CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
@@ -461,8 +461,8 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the
- * event categories and source types in <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
- * with Events and Notifications </a> in the AWS Database Migration Service User Guide.
+ * event categories and source types in <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
+ * with Events and Notifications</a> in the <i>AWS Database Migration Service User Guide.</i>
  */
 DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -495,8 +495,8 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists events for a given source identifier and source type. You can also specify a start and end time. For more
- * information on AWS DMS events, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html"> Working
- * with Events and Notifications </a>.
+ * information on AWS DMS events, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
+ * with Events and Notifications</a> in the <i>AWS Database Migration User Guide.</i>
  */
 DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -722,8 +722,9 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
  *
  * </p
  *
- * For more information about AWS DMS tasks, see the AWS DMS user guide at <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html"> Working with Migration Tasks </a>
+ * For more information about AWS DMS tasks, see <a
+ * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks</a> in the <i>AWS
+ * Database Migration Service User
  */
 ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
 {
@@ -794,8 +795,9 @@ RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromR
  *
  * task>
  *
- * For more information about AWS DMS tasks, see the AWS DMS user guide at <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html"> Working with Migration Tasks </a>
+ * For more information about AWS DMS tasks, see <a
+ * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the <i>AWS
+ * Database Migration Service User Guide.</i>
  */
 StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)
 {

@@ -1,0 +1,9 @@
+
+/*!
+    \page qtawskinesisanalyticsv2-index.html
+    \title Qt Aws KinesisAnalyticsV2
+
+    \brief Classes for the Amazon Kinesis Analytics (Kinesis Analytics V2) service
+
+    (This is the page the forms the overview for the servce.)
+*/

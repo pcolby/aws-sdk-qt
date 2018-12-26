@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    acceptshareddirectoryrequest.h \
+    acceptshareddirectoryrequest_p.h \
+    acceptshareddirectoryresponse.h \
+    acceptshareddirectoryresponse_p.h \
     addiproutesrequest.h \
     addiproutesrequest_p.h \
     addiproutesresponse.h \
@@ -42,6 +46,10 @@ HEADERS += \
     createdirectoryrequest_p.h \
     createdirectoryresponse.h \
     createdirectoryresponse_p.h \
+    createlogsubscriptionrequest.h \
+    createlogsubscriptionrequest_p.h \
+    createlogsubscriptionresponse.h \
+    createlogsubscriptionresponse_p.h \
     createmicrosoftadrequest.h \
     createmicrosoftadrequest_p.h \
     createmicrosoftadresponse.h \
@@ -62,6 +70,10 @@ HEADERS += \
     deletedirectoryrequest_p.h \
     deletedirectoryresponse.h \
     deletedirectoryresponse_p.h \
+    deletelogsubscriptionrequest.h \
+    deletelogsubscriptionrequest_p.h \
+    deletelogsubscriptionresponse.h \
+    deletelogsubscriptionresponse_p.h \
     deletesnapshotrequest.h \
     deletesnapshotrequest_p.h \
     deletesnapshotresponse.h \
@@ -90,6 +102,10 @@ HEADERS += \
     describeeventtopicsrequest_p.h \
     describeeventtopicsresponse.h \
     describeeventtopicsresponse_p.h \
+    describeshareddirectoriesrequest.h \
+    describeshareddirectoriesrequest_p.h \
+    describeshareddirectoriesresponse.h \
+    describeshareddirectoriesresponse_p.h \
     describesnapshotsrequest.h \
     describesnapshotsrequest_p.h \
     describesnapshotsresponse.h \
@@ -132,6 +148,10 @@ HEADERS += \
     listiproutesrequest_p.h \
     listiproutesresponse.h \
     listiproutesresponse_p.h \
+    listlogsubscriptionsrequest.h \
+    listlogsubscriptionsrequest_p.h \
+    listlogsubscriptionsresponse.h \
+    listlogsubscriptionsresponse_p.h \
     listschemaextensionsrequest.h \
     listschemaextensionsrequest_p.h \
     listschemaextensionsresponse.h \
@@ -144,6 +164,10 @@ HEADERS += \
     registereventtopicrequest_p.h \
     registereventtopicresponse.h \
     registereventtopicresponse_p.h \
+    rejectshareddirectoryrequest.h \
+    rejectshareddirectoryrequest_p.h \
+    rejectshareddirectoryresponse.h \
+    rejectshareddirectoryresponse_p.h \
     removeiproutesrequest.h \
     removeiproutesrequest_p.h \
     removeiproutesresponse.h \
@@ -160,10 +184,18 @@ HEADERS += \
     restorefromsnapshotrequest_p.h \
     restorefromsnapshotresponse.h \
     restorefromsnapshotresponse_p.h \
+    sharedirectoryrequest.h \
+    sharedirectoryrequest_p.h \
+    sharedirectoryresponse.h \
+    sharedirectoryresponse_p.h \
     startschemaextensionrequest.h \
     startschemaextensionrequest_p.h \
     startschemaextensionresponse.h \
     startschemaextensionresponse_p.h \
+    unsharedirectoryrequest.h \
+    unsharedirectoryrequest_p.h \
+    unsharedirectoryresponse.h \
+    unsharedirectoryresponse_p.h \
     updateconditionalforwarderrequest.h \
     updateconditionalforwarderrequest_p.h \
     updateconditionalforwarderresponse.h \
@@ -176,12 +208,18 @@ HEADERS += \
     updateradiusrequest_p.h \
     updateradiusresponse.h \
     updateradiusresponse_p.h \
+    updatetrustrequest.h \
+    updatetrustrequest_p.h \
+    updatetrustresponse.h \
+    updatetrustresponse_p.h \
     verifytrustrequest.h \
     verifytrustrequest_p.h \
     verifytrustresponse.h \
     verifytrustresponse_p.h \
 
 SOURCES += \
+    acceptshareddirectoryrequest.cpp \
+    acceptshareddirectoryresponse.cpp \
     addiproutesrequest.cpp \
     addiproutesresponse.cpp \
     addtagstoresourcerequest.cpp \
@@ -198,6 +236,8 @@ SOURCES += \
     createconditionalforwarderresponse.cpp \
     createdirectoryrequest.cpp \
     createdirectoryresponse.cpp \
+    createlogsubscriptionrequest.cpp \
+    createlogsubscriptionresponse.cpp \
     createmicrosoftadrequest.cpp \
     createmicrosoftadresponse.cpp \
     createsnapshotrequest.cpp \
@@ -208,6 +248,8 @@ SOURCES += \
     deleteconditionalforwarderresponse.cpp \
     deletedirectoryrequest.cpp \
     deletedirectoryresponse.cpp \
+    deletelogsubscriptionrequest.cpp \
+    deletelogsubscriptionresponse.cpp \
     deletesnapshotrequest.cpp \
     deletesnapshotresponse.cpp \
     deletetrustrequest.cpp \
@@ -222,6 +264,8 @@ SOURCES += \
     describedomaincontrollersresponse.cpp \
     describeeventtopicsrequest.cpp \
     describeeventtopicsresponse.cpp \
+    describeshareddirectoriesrequest.cpp \
+    describeshareddirectoriesresponse.cpp \
     describesnapshotsrequest.cpp \
     describesnapshotsresponse.cpp \
     describetrustsrequest.cpp \
@@ -243,12 +287,16 @@ SOURCES += \
     getsnapshotlimitsresponse.cpp \
     listiproutesrequest.cpp \
     listiproutesresponse.cpp \
+    listlogsubscriptionsrequest.cpp \
+    listlogsubscriptionsresponse.cpp \
     listschemaextensionsrequest.cpp \
     listschemaextensionsresponse.cpp \
     listtagsforresourcerequest.cpp \
     listtagsforresourceresponse.cpp \
     registereventtopicrequest.cpp \
     registereventtopicresponse.cpp \
+    rejectshareddirectoryrequest.cpp \
+    rejectshareddirectoryresponse.cpp \
     removeiproutesrequest.cpp \
     removeiproutesresponse.cpp \
     removetagsfromresourcerequest.cpp \
@@ -257,14 +305,20 @@ SOURCES += \
     resetuserpasswordresponse.cpp \
     restorefromsnapshotrequest.cpp \
     restorefromsnapshotresponse.cpp \
+    sharedirectoryrequest.cpp \
+    sharedirectoryresponse.cpp \
     startschemaextensionrequest.cpp \
     startschemaextensionresponse.cpp \
+    unsharedirectoryrequest.cpp \
+    unsharedirectoryresponse.cpp \
     updateconditionalforwarderrequest.cpp \
     updateconditionalforwarderresponse.cpp \
     updatenumberofdomaincontrollersrequest.cpp \
     updatenumberofdomaincontrollersresponse.cpp \
     updateradiusrequest.cpp \
     updateradiusresponse.cpp \
+    updatetrustrequest.cpp \
+    updatetrustresponse.cpp \
     verifytrustrequest.cpp \
     verifytrustresponse.cpp \
 

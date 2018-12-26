@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsRDSDataService
+description = AWS RDSDataService SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsrdsdataservice-index.html"
+navigation.landingtitle = "RDSDataService"
+navigation.cppclassespage = "RDSDataService C++ Classes"

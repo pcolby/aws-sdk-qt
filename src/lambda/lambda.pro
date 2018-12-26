@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    addlayerversionpermissionrequest.h \
+    addlayerversionpermissionrequest_p.h \
+    addlayerversionpermissionresponse.h \
+    addlayerversionpermissionresponse_p.h \
     addpermissionrequest.h \
     addpermissionrequest_p.h \
     addpermissionresponse.h \
@@ -42,6 +46,10 @@ HEADERS += \
     deletefunctionrequest_p.h \
     deletefunctionresponse.h \
     deletefunctionresponse_p.h \
+    deletelayerversionrequest.h \
+    deletelayerversionrequest_p.h \
+    deletelayerversionresponse.h \
+    deletelayerversionresponse_p.h \
     getaccountsettingsrequest.h \
     getaccountsettingsrequest_p.h \
     getaccountsettingsresponse.h \
@@ -62,6 +70,14 @@ HEADERS += \
     getfunctionrequest_p.h \
     getfunctionresponse.h \
     getfunctionresponse_p.h \
+    getlayerversionpolicyrequest.h \
+    getlayerversionpolicyrequest_p.h \
+    getlayerversionpolicyresponse.h \
+    getlayerversionpolicyresponse_p.h \
+    getlayerversionrequest.h \
+    getlayerversionrequest_p.h \
+    getlayerversionresponse.h \
+    getlayerversionresponse_p.h \
     getpolicyrequest.h \
     getpolicyrequest_p.h \
     getpolicyresponse.h \
@@ -92,6 +108,14 @@ HEADERS += \
     listfunctionsrequest_p.h \
     listfunctionsresponse.h \
     listfunctionsresponse_p.h \
+    listlayersrequest.h \
+    listlayersrequest_p.h \
+    listlayersresponse.h \
+    listlayersresponse_p.h \
+    listlayerversionsrequest.h \
+    listlayerversionsrequest_p.h \
+    listlayerversionsresponse.h \
+    listlayerversionsresponse_p.h \
     listtagsrequest.h \
     listtagsrequest_p.h \
     listtagsresponse.h \
@@ -100,6 +124,10 @@ HEADERS += \
     listversionsbyfunctionrequest_p.h \
     listversionsbyfunctionresponse.h \
     listversionsbyfunctionresponse_p.h \
+    publishlayerversionrequest.h \
+    publishlayerversionrequest_p.h \
+    publishlayerversionresponse.h \
+    publishlayerversionresponse_p.h \
     publishversionrequest.h \
     publishversionrequest_p.h \
     publishversionresponse.h \
@@ -108,6 +136,10 @@ HEADERS += \
     putfunctionconcurrencyrequest_p.h \
     putfunctionconcurrencyresponse.h \
     putfunctionconcurrencyresponse_p.h \
+    removelayerversionpermissionrequest.h \
+    removelayerversionpermissionrequest_p.h \
+    removelayerversionpermissionresponse.h \
+    removelayerversionpermissionresponse_p.h \
     removepermissionrequest.h \
     removepermissionrequest_p.h \
     removepermissionresponse.h \
@@ -138,6 +170,8 @@ HEADERS += \
     updatefunctionconfigurationresponse_p.h \
 
 SOURCES += \
+    addlayerversionpermissionrequest.cpp \
+    addlayerversionpermissionresponse.cpp \
     addpermissionrequest.cpp \
     addpermissionresponse.cpp \
     createaliasrequest.cpp \
@@ -154,6 +188,8 @@ SOURCES += \
     deletefunctionconcurrencyresponse.cpp \
     deletefunctionrequest.cpp \
     deletefunctionresponse.cpp \
+    deletelayerversionrequest.cpp \
+    deletelayerversionresponse.cpp \
     getaccountsettingsrequest.cpp \
     getaccountsettingsresponse.cpp \
     getaliasrequest.cpp \
@@ -164,6 +200,10 @@ SOURCES += \
     getfunctionconfigurationresponse.cpp \
     getfunctionrequest.cpp \
     getfunctionresponse.cpp \
+    getlayerversionpolicyrequest.cpp \
+    getlayerversionpolicyresponse.cpp \
+    getlayerversionrequest.cpp \
+    getlayerversionresponse.cpp \
     getpolicyrequest.cpp \
     getpolicyresponse.cpp \
     invokeasyncrequest.cpp \
@@ -179,14 +219,22 @@ SOURCES += \
     listeventsourcemappingsresponse.cpp \
     listfunctionsrequest.cpp \
     listfunctionsresponse.cpp \
+    listlayersrequest.cpp \
+    listlayersresponse.cpp \
+    listlayerversionsrequest.cpp \
+    listlayerversionsresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
     listversionsbyfunctionrequest.cpp \
     listversionsbyfunctionresponse.cpp \
+    publishlayerversionrequest.cpp \
+    publishlayerversionresponse.cpp \
     publishversionrequest.cpp \
     publishversionresponse.cpp \
     putfunctionconcurrencyrequest.cpp \
     putfunctionconcurrencyresponse.cpp \
+    removelayerversionpermissionrequest.cpp \
+    removelayerversionpermissionresponse.cpp \
     removepermissionrequest.cpp \
     removepermissionresponse.cpp \
     tagresourcerequest.cpp \

@@ -44,6 +44,14 @@ HEADERS += \
     putrecordrequest_p.h \
     putrecordresponse.h \
     putrecordresponse_p.h \
+    startdeliverystreamencryptionrequest.h \
+    startdeliverystreamencryptionrequest_p.h \
+    startdeliverystreamencryptionresponse.h \
+    startdeliverystreamencryptionresponse_p.h \
+    stopdeliverystreamencryptionrequest.h \
+    stopdeliverystreamencryptionrequest_p.h \
+    stopdeliverystreamencryptionresponse.h \
+    stopdeliverystreamencryptionresponse_p.h \
     tagdeliverystreamrequest.h \
     tagdeliverystreamrequest_p.h \
     tagdeliverystreamresponse.h \
@@ -75,6 +83,10 @@ SOURCES += \
     putrecordbatchresponse.cpp \
     putrecordrequest.cpp \
     putrecordresponse.cpp \
+    startdeliverystreamencryptionrequest.cpp \
+    startdeliverystreamencryptionresponse.cpp \
+    stopdeliverystreamencryptionrequest.cpp \
+    stopdeliverystreamencryptionresponse.cpp \
     tagdeliverystreamrequest.cpp \
     tagdeliverystreamresponse.cpp \
     untagdeliverystreamrequest.cpp \

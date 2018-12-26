@@ -39,9 +39,12 @@ namespace ServerlessApplicationRepository {
  * \value CreateApplicationAction ServerlessApplicationRepository CreateApplication action.
  * \value CreateApplicationVersionAction ServerlessApplicationRepository CreateApplicationVersion action.
  * \value CreateCloudFormationChangeSetAction ServerlessApplicationRepository CreateCloudFormationChangeSet action.
+ * \value CreateCloudFormationTemplateAction ServerlessApplicationRepository CreateCloudFormationTemplate action.
  * \value DeleteApplicationAction ServerlessApplicationRepository DeleteApplication action.
  * \value GetApplicationAction ServerlessApplicationRepository GetApplication action.
  * \value GetApplicationPolicyAction ServerlessApplicationRepository GetApplicationPolicy action.
+ * \value GetCloudFormationTemplateAction ServerlessApplicationRepository GetCloudFormationTemplate action.
+ * \value ListApplicationDependenciesAction ServerlessApplicationRepository ListApplicationDependencies action.
  * \value ListApplicationVersionsAction ServerlessApplicationRepository ListApplicationVersions action.
  * \value ListApplicationsAction ServerlessApplicationRepository ListApplications action.
  * \value PutApplicationPolicyAction ServerlessApplicationRepository PutApplicationPolicy action.

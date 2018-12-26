@@ -84,6 +84,10 @@ HEADERS += \
     listimagesrequest_p.h \
     listimagesresponse.h \
     listimagesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     putimagerequest.h \
     putimagerequest_p.h \
     putimageresponse.h \
@@ -100,6 +104,14 @@ HEADERS += \
     startlifecyclepolicypreviewrequest_p.h \
     startlifecyclepolicypreviewresponse.h \
     startlifecyclepolicypreviewresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     uploadlayerpartrequest.h \
     uploadlayerpartrequest_p.h \
     uploadlayerpartresponse.h \
@@ -143,6 +155,8 @@ SOURCES += \
     initiatelayeruploadresponse.cpp \
     listimagesrequest.cpp \
     listimagesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     putimagerequest.cpp \
     putimageresponse.cpp \
     putlifecyclepolicyrequest.cpp \
@@ -151,6 +165,10 @@ SOURCES += \
     setrepositorypolicyresponse.cpp \
     startlifecyclepolicypreviewrequest.cpp \
     startlifecyclepolicypreviewresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     uploadlayerpartrequest.cpp \
     uploadlayerpartresponse.cpp \
 

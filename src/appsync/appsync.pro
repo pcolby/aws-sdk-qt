@@ -24,6 +24,10 @@ HEADERS += \
     createdatasourcerequest_p.h \
     createdatasourceresponse.h \
     createdatasourceresponse_p.h \
+    createfunctionrequest.h \
+    createfunctionrequest_p.h \
+    createfunctionresponse.h \
+    createfunctionresponse_p.h \
     creategraphqlapirequest.h \
     creategraphqlapirequest_p.h \
     creategraphqlapiresponse.h \
@@ -44,6 +48,10 @@ HEADERS += \
     deletedatasourcerequest_p.h \
     deletedatasourceresponse.h \
     deletedatasourceresponse_p.h \
+    deletefunctionrequest.h \
+    deletefunctionrequest_p.h \
+    deletefunctionresponse.h \
+    deletefunctionresponse_p.h \
     deletegraphqlapirequest.h \
     deletegraphqlapirequest_p.h \
     deletegraphqlapiresponse.h \
@@ -60,6 +68,10 @@ HEADERS += \
     getdatasourcerequest_p.h \
     getdatasourceresponse.h \
     getdatasourceresponse_p.h \
+    getfunctionrequest.h \
+    getfunctionrequest_p.h \
+    getfunctionresponse.h \
+    getfunctionresponse_p.h \
     getgraphqlapirequest.h \
     getgraphqlapirequest_p.h \
     getgraphqlapiresponse.h \
@@ -88,10 +100,18 @@ HEADERS += \
     listdatasourcesrequest_p.h \
     listdatasourcesresponse.h \
     listdatasourcesresponse_p.h \
+    listfunctionsrequest.h \
+    listfunctionsrequest_p.h \
+    listfunctionsresponse.h \
+    listfunctionsresponse_p.h \
     listgraphqlapisrequest.h \
     listgraphqlapisrequest_p.h \
     listgraphqlapisresponse.h \
     listgraphqlapisresponse_p.h \
+    listresolversbyfunctionrequest.h \
+    listresolversbyfunctionrequest_p.h \
+    listresolversbyfunctionresponse.h \
+    listresolversbyfunctionresponse_p.h \
     listresolversrequest.h \
     listresolversrequest_p.h \
     listresolversresponse.h \
@@ -112,6 +132,10 @@ HEADERS += \
     updatedatasourcerequest_p.h \
     updatedatasourceresponse.h \
     updatedatasourceresponse_p.h \
+    updatefunctionrequest.h \
+    updatefunctionrequest_p.h \
+    updatefunctionresponse.h \
+    updatefunctionresponse_p.h \
     updategraphqlapirequest.h \
     updategraphqlapirequest_p.h \
     updategraphqlapiresponse.h \
@@ -133,6 +157,8 @@ SOURCES += \
     createapikeyresponse.cpp \
     createdatasourcerequest.cpp \
     createdatasourceresponse.cpp \
+    createfunctionrequest.cpp \
+    createfunctionresponse.cpp \
     creategraphqlapirequest.cpp \
     creategraphqlapiresponse.cpp \
     createresolverrequest.cpp \
@@ -143,6 +169,8 @@ SOURCES += \
     deleteapikeyresponse.cpp \
     deletedatasourcerequest.cpp \
     deletedatasourceresponse.cpp \
+    deletefunctionrequest.cpp \
+    deletefunctionresponse.cpp \
     deletegraphqlapirequest.cpp \
     deletegraphqlapiresponse.cpp \
     deleteresolverrequest.cpp \
@@ -151,6 +179,8 @@ SOURCES += \
     deletetyperesponse.cpp \
     getdatasourcerequest.cpp \
     getdatasourceresponse.cpp \
+    getfunctionrequest.cpp \
+    getfunctionresponse.cpp \
     getgraphqlapirequest.cpp \
     getgraphqlapiresponse.cpp \
     getintrospectionschemarequest.cpp \
@@ -165,8 +195,12 @@ SOURCES += \
     listapikeysresponse.cpp \
     listdatasourcesrequest.cpp \
     listdatasourcesresponse.cpp \
+    listfunctionsrequest.cpp \
+    listfunctionsresponse.cpp \
     listgraphqlapisrequest.cpp \
     listgraphqlapisresponse.cpp \
+    listresolversbyfunctionrequest.cpp \
+    listresolversbyfunctionresponse.cpp \
     listresolversrequest.cpp \
     listresolversresponse.cpp \
     listtypesrequest.cpp \
@@ -177,6 +211,8 @@ SOURCES += \
     updateapikeyresponse.cpp \
     updatedatasourcerequest.cpp \
     updatedatasourceresponse.cpp \
+    updatefunctionrequest.cpp \
+    updatefunctionresponse.cpp \
     updategraphqlapirequest.cpp \
     updategraphqlapiresponse.cpp \
     updateresolverrequest.cpp \

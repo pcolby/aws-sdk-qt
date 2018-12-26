@@ -46,6 +46,7 @@ namespace CloudWatch {
  * \value GetDashboardAction CloudWatch GetDashboard action.
  * \value GetMetricDataAction CloudWatch GetMetricData action.
  * \value GetMetricStatisticsAction CloudWatch GetMetricStatistics action.
+ * \value GetMetricWidgetImageAction CloudWatch GetMetricWidgetImage action.
  * \value ListDashboardsAction CloudWatch ListDashboards action.
  * \value ListMetricsAction CloudWatch ListMetrics action.
  * \value PutDashboardAction CloudWatch PutDashboard action.

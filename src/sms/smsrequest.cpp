@@ -36,16 +36,33 @@ namespace SMS {
  * This enum describes the actions that can be performed as SMS
  * requests.
  *
+ * \value CreateAppAction SMS CreateApp action.
  * \value CreateReplicationJobAction SMS CreateReplicationJob action.
+ * \value DeleteAppAction SMS DeleteApp action.
+ * \value DeleteAppLaunchConfigurationAction SMS DeleteAppLaunchConfiguration action.
+ * \value DeleteAppReplicationConfigurationAction SMS DeleteAppReplicationConfiguration action.
  * \value DeleteReplicationJobAction SMS DeleteReplicationJob action.
  * \value DeleteServerCatalogAction SMS DeleteServerCatalog action.
  * \value DisassociateConnectorAction SMS DisassociateConnector action.
+ * \value GenerateChangeSetAction SMS GenerateChangeSet action.
+ * \value GenerateTemplateAction SMS GenerateTemplate action.
+ * \value GetAppAction SMS GetApp action.
+ * \value GetAppLaunchConfigurationAction SMS GetAppLaunchConfiguration action.
+ * \value GetAppReplicationConfigurationAction SMS GetAppReplicationConfiguration action.
  * \value GetConnectorsAction SMS GetConnectors action.
  * \value GetReplicationJobsAction SMS GetReplicationJobs action.
  * \value GetReplicationRunsAction SMS GetReplicationRuns action.
  * \value GetServersAction SMS GetServers action.
  * \value ImportServerCatalogAction SMS ImportServerCatalog action.
+ * \value LaunchAppAction SMS LaunchApp action.
+ * \value ListAppsAction SMS ListApps action.
+ * \value PutAppLaunchConfigurationAction SMS PutAppLaunchConfiguration action.
+ * \value PutAppReplicationConfigurationAction SMS PutAppReplicationConfiguration action.
+ * \value StartAppReplicationAction SMS StartAppReplication action.
  * \value StartOnDemandReplicationRunAction SMS StartOnDemandReplicationRun action.
+ * \value StopAppReplicationAction SMS StopAppReplication action.
+ * \value TerminateAppAction SMS TerminateApp action.
+ * \value UpdateAppAction SMS UpdateApp action.
  * \value UpdateReplicationJobAction SMS UpdateReplicationJob action.
  */
 

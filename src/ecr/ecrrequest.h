@@ -54,10 +54,13 @@ public:
         GetRepositoryPolicyAction,
         InitiateLayerUploadAction,
         ListImagesAction,
+        ListTagsForResourceAction,
         PutImageAction,
         PutLifecyclePolicyAction,
         SetRepositoryPolicyAction,
         StartLifecyclePolicyPreviewAction,
+        TagResourceAction,
+        UntagResourceAction,
         UploadLayerPartAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

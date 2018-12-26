@@ -62,6 +62,8 @@ class InitiateLayerUploadRequest;
 class InitiateLayerUploadResponse;
 class ListImagesRequest;
 class ListImagesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutImageRequest;
 class PutImageResponse;
 class PutLifecyclePolicyRequest;
@@ -70,6 +72,10 @@ class SetRepositoryPolicyRequest;
 class SetRepositoryPolicyResponse;
 class StartLifecyclePolicyPreviewRequest;
 class StartLifecyclePolicyPreviewResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UploadLayerPartRequest;
 class UploadLayerPartResponse;
 
@@ -106,10 +112,13 @@ public slots:
     GetRepositoryPolicyResponse * getRepositoryPolicy(const GetRepositoryPolicyRequest &request);
     InitiateLayerUploadResponse * initiateLayerUpload(const InitiateLayerUploadRequest &request);
     ListImagesResponse * listImages(const ListImagesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutImageResponse * putImage(const PutImageRequest &request);
     PutLifecyclePolicyResponse * putLifecyclePolicy(const PutLifecyclePolicyRequest &request);
     SetRepositoryPolicyResponse * setRepositoryPolicy(const SetRepositoryPolicyRequest &request);
     StartLifecyclePolicyPreviewResponse * startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UploadLayerPartResponse * uploadLayerPart(const UploadLayerPartRequest &request);
 
 private:

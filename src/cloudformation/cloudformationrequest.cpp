@@ -48,13 +48,17 @@ namespace CloudFormation {
  * \value DeleteStackSetAction CloudFormation DeleteStackSet action.
  * \value DescribeAccountLimitsAction CloudFormation DescribeAccountLimits action.
  * \value DescribeChangeSetAction CloudFormation DescribeChangeSet action.
+ * \value DescribeStackDriftDetectionStatusAction CloudFormation DescribeStackDriftDetectionStatus action.
  * \value DescribeStackEventsAction CloudFormation DescribeStackEvents action.
  * \value DescribeStackInstanceAction CloudFormation DescribeStackInstance action.
  * \value DescribeStackResourceAction CloudFormation DescribeStackResource action.
+ * \value DescribeStackResourceDriftsAction CloudFormation DescribeStackResourceDrifts action.
  * \value DescribeStackResourcesAction CloudFormation DescribeStackResources action.
  * \value DescribeStackSetAction CloudFormation DescribeStackSet action.
  * \value DescribeStackSetOperationAction CloudFormation DescribeStackSetOperation action.
  * \value DescribeStacksAction CloudFormation DescribeStacks action.
+ * \value DetectStackDriftAction CloudFormation DetectStackDrift action.
+ * \value DetectStackResourceDriftAction CloudFormation DetectStackResourceDrift action.
  * \value EstimateTemplateCostAction CloudFormation EstimateTemplateCost action.
  * \value ExecuteChangeSetAction CloudFormation ExecuteChangeSet action.
  * \value GetStackPolicyAction CloudFormation GetStackPolicy action.

@@ -22,6 +22,10 @@ HEADERS += \
     describeclusterrequest_p.h \
     describeclusterresponse.h \
     describeclusterresponse_p.h \
+    describeupdaterequest.h \
+    describeupdaterequest_p.h \
+    describeupdateresponse.h \
+    describeupdateresponse_p.h \
     eksclient.h \
     eksclient_p.h \
     eksrequest.h \
@@ -32,6 +36,14 @@ HEADERS += \
     listclustersrequest_p.h \
     listclustersresponse.h \
     listclustersresponse_p.h \
+    listupdatesrequest.h \
+    listupdatesrequest_p.h \
+    listupdatesresponse.h \
+    listupdatesresponse_p.h \
+    updateclusterversionrequest.h \
+    updateclusterversionrequest_p.h \
+    updateclusterversionresponse.h \
+    updateclusterversionresponse_p.h \
 
 SOURCES += \
     createclusterrequest.cpp \
@@ -40,10 +52,16 @@ SOURCES += \
     deleteclusterresponse.cpp \
     describeclusterrequest.cpp \
     describeclusterresponse.cpp \
+    describeupdaterequest.cpp \
+    describeupdateresponse.cpp \
     eksclient.cpp \
     eksrequest.cpp \
     eksresponse.cpp \
     listclustersrequest.cpp \
     listclustersresponse.cpp \
+    listupdatesrequest.cpp \
+    listupdatesresponse.cpp \
+    updateclusterversionrequest.cpp \
+    updateclusterversionresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

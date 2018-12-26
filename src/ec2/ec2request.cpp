@@ -37,27 +37,34 @@ namespace EC2 {
  * requests.
  *
  * \value AcceptReservedInstancesExchangeQuoteAction EC2 AcceptReservedInstancesExchangeQuote action.
+ * \value AcceptTransitGatewayVpcAttachmentAction EC2 AcceptTransitGatewayVpcAttachment action.
  * \value AcceptVpcEndpointConnectionsAction EC2 AcceptVpcEndpointConnections action.
  * \value AcceptVpcPeeringConnectionAction EC2 AcceptVpcPeeringConnection action.
+ * \value AdvertiseByoipCidrAction EC2 AdvertiseByoipCidr action.
  * \value AllocateAddressAction EC2 AllocateAddress action.
  * \value AllocateHostsAction EC2 AllocateHosts action.
+ * \value ApplySecurityGroupsToClientVpnTargetNetworkAction EC2 ApplySecurityGroupsToClientVpnTargetNetwork action.
  * \value AssignIpv6AddressesAction EC2 AssignIpv6Addresses action.
  * \value AssignPrivateIpAddressesAction EC2 AssignPrivateIpAddresses action.
  * \value AssociateAddressAction EC2 AssociateAddress action.
+ * \value AssociateClientVpnTargetNetworkAction EC2 AssociateClientVpnTargetNetwork action.
  * \value AssociateDhcpOptionsAction EC2 AssociateDhcpOptions action.
  * \value AssociateIamInstanceProfileAction EC2 AssociateIamInstanceProfile action.
  * \value AssociateRouteTableAction EC2 AssociateRouteTable action.
  * \value AssociateSubnetCidrBlockAction EC2 AssociateSubnetCidrBlock action.
+ * \value AssociateTransitGatewayRouteTableAction EC2 AssociateTransitGatewayRouteTable action.
  * \value AssociateVpcCidrBlockAction EC2 AssociateVpcCidrBlock action.
  * \value AttachClassicLinkVpcAction EC2 AttachClassicLinkVpc action.
  * \value AttachInternetGatewayAction EC2 AttachInternetGateway action.
  * \value AttachNetworkInterfaceAction EC2 AttachNetworkInterface action.
  * \value AttachVolumeAction EC2 AttachVolume action.
  * \value AttachVpnGatewayAction EC2 AttachVpnGateway action.
+ * \value AuthorizeClientVpnIngressAction EC2 AuthorizeClientVpnIngress action.
  * \value AuthorizeSecurityGroupEgressAction EC2 AuthorizeSecurityGroupEgress action.
  * \value AuthorizeSecurityGroupIngressAction EC2 AuthorizeSecurityGroupIngress action.
  * \value BundleInstanceAction EC2 BundleInstance action.
  * \value CancelBundleTaskAction EC2 CancelBundleTask action.
+ * \value CancelCapacityReservationAction EC2 CancelCapacityReservation action.
  * \value CancelConversionTaskAction EC2 CancelConversionTask action.
  * \value CancelExportTaskAction EC2 CancelExportTask action.
  * \value CancelImportTaskAction EC2 CancelImportTask action.
@@ -68,6 +75,9 @@ namespace EC2 {
  * \value CopyFpgaImageAction EC2 CopyFpgaImage action.
  * \value CopyImageAction EC2 CopyImage action.
  * \value CopySnapshotAction EC2 CopySnapshot action.
+ * \value CreateCapacityReservationAction EC2 CreateCapacityReservation action.
+ * \value CreateClientVpnEndpointAction EC2 CreateClientVpnEndpoint action.
+ * \value CreateClientVpnRouteAction EC2 CreateClientVpnRoute action.
  * \value CreateCustomerGatewayAction EC2 CreateCustomerGateway action.
  * \value CreateDefaultSubnetAction EC2 CreateDefaultSubnet action.
  * \value CreateDefaultVpcAction EC2 CreateDefaultVpc action.
@@ -96,6 +106,10 @@ namespace EC2 {
  * \value CreateSpotDatafeedSubscriptionAction EC2 CreateSpotDatafeedSubscription action.
  * \value CreateSubnetAction EC2 CreateSubnet action.
  * \value CreateTagsAction EC2 CreateTags action.
+ * \value CreateTransitGatewayAction EC2 CreateTransitGateway action.
+ * \value CreateTransitGatewayRouteAction EC2 CreateTransitGatewayRoute action.
+ * \value CreateTransitGatewayRouteTableAction EC2 CreateTransitGatewayRouteTable action.
+ * \value CreateTransitGatewayVpcAttachmentAction EC2 CreateTransitGatewayVpcAttachment action.
  * \value CreateVolumeAction EC2 CreateVolume action.
  * \value CreateVpcAction EC2 CreateVpc action.
  * \value CreateVpcEndpointAction EC2 CreateVpcEndpoint action.
@@ -105,6 +119,8 @@ namespace EC2 {
  * \value CreateVpnConnectionAction EC2 CreateVpnConnection action.
  * \value CreateVpnConnectionRouteAction EC2 CreateVpnConnectionRoute action.
  * \value CreateVpnGatewayAction EC2 CreateVpnGateway action.
+ * \value DeleteClientVpnEndpointAction EC2 DeleteClientVpnEndpoint action.
+ * \value DeleteClientVpnRouteAction EC2 DeleteClientVpnRoute action.
  * \value DeleteCustomerGatewayAction EC2 DeleteCustomerGateway action.
  * \value DeleteDhcpOptionsAction EC2 DeleteDhcpOptions action.
  * \value DeleteEgressOnlyInternetGatewayAction EC2 DeleteEgressOnlyInternetGateway action.
@@ -128,6 +144,10 @@ namespace EC2 {
  * \value DeleteSpotDatafeedSubscriptionAction EC2 DeleteSpotDatafeedSubscription action.
  * \value DeleteSubnetAction EC2 DeleteSubnet action.
  * \value DeleteTagsAction EC2 DeleteTags action.
+ * \value DeleteTransitGatewayAction EC2 DeleteTransitGateway action.
+ * \value DeleteTransitGatewayRouteAction EC2 DeleteTransitGatewayRoute action.
+ * \value DeleteTransitGatewayRouteTableAction EC2 DeleteTransitGatewayRouteTable action.
+ * \value DeleteTransitGatewayVpcAttachmentAction EC2 DeleteTransitGatewayVpcAttachment action.
  * \value DeleteVolumeAction EC2 DeleteVolume action.
  * \value DeleteVpcAction EC2 DeleteVpc action.
  * \value DeleteVpcEndpointConnectionNotificationsAction EC2 DeleteVpcEndpointConnectionNotifications action.
@@ -137,13 +157,21 @@ namespace EC2 {
  * \value DeleteVpnConnectionAction EC2 DeleteVpnConnection action.
  * \value DeleteVpnConnectionRouteAction EC2 DeleteVpnConnectionRoute action.
  * \value DeleteVpnGatewayAction EC2 DeleteVpnGateway action.
+ * \value DeprovisionByoipCidrAction EC2 DeprovisionByoipCidr action.
  * \value DeregisterImageAction EC2 DeregisterImage action.
  * \value DescribeAccountAttributesAction EC2 DescribeAccountAttributes action.
  * \value DescribeAddressesAction EC2 DescribeAddresses action.
  * \value DescribeAggregateIdFormatAction EC2 DescribeAggregateIdFormat action.
  * \value DescribeAvailabilityZonesAction EC2 DescribeAvailabilityZones action.
  * \value DescribeBundleTasksAction EC2 DescribeBundleTasks action.
+ * \value DescribeByoipCidrsAction EC2 DescribeByoipCidrs action.
+ * \value DescribeCapacityReservationsAction EC2 DescribeCapacityReservations action.
  * \value DescribeClassicLinkInstancesAction EC2 DescribeClassicLinkInstances action.
+ * \value DescribeClientVpnAuthorizationRulesAction EC2 DescribeClientVpnAuthorizationRules action.
+ * \value DescribeClientVpnConnectionsAction EC2 DescribeClientVpnConnections action.
+ * \value DescribeClientVpnEndpointsAction EC2 DescribeClientVpnEndpoints action.
+ * \value DescribeClientVpnRoutesAction EC2 DescribeClientVpnRoutes action.
+ * \value DescribeClientVpnTargetNetworksAction EC2 DescribeClientVpnTargetNetworks action.
  * \value DescribeConversionTasksAction EC2 DescribeConversionTasks action.
  * \value DescribeCustomerGatewaysAction EC2 DescribeCustomerGateways action.
  * \value DescribeDhcpOptionsAction EC2 DescribeDhcpOptions action.
@@ -183,6 +211,7 @@ namespace EC2 {
  * \value DescribePlacementGroupsAction EC2 DescribePlacementGroups action.
  * \value DescribePrefixListsAction EC2 DescribePrefixLists action.
  * \value DescribePrincipalIdFormatAction EC2 DescribePrincipalIdFormat action.
+ * \value DescribePublicIpv4PoolsAction EC2 DescribePublicIpv4Pools action.
  * \value DescribeRegionsAction EC2 DescribeRegions action.
  * \value DescribeReservedInstancesAction EC2 DescribeReservedInstances action.
  * \value DescribeReservedInstancesListingsAction EC2 DescribeReservedInstancesListings action.
@@ -204,6 +233,10 @@ namespace EC2 {
  * \value DescribeStaleSecurityGroupsAction EC2 DescribeStaleSecurityGroups action.
  * \value DescribeSubnetsAction EC2 DescribeSubnets action.
  * \value DescribeTagsAction EC2 DescribeTags action.
+ * \value DescribeTransitGatewayAttachmentsAction EC2 DescribeTransitGatewayAttachments action.
+ * \value DescribeTransitGatewayRouteTablesAction EC2 DescribeTransitGatewayRouteTables action.
+ * \value DescribeTransitGatewayVpcAttachmentsAction EC2 DescribeTransitGatewayVpcAttachments action.
+ * \value DescribeTransitGatewaysAction EC2 DescribeTransitGateways action.
  * \value DescribeVolumeAttributeAction EC2 DescribeVolumeAttribute action.
  * \value DescribeVolumeStatusAction EC2 DescribeVolumeStatus action.
  * \value DescribeVolumesAction EC2 DescribeVolumes action.
@@ -226,29 +259,42 @@ namespace EC2 {
  * \value DetachNetworkInterfaceAction EC2 DetachNetworkInterface action.
  * \value DetachVolumeAction EC2 DetachVolume action.
  * \value DetachVpnGatewayAction EC2 DetachVpnGateway action.
+ * \value DisableTransitGatewayRouteTablePropagationAction EC2 DisableTransitGatewayRouteTablePropagation action.
  * \value DisableVgwRoutePropagationAction EC2 DisableVgwRoutePropagation action.
  * \value DisableVpcClassicLinkAction EC2 DisableVpcClassicLink action.
  * \value DisableVpcClassicLinkDnsSupportAction EC2 DisableVpcClassicLinkDnsSupport action.
  * \value DisassociateAddressAction EC2 DisassociateAddress action.
+ * \value DisassociateClientVpnTargetNetworkAction EC2 DisassociateClientVpnTargetNetwork action.
  * \value DisassociateIamInstanceProfileAction EC2 DisassociateIamInstanceProfile action.
  * \value DisassociateRouteTableAction EC2 DisassociateRouteTable action.
  * \value DisassociateSubnetCidrBlockAction EC2 DisassociateSubnetCidrBlock action.
+ * \value DisassociateTransitGatewayRouteTableAction EC2 DisassociateTransitGatewayRouteTable action.
  * \value DisassociateVpcCidrBlockAction EC2 DisassociateVpcCidrBlock action.
+ * \value EnableTransitGatewayRouteTablePropagationAction EC2 EnableTransitGatewayRouteTablePropagation action.
  * \value EnableVgwRoutePropagationAction EC2 EnableVgwRoutePropagation action.
  * \value EnableVolumeIOAction EC2 EnableVolumeIO action.
  * \value EnableVpcClassicLinkAction EC2 EnableVpcClassicLink action.
  * \value EnableVpcClassicLinkDnsSupportAction EC2 EnableVpcClassicLinkDnsSupport action.
+ * \value ExportClientVpnClientCertificateRevocationListAction EC2 ExportClientVpnClientCertificateRevocationList action.
+ * \value ExportClientVpnClientConfigurationAction EC2 ExportClientVpnClientConfiguration action.
+ * \value ExportTransitGatewayRoutesAction EC2 ExportTransitGatewayRoutes action.
  * \value GetConsoleOutputAction EC2 GetConsoleOutput action.
  * \value GetConsoleScreenshotAction EC2 GetConsoleScreenshot action.
  * \value GetHostReservationPurchasePreviewAction EC2 GetHostReservationPurchasePreview action.
  * \value GetLaunchTemplateDataAction EC2 GetLaunchTemplateData action.
  * \value GetPasswordDataAction EC2 GetPasswordData action.
  * \value GetReservedInstancesExchangeQuoteAction EC2 GetReservedInstancesExchangeQuote action.
+ * \value GetTransitGatewayAttachmentPropagationsAction EC2 GetTransitGatewayAttachmentPropagations action.
+ * \value GetTransitGatewayRouteTableAssociationsAction EC2 GetTransitGatewayRouteTableAssociations action.
+ * \value GetTransitGatewayRouteTablePropagationsAction EC2 GetTransitGatewayRouteTablePropagations action.
+ * \value ImportClientVpnClientCertificateRevocationListAction EC2 ImportClientVpnClientCertificateRevocationList action.
  * \value ImportImageAction EC2 ImportImage action.
  * \value ImportInstanceAction EC2 ImportInstance action.
  * \value ImportKeyPairAction EC2 ImportKeyPair action.
  * \value ImportSnapshotAction EC2 ImportSnapshot action.
  * \value ImportVolumeAction EC2 ImportVolume action.
+ * \value ModifyCapacityReservationAction EC2 ModifyCapacityReservation action.
+ * \value ModifyClientVpnEndpointAction EC2 ModifyClientVpnEndpoint action.
  * \value ModifyFleetAction EC2 ModifyFleet action.
  * \value ModifyFpgaImageAttributeAction EC2 ModifyFpgaImageAttribute action.
  * \value ModifyHostsAction EC2 ModifyHosts action.
@@ -256,6 +302,7 @@ namespace EC2 {
  * \value ModifyIdentityIdFormatAction EC2 ModifyIdentityIdFormat action.
  * \value ModifyImageAttributeAction EC2 ModifyImageAttribute action.
  * \value ModifyInstanceAttributeAction EC2 ModifyInstanceAttribute action.
+ * \value ModifyInstanceCapacityReservationAttributesAction EC2 ModifyInstanceCapacityReservationAttributes action.
  * \value ModifyInstanceCreditSpecificationAction EC2 ModifyInstanceCreditSpecification action.
  * \value ModifyInstancePlacementAction EC2 ModifyInstancePlacement action.
  * \value ModifyLaunchTemplateAction EC2 ModifyLaunchTemplate action.
@@ -264,6 +311,7 @@ namespace EC2 {
  * \value ModifySnapshotAttributeAction EC2 ModifySnapshotAttribute action.
  * \value ModifySpotFleetRequestAction EC2 ModifySpotFleetRequest action.
  * \value ModifySubnetAttributeAction EC2 ModifySubnetAttribute action.
+ * \value ModifyTransitGatewayVpcAttachmentAction EC2 ModifyTransitGatewayVpcAttachment action.
  * \value ModifyVolumeAction EC2 ModifyVolume action.
  * \value ModifyVolumeAttributeAction EC2 ModifyVolumeAttribute action.
  * \value ModifyVpcAttributeAction EC2 ModifyVpcAttribute action.
@@ -275,11 +323,13 @@ namespace EC2 {
  * \value ModifyVpcTenancyAction EC2 ModifyVpcTenancy action.
  * \value MonitorInstancesAction EC2 MonitorInstances action.
  * \value MoveAddressToVpcAction EC2 MoveAddressToVpc action.
+ * \value ProvisionByoipCidrAction EC2 ProvisionByoipCidr action.
  * \value PurchaseHostReservationAction EC2 PurchaseHostReservation action.
  * \value PurchaseReservedInstancesOfferingAction EC2 PurchaseReservedInstancesOffering action.
  * \value PurchaseScheduledInstancesAction EC2 PurchaseScheduledInstances action.
  * \value RebootInstancesAction EC2 RebootInstances action.
  * \value RegisterImageAction EC2 RegisterImage action.
+ * \value RejectTransitGatewayVpcAttachmentAction EC2 RejectTransitGatewayVpcAttachment action.
  * \value RejectVpcEndpointConnectionsAction EC2 RejectVpcEndpointConnections action.
  * \value RejectVpcPeeringConnectionAction EC2 RejectVpcPeeringConnection action.
  * \value ReleaseAddressAction EC2 ReleaseAddress action.
@@ -289,6 +339,7 @@ namespace EC2 {
  * \value ReplaceNetworkAclEntryAction EC2 ReplaceNetworkAclEntry action.
  * \value ReplaceRouteAction EC2 ReplaceRoute action.
  * \value ReplaceRouteTableAssociationAction EC2 ReplaceRouteTableAssociation action.
+ * \value ReplaceTransitGatewayRouteAction EC2 ReplaceTransitGatewayRoute action.
  * \value ReportInstanceStatusAction EC2 ReportInstanceStatus action.
  * \value RequestSpotFleetAction EC2 RequestSpotFleet action.
  * \value RequestSpotInstancesAction EC2 RequestSpotInstances action.
@@ -298,18 +349,22 @@ namespace EC2 {
  * \value ResetNetworkInterfaceAttributeAction EC2 ResetNetworkInterfaceAttribute action.
  * \value ResetSnapshotAttributeAction EC2 ResetSnapshotAttribute action.
  * \value RestoreAddressToClassicAction EC2 RestoreAddressToClassic action.
+ * \value RevokeClientVpnIngressAction EC2 RevokeClientVpnIngress action.
  * \value RevokeSecurityGroupEgressAction EC2 RevokeSecurityGroupEgress action.
  * \value RevokeSecurityGroupIngressAction EC2 RevokeSecurityGroupIngress action.
  * \value RunInstancesAction EC2 RunInstances action.
  * \value RunScheduledInstancesAction EC2 RunScheduledInstances action.
+ * \value SearchTransitGatewayRoutesAction EC2 SearchTransitGatewayRoutes action.
  * \value StartInstancesAction EC2 StartInstances action.
  * \value StopInstancesAction EC2 StopInstances action.
+ * \value TerminateClientVpnConnectionsAction EC2 TerminateClientVpnConnections action.
  * \value TerminateInstancesAction EC2 TerminateInstances action.
  * \value UnassignIpv6AddressesAction EC2 UnassignIpv6Addresses action.
  * \value UnassignPrivateIpAddressesAction EC2 UnassignPrivateIpAddresses action.
  * \value UnmonitorInstancesAction EC2 UnmonitorInstances action.
  * \value UpdateSecurityGroupRuleDescriptionsEgressAction EC2 UpdateSecurityGroupRuleDescriptionsEgress action.
  * \value UpdateSecurityGroupRuleDescriptionsIngressAction EC2 UpdateSecurityGroupRuleDescriptionsIngress action.
+ * \value WithdrawByoipCidrAction EC2 WithdrawByoipCidr action.
  */
 
 /*!

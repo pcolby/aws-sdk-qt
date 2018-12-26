@@ -41,6 +41,7 @@ namespace CodeDeploy {
  * \value BatchGetApplicationsAction CodeDeploy BatchGetApplications action.
  * \value BatchGetDeploymentGroupsAction CodeDeploy BatchGetDeploymentGroups action.
  * \value BatchGetDeploymentInstancesAction CodeDeploy BatchGetDeploymentInstances action.
+ * \value BatchGetDeploymentTargetsAction CodeDeploy BatchGetDeploymentTargets action.
  * \value BatchGetDeploymentsAction CodeDeploy BatchGetDeployments action.
  * \value BatchGetOnPremisesInstancesAction CodeDeploy BatchGetOnPremisesInstances action.
  * \value ContinueDeploymentAction CodeDeploy ContinueDeployment action.
@@ -59,12 +60,14 @@ namespace CodeDeploy {
  * \value GetDeploymentConfigAction CodeDeploy GetDeploymentConfig action.
  * \value GetDeploymentGroupAction CodeDeploy GetDeploymentGroup action.
  * \value GetDeploymentInstanceAction CodeDeploy GetDeploymentInstance action.
+ * \value GetDeploymentTargetAction CodeDeploy GetDeploymentTarget action.
  * \value GetOnPremisesInstanceAction CodeDeploy GetOnPremisesInstance action.
  * \value ListApplicationRevisionsAction CodeDeploy ListApplicationRevisions action.
  * \value ListApplicationsAction CodeDeploy ListApplications action.
  * \value ListDeploymentConfigsAction CodeDeploy ListDeploymentConfigs action.
  * \value ListDeploymentGroupsAction CodeDeploy ListDeploymentGroups action.
  * \value ListDeploymentInstancesAction CodeDeploy ListDeploymentInstances action.
+ * \value ListDeploymentTargetsAction CodeDeploy ListDeploymentTargets action.
  * \value ListDeploymentsAction CodeDeploy ListDeployments action.
  * \value ListGitHubAccountTokenNamesAction CodeDeploy ListGitHubAccountTokenNames action.
  * \value ListOnPremisesInstancesAction CodeDeploy ListOnPremisesInstances action.

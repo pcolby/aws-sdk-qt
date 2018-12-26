@@ -50,6 +50,10 @@ HEADERS += \
     describecontinuousbackupsrequest_p.h \
     describecontinuousbackupsresponse.h \
     describecontinuousbackupsresponse_p.h \
+    describeendpointsrequest.h \
+    describeendpointsrequest_p.h \
+    describeendpointsresponse.h \
+    describeendpointsresponse_p.h \
     describeglobaltablerequest.h \
     describeglobaltablerequest_p.h \
     describeglobaltableresponse.h \
@@ -120,6 +124,14 @@ HEADERS += \
     tagresourcerequest_p.h \
     tagresourceresponse.h \
     tagresourceresponse_p.h \
+    transactgetitemsrequest.h \
+    transactgetitemsrequest_p.h \
+    transactgetitemsresponse.h \
+    transactgetitemsresponse_p.h \
+    transactwriteitemsrequest.h \
+    transactwriteitemsrequest_p.h \
+    transactwriteitemsresponse.h \
+    transactwriteitemsresponse_p.h \
     untagresourcerequest.h \
     untagresourcerequest_p.h \
     untagresourceresponse.h \
@@ -170,6 +182,8 @@ SOURCES += \
     describebackupresponse.cpp \
     describecontinuousbackupsrequest.cpp \
     describecontinuousbackupsresponse.cpp \
+    describeendpointsrequest.cpp \
+    describeendpointsresponse.cpp \
     describeglobaltablerequest.cpp \
     describeglobaltableresponse.cpp \
     describeglobaltablesettingsrequest.cpp \
@@ -205,6 +219,10 @@ SOURCES += \
     scanresponse.cpp \
     tagresourcerequest.cpp \
     tagresourceresponse.cpp \
+    transactgetitemsrequest.cpp \
+    transactgetitemsresponse.cpp \
+    transactwriteitemsrequest.cpp \
+    transactwriteitemsresponse.cpp \
     untagresourcerequest.cpp \
     untagresourceresponse.cpp \
     updatecontinuousbackupsrequest.cpp \

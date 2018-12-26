@@ -50,6 +50,8 @@ class DescribeServersRequest;
 class DescribeServersResponse;
 class DisassociateNodeRequest;
 class DisassociateNodeResponse;
+class ExportServerEngineAttributeRequest;
+class ExportServerEngineAttributeResponse;
 class RestoreServerRequest;
 class RestoreServerResponse;
 class StartMaintenanceRequest;
@@ -86,6 +88,7 @@ public slots:
     DescribeNodeAssociationStatusResponse * describeNodeAssociationStatus(const DescribeNodeAssociationStatusRequest &request);
     DescribeServersResponse * describeServers(const DescribeServersRequest &request);
     DisassociateNodeResponse * disassociateNode(const DisassociateNodeRequest &request);
+    ExportServerEngineAttributeResponse * exportServerEngineAttribute(const ExportServerEngineAttributeRequest &request);
     RestoreServerResponse * restoreServer(const RestoreServerRequest &request);
     StartMaintenanceResponse * startMaintenance(const StartMaintenanceRequest &request);
     UpdateServerResponse * updateServer(const UpdateServerRequest &request);

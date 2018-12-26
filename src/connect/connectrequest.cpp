@@ -36,8 +36,27 @@ namespace Connect {
  * This enum describes the actions that can be performed as Connect
  * requests.
  *
+ * \value CreateUserAction Connect CreateUser action.
+ * \value DeleteUserAction Connect DeleteUser action.
+ * \value DescribeUserAction Connect DescribeUser action.
+ * \value DescribeUserHierarchyGroupAction Connect DescribeUserHierarchyGroup action.
+ * \value DescribeUserHierarchyStructureAction Connect DescribeUserHierarchyStructure action.
+ * \value GetContactAttributesAction Connect GetContactAttributes action.
+ * \value GetCurrentMetricDataAction Connect GetCurrentMetricData action.
+ * \value GetFederationTokenAction Connect GetFederationToken action.
+ * \value GetMetricDataAction Connect GetMetricData action.
+ * \value ListRoutingProfilesAction Connect ListRoutingProfiles action.
+ * \value ListSecurityProfilesAction Connect ListSecurityProfiles action.
+ * \value ListUserHierarchyGroupsAction Connect ListUserHierarchyGroups action.
+ * \value ListUsersAction Connect ListUsers action.
  * \value StartOutboundVoiceContactAction Connect StartOutboundVoiceContact action.
  * \value StopContactAction Connect StopContact action.
+ * \value UpdateContactAttributesAction Connect UpdateContactAttributes action.
+ * \value UpdateUserHierarchyAction Connect UpdateUserHierarchy action.
+ * \value UpdateUserIdentityInfoAction Connect UpdateUserIdentityInfo action.
+ * \value UpdateUserPhoneConfigAction Connect UpdateUserPhoneConfig action.
+ * \value UpdateUserRoutingProfileAction Connect UpdateUserRoutingProfile action.
+ * \value UpdateUserSecurityProfilesAction Connect UpdateUserSecurityProfiles action.
  */
 
 /*!

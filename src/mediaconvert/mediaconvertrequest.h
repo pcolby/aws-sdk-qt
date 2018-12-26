@@ -37,6 +37,7 @@ class QTAWS_EXPORT MediaConvertRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by MediaConvert.
     enum Action {
+        AssociateCertificateAction,
         CancelJobAction,
         CreateJobAction,
         CreateJobTemplateAction,
@@ -46,6 +47,7 @@ public:
         DeletePresetAction,
         DeleteQueueAction,
         DescribeEndpointsAction,
+        DisassociateCertificateAction,
         GetJobAction,
         GetJobTemplateAction,
         GetPresetAction,

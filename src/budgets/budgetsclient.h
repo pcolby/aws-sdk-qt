@@ -42,6 +42,8 @@ class DeleteSubscriberRequest;
 class DeleteSubscriberResponse;
 class DescribeBudgetRequest;
 class DescribeBudgetResponse;
+class DescribeBudgetPerformanceHistoryRequest;
+class DescribeBudgetPerformanceHistoryResponse;
 class DescribeBudgetsRequest;
 class DescribeBudgetsResponse;
 class DescribeNotificationsForBudgetRequest;
@@ -78,6 +80,7 @@ public slots:
     DeleteNotificationResponse * deleteNotification(const DeleteNotificationRequest &request);
     DeleteSubscriberResponse * deleteSubscriber(const DeleteSubscriberRequest &request);
     DescribeBudgetResponse * describeBudget(const DescribeBudgetRequest &request);
+    DescribeBudgetPerformanceHistoryResponse * describeBudgetPerformanceHistory(const DescribeBudgetPerformanceHistoryRequest &request);
     DescribeBudgetsResponse * describeBudgets(const DescribeBudgetsRequest &request);
     DescribeNotificationsForBudgetResponse * describeNotificationsForBudget(const DescribeNotificationsForBudgetRequest &request);
     DescribeSubscribersForNotificationResponse * describeSubscribersForNotification(const DescribeSubscribersForNotificationRequest &request);

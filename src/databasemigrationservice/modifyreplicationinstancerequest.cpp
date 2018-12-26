@@ -40,8 +40,8 @@ namespace DatabaseMigrationService {
  * 
  *  PostgreSQL>
  * 
- *  For more information about AWS DMS, see the AWS DMS user guide at <a
- *  href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> What Is AWS Database Migration Service? </a>
+ *  For more information about AWS DMS, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
+ *  AWS Database Migration Service?</a> in the <i>AWS Database Migration User Guide.</i>
  *
  * \sa DatabaseMigrationServiceClient::modifyReplicationInstance
  */

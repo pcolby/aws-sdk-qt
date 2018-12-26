@@ -52,6 +52,10 @@ HEADERS += \
     listcompliancestatusrequest_p.h \
     listcompliancestatusresponse.h \
     listcompliancestatusresponse_p.h \
+    listmemberaccountsrequest.h \
+    listmemberaccountsrequest_p.h \
+    listmemberaccountsresponse.h \
+    listmemberaccountsresponse_p.h \
     listpoliciesrequest.h \
     listpoliciesrequest_p.h \
     listpoliciesresponse.h \
@@ -87,6 +91,8 @@ SOURCES += \
     getpolicyresponse.cpp \
     listcompliancestatusrequest.cpp \
     listcompliancestatusresponse.cpp \
+    listmemberaccountsrequest.cpp \
+    listmemberaccountsresponse.cpp \
     listpoliciesrequest.cpp \
     listpoliciesresponse.cpp \
     putnotificationchannelrequest.cpp \

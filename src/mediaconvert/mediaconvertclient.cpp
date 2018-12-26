@@ -21,6 +21,8 @@
 #include "mediaconvertclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associatecertificaterequest.h"
+#include "associatecertificateresponse.h"
 #include "canceljobrequest.h"
 #include "canceljobresponse.h"
 #include "createjobrequest.h"
@@ -39,6 +41,8 @@
 #include "deletequeueresponse.h"
 #include "describeendpointsrequest.h"
 #include "describeendpointsresponse.h"
+#include "disassociatecertificaterequest.h"
+#include "disassociatecertificateresponse.h"
 #include "getjobrequest.h"
 #include "getjobresponse.h"
 #include "getjobtemplaterequest.h"
@@ -147,6 +151,18 @@ MediaConvertClient::MediaConvertClient(
 
 /*!
  * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * AssociateCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+AssociateCertificateResponse * MediaConvertClient::associateCertificate(const AssociateCertificateRequest &request)
+{
+    return qobject_cast<AssociateCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
  * CancelJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -203,7 +219,7 @@ CreatePresetResponse * MediaConvertClient::createPreset(const CreatePresetReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a new transcoding queue. For information about job templates see the User Guide at
+ * Create a new transcoding queue. For information about queues, see Working With Queues in the User Guide at
  */
 CreateQueueResponse * MediaConvertClient::createQueue(const CreateQueueRequest &request)
 {
@@ -256,6 +272,19 @@ DeleteQueueResponse * MediaConvertClient::deleteQueue(const DeleteQueueRequest &
 DescribeEndpointsResponse * MediaConvertClient::describeEndpoints(const DescribeEndpointsRequest &request)
 {
     return qobject_cast<DescribeEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaConvertClient service, and returns a pointer to an
+ * DisassociateCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an association between the Amazon Resource Name (ARN) of an AWS Certificate Manager (ACM) certificate and an AWS
+ */
+DisassociateCertificateResponse * MediaConvertClient::disassociateCertificate(const DisassociateCertificateRequest &request)
+{
+    return qobject_cast<DisassociateCertificateResponse *>(send(request));
 }
 
 /*!
@@ -377,7 +406,7 @@ ListTagsForResourceResponse * MediaConvertClient::listTagsForResource(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Tag a MediaConvert queue, preset, or job template. For information about these resource types, see the User Guide at
+ * Add tags to a MediaConvert queue, preset, or job template. For information about tagging, see the User Guide at
  */
 TagResourceResponse * MediaConvertClient::tagResource(const TagResourceRequest &request)
 {
@@ -390,7 +419,7 @@ TagResourceResponse * MediaConvertClient::tagResource(const TagResourceRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Untag a MediaConvert queue, preset, or job template. For information about these resource types, see the User Guide at
+ * Remove tags from a MediaConvert queue, preset, or job template. For information about tagging, see the User Guide at
  */
 UntagResourceResponse * MediaConvertClient::untagResource(const UntagResourceRequest &request)
 {

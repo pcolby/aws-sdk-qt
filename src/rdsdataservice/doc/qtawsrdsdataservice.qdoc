@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsRDSDataService
+    \title RDSDataService C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS RDSDataService functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

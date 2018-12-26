@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    batchgetaggregateresourceconfigrequest.h \
+    batchgetaggregateresourceconfigrequest_p.h \
+    batchgetaggregateresourceconfigresponse.h \
+    batchgetaggregateresourceconfigresponse_p.h \
     batchgetresourceconfigrequest.h \
     batchgetresourceconfigrequest_p.h \
     batchgetresourceconfigresponse.h \
@@ -120,6 +124,14 @@ HEADERS += \
     getaggregateconfigrulecompliancesummaryrequest_p.h \
     getaggregateconfigrulecompliancesummaryresponse.h \
     getaggregateconfigrulecompliancesummaryresponse_p.h \
+    getaggregatediscoveredresourcecountsrequest.h \
+    getaggregatediscoveredresourcecountsrequest_p.h \
+    getaggregatediscoveredresourcecountsresponse.h \
+    getaggregatediscoveredresourcecountsresponse_p.h \
+    getaggregateresourceconfigrequest.h \
+    getaggregateresourceconfigrequest_p.h \
+    getaggregateresourceconfigresponse.h \
+    getaggregateresourceconfigresponse_p.h \
     getcompliancedetailsbyconfigrulerequest.h \
     getcompliancedetailsbyconfigrulerequest_p.h \
     getcompliancedetailsbyconfigruleresponse.h \
@@ -144,6 +156,10 @@ HEADERS += \
     getresourceconfighistoryrequest_p.h \
     getresourceconfighistoryresponse.h \
     getresourceconfighistoryresponse_p.h \
+    listaggregatediscoveredresourcesrequest.h \
+    listaggregatediscoveredresourcesrequest_p.h \
+    listaggregatediscoveredresourcesresponse.h \
+    listaggregatediscoveredresourcesresponse_p.h \
     listdiscoveredresourcesrequest.h \
     listdiscoveredresourcesrequest_p.h \
     listdiscoveredresourcesresponse.h \
@@ -190,6 +206,8 @@ HEADERS += \
     stopconfigurationrecorderresponse_p.h \
 
 SOURCES += \
+    batchgetaggregateresourceconfigrequest.cpp \
+    batchgetaggregateresourceconfigresponse.cpp \
     batchgetresourceconfigrequest.cpp \
     batchgetresourceconfigresponse.cpp \
     configserviceclient.cpp \
@@ -245,6 +263,10 @@ SOURCES += \
     getaggregatecompliancedetailsbyconfigruleresponse.cpp \
     getaggregateconfigrulecompliancesummaryrequest.cpp \
     getaggregateconfigrulecompliancesummaryresponse.cpp \
+    getaggregatediscoveredresourcecountsrequest.cpp \
+    getaggregatediscoveredresourcecountsresponse.cpp \
+    getaggregateresourceconfigrequest.cpp \
+    getaggregateresourceconfigresponse.cpp \
     getcompliancedetailsbyconfigrulerequest.cpp \
     getcompliancedetailsbyconfigruleresponse.cpp \
     getcompliancedetailsbyresourcerequest.cpp \
@@ -257,6 +279,8 @@ SOURCES += \
     getdiscoveredresourcecountsresponse.cpp \
     getresourceconfighistoryrequest.cpp \
     getresourceconfighistoryresponse.cpp \
+    listaggregatediscoveredresourcesrequest.cpp \
+    listaggregatediscoveredresourcesresponse.cpp \
     listdiscoveredresourcesrequest.cpp \
     listdiscoveredresourcesresponse.cpp \
     putaggregationauthorizationrequest.cpp \

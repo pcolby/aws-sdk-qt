@@ -130,6 +130,7 @@ public:
         UpdateUserAttributesAction,
         UpdateUserPoolAction,
         UpdateUserPoolClientAction,
+        UpdateUserPoolDomainAction,
         VerifySoftwareTokenAction,
         VerifyUserAttributeAction,
     };

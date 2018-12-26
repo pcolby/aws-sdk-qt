@@ -16,6 +16,10 @@ HEADERS += \
     cloudhsmv2request_p.h \
     cloudhsmv2response.h \
     cloudhsmv2response_p.h \
+    copybackuptoregionrequest.h \
+    copybackuptoregionrequest_p.h \
+    copybackuptoregionresponse.h \
+    copybackuptoregionresponse_p.h \
     createclusterrequest.h \
     createclusterrequest_p.h \
     createclusterresponse.h \
@@ -24,6 +28,10 @@ HEADERS += \
     createhsmrequest_p.h \
     createhsmresponse.h \
     createhsmresponse_p.h \
+    deletebackuprequest.h \
+    deletebackuprequest_p.h \
+    deletebackupresponse.h \
+    deletebackupresponse_p.h \
     deleteclusterrequest.h \
     deleteclusterrequest_p.h \
     deleteclusterresponse.h \
@@ -48,6 +56,10 @@ HEADERS += \
     listtagsrequest_p.h \
     listtagsresponse.h \
     listtagsresponse_p.h \
+    restorebackuprequest.h \
+    restorebackuprequest_p.h \
+    restorebackupresponse.h \
+    restorebackupresponse_p.h \
     tagresourcerequest.h \
     tagresourcerequest_p.h \
     tagresourceresponse.h \
@@ -61,10 +73,14 @@ SOURCES += \
     cloudhsmv2client.cpp \
     cloudhsmv2request.cpp \
     cloudhsmv2response.cpp \
+    copybackuptoregionrequest.cpp \
+    copybackuptoregionresponse.cpp \
     createclusterrequest.cpp \
     createclusterresponse.cpp \
     createhsmrequest.cpp \
     createhsmresponse.cpp \
+    deletebackuprequest.cpp \
+    deletebackupresponse.cpp \
     deleteclusterrequest.cpp \
     deleteclusterresponse.cpp \
     deletehsmrequest.cpp \
@@ -77,6 +93,8 @@ SOURCES += \
     initializeclusterresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
+    restorebackuprequest.cpp \
+    restorebackupresponse.cpp \
     tagresourcerequest.cpp \
     tagresourceresponse.cpp \
     untagresourcerequest.cpp \

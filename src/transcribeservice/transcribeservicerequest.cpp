@@ -37,6 +37,7 @@ namespace TranscribeService {
  * requests.
  *
  * \value CreateVocabularyAction TranscribeService CreateVocabulary action.
+ * \value DeleteTranscriptionJobAction TranscribeService DeleteTranscriptionJob action.
  * \value DeleteVocabularyAction TranscribeService DeleteVocabulary action.
  * \value GetTranscriptionJobAction TranscribeService GetTranscriptionJob action.
  * \value GetVocabularyAction TranscribeService GetVocabulary action.

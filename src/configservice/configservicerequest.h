@@ -37,6 +37,7 @@ class QTAWS_EXPORT ConfigServiceRequest : public QtAws::Core::AwsAbstractRequest
 public:
     /// Actions supported by ConfigService.
     enum Action {
+        BatchGetAggregateResourceConfigAction,
         BatchGetResourceConfigAction,
         DeleteAggregationAuthorizationAction,
         DeleteConfigRuleAction,
@@ -63,12 +64,15 @@ public:
         DescribeRetentionConfigurationsAction,
         GetAggregateComplianceDetailsByConfigRuleAction,
         GetAggregateConfigRuleComplianceSummaryAction,
+        GetAggregateDiscoveredResourceCountsAction,
+        GetAggregateResourceConfigAction,
         GetComplianceDetailsByConfigRuleAction,
         GetComplianceDetailsByResourceAction,
         GetComplianceSummaryByConfigRuleAction,
         GetComplianceSummaryByResourceTypeAction,
         GetDiscoveredResourceCountsAction,
         GetResourceConfigHistoryAction,
+        ListAggregateDiscoveredResourcesAction,
         ListDiscoveredResourcesAction,
         PutAggregationAuthorizationAction,
         PutConfigRuleAction,

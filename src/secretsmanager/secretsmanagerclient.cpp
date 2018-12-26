@@ -228,9 +228,9 @@ SecretsManagerClient::SecretsManagerClient(
  *
  * If you cancel a rotation that is in progress, it can leave the <code>VersionStage</code> labels in an unexpected state.
  * Depending on what step of the rotation was in progress, you might need to remove the staging label
- * <code>AWSPENDING</code> from the partially created version, specified by the <code>SecretVersionId</code> response
- * value. You should also evaluate the partially rotated new version to see if it should be deleted, which you can do by
- * removing all staging labels from the new version's <code>VersionStage</code>
+ * <code>AWSPENDING</code> from the partially created version, specified by the <code>VersionId</code> response value. You
+ * should also evaluate the partially rotated new version to see if it should be deleted, which you can do by removing all
+ * staging labels from the new version's <code>VersionStage</code>
  *
  * field> </note>
  *
@@ -313,9 +313,10 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
  * a secret in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets
  * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
- * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
- * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and
+ * roles in the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call
+ * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
+ * returning the
  *
  * result> </li> <li>
  *
@@ -350,7 +351,11 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  * kms:Decrypt - needed only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
  * permission to use the account's default AWS managed CMK for Secrets
  *
- * Manager> </li> </ul>
+ * Manager> </li> <li>
+ *
+ * secretsmanager:TagResource - needed only if you include the <code>Tags</code> parameter.
+ *
+ * </p </li> </ul>
  *
  * <b>Related operations</b>
  *
@@ -795,7 +800,7 @@ PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutRes
  *
  * from> </li> <li>
  *
- * This operation is idempotent. If a version with a <code>SecretVersionId</code> with the same value as the
+ * This operation is idempotent. If a version with a <code>VersionId</code> with the same value as the
  * <code>ClientRequestToken</code> parameter already exists and you specify the same secret data, the operation succeeds
  * but does nothing. However, if the secret data is different, then the operation fails because you cannot modify an
  * existing version; you can only create new
@@ -805,9 +810,10 @@ PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutRes
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
  * a secret in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets
  * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
- * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
- * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and
+ * roles in the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call
+ * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
+ * returning the
  *
  * result> </li> <li>
  *
@@ -913,6 +919,13 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
  * Manager</a> in the <i>AWS Secrets Manager User
  *
  * Guide</i>>
+ *
+ * Secrets Manager schedules the next rotation when the previous one is complete. Secrets Manager schedules the date by
+ * adding the rotation interval (number of days) to the actual date of the last rotation. The service chooses the hour
+ * within that 24-hour date window randomly. The minute is also chosen somewhat randomly, but weighted towards the top of
+ * the hour and influenced by a variety of factors that help distribute
+ *
+ * load>
  *
  * The rotation function must end with the versions of the secret in one of two
  *
@@ -1095,7 +1108,7 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies many of the details of a secret. If you include a <code>ClientRequestToken</code> and either
+ * Modifies many of the details of the specified secret. If you include a <code>ClientRequestToken</code> and <i>either</i>
  * <code>SecretString</code> or <code>SecretBinary</code> then it also creates a new version attached to the
  *
  * secret>
@@ -1110,10 +1123,10 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * SDKs> </note> <ul> <li>
  *
- * If a version with a <code>SecretVersionId</code> with the same value as the <code>ClientRequestToken</code> parameter
- * already exists, the operation generates an error. You cannot modify an existing version, you can only create new
+ * If a version with a <code>VersionId</code> with the same value as the <code>ClientRequestToken</code> parameter already
+ * exists, the operation results in an error. You cannot modify an existing version, you can only create a new
  *
- * ones> </li> <li>
+ * version> </li> <li>
  *
  * If you include <code>SecretString</code> or <code>SecretBinary</code> to create a new secret version, Secrets Manager
  * automatically attaches the staging label <code>AWSCURRENT</code> to the new version.
@@ -1123,9 +1136,10 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
  * a secret in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets
  * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
- * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
- * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
+ * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and
+ * roles in the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call
+ * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
+ * returning the
  *
  * result> </li> <li>
  *

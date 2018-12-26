@@ -38,6 +38,8 @@ namespace Greengrass {
  *
  * \value AssociateRoleToGroupAction Greengrass AssociateRoleToGroup action.
  * \value AssociateServiceRoleToAccountAction Greengrass AssociateServiceRoleToAccount action.
+ * \value CreateConnectorDefinitionAction Greengrass CreateConnectorDefinition action.
+ * \value CreateConnectorDefinitionVersionAction Greengrass CreateConnectorDefinitionVersion action.
  * \value CreateCoreDefinitionAction Greengrass CreateCoreDefinition action.
  * \value CreateCoreDefinitionVersionAction Greengrass CreateCoreDefinitionVersion action.
  * \value CreateDeploymentAction Greengrass CreateDeployment action.
@@ -55,6 +57,7 @@ namespace Greengrass {
  * \value CreateSoftwareUpdateJobAction Greengrass CreateSoftwareUpdateJob action.
  * \value CreateSubscriptionDefinitionAction Greengrass CreateSubscriptionDefinition action.
  * \value CreateSubscriptionDefinitionVersionAction Greengrass CreateSubscriptionDefinitionVersion action.
+ * \value DeleteConnectorDefinitionAction Greengrass DeleteConnectorDefinition action.
  * \value DeleteCoreDefinitionAction Greengrass DeleteCoreDefinition action.
  * \value DeleteDeviceDefinitionAction Greengrass DeleteDeviceDefinition action.
  * \value DeleteFunctionDefinitionAction Greengrass DeleteFunctionDefinition action.
@@ -65,7 +68,10 @@ namespace Greengrass {
  * \value DisassociateRoleFromGroupAction Greengrass DisassociateRoleFromGroup action.
  * \value DisassociateServiceRoleFromAccountAction Greengrass DisassociateServiceRoleFromAccount action.
  * \value GetAssociatedRoleAction Greengrass GetAssociatedRole action.
+ * \value GetBulkDeploymentStatusAction Greengrass GetBulkDeploymentStatus action.
  * \value GetConnectivityInfoAction Greengrass GetConnectivityInfo action.
+ * \value GetConnectorDefinitionAction Greengrass GetConnectorDefinition action.
+ * \value GetConnectorDefinitionVersionAction Greengrass GetConnectorDefinitionVersion action.
  * \value GetCoreDefinitionAction Greengrass GetCoreDefinition action.
  * \value GetCoreDefinitionVersionAction Greengrass GetCoreDefinitionVersion action.
  * \value GetDeploymentStatusAction Greengrass GetDeploymentStatus action.
@@ -84,6 +90,10 @@ namespace Greengrass {
  * \value GetServiceRoleForAccountAction Greengrass GetServiceRoleForAccount action.
  * \value GetSubscriptionDefinitionAction Greengrass GetSubscriptionDefinition action.
  * \value GetSubscriptionDefinitionVersionAction Greengrass GetSubscriptionDefinitionVersion action.
+ * \value ListBulkDeploymentDetailedReportsAction Greengrass ListBulkDeploymentDetailedReports action.
+ * \value ListBulkDeploymentsAction Greengrass ListBulkDeployments action.
+ * \value ListConnectorDefinitionVersionsAction Greengrass ListConnectorDefinitionVersions action.
+ * \value ListConnectorDefinitionsAction Greengrass ListConnectorDefinitions action.
  * \value ListCoreDefinitionVersionsAction Greengrass ListCoreDefinitionVersions action.
  * \value ListCoreDefinitionsAction Greengrass ListCoreDefinitions action.
  * \value ListDeploymentsAction Greengrass ListDeployments action.
@@ -101,7 +111,10 @@ namespace Greengrass {
  * \value ListSubscriptionDefinitionVersionsAction Greengrass ListSubscriptionDefinitionVersions action.
  * \value ListSubscriptionDefinitionsAction Greengrass ListSubscriptionDefinitions action.
  * \value ResetDeploymentsAction Greengrass ResetDeployments action.
+ * \value StartBulkDeploymentAction Greengrass StartBulkDeployment action.
+ * \value StopBulkDeploymentAction Greengrass StopBulkDeployment action.
  * \value UpdateConnectivityInfoAction Greengrass UpdateConnectivityInfo action.
+ * \value UpdateConnectorDefinitionAction Greengrass UpdateConnectorDefinition action.
  * \value UpdateCoreDefinitionAction Greengrass UpdateCoreDefinition action.
  * \value UpdateDeviceDefinitionAction Greengrass UpdateDeviceDefinition action.
  * \value UpdateFunctionDefinitionAction Greengrass UpdateFunctionDefinition action.

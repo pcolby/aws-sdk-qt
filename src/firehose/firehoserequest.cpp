@@ -43,6 +43,8 @@ namespace Firehose {
  * \value ListTagsForDeliveryStreamAction Firehose ListTagsForDeliveryStream action.
  * \value PutRecordAction Firehose PutRecord action.
  * \value PutRecordBatchAction Firehose PutRecordBatch action.
+ * \value StartDeliveryStreamEncryptionAction Firehose StartDeliveryStreamEncryption action.
+ * \value StopDeliveryStreamEncryptionAction Firehose StopDeliveryStreamEncryption action.
  * \value TagDeliveryStreamAction Firehose TagDeliveryStream action.
  * \value UntagDeliveryStreamAction Firehose UntagDeliveryStream action.
  * \value UpdateDestinationAction Firehose UpdateDestination action.

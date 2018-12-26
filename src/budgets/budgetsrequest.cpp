@@ -43,6 +43,7 @@ namespace Budgets {
  * \value DeleteNotificationAction Budgets DeleteNotification action.
  * \value DeleteSubscriberAction Budgets DeleteSubscriber action.
  * \value DescribeBudgetAction Budgets DescribeBudget action.
+ * \value DescribeBudgetPerformanceHistoryAction Budgets DescribeBudgetPerformanceHistory action.
  * \value DescribeBudgetsAction Budgets DescribeBudgets action.
  * \value DescribeNotificationsForBudgetAction Budgets DescribeNotificationsForBudget action.
  * \value DescribeSubscribersForNotificationAction Budgets DescribeSubscribersForNotification action.

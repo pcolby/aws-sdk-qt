@@ -26,10 +26,18 @@ HEADERS += \
     deletestreamrequest_p.h \
     deletestreamresponse.h \
     deletestreamresponse_p.h \
+    deregisterstreamconsumerrequest.h \
+    deregisterstreamconsumerrequest_p.h \
+    deregisterstreamconsumerresponse.h \
+    deregisterstreamconsumerresponse_p.h \
     describelimitsrequest.h \
     describelimitsrequest_p.h \
     describelimitsresponse.h \
     describelimitsresponse_p.h \
+    describestreamconsumerrequest.h \
+    describestreamconsumerrequest_p.h \
+    describestreamconsumerresponse.h \
+    describestreamconsumerresponse_p.h \
     describestreamrequest.h \
     describestreamrequest_p.h \
     describestreamresponse.h \
@@ -68,6 +76,10 @@ HEADERS += \
     listshardsrequest_p.h \
     listshardsresponse.h \
     listshardsresponse_p.h \
+    liststreamconsumersrequest.h \
+    liststreamconsumersrequest_p.h \
+    liststreamconsumersresponse.h \
+    liststreamconsumersresponse_p.h \
     liststreamsrequest.h \
     liststreamsrequest_p.h \
     liststreamsresponse.h \
@@ -88,6 +100,10 @@ HEADERS += \
     putrecordsrequest_p.h \
     putrecordsresponse.h \
     putrecordsresponse_p.h \
+    registerstreamconsumerrequest.h \
+    registerstreamconsumerrequest_p.h \
+    registerstreamconsumerresponse.h \
+    registerstreamconsumerresponse_p.h \
     removetagsfromstreamrequest.h \
     removetagsfromstreamrequest_p.h \
     removetagsfromstreamresponse.h \
@@ -104,6 +120,10 @@ HEADERS += \
     stopstreamencryptionrequest_p.h \
     stopstreamencryptionresponse.h \
     stopstreamencryptionresponse_p.h \
+    subscribetoshardrequest.h \
+    subscribetoshardrequest_p.h \
+    subscribetoshardresponse.h \
+    subscribetoshardresponse_p.h \
     updateshardcountrequest.h \
     updateshardcountrequest_p.h \
     updateshardcountresponse.h \
@@ -118,8 +138,12 @@ SOURCES += \
     decreasestreamretentionperiodresponse.cpp \
     deletestreamrequest.cpp \
     deletestreamresponse.cpp \
+    deregisterstreamconsumerrequest.cpp \
+    deregisterstreamconsumerresponse.cpp \
     describelimitsrequest.cpp \
     describelimitsresponse.cpp \
+    describestreamconsumerrequest.cpp \
+    describestreamconsumerresponse.cpp \
     describestreamrequest.cpp \
     describestreamresponse.cpp \
     describestreamsummaryrequest.cpp \
@@ -139,6 +163,8 @@ SOURCES += \
     kinesisresponse.cpp \
     listshardsrequest.cpp \
     listshardsresponse.cpp \
+    liststreamconsumersrequest.cpp \
+    liststreamconsumersresponse.cpp \
     liststreamsrequest.cpp \
     liststreamsresponse.cpp \
     listtagsforstreamrequest.cpp \
@@ -149,6 +175,8 @@ SOURCES += \
     putrecordresponse.cpp \
     putrecordsrequest.cpp \
     putrecordsresponse.cpp \
+    registerstreamconsumerrequest.cpp \
+    registerstreamconsumerresponse.cpp \
     removetagsfromstreamrequest.cpp \
     removetagsfromstreamresponse.cpp \
     splitshardrequest.cpp \
@@ -157,6 +185,8 @@ SOURCES += \
     startstreamencryptionresponse.cpp \
     stopstreamencryptionrequest.cpp \
     stopstreamencryptionresponse.cpp \
+    subscribetoshardrequest.cpp \
+    subscribetoshardresponse.cpp \
     updateshardcountrequest.cpp \
     updateshardcountresponse.cpp \
 

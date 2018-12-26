@@ -45,6 +45,7 @@ namespace MediaPackage {
  * \value ListChannelsAction MediaPackage ListChannels action.
  * \value ListOriginEndpointsAction MediaPackage ListOriginEndpoints action.
  * \value RotateChannelCredentialsAction MediaPackage RotateChannelCredentials action.
+ * \value RotateIngestEndpointCredentialsAction MediaPackage RotateIngestEndpointCredentials action.
  * \value UpdateChannelAction MediaPackage UpdateChannel action.
  * \value UpdateOriginEndpointAction MediaPackage UpdateOriginEndpoint action.
  */

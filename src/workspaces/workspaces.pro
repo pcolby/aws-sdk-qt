@@ -38,6 +38,22 @@ HEADERS += \
     deletetagsrequest_p.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
+    deleteworkspaceimagerequest.h \
+    deleteworkspaceimagerequest_p.h \
+    deleteworkspaceimageresponse.h \
+    deleteworkspaceimageresponse_p.h \
+    describeaccountmodificationsrequest.h \
+    describeaccountmodificationsrequest_p.h \
+    describeaccountmodificationsresponse.h \
+    describeaccountmodificationsresponse_p.h \
+    describeaccountrequest.h \
+    describeaccountrequest_p.h \
+    describeaccountresponse.h \
+    describeaccountresponse_p.h \
+    describeclientpropertiesrequest.h \
+    describeclientpropertiesrequest_p.h \
+    describeclientpropertiesresponse.h \
+    describeclientpropertiesresponse_p.h \
     describeipgroupsrequest.h \
     describeipgroupsrequest_p.h \
     describeipgroupsresponse.h \
@@ -54,6 +70,10 @@ HEADERS += \
     describeworkspacedirectoriesrequest_p.h \
     describeworkspacedirectoriesresponse.h \
     describeworkspacedirectoriesresponse_p.h \
+    describeworkspaceimagesrequest.h \
+    describeworkspaceimagesrequest_p.h \
+    describeworkspaceimagesresponse.h \
+    describeworkspaceimagesresponse_p.h \
     describeworkspacesconnectionstatusrequest.h \
     describeworkspacesconnectionstatusrequest_p.h \
     describeworkspacesconnectionstatusresponse.h \
@@ -66,6 +86,22 @@ HEADERS += \
     disassociateipgroupsrequest_p.h \
     disassociateipgroupsresponse.h \
     disassociateipgroupsresponse_p.h \
+    importworkspaceimagerequest.h \
+    importworkspaceimagerequest_p.h \
+    importworkspaceimageresponse.h \
+    importworkspaceimageresponse_p.h \
+    listavailablemanagementcidrrangesrequest.h \
+    listavailablemanagementcidrrangesrequest_p.h \
+    listavailablemanagementcidrrangesresponse.h \
+    listavailablemanagementcidrrangesresponse_p.h \
+    modifyaccountrequest.h \
+    modifyaccountrequest_p.h \
+    modifyaccountresponse.h \
+    modifyaccountresponse_p.h \
+    modifyclientpropertiesrequest.h \
+    modifyclientpropertiesrequest_p.h \
+    modifyclientpropertiesresponse.h \
+    modifyclientpropertiesresponse_p.h \
     modifyworkspacepropertiesrequest.h \
     modifyworkspacepropertiesrequest_p.h \
     modifyworkspacepropertiesresponse.h \
@@ -124,6 +160,14 @@ SOURCES += \
     deleteipgroupresponse.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
+    deleteworkspaceimagerequest.cpp \
+    deleteworkspaceimageresponse.cpp \
+    describeaccountmodificationsrequest.cpp \
+    describeaccountmodificationsresponse.cpp \
+    describeaccountrequest.cpp \
+    describeaccountresponse.cpp \
+    describeclientpropertiesrequest.cpp \
+    describeclientpropertiesresponse.cpp \
     describeipgroupsrequest.cpp \
     describeipgroupsresponse.cpp \
     describetagsrequest.cpp \
@@ -132,12 +176,22 @@ SOURCES += \
     describeworkspacebundlesresponse.cpp \
     describeworkspacedirectoriesrequest.cpp \
     describeworkspacedirectoriesresponse.cpp \
+    describeworkspaceimagesrequest.cpp \
+    describeworkspaceimagesresponse.cpp \
     describeworkspacesconnectionstatusrequest.cpp \
     describeworkspacesconnectionstatusresponse.cpp \
     describeworkspacesrequest.cpp \
     describeworkspacesresponse.cpp \
     disassociateipgroupsrequest.cpp \
     disassociateipgroupsresponse.cpp \
+    importworkspaceimagerequest.cpp \
+    importworkspaceimageresponse.cpp \
+    listavailablemanagementcidrrangesrequest.cpp \
+    listavailablemanagementcidrrangesresponse.cpp \
+    modifyaccountrequest.cpp \
+    modifyaccountresponse.cpp \
+    modifyclientpropertiesrequest.cpp \
+    modifyclientpropertiesresponse.cpp \
     modifyworkspacepropertiesrequest.cpp \
     modifyworkspacepropertiesresponse.cpp \
     modifyworkspacestaterequest.cpp \

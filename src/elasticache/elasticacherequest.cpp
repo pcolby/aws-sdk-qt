@@ -45,6 +45,7 @@ namespace ElastiCache {
  * \value CreateCacheSubnetGroupAction ElastiCache CreateCacheSubnetGroup action.
  * \value CreateReplicationGroupAction ElastiCache CreateReplicationGroup action.
  * \value CreateSnapshotAction ElastiCache CreateSnapshot action.
+ * \value DecreaseReplicaCountAction ElastiCache DecreaseReplicaCount action.
  * \value DeleteCacheClusterAction ElastiCache DeleteCacheCluster action.
  * \value DeleteCacheParameterGroupAction ElastiCache DeleteCacheParameterGroup action.
  * \value DeleteCacheSecurityGroupAction ElastiCache DeleteCacheSecurityGroup action.
@@ -63,6 +64,7 @@ namespace ElastiCache {
  * \value DescribeReservedCacheNodesAction ElastiCache DescribeReservedCacheNodes action.
  * \value DescribeReservedCacheNodesOfferingsAction ElastiCache DescribeReservedCacheNodesOfferings action.
  * \value DescribeSnapshotsAction ElastiCache DescribeSnapshots action.
+ * \value IncreaseReplicaCountAction ElastiCache IncreaseReplicaCount action.
  * \value ListAllowedNodeTypeModificationsAction ElastiCache ListAllowedNodeTypeModifications action.
  * \value ListTagsForResourceAction ElastiCache ListTagsForResource action.
  * \value ModifyCacheClusterAction ElastiCache ModifyCacheCluster action.

@@ -50,11 +50,14 @@ public:
         ListActivitiesAction,
         ListExecutionsAction,
         ListStateMachinesAction,
+        ListTagsForResourceAction,
         SendTaskFailureAction,
         SendTaskHeartbeatAction,
         SendTaskSuccessAction,
         StartExecutionAction,
         StopExecutionAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateStateMachineAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

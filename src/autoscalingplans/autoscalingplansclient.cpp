@@ -29,6 +29,8 @@
 #include "describescalingplanresourcesresponse.h"
 #include "describescalingplansrequest.h"
 #include "describescalingplansresponse.h"
+#include "getscalingplanresourceforecastdatarequest.h"
+#include "getscalingplanresourceforecastdataresponse.h"
 #include "updatescalingplanrequest.h"
 #include "updatescalingplanresponse.h"
 
@@ -57,14 +59,17 @@ namespace AutoScalingPlans {
  *  <fullname>AWS Auto Scaling</fullname>
  * 
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
- *  scaling for your scalable
+ *  scaling and predictive scaling for your resources using scaling plans. Use this service in conjunction with the Amazon
+ *  EC2 Auto Scaling, Application Auto Scaling, Amazon CloudWatch, and AWS CloudFormation services.
  * 
- *  resources>
+ *  </p
  * 
- *  To get started, create a scaling plan with a set of instructions used to configure dynamic scaling for the scalable
- *  resources in your application. AWS Auto Scaling creates target tracking scaling policies for the scalable resources in
- *  your scaling plan. Target tracking scaling policies adjust the capacity of your scalable resource as required to
- *  maintain resource utilization at the target value that you
+ *  Currently, predictive scaling is only available for Amazon EC2 Auto Scaling
+ * 
+ *  groups>
+ * 
+ *  For more information about AWS Auto Scaling, see the <a
+ *  href="http://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html">AWS Auto Scaling User
  */
 
 /*!
@@ -127,11 +132,6 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a scaling
- *
- * plan>
- *
- * A scaling plan contains a set of instructions used to configure dynamic scaling for the scalable resources in your
- * application. AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions in your scaling
  */
 CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const CreateScalingPlanRequest &request)
 {
@@ -145,6 +145,15 @@ CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const Crea
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified scaling
+ *
+ * plan>
+ *
+ * Deleting a scaling plan deletes the underlying <a>ScalingInstruction</a> for all of the scalable resources that are
+ * covered by the
+ *
+ * plan>
+ *
+ * If the plan has launched resources or has scaling activities in progress, you must delete those resources
  */
 DeleteScalingPlanResponse * AutoScalingPlansClient::deleteScalingPlan(const DeleteScalingPlanRequest &request)
 {
@@ -170,7 +179,7 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified scaling plans or all of your scaling
+ * Describes one or more of your scaling
  */
 DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(const DescribeScalingPlansRequest &request)
 {
@@ -179,11 +188,29 @@ DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(cons
 
 /*!
  * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
+ * GetScalingPlanResourceForecastDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the forecast data for a scalable
+ *
+ * resource>
+ *
+ * Capacity forecasts are represented as predicted values, or data points, that are calculated using historical data points
+ * from a specified CloudWatch load metric. Data points are available for up to 56 days.
+ */
+GetScalingPlanResourceForecastDataResponse * AutoScalingPlansClient::getScalingPlanResourceForecastData(const GetScalingPlanResourceForecastDataRequest &request)
+{
+    return qobject_cast<GetScalingPlanResourceForecastDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
  * UpdateScalingPlanResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the scaling plan for the specified scaling
+ * Updates the specified scaling
  *
  * plan>
  *

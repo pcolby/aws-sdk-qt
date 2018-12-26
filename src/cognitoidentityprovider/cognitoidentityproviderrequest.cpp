@@ -129,6 +129,7 @@ namespace CognitoIdentityProvider {
  * \value UpdateUserAttributesAction CognitoIdentityProvider UpdateUserAttributes action.
  * \value UpdateUserPoolAction CognitoIdentityProvider UpdateUserPool action.
  * \value UpdateUserPoolClientAction CognitoIdentityProvider UpdateUserPoolClient action.
+ * \value UpdateUserPoolDomainAction CognitoIdentityProvider UpdateUserPoolDomain action.
  * \value VerifySoftwareTokenAction CognitoIdentityProvider VerifySoftwareToken action.
  * \value VerifyUserAttributeAction CognitoIdentityProvider VerifyUserAttribute action.
  */

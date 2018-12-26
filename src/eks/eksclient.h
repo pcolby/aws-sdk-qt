@@ -34,8 +34,14 @@ class DeleteClusterRequest;
 class DeleteClusterResponse;
 class DescribeClusterRequest;
 class DescribeClusterResponse;
+class DescribeUpdateRequest;
+class DescribeUpdateResponse;
 class ListClustersRequest;
 class ListClustersResponse;
+class ListUpdatesRequest;
+class ListUpdatesResponse;
+class UpdateClusterVersionRequest;
+class UpdateClusterVersionResponse;
 
 class QTAWS_EXPORT EksClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -56,7 +62,10 @@ public slots:
     CreateClusterResponse * createCluster(const CreateClusterRequest &request);
     DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
     DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
+    DescribeUpdateResponse * describeUpdate(const DescribeUpdateRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
+    ListUpdatesResponse * listUpdates(const ListUpdatesRequest &request);
+    UpdateClusterVersionResponse * updateClusterVersion(const UpdateClusterVersionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EksClient)

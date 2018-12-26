@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsRam
+description = AWS RAM SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsram-index.html"
+navigation.landingtitle = "RAM"
+navigation.cppclassespage = "RAM C++ Classes"

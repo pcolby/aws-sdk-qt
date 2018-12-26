@@ -70,6 +70,7 @@ public:
         GetDocumentVersionAction,
         GetFolderAction,
         GetFolderPathAction,
+        GetResourcesAction,
         InitiateDocumentVersionUploadAction,
         RemoveAllResourcePermissionsAction,
         RemoveResourcePermissionAction,

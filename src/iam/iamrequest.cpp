@@ -86,6 +86,7 @@ namespace IAM {
  * \value DetachUserPolicyAction IAM DetachUserPolicy action.
  * \value EnableMFADeviceAction IAM EnableMFADevice action.
  * \value GenerateCredentialReportAction IAM GenerateCredentialReport action.
+ * \value GenerateServiceLastAccessedDetailsAction IAM GenerateServiceLastAccessedDetails action.
  * \value GetAccessKeyLastUsedAction IAM GetAccessKeyLastUsed action.
  * \value GetAccountAuthorizationDetailsAction IAM GetAccountAuthorizationDetails action.
  * \value GetAccountPasswordPolicyAction IAM GetAccountPasswordPolicy action.
@@ -105,6 +106,8 @@ namespace IAM {
  * \value GetSAMLProviderAction IAM GetSAMLProvider action.
  * \value GetSSHPublicKeyAction IAM GetSSHPublicKey action.
  * \value GetServerCertificateAction IAM GetServerCertificate action.
+ * \value GetServiceLastAccessedDetailsAction IAM GetServiceLastAccessedDetails action.
+ * \value GetServiceLastAccessedDetailsWithEntitiesAction IAM GetServiceLastAccessedDetailsWithEntities action.
  * \value GetServiceLinkedRoleDeletionStatusAction IAM GetServiceLinkedRoleDeletionStatus action.
  * \value GetUserAction IAM GetUser action.
  * \value GetUserPolicyAction IAM GetUserPolicy action.
@@ -122,8 +125,10 @@ namespace IAM {
  * \value ListMFADevicesAction IAM ListMFADevices action.
  * \value ListOpenIDConnectProvidersAction IAM ListOpenIDConnectProviders action.
  * \value ListPoliciesAction IAM ListPolicies action.
+ * \value ListPoliciesGrantingServiceAccessAction IAM ListPoliciesGrantingServiceAccess action.
  * \value ListPolicyVersionsAction IAM ListPolicyVersions action.
  * \value ListRolePoliciesAction IAM ListRolePolicies action.
+ * \value ListRoleTagsAction IAM ListRoleTags action.
  * \value ListRolesAction IAM ListRoles action.
  * \value ListSAMLProvidersAction IAM ListSAMLProviders action.
  * \value ListSSHPublicKeysAction IAM ListSSHPublicKeys action.
@@ -131,6 +136,7 @@ namespace IAM {
  * \value ListServiceSpecificCredentialsAction IAM ListServiceSpecificCredentials action.
  * \value ListSigningCertificatesAction IAM ListSigningCertificates action.
  * \value ListUserPoliciesAction IAM ListUserPolicies action.
+ * \value ListUserTagsAction IAM ListUserTags action.
  * \value ListUsersAction IAM ListUsers action.
  * \value ListVirtualMFADevicesAction IAM ListVirtualMFADevices action.
  * \value PutGroupPolicyAction IAM PutGroupPolicy action.
@@ -146,6 +152,10 @@ namespace IAM {
  * \value SetDefaultPolicyVersionAction IAM SetDefaultPolicyVersion action.
  * \value SimulateCustomPolicyAction IAM SimulateCustomPolicy action.
  * \value SimulatePrincipalPolicyAction IAM SimulatePrincipalPolicy action.
+ * \value TagRoleAction IAM TagRole action.
+ * \value TagUserAction IAM TagUser action.
+ * \value UntagRoleAction IAM UntagRole action.
+ * \value UntagUserAction IAM UntagUser action.
  * \value UpdateAccessKeyAction IAM UpdateAccessKey action.
  * \value UpdateAccountPasswordPolicyAction IAM UpdateAccountPasswordPolicy action.
  * \value UpdateAssumeRolePolicyAction IAM UpdateAssumeRolePolicy action.

@@ -81,6 +81,7 @@ public:
         TagResourceAction,
         UntagResourceAction,
         UpdateLagAction,
+        UpdateVirtualInterfaceAttributesAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

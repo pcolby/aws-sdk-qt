@@ -35,7 +35,7 @@ namespace WorkSpaces {
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
- *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows desktops for your
+ *  Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your
  *
  * \sa WorkSpacesClient::deleteIpGroup
  */

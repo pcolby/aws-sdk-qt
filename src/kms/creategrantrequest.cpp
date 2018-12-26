@@ -35,12 +35,12 @@ namespace KMS {
  * 
  *  AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS
  *  operations that you can call programmatically. For general information about AWS KMS, see the <a
- *  href="http://docs.aws.amazon.com/kms/latest/developerguide/">AWS Key Management Service Developer
+ *  href="http://docs.aws.amazon.com/kms/latest/developerguide/"> <i>AWS Key Management Service Developer Guide</i>
  * 
- *  Guide</a>> <note>
+ *  </a>> <note>
  * 
  *  AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java, Ruby,
- *  .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS
+ *  .Net, macOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS KMS and other AWS
  *  services. For example, the SDKs take care of tasks such as signing requests (see below), managing errors, and retrying
  *  requests automatically. For more information about the AWS SDKs, including how to download and install them, see <a
  *  href="http://aws.amazon.com/tools/">Tools for Amazon Web
@@ -94,7 +94,7 @@ namespace KMS {
  *  following> <ul> <li>
  * 
  *  <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> - This
- *  topic provides general information about the types of credentials used for accessing
+ *  topic provides general information about the of credentials used for accessing
  * 
  *  AWS> </li> <li>
  * 

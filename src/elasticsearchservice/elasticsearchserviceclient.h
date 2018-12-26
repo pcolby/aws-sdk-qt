@@ -30,6 +30,8 @@ namespace ElasticsearchService {
 class ElasticsearchServiceClientPrivate;
 class AddTagsRequest;
 class AddTagsResponse;
+class CancelElasticsearchServiceSoftwareUpdateRequest;
+class CancelElasticsearchServiceSoftwareUpdateResponse;
 class CreateElasticsearchDomainRequest;
 class CreateElasticsearchDomainResponse;
 class DeleteElasticsearchDomainRequest;
@@ -48,6 +50,12 @@ class DescribeReservedElasticsearchInstanceOfferingsRequest;
 class DescribeReservedElasticsearchInstanceOfferingsResponse;
 class DescribeReservedElasticsearchInstancesRequest;
 class DescribeReservedElasticsearchInstancesResponse;
+class GetCompatibleElasticsearchVersionsRequest;
+class GetCompatibleElasticsearchVersionsResponse;
+class GetUpgradeHistoryRequest;
+class GetUpgradeHistoryResponse;
+class GetUpgradeStatusRequest;
+class GetUpgradeStatusResponse;
 class ListDomainNamesRequest;
 class ListDomainNamesResponse;
 class ListElasticsearchInstanceTypesRequest;
@@ -60,8 +68,12 @@ class PurchaseReservedElasticsearchInstanceOfferingRequest;
 class PurchaseReservedElasticsearchInstanceOfferingResponse;
 class RemoveTagsRequest;
 class RemoveTagsResponse;
+class StartElasticsearchServiceSoftwareUpdateRequest;
+class StartElasticsearchServiceSoftwareUpdateResponse;
 class UpdateElasticsearchDomainConfigRequest;
 class UpdateElasticsearchDomainConfigResponse;
+class UpgradeElasticsearchDomainRequest;
+class UpgradeElasticsearchDomainResponse;
 
 class QTAWS_EXPORT ElasticsearchServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -80,6 +92,7 @@ public:
 
 public slots:
     AddTagsResponse * addTags(const AddTagsRequest &request);
+    CancelElasticsearchServiceSoftwareUpdateResponse * cancelElasticsearchServiceSoftwareUpdate(const CancelElasticsearchServiceSoftwareUpdateRequest &request);
     CreateElasticsearchDomainResponse * createElasticsearchDomain(const CreateElasticsearchDomainRequest &request);
     DeleteElasticsearchDomainResponse * deleteElasticsearchDomain(const DeleteElasticsearchDomainRequest &request);
     DeleteElasticsearchServiceRoleResponse * deleteElasticsearchServiceRole(const DeleteElasticsearchServiceRoleRequest &request);
@@ -90,6 +103,9 @@ public slots:
     DescribeElasticsearchInstanceTypeLimitsResponse * describeElasticsearchInstanceTypeLimits(const DescribeElasticsearchInstanceTypeLimitsRequest &request);
     DescribeReservedElasticsearchInstanceOfferingsResponse * describeReservedElasticsearchInstanceOfferings(const DescribeReservedElasticsearchInstanceOfferingsRequest &request);
     DescribeReservedElasticsearchInstancesResponse * describeReservedElasticsearchInstances(const DescribeReservedElasticsearchInstancesRequest &request);
+    GetCompatibleElasticsearchVersionsResponse * getCompatibleElasticsearchVersions(const GetCompatibleElasticsearchVersionsRequest &request);
+    GetUpgradeHistoryResponse * getUpgradeHistory(const GetUpgradeHistoryRequest &request);
+    GetUpgradeStatusResponse * getUpgradeStatus(const GetUpgradeStatusRequest &request);
     ListDomainNamesResponse * listDomainNames(const ListDomainNamesRequest &request);
     ListDomainNamesResponse * listDomainNames();
     ListElasticsearchInstanceTypesResponse * listElasticsearchInstanceTypes(const ListElasticsearchInstanceTypesRequest &request);
@@ -97,7 +113,9 @@ public slots:
     ListTagsResponse * listTags(const ListTagsRequest &request);
     PurchaseReservedElasticsearchInstanceOfferingResponse * purchaseReservedElasticsearchInstanceOffering(const PurchaseReservedElasticsearchInstanceOfferingRequest &request);
     RemoveTagsResponse * removeTags(const RemoveTagsRequest &request);
+    StartElasticsearchServiceSoftwareUpdateResponse * startElasticsearchServiceSoftwareUpdate(const StartElasticsearchServiceSoftwareUpdateRequest &request);
     UpdateElasticsearchDomainConfigResponse * updateElasticsearchDomainConfig(const UpdateElasticsearchDomainConfigRequest &request);
+    UpgradeElasticsearchDomainResponse * upgradeElasticsearchDomain(const UpgradeElasticsearchDomainRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ElasticsearchServiceClient)

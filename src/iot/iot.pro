@@ -14,6 +14,10 @@ HEADERS += \
     acceptcertificatetransferrequest_p.h \
     acceptcertificatetransferresponse.h \
     acceptcertificatetransferresponse_p.h \
+    addthingtobillinggrouprequest.h \
+    addthingtobillinggrouprequest_p.h \
+    addthingtobillinggroupresponse.h \
+    addthingtobillinggroupresponse_p.h \
     addthingtothinggrouprequest.h \
     addthingtothinggrouprequest_p.h \
     addthingtothinggroupresponse.h \
@@ -30,10 +34,18 @@ HEADERS += \
     attachprincipalpolicyrequest_p.h \
     attachprincipalpolicyresponse.h \
     attachprincipalpolicyresponse_p.h \
+    attachsecurityprofilerequest.h \
+    attachsecurityprofilerequest_p.h \
+    attachsecurityprofileresponse.h \
+    attachsecurityprofileresponse_p.h \
     attachthingprincipalrequest.h \
     attachthingprincipalrequest_p.h \
     attachthingprincipalresponse.h \
     attachthingprincipalresponse_p.h \
+    cancelaudittaskrequest.h \
+    cancelaudittaskrequest_p.h \
+    cancelaudittaskresponse.h \
+    cancelaudittaskresponse_p.h \
     cancelcertificatetransferrequest.h \
     cancelcertificatetransferrequest_p.h \
     cancelcertificatetransferresponse.h \
@@ -54,10 +66,18 @@ HEADERS += \
     createauthorizerrequest_p.h \
     createauthorizerresponse.h \
     createauthorizerresponse_p.h \
+    createbillinggrouprequest.h \
+    createbillinggrouprequest_p.h \
+    createbillinggroupresponse.h \
+    createbillinggroupresponse_p.h \
     createcertificatefromcsrrequest.h \
     createcertificatefromcsrrequest_p.h \
     createcertificatefromcsrresponse.h \
     createcertificatefromcsrresponse_p.h \
+    createdynamicthinggrouprequest.h \
+    createdynamicthinggrouprequest_p.h \
+    createdynamicthinggroupresponse.h \
+    createdynamicthinggroupresponse_p.h \
     createjobrequest.h \
     createjobrequest_p.h \
     createjobresponse.h \
@@ -82,6 +102,14 @@ HEADERS += \
     createrolealiasrequest_p.h \
     createrolealiasresponse.h \
     createrolealiasresponse_p.h \
+    createscheduledauditrequest.h \
+    createscheduledauditrequest_p.h \
+    createscheduledauditresponse.h \
+    createscheduledauditresponse_p.h \
+    createsecurityprofilerequest.h \
+    createsecurityprofilerequest_p.h \
+    createsecurityprofileresponse.h \
+    createsecurityprofileresponse_p.h \
     createstreamrequest.h \
     createstreamrequest_p.h \
     createstreamresponse.h \
@@ -102,10 +130,18 @@ HEADERS += \
     createtopicrulerequest_p.h \
     createtopicruleresponse.h \
     createtopicruleresponse_p.h \
+    deleteaccountauditconfigurationrequest.h \
+    deleteaccountauditconfigurationrequest_p.h \
+    deleteaccountauditconfigurationresponse.h \
+    deleteaccountauditconfigurationresponse_p.h \
     deleteauthorizerrequest.h \
     deleteauthorizerrequest_p.h \
     deleteauthorizerresponse.h \
     deleteauthorizerresponse_p.h \
+    deletebillinggrouprequest.h \
+    deletebillinggrouprequest_p.h \
+    deletebillinggroupresponse.h \
+    deletebillinggroupresponse_p.h \
     deletecacertificaterequest.h \
     deletecacertificaterequest_p.h \
     deletecacertificateresponse.h \
@@ -114,6 +150,10 @@ HEADERS += \
     deletecertificaterequest_p.h \
     deletecertificateresponse.h \
     deletecertificateresponse_p.h \
+    deletedynamicthinggrouprequest.h \
+    deletedynamicthinggrouprequest_p.h \
+    deletedynamicthinggroupresponse.h \
+    deletedynamicthinggroupresponse_p.h \
     deletejobexecutionrequest.h \
     deletejobexecutionrequest_p.h \
     deletejobexecutionresponse.h \
@@ -142,6 +182,14 @@ HEADERS += \
     deleterolealiasrequest_p.h \
     deleterolealiasresponse.h \
     deleterolealiasresponse_p.h \
+    deletescheduledauditrequest.h \
+    deletescheduledauditrequest_p.h \
+    deletescheduledauditresponse.h \
+    deletescheduledauditresponse_p.h \
+    deletesecurityprofilerequest.h \
+    deletesecurityprofilerequest_p.h \
+    deletesecurityprofileresponse.h \
+    deletesecurityprofileresponse_p.h \
     deletestreamrequest.h \
     deletestreamrequest_p.h \
     deletestreamresponse.h \
@@ -170,10 +218,22 @@ HEADERS += \
     deprecatethingtyperequest_p.h \
     deprecatethingtyperesponse.h \
     deprecatethingtyperesponse_p.h \
+    describeaccountauditconfigurationrequest.h \
+    describeaccountauditconfigurationrequest_p.h \
+    describeaccountauditconfigurationresponse.h \
+    describeaccountauditconfigurationresponse_p.h \
+    describeaudittaskrequest.h \
+    describeaudittaskrequest_p.h \
+    describeaudittaskresponse.h \
+    describeaudittaskresponse_p.h \
     describeauthorizerrequest.h \
     describeauthorizerrequest_p.h \
     describeauthorizerresponse.h \
     describeauthorizerresponse_p.h \
+    describebillinggrouprequest.h \
+    describebillinggrouprequest_p.h \
+    describebillinggroupresponse.h \
+    describebillinggroupresponse_p.h \
     describecacertificaterequest.h \
     describecacertificaterequest_p.h \
     describecacertificateresponse.h \
@@ -210,6 +270,14 @@ HEADERS += \
     describerolealiasrequest_p.h \
     describerolealiasresponse.h \
     describerolealiasresponse_p.h \
+    describescheduledauditrequest.h \
+    describescheduledauditrequest_p.h \
+    describescheduledauditresponse.h \
+    describescheduledauditresponse_p.h \
+    describesecurityprofilerequest.h \
+    describesecurityprofilerequest_p.h \
+    describesecurityprofileresponse.h \
+    describesecurityprofileresponse_p.h \
     describestreamrequest.h \
     describestreamrequest_p.h \
     describestreamresponse.h \
@@ -238,6 +306,10 @@ HEADERS += \
     detachprincipalpolicyrequest_p.h \
     detachprincipalpolicyresponse.h \
     detachprincipalpolicyresponse_p.h \
+    detachsecurityprofilerequest.h \
+    detachsecurityprofilerequest_p.h \
+    detachsecurityprofileresponse.h \
+    detachsecurityprofileresponse_p.h \
     detachthingprincipalrequest.h \
     detachthingprincipalrequest_p.h \
     detachthingprincipalresponse.h \
@@ -296,14 +368,30 @@ HEADERS += \
     iotrequest_p.h \
     iotresponse.h \
     iotresponse_p.h \
+    listactiveviolationsrequest.h \
+    listactiveviolationsrequest_p.h \
+    listactiveviolationsresponse.h \
+    listactiveviolationsresponse_p.h \
     listattachedpoliciesrequest.h \
     listattachedpoliciesrequest_p.h \
     listattachedpoliciesresponse.h \
     listattachedpoliciesresponse_p.h \
+    listauditfindingsrequest.h \
+    listauditfindingsrequest_p.h \
+    listauditfindingsresponse.h \
+    listauditfindingsresponse_p.h \
+    listaudittasksrequest.h \
+    listaudittasksrequest_p.h \
+    listaudittasksresponse.h \
+    listaudittasksresponse_p.h \
     listauthorizersrequest.h \
     listauthorizersrequest_p.h \
     listauthorizersresponse.h \
     listauthorizersresponse_p.h \
+    listbillinggroupsrequest.h \
+    listbillinggroupsrequest_p.h \
+    listbillinggroupsresponse.h \
+    listbillinggroupsresponse_p.h \
     listcacertificatesrequest.h \
     listcacertificatesrequest_p.h \
     listcacertificatesresponse.h \
@@ -364,14 +452,34 @@ HEADERS += \
     listrolealiasesrequest_p.h \
     listrolealiasesresponse.h \
     listrolealiasesresponse_p.h \
+    listscheduledauditsrequest.h \
+    listscheduledauditsrequest_p.h \
+    listscheduledauditsresponse.h \
+    listscheduledauditsresponse_p.h \
+    listsecurityprofilesfortargetrequest.h \
+    listsecurityprofilesfortargetrequest_p.h \
+    listsecurityprofilesfortargetresponse.h \
+    listsecurityprofilesfortargetresponse_p.h \
+    listsecurityprofilesrequest.h \
+    listsecurityprofilesrequest_p.h \
+    listsecurityprofilesresponse.h \
+    listsecurityprofilesresponse_p.h \
     liststreamsrequest.h \
     liststreamsrequest_p.h \
     liststreamsresponse.h \
     liststreamsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtargetsforpolicyrequest.h \
     listtargetsforpolicyrequest_p.h \
     listtargetsforpolicyresponse.h \
     listtargetsforpolicyresponse_p.h \
+    listtargetsforsecurityprofilerequest.h \
+    listtargetsforsecurityprofilerequest_p.h \
+    listtargetsforsecurityprofileresponse.h \
+    listtargetsforsecurityprofileresponse_p.h \
     listthinggroupsforthingrequest.h \
     listthinggroupsforthingrequest_p.h \
     listthinggroupsforthingresponse.h \
@@ -392,6 +500,10 @@ HEADERS += \
     listthingregistrationtasksrequest_p.h \
     listthingregistrationtasksresponse.h \
     listthingregistrationtasksresponse_p.h \
+    listthingsinbillinggrouprequest.h \
+    listthingsinbillinggrouprequest_p.h \
+    listthingsinbillinggroupresponse.h \
+    listthingsinbillinggroupresponse_p.h \
     listthingsinthinggrouprequest.h \
     listthingsinthinggrouprequest_p.h \
     listthingsinthinggroupresponse.h \
@@ -412,6 +524,10 @@ HEADERS += \
     listv2logginglevelsrequest_p.h \
     listv2logginglevelsresponse.h \
     listv2logginglevelsresponse_p.h \
+    listviolationeventsrequest.h \
+    listviolationeventsrequest_p.h \
+    listviolationeventsresponse.h \
+    listviolationeventsresponse_p.h \
     registercacertificaterequest.h \
     registercacertificaterequest_p.h \
     registercacertificateresponse.h \
@@ -428,6 +544,10 @@ HEADERS += \
     rejectcertificatetransferrequest_p.h \
     rejectcertificatetransferresponse.h \
     rejectcertificatetransferresponse_p.h \
+    removethingfrombillinggrouprequest.h \
+    removethingfrombillinggrouprequest_p.h \
+    removethingfrombillinggroupresponse.h \
+    removethingfrombillinggroupresponse_p.h \
     removethingfromthinggrouprequest.h \
     removethingfromthinggrouprequest_p.h \
     removethingfromthinggroupresponse.h \
@@ -460,6 +580,10 @@ HEADERS += \
     setv2loggingoptionsrequest_p.h \
     setv2loggingoptionsresponse.h \
     setv2loggingoptionsresponse_p.h \
+    startondemandaudittaskrequest.h \
+    startondemandaudittaskrequest_p.h \
+    startondemandaudittaskresponse.h \
+    startondemandaudittaskresponse_p.h \
     startthingregistrationtaskrequest.h \
     startthingregistrationtaskrequest_p.h \
     startthingregistrationtaskresponse.h \
@@ -468,6 +592,10 @@ HEADERS += \
     stopthingregistrationtaskrequest_p.h \
     stopthingregistrationtaskresponse.h \
     stopthingregistrationtaskresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     testauthorizationrequest.h \
     testauthorizationrequest_p.h \
     testauthorizationresponse.h \
@@ -480,10 +608,22 @@ HEADERS += \
     transfercertificaterequest_p.h \
     transfercertificateresponse.h \
     transfercertificateresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
+    updateaccountauditconfigurationrequest.h \
+    updateaccountauditconfigurationrequest_p.h \
+    updateaccountauditconfigurationresponse.h \
+    updateaccountauditconfigurationresponse_p.h \
     updateauthorizerrequest.h \
     updateauthorizerrequest_p.h \
     updateauthorizerresponse.h \
     updateauthorizerresponse_p.h \
+    updatebillinggrouprequest.h \
+    updatebillinggrouprequest_p.h \
+    updatebillinggroupresponse.h \
+    updatebillinggroupresponse_p.h \
     updatecacertificaterequest.h \
     updatecacertificaterequest_p.h \
     updatecacertificateresponse.h \
@@ -492,6 +632,10 @@ HEADERS += \
     updatecertificaterequest_p.h \
     updatecertificateresponse.h \
     updatecertificateresponse_p.h \
+    updatedynamicthinggrouprequest.h \
+    updatedynamicthinggrouprequest_p.h \
+    updatedynamicthinggroupresponse.h \
+    updatedynamicthinggroupresponse_p.h \
     updateeventconfigurationsrequest.h \
     updateeventconfigurationsrequest_p.h \
     updateeventconfigurationsresponse.h \
@@ -500,10 +644,22 @@ HEADERS += \
     updateindexingconfigurationrequest_p.h \
     updateindexingconfigurationresponse.h \
     updateindexingconfigurationresponse_p.h \
+    updatejobrequest.h \
+    updatejobrequest_p.h \
+    updatejobresponse.h \
+    updatejobresponse_p.h \
     updaterolealiasrequest.h \
     updaterolealiasrequest_p.h \
     updaterolealiasresponse.h \
     updaterolealiasresponse_p.h \
+    updatescheduledauditrequest.h \
+    updatescheduledauditrequest_p.h \
+    updatescheduledauditresponse.h \
+    updatescheduledauditresponse_p.h \
+    updatesecurityprofilerequest.h \
+    updatesecurityprofilerequest_p.h \
+    updatesecurityprofileresponse.h \
+    updatesecurityprofileresponse_p.h \
     updatestreamrequest.h \
     updatestreamrequest_p.h \
     updatestreamresponse.h \
@@ -520,10 +676,16 @@ HEADERS += \
     updatethingrequest_p.h \
     updatethingresponse.h \
     updatethingresponse_p.h \
+    validatesecurityprofilebehaviorsrequest.h \
+    validatesecurityprofilebehaviorsrequest_p.h \
+    validatesecurityprofilebehaviorsresponse.h \
+    validatesecurityprofilebehaviorsresponse_p.h \
 
 SOURCES += \
     acceptcertificatetransferrequest.cpp \
     acceptcertificatetransferresponse.cpp \
+    addthingtobillinggrouprequest.cpp \
+    addthingtobillinggroupresponse.cpp \
     addthingtothinggrouprequest.cpp \
     addthingtothinggroupresponse.cpp \
     associatetargetswithjobrequest.cpp \
@@ -532,8 +694,12 @@ SOURCES += \
     attachpolicyresponse.cpp \
     attachprincipalpolicyrequest.cpp \
     attachprincipalpolicyresponse.cpp \
+    attachsecurityprofilerequest.cpp \
+    attachsecurityprofileresponse.cpp \
     attachthingprincipalrequest.cpp \
     attachthingprincipalresponse.cpp \
+    cancelaudittaskrequest.cpp \
+    cancelaudittaskresponse.cpp \
     cancelcertificatetransferrequest.cpp \
     cancelcertificatetransferresponse.cpp \
     canceljobexecutionrequest.cpp \
@@ -544,8 +710,12 @@ SOURCES += \
     cleardefaultauthorizerresponse.cpp \
     createauthorizerrequest.cpp \
     createauthorizerresponse.cpp \
+    createbillinggrouprequest.cpp \
+    createbillinggroupresponse.cpp \
     createcertificatefromcsrrequest.cpp \
     createcertificatefromcsrresponse.cpp \
+    createdynamicthinggrouprequest.cpp \
+    createdynamicthinggroupresponse.cpp \
     createjobrequest.cpp \
     createjobresponse.cpp \
     createkeysandcertificaterequest.cpp \
@@ -558,6 +728,10 @@ SOURCES += \
     createpolicyversionresponse.cpp \
     createrolealiasrequest.cpp \
     createrolealiasresponse.cpp \
+    createscheduledauditrequest.cpp \
+    createscheduledauditresponse.cpp \
+    createsecurityprofilerequest.cpp \
+    createsecurityprofileresponse.cpp \
     createstreamrequest.cpp \
     createstreamresponse.cpp \
     createthinggrouprequest.cpp \
@@ -568,12 +742,18 @@ SOURCES += \
     createthingtyperesponse.cpp \
     createtopicrulerequest.cpp \
     createtopicruleresponse.cpp \
+    deleteaccountauditconfigurationrequest.cpp \
+    deleteaccountauditconfigurationresponse.cpp \
     deleteauthorizerrequest.cpp \
     deleteauthorizerresponse.cpp \
+    deletebillinggrouprequest.cpp \
+    deletebillinggroupresponse.cpp \
     deletecacertificaterequest.cpp \
     deletecacertificateresponse.cpp \
     deletecertificaterequest.cpp \
     deletecertificateresponse.cpp \
+    deletedynamicthinggrouprequest.cpp \
+    deletedynamicthinggroupresponse.cpp \
     deletejobexecutionrequest.cpp \
     deletejobexecutionresponse.cpp \
     deletejobrequest.cpp \
@@ -588,6 +768,10 @@ SOURCES += \
     deleteregistrationcoderesponse.cpp \
     deleterolealiasrequest.cpp \
     deleterolealiasresponse.cpp \
+    deletescheduledauditrequest.cpp \
+    deletescheduledauditresponse.cpp \
+    deletesecurityprofilerequest.cpp \
+    deletesecurityprofileresponse.cpp \
     deletestreamrequest.cpp \
     deletestreamresponse.cpp \
     deletethinggrouprequest.cpp \
@@ -602,8 +786,14 @@ SOURCES += \
     deletev2logginglevelresponse.cpp \
     deprecatethingtyperequest.cpp \
     deprecatethingtyperesponse.cpp \
+    describeaccountauditconfigurationrequest.cpp \
+    describeaccountauditconfigurationresponse.cpp \
+    describeaudittaskrequest.cpp \
+    describeaudittaskresponse.cpp \
     describeauthorizerrequest.cpp \
     describeauthorizerresponse.cpp \
+    describebillinggrouprequest.cpp \
+    describebillinggroupresponse.cpp \
     describecacertificaterequest.cpp \
     describecacertificateresponse.cpp \
     describecertificaterequest.cpp \
@@ -622,6 +812,10 @@ SOURCES += \
     describejobresponse.cpp \
     describerolealiasrequest.cpp \
     describerolealiasresponse.cpp \
+    describescheduledauditrequest.cpp \
+    describescheduledauditresponse.cpp \
+    describesecurityprofilerequest.cpp \
+    describesecurityprofileresponse.cpp \
     describestreamrequest.cpp \
     describestreamresponse.cpp \
     describethinggrouprequest.cpp \
@@ -636,6 +830,8 @@ SOURCES += \
     detachpolicyresponse.cpp \
     detachprincipalpolicyrequest.cpp \
     detachprincipalpolicyresponse.cpp \
+    detachsecurityprofilerequest.cpp \
+    detachsecurityprofileresponse.cpp \
     detachthingprincipalrequest.cpp \
     detachthingprincipalresponse.cpp \
     disabletopicrulerequest.cpp \
@@ -665,10 +861,18 @@ SOURCES += \
     iotclient.cpp \
     iotrequest.cpp \
     iotresponse.cpp \
+    listactiveviolationsrequest.cpp \
+    listactiveviolationsresponse.cpp \
     listattachedpoliciesrequest.cpp \
     listattachedpoliciesresponse.cpp \
+    listauditfindingsrequest.cpp \
+    listauditfindingsresponse.cpp \
+    listaudittasksrequest.cpp \
+    listaudittasksresponse.cpp \
     listauthorizersrequest.cpp \
     listauthorizersresponse.cpp \
+    listbillinggroupsrequest.cpp \
+    listbillinggroupsresponse.cpp \
     listcacertificatesrequest.cpp \
     listcacertificatesresponse.cpp \
     listcertificatesbycarequest.cpp \
@@ -699,10 +903,20 @@ SOURCES += \
     listprincipalthingsresponse.cpp \
     listrolealiasesrequest.cpp \
     listrolealiasesresponse.cpp \
+    listscheduledauditsrequest.cpp \
+    listscheduledauditsresponse.cpp \
+    listsecurityprofilesfortargetrequest.cpp \
+    listsecurityprofilesfortargetresponse.cpp \
+    listsecurityprofilesrequest.cpp \
+    listsecurityprofilesresponse.cpp \
     liststreamsrequest.cpp \
     liststreamsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtargetsforpolicyrequest.cpp \
     listtargetsforpolicyresponse.cpp \
+    listtargetsforsecurityprofilerequest.cpp \
+    listtargetsforsecurityprofileresponse.cpp \
     listthinggroupsforthingrequest.cpp \
     listthinggroupsforthingresponse.cpp \
     listthinggroupsrequest.cpp \
@@ -713,6 +927,8 @@ SOURCES += \
     listthingregistrationtaskreportsresponse.cpp \
     listthingregistrationtasksrequest.cpp \
     listthingregistrationtasksresponse.cpp \
+    listthingsinbillinggrouprequest.cpp \
+    listthingsinbillinggroupresponse.cpp \
     listthingsinthinggrouprequest.cpp \
     listthingsinthinggroupresponse.cpp \
     listthingsrequest.cpp \
@@ -723,6 +939,8 @@ SOURCES += \
     listtopicrulesresponse.cpp \
     listv2logginglevelsrequest.cpp \
     listv2logginglevelsresponse.cpp \
+    listviolationeventsrequest.cpp \
+    listviolationeventsresponse.cpp \
     registercacertificaterequest.cpp \
     registercacertificateresponse.cpp \
     registercertificaterequest.cpp \
@@ -731,6 +949,8 @@ SOURCES += \
     registerthingresponse.cpp \
     rejectcertificatetransferrequest.cpp \
     rejectcertificatetransferresponse.cpp \
+    removethingfrombillinggrouprequest.cpp \
+    removethingfrombillinggroupresponse.cpp \
     removethingfromthinggrouprequest.cpp \
     removethingfromthinggroupresponse.cpp \
     replacetopicrulerequest.cpp \
@@ -747,28 +967,46 @@ SOURCES += \
     setv2logginglevelresponse.cpp \
     setv2loggingoptionsrequest.cpp \
     setv2loggingoptionsresponse.cpp \
+    startondemandaudittaskrequest.cpp \
+    startondemandaudittaskresponse.cpp \
     startthingregistrationtaskrequest.cpp \
     startthingregistrationtaskresponse.cpp \
     stopthingregistrationtaskrequest.cpp \
     stopthingregistrationtaskresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     testauthorizationrequest.cpp \
     testauthorizationresponse.cpp \
     testinvokeauthorizerrequest.cpp \
     testinvokeauthorizerresponse.cpp \
     transfercertificaterequest.cpp \
     transfercertificateresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
+    updateaccountauditconfigurationrequest.cpp \
+    updateaccountauditconfigurationresponse.cpp \
     updateauthorizerrequest.cpp \
     updateauthorizerresponse.cpp \
+    updatebillinggrouprequest.cpp \
+    updatebillinggroupresponse.cpp \
     updatecacertificaterequest.cpp \
     updatecacertificateresponse.cpp \
     updatecertificaterequest.cpp \
     updatecertificateresponse.cpp \
+    updatedynamicthinggrouprequest.cpp \
+    updatedynamicthinggroupresponse.cpp \
     updateeventconfigurationsrequest.cpp \
     updateeventconfigurationsresponse.cpp \
     updateindexingconfigurationrequest.cpp \
     updateindexingconfigurationresponse.cpp \
+    updatejobrequest.cpp \
+    updatejobresponse.cpp \
     updaterolealiasrequest.cpp \
     updaterolealiasresponse.cpp \
+    updatescheduledauditrequest.cpp \
+    updatescheduledauditresponse.cpp \
+    updatesecurityprofilerequest.cpp \
+    updatesecurityprofileresponse.cpp \
     updatestreamrequest.cpp \
     updatestreamresponse.cpp \
     updatethinggrouprequest.cpp \
@@ -777,5 +1015,7 @@ SOURCES += \
     updatethinggroupsforthingresponse.cpp \
     updatethingrequest.cpp \
     updatethingresponse.cpp \
+    validatesecurityprofilebehaviorsrequest.cpp \
+    validatesecurityprofilebehaviorsresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

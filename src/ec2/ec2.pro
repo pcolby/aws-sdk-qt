@@ -14,6 +14,10 @@ HEADERS += \
     acceptreservedinstancesexchangequoterequest_p.h \
     acceptreservedinstancesexchangequoteresponse.h \
     acceptreservedinstancesexchangequoteresponse_p.h \
+    accepttransitgatewayvpcattachmentrequest.h \
+    accepttransitgatewayvpcattachmentrequest_p.h \
+    accepttransitgatewayvpcattachmentresponse.h \
+    accepttransitgatewayvpcattachmentresponse_p.h \
     acceptvpcendpointconnectionsrequest.h \
     acceptvpcendpointconnectionsrequest_p.h \
     acceptvpcendpointconnectionsresponse.h \
@@ -22,6 +26,10 @@ HEADERS += \
     acceptvpcpeeringconnectionrequest_p.h \
     acceptvpcpeeringconnectionresponse.h \
     acceptvpcpeeringconnectionresponse_p.h \
+    advertisebyoipcidrrequest.h \
+    advertisebyoipcidrrequest_p.h \
+    advertisebyoipcidrresponse.h \
+    advertisebyoipcidrresponse_p.h \
     allocateaddressrequest.h \
     allocateaddressrequest_p.h \
     allocateaddressresponse.h \
@@ -30,6 +38,10 @@ HEADERS += \
     allocatehostsrequest_p.h \
     allocatehostsresponse.h \
     allocatehostsresponse_p.h \
+    applysecuritygroupstoclientvpntargetnetworkrequest.h \
+    applysecuritygroupstoclientvpntargetnetworkrequest_p.h \
+    applysecuritygroupstoclientvpntargetnetworkresponse.h \
+    applysecuritygroupstoclientvpntargetnetworkresponse_p.h \
     assignipv6addressesrequest.h \
     assignipv6addressesrequest_p.h \
     assignipv6addressesresponse.h \
@@ -42,6 +54,10 @@ HEADERS += \
     associateaddressrequest_p.h \
     associateaddressresponse.h \
     associateaddressresponse_p.h \
+    associateclientvpntargetnetworkrequest.h \
+    associateclientvpntargetnetworkrequest_p.h \
+    associateclientvpntargetnetworkresponse.h \
+    associateclientvpntargetnetworkresponse_p.h \
     associatedhcpoptionsrequest.h \
     associatedhcpoptionsrequest_p.h \
     associatedhcpoptionsresponse.h \
@@ -58,6 +74,10 @@ HEADERS += \
     associatesubnetcidrblockrequest_p.h \
     associatesubnetcidrblockresponse.h \
     associatesubnetcidrblockresponse_p.h \
+    associatetransitgatewayroutetablerequest.h \
+    associatetransitgatewayroutetablerequest_p.h \
+    associatetransitgatewayroutetableresponse.h \
+    associatetransitgatewayroutetableresponse_p.h \
     associatevpccidrblockrequest.h \
     associatevpccidrblockrequest_p.h \
     associatevpccidrblockresponse.h \
@@ -82,6 +102,10 @@ HEADERS += \
     attachvpngatewayrequest_p.h \
     attachvpngatewayresponse.h \
     attachvpngatewayresponse_p.h \
+    authorizeclientvpningressrequest.h \
+    authorizeclientvpningressrequest_p.h \
+    authorizeclientvpningressresponse.h \
+    authorizeclientvpningressresponse_p.h \
     authorizesecuritygroupegressrequest.h \
     authorizesecuritygroupegressrequest_p.h \
     authorizesecuritygroupegressresponse.h \
@@ -98,6 +122,10 @@ HEADERS += \
     cancelbundletaskrequest_p.h \
     cancelbundletaskresponse.h \
     cancelbundletaskresponse_p.h \
+    cancelcapacityreservationrequest.h \
+    cancelcapacityreservationrequest_p.h \
+    cancelcapacityreservationresponse.h \
+    cancelcapacityreservationresponse_p.h \
     cancelconversiontaskrequest.h \
     cancelconversiontaskrequest_p.h \
     cancelconversiontaskresponse.h \
@@ -138,6 +166,18 @@ HEADERS += \
     copysnapshotrequest_p.h \
     copysnapshotresponse.h \
     copysnapshotresponse_p.h \
+    createcapacityreservationrequest.h \
+    createcapacityreservationrequest_p.h \
+    createcapacityreservationresponse.h \
+    createcapacityreservationresponse_p.h \
+    createclientvpnendpointrequest.h \
+    createclientvpnendpointrequest_p.h \
+    createclientvpnendpointresponse.h \
+    createclientvpnendpointresponse_p.h \
+    createclientvpnrouterequest.h \
+    createclientvpnrouterequest_p.h \
+    createclientvpnrouteresponse.h \
+    createclientvpnrouteresponse_p.h \
     createcustomergatewayrequest.h \
     createcustomergatewayrequest_p.h \
     createcustomergatewayresponse.h \
@@ -250,6 +290,22 @@ HEADERS += \
     createtagsrequest_p.h \
     createtagsresponse.h \
     createtagsresponse_p.h \
+    createtransitgatewayrequest.h \
+    createtransitgatewayrequest_p.h \
+    createtransitgatewayresponse.h \
+    createtransitgatewayresponse_p.h \
+    createtransitgatewayrouterequest.h \
+    createtransitgatewayrouterequest_p.h \
+    createtransitgatewayrouteresponse.h \
+    createtransitgatewayrouteresponse_p.h \
+    createtransitgatewayroutetablerequest.h \
+    createtransitgatewayroutetablerequest_p.h \
+    createtransitgatewayroutetableresponse.h \
+    createtransitgatewayroutetableresponse_p.h \
+    createtransitgatewayvpcattachmentrequest.h \
+    createtransitgatewayvpcattachmentrequest_p.h \
+    createtransitgatewayvpcattachmentresponse.h \
+    createtransitgatewayvpcattachmentresponse_p.h \
     createvolumerequest.h \
     createvolumerequest_p.h \
     createvolumeresponse.h \
@@ -286,6 +342,14 @@ HEADERS += \
     createvpngatewayrequest_p.h \
     createvpngatewayresponse.h \
     createvpngatewayresponse_p.h \
+    deleteclientvpnendpointrequest.h \
+    deleteclientvpnendpointrequest_p.h \
+    deleteclientvpnendpointresponse.h \
+    deleteclientvpnendpointresponse_p.h \
+    deleteclientvpnrouterequest.h \
+    deleteclientvpnrouterequest_p.h \
+    deleteclientvpnrouteresponse.h \
+    deleteclientvpnrouteresponse_p.h \
     deletecustomergatewayrequest.h \
     deletecustomergatewayrequest_p.h \
     deletecustomergatewayresponse.h \
@@ -378,6 +442,22 @@ HEADERS += \
     deletetagsrequest_p.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
+    deletetransitgatewayrequest.h \
+    deletetransitgatewayrequest_p.h \
+    deletetransitgatewayresponse.h \
+    deletetransitgatewayresponse_p.h \
+    deletetransitgatewayrouterequest.h \
+    deletetransitgatewayrouterequest_p.h \
+    deletetransitgatewayrouteresponse.h \
+    deletetransitgatewayrouteresponse_p.h \
+    deletetransitgatewayroutetablerequest.h \
+    deletetransitgatewayroutetablerequest_p.h \
+    deletetransitgatewayroutetableresponse.h \
+    deletetransitgatewayroutetableresponse_p.h \
+    deletetransitgatewayvpcattachmentrequest.h \
+    deletetransitgatewayvpcattachmentrequest_p.h \
+    deletetransitgatewayvpcattachmentresponse.h \
+    deletetransitgatewayvpcattachmentresponse_p.h \
     deletevolumerequest.h \
     deletevolumerequest_p.h \
     deletevolumeresponse.h \
@@ -414,6 +494,10 @@ HEADERS += \
     deletevpngatewayrequest_p.h \
     deletevpngatewayresponse.h \
     deletevpngatewayresponse_p.h \
+    deprovisionbyoipcidrrequest.h \
+    deprovisionbyoipcidrrequest_p.h \
+    deprovisionbyoipcidrresponse.h \
+    deprovisionbyoipcidrresponse_p.h \
     deregisterimagerequest.h \
     deregisterimagerequest_p.h \
     deregisterimageresponse.h \
@@ -438,10 +522,38 @@ HEADERS += \
     describebundletasksrequest_p.h \
     describebundletasksresponse.h \
     describebundletasksresponse_p.h \
+    describebyoipcidrsrequest.h \
+    describebyoipcidrsrequest_p.h \
+    describebyoipcidrsresponse.h \
+    describebyoipcidrsresponse_p.h \
+    describecapacityreservationsrequest.h \
+    describecapacityreservationsrequest_p.h \
+    describecapacityreservationsresponse.h \
+    describecapacityreservationsresponse_p.h \
     describeclassiclinkinstancesrequest.h \
     describeclassiclinkinstancesrequest_p.h \
     describeclassiclinkinstancesresponse.h \
     describeclassiclinkinstancesresponse_p.h \
+    describeclientvpnauthorizationrulesrequest.h \
+    describeclientvpnauthorizationrulesrequest_p.h \
+    describeclientvpnauthorizationrulesresponse.h \
+    describeclientvpnauthorizationrulesresponse_p.h \
+    describeclientvpnconnectionsrequest.h \
+    describeclientvpnconnectionsrequest_p.h \
+    describeclientvpnconnectionsresponse.h \
+    describeclientvpnconnectionsresponse_p.h \
+    describeclientvpnendpointsrequest.h \
+    describeclientvpnendpointsrequest_p.h \
+    describeclientvpnendpointsresponse.h \
+    describeclientvpnendpointsresponse_p.h \
+    describeclientvpnroutesrequest.h \
+    describeclientvpnroutesrequest_p.h \
+    describeclientvpnroutesresponse.h \
+    describeclientvpnroutesresponse_p.h \
+    describeclientvpntargetnetworksrequest.h \
+    describeclientvpntargetnetworksrequest_p.h \
+    describeclientvpntargetnetworksresponse.h \
+    describeclientvpntargetnetworksresponse_p.h \
     describeconversiontasksrequest.h \
     describeconversiontasksrequest_p.h \
     describeconversiontasksresponse.h \
@@ -598,6 +710,10 @@ HEADERS += \
     describeprincipalidformatrequest_p.h \
     describeprincipalidformatresponse.h \
     describeprincipalidformatresponse_p.h \
+    describepublicipv4poolsrequest.h \
+    describepublicipv4poolsrequest_p.h \
+    describepublicipv4poolsresponse.h \
+    describepublicipv4poolsresponse_p.h \
     describeregionsrequest.h \
     describeregionsrequest_p.h \
     describeregionsresponse.h \
@@ -682,6 +798,22 @@ HEADERS += \
     describetagsrequest_p.h \
     describetagsresponse.h \
     describetagsresponse_p.h \
+    describetransitgatewayattachmentsrequest.h \
+    describetransitgatewayattachmentsrequest_p.h \
+    describetransitgatewayattachmentsresponse.h \
+    describetransitgatewayattachmentsresponse_p.h \
+    describetransitgatewayroutetablesrequest.h \
+    describetransitgatewayroutetablesrequest_p.h \
+    describetransitgatewayroutetablesresponse.h \
+    describetransitgatewayroutetablesresponse_p.h \
+    describetransitgatewaysrequest.h \
+    describetransitgatewaysrequest_p.h \
+    describetransitgatewaysresponse.h \
+    describetransitgatewaysresponse_p.h \
+    describetransitgatewayvpcattachmentsrequest.h \
+    describetransitgatewayvpcattachmentsrequest_p.h \
+    describetransitgatewayvpcattachmentsresponse.h \
+    describetransitgatewayvpcattachmentsresponse_p.h \
     describevolumeattributerequest.h \
     describevolumeattributerequest_p.h \
     describevolumeattributeresponse.h \
@@ -770,6 +902,10 @@ HEADERS += \
     detachvpngatewayrequest_p.h \
     detachvpngatewayresponse.h \
     detachvpngatewayresponse_p.h \
+    disabletransitgatewayroutetablepropagationrequest.h \
+    disabletransitgatewayroutetablepropagationrequest_p.h \
+    disabletransitgatewayroutetablepropagationresponse.h \
+    disabletransitgatewayroutetablepropagationresponse_p.h \
     disablevgwroutepropagationrequest.h \
     disablevgwroutepropagationrequest_p.h \
     disablevgwroutepropagationresponse.h \
@@ -786,6 +922,10 @@ HEADERS += \
     disassociateaddressrequest_p.h \
     disassociateaddressresponse.h \
     disassociateaddressresponse_p.h \
+    disassociateclientvpntargetnetworkrequest.h \
+    disassociateclientvpntargetnetworkrequest_p.h \
+    disassociateclientvpntargetnetworkresponse.h \
+    disassociateclientvpntargetnetworkresponse_p.h \
     disassociateiaminstanceprofilerequest.h \
     disassociateiaminstanceprofilerequest_p.h \
     disassociateiaminstanceprofileresponse.h \
@@ -798,6 +938,10 @@ HEADERS += \
     disassociatesubnetcidrblockrequest_p.h \
     disassociatesubnetcidrblockresponse.h \
     disassociatesubnetcidrblockresponse_p.h \
+    disassociatetransitgatewayroutetablerequest.h \
+    disassociatetransitgatewayroutetablerequest_p.h \
+    disassociatetransitgatewayroutetableresponse.h \
+    disassociatetransitgatewayroutetableresponse_p.h \
     disassociatevpccidrblockrequest.h \
     disassociatevpccidrblockrequest_p.h \
     disassociatevpccidrblockresponse.h \
@@ -808,6 +952,10 @@ HEADERS += \
     ec2request_p.h \
     ec2response.h \
     ec2response_p.h \
+    enabletransitgatewayroutetablepropagationrequest.h \
+    enabletransitgatewayroutetablepropagationrequest_p.h \
+    enabletransitgatewayroutetablepropagationresponse.h \
+    enabletransitgatewayroutetablepropagationresponse_p.h \
     enablevgwroutepropagationrequest.h \
     enablevgwroutepropagationrequest_p.h \
     enablevgwroutepropagationresponse.h \
@@ -824,6 +972,18 @@ HEADERS += \
     enablevpcclassiclinkrequest_p.h \
     enablevpcclassiclinkresponse.h \
     enablevpcclassiclinkresponse_p.h \
+    exportclientvpnclientcertificaterevocationlistrequest.h \
+    exportclientvpnclientcertificaterevocationlistrequest_p.h \
+    exportclientvpnclientcertificaterevocationlistresponse.h \
+    exportclientvpnclientcertificaterevocationlistresponse_p.h \
+    exportclientvpnclientconfigurationrequest.h \
+    exportclientvpnclientconfigurationrequest_p.h \
+    exportclientvpnclientconfigurationresponse.h \
+    exportclientvpnclientconfigurationresponse_p.h \
+    exporttransitgatewayroutesrequest.h \
+    exporttransitgatewayroutesrequest_p.h \
+    exporttransitgatewayroutesresponse.h \
+    exporttransitgatewayroutesresponse_p.h \
     getconsoleoutputrequest.h \
     getconsoleoutputrequest_p.h \
     getconsoleoutputresponse.h \
@@ -848,6 +1008,22 @@ HEADERS += \
     getreservedinstancesexchangequoterequest_p.h \
     getreservedinstancesexchangequoteresponse.h \
     getreservedinstancesexchangequoteresponse_p.h \
+    gettransitgatewayattachmentpropagationsrequest.h \
+    gettransitgatewayattachmentpropagationsrequest_p.h \
+    gettransitgatewayattachmentpropagationsresponse.h \
+    gettransitgatewayattachmentpropagationsresponse_p.h \
+    gettransitgatewayroutetableassociationsrequest.h \
+    gettransitgatewayroutetableassociationsrequest_p.h \
+    gettransitgatewayroutetableassociationsresponse.h \
+    gettransitgatewayroutetableassociationsresponse_p.h \
+    gettransitgatewayroutetablepropagationsrequest.h \
+    gettransitgatewayroutetablepropagationsrequest_p.h \
+    gettransitgatewayroutetablepropagationsresponse.h \
+    gettransitgatewayroutetablepropagationsresponse_p.h \
+    importclientvpnclientcertificaterevocationlistrequest.h \
+    importclientvpnclientcertificaterevocationlistrequest_p.h \
+    importclientvpnclientcertificaterevocationlistresponse.h \
+    importclientvpnclientcertificaterevocationlistresponse_p.h \
     importimagerequest.h \
     importimagerequest_p.h \
     importimageresponse.h \
@@ -868,6 +1044,14 @@ HEADERS += \
     importvolumerequest_p.h \
     importvolumeresponse.h \
     importvolumeresponse_p.h \
+    modifycapacityreservationrequest.h \
+    modifycapacityreservationrequest_p.h \
+    modifycapacityreservationresponse.h \
+    modifycapacityreservationresponse_p.h \
+    modifyclientvpnendpointrequest.h \
+    modifyclientvpnendpointrequest_p.h \
+    modifyclientvpnendpointresponse.h \
+    modifyclientvpnendpointresponse_p.h \
     modifyfleetrequest.h \
     modifyfleetrequest_p.h \
     modifyfleetresponse.h \
@@ -896,6 +1080,10 @@ HEADERS += \
     modifyinstanceattributerequest_p.h \
     modifyinstanceattributeresponse.h \
     modifyinstanceattributeresponse_p.h \
+    modifyinstancecapacityreservationattributesrequest.h \
+    modifyinstancecapacityreservationattributesrequest_p.h \
+    modifyinstancecapacityreservationattributesresponse.h \
+    modifyinstancecapacityreservationattributesresponse_p.h \
     modifyinstancecreditspecificationrequest.h \
     modifyinstancecreditspecificationrequest_p.h \
     modifyinstancecreditspecificationresponse.h \
@@ -928,6 +1116,10 @@ HEADERS += \
     modifysubnetattributerequest_p.h \
     modifysubnetattributeresponse.h \
     modifysubnetattributeresponse_p.h \
+    modifytransitgatewayvpcattachmentrequest.h \
+    modifytransitgatewayvpcattachmentrequest_p.h \
+    modifytransitgatewayvpcattachmentresponse.h \
+    modifytransitgatewayvpcattachmentresponse_p.h \
     modifyvolumeattributerequest.h \
     modifyvolumeattributerequest_p.h \
     modifyvolumeattributeresponse.h \
@@ -972,6 +1164,10 @@ HEADERS += \
     moveaddresstovpcrequest_p.h \
     moveaddresstovpcresponse.h \
     moveaddresstovpcresponse_p.h \
+    provisionbyoipcidrrequest.h \
+    provisionbyoipcidrrequest_p.h \
+    provisionbyoipcidrresponse.h \
+    provisionbyoipcidrresponse_p.h \
     purchasehostreservationrequest.h \
     purchasehostreservationrequest_p.h \
     purchasehostreservationresponse.h \
@@ -992,6 +1188,10 @@ HEADERS += \
     registerimagerequest_p.h \
     registerimageresponse.h \
     registerimageresponse_p.h \
+    rejecttransitgatewayvpcattachmentrequest.h \
+    rejecttransitgatewayvpcattachmentrequest_p.h \
+    rejecttransitgatewayvpcattachmentresponse.h \
+    rejecttransitgatewayvpcattachmentresponse_p.h \
     rejectvpcendpointconnectionsrequest.h \
     rejectvpcendpointconnectionsrequest_p.h \
     rejectvpcendpointconnectionsresponse.h \
@@ -1028,6 +1228,10 @@ HEADERS += \
     replaceroutetableassociationrequest_p.h \
     replaceroutetableassociationresponse.h \
     replaceroutetableassociationresponse_p.h \
+    replacetransitgatewayrouterequest.h \
+    replacetransitgatewayrouterequest_p.h \
+    replacetransitgatewayrouteresponse.h \
+    replacetransitgatewayrouteresponse_p.h \
     reportinstancestatusrequest.h \
     reportinstancestatusrequest_p.h \
     reportinstancestatusresponse.h \
@@ -1064,6 +1268,10 @@ HEADERS += \
     restoreaddresstoclassicrequest_p.h \
     restoreaddresstoclassicresponse.h \
     restoreaddresstoclassicresponse_p.h \
+    revokeclientvpningressrequest.h \
+    revokeclientvpningressrequest_p.h \
+    revokeclientvpningressresponse.h \
+    revokeclientvpningressresponse_p.h \
     revokesecuritygroupegressrequest.h \
     revokesecuritygroupegressrequest_p.h \
     revokesecuritygroupegressresponse.h \
@@ -1080,6 +1288,10 @@ HEADERS += \
     runscheduledinstancesrequest_p.h \
     runscheduledinstancesresponse.h \
     runscheduledinstancesresponse_p.h \
+    searchtransitgatewayroutesrequest.h \
+    searchtransitgatewayroutesrequest_p.h \
+    searchtransitgatewayroutesresponse.h \
+    searchtransitgatewayroutesresponse_p.h \
     startinstancesrequest.h \
     startinstancesrequest_p.h \
     startinstancesresponse.h \
@@ -1088,6 +1300,10 @@ HEADERS += \
     stopinstancesrequest_p.h \
     stopinstancesresponse.h \
     stopinstancesresponse_p.h \
+    terminateclientvpnconnectionsrequest.h \
+    terminateclientvpnconnectionsrequest_p.h \
+    terminateclientvpnconnectionsresponse.h \
+    terminateclientvpnconnectionsresponse_p.h \
     terminateinstancesrequest.h \
     terminateinstancesrequest_p.h \
     terminateinstancesresponse.h \
@@ -1112,24 +1328,36 @@ HEADERS += \
     updatesecuritygroupruledescriptionsingressrequest_p.h \
     updatesecuritygroupruledescriptionsingressresponse.h \
     updatesecuritygroupruledescriptionsingressresponse_p.h \
+    withdrawbyoipcidrrequest.h \
+    withdrawbyoipcidrrequest_p.h \
+    withdrawbyoipcidrresponse.h \
+    withdrawbyoipcidrresponse_p.h \
 
 SOURCES += \
     acceptreservedinstancesexchangequoterequest.cpp \
     acceptreservedinstancesexchangequoteresponse.cpp \
+    accepttransitgatewayvpcattachmentrequest.cpp \
+    accepttransitgatewayvpcattachmentresponse.cpp \
     acceptvpcendpointconnectionsrequest.cpp \
     acceptvpcendpointconnectionsresponse.cpp \
     acceptvpcpeeringconnectionrequest.cpp \
     acceptvpcpeeringconnectionresponse.cpp \
+    advertisebyoipcidrrequest.cpp \
+    advertisebyoipcidrresponse.cpp \
     allocateaddressrequest.cpp \
     allocateaddressresponse.cpp \
     allocatehostsrequest.cpp \
     allocatehostsresponse.cpp \
+    applysecuritygroupstoclientvpntargetnetworkrequest.cpp \
+    applysecuritygroupstoclientvpntargetnetworkresponse.cpp \
     assignipv6addressesrequest.cpp \
     assignipv6addressesresponse.cpp \
     assignprivateipaddressesrequest.cpp \
     assignprivateipaddressesresponse.cpp \
     associateaddressrequest.cpp \
     associateaddressresponse.cpp \
+    associateclientvpntargetnetworkrequest.cpp \
+    associateclientvpntargetnetworkresponse.cpp \
     associatedhcpoptionsrequest.cpp \
     associatedhcpoptionsresponse.cpp \
     associateiaminstanceprofilerequest.cpp \
@@ -1138,6 +1366,8 @@ SOURCES += \
     associateroutetableresponse.cpp \
     associatesubnetcidrblockrequest.cpp \
     associatesubnetcidrblockresponse.cpp \
+    associatetransitgatewayroutetablerequest.cpp \
+    associatetransitgatewayroutetableresponse.cpp \
     associatevpccidrblockrequest.cpp \
     associatevpccidrblockresponse.cpp \
     attachclassiclinkvpcrequest.cpp \
@@ -1150,6 +1380,8 @@ SOURCES += \
     attachvolumeresponse.cpp \
     attachvpngatewayrequest.cpp \
     attachvpngatewayresponse.cpp \
+    authorizeclientvpningressrequest.cpp \
+    authorizeclientvpningressresponse.cpp \
     authorizesecuritygroupegressrequest.cpp \
     authorizesecuritygroupegressresponse.cpp \
     authorizesecuritygroupingressrequest.cpp \
@@ -1158,6 +1390,8 @@ SOURCES += \
     bundleinstanceresponse.cpp \
     cancelbundletaskrequest.cpp \
     cancelbundletaskresponse.cpp \
+    cancelcapacityreservationrequest.cpp \
+    cancelcapacityreservationresponse.cpp \
     cancelconversiontaskrequest.cpp \
     cancelconversiontaskresponse.cpp \
     cancelexporttaskrequest.cpp \
@@ -1178,6 +1412,12 @@ SOURCES += \
     copyimageresponse.cpp \
     copysnapshotrequest.cpp \
     copysnapshotresponse.cpp \
+    createcapacityreservationrequest.cpp \
+    createcapacityreservationresponse.cpp \
+    createclientvpnendpointrequest.cpp \
+    createclientvpnendpointresponse.cpp \
+    createclientvpnrouterequest.cpp \
+    createclientvpnrouteresponse.cpp \
     createcustomergatewayrequest.cpp \
     createcustomergatewayresponse.cpp \
     createdefaultsubnetrequest.cpp \
@@ -1234,6 +1474,14 @@ SOURCES += \
     createsubnetresponse.cpp \
     createtagsrequest.cpp \
     createtagsresponse.cpp \
+    createtransitgatewayrequest.cpp \
+    createtransitgatewayresponse.cpp \
+    createtransitgatewayrouterequest.cpp \
+    createtransitgatewayrouteresponse.cpp \
+    createtransitgatewayroutetablerequest.cpp \
+    createtransitgatewayroutetableresponse.cpp \
+    createtransitgatewayvpcattachmentrequest.cpp \
+    createtransitgatewayvpcattachmentresponse.cpp \
     createvolumerequest.cpp \
     createvolumeresponse.cpp \
     createvpcendpointconnectionnotificationrequest.cpp \
@@ -1252,6 +1500,10 @@ SOURCES += \
     createvpnconnectionrouteresponse.cpp \
     createvpngatewayrequest.cpp \
     createvpngatewayresponse.cpp \
+    deleteclientvpnendpointrequest.cpp \
+    deleteclientvpnendpointresponse.cpp \
+    deleteclientvpnrouterequest.cpp \
+    deleteclientvpnrouteresponse.cpp \
     deletecustomergatewayrequest.cpp \
     deletecustomergatewayresponse.cpp \
     deletedhcpoptionsrequest.cpp \
@@ -1298,6 +1550,14 @@ SOURCES += \
     deletesubnetresponse.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
+    deletetransitgatewayrequest.cpp \
+    deletetransitgatewayresponse.cpp \
+    deletetransitgatewayrouterequest.cpp \
+    deletetransitgatewayrouteresponse.cpp \
+    deletetransitgatewayroutetablerequest.cpp \
+    deletetransitgatewayroutetableresponse.cpp \
+    deletetransitgatewayvpcattachmentrequest.cpp \
+    deletetransitgatewayvpcattachmentresponse.cpp \
     deletevolumerequest.cpp \
     deletevolumeresponse.cpp \
     deletevpcendpointconnectionnotificationsrequest.cpp \
@@ -1316,6 +1576,8 @@ SOURCES += \
     deletevpnconnectionrouteresponse.cpp \
     deletevpngatewayrequest.cpp \
     deletevpngatewayresponse.cpp \
+    deprovisionbyoipcidrrequest.cpp \
+    deprovisionbyoipcidrresponse.cpp \
     deregisterimagerequest.cpp \
     deregisterimageresponse.cpp \
     describeaccountattributesrequest.cpp \
@@ -1328,8 +1590,22 @@ SOURCES += \
     describeavailabilityzonesresponse.cpp \
     describebundletasksrequest.cpp \
     describebundletasksresponse.cpp \
+    describebyoipcidrsrequest.cpp \
+    describebyoipcidrsresponse.cpp \
+    describecapacityreservationsrequest.cpp \
+    describecapacityreservationsresponse.cpp \
     describeclassiclinkinstancesrequest.cpp \
     describeclassiclinkinstancesresponse.cpp \
+    describeclientvpnauthorizationrulesrequest.cpp \
+    describeclientvpnauthorizationrulesresponse.cpp \
+    describeclientvpnconnectionsrequest.cpp \
+    describeclientvpnconnectionsresponse.cpp \
+    describeclientvpnendpointsrequest.cpp \
+    describeclientvpnendpointsresponse.cpp \
+    describeclientvpnroutesrequest.cpp \
+    describeclientvpnroutesresponse.cpp \
+    describeclientvpntargetnetworksrequest.cpp \
+    describeclientvpntargetnetworksresponse.cpp \
     describeconversiontasksrequest.cpp \
     describeconversiontasksresponse.cpp \
     describecustomergatewaysrequest.cpp \
@@ -1408,6 +1684,8 @@ SOURCES += \
     describeprefixlistsresponse.cpp \
     describeprincipalidformatrequest.cpp \
     describeprincipalidformatresponse.cpp \
+    describepublicipv4poolsrequest.cpp \
+    describepublicipv4poolsresponse.cpp \
     describeregionsrequest.cpp \
     describeregionsresponse.cpp \
     describereservedinstanceslistingsrequest.cpp \
@@ -1450,6 +1728,14 @@ SOURCES += \
     describesubnetsresponse.cpp \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
+    describetransitgatewayattachmentsrequest.cpp \
+    describetransitgatewayattachmentsresponse.cpp \
+    describetransitgatewayroutetablesrequest.cpp \
+    describetransitgatewayroutetablesresponse.cpp \
+    describetransitgatewaysrequest.cpp \
+    describetransitgatewaysresponse.cpp \
+    describetransitgatewayvpcattachmentsrequest.cpp \
+    describetransitgatewayvpcattachmentsresponse.cpp \
     describevolumeattributerequest.cpp \
     describevolumeattributeresponse.cpp \
     describevolumesmodificationsrequest.cpp \
@@ -1494,6 +1780,8 @@ SOURCES += \
     detachvolumeresponse.cpp \
     detachvpngatewayrequest.cpp \
     detachvpngatewayresponse.cpp \
+    disabletransitgatewayroutetablepropagationrequest.cpp \
+    disabletransitgatewayroutetablepropagationresponse.cpp \
     disablevgwroutepropagationrequest.cpp \
     disablevgwroutepropagationresponse.cpp \
     disablevpcclassiclinkdnssupportrequest.cpp \
@@ -1502,17 +1790,23 @@ SOURCES += \
     disablevpcclassiclinkresponse.cpp \
     disassociateaddressrequest.cpp \
     disassociateaddressresponse.cpp \
+    disassociateclientvpntargetnetworkrequest.cpp \
+    disassociateclientvpntargetnetworkresponse.cpp \
     disassociateiaminstanceprofilerequest.cpp \
     disassociateiaminstanceprofileresponse.cpp \
     disassociateroutetablerequest.cpp \
     disassociateroutetableresponse.cpp \
     disassociatesubnetcidrblockrequest.cpp \
     disassociatesubnetcidrblockresponse.cpp \
+    disassociatetransitgatewayroutetablerequest.cpp \
+    disassociatetransitgatewayroutetableresponse.cpp \
     disassociatevpccidrblockrequest.cpp \
     disassociatevpccidrblockresponse.cpp \
     ec2client.cpp \
     ec2request.cpp \
     ec2response.cpp \
+    enabletransitgatewayroutetablepropagationrequest.cpp \
+    enabletransitgatewayroutetablepropagationresponse.cpp \
     enablevgwroutepropagationrequest.cpp \
     enablevgwroutepropagationresponse.cpp \
     enablevolumeiorequest.cpp \
@@ -1521,6 +1815,12 @@ SOURCES += \
     enablevpcclassiclinkdnssupportresponse.cpp \
     enablevpcclassiclinkrequest.cpp \
     enablevpcclassiclinkresponse.cpp \
+    exportclientvpnclientcertificaterevocationlistrequest.cpp \
+    exportclientvpnclientcertificaterevocationlistresponse.cpp \
+    exportclientvpnclientconfigurationrequest.cpp \
+    exportclientvpnclientconfigurationresponse.cpp \
+    exporttransitgatewayroutesrequest.cpp \
+    exporttransitgatewayroutesresponse.cpp \
     getconsoleoutputrequest.cpp \
     getconsoleoutputresponse.cpp \
     getconsolescreenshotrequest.cpp \
@@ -1533,6 +1833,14 @@ SOURCES += \
     getpassworddataresponse.cpp \
     getreservedinstancesexchangequoterequest.cpp \
     getreservedinstancesexchangequoteresponse.cpp \
+    gettransitgatewayattachmentpropagationsrequest.cpp \
+    gettransitgatewayattachmentpropagationsresponse.cpp \
+    gettransitgatewayroutetableassociationsrequest.cpp \
+    gettransitgatewayroutetableassociationsresponse.cpp \
+    gettransitgatewayroutetablepropagationsrequest.cpp \
+    gettransitgatewayroutetablepropagationsresponse.cpp \
+    importclientvpnclientcertificaterevocationlistrequest.cpp \
+    importclientvpnclientcertificaterevocationlistresponse.cpp \
     importimagerequest.cpp \
     importimageresponse.cpp \
     importinstancerequest.cpp \
@@ -1543,6 +1851,10 @@ SOURCES += \
     importsnapshotresponse.cpp \
     importvolumerequest.cpp \
     importvolumeresponse.cpp \
+    modifycapacityreservationrequest.cpp \
+    modifycapacityreservationresponse.cpp \
+    modifyclientvpnendpointrequest.cpp \
+    modifyclientvpnendpointresponse.cpp \
     modifyfleetrequest.cpp \
     modifyfleetresponse.cpp \
     modifyfpgaimageattributerequest.cpp \
@@ -1557,6 +1869,8 @@ SOURCES += \
     modifyimageattributeresponse.cpp \
     modifyinstanceattributerequest.cpp \
     modifyinstanceattributeresponse.cpp \
+    modifyinstancecapacityreservationattributesrequest.cpp \
+    modifyinstancecapacityreservationattributesresponse.cpp \
     modifyinstancecreditspecificationrequest.cpp \
     modifyinstancecreditspecificationresponse.cpp \
     modifyinstanceplacementrequest.cpp \
@@ -1573,6 +1887,8 @@ SOURCES += \
     modifyspotfleetrequestresponse.cpp \
     modifysubnetattributerequest.cpp \
     modifysubnetattributeresponse.cpp \
+    modifytransitgatewayvpcattachmentrequest.cpp \
+    modifytransitgatewayvpcattachmentresponse.cpp \
     modifyvolumeattributerequest.cpp \
     modifyvolumeattributeresponse.cpp \
     modifyvolumerequest.cpp \
@@ -1595,6 +1911,8 @@ SOURCES += \
     monitorinstancesresponse.cpp \
     moveaddresstovpcrequest.cpp \
     moveaddresstovpcresponse.cpp \
+    provisionbyoipcidrrequest.cpp \
+    provisionbyoipcidrresponse.cpp \
     purchasehostreservationrequest.cpp \
     purchasehostreservationresponse.cpp \
     purchasereservedinstancesofferingrequest.cpp \
@@ -1605,6 +1923,8 @@ SOURCES += \
     rebootinstancesresponse.cpp \
     registerimagerequest.cpp \
     registerimageresponse.cpp \
+    rejecttransitgatewayvpcattachmentrequest.cpp \
+    rejecttransitgatewayvpcattachmentresponse.cpp \
     rejectvpcendpointconnectionsrequest.cpp \
     rejectvpcendpointconnectionsresponse.cpp \
     rejectvpcpeeringconnectionrequest.cpp \
@@ -1623,6 +1943,8 @@ SOURCES += \
     replacerouteresponse.cpp \
     replaceroutetableassociationrequest.cpp \
     replaceroutetableassociationresponse.cpp \
+    replacetransitgatewayrouterequest.cpp \
+    replacetransitgatewayrouteresponse.cpp \
     reportinstancestatusrequest.cpp \
     reportinstancestatusresponse.cpp \
     requestspotfleetrequest.cpp \
@@ -1641,6 +1963,8 @@ SOURCES += \
     resetsnapshotattributeresponse.cpp \
     restoreaddresstoclassicrequest.cpp \
     restoreaddresstoclassicresponse.cpp \
+    revokeclientvpningressrequest.cpp \
+    revokeclientvpningressresponse.cpp \
     revokesecuritygroupegressrequest.cpp \
     revokesecuritygroupegressresponse.cpp \
     revokesecuritygroupingressrequest.cpp \
@@ -1649,10 +1973,14 @@ SOURCES += \
     runinstancesresponse.cpp \
     runscheduledinstancesrequest.cpp \
     runscheduledinstancesresponse.cpp \
+    searchtransitgatewayroutesrequest.cpp \
+    searchtransitgatewayroutesresponse.cpp \
     startinstancesrequest.cpp \
     startinstancesresponse.cpp \
     stopinstancesrequest.cpp \
     stopinstancesresponse.cpp \
+    terminateclientvpnconnectionsrequest.cpp \
+    terminateclientvpnconnectionsresponse.cpp \
     terminateinstancesrequest.cpp \
     terminateinstancesresponse.cpp \
     unassignipv6addressesrequest.cpp \
@@ -1665,5 +1993,7 @@ SOURCES += \
     updatesecuritygroupruledescriptionsegressresponse.cpp \
     updatesecuritygroupruledescriptionsingressrequest.cpp \
     updatesecuritygroupruledescriptionsingressresponse.cpp \
+    withdrawbyoipcidrrequest.cpp \
+    withdrawbyoipcidrresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

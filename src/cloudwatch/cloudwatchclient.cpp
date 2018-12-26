@@ -41,6 +41,8 @@
 #include "getmetricdataresponse.h"
 #include "getmetricstatisticsrequest.h"
 #include "getmetricstatisticsresponse.h"
+#include "getmetricwidgetimagerequest.h"
+#include "getmetricwidgetimageresponse.h"
 #include "listdashboardsrequest.h"
 #include "listdashboardsresponse.h"
 #include "listmetricsrequest.h"
@@ -281,6 +283,34 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
  * Calls to the <code>GetMetricData</code> API have a different pricing structure than calls to
  * <code>GetMetricStatistics</code>. For more information about pricing, see <a
  * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+ *
+ * Pricing</a>>
+ *
+ * Amazon CloudWatch retains metric data as
+ *
+ * follows> <ul> <li>
+ *
+ * Data points with a period of less than 60 seconds are available for 3 hours. These data points are high-resolution
+ * metrics and are available only for custom metrics that have been defined with a <code>StorageResolution</code> of
+ *
+ * 1> </li> <li>
+ *
+ * Data points with a period of 60 seconds (1-minute) are available for 15
+ *
+ * days> </li> <li>
+ *
+ * Data points with a period of 300 seconds (5-minute) are available for 63
+ *
+ * days> </li> <li>
+ *
+ * Data points with a period of 3600 seconds (1 hour) are available for 455 days (15
+ *
+ * months)> </li> </ul>
+ *
+ * Data points that are initially published with a shorter period are aggregated together for long-term storage. For
+ * example, if you collect data using a period of 1 minute, the data remains available for 15 days with 1-minute
+ * resolution. After 15 days, this data is still available, but is aggregated and retrievable only with a resolution of 5
+ * minutes. After 63 days, the data is further aggregated and is available with a resolution of 1
  */
 GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataRequest &request)
 {
@@ -322,6 +352,10 @@ GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataReque
  * The Min and the Max values of the statistic set are
  *
  * equal> </li> </ul>
+ *
+ * Percentile statistics are not available for metrics when any of the metric values are negative
+ *
+ * numbers>
  *
  * Amazon CloudWatch retains metric data as
  *
@@ -366,12 +400,51 @@ GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMet
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * GetMetricWidgetImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * You can use the <code>GetMetricWidgetImage</code> API to retrieve a snapshot graph of one or more Amazon CloudWatch
+ * metrics as a bitmap image. You can then embed this image into your services and products, such as wiki pages, reports,
+ * and documents. You could also retrieve images regularly, such as every minute, and create your own custom live
+ *
+ * dashboard>
+ *
+ * The graph you retrieve can include all CloudWatch metric graph features, including metric math and horizontal and
+ * vertical
+ *
+ * annotations>
+ *
+ * There is a limit of 20 transactions per second for this API. Each <code>GetMetricWidgetImage</code> action has the
+ * following
+ *
+ * limits> <ul> <li>
+ *
+ * As many as 100 metrics in the
+ *
+ * graph> </li> <li>
+ *
+ * Up to 100 KB uncompressed
+ */
+GetMetricWidgetImageResponse * CloudWatchClient::getMetricWidgetImage(const GetMetricWidgetImageRequest &request)
+{
+    return qobject_cast<GetMetricWidgetImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * ListDashboardsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of the dashboards for your account. If you include <code>DashboardNamePrefix</code>, only those
  * dashboards with names starting with the prefix are listed. Otherwise, all dashboards in your account are listed.
+ *
+ * </p
+ *
+ * <code>ListDashboards</code> returns up to 1000 results on one page. If there are more than 1000 dashboards, you can call
+ * <code>ListDashboards</code> again and include the value you received for <code>NextToken</code> in the first call, to
+ * receive the next 1000
  */
 ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRequest &request)
 {
@@ -384,7 +457,8 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List the specified metrics. You can use the returned metrics with <a>GetMetricStatistics</a> to obtain statistical
+ * List the specified metrics. You can use the returned metrics with <a>GetMetricData</a> or <a>GetMetricStatistics</a> to
+ * obtain statistical
  *
  * data>
  *
@@ -393,7 +467,7 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
  * calls>
  *
  * After you create a metric, allow up to fifteen minutes before the metric appears. Statistics about the metric, however,
- * are available sooner using
+ * are available sooner using <a>GetMetricData</a> or
  */
 ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &request)
 {
@@ -411,7 +485,7 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
  *
  * here>
  *
- * You can have up to 500 dashboards per account. All dashboards in your account are global, not
+ * There is no limit to the number of dashboards in your account. All dashboards in your account are global, not
  *
  * region-specific>
  *
@@ -438,13 +512,12 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates an alarm and associates it with the specified metric. Optionally, this operation can associate one or
- * more Amazon SNS resources with the
+ * Creates or updates an alarm and associates it with the specified metric or metric math
  *
- * alarm>
+ * expression>
  *
  * When this operation creates an alarm, the alarm state is immediately set to <code>INSUFFICIENT_DATA</code>. The alarm is
- * evaluated and its state is set appropriately. Any actions associated with the state are then
+ * then evaluated and its state is set appropriately. Any actions associated with the new state are then
  *
  * executed>
  *
@@ -453,7 +526,7 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  *
  * alarm>
  *
- * If you are an IAM user, you must have Amazon EC2 permissions for some
+ * If you are an IAM user, you must have Amazon EC2 permissions for some alarm
  *
  * operations> <ul> <li>
  *
@@ -494,9 +567,11 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  *
  * actions>
  *
- * You must create at least one stop, terminate, or reboot alarm using either the Amazon EC2 or CloudWatch consoles to
- * create the <b>EC2ActionsAccess</b> IAM role. After this IAM role is created, you can create stop, terminate, or reboot
- * alarms using a command-line interface or
+ * The first time you create an alarm in the AWS Management Console, the CLI, or by using the PutMetricAlarm API,
+ * CloudWatch creates the necessary service-linked role for you. The service-linked role is called
+ * <code>AWSServiceRoleForCloudWatchEvents</code>. For more information, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">AWS
+ * service-linked
  */
 PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRequest &request)
 {
@@ -515,9 +590,18 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * <a>ListMetrics</a>>
  *
- * Each <code>PutMetricData</code> request is limited to 40 KB in size for HTTP POST
+ * You can publish either individual data points in the <code>Value</code> field, or arrays of values and the number of
+ * times each value occurred during the period by using the <code>Values</code> and <code>Counts</code> fields in the
+ * <code>MetricDatum</code> structure. Using the <code>Values</code> and <code>Counts</code> method enables you to publish
+ * up to 150 values per metric with one <code>PutMetricData</code> request, and supports retrieving percentile statistics
+ * on this
  *
- * requests>
+ * data>
+ *
+ * Each <code>PutMetricData</code> request is limited to 40 KB in size for HTTP POST requests. You can send a payload
+ * compressed by gzip. Each request is also limited to no more than 20 different
+ *
+ * metrics>
  *
  * Although the <code>Value</code> parameter accepts numbers of type <code>Double</code>, CloudWatch rejects values that
  * are either too small or too large. Values must be in the range of 8.515920e-109 to 1.174271e+108 (Base 10) or 2e-360 to
@@ -533,7 +617,7 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  * Guide</i>>
  *
  * Data points with time stamps from 24 hours ago or longer can take at least 48 hours to become available for
- * <a>GetMetricStatistics</a> from the time they are
+ * <a>GetMetricData</a> or <a>GetMetricStatistics</a> from the time they are
  *
  * submitted>
  *
@@ -542,11 +626,12 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * true> <ul> <li>
  *
- * The SampleCount value of the statistic set is
+ * The <code>SampleCount</code> value of the statistic set is 1 and <code>Min</code>, <code>Max</code>, and
+ * <code>Sum</code> are all
  *
- * > </li> <li>
+ * equal> </li> <li>
  *
- * The Min and the Max values of the statistic set are
+ * The <code>Min</code> and <code>Max</code> are equal, and <code>Sum</code> is equal to <code>Min</code> multiplied by
  */
 PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataRequest &request)
 {

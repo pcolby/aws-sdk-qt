@@ -36,6 +36,8 @@ class DescribeScalingPlanResourcesRequest;
 class DescribeScalingPlanResourcesResponse;
 class DescribeScalingPlansRequest;
 class DescribeScalingPlansResponse;
+class GetScalingPlanResourceForecastDataRequest;
+class GetScalingPlanResourceForecastDataResponse;
 class UpdateScalingPlanRequest;
 class UpdateScalingPlanResponse;
 
@@ -59,6 +61,7 @@ public slots:
     DeleteScalingPlanResponse * deleteScalingPlan(const DeleteScalingPlanRequest &request);
     DescribeScalingPlanResourcesResponse * describeScalingPlanResources(const DescribeScalingPlanResourcesRequest &request);
     DescribeScalingPlansResponse * describeScalingPlans(const DescribeScalingPlansRequest &request);
+    GetScalingPlanResourceForecastDataResponse * getScalingPlanResourceForecastData(const GetScalingPlanResourceForecastDataRequest &request);
     UpdateScalingPlanResponse * updateScalingPlan(const UpdateScalingPlanRequest &request);
 
 private:

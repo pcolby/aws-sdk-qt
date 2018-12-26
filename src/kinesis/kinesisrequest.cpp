@@ -40,8 +40,10 @@ namespace Kinesis {
  * \value CreateStreamAction Kinesis CreateStream action.
  * \value DecreaseStreamRetentionPeriodAction Kinesis DecreaseStreamRetentionPeriod action.
  * \value DeleteStreamAction Kinesis DeleteStream action.
+ * \value DeregisterStreamConsumerAction Kinesis DeregisterStreamConsumer action.
  * \value DescribeLimitsAction Kinesis DescribeLimits action.
  * \value DescribeStreamAction Kinesis DescribeStream action.
+ * \value DescribeStreamConsumerAction Kinesis DescribeStreamConsumer action.
  * \value DescribeStreamSummaryAction Kinesis DescribeStreamSummary action.
  * \value DisableEnhancedMonitoringAction Kinesis DisableEnhancedMonitoring action.
  * \value EnableEnhancedMonitoringAction Kinesis EnableEnhancedMonitoring action.
@@ -49,15 +51,18 @@ namespace Kinesis {
  * \value GetShardIteratorAction Kinesis GetShardIterator action.
  * \value IncreaseStreamRetentionPeriodAction Kinesis IncreaseStreamRetentionPeriod action.
  * \value ListShardsAction Kinesis ListShards action.
+ * \value ListStreamConsumersAction Kinesis ListStreamConsumers action.
  * \value ListStreamsAction Kinesis ListStreams action.
  * \value ListTagsForStreamAction Kinesis ListTagsForStream action.
  * \value MergeShardsAction Kinesis MergeShards action.
  * \value PutRecordAction Kinesis PutRecord action.
  * \value PutRecordsAction Kinesis PutRecords action.
+ * \value RegisterStreamConsumerAction Kinesis RegisterStreamConsumer action.
  * \value RemoveTagsFromStreamAction Kinesis RemoveTagsFromStream action.
  * \value SplitShardAction Kinesis SplitShard action.
  * \value StartStreamEncryptionAction Kinesis StartStreamEncryption action.
  * \value StopStreamEncryptionAction Kinesis StopStreamEncryption action.
+ * \value SubscribeToShardAction Kinesis SubscribeToShard action.
  * \value UpdateShardCountAction Kinesis UpdateShardCount action.
  */
 

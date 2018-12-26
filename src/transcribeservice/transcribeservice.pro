@@ -14,6 +14,10 @@ HEADERS += \
     createvocabularyrequest_p.h \
     createvocabularyresponse.h \
     createvocabularyresponse_p.h \
+    deletetranscriptionjobrequest.h \
+    deletetranscriptionjobrequest_p.h \
+    deletetranscriptionjobresponse.h \
+    deletetranscriptionjobresponse_p.h \
     deletevocabularyrequest.h \
     deletevocabularyrequest_p.h \
     deletevocabularyresponse.h \
@@ -52,6 +56,8 @@ HEADERS += \
 SOURCES += \
     createvocabularyrequest.cpp \
     createvocabularyresponse.cpp \
+    deletetranscriptionjobrequest.cpp \
+    deletetranscriptionjobresponse.cpp \
     deletevocabularyrequest.cpp \
     deletevocabularyresponse.cpp \
     gettranscriptionjobrequest.cpp \

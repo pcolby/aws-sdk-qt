@@ -37,13 +37,24 @@ namespace XRay {
  * requests.
  *
  * \value BatchGetTracesAction XRay BatchGetTraces action.
+ * \value CreateGroupAction XRay CreateGroup action.
+ * \value CreateSamplingRuleAction XRay CreateSamplingRule action.
+ * \value DeleteGroupAction XRay DeleteGroup action.
+ * \value DeleteSamplingRuleAction XRay DeleteSamplingRule action.
  * \value GetEncryptionConfigAction XRay GetEncryptionConfig action.
+ * \value GetGroupAction XRay GetGroup action.
+ * \value GetGroupsAction XRay GetGroups action.
+ * \value GetSamplingRulesAction XRay GetSamplingRules action.
+ * \value GetSamplingStatisticSummariesAction XRay GetSamplingStatisticSummaries action.
+ * \value GetSamplingTargetsAction XRay GetSamplingTargets action.
  * \value GetServiceGraphAction XRay GetServiceGraph action.
  * \value GetTraceGraphAction XRay GetTraceGraph action.
  * \value GetTraceSummariesAction XRay GetTraceSummaries action.
  * \value PutEncryptionConfigAction XRay PutEncryptionConfig action.
  * \value PutTelemetryRecordsAction XRay PutTelemetryRecords action.
  * \value PutTraceSegmentsAction XRay PutTraceSegments action.
+ * \value UpdateGroupAction XRay UpdateGroup action.
+ * \value UpdateSamplingRuleAction XRay UpdateSamplingRule action.
  */
 
 /*!

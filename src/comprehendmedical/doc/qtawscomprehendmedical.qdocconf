@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsComprehendMedical
+description = AWS ComprehendMedical SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawscomprehendmedical-index.html"
+navigation.landingtitle = "ComprehendMedical"
+navigation.cppclassespage = "ComprehendMedical C++ Classes"

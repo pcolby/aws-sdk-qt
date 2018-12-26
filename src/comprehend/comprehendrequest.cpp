@@ -41,8 +41,15 @@ namespace Comprehend {
  * \value BatchDetectKeyPhrasesAction Comprehend BatchDetectKeyPhrases action.
  * \value BatchDetectSentimentAction Comprehend BatchDetectSentiment action.
  * \value BatchDetectSyntaxAction Comprehend BatchDetectSyntax action.
+ * \value CreateDocumentClassifierAction Comprehend CreateDocumentClassifier action.
+ * \value CreateEntityRecognizerAction Comprehend CreateEntityRecognizer action.
+ * \value DeleteDocumentClassifierAction Comprehend DeleteDocumentClassifier action.
+ * \value DeleteEntityRecognizerAction Comprehend DeleteEntityRecognizer action.
+ * \value DescribeDocumentClassificationJobAction Comprehend DescribeDocumentClassificationJob action.
+ * \value DescribeDocumentClassifierAction Comprehend DescribeDocumentClassifier action.
  * \value DescribeDominantLanguageDetectionJobAction Comprehend DescribeDominantLanguageDetectionJob action.
  * \value DescribeEntitiesDetectionJobAction Comprehend DescribeEntitiesDetectionJob action.
+ * \value DescribeEntityRecognizerAction Comprehend DescribeEntityRecognizer action.
  * \value DescribeKeyPhrasesDetectionJobAction Comprehend DescribeKeyPhrasesDetectionJob action.
  * \value DescribeSentimentDetectionJobAction Comprehend DescribeSentimentDetectionJob action.
  * \value DescribeTopicsDetectionJobAction Comprehend DescribeTopicsDetectionJob action.
@@ -51,11 +58,15 @@ namespace Comprehend {
  * \value DetectKeyPhrasesAction Comprehend DetectKeyPhrases action.
  * \value DetectSentimentAction Comprehend DetectSentiment action.
  * \value DetectSyntaxAction Comprehend DetectSyntax action.
+ * \value ListDocumentClassificationJobsAction Comprehend ListDocumentClassificationJobs action.
+ * \value ListDocumentClassifiersAction Comprehend ListDocumentClassifiers action.
  * \value ListDominantLanguageDetectionJobsAction Comprehend ListDominantLanguageDetectionJobs action.
  * \value ListEntitiesDetectionJobsAction Comprehend ListEntitiesDetectionJobs action.
+ * \value ListEntityRecognizersAction Comprehend ListEntityRecognizers action.
  * \value ListKeyPhrasesDetectionJobsAction Comprehend ListKeyPhrasesDetectionJobs action.
  * \value ListSentimentDetectionJobsAction Comprehend ListSentimentDetectionJobs action.
  * \value ListTopicsDetectionJobsAction Comprehend ListTopicsDetectionJobs action.
+ * \value StartDocumentClassificationJobAction Comprehend StartDocumentClassificationJob action.
  * \value StartDominantLanguageDetectionJobAction Comprehend StartDominantLanguageDetectionJob action.
  * \value StartEntitiesDetectionJobAction Comprehend StartEntitiesDetectionJob action.
  * \value StartKeyPhrasesDetectionJobAction Comprehend StartKeyPhrasesDetectionJob action.
@@ -65,6 +76,8 @@ namespace Comprehend {
  * \value StopEntitiesDetectionJobAction Comprehend StopEntitiesDetectionJob action.
  * \value StopKeyPhrasesDetectionJobAction Comprehend StopKeyPhrasesDetectionJob action.
  * \value StopSentimentDetectionJobAction Comprehend StopSentimentDetectionJob action.
+ * \value StopTrainingDocumentClassifierAction Comprehend StopTrainingDocumentClassifier action.
+ * \value StopTrainingEntityRecognizerAction Comprehend StopTrainingEntityRecognizer action.
  */
 
 /*!

@@ -46,6 +46,7 @@ namespace DynamoDB {
  * \value DeleteTableAction DynamoDB DeleteTable action.
  * \value DescribeBackupAction DynamoDB DescribeBackup action.
  * \value DescribeContinuousBackupsAction DynamoDB DescribeContinuousBackups action.
+ * \value DescribeEndpointsAction DynamoDB DescribeEndpoints action.
  * \value DescribeGlobalTableAction DynamoDB DescribeGlobalTable action.
  * \value DescribeGlobalTableSettingsAction DynamoDB DescribeGlobalTableSettings action.
  * \value DescribeLimitsAction DynamoDB DescribeLimits action.
@@ -62,6 +63,8 @@ namespace DynamoDB {
  * \value RestoreTableToPointInTimeAction DynamoDB RestoreTableToPointInTime action.
  * \value ScanAction DynamoDB Scan action.
  * \value TagResourceAction DynamoDB TagResource action.
+ * \value TransactGetItemsAction DynamoDB TransactGetItems action.
+ * \value TransactWriteItemsAction DynamoDB TransactWriteItems action.
  * \value UntagResourceAction DynamoDB UntagResource action.
  * \value UpdateContinuousBackupsAction DynamoDB UpdateContinuousBackups action.
  * \value UpdateGlobalTableAction DynamoDB UpdateGlobalTable action.

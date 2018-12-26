@@ -55,6 +55,7 @@ namespace IoTAnalytics {
  * \value DescribePipelineAction IoTAnalytics DescribePipeline action.
  * \value GetDatasetContentAction IoTAnalytics GetDatasetContent action.
  * \value ListChannelsAction IoTAnalytics ListChannels action.
+ * \value ListDatasetContentsAction IoTAnalytics ListDatasetContents action.
  * \value ListDatasetsAction IoTAnalytics ListDatasets action.
  * \value ListDatastoresAction IoTAnalytics ListDatastores action.
  * \value ListPipelinesAction IoTAnalytics ListPipelines action.

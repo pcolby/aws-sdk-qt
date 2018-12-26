@@ -14,10 +14,46 @@ HEADERS += \
     batchgettracesrequest_p.h \
     batchgettracesresponse.h \
     batchgettracesresponse_p.h \
+    creategrouprequest.h \
+    creategrouprequest_p.h \
+    creategroupresponse.h \
+    creategroupresponse_p.h \
+    createsamplingrulerequest.h \
+    createsamplingrulerequest_p.h \
+    createsamplingruleresponse.h \
+    createsamplingruleresponse_p.h \
+    deletegrouprequest.h \
+    deletegrouprequest_p.h \
+    deletegroupresponse.h \
+    deletegroupresponse_p.h \
+    deletesamplingrulerequest.h \
+    deletesamplingrulerequest_p.h \
+    deletesamplingruleresponse.h \
+    deletesamplingruleresponse_p.h \
     getencryptionconfigrequest.h \
     getencryptionconfigrequest_p.h \
     getencryptionconfigresponse.h \
     getencryptionconfigresponse_p.h \
+    getgrouprequest.h \
+    getgrouprequest_p.h \
+    getgroupresponse.h \
+    getgroupresponse_p.h \
+    getgroupsrequest.h \
+    getgroupsrequest_p.h \
+    getgroupsresponse.h \
+    getgroupsresponse_p.h \
+    getsamplingrulesrequest.h \
+    getsamplingrulesrequest_p.h \
+    getsamplingrulesresponse.h \
+    getsamplingrulesresponse_p.h \
+    getsamplingstatisticsummariesrequest.h \
+    getsamplingstatisticsummariesrequest_p.h \
+    getsamplingstatisticsummariesresponse.h \
+    getsamplingstatisticsummariesresponse_p.h \
+    getsamplingtargetsrequest.h \
+    getsamplingtargetsrequest_p.h \
+    getsamplingtargetsresponse.h \
+    getsamplingtargetsresponse_p.h \
     getservicegraphrequest.h \
     getservicegraphrequest_p.h \
     getservicegraphresponse.h \
@@ -42,6 +78,14 @@ HEADERS += \
     puttracesegmentsrequest_p.h \
     puttracesegmentsresponse.h \
     puttracesegmentsresponse_p.h \
+    updategrouprequest.h \
+    updategrouprequest_p.h \
+    updategroupresponse.h \
+    updategroupresponse_p.h \
+    updatesamplingrulerequest.h \
+    updatesamplingrulerequest_p.h \
+    updatesamplingruleresponse.h \
+    updatesamplingruleresponse_p.h \
     xrayclient.h \
     xrayclient_p.h \
     xrayrequest.h \
@@ -52,8 +96,26 @@ HEADERS += \
 SOURCES += \
     batchgettracesrequest.cpp \
     batchgettracesresponse.cpp \
+    creategrouprequest.cpp \
+    creategroupresponse.cpp \
+    createsamplingrulerequest.cpp \
+    createsamplingruleresponse.cpp \
+    deletegrouprequest.cpp \
+    deletegroupresponse.cpp \
+    deletesamplingrulerequest.cpp \
+    deletesamplingruleresponse.cpp \
     getencryptionconfigrequest.cpp \
     getencryptionconfigresponse.cpp \
+    getgrouprequest.cpp \
+    getgroupresponse.cpp \
+    getgroupsrequest.cpp \
+    getgroupsresponse.cpp \
+    getsamplingrulesrequest.cpp \
+    getsamplingrulesresponse.cpp \
+    getsamplingstatisticsummariesrequest.cpp \
+    getsamplingstatisticsummariesresponse.cpp \
+    getsamplingtargetsrequest.cpp \
+    getsamplingtargetsresponse.cpp \
     getservicegraphrequest.cpp \
     getservicegraphresponse.cpp \
     gettracegraphrequest.cpp \
@@ -66,6 +128,10 @@ SOURCES += \
     puttelemetryrecordsresponse.cpp \
     puttracesegmentsrequest.cpp \
     puttracesegmentsresponse.cpp \
+    updategrouprequest.cpp \
+    updategroupresponse.cpp \
+    updatesamplingrulerequest.cpp \
+    updatesamplingruleresponse.cpp \
     xrayclient.cpp \
     xrayrequest.cpp \
     xrayresponse.cpp \

@@ -32,6 +32,10 @@ HEADERS += \
     describescalingplansrequest_p.h \
     describescalingplansresponse.h \
     describescalingplansresponse_p.h \
+    getscalingplanresourceforecastdatarequest.h \
+    getscalingplanresourceforecastdatarequest_p.h \
+    getscalingplanresourceforecastdataresponse.h \
+    getscalingplanresourceforecastdataresponse_p.h \
     updatescalingplanrequest.h \
     updatescalingplanrequest_p.h \
     updatescalingplanresponse.h \
@@ -49,6 +53,8 @@ SOURCES += \
     describescalingplanresourcesresponse.cpp \
     describescalingplansrequest.cpp \
     describescalingplansresponse.cpp \
+    getscalingplanresourceforecastdatarequest.cpp \
+    getscalingplanresourceforecastdataresponse.cpp \
     updatescalingplanrequest.cpp \
     updatescalingplanresponse.cpp \
 

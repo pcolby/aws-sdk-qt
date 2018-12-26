@@ -352,7 +352,7 @@ APIGatewayClient::APIGatewayClient(
  *
  * Create an <a>ApiKey</a> resource.
  *
- * </p <div class="seeAlso"><a href="http://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS
+ * </p <div class="seeAlso"><a href="https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html">AWS
  */
 CreateApiKeyResponse * APIGatewayClient::createApiKey(const CreateApiKeyRequest &request)
 {
@@ -1593,7 +1593,7 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
  * Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
  *
  * body> <div class="seeAlso"> <a
- * href="http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom
+ * href="https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom
  */
 TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {

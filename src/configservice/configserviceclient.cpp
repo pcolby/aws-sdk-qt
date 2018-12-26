@@ -21,6 +21,8 @@
 #include "configserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchgetaggregateresourceconfigrequest.h"
+#include "batchgetaggregateresourceconfigresponse.h"
 #include "batchgetresourceconfigrequest.h"
 #include "batchgetresourceconfigresponse.h"
 #include "deleteaggregationauthorizationrequest.h"
@@ -73,6 +75,10 @@
 #include "getaggregatecompliancedetailsbyconfigruleresponse.h"
 #include "getaggregateconfigrulecompliancesummaryrequest.h"
 #include "getaggregateconfigrulecompliancesummaryresponse.h"
+#include "getaggregatediscoveredresourcecountsrequest.h"
+#include "getaggregatediscoveredresourcecountsresponse.h"
+#include "getaggregateresourceconfigrequest.h"
+#include "getaggregateresourceconfigresponse.h"
 #include "getcompliancedetailsbyconfigrulerequest.h"
 #include "getcompliancedetailsbyconfigruleresponse.h"
 #include "getcompliancedetailsbyresourcerequest.h"
@@ -85,6 +91,8 @@
 #include "getdiscoveredresourcecountsresponse.h"
 #include "getresourceconfighistoryrequest.h"
 #include "getresourceconfighistoryresponse.h"
+#include "listaggregatediscoveredresourcesrequest.h"
+#include "listaggregatediscoveredresourcesresponse.h"
 #include "listdiscoveredresourcesrequest.h"
 #include "listdiscoveredresourcesresponse.h"
 #include "putaggregationauthorizationrequest.h"
@@ -203,6 +211,29 @@ ConfigServiceClient::ConfigServiceClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Config");
     d->serviceName = QStringLiteral("config");
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * BatchGetAggregateResourceConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the current configuration items for resources that are present in your AWS Config aggregator. The operation also
+ * returns a list of resources that are not processed in the current request. If there are no unprocessed resources, the
+ * operation returns an empty <code>unprocessedResourceIdentifiers</code> list.
+ *
+ * </p <note> <ul> <li>
+ *
+ * The API does not return results for deleted
+ *
+ * resources> </li> <li>
+ *
+ * The API does not return tags and
+ */
+BatchGetAggregateResourceConfigResponse * ConfigServiceClient::batchGetAggregateResourceConfig(const BatchGetAggregateResourceConfigRequest &request)
+{
+    return qobject_cast<BatchGetAggregateResourceConfigResponse *>(send(request));
 }
 
 /*!
@@ -694,6 +725,39 @@ GetAggregateConfigRuleComplianceSummaryResponse * ConfigServiceClient::getAggreg
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetAggregateDiscoveredResourceCountsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the resource counts across accounts and regions that are present in your AWS Config aggregator. You can request
+ * the resource counts by providing filters and
+ *
+ * GroupByKey>
+ *
+ * For example, if the input contains accountID 12345678910 and region us-east-1 in filters, the API returns the count of
+ * resources in account ID 12345678910 and region us-east-1. If the input contains ACCOUNT_ID as a GroupByKey, the API
+ * returns resource counts for all source accounts that are present in your
+ */
+GetAggregateDiscoveredResourceCountsResponse * ConfigServiceClient::getAggregateDiscoveredResourceCounts(const GetAggregateDiscoveredResourceCountsRequest &request)
+{
+    return qobject_cast<GetAggregateDiscoveredResourceCountsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetAggregateResourceConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns configuration item that is aggregated for your specific resource in a specific source account and
+ */
+GetAggregateResourceConfigResponse * ConfigServiceClient::getAggregateResourceConfig(const GetAggregateResourceConfigRequest &request)
+{
+    return qobject_cast<GetAggregateResourceConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * GetComplianceDetailsByConfigRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -850,6 +914,28 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
 GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory(const GetResourceConfigHistoryRequest &request)
 {
     return qobject_cast<GetResourceConfigHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * ListAggregateDiscoveredResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts a resource type and returns a list of resource identifiers that are aggregated for a specific resource type
+ * across accounts and regions. A resource identifier includes the resource type, ID, (if available) the custom resource
+ * name, source account, and source region. You can narrow the results to include only resources that have specific
+ * resource IDs, or a resource name, or source account ID, or source
+ *
+ * region>
+ *
+ * For example, if the input consists of accountID 12345678910 and the region is us-east-1 for resource type
+ * <code>AWS::EC2::Instance</code> then the API returns all the EC2 instance identifiers of accountID 12345678910 and
+ * region
+ */
+ListAggregateDiscoveredResourcesResponse * ConfigServiceClient::listAggregateDiscoveredResources(const ListAggregateDiscoveredResourcesRequest &request)
+{
+    return qobject_cast<ListAggregateDiscoveredResourcesResponse *>(send(request));
 }
 
 /*!

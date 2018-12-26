@@ -30,6 +30,8 @@ namespace CostExplorer {
 class CostExplorerClientPrivate;
 class GetCostAndUsageRequest;
 class GetCostAndUsageResponse;
+class GetCostForecastRequest;
+class GetCostForecastResponse;
 class GetDimensionValuesRequest;
 class GetDimensionValuesResponse;
 class GetReservationCoverageRequest;
@@ -58,6 +60,7 @@ public:
 
 public slots:
     GetCostAndUsageResponse * getCostAndUsage(const GetCostAndUsageRequest &request);
+    GetCostForecastResponse * getCostForecast(const GetCostForecastRequest &request);
     GetDimensionValuesResponse * getDimensionValues(const GetDimensionValuesRequest &request);
     GetReservationCoverageResponse * getReservationCoverage(const GetReservationCoverageRequest &request);
     GetReservationPurchaseRecommendationResponse * getReservationPurchaseRecommendation(const GetReservationPurchaseRecommendationRequest &request);

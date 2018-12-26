@@ -39,6 +39,7 @@ public:
     enum Action {
         BatchMeterUsageAction,
         MeterUsageAction,
+        RegisterUsageAction,
         ResolveCustomerAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

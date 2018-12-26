@@ -242,7 +242,9 @@ AssociateTeamMemberResponse * CodeStarClient::associateTeamMember(const Associat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Reserved for future use. To create a project, use the AWS CodeStar
+ * Creates a project, including project resources. This action creates a project based on a submitted project request. A
+ * set of source code files and a toolchain template file can be included with the project request. If these are not
+ * provided, an empty project is
  */
 CreateProjectResponse * CodeStarClient::createProject(const CreateProjectRequest &request)
 {

@@ -33,6 +33,8 @@
 #include "deletebranchresponse.h"
 #include "deletecommentcontentrequest.h"
 #include "deletecommentcontentresponse.h"
+#include "deletefilerequest.h"
+#include "deletefileresponse.h"
 #include "deleterepositoryrequest.h"
 #include "deleterepositoryresponse.h"
 #include "describepullrequesteventsrequest.h"
@@ -51,6 +53,10 @@
 #include "getcommitresponse.h"
 #include "getdifferencesrequest.h"
 #include "getdifferencesresponse.h"
+#include "getfilerequest.h"
+#include "getfileresponse.h"
+#include "getfolderrequest.h"
+#include "getfolderresponse.h"
 #include "getmergeconflictsrequest.h"
 #include "getmergeconflictsresponse.h"
 #include "getpullrequestrequest.h"
@@ -187,6 +193,18 @@ namespace CodeCommit {
  *  Files, by calling the
  * 
  *  following> <ul> <li>
+ * 
+ *  <a>DeleteFile</a>, which deletes the content of a specified file from a specified
+ * 
+ *  branch> </li> <li>
+ * 
+ *  <a>GetFile</a>, which returns the base-64 encoded content of a specified
+ * 
+ *  file> </li> <li>
+ * 
+ *  <a>GetFolder</a>, which returns the contents of a specified folder or
+ * 
+ *  directory> </li> <li>
  * 
  *  <a>PutFile</a>, which adds or modifies a file in a specified repository and
  * 
@@ -453,6 +471,20 @@ DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const Dele
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * DeleteFileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified file from a specified branch. A commit is created on the branch that contains the revision. The file
+ * will still exist in the commits prior to the commit that contains the
+ */
+DeleteFileResponse * CodeCommitClient::deleteFile(const DeleteFileRequest &request)
+{
+    return qobject_cast<DeleteFileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * DeleteRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -572,6 +604,32 @@ GetCommitResponse * CodeCommitClient::getCommit(const GetCommitRequest &request)
 GetDifferencesResponse * CodeCommitClient::getDifferences(const GetDifferencesRequest &request)
 {
     return qobject_cast<GetDifferencesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetFileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the base-64 encoded contents of a specified file and its
+ */
+GetFileResponse * CodeCommitClient::getFile(const GetFileRequest &request)
+{
+    return qobject_cast<GetFileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetFolderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the contents of a specified folder in a
+ */
+GetFolderResponse * CodeCommitClient::getFolder(const GetFolderRequest &request)
+{
+    return qobject_cast<GetFolderResponse *>(send(request));
 }
 
 /*!
@@ -732,7 +790,8 @@ PostCommentReplyResponse * CodeCommitClient::postCommentReply(const PostCommentR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or updates a file in an AWS CodeCommit
+ * Adds or updates a file in a branch in an AWS CodeCommit repository, and generates a commit for the addition in the
+ * specified
  */
 PutFileResponse * CodeCommitClient::putFile(const PutFileRequest &request)
 {

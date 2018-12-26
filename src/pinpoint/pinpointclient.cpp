@@ -61,6 +61,8 @@
 #include "deletesmschannelresponse.h"
 #include "deleteuserendpointsrequest.h"
 #include "deleteuserendpointsresponse.h"
+#include "deletevoicechannelrequest.h"
+#include "deletevoicechannelresponse.h"
 #include "getadmchannelrequest.h"
 #include "getadmchannelresponse.h"
 #include "getapnschannelrequest.h"
@@ -123,10 +125,14 @@
 #include "getsmschannelresponse.h"
 #include "getuserendpointsrequest.h"
 #include "getuserendpointsresponse.h"
+#include "getvoicechannelrequest.h"
+#include "getvoicechannelresponse.h"
 #include "phonenumbervalidaterequest.h"
 #include "phonenumbervalidateresponse.h"
 #include "puteventstreamrequest.h"
 #include "puteventstreamresponse.h"
+#include "puteventsrequest.h"
+#include "puteventsresponse.h"
 #include "removeattributesrequest.h"
 #include "removeattributesresponse.h"
 #include "sendmessagesrequest.h"
@@ -161,6 +167,8 @@
 #include "updatesegmentresponse.h"
 #include "updatesmschannelrequest.h"
 #include "updatesmschannelresponse.h"
+#include "updatevoicechannelrequest.h"
+#include "updatevoicechannelresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -477,6 +485,18 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
 DeleteUserEndpointsResponse * PinpointClient::deleteUserEndpoints(const DeleteUserEndpointsRequest &request)
 {
     return qobject_cast<DeleteUserEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteVoiceChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteVoiceChannelResponse * PinpointClient::deleteVoiceChannel(const DeleteVoiceChannelRequest &request)
+{
+    return qobject_cast<DeleteVoiceChannelResponse *>(send(request));
 }
 
 /*!
@@ -853,6 +873,18 @@ GetUserEndpointsResponse * PinpointClient::getUserEndpoints(const GetUserEndpoin
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetVoiceChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetVoiceChannelResponse * PinpointClient::getVoiceChannel(const GetVoiceChannelRequest &request)
+{
+    return qobject_cast<GetVoiceChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * PhoneNumberValidateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -877,6 +909,19 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * PutEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use to record events for endpoints. This method creates events and creates or updates the endpoints that those events
+ */
+PutEventsResponse * PinpointClient::putEvents(const PutEventsRequest &request)
+{
+    return qobject_cast<PutEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * RemoveAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -893,10 +938,6 @@ RemoveAttributesResponse * PinpointClient::removeAttributes(const RemoveAttribut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this resource to send a direct message, which is a one time message that you send to a limited audience without
- * creating a campaign. You can send the message to up to 100 recipients. You cannot use the message to engage a segment.
- * When you send the message, Amazon Pinpoint delivers it immediately, and you cannot schedule the delivery. To engage a
- * user segment, and to schedule the message delivery, create a campaign instead of sending a direct message. You can send
  */
 SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &request)
 {
@@ -909,16 +950,6 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this resource to message a list of users. Amazon Pinpoint sends the message to all of the endpoints that are
- * associated with each user. A user represents an individual who is assigned a unique user ID, and this ID is assigned to
- * one or more endpoints. For example, if an individual uses your app on multiple devices, your app could assign that
- * person's user ID to the endpoint for each device. With the users-messages resource, you specify the message recipients
- * as user IDs. For each user ID, Amazon Pinpoint delivers the message to all of the user's endpoints. Within the body of
- * your request, you can specify a default message, and you can tailor your message for different channels, including those
- * for mobile push and SMS. With this resource, you send a direct message, which is a one time message that you send to a
- * limited audience without creating a campaign. You can send the message to up to 100 users per request. You cannot use
- * the message to engage a segment. When you send the message, Amazon Pinpoint delivers it immediately, and you cannot
- * schedule the delivery. To engage a user segment, and to schedule the message delivery, create a campaign instead of
  */
 SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMessagesRequest &request)
 {
@@ -1091,6 +1122,18 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
 UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
 {
     return qobject_cast<UpdateSmsChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateVoiceChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateVoiceChannelResponse * PinpointClient::updateVoiceChannel(const UpdateVoiceChannelRequest &request)
+{
+    return qobject_cast<UpdateVoiceChannelResponse *>(send(request));
 }
 
 /*!

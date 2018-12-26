@@ -87,6 +87,8 @@
 #include "getfolderresponse.h"
 #include "getfolderpathrequest.h"
 #include "getfolderpathresponse.h"
+#include "getresourcesrequest.h"
+#include "getresourcesresponse.h"
 #include "initiatedocumentversionuploadrequest.h"
 #include "initiatedocumentversionuploadresponse.h"
 #include "removeallresourcepermissionsrequest.h"
@@ -308,13 +310,14 @@ CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Configure WorkDocs to use Amazon SNS
+ * Configure Amazon WorkDocs to use Amazon SNS notifications. The endpoint receives a confirmation message, and must
+ * confirm the
  *
- * notifications>
+ * subscription>
  *
- * The endpoint receives a confirmation message, and must confirm the subscription. For more information, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.confirm">Confirm the
- * Subscription</a> in the <i>Amazon Simple Notification Service Developer
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/workdocs/latest/developerguide/subscribe-notifications.html">Subscribe to
+ * Notifications</a> in the <i>Amazon WorkDocs Developer
  */
 CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubscription(const CreateNotificationSubscriptionRequest &request)
 {
@@ -519,7 +522,7 @@ DescribeFolderContentsResponse * WorkDocsClient::describeFolderContents(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the groups specified by
+ * Describes the groups specified by the query. Groups are defined by the underlying Active
  */
 DescribeGroupsResponse * WorkDocsClient::describeGroups(const DescribeGroupsRequest &request)
 {
@@ -561,6 +564,13 @@ DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermission
  * Describes the current user's special folders; the <code>RootFolder</code> and the <code>RecycleBin</code>.
  * <code>RootFolder</code> is the root of user's files and folders and <code>RecycleBin</code> is the root of recycled
  * items. This is not a valid action for SigV4 (administrative API)
+ *
+ * clients>
+ *
+ * This action requires an authentication token. To get an authentication token, register an application with Amazon
+ * WorkDocs. For more information, see <a
+ * href="http://docs.aws.amazon.com/workdocs/latest/developerguide/wd-auth-user.html">Authentication and Access Control for
+ * User Applications</a> in the <i>Amazon WorkDocs Developer
  */
 DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const DescribeRootFoldersRequest &request)
 {
@@ -673,6 +683,19 @@ GetFolderResponse * WorkDocsClient::getFolder(const GetFolderRequest &request)
 GetFolderPathResponse * WorkDocsClient::getFolderPath(const GetFolderPathRequest &request)
 {
     return qobject_cast<GetFolderPathResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkDocsClient service, and returns a pointer to an
+ * GetResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a collection of resources, including folders and documents. The only <code>CollectionType</code> supported is
+ */
+GetResourcesResponse * WorkDocsClient::getResources(const GetResourcesRequest &request)
+{
+    return qobject_cast<GetResourcesResponse *>(send(request));
 }
 
 /*!

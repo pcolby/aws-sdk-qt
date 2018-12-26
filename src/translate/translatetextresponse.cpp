@@ -33,7 +33,7 @@ namespace Translate {
  *
  * \inmodule QtAwsTranslate
  *
- *  Provides translation between English and one of six languages, or between one of the six languages and
+ *  Provides translation between one source language and another of the same set of
  *
  * \sa TranslateClient::translateText
  */

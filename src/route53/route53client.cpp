@@ -254,21 +254,21 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  *
  * The request body must include a document with a <code>ChangeResourceRecordSetsRequest</code> element. The request body
  * contains a list of change items, known as a change batch. Change batches are considered transactional changes. When
- * using the Amazon Route 53 API to change resource record sets, Amazon Route 53 either makes all or none of the changes in
- * a change batch request. This ensures that Amazon Route 53 never partially implements the intended changes to the
- * resource record sets in a hosted zone.
+ * using the Amazon Route 53 API to change resource record sets, Route 53 either makes all or none of the changes in a
+ * change batch request. This ensures that Route 53 never partially implements the intended changes to the resource record
+ * sets in a hosted zone.
  *
  * </p
  *
  * For example, a change batch request that deletes the <code>CNAME</code> record for www.example.com and creates an alias
- * resource record set for www.example.com. Amazon Route 53 deletes the first resource record set and creates the second
- * resource record set in a single operation. If either the <code>DELETE</code> or the <code>CREATE</code> action fails,
- * then both changes (plus any other changes in the batch) fail, and the original <code>CNAME</code> record continues to
+ * resource record set for www.example.com. Route 53 deletes the first resource record set and creates the second resource
+ * record set in a single operation. If either the <code>DELETE</code> or the <code>CREATE</code> action fails, then both
+ * changes (plus any other changes in the batch) fail, and the original <code>CNAME</code> record continues to
  *
  * exist> <b>
  *
  * Due to the nature of transactional changes, you can't delete the same resource record set more than once in a single
- * change batch. If you attempt to delete the same change batch more than once, Amazon Route 53 returns an
+ * change batch. If you attempt to delete the same change batch more than once, Route 53 returns an
  * <code>InvalidChangeBatch</code>
  *
  * error> </b>
@@ -278,10 +278,10 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  * </p
  *
  * To create resource record sets for complex routing configurations, use either the traffic flow visual editor in the
- * Amazon Route 53 console or the API actions for traffic policies and traffic policy instances. Save the configuration as
- * a traffic policy, then associate the traffic policy with one or more domain names (such as example.com) or subdomain
- * names (such as www.example.com), in the same hosted zone or in multiple hosted zones. You can roll back the updates if
- * the new configuration isn't performing as expected. For more information, see <a
+ * Route 53 console or the API actions for traffic policies and traffic policy instances. Save the configuration as a
+ * traffic policy, then associate the traffic policy with one or more domain names (such as example.com) or subdomain names
+ * (such as www.example.com), in the same hosted zone or in multiple hosted zones. You can roll back the updates if the new
+ * configuration isn't performing as expected. For more information, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/traffic-flow.html">Using Traffic Flow to Route DNS
  * Traffic</a> in the <i>Amazon Route 53 Developer
  *
@@ -304,7 +304,7 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  * values> </li> <li>
  *
  * <code>UPSERT</code>: If a resource record set does not already exist, AWS creates it. If a resource set does exist,
- * Amazon Route 53 updates it with the values in the request.
+ * Route 53 updates it with the values in the request.
  *
  * </p </li> </ul>
  *
@@ -326,14 +326,14 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  *
  * </p
  *
- * <b>Change Propagation to Amazon Route 53 DNS Servers</b>
+ * <b>Change Propagation to Route 53 DNS Servers</b>
  *
  * </p
  *
- * When you submit a <code>ChangeResourceRecordSets</code> request, Amazon Route 53 propagates your changes to all of the
- * Amazon Route 53 authoritative DNS servers. While your changes are propagating, <code>GetChange</code> returns a status
- * of <code>PENDING</code>. When propagation is complete, <code>GetChange</code> returns a status of <code>INSYNC</code>.
- * Changes generally propagate to all Amazon Route 53 name servers within 60 seconds. For more information, see
+ * When you submit a <code>ChangeResourceRecordSets</code> request, Route 53 propagates your changes to all of the Route 53
+ * authoritative DNS servers. While your changes are propagating, <code>GetChange</code> returns a status of
+ * <code>PENDING</code>. When propagation is complete, <code>GetChange</code> returns a status of <code>INSYNC</code>.
+ * Changes generally propagate to all Route 53 name servers within 60 seconds. For more information, see
  *
  * <a>GetChange</a>>
  *
@@ -390,7 +390,7 @@ ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const Chang
  *
  * If you're registering EC2 instances with an Elastic Load Balancing (ELB) load balancer, do not create Amazon Route 53
  * health checks for the EC2 instances. When you register an EC2 instance with a load balancer, you configure settings for
- * an ELB health check, which performs a similar function to an Amazon Route 53 health
+ * an ELB health check, which performs a similar function to a Route 53 health
  *
  * check>
  *
@@ -402,8 +402,8 @@ ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const Chang
  *
  * following> <ul> <li>
  *
- * Amazon Route 53 health checkers are outside the VPC. To check the health of an endpoint within a VPC by IP address, you
- * must assign a public IP address to the instance in the
+ * Route 53 health checkers are outside the VPC. To check the health of an endpoint within a VPC by IP address, you must
+ * assign a public IP address to the instance in the
  *
  * VPC> </li> <li>
  *
@@ -430,12 +430,14 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new public hosted zone, which you use to specify how the Domain Name System (DNS) routes traffic on the
- * Internet for a domain, such as example.com, and its subdomains.
+ * Creates a new public or private hosted zone. You create records in a public hosted zone to define how you want to route
+ * traffic on the internet for a domain, such as example.com, and its subdomains (apex.example.com, acme.example.com). You
+ * create records in a private hosted zone to define how you want to route traffic for a domain and its subdomains within
+ * one or more Amazon Virtual Private Clouds (Amazon VPCs).
  *
  * </p <b>
  *
- * You can't convert a public hosted zones to a private hosted zone or vice versa. Instead, you must create a new hosted
+ * You can't convert a public hosted zone to a private hosted zone or vice versa. Instead, you must create a new hosted
  * zone with the same name and create new resource record
  *
  * sets> </b>
@@ -449,31 +451,32 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * following> <ul> <li>
  *
- * You can't create a hosted zone for a top-level domain
+ * You can't create a hosted zone for a top-level domain (TLD) such as
  *
- * (TLD)> </li> <li>
+ * .com> </li> <li>
  *
- * Amazon Route 53 automatically creates a default SOA record and four NS records for the zone. For more information about
- * SOA and NS records, see <a href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html">NS and SOA
- * Records that Amazon Route 53 Creates for a Hosted Zone</a> in the <i>Amazon Route 53 Developer
+ * For public hosted zones, Amazon Route 53 automatically creates a default SOA record and four NS records for the zone.
+ * For more information about SOA and NS records, see <a
+ * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html">NS and SOA Records that Route 53
+ * Creates for a Hosted Zone</a> in the <i>Amazon Route 53 Developer
  *
  * Guide</i>>
  *
- * If you want to use the same name servers for multiple hosted zones, you can optionally associate a reusable delegation
- * set with the hosted zone. See the <code>DelegationSetId</code>
+ * If you want to use the same name servers for multiple public hosted zones, you can optionally associate a reusable
+ * delegation set with the hosted zone. See the <code>DelegationSetId</code>
  *
  * element> </li> <li>
  *
- * If your domain is registered with a registrar other than Amazon Route 53, you must update the name servers with your
- * registrar to make Amazon Route 53 your DNS service. For more information, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/creating-migrating.html">Configuring Amazon Route 53 as
- * your DNS Service</a> in the <i>Amazon Route 53 Developer Guide</i>.
+ * If your domain is registered with a registrar other than Route 53, you must update the name servers with your registrar
+ * to make Route 53 the DNS service for the domain. For more information, see <a
+ * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html">Migrating DNS Service for an Existing
+ * Domain to Amazon Route 53</a> in the <i>Amazon Route 53 Developer Guide</i>.
  *
  * </p </li> </ul>
  *
  * When you submit a <code>CreateHostedZone</code> request, the initial status of the hosted zone is <code>PENDING</code>.
- * This means that the NS and SOA records are not yet available on all Amazon Route 53 DNS servers. When the NS and SOA
- * records are available, the status of the zone changes to
+ * For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers. When
+ * the NS and SOA records are available, the status of the zone changes to
  */
 CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZoneRequest &request)
 {
@@ -491,12 +494,12 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  *
  * group>
  *
- * DNS query logs contain information about the queries that Amazon Route 53 receives for a specified public hosted zone,
- * such as the
+ * DNS query logs contain information about the queries that Route 53 receives for a specified public hosted zone, such as
+ * the
  *
  * following> <ul> <li>
  *
- * Amazon Route 53 edge location that responded to the DNS
+ * Route 53 edge location that responded to the DNS
  *
  * quer> </li> <li>
  *
@@ -516,7 +519,7 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  *
  * operations> <note>
  *
- * If you create a query logging configuration using the Amazon Route 53 console, Amazon Route 53 performs these operations
+ * If you create a query logging configuration using the Route 53 console, Route 53 performs these operations
  *
  * automatically> </note> <ol> <li>
  *
@@ -542,16 +545,16 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  * </p
  *
  * In the next step, you'll create a resource policy, which controls access to one or more log groups and the associated
- * AWS resources, such as Amazon Route 53 hosted zones. There's a limit on the number of resource policies that you can
- * create, so we recommend that you use a consistent prefix so you can use the same resource policy for all the log groups
- * that you create for query
+ * AWS resources, such as Route 53 hosted zones. There's a limit on the number of resource policies that you can create, so
+ * we recommend that you use a consistent prefix so you can use the same resource policy for all the log groups that you
+ * create for query
  *
  * logging> </li> </ul> </li> <li>
  *
- * Create a CloudWatch Logs resource policy, and give it the permissions that Amazon Route 53 needs to create log streams
- * and to send query logs to log streams. For the value of <code>Resource</code>, specify the ARN for the log group that
- * you created in the previous step. To use the same resource policy for all the CloudWatch Logs log groups that you
- * created for query logging configurations, replace the hosted zone name with <code>*</code>, for
+ * Create a CloudWatch Logs resource policy, and give it the permissions that Route 53 needs to create log streams and to
+ * send query logs to log streams. For the value of <code>Resource</code>, specify the ARN for the log group that you
+ * created in the previous step. To use the same resource policy for all the CloudWatch Logs log groups that you created
+ * for query logging configurations, replace the hosted zone name with <code>*</code>, for
  *
  * example>
  *
@@ -564,12 +567,12 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  *
  * CLI> </note> </li> </ol> </dd> <dt>Log Streams and Edge Locations</dt> <dd>
  *
- * When Amazon Route 53 finishes creating the configuration for DNS query logging, it does the
+ * When Route 53 finishes creating the configuration for DNS query logging, it does the
  *
  * following> <ul> <li>
  *
  * Creates a log stream for an edge location the first time that the edge location responds to DNS queries for the
- * specified hosted zone. That log stream is used to log all queries that Amazon Route 53 responds to for that edge
+ * specified hosted zone. That log stream is used to log all queries that Route 53 responds to for that edge
  *
  * location> </li> <li>
  *
@@ -587,17 +590,17 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  *
  * The edge location code is a three-letter code and an arbitrarily assigned number, for example, DFW3. The three-letter
  * code typically corresponds with the International Air Transport Association airport code for an airport near the edge
- * location. (These abbreviations might change in the future.) For a list of edge locations, see "The Amazon Route 53
- * Global Network" on the <a href="http://aws.amazon.com/route53/details/">Amazon Route 53 Product Details</a>
+ * location. (These abbreviations might change in the future.) For a list of edge locations, see "The Route 53 Global
+ * Network" on the <a href="http://aws.amazon.com/route53/details/">Route 53 Product Details</a>
  *
  * page> </dd> <dt>Queries That Are Logged</dt> <dd>
  *
- * Query logs contain only the queries that DNS resolvers forward to Amazon Route 53. If a DNS resolver has already cached
- * the response to a query (such as the IP address for a load balancer for example.com), the resolver will continue to
- * return the cached response. It doesn't forward another query to Amazon Route 53 until the TTL for the corresponding
- * resource record set expires. Depending on how many DNS queries are submitted for a resource record set, and depending on
- * the TTL for that resource record set, query logs might contain information about only one query out of every several
- * thousand queries that are submitted to DNS. For more information about how DNS works, see <a
+ * Query logs contain only the queries that DNS resolvers forward to Route 53. If a DNS resolver has already cached the
+ * response to a query (such as the IP address for a load balancer for example.com), the resolver will continue to return
+ * the cached response. It doesn't forward another query to Route 53 until the TTL for the corresponding resource record
+ * set expires. Depending on how many DNS queries are submitted for a resource record set, and depending on the TTL for
+ * that resource record set, query logs might contain information about only one query out of every several thousand
+ * queries that are submitted to DNS. For more information about how DNS works, see <a
  * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html">Routing Internet Traffic to
  * Your Website or Web Application</a> in the <i>Amazon Route 53 Developer
  *
@@ -613,8 +616,8 @@ CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZon
  *
  * Pricing</a>> </dd> <dt>How to Stop Logging</dt> <dd>
  *
- * If you want Amazon Route 53 to stop sending query logs to CloudWatch Logs, delete the query logging configuration. For
- * more information, see
+ * If you want Route 53 to stop sending query logs to CloudWatch Logs, delete the query logging configuration. For more
+ * information, see
  */
 CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const CreateQueryLoggingConfigRequest &request)
 {
@@ -809,7 +812,7 @@ DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthC
  *
  * You can delete a hosted zone only if it contains only the default SOA record and NS resource record sets. If the hosted
  * zone contains other resource record sets, you must delete them before you can delete the hosted zone. If you try to
- * delete a hosted zone that contains other resource record sets, the request fails, and Amazon Route 53 returns a
+ * delete a hosted zone that contains other resource record sets, the request fails, and Route 53 returns a
  * <code>HostedZoneNotEmpty</code> error. For information about deleting records from your hosted zone, see
  *
  * <a>ChangeResourceRecordSets</a>>
@@ -836,7 +839,7 @@ DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZon
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a configuration for DNS query logging. If you delete a configuration, Amazon Route 53 stops sending query logs
- * to CloudWatch Logs. Amazon Route 53 doesn't delete any logs that are already in CloudWatch
+ * to CloudWatch Logs. Route 53 doesn't delete any logs that are already in CloudWatch
  *
  * Logs>
  *
@@ -892,7 +895,7 @@ DeleteTrafficPolicyResponse * Route53Client::deleteTrafficPolicy(const DeleteTra
  *
  * instance> <note>
  *
- * In the Amazon Route 53 console, traffic policy instances are known as policy
+ * In the Route 53 console, traffic policy instances are known as policy
  */
 DeleteTrafficPolicyInstanceResponse * Route53Client::deleteTrafficPolicyInstance(const DeleteTrafficPolicyInstanceRequest &request)
 {
@@ -927,16 +930,20 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates a VPC from a Amazon Route 53 private hosted zone.
+ * Disassociates a VPC from a Amazon Route 53 private hosted zone. Note the
  *
- * </p <note>
+ * following> <ul> <li>
  *
  * You can't disassociate the last VPC from a private hosted
  *
- * zone> </note> <b>
+ * zone> </li> <li>
  *
- * You can't disassociate a VPC from a private hosted zone when only one VPC is associated with the hosted zone. You also
- * can't convert a private hosted zone into a public hosted
+ * You can't convert a private hosted zone into a public hosted
+ *
+ * zone> </li> <li>
+ *
+ * You can submit a <code>DisassociateVPCFromHostedZone</code> request using either the account that created the hosted
+ * zone or the account that created the
  */
 DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHostedZone(const DisassociateVPCFromHostedZoneRequest &request)
 {
@@ -980,7 +987,7 @@ GetAccountLimitResponse * Route53Client::getAccountLimit(const GetAccountLimitRe
  *
  * requests> </li> <li>
  *
- * <code>INSYNC</code> indicates that the changes have propagated to all Amazon Route 53 DNS servers.
+ * <code>INSYNC</code> indicates that the changes have propagated to all Route 53 DNS servers.
  */
 GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
 {
@@ -992,6 +999,8 @@ GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
  * GetCheckerIpRangesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <b>
  *
  * <code>GetCheckerIpRanges</code> still works, but we recommend that you download ip-ranges.json, which includes IP
  * address ranges for all AWS services. For more information, see <a
@@ -1018,7 +1027,7 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
  *
  * geolocation>
  *
- * <code>GET /2013-04-01/geolocation?ContinentCode=<i>two-letter abbreviation for a continent</i> </code>
+ * <code>GET /2013-04-01/geolocation?continentcode=<i>two-letter abbreviation for a continent</i> </code>
  *
  * </p
  *
@@ -1026,7 +1035,7 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
  *
  * geolocation>
  *
- * <code>GET /2013-04-01/geolocation?CountryCode=<i>two-character country code</i> </code>
+ * <code>GET /2013-04-01/geolocation?countrycode=<i>two-character country code</i> </code>
  *
  * </p
  *
@@ -1034,7 +1043,7 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
  *
  * geolocation>
  *
- * <code>GET /2013-04-01/geolocation?CountryCode=<i>two-character country code</i>&amp;SubdivisionCode=<i>subdivision
+ * <code>GET /2013-04-01/geolocation?countrycode=<i>two-character country code</i>&amp;subdivisioncode=<i>subdivision
  * code</i> </code>
  */
 GetGeoLocationResponse * Route53Client::getGeoLocation(const GetGeoLocationRequest &request)
@@ -1224,7 +1233,7 @@ GetTrafficPolicyResponse * Route53Client::getTrafficPolicy(const GetTrafficPolic
  *
  * element> </note> <note>
  *
- * In the Amazon Route 53 console, traffic policy instances are known as policy
+ * In the Route 53 console, traffic policy instances are known as policy
  */
 GetTrafficPolicyInstanceResponse * Route53Client::getTrafficPolicyInstance(const GetTrafficPolicyInstanceRequest &request)
 {
@@ -1250,7 +1259,7 @@ GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list of supported geo
+ * Retrieves a list of supported geographic
  *
  * locations>
  *
@@ -1336,9 +1345,9 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  *
  * Guide</i>>
  *
- * Amazon Route 53 returns up to 100 items in each response. If you have a lot of hosted zones, use the
- * <code>MaxItems</code> parameter to list them in groups of up to 100. The response includes values that help navigate
- * from one group of <code>MaxItems</code> hosted zones to the
+ * Route 53 returns up to 100 items in each response. If you have a lot of hosted zones, use the <code>MaxItems</code>
+ * parameter to list them in groups of up to 100. The response includes values that help navigate from one group of
+ * <code>MaxItems</code> hosted zones to the
  *
  * next> <ul> <li>
  *
@@ -1404,8 +1413,15 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  * zone>
  *
  * <code>ListResourceRecordSets</code> returns up to 100 resource record sets at a time in ASCII order, beginning at a
- * position specified by the <code>name</code> and <code>type</code> elements. The action sorts results first by DNS name
- * with the labels reversed, for
+ * position specified by the <code>name</code> and <code>type</code>
+ *
+ * elements>
+ *
+ * <b>Sort order</b>
+ *
+ * </p
+ *
+ * <code>ListResourceRecordSets</code> sorts results first by DNS name with the labels reversed, for
  *
  * example>
  *
@@ -1413,17 +1429,23 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  *
  * </p
  *
- * Note the trailing dot, which can change the sort order in some
+ * Note the trailing dot, which can change the sort order when the record name contains characters that appear before
+ * <code>.</code> (decimal 46) in the ASCII table. These characters include the following: <code>! " # $ % &amp; ' ( ) * +
+ * , -</code>
  *
- * circumstances>
+ * </p
  *
- * When multiple records have the same DNS name, the action sorts results by the record
+ * When multiple records have the same DNS name, <code>ListResourceRecordSets</code> sorts results by the record
  *
  * type>
  *
- * You can use the name and type elements to adjust the beginning position of the list of resource record sets
+ * <b>Specifying where to start listing records</b>
  *
- * returned> <dl> <dt>If you do not specify Name or Type</dt> <dd>
+ * </p
+ *
+ * You can use the name and type elements to specify the resource record set that the list begins
+ *
+ * with> <dl> <dt>If you do not specify Name or Type</dt> <dd>
  *
  * The results begin with the first resource record set that the hosted zone
  *
@@ -1442,15 +1464,35 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  *
  * <code>Type</code>> </dd> </dl>
  *
+ * <b>Resource record sets that are PENDING</b>
+ *
+ * </p
+ *
  * This action returns the most current version of the records. This includes records that are <code>PENDING</code>, and
- * that are not yet available on all Amazon Route 53 DNS
+ * that are not yet available on all Route 53 DNS
  *
  * servers>
+ *
+ * <b>Changing resource record sets</b>
+ *
+ * </p
  *
  * To ensure that you get an accurate listing of the resource record sets for a hosted zone at a point in time, do not
  * submit a <code>ChangeResourceRecordSets</code> request while you're paging through the results of a
  * <code>ListResourceRecordSets</code> request. If you do, some pages may display results without the latest changes while
  * other pages display results with the latest
+ *
+ * changes>
+ *
+ * <b>Displaying the next page of results</b>
+ *
+ * </p
+ *
+ * If a <code>ListResourceRecordSets</code> command returns more than one page of results, the value of
+ * <code>IsTruncated</code> is <code>true</code>. To display the next page of results, get the values of
+ * <code>NextRecordName</code>, <code>NextRecordType</code>, and <code>NextRecordIdentifier</code> (if any) from the
+ * response. Then submit another <code>ListResourceRecordSets</code> request, and specify those values for
+ * <code>StartRecordName</code>, <code>StartRecordType</code>, and
  */
 ListResourceRecordSetsResponse * Route53Client::listResourceRecordSets(const ListResourceRecordSetsRequest &request)
 {
@@ -1515,7 +1557,7 @@ ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTag
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the latest version for every traffic policy that is associated with the current AWS account.
- * Policies are listed in the order in which they were created.
+ * Policies are listed in the order that they were created in.
  */
 ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTrafficPoliciesRequest &request)
 {
@@ -1538,8 +1580,8 @@ ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTraff
  *
  * element> </note>
  *
- * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can
- * use the <code>MaxItems</code> parameter to list them in groups of up to
+ * Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can use the
+ * <code>MaxItems</code> parameter to list them in groups of up to
  */
 ListTrafficPolicyInstancesResponse * Route53Client::listTrafficPolicyInstances(const ListTrafficPolicyInstancesRequest &request)
 {
@@ -1562,8 +1604,8 @@ ListTrafficPolicyInstancesResponse * Route53Client::listTrafficPolicyInstances(c
  *
  * element> </note>
  *
- * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can
- * use the <code>MaxItems</code> parameter to list them in groups of up to
+ * Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can use the
+ * <code>MaxItems</code> parameter to list them in groups of up to
  */
 ListTrafficPolicyInstancesByHostedZoneResponse * Route53Client::listTrafficPolicyInstancesByHostedZone(const ListTrafficPolicyInstancesByHostedZoneRequest &request)
 {
@@ -1586,8 +1628,8 @@ ListTrafficPolicyInstancesByHostedZoneResponse * Route53Client::listTrafficPolic
  *
  * element> </note>
  *
- * Amazon Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can
- * use the <code>MaxItems</code> parameter to list them in groups of up to
+ * Route 53 returns a maximum of 100 items in each response. If you have a lot of traffic policy instances, you can use the
+ * <code>MaxItems</code> parameter to list them in groups of up to
  */
 ListTrafficPolicyInstancesByPolicyResponse * Route53Client::listTrafficPolicyInstancesByPolicy(const ListTrafficPolicyInstancesByPolicyRequest &request)
 {
@@ -1701,23 +1743,22 @@ UpdateTrafficPolicyCommentResponse * Route53Client::updateTrafficPolicyComment(c
  * version>
  *
  * When you update a traffic policy instance, Amazon Route 53 continues to respond to DNS queries for the root resource
- * record set name (such as example.com) while it replaces one group of resource record sets with another. Amazon Route 53
+ * record set name (such as example.com) while it replaces one group of resource record sets with another. Route 53
  * performs the following
  *
  * operations> <ol> <li>
  *
- * Amazon Route 53 creates a new group of resource record sets based on the specified traffic policy. This is true
- * regardless of how significant the differences are between the existing resource record sets and the new resource record
- * sets.
+ * Route 53 creates a new group of resource record sets based on the specified traffic policy. This is true regardless of
+ * how significant the differences are between the existing resource record sets and the new resource record sets.
  *
  * </p </li> <li>
  *
- * When all of the new resource record sets have been created, Amazon Route 53 starts to respond to DNS queries for the
- * root resource record set name (such as example.com) by using the new resource record
+ * When all of the new resource record sets have been created, Route 53 starts to respond to DNS queries for the root
+ * resource record set name (such as example.com) by using the new resource record
  *
  * sets> </li> <li>
  *
- * Amazon Route 53 deletes the old group of resource record sets that are associated with the root resource record set
+ * Route 53 deletes the old group of resource record sets that are associated with the root resource record set
  */
 UpdateTrafficPolicyInstanceResponse * Route53Client::updateTrafficPolicyInstance(const UpdateTrafficPolicyInstanceRequest &request)
 {

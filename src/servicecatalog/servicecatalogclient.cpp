@@ -27,8 +27,14 @@
 #include "associateprincipalwithportfolioresponse.h"
 #include "associateproductwithportfoliorequest.h"
 #include "associateproductwithportfolioresponse.h"
+#include "associateserviceactionwithprovisioningartifactrequest.h"
+#include "associateserviceactionwithprovisioningartifactresponse.h"
 #include "associatetagoptionwithresourcerequest.h"
 #include "associatetagoptionwithresourceresponse.h"
+#include "batchassociateserviceactionwithprovisioningartifactrequest.h"
+#include "batchassociateserviceactionwithprovisioningartifactresponse.h"
+#include "batchdisassociateserviceactionfromprovisioningartifactrequest.h"
+#include "batchdisassociateserviceactionfromprovisioningartifactresponse.h"
 #include "copyproductrequest.h"
 #include "copyproductresponse.h"
 #include "createconstraintrequest.h"
@@ -43,6 +49,8 @@
 #include "createprovisionedproductplanresponse.h"
 #include "createprovisioningartifactrequest.h"
 #include "createprovisioningartifactresponse.h"
+#include "createserviceactionrequest.h"
+#include "createserviceactionresponse.h"
 #include "createtagoptionrequest.h"
 #include "createtagoptionresponse.h"
 #include "deleteconstraintrequest.h"
@@ -57,6 +65,8 @@
 #include "deleteprovisionedproductplanresponse.h"
 #include "deleteprovisioningartifactrequest.h"
 #include "deleteprovisioningartifactresponse.h"
+#include "deleteserviceactionrequest.h"
+#include "deleteserviceactionresponse.h"
 #include "deletetagoptionrequest.h"
 #include "deletetagoptionresponse.h"
 #include "describeconstraintrequest.h"
@@ -65,6 +75,8 @@
 #include "describecopyproductstatusresponse.h"
 #include "describeportfoliorequest.h"
 #include "describeportfolioresponse.h"
+#include "describeportfoliosharestatusrequest.h"
+#include "describeportfoliosharestatusresponse.h"
 #include "describeproductrequest.h"
 #include "describeproductresponse.h"
 #include "describeproductasadminrequest.h"
@@ -81,22 +93,36 @@
 #include "describeprovisioningparametersresponse.h"
 #include "describerecordrequest.h"
 #include "describerecordresponse.h"
+#include "describeserviceactionrequest.h"
+#include "describeserviceactionresponse.h"
 #include "describetagoptionrequest.h"
 #include "describetagoptionresponse.h"
+#include "disableawsorganizationsaccessrequest.h"
+#include "disableawsorganizationsaccessresponse.h"
 #include "disassociateprincipalfromportfoliorequest.h"
 #include "disassociateprincipalfromportfolioresponse.h"
 #include "disassociateproductfromportfoliorequest.h"
 #include "disassociateproductfromportfolioresponse.h"
+#include "disassociateserviceactionfromprovisioningartifactrequest.h"
+#include "disassociateserviceactionfromprovisioningartifactresponse.h"
 #include "disassociatetagoptionfromresourcerequest.h"
 #include "disassociatetagoptionfromresourceresponse.h"
+#include "enableawsorganizationsaccessrequest.h"
+#include "enableawsorganizationsaccessresponse.h"
 #include "executeprovisionedproductplanrequest.h"
 #include "executeprovisionedproductplanresponse.h"
+#include "executeprovisionedproductserviceactionrequest.h"
+#include "executeprovisionedproductserviceactionresponse.h"
+#include "getawsorganizationsaccessstatusrequest.h"
+#include "getawsorganizationsaccessstatusresponse.h"
 #include "listacceptedportfoliosharesrequest.h"
 #include "listacceptedportfoliosharesresponse.h"
 #include "listconstraintsforportfoliorequest.h"
 #include "listconstraintsforportfolioresponse.h"
 #include "listlaunchpathsrequest.h"
 #include "listlaunchpathsresponse.h"
+#include "listorganizationportfolioaccessrequest.h"
+#include "listorganizationportfolioaccessresponse.h"
 #include "listportfolioaccessrequest.h"
 #include "listportfolioaccessresponse.h"
 #include "listportfoliosrequest.h"
@@ -109,10 +135,16 @@
 #include "listprovisionedproductplansresponse.h"
 #include "listprovisioningartifactsrequest.h"
 #include "listprovisioningartifactsresponse.h"
+#include "listprovisioningartifactsforserviceactionrequest.h"
+#include "listprovisioningartifactsforserviceactionresponse.h"
 #include "listrecordhistoryrequest.h"
 #include "listrecordhistoryresponse.h"
 #include "listresourcesfortagoptionrequest.h"
 #include "listresourcesfortagoptionresponse.h"
+#include "listserviceactionsrequest.h"
+#include "listserviceactionsresponse.h"
+#include "listserviceactionsforprovisioningartifactrequest.h"
+#include "listserviceactionsforprovisioningartifactresponse.h"
 #include "listtagoptionsrequest.h"
 #include "listtagoptionsresponse.h"
 #include "provisionproductrequest.h"
@@ -139,6 +171,8 @@
 #include "updateprovisionedproductresponse.h"
 #include "updateprovisioningartifactrequest.h"
 #include "updateprovisioningartifactresponse.h"
+#include "updateserviceactionrequest.h"
+#include "updateserviceactionresponse.h"
 #include "updatetagoptionrequest.h"
 #include "updatetagoptionresponse.h"
 
@@ -266,6 +300,19 @@ AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWi
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * AssociateServiceActionWithProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a self-service action with a provisioning
+ */
+AssociateServiceActionWithProvisioningArtifactResponse * ServiceCatalogClient::associateServiceActionWithProvisioningArtifact(const AssociateServiceActionWithProvisioningArtifactRequest &request)
+{
+    return qobject_cast<AssociateServiceActionWithProvisioningArtifactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * AssociateTagOptionWithResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -275,6 +322,32 @@ AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWi
 AssociateTagOptionWithResourceResponse * ServiceCatalogClient::associateTagOptionWithResource(const AssociateTagOptionWithResourceRequest &request)
 {
     return qobject_cast<AssociateTagOptionWithResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * BatchAssociateServiceActionWithProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates multiple self-service actions with provisioning
+ */
+BatchAssociateServiceActionWithProvisioningArtifactResponse * ServiceCatalogClient::batchAssociateServiceActionWithProvisioningArtifact(const BatchAssociateServiceActionWithProvisioningArtifactRequest &request)
+{
+    return qobject_cast<BatchAssociateServiceActionWithProvisioningArtifactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * BatchDisassociateServiceActionFromProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a batch of self-service actions from the specified provisioning
+ */
+BatchDisassociateServiceActionFromProvisioningArtifactResponse * ServiceCatalogClient::batchDisassociateServiceActionFromProvisioningArtifact(const BatchDisassociateServiceActionFromProvisioningArtifactRequest &request)
+{
+    return qobject_cast<BatchDisassociateServiceActionFromProvisioningArtifactResponse *>(send(request));
 }
 
 /*!
@@ -330,7 +403,9 @@ CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePort
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Shares the specified portfolio with the specified
+ * Shares the specified portfolio with the specified account or organization node. Shares to an organization node can only
+ * be created by the master account of an Organization. AWSOrganizationsAccess must be enabled in order to create a
+ * portfolio share to an organization
  */
 CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const CreatePortfolioShareRequest &request)
 {
@@ -393,6 +468,19 @@ CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArt
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * CreateServiceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a self-service
+ */
+CreateServiceActionResponse * ServiceCatalogClient::createServiceAction(const CreateServiceActionRequest &request)
+{
+    return qobject_cast<CreateServiceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * CreateTagOptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -440,7 +528,8 @@ DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePort
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops sharing the specified portfolio with the specified
+ * Stops sharing the specified portfolio with the specified account or organization node. Shares to an organization node
+ * can only be deleted by the master account of an
  */
 DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const DeletePortfolioShareRequest &request)
 {
@@ -497,6 +586,19 @@ DeleteProvisioningArtifactResponse * ServiceCatalogClient::deleteProvisioningArt
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DeleteServiceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a self-service
+ */
+DeleteServiceActionResponse * ServiceCatalogClient::deleteServiceAction(const DeleteServiceActionRequest &request)
+{
+    return qobject_cast<DeleteServiceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * DeleteTagOptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -549,6 +651,19 @@ DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductSta
 DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const DescribePortfolioRequest &request)
 {
     return qobject_cast<DescribePortfolioResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribePortfolioShareStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the status of the specified portfolio share operation. This API can only be called by the master account in the
+ */
+DescribePortfolioShareStatusResponse * ServiceCatalogClient::describePortfolioShareStatus(const DescribePortfolioShareStatusRequest &request)
+{
+    return qobject_cast<DescribePortfolioShareStatusResponse *>(send(request));
 }
 
 /*!
@@ -669,6 +784,19 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeServiceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a self-service
+ */
+DescribeServiceActionResponse * ServiceCatalogClient::describeServiceAction(const DescribeServiceActionRequest &request)
+{
+    return qobject_cast<DescribeServiceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * DescribeTagOptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -678,6 +806,21 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
 DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const DescribeTagOptionRequest &request)
 {
     return qobject_cast<DescribeTagOptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DisableAWSOrganizationsAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it
+ * will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your
+ * organization structure if it changes after calling this API. This API can only be called by the master account in the
+ */
+DisableAWSOrganizationsAccessResponse * ServiceCatalogClient::disableAWSOrganizationsAccess(const DisableAWSOrganizationsAccessRequest &request)
+{
+    return qobject_cast<DisableAWSOrganizationsAccessResponse *>(send(request));
 }
 
 /*!
@@ -708,6 +851,19 @@ DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociatePro
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DisassociateServiceActionFromProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates the specified self-service action association from the specified provisioning
+ */
+DisassociateServiceActionFromProvisioningArtifactResponse * ServiceCatalogClient::disassociateServiceActionFromProvisioningArtifact(const DisassociateServiceActionFromProvisioningArtifactRequest &request)
+{
+    return qobject_cast<DisassociateServiceActionFromProvisioningArtifactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * DisassociateTagOptionFromResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -721,6 +877,26 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * EnableAWSOrganizationsAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on
+ * your organization in order to sync your shares with the current structure. This API can only be called by the master
+ * account in the
+ *
+ * organization>
+ *
+ * By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your
+ * shares can be in sync with any changes in your AWS Organizations
+ */
+EnableAWSOrganizationsAccessResponse * ServiceCatalogClient::enableAWSOrganizationsAccess(const EnableAWSOrganizationsAccessRequest &request)
+{
+    return qobject_cast<EnableAWSOrganizationsAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * ExecuteProvisionedProductPlanResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -730,6 +906,33 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
 ExecuteProvisionedProductPlanResponse * ServiceCatalogClient::executeProvisionedProductPlan(const ExecuteProvisionedProductPlanRequest &request)
 {
     return qobject_cast<ExecuteProvisionedProductPlanResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ExecuteProvisionedProductServiceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Executes a self-service action against a provisioned
+ */
+ExecuteProvisionedProductServiceActionResponse * ServiceCatalogClient::executeProvisionedProductServiceAction(const ExecuteProvisionedProductServiceActionRequest &request)
+{
+    return qobject_cast<ExecuteProvisionedProductServiceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * GetAWSOrganizationsAccessStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the master account in
+ * the
+ */
+GetAWSOrganizationsAccessStatusResponse * ServiceCatalogClient::getAWSOrganizationsAccessStatus(const GetAWSOrganizationsAccessStatusRequest &request)
+{
+    return qobject_cast<GetAWSOrganizationsAccessStatusResponse *>(send(request));
 }
 
 /*!
@@ -770,6 +973,20 @@ ListConstraintsForPortfolioResponse * ServiceCatalogClient::listConstraintsForPo
 ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunchPathsRequest &request)
 {
     return qobject_cast<ListLaunchPathsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListOrganizationPortfolioAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the master
+ * account in the
+ */
+ListOrganizationPortfolioAccessResponse * ServiceCatalogClient::listOrganizationPortfolioAccess(const ListOrganizationPortfolioAccessRequest &request)
+{
+    return qobject_cast<ListOrganizationPortfolioAccessResponse *>(send(request));
 }
 
 /*!
@@ -852,6 +1069,19 @@ ListProvisioningArtifactsResponse * ServiceCatalogClient::listProvisioningArtifa
 
 /*!
  * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListProvisioningArtifactsForServiceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all provisioning artifacts (also known as versions) for the specified self-service
+ */
+ListProvisioningArtifactsForServiceActionResponse * ServiceCatalogClient::listProvisioningArtifactsForServiceAction(const ListProvisioningArtifactsForServiceActionRequest &request)
+{
+    return qobject_cast<ListProvisioningArtifactsForServiceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
  * ListRecordHistoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -874,6 +1104,32 @@ ListRecordHistoryResponse * ServiceCatalogClient::listRecordHistory(const ListRe
 ListResourcesForTagOptionResponse * ServiceCatalogClient::listResourcesForTagOption(const ListResourcesForTagOptionRequest &request)
 {
     return qobject_cast<ListResourcesForTagOptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListServiceActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all self-service
+ */
+ListServiceActionsResponse * ServiceCatalogClient::listServiceActions(const ListServiceActionsRequest &request)
+{
+    return qobject_cast<ListServiceActionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListServiceActionsForProvisioningArtifactResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a paginated list of self-service actions associated with the specified Product ID and Provisioning Artifact
+ */
+ListServiceActionsForProvisioningArtifactResponse * ServiceCatalogClient::listServiceActionsForProvisioningArtifact(const ListServiceActionsForProvisioningArtifactRequest &request)
+{
+    return qobject_cast<ListServiceActionsForProvisioningArtifactResponse *>(send(request));
 }
 
 /*!
@@ -1083,6 +1339,19 @@ UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduc
 UpdateProvisioningArtifactResponse * ServiceCatalogClient::updateProvisioningArtifact(const UpdateProvisioningArtifactRequest &request)
 {
     return qobject_cast<UpdateProvisioningArtifactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateServiceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a self-service
+ */
+UpdateServiceActionResponse * ServiceCatalogClient::updateServiceAction(const UpdateServiceActionRequest &request)
+{
+    return qobject_cast<UpdateServiceActionResponse *>(send(request));
 }
 
 /*!

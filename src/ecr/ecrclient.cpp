@@ -55,6 +55,8 @@
 #include "initiatelayeruploadresponse.h"
 #include "listimagesrequest.h"
 #include "listimagesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putimagerequest.h"
 #include "putimageresponse.h"
 #include "putlifecyclepolicyrequest.h"
@@ -63,6 +65,10 @@
 #include "setrepositorypolicyresponse.h"
 #include "startlifecyclepolicypreviewrequest.h"
 #include "startlifecyclepolicypreviewresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "uploadlayerpartrequest.h"
 #include "uploadlayerpartresponse.h"
 
@@ -425,6 +431,19 @@ ListImagesResponse * EcrClient::listImages(const ListImagesRequest &request)
 
 /*!
  * Sends \a request to the EcrClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the tags for an Amazon ECR
+ */
+ListTagsForResourceResponse * EcrClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
  * PutImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -479,6 +498,33 @@ SetRepositoryPolicyResponse * EcrClient::setRepositoryPolicy(const SetRepository
 StartLifecyclePolicyPreviewResponse * EcrClient::startLifecyclePolicyPreview(const StartLifecyclePolicyPreviewRequest &request)
 {
     return qobject_cast<StartLifecyclePolicyPreviewResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds specified tags to a resource with the specified ARN. Existing tags on a resource are not changed if they are not
+ * specified in the request
+ */
+TagResourceResponse * EcrClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcrClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes specified tags from a
+ */
+UntagResourceResponse * EcrClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

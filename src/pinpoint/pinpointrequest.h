@@ -57,6 +57,7 @@ public:
         DeleteSegmentAction,
         DeleteSmsChannelAction,
         DeleteUserEndpointsAction,
+        DeleteVoiceChannelAction,
         GetAdmChannelAction,
         GetApnsChannelAction,
         GetApnsSandboxChannelAction,
@@ -88,8 +89,10 @@ public:
         GetSegmentsAction,
         GetSmsChannelAction,
         GetUserEndpointsAction,
+        GetVoiceChannelAction,
         PhoneNumberValidateAction,
         PutEventStreamAction,
+        PutEventsAction,
         RemoveAttributesAction,
         SendMessagesAction,
         SendUsersMessagesAction,
@@ -107,6 +110,7 @@ public:
         UpdateGcmChannelAction,
         UpdateSegmentAction,
         UpdateSmsChannelAction,
+        UpdateVoiceChannelAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

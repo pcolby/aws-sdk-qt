@@ -54,6 +54,10 @@ HEADERS += \
     disassociatenoderequest_p.h \
     disassociatenoderesponse.h \
     disassociatenoderesponse_p.h \
+    exportserverengineattributerequest.h \
+    exportserverengineattributerequest_p.h \
+    exportserverengineattributeresponse.h \
+    exportserverengineattributeresponse_p.h \
     opsworkscmclient.h \
     opsworkscmclient_p.h \
     opsworkscmrequest.h \
@@ -100,6 +104,8 @@ SOURCES += \
     describeserversresponse.cpp \
     disassociatenoderequest.cpp \
     disassociatenoderesponse.cpp \
+    exportserverengineattributerequest.cpp \
+    exportserverengineattributeresponse.cpp \
     opsworkscmclient.cpp \
     opsworkscmrequest.cpp \
     opsworkscmresponse.cpp \

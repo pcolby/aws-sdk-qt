@@ -38,6 +38,7 @@ namespace MarketplaceMetering {
  *
  * \value BatchMeterUsageAction MarketplaceMetering BatchMeterUsage action.
  * \value MeterUsageAction MarketplaceMetering MeterUsage action.
+ * \value RegisterUsageAction MarketplaceMetering RegisterUsage action.
  * \value ResolveCustomerAction MarketplaceMetering ResolveCustomer action.
  */
 

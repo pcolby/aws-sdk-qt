@@ -28,6 +28,8 @@ namespace QtAws {
 namespace MediaLive {
 
 class MediaLiveClientPrivate;
+class BatchUpdateScheduleRequest;
+class BatchUpdateScheduleResponse;
 class CreateChannelRequest;
 class CreateChannelResponse;
 class CreateInputRequest;
@@ -52,6 +54,8 @@ class DescribeOfferingRequest;
 class DescribeOfferingResponse;
 class DescribeReservationRequest;
 class DescribeReservationResponse;
+class DescribeScheduleRequest;
+class DescribeScheduleResponse;
 class ListChannelsRequest;
 class ListChannelsResponse;
 class ListInputSecurityGroupsRequest;
@@ -91,6 +95,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    BatchUpdateScheduleResponse * batchUpdateSchedule(const BatchUpdateScheduleRequest &request);
     CreateChannelResponse * createChannel(const CreateChannelRequest &request);
     CreateInputResponse * createInput(const CreateInputRequest &request);
     CreateInputSecurityGroupResponse * createInputSecurityGroup(const CreateInputSecurityGroupRequest &request);
@@ -103,6 +108,7 @@ public slots:
     DescribeInputSecurityGroupResponse * describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request);
     DescribeOfferingResponse * describeOffering(const DescribeOfferingRequest &request);
     DescribeReservationResponse * describeReservation(const DescribeReservationRequest &request);
+    DescribeScheduleResponse * describeSchedule(const DescribeScheduleRequest &request);
     ListChannelsResponse * listChannels(const ListChannelsRequest &request);
     ListInputSecurityGroupsResponse * listInputSecurityGroups(const ListInputSecurityGroupsRequest &request);
     ListInputsResponse * listInputs(const ListInputsRequest &request);

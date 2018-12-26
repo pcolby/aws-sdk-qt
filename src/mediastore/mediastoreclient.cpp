@@ -29,18 +29,24 @@
 #include "deletecontainerpolicyresponse.h"
 #include "deletecorspolicyrequest.h"
 #include "deletecorspolicyresponse.h"
+#include "deletelifecyclepolicyrequest.h"
+#include "deletelifecyclepolicyresponse.h"
 #include "describecontainerrequest.h"
 #include "describecontainerresponse.h"
 #include "getcontainerpolicyrequest.h"
 #include "getcontainerpolicyresponse.h"
 #include "getcorspolicyrequest.h"
 #include "getcorspolicyresponse.h"
+#include "getlifecyclepolicyrequest.h"
+#include "getlifecyclepolicyresponse.h"
 #include "listcontainersrequest.h"
 #include "listcontainersresponse.h"
 #include "putcontainerpolicyrequest.h"
 #include "putcontainerpolicyresponse.h"
 #include "putcorspolicyrequest.h"
 #include "putcorspolicyresponse.h"
+#include "putlifecyclepolicyrequest.h"
+#include "putlifecyclepolicyresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -181,6 +187,19 @@ DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPo
 
 /*!
  * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * DeleteLifecyclePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an object lifecycle policy from a
+ */
+DeleteLifecyclePolicyResponse * MediaStoreClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
+{
+    return qobject_cast<DeleteLifecyclePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
  * DescribeContainerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -226,6 +245,19 @@ GetContainerPolicyResponse * MediaStoreClient::getContainerPolicy(const GetConta
 GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyRequest &request)
 {
     return qobject_cast<GetCorsPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * GetLifecyclePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the object lifecycle policy that is assigned to a
+ */
+GetLifecyclePolicyResponse * MediaStoreClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
+{
+    return qobject_cast<GetLifecyclePolicyResponse *>(send(request));
 }
 
 /*!
@@ -292,6 +324,20 @@ PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutConta
 PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyRequest &request)
 {
     return qobject_cast<PutCorsPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * PutLifecyclePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Writes an object lifecycle policy to a container. If the container already has an object lifecycle policy, the service
+ * replaces the existing policy with the new policy.
+ */
+PutLifecyclePolicyResponse * MediaStoreClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
+{
+    return qobject_cast<PutLifecyclePolicyResponse *>(send(request));
 }
 
 /*!

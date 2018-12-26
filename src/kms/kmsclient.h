@@ -30,8 +30,12 @@ namespace KMS {
 class KmsClientPrivate;
 class CancelKeyDeletionRequest;
 class CancelKeyDeletionResponse;
+class ConnectCustomKeyStoreRequest;
+class ConnectCustomKeyStoreResponse;
 class CreateAliasRequest;
 class CreateAliasResponse;
+class CreateCustomKeyStoreRequest;
+class CreateCustomKeyStoreResponse;
 class CreateGrantRequest;
 class CreateGrantResponse;
 class CreateKeyRequest;
@@ -40,14 +44,20 @@ class DecryptRequest;
 class DecryptResponse;
 class DeleteAliasRequest;
 class DeleteAliasResponse;
+class DeleteCustomKeyStoreRequest;
+class DeleteCustomKeyStoreResponse;
 class DeleteImportedKeyMaterialRequest;
 class DeleteImportedKeyMaterialResponse;
+class DescribeCustomKeyStoresRequest;
+class DescribeCustomKeyStoresResponse;
 class DescribeKeyRequest;
 class DescribeKeyResponse;
 class DisableKeyRequest;
 class DisableKeyResponse;
 class DisableKeyRotationRequest;
 class DisableKeyRotationResponse;
+class DisconnectCustomKeyStoreRequest;
+class DisconnectCustomKeyStoreResponse;
 class EnableKeyRequest;
 class EnableKeyResponse;
 class EnableKeyRotationRequest;
@@ -96,6 +106,8 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateAliasRequest;
 class UpdateAliasResponse;
+class UpdateCustomKeyStoreRequest;
+class UpdateCustomKeyStoreResponse;
 class UpdateKeyDescriptionRequest;
 class UpdateKeyDescriptionResponse;
 
@@ -116,15 +128,20 @@ public:
 
 public slots:
     CancelKeyDeletionResponse * cancelKeyDeletion(const CancelKeyDeletionRequest &request);
+    ConnectCustomKeyStoreResponse * connectCustomKeyStore(const ConnectCustomKeyStoreRequest &request);
     CreateAliasResponse * createAlias(const CreateAliasRequest &request);
+    CreateCustomKeyStoreResponse * createCustomKeyStore(const CreateCustomKeyStoreRequest &request);
     CreateGrantResponse * createGrant(const CreateGrantRequest &request);
     CreateKeyResponse * createKey(const CreateKeyRequest &request);
     DecryptResponse * decrypt(const DecryptRequest &request);
     DeleteAliasResponse * deleteAlias(const DeleteAliasRequest &request);
+    DeleteCustomKeyStoreResponse * deleteCustomKeyStore(const DeleteCustomKeyStoreRequest &request);
     DeleteImportedKeyMaterialResponse * deleteImportedKeyMaterial(const DeleteImportedKeyMaterialRequest &request);
+    DescribeCustomKeyStoresResponse * describeCustomKeyStores(const DescribeCustomKeyStoresRequest &request);
     DescribeKeyResponse * describeKey(const DescribeKeyRequest &request);
     DisableKeyResponse * disableKey(const DisableKeyRequest &request);
     DisableKeyRotationResponse * disableKeyRotation(const DisableKeyRotationRequest &request);
+    DisconnectCustomKeyStoreResponse * disconnectCustomKeyStore(const DisconnectCustomKeyStoreRequest &request);
     EnableKeyResponse * enableKey(const EnableKeyRequest &request);
     EnableKeyRotationResponse * enableKeyRotation(const EnableKeyRotationRequest &request);
     EncryptResponse * encrypt(const EncryptRequest &request);
@@ -149,6 +166,7 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
+    UpdateCustomKeyStoreResponse * updateCustomKeyStore(const UpdateCustomKeyStoreRequest &request);
     UpdateKeyDescriptionResponse * updateKeyDescription(const UpdateKeyDescriptionRequest &request);
 
 private:

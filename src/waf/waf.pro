@@ -70,6 +70,10 @@ HEADERS += \
     deleteipsetrequest_p.h \
     deleteipsetresponse.h \
     deleteipsetresponse_p.h \
+    deleteloggingconfigurationrequest.h \
+    deleteloggingconfigurationrequest_p.h \
+    deleteloggingconfigurationresponse.h \
+    deleteloggingconfigurationresponse_p.h \
     deletepermissionpolicyrequest.h \
     deletepermissionpolicyrequest_p.h \
     deletepermissionpolicyresponse.h \
@@ -130,6 +134,10 @@ HEADERS += \
     getipsetrequest_p.h \
     getipsetresponse.h \
     getipsetresponse_p.h \
+    getloggingconfigurationrequest.h \
+    getloggingconfigurationrequest_p.h \
+    getloggingconfigurationresponse.h \
+    getloggingconfigurationresponse_p.h \
     getpermissionpolicyrequest.h \
     getpermissionpolicyrequest_p.h \
     getpermissionpolicyresponse.h \
@@ -194,6 +202,10 @@ HEADERS += \
     listipsetsrequest_p.h \
     listipsetsresponse.h \
     listipsetsresponse_p.h \
+    listloggingconfigurationsrequest.h \
+    listloggingconfigurationsrequest_p.h \
+    listloggingconfigurationsresponse.h \
+    listloggingconfigurationsresponse_p.h \
     listratebasedrulesrequest.h \
     listratebasedrulesrequest_p.h \
     listratebasedrulesresponse.h \
@@ -234,6 +246,10 @@ HEADERS += \
     listxssmatchsetsrequest_p.h \
     listxssmatchsetsresponse.h \
     listxssmatchsetsresponse_p.h \
+    putloggingconfigurationrequest.h \
+    putloggingconfigurationrequest_p.h \
+    putloggingconfigurationresponse.h \
+    putloggingconfigurationresponse_p.h \
     putpermissionpolicyrequest.h \
     putpermissionpolicyrequest_p.h \
     putpermissionpolicyresponse.h \
@@ -324,6 +340,8 @@ SOURCES += \
     deletegeomatchsetresponse.cpp \
     deleteipsetrequest.cpp \
     deleteipsetresponse.cpp \
+    deleteloggingconfigurationrequest.cpp \
+    deleteloggingconfigurationresponse.cpp \
     deletepermissionpolicyrequest.cpp \
     deletepermissionpolicyresponse.cpp \
     deleteratebasedrulerequest.cpp \
@@ -354,6 +372,8 @@ SOURCES += \
     getgeomatchsetresponse.cpp \
     getipsetrequest.cpp \
     getipsetresponse.cpp \
+    getloggingconfigurationrequest.cpp \
+    getloggingconfigurationresponse.cpp \
     getpermissionpolicyrequest.cpp \
     getpermissionpolicyresponse.cpp \
     getratebasedrulemanagedkeysrequest.cpp \
@@ -386,6 +406,8 @@ SOURCES += \
     listgeomatchsetsresponse.cpp \
     listipsetsrequest.cpp \
     listipsetsresponse.cpp \
+    listloggingconfigurationsrequest.cpp \
+    listloggingconfigurationsresponse.cpp \
     listratebasedrulesrequest.cpp \
     listratebasedrulesresponse.cpp \
     listregexmatchsetsrequest.cpp \
@@ -406,6 +428,8 @@ SOURCES += \
     listwebaclsresponse.cpp \
     listxssmatchsetsrequest.cpp \
     listxssmatchsetsresponse.cpp \
+    putloggingconfigurationrequest.cpp \
+    putloggingconfigurationresponse.cpp \
     putpermissionpolicyrequest.cpp \
     putpermissionpolicyresponse.cpp \
     updatebytematchsetrequest.cpp \
