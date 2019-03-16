@@ -51,7 +51,7 @@ but outside the scope of this project.
 
 Note, the [code-generation](code-generation) sub-project requires Qt
 5.10+ and [Grantlee](https://github.com/steveire/grantlee), but this is
-for development of SDK itself, not for devlopers that use the SDK.
+for development of the SDK itself, not for developers that use the SDK.
 
 ## Building
 This library supports out-of-source builds (highly recommended), for example:
