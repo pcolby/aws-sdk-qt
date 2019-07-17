@@ -1,5 +1,5 @@
 /*
-    Copyright 2013-2018 Paul Colby
+    Copyright 2013-2019 Paul Colby
 
     This file is part of QtAws Codegen.
 
