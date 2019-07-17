@@ -32,6 +32,8 @@ class AssociateIpGroupsRequest;
 class AssociateIpGroupsResponse;
 class AuthorizeIpRulesRequest;
 class AuthorizeIpRulesResponse;
+class CopyWorkspaceImageRequest;
+class CopyWorkspaceImageResponse;
 class CreateIpGroupRequest;
 class CreateIpGroupResponse;
 class CreateTagsRequest;
@@ -111,6 +113,7 @@ public:
 public slots:
     AssociateIpGroupsResponse * associateIpGroups(const AssociateIpGroupsRequest &request);
     AuthorizeIpRulesResponse * authorizeIpRules(const AuthorizeIpRulesRequest &request);
+    CopyWorkspaceImageResponse * copyWorkspaceImage(const CopyWorkspaceImageRequest &request);
     CreateIpGroupResponse * createIpGroup(const CreateIpGroupRequest &request);
     CreateTagsResponse * createTags(const CreateTagsRequest &request);
     CreateWorkspacesResponse * createWorkspaces(const CreateWorkspacesRequest &request);

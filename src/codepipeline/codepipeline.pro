@@ -76,6 +76,10 @@ HEADERS += \
     getthirdpartyjobdetailsrequest_p.h \
     getthirdpartyjobdetailsresponse.h \
     getthirdpartyjobdetailsresponse_p.h \
+    listactionexecutionsrequest.h \
+    listactionexecutionsrequest_p.h \
+    listactionexecutionsresponse.h \
+    listactionexecutionsresponse_p.h \
     listactiontypesrequest.h \
     listactiontypesrequest_p.h \
     listactiontypesresponse.h \
@@ -88,6 +92,10 @@ HEADERS += \
     listpipelinesrequest_p.h \
     listpipelinesresponse.h \
     listpipelinesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listwebhooksrequest.h \
     listwebhooksrequest_p.h \
     listwebhooksresponse.h \
@@ -140,6 +148,14 @@ HEADERS += \
     startpipelineexecutionrequest_p.h \
     startpipelineexecutionresponse.h \
     startpipelineexecutionresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatepipelinerequest.h \
     updatepipelinerequest_p.h \
     updatepipelineresponse.h \
@@ -179,12 +195,16 @@ SOURCES += \
     getpipelinestateresponse.cpp \
     getthirdpartyjobdetailsrequest.cpp \
     getthirdpartyjobdetailsresponse.cpp \
+    listactionexecutionsrequest.cpp \
+    listactionexecutionsresponse.cpp \
     listactiontypesrequest.cpp \
     listactiontypesresponse.cpp \
     listpipelineexecutionsrequest.cpp \
     listpipelineexecutionsresponse.cpp \
     listpipelinesrequest.cpp \
     listpipelinesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listwebhooksrequest.cpp \
     listwebhooksresponse.cpp \
     pollforjobsrequest.cpp \
@@ -211,6 +231,10 @@ SOURCES += \
     retrystageexecutionresponse.cpp \
     startpipelineexecutionrequest.cpp \
     startpipelineexecutionresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatepipelinerequest.cpp \
     updatepipelineresponse.cpp \
 

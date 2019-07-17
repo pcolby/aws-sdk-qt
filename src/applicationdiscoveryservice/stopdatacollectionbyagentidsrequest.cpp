@@ -80,12 +80,6 @@ namespace ApplicationDiscoveryService {
  * 
  *  service> </b>
  * 
- *  Your AWS account must be granted access to Application Discovery Service, a process called <i>whitelisting</i>. This is
- *  true for AWS partners and customers alike. To request access, <a
- *  href="http://aws.amazon.com/application-discovery/">sign up for Application Discovery Service</a>.
- * 
- *  </p
- * 
  *  This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
  *  Application Discovery Service. The topic for each action shows the API request parameters and the response.
  *  Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform

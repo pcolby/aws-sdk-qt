@@ -38,6 +38,7 @@ namespace AlexaForBusiness {
  *
  * \value ApproveSkillAction AlexaForBusiness ApproveSkill action.
  * \value AssociateContactWithAddressBookAction AlexaForBusiness AssociateContactWithAddressBook action.
+ * \value AssociateDeviceWithNetworkProfileAction AlexaForBusiness AssociateDeviceWithNetworkProfile action.
  * \value AssociateDeviceWithRoomAction AlexaForBusiness AssociateDeviceWithRoom action.
  * \value AssociateSkillGroupWithRoomAction AlexaForBusiness AssociateSkillGroupWithRoom action.
  * \value AssociateSkillWithSkillGroupAction AlexaForBusiness AssociateSkillWithSkillGroup action.
@@ -46,6 +47,8 @@ namespace AlexaForBusiness {
  * \value CreateBusinessReportScheduleAction AlexaForBusiness CreateBusinessReportSchedule action.
  * \value CreateConferenceProviderAction AlexaForBusiness CreateConferenceProvider action.
  * \value CreateContactAction AlexaForBusiness CreateContact action.
+ * \value CreateGatewayGroupAction AlexaForBusiness CreateGatewayGroup action.
+ * \value CreateNetworkProfileAction AlexaForBusiness CreateNetworkProfile action.
  * \value CreateProfileAction AlexaForBusiness CreateProfile action.
  * \value CreateRoomAction AlexaForBusiness CreateRoom action.
  * \value CreateSkillGroupAction AlexaForBusiness CreateSkillGroup action.
@@ -55,6 +58,9 @@ namespace AlexaForBusiness {
  * \value DeleteConferenceProviderAction AlexaForBusiness DeleteConferenceProvider action.
  * \value DeleteContactAction AlexaForBusiness DeleteContact action.
  * \value DeleteDeviceAction AlexaForBusiness DeleteDevice action.
+ * \value DeleteDeviceUsageDataAction AlexaForBusiness DeleteDeviceUsageData action.
+ * \value DeleteGatewayGroupAction AlexaForBusiness DeleteGatewayGroup action.
+ * \value DeleteNetworkProfileAction AlexaForBusiness DeleteNetworkProfile action.
  * \value DeleteProfileAction AlexaForBusiness DeleteProfile action.
  * \value DeleteRoomAction AlexaForBusiness DeleteRoom action.
  * \value DeleteRoomSkillParameterAction AlexaForBusiness DeleteRoomSkillParameter action.
@@ -72,6 +78,10 @@ namespace AlexaForBusiness {
  * \value GetConferenceProviderAction AlexaForBusiness GetConferenceProvider action.
  * \value GetContactAction AlexaForBusiness GetContact action.
  * \value GetDeviceAction AlexaForBusiness GetDevice action.
+ * \value GetGatewayAction AlexaForBusiness GetGateway action.
+ * \value GetGatewayGroupAction AlexaForBusiness GetGatewayGroup action.
+ * \value GetInvitationConfigurationAction AlexaForBusiness GetInvitationConfiguration action.
+ * \value GetNetworkProfileAction AlexaForBusiness GetNetworkProfile action.
  * \value GetProfileAction AlexaForBusiness GetProfile action.
  * \value GetRoomAction AlexaForBusiness GetRoom action.
  * \value GetRoomSkillParameterAction AlexaForBusiness GetRoomSkillParameter action.
@@ -79,12 +89,15 @@ namespace AlexaForBusiness {
  * \value ListBusinessReportSchedulesAction AlexaForBusiness ListBusinessReportSchedules action.
  * \value ListConferenceProvidersAction AlexaForBusiness ListConferenceProviders action.
  * \value ListDeviceEventsAction AlexaForBusiness ListDeviceEvents action.
+ * \value ListGatewayGroupsAction AlexaForBusiness ListGatewayGroups action.
+ * \value ListGatewaysAction AlexaForBusiness ListGateways action.
  * \value ListSkillsAction AlexaForBusiness ListSkills action.
  * \value ListSkillsStoreCategoriesAction AlexaForBusiness ListSkillsStoreCategories action.
  * \value ListSkillsStoreSkillsByCategoryAction AlexaForBusiness ListSkillsStoreSkillsByCategory action.
  * \value ListSmartHomeAppliancesAction AlexaForBusiness ListSmartHomeAppliances action.
  * \value ListTagsAction AlexaForBusiness ListTags action.
  * \value PutConferencePreferenceAction AlexaForBusiness PutConferencePreference action.
+ * \value PutInvitationConfigurationAction AlexaForBusiness PutInvitationConfiguration action.
  * \value PutRoomSkillParameterAction AlexaForBusiness PutRoomSkillParameter action.
  * \value PutSkillAuthorizationAction AlexaForBusiness PutSkillAuthorization action.
  * \value RegisterAVSDeviceAction AlexaForBusiness RegisterAVSDevice action.
@@ -94,10 +107,12 @@ namespace AlexaForBusiness {
  * \value SearchAddressBooksAction AlexaForBusiness SearchAddressBooks action.
  * \value SearchContactsAction AlexaForBusiness SearchContacts action.
  * \value SearchDevicesAction AlexaForBusiness SearchDevices action.
+ * \value SearchNetworkProfilesAction AlexaForBusiness SearchNetworkProfiles action.
  * \value SearchProfilesAction AlexaForBusiness SearchProfiles action.
  * \value SearchRoomsAction AlexaForBusiness SearchRooms action.
  * \value SearchSkillGroupsAction AlexaForBusiness SearchSkillGroups action.
  * \value SearchUsersAction AlexaForBusiness SearchUsers action.
+ * \value SendAnnouncementAction AlexaForBusiness SendAnnouncement action.
  * \value SendInvitationAction AlexaForBusiness SendInvitation action.
  * \value StartDeviceSyncAction AlexaForBusiness StartDeviceSync action.
  * \value StartSmartHomeApplianceDiscoveryAction AlexaForBusiness StartSmartHomeApplianceDiscovery action.
@@ -108,6 +123,9 @@ namespace AlexaForBusiness {
  * \value UpdateConferenceProviderAction AlexaForBusiness UpdateConferenceProvider action.
  * \value UpdateContactAction AlexaForBusiness UpdateContact action.
  * \value UpdateDeviceAction AlexaForBusiness UpdateDevice action.
+ * \value UpdateGatewayAction AlexaForBusiness UpdateGateway action.
+ * \value UpdateGatewayGroupAction AlexaForBusiness UpdateGatewayGroup action.
+ * \value UpdateNetworkProfileAction AlexaForBusiness UpdateNetworkProfile action.
  * \value UpdateProfileAction AlexaForBusiness UpdateProfile action.
  * \value UpdateRoomAction AlexaForBusiness UpdateRoom action.
  * \value UpdateSkillGroupAction AlexaForBusiness UpdateSkillGroup action.

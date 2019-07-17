@@ -69,10 +69,13 @@ namespace GuardDuty {
  * \value ListIPSetsAction GuardDuty ListIPSets action.
  * \value ListInvitationsAction GuardDuty ListInvitations action.
  * \value ListMembersAction GuardDuty ListMembers action.
+ * \value ListTagsForResourceAction GuardDuty ListTagsForResource action.
  * \value ListThreatIntelSetsAction GuardDuty ListThreatIntelSets action.
  * \value StartMonitoringMembersAction GuardDuty StartMonitoringMembers action.
  * \value StopMonitoringMembersAction GuardDuty StopMonitoringMembers action.
+ * \value TagResourceAction GuardDuty TagResource action.
  * \value UnarchiveFindingsAction GuardDuty UnarchiveFindings action.
+ * \value UntagResourceAction GuardDuty UntagResource action.
  * \value UpdateDetectorAction GuardDuty UpdateDetector action.
  * \value UpdateFilterAction GuardDuty UpdateFilter action.
  * \value UpdateFindingsFeedbackAction GuardDuty UpdateFindingsFeedback action.

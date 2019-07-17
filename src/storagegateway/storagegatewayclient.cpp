@@ -31,6 +31,10 @@
 #include "adduploadbufferresponse.h"
 #include "addworkingstoragerequest.h"
 #include "addworkingstorageresponse.h"
+#include "assigntapepoolrequest.h"
+#include "assigntapepoolresponse.h"
+#include "attachvolumerequest.h"
+#include "attachvolumeresponse.h"
 #include "cancelarchivalrequest.h"
 #include "cancelarchivalresponse.h"
 #include "cancelretrievalrequest.h"
@@ -101,6 +105,8 @@
 #include "describevtldevicesresponse.h"
 #include "describeworkingstoragerequest.h"
 #include "describeworkingstorageresponse.h"
+#include "detachvolumerequest.h"
+#include "detachvolumeresponse.h"
 #include "disablegatewayrequest.h"
 #include "disablegatewayresponse.h"
 #include "joindomainrequest.h"
@@ -155,6 +161,8 @@
 #include "updatenfsfileshareresponse.h"
 #include "updatesmbfilesharerequest.h"
 #include "updatesmbfileshareresponse.h"
+#include "updatesmbsecuritystrategyrequest.h"
+#include "updatesmbsecuritystrategyresponse.h"
 #include "updatesnapshotschedulerequest.h"
 #include "updatesnapshotscheduleresponse.h"
 #include "updatevtldevicetyperequest.h"
@@ -185,7 +193,7 @@ namespace StorageGateway {
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
  *  AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
- *  seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure.
+ *  seamless and secure integration between an organization's on-premises IT environment and the AWS storage infrastructure.
  *  The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster
  * 
  *  recovery>
@@ -195,25 +203,25 @@ namespace StorageGateway {
  *  Reference</i>> <ul> <li>
  * 
  *  <a
- *  href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
+ *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
  *  Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
  *  to AWS Storage
  * 
  *  Gateway> </li> <li>
  * 
  *  <a
- *  href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
+ *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
  *  Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
  *  such a
  * 
  *  request> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
+ *  <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
  *  Responses</a>: Provides reference information about AWS Storage Gateway
  * 
  *  errors> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
+ *  <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
  *  Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response
  *  elements, possible errors, and examples of requests and
  * 
@@ -334,7 +342,7 @@ ActivateGatewayResponse * StorageGatewayClient::activateGateway(const ActivateGa
  *
  * Configures one or more gateway local disks as cache for a gateway. This operation is only supported in the cached
  * volume, tape and file gateway type (see <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">Storage Gateway
+ * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/StorageGatewayConcepts.html">Storage Gateway
  *
  * Concepts</a>)>
  *
@@ -360,17 +368,21 @@ AddCacheResponse * StorageGatewayClient::addCache(const AddCacheRequest &request
  *
  * Storage gateways of all
  *
- * type> </li> </ul> <ul> <li>
+ * type> </li> <li>
  *
  * Storage
  *
- * Volume> </li> </ul> <ul> <li>
+ * volume> </li> <li>
  *
  * Virtual
  *
- * Tape> </li> </ul>
+ * tape> </li> <li>
  *
- * You can create a maximum of 10 tags for each resource. Virtual tapes and storage volumes that are recovered to a new
+ * NFS and SMB file
+ *
+ * share> </li> </ul>
+ *
+ * You can create a maximum of 50 tags for each resource. Virtual tapes and storage volumes that are recovered to a new
  * gateway maintain their
  */
 AddTagsToResourceResponse * StorageGatewayClient::addTagsToResource(const AddTagsToResourceRequest &request)
@@ -420,6 +432,40 @@ AddUploadBufferResponse * StorageGatewayClient::addUploadBuffer(const AddUploadB
 AddWorkingStorageResponse * StorageGatewayClient::addWorkingStorage(const AddWorkingStorageRequest &request)
 {
     return qobject_cast<AddWorkingStorageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * AssignTapePoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Assigns a tape to a tape pool for archiving. The tape assigned to a pool is archived in the S3 storage class that is
+ * associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the
+ * S3 storage class (Glacier or Deep Archive) that corresponds to the
+ *
+ * pool>
+ *
+ * Valid values: "GLACIER",
+ */
+AssignTapePoolResponse * StorageGatewayClient::assignTapePool(const AssignTapePoolRequest &request)
+{
+    return qobject_cast<AssignTapePoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * AttachVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Connects a volume to an iSCSI connection and then attaches the volume to the specified gateway. Detaching and attaching
+ * a volume enables you to recover your data from one gateway to a different gateway without creating a snapshot. It also
+ * makes it easier to move your volumes from an on-premises gateway to a gateway hosted on an Amazon EC2
+ */
+AttachVolumeResponse * StorageGatewayClient::attachVolume(const AttachVolumeRequest &request)
+{
+    return qobject_cast<AttachVolumeResponse *>(send(request));
 }
 
 /*!
@@ -523,7 +569,7 @@ CreateNFSFileShareResponse * StorageGatewayClient::createNFSFileShare(const Crea
  * File gateways require AWS Security Token Service (AWS STS) to be activated to enable you to create a file share. Make
  * sure that AWS STS is activated in the AWS Region you are creating your file gateway in. If AWS STS is not activated in
  * this AWS Region, activate it. For information about how to activate AWS STS, see <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
  * Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access Management User Guide.</i>
  *
  * </p
@@ -547,9 +593,9 @@ CreateSMBFileShareResponse * StorageGatewayClient::createSMBFileShare(const Crea
  *
  * AWS Storage Gateway provides the ability to back up point-in-time snapshots of your data to Amazon Simple Storage (S3)
  * for durable off-site recovery, as well as import the data to an Amazon Elastic Block Store (EBS) volume in Amazon
- * Elastic Compute Cloud (EC2). You can take snapshots of your gateway volume on a scheduled or ad-hoc basis. This API
+ * Elastic Compute Cloud (EC2). You can take snapshots of your gateway volume on a scheduled or ad hoc basis. This API
  * enables you to take ad-hoc snapshot. For more information, see <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot">Editing a
+ * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-volumes.html#SchedulingSnapshot">Editing a
  * Snapshot
  *
  * Schedule</a>>
@@ -563,12 +609,12 @@ CreateSMBFileShareResponse * StorageGatewayClient::createSMBFileShare(const Crea
  * type> <note>
  *
  * To list or delete a snapshot, you must use the Amazon EC2 API. For more information, see DescribeSnapshots or
- * DeleteSnapshot in the <a href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Operations.html">EC2 API
+ * DeleteSnapshot in the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_Operations.html">EC2 API
  *
  * reference</a>> </note> <b>
  *
  * Volume and snapshot IDs are changing to a longer length ID format. For more information, see the important note on the
- * <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html">Welcome</a>
+ * <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/Welcome.html">Welcome</a>
  */
 CreateSnapshotResponse * StorageGatewayClient::createSnapshot(const CreateSnapshotRequest &request)
 {
@@ -752,7 +798,7 @@ DeleteGatewayResponse * StorageGatewayClient::deleteGateway(const DeleteGatewayR
  *
  * You can take snapshots of your gateway volumes on a scheduled or ad hoc basis. This API action enables you to delete a
  * snapshot schedule for a volume. For more information, see <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/WorkingWithSnapshots.html">Working with Snapshots</a>.
+ * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/WorkingWithSnapshots.html">Working with Snapshots</a>.
  * In the <code>DeleteSnapshotSchedule</code> request, you identify the volume by providing its Amazon Resource Name (ARN).
  * This operation is only supported in stored and cached volume gateway
  *
@@ -808,7 +854,7 @@ DeleteTapeArchiveResponse * StorageGatewayClient::deleteTapeArchive(const Delete
  * Before you delete a volume, make sure there are no iSCSI connections to the volume you are deleting. You should also
  * make sure there is no snapshot in progress. You can use the Amazon Elastic Compute Cloud (Amazon EC2) API to query
  * snapshots on the volume you are deleting and check the snapshot status. For more information, go to <a
- * href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DescribeSnapshots.html">DescribeSnapshots</a>
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DescribeSnapshots.html">DescribeSnapshots</a>
  * in the <i>Amazon Elastic Compute Cloud API
  *
  * Reference</i>>
@@ -1108,6 +1154,21 @@ DescribeWorkingStorageResponse * StorageGatewayClient::describeWorkingStorage(co
 
 /*!
  * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * DetachVolumeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disconnects a volume from an iSCSI connection and then detaches the volume from the specified gateway. Detaching and
+ * attaching a volume enables you to recover your data from one gateway to a different gateway without creating a snapshot.
+ * It also makes it easier to move your volumes from an on-premises gateway to a gateway hosted on an Amazon EC2
+ */
+DetachVolumeResponse * StorageGatewayClient::detachVolume(const DetachVolumeRequest &request)
+{
+    return qobject_cast<DetachVolumeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
  * DisableGatewayResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1333,6 +1394,13 @@ NotifyWhenUploadedResponse * StorageGatewayClient::notifyWhenUploaded(const Noti
  * RefreshCache operation completes. For more information, see <a
  * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/monitoring-file-gateway.html#get-notification">Getting
  * Notified About File
+ *
+ * Operations</a>>
+ *
+ * When this API is called, it only initiates the refresh operation. When the API call completes and returns a success
+ * code, it doesn't necessarily mean that the file refresh has completed. You should use the refresh-complete notification
+ * to determine that the operation has completed before you check for new files on the gateway file share. You can
+ * subscribe to be notified through an CloudWatch event when your <code>RefreshCache</code> operation completes.
  */
 RefreshCacheResponse * StorageGatewayClient::refreshCache(const RefreshCacheRequest &request)
 {
@@ -1593,9 +1661,9 @@ UpdateGatewayInformationResponse * StorageGatewayClient::updateGatewayInformatio
  * A software update forces a system restart of your gateway. You can minimize the chance of any disruption to your
  * applications by increasing your iSCSI Initiators' timeouts. For more information about increasing iSCSI Initiator
  * timeouts for Windows and Linux, see <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorWindowsClient.html#CustomizeWindowsiSCSISettings">Customizing
+ * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorWindowsClient.html#CustomizeWindowsiSCSISettings">Customizing
  * Your Windows iSCSI Settings</a> and <a
- * href="http://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorRedHatClient.html#CustomizeLinuxiSCSISettings">Customizing
+ * href="https://docs.aws.amazon.com/storagegateway/latest/userguide/ConfiguringiSCSIClientInitiatorRedHatClient.html#CustomizeLinuxiSCSISettings">Customizing
  * Your Linux iSCSI Settings</a>,
  */
 UpdateGatewaySoftwareNowResponse * StorageGatewayClient::updateGatewaySoftwareNow(const UpdateGatewaySoftwareNowRequest &request)
@@ -1681,7 +1749,7 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
  * File gateways require AWS Security Token Service (AWS STS) to be activated to enable you to create a file share. Make
  * sure that AWS STS is activated in the AWS Region you are creating your file gateway in. If AWS STS is not activated in
  * this AWS Region, activate it. For information about how to activate AWS STS, see <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
  * Deactivating AWS STS in an AWS Region</a> in the <i>AWS Identity and Access Management User Guide.</i>
  *
  * </p
@@ -1691,6 +1759,19 @@ UpdateNFSFileShareResponse * StorageGatewayClient::updateNFSFileShare(const Upda
 UpdateSMBFileShareResponse * StorageGatewayClient::updateSMBFileShare(const UpdateSMBFileShareRequest &request)
 {
     return qobject_cast<UpdateSMBFileShareResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the StorageGatewayClient service, and returns a pointer to an
+ * UpdateSMBSecurityStrategyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the SMB security strategy on a file gateway. This action is only supported in file
+ */
+UpdateSMBSecurityStrategyResponse * StorageGatewayClient::updateSMBSecurityStrategy(const UpdateSMBSecurityStrategyRequest &request)
+{
+    return qobject_cast<UpdateSMBSecurityStrategyResponse *>(send(request));
 }
 
 /*!

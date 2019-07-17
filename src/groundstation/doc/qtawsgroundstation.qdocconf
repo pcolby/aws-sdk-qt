@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsGroundStation
+description = AWS GroundStation SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsgroundstation-index.html"
+navigation.landingtitle = "GroundStation"
+navigation.cppclassespage = "GroundStation C++ Classes"

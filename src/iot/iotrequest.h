@@ -123,6 +123,7 @@ public:
         GetPolicyAction,
         GetPolicyVersionAction,
         GetRegistrationCodeAction,
+        GetStatisticsAction,
         GetTopicRuleAction,
         GetV2LoggingOptionsAction,
         ListActiveViolationsAction,

@@ -82,6 +82,10 @@ HEADERS += \
     disassociatememberfromgrouprequest_p.h \
     disassociatememberfromgroupresponse.h \
     disassociatememberfromgroupresponse_p.h \
+    getmailboxdetailsrequest.h \
+    getmailboxdetailsrequest_p.h \
+    getmailboxdetailsresponse.h \
+    getmailboxdetailsresponse_p.h \
     listaliasesrequest.h \
     listaliasesrequest_p.h \
     listaliasesresponse.h \
@@ -126,6 +130,10 @@ HEADERS += \
     resetpasswordrequest_p.h \
     resetpasswordresponse.h \
     resetpasswordresponse_p.h \
+    updatemailboxquotarequest.h \
+    updatemailboxquotarequest_p.h \
+    updatemailboxquotaresponse.h \
+    updatemailboxquotaresponse_p.h \
     updateprimaryemailaddressrequest.h \
     updateprimaryemailaddressrequest_p.h \
     updateprimaryemailaddressresponse.h \
@@ -178,6 +186,8 @@ SOURCES += \
     disassociatedelegatefromresourceresponse.cpp \
     disassociatememberfromgrouprequest.cpp \
     disassociatememberfromgroupresponse.cpp \
+    getmailboxdetailsrequest.cpp \
+    getmailboxdetailsresponse.cpp \
     listaliasesrequest.cpp \
     listaliasesresponse.cpp \
     listgroupmembersrequest.cpp \
@@ -200,6 +210,8 @@ SOURCES += \
     registertoworkmailresponse.cpp \
     resetpasswordrequest.cpp \
     resetpasswordresponse.cpp \
+    updatemailboxquotarequest.cpp \
+    updatemailboxquotaresponse.cpp \
     updateprimaryemailaddressrequest.cpp \
     updateprimaryemailaddressresponse.cpp \
     updateresourcerequest.cpp \

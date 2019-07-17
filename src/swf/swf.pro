@@ -74,6 +74,10 @@ HEADERS += \
     listopenworkflowexecutionsrequest_p.h \
     listopenworkflowexecutionsresponse.h \
     listopenworkflowexecutionsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listworkflowtypesrequest.h \
     listworkflowtypesrequest_p.h \
     listworkflowtypesresponse.h \
@@ -136,10 +140,30 @@ HEADERS += \
     swfrequest_p.h \
     swfresponse.h \
     swfresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     terminateworkflowexecutionrequest.h \
     terminateworkflowexecutionrequest_p.h \
     terminateworkflowexecutionresponse.h \
     terminateworkflowexecutionresponse_p.h \
+    undeprecateactivitytyperequest.h \
+    undeprecateactivitytyperequest_p.h \
+    undeprecateactivitytyperesponse.h \
+    undeprecateactivitytyperesponse_p.h \
+    undeprecatedomainrequest.h \
+    undeprecatedomainrequest_p.h \
+    undeprecatedomainresponse.h \
+    undeprecatedomainresponse_p.h \
+    undeprecateworkflowtyperequest.h \
+    undeprecateworkflowtyperequest_p.h \
+    undeprecateworkflowtyperesponse.h \
+    undeprecateworkflowtyperesponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     countclosedworkflowexecutionsrequest.cpp \
@@ -174,6 +198,8 @@ SOURCES += \
     listdomainsresponse.cpp \
     listopenworkflowexecutionsrequest.cpp \
     listopenworkflowexecutionsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listworkflowtypesrequest.cpp \
     listworkflowtypesresponse.cpp \
     pollforactivitytaskrequest.cpp \
@@ -205,7 +231,17 @@ SOURCES += \
     swfclient.cpp \
     swfrequest.cpp \
     swfresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     terminateworkflowexecutionrequest.cpp \
     terminateworkflowexecutionresponse.cpp \
+    undeprecateactivitytyperequest.cpp \
+    undeprecateactivitytyperesponse.cpp \
+    undeprecatedomainrequest.cpp \
+    undeprecatedomainresponse.cpp \
+    undeprecateworkflowtyperequest.cpp \
+    undeprecateworkflowtyperesponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

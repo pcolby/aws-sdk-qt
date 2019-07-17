@@ -93,10 +93,13 @@ namespace WAF {
  * \value ListSizeConstraintSetsAction WAF ListSizeConstraintSets action.
  * \value ListSqlInjectionMatchSetsAction WAF ListSqlInjectionMatchSets action.
  * \value ListSubscribedRuleGroupsAction WAF ListSubscribedRuleGroups action.
+ * \value ListTagsForResourceAction WAF ListTagsForResource action.
  * \value ListWebACLsAction WAF ListWebACLs action.
  * \value ListXssMatchSetsAction WAF ListXssMatchSets action.
  * \value PutLoggingConfigurationAction WAF PutLoggingConfiguration action.
  * \value PutPermissionPolicyAction WAF PutPermissionPolicy action.
+ * \value TagResourceAction WAF TagResource action.
+ * \value UntagResourceAction WAF UntagResource action.
  * \value UpdateByteMatchSetAction WAF UpdateByteMatchSet action.
  * \value UpdateGeoMatchSetAction WAF UpdateGeoMatchSet action.
  * \value UpdateIPSetAction WAF UpdateIPSet action.

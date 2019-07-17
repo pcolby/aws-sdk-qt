@@ -193,6 +193,8 @@
 #include "getpolicyversionresponse.h"
 #include "getregistrationcoderequest.h"
 #include "getregistrationcoderesponse.h"
+#include "getstatisticsrequest.h"
+#include "getstatisticsresponse.h"
 #include "gettopicrulerequest.h"
 #include "gettopicruleresponse.h"
 #include "getv2loggingoptionsrequest.h"
@@ -386,12 +388,12 @@ namespace IoT {
  *  devices>
  * 
  *  For more information about how AWS IoT works, see the <a
- *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
  * 
  *  Guide</a>>
  * 
  *  For information about how to use the credentials provider for AWS IoT, see <a
- *  href="http://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html">Authorizing Direct Calls to AWS
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html">Authorizing Direct Calls to AWS
  */
 
 /*!
@@ -565,7 +567,8 @@ AttachSecurityProfileResponse * IoTClient::attachSecurityProfile(const AttachSec
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches the specified principal to the specified
+ * Attaches the specified principal to the specified thing. A principal can be X.509 certificates, IAM users, groups, and
+ * roles, Amazon Cognito identities or federated
  */
 AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThingPrincipalRequest &request)
 {
@@ -901,12 +904,14 @@ CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a thing record in the
+ * Creates a thing record in the registry. If this call is made multiple times using the same thing name and configuration,
+ * the call will succeed. If this call is made with the same thing name but different configuration a
+ * <code>ResourceAlreadyExistsException</code> is
  *
- * registry> <note>
+ * thrown> <note>
  *
  * This is a control plane operation. See <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">Authorization</a> for information about
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">Authorization</a> for information about
  * authorizing control plane
  */
 CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
@@ -925,7 +930,7 @@ CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
  * group> <note>
  *
  * This is a control plane operation. See <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">Authorization</a> for information about
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">Authorization</a> for information about
  * authorizing control plane
  */
 CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupRequest &request)
@@ -1592,9 +1597,10 @@ DetachSecurityProfileResponse * IoTClient::detachSecurityProfile(const DetachSec
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Detaches the specified principal from the specified
+ * Detaches the specified principal from the specified thing. A principal can be X.509 certificates, IAM users, groups, and
+ * roles, Amazon Cognito identities or federated
  *
- * thing> <note>
+ * identities> <note>
  *
  * This call is asynchronous. It might take several seconds for the detachment to
  */
@@ -1736,6 +1742,19 @@ GetPolicyVersionResponse * IoTClient::getPolicyVersion(const GetPolicyVersionReq
 GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrationCodeRequest &request)
 {
     return qobject_cast<GetRegistrationCodeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets statistics about things that match the specified
+ */
+GetStatisticsResponse * IoTClient::getStatistics(const GetStatisticsRequest &request)
+{
+    return qobject_cast<GetStatisticsResponse *>(send(request));
 }
 
 /*!
@@ -2018,7 +2037,7 @@ ListPolicyVersionsResponse * IoTClient::listPolicyVersions(const ListPolicyVersi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the policies attached to the specified principal. If you use an Cognito identity, the ID must be in <a
- * href="http://docs.aws.amazon.com/cognitoidentity/latest/APIReference/API_GetCredentialsForIdentity.html#API_GetCredentialsForIdentity_RequestSyntax">AmazonCognito
+ * href="https://docs.aws.amazon.com/cognitoidentity/latest/APIReference/API_GetCredentialsForIdentity.html#API_GetCredentialsForIdentity_RequestSyntax">AmazonCognito
  * Identity
  *
  * format</a>>
@@ -2036,7 +2055,8 @@ ListPrincipalPoliciesResponse * IoTClient::listPrincipalPolicies(const ListPrinc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the things associated with the specified
+ * Lists the things associated with the specified principal. A principal can be X.509 certificates, IAM users, groups, and
+ * roles, Amazon Cognito identities or federated identities.
  */
 ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipalThingsRequest &request)
 {
@@ -2180,7 +2200,8 @@ ListThingGroupsForThingResponse * IoTClient::listThingGroupsForThing(const ListT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the principals associated with the specified
+ * Lists the principals associated with the specified thing. A principal can be X.509 certificates, IAM users, groups, and
+ * roles, Amazon Cognito identities or federated
  */
 ListThingPrincipalsResponse * IoTClient::listThingPrincipals(const ListThingPrincipalsRequest &request)
 {

@@ -30,6 +30,8 @@ namespace CloudWatch {
 class CloudWatchClientPrivate;
 class DeleteAlarmsRequest;
 class DeleteAlarmsResponse;
+class DeleteAnomalyDetectorRequest;
+class DeleteAnomalyDetectorResponse;
 class DeleteDashboardsRequest;
 class DeleteDashboardsResponse;
 class DescribeAlarmHistoryRequest;
@@ -38,6 +40,8 @@ class DescribeAlarmsRequest;
 class DescribeAlarmsResponse;
 class DescribeAlarmsForMetricRequest;
 class DescribeAlarmsForMetricResponse;
+class DescribeAnomalyDetectorsRequest;
+class DescribeAnomalyDetectorsResponse;
 class DisableAlarmActionsRequest;
 class DisableAlarmActionsResponse;
 class EnableAlarmActionsRequest;
@@ -54,6 +58,10 @@ class ListDashboardsRequest;
 class ListDashboardsResponse;
 class ListMetricsRequest;
 class ListMetricsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class PutAnomalyDetectorRequest;
+class PutAnomalyDetectorResponse;
 class PutDashboardRequest;
 class PutDashboardResponse;
 class PutMetricAlarmRequest;
@@ -62,6 +70,10 @@ class PutMetricDataRequest;
 class PutMetricDataResponse;
 class SetAlarmStateRequest;
 class SetAlarmStateResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT CloudWatchClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -80,10 +92,12 @@ public:
 
 public slots:
     DeleteAlarmsResponse * deleteAlarms(const DeleteAlarmsRequest &request);
+    DeleteAnomalyDetectorResponse * deleteAnomalyDetector(const DeleteAnomalyDetectorRequest &request);
     DeleteDashboardsResponse * deleteDashboards(const DeleteDashboardsRequest &request);
     DescribeAlarmHistoryResponse * describeAlarmHistory(const DescribeAlarmHistoryRequest &request);
     DescribeAlarmsResponse * describeAlarms(const DescribeAlarmsRequest &request);
     DescribeAlarmsForMetricResponse * describeAlarmsForMetric(const DescribeAlarmsForMetricRequest &request);
+    DescribeAnomalyDetectorsResponse * describeAnomalyDetectors(const DescribeAnomalyDetectorsRequest &request);
     DisableAlarmActionsResponse * disableAlarmActions(const DisableAlarmActionsRequest &request);
     EnableAlarmActionsResponse * enableAlarmActions(const EnableAlarmActionsRequest &request);
     GetDashboardResponse * getDashboard(const GetDashboardRequest &request);
@@ -92,10 +106,14 @@ public slots:
     GetMetricWidgetImageResponse * getMetricWidgetImage(const GetMetricWidgetImageRequest &request);
     ListDashboardsResponse * listDashboards(const ListDashboardsRequest &request);
     ListMetricsResponse * listMetrics(const ListMetricsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    PutAnomalyDetectorResponse * putAnomalyDetector(const PutAnomalyDetectorRequest &request);
     PutDashboardResponse * putDashboard(const PutDashboardRequest &request);
     PutMetricAlarmResponse * putMetricAlarm(const PutMetricAlarmRequest &request);
     PutMetricDataResponse * putMetricData(const PutMetricDataRequest &request);
     SetAlarmStateResponse * setAlarmState(const SetAlarmStateRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchClient)

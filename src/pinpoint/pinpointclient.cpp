@@ -127,6 +127,8 @@
 #include "getuserendpointsresponse.h"
 #include "getvoicechannelrequest.h"
 #include "getvoicechannelresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "phonenumbervalidaterequest.h"
 #include "phonenumbervalidateresponse.h"
 #include "puteventstreamrequest.h"
@@ -139,6 +141,10 @@
 #include "sendmessagesresponse.h"
 #include "sendusersmessagesrequest.h"
 #include "sendusersmessagesresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateadmchannelrequest.h"
 #include "updateadmchannelresponse.h"
 #include "updateapnschannelrequest.h"
@@ -192,6 +198,7 @@ namespace Pinpoint {
  * \ingroup aws-clients
  * \inmodule QtAwsPinpoint
  *
+ *  Doc Engage API - Amazon Pinpoint
  */
 
 /*!
@@ -253,6 +260,7 @@ PinpointClient::PinpointClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates an
  */
 CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
 {
@@ -265,6 +273,7 @@ CreateAppResponse * PinpointClient::createApp(const CreateAppRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new campaign for an application or updates the settings of an existing campaign for an
  */
 CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequest &request)
 {
@@ -277,6 +286,7 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new export job for an
  */
 CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobRequest &request)
 {
@@ -289,6 +299,7 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new import job for an
  */
 CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
 {
@@ -301,6 +312,8 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing
+ * segment that's associated with an
  */
 CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest &request)
 {
@@ -313,6 +326,7 @@ CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the ADM channel for an application and deletes any existing settings for the
  */
 DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChannelRequest &request)
 {
@@ -325,6 +339,7 @@ DeleteAdmChannelResponse * PinpointClient::deleteAdmChannel(const DeleteAdmChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the APNs channel for an application and deletes any existing settings for the
  */
 DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsChannelRequest &request)
 {
@@ -337,6 +352,7 @@ DeleteApnsChannelResponse * PinpointClient::deleteApnsChannel(const DeleteApnsCh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the APNs sandbox channel for an application and deletes any existing settings for the
  */
 DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(const DeleteApnsSandboxChannelRequest &request)
 {
@@ -349,6 +365,7 @@ DeleteApnsSandboxChannelResponse * PinpointClient::deleteApnsSandboxChannel(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the APNs VoIP channel for an application and deletes any existing settings for the
  */
 DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const DeleteApnsVoipChannelRequest &request)
 {
@@ -361,6 +378,7 @@ DeleteApnsVoipChannelResponse * PinpointClient::deleteApnsVoipChannel(const Dele
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the APNs VoIP sandbox channel for an application and deletes any existing settings for the
  */
 DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChannel(const DeleteApnsVoipSandboxChannelRequest &request)
 {
@@ -373,6 +391,7 @@ DeleteApnsVoipSandboxChannelResponse * PinpointClient::deleteApnsVoipSandboxChan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes an
  */
 DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
 {
@@ -385,6 +404,7 @@ DeleteAppResponse * PinpointClient::deleteApp(const DeleteAppRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the Baidu channel for an application and deletes any existing settings for the
  */
 DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaiduChannelRequest &request)
 {
@@ -397,6 +417,7 @@ DeleteBaiduChannelResponse * PinpointClient::deleteBaiduChannel(const DeleteBaid
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes a campaign from an
  */
 DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequest &request)
 {
@@ -409,6 +430,7 @@ DeleteCampaignResponse * PinpointClient::deleteCampaign(const DeleteCampaignRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the email channel for an application and deletes any existing settings for the
  */
 DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmailChannelRequest &request)
 {
@@ -421,6 +443,7 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes an endpoint from an
  */
 DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequest &request)
 {
@@ -433,6 +456,7 @@ DeleteEndpointResponse * PinpointClient::deleteEndpoint(const DeleteEndpointRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the event stream for an
  */
 DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventStreamRequest &request)
 {
@@ -445,6 +469,7 @@ DeleteEventStreamResponse * PinpointClient::deleteEventStream(const DeleteEventS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the GCM channel for an application and deletes any existing settings for the
  */
 DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChannelRequest &request)
 {
@@ -457,6 +482,7 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes a segment from an
  */
 DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest &request)
 {
@@ -469,6 +495,7 @@ DeleteSegmentResponse * PinpointClient::deleteSegment(const DeleteSegmentRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the SMS channel for an application and deletes any existing settings for the
  */
 DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChannelRequest &request)
 {
@@ -481,6 +508,7 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes all the endpoints that are associated with a specific user
  */
 DeleteUserEndpointsResponse * PinpointClient::deleteUserEndpoints(const DeleteUserEndpointsRequest &request)
 {
@@ -493,6 +521,7 @@ DeleteUserEndpointsResponse * PinpointClient::deleteUserEndpoints(const DeleteUs
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disables the voice channel for an application and deletes any existing settings for the
  */
 DeleteVoiceChannelResponse * PinpointClient::deleteVoiceChannel(const DeleteVoiceChannelRequest &request)
 {
@@ -505,6 +534,7 @@ DeleteVoiceChannelResponse * PinpointClient::deleteVoiceChannel(const DeleteVoic
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the ADM channel for an
  */
 GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest &request)
 {
@@ -517,6 +547,7 @@ GetAdmChannelResponse * PinpointClient::getAdmChannel(const GetAdmChannelRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the APNs channel for an
  */
 GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequest &request)
 {
@@ -529,6 +560,7 @@ GetApnsChannelResponse * PinpointClient::getApnsChannel(const GetApnsChannelRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the APNs sandbox channel for an
  */
 GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetApnsSandboxChannelRequest &request)
 {
@@ -541,6 +573,7 @@ GetApnsSandboxChannelResponse * PinpointClient::getApnsSandboxChannel(const GetA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the APNs VoIP channel for an
  */
 GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoipChannelRequest &request)
 {
@@ -553,6 +586,7 @@ GetApnsVoipChannelResponse * PinpointClient::getApnsVoipChannel(const GetApnsVoi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the APNs VoIP sandbox channel for an
  */
 GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(const GetApnsVoipSandboxChannelRequest &request)
 {
@@ -565,6 +599,7 @@ GetApnsVoipSandboxChannelResponse * PinpointClient::getApnsVoipSandboxChannel(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about an
  */
 GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 {
@@ -577,6 +612,7 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the settings for an
  */
 GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const GetApplicationSettingsRequest &request)
 {
@@ -589,6 +625,7 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about all of your
  */
 GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 {
@@ -601,6 +638,7 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the Baidu Cloud Push channel for an
  */
 GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelRequest &request)
 {
@@ -613,6 +651,7 @@ GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status, configuration, and other settings for a
  */
 GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &request)
 {
@@ -625,6 +664,7 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the activity performed by a
  */
 GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetCampaignActivitiesRequest &request)
 {
@@ -637,6 +677,7 @@ GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status, configuration, and other settings for a specific version of a
  */
 GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaignVersionRequest &request)
 {
@@ -649,6 +690,7 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status, configuration, and other settings for all versions of a specific
  */
 GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampaignVersionsRequest &request)
 {
@@ -661,6 +703,8 @@ GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status, configuration, and other settings for all the campaigns that are associated with
+ * an
  */
 GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &request)
 {
@@ -673,6 +717,7 @@ GetCampaignsResponse * PinpointClient::getCampaigns(const GetCampaignsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the history and status of each channel for an
  */
 GetChannelsResponse * PinpointClient::getChannels(const GetChannelsRequest &request)
 {
@@ -685,6 +730,7 @@ GetChannelsResponse * PinpointClient::getChannels(const GetChannelsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the email channel for an
  */
 GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelRequest &request)
 {
@@ -697,6 +743,7 @@ GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the settings and attributes of a specific endpoint for an
  */
 GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &request)
 {
@@ -709,6 +756,7 @@ GetEndpointResponse * PinpointClient::getEndpoint(const GetEndpointRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the event stream settings for an
  */
 GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequest &request)
 {
@@ -721,6 +769,7 @@ GetEventStreamResponse * PinpointClient::getEventStream(const GetEventStreamRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of a specific export job for an
  */
 GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &request)
 {
@@ -733,6 +782,7 @@ GetExportJobResponse * PinpointClient::getExportJob(const GetExportJobRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of all the export jobs for an
  */
 GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest &request)
 {
@@ -745,6 +795,7 @@ GetExportJobsResponse * PinpointClient::getExportJobs(const GetExportJobsRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the GCM channel for an
  */
 GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest &request)
 {
@@ -757,6 +808,7 @@ GetGcmChannelResponse * PinpointClient::getGcmChannel(const GetGcmChannelRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of a specific import job for an
  */
 GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &request)
 {
@@ -769,6 +821,7 @@ GetImportJobResponse * PinpointClient::getImportJob(const GetImportJobRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of all the import jobs for an
  */
 GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest &request)
 {
@@ -781,6 +834,8 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the configuration, dimension, and other settings for a specific segment that's associated
+ * with an
  */
 GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request)
 {
@@ -793,6 +848,7 @@ GetSegmentResponse * PinpointClient::getSegment(const GetSegmentRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the export jobs for a
  */
 GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSegmentExportJobsRequest &request)
 {
@@ -805,6 +861,7 @@ GetSegmentExportJobsResponse * PinpointClient::getSegmentExportJobs(const GetSeg
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the import jobs for a
  */
 GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSegmentImportJobsRequest &request)
 {
@@ -817,6 +874,8 @@ GetSegmentImportJobsResponse * PinpointClient::getSegmentImportJobs(const GetSeg
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the configuration, dimension, and other settings for a specific version of a segment that's
+ * associated with an
  */
 GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVersionRequest &request)
 {
@@ -829,6 +888,8 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the configuration, dimension, and other settings for all versions of a specific segment
+ * that's associated with an
  */
 GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegmentVersionsRequest &request)
 {
@@ -841,6 +902,8 @@ GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegment
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the configuration, dimension, and other settings for all the segments that are associated
+ * with an
  */
 GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &request)
 {
@@ -853,6 +916,7 @@ GetSegmentsResponse * PinpointClient::getSegments(const GetSegmentsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the SMS channel for an
  */
 GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest &request)
 {
@@ -865,6 +929,7 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about all the endpoints that are associated with a specific user
  */
 GetUserEndpointsResponse * PinpointClient::getUserEndpoints(const GetUserEndpointsRequest &request)
 {
@@ -877,6 +942,7 @@ GetUserEndpointsResponse * PinpointClient::getUserEndpoints(const GetUserEndpoin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about the status and settings of the voice channel for an
  */
 GetVoiceChannelResponse * PinpointClient::getVoiceChannel(const GetVoiceChannelRequest &request)
 {
@@ -885,10 +951,24 @@ GetVoiceChannelResponse * PinpointClient::getVoiceChannel(const GetVoiceChannelR
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves all the tags (keys and values) that are associated with an application, campaign, or
+ */
+ListTagsForResourceResponse * PinpointClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * PhoneNumberValidateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves information about a phone
  */
 PhoneNumberValidateResponse * PinpointClient::phoneNumberValidate(const PhoneNumberValidateRequest &request)
 {
@@ -901,6 +981,7 @@ PhoneNumberValidateResponse * PinpointClient::phoneNumberValidate(const PhoneNum
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new event stream for an application or updates the settings of an existing event stream for an
  */
 PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequest &request)
 {
@@ -913,7 +994,7 @@ PutEventStreamResponse * PinpointClient::putEventStream(const PutEventStreamRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use to record events for endpoints. This method creates events and creates or updates the endpoints that those events
+ * Creates a new event to record for endpoints, or creates or updates endpoint data that existing events are associated
  */
 PutEventsResponse * PinpointClient::putEvents(const PutEventsRequest &request)
 {
@@ -926,6 +1007,7 @@ PutEventsResponse * PinpointClient::putEvents(const PutEventsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Removes one or more attributes, of the same attribute type, from all the endpoints that are associated with an
  */
 RemoveAttributesResponse * PinpointClient::removeAttributes(const RemoveAttributesRequest &request)
 {
@@ -938,6 +1020,7 @@ RemoveAttributesResponse * PinpointClient::removeAttributes(const RemoveAttribut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates and sends a direct
  */
 SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &request)
 {
@@ -950,6 +1033,7 @@ SendMessagesResponse * PinpointClient::sendMessages(const SendMessagesRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates and sends a message to a list of
  */
 SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMessagesRequest &request)
 {
@@ -958,10 +1042,37 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags (keys and values) to an application, campaign, or
+ */
+TagResourceResponse * PinpointClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags (keys and values) from an application, campaign, or
+ */
+UntagResourceResponse * PinpointClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * UpdateAdmChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the ADM channel settings for an
  */
 UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChannelRequest &request)
 {
@@ -974,6 +1085,7 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the APNs channel settings for an
  */
 UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsChannelRequest &request)
 {
@@ -986,6 +1098,7 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the APNs sandbox channel settings for an
  */
 UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(const UpdateApnsSandboxChannelRequest &request)
 {
@@ -998,6 +1111,7 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the APNs VoIP channel settings for an
  */
 UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const UpdateApnsVoipChannelRequest &request)
 {
@@ -1010,6 +1124,7 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the settings for the APNs VoIP sandbox channel for an
  */
 UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChannel(const UpdateApnsVoipSandboxChannelRequest &request)
 {
@@ -1022,6 +1137,7 @@ UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the settings for an
  */
 UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(const UpdateApplicationSettingsRequest &request)
 {
@@ -1034,6 +1150,7 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the settings of the Baidu channel for an
  */
 UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaiduChannelRequest &request)
 {
@@ -1046,6 +1163,7 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the settings for a
  */
 UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequest &request)
 {
@@ -1058,6 +1176,7 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the status and settings of the email channel for an
  */
 UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmailChannelRequest &request)
 {
@@ -1070,6 +1189,9 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new endpoint for an application or updates the settings and attributes of an existing endpoint for an
+ * application. You can also use this operation to define custom attributes (Attributes, Metrics, and UserAttributes
+ * properties) for an
  */
 UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -1082,6 +1204,9 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new batch of endpoints for an application or updates the settings and attributes of a batch of existing
+ * endpoints for an application. You can also use this operation to define custom attributes (Attributes, Metrics, and
+ * UserAttributes properties) for a batch of
  */
 UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const UpdateEndpointsBatchRequest &request)
 {
@@ -1094,6 +1219,7 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the status and settings of the GCM channel for an
  */
 UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChannelRequest &request)
 {
@@ -1106,6 +1232,8 @@ UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing
+ * segment that's associated with an
  */
 UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest &request)
 {
@@ -1118,6 +1246,7 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the status and settings of the SMS channel for an
  */
 UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
 {
@@ -1130,6 +1259,7 @@ UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the status and settings of the voice channel for an
  */
 UpdateVoiceChannelResponse * PinpointClient::updateVoiceChannel(const UpdateVoiceChannelRequest &request)
 {

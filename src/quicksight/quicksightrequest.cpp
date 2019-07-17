@@ -41,6 +41,7 @@ namespace QuickSight {
  * \value DeleteGroupAction QuickSight DeleteGroup action.
  * \value DeleteGroupMembershipAction QuickSight DeleteGroupMembership action.
  * \value DeleteUserAction QuickSight DeleteUser action.
+ * \value DeleteUserByPrincipalIdAction QuickSight DeleteUserByPrincipalId action.
  * \value DescribeGroupAction QuickSight DescribeGroup action.
  * \value DescribeUserAction QuickSight DescribeUser action.
  * \value GetDashboardEmbedUrlAction QuickSight GetDashboardEmbedUrl action.

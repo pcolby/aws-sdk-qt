@@ -157,7 +157,7 @@ CloudFrontClient::CloudFrontClient(
 : QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->apiVersion = QStringLiteral("2018-11-05");
+    d->apiVersion = QStringLiteral("2019-03-26");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("cloudfront");
     d->networkAccessManager = manager;
@@ -185,7 +185,7 @@ CloudFrontClient::CloudFrontClient(
 : QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->apiVersion = QStringLiteral("2018-11-05");
+    d->apiVersion = QStringLiteral("2019-03-26");
     d->credentials = credentials;
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("cloudfront");
@@ -203,7 +203,7 @@ CloudFrontClient::CloudFrontClient(
  * Creates a new origin access identity. If you're using Amazon S3 for your origin, you can use an origin access identity
  * to require users to access your content using a CloudFront URL instead of the Amazon S3 URL. For more information about
  * how to use origin access identities, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving Private Content
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving Private Content
  * through CloudFront</a> in the <i>Amazon CloudFront Developer
  */
 CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFrontOriginAccessIdentity(const CreateCloudFrontOriginAccessIdentityRequest &request)
@@ -224,16 +224,12 @@ CreateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::createCloudFron
  * resource> <b>
  *
  * When you update a distribution, there are more required fields than when you create a distribution. When you update your
- * distribution by using <a>UpdateDistribution</a>, follow the steps included in the documentation to get the current
- * configuration and then make your updates. This helps to make sure that you include all of the required fields. To view a
- * summary, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html">Required
+ * distribution by using <a
+ * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateDistribution.html">UpdateDistribution</a>,
+ * follow the steps included in the documentation to get the current configuration and then make your updates. This helps
+ * to make sure that you include all of the required fields. To view a summary, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html">Required
  * Fields for Create Distribution and Update Distribution</a> in the <i>Amazon CloudFront Developer
- *
- * Guide</i>> </b>
- *
- * If you are using Adobe Flash Media Server's RTMP protocol, you set up a different kind of CloudFront distribution. For
- * more information, see
  */
 CreateDistributionResponse * CloudFrontClient::createDistribution(const CreateDistributionRequest &request)
 {
@@ -312,12 +308,12 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new RMTP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams
+ * Creates a new RTMP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams
  * media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.
  *
  * </p
  *
- * To create a new web distribution, submit a <code>POST</code> request to the <i>CloudFront API version</i>/distribution
+ * To create a new distribution, submit a <code>POST</code> request to the <i>CloudFront API version</i>/distribution
  * resource. The request body must include a document with a <i>StreamingDistributionConfig</i> element. The response
  * echoes the <code>StreamingDistributionConfig</code> element and returns other information about the RTMP
  *
@@ -330,7 +326,7 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
  * minutes>
  *
  * For more information about web distributions, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html">Working with RTMP
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html">Working with RTMP
  * Distributions</a> in the <i>Amazon CloudFront Developer
  *
  * Guide</i>> <b>
@@ -483,7 +479,7 @@ DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKe
  * deleted> </li> </ol>
  *
  * For information about deleting a distribution using the CloudFront console, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a
  * Distribution</a> in the <i>Amazon CloudFront Developer
  */
 DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request)
@@ -523,7 +519,7 @@ GetCloudFrontOriginAccessIdentityConfigResponse * CloudFrontClient::getCloudFron
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get the information about a distribution.
+ * Get the information about a
  */
 GetDistributionResponse * CloudFrontClient::getDistribution(const GetDistributionRequest &request)
 {
@@ -679,7 +675,7 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List distributions.
+ * List CloudFront
  */
 ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistributionsRequest &request)
 {
@@ -829,7 +825,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * When you update a distribution, there are more required fields than when you create a distribution. When you update your
  * distribution by using this API action, follow the steps here to get the current configuration and then make your
  * updates, to make sure that you include all of the required fields. To view a summary, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html">Required
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-overview-required-fields.html">Required
  * Fields for Create Distribution and Update Distribution</a> in the <i>Amazon CloudFront Developer
  *
  * Guide</i>> </b>
@@ -840,7 +836,7 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  * updates>
  *
  * For information about updating a distribution using the CloudFront console instead, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html">Creating
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html">Creating
  * a Distribution</a> in the <i>Amazon CloudFront Developer
  *
  * Guide</i>>
@@ -849,7 +845,9 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  *
  * </p <ol> <li>
  *
- * Submit a <a>GetDistributionConfig</a> request to get the current configuration and an <code>Etag</code> header for the
+ * Submit a <a
+ * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistributionConfig.html">GetDistributionConfig</a>
+ * request to get the current configuration and an <code>Etag</code> header for the
  *
  * distribution> <note>
  *
@@ -906,8 +904,9 @@ UpdateCloudFrontOriginAccessIdentityResponse * CloudFrontClient::updateCloudFron
  *
  * updated> </li> <li>
  *
- * Optional: Submit a <a>GetDistribution</a> request to confirm that your changes have propagated. When propagation is
- * complete, the value of <code>Status</code> is
+ * Optional: Submit a <a
+ * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GetDistribution.html">GetDistribution</a> request
+ * to confirm that your changes have propagated. When propagation is complete, the value of <code>Status</code> is
  */
 UpdateDistributionResponse * CloudFrontClient::updateDistribution(const UpdateDistributionRequest &request)
 {

@@ -66,6 +66,7 @@ public:
         DeleteInstanceAction,
         DeleteInstanceSnapshotAction,
         DeleteKeyPairAction,
+        DeleteKnownHostKeysAction,
         DeleteLoadBalancerAction,
         DeleteLoadBalancerTlsCertificateAction,
         DeleteRelationalDatabaseAction,

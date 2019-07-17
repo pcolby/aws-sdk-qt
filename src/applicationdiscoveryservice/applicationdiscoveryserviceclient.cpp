@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "associateconfigurationitemstoapplicationrequest.h"
 #include "associateconfigurationitemstoapplicationresponse.h"
+#include "batchdeleteimportdatarequest.h"
+#include "batchdeleteimportdataresponse.h"
 #include "createapplicationrequest.h"
 #include "createapplicationresponse.h"
 #include "createtagsrequest.h"
@@ -41,6 +43,8 @@
 #include "describeexportconfigurationsresponse.h"
 #include "describeexporttasksrequest.h"
 #include "describeexporttasksresponse.h"
+#include "describeimporttasksrequest.h"
+#include "describeimporttasksresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
 #include "disassociateconfigurationitemsfromapplicationrequest.h"
@@ -59,6 +63,8 @@
 #include "startdatacollectionbyagentidsresponse.h"
 #include "startexporttaskrequest.h"
 #include "startexporttaskresponse.h"
+#include "startimporttaskrequest.h"
+#include "startimporttaskresponse.h"
 #include "stopcontinuousexportrequest.h"
 #include "stopcontinuousexportresponse.h"
 #include "stopdatacollectionbyagentidsrequest.h"
@@ -137,12 +143,6 @@ namespace ApplicationDiscoveryService {
  * 
  *  service> </b>
  * 
- *  Your AWS account must be granted access to Application Discovery Service, a process called <i>whitelisting</i>. This is
- *  true for AWS partners and customers alike. To request access, <a
- *  href="http://aws.amazon.com/application-discovery/">sign up for Application Discovery Service</a>.
- * 
- *  </p
- * 
  *  This API reference provides descriptions, syntax, and usage examples for each of the actions and data types for
  *  Application Discovery Service. The topic for each action shows the API request parameters and the response.
  *  Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform
@@ -218,6 +218,27 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
 AssociateConfigurationItemsToApplicationResponse * ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request)
 {
     return qobject_cast<AssociateConfigurationItemsToApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * BatchDeleteImportDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes one or more import tasks, each identified by their import ID. Each import task has a number of records that can
+ * identify servers or applications.
+ *
+ * </p
+ *
+ * AWS Application Discovery Service has built-in matching logic that will identify when discovered servers match existing
+ * entries that you've previously discovered, the information for the already-existing discovered server is updated. When
+ * you delete an import task that contains records that were used to match, the information in those matched records that
+ * comes from the deleted records will also be
+ */
+BatchDeleteImportDataResponse * ApplicationDiscoveryServiceClient::batchDeleteImportData(const BatchDeleteImportDataRequest &request)
+{
+    return qobject_cast<BatchDeleteImportDataResponse *>(send(request));
 }
 
 /*!
@@ -300,7 +321,7 @@ DescribeAgentsResponse * ApplicationDiscoveryServiceClient::describeAgents(const
  *
  * All of the supplied IDs must be for the same asset type from one of the
  *
- * follwoing> <ul> <li>
+ * following> <ul> <li>
  *
  * serve> </li> <li>
  *
@@ -344,12 +365,8 @@ DescribeContinuousExportsResponse * ApplicationDiscoveryServiceClient::describeC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * <code>DescribeExportConfigurations</code> is
- *
- * deprecated>
- *
- * Use instead <a href="http://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeExportTasks.html">
- * <code>DescribeExportTasks</code>
+ * <code>DescribeExportConfigurations</code> is deprecated. Use <a
+ * href="https://docs.aws.amazon.com/application-discovery/latest/APIReference/API_DescribeExportTasks.html">DescribeImportTasks</a>,
  */
 DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::describeExportConfigurations(const DescribeExportConfigurationsRequest &request)
 {
@@ -367,6 +384,20 @@ DescribeExportConfigurationsResponse * ApplicationDiscoveryServiceClient::descri
 DescribeExportTasksResponse * ApplicationDiscoveryServiceClient::describeExportTasks(const DescribeExportTasksRequest &request)
 {
     return qobject_cast<DescribeExportTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * DescribeImportTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of import tasks for your account, including status information, times, IDs, the Amazon S3 Object URL
+ * for the import file, and
+ */
+DescribeImportTasksResponse * ApplicationDiscoveryServiceClient::describeImportTasks(const DescribeImportTasksRequest &request)
+{
+    return qobject_cast<DescribeImportTasksResponse *>(send(request));
 }
 
 /*!
@@ -545,6 +576,56 @@ StartDataCollectionByAgentIdsResponse * ApplicationDiscoveryServiceClient::start
 StartExportTaskResponse * ApplicationDiscoveryServiceClient::startExportTask(const StartExportTaskRequest &request)
 {
     return qobject_cast<StartExportTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApplicationDiscoveryServiceClient service, and returns a pointer to an
+ * StartImportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an import task, which allows you to import details of your on-premises environment directly into AWS without
+ * having to use the Application Discovery Service (ADS) tools such as the Discovery Connector or Discovery Agent. This
+ * gives you the option to perform migration assessment and planning directly from your imported data, including the
+ * ability to group your devices as applications and track their migration
+ *
+ * status>
+ *
+ * To start an import request, do
+ *
+ * this> <ol> <li>
+ *
+ * Download the specially formatted comma separated value (CSV) import template, which you can find here: <a
+ *
+ * href="https://s3-us-west-2.amazonaws.com/templates-7cffcf56-bd96-4b1c-b45b-a5b42f282e46/import_template.csv">https://s3-us-west-2.amazonaws.com/templates-7cffcf56-bd96-4b1c-b45b-a5b42f282e46/import_template.csv</a>>
+ * </li> <li>
+ *
+ * Fill out the template with your server and application
+ *
+ * data> </li> <li>
+ *
+ * Upload your import file to an Amazon S3 bucket, and make a note of it's Object URL. Your import file must be in the CSV
+ *
+ * format> </li> <li>
+ *
+ * Use the console or the <code>StartImportTask</code> command with the AWS CLI or one of the AWS SDKs to import the
+ * records from your
+ *
+ * file> </li> </ol>
+ *
+ * For more information, including step-by-step procedures, see <a
+ * href="https://docs.aws.amazon.com/application-discovery/latest/userguide/discovery-import.html">Migration Hub Import</a>
+ * in the <i>AWS Application Discovery Service User
+ *
+ * Guide</i>> <note>
+ *
+ * There are limits to the number of import tasks you can create (and delete) in an AWS account. For more information, see
+ * <a href="https://docs.aws.amazon.com/application-discovery/latest/userguide/ads_service_limits.html">AWS Application
+ * Discovery Service Limits</a> in the <i>AWS Application Discovery Service User
+ */
+StartImportTaskResponse * ApplicationDiscoveryServiceClient::startImportTask(const StartImportTaskRequest &request)
+{
+    return qobject_cast<StartImportTaskResponse *>(send(request));
 }
 
 /*!

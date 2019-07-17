@@ -675,9 +675,13 @@ GetLogRecordResponse * CloudWatchLogsClient::getLogRecord(const GetLogRecordRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the results from the specified query. If the query is in progress, partial results of that current execution are
- * returned. Only the fields requested in the query are
  *
  * returned>
+ *
+ * Only the fields requested in the query are returned, along with a <code>@ptr</code> field which is the identifier for
+ * the log record. You can use the value of <code>@ptr</code> in a operation to get the full log
+ *
+ * record>
  *
  * <code>GetQueryResults</code> does not start a query execution. To run a query, use
  */
@@ -729,7 +733,7 @@ PutDestinationResponse * CloudWatchLogsClient::putDestination(const PutDestinati
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates or updates an access policy associated with an existing destination. An access policy is an <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies_overview.html">IAM policy document</a> that is used to
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/policies_overview.html">IAM policy document</a> that is used to
  * authorize claims to register a subscription filter against a given
  */
 PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const PutDestinationPolicyRequest &request)
@@ -767,7 +771,7 @@ PutDestinationPolicyResponse * CloudWatchLogsClient::putDestinationPolicy(const 
  *
  * future> </li> <li>
  *
- * None of the log events in the batch can be older than 14 days or the retention period of the log
+ * None of the log events in the batch can be older than 14 days or older than the retention period of the log
  *
  * group> </li> <li>
  *
@@ -882,13 +886,18 @@ PutSubscriptionFilterResponse * CloudWatchLogsClient::putSubscriptionFilter(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Schedules a query of a log group using CloudWatch Logs Insights. You specify the log group to query, the query string to
- * use, and the time to
+ * Schedules a query of a log group using CloudWatch Logs Insights. You specify the log group and time range to query, and
+ * the query string to
  *
- * query>
+ * use>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">CloudWatch Logs Insights Query
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">CloudWatch Logs Insights Query
+ *
+ * Syntax</a>>
+ *
+ * Queries time out after 15 minutes of execution. If your queries are timing out, reduce the time range being searched, or
+ * partition your query into a number of
  */
 StartQueryResponse * CloudWatchLogsClient::startQuery(const StartQueryRequest &request)
 {
@@ -924,7 +933,7 @@ StopQueryResponse * CloudWatchLogsClient::stopQuery(const StopQueryRequest &requ
  * <a>UntagLogGroup</a>>
  *
  * For more information about tags, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/log-group-tagging.html">Tag Log Groups in Amazon
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/log-group-tagging.html">Tag Log Groups in Amazon
  * CloudWatch Logs</a> in the <i>Amazon CloudWatch Logs User
  */
 TagLogGroupResponse * CloudWatchLogsClient::tagLogGroup(const TagLogGroupRequest &request)

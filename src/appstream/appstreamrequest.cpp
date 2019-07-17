@@ -46,6 +46,7 @@ namespace AppStream {
  * \value CreateImageBuilderStreamingURLAction AppStream CreateImageBuilderStreamingURL action.
  * \value CreateStackAction AppStream CreateStack action.
  * \value CreateStreamingURLAction AppStream CreateStreamingURL action.
+ * \value CreateUsageReportSubscriptionAction AppStream CreateUsageReportSubscription action.
  * \value CreateUserAction AppStream CreateUser action.
  * \value DeleteDirectoryConfigAction AppStream DeleteDirectoryConfig action.
  * \value DeleteFleetAction AppStream DeleteFleet action.
@@ -53,6 +54,7 @@ namespace AppStream {
  * \value DeleteImageBuilderAction AppStream DeleteImageBuilder action.
  * \value DeleteImagePermissionsAction AppStream DeleteImagePermissions action.
  * \value DeleteStackAction AppStream DeleteStack action.
+ * \value DeleteUsageReportSubscriptionAction AppStream DeleteUsageReportSubscription action.
  * \value DeleteUserAction AppStream DeleteUser action.
  * \value DescribeDirectoryConfigsAction AppStream DescribeDirectoryConfigs action.
  * \value DescribeFleetsAction AppStream DescribeFleets action.
@@ -61,6 +63,7 @@ namespace AppStream {
  * \value DescribeImagesAction AppStream DescribeImages action.
  * \value DescribeSessionsAction AppStream DescribeSessions action.
  * \value DescribeStacksAction AppStream DescribeStacks action.
+ * \value DescribeUsageReportSubscriptionsAction AppStream DescribeUsageReportSubscriptions action.
  * \value DescribeUserStackAssociationsAction AppStream DescribeUserStackAssociations action.
  * \value DescribeUsersAction AppStream DescribeUsers action.
  * \value DisableUserAction AppStream DisableUser action.

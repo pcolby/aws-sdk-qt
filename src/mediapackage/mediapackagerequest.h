@@ -45,8 +45,11 @@ public:
         DescribeOriginEndpointAction,
         ListChannelsAction,
         ListOriginEndpointsAction,
+        ListTagsForResourceAction,
         RotateChannelCredentialsAction,
         RotateIngestEndpointCredentialsAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateChannelAction,
         UpdateOriginEndpointAction,
     };

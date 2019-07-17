@@ -48,12 +48,22 @@ class GetLifecyclePolicyRequest;
 class GetLifecyclePolicyResponse;
 class ListContainersRequest;
 class ListContainersResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutContainerPolicyRequest;
 class PutContainerPolicyResponse;
 class PutCorsPolicyRequest;
 class PutCorsPolicyResponse;
 class PutLifecyclePolicyRequest;
 class PutLifecyclePolicyResponse;
+class StartAccessLoggingRequest;
+class StartAccessLoggingResponse;
+class StopAccessLoggingRequest;
+class StopAccessLoggingResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT MediaStoreClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -81,9 +91,14 @@ public slots:
     GetCorsPolicyResponse * getCorsPolicy(const GetCorsPolicyRequest &request);
     GetLifecyclePolicyResponse * getLifecyclePolicy(const GetLifecyclePolicyRequest &request);
     ListContainersResponse * listContainers(const ListContainersRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutContainerPolicyResponse * putContainerPolicy(const PutContainerPolicyRequest &request);
     PutCorsPolicyResponse * putCorsPolicy(const PutCorsPolicyRequest &request);
     PutLifecyclePolicyResponse * putLifecyclePolicy(const PutLifecyclePolicyRequest &request);
+    StartAccessLoggingResponse * startAccessLogging(const StartAccessLoggingRequest &request);
+    StopAccessLoggingResponse * stopAccessLogging(const StopAccessLoggingRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaStoreClient)

@@ -64,10 +64,16 @@ class ListApplicationSnapshotsRequest;
 class ListApplicationSnapshotsResponse;
 class ListApplicationsRequest;
 class ListApplicationsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class StartApplicationRequest;
 class StartApplicationResponse;
 class StopApplicationRequest;
 class StopApplicationResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
@@ -105,8 +111,11 @@ public slots:
     DiscoverInputSchemaResponse * discoverInputSchema(const DiscoverInputSchemaRequest &request);
     ListApplicationSnapshotsResponse * listApplicationSnapshots(const ListApplicationSnapshotsRequest &request);
     ListApplicationsResponse * listApplications(const ListApplicationsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     StartApplicationResponse * startApplication(const StartApplicationRequest &request);
     StopApplicationResponse * stopApplication(const StopApplicationRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
 private:

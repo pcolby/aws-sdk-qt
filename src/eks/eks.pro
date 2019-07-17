@@ -40,6 +40,10 @@ HEADERS += \
     listupdatesrequest_p.h \
     listupdatesresponse.h \
     listupdatesresponse_p.h \
+    updateclusterconfigrequest.h \
+    updateclusterconfigrequest_p.h \
+    updateclusterconfigresponse.h \
+    updateclusterconfigresponse_p.h \
     updateclusterversionrequest.h \
     updateclusterversionrequest_p.h \
     updateclusterversionresponse.h \
@@ -61,6 +65,8 @@ SOURCES += \
     listclustersresponse.cpp \
     listupdatesrequest.cpp \
     listupdatesresponse.cpp \
+    updateclusterconfigrequest.cpp \
+    updateclusterconfigresponse.cpp \
     updateclusterversionrequest.cpp \
     updateclusterversionresponse.cpp \
 

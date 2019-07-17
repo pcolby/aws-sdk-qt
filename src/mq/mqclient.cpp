@@ -37,6 +37,10 @@
 #include "deleteuserresponse.h"
 #include "describebrokerrequest.h"
 #include "describebrokerresponse.h"
+#include "describebrokerenginetypesrequest.h"
+#include "describebrokerenginetypesresponse.h"
+#include "describebrokerinstanceoptionsrequest.h"
+#include "describebrokerinstanceoptionsresponse.h"
 #include "describeconfigurationrequest.h"
 #include "describeconfigurationresponse.h"
 #include "describeconfigurationrevisionrequest.h"
@@ -236,6 +240,30 @@ DeleteUserResponse * MqClient::deleteUser(const DeleteUserRequest &request)
 DescribeBrokerResponse * MqClient::describeBroker(const DescribeBrokerRequest &request)
 {
     return qobject_cast<DescribeBrokerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DescribeBrokerEngineTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeBrokerEngineTypesResponse * MqClient::describeBrokerEngineTypes(const DescribeBrokerEngineTypesRequest &request)
+{
+    return qobject_cast<DescribeBrokerEngineTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MqClient service, and returns a pointer to an
+ * DescribeBrokerInstanceOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeBrokerInstanceOptionsResponse * MqClient::describeBrokerInstanceOptions(const DescribeBrokerInstanceOptionsRequest &request)
+{
+    return qobject_cast<DescribeBrokerInstanceOptionsResponse *>(send(request));
 }
 
 /*!

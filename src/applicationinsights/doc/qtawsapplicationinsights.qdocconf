@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsApplicationInsights
+description = AWS ApplicationInsights SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsapplicationinsights-index.html"
+navigation.landingtitle = "ApplicationInsights"
+navigation.cppclassespage = "ApplicationInsights C++ Classes"

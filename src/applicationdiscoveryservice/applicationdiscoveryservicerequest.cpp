@@ -37,6 +37,7 @@ namespace ApplicationDiscoveryService {
  * requests.
  *
  * \value AssociateConfigurationItemsToApplicationAction ApplicationDiscoveryService AssociateConfigurationItemsToApplication action.
+ * \value BatchDeleteImportDataAction ApplicationDiscoveryService BatchDeleteImportData action.
  * \value CreateApplicationAction ApplicationDiscoveryService CreateApplication action.
  * \value CreateTagsAction ApplicationDiscoveryService CreateTags action.
  * \value DeleteApplicationsAction ApplicationDiscoveryService DeleteApplications action.
@@ -46,6 +47,7 @@ namespace ApplicationDiscoveryService {
  * \value DescribeContinuousExportsAction ApplicationDiscoveryService DescribeContinuousExports action.
  * \value DescribeExportConfigurationsAction ApplicationDiscoveryService DescribeExportConfigurations action.
  * \value DescribeExportTasksAction ApplicationDiscoveryService DescribeExportTasks action.
+ * \value DescribeImportTasksAction ApplicationDiscoveryService DescribeImportTasks action.
  * \value DescribeTagsAction ApplicationDiscoveryService DescribeTags action.
  * \value DisassociateConfigurationItemsFromApplicationAction ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication action.
  * \value ExportConfigurationsAction ApplicationDiscoveryService ExportConfigurations action.
@@ -55,6 +57,7 @@ namespace ApplicationDiscoveryService {
  * \value StartContinuousExportAction ApplicationDiscoveryService StartContinuousExport action.
  * \value StartDataCollectionByAgentIdsAction ApplicationDiscoveryService StartDataCollectionByAgentIds action.
  * \value StartExportTaskAction ApplicationDiscoveryService StartExportTask action.
+ * \value StartImportTaskAction ApplicationDiscoveryService StartImportTask action.
  * \value StopContinuousExportAction ApplicationDiscoveryService StopContinuousExport action.
  * \value StopDataCollectionByAgentIdsAction ApplicationDiscoveryService StopDataCollectionByAgentIds action.
  * \value UpdateApplicationAction ApplicationDiscoveryService UpdateApplication action.

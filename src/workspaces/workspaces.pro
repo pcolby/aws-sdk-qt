@@ -18,6 +18,10 @@ HEADERS += \
     authorizeiprulesrequest_p.h \
     authorizeiprulesresponse.h \
     authorizeiprulesresponse_p.h \
+    copyworkspaceimagerequest.h \
+    copyworkspaceimagerequest_p.h \
+    copyworkspaceimageresponse.h \
+    copyworkspaceimageresponse_p.h \
     createipgrouprequest.h \
     createipgrouprequest_p.h \
     createipgroupresponse.h \
@@ -150,6 +154,8 @@ SOURCES += \
     associateipgroupsresponse.cpp \
     authorizeiprulesrequest.cpp \
     authorizeiprulesresponse.cpp \
+    copyworkspaceimagerequest.cpp \
+    copyworkspaceimageresponse.cpp \
     createipgrouprequest.cpp \
     createipgroupresponse.cpp \
     createtagsrequest.cpp \

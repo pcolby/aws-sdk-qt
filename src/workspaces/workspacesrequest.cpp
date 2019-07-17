@@ -38,6 +38,7 @@ namespace WorkSpaces {
  *
  * \value AssociateIpGroupsAction WorkSpaces AssociateIpGroups action.
  * \value AuthorizeIpRulesAction WorkSpaces AuthorizeIpRules action.
+ * \value CopyWorkspaceImageAction WorkSpaces CopyWorkspaceImage action.
  * \value CreateIpGroupAction WorkSpaces CreateIpGroup action.
  * \value CreateTagsAction WorkSpaces CreateTags action.
  * \value CreateWorkspacesAction WorkSpaces CreateWorkspaces action.

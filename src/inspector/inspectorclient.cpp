@@ -121,7 +121,7 @@ namespace Inspector {
  *  <fullname>Amazon Inspector</fullname>
  * 
  *  Amazon Inspector enables you to analyze the behavior of your AWS resources and to identify potential security issues.
- *  For more information, see <a href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
+ *  For more information, see <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html">
  *  Amazon Inspector User
  */
 
@@ -204,7 +204,7 @@ AddAttributesToFindingsResponse * InspectorClient::addAttributesToFindings(const
  * registered, this action also creates and registers a service-linked role to grant Amazon Inspector access to AWS
  * Services needed to perform security assessments. You can create up to 50 assessment targets per AWS account. You can run
  * up to 500 concurrent agents per AWS account. For more information, see <a
- * href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html"> Amazon Inspector Assessment
+ * href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html"> Amazon Inspector Assessment
  */
 CreateAssessmentTargetResponse * InspectorClient::createAssessmentTarget(const CreateAssessmentTargetRequest &request)
 {
@@ -485,7 +485,7 @@ ListAssessmentRunsResponse * InspectorClient::listAssessmentRuns(const ListAsses
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the ARNs of the assessment targets within this AWS account. For more information about assessment targets, see <a
- * href="http://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html">Amazon Inspector Assessment
+ * href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html">Amazon Inspector Assessment
  */
 ListAssessmentTargetsResponse * InspectorClient::listAssessmentTargets(const ListAssessmentTargetsRequest &request)
 {

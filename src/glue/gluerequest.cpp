@@ -41,7 +41,12 @@ namespace Glue {
  * \value BatchDeletePartitionAction Glue BatchDeletePartition action.
  * \value BatchDeleteTableAction Glue BatchDeleteTable action.
  * \value BatchDeleteTableVersionAction Glue BatchDeleteTableVersion action.
+ * \value BatchGetCrawlersAction Glue BatchGetCrawlers action.
+ * \value BatchGetDevEndpointsAction Glue BatchGetDevEndpoints action.
+ * \value BatchGetJobsAction Glue BatchGetJobs action.
  * \value BatchGetPartitionAction Glue BatchGetPartition action.
+ * \value BatchGetTriggersAction Glue BatchGetTriggers action.
+ * \value BatchGetWorkflowsAction Glue BatchGetWorkflows action.
  * \value BatchStopJobRunAction Glue BatchStopJobRun action.
  * \value CreateClassifierAction Glue CreateClassifier action.
  * \value CreateConnectionAction Glue CreateConnection action.
@@ -55,6 +60,7 @@ namespace Glue {
  * \value CreateTableAction Glue CreateTable action.
  * \value CreateTriggerAction Glue CreateTrigger action.
  * \value CreateUserDefinedFunctionAction Glue CreateUserDefinedFunction action.
+ * \value CreateWorkflowAction Glue CreateWorkflow action.
  * \value DeleteClassifierAction Glue DeleteClassifier action.
  * \value DeleteConnectionAction Glue DeleteConnection action.
  * \value DeleteCrawlerAction Glue DeleteCrawler action.
@@ -68,6 +74,7 @@ namespace Glue {
  * \value DeleteTableVersionAction Glue DeleteTableVersion action.
  * \value DeleteTriggerAction Glue DeleteTrigger action.
  * \value DeleteUserDefinedFunctionAction Glue DeleteUserDefinedFunction action.
+ * \value DeleteWorkflowAction Glue DeleteWorkflow action.
  * \value GetCatalogImportStatusAction Glue GetCatalogImportStatus action.
  * \value GetClassifierAction Glue GetClassifier action.
  * \value GetClassifiersAction Glue GetClassifiers action.
@@ -97,21 +104,35 @@ namespace Glue {
  * \value GetTableVersionAction Glue GetTableVersion action.
  * \value GetTableVersionsAction Glue GetTableVersions action.
  * \value GetTablesAction Glue GetTables action.
+ * \value GetTagsAction Glue GetTags action.
  * \value GetTriggerAction Glue GetTrigger action.
  * \value GetTriggersAction Glue GetTriggers action.
  * \value GetUserDefinedFunctionAction Glue GetUserDefinedFunction action.
  * \value GetUserDefinedFunctionsAction Glue GetUserDefinedFunctions action.
+ * \value GetWorkflowAction Glue GetWorkflow action.
+ * \value GetWorkflowRunAction Glue GetWorkflowRun action.
+ * \value GetWorkflowRunPropertiesAction Glue GetWorkflowRunProperties action.
+ * \value GetWorkflowRunsAction Glue GetWorkflowRuns action.
  * \value ImportCatalogToGlueAction Glue ImportCatalogToGlue action.
+ * \value ListCrawlersAction Glue ListCrawlers action.
+ * \value ListDevEndpointsAction Glue ListDevEndpoints action.
+ * \value ListJobsAction Glue ListJobs action.
+ * \value ListTriggersAction Glue ListTriggers action.
+ * \value ListWorkflowsAction Glue ListWorkflows action.
  * \value PutDataCatalogEncryptionSettingsAction Glue PutDataCatalogEncryptionSettings action.
  * \value PutResourcePolicyAction Glue PutResourcePolicy action.
+ * \value PutWorkflowRunPropertiesAction Glue PutWorkflowRunProperties action.
  * \value ResetJobBookmarkAction Glue ResetJobBookmark action.
  * \value StartCrawlerAction Glue StartCrawler action.
  * \value StartCrawlerScheduleAction Glue StartCrawlerSchedule action.
  * \value StartJobRunAction Glue StartJobRun action.
  * \value StartTriggerAction Glue StartTrigger action.
+ * \value StartWorkflowRunAction Glue StartWorkflowRun action.
  * \value StopCrawlerAction Glue StopCrawler action.
  * \value StopCrawlerScheduleAction Glue StopCrawlerSchedule action.
  * \value StopTriggerAction Glue StopTrigger action.
+ * \value TagResourceAction Glue TagResource action.
+ * \value UntagResourceAction Glue UntagResource action.
  * \value UpdateClassifierAction Glue UpdateClassifier action.
  * \value UpdateConnectionAction Glue UpdateConnection action.
  * \value UpdateCrawlerAction Glue UpdateCrawler action.
@@ -123,6 +144,7 @@ namespace Glue {
  * \value UpdateTableAction Glue UpdateTable action.
  * \value UpdateTriggerAction Glue UpdateTrigger action.
  * \value UpdateUserDefinedFunctionAction Glue UpdateUserDefinedFunction action.
+ * \value UpdateWorkflowAction Glue UpdateWorkflow action.
  */
 
 /*!

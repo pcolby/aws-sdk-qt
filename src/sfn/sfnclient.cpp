@@ -106,7 +106,7 @@ namespace SFN {
  *  Step Functions manages operations and underlying infrastructure to ensure your application is available at any scale.
  *  You can run tasks on AWS, your own servers, or any system that has access to AWS. You can access and use Step Functions
  *  using the console, the AWS SDKs, or an HTTP API. For more information about Step Functions, see the <i> <a
- *  href="http://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
+ *  href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html">AWS Step Functions Developer Guide</a>
  */
 
 /*!
@@ -172,6 +172,10 @@ SfnClient::SfnClient(
  * access to AWS Step Functions. Activities must poll Step Functions using the <code>GetActivityTask</code> API action and
  * respond using <code>SendTask*</code> API actions. This function lets Step Functions know the existence of your activity
  * and returns an identifier for use in a state machine and when polling from the
+ *
+ * activity> <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
  */
 CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &request)
 {
@@ -187,6 +191,10 @@ CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &
  * Creates a state machine. A state machine consists of a collection of states that can do work (<code>Task</code> states),
  * determine to which states to transition next (<code>Choice</code> states), stop an execution with an error
  * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
+ *
+ * language> <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
  */
 CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMachineRequest &request)
 {
@@ -312,7 +320,7 @@ DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExe
  * request)>
  *
  * Polling with <code>GetActivityTask</code> can cause latency in some implementations. See <a
- * href="http://docs.aws.amazon.com/step-functions/latest/dg/bp-activity-pollers.html">Avoid Latency When Polling for
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/bp-activity-pollers.html">Avoid Latency When Polling for
  * Activity Tasks</a> in the Step Functions Developer
  */
 GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskRequest &request)

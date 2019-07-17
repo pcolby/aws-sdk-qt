@@ -62,6 +62,8 @@ class GetDeliverabilityDashboardOptionsRequest;
 class GetDeliverabilityDashboardOptionsResponse;
 class GetDeliverabilityTestReportRequest;
 class GetDeliverabilityTestReportResponse;
+class GetDomainDeliverabilityCampaignRequest;
+class GetDomainDeliverabilityCampaignResponse;
 class GetDomainStatisticsReportRequest;
 class GetDomainStatisticsReportResponse;
 class GetEmailIdentityRequest;
@@ -72,8 +74,12 @@ class ListDedicatedIpPoolsRequest;
 class ListDedicatedIpPoolsResponse;
 class ListDeliverabilityTestReportsRequest;
 class ListDeliverabilityTestReportsResponse;
+class ListDomainDeliverabilityCampaignsRequest;
+class ListDomainDeliverabilityCampaignsResponse;
 class ListEmailIdentitiesRequest;
 class ListEmailIdentitiesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutAccountDedicatedIpWarmupAttributesRequest;
 class PutAccountDedicatedIpWarmupAttributesResponse;
 class PutAccountSendingAttributesRequest;
@@ -100,6 +106,10 @@ class PutEmailIdentityMailFromAttributesRequest;
 class PutEmailIdentityMailFromAttributesResponse;
 class SendEmailRequest;
 class SendEmailResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateConfigurationSetEventDestinationRequest;
 class UpdateConfigurationSetEventDestinationResponse;
 
@@ -136,12 +146,15 @@ public slots:
     GetDedicatedIpsResponse * getDedicatedIps(const GetDedicatedIpsRequest &request);
     GetDeliverabilityDashboardOptionsResponse * getDeliverabilityDashboardOptions(const GetDeliverabilityDashboardOptionsRequest &request);
     GetDeliverabilityTestReportResponse * getDeliverabilityTestReport(const GetDeliverabilityTestReportRequest &request);
+    GetDomainDeliverabilityCampaignResponse * getDomainDeliverabilityCampaign(const GetDomainDeliverabilityCampaignRequest &request);
     GetDomainStatisticsReportResponse * getDomainStatisticsReport(const GetDomainStatisticsReportRequest &request);
     GetEmailIdentityResponse * getEmailIdentity(const GetEmailIdentityRequest &request);
     ListConfigurationSetsResponse * listConfigurationSets(const ListConfigurationSetsRequest &request);
     ListDedicatedIpPoolsResponse * listDedicatedIpPools(const ListDedicatedIpPoolsRequest &request);
     ListDeliverabilityTestReportsResponse * listDeliverabilityTestReports(const ListDeliverabilityTestReportsRequest &request);
+    ListDomainDeliverabilityCampaignsResponse * listDomainDeliverabilityCampaigns(const ListDomainDeliverabilityCampaignsRequest &request);
     ListEmailIdentitiesResponse * listEmailIdentities(const ListEmailIdentitiesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutAccountDedicatedIpWarmupAttributesResponse * putAccountDedicatedIpWarmupAttributes(const PutAccountDedicatedIpWarmupAttributesRequest &request);
     PutAccountSendingAttributesResponse * putAccountSendingAttributes(const PutAccountSendingAttributesRequest &request);
     PutConfigurationSetDeliveryOptionsResponse * putConfigurationSetDeliveryOptions(const PutConfigurationSetDeliveryOptionsRequest &request);
@@ -155,6 +168,8 @@ public slots:
     PutEmailIdentityFeedbackAttributesResponse * putEmailIdentityFeedbackAttributes(const PutEmailIdentityFeedbackAttributesRequest &request);
     PutEmailIdentityMailFromAttributesResponse * putEmailIdentityMailFromAttributes(const PutEmailIdentityMailFromAttributesRequest &request);
     SendEmailResponse * sendEmail(const SendEmailRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateConfigurationSetEventDestinationResponse * updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request);
 
 private:

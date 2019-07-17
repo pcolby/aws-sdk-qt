@@ -31,7 +31,7 @@ namespace IoT1ClickProjects {
  *
  * \inmodule QtAwsIoT1ClickProjects
  *
- *  The AWS IoT 1-Click Project API
+ *  The AWS IoT 1-Click Projects API
  *
  * \sa IoT1ClickProjectsClient::listProjects
  */

@@ -122,6 +122,7 @@ namespace IoT {
  * \value GetPolicyAction IoT GetPolicy action.
  * \value GetPolicyVersionAction IoT GetPolicyVersion action.
  * \value GetRegistrationCodeAction IoT GetRegistrationCode action.
+ * \value GetStatisticsAction IoT GetStatistics action.
  * \value GetTopicRuleAction IoT GetTopicRule action.
  * \value GetV2LoggingOptionsAction IoT GetV2LoggingOptions action.
  * \value ListActiveViolationsAction IoT ListActiveViolations action.

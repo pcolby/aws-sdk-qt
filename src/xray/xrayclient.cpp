@@ -45,6 +45,8 @@
 #include "getsamplingtargetsresponse.h"
 #include "getservicegraphrequest.h"
 #include "getservicegraphresponse.h"
+#include "gettimeseriesservicestatisticsrequest.h"
+#include "gettimeseriesservicestatisticsresponse.h"
 #include "gettracegraphrequest.h"
 #include "gettracegraphresponse.h"
 #include "gettracesummariesrequest.h"
@@ -303,6 +305,19 @@ GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphReque
 
 /*!
  * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetTimeSeriesServiceStatisticsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get an aggregation of service statistics defined by a specific time
+ */
+GetTimeSeriesServiceStatisticsResponse * XRayClient::getTimeSeriesServiceStatistics(const GetTimeSeriesServiceStatisticsRequest &request)
+{
+    return qobject_cast<GetTimeSeriesServiceStatisticsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
  * GetTraceGraphResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -343,7 +358,7 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  * </p
  *
  * For a full list of indexed fields and keywords that you can use in filter expressions, see <a
- * href="http://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html">Using Filter Expressions</a> in the
+ * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html">Using Filter Expressions</a> in the
  * <i>AWS X-Ray Developer
  */
 GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummariesRequest &request)

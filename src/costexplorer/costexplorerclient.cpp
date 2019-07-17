@@ -35,6 +35,8 @@
 #include "getreservationutilizationresponse.h"
 #include "gettagsrequest.h"
 #include "gettagsresponse.h"
+#include "getusageforecastrequest.h"
+#include "getusageforecastresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -280,6 +282,20 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
 GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
 {
     return qobject_cast<GetTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostExplorerClient service, and returns a pointer to an
+ * GetUsageForecastResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a forecast for how much Amazon Web Services predicts that you will use over the forecast time period that you
+ * select, based on your past usage.
+ */
+GetUsageForecastResponse * CostExplorerClient::getUsageForecast(const GetUsageForecastRequest &request)
+{
+    return qobject_cast<GetUsageForecastResponse *>(send(request));
 }
 
 /*!

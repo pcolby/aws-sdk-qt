@@ -38,24 +38,34 @@ namespace Amplify {
  *
  * \value CreateAppAction Amplify CreateApp action.
  * \value CreateBranchAction Amplify CreateBranch action.
+ * \value CreateDeploymentAction Amplify CreateDeployment action.
  * \value CreateDomainAssociationAction Amplify CreateDomainAssociation action.
+ * \value CreateWebhookAction Amplify CreateWebhook action.
  * \value DeleteAppAction Amplify DeleteApp action.
  * \value DeleteBranchAction Amplify DeleteBranch action.
  * \value DeleteDomainAssociationAction Amplify DeleteDomainAssociation action.
  * \value DeleteJobAction Amplify DeleteJob action.
+ * \value DeleteWebhookAction Amplify DeleteWebhook action.
  * \value GetAppAction Amplify GetApp action.
  * \value GetBranchAction Amplify GetBranch action.
  * \value GetDomainAssociationAction Amplify GetDomainAssociation action.
  * \value GetJobAction Amplify GetJob action.
+ * \value GetWebhookAction Amplify GetWebhook action.
  * \value ListAppsAction Amplify ListApps action.
  * \value ListBranchesAction Amplify ListBranches action.
  * \value ListDomainAssociationsAction Amplify ListDomainAssociations action.
  * \value ListJobsAction Amplify ListJobs action.
+ * \value ListTagsForResourceAction Amplify ListTagsForResource action.
+ * \value ListWebhooksAction Amplify ListWebhooks action.
+ * \value StartDeploymentAction Amplify StartDeployment action.
  * \value StartJobAction Amplify StartJob action.
  * \value StopJobAction Amplify StopJob action.
+ * \value TagResourceAction Amplify TagResource action.
+ * \value UntagResourceAction Amplify UntagResource action.
  * \value UpdateAppAction Amplify UpdateApp action.
  * \value UpdateBranchAction Amplify UpdateBranch action.
  * \value UpdateDomainAssociationAction Amplify UpdateDomainAssociation action.
+ * \value UpdateWebhookAction Amplify UpdateWebhook action.
  */
 
 /*!

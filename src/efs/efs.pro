@@ -38,6 +38,10 @@ HEADERS += \
     describefilesystemsrequest_p.h \
     describefilesystemsresponse.h \
     describefilesystemsresponse_p.h \
+    describelifecycleconfigurationrequest.h \
+    describelifecycleconfigurationrequest_p.h \
+    describelifecycleconfigurationresponse.h \
+    describelifecycleconfigurationresponse_p.h \
     describemounttargetsecuritygroupsrequest.h \
     describemounttargetsecuritygroupsrequest_p.h \
     describemounttargetsecuritygroupsresponse.h \
@@ -60,6 +64,10 @@ HEADERS += \
     modifymounttargetsecuritygroupsrequest_p.h \
     modifymounttargetsecuritygroupsresponse.h \
     modifymounttargetsecuritygroupsresponse_p.h \
+    putlifecycleconfigurationrequest.h \
+    putlifecycleconfigurationrequest_p.h \
+    putlifecycleconfigurationresponse.h \
+    putlifecycleconfigurationresponse_p.h \
     updatefilesystemrequest.h \
     updatefilesystemrequest_p.h \
     updatefilesystemresponse.h \
@@ -80,6 +88,8 @@ SOURCES += \
     deletetagsresponse.cpp \
     describefilesystemsrequest.cpp \
     describefilesystemsresponse.cpp \
+    describelifecycleconfigurationrequest.cpp \
+    describelifecycleconfigurationresponse.cpp \
     describemounttargetsecuritygroupsrequest.cpp \
     describemounttargetsecuritygroupsresponse.cpp \
     describemounttargetsrequest.cpp \
@@ -91,6 +101,8 @@ SOURCES += \
     efsresponse.cpp \
     modifymounttargetsecuritygroupsrequest.cpp \
     modifymounttargetsecuritygroupsresponse.cpp \
+    putlifecycleconfigurationrequest.cpp \
+    putlifecycleconfigurationresponse.cpp \
     updatefilesystemrequest.cpp \
     updatefilesystemresponse.cpp \
 

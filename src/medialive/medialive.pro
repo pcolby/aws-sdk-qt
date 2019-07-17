@@ -26,6 +26,10 @@ HEADERS += \
     createinputsecuritygrouprequest_p.h \
     createinputsecuritygroupresponse.h \
     createinputsecuritygroupresponse_p.h \
+    createtagsrequest.h \
+    createtagsrequest_p.h \
+    createtagsresponse.h \
+    createtagsresponse_p.h \
     deletechannelrequest.h \
     deletechannelrequest_p.h \
     deletechannelresponse.h \
@@ -42,6 +46,14 @@ HEADERS += \
     deletereservationrequest_p.h \
     deletereservationresponse.h \
     deletereservationresponse_p.h \
+    deleteschedulerequest.h \
+    deleteschedulerequest_p.h \
+    deletescheduleresponse.h \
+    deletescheduleresponse_p.h \
+    deletetagsrequest.h \
+    deletetagsrequest_p.h \
+    deletetagsresponse.h \
+    deletetagsresponse_p.h \
     describechannelrequest.h \
     describechannelrequest_p.h \
     describechannelresponse.h \
@@ -86,6 +98,10 @@ HEADERS += \
     listreservationsrequest_p.h \
     listreservationsresponse.h \
     listreservationsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     medialiveclient.h \
     medialiveclient_p.h \
     medialiverequest.h \
@@ -104,6 +120,10 @@ HEADERS += \
     stopchannelrequest_p.h \
     stopchannelresponse.h \
     stopchannelresponse_p.h \
+    updatechannelclassrequest.h \
+    updatechannelclassrequest_p.h \
+    updatechannelclassresponse.h \
+    updatechannelclassresponse_p.h \
     updatechannelrequest.h \
     updatechannelrequest_p.h \
     updatechannelresponse.h \
@@ -116,6 +136,10 @@ HEADERS += \
     updateinputsecuritygrouprequest_p.h \
     updateinputsecuritygroupresponse.h \
     updateinputsecuritygroupresponse_p.h \
+    updatereservationrequest.h \
+    updatereservationrequest_p.h \
+    updatereservationresponse.h \
+    updatereservationresponse_p.h \
 
 SOURCES += \
     batchupdateschedulerequest.cpp \
@@ -126,6 +150,8 @@ SOURCES += \
     createinputresponse.cpp \
     createinputsecuritygrouprequest.cpp \
     createinputsecuritygroupresponse.cpp \
+    createtagsrequest.cpp \
+    createtagsresponse.cpp \
     deletechannelrequest.cpp \
     deletechannelresponse.cpp \
     deleteinputrequest.cpp \
@@ -134,6 +160,10 @@ SOURCES += \
     deleteinputsecuritygroupresponse.cpp \
     deletereservationrequest.cpp \
     deletereservationresponse.cpp \
+    deleteschedulerequest.cpp \
+    deletescheduleresponse.cpp \
+    deletetagsrequest.cpp \
+    deletetagsresponse.cpp \
     describechannelrequest.cpp \
     describechannelresponse.cpp \
     describeinputrequest.cpp \
@@ -156,6 +186,8 @@ SOURCES += \
     listofferingsresponse.cpp \
     listreservationsrequest.cpp \
     listreservationsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     medialiveclient.cpp \
     medialiverequest.cpp \
     medialiveresponse.cpp \
@@ -165,11 +197,15 @@ SOURCES += \
     startchannelresponse.cpp \
     stopchannelrequest.cpp \
     stopchannelresponse.cpp \
+    updatechannelclassrequest.cpp \
+    updatechannelclassresponse.cpp \
     updatechannelrequest.cpp \
     updatechannelresponse.cpp \
     updateinputrequest.cpp \
     updateinputresponse.cpp \
     updateinputsecuritygrouprequest.cpp \
     updateinputsecuritygroupresponse.cpp \
+    updatereservationrequest.cpp \
+    updatereservationresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

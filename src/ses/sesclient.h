@@ -112,6 +112,8 @@ class ListTemplatesRequest;
 class ListTemplatesResponse;
 class ListVerifiedEmailAddressesRequest;
 class ListVerifiedEmailAddressesResponse;
+class PutConfigurationSetDeliveryOptionsRequest;
+class PutConfigurationSetDeliveryOptionsResponse;
 class PutIdentityPolicyRequest;
 class PutIdentityPolicyResponse;
 class ReorderReceiptRuleSetRequest;
@@ -231,6 +233,7 @@ public slots:
     ListTemplatesResponse * listTemplates(const ListTemplatesRequest &request);
     ListVerifiedEmailAddressesResponse * listVerifiedEmailAddresses(const ListVerifiedEmailAddressesRequest &request);
     ListVerifiedEmailAddressesResponse * listVerifiedEmailAddresses();
+    PutConfigurationSetDeliveryOptionsResponse * putConfigurationSetDeliveryOptions(const PutConfigurationSetDeliveryOptionsRequest &request);
     PutIdentityPolicyResponse * putIdentityPolicy(const PutIdentityPolicyRequest &request);
     ReorderReceiptRuleSetResponse * reorderReceiptRuleSet(const ReorderReceiptRuleSetRequest &request);
     SendBounceResponse * sendBounce(const SendBounceRequest &request);

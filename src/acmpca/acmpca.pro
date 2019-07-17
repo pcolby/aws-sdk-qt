@@ -24,10 +24,18 @@ HEADERS += \
     createcertificateauthorityrequest_p.h \
     createcertificateauthorityresponse.h \
     createcertificateauthorityresponse_p.h \
+    createpermissionrequest.h \
+    createpermissionrequest_p.h \
+    createpermissionresponse.h \
+    createpermissionresponse_p.h \
     deletecertificateauthorityrequest.h \
     deletecertificateauthorityrequest_p.h \
     deletecertificateauthorityresponse.h \
     deletecertificateauthorityresponse_p.h \
+    deletepermissionrequest.h \
+    deletepermissionrequest_p.h \
+    deletepermissionresponse.h \
+    deletepermissionresponse_p.h \
     describecertificateauthorityauditreportrequest.h \
     describecertificateauthorityauditreportrequest_p.h \
     describecertificateauthorityauditreportresponse.h \
@@ -60,6 +68,10 @@ HEADERS += \
     listcertificateauthoritiesrequest_p.h \
     listcertificateauthoritiesresponse.h \
     listcertificateauthoritiesresponse_p.h \
+    listpermissionsrequest.h \
+    listpermissionsrequest_p.h \
+    listpermissionsresponse.h \
+    listpermissionsresponse_p.h \
     listtagsrequest.h \
     listtagsrequest_p.h \
     listtagsresponse.h \
@@ -93,8 +105,12 @@ SOURCES += \
     createcertificateauthorityauditreportresponse.cpp \
     createcertificateauthorityrequest.cpp \
     createcertificateauthorityresponse.cpp \
+    createpermissionrequest.cpp \
+    createpermissionresponse.cpp \
     deletecertificateauthorityrequest.cpp \
     deletecertificateauthorityresponse.cpp \
+    deletepermissionrequest.cpp \
+    deletepermissionresponse.cpp \
     describecertificateauthorityauditreportrequest.cpp \
     describecertificateauthorityauditreportresponse.cpp \
     describecertificateauthorityrequest.cpp \
@@ -111,6 +127,8 @@ SOURCES += \
     issuecertificateresponse.cpp \
     listcertificateauthoritiesrequest.cpp \
     listcertificateauthoritiesresponse.cpp \
+    listpermissionsrequest.cpp \
+    listpermissionsresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
     restorecertificateauthorityrequest.cpp \

@@ -37,10 +37,12 @@ namespace CloudWatch {
  * requests.
  *
  * \value DeleteAlarmsAction CloudWatch DeleteAlarms action.
+ * \value DeleteAnomalyDetectorAction CloudWatch DeleteAnomalyDetector action.
  * \value DeleteDashboardsAction CloudWatch DeleteDashboards action.
  * \value DescribeAlarmHistoryAction CloudWatch DescribeAlarmHistory action.
  * \value DescribeAlarmsAction CloudWatch DescribeAlarms action.
  * \value DescribeAlarmsForMetricAction CloudWatch DescribeAlarmsForMetric action.
+ * \value DescribeAnomalyDetectorsAction CloudWatch DescribeAnomalyDetectors action.
  * \value DisableAlarmActionsAction CloudWatch DisableAlarmActions action.
  * \value EnableAlarmActionsAction CloudWatch EnableAlarmActions action.
  * \value GetDashboardAction CloudWatch GetDashboard action.
@@ -49,10 +51,14 @@ namespace CloudWatch {
  * \value GetMetricWidgetImageAction CloudWatch GetMetricWidgetImage action.
  * \value ListDashboardsAction CloudWatch ListDashboards action.
  * \value ListMetricsAction CloudWatch ListMetrics action.
+ * \value ListTagsForResourceAction CloudWatch ListTagsForResource action.
+ * \value PutAnomalyDetectorAction CloudWatch PutAnomalyDetector action.
  * \value PutDashboardAction CloudWatch PutDashboard action.
  * \value PutMetricAlarmAction CloudWatch PutMetricAlarm action.
  * \value PutMetricDataAction CloudWatch PutMetricData action.
  * \value SetAlarmStateAction CloudWatch SetAlarmState action.
+ * \value TagResourceAction CloudWatch TagResource action.
+ * \value UntagResourceAction CloudWatch UntagResource action.
  */
 
 /*!

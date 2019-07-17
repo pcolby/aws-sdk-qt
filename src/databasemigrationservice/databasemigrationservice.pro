@@ -14,6 +14,10 @@ HEADERS += \
     addtagstoresourcerequest_p.h \
     addtagstoresourceresponse.h \
     addtagstoresourceresponse_p.h \
+    applypendingmaintenanceactionrequest.h \
+    applypendingmaintenanceactionrequest_p.h \
+    applypendingmaintenanceactionresponse.h \
+    applypendingmaintenanceactionresponse_p.h \
     createendpointrequest.h \
     createendpointrequest_p.h \
     createendpointresponse.h \
@@ -100,6 +104,10 @@ HEADERS += \
     describeorderablereplicationinstancesrequest_p.h \
     describeorderablereplicationinstancesresponse.h \
     describeorderablereplicationinstancesresponse_p.h \
+    describependingmaintenanceactionsrequest.h \
+    describependingmaintenanceactionsrequest_p.h \
+    describependingmaintenanceactionsresponse.h \
+    describependingmaintenanceactionsresponse_p.h \
     describerefreshschemasstatusrequest.h \
     describerefreshschemasstatusrequest_p.h \
     describerefreshschemasstatusresponse.h \
@@ -196,6 +204,8 @@ HEADERS += \
 SOURCES += \
     addtagstoresourcerequest.cpp \
     addtagstoresourceresponse.cpp \
+    applypendingmaintenanceactionrequest.cpp \
+    applypendingmaintenanceactionresponse.cpp \
     createendpointrequest.cpp \
     createendpointresponse.cpp \
     createeventsubscriptionrequest.cpp \
@@ -239,6 +249,8 @@ SOURCES += \
     describeeventsubscriptionsresponse.cpp \
     describeorderablereplicationinstancesrequest.cpp \
     describeorderablereplicationinstancesresponse.cpp \
+    describependingmaintenanceactionsrequest.cpp \
+    describependingmaintenanceactionsresponse.cpp \
     describerefreshschemasstatusrequest.cpp \
     describerefreshschemasstatusresponse.cpp \
     describereplicationinstancesrequest.cpp \

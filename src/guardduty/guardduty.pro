@@ -148,6 +148,10 @@ HEADERS += \
     listmembersrequest_p.h \
     listmembersresponse.h \
     listmembersresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listthreatintelsetsrequest.h \
     listthreatintelsetsrequest_p.h \
     listthreatintelsetsresponse.h \
@@ -160,10 +164,18 @@ HEADERS += \
     stopmonitoringmembersrequest_p.h \
     stopmonitoringmembersresponse.h \
     stopmonitoringmembersresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     unarchivefindingsrequest.h \
     unarchivefindingsrequest_p.h \
     unarchivefindingsresponse.h \
     unarchivefindingsresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatedetectorrequest.h \
     updatedetectorrequest_p.h \
     updatedetectorresponse.h \
@@ -255,14 +267,20 @@ SOURCES += \
     listipsetsresponse.cpp \
     listmembersrequest.cpp \
     listmembersresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listthreatintelsetsrequest.cpp \
     listthreatintelsetsresponse.cpp \
     startmonitoringmembersrequest.cpp \
     startmonitoringmembersresponse.cpp \
     stopmonitoringmembersrequest.cpp \
     stopmonitoringmembersresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     unarchivefindingsrequest.cpp \
     unarchivefindingsresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatedetectorrequest.cpp \
     updatedetectorresponse.cpp \
     updatefilterrequest.cpp \

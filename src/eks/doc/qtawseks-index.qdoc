@@ -3,7 +3,7 @@
     \page qtawseks-index.html
     \title Qt Aws EKS
 
-    \brief Classes for the Amazon Elastic Container Service for Kubernetes ( EKS) service
+    \brief Classes for the Amazon Elastic Kubernetes Service ( EKS) service
 
     (This is the page the forms the overview for the servce.)
 */

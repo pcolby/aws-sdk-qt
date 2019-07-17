@@ -36,7 +36,12 @@ namespace RDSDataService {
  * This enum describes the actions that can be performed as RDSDataService
  * requests.
  *
+ * \value BatchExecuteStatementAction RDSDataService BatchExecuteStatement action.
+ * \value BeginTransactionAction RDSDataService BeginTransaction action.
+ * \value CommitTransactionAction RDSDataService CommitTransaction action.
  * \value ExecuteSqlAction RDSDataService ExecuteSql action.
+ * \value ExecuteStatementAction RDSDataService ExecuteStatement action.
+ * \value RollbackTransactionAction RDSDataService RollbackTransaction action.
  */
 
 /*!

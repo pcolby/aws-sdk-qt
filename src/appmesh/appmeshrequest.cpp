@@ -40,21 +40,30 @@ namespace AppMesh {
  * \value CreateRouteAction AppMesh CreateRoute action.
  * \value CreateVirtualNodeAction AppMesh CreateVirtualNode action.
  * \value CreateVirtualRouterAction AppMesh CreateVirtualRouter action.
+ * \value CreateVirtualServiceAction AppMesh CreateVirtualService action.
  * \value DeleteMeshAction AppMesh DeleteMesh action.
  * \value DeleteRouteAction AppMesh DeleteRoute action.
  * \value DeleteVirtualNodeAction AppMesh DeleteVirtualNode action.
  * \value DeleteVirtualRouterAction AppMesh DeleteVirtualRouter action.
+ * \value DeleteVirtualServiceAction AppMesh DeleteVirtualService action.
  * \value DescribeMeshAction AppMesh DescribeMesh action.
  * \value DescribeRouteAction AppMesh DescribeRoute action.
  * \value DescribeVirtualNodeAction AppMesh DescribeVirtualNode action.
  * \value DescribeVirtualRouterAction AppMesh DescribeVirtualRouter action.
+ * \value DescribeVirtualServiceAction AppMesh DescribeVirtualService action.
  * \value ListMeshesAction AppMesh ListMeshes action.
  * \value ListRoutesAction AppMesh ListRoutes action.
+ * \value ListTagsForResourceAction AppMesh ListTagsForResource action.
  * \value ListVirtualNodesAction AppMesh ListVirtualNodes action.
  * \value ListVirtualRoutersAction AppMesh ListVirtualRouters action.
+ * \value ListVirtualServicesAction AppMesh ListVirtualServices action.
+ * \value TagResourceAction AppMesh TagResource action.
+ * \value UntagResourceAction AppMesh UntagResource action.
+ * \value UpdateMeshAction AppMesh UpdateMesh action.
  * \value UpdateRouteAction AppMesh UpdateRoute action.
  * \value UpdateVirtualNodeAction AppMesh UpdateVirtualNode action.
  * \value UpdateVirtualRouterAction AppMesh UpdateVirtualRouter action.
+ * \value UpdateVirtualServiceAction AppMesh UpdateVirtualService action.
  */
 
 /*!

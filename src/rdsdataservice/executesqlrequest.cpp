@@ -31,6 +31,16 @@ namespace RDSDataService {
  *
  * \inmodule QtAwsRDSDataService
  *
+ *  <fullname>Amazon RDS Data Service</fullname>
+ * 
+ *  Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora Serverless DB cluster. To run these
+ *  statements, you work with the Data Service
+ * 
+ *  API>
+ * 
+ *  For more information about the Data Service API, see <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
+ *  Serverless</a> in the <i>Amazon Aurora User
  *
  * \sa RDSDataServiceClient::executeSql
  */

@@ -38,10 +38,12 @@ public:
     /// Actions supported by CloudWatch.
     enum Action {
         DeleteAlarmsAction,
+        DeleteAnomalyDetectorAction,
         DeleteDashboardsAction,
         DescribeAlarmHistoryAction,
         DescribeAlarmsAction,
         DescribeAlarmsForMetricAction,
+        DescribeAnomalyDetectorsAction,
         DisableAlarmActionsAction,
         EnableAlarmActionsAction,
         GetDashboardAction,
@@ -50,10 +52,14 @@ public:
         GetMetricWidgetImageAction,
         ListDashboardsAction,
         ListMetricsAction,
+        ListTagsForResourceAction,
+        PutAnomalyDetectorAction,
         PutDashboardAction,
         PutMetricAlarmAction,
         PutMetricDataAction,
         SetAlarmStateAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

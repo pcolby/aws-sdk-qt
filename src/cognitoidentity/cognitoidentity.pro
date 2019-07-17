@@ -64,6 +64,10 @@ HEADERS += \
     listidentitypoolsrequest_p.h \
     listidentitypoolsresponse.h \
     listidentitypoolsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     lookupdeveloperidentityrequest.h \
     lookupdeveloperidentityrequest_p.h \
     lookupdeveloperidentityresponse.h \
@@ -76,6 +80,10 @@ HEADERS += \
     setidentitypoolrolesrequest_p.h \
     setidentitypoolrolesresponse.h \
     setidentitypoolrolesresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     unlinkdeveloperidentityrequest.h \
     unlinkdeveloperidentityrequest_p.h \
     unlinkdeveloperidentityresponse.h \
@@ -84,6 +92,10 @@ HEADERS += \
     unlinkidentityrequest_p.h \
     unlinkidentityresponse.h \
     unlinkidentityresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateidentitypoolrequest.h \
     updateidentitypoolrequest_p.h \
     updateidentitypoolresponse.h \
@@ -117,16 +129,22 @@ SOURCES += \
     listidentitiesresponse.cpp \
     listidentitypoolsrequest.cpp \
     listidentitypoolsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     lookupdeveloperidentityrequest.cpp \
     lookupdeveloperidentityresponse.cpp \
     mergedeveloperidentitiesrequest.cpp \
     mergedeveloperidentitiesresponse.cpp \
     setidentitypoolrolesrequest.cpp \
     setidentitypoolrolesresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     unlinkdeveloperidentityrequest.cpp \
     unlinkdeveloperidentityresponse.cpp \
     unlinkidentityrequest.cpp \
     unlinkidentityresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateidentitypoolrequest.cpp \
     updateidentitypoolresponse.cpp \
 

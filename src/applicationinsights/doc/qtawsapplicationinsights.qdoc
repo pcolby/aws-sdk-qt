@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsApplicationInsights
+    \title ApplicationInsights C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS ApplicationInsights functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

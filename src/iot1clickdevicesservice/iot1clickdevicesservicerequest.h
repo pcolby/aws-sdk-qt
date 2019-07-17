@@ -45,7 +45,10 @@ public:
         InvokeDeviceMethodAction,
         ListDeviceEventsAction,
         ListDevicesAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
         UnclaimDeviceAction,
+        UntagResourceAction,
         UpdateDeviceStateAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

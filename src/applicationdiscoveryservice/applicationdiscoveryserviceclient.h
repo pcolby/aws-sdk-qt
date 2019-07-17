@@ -30,6 +30,8 @@ namespace ApplicationDiscoveryService {
 class ApplicationDiscoveryServiceClientPrivate;
 class AssociateConfigurationItemsToApplicationRequest;
 class AssociateConfigurationItemsToApplicationResponse;
+class BatchDeleteImportDataRequest;
+class BatchDeleteImportDataResponse;
 class CreateApplicationRequest;
 class CreateApplicationResponse;
 class CreateTagsRequest;
@@ -48,6 +50,8 @@ class DescribeExportConfigurationsRequest;
 class DescribeExportConfigurationsResponse;
 class DescribeExportTasksRequest;
 class DescribeExportTasksResponse;
+class DescribeImportTasksRequest;
+class DescribeImportTasksResponse;
 class DescribeTagsRequest;
 class DescribeTagsResponse;
 class DisassociateConfigurationItemsFromApplicationRequest;
@@ -66,6 +70,8 @@ class StartDataCollectionByAgentIdsRequest;
 class StartDataCollectionByAgentIdsResponse;
 class StartExportTaskRequest;
 class StartExportTaskResponse;
+class StartImportTaskRequest;
+class StartImportTaskResponse;
 class StopContinuousExportRequest;
 class StopContinuousExportResponse;
 class StopDataCollectionByAgentIdsRequest;
@@ -90,6 +96,7 @@ public:
 
 public slots:
     AssociateConfigurationItemsToApplicationResponse * associateConfigurationItemsToApplication(const AssociateConfigurationItemsToApplicationRequest &request);
+    BatchDeleteImportDataResponse * batchDeleteImportData(const BatchDeleteImportDataRequest &request);
     CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
     CreateTagsResponse * createTags(const CreateTagsRequest &request);
     DeleteApplicationsResponse * deleteApplications(const DeleteApplicationsRequest &request);
@@ -99,6 +106,7 @@ public slots:
     DescribeContinuousExportsResponse * describeContinuousExports(const DescribeContinuousExportsRequest &request);
     DescribeExportConfigurationsResponse * describeExportConfigurations(const DescribeExportConfigurationsRequest &request);
     DescribeExportTasksResponse * describeExportTasks(const DescribeExportTasksRequest &request);
+    DescribeImportTasksResponse * describeImportTasks(const DescribeImportTasksRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     DisassociateConfigurationItemsFromApplicationResponse * disassociateConfigurationItemsFromApplication(const DisassociateConfigurationItemsFromApplicationRequest &request);
     ExportConfigurationsResponse * exportConfigurations(const ExportConfigurationsRequest &request);
@@ -109,6 +117,7 @@ public slots:
     StartContinuousExportResponse * startContinuousExport(const StartContinuousExportRequest &request);
     StartDataCollectionByAgentIdsResponse * startDataCollectionByAgentIds(const StartDataCollectionByAgentIdsRequest &request);
     StartExportTaskResponse * startExportTask(const StartExportTaskRequest &request);
+    StartImportTaskResponse * startImportTask(const StartImportTaskRequest &request);
     StopContinuousExportResponse * stopContinuousExport(const StopContinuousExportRequest &request);
     StopDataCollectionByAgentIdsResponse * stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);

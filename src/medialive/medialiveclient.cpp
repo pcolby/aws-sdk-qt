@@ -29,6 +29,8 @@
 #include "createinputresponse.h"
 #include "createinputsecuritygrouprequest.h"
 #include "createinputsecuritygroupresponse.h"
+#include "createtagsrequest.h"
+#include "createtagsresponse.h"
 #include "deletechannelrequest.h"
 #include "deletechannelresponse.h"
 #include "deleteinputrequest.h"
@@ -37,6 +39,10 @@
 #include "deleteinputsecuritygroupresponse.h"
 #include "deletereservationrequest.h"
 #include "deletereservationresponse.h"
+#include "deleteschedulerequest.h"
+#include "deletescheduleresponse.h"
+#include "deletetagsrequest.h"
+#include "deletetagsresponse.h"
 #include "describechannelrequest.h"
 #include "describechannelresponse.h"
 #include "describeinputrequest.h"
@@ -59,6 +65,8 @@
 #include "listofferingsresponse.h"
 #include "listreservationsrequest.h"
 #include "listreservationsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "purchaseofferingrequest.h"
 #include "purchaseofferingresponse.h"
 #include "startchannelrequest.h"
@@ -67,10 +75,14 @@
 #include "stopchannelresponse.h"
 #include "updatechannelrequest.h"
 #include "updatechannelresponse.h"
+#include "updatechannelclassrequest.h"
+#include "updatechannelclassresponse.h"
 #include "updateinputrequest.h"
 #include "updateinputresponse.h"
 #include "updateinputsecuritygrouprequest.h"
 #include "updateinputsecuritygroupresponse.h"
+#include "updatereservationrequest.h"
+#include "updatereservationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -199,6 +211,18 @@ CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(con
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreateTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateTagsResponse * MediaLiveClient::createTags(const CreateTagsRequest &request)
+{
+    return qobject_cast<CreateTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * DeleteChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -243,6 +267,30 @@ DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(con
 DeleteReservationResponse * MediaLiveClient::deleteReservation(const DeleteReservationRequest &request)
 {
     return qobject_cast<DeleteReservationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteScheduleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteScheduleResponse * MediaLiveClient::deleteSchedule(const DeleteScheduleRequest &request)
+{
+    return qobject_cast<DeleteScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteTagsResponse * MediaLiveClient::deleteTags(const DeleteTagsRequest &request)
+{
+    return qobject_cast<DeleteTagsResponse *>(send(request));
 }
 
 /*!
@@ -379,6 +427,18 @@ ListReservationsResponse * MediaLiveClient::listReservations(const ListReservati
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsForResourceResponse * MediaLiveClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * PurchaseOfferingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -427,6 +487,18 @@ UpdateChannelResponse * MediaLiveClient::updateChannel(const UpdateChannelReques
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateChannelClassResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateChannelClassResponse * MediaLiveClient::updateChannelClass(const UpdateChannelClassRequest &request)
+{
+    return qobject_cast<UpdateChannelClassResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * UpdateInputResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -447,6 +519,18 @@ UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &req
 UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(const UpdateInputSecurityGroupRequest &request)
 {
     return qobject_cast<UpdateInputSecurityGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateReservationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateReservationResponse * MediaLiveClient::updateReservation(const UpdateReservationRequest &request)
+{
+    return qobject_cast<UpdateReservationResponse *>(send(request));
 }
 
 /*!

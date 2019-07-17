@@ -78,6 +78,10 @@ HEADERS += \
     getdeliverabilitytestreportrequest_p.h \
     getdeliverabilitytestreportresponse.h \
     getdeliverabilitytestreportresponse_p.h \
+    getdomaindeliverabilitycampaignrequest.h \
+    getdomaindeliverabilitycampaignrequest_p.h \
+    getdomaindeliverabilitycampaignresponse.h \
+    getdomaindeliverabilitycampaignresponse_p.h \
     getdomainstatisticsreportrequest.h \
     getdomainstatisticsreportrequest_p.h \
     getdomainstatisticsreportresponse.h \
@@ -98,10 +102,18 @@ HEADERS += \
     listdeliverabilitytestreportsrequest_p.h \
     listdeliverabilitytestreportsresponse.h \
     listdeliverabilitytestreportsresponse_p.h \
+    listdomaindeliverabilitycampaignsrequest.h \
+    listdomaindeliverabilitycampaignsrequest_p.h \
+    listdomaindeliverabilitycampaignsresponse.h \
+    listdomaindeliverabilitycampaignsresponse_p.h \
     listemailidentitiesrequest.h \
     listemailidentitiesrequest_p.h \
     listemailidentitiesresponse.h \
     listemailidentitiesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     pinpointemailclient.h \
     pinpointemailclient_p.h \
     pinpointemailrequest.h \
@@ -160,6 +172,14 @@ HEADERS += \
     sendemailrequest_p.h \
     sendemailresponse.h \
     sendemailresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateconfigurationseteventdestinationrequest.h \
     updateconfigurationseteventdestinationrequest_p.h \
     updateconfigurationseteventdestinationresponse.h \
@@ -200,6 +220,8 @@ SOURCES += \
     getdeliverabilitydashboardoptionsresponse.cpp \
     getdeliverabilitytestreportrequest.cpp \
     getdeliverabilitytestreportresponse.cpp \
+    getdomaindeliverabilitycampaignrequest.cpp \
+    getdomaindeliverabilitycampaignresponse.cpp \
     getdomainstatisticsreportrequest.cpp \
     getdomainstatisticsreportresponse.cpp \
     getemailidentityrequest.cpp \
@@ -210,8 +232,12 @@ SOURCES += \
     listdedicatedippoolsresponse.cpp \
     listdeliverabilitytestreportsrequest.cpp \
     listdeliverabilitytestreportsresponse.cpp \
+    listdomaindeliverabilitycampaignsrequest.cpp \
+    listdomaindeliverabilitycampaignsresponse.cpp \
     listemailidentitiesrequest.cpp \
     listemailidentitiesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     pinpointemailclient.cpp \
     pinpointemailrequest.cpp \
     pinpointemailresponse.cpp \
@@ -241,6 +267,10 @@ SOURCES += \
     putemailidentitymailfromattributesresponse.cpp \
     sendemailrequest.cpp \
     sendemailresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateconfigurationseteventdestinationrequest.cpp \
     updateconfigurationseteventdestinationresponse.cpp \
 

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsPersonalize
+description = AWS Personalize SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawspersonalize-index.html"
+navigation.landingtitle = "Personalize"
+navigation.cppclassespage = "Personalize C++ Classes"

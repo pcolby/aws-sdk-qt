@@ -27,22 +27,38 @@
 #include "batchgetqueryexecutionresponse.h"
 #include "createnamedqueryrequest.h"
 #include "createnamedqueryresponse.h"
+#include "createworkgrouprequest.h"
+#include "createworkgroupresponse.h"
 #include "deletenamedqueryrequest.h"
 #include "deletenamedqueryresponse.h"
+#include "deleteworkgrouprequest.h"
+#include "deleteworkgroupresponse.h"
 #include "getnamedqueryrequest.h"
 #include "getnamedqueryresponse.h"
 #include "getqueryexecutionrequest.h"
 #include "getqueryexecutionresponse.h"
 #include "getqueryresultsrequest.h"
 #include "getqueryresultsresponse.h"
+#include "getworkgrouprequest.h"
+#include "getworkgroupresponse.h"
 #include "listnamedqueriesrequest.h"
 #include "listnamedqueriesresponse.h"
 #include "listqueryexecutionsrequest.h"
 #include "listqueryexecutionsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "listworkgroupsrequest.h"
+#include "listworkgroupsresponse.h"
 #include "startqueryexecutionrequest.h"
 #include "startqueryexecutionresponse.h"
 #include "stopqueryexecutionrequest.h"
 #include "stopqueryexecutionresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
+#include "updateworkgrouprequest.h"
+#include "updateworkgroupresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -146,10 +162,11 @@ AthenaClient::AthenaClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID
- * strings. Use <a>ListNamedQueries</a> to get the list of named query IDs. If information could not be retrieved for a
- * submitted query ID, information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>. Named
- * queries are different from executed queries. Use <a>BatchGetQueryExecution</a> to get details about each unique query
- * execution, and <a>ListQueryExecutions</a> to get a list of query execution
+ * strings. Requires you to have access to the workgroup in which the queries were saved. Use <a>ListNamedQueriesInput</a>
+ * to get the list of named query IDs in the specified workgroup. If information could not be retrieved for a submitted
+ * query ID, information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>. Named queries differ
+ * from executed queries. Use <a>BatchGetQueryExecutionInput</a> to get details about each unique query execution, and
+ * <a>ListQueryExecutionsInput</a> to get a list of query execution
  */
 BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetNamedQueryRequest &request)
 {
@@ -163,8 +180,9 @@ BatchGetNamedQueryResponse * AthenaClient::batchGetNamedQuery(const BatchGetName
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of
- * query execution ID strings. To get a list of query execution IDs, use <a>ListQueryExecutions</a>. Query executions are
- * different from named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named
+ * query execution ID strings. Requires you to have access to the workgroup in which the queries ran. To get a list of
+ * query execution IDs, use <a>ListQueryExecutionsInput$WorkGroup</a>. Query executions differ from named (saved) queries.
+ * Use <a>BatchGetNamedQueryInput</a> to get details about named
  */
 BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const BatchGetQueryExecutionRequest &request)
 {
@@ -177,9 +195,9 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a named
+ * Creates a named query in the specified workgroup. Requires that you have access to the
  *
- * query>
+ * workgroup>
  *
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
@@ -192,13 +210,26 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * CreateWorkGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a workgroup with the specified
+ */
+CreateWorkGroupResponse * AthenaClient::createWorkGroup(const CreateWorkGroupRequest &request)
+{
+    return qobject_cast<CreateWorkGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * DeleteNamedQueryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a named
+ * Deletes the named query if you have access to the workgroup in which the query was
  *
- * query>
+ * saved>
  *
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
@@ -211,11 +242,24 @@ DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQuery
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * DeleteWorkGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the workgroup with the specified name. The primary workgroup cannot be
+ */
+DeleteWorkGroupResponse * AthenaClient::deleteWorkGroup(const DeleteWorkGroupRequest &request)
+{
+    return qobject_cast<DeleteWorkGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * GetNamedQueryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a single
+ * Returns information about a single query. Requires that you have access to the workgroup in which the query was
  */
 GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &request)
 {
@@ -228,8 +272,8 @@ GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a single execution of a query. Each time a query executes, information about the query
- * execution is saved with a unique
+ * Returns information about a single execution of a query if you have access to the workgroup in which the query ran. Each
+ * time a query executes, information about the query execution is saved with a unique
  */
 GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecutionRequest &request)
 {
@@ -242,8 +286,9 @@ GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the results of a single query execution specified by <code>QueryExecutionId</code>. This request does not
- * execute the query but returns results. Use <a>StartQueryExecution</a> to run a
+ * Returns the results of a single query execution specified by <code>QueryExecutionId</code> if you have access to the
+ * workgroup in which the query ran. This request does not execute the query but returns results. Use
+ * <a>StartQueryExecution</a> to run a
  */
 GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsRequest &request)
 {
@@ -252,13 +297,27 @@ GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsReq
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * GetWorkGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the workgroup with the specified
+ */
+GetWorkGroupResponse * AthenaClient::getWorkGroup(const GetWorkGroupRequest &request)
+{
+    return qobject_cast<GetWorkGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * ListNamedQueriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides a list of all available query
+ * Provides a list of available query IDs only for queries saved in the specified workgroup. Requires that you have access
+ * to the
  *
- * IDs>
+ * workgroup>
  *
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
@@ -275,9 +334,10 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides a list of all available query execution
+ * Provides a list of available query execution IDs for the queries in the specified workgroup. Requires you to have access
+ * to the workgroup in which the queries
  *
- * IDs>
+ * ran>
  *
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
@@ -290,13 +350,40 @@ ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryE
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags associated with this
+ */
+ListTagsForResourceResponse * AthenaClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListWorkGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists available workgroups for the
+ */
+ListWorkGroupsResponse * AthenaClient::listWorkGroups(const ListWorkGroupsRequest &request)
+{
+    return qobject_cast<ListWorkGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * StartQueryExecutionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Runs (executes) the SQL query statements contained in the <code>Query</code>
+ * Runs the SQL query statements contained in the <code>Query</code>. Requires you to have access to the workgroup in which
+ * the query
  *
- * string>
+ * ran>
  *
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
@@ -313,9 +400,9 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a query
+ * Stops a query execution. Requires you to have access to the workgroup in which the query
  *
- * execution>
+ * ran>
  *
  * For code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
@@ -324,6 +411,54 @@ StartQueryExecutionResponse * AthenaClient::startQueryExecution(const StartQuery
 StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExecutionRequest &request)
 {
     return qobject_cast<StopQueryExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to the resource, such as a workgroup. A tag is a label that you assign to an AWS Athena resource
+ * (a workgroup). Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize
+ * resources (workgroups) in Athena, for example, by purpose, owner, or environment. Use a consistent set of tag keys to
+ * make it easier to search and filter workgroups in your account. For best practices, see <a
+ * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS Tagging Strategies</a>. The key
+ * length is from 1 (minimum) to 128 (maximum) Unicode characters in UTF-8. The tag value length is from 0 (minimum) to 256
+ * (maximum) Unicode characters in UTF-8. You can use letters and numbers representable in UTF-8, and the following
+ * characters: + - = . _ : / @. Tag keys and values are case-sensitive. Tag keys must be unique per resource. If you
+ * specify more than one, separate them by
+ */
+TagResourceResponse * AthenaClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from the workgroup resource. Takes as an input a list of TagKey Strings separated by commas,
+ * and removes their tags at the same
+ */
+UntagResourceResponse * AthenaClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * UpdateWorkGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the workgroup with the specified name. The workgroup's name cannot be
+ */
+UpdateWorkGroupResponse * AthenaClient::updateWorkGroup(const UpdateWorkGroupRequest &request)
+{
+    return qobject_cast<UpdateWorkGroupResponse *>(send(request));
 }
 
 /*!

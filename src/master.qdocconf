@@ -7,6 +7,7 @@ apigateway/doc/qtawsapigateway.qdocconf
 apigatewaymanagementapi/doc/qtawsapigatewaymanagementapi.qdocconf
 apigatewayv2/doc/qtawsapigatewayv2.qdocconf
 applicationautoscaling/doc/qtawsapplicationautoscaling.qdocconf
+applicationinsights/doc/qtawsapplicationinsights.qdocconf
 appmesh/doc/qtawsappmesh.qdocconf
 appstream/doc/qtawsappstream.qdocconf
 appsync/doc/qtawsappsync.qdocconf
@@ -14,6 +15,7 @@ athena/doc/qtawsathena.qdocconf
 autoscaling/doc/qtawsautoscaling.qdocconf
 autoscalingplans/doc/qtawsautoscalingplans.qdocconf
 migrationhub/doc/qtawsmigrationhub.qdocconf
+backup/doc/qtawsbackup.qdocconf
 batch/doc/qtawsbatch.qdocconf
 budgets/doc/qtawsbudgets.qdocconf
 costexplorer/doc/qtawscostexplorer.qdocconf
@@ -48,10 +50,12 @@ directconnect/doc/qtawsdirectconnect.qdocconf
 applicationdiscoveryservice/doc/qtawsapplicationdiscoveryservice.qdocconf
 dlm/doc/qtawsdlm.qdocconf
 databasemigrationservice/doc/qtawsdatabasemigrationservice.qdocconf
+docdb/doc/qtawsdocdb.qdocconf
 directoryservice/doc/qtawsdirectoryservice.qdocconf
 dynamodb/doc/qtawsdynamodb.qdocconf
 dynamodbstreams/doc/qtawsdynamodbstreams.qdocconf
 ec2/doc/qtawsec2.qdocconf
+ec2instanceconnect/doc/qtawsec2instanceconnect.qdocconf
 ecr/doc/qtawsecr.qdocconf
 ecs/doc/qtawsecs.qdocconf
 eks/doc/qtawseks.qdocconf
@@ -65,6 +69,7 @@ elastictranscoder/doc/qtawselastictranscoder.qdocconf
 ses/doc/qtawsses.qdocconf
 marketplaceentitlementservice/doc/qtawsmarketplaceentitlementservice.qdocconf
 elasticsearchservice/doc/qtawselasticsearchservice.qdocconf
+eventbridge/doc/qtawseventbridge.qdocconf
 cloudwatchevents/doc/qtawscloudwatchevents.qdocconf
 firehose/doc/qtawsfirehose.qdocconf
 fms/doc/qtawsfms.qdocconf
@@ -74,6 +79,7 @@ glacier/doc/qtawsglacier.qdocconf
 globalaccelerator/doc/qtawsglobalaccelerator.qdocconf
 glue/doc/qtawsglue.qdocconf
 greengrass/doc/qtawsgreengrass.qdocconf
+groundstation/doc/qtawsgroundstation.qdocconf
 guardduty/doc/qtawsguardduty.qdocconf
 health/doc/qtawshealth.qdocconf
 iam/doc/qtawsiam.qdocconf
@@ -85,6 +91,9 @@ iotjobsdataplane/doc/qtawsiotjobsdataplane.qdocconf
 iot1clickdevicesservice/doc/qtawsiot1clickdevicesservice.qdocconf
 iot1clickprojects/doc/qtawsiot1clickprojects.qdocconf
 iotanalytics/doc/qtawsiotanalytics.qdocconf
+iotevents/doc/qtawsiotevents.qdocconf
+ioteventsdata/doc/qtawsioteventsdata.qdocconf
+iotthingsgraph/doc/qtawsiotthingsgraph.qdocconf
 kafka/doc/qtawskafka.qdocconf
 kinesis/doc/qtawskinesis.qdocconf
 kinesisvideoarchivedmedia/doc/qtawskinesisvideoarchivedmedia.qdocconf
@@ -100,11 +109,13 @@ lightsail/doc/qtawslightsail.qdocconf
 cloudwatchlogs/doc/qtawscloudwatchlogs.qdocconf
 machinelearning/doc/qtawsmachinelearning.qdocconf
 macie/doc/qtawsmacie.qdocconf
+managedblockchain/doc/qtawsmanagedblockchain.qdocconf
 marketplacecommerceanalytics/doc/qtawsmarketplacecommerceanalytics.qdocconf
 mediaconnect/doc/qtawsmediaconnect.qdocconf
 mediaconvert/doc/qtawsmediaconvert.qdocconf
 medialive/doc/qtawsmedialive.qdocconf
 mediapackage/doc/qtawsmediapackage.qdocconf
+mediapackagevod/doc/qtawsmediapackagevod.qdocconf
 mediastore/doc/qtawsmediastore.qdocconf
 mediastoredata/doc/qtawsmediastoredata.qdocconf
 mediatailor/doc/qtawsmediatailor.qdocconf
@@ -118,6 +129,9 @@ neptune/doc/qtawsneptune.qdocconf
 opsworks/doc/qtawsopsworks.qdocconf
 opsworkscm/doc/qtawsopsworkscm.qdocconf
 organizations/doc/qtawsorganizations.qdocconf
+personalize/doc/qtawspersonalize.qdocconf
+personalizeevents/doc/qtawspersonalizeevents.qdocconf
+personalizeruntime/doc/qtawspersonalizeruntime.qdocconf
 pi/doc/qtawspi.qdocconf
 pinpoint/doc/qtawspinpoint.qdocconf
 pinpointemail/doc/qtawspinpointemail.qdocconf
@@ -144,6 +158,7 @@ simpledb/doc/qtawssimpledb.qdocconf
 secretsmanager/doc/qtawssecretsmanager.qdocconf
 securityhub/doc/qtawssecurityhub.qdocconf
 serverlessapplicationrepository/doc/qtawsserverlessapplicationrepository.qdocconf
+servicequotas/doc/qtawsservicequotas.qdocconf
 servicecatalog/doc/qtawsservicecatalog.qdocconf
 servicediscovery/doc/qtawsservicediscovery.qdocconf
 shield/doc/qtawsshield.qdocconf
@@ -159,12 +174,15 @@ storagegateway/doc/qtawsstoragegateway.qdocconf
 sts/doc/qtawssts.qdocconf
 support/doc/qtawssupport.qdocconf
 swf/doc/qtawsswf.qdocconf
+textract/doc/qtawstextract.qdocconf
 transcribeservice/doc/qtawstranscribeservice.qdocconf
+transcribestreamingservice/doc/qtawstranscribestreamingservice.qdocconf
 transfer/doc/qtawstransfer.qdocconf
 translate/doc/qtawstranslate.qdocconf
 waf/doc/qtawswaf.qdocconf
 wafregional/doc/qtawswafregional.qdocconf
 workdocs/doc/qtawsworkdocs.qdocconf
+worklink/doc/qtawsworklink.qdocconf
 workmail/doc/qtawsworkmail.qdocconf
 workspaces/doc/qtawsworkspaces.qdocconf
 xray/doc/qtawsxray.qdocconf

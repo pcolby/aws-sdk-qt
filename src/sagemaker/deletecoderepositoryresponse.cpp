@@ -33,6 +33,7 @@ namespace SageMaker {
  *
  * \inmodule QtAwsSageMaker
  *
+ *  Provides APIs for creating and managing Amazon SageMaker
  *
  * \sa SageMakerClient::deleteCodeRepository
  */

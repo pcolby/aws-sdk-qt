@@ -1,0 +1,9 @@
+
+/*!
+    \page qtawsmediapackagevod-index.html
+    \title Qt Aws MediaPackageVod
+
+    \brief Classes for the AWS Elemental MediaPackage VOD (MediaPackage Vod) service
+
+    (This is the page the forms the overview for the servce.)
+*/

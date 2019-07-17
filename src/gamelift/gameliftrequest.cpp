@@ -46,6 +46,7 @@ namespace GameLift {
  * \value CreateMatchmakingRuleSetAction GameLift CreateMatchmakingRuleSet action.
  * \value CreatePlayerSessionAction GameLift CreatePlayerSession action.
  * \value CreatePlayerSessionsAction GameLift CreatePlayerSessions action.
+ * \value CreateScriptAction GameLift CreateScript action.
  * \value CreateVpcPeeringAuthorizationAction GameLift CreateVpcPeeringAuthorization action.
  * \value CreateVpcPeeringConnectionAction GameLift CreateVpcPeeringConnection action.
  * \value DeleteAliasAction GameLift DeleteAlias action.
@@ -53,7 +54,9 @@ namespace GameLift {
  * \value DeleteFleetAction GameLift DeleteFleet action.
  * \value DeleteGameSessionQueueAction GameLift DeleteGameSessionQueue action.
  * \value DeleteMatchmakingConfigurationAction GameLift DeleteMatchmakingConfiguration action.
+ * \value DeleteMatchmakingRuleSetAction GameLift DeleteMatchmakingRuleSet action.
  * \value DeleteScalingPolicyAction GameLift DeleteScalingPolicy action.
+ * \value DeleteScriptAction GameLift DeleteScript action.
  * \value DeleteVpcPeeringAuthorizationAction GameLift DeleteVpcPeeringAuthorization action.
  * \value DeleteVpcPeeringConnectionAction GameLift DeleteVpcPeeringConnection action.
  * \value DescribeAliasAction GameLift DescribeAlias action.
@@ -75,6 +78,7 @@ namespace GameLift {
  * \value DescribePlayerSessionsAction GameLift DescribePlayerSessions action.
  * \value DescribeRuntimeConfigurationAction GameLift DescribeRuntimeConfiguration action.
  * \value DescribeScalingPoliciesAction GameLift DescribeScalingPolicies action.
+ * \value DescribeScriptAction GameLift DescribeScript action.
  * \value DescribeVpcPeeringAuthorizationsAction GameLift DescribeVpcPeeringAuthorizations action.
  * \value DescribeVpcPeeringConnectionsAction GameLift DescribeVpcPeeringConnections action.
  * \value GetGameSessionLogUrlAction GameLift GetGameSessionLogUrl action.
@@ -82,6 +86,7 @@ namespace GameLift {
  * \value ListAliasesAction GameLift ListAliases action.
  * \value ListBuildsAction GameLift ListBuilds action.
  * \value ListFleetsAction GameLift ListFleets action.
+ * \value ListScriptsAction GameLift ListScripts action.
  * \value PutScalingPolicyAction GameLift PutScalingPolicy action.
  * \value RequestUploadCredentialsAction GameLift RequestUploadCredentials action.
  * \value ResolveAliasAction GameLift ResolveAlias action.
@@ -102,6 +107,7 @@ namespace GameLift {
  * \value UpdateGameSessionQueueAction GameLift UpdateGameSessionQueue action.
  * \value UpdateMatchmakingConfigurationAction GameLift UpdateMatchmakingConfiguration action.
  * \value UpdateRuntimeConfigurationAction GameLift UpdateRuntimeConfiguration action.
+ * \value UpdateScriptAction GameLift UpdateScript action.
  * \value ValidateMatchmakingRuleSetAction GameLift ValidateMatchmakingRuleSet action.
  */
 

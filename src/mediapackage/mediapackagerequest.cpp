@@ -44,8 +44,11 @@ namespace MediaPackage {
  * \value DescribeOriginEndpointAction MediaPackage DescribeOriginEndpoint action.
  * \value ListChannelsAction MediaPackage ListChannels action.
  * \value ListOriginEndpointsAction MediaPackage ListOriginEndpoints action.
+ * \value ListTagsForResourceAction MediaPackage ListTagsForResource action.
  * \value RotateChannelCredentialsAction MediaPackage RotateChannelCredentials action.
  * \value RotateIngestEndpointCredentialsAction MediaPackage RotateIngestEndpointCredentials action.
+ * \value TagResourceAction MediaPackage TagResource action.
+ * \value UntagResourceAction MediaPackage UntagResource action.
  * \value UpdateChannelAction MediaPackage UpdateChannel action.
  * \value UpdateOriginEndpointAction MediaPackage UpdateOriginEndpoint action.
  */

@@ -42,6 +42,8 @@ class GetReservationUtilizationRequest;
 class GetReservationUtilizationResponse;
 class GetTagsRequest;
 class GetTagsResponse;
+class GetUsageForecastRequest;
+class GetUsageForecastResponse;
 
 class QTAWS_EXPORT CostExplorerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -66,6 +68,7 @@ public slots:
     GetReservationPurchaseRecommendationResponse * getReservationPurchaseRecommendation(const GetReservationPurchaseRecommendationRequest &request);
     GetReservationUtilizationResponse * getReservationUtilization(const GetReservationUtilizationRequest &request);
     GetTagsResponse * getTags(const GetTagsRequest &request);
+    GetUsageForecastResponse * getUsageForecast(const GetUsageForecastRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CostExplorerClient)

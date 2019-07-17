@@ -156,6 +156,10 @@ HEADERS += \
     listonpremisesinstancesrequest_p.h \
     listonpremisesinstancesresponse.h \
     listonpremisesinstancesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     putlifecycleeventhookexecutionstatusrequest.h \
     putlifecycleeventhookexecutionstatusrequest_p.h \
     putlifecycleeventhookexecutionstatusresponse.h \
@@ -180,6 +184,14 @@ HEADERS += \
     stopdeploymentrequest_p.h \
     stopdeploymentresponse.h \
     stopdeploymentresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateapplicationrequest.h \
     updateapplicationrequest_p.h \
     updateapplicationresponse.h \
@@ -263,6 +275,8 @@ SOURCES += \
     listgithubaccounttokennamesresponse.cpp \
     listonpremisesinstancesrequest.cpp \
     listonpremisesinstancesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     putlifecycleeventhookexecutionstatusrequest.cpp \
     putlifecycleeventhookexecutionstatusresponse.cpp \
     registerapplicationrevisionrequest.cpp \
@@ -275,6 +289,10 @@ SOURCES += \
     skipwaittimeforinstanceterminationresponse.cpp \
     stopdeploymentrequest.cpp \
     stopdeploymentresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateapplicationrequest.cpp \
     updateapplicationresponse.cpp \
     updatedeploymentgrouprequest.cpp \

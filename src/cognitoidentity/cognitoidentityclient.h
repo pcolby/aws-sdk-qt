@@ -52,16 +52,22 @@ class ListIdentitiesRequest;
 class ListIdentitiesResponse;
 class ListIdentityPoolsRequest;
 class ListIdentityPoolsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class LookupDeveloperIdentityRequest;
 class LookupDeveloperIdentityResponse;
 class MergeDeveloperIdentitiesRequest;
 class MergeDeveloperIdentitiesResponse;
 class SetIdentityPoolRolesRequest;
 class SetIdentityPoolRolesResponse;
+class TagResourceRequest;
+class TagResourceResponse;
 class UnlinkDeveloperIdentityRequest;
 class UnlinkDeveloperIdentityResponse;
 class UnlinkIdentityRequest;
 class UnlinkIdentityResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateIdentityPoolRequest;
 class UpdateIdentityPoolResponse;
 
@@ -93,11 +99,14 @@ public slots:
     GetOpenIdTokenForDeveloperIdentityResponse * getOpenIdTokenForDeveloperIdentity(const GetOpenIdTokenForDeveloperIdentityRequest &request);
     ListIdentitiesResponse * listIdentities(const ListIdentitiesRequest &request);
     ListIdentityPoolsResponse * listIdentityPools(const ListIdentityPoolsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     LookupDeveloperIdentityResponse * lookupDeveloperIdentity(const LookupDeveloperIdentityRequest &request);
     MergeDeveloperIdentitiesResponse * mergeDeveloperIdentities(const MergeDeveloperIdentitiesRequest &request);
     SetIdentityPoolRolesResponse * setIdentityPoolRoles(const SetIdentityPoolRolesRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     UnlinkDeveloperIdentityResponse * unlinkDeveloperIdentity(const UnlinkDeveloperIdentityRequest &request);
     UnlinkIdentityResponse * unlinkIdentity(const UnlinkIdentityRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateIdentityPoolResponse * updateIdentityPool(const UpdateIdentityPoolRequest &request);
 
 private:

@@ -52,6 +52,10 @@ HEADERS += \
     removetagsfromcertificaterequest_p.h \
     removetagsfromcertificateresponse.h \
     removetagsfromcertificateresponse_p.h \
+    renewcertificaterequest.h \
+    renewcertificaterequest_p.h \
+    renewcertificateresponse.h \
+    renewcertificateresponse_p.h \
     requestcertificaterequest.h \
     requestcertificaterequest_p.h \
     requestcertificateresponse.h \
@@ -87,6 +91,8 @@ SOURCES += \
     listtagsforcertificateresponse.cpp \
     removetagsfromcertificaterequest.cpp \
     removetagsfromcertificateresponse.cpp \
+    renewcertificaterequest.cpp \
+    renewcertificateresponse.cpp \
     requestcertificaterequest.cpp \
     requestcertificateresponse.cpp \
     resendvalidationemailrequest.cpp \

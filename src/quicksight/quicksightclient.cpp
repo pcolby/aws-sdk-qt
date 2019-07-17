@@ -31,6 +31,8 @@
 #include "deletegroupmembershipresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
+#include "deleteuserbyprincipalidrequest.h"
+#include "deleteuserbyprincipalidresponse.h"
 #include "describegrouprequest.h"
 #include "describegroupresponse.h"
 #include "describeuserrequest.h"
@@ -291,6 +293,33 @@ DeleteGroupMembershipResponse * QuickSightClient::deleteGroupMembership(const De
 DeleteUserResponse * QuickSightClient::deleteUser(const DeleteUserRequest &request)
 {
     return qobject_cast<DeleteUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the QuickSightClient service, and returns a pointer to an
+ * DeleteUserByPrincipalIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a user identified by its principal ID.
+ *
+ * </p
+ *
+ * The permission resource is
+ * <code>arn:aws:quicksight:us-east-1:<i>&lt;aws-account-id&gt;</i>:user/default/<i>&lt;user-name&gt; </i>
+ *
+ * </code>>
+ *
+ * <b>CLI Sample:</b>
+ *
+ * </p
+ *
+ * <code>aws quicksight delete-user-by-principal-id --aws-account-id=111122223333 --namespace=default
+ * --principal-id=ABCDEFJA26JLI7EUUOEHS </code>
+ */
+DeleteUserByPrincipalIdResponse * QuickSightClient::deleteUserByPrincipalId(const DeleteUserByPrincipalIdRequest &request)
+{
+    return qobject_cast<DeleteUserByPrincipalIdResponse *>(send(request));
 }
 
 /*!

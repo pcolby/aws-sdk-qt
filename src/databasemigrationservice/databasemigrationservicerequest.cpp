@@ -37,6 +37,7 @@ namespace DatabaseMigrationService {
  * requests.
  *
  * \value AddTagsToResourceAction DatabaseMigrationService AddTagsToResource action.
+ * \value ApplyPendingMaintenanceActionAction DatabaseMigrationService ApplyPendingMaintenanceAction action.
  * \value CreateEndpointAction DatabaseMigrationService CreateEndpoint action.
  * \value CreateEventSubscriptionAction DatabaseMigrationService CreateEventSubscription action.
  * \value CreateReplicationInstanceAction DatabaseMigrationService CreateReplicationInstance action.
@@ -57,6 +58,7 @@ namespace DatabaseMigrationService {
  * \value DescribeEventSubscriptionsAction DatabaseMigrationService DescribeEventSubscriptions action.
  * \value DescribeEventsAction DatabaseMigrationService DescribeEvents action.
  * \value DescribeOrderableReplicationInstancesAction DatabaseMigrationService DescribeOrderableReplicationInstances action.
+ * \value DescribePendingMaintenanceActionsAction DatabaseMigrationService DescribePendingMaintenanceActions action.
  * \value DescribeRefreshSchemasStatusAction DatabaseMigrationService DescribeRefreshSchemasStatus action.
  * \value DescribeReplicationInstanceTaskLogsAction DatabaseMigrationService DescribeReplicationInstanceTaskLogs action.
  * \value DescribeReplicationInstancesAction DatabaseMigrationService DescribeReplicationInstances action.

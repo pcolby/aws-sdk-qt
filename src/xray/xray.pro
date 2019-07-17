@@ -58,6 +58,10 @@ HEADERS += \
     getservicegraphrequest_p.h \
     getservicegraphresponse.h \
     getservicegraphresponse_p.h \
+    gettimeseriesservicestatisticsrequest.h \
+    gettimeseriesservicestatisticsrequest_p.h \
+    gettimeseriesservicestatisticsresponse.h \
+    gettimeseriesservicestatisticsresponse_p.h \
     gettracegraphrequest.h \
     gettracegraphrequest_p.h \
     gettracegraphresponse.h \
@@ -118,6 +122,8 @@ SOURCES += \
     getsamplingtargetsresponse.cpp \
     getservicegraphrequest.cpp \
     getservicegraphresponse.cpp \
+    gettimeseriesservicestatisticsrequest.cpp \
+    gettimeseriesservicestatisticsresponse.cpp \
     gettracegraphrequest.cpp \
     gettracegraphresponse.cpp \
     gettracesummariesrequest.cpp \

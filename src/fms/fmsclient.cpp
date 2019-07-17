@@ -37,6 +37,8 @@
 #include "getnotificationchannelresponse.h"
 #include "getpolicyrequest.h"
 #include "getpolicyresponse.h"
+#include "getprotectionstatusrequest.h"
+#include "getprotectionstatusresponse.h"
 #include "listcompliancestatusrequest.h"
 #include "listcompliancestatusresponse.h"
 #include "listmemberaccountsrequest.h"
@@ -74,7 +76,7 @@ namespace FMS {
  * 
  *  This is the <i>AWS Firewall Manager API Reference</i>. This guide is for developers who need detailed information about
  *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
- *  features, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
+ *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
  *  Developer
  */
 
@@ -184,8 +186,8 @@ DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the account that has been set as the AWS Firewall Manager administrator account. You will need to submit
- * an <code>AssociateAdminAccount</code> request to set a new account as the AWS Firewall
+ * Disassociates the account that has been set as the AWS Firewall Manager administrator account. To set a different
+ * account as the administrator account, you must submit an <code>AssociateAdminAccount</code> request
  */
 DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const DisassociateAdminAccountRequest &request)
 {
@@ -245,6 +247,20 @@ GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNoti
 GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
 {
     return qobject_cast<GetPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetProtectionStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * If you created a Shield Advanced policy, returns policy-level attack summary information in the event of a potential
+ * DDoS
+ */
+GetProtectionStatusResponse * FmsClient::getProtectionStatus(const GetProtectionStatusRequest &request)
+{
+    return qobject_cast<GetProtectionStatusResponse *>(send(request));
 }
 
 /*!
@@ -311,6 +327,19 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an AWS Firewall Manager
+ *
+ * policy>
+ *
+ * Firewall Manager provides two types of policies: A Shield Advanced policy, which applies Shield Advanced protection to
+ * specified accounts and resources, or a WAF policy, which contains a rule group and defines which resources are to be
+ * protected by that rule group. A policy is specific to either WAF or Shield Advanced. If you want to enforce both WAF
+ * rules and Shield Advanced protection across accounts, you can create multiple policies. You can create one or more
+ * policies for WAF rules, and one or more policies for Shield
+ *
+ * Advanced>
+ *
+ * You must be subscribed to Shield Advanced to create a Shield Advanced policy. For more information on subscribing to
+ * Shield Advanced, see <a
  */
 PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
 {

@@ -30,6 +30,10 @@ HEADERS += \
     getconfigurationseteventdestinationsrequest_p.h \
     getconfigurationseteventdestinationsresponse.h \
     getconfigurationseteventdestinationsresponse_p.h \
+    listconfigurationsetsrequest.h \
+    listconfigurationsetsrequest_p.h \
+    listconfigurationsetsresponse.h \
+    listconfigurationsetsresponse_p.h \
     pinpointsmsvoiceclient.h \
     pinpointsmsvoiceclient_p.h \
     pinpointsmsvoicerequest.h \
@@ -56,6 +60,8 @@ SOURCES += \
     deleteconfigurationsetresponse.cpp \
     getconfigurationseteventdestinationsrequest.cpp \
     getconfigurationseteventdestinationsresponse.cpp \
+    listconfigurationsetsrequest.cpp \
+    listconfigurationsetsresponse.cpp \
     pinpointsmsvoiceclient.cpp \
     pinpointsmsvoicerequest.cpp \
     pinpointsmsvoiceresponse.cpp \

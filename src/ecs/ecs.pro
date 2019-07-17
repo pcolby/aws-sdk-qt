@@ -18,6 +18,10 @@ HEADERS += \
     createservicerequest_p.h \
     createserviceresponse.h \
     createserviceresponse_p.h \
+    createtasksetrequest.h \
+    createtasksetrequest_p.h \
+    createtasksetresponse.h \
+    createtasksetresponse_p.h \
     deleteaccountsettingrequest.h \
     deleteaccountsettingrequest_p.h \
     deleteaccountsettingresponse.h \
@@ -34,6 +38,10 @@ HEADERS += \
     deleteservicerequest_p.h \
     deleteserviceresponse.h \
     deleteserviceresponse_p.h \
+    deletetasksetrequest.h \
+    deletetasksetrequest_p.h \
+    deletetasksetresponse.h \
+    deletetasksetresponse_p.h \
     deregistercontainerinstancerequest.h \
     deregistercontainerinstancerequest_p.h \
     deregistercontainerinstanceresponse.h \
@@ -58,6 +66,10 @@ HEADERS += \
     describetaskdefinitionrequest_p.h \
     describetaskdefinitionresponse.h \
     describetaskdefinitionresponse_p.h \
+    describetasksetsrequest.h \
+    describetasksetsrequest_p.h \
+    describetasksetsresponse.h \
+    describetasksetsresponse_p.h \
     describetasksrequest.h \
     describetasksrequest_p.h \
     describetasksresponse.h \
@@ -108,6 +120,10 @@ HEADERS += \
     listtasksrequest_p.h \
     listtasksresponse.h \
     listtasksresponse_p.h \
+    putaccountsettingdefaultrequest.h \
+    putaccountsettingdefaultrequest_p.h \
+    putaccountsettingdefaultresponse.h \
+    putaccountsettingdefaultresponse_p.h \
     putaccountsettingrequest.h \
     putaccountsettingrequest_p.h \
     putaccountsettingresponse.h \
@@ -136,6 +152,10 @@ HEADERS += \
     stoptaskrequest_p.h \
     stoptaskresponse.h \
     stoptaskresponse_p.h \
+    submitattachmentstatechangesrequest.h \
+    submitattachmentstatechangesrequest_p.h \
+    submitattachmentstatechangesresponse.h \
+    submitattachmentstatechangesresponse_p.h \
     submitcontainerstatechangerequest.h \
     submitcontainerstatechangerequest_p.h \
     submitcontainerstatechangeresponse.h \
@@ -160,16 +180,26 @@ HEADERS += \
     updatecontainerinstancesstaterequest_p.h \
     updatecontainerinstancesstateresponse.h \
     updatecontainerinstancesstateresponse_p.h \
+    updateserviceprimarytasksetrequest.h \
+    updateserviceprimarytasksetrequest_p.h \
+    updateserviceprimarytasksetresponse.h \
+    updateserviceprimarytasksetresponse_p.h \
     updateservicerequest.h \
     updateservicerequest_p.h \
     updateserviceresponse.h \
     updateserviceresponse_p.h \
+    updatetasksetrequest.h \
+    updatetasksetrequest_p.h \
+    updatetasksetresponse.h \
+    updatetasksetresponse_p.h \
 
 SOURCES += \
     createclusterrequest.cpp \
     createclusterresponse.cpp \
     createservicerequest.cpp \
     createserviceresponse.cpp \
+    createtasksetrequest.cpp \
+    createtasksetresponse.cpp \
     deleteaccountsettingrequest.cpp \
     deleteaccountsettingresponse.cpp \
     deleteattributesrequest.cpp \
@@ -178,6 +208,8 @@ SOURCES += \
     deleteclusterresponse.cpp \
     deleteservicerequest.cpp \
     deleteserviceresponse.cpp \
+    deletetasksetrequest.cpp \
+    deletetasksetresponse.cpp \
     deregistercontainerinstancerequest.cpp \
     deregistercontainerinstanceresponse.cpp \
     deregistertaskdefinitionrequest.cpp \
@@ -190,6 +222,8 @@ SOURCES += \
     describeservicesresponse.cpp \
     describetaskdefinitionrequest.cpp \
     describetaskdefinitionresponse.cpp \
+    describetasksetsrequest.cpp \
+    describetasksetsresponse.cpp \
     describetasksrequest.cpp \
     describetasksresponse.cpp \
     discoverpollendpointrequest.cpp \
@@ -215,6 +249,8 @@ SOURCES += \
     listtaskdefinitionsresponse.cpp \
     listtasksrequest.cpp \
     listtasksresponse.cpp \
+    putaccountsettingdefaultrequest.cpp \
+    putaccountsettingdefaultresponse.cpp \
     putaccountsettingrequest.cpp \
     putaccountsettingresponse.cpp \
     putattributesrequest.cpp \
@@ -229,6 +265,8 @@ SOURCES += \
     starttaskresponse.cpp \
     stoptaskrequest.cpp \
     stoptaskresponse.cpp \
+    submitattachmentstatechangesrequest.cpp \
+    submitattachmentstatechangesresponse.cpp \
     submitcontainerstatechangerequest.cpp \
     submitcontainerstatechangeresponse.cpp \
     submittaskstatechangerequest.cpp \
@@ -241,7 +279,11 @@ SOURCES += \
     updatecontaineragentresponse.cpp \
     updatecontainerinstancesstaterequest.cpp \
     updatecontainerinstancesstateresponse.cpp \
+    updateserviceprimarytasksetrequest.cpp \
+    updateserviceprimarytasksetresponse.cpp \
     updateservicerequest.cpp \
     updateserviceresponse.cpp \
+    updatetasksetrequest.cpp \
+    updatetasksetresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -43,10 +43,13 @@ namespace MediaConnect {
  * \value GrantFlowEntitlementsAction MediaConnect GrantFlowEntitlements action.
  * \value ListEntitlementsAction MediaConnect ListEntitlements action.
  * \value ListFlowsAction MediaConnect ListFlows action.
+ * \value ListTagsForResourceAction MediaConnect ListTagsForResource action.
  * \value RemoveFlowOutputAction MediaConnect RemoveFlowOutput action.
  * \value RevokeFlowEntitlementAction MediaConnect RevokeFlowEntitlement action.
  * \value StartFlowAction MediaConnect StartFlow action.
  * \value StopFlowAction MediaConnect StopFlow action.
+ * \value TagResourceAction MediaConnect TagResource action.
+ * \value UntagResourceAction MediaConnect UntagResource action.
  * \value UpdateFlowEntitlementAction MediaConnect UpdateFlowEntitlement action.
  * \value UpdateFlowOutputAction MediaConnect UpdateFlowOutput action.
  * \value UpdateFlowSourceAction MediaConnect UpdateFlowSource action.

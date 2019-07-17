@@ -44,7 +44,9 @@ namespace ConfigService {
  * \value DeleteConfigurationRecorderAction ConfigService DeleteConfigurationRecorder action.
  * \value DeleteDeliveryChannelAction ConfigService DeleteDeliveryChannel action.
  * \value DeleteEvaluationResultsAction ConfigService DeleteEvaluationResults action.
+ * \value DeleteOrganizationConfigRuleAction ConfigService DeleteOrganizationConfigRule action.
  * \value DeletePendingAggregationRequestAction ConfigService DeletePendingAggregationRequest action.
+ * \value DeleteRemediationConfigurationAction ConfigService DeleteRemediationConfiguration action.
  * \value DeleteRetentionConfigurationAction ConfigService DeleteRetentionConfiguration action.
  * \value DeliverConfigSnapshotAction ConfigService DeliverConfigSnapshot action.
  * \value DescribeAggregateComplianceByConfigRulesAction ConfigService DescribeAggregateComplianceByConfigRules action.
@@ -59,7 +61,11 @@ namespace ConfigService {
  * \value DescribeConfigurationRecordersAction ConfigService DescribeConfigurationRecorders action.
  * \value DescribeDeliveryChannelStatusAction ConfigService DescribeDeliveryChannelStatus action.
  * \value DescribeDeliveryChannelsAction ConfigService DescribeDeliveryChannels action.
+ * \value DescribeOrganizationConfigRuleStatusesAction ConfigService DescribeOrganizationConfigRuleStatuses action.
+ * \value DescribeOrganizationConfigRulesAction ConfigService DescribeOrganizationConfigRules action.
  * \value DescribePendingAggregationRequestsAction ConfigService DescribePendingAggregationRequests action.
+ * \value DescribeRemediationConfigurationsAction ConfigService DescribeRemediationConfigurations action.
+ * \value DescribeRemediationExecutionStatusAction ConfigService DescribeRemediationExecutionStatus action.
  * \value DescribeRetentionConfigurationsAction ConfigService DescribeRetentionConfigurations action.
  * \value GetAggregateComplianceDetailsByConfigRuleAction ConfigService GetAggregateComplianceDetailsByConfigRule action.
  * \value GetAggregateConfigRuleComplianceSummaryAction ConfigService GetAggregateConfigRuleComplianceSummary action.
@@ -70,19 +76,27 @@ namespace ConfigService {
  * \value GetComplianceSummaryByConfigRuleAction ConfigService GetComplianceSummaryByConfigRule action.
  * \value GetComplianceSummaryByResourceTypeAction ConfigService GetComplianceSummaryByResourceType action.
  * \value GetDiscoveredResourceCountsAction ConfigService GetDiscoveredResourceCounts action.
+ * \value GetOrganizationConfigRuleDetailedStatusAction ConfigService GetOrganizationConfigRuleDetailedStatus action.
  * \value GetResourceConfigHistoryAction ConfigService GetResourceConfigHistory action.
  * \value ListAggregateDiscoveredResourcesAction ConfigService ListAggregateDiscoveredResources action.
  * \value ListDiscoveredResourcesAction ConfigService ListDiscoveredResources action.
+ * \value ListTagsForResourceAction ConfigService ListTagsForResource action.
  * \value PutAggregationAuthorizationAction ConfigService PutAggregationAuthorization action.
  * \value PutConfigRuleAction ConfigService PutConfigRule action.
  * \value PutConfigurationAggregatorAction ConfigService PutConfigurationAggregator action.
  * \value PutConfigurationRecorderAction ConfigService PutConfigurationRecorder action.
  * \value PutDeliveryChannelAction ConfigService PutDeliveryChannel action.
  * \value PutEvaluationsAction ConfigService PutEvaluations action.
+ * \value PutOrganizationConfigRuleAction ConfigService PutOrganizationConfigRule action.
+ * \value PutRemediationConfigurationsAction ConfigService PutRemediationConfigurations action.
  * \value PutRetentionConfigurationAction ConfigService PutRetentionConfiguration action.
+ * \value SelectResourceConfigAction ConfigService SelectResourceConfig action.
  * \value StartConfigRulesEvaluationAction ConfigService StartConfigRulesEvaluation action.
  * \value StartConfigurationRecorderAction ConfigService StartConfigurationRecorder action.
+ * \value StartRemediationExecutionAction ConfigService StartRemediationExecution action.
  * \value StopConfigurationRecorderAction ConfigService StopConfigurationRecorder action.
+ * \value TagResourceAction ConfigService TagResource action.
+ * \value UntagResourceAction ConfigService UntagResource action.
  */
 
 /*!

@@ -41,7 +41,7 @@ namespace CodePipeline {
  * 
  *  This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS
  *  CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see
- *  the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
+ *  the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
  * 
  *  Guide</a>>
  * 
@@ -79,6 +79,12 @@ namespace CodePipeline {
  * 
  *  pipeline> </li> <li>
  * 
+ *  <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and
+ *  action-level details, including individual action duration, status, any errors which occurred during the execution, and
+ *  input and output artifact location
+ * 
+ *  details> </li> <li>
+ * 
  *  <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your
  * 
  *  account> </li> <li>
@@ -101,7 +107,7 @@ namespace CodePipeline {
  *  re-run the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of
  *  a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of
  *  the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions,
- *  also refer to the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS
+ *  also refer to the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS
  *  CodePipeline Pipeline Structure
  * 
  *  Reference</a>>

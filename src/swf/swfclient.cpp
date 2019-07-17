@@ -53,6 +53,8 @@
 #include "listdomainsresponse.h"
 #include "listopenworkflowexecutionsrequest.h"
 #include "listopenworkflowexecutionsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listworkflowtypesrequest.h"
 #include "listworkflowtypesresponse.h"
 #include "pollforactivitytaskrequest.h"
@@ -81,8 +83,18 @@
 #include "signalworkflowexecutionresponse.h"
 #include "startworkflowexecutionrequest.h"
 #include "startworkflowexecutionresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "terminateworkflowexecutionrequest.h"
 #include "terminateworkflowexecutionresponse.h"
+#include "undeprecateactivitytyperequest.h"
+#include "undeprecateactivitytyperesponse.h"
+#include "undeprecatedomainrequest.h"
+#include "undeprecatedomainresponse.h"
+#include "undeprecateworkflowtyperequest.h"
+#include "undeprecateworkflowtyperesponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -121,7 +133,7 @@ namespace SWF {
  *  state>
  * 
  *  This documentation serves as reference only. For a broader overview of the Amazon SWF programming model, see the <i> <a
- *  href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
+ *  href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/">Amazon SWF Developer Guide</a>
  */
 
 /*!
@@ -226,7 +238,7 @@ SwfClient::SwfClient(
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions(const CountClosedWorkflowExecutionsRequest &request)
@@ -283,7 +295,7 @@ CountClosedWorkflowExecutionsResponse * SwfClient::countClosedWorkflowExecutions
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(const CountOpenWorkflowExecutionsRequest &request)
@@ -327,7 +339,7 @@ CountOpenWorkflowExecutionsResponse * SwfClient::countOpenWorkflowExecutions(con
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const CountPendingActivityTasksRequest &request)
@@ -371,7 +383,7 @@ CountPendingActivityTasksResponse * SwfClient::countPendingActivityTasks(const C
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const CountPendingDecisionTasksRequest &request)
@@ -425,7 +437,7 @@ CountPendingDecisionTasksResponse * SwfClient::countPendingDecisionTasks(const C
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const DeprecateActivityTypeRequest &request)
@@ -473,7 +485,7 @@ DeprecateActivityTypeResponse * SwfClient::deprecateActivityType(const Deprecate
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainRequest &request)
@@ -528,7 +540,7 @@ DeprecateDomainResponse * SwfClient::deprecateDomain(const DeprecateDomainReques
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const DeprecateWorkflowTypeRequest &request)
@@ -578,7 +590,7 @@ DeprecateWorkflowTypeResponse * SwfClient::deprecateWorkflowType(const Deprecate
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeActivityTypeRequest &request)
@@ -619,7 +631,7 @@ DescribeActivityTypeResponse * SwfClient::describeActivityType(const DescribeAct
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &request)
@@ -664,7 +676,7 @@ DescribeDomainResponse * SwfClient::describeDomain(const DescribeDomainRequest &
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const DescribeWorkflowExecutionRequest &request)
@@ -714,7 +726,7 @@ DescribeWorkflowExecutionResponse * SwfClient::describeWorkflowExecution(const D
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWorkflowTypeRequest &request)
@@ -760,7 +772,7 @@ DescribeWorkflowTypeResponse * SwfClient::describeWorkflowType(const DescribeWor
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(const GetWorkflowExecutionHistoryRequest &request)
@@ -804,7 +816,7 @@ GetWorkflowExecutionHistoryResponse * SwfClient::getWorkflowExecutionHistory(con
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypesRequest &request)
@@ -863,7 +875,7 @@ ListActivityTypesResponse * SwfClient::listActivityTypes(const ListActivityTypes
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(const ListClosedWorkflowExecutionsRequest &request)
@@ -910,7 +922,7 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
@@ -969,12 +981,25 @@ ListDomainsResponse * SwfClient::listDomains(const ListDomainsRequest &request)
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const ListOpenWorkflowExecutionsRequest &request)
 {
     return qobject_cast<ListOpenWorkflowExecutionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List tags for a given
+ */
+ListTagsForResourceResponse * SwfClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -1011,7 +1036,7 @@ ListOpenWorkflowExecutionsResponse * SwfClient::listOpenWorkflowExecutions(const
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypesRequest &request)
@@ -1062,7 +1087,7 @@ ListWorkflowTypesResponse * SwfClient::listWorkflowTypes(const ListWorkflowTypes
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivityTaskRequest &request)
@@ -1126,7 +1151,7 @@ PollForActivityTaskResponse * SwfClient::pollForActivityTask(const PollForActivi
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisionTaskRequest &request)
@@ -1198,7 +1223,7 @@ PollForDecisionTaskResponse * SwfClient::pollForDecisionTask(const PollForDecisi
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(const RecordActivityTaskHeartbeatRequest &request)
@@ -1256,7 +1281,7 @@ RecordActivityTaskHeartbeatResponse * SwfClient::recordActivityTaskHeartbeat(con
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterActivityTypeRequest &request)
@@ -1298,7 +1323,7 @@ RegisterActivityTypeResponse * SwfClient::registerActivityType(const RegisterAct
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &request)
@@ -1360,7 +1385,7 @@ RegisterDomainResponse * SwfClient::registerDomain(const RegisterDomainRequest &
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWorkflowTypeRequest &request)
@@ -1413,7 +1438,7 @@ RegisterWorkflowTypeResponse * SwfClient::registerWorkflowType(const RegisterWor
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecution(const RequestCancelWorkflowExecutionRequest &request)
@@ -1444,7 +1469,7 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  * A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open
  * while a worker is processing it. A task is closed after it has been specified in a call to
  * <a>RespondActivityTaskCompleted</a>, RespondActivityTaskCanceled, <a>RespondActivityTaskFailed</a>, or the task has <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types">timed
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types">timed
  *
  * out</a>>
  *
@@ -1471,7 +1496,7 @@ RequestCancelWorkflowExecutionResponse * SwfClient::requestCancelWorkflowExecuti
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(const RespondActivityTaskCanceledRequest &request)
@@ -1500,7 +1525,7 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  * A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open
  * while a worker is processing it. A task is closed after it has been specified in a call to RespondActivityTaskCompleted,
  * <a>RespondActivityTaskCanceled</a>, <a>RespondActivityTaskFailed</a>, or the task has <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types">timed
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types">timed
  *
  * out</a>>
  *
@@ -1527,7 +1552,7 @@ RespondActivityTaskCanceledResponse * SwfClient::respondActivityTaskCanceled(con
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(const RespondActivityTaskCompletedRequest &request)
@@ -1550,7 +1575,7 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
  * A task is considered open from the time that it is scheduled until it is closed. Therefore a task is reported as open
  * while a worker is processing it. A task is closed after it has been specified in a call to
  * <a>RespondActivityTaskCompleted</a>, <a>RespondActivityTaskCanceled</a>, RespondActivityTaskFailed, or the task has <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types">timed
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-basic.html#swf-dev-timeout-types">timed
  *
  * out</a>>
  *
@@ -1577,7 +1602,7 @@ RespondActivityTaskCompletedResponse * SwfClient::respondActivityTaskCompleted(c
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const RespondActivityTaskFailedRequest &request)
@@ -1609,7 +1634,7 @@ RespondActivityTaskFailedResponse * SwfClient::respondActivityTaskFailed(const R
  * list of decisions in the <code>decisions</code> parameter. Each of the decisions has one or more parameters, much like a
  * regular API call. To allow for policies to be as readable as possible, you can express permissions on decisions as if
  * they were actual API calls, including applying conditions to some parameters. For more information, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(const RespondDecisionTaskCompletedRequest &request)
@@ -1661,7 +1686,7 @@ RespondDecisionTaskCompletedResponse * SwfClient::respondDecisionTaskCompleted(c
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const SignalWorkflowExecutionRequest &request)
@@ -1738,12 +1763,29 @@ SignalWorkflowExecutionResponse * SwfClient::signalWorkflowExecution(const Signa
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWorkflowExecutionRequest &request)
 {
     return qobject_cast<StartWorkflowExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Add a tag to a Amazon SWF
+ *
+ * domain> <note>
+ *
+ * Amazon SWF supports a maximum of 50 tags per
+ */
+TagResourceResponse * SwfClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
@@ -1795,12 +1837,179 @@ StartWorkflowExecutionResponse * SwfClient::startWorkflowExecution(const StartWo
  * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
  * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
  * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
- * href="http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
  * SWF Workflows</a> in the <i>Amazon SWF Developer
  */
 TerminateWorkflowExecutionResponse * SwfClient::terminateWorkflowExecution(const TerminateWorkflowExecutionRequest &request)
 {
     return qobject_cast<TerminateWorkflowExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * UndeprecateActivityTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Undeprecates a previously deprecated <i>activity type</i>. After an activity type has been undeprecated, you can create
+ * new tasks of that activity
+ *
+ * type> <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and
+ *
+ * changes> </note>
+ *
+ * <b>Access Control</b>
+ *
+ * </p
+ *
+ * You can use IAM policies to control this action's access to Amazon SWF resources as
+ *
+ * follows> <ul> <li>
+ *
+ * Use a <code>Resource</code> element with the domain name to limit the action to only specified
+ *
+ * domains> </li> <li>
+ *
+ * Use an <code>Action</code> element to allow or deny permission to call this
+ *
+ * action> </li> <li>
+ *
+ * Constrain the following parameters by using a <code>Condition</code> element with the appropriate
+ *
+ * keys> <ul> <li>
+ *
+ * <code>activityType.name</code>: String constraint. The key is
+ *
+ * <code>swf:activityType.name</code>> </li> <li>
+ *
+ * <code>activityType.version</code>: String constraint. The key is
+ *
+ * <code>swf:activityType.version</code>> </li> </ul> </li> </ul>
+ *
+ * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
+ * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
+ * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * SWF Workflows</a> in the <i>Amazon SWF Developer
+ */
+UndeprecateActivityTypeResponse * SwfClient::undeprecateActivityType(const UndeprecateActivityTypeRequest &request)
+{
+    return qobject_cast<UndeprecateActivityTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * UndeprecateDomainResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Undeprecates a previously deprecated domain. After a domain has been undeprecated it can be used to create new workflow
+ * executions or register new
+ *
+ * types> <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and
+ *
+ * changes> </note>
+ *
+ * <b>Access Control</b>
+ *
+ * </p
+ *
+ * You can use IAM policies to control this action's access to Amazon SWF resources as
+ *
+ * follows> <ul> <li>
+ *
+ * Use a <code>Resource</code> element with the domain name to limit the action to only specified
+ *
+ * domains> </li> <li>
+ *
+ * Use an <code>Action</code> element to allow or deny permission to call this
+ *
+ * action> </li> <li>
+ *
+ * You cannot use an IAM policy to constrain this action's
+ *
+ * parameters> </li> </ul>
+ *
+ * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
+ * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
+ * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * SWF Workflows</a> in the <i>Amazon SWF Developer
+ */
+UndeprecateDomainResponse * SwfClient::undeprecateDomain(const UndeprecateDomainRequest &request)
+{
+    return qobject_cast<UndeprecateDomainResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * UndeprecateWorkflowTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Undeprecates a previously deprecated <i>workflow type</i>. After a workflow type has been undeprecated, you can create
+ * new executions of that type.
+ *
+ * </p <note>
+ *
+ * This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and
+ *
+ * changes> </note>
+ *
+ * <b>Access Control</b>
+ *
+ * </p
+ *
+ * You can use IAM policies to control this action's access to Amazon SWF resources as
+ *
+ * follows> <ul> <li>
+ *
+ * Use a <code>Resource</code> element with the domain name to limit the action to only specified
+ *
+ * domains> </li> <li>
+ *
+ * Use an <code>Action</code> element to allow or deny permission to call this
+ *
+ * action> </li> <li>
+ *
+ * Constrain the following parameters by using a <code>Condition</code> element with the appropriate
+ *
+ * keys> <ul> <li>
+ *
+ * <code>workflowType.name</code>: String constraint. The key is
+ *
+ * <code>swf:workflowType.name</code>> </li> <li>
+ *
+ * <code>workflowType.version</code>: String constraint. The key is
+ *
+ * <code>swf:workflowType.version</code>> </li> </ul> </li> </ul>
+ *
+ * If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the
+ * specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to
+ * <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a
+ * href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon
+ * SWF Workflows</a> in the <i>Amazon SWF Developer
+ */
+UndeprecateWorkflowTypeResponse * SwfClient::undeprecateWorkflowType(const UndeprecateWorkflowTypeRequest &request)
+{
+    return qobject_cast<UndeprecateWorkflowTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SwfClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove a tag from a Amazon SWF
+ */
+UntagResourceResponse * SwfClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

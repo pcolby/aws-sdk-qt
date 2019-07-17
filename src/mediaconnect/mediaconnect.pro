@@ -38,6 +38,10 @@ HEADERS += \
     listflowsrequest_p.h \
     listflowsresponse.h \
     listflowsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     mediaconnectclient.h \
     mediaconnectclient_p.h \
     mediaconnectrequest.h \
@@ -60,6 +64,14 @@ HEADERS += \
     stopflowrequest_p.h \
     stopflowresponse.h \
     stopflowresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateflowentitlementrequest.h \
     updateflowentitlementrequest_p.h \
     updateflowentitlementresponse.h \
@@ -88,6 +100,8 @@ SOURCES += \
     listentitlementsresponse.cpp \
     listflowsrequest.cpp \
     listflowsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     mediaconnectclient.cpp \
     mediaconnectrequest.cpp \
     mediaconnectresponse.cpp \
@@ -99,6 +113,10 @@ SOURCES += \
     startflowresponse.cpp \
     stopflowrequest.cpp \
     stopflowresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateflowentitlementrequest.cpp \
     updateflowentitlementresponse.cpp \
     updateflowoutputrequest.cpp \

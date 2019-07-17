@@ -25,6 +25,8 @@
 #include "approveskillresponse.h"
 #include "associatecontactwithaddressbookrequest.h"
 #include "associatecontactwithaddressbookresponse.h"
+#include "associatedevicewithnetworkprofilerequest.h"
+#include "associatedevicewithnetworkprofileresponse.h"
 #include "associatedevicewithroomrequest.h"
 #include "associatedevicewithroomresponse.h"
 #include "associateskillgroupwithroomrequest.h"
@@ -41,6 +43,10 @@
 #include "createconferenceproviderresponse.h"
 #include "createcontactrequest.h"
 #include "createcontactresponse.h"
+#include "creategatewaygrouprequest.h"
+#include "creategatewaygroupresponse.h"
+#include "createnetworkprofilerequest.h"
+#include "createnetworkprofileresponse.h"
 #include "createprofilerequest.h"
 #include "createprofileresponse.h"
 #include "createroomrequest.h"
@@ -59,6 +65,12 @@
 #include "deletecontactresponse.h"
 #include "deletedevicerequest.h"
 #include "deletedeviceresponse.h"
+#include "deletedeviceusagedatarequest.h"
+#include "deletedeviceusagedataresponse.h"
+#include "deletegatewaygrouprequest.h"
+#include "deletegatewaygroupresponse.h"
+#include "deletenetworkprofilerequest.h"
+#include "deletenetworkprofileresponse.h"
 #include "deleteprofilerequest.h"
 #include "deleteprofileresponse.h"
 #include "deleteroomrequest.h"
@@ -93,6 +105,14 @@
 #include "getcontactresponse.h"
 #include "getdevicerequest.h"
 #include "getdeviceresponse.h"
+#include "getgatewayrequest.h"
+#include "getgatewayresponse.h"
+#include "getgatewaygrouprequest.h"
+#include "getgatewaygroupresponse.h"
+#include "getinvitationconfigurationrequest.h"
+#include "getinvitationconfigurationresponse.h"
+#include "getnetworkprofilerequest.h"
+#include "getnetworkprofileresponse.h"
 #include "getprofilerequest.h"
 #include "getprofileresponse.h"
 #include "getroomrequest.h"
@@ -107,6 +127,10 @@
 #include "listconferenceprovidersresponse.h"
 #include "listdeviceeventsrequest.h"
 #include "listdeviceeventsresponse.h"
+#include "listgatewaygroupsrequest.h"
+#include "listgatewaygroupsresponse.h"
+#include "listgatewaysrequest.h"
+#include "listgatewaysresponse.h"
 #include "listskillsrequest.h"
 #include "listskillsresponse.h"
 #include "listskillsstorecategoriesrequest.h"
@@ -119,6 +143,8 @@
 #include "listtagsresponse.h"
 #include "putconferencepreferencerequest.h"
 #include "putconferencepreferenceresponse.h"
+#include "putinvitationconfigurationrequest.h"
+#include "putinvitationconfigurationresponse.h"
 #include "putroomskillparameterrequest.h"
 #include "putroomskillparameterresponse.h"
 #include "putskillauthorizationrequest.h"
@@ -137,6 +163,8 @@
 #include "searchcontactsresponse.h"
 #include "searchdevicesrequest.h"
 #include "searchdevicesresponse.h"
+#include "searchnetworkprofilesrequest.h"
+#include "searchnetworkprofilesresponse.h"
 #include "searchprofilesrequest.h"
 #include "searchprofilesresponse.h"
 #include "searchroomsrequest.h"
@@ -145,6 +173,8 @@
 #include "searchskillgroupsresponse.h"
 #include "searchusersrequest.h"
 #include "searchusersresponse.h"
+#include "sendannouncementrequest.h"
+#include "sendannouncementresponse.h"
 #include "sendinvitationrequest.h"
 #include "sendinvitationresponse.h"
 #include "startdevicesyncrequest.h"
@@ -165,6 +195,12 @@
 #include "updatecontactresponse.h"
 #include "updatedevicerequest.h"
 #include "updatedeviceresponse.h"
+#include "updategatewayrequest.h"
+#include "updategatewayresponse.h"
+#include "updategatewaygrouprequest.h"
+#include "updategatewaygroupresponse.h"
+#include "updatenetworkprofilerequest.h"
+#include "updatenetworkprofileresponse.h"
 #include "updateprofilerequest.h"
 #include "updateprofileresponse.h"
 #include "updateroomrequest.h"
@@ -285,6 +321,19 @@ AssociateContactWithAddressBookResponse * AlexaForBusinessClient::associateConta
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * AssociateDeviceWithNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a device with the specified network
+ */
+AssociateDeviceWithNetworkProfileResponse * AlexaForBusinessClient::associateDeviceWithNetworkProfile(const AssociateDeviceWithNetworkProfileRequest &request)
+{
+    return qobject_cast<AssociateDeviceWithNetworkProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * AssociateDeviceWithRoomResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -387,6 +436,32 @@ CreateConferenceProviderResponse * AlexaForBusinessClient::createConferenceProvi
 CreateContactResponse * AlexaForBusinessClient::createContact(const CreateContactRequest &request)
 {
     return qobject_cast<CreateContactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * CreateGatewayGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a gateway group with the specified
+ */
+CreateGatewayGroupResponse * AlexaForBusinessClient::createGatewayGroup(const CreateGatewayGroupRequest &request)
+{
+    return qobject_cast<CreateGatewayGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * CreateNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a network profile with the specified
+ */
+CreateNetworkProfileResponse * AlexaForBusinessClient::createNetworkProfile(const CreateNetworkProfileRequest &request)
+{
+    return qobject_cast<CreateNetworkProfileResponse *>(send(request));
 }
 
 /*!
@@ -504,6 +579,52 @@ DeleteContactResponse * AlexaForBusinessClient::deleteContact(const DeleteContac
 DeleteDeviceResponse * AlexaForBusinessClient::deleteDevice(const DeleteDeviceRequest &request)
 {
     return qobject_cast<DeleteDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteDeviceUsageDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * When this action is called for a specified shared device, it allows authorized users to delete the device's entire
+ * previous history of voice input data and associated response data. This action can be called once every 24 hours for a
+ * specific shared
+ *
+ * device>
+ *
+ * When this action is called for a specified shared device, it allows authorized users to delete the device's entire
+ * previous history of voice input data. This action can be called once every 24 hours for a specific shared device.
+ */
+DeleteDeviceUsageDataResponse * AlexaForBusinessClient::deleteDeviceUsageData(const DeleteDeviceUsageDataRequest &request)
+{
+    return qobject_cast<DeleteDeviceUsageDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteGatewayGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a gateway
+ */
+DeleteGatewayGroupResponse * AlexaForBusinessClient::deleteGatewayGroup(const DeleteGatewayGroupRequest &request)
+{
+    return qobject_cast<DeleteGatewayGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * DeleteNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a network profile by the network profile
+ */
+DeleteNetworkProfileResponse * AlexaForBusinessClient::deleteNetworkProfile(const DeleteNetworkProfileRequest &request)
+{
+    return qobject_cast<DeleteNetworkProfileResponse *>(send(request));
 }
 
 /*!
@@ -730,6 +851,58 @@ GetDeviceResponse * AlexaForBusinessClient::getDevice(const GetDeviceRequest &re
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * GetGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details of a
+ */
+GetGatewayResponse * AlexaForBusinessClient::getGateway(const GetGatewayRequest &request)
+{
+    return qobject_cast<GetGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * GetGatewayGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the details of a gateway
+ */
+GetGatewayGroupResponse * AlexaForBusinessClient::getGatewayGroup(const GetGatewayGroupRequest &request)
+{
+    return qobject_cast<GetGatewayGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * GetInvitationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the configured values for the user enrollment invitation email
+ */
+GetInvitationConfigurationResponse * AlexaForBusinessClient::getInvitationConfiguration(const GetInvitationConfigurationRequest &request)
+{
+    return qobject_cast<GetInvitationConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * GetNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the network profile details by the network profile
+ */
+GetNetworkProfileResponse * AlexaForBusinessClient::getNetworkProfile(const GetNetworkProfileRequest &request)
+{
+    return qobject_cast<GetNetworkProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * GetProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -821,6 +994,33 @@ ListDeviceEventsResponse * AlexaForBusinessClient::listDeviceEvents(const ListDe
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListGatewayGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of gateway group summaries. Use GetGatewayGroup to retrieve details of a specific gateway
+ */
+ListGatewayGroupsResponse * AlexaForBusinessClient::listGatewayGroups(const ListGatewayGroupsRequest &request)
+{
+    return qobject_cast<ListGatewayGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * ListGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of gateway summaries. Use GetGateway to retrieve details of a specific gateway. An optional gateway
+ * group ARN can be provided to only retrieve gateway summaries of gateways that are associated with that gateway group
+ */
+ListGatewaysResponse * AlexaForBusinessClient::listGateways(const ListGatewaysRequest &request)
+{
+    return qobject_cast<ListGatewaysResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * ListSkillsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -895,6 +1095,19 @@ ListTagsResponse * AlexaForBusinessClient::listTags(const ListTagsRequest &reque
 PutConferencePreferenceResponse * AlexaForBusinessClient::putConferencePreference(const PutConferencePreferenceRequest &request)
 {
     return qobject_cast<PutConferencePreferenceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * PutInvitationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Configures the email template for the user enrollment invitation with the specified
+ */
+PutInvitationConfigurationResponse * AlexaForBusinessClient::putInvitationConfiguration(const PutInvitationConfigurationRequest &request)
+{
+    return qobject_cast<PutInvitationConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -1019,6 +1232,19 @@ SearchDevicesResponse * AlexaForBusinessClient::searchDevices(const SearchDevice
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * SearchNetworkProfilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches network profiles and lists the ones that meet a set of filter and sort
+ */
+SearchNetworkProfilesResponse * AlexaForBusinessClient::searchNetworkProfiles(const SearchNetworkProfilesRequest &request)
+{
+    return qobject_cast<SearchNetworkProfilesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * SearchProfilesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1071,12 +1297,26 @@ SearchUsersResponse * AlexaForBusinessClient::searchUsers(const SearchUsersReque
 
 /*!
  * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * SendAnnouncementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Triggers an asynchronous flow to send text, SSML, or audio announcements to rooms that are identified by a search or
+ * filter.
+ */
+SendAnnouncementResponse * AlexaForBusinessClient::sendAnnouncement(const SendAnnouncementRequest &request)
+{
+    return qobject_cast<SendAnnouncementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
  * SendInvitationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends an enrollment invitation email with a URL to a user. The URL is valid for 72 hours or until you call this
- * operation again, whichever comes first.
+ * Sends an enrollment invitation email with a URL to a user. The URL is valid for 30 days or until you call this operation
+ * again, whichever comes first.
  */
 SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvitationRequest &request)
 {
@@ -1089,7 +1329,29 @@ SendInvitationResponse * AlexaForBusinessClient::sendInvitation(const SendInvita
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resets a device and its account to the known default settings, by clearing all information and settings set by previous
+ * Resets a device and its account to the known default settings. This clears all information and settings set by previous
+ * users in the following
+ *
+ * ways> <ul> <li>
+ *
+ * Bluetooth - This unpairs all bluetooth devices paired with your echo
+ *
+ * device> </li> <li>
+ *
+ * Volume - This resets the echo device's volume to the default
+ *
+ * value> </li> <li>
+ *
+ * Notifications - This clears all notifications from your echo
+ *
+ * device> </li> <li>
+ *
+ * Lists - This clears all to-do items from your echo
+ *
+ * device> </li> <li>
+ *
+ * Settings - This internally syncs the room's profile (if the device is assigned to a room), contacts, address books,
+ * delegation access for account linking, and communications (if enabled on the room
  */
 StartDeviceSyncResponse * AlexaForBusinessClient::startDeviceSync(const StartDeviceSyncRequest &request)
 {
@@ -1198,6 +1460,45 @@ UpdateContactResponse * AlexaForBusinessClient::updateContact(const UpdateContac
 UpdateDeviceResponse * AlexaForBusinessClient::updateDevice(const UpdateDeviceRequest &request)
 {
     return qobject_cast<UpdateDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * UpdateGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the details of a gateway. If any optional field is not provided, the existing corresponding value is left
+ */
+UpdateGatewayResponse * AlexaForBusinessClient::updateGateway(const UpdateGatewayRequest &request)
+{
+    return qobject_cast<UpdateGatewayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * UpdateGatewayGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the details of a gateway group. If any optional field is not provided, the existing corresponding value is left
+ */
+UpdateGatewayGroupResponse * AlexaForBusinessClient::updateGatewayGroup(const UpdateGatewayGroupRequest &request)
+{
+    return qobject_cast<UpdateGatewayGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AlexaForBusinessClient service, and returns a pointer to an
+ * UpdateNetworkProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a network profile by the network profile
+ */
+UpdateNetworkProfileResponse * AlexaForBusinessClient::updateNetworkProfile(const UpdateNetworkProfileRequest &request)
+{
+    return qobject_cast<UpdateNetworkProfileResponse *>(send(request));
 }
 
 /*!

@@ -22,6 +22,10 @@ HEADERS += \
     listplaybackconfigurationsrequest_p.h \
     listplaybackconfigurationsresponse.h \
     listplaybackconfigurationsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     mediatailorclient.h \
     mediatailorclient_p.h \
     mediatailorrequest.h \
@@ -32,6 +36,14 @@ HEADERS += \
     putplaybackconfigurationrequest_p.h \
     putplaybackconfigurationresponse.h \
     putplaybackconfigurationresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     deleteplaybackconfigurationrequest.cpp \
@@ -40,10 +52,16 @@ SOURCES += \
     getplaybackconfigurationresponse.cpp \
     listplaybackconfigurationsrequest.cpp \
     listplaybackconfigurationsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     mediatailorclient.cpp \
     mediatailorrequest.cpp \
     mediatailorresponse.cpp \
     putplaybackconfigurationrequest.cpp \
     putplaybackconfigurationresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

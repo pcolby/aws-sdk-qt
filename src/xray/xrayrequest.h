@@ -49,6 +49,7 @@ public:
         GetSamplingStatisticSummariesAction,
         GetSamplingTargetsAction,
         GetServiceGraphAction,
+        GetTimeSeriesServiceStatisticsAction,
         GetTraceGraphAction,
         GetTraceSummariesAction,
         PutEncryptionConfigAction,

@@ -57,6 +57,8 @@
 #include "disassociatedelegatefromresourceresponse.h"
 #include "disassociatememberfromgrouprequest.h"
 #include "disassociatememberfromgroupresponse.h"
+#include "getmailboxdetailsrequest.h"
+#include "getmailboxdetailsresponse.h"
 #include "listaliasesrequest.h"
 #include "listaliasesresponse.h"
 #include "listgroupmembersrequest.h"
@@ -79,6 +81,8 @@
 #include "registertoworkmailresponse.h"
 #include "resetpasswordrequest.h"
 #include "resetpasswordresponse.h"
+#include "updatemailboxquotarequest.h"
+#include "updatemailboxquotaresponse.h"
 #include "updateprimaryemailaddressrequest.h"
 #include "updateprimaryemailaddressresponse.h"
 #include "updateresourcerequest.h"
@@ -107,13 +111,13 @@ namespace WorkMail {
  * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
- *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
- *  iOS and Android email applications. You can integrate Amazon WorkMail with your existing corporate directory and control
- *  both the keys that encrypt your data and the location in which your data is
+ *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or other native
+ *  iOS and Android email applications. You can integrate WorkMail with your existing corporate directory and control both
+ *  the keys that encrypt your data and the location in which your data is
  * 
  *  stored>
  * 
- *  The Amazon WorkMail API is designed for the following
+ *  The WorkMail API is designed for the following
  * 
  *  scenarios> <ul> <li>
  * 
@@ -133,12 +137,13 @@ namespace WorkMail {
  * 
  *  resource> </li> </ul>
  * 
- *  All Amazon WorkMail API actions are Amazon-authenticated and certificate-signed. They not only require the use of the
- *  AWS SDK, but also allow for the exclusive use of IAM users and roles to help facilitate access, trust, and permission
- *  policies. By creating a role and allowing an IAM user to access the Amazon WorkMail site, the IAM user gains full
- *  administrative visibility into the entire Amazon WorkMail organization (or as set in the IAM policy). This includes, but
- *  is not limited to, the ability to create, update, and delete users, groups, and resources. This allows developers to
- *  perform the scenarios listed above, as well as give users the ability to grant access on a selective basis using the IAM
+ *  All WorkMail API operations are Amazon-authenticated and certificate-signed. They not only require the use of the AWS
+ *  SDK, but also allow for the exclusive use of AWS Identity and Access Management users and roles to help facilitate
+ *  access, trust, and permission policies. By creating a role and allowing an IAM user to access the WorkMail site, the IAM
+ *  user gains full administrative visibility into the entire WorkMail organization (or as set in the IAM policy). This
+ *  includes, but is not limited to, the ability to create, update, and delete users, groups, and resources. This allows
+ *  developers to perform the scenarios listed above, as well as give users the ability to grant access on a selective basis
+ *  using the IAM
  */
 
 /*!
@@ -200,7 +205,7 @@ WorkMailClient::WorkMailClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a member to the resource's set of
+ * Adds a member (user or group) to the resource's set of
  */
 AssociateDelegateToResourceResponse * WorkMailClient::associateDelegateToResource(const AssociateDelegateToResourceRequest &request)
 {
@@ -213,7 +218,7 @@ AssociateDelegateToResourceResponse * WorkMailClient::associateDelegateToResourc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a member to the group's
+ * Adds a member (user or group) to the group's
  */
 AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const AssociateMemberToGroupRequest &request)
 {
@@ -226,7 +231,7 @@ AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const As
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds an alias to the set of a given member of Amazon
+ * Adds an alias to the set of a given member (user or group) of Amazon
  */
 CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &request)
 {
@@ -239,7 +244,7 @@ CreateAliasResponse * WorkMailClient::createAlias(const CreateAliasRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a group that can be used in Amazon WorkMail by calling the RegisterToWorkMail
+ * Creates a group that can be used in Amazon WorkMail by calling the <a>RegisterToWorkMail</a>
  */
 CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &request)
 {
@@ -252,7 +257,7 @@ CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Amazon WorkMail resource. The available types are equipment and
+ * Creates a new Amazon WorkMail resource.
  */
 CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequest &request)
 {
@@ -265,7 +270,7 @@ CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a user who can be used in Amazon WorkMail by calling the RegisterToWorkMail
+ * Creates a user who can be used in Amazon WorkMail by calling the <a>RegisterToWorkMail</a>
  */
 CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request)
 {
@@ -278,7 +283,7 @@ CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Remove the alias from a set of aliases for a given
+ * Remove one or more specified aliases from a set of aliases for a given
  */
 DeleteAliasResponse * WorkMailClient::deleteAlias(const DeleteAliasRequest &request)
 {
@@ -304,7 +309,7 @@ DeleteGroupResponse * WorkMailClient::deleteGroup(const DeleteGroupRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes permissions granted to a user or
+ * Deletes permissions granted to a member (user or
  */
 DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(const DeleteMailboxPermissionsRequest &request)
 {
@@ -330,8 +335,13 @@ DeleteResourceResponse * WorkMailClient::deleteResource(const DeleteResourceRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a user from Amazon WorkMail and all subsequent systems. The action can't be undone. The mailbox is kept as-is
- * for a minimum of 30 days, without any means to restore it.
+ * Deletes a user from Amazon WorkMail and all subsequent systems. Before you can delete a user, the user state must be
+ * <code>DISABLED</code>. Use the <a>DescribeUser</a> action to confirm the user
+ *
+ * state>
+ *
+ * Deleting a user is permanent and cannot be undone. WorkMail archives user mailboxes for 30 days before they are
+ * permanently
  */
 DeleteUserResponse * WorkMailClient::deleteUser(const DeleteUserRequest &request)
 {
@@ -345,8 +355,8 @@ DeleteUserResponse * WorkMailClient::deleteUser(const DeleteUserRequest &request
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Mark a user, group, or resource as no longer used in Amazon WorkMail. This action disassociates the mailbox and
- * schedules it for clean-up. Amazon WorkMail keeps mailboxes for 30 days before they are permanently removed. The
- * functionality in the console is
+ * schedules it for clean-up. WorkMail keeps mailboxes for 30 days before they are permanently removed. The functionality
+ * in the console is
  */
 DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const DeregisterFromWorkMailRequest &request)
 {
@@ -433,6 +443,19 @@ DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGrou
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * GetMailboxDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Requests a user's mailbox details for a specified organization and
+ */
+GetMailboxDetailsResponse * WorkMailClient::getMailboxDetails(const GetMailboxDetailsRequest &request)
+{
+    return qobject_cast<GetMailboxDetailsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * ListAliasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -450,7 +473,7 @@ ListAliasesResponse * WorkMailClient::listAliases(const ListAliasesRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an overview of the members of a
+ * Returns an overview of the members of a group. Users and groups can be members of a
  */
 ListGroupMembersResponse * WorkMailClient::listGroupMembers(const ListGroupMembersRequest &request)
 {
@@ -476,7 +499,7 @@ ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the mailbox permissions associated with a
+ * Lists the mailbox permissions associated with a user, group, or resource
  */
 ListMailboxPermissionsResponse * WorkMailClient::listMailboxPermissions(const ListMailboxPermissionsRequest &request)
 {
@@ -542,7 +565,7 @@ ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets permissions for a user or group. This replaces any pre-existing permissions set for the
+ * Sets permissions for a user, group, or resource. This replaces any pre-existing
  */
 PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutMailboxPermissionsRequest &request)
 {
@@ -555,11 +578,15 @@ PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutM
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers an existing and disabled user, group, or resource/entity for Amazon WorkMail use by associating a mailbox and
- * calendaring capabilities. It performs no change if the entity is enabled and fails if the entity is deleted. This
- * operation results in the accumulation of costs. For more information, see <a
- * href="http://aws.amazon.com/workmail/pricing">Pricing</a>. The equivalent console functionality for this operation is
- * <i>Enable</i>. Users can either be created by calling the CreateUser API or they can be synchronized from your
+ * Registers an existing and disabled user, group, or resource for Amazon WorkMail use by associating a mailbox and
+ * calendaring capabilities. It performs no change if the user, group, or resource is enabled and fails if the user, group,
+ * or resource is deleted. This operation results in the accumulation of costs. For more information, see <a
+ * href="https://aws.amazon.com//workmail/pricing">Pricing</a>. The equivalent console functionality for this operation is
+ * <i>Enable</i>.
+ *
+ * </p
+ *
+ * Users can either be created by calling the <a>CreateUser</a> API operation or they can be synchronized from your
  * directory. For more information, see
  */
 RegisterToWorkMailResponse * WorkMailClient::registerToWorkMail(const RegisterToWorkMailRequest &request)
@@ -582,12 +609,25 @@ ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UpdateMailboxQuotaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a user's current mailbox quota for a specified organization and
+ */
+UpdateMailboxQuotaResponse * WorkMailClient::updateMailboxQuota(const UpdateMailboxQuotaRequest &request)
+{
+    return qobject_cast<UpdateMailboxQuotaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * UpdatePrimaryEmailAddressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the primary email for an entity. The current email is moved into the list of aliases (or swapped between an
- * existing alias and the current primary email) and the email provided in the input is promoted as the
+ * Updates the primary email for a user, group, or resource. The current email is moved into the list of aliases (or
+ * swapped between an existing alias and the current primary email), and the email provided in the input is promoted as the
  */
 UpdatePrimaryEmailAddressResponse * WorkMailClient::updatePrimaryEmailAddress(const UpdatePrimaryEmailAddressRequest &request)
 {
@@ -600,8 +640,8 @@ UpdatePrimaryEmailAddressResponse * WorkMailClient::updatePrimaryEmailAddress(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates data for the resource. It must be preceded by a describe call in order to have the latest information. The
- * dataset in the request should be the one expected when performing another describe
+ * Updates data for the resource. To have the latest information, it must be preceded by a <a>DescribeResource</a> call.
+ * The dataset in the request should be the one expected when performing another <code>DescribeResource</code>
  */
 UpdateResourceResponse * WorkMailClient::updateResource(const UpdateResourceRequest &request)
 {

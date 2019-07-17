@@ -226,7 +226,7 @@ GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of tags that are associated with a resource, specified by an
+ * Returns a list of tags that are associated with a resource group, specified by an
  */
 GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
 {
@@ -279,7 +279,7 @@ SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchReso
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds specified tags to a resource with the specified ARN. Existing tags on a resource are not changed if they are not
+ * Adds tags to a resource group with the specified ARN. Existing tags on a resource group are not changed if they are not
  * specified in the request
  */
 TagResponse * ResourceGroupsClient::tag(const TagRequest &request)

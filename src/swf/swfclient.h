@@ -60,6 +60,8 @@ class ListDomainsRequest;
 class ListDomainsResponse;
 class ListOpenWorkflowExecutionsRequest;
 class ListOpenWorkflowExecutionsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ListWorkflowTypesRequest;
 class ListWorkflowTypesResponse;
 class PollForActivityTaskRequest;
@@ -88,8 +90,18 @@ class SignalWorkflowExecutionRequest;
 class SignalWorkflowExecutionResponse;
 class StartWorkflowExecutionRequest;
 class StartWorkflowExecutionResponse;
+class TagResourceRequest;
+class TagResourceResponse;
 class TerminateWorkflowExecutionRequest;
 class TerminateWorkflowExecutionResponse;
+class UndeprecateActivityTypeRequest;
+class UndeprecateActivityTypeResponse;
+class UndeprecateDomainRequest;
+class UndeprecateDomainResponse;
+class UndeprecateWorkflowTypeRequest;
+class UndeprecateWorkflowTypeResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT SwfClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -123,6 +135,7 @@ public slots:
     ListClosedWorkflowExecutionsResponse * listClosedWorkflowExecutions(const ListClosedWorkflowExecutionsRequest &request);
     ListDomainsResponse * listDomains(const ListDomainsRequest &request);
     ListOpenWorkflowExecutionsResponse * listOpenWorkflowExecutions(const ListOpenWorkflowExecutionsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListWorkflowTypesResponse * listWorkflowTypes(const ListWorkflowTypesRequest &request);
     PollForActivityTaskResponse * pollForActivityTask(const PollForActivityTaskRequest &request);
     PollForDecisionTaskResponse * pollForDecisionTask(const PollForDecisionTaskRequest &request);
@@ -137,7 +150,12 @@ public slots:
     RespondDecisionTaskCompletedResponse * respondDecisionTaskCompleted(const RespondDecisionTaskCompletedRequest &request);
     SignalWorkflowExecutionResponse * signalWorkflowExecution(const SignalWorkflowExecutionRequest &request);
     StartWorkflowExecutionResponse * startWorkflowExecution(const StartWorkflowExecutionRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     TerminateWorkflowExecutionResponse * terminateWorkflowExecution(const TerminateWorkflowExecutionRequest &request);
+    UndeprecateActivityTypeResponse * undeprecateActivityType(const UndeprecateActivityTypeRequest &request);
+    UndeprecateDomainResponse * undeprecateDomain(const UndeprecateDomainRequest &request);
+    UndeprecateWorkflowTypeResponse * undeprecateWorkflowType(const UndeprecateWorkflowTypeRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SwfClient)

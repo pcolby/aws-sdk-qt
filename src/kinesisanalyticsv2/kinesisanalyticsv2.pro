@@ -88,6 +88,10 @@ HEADERS += \
     listapplicationsrequest_p.h \
     listapplicationsresponse.h \
     listapplicationsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     startapplicationrequest.h \
     startapplicationrequest_p.h \
     startapplicationresponse.h \
@@ -96,6 +100,14 @@ HEADERS += \
     stopapplicationrequest_p.h \
     stopapplicationresponse.h \
     stopapplicationresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateapplicationrequest.h \
     updateapplicationrequest_p.h \
     updateapplicationresponse.h \
@@ -141,10 +153,16 @@ SOURCES += \
     listapplicationsnapshotsresponse.cpp \
     listapplicationsrequest.cpp \
     listapplicationsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     startapplicationrequest.cpp \
     startapplicationresponse.cpp \
     stopapplicationrequest.cpp \
     stopapplicationresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateapplicationrequest.cpp \
     updateapplicationresponse.cpp \
 

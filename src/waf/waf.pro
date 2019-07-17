@@ -238,6 +238,10 @@ HEADERS += \
     listsubscribedrulegroupsrequest_p.h \
     listsubscribedrulegroupsresponse.h \
     listsubscribedrulegroupsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listwebaclsrequest.h \
     listwebaclsrequest_p.h \
     listwebaclsresponse.h \
@@ -254,6 +258,14 @@ HEADERS += \
     putpermissionpolicyrequest_p.h \
     putpermissionpolicyresponse.h \
     putpermissionpolicyresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatebytematchsetrequest.h \
     updatebytematchsetrequest_p.h \
     updatebytematchsetresponse.h \
@@ -424,6 +436,8 @@ SOURCES += \
     listsqlinjectionmatchsetsresponse.cpp \
     listsubscribedrulegroupsrequest.cpp \
     listsubscribedrulegroupsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listwebaclsrequest.cpp \
     listwebaclsresponse.cpp \
     listxssmatchsetsrequest.cpp \
@@ -432,6 +446,10 @@ SOURCES += \
     putloggingconfigurationresponse.cpp \
     putpermissionpolicyrequest.cpp \
     putpermissionpolicyresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatebytematchsetrequest.cpp \
     updatebytematchsetresponse.cpp \
     updategeomatchsetrequest.cpp \

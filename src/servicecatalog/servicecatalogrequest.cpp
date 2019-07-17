@@ -37,6 +37,7 @@ namespace ServiceCatalog {
  * requests.
  *
  * \value AcceptPortfolioShareAction ServiceCatalog AcceptPortfolioShare action.
+ * \value AssociateBudgetWithResourceAction ServiceCatalog AssociateBudgetWithResource action.
  * \value AssociatePrincipalWithPortfolioAction ServiceCatalog AssociatePrincipalWithPortfolio action.
  * \value AssociateProductWithPortfolioAction ServiceCatalog AssociateProductWithPortfolio action.
  * \value AssociateServiceActionWithProvisioningArtifactAction ServiceCatalog AssociateServiceActionWithProvisioningArtifact action.
@@ -73,8 +74,10 @@ namespace ServiceCatalog {
  * \value DescribeProvisioningParametersAction ServiceCatalog DescribeProvisioningParameters action.
  * \value DescribeRecordAction ServiceCatalog DescribeRecord action.
  * \value DescribeServiceActionAction ServiceCatalog DescribeServiceAction action.
+ * \value DescribeServiceActionExecutionParametersAction ServiceCatalog DescribeServiceActionExecutionParameters action.
  * \value DescribeTagOptionAction ServiceCatalog DescribeTagOption action.
  * \value DisableAWSOrganizationsAccessAction ServiceCatalog DisableAWSOrganizationsAccess action.
+ * \value DisassociateBudgetFromResourceAction ServiceCatalog DisassociateBudgetFromResource action.
  * \value DisassociatePrincipalFromPortfolioAction ServiceCatalog DisassociatePrincipalFromPortfolio action.
  * \value DisassociateProductFromPortfolioAction ServiceCatalog DisassociateProductFromPortfolio action.
  * \value DisassociateServiceActionFromProvisioningArtifactAction ServiceCatalog DisassociateServiceActionFromProvisioningArtifact action.
@@ -84,6 +87,7 @@ namespace ServiceCatalog {
  * \value ExecuteProvisionedProductServiceActionAction ServiceCatalog ExecuteProvisionedProductServiceAction action.
  * \value GetAWSOrganizationsAccessStatusAction ServiceCatalog GetAWSOrganizationsAccessStatus action.
  * \value ListAcceptedPortfolioSharesAction ServiceCatalog ListAcceptedPortfolioShares action.
+ * \value ListBudgetsForResourceAction ServiceCatalog ListBudgetsForResource action.
  * \value ListConstraintsForPortfolioAction ServiceCatalog ListConstraintsForPortfolio action.
  * \value ListLaunchPathsAction ServiceCatalog ListLaunchPaths action.
  * \value ListOrganizationPortfolioAccessAction ServiceCatalog ListOrganizationPortfolioAccess action.
@@ -98,6 +102,7 @@ namespace ServiceCatalog {
  * \value ListResourcesForTagOptionAction ServiceCatalog ListResourcesForTagOption action.
  * \value ListServiceActionsAction ServiceCatalog ListServiceActions action.
  * \value ListServiceActionsForProvisioningArtifactAction ServiceCatalog ListServiceActionsForProvisioningArtifact action.
+ * \value ListStackInstancesForProvisionedProductAction ServiceCatalog ListStackInstancesForProvisionedProduct action.
  * \value ListTagOptionsAction ServiceCatalog ListTagOptions action.
  * \value ProvisionProductAction ServiceCatalog ProvisionProduct action.
  * \value RejectPortfolioShareAction ServiceCatalog RejectPortfolioShare action.
@@ -110,6 +115,7 @@ namespace ServiceCatalog {
  * \value UpdatePortfolioAction ServiceCatalog UpdatePortfolio action.
  * \value UpdateProductAction ServiceCatalog UpdateProduct action.
  * \value UpdateProvisionedProductAction ServiceCatalog UpdateProvisionedProduct action.
+ * \value UpdateProvisionedProductPropertiesAction ServiceCatalog UpdateProvisionedProductProperties action.
  * \value UpdateProvisioningArtifactAction ServiceCatalog UpdateProvisioningArtifact action.
  * \value UpdateServiceActionAction ServiceCatalog UpdateServiceAction action.
  * \value UpdateTagOptionAction ServiceCatalog UpdateTagOption action.

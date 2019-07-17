@@ -42,6 +42,8 @@ class DeleteTagsRequest;
 class DeleteTagsResponse;
 class DescribeFileSystemsRequest;
 class DescribeFileSystemsResponse;
+class DescribeLifecycleConfigurationRequest;
+class DescribeLifecycleConfigurationResponse;
 class DescribeMountTargetSecurityGroupsRequest;
 class DescribeMountTargetSecurityGroupsResponse;
 class DescribeMountTargetsRequest;
@@ -50,6 +52,8 @@ class DescribeTagsRequest;
 class DescribeTagsResponse;
 class ModifyMountTargetSecurityGroupsRequest;
 class ModifyMountTargetSecurityGroupsResponse;
+class PutLifecycleConfigurationRequest;
+class PutLifecycleConfigurationResponse;
 class UpdateFileSystemRequest;
 class UpdateFileSystemResponse;
 
@@ -76,10 +80,12 @@ public slots:
     DeleteMountTargetResponse * deleteMountTarget(const DeleteMountTargetRequest &request);
     DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
     DescribeFileSystemsResponse * describeFileSystems(const DescribeFileSystemsRequest &request);
+    DescribeLifecycleConfigurationResponse * describeLifecycleConfiguration(const DescribeLifecycleConfigurationRequest &request);
     DescribeMountTargetSecurityGroupsResponse * describeMountTargetSecurityGroups(const DescribeMountTargetSecurityGroupsRequest &request);
     DescribeMountTargetsResponse * describeMountTargets(const DescribeMountTargetsRequest &request);
     DescribeTagsResponse * describeTags(const DescribeTagsRequest &request);
     ModifyMountTargetSecurityGroupsResponse * modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request);
+    PutLifecycleConfigurationResponse * putLifecycleConfiguration(const PutLifecycleConfigurationRequest &request);
     UpdateFileSystemResponse * updateFileSystem(const UpdateFileSystemRequest &request);
 
 private:

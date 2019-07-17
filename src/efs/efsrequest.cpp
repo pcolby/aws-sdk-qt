@@ -43,10 +43,12 @@ namespace EFS {
  * \value DeleteMountTargetAction EFS DeleteMountTarget action.
  * \value DeleteTagsAction EFS DeleteTags action.
  * \value DescribeFileSystemsAction EFS DescribeFileSystems action.
+ * \value DescribeLifecycleConfigurationAction EFS DescribeLifecycleConfiguration action.
  * \value DescribeMountTargetSecurityGroupsAction EFS DescribeMountTargetSecurityGroups action.
  * \value DescribeMountTargetsAction EFS DescribeMountTargets action.
  * \value DescribeTagsAction EFS DescribeTags action.
  * \value ModifyMountTargetSecurityGroupsAction EFS ModifyMountTargetSecurityGroups action.
+ * \value PutLifecycleConfigurationAction EFS PutLifecycleConfiguration action.
  * \value UpdateFileSystemAction EFS UpdateFileSystem action.
  */
 

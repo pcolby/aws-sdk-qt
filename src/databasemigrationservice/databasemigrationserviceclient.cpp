@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "addtagstoresourcerequest.h"
 #include "addtagstoresourceresponse.h"
+#include "applypendingmaintenanceactionrequest.h"
+#include "applypendingmaintenanceactionresponse.h"
 #include "createendpointrequest.h"
 #include "createendpointresponse.h"
 #include "createeventsubscriptionrequest.h"
@@ -63,6 +65,8 @@
 #include "describeeventsresponse.h"
 #include "describeorderablereplicationinstancesrequest.h"
 #include "describeorderablereplicationinstancesresponse.h"
+#include "describependingmaintenanceactionsrequest.h"
+#include "describependingmaintenanceactionsresponse.h"
 #include "describerefreshschemasstatusrequest.h"
 #include "describerefreshschemasstatusresponse.h"
 #include "describereplicationinstancetasklogsrequest.h"
@@ -141,7 +145,7 @@ namespace DatabaseMigrationService {
  * 
  *  PostgreSQL>
  * 
- *  For more information about AWS DMS, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
+ *  For more information about AWS DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
  *  AWS Database Migration Service?</a> in the <i>AWS Database Migration User Guide.</i>
  */
 
@@ -215,6 +219,19 @@ AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(co
 
 /*!
  * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * ApplyPendingMaintenanceActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies a pending maintenance action to a resource (for example, to a replication
+ */
+ApplyPendingMaintenanceActionResponse * DatabaseMigrationServiceClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
+{
+    return qobject_cast<ApplyPendingMaintenanceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
  * CreateEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -249,8 +266,8 @@ CreateEndpointResponse * DatabaseMigrationServiceClient::createEndpoint(const Cr
  * account>
  *
  * For more information about AWS DMS events, see <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in the
- * <i>AWS Database Migration Service User Guide.</i>
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in
+ * the <i>AWS Database Migration Service User Guide.</i>
  */
 CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
@@ -461,7 +478,7 @@ DescribeEndpointsResponse * DatabaseMigrationServiceClient::describeEndpoints(co
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the
- * event categories and source types in <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
+ * event categories and source types in <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
  * with Events and Notifications</a> in the <i>AWS Database Migration Service User Guide.</i>
  */
 DescribeEventCategoriesResponse * DatabaseMigrationServiceClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
@@ -495,7 +512,7 @@ DescribeEventSubscriptionsResponse * DatabaseMigrationServiceClient::describeEve
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists events for a given source identifier and source type. You can also specify a start and end time. For more
- * information on AWS DMS events, see <a href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
+ * information on AWS DMS events, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working
  * with Events and Notifications</a> in the <i>AWS Database Migration User Guide.</i>
  */
 DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const DescribeEventsRequest &request)
@@ -514,6 +531,19 @@ DescribeEventsResponse * DatabaseMigrationServiceClient::describeEvents(const De
 DescribeOrderableReplicationInstancesResponse * DatabaseMigrationServiceClient::describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request)
 {
     return qobject_cast<DescribeOrderableReplicationInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribePendingMaintenanceActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * For internal use
+ */
+DescribePendingMaintenanceActionsResponse * DatabaseMigrationServiceClient::describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request)
+{
+    return qobject_cast<DescribePendingMaintenanceActionsResponse *>(send(request));
 }
 
 /*!
@@ -723,7 +753,7 @@ ModifyReplicationSubnetGroupResponse * DatabaseMigrationServiceClient::modifyRep
  * </p
  *
  * For more information about AWS DMS tasks, see <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks</a> in the <i>AWS
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks</a> in the <i>AWS
  * Database Migration Service User
  */
 ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicationTask(const ModifyReplicationTaskRequest &request)
@@ -796,7 +826,7 @@ RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromR
  * task>
  *
  * For more information about AWS DMS tasks, see <a
- * href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the <i>AWS
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the <i>AWS
  * Database Migration Service User Guide.</i>
  */
 StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationTask(const StartReplicationTaskRequest &request)

@@ -38,27 +38,27 @@ namespace EC2 {
  * 
  *  faster>
  * 
- *  To learn more about Amazon EC2, Amazon EBS, and Amazon VPC, see the following
+ *  To learn more, see the following
  * 
  *  resources> <ul> <li>
  * 
- *  <a href="http://aws.amazon.com/ec2">Amazon EC2 product page</a>
+ *  Amazon EC2: <a href="http://aws.amazon.com/ec2">Amazon EC2 product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/ec2">Amazon EC2 documentation</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://aws.amazon.com/documentation/ec2">Amazon EC2 documentation</a>
+ *  Amazon EBS: <a href="http://aws.amazon.com/ebs">Amazon EBS product page</a>, <a
+ *  href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html">Amazon EBS documentation</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://aws.amazon.com/ebs">Amazon EBS product page</a>
+ *  Amazon VPC: <a href="http://aws.amazon.com/vpc">Amazon VPC product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpc">Amazon VPC documentation</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://aws.amazon.com/vpc">Amazon VPC product page</a>
- * 
- *  </p </li> <li>
- * 
- *  <a href="http://aws.amazon.com/documentation/vpc">Amazon VPC documentation</a>
+ *  AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
+ *  href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
  *
  * \sa Ec2Client::deleteDhcpOptions
  */

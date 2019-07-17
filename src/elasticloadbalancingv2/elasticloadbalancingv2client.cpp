@@ -129,15 +129,15 @@ namespace ElasticLoadBalancingv2 {
  *  Balancers>
  * 
  *  An Application Load Balancer makes routing and load balancing decisions at the application layer (HTTP/HTTPS). A Network
- *  Load Balancer makes routing and load balancing decisions at the transport layer (TCP). Both Application Load Balancers
- *  and Network Load Balancers can route requests to one or more ports on each EC2 instance or container instance in your
- *  virtual private cloud
+ *  Load Balancer makes routing and load balancing decisions at the transport layer (TCP/TLS). Both Application Load
+ *  Balancers and Network Load Balancers can route requests to one or more ports on each EC2 instance or container instance
+ *  in your virtual private cloud
  * 
  *  (VPC)>
  * 
  *  A Classic Load Balancer makes routing and load balancing decisions either at the transport layer (TCP/SSL) or the
  *  application layer (HTTP/HTTPS), and supports either EC2-Classic or a VPC. For more information, see the <a
- *  href="http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
+ *  href="https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/">Elastic Load Balancing User
  * 
  *  Guide</a>>
  * 
@@ -241,16 +241,23 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds the specified certificate to the specified secure
+ * Adds the specified SSL server certificate to the certificate list for the specified HTTPS
  *
  * listener>
  *
- * If the certificate was already added, the call is successful but the certificate is not added
+ * If the certificate in already in the certificate list, the call is successful but the certificate is not added
  *
  * again>
  *
- * To list the certificates for your listener, use <a>DescribeListenerCertificates</a>. To remove certificates from your
- * listener, use <a>RemoveListenerCertificates</a>. To specify the default SSL server certificate, use
+ * To get the certificate list for a listener, use <a>DescribeListenerCertificates</a>. To remove certificates from the
+ * certificate list for a listener, use <a>RemoveListenerCertificates</a>. To replace the default certificate for a
+ * listener, use
+ *
+ * <a>ModifyListener</a>>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#https-listener-certificates">SSL
+ * Certificates</a> in the <i>Application Load Balancers
  */
 AddListenerCertificatesResponse * ElasticLoadBalancingv2Client::addListenerCertificates(const AddListenerCertificatesRequest &request)
 {
@@ -301,9 +308,9 @@ AddTagsResponse * ElasticLoadBalancingv2Client::addTags(const AddTagsRequest &re
  * succeeds>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html">Listeners for
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html">Listeners for
  * Your Application Load Balancers</a> in the <i>Application Load Balancers Guide</i> and <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html">Listeners for Your
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html">Listeners for Your
  * Network Load Balancers</a> in the <i>Network Load Balancers
  */
 CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const CreateListenerRequest &request)
@@ -332,9 +339,9 @@ CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const Crea
  * <a>DeleteLoadBalancer</a>>
  *
  * For limit information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html">Limits for Your
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html">Limits for Your
  * Application Load Balancer</a> in the <i>Application Load Balancers Guide</i> and <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
  * Load Balancer</a> in the <i>Network Load Balancers
  *
  * Guide</i>>
@@ -345,9 +352,9 @@ CreateListenerResponse * ElasticLoadBalancingv2Client::createListener(const Crea
  * succeeds>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html">Application
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html">Application
  * Load Balancers</a> in the <i>Application Load Balancers Guide</i> and <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html">Network Load
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html">Network Load
  * Balancers</a> in the <i>Network Load Balancers
  */
 CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(const CreateLoadBalancerRequest &request)
@@ -368,7 +375,7 @@ CreateLoadBalancerResponse * ElasticLoadBalancingv2Client::createLoadBalancer(co
  * Rules are evaluated in priority order, from the lowest value to the highest value. When the conditions for a rule are
  * met, its actions are performed. If the conditions for no rules are met, the actions for the default rule are performed.
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules">Listener
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules">Listener
  * Rules</a> in the <i>Application Load Balancers
  *
  * Guide</i>>
@@ -410,10 +417,10 @@ CreateRuleResponse * ElasticLoadBalancingv2Client::createRule(const CreateRuleRe
  * succeeds>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html">Target Groups
- * for Your Application Load Balancers</a> in the <i>Application Load Balancers Guide</i> or <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html">Target Groups for
- * Your Network Load Balancers</a> in the <i>Network Load Balancers
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html">Target
+ * Groups for Your Application Load Balancers</a> in the <i>Application Load Balancers Guide</i> or <a
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html">Target Groups
+ * for Your Network Load Balancers</a> in the <i>Network Load Balancers
  */
 CreateTargetGroupResponse * ElasticLoadBalancingv2Client::createTargetGroup(const CreateTargetGroupRequest &request)
 {
@@ -516,9 +523,9 @@ DeregisterTargetsResponse * ElasticLoadBalancingv2Client::deregisterTargets(cons
  * account>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html">Limits for Your
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html">Limits for Your
  * Application Load Balancers</a> in the <i>Application Load Balancer Guide</i> or <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html">Limits for Your Network
  * Load Balancers</a> in the <i>Network Load Balancers
  */
 DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLimits(const DescribeAccountLimitsRequest &request)
@@ -532,7 +539,18 @@ DescribeAccountLimitsResponse * ElasticLoadBalancingv2Client::describeAccountLim
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the certificates for the specified secure
+ * Describes the default certificate and the certificate list for the specified HTTPS
+ *
+ * listener>
+ *
+ * If the default certificate is also in the certificate list, it appears twice in the results (once with
+ * <code>IsDefault</code> set to true and once with <code>IsDefault</code> set to
+ *
+ * false)>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#https-listener-certificates">SSL
+ * Certificates</a> in the <i>Application Load Balancers
  */
 DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeListenerCertificates(const DescribeListenerCertificatesRequest &request)
 {
@@ -547,6 +565,11 @@ DescribeListenerCertificatesResponse * ElasticLoadBalancingv2Client::describeLis
  *
  * Describes the specified listeners or the listeners for the specified Application Load Balancer or Network Load Balancer.
  * You must specify either a load balancer or one or more
+ *
+ * listeners>
+ *
+ * For an HTTPS or TLS listener, the output includes the default certificate for the listener. To describe the certificate
+ * list for the listener, use
  */
 DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(const DescribeListenersRequest &request)
 {
@@ -564,9 +587,9 @@ DescribeListenersResponse * ElasticLoadBalancingv2Client::describeListeners(cons
  * Balancer>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes">Load
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes">Load
  * Balancer Attributes</a> in the <i>Application Load Balancers Guide</i> or <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#load-balancer-attributes">Load
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#load-balancer-attributes">Load
  * Balancer Attributes</a> in the <i>Network Load Balancers
  */
 DescribeLoadBalancerAttributesResponse * ElasticLoadBalancingv2Client::describeLoadBalancerAttributes(const DescribeLoadBalancerAttributesRequest &request)
@@ -616,7 +639,7 @@ DescribeRulesResponse * ElasticLoadBalancingv2Client::describeRules(const Descri
  * negotiation>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies">Security
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies">Security
  * Policies</a> in the <i>Application Load Balancers
  */
 DescribeSSLPoliciesResponse * ElasticLoadBalancingv2Client::describeSSLPolicies(const DescribeSSLPoliciesRequest &request)
@@ -649,9 +672,9 @@ DescribeTagsResponse * ElasticLoadBalancingv2Client::describeTags(const Describe
  * group>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes">Target
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes">Target
  * Group Attributes</a> in the <i>Application Load Balancers Guide</i> or <a
- * href="http://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#target-group-attributes">Target
+ * href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#target-group-attributes">Target
  * Group Attributes</a> in the <i>Network Load Balancers
  */
 DescribeTargetGroupAttributesResponse * ElasticLoadBalancingv2Client::describeTargetGroupAttributes(const DescribeTargetGroupAttributesRequest &request)
@@ -702,9 +725,9 @@ DescribeTargetHealthResponse * ElasticLoadBalancingv2Client::describeTargetHealt
  *
  * listener>
  *
- * Any properties that you do not specify retain their current values. However, changing the protocol from HTTPS to HTTP
- * removes the security policy and SSL certificate properties. If you change the protocol from HTTP to HTTPS, you must add
- * the security policy and server
+ * Any properties that you do not specify retain their current values. However, changing the protocol from HTTPS to HTTP,
+ * or from TLS to TCP, removes the security policy and default certificate properties. If you change the protocol from HTTP
+ * to HTTPS, or from TCP to TLS, you must add the security policy and default certificate
  */
 ModifyListenerResponse * ElasticLoadBalancingv2Client::modifyListener(const ModifyListenerRequest &request)
 {
@@ -818,7 +841,7 @@ RegisterTargetsResponse * ElasticLoadBalancingv2Client::registerTargets(const Re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified certificate from the specified secure
+ * Removes the specified certificate from the certificate list for the specified HTTPS
  *
  * listener>
  *
@@ -857,10 +880,6 @@ RemoveTagsResponse * ElasticLoadBalancingv2Client::removeTags(const RemoveTagsRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the type of IP addresses used by the subnets of the specified Application Load Balancer or Network Load
- *
- * Balancer>
- *
- * Network Load Balancers must use
  */
 SetIpAddressTypeResponse * ElasticLoadBalancingv2Client::setIpAddressType(const SetIpAddressTypeRequest &request)
 {

@@ -312,6 +312,10 @@ HEADERS += \
     listsubscriptiondefinitionversionsrequest_p.h \
     listsubscriptiondefinitionversionsresponse.h \
     listsubscriptiondefinitionversionsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     resetdeploymentsrequest.h \
     resetdeploymentsrequest_p.h \
     resetdeploymentsresponse.h \
@@ -324,6 +328,14 @@ HEADERS += \
     stopbulkdeploymentrequest_p.h \
     stopbulkdeploymentresponse.h \
     stopbulkdeploymentresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateconnectivityinforequest.h \
     updateconnectivityinforequest_p.h \
     updateconnectivityinforesponse.h \
@@ -517,12 +529,18 @@ SOURCES += \
     listsubscriptiondefinitionsresponse.cpp \
     listsubscriptiondefinitionversionsrequest.cpp \
     listsubscriptiondefinitionversionsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     resetdeploymentsrequest.cpp \
     resetdeploymentsresponse.cpp \
     startbulkdeploymentrequest.cpp \
     startbulkdeploymentresponse.cpp \
     stopbulkdeploymentrequest.cpp \
     stopbulkdeploymentresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateconnectivityinforequest.cpp \
     updateconnectivityinforesponse.cpp \
     updateconnectordefinitionrequest.cpp \

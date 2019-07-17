@@ -51,8 +51,11 @@ public:
         DescribeApplicationAction,
         DiscoverInputSchemaAction,
         ListApplicationsAction,
+        ListTagsForResourceAction,
         StartApplicationAction,
         StopApplicationAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateApplicationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

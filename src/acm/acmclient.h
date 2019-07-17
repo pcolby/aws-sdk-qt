@@ -46,6 +46,8 @@ class ListTagsForCertificateRequest;
 class ListTagsForCertificateResponse;
 class RemoveTagsFromCertificateRequest;
 class RemoveTagsFromCertificateResponse;
+class RenewCertificateRequest;
+class RenewCertificateResponse;
 class RequestCertificateRequest;
 class RequestCertificateResponse;
 class ResendValidationEmailRequest;
@@ -78,6 +80,7 @@ public slots:
     ListCertificatesResponse * listCertificates(const ListCertificatesRequest &request);
     ListTagsForCertificateResponse * listTagsForCertificate(const ListTagsForCertificateRequest &request);
     RemoveTagsFromCertificateResponse * removeTagsFromCertificate(const RemoveTagsFromCertificateRequest &request);
+    RenewCertificateResponse * renewCertificate(const RenewCertificateRequest &request);
     RequestCertificateResponse * requestCertificate(const RequestCertificateRequest &request);
     ResendValidationEmailResponse * resendValidationEmail(const ResendValidationEmailRequest &request);
     UpdateCertificateOptionsResponse * updateCertificateOptions(const UpdateCertificateOptionsRequest &request);

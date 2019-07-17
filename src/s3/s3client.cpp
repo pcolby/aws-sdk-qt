@@ -372,6 +372,11 @@ DeleteBucketResponse * S3Client::deleteBucket(const DeleteBucketRequest &request
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an analytics configuration for the bucket (specified by the analytics configuration
+ *
+ * ID)>
+ *
+ * To use this operation, you must have permissions to perform the s3:PutAnalyticsConfiguration action. The bucket owner
+ * has this permission by default. The bucket owner can grant this permission to others.
  */
 DeleteBucketAnalyticsConfigurationResponse * S3Client::deleteBucketAnalyticsConfiguration(const DeleteBucketAnalyticsConfigurationRequest &request)
 {
@@ -462,8 +467,8 @@ DeleteBucketPolicyResponse * S3Client::deleteBucketPolicy(const DeleteBucketPoli
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the replication configuration from the bucket. For information about replication configuration, see <a href="
- * https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">Cross-Region Replication (CRR)</a> in the <i>Amazon S3
+ * Deletes the replication configuration from the bucket. For information about replication configuration, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">Cross-Region Replication (CRR)</a> in the <i>Amazon S3
  * Developer Guide</i>.
  */
 DeleteBucketReplicationResponse * S3Client::deleteBucketReplication(const DeleteBucketReplicationRequest &request)
@@ -635,7 +640,7 @@ GetBucketInventoryConfigurationResponse * S3Client::getBucketInventoryConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deprecated, see the GetBucketLifecycleConfiguration
+ * No longer used, see the GetBucketLifecycleConfiguration
  */
 GetBucketLifecycleResponse * S3Client::getBucketLifecycle(const GetBucketLifecycleRequest &request)
 {
@@ -701,7 +706,7 @@ GetBucketMetricsConfigurationResponse * S3Client::getBucketMetricsConfiguration(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deprecated, see the GetBucketNotificationConfiguration
+ * No longer used, see the GetBucketNotificationConfiguration
  */
 GetBucketNotificationResponse * S3Client::getBucketNotification(const GetBucketNotificationRequest &request)
 {
@@ -862,7 +867,7 @@ GetObjectLegalHoldResponse * S3Client::getObjectLegalHold(const GetObjectLegalHo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the Object Lock configuration for a bucket. The rule specified in the Object Lock configuration will be applied by
+ * Gets the object lock configuration for a bucket. The rule specified in the object lock configuration will be applied by
  * default to every new object placed in the specified
  */
 GetObjectLockConfigurationResponse * S3Client::getObjectLockConfiguration(const GetObjectLockConfigurationRequest &request)
@@ -1166,7 +1171,7 @@ PutBucketInventoryConfigurationResponse * S3Client::putBucketInventoryConfigurat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deprecated, see the PutBucketLifecycleConfiguration
+ * No longer used, see the PutBucketLifecycleConfiguration
  */
 PutBucketLifecycleResponse * S3Client::putBucketLifecycle(const PutBucketLifecycleRequest &request)
 {
@@ -1219,7 +1224,7 @@ PutBucketMetricsConfigurationResponse * S3Client::putBucketMetricsConfiguration(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deprecated, see the PutBucketNotificationConfiguraiton
+ * No longer used, see the PutBucketNotificationConfiguration
  */
 PutBucketNotificationResponse * S3Client::putBucketNotification(const PutBucketNotificationRequest &request)
 {
@@ -1245,7 +1250,7 @@ PutBucketNotificationConfigurationResponse * S3Client::putBucketNotificationConf
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Replaces a policy on a bucket. If the bucket already has a policy, the one in this request completely replaces
+ * Applies an Amazon S3 bucket policy to an Amazon S3
  */
 PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest &request)
 {
@@ -1258,8 +1263,8 @@ PutBucketPolicyResponse * S3Client::putBucketPolicy(const PutBucketPolicyRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a replication configuration or replaces an existing one. For more information, see <a href="
- * https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">Cross-Region Replication (CRR)</a> in the <i>Amazon S3
+ * Creates a replication configuration or replaces an existing one. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html">Cross-Region Replication (CRR)</a> in the <i>Amazon S3
  * Developer Guide</i>.
  */
 PutBucketReplicationResponse * S3Client::putBucketReplication(const PutBucketReplicationRequest &request)
@@ -1366,7 +1371,7 @@ PutObjectLegalHoldResponse * S3Client::putObjectLegalHold(const PutObjectLegalHo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Places an Object Lock configuration on the specified bucket. The rule specified in the Object Lock configuration will be
+ * Places an object lock configuration on the specified bucket. The rule specified in the object lock configuration will be
  * applied by default to every new object placed in the specified
  */
 PutObjectLockConfigurationResponse * S3Client::putObjectLockConfiguration(const PutObjectLockConfigurationRequest &request)

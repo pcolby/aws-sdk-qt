@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "deletealarmsrequest.h"
 #include "deletealarmsresponse.h"
+#include "deleteanomalydetectorrequest.h"
+#include "deleteanomalydetectorresponse.h"
 #include "deletedashboardsrequest.h"
 #include "deletedashboardsresponse.h"
 #include "describealarmhistoryrequest.h"
@@ -31,6 +33,8 @@
 #include "describealarmsresponse.h"
 #include "describealarmsformetricrequest.h"
 #include "describealarmsformetricresponse.h"
+#include "describeanomalydetectorsrequest.h"
+#include "describeanomalydetectorsresponse.h"
 #include "disablealarmactionsrequest.h"
 #include "disablealarmactionsresponse.h"
 #include "enablealarmactionsrequest.h"
@@ -47,6 +51,10 @@
 #include "listdashboardsresponse.h"
 #include "listmetricsrequest.h"
 #include "listmetricsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "putanomalydetectorrequest.h"
+#include "putanomalydetectorresponse.h"
 #include "putdashboardrequest.h"
 #include "putdashboardresponse.h"
 #include "putmetricalarmrequest.h"
@@ -55,6 +63,10 @@
 #include "putmetricdataresponse.h"
 #include "setalarmstaterequest.h"
 #include "setalarmstateresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -162,6 +174,19 @@ DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest 
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DeleteAnomalyDetectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified anomaly detection model from your
+ */
+DeleteAnomalyDetectorResponse * CloudWatchClient::deleteAnomalyDetector(const DeleteAnomalyDetectorRequest &request)
+{
+    return qobject_cast<DeleteAnomalyDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * DeleteDashboardsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -221,6 +246,20 @@ DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(cons
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DescribeAnomalyDetectorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the anomaly detection models that you have created in your account. You can list all models in your account or
+ * filter the results to only the models that are related to a certain namespace, metric name, or metric
+ */
+DescribeAnomalyDetectorsResponse * CloudWatchClient::describeAnomalyDetectors(const DescribeAnomalyDetectorsRequest &request)
+{
+    return qobject_cast<DescribeAnomalyDetectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * DisableAlarmActionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -275,7 +314,7 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
  * statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you
  * could divide the Errors metric by the Invocations metric to get an error rate time series. For more information about
  * metric math expressions, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Metric
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Metric
  * Math Syntax and Functions</a> in the <i>Amazon CloudWatch User
  *
  * Guide</i>>
@@ -390,7 +429,7 @@ GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataReque
  * 2016>
  *
  * For information about metrics and dimensions supported by AWS services, see the <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html">Amazon CloudWatch Metrics
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CW_Support_For_AWS.html">Amazon CloudWatch Metrics
  * and Dimensions Reference</a> in the <i>Amazon CloudWatch User
  */
 GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMetricStatisticsRequest &request)
@@ -476,6 +515,39 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Displays the tags associated with a CloudWatch resource. Alarms support
+ */
+ListTagsForResourceResponse * CloudWatchClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutAnomalyDetectorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an anomaly detection model for a CloudWatch metric. You can use the model to display a band of expected normal
+ * values when the metric is
+ *
+ * graphed>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Anomaly_Detection.html">CloudWatch
+ * Anomaly
+ */
+PutAnomalyDetectorResponse * CloudWatchClient::putAnomalyDetector(const PutAnomalyDetectorRequest &request)
+{
+    return qobject_cast<PutAnomalyDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * PutDashboardResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -485,7 +557,7 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
  *
  * here>
  *
- * There is no limit to the number of dashboards in your account. All dashboards in your account are global, not
+ * All dashboards in your account are global, not
  *
  * region-specific>
  *
@@ -512,9 +584,13 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates an alarm and associates it with the specified metric or metric math
+ * Creates or updates an alarm and associates it with the specified metric, metric math expression, or anomaly detection
  *
- * expression>
+ * model>
+ *
+ * Alarms based on anomaly detection models cannot have Auto Scaling
+ *
+ * actions>
  *
  * When this operation creates an alarm, the alarm state is immediately set to <code>INSUFFICIENT_DATA</code>. The alarm is
  * then evaluated and its state is set appropriately. Any actions associated with the new state are then
@@ -546,7 +622,7 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  *
  * action> </li> <li>
  *
- * <code>ec2:DescribeInstanceRecoveryAttribute</code> and <code>ec2:RecoverInstances</code> for alarms with recover
+ * No specific permissions are needed for alarms with recover
  *
  * action> </li> </ul>
  *
@@ -570,7 +646,7 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  * The first time you create an alarm in the AWS Management Console, the CLI, or by using the PutMetricAlarm API,
  * CloudWatch creates the necessary service-linked role for you. The service-linked role is called
  * <code>AWSServiceRoleForCloudWatchEvents</code>. For more information, see <a
- * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">AWS
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">AWS
  * service-linked
  */
 PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRequest &request)
@@ -609,9 +685,9 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * supported>
  *
- * You can use up to 10 dimensions per metric to further clarify what data the metric collects. For more information about
- * specifying dimensions, see <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publishing Metrics</a> in
+ * You can use up to 10 dimensions per metric to further clarify what data the metric collects. Each dimension consists of
+ * a Name and Value pair. For more information about specifying dimensions, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publishing Metrics</a> in
  * the <i>Amazon CloudWatch User
  *
  * Guide</i>>
@@ -653,6 +729,48 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
 SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateRequest &request)
 {
     return qobject_cast<SetAlarmStateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Assigns one or more tags (key-value pairs) to the specified CloudWatch resource. Tags can help you organize and
+ * categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or
+ * change only resources with certain tag values. In CloudWatch, alarms can be
+ *
+ * tagged>
+ *
+ * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
+ *
+ * characters>
+ *
+ * You can use the <code>TagResource</code> action with a resource that already has tags. If you specify a new tag key for
+ * the resource, this tag is appended to the list of tags associated with the resource. If you specify a tag key that is
+ * already associated with the resource, the new tag value that you specify replaces the previous value for that
+ *
+ * tag>
+ *
+ * You can associate as many as 50 tags with a
+ */
+TagResourceResponse * CloudWatchClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from the specified
+ */
+UntagResourceResponse * CloudWatchClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -116,6 +116,10 @@ HEADERS += \
     listresolversrequest_p.h \
     listresolversresponse.h \
     listresolversresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtypesrequest.h \
     listtypesrequest_p.h \
     listtypesresponse.h \
@@ -124,6 +128,14 @@ HEADERS += \
     startschemacreationrequest_p.h \
     startschemacreationresponse.h \
     startschemacreationresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateapikeyrequest.h \
     updateapikeyrequest_p.h \
     updateapikeyresponse.h \
@@ -203,10 +215,16 @@ SOURCES += \
     listresolversbyfunctionresponse.cpp \
     listresolversrequest.cpp \
     listresolversresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtypesrequest.cpp \
     listtypesresponse.cpp \
     startschemacreationrequest.cpp \
     startschemacreationresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateapikeyrequest.cpp \
     updateapikeyresponse.cpp \
     updatedatasourcerequest.cpp \

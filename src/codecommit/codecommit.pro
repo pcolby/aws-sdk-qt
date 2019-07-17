@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    batchdescribemergeconflictsrequest.h \
+    batchdescribemergeconflictsrequest_p.h \
+    batchdescribemergeconflictsresponse.h \
+    batchdescribemergeconflictsresponse_p.h \
     batchgetrepositoriesrequest.h \
     batchgetrepositoriesrequest_p.h \
     batchgetrepositoriesresponse.h \
@@ -24,6 +28,10 @@ HEADERS += \
     createbranchrequest_p.h \
     createbranchresponse.h \
     createbranchresponse_p.h \
+    createcommitrequest.h \
+    createcommitrequest_p.h \
+    createcommitresponse.h \
+    createcommitresponse_p.h \
     createpullrequestrequest.h \
     createpullrequestrequest_p.h \
     createpullrequestresponse.h \
@@ -32,6 +40,10 @@ HEADERS += \
     createrepositoryrequest_p.h \
     createrepositoryresponse.h \
     createrepositoryresponse_p.h \
+    createunreferencedmergecommitrequest.h \
+    createunreferencedmergecommitrequest_p.h \
+    createunreferencedmergecommitresponse.h \
+    createunreferencedmergecommitresponse_p.h \
     deletebranchrequest.h \
     deletebranchrequest_p.h \
     deletebranchresponse.h \
@@ -48,6 +60,10 @@ HEADERS += \
     deleterepositoryrequest_p.h \
     deleterepositoryresponse.h \
     deleterepositoryresponse_p.h \
+    describemergeconflictsrequest.h \
+    describemergeconflictsrequest_p.h \
+    describemergeconflictsresponse.h \
+    describemergeconflictsresponse_p.h \
     describepullrequesteventsrequest.h \
     describepullrequesteventsrequest_p.h \
     describepullrequesteventsresponse.h \
@@ -88,10 +104,18 @@ HEADERS += \
     getfolderrequest_p.h \
     getfolderresponse.h \
     getfolderresponse_p.h \
+    getmergecommitrequest.h \
+    getmergecommitrequest_p.h \
+    getmergecommitresponse.h \
+    getmergecommitresponse_p.h \
     getmergeconflictsrequest.h \
     getmergeconflictsrequest_p.h \
     getmergeconflictsresponse.h \
     getmergeconflictsresponse_p.h \
+    getmergeoptionsrequest.h \
+    getmergeoptionsrequest_p.h \
+    getmergeoptionsresponse.h \
+    getmergeoptionsresponse_p.h \
     getpullrequestrequest.h \
     getpullrequestrequest_p.h \
     getpullrequestresponse.h \
@@ -116,10 +140,34 @@ HEADERS += \
     listrepositoriesrequest_p.h \
     listrepositoriesresponse.h \
     listrepositoriesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
+    mergebranchesbyfastforwardrequest.h \
+    mergebranchesbyfastforwardrequest_p.h \
+    mergebranchesbyfastforwardresponse.h \
+    mergebranchesbyfastforwardresponse_p.h \
+    mergebranchesbysquashrequest.h \
+    mergebranchesbysquashrequest_p.h \
+    mergebranchesbysquashresponse.h \
+    mergebranchesbysquashresponse_p.h \
+    mergebranchesbythreewayrequest.h \
+    mergebranchesbythreewayrequest_p.h \
+    mergebranchesbythreewayresponse.h \
+    mergebranchesbythreewayresponse_p.h \
     mergepullrequestbyfastforwardrequest.h \
     mergepullrequestbyfastforwardrequest_p.h \
     mergepullrequestbyfastforwardresponse.h \
     mergepullrequestbyfastforwardresponse_p.h \
+    mergepullrequestbysquashrequest.h \
+    mergepullrequestbysquashrequest_p.h \
+    mergepullrequestbysquashresponse.h \
+    mergepullrequestbysquashresponse_p.h \
+    mergepullrequestbythreewayrequest.h \
+    mergepullrequestbythreewayrequest_p.h \
+    mergepullrequestbythreewayresponse.h \
+    mergepullrequestbythreewayresponse_p.h \
     postcommentforcomparedcommitrequest.h \
     postcommentforcomparedcommitrequest_p.h \
     postcommentforcomparedcommitresponse.h \
@@ -140,10 +188,18 @@ HEADERS += \
     putrepositorytriggersrequest_p.h \
     putrepositorytriggersresponse.h \
     putrepositorytriggersresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     testrepositorytriggersrequest.h \
     testrepositorytriggersrequest_p.h \
     testrepositorytriggersresponse.h \
     testrepositorytriggersresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatecommentrequest.h \
     updatecommentrequest_p.h \
     updatecommentresponse.h \
@@ -174,6 +230,8 @@ HEADERS += \
     updaterepositorynameresponse_p.h \
 
 SOURCES += \
+    batchdescribemergeconflictsrequest.cpp \
+    batchdescribemergeconflictsresponse.cpp \
     batchgetrepositoriesrequest.cpp \
     batchgetrepositoriesresponse.cpp \
     codecommitclient.cpp \
@@ -181,10 +239,14 @@ SOURCES += \
     codecommitresponse.cpp \
     createbranchrequest.cpp \
     createbranchresponse.cpp \
+    createcommitrequest.cpp \
+    createcommitresponse.cpp \
     createpullrequestrequest.cpp \
     createpullrequestresponse.cpp \
     createrepositoryrequest.cpp \
     createrepositoryresponse.cpp \
+    createunreferencedmergecommitrequest.cpp \
+    createunreferencedmergecommitresponse.cpp \
     deletebranchrequest.cpp \
     deletebranchresponse.cpp \
     deletecommentcontentrequest.cpp \
@@ -193,6 +255,8 @@ SOURCES += \
     deletefileresponse.cpp \
     deleterepositoryrequest.cpp \
     deleterepositoryresponse.cpp \
+    describemergeconflictsrequest.cpp \
+    describemergeconflictsresponse.cpp \
     describepullrequesteventsrequest.cpp \
     describepullrequesteventsresponse.cpp \
     getblobrequest.cpp \
@@ -213,8 +277,12 @@ SOURCES += \
     getfileresponse.cpp \
     getfolderrequest.cpp \
     getfolderresponse.cpp \
+    getmergecommitrequest.cpp \
+    getmergecommitresponse.cpp \
     getmergeconflictsrequest.cpp \
     getmergeconflictsresponse.cpp \
+    getmergeoptionsrequest.cpp \
+    getmergeoptionsresponse.cpp \
     getpullrequestrequest.cpp \
     getpullrequestresponse.cpp \
     getrepositoryrequest.cpp \
@@ -227,8 +295,20 @@ SOURCES += \
     listpullrequestsresponse.cpp \
     listrepositoriesrequest.cpp \
     listrepositoriesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
+    mergebranchesbyfastforwardrequest.cpp \
+    mergebranchesbyfastforwardresponse.cpp \
+    mergebranchesbysquashrequest.cpp \
+    mergebranchesbysquashresponse.cpp \
+    mergebranchesbythreewayrequest.cpp \
+    mergebranchesbythreewayresponse.cpp \
     mergepullrequestbyfastforwardrequest.cpp \
     mergepullrequestbyfastforwardresponse.cpp \
+    mergepullrequestbysquashrequest.cpp \
+    mergepullrequestbysquashresponse.cpp \
+    mergepullrequestbythreewayrequest.cpp \
+    mergepullrequestbythreewayresponse.cpp \
     postcommentforcomparedcommitrequest.cpp \
     postcommentforcomparedcommitresponse.cpp \
     postcommentforpullrequestrequest.cpp \
@@ -239,8 +319,12 @@ SOURCES += \
     putfileresponse.cpp \
     putrepositorytriggersrequest.cpp \
     putrepositorytriggersresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     testrepositorytriggersrequest.cpp \
     testrepositorytriggersresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatecommentrequest.cpp \
     updatecommentresponse.cpp \
     updatedefaultbranchrequest.cpp \

@@ -44,6 +44,10 @@ HEADERS += \
     gettagsrequest_p.h \
     gettagsresponse.h \
     gettagsresponse_p.h \
+    getusageforecastrequest.h \
+    getusageforecastrequest_p.h \
+    getusageforecastresponse.h \
+    getusageforecastresponse_p.h \
 
 SOURCES += \
     costexplorerclient.cpp \
@@ -63,5 +67,7 @@ SOURCES += \
     getreservationutilizationresponse.cpp \
     gettagsrequest.cpp \
     gettagsresponse.cpp \
+    getusageforecastrequest.cpp \
+    getusageforecastresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

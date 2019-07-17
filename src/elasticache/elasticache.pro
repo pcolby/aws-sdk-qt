@@ -18,6 +18,14 @@ HEADERS += \
     authorizecachesecuritygroupingressrequest_p.h \
     authorizecachesecuritygroupingressresponse.h \
     authorizecachesecuritygroupingressresponse_p.h \
+    batchapplyupdateactionrequest.h \
+    batchapplyupdateactionrequest_p.h \
+    batchapplyupdateactionresponse.h \
+    batchapplyupdateactionresponse_p.h \
+    batchstopupdateactionrequest.h \
+    batchstopupdateactionrequest_p.h \
+    batchstopupdateactionresponse.h \
+    batchstopupdateactionresponse_p.h \
     copysnapshotrequest.h \
     copysnapshotrequest_p.h \
     copysnapshotresponse.h \
@@ -118,10 +126,18 @@ HEADERS += \
     describereservedcachenodesrequest_p.h \
     describereservedcachenodesresponse.h \
     describereservedcachenodesresponse_p.h \
+    describeserviceupdatesrequest.h \
+    describeserviceupdatesrequest_p.h \
+    describeserviceupdatesresponse.h \
+    describeserviceupdatesresponse_p.h \
     describesnapshotsrequest.h \
     describesnapshotsrequest_p.h \
     describesnapshotsresponse.h \
     describesnapshotsresponse_p.h \
+    describeupdateactionsrequest.h \
+    describeupdateactionsrequest_p.h \
+    describeupdateactionsresponse.h \
+    describeupdateactionsresponse_p.h \
     elasticacheclient.h \
     elasticacheclient_p.h \
     elasticacherequest.h \
@@ -190,6 +206,10 @@ SOURCES += \
     addtagstoresourceresponse.cpp \
     authorizecachesecuritygroupingressrequest.cpp \
     authorizecachesecuritygroupingressresponse.cpp \
+    batchapplyupdateactionrequest.cpp \
+    batchapplyupdateactionresponse.cpp \
+    batchstopupdateactionrequest.cpp \
+    batchstopupdateactionresponse.cpp \
     copysnapshotrequest.cpp \
     copysnapshotresponse.cpp \
     createcacheclusterrequest.cpp \
@@ -240,8 +260,12 @@ SOURCES += \
     describereservedcachenodesofferingsresponse.cpp \
     describereservedcachenodesrequest.cpp \
     describereservedcachenodesresponse.cpp \
+    describeserviceupdatesrequest.cpp \
+    describeserviceupdatesresponse.cpp \
     describesnapshotsrequest.cpp \
     describesnapshotsresponse.cpp \
+    describeupdateactionsrequest.cpp \
+    describeupdateactionsresponse.cpp \
     elasticacheclient.cpp \
     elasticacherequest.cpp \
     elasticacheresponse.cpp \

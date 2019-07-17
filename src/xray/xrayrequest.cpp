@@ -48,6 +48,7 @@ namespace XRay {
  * \value GetSamplingStatisticSummariesAction XRay GetSamplingStatisticSummaries action.
  * \value GetSamplingTargetsAction XRay GetSamplingTargets action.
  * \value GetServiceGraphAction XRay GetServiceGraph action.
+ * \value GetTimeSeriesServiceStatisticsAction XRay GetTimeSeriesServiceStatistics action.
  * \value GetTraceGraphAction XRay GetTraceGraph action.
  * \value GetTraceSummariesAction XRay GetTraceSummaries action.
  * \value PutEncryptionConfigAction XRay PutEncryptionConfig action.

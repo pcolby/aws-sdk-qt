@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoTEvents
+description = AWS IoTEvents SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiotevents-index.html"
+navigation.landingtitle = "IoTEvents"
+navigation.cppclassespage = "IoTEvents C++ Classes"

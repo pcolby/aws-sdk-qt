@@ -38,6 +38,14 @@ HEADERS += \
     deleteuserrequest_p.h \
     deleteuserresponse.h \
     deleteuserresponse_p.h \
+    describebrokerenginetypesrequest.h \
+    describebrokerenginetypesrequest_p.h \
+    describebrokerenginetypesresponse.h \
+    describebrokerenginetypesresponse_p.h \
+    describebrokerinstanceoptionsrequest.h \
+    describebrokerinstanceoptionsrequest_p.h \
+    describebrokerinstanceoptionsresponse.h \
+    describebrokerinstanceoptionsresponse_p.h \
     describebrokerrequest.h \
     describebrokerrequest_p.h \
     describebrokerresponse.h \
@@ -112,6 +120,10 @@ SOURCES += \
     deletetagsresponse.cpp \
     deleteuserrequest.cpp \
     deleteuserresponse.cpp \
+    describebrokerenginetypesrequest.cpp \
+    describebrokerenginetypesresponse.cpp \
+    describebrokerinstanceoptionsrequest.cpp \
+    describebrokerinstanceoptionsresponse.cpp \
     describebrokerrequest.cpp \
     describebrokerresponse.cpp \
     describeconfigurationrequest.cpp \

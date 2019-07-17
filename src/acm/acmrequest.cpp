@@ -45,6 +45,7 @@ namespace ACM {
  * \value ListCertificatesAction ACM ListCertificates action.
  * \value ListTagsForCertificateAction ACM ListTagsForCertificate action.
  * \value RemoveTagsFromCertificateAction ACM RemoveTagsFromCertificate action.
+ * \value RenewCertificateAction ACM RenewCertificate action.
  * \value RequestCertificateAction ACM RequestCertificate action.
  * \value ResendValidationEmailAction ACM ResendValidationEmail action.
  * \value UpdateCertificateOptionsAction ACM UpdateCertificateOptions action.

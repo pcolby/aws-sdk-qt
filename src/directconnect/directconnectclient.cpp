@@ -21,6 +21,8 @@
 #include "directconnectclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "acceptdirectconnectgatewayassociationproposalrequest.h"
+#include "acceptdirectconnectgatewayassociationproposalresponse.h"
 #include "allocateconnectiononinterconnectrequest.h"
 #include "allocateconnectiononinterconnectresponse.h"
 #include "allocatehostedconnectionrequest.h"
@@ -29,6 +31,8 @@
 #include "allocateprivatevirtualinterfaceresponse.h"
 #include "allocatepublicvirtualinterfacerequest.h"
 #include "allocatepublicvirtualinterfaceresponse.h"
+#include "allocatetransitvirtualinterfacerequest.h"
+#include "allocatetransitvirtualinterfaceresponse.h"
 #include "associateconnectionwithlagrequest.h"
 #include "associateconnectionwithlagresponse.h"
 #include "associatehostedconnectionrequest.h"
@@ -41,6 +45,8 @@
 #include "confirmprivatevirtualinterfaceresponse.h"
 #include "confirmpublicvirtualinterfacerequest.h"
 #include "confirmpublicvirtualinterfaceresponse.h"
+#include "confirmtransitvirtualinterfacerequest.h"
+#include "confirmtransitvirtualinterfaceresponse.h"
 #include "createbgppeerrequest.h"
 #include "createbgppeerresponse.h"
 #include "createconnectionrequest.h"
@@ -49,6 +55,8 @@
 #include "createdirectconnectgatewayresponse.h"
 #include "createdirectconnectgatewayassociationrequest.h"
 #include "createdirectconnectgatewayassociationresponse.h"
+#include "createdirectconnectgatewayassociationproposalrequest.h"
+#include "createdirectconnectgatewayassociationproposalresponse.h"
 #include "createinterconnectrequest.h"
 #include "createinterconnectresponse.h"
 #include "createlagrequest.h"
@@ -57,6 +65,8 @@
 #include "createprivatevirtualinterfaceresponse.h"
 #include "createpublicvirtualinterfacerequest.h"
 #include "createpublicvirtualinterfaceresponse.h"
+#include "createtransitvirtualinterfacerequest.h"
+#include "createtransitvirtualinterfaceresponse.h"
 #include "deletebgppeerrequest.h"
 #include "deletebgppeerresponse.h"
 #include "deleteconnectionrequest.h"
@@ -65,6 +75,8 @@
 #include "deletedirectconnectgatewayresponse.h"
 #include "deletedirectconnectgatewayassociationrequest.h"
 #include "deletedirectconnectgatewayassociationresponse.h"
+#include "deletedirectconnectgatewayassociationproposalrequest.h"
+#include "deletedirectconnectgatewayassociationproposalresponse.h"
 #include "deleteinterconnectrequest.h"
 #include "deleteinterconnectresponse.h"
 #include "deletelagrequest.h"
@@ -77,6 +89,8 @@
 #include "describeconnectionsresponse.h"
 #include "describeconnectionsoninterconnectrequest.h"
 #include "describeconnectionsoninterconnectresponse.h"
+#include "describedirectconnectgatewayassociationproposalsrequest.h"
+#include "describedirectconnectgatewayassociationproposalsresponse.h"
 #include "describedirectconnectgatewayassociationsrequest.h"
 #include "describedirectconnectgatewayassociationsresponse.h"
 #include "describedirectconnectgatewayattachmentsrequest.h"
@@ -107,6 +121,8 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatedirectconnectgatewayassociationrequest.h"
+#include "updatedirectconnectgatewayassociationresponse.h"
 #include "updatelagrequest.h"
 #include "updatelagresponse.h"
 #include "updatevirtualinterfaceattributesrequest.h"
@@ -197,6 +213,19 @@ DirectConnectClient::DirectConnectClient(
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AcceptDirectConnectGatewayAssociationProposalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts a proposal request to attach a virtual private gateway or transit gateway to a Direct Connect
+ */
+AcceptDirectConnectGatewayAssociationProposalResponse * DirectConnectClient::acceptDirectConnectGatewayAssociationProposal(const AcceptDirectConnectGatewayAssociationProposalRequest &request)
+{
+    return qobject_cast<AcceptDirectConnectGatewayAssociationProposalResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * AllocateConnectionOnInterconnectResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -213,7 +242,7 @@ DirectConnectClient::DirectConnectClient(
  *
  * interconnect> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnectionOnInterconnect(const AllocateConnectionOnInterconnectRequest &request)
 {
@@ -226,16 +255,17 @@ AllocateConnectionOnInterconnectResponse * DirectConnectClient::allocateConnecti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a hosted connection on the specified interconnect or a link aggregation group
+ * Creates a hosted connection on the specified interconnect or a link aggregation group (LAG) of
  *
- * (LAG)>
+ * interconnects>
  *
- * Allocates a VLAN number and a specified amount of bandwidth for use by a hosted connection on the specified interconnect
- * or
+ * Allocates a VLAN number and a specified amount of capacity (bandwidth) for use by a hosted connection on the specified
+ * interconnect or LAG of interconnects. AWS polices the hosted connection for the specified capacity and the AWS Direct
+ * Connect Partner must also police the hosted connection for the specified
  *
- * LAG> <note>
+ * capacity> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 AllocateHostedConnectionResponse * DirectConnectClient::allocateHostedConnection(const AllocateHostedConnectionRequest &request)
 {
@@ -290,6 +320,30 @@ AllocatePublicVirtualInterfaceResponse * DirectConnectClient::allocatePublicVirt
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AllocateTransitVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provisions a transit virtual interface to be owned by the specified AWS account. Use this type of interface to connect a
+ * transit gateway to your Direct Connect
+ *
+ * gateway>
+ *
+ * The owner of a connection provisions a transit virtual interface to be owned by the specified AWS
+ *
+ * account>
+ *
+ * After you create a transit virtual interface, it must be confirmed by the owner using
+ * <a>ConfirmTransitVirtualInterface</a>. Until this step has been completed, the transit virtual interface is in the
+ * <code>requested</code> state and is not available to handle
+ */
+AllocateTransitVirtualInterfaceResponse * DirectConnectClient::allocateTransitVirtualInterface(const AllocateTransitVirtualInterfaceRequest &request)
+{
+    return qobject_cast<AllocateTransitVirtualInterfaceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * AssociateConnectionWithLagResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -328,7 +382,7 @@ AssociateConnectionWithLagResponse * DirectConnectClient::associateConnectionWit
  *
  * migrated> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnection(const AssociateHostedConnectionRequest &request)
 {
@@ -413,6 +467,24 @@ ConfirmPrivateVirtualInterfaceResponse * DirectConnectClient::confirmPrivateVirt
 ConfirmPublicVirtualInterfaceResponse * DirectConnectClient::confirmPublicVirtualInterface(const ConfirmPublicVirtualInterfaceRequest &request)
 {
     return qobject_cast<ConfirmPublicVirtualInterfaceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * ConfirmTransitVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts ownership of a transit virtual interface created by another AWS
+ *
+ * account>
+ *
+ * After the owner of the transit virtual interface makes this call, the specified transit virtual interface is created and
+ * made available to handle
+ */
+ConfirmTransitVirtualInterfaceResponse * DirectConnectClient::confirmTransitVirtualInterface(const ConfirmTransitVirtualInterfaceRequest &request)
+{
+    return qobject_cast<ConfirmTransitVirtualInterfaceResponse *>(send(request));
 }
 
 /*!
@@ -509,18 +581,38 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateDirectConnectGatewayAssociationProposalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a proposal to associate the specified virtual private gateway or transit gateway with the specified Direct
+ * Connect
+ *
+ * gateway>
+ *
+ * You can only associate a Direct Connect gateway and virtual private gateway or transit gateway when the account that
+ * owns the Direct Connect gateway and the account that owns the virtual private gateway or transit gateway have the same
+ * AWS Payer
+ */
+CreateDirectConnectGatewayAssociationProposalResponse * DirectConnectClient::createDirectConnectGatewayAssociationProposal(const CreateDirectConnectGatewayAssociationProposalRequest &request)
+{
+    return qobject_cast<CreateDirectConnectGatewayAssociationProposalResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * CreateInterconnectResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an interconnect between an AWS Direct Connect partner's network and a specific AWS Direct Connect
+ * Creates an interconnect between an AWS Direct Connect Partner's network and a specific AWS Direct Connect
  *
  * location>
  *
- * An interconnect is a connection which is capable of hosting other connections. The partner can use an interconnect to
- * provide sub-1Gbps AWS Direct Connect service to tier 2 customers who do not have their own connections. Like a standard
- * connection, an interconnect links the partner's network to an AWS Direct Connect location over a standard Ethernet
- * fiber-optic cable. One end is connected to the partner's router, the other to an AWS Direct Connect
+ * An interconnect is a connection that is capable of hosting other connections. The AWS Direct Connect partner can use an
+ * interconnect to provide AWS Direct Connect hosted connections to customers through their own network services. Like a
+ * standard connection, an interconnect links the partner's network to an AWS Direct Connect location over a standard
+ * Ethernet fiber-optic cable. One end is connected to the partner's router, the other to an AWS Direct Connect
  *
  * router>
  *
@@ -530,13 +622,13 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
  *
  * created>
  *
- * For each end customer, the AWS Direct Connect partner provisions a connection on their interconnect by calling
- * <a>AllocateConnectionOnInterconnect</a>. The end customer can then connect to AWS resources by creating a virtual
- * interface on their connection, using the VLAN assigned to them by the
+ * For each end customer, the AWS Direct Connect Partner provisions a connection on their interconnect by calling
+ * <a>AllocateHostedConnection</a>. The end customer can then connect to AWS resources by creating a virtual interface on
+ * their connection, using the VLAN assigned to them by the AWS Direct Connect
  *
- * partner> <note>
+ * Partner> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 CreateInterconnectResponse * DirectConnectClient::createInterconnect(const CreateInterconnectRequest &request)
 {
@@ -572,7 +664,7 @@ CreateInterconnectResponse * DirectConnectClient::createInterconnect(const Creat
  *
  * change>
  *
- * If the AWS account used to create a LAG is a registered AWS Direct Connect partner, the LAG is automatically enabled to
+ * If the AWS account used to create a LAG is a registered AWS Direct Connect Partner, the LAG is automatically enabled to
  * host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly
  */
 CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &request)
@@ -615,6 +707,27 @@ CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtua
 CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualInterface(const CreatePublicVirtualInterfaceRequest &request)
 {
     return qobject_cast<CreatePublicVirtualInterfaceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * CreateTransitVirtualInterfaceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a transit virtual interface. A transit virtual interface should be used to access one or more transit gateways
+ * associated with Direct Connect gateways. A transit virtual interface enables the connection of multiple VPCs attached to
+ * a transit gateway to a Direct Connect
+ *
+ * gateway> <b>
+ *
+ * If you associate your transit gateway with one or more Direct Connect gateways, the Autonomous System Number (ASN) used
+ * by the transit gateway and the Direct Connect gateway must be different. For example, if you use the default ASN 64512
+ * for both your the transit gateway and Direct Connect gateway, the association request
+ */
+CreateTransitVirtualInterfaceResponse * DirectConnectClient::createTransitVirtualInterface(const CreateTransitVirtualInterfaceRequest &request)
+{
+    return qobject_cast<CreateTransitVirtualInterfaceResponse *>(send(request));
 }
 
 /*!
@@ -681,6 +794,20 @@ DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirec
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DeleteDirectConnectGatewayAssociationProposalResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the association proposal request between the specified Direct Connect gateway and virtual private gateway or
+ * transit
+ */
+DeleteDirectConnectGatewayAssociationProposalResponse * DirectConnectClient::deleteDirectConnectGatewayAssociationProposal(const DeleteDirectConnectGatewayAssociationProposalRequest &request)
+{
+    return qobject_cast<DeleteDirectConnectGatewayAssociationProposalResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * DeleteInterconnectResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -689,7 +816,7 @@ DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirec
  *
  * interconnect> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 DeleteInterconnectResponse * DirectConnectClient::deleteInterconnect(const DeleteInterconnectRequest &request)
 {
@@ -739,8 +866,8 @@ DeleteVirtualInterfaceResponse * DirectConnectClient::deleteVirtualInterface(con
  *
  * The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that your APN partner or service
  * provider uses when establishing your cross connect to AWS at the colocation facility. For more information, see <a
- * href="http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS Direct
- * Connect Locations</a> in the <i>AWS Direct Connect User
+ * href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS
+ * Direct Connect Locations</a> in the <i>AWS Direct Connect User
  */
 DescribeConnectionLoaResponse * DirectConnectClient::describeConnectionLoa(const DescribeConnectionLoaRequest &request)
 {
@@ -774,11 +901,25 @@ DescribeConnectionsResponse * DirectConnectClient::describeConnections(const Des
  *
  * interconnect> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 DescribeConnectionsOnInterconnectResponse * DirectConnectClient::describeConnectionsOnInterconnect(const DescribeConnectionsOnInterconnectRequest &request)
 {
     return qobject_cast<DescribeConnectionsOnInterconnectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DescribeDirectConnectGatewayAssociationProposalsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more association proposals for connection between a virtual private gateway or transit gateway and a
+ * Direct Connect gateway.
+ */
+DescribeDirectConnectGatewayAssociationProposalsResponse * DirectConnectClient::describeDirectConnectGatewayAssociationProposals(const DescribeDirectConnectGatewayAssociationProposalsRequest &request)
+{
+    return qobject_cast<DescribeDirectConnectGatewayAssociationProposalsResponse *>(send(request));
 }
 
 /*!
@@ -839,7 +980,7 @@ DescribeDirectConnectGatewaysResponse * DirectConnectClient::describeDirectConne
  *
  * (LAG)> <note>
  *
- * Intended for use by AWS Direct Connect partners
+ * Intended for use by AWS Direct Connect Partners
  */
 DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnections(const DescribeHostedConnectionsRequest &request)
 {
@@ -862,8 +1003,8 @@ DescribeHostedConnectionsResponse * DirectConnectClient::describeHostedConnectio
  *
  * The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that is used when establishing your
  * cross connect to AWS at the colocation facility. For more information, see <a
- * href="http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS Direct
- * Connect Locations</a> in the <i>AWS Direct Connect User
+ * href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS
+ * Direct Connect Locations</a> in the <i>AWS Direct Connect User
  */
 DescribeInterconnectLoaResponse * DirectConnectClient::describeInterconnectLoa(const DescribeInterconnectLoaRequest &request)
 {
@@ -908,8 +1049,8 @@ DescribeLagsResponse * DirectConnectClient::describeLags(const DescribeLagsReque
  *
  * The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that is used when establishing your
  * cross connect to AWS at the colocation facility. For more information, see <a
- * href="http://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS Direct
- * Connect Locations</a> in the <i>AWS Direct Connect User
+ * href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at AWS
+ * Direct Connect Locations</a> in the <i>AWS Direct Connect User
  */
 DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest &request)
 {
@@ -1019,7 +1160,7 @@ DescribeVirtualInterfacesResponse * DirectConnectClient::describeVirtualInterfac
  * Disassociates a connection from a link aggregation group (LAG). The connection is interrupted and re-established as a
  * standalone connection (the connection is not deleted; to delete the connection, use the <a>DeleteConnection</a>
  * request). If the LAG has associated virtual interfaces or hosted connections, they remain associated with the LAG. A
- * disassociated connection owned by an AWS Direct Connect partner is automatically converted to an
+ * disassociated connection owned by an AWS Direct Connect Partner is automatically converted to an
  *
  * interconnect>
  *
@@ -1061,6 +1202,23 @@ TagResourceResponse * DirectConnectClient::tagResource(const TagResourceRequest 
 UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * UpdateDirectConnectGatewayAssociationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the specified attributes of the Direct Connect gateway
+ *
+ * association>
+ *
+ * Add or remove prefixes from the
+ */
+UpdateDirectConnectGatewayAssociationResponse * DirectConnectClient::updateDirectConnectGatewayAssociation(const UpdateDirectConnectGatewayAssociationRequest &request)
+{
+    return qobject_cast<UpdateDirectConnectGatewayAssociationResponse *>(send(request));
 }
 
 /*!

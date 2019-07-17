@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    getdashstreamingsessionurlrequest.h \
+    getdashstreamingsessionurlrequest_p.h \
+    getdashstreamingsessionurlresponse.h \
+    getdashstreamingsessionurlresponse_p.h \
     gethlsstreamingsessionurlrequest.h \
     gethlsstreamingsessionurlrequest_p.h \
     gethlsstreamingsessionurlresponse.h \
@@ -30,6 +34,8 @@ HEADERS += \
     listfragmentsresponse_p.h \
 
 SOURCES += \
+    getdashstreamingsessionurlrequest.cpp \
+    getdashstreamingsessionurlresponse.cpp \
     gethlsstreamingsessionurlrequest.cpp \
     gethlsstreamingsessionurlresponse.cpp \
     getmediaforfragmentlistrequest.cpp \

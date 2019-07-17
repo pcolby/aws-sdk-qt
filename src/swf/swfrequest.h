@@ -53,6 +53,7 @@ public:
         ListClosedWorkflowExecutionsAction,
         ListDomainsAction,
         ListOpenWorkflowExecutionsAction,
+        ListTagsForResourceAction,
         ListWorkflowTypesAction,
         PollForActivityTaskAction,
         PollForDecisionTaskAction,
@@ -67,7 +68,12 @@ public:
         RespondDecisionTaskCompletedAction,
         SignalWorkflowExecutionAction,
         StartWorkflowExecutionAction,
+        TagResourceAction,
         TerminateWorkflowExecutionAction,
+        UndeprecateActivityTypeAction,
+        UndeprecateDomainAction,
+        UndeprecateWorkflowTypeAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

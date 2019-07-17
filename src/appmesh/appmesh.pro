@@ -32,6 +32,10 @@ HEADERS += \
     createvirtualrouterrequest_p.h \
     createvirtualrouterresponse.h \
     createvirtualrouterresponse_p.h \
+    createvirtualservicerequest.h \
+    createvirtualservicerequest_p.h \
+    createvirtualserviceresponse.h \
+    createvirtualserviceresponse_p.h \
     deletemeshrequest.h \
     deletemeshrequest_p.h \
     deletemeshresponse.h \
@@ -48,6 +52,10 @@ HEADERS += \
     deletevirtualrouterrequest_p.h \
     deletevirtualrouterresponse.h \
     deletevirtualrouterresponse_p.h \
+    deletevirtualservicerequest.h \
+    deletevirtualservicerequest_p.h \
+    deletevirtualserviceresponse.h \
+    deletevirtualserviceresponse_p.h \
     describemeshrequest.h \
     describemeshrequest_p.h \
     describemeshresponse.h \
@@ -64,6 +72,10 @@ HEADERS += \
     describevirtualrouterrequest_p.h \
     describevirtualrouterresponse.h \
     describevirtualrouterresponse_p.h \
+    describevirtualservicerequest.h \
+    describevirtualservicerequest_p.h \
+    describevirtualserviceresponse.h \
+    describevirtualserviceresponse_p.h \
     listmeshesrequest.h \
     listmeshesrequest_p.h \
     listmeshesresponse.h \
@@ -72,6 +84,10 @@ HEADERS += \
     listroutesrequest_p.h \
     listroutesresponse.h \
     listroutesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listvirtualnodesrequest.h \
     listvirtualnodesrequest_p.h \
     listvirtualnodesresponse.h \
@@ -80,6 +96,22 @@ HEADERS += \
     listvirtualroutersrequest_p.h \
     listvirtualroutersresponse.h \
     listvirtualroutersresponse_p.h \
+    listvirtualservicesrequest.h \
+    listvirtualservicesrequest_p.h \
+    listvirtualservicesresponse.h \
+    listvirtualservicesresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
+    updatemeshrequest.h \
+    updatemeshrequest_p.h \
+    updatemeshresponse.h \
+    updatemeshresponse_p.h \
     updaterouterequest.h \
     updaterouterequest_p.h \
     updaterouteresponse.h \
@@ -92,6 +124,10 @@ HEADERS += \
     updatevirtualrouterrequest_p.h \
     updatevirtualrouterresponse.h \
     updatevirtualrouterresponse_p.h \
+    updatevirtualservicerequest.h \
+    updatevirtualservicerequest_p.h \
+    updatevirtualserviceresponse.h \
+    updatevirtualserviceresponse_p.h \
 
 SOURCES += \
     appmeshclient.cpp \
@@ -105,6 +141,8 @@ SOURCES += \
     createvirtualnoderesponse.cpp \
     createvirtualrouterrequest.cpp \
     createvirtualrouterresponse.cpp \
+    createvirtualservicerequest.cpp \
+    createvirtualserviceresponse.cpp \
     deletemeshrequest.cpp \
     deletemeshresponse.cpp \
     deleterouterequest.cpp \
@@ -113,6 +151,8 @@ SOURCES += \
     deletevirtualnoderesponse.cpp \
     deletevirtualrouterrequest.cpp \
     deletevirtualrouterresponse.cpp \
+    deletevirtualservicerequest.cpp \
+    deletevirtualserviceresponse.cpp \
     describemeshrequest.cpp \
     describemeshresponse.cpp \
     describerouterequest.cpp \
@@ -121,19 +161,33 @@ SOURCES += \
     describevirtualnoderesponse.cpp \
     describevirtualrouterrequest.cpp \
     describevirtualrouterresponse.cpp \
+    describevirtualservicerequest.cpp \
+    describevirtualserviceresponse.cpp \
     listmeshesrequest.cpp \
     listmeshesresponse.cpp \
     listroutesrequest.cpp \
     listroutesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listvirtualnodesrequest.cpp \
     listvirtualnodesresponse.cpp \
     listvirtualroutersrequest.cpp \
     listvirtualroutersresponse.cpp \
+    listvirtualservicesrequest.cpp \
+    listvirtualservicesresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
+    updatemeshrequest.cpp \
+    updatemeshresponse.cpp \
     updaterouterequest.cpp \
     updaterouteresponse.cpp \
     updatevirtualnoderequest.cpp \
     updatevirtualnoderesponse.cpp \
     updatevirtualrouterrequest.cpp \
     updatevirtualrouterresponse.cpp \
+    updatevirtualservicerequest.cpp \
+    updatevirtualserviceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

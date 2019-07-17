@@ -29,18 +29,28 @@
 #include "batchenablestandardsresponse.h"
 #include "batchimportfindingsrequest.h"
 #include "batchimportfindingsresponse.h"
+#include "createactiontargetrequest.h"
+#include "createactiontargetresponse.h"
 #include "createinsightrequest.h"
 #include "createinsightresponse.h"
 #include "createmembersrequest.h"
 #include "createmembersresponse.h"
 #include "declineinvitationsrequest.h"
 #include "declineinvitationsresponse.h"
+#include "deleteactiontargetrequest.h"
+#include "deleteactiontargetresponse.h"
 #include "deleteinsightrequest.h"
 #include "deleteinsightresponse.h"
 #include "deleteinvitationsrequest.h"
 #include "deleteinvitationsresponse.h"
 #include "deletemembersrequest.h"
 #include "deletemembersresponse.h"
+#include "describeactiontargetsrequest.h"
+#include "describeactiontargetsresponse.h"
+#include "describehubrequest.h"
+#include "describehubresponse.h"
+#include "describeproductsrequest.h"
+#include "describeproductsresponse.h"
 #include "disableimportfindingsforproductrequest.h"
 #include "disableimportfindingsforproductresponse.h"
 #include "disablesecurityhubrequest.h"
@@ -75,6 +85,14 @@
 #include "listinvitationsresponse.h"
 #include "listmembersrequest.h"
 #include "listmembersresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
+#include "updateactiontargetrequest.h"
+#include "updateactiontargetresponse.h"
 #include "updatefindingsrequest.h"
 #include "updatefindingsresponse.h"
 #include "updateinsightrequest.h"
@@ -102,10 +120,22 @@ namespace SecurityHub {
  * \ingroup aws-clients
  * \inmodule QtAwsSecurityHub
  *
- *  AWS Security Hub provides you with a comprehensive view of your security state within AWS and your compliance with the
- *  security industry standards and best practices. Security Hub collects security data from across AWS accounts, services,
- *  and supported third-party partners and helps you analyze your security trends and identify the highest priority security
- *  issues. For more information, see <a href="">AWS Security Hub User Guide</a>.
+ *  Security Hub provides you with a comprehensive view of the security state of your AWS environment and resources. It also
+ *  provides you with the compliance status of your environment based on CIS AWS Foundations compliance checks. Security Hub
+ *  collects security data from AWS accounts, services, and integrated third-party products and helps you analyze security
+ *  trends in your environment to identify the highest priority security issues. For more information about Security Hub,
+ *  see the <i> <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">AWS Security Hub
+ *  User Guide</a>
+ * 
+ *  </i>>
+ * 
+ *  When you use operations in the Security Hub API, the requests are executed only in the AWS Region that is currently
+ *  active or in the specific AWS Region that you specify in your request. Any configuration or settings change that results
+ *  from the operation is applied only to that Region. To make the same change in other Regions, execute the same command
+ *  for each Region to apply the change to. For example, if your Region is set to <code>us-west-2</code>, when you use
+ *  <code>CreateMembers</code> to add a member account to Security Hub, the association of the member account with the
+ *  master account is created only in the us-west-2 Region. Security Hub must be enabled for the member account in the same
+ *  Region that the invite was sent
  */
 
 /*!
@@ -167,7 +197,9 @@ SecurityHubClient::SecurityHubClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Accepts the invitation to be monitored by a master SecurityHub
+ * Accepts the invitation to be a member account and be monitored by the Security Hub master account that the invitation
+ * was sent from. When the member account accepts the invitation, permission is granted to the master account to view
+ * findings generated in the member
  */
 AcceptInvitationResponse * SecurityHubClient::acceptInvitation(const AcceptInvitationRequest &request)
 {
@@ -180,9 +212,9 @@ AcceptInvitationResponse * SecurityHubClient::acceptInvitation(const AcceptInvit
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables the standards specified by the standards subscription ARNs. In the context of Security Hub, supported standards
- * (for example, CIS AWS Foundations) are automated and continuous checks that help determine your compliance status
- * against security industry (including AWS) best practices.
+ * Disables the standards specified by the provided <code>StandardsSubscriptionArns</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Standards Supported in AWS
+ * Security
  */
 BatchDisableStandardsResponse * SecurityHubClient::batchDisableStandards(const BatchDisableStandardsRequest &request)
 {
@@ -195,9 +227,10 @@ BatchDisableStandardsResponse * SecurityHubClient::batchDisableStandards(const B
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables the standards specified by the standards ARNs. In the context of Security Hub, supported standards (for example,
- * CIS AWS Foundations) are automated and continuous checks that help determine your compliance status against security
- * industry (including AWS) best practices.
+ * Enables the standards specified by the provided <code>standardsArn</code>. In this release, only CIS AWS Foundations
+ * standards are supported. For more information, see <a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Standards Supported in AWS
+ * Security
  */
 BatchEnableStandardsResponse * SecurityHubClient::batchEnableStandards(const BatchEnableStandardsRequest &request)
 {
@@ -210,7 +243,9 @@ BatchEnableStandardsResponse * SecurityHubClient::batchEnableStandards(const Bat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Imports security findings that are generated by the integrated third-party products into Security
+ * Imports security findings generated from an integrated third-party product into Security Hub. This action is requested
+ * by the integrated product to import its findings into Security Hub. The maximum allowed size for a finding is 240 Kb. An
+ * error is returned for any finding larger than 240
  */
 BatchImportFindingsResponse * SecurityHubClient::batchImportFindings(const BatchImportFindingsRequest &request)
 {
@@ -219,11 +254,26 @@ BatchImportFindingsResponse * SecurityHubClient::batchImportFindings(const Batch
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * CreateActionTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a custom action target in Security Hub. You can use custom actions on findings and insights in Security Hub to
+ * trigger target actions in Amazon CloudWatch
+ */
+CreateActionTargetResponse * SecurityHubClient::createActionTarget(const CreateActionTargetRequest &request)
+{
+    return qobject_cast<CreateActionTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * CreateInsightResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an insight, which is a consolidation of findings that identifies a security area that requires attention or
+ * Creates a custom insight in Security Hub. An insight is a consolidation of findings that relate to a security issue that
+ * requires attention or remediation. Use the <code>GroupByAttribute</code> to group the related findings in the
  */
 CreateInsightResponse * SecurityHubClient::createInsight(const CreateInsightRequest &request)
 {
@@ -236,8 +286,22 @@ CreateInsightResponse * SecurityHubClient::createInsight(const CreateInsightRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates member Security Hub accounts in the current AWS account (which becomes the master Security Hub account) that has
- * Security Hub
+ * Creates a member association in Security Hub between the specified accounts and the account used to make the request,
+ * which is the master account. To successfully create a member, you must use this action from an account that already has
+ * Security Hub enabled. You can use the <a>EnableSecurityHub</a> to enable Security
+ *
+ * Hub>
+ *
+ * After you use <code>CreateMembers</code> to create member account associations in Security Hub, you need to use the
+ * <a>InviteMembers</a> action, which invites the accounts to enable Security Hub and become member accounts in Security
+ * Hub. If the invitation is accepted by the account owner, the account becomes a member account in Security Hub, and a
+ * permission policy is added that permits the master account to view the findings generated in the member account. When
+ * Security Hub is enabled in the invited account, findings start being sent to both the member and master
+ *
+ * accounts>
+ *
+ * You can remove the association between the master and member accounts by using the <a>DisassociateFromMasterAccount</a>
+ * or <a>DisassociateMembers</a>
  */
 CreateMembersResponse * SecurityHubClient::createMembers(const CreateMembersRequest &request)
 {
@@ -250,8 +314,7 @@ CreateMembersResponse * SecurityHubClient::createMembers(const CreateMembersRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Declines invitations that are sent to this AWS account (invitee) by the AWS accounts (inviters) that are specified by
- * the account IDs.
+ * Declines invitations to become a member
  */
 DeclineInvitationsResponse * SecurityHubClient::declineInvitations(const DeclineInvitationsRequest &request)
 {
@@ -260,11 +323,25 @@ DeclineInvitationsResponse * SecurityHubClient::declineInvitations(const Decline
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * DeleteActionTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a custom action target from Security Hub. Deleting a custom action target doesn't affect any findings or
+ * insights that were already sent to Amazon CloudWatch Events using the custom
+ */
+DeleteActionTargetResponse * SecurityHubClient::deleteActionTarget(const DeleteActionTargetRequest &request)
+{
+    return qobject_cast<DeleteActionTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * DeleteInsightResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an insight that is specified by the insight
+ * Deletes the insight specified by the
  */
 DeleteInsightResponse * SecurityHubClient::deleteInsight(const DeleteInsightRequest &request)
 {
@@ -277,8 +354,7 @@ DeleteInsightResponse * SecurityHubClient::deleteInsight(const DeleteInsightRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes invitations that are sent to this AWS account (invitee) by the AWS accounts (inviters) that are specified by
- * their account IDs.
+ * Deletes invitations received by the AWS account to become a member
  */
 DeleteInvitationsResponse * SecurityHubClient::deleteInvitations(const DeleteInvitationsRequest &request)
 {
@@ -291,7 +367,7 @@ DeleteInvitationsResponse * SecurityHubClient::deleteInvitations(const DeleteInv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the Security Hub member accounts that are specified by the account
+ * Deletes the specified member accounts from Security
  */
 DeleteMembersResponse * SecurityHubClient::deleteMembers(const DeleteMembersRequest &request)
 {
@@ -300,11 +376,53 @@ DeleteMembersResponse * SecurityHubClient::deleteMembers(const DeleteMembersRequ
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * DescribeActionTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the custom action targets in Security Hub in your
+ */
+DescribeActionTargetsResponse * SecurityHubClient::describeActionTargets(const DescribeActionTargetsRequest &request)
+{
+    return qobject_cast<DescribeActionTargetsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * DescribeHubResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details about the Hub resource in your account, including the <code>HubArn</code> and the time when you enabled
+ * Security
+ */
+DescribeHubResponse * SecurityHubClient::describeHub(const DescribeHubRequest &request)
+{
+    return qobject_cast<DescribeHubResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * DescribeProductsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the products available that you can subscribe to and integrate with Security Hub to
+ * consolidate
+ */
+DescribeProductsResponse * SecurityHubClient::describeProducts(const DescribeProductsRequest &request)
+{
+    return qobject_cast<DescribeProductsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * DisableImportFindingsForProductResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops you from being able to import findings generated by integrated third-party providers into Security
+ * Disables the integration of the specified product with Security Hub. Findings from that product are no longer sent to
+ * Security Hub after the integration is
  */
 DisableImportFindingsForProductResponse * SecurityHubClient::disableImportFindingsForProduct(const DisableImportFindingsForProductRequest &request)
 {
@@ -317,7 +435,16 @@ DisableImportFindingsForProductResponse * SecurityHubClient::disableImportFindin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables the AWS Security Hub
+ * Disables Security Hub in your account only in the current Region. To disable Security Hub in all Regions, you must
+ * submit one request per Region where you have enabled Security Hub. When you disable Security Hub for a master account,
+ * it doesn't disable Security Hub for any associated member
+ *
+ * accounts>
+ *
+ * When you disable Security Hub, your existing findings and insights and any Security Hub configuration settings are
+ * deleted after 90 days and can't be recovered. Any standards that were enabled are disabled, and your master and member
+ * account associations are removed. If you want to save your existing findings, you must export them before you disable
+ * Security
  */
 DisableSecurityHubResponse * SecurityHubClient::disableSecurityHub(const DisableSecurityHubRequest &request)
 {
@@ -330,7 +457,7 @@ DisableSecurityHubResponse * SecurityHubClient::disableSecurityHub(const Disable
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the current Security Hub member account from its master
+ * Disassociates the current Security Hub member account from the associated master
  */
 DisassociateFromMasterAccountResponse * SecurityHubClient::disassociateFromMasterAccount(const DisassociateFromMasterAccountRequest &request)
 {
@@ -343,7 +470,7 @@ DisassociateFromMasterAccountResponse * SecurityHubClient::disassociateFromMaste
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates the Security Hub member accounts that are specified by the account IDs from their master account.
+ * Disassociates the specified member accounts from the associated master
  */
 DisassociateMembersResponse * SecurityHubClient::disassociateMembers(const DisassociateMembersRequest &request)
 {
@@ -356,7 +483,9 @@ DisassociateMembersResponse * SecurityHubClient::disassociateMembers(const Disas
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables you to import findings generated by integrated third-party providers into Security
+ * Enables the integration of a partner product with Security Hub. Integrated products send findings to Security Hub. When
+ * you enable a product integration, a permission policy that grants permission for the product to send findings to
+ * Security Hub is
  */
 EnableImportFindingsForProductResponse * SecurityHubClient::enableImportFindingsForProduct(const EnableImportFindingsForProductRequest &request)
 {
@@ -369,7 +498,10 @@ EnableImportFindingsForProductResponse * SecurityHubClient::enableImportFindings
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables the AWS Security Hub
+ * Enables Security Hub for your account in the current Region or the Region you specify in the request. When you enable
+ * Security Hub, you grant to Security Hub the permissions necessary to gather findings from AWS Config, Amazon GuardDuty,
+ * Amazon Inspector, and Amazon Macie. To learn more, see <a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html">Setting Up AWS Security
  */
 EnableSecurityHubResponse * SecurityHubClient::enableSecurityHub(const EnableSecurityHubRequest &request)
 {
@@ -382,7 +514,7 @@ EnableSecurityHubResponse * SecurityHubClient::enableSecurityHub(const EnableSec
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists and describes enabled
+ * Returns a list of the standards that are currently
  */
 GetEnabledStandardsResponse * SecurityHubClient::getEnabledStandards(const GetEnabledStandardsRequest &request)
 {
@@ -395,7 +527,7 @@ GetEnabledStandardsResponse * SecurityHubClient::getEnabledStandards(const GetEn
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists and describes Security Hub-aggregated findings that are specified by filter
+ * Returns a list of findings that match the specified
  */
 GetFindingsResponse * SecurityHubClient::getFindings(const GetFindingsRequest &request)
 {
@@ -408,7 +540,7 @@ GetFindingsResponse * SecurityHubClient::getFindings(const GetFindingsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the results of the Security Hub insight specified by the insight
+ * Lists the results of the Security Hub insight that the insight ARN
  */
 GetInsightResultsResponse * SecurityHubClient::getInsightResults(const GetInsightResultsRequest &request)
 {
@@ -421,7 +553,7 @@ GetInsightResultsResponse * SecurityHubClient::getInsightResults(const GetInsigh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists and describes insights that are specified by insight
+ * Lists and describes insights that insight ARNs
  */
 GetInsightsResponse * SecurityHubClient::getInsights(const GetInsightsRequest &request)
 {
@@ -461,7 +593,7 @@ GetMasterAccountResponse * SecurityHubClient::getMasterAccount(const GetMasterAc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the details on the Security Hub member accounts that are specified by the account IDs.
+ * Returns the details on the Security Hub member accounts that the account IDs
  */
 GetMembersResponse * SecurityHubClient::getMembers(const GetMembersRequest &request)
 {
@@ -474,8 +606,10 @@ GetMembersResponse * SecurityHubClient::getMembers(const GetMembersRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Invites other AWS accounts to enable Security Hub and become Security Hub member accounts. When an account accepts the
- * invitation and becomes a member account, the master account can view Security Hub findings of the member account.
+ * Invites other AWS accounts to become member accounts for the Security Hub master account that the invitation is sent
+ * from. Before you can use this action to invite a member, you must first create the member account in Security Hub by
+ * using the <a>CreateMembers</a> action. When the account owner accepts the invitation to become a member account and
+ * enables Security Hub, the master account can view the findings generated from member
  */
 InviteMembersResponse * SecurityHubClient::inviteMembers(const InviteMembersRequest &request)
 {
@@ -488,7 +622,7 @@ InviteMembersResponse * SecurityHubClient::inviteMembers(const InviteMembersRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all Security Hub-integrated third-party findings
+ * Lists all findings-generating solutions (products) whose findings you have subscribed to receive in Security
  */
 ListEnabledProductsForImportResponse * SecurityHubClient::listEnabledProductsForImport(const ListEnabledProductsForImportRequest &request)
 {
@@ -523,11 +657,64 @@ ListMembersResponse * SecurityHubClient::listMembers(const ListMembersRequest &r
 
 /*!
  * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of tags associated with a
+ */
+ListTagsForResourceResponse * SecurityHubClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to a
+ */
+TagResourceResponse * SecurityHubClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from a
+ */
+UntagResourceResponse * SecurityHubClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
+ * UpdateActionTargetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the name and description of a custom action target in Security
+ */
+UpdateActionTargetResponse * SecurityHubClient::updateActionTarget(const UpdateActionTargetRequest &request)
+{
+    return qobject_cast<UpdateActionTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecurityHubClient service, and returns a pointer to an
  * UpdateFindingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the AWS Security Hub-aggregated findings specified by the filter
+ * Updates the <code>Note</code> and <code>RecordState</code> of the Security Hub-aggregated findings that the filter
+ * attributes specify. Any member account that can view the finding also sees the update to the
  */
 UpdateFindingsResponse * SecurityHubClient::updateFindings(const UpdateFindingsRequest &request)
 {
@@ -540,7 +727,7 @@ UpdateFindingsResponse * SecurityHubClient::updateFindings(const UpdateFindingsR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the AWS Security Hub insight specified by the insight
+ * Updates the Security Hub insight that the insight ARN
  */
 UpdateInsightResponse * SecurityHubClient::updateInsight(const UpdateInsightRequest &request)
 {

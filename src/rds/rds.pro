@@ -14,6 +14,10 @@ HEADERS += \
     addroletodbclusterrequest_p.h \
     addroletodbclusterresponse.h \
     addroletodbclusterresponse_p.h \
+    addroletodbinstancerequest.h \
+    addroletodbinstancerequest_p.h \
+    addroletodbinstanceresponse.h \
+    addroletodbinstanceresponse_p.h \
     addsourceidentifiertosubscriptionrequest.h \
     addsourceidentifiertosubscriptionrequest_p.h \
     addsourceidentifiertosubscriptionresponse.h \
@@ -384,6 +388,10 @@ HEADERS += \
     removerolefromdbclusterrequest_p.h \
     removerolefromdbclusterresponse.h \
     removerolefromdbclusterresponse_p.h \
+    removerolefromdbinstancerequest.h \
+    removerolefromdbinstancerequest_p.h \
+    removerolefromdbinstanceresponse.h \
+    removerolefromdbinstanceresponse_p.h \
     removesourceidentifierfromsubscriptionrequest.h \
     removesourceidentifierfromsubscriptionrequest_p.h \
     removesourceidentifierfromsubscriptionresponse.h \
@@ -428,6 +436,10 @@ HEADERS += \
     revokedbsecuritygroupingressrequest_p.h \
     revokedbsecuritygroupingressresponse.h \
     revokedbsecuritygroupingressresponse_p.h \
+    startactivitystreamrequest.h \
+    startactivitystreamrequest_p.h \
+    startactivitystreamresponse.h \
+    startactivitystreamresponse_p.h \
     startdbclusterrequest.h \
     startdbclusterrequest_p.h \
     startdbclusterresponse.h \
@@ -436,6 +448,10 @@ HEADERS += \
     startdbinstancerequest_p.h \
     startdbinstanceresponse.h \
     startdbinstanceresponse_p.h \
+    stopactivitystreamrequest.h \
+    stopactivitystreamrequest_p.h \
+    stopactivitystreamresponse.h \
+    stopactivitystreamresponse_p.h \
     stopdbclusterrequest.h \
     stopdbclusterrequest_p.h \
     stopdbclusterresponse.h \
@@ -448,6 +464,8 @@ HEADERS += \
 SOURCES += \
     addroletodbclusterrequest.cpp \
     addroletodbclusterresponse.cpp \
+    addroletodbinstancerequest.cpp \
+    addroletodbinstanceresponse.cpp \
     addsourceidentifiertosubscriptionrequest.cpp \
     addsourceidentifiertosubscriptionresponse.cpp \
     addtagstoresourcerequest.cpp \
@@ -633,6 +651,8 @@ SOURCES += \
     removefromglobalclusterresponse.cpp \
     removerolefromdbclusterrequest.cpp \
     removerolefromdbclusterresponse.cpp \
+    removerolefromdbinstancerequest.cpp \
+    removerolefromdbinstanceresponse.cpp \
     removesourceidentifierfromsubscriptionrequest.cpp \
     removesourceidentifierfromsubscriptionresponse.cpp \
     removetagsfromresourcerequest.cpp \
@@ -655,10 +675,14 @@ SOURCES += \
     restoredbinstancetopointintimeresponse.cpp \
     revokedbsecuritygroupingressrequest.cpp \
     revokedbsecuritygroupingressresponse.cpp \
+    startactivitystreamrequest.cpp \
+    startactivitystreamresponse.cpp \
     startdbclusterrequest.cpp \
     startdbclusterresponse.cpp \
     startdbinstancerequest.cpp \
     startdbinstanceresponse.cpp \
+    stopactivitystreamrequest.cpp \
+    stopactivitystreamresponse.cpp \
     stopdbclusterrequest.cpp \
     stopdbclusterresponse.cpp \
     stopdbinstancerequest.cpp \

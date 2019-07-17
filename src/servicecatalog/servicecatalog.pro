@@ -14,6 +14,10 @@ HEADERS += \
     acceptportfoliosharerequest_p.h \
     acceptportfolioshareresponse.h \
     acceptportfolioshareresponse_p.h \
+    associatebudgetwithresourcerequest.h \
+    associatebudgetwithresourcerequest_p.h \
+    associatebudgetwithresourceresponse.h \
+    associatebudgetwithresourceresponse_p.h \
     associateprincipalwithportfoliorequest.h \
     associateprincipalwithportfoliorequest_p.h \
     associateprincipalwithportfolioresponse.h \
@@ -154,6 +158,10 @@ HEADERS += \
     describerecordrequest_p.h \
     describerecordresponse.h \
     describerecordresponse_p.h \
+    describeserviceactionexecutionparametersrequest.h \
+    describeserviceactionexecutionparametersrequest_p.h \
+    describeserviceactionexecutionparametersresponse.h \
+    describeserviceactionexecutionparametersresponse_p.h \
     describeserviceactionrequest.h \
     describeserviceactionrequest_p.h \
     describeserviceactionresponse.h \
@@ -166,6 +174,10 @@ HEADERS += \
     disableawsorganizationsaccessrequest_p.h \
     disableawsorganizationsaccessresponse.h \
     disableawsorganizationsaccessresponse_p.h \
+    disassociatebudgetfromresourcerequest.h \
+    disassociatebudgetfromresourcerequest_p.h \
+    disassociatebudgetfromresourceresponse.h \
+    disassociatebudgetfromresourceresponse_p.h \
     disassociateprincipalfromportfoliorequest.h \
     disassociateprincipalfromportfoliorequest_p.h \
     disassociateprincipalfromportfolioresponse.h \
@@ -202,6 +214,10 @@ HEADERS += \
     listacceptedportfoliosharesrequest_p.h \
     listacceptedportfoliosharesresponse.h \
     listacceptedportfoliosharesresponse_p.h \
+    listbudgetsforresourcerequest.h \
+    listbudgetsforresourcerequest_p.h \
+    listbudgetsforresourceresponse.h \
+    listbudgetsforresourceresponse_p.h \
     listconstraintsforportfoliorequest.h \
     listconstraintsforportfoliorequest_p.h \
     listconstraintsforportfolioresponse.h \
@@ -258,6 +274,10 @@ HEADERS += \
     listserviceactionsrequest_p.h \
     listserviceactionsresponse.h \
     listserviceactionsresponse_p.h \
+    liststackinstancesforprovisionedproductrequest.h \
+    liststackinstancesforprovisionedproductrequest_p.h \
+    liststackinstancesforprovisionedproductresponse.h \
+    liststackinstancesforprovisionedproductresponse_p.h \
     listtagoptionsrequest.h \
     listtagoptionsrequest_p.h \
     listtagoptionsresponse.h \
@@ -308,6 +328,10 @@ HEADERS += \
     updateproductrequest_p.h \
     updateproductresponse.h \
     updateproductresponse_p.h \
+    updateprovisionedproductpropertiesrequest.h \
+    updateprovisionedproductpropertiesrequest_p.h \
+    updateprovisionedproductpropertiesresponse.h \
+    updateprovisionedproductpropertiesresponse_p.h \
     updateprovisionedproductrequest.h \
     updateprovisionedproductrequest_p.h \
     updateprovisionedproductresponse.h \
@@ -328,6 +352,8 @@ HEADERS += \
 SOURCES += \
     acceptportfoliosharerequest.cpp \
     acceptportfolioshareresponse.cpp \
+    associatebudgetwithresourcerequest.cpp \
+    associatebudgetwithresourceresponse.cpp \
     associateprincipalwithportfoliorequest.cpp \
     associateprincipalwithportfolioresponse.cpp \
     associateproductwithportfoliorequest.cpp \
@@ -398,12 +424,16 @@ SOURCES += \
     describeprovisioningparametersresponse.cpp \
     describerecordrequest.cpp \
     describerecordresponse.cpp \
+    describeserviceactionexecutionparametersrequest.cpp \
+    describeserviceactionexecutionparametersresponse.cpp \
     describeserviceactionrequest.cpp \
     describeserviceactionresponse.cpp \
     describetagoptionrequest.cpp \
     describetagoptionresponse.cpp \
     disableawsorganizationsaccessrequest.cpp \
     disableawsorganizationsaccessresponse.cpp \
+    disassociatebudgetfromresourcerequest.cpp \
+    disassociatebudgetfromresourceresponse.cpp \
     disassociateprincipalfromportfoliorequest.cpp \
     disassociateprincipalfromportfolioresponse.cpp \
     disassociateproductfromportfoliorequest.cpp \
@@ -422,6 +452,8 @@ SOURCES += \
     getawsorganizationsaccessstatusresponse.cpp \
     listacceptedportfoliosharesrequest.cpp \
     listacceptedportfoliosharesresponse.cpp \
+    listbudgetsforresourcerequest.cpp \
+    listbudgetsforresourceresponse.cpp \
     listconstraintsforportfoliorequest.cpp \
     listconstraintsforportfolioresponse.cpp \
     listlaunchpathsrequest.cpp \
@@ -450,6 +482,8 @@ SOURCES += \
     listserviceactionsforprovisioningartifactresponse.cpp \
     listserviceactionsrequest.cpp \
     listserviceactionsresponse.cpp \
+    liststackinstancesforprovisionedproductrequest.cpp \
+    liststackinstancesforprovisionedproductresponse.cpp \
     listtagoptionsrequest.cpp \
     listtagoptionsresponse.cpp \
     provisionproductrequest.cpp \
@@ -475,6 +509,8 @@ SOURCES += \
     updateportfolioresponse.cpp \
     updateproductrequest.cpp \
     updateproductresponse.cpp \
+    updateprovisionedproductpropertiesrequest.cpp \
+    updateprovisionedproductpropertiesresponse.cpp \
     updateprovisionedproductrequest.cpp \
     updateprovisionedproductresponse.cpp \
     updateprovisioningartifactrequest.cpp \

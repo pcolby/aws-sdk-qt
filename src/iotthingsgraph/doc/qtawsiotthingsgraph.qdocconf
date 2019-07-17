@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoTThingsGraph
+description = AWS IoTThingsGraph SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiotthingsgraph-index.html"
+navigation.landingtitle = "IoTThingsGraph"
+navigation.cppclassespage = "IoTThingsGraph C++ Classes"

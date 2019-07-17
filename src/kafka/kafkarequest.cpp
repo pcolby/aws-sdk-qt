@@ -37,11 +37,23 @@ namespace Kafka {
  * requests.
  *
  * \value CreateClusterAction Kafka CreateCluster action.
+ * \value CreateConfigurationAction Kafka CreateConfiguration action.
  * \value DeleteClusterAction Kafka DeleteCluster action.
  * \value DescribeClusterAction Kafka DescribeCluster action.
+ * \value DescribeClusterOperationAction Kafka DescribeClusterOperation action.
+ * \value DescribeConfigurationAction Kafka DescribeConfiguration action.
+ * \value DescribeConfigurationRevisionAction Kafka DescribeConfigurationRevision action.
  * \value GetBootstrapBrokersAction Kafka GetBootstrapBrokers action.
+ * \value ListClusterOperationsAction Kafka ListClusterOperations action.
  * \value ListClustersAction Kafka ListClusters action.
+ * \value ListConfigurationRevisionsAction Kafka ListConfigurationRevisions action.
+ * \value ListConfigurationsAction Kafka ListConfigurations action.
  * \value ListNodesAction Kafka ListNodes action.
+ * \value ListTagsForResourceAction Kafka ListTagsForResource action.
+ * \value TagResourceAction Kafka TagResource action.
+ * \value UntagResourceAction Kafka UntagResource action.
+ * \value UpdateBrokerStorageAction Kafka UpdateBrokerStorage action.
+ * \value UpdateClusterConfigurationAction Kafka UpdateClusterConfiguration action.
  */
 
 /*!

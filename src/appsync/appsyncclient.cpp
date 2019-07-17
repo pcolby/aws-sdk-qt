@@ -71,10 +71,16 @@
 #include "listresolversresponse.h"
 #include "listresolversbyfunctionrequest.h"
 #include "listresolversbyfunctionresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtypesrequest.h"
 #include "listtypesresponse.h"
 #include "startschemacreationrequest.h"
 #include "startschemacreationresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateapikeyrequest.h"
 #include "updateapikeyresponse.h"
 #include "updatedatasourcerequest.h"
@@ -508,6 +514,19 @@ ListResolversByFunctionResponse * AppSyncClient::listResolversByFunction(const L
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags for a
+ */
+ListTagsForResourceResponse * AppSyncClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * ListTypesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -534,6 +553,32 @@ ListTypesResponse * AppSyncClient::listTypes(const ListTypesRequest &request)
 StartSchemaCreationResponse * AppSyncClient::startSchemaCreation(const StartSchemaCreationRequest &request)
 {
     return qobject_cast<StartSchemaCreationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Tags a resource with user-supplied
+ */
+TagResourceResponse * AppSyncClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Untags a
+ */
+UntagResourceResponse * AppSyncClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

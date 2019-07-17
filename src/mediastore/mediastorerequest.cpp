@@ -46,9 +46,14 @@ namespace MediaStore {
  * \value GetCorsPolicyAction MediaStore GetCorsPolicy action.
  * \value GetLifecyclePolicyAction MediaStore GetLifecyclePolicy action.
  * \value ListContainersAction MediaStore ListContainers action.
+ * \value ListTagsForResourceAction MediaStore ListTagsForResource action.
  * \value PutContainerPolicyAction MediaStore PutContainerPolicy action.
  * \value PutCorsPolicyAction MediaStore PutCorsPolicy action.
  * \value PutLifecyclePolicyAction MediaStore PutLifecyclePolicy action.
+ * \value StartAccessLoggingAction MediaStore StartAccessLogging action.
+ * \value StopAccessLoggingAction MediaStore StopAccessLogging action.
+ * \value TagResourceAction MediaStore TagResource action.
+ * \value UntagResourceAction MediaStore UntagResource action.
  */
 
 /*!

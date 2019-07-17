@@ -39,7 +39,10 @@ namespace MediaTailor {
  * \value DeletePlaybackConfigurationAction MediaTailor DeletePlaybackConfiguration action.
  * \value GetPlaybackConfigurationAction MediaTailor GetPlaybackConfiguration action.
  * \value ListPlaybackConfigurationsAction MediaTailor ListPlaybackConfigurations action.
+ * \value ListTagsForResourceAction MediaTailor ListTagsForResource action.
  * \value PutPlaybackConfigurationAction MediaTailor PutPlaybackConfiguration action.
+ * \value TagResourceAction MediaTailor TagResource action.
+ * \value UntagResourceAction MediaTailor UntagResource action.
  */
 
 /*!

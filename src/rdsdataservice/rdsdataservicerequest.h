@@ -37,7 +37,12 @@ class QTAWS_EXPORT RDSDataServiceRequest : public QtAws::Core::AwsAbstractReques
 public:
     /// Actions supported by RDSDataService.
     enum Action {
+        BatchExecuteStatementAction,
+        BeginTransactionAction,
+        CommitTransactionAction,
         ExecuteSqlAction,
+        ExecuteStatementAction,
+        RollbackTransactionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

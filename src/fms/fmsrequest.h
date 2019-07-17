@@ -45,6 +45,7 @@ public:
         GetComplianceDetailAction,
         GetNotificationChannelAction,
         GetPolicyAction,
+        GetProtectionStatusAction,
         ListComplianceStatusAction,
         ListMemberAccountsAction,
         ListPoliciesAction,

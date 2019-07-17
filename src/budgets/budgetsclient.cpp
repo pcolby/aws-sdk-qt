@@ -195,6 +195,14 @@ BudgetsClient::BudgetsClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a budget and, if included, notifications and subscribers.
+ *
+ * </p <b>
+ *
+ * Only one of <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in the syntax at one time. Use
+ * the syntax that matches your case. The Request Syntax section shows the <code>BudgetLimit</code> syntax. For
+ * <code>PlannedBudgetLimits</code>, see the <a
+ * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html#API_CreateBudget_Examples">Examples</a>
+ * section.
  */
 CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &request)
 {
@@ -285,6 +293,12 @@ DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscribe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Describes a
+ *
+ * budget> <b>
+ *
+ * The Request Syntax section shows the <code>BudgetLimit</code> syntax. For <code>PlannedBudgetLimits</code>, see the <a
+ * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_DescribeBudget.html#API_DescribeBudget_Examples">Examples</a>
+ * section.
  */
 DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetRequest &request)
 {
@@ -312,6 +326,12 @@ DescribeBudgetPerformanceHistoryResponse * BudgetsClient::describeBudgetPerforma
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the budgets that are associated with an
+ *
+ * account> <b>
+ *
+ * The Request Syntax section shows the <code>BudgetLimit</code> syntax. For <code>PlannedBudgetLimits</code>, see the <a
+ * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_DescribeBudgets.html#API_DescribeBudgets_Examples">Examples</a>
+ * section.
  */
 DescribeBudgetsResponse * BudgetsClient::describeBudgets(const DescribeBudgetsRequest &request)
 {
@@ -353,6 +373,14 @@ DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersF
  * Updates a budget. You can change every part of a budget except for the <code>budgetName</code> and the
  * <code>calculatedSpend</code>. When you modify a budget, the <code>calculatedSpend</code> drops to zero until AWS has new
  * usage data to use for
+ *
+ * forecasting> <b>
+ *
+ * Only one of <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in the syntax at one time. Use
+ * the syntax that matches your case. The Request Syntax section shows the <code>BudgetLimit</code> syntax. For
+ * <code>PlannedBudgetLimits</code>, see the <a
+ * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_UpdateBudget.html#API_UpdateBudget_Examples">Examples</a>
+ * section.
  */
 UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &request)
 {

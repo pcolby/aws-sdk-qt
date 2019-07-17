@@ -1593,7 +1593,9 @@ TagResourceResponse * APIGatewayClient::tagResource(const TagResourceRequest &re
  * Simulate the execution of an <a>Authorizer</a> in your <a>RestApi</a> with headers, parameters, and an incoming request
  *
  * body> <div class="seeAlso"> <a
- * href="https://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html">Enable custom
+ * href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html">Use Lambda
+ * Function as Authorizer</a> <a
+ * href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html">Use Cognito
  */
 TestInvokeAuthorizerResponse * APIGatewayClient::testInvokeAuthorizer(const TestInvokeAuthorizerRequest &request)
 {

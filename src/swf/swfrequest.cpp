@@ -52,6 +52,7 @@ namespace SWF {
  * \value ListClosedWorkflowExecutionsAction SWF ListClosedWorkflowExecutions action.
  * \value ListDomainsAction SWF ListDomains action.
  * \value ListOpenWorkflowExecutionsAction SWF ListOpenWorkflowExecutions action.
+ * \value ListTagsForResourceAction SWF ListTagsForResource action.
  * \value ListWorkflowTypesAction SWF ListWorkflowTypes action.
  * \value PollForActivityTaskAction SWF PollForActivityTask action.
  * \value PollForDecisionTaskAction SWF PollForDecisionTask action.
@@ -66,7 +67,12 @@ namespace SWF {
  * \value RespondDecisionTaskCompletedAction SWF RespondDecisionTaskCompleted action.
  * \value SignalWorkflowExecutionAction SWF SignalWorkflowExecution action.
  * \value StartWorkflowExecutionAction SWF StartWorkflowExecution action.
+ * \value TagResourceAction SWF TagResource action.
  * \value TerminateWorkflowExecutionAction SWF TerminateWorkflowExecution action.
+ * \value UndeprecateActivityTypeAction SWF UndeprecateActivityType action.
+ * \value UndeprecateDomainAction SWF UndeprecateDomain action.
+ * \value UndeprecateWorkflowTypeAction SWF UndeprecateWorkflowType action.
+ * \value UntagResourceAction SWF UntagResource action.
  */
 
 /*!

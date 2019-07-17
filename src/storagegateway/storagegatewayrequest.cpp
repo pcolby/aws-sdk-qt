@@ -41,6 +41,8 @@ namespace StorageGateway {
  * \value AddTagsToResourceAction StorageGateway AddTagsToResource action.
  * \value AddUploadBufferAction StorageGateway AddUploadBuffer action.
  * \value AddWorkingStorageAction StorageGateway AddWorkingStorage action.
+ * \value AssignTapePoolAction StorageGateway AssignTapePool action.
+ * \value AttachVolumeAction StorageGateway AttachVolume action.
  * \value CancelArchivalAction StorageGateway CancelArchival action.
  * \value CancelRetrievalAction StorageGateway CancelRetrieval action.
  * \value CreateCachediSCSIVolumeAction StorageGateway CreateCachediSCSIVolume action.
@@ -76,6 +78,7 @@ namespace StorageGateway {
  * \value DescribeUploadBufferAction StorageGateway DescribeUploadBuffer action.
  * \value DescribeVTLDevicesAction StorageGateway DescribeVTLDevices action.
  * \value DescribeWorkingStorageAction StorageGateway DescribeWorkingStorage action.
+ * \value DetachVolumeAction StorageGateway DetachVolume action.
  * \value DisableGatewayAction StorageGateway DisableGateway action.
  * \value JoinDomainAction StorageGateway JoinDomain action.
  * \value ListFileSharesAction StorageGateway ListFileShares action.
@@ -103,6 +106,7 @@ namespace StorageGateway {
  * \value UpdateMaintenanceStartTimeAction StorageGateway UpdateMaintenanceStartTime action.
  * \value UpdateNFSFileShareAction StorageGateway UpdateNFSFileShare action.
  * \value UpdateSMBFileShareAction StorageGateway UpdateSMBFileShare action.
+ * \value UpdateSMBSecurityStrategyAction StorageGateway UpdateSMBSecurityStrategy action.
  * \value UpdateSnapshotScheduleAction StorageGateway UpdateSnapshotSchedule action.
  * \value UpdateVTLDeviceTypeAction StorageGateway UpdateVTLDeviceType action.
  */

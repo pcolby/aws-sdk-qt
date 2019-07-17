@@ -316,7 +316,7 @@ CreateLabelsResponse * WorkDocsClient::createLabels(const CreateLabelsRequest &r
  * subscription>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/workdocs/latest/developerguide/subscribe-notifications.html">Subscribe to
+ * href="https://docs.aws.amazon.com/workdocs/latest/developerguide/subscribe-notifications.html">Subscribe to
  * Notifications</a> in the <i>Amazon WorkDocs Developer
  */
 CreateNotificationSubscriptionResponse * WorkDocsClient::createNotificationSubscription(const CreateNotificationSubscriptionRequest &request)
@@ -569,8 +569,8 @@ DescribeResourcePermissionsResponse * WorkDocsClient::describeResourcePermission
  *
  * This action requires an authentication token. To get an authentication token, register an application with Amazon
  * WorkDocs. For more information, see <a
- * href="http://docs.aws.amazon.com/workdocs/latest/developerguide/wd-auth-user.html">Authentication and Access Control for
- * User Applications</a> in the <i>Amazon WorkDocs Developer
+ * href="https://docs.aws.amazon.com/workdocs/latest/developerguide/wd-auth-user.html">Authentication and Access Control
+ * for User Applications</a> in the <i>Amazon WorkDocs Developer
  */
 DescribeRootFoldersResponse * WorkDocsClient::describeRootFolders(const DescribeRootFoldersRequest &request)
 {

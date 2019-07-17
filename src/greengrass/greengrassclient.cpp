@@ -169,12 +169,18 @@
 #include "listsubscriptiondefinitionversionsresponse.h"
 #include "listsubscriptiondefinitionsrequest.h"
 #include "listsubscriptiondefinitionsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "resetdeploymentsrequest.h"
 #include "resetdeploymentsresponse.h"
 #include "startbulkdeploymentrequest.h"
 #include "startbulkdeploymentresponse.h"
 #include "stopbulkdeploymentrequest.h"
 #include "stopbulkdeploymentresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateconnectivityinforequest.h"
 #include "updateconnectivityinforesponse.h"
 #include "updateconnectordefinitionrequest.h"
@@ -1188,6 +1194,18 @@ ListSubscriptionDefinitionsResponse * GreengrassClient::listSubscriptionDefiniti
 
 /*!
  * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsForResourceResponse * GreengrassClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
  * ResetDeploymentsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1225,6 +1243,30 @@ StartBulkDeploymentResponse * GreengrassClient::startBulkDeployment(const StartB
 StopBulkDeploymentResponse * GreengrassClient::stopBulkDeployment(const StopBulkDeploymentRequest &request)
 {
     return qobject_cast<StopBulkDeploymentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+TagResourceResponse * GreengrassClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UntagResourceResponse * GreengrassClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

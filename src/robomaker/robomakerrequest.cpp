@@ -37,6 +37,7 @@ namespace RoboMaker {
  * requests.
  *
  * \value BatchDescribeSimulationJobAction RoboMaker BatchDescribeSimulationJob action.
+ * \value CancelDeploymentJobAction RoboMaker CancelDeploymentJob action.
  * \value CancelSimulationJobAction RoboMaker CancelSimulationJob action.
  * \value CreateDeploymentJobAction RoboMaker CreateDeploymentJob action.
  * \value CreateFleetAction RoboMaker CreateFleet action.
@@ -63,9 +64,12 @@ namespace RoboMaker {
  * \value ListRobotsAction RoboMaker ListRobots action.
  * \value ListSimulationApplicationsAction RoboMaker ListSimulationApplications action.
  * \value ListSimulationJobsAction RoboMaker ListSimulationJobs action.
+ * \value ListTagsForResourceAction RoboMaker ListTagsForResource action.
  * \value RegisterRobotAction RoboMaker RegisterRobot action.
  * \value RestartSimulationJobAction RoboMaker RestartSimulationJob action.
  * \value SyncDeploymentJobAction RoboMaker SyncDeploymentJob action.
+ * \value TagResourceAction RoboMaker TagResource action.
+ * \value UntagResourceAction RoboMaker UntagResource action.
  * \value UpdateRobotApplicationAction RoboMaker UpdateRobotApplication action.
  * \value UpdateSimulationApplicationAction RoboMaker UpdateSimulationApplication action.
  */

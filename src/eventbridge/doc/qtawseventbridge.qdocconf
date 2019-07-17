@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsEventBridge
+description = AWS EventBridge SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawseventbridge-index.html"
+navigation.landingtitle = "EventBridge"
+navigation.cppclassespage = "EventBridge C++ Classes"

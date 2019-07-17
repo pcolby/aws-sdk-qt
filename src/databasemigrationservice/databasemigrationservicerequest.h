@@ -38,6 +38,7 @@ public:
     /// Actions supported by DatabaseMigrationService.
     enum Action {
         AddTagsToResourceAction,
+        ApplyPendingMaintenanceActionAction,
         CreateEndpointAction,
         CreateEventSubscriptionAction,
         CreateReplicationInstanceAction,
@@ -58,6 +59,7 @@ public:
         DescribeEventSubscriptionsAction,
         DescribeEventsAction,
         DescribeOrderableReplicationInstancesAction,
+        DescribePendingMaintenanceActionsAction,
         DescribeRefreshSchemasStatusAction,
         DescribeReplicationInstanceTaskLogsAction,
         DescribeReplicationInstancesAction,

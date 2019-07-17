@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsBackup
+description = AWS Backup SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsbackup-index.html"
+navigation.landingtitle = "Backup"
+navigation.cppclassespage = "Backup C++ Classes"

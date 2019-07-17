@@ -30,6 +30,8 @@ namespace RDS {
 class RdsClientPrivate;
 class AddRoleToDBClusterRequest;
 class AddRoleToDBClusterResponse;
+class AddRoleToDBInstanceRequest;
+class AddRoleToDBInstanceResponse;
 class AddSourceIdentifierToSubscriptionRequest;
 class AddSourceIdentifierToSubscriptionResponse;
 class AddTagsToResourceRequest;
@@ -212,6 +214,8 @@ class RemoveFromGlobalClusterRequest;
 class RemoveFromGlobalClusterResponse;
 class RemoveRoleFromDBClusterRequest;
 class RemoveRoleFromDBClusterResponse;
+class RemoveRoleFromDBInstanceRequest;
+class RemoveRoleFromDBInstanceResponse;
 class RemoveSourceIdentifierFromSubscriptionRequest;
 class RemoveSourceIdentifierFromSubscriptionResponse;
 class RemoveTagsFromResourceRequest;
@@ -234,10 +238,14 @@ class RestoreDBInstanceToPointInTimeRequest;
 class RestoreDBInstanceToPointInTimeResponse;
 class RevokeDBSecurityGroupIngressRequest;
 class RevokeDBSecurityGroupIngressResponse;
+class StartActivityStreamRequest;
+class StartActivityStreamResponse;
 class StartDBClusterRequest;
 class StartDBClusterResponse;
 class StartDBInstanceRequest;
 class StartDBInstanceResponse;
+class StopActivityStreamRequest;
+class StopActivityStreamResponse;
 class StopDBClusterRequest;
 class StopDBClusterResponse;
 class StopDBInstanceRequest;
@@ -260,6 +268,7 @@ public:
 
 public slots:
     AddRoleToDBClusterResponse * addRoleToDBCluster(const AddRoleToDBClusterRequest &request);
+    AddRoleToDBInstanceResponse * addRoleToDBInstance(const AddRoleToDBInstanceRequest &request);
     AddSourceIdentifierToSubscriptionResponse * addSourceIdentifierToSubscription(const AddSourceIdentifierToSubscriptionRequest &request);
     AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
     ApplyPendingMaintenanceActionResponse * applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request);
@@ -351,6 +360,7 @@ public slots:
     RebootDBInstanceResponse * rebootDBInstance(const RebootDBInstanceRequest &request);
     RemoveFromGlobalClusterResponse * removeFromGlobalCluster(const RemoveFromGlobalClusterRequest &request);
     RemoveRoleFromDBClusterResponse * removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request);
+    RemoveRoleFromDBInstanceResponse * removeRoleFromDBInstance(const RemoveRoleFromDBInstanceRequest &request);
     RemoveSourceIdentifierFromSubscriptionResponse * removeSourceIdentifierFromSubscription(const RemoveSourceIdentifierFromSubscriptionRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
     ResetDBClusterParameterGroupResponse * resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request);
@@ -362,8 +372,10 @@ public slots:
     RestoreDBInstanceFromS3Response * restoreDBInstanceFromS3(const RestoreDBInstanceFromS3Request &request);
     RestoreDBInstanceToPointInTimeResponse * restoreDBInstanceToPointInTime(const RestoreDBInstanceToPointInTimeRequest &request);
     RevokeDBSecurityGroupIngressResponse * revokeDBSecurityGroupIngress(const RevokeDBSecurityGroupIngressRequest &request);
+    StartActivityStreamResponse * startActivityStream(const StartActivityStreamRequest &request);
     StartDBClusterResponse * startDBCluster(const StartDBClusterRequest &request);
     StartDBInstanceResponse * startDBInstance(const StartDBInstanceRequest &request);
+    StopActivityStreamResponse * stopActivityStream(const StopActivityStreamRequest &request);
     StopDBClusterResponse * stopDBCluster(const StopDBClusterRequest &request);
     StopDBInstanceResponse * stopDBInstance(const StopDBInstanceRequest &request);
 

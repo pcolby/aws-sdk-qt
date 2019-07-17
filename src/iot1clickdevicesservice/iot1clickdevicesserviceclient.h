@@ -44,8 +44,14 @@ class ListDeviceEventsRequest;
 class ListDeviceEventsResponse;
 class ListDevicesRequest;
 class ListDevicesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
 class UnclaimDeviceRequest;
 class UnclaimDeviceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateDeviceStateRequest;
 class UpdateDeviceStateResponse;
 
@@ -73,7 +79,10 @@ public slots:
     InvokeDeviceMethodResponse * invokeDeviceMethod(const InvokeDeviceMethodRequest &request);
     ListDeviceEventsResponse * listDeviceEvents(const ListDeviceEventsRequest &request);
     ListDevicesResponse * listDevices(const ListDevicesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     UnclaimDeviceResponse * unclaimDevice(const UnclaimDeviceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateDeviceStateResponse * updateDeviceState(const UpdateDeviceStateRequest &request);
 
 private:

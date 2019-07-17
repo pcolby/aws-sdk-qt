@@ -66,6 +66,8 @@ class ListSubscriptionsRequest;
 class ListSubscriptionsResponse;
 class ListSubscriptionsByTopicRequest;
 class ListSubscriptionsByTopicResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ListTopicsRequest;
 class ListTopicsResponse;
 class OptInPhoneNumberRequest;
@@ -86,8 +88,12 @@ class SetTopicAttributesRequest;
 class SetTopicAttributesResponse;
 class SubscribeRequest;
 class SubscribeResponse;
+class TagResourceRequest;
+class TagResourceResponse;
 class UnsubscribeRequest;
 class UnsubscribeResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT SnsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -124,6 +130,7 @@ public slots:
     ListPlatformApplicationsResponse * listPlatformApplications(const ListPlatformApplicationsRequest &request);
     ListSubscriptionsResponse * listSubscriptions(const ListSubscriptionsRequest &request);
     ListSubscriptionsByTopicResponse * listSubscriptionsByTopic(const ListSubscriptionsByTopicRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListTopicsResponse * listTopics(const ListTopicsRequest &request);
     OptInPhoneNumberResponse * optInPhoneNumber(const OptInPhoneNumberRequest &request);
     PublishResponse * publish(const PublishRequest &request);
@@ -134,7 +141,9 @@ public slots:
     SetSubscriptionAttributesResponse * setSubscriptionAttributes(const SetSubscriptionAttributesRequest &request);
     SetTopicAttributesResponse * setTopicAttributes(const SetTopicAttributesRequest &request);
     SubscribeResponse * subscribe(const SubscribeRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     UnsubscribeResponse * unsubscribe(const UnsubscribeRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SnsClient)

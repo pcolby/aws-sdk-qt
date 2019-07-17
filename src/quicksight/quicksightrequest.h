@@ -42,6 +42,7 @@ public:
         DeleteGroupAction,
         DeleteGroupMembershipAction,
         DeleteUserAction,
+        DeleteUserByPrincipalIdAction,
         DescribeGroupAction,
         DescribeUserAction,
         GetDashboardEmbedUrlAction,

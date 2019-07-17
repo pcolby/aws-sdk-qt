@@ -31,6 +31,8 @@
 #include "deleteconfigurationseteventdestinationresponse.h"
 #include "getconfigurationseteventdestinationsrequest.h"
 #include "getconfigurationseteventdestinationsresponse.h"
+#include "listconfigurationsetsrequest.h"
+#include "listconfigurationsetsresponse.h"
 #include "sendvoicemessagerequest.h"
 #include "sendvoicemessageresponse.h"
 #include "updateconfigurationseteventdestinationrequest.h"
@@ -173,6 +175,18 @@ DeleteConfigurationSetEventDestinationResponse * PinpointSMSVoiceClient::deleteC
 GetConfigurationSetEventDestinationsResponse * PinpointSMSVoiceClient::getConfigurationSetEventDestinations(const GetConfigurationSetEventDestinationsRequest &request)
 {
     return qobject_cast<GetConfigurationSetEventDestinationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointSMSVoiceClient service, and returns a pointer to an
+ * ListConfigurationSetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListConfigurationSetsResponse * PinpointSMSVoiceClient::listConfigurationSets(const ListConfigurationSetsRequest &request)
+{
+    return qobject_cast<ListConfigurationSetsResponse *>(send(request));
 }
 
 /*!

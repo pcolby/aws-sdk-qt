@@ -34,7 +34,7 @@ namespace StorageGateway {
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
  *  AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
- *  seamless and secure integration between an organization's on-premises IT environment and AWS's storage infrastructure.
+ *  seamless and secure integration between an organization's on-premises IT environment and the AWS storage infrastructure.
  *  The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster
  * 
  *  recovery>
@@ -44,25 +44,25 @@ namespace StorageGateway {
  *  Reference</i>> <ul> <li>
  * 
  *  <a
- *  href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
+ *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
  *  Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
  *  to AWS Storage
  * 
  *  Gateway> </li> <li>
  * 
  *  <a
- *  href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
+ *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
  *  Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
  *  such a
  * 
  *  request> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
+ *  <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
  *  Responses</a>: Provides reference information about AWS Storage Gateway
  * 
  *  errors> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
+ *  <a href="https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html">Operations in AWS Storage
  *  Gateway</a>: Contains detailed descriptions of all AWS Storage Gateway operations, their request parameters, response
  *  elements, possible errors, and examples of requests and
  * 

@@ -29,6 +29,8 @@
 #include "cancelhandshakeresponse.h"
 #include "createaccountrequest.h"
 #include "createaccountresponse.h"
+#include "creategovcloudaccountrequest.h"
+#include "creategovcloudaccountresponse.h"
 #include "createorganizationrequest.h"
 #include "createorganizationresponse.h"
 #include "createorganizationalunitrequest.h"
@@ -95,12 +97,18 @@
 #include "listpoliciesfortargetresponse.h"
 #include "listrootsrequest.h"
 #include "listrootsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtargetsforpolicyrequest.h"
 #include "listtargetsforpolicyresponse.h"
 #include "moveaccountrequest.h"
 #include "moveaccountresponse.h"
 #include "removeaccountfromorganizationrequest.h"
 #include "removeaccountfromorganizationresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateorganizationalunitrequest.h"
 #include "updateorganizationalunitresponse.h"
 #include "updatepolicyrequest.h"
@@ -136,7 +144,7 @@ namespace Organizations {
  *  resources>
  * 
  *  This guide provides descriptions of the Organizations API. For more information about using this service, see the <a
- *  href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">AWS Organizations User
+ *  href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">AWS Organizations User
  * 
  *  Guide</a>>
  * 
@@ -158,10 +166,10 @@ namespace Organizations {
  * 
  *  We recommend that you use the AWS SDKs to make programmatic API calls to Organizations. However, you also can use the
  *  Organizations Query API to make direct calls to the Organizations web service. To learn more about the Organizations
- *  Query API, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_query-requests.html">Making Query
- *  Requests</a> in the <i>AWS Organizations User Guide</i>. Organizations supports GET and POST requests for all actions.
- *  That is, the API does not require you to use GET for some actions and POST for others. However, GET requests are subject
- *  to the limitation size of a URL. Therefore, for operations that require larger sizes, use a POST
+ *  Query API, see <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_query-requests.html">Making
+ *  Query Requests</a> in the <i>AWS Organizations User Guide</i>. Organizations supports GET and POST requests for all
+ *  actions. That is, the API does not require you to use GET for some actions and POST for others. However, GET requests
+ *  are subject to the limitation size of a URL. Therefore, for operations that require larger sizes, use a POST
  * 
  *  request>
  * 
@@ -179,7 +187,7 @@ namespace Organizations {
  *  </p
  * 
  *  To sign requests, we recommend that you use <a
- *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an
+ *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4</a>. If you have an
  *  existing application that uses Signature Version 2, you do not have to update it to use Signature Version 4. However,
  *  some operations now require Signature Version 4. The documentation for operations that require version 4 indicate this
  *  requirement.
@@ -242,7 +250,7 @@ namespace Organizations {
  * 
  *  For the various SDKs used to call the APIs, see the documentation for the SDK of interest to learn how to direct the
  *  requests to a specific endpoint. For more information, see <a
- *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sts_region">Regions and Endpoints</a> in the <i>AWS
+ *  href="https://docs.aws.amazon.com/general/latest/gr/rande.html#sts_region">Regions and Endpoints</a> in the <i>AWS
  *  General Reference</i>.
  * 
  *  </p
@@ -266,10 +274,10 @@ namespace Organizations {
  *  files to an Amazon S3 bucket. By using information collected by AWS CloudTrail, you can determine which requests were
  *  successfully made to Organizations, who made the request, when it was made, and so on. For more about AWS Organizations
  *  and its support for AWS CloudTrail, see <a
- *  href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html#orgs_cloudtrail-integration">Logging
+ *  href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html#orgs_cloudtrail-integration">Logging
  *  AWS Organizations Events with AWS CloudTrail</a> in the <i>AWS Organizations User Guide</i>. To learn more about
  *  CloudTrail, including how to turn it on and find your log files, see the <a
- *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
+ *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  */
 
 /*!
@@ -344,9 +352,9 @@ OrganizationsClient::OrganizationsClient(
  * </p
  *
  * The user who calls the API for an invitation to join must have the <code>organizations:AcceptHandshake</code>
- * permission. If you enabled all features in the organization, then the user must also have the
- * <code>iam:CreateServiceLinkedRole</code> permission so that Organizations can create the required service-linked role
- * named <i>AWSServiceRoleForOrganizations</i>. For more information, see <a
+ * permission. If you enabled all features in the organization, the user must also have the
+ * <code>iam:CreateServiceLinkedRole</code> permission so that AWS Organizations can create the required service-linked
+ * role named <code>AWSServiceRoleForOrganizations</code>. For more information, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integration_services.html#orgs_integration_service-linked-roles">AWS
  * Organizations and Service-Linked Roles</a> in the <i>AWS Organizations User
  *
@@ -357,15 +365,15 @@ OrganizationsClient::OrganizationsClient(
  * account>
  *
  * For more information about invitations, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_invites.html">Inviting an AWS
- * Account to Join Your Organization</a> in the <i>AWS Organizations User Guide</i>. For more information about requests to
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_invites.html">Inviting an AWS
+ * Account to Join Your Organization</a> in the <i>AWS Organizations User Guide.</i> For more information about requests to
  * enable all features in the organization, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All
- * Features in Your Organization</a> in the <i>AWS Organizations User
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All
+ * Features in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>> </li> </ul>
+ * </p </li> </ul>
  *
- * After you accept a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
+ * After you accept a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that, it's
  */
 AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHandshakeRequest &request)
 {
@@ -390,24 +398,24 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
  *
  * If you attach an SCP to a root, it affects all accounts in the
  *
- * organization> </li> <li>
+ * organizatio> </li> <li>
  *
  * If you attach an SCP to an OU, it affects all accounts in that OU and in any child
  *
- * OUs> </li> <li>
+ * OU> </li> <li>
  *
- * If you attach the policy directly to an account, then it affects only that
+ * If you attach the policy directly to an account, it affects only that
  *
- * account> </li> </ul>
+ * accoun> </li> </ul>
  *
- * SCPs essentially are permission "filters". When you attach one SCP to a higher level root or OU, and you also attach a
- * different SCP to a child OU or to an account, the child policy can further restrict only the permissions that pass
- * through the parent filter and are available to the child. An SCP that is attached to a child cannot grant a permission
- * that is not already granted by the parent. For example, imagine that the parent SCP allows permissions A, B, C, D, and
- * E. The child SCP allows C, D, E, F, and G. The result is that the accounts affected by the child SCP are allowed to use
- * only C, D, and E. They cannot use A or B because they were filtered out by the child OU. They also cannot use F and G
- * because they were filtered out by the parent OU. They cannot be granted back by the child SCP; child SCPs can only
- * filter the permissions they receive from the parent
+ * SCPs are JSON policies that specify the maximum permissions for an organization or organizational unit (OU). When you
+ * attach one SCP to a higher level root or OU, and you also attach a different SCP to a child OU or to an account, the
+ * child policy can further restrict only the permissions that pass through the parent filter and are available to the
+ * child. An SCP that is attached to a child can't grant a permission that the paren't hasn't already granted. For example,
+ * imagine that the parent SCP allows permissions A, B, C, D, and E. The child SCP allows C, D, E, F, and G. The result is
+ * that the accounts affected by the child SCP are allowed to use only C, D, and E. They can't use A or B because the child
+ * OU filtered them out. They also can't use F and G because the parent OU filtered them out. They can't be granted back by
+ * the child SCP; child SCPs can only filter the permissions they receive from the parent
  *
  * SCP>
  *
@@ -418,11 +426,11 @@ AcceptHandshakeResponse * OrganizationsClient::acceptHandshake(const AcceptHands
  *
  * account>
  *
- * For more information about how Organizations policies permissions work, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html">Using Service Control
- * Policies</a> in the <i>AWS Organizations User
+ * For more information about how AWS Organizations policies permissions work, see <a
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html">Using Service Control
+ * Policies</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>> </li> </ul>
+ * </p </li> </ul>
  *
  * This operation can be called only from the organization's master
  */
@@ -447,7 +455,7 @@ AttachPolicyResponse * OrganizationsClient::attachPolicy(const AttachPolicyReque
  *
  * handshake>
  *
- * After you cancel a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
+ * After you cancel a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that, it's
  */
 CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHandshakeRequest &request)
 {
@@ -473,11 +481,11 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * operation> </li> <li>
  *
  * Check the AWS CloudTrail log for the <code>CreateAccountResult</code> event. For information on using AWS CloudTrail
- * with Organizations, see <a
+ * with AWS Organizations, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html">Monitoring the Activity in Your
- * Organization</a> in the <i>AWS Organizations User
+ * Organization</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>> </li> </ul> <p/>
+ * </p </li> </ul> <p/>
  *
  * The user who calls the API to create an account must have the <code>organizations:CreateAccount</code> permission. If
  * you enabled all features in the organization, AWS Organizations will create the required service-linked role named
@@ -499,10 +507,10 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * account>
  *
  * For more information about creating accounts, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html">Creating an AWS
- * Account in Your Organization</a> in the <i>AWS Organizations User
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html">Creating an AWS
+ * Account in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>> <b> <ul> <li>
+ * </p <b> <ul> <li>
  *
  * When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information
  * required for the account to operate as a standalone account, such as a payment method and signing the end user license
@@ -523,9 +531,9 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  *
  * Support</a>> </li> <li>
  *
- * Using CreateAccount to create multiple temporary accounts is not recommended. You can only close an account from the
- * Billing and Cost Management Console, and you must be signed in as the root user. For information on the requirements and
- * process for closing an account, see <a
+ * Using <code>CreateAccount</code> to create multiple temporary accounts isn't recommended. You can only close an account
+ * from the Billing and Cost Management Console, and you must be signed in as the root user. For information on the
+ * requirements and process for closing an account, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html">Closing an AWS
  * Account</a> in the <i>AWS Organizations User
  *
@@ -535,7 +543,7 @@ CancelHandshakeResponse * OrganizationsClient::cancelHandshake(const CancelHands
  * and Role Access to Billing Information</b> switch enabled. If you enable it, IAM users and roles that have appropriate
  * permissions can view billing information for the account. If you disable it, only the account root user can access
  * billing information. For information about how to disable this switch for an account, see <a
- * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html">Granting Access to Your Billing
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html">Granting Access to Your Billing
  * Information and
  */
 CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRequest &request)
@@ -545,13 +553,154 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
 
 /*!
  * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * CreateGovCloudAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This action is available if all of the following are
+ *
+ * true> <ul> <li>
+ *
+ * You're authorized to create accounts in the AWS GovCloud (US) Region. For more information on the AWS GovCloud (US)
+ * Region, see the <a href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/welcome.html"> <i>AWS GovCloud User
+ * Guide</i>.</a>
+ *
+ * </p </li> <li>
+ *
+ * You already have an account in the AWS GovCloud (US) Region that is associated with your master account in the
+ * commercial Region.
+ *
+ * </p </li> <li>
+ *
+ * You call this action from the master account of your organization in the commercial
+ *
+ * Region> </li> <li>
+ *
+ * You have the <code>organizations:CreateGovCloudAccount</code> permission. AWS Organizations creates the required
+ * service-linked role named <code>AWSServiceRoleForOrganizations</code>. For more information, see <a
+ * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs">AWS
+ * Organizations and Service-Linked Roles</a> in the <i>AWS Organizations User Guide.</i>
+ *
+ * </p </li> </ul>
+ *
+ * AWS automatically enables AWS CloudTrail for AWS GovCloud (US) accounts, but you should also do the
+ *
+ * following> <ul> <li>
+ *
+ * Verify that AWS CloudTrail is enabled to store
+ *
+ * logs> </li> <li>
+ *
+ * Create an S3 bucket for AWS CloudTrail log
+ *
+ * storage>
+ *
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/verifying-cloudtrail.html">Verifying AWS CloudTrail Is
+ * Enabled</a> in the <i>AWS GovCloud User Guide</i>.
+ *
+ * </p </li> </ul>
+ *
+ * You call this action from the master account of your organization in the commercial Region to create a standalone AWS
+ * account in the AWS GovCloud (US) Region. After the account is created, the master account of an organization in the AWS
+ * GovCloud (US) Region can invite it to that organization. For more information on inviting standalone accounts in the AWS
+ * GovCloud (US) to join an organization, see <a
+ * href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS Organizations</a> in the
+ * <i>AWS GovCloud User Guide.</i>
+ *
+ * </p
+ *
+ * Calling <code>CreateGovCloudAccount</code> is an asynchronous request that AWS performs in the background. Because
+ * <code>CreateGovCloudAccount</code> operates asynchronously, it can return a successful completion message even though
+ * account initialization might still be in progress. You might need to wait a few minutes before you can successfully
+ * access the account. To check the status of the request, do one of the
+ *
+ * following> <ul> <li>
+ *
+ * Use the <code>OperationId</code> response element from this operation to provide as a parameter to the
+ * <a>DescribeCreateAccountStatus</a>
+ *
+ * operation> </li> <li>
+ *
+ * Check the AWS CloudTrail log for the <code>CreateAccountResult</code> event. For information on using AWS CloudTrail
+ * with Organizations, see <a
+ * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html">Monitoring the Activity in Your
+ * Organization</a> in the <i>AWS Organizations User Guide.</i>
+ *
+ * </p </li> </ul> <p/>
+ *
+ * When you call the <code>CreateGovCloudAccount</code> action, you create two accounts: a standalone account in the AWS
+ * GovCloud (US) Region and an associated account in the commercial Region for billing and support purposes. The account in
+ * the commercial Region is automatically a member of the organization whose credentials made the request. Both accounts
+ * are associated with the same email
+ *
+ * address>
+ *
+ * A role is created in the new account in the commercial Region that allows the master account in the organization in the
+ * commercial Region to assume it. An AWS GovCloud (US) account is then created and associated with the commercial account
+ * that you just created. A role is created in the new AWS GovCloud (US) account that can be assumed by the AWS GovCloud
+ * (US) account that is associated with the master account of the commercial organization. For more information and to view
+ * a diagram that explains how account access works, see <a
+ * href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS Organizations</a> in the
+ * <i>AWS GovCloud User Guide.</i>
+ *
+ * </p
+ *
+ * For more information about creating accounts, see <a
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html">Creating an AWS
+ * Account in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+ *
+ * </p <b> <ul> <li>
+ *
+ * When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information
+ * required for the account to operate as a standalone account, such as a payment method and signing the end user license
+ * agreement (EULA) is <i>not</i> automatically collected. If you must remove an account from your organization later, you
+ * can do so only after you provide the missing information. Follow the steps at <a
+ * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">
+ * To leave an organization as a member account</a> in the <i>AWS Organizations User Guide.</i>
+ *
+ * </p </li> <li>
+ *
+ * If you get an exception that indicates that you exceeded your account limits for the organization, contact <a
+ * href="https://console.aws.amazon.com/support/home#/">AWS
+ *
+ * Support</a>> </li> <li>
+ *
+ * If you get an exception that indicates that the operation failed because your organization is still initializing, wait
+ * one hour and then try again. If the error persists, contact <a href="https://console.aws.amazon.com/support/home#/">AWS
+ *
+ * Support</a>> </li> <li>
+ *
+ * Using <code>CreateGovCloudAccount</code> to create multiple temporary accounts isn't recommended. You can only close an
+ * account from the AWS Billing and Cost Management console, and you must be signed in as the root user. For information on
+ * the requirements and process for closing an account, see <a
+ * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html">Closing an AWS
+ * Account</a> in the <i>AWS Organizations User
+ *
+ * Guide</i>> </li> </ul> </b> <note>
+ *
+ * When you create a member account with this operation, you can choose whether to create the account with the <b>IAM User
+ * and Role Access to Billing Information</b> switch enabled. If you enable it, IAM users and roles that have appropriate
+ * permissions can view billing information for the account. If you disable it, only the account root user can access
+ * billing information. For information about how to disable this switch for an account, see <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html">Granting Access to Your Billing
+ * Information and
+ */
+CreateGovCloudAccountResponse * OrganizationsClient::createGovCloudAccount(const CreateGovCloudAccountRequest &request)
+{
+    return qobject_cast<CreateGovCloudAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
  * CreateOrganizationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS organization. The account whose user is calling the CreateOrganization operation automatically becomes
- * the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/orgs_getting-started_concepts.html#account">master
- * account</a> of the new
+ * Creates an AWS organization. The account whose user is calling the <code>CreateOrganization</code> operation
+ * automatically becomes the <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/orgs_getting-started_concepts.html#account">master account</a> of
+ * the new
  *
  * organization>
  *
@@ -563,8 +712,7 @@ CreateAccountResponse * OrganizationsClient::createAccount(const CreateAccountRe
  * By default (or if you set the <code>FeatureSet</code> parameter to <code>ALL</code>), the new organization is created
  * with all features enabled and service control policies automatically enabled in the root. If you instead choose to
  * create the organization supporting only the consolidated billing features by setting the <code>FeatureSet</code>
- * parameter to <code>CONSOLIDATED_BILLING"</code>, then no policy types are enabled by default and you cannot use
- * organization
+ * parameter to <code>CONSOLIDATED_BILLING"</code>, no policy types are enabled by default, and you can't use organization
  */
 CreateOrganizationResponse * OrganizationsClient::createOrganization(const CreateOrganizationRequest &request)
 {
@@ -584,10 +732,10 @@ CreateOrganizationResponse * OrganizationsClient::createOrganization(const Creat
  * </p
  *
  * For more information about OUs, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html">Managing Organizational Units</a>
- * in the <i>AWS Organizations User
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html">Managing Organizational Units</a>
+ * in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>>
+ * </p
  *
  * This operation can be called only from the organization's master
  */
@@ -607,7 +755,7 @@ CreateOrganizationalUnitResponse * OrganizationsClient::createOrganizationalUnit
  * account>
  *
  * For more information about policies and their use, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html">Managing Organization
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html">Managing Organization
  *
  * Policies</a>>
  *
@@ -629,12 +777,12 @@ CreatePolicyResponse * OrganizationsClient::createPolicy(const CreatePolicyReque
  * request>
  *
  * This operation can be called only from the account that received the handshake. The originator of the handshake can use
- * <a>CancelHandshake</a> instead. The originator can't reactivate a declined request, but can re-initiate the process with
+ * <a>CancelHandshake</a> instead. The originator can't reactivate a declined request, but can reinitiate the process with
  * a new handshake
  *
  * request>
  *
- * After you decline a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that it is
+ * After you decline a handshake, it continues to appear in the results of relevant APIs for only 30 days. After that, it's
  */
 DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHandshakeRequest &request)
 {
@@ -711,7 +859,7 @@ DeletePolicyResponse * OrganizationsClient::deletePolicy(const DeletePolicyReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves Organizations-related information about the specified
+ * Retrieves AWS Organizations-related information about the specified
  *
  * account>
  *
@@ -750,8 +898,8 @@ DescribeCreateAccountStatusResponse * OrganizationsClient::describeCreateAccount
  *
  * handshake>
  *
- * You can access handshakes that are ACCEPTED, DECLINED, or CANCELED for only 30 days after they change to that state.
- * They are then deleted and no longer
+ * You can access handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, or <code>CANCELED</code> for only 30
+ * days after they change to that state. They're then deleted and no longer
  *
  * accessible>
  *
@@ -776,7 +924,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  *
  * organization> <note>
  *
- * Even if a policy type is shown as available in the organization, it can be disabled separately at the root level with
+ * Even if a policy type is shown as available in the organization, you can disable it separately at the root level with
  * <a>DisablePolicyType</a>. Use <a>ListRoots</a> to see the status of policy types for a specified
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization(const DescribeOrganizationRequest &request)
@@ -798,7 +946,7 @@ DescribeOrganizationResponse * OrganizationsClient::describeOrganization(const D
  *
  * organization> <note>
  *
- * Even if a policy type is shown as available in the organization, it can be disabled separately at the root level with
+ * Even if a policy type is shown as available in the organization, you can disable it separately at the root level with
  * <a>DisablePolicyType</a>. Use <a>ListRoots</a> to see the status of policy types for a specified
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
@@ -852,13 +1000,13 @@ DescribePolicyResponse * OrganizationsClient::describePolicy(const DescribePolic
  * immediate>
  *
  * <b>Note:</b> Every root, OU, and account must have at least one SCP attached. If you want to replace the default
- * <code>FullAWSAccess</code> policy with one that limits the permissions that can be delegated, then you must attach the
+ * <code>FullAWSAccess</code> policy with one that limits the permissions that can be delegated, you must attach the
  * replacement policy before you can remove the default one. This is the authorization strategy of <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_whitelist">whitelisting</a>.
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_whitelist">whitelisting</a>.
  * If you instead attach a second SCP and leave the <code>FullAWSAccess</code> SCP still attached, and specify
  * <code>"Effect": "Deny"</code> in the second SCP to override the <code>"Effect": "Allow"</code> in the
- * <code>FullAWSAccess</code> policy (or any other attached SCP), then you are using the authorization strategy of <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_blacklist">blacklisting</a>.
+ * <code>FullAWSAccess</code> policy (or any other attached SCP), you're using the authorization strategy of <a
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_blacklist">blacklisting</a>.
  *
  * </p
  *
@@ -900,9 +1048,9 @@ DetachPolicyResponse * OrganizationsClient::detachPolicy(const DetachPolicyReque
  * For more information about integrating other services with AWS Organizations, including the list of services that work
  * with Organizations, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
- * Organizations with Other AWS Services</a> in the <i>AWS Organizations User
+ * Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>>
+ * </p
  *
  * This operation can be called only from the organization's master
  */
@@ -960,9 +1108,9 @@ DisablePolicyTypeResponse * OrganizationsClient::disablePolicyType(const Disable
  *
  * For more information about enabling services to integrate with AWS Organizations, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
- * Organizations with Other AWS Services</a> in the <i>AWS Organizations User
+ * Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>>
+ * </p
  *
  * This operation can be called only from the organization's master account and only if the organization has <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled all
@@ -982,10 +1130,10 @@ EnableAWSServiceAccessResponse * OrganizationsClient::enableAWSServiceAccess(con
  * and actions that can be called in each account. Until you enable all features, you have access only to consolidated
  * billing, and you can't use any of the advanced account administration features that AWS Organizations supports. For more
  * information, see <a
- * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All
- * Features in Your Organization</a> in the <i>AWS Organizations User
+ * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All
+ * Features in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>> <b>
+ * </p <b>
  *
  * This operation is required only for organizations that were created explicitly with only the consolidated billing
  * features enabled. Calling this operation sends a handshake to every invited account in the organization. The feature set
@@ -1051,16 +1199,16 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends an invitation to another account to join your organization as a member account. Organizations sends email on your
- * behalf to the email address that is associated with the other account's owner. The invitation is implemented as a
+ * Sends an invitation to another account to join your organization as a member account. AWS Organizations sends email on
+ * your behalf to the email address that is associated with the other account's owner. The invitation is implemented as a
  * <a>Handshake</a> whose details are in the
  *
  * response> <b> <ul> <li>
  *
  * You can invite AWS accounts only from the same seller as the master account. For example, if your organization's master
- * account was created by Amazon Internet Services Pvt. Ltd (AISPL), an AWS seller in India, then you can only invite other
- * AISPL accounts to your organization. You can't combine accounts from AISPL and AWS, or any other AWS seller. For more
- * information, see <a
+ * account was created by Amazon Internet Services Pvt. Ltd (AISPL), an AWS seller in India, you can invite only other
+ * AISPL accounts to your organization. You can't combine accounts from AISPL and AWS or from any other AWS seller. For
+ * more information, see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilliing-India.html">Consolidated
  * Billing in
  *
@@ -1068,7 +1216,7 @@ EnablePolicyTypeResponse * OrganizationsClient::enablePolicyType(const EnablePol
  *
  * If you receive an exception that indicates that you exceeded your account limits for the organization or that the
  * operation failed because your organization is still initializing, wait one hour and then try again. If the error
- * persists after an hour, then contact <a href="https://console.aws.amazon.com/support/home#/">AWS Customer
+ * persists after an hour, contact <a href="https://console.aws.amazon.com/support/home#/">AWS
  *
  * Support</a>> </li> </ul> </b>
  *
@@ -1103,20 +1251,20 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  * You can leave an organization as a member account only if the account is configured with the information required to
  * operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API,
  * or CLI commands, the information required of standalone accounts is <i>not</i> automatically collected. For each account
- * that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide
+ * that you want to make standalone, you must accept the end user license agreement (EULA), choose a support plan, provide
  * and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge
- * for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. Follow
+ * for any billable (not free tier) AWS activity that occurs while the account isn't attached to an organization. Follow
  * the steps at <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">
  * To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations
- * User
+ * User Guide.</i>
  *
- * Guide</i>> </li> <li>
+ * </p </li> <li>
  *
  * You can leave an organization only after you enable IAM user access to billing in your account. For more information,
  * see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
- * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
+ * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User Guide.</i>
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization(const LeaveOrganizationRequest &request)
 {
@@ -1147,20 +1295,20 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization(const LeaveOr
  * You can leave an organization as a member account only if the account is configured with the information required to
  * operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API,
  * or CLI commands, the information required of standalone accounts is <i>not</i> automatically collected. For each account
- * that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide
+ * that you want to make standalone, you must accept the end user license agreement (EULA), choose a support plan, provide
  * and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge
- * for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. Follow
+ * for any billable (not free tier) AWS activity that occurs while the account isn't attached to an organization. Follow
  * the steps at <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">
  * To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations
- * User
+ * User Guide.</i>
  *
- * Guide</i>> </li> <li>
+ * </p </li> <li>
  *
  * You can leave an organization only after you enable IAM user access to billing in your account. For more information,
  * see <a
  * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating
- * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
+ * Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User Guide.</i>
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 {
@@ -1181,9 +1329,9 @@ LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
  * For more information about integrating other services with AWS Organizations, including the list of services that
  * currently work with Organizations, see <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
- * Organizations with Other AWS Services</a> in the <i>AWS Organizations User
+ * Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide.</i>
  *
- * Guide</i>>
+ * </p
  *
  * This operation can be called only from the organization's master
  */
@@ -1224,8 +1372,8 @@ ListAccountsResponse * OrganizationsClient::listAccounts(const ListAccountsReque
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the accounts in an organization that are contained by the specified target root or organizational unit (OU). If
- * you specify the root, you get a list of all the accounts that are not in any OU. If you specify an OU, you get a list of
- * all the accounts in only that OU, and not in any child OUs. To get a list of all accounts in the organization, use the
+ * you specify the root, you get a list of all the accounts that aren't in any OU. If you specify an OU, you get a list of
+ * all the accounts in only that OU and not in any child OUs. To get a list of all accounts in the organization, use the
  * <a>ListAccounts</a>
  *
  * operation> <note>
@@ -1303,8 +1451,8 @@ ListCreateAccountStatusResponse * OrganizationsClient::listCreateAccountStatus(c
  *
  * user>
  *
- * Handshakes that are ACCEPTED, DECLINED, or CANCELED appear in the results of this API for only 30 days after changing to
- * that state. After that they are deleted and no longer
+ * Handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, or <code>CANCELED</code> appear in the results of this
+ * API for only 30 days after changing to that state. After that, they're deleted and no longer
  *
  * accessible> <note>
  *
@@ -1334,8 +1482,8 @@ ListHandshakesForAccountResponse * OrganizationsClient::listHandshakesForAccount
  *
  * handshake>
  *
- * Handshakes that are ACCEPTED, DECLINED, or CANCELED appear in the results of this API for only 30 days after changing to
- * that state. After that they are deleted and no longer
+ * Handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, or <code>CANCELED</code> appear in the results of this
+ * API for only 30 days after changing to that state. After that, they're deleted and no longer
  *
  * accessible> <note>
  *
@@ -1476,7 +1624,7 @@ ListPoliciesForTargetResponse * OrganizationsClient::listPoliciesForTarget(const
  *
  * account> <note>
  *
- * Policy types can be enabled and disabled in roots. This is distinct from whether they are available in the organization.
+ * Policy types can be enabled and disabled in roots. This is distinct from whether they're available in the organization.
  * When you enable all features, you make policy types available for use in that organization. Individual policy types can
  * then be enabled and disabled in a root. To see the availability of a policy type in an organization, use
  */
@@ -1487,13 +1635,30 @@ ListRootsResponse * OrganizationsClient::listRoots(const ListRootsRequest &reque
 
 /*!
  * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists tags for the specified resource.
+ *
+ * </p
+ *
+ * Currently, you can list tags on an account in AWS
+ */
+ListTagsForResourceResponse * OrganizationsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
  * ListTargetsForPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the roots, organizaitonal units (OUs), and accounts to which the specified policy is
+ * Lists all the roots, organizational units (OUs), and accounts that the specified policy is attached
  *
- * attached> <note>
+ * to> <note>
  *
  * Always check the <code>NextToken</code> response parameter for a <code>null</code> value when calling a
  * <code>List*</code> operation. These operations can occasionally return an empty set of results even when there are more
@@ -1537,9 +1702,9 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  *
  * organization>
  *
- * The removed account becomes a stand-alone account that is not a member of any organization. It is no longer subject to
- * any policies and is responsible for its own bill payments. The organization's master account is no longer charged for
- * any expenses accrued by the member account after it is removed from the
+ * The removed account becomes a standalone account that isn't a member of any organization. It's no longer subject to any
+ * policies and is responsible for its own bill payments. The organization's master account is no longer charged for any
+ * expenses accrued by the member account after it's removed from the
  *
  * organization>
  *
@@ -1551,14 +1716,13 @@ MoveAccountResponse * OrganizationsClient::moveAccount(const MoveAccountRequest 
  * You can remove an account from your organization only if the account is configured with the information required to
  * operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API,
  * or CLI commands, the information required of standalone accounts is <i>not</i> automatically collected. For an account
- * that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide
+ * that you want to make standalone, you must accept the end user license agreement (EULA), choose a support plan, provide
  * and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge
- * for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. To
- * remove an account that does not yet have this information, you must sign in as the member account and follow the steps
- * at <a
+ * for any billable (not free tier) AWS activity that occurs while the account isn't attached to an organization. To remove
+ * an account that doesn't yet have this information, you must sign in as the member account and follow the steps at <a
  * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">
  * To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations
- * User
+ * User Guide.</i>
  */
 RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOrganization(const RemoveAccountFromOrganizationRequest &request)
 {
@@ -1567,12 +1731,46 @@ RemoveAccountFromOrganizationResponse * OrganizationsClient::removeAccountFromOr
 
 /*!
  * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to the specified
+ *
+ * resource>
+ *
+ * Currently, you can tag and untag accounts in AWS
+ */
+TagResourceResponse * OrganizationsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a tag from the specified resource.
+ *
+ * </p
+ *
+ * Currently, you can tag and untag accounts in AWS
+ */
+UntagResourceResponse * OrganizationsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OrganizationsClient service, and returns a pointer to an
  * UpdateOrganizationalUnitResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Renames the specified organizational unit (OU). The ID and ARN do not change. The child OUs and accounts remain in
- * place, and any attached policies of the OU remain attached.
+ * Renames the specified organizational unit (OU). The ID and ARN don't change. The child OUs and accounts remain in place,
+ * and any attached policies of the OU remain attached.
  *
  * </p
  *
@@ -1589,8 +1787,8 @@ UpdateOrganizationalUnitResponse * OrganizationsClient::updateOrganizationalUnit
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing policy with a new name, description, or content. If any parameter is not supplied, that value
- * remains unchanged. Note that you cannot change a policy's
+ * Updates an existing policy with a new name, description, or content. If you don't supply any parameter, that value
+ * remains unchanged. You can't change a policy's
  *
  * type>
  *

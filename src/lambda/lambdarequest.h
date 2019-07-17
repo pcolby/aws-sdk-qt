@@ -53,6 +53,7 @@ public:
         GetFunctionAction,
         GetFunctionConfigurationAction,
         GetLayerVersionAction,
+        GetLayerVersionByArnAction,
         GetLayerVersionPolicyAction,
         GetPolicyAction,
         InvokeAction,

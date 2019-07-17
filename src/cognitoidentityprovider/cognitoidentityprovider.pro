@@ -94,6 +94,10 @@ HEADERS += \
     adminsetusermfapreferencerequest_p.h \
     adminsetusermfapreferenceresponse.h \
     adminsetusermfapreferenceresponse_p.h \
+    adminsetuserpasswordrequest.h \
+    adminsetuserpasswordrequest_p.h \
+    adminsetuserpasswordresponse.h \
+    adminsetuserpasswordresponse_p.h \
     adminsetusersettingsrequest.h \
     adminsetusersettingsrequest_p.h \
     adminsetusersettingsresponse.h \
@@ -296,6 +300,10 @@ HEADERS += \
     listresourceserversrequest_p.h \
     listresourceserversresponse.h \
     listresourceserversresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listuserimportjobsrequest.h \
     listuserimportjobsrequest_p.h \
     listuserimportjobsresponse.h \
@@ -356,6 +364,14 @@ HEADERS += \
     stopuserimportjobrequest_p.h \
     stopuserimportjobresponse.h \
     stopuserimportjobresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateautheventfeedbackrequest.h \
     updateautheventfeedbackrequest_p.h \
     updateautheventfeedbackresponse.h \
@@ -444,6 +460,8 @@ SOURCES += \
     adminrespondtoauthchallengeresponse.cpp \
     adminsetusermfapreferencerequest.cpp \
     adminsetusermfapreferenceresponse.cpp \
+    adminsetuserpasswordrequest.cpp \
+    adminsetuserpasswordresponse.cpp \
     adminsetusersettingsrequest.cpp \
     adminsetusersettingsresponse.cpp \
     adminupdateautheventfeedbackrequest.cpp \
@@ -545,6 +563,8 @@ SOURCES += \
     listidentityprovidersresponse.cpp \
     listresourceserversrequest.cpp \
     listresourceserversresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listuserimportjobsrequest.cpp \
     listuserimportjobsresponse.cpp \
     listuserpoolclientsrequest.cpp \
@@ -575,6 +595,10 @@ SOURCES += \
     startuserimportjobresponse.cpp \
     stopuserimportjobrequest.cpp \
     stopuserimportjobresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateautheventfeedbackrequest.cpp \
     updateautheventfeedbackresponse.cpp \
     updatedevicestatusrequest.cpp \

@@ -42,6 +42,7 @@ namespace EKS {
  * \value DescribeUpdateAction EKS DescribeUpdate action.
  * \value ListClustersAction EKS ListClusters action.
  * \value ListUpdatesAction EKS ListUpdates action.
+ * \value UpdateClusterConfigAction EKS UpdateClusterConfig action.
  * \value UpdateClusterVersionAction EKS UpdateClusterVersion action.
  */
 

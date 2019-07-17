@@ -40,6 +40,8 @@ class ListClustersRequest;
 class ListClustersResponse;
 class ListUpdatesRequest;
 class ListUpdatesResponse;
+class UpdateClusterConfigRequest;
+class UpdateClusterConfigResponse;
 class UpdateClusterVersionRequest;
 class UpdateClusterVersionResponse;
 
@@ -65,6 +67,7 @@ public slots:
     DescribeUpdateResponse * describeUpdate(const DescribeUpdateRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
     ListUpdatesResponse * listUpdates(const ListUpdatesRequest &request);
+    UpdateClusterConfigResponse * updateClusterConfig(const UpdateClusterConfigRequest &request);
     UpdateClusterVersionResponse * updateClusterVersion(const UpdateClusterVersionRequest &request);
 
 private:

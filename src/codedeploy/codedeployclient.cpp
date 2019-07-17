@@ -91,6 +91,8 @@
 #include "listgithubaccounttokennamesresponse.h"
 #include "listonpremisesinstancesrequest.h"
 #include "listonpremisesinstancesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putlifecycleeventhookexecutionstatusrequest.h"
 #include "putlifecycleeventhookexecutionstatusresponse.h"
 #include "registerapplicationrevisionrequest.h"
@@ -103,6 +105,10 @@
 #include "skipwaittimeforinstanceterminationresponse.h"
 #include "stopdeploymentrequest.h"
 #include "stopdeploymentresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateapplicationrequest.h"
 #include "updateapplicationresponse.h"
 #include "updatedeploymentgrouprequest.h"
@@ -133,14 +139,14 @@ namespace CodeDeploy {
  *  <fullname>AWS CodeDeploy</fullname>
  * 
  *  AWS CodeDeploy is a deployment service that automates application deployments to Amazon EC2 instances, on-premises
- *  instances running in your own facility, or serverless AWS Lambda
+ *  instances running in your own facility, serverless AWS Lambda functions, or applications in an Amazon ECS
  * 
- *  functions>
+ *  service>
  * 
- *  You can deploy a nearly unlimited variety of application content, such as an updated Lambda function, code, web and
- *  configuration files, executables, packages, scripts, multimedia files, and so on. AWS CodeDeploy can deploy application
- *  content stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. You do not need to make changes to
- *  your existing code before you can use AWS
+ *  You can deploy a nearly unlimited variety of application content, such as an updated Lambda function, updated
+ *  applications in an Amazon ECS service, code, web and configuration files, executables, packages, scripts, multimedia
+ *  files, and so on. AWS CodeDeploy can deploy application content stored in Amazon S3 buckets, GitHub repositories, or
+ *  Bitbucket repositories. You do not need to make changes to your existing code before you can use AWS
  * 
  *  CodeDeploy>
  * 
@@ -164,49 +170,54 @@ namespace CodeDeploy {
  * 
  *  deployment> </li> <li>
  * 
- *  <b>Deployment group</b>: A set of individual instances or CodeDeploy Lambda applications. A Lambda deployment group
- *  contains a group of applications. An EC2/On-premises deployment group contains individually tagged instances, Amazon EC2
- *  instances in Auto Scaling groups, or both.
+ *  <b>Deployment group</b>: A set of individual instances, CodeDeploy Lambda deployment configuration settings, or an
+ *  Amazon ECS service and network details. A Lambda deployment group specifies how to route traffic to a new version of a
+ *  Lambda function. An Amazon ECS deployment group specifies the service created in Amazon ECS to deploy, a load balancer,
+ *  and a listener to reroute production traffic to an updated containerized application. An EC2/On-premises deployment
+ *  group contains individually tagged instances, Amazon EC2 instances in Amazon EC2 Auto Scaling groups, or both. All
+ *  deployment groups can specify optional trigger, alarm, and rollback
  * 
- *  </p </li> <li>
+ *  settings> </li> <li>
  * 
  *  <b>Deployment configuration</b>: A set of deployment rules and deployment success and failure conditions used by AWS
  *  CodeDeploy during a
  * 
  *  deployment> </li> <li>
  * 
- *  <b>Deployment</b>: The process and the components used in the process of updating a Lambda function or of installing
- *  content on one or more instances.
+ *  <b>Deployment</b>: The process and the components used when updating a Lambda function, a containerized application in
+ *  an Amazon ECS service, or of installing content on one or more instances.
  * 
  *  </p </li> <li>
  * 
  *  <b>Application revisions</b>: For an AWS Lambda deployment, this is an AppSpec file that specifies the Lambda function
- *  to update and one or more functions to validate deployment lifecycle events. For an EC2/On-premises deployment, this is
- *  an archive file containing source content—source code, web pages, executable files, and deployment scripts—along with an
- *  AppSpec file. Revisions are stored in Amazon S3 buckets or GitHub repositories. For Amazon S3, a revision is uniquely
- *  identified by its Amazon S3 object key and its ETag, version, or both. For GitHub, a revision is uniquely identified by
- *  its commit
+ *  to be updated and one or more functions to validate deployment lifecycle events. For an Amazon ECS deployment, this is
+ *  an AppSpec file that specifies the Amazon ECS task definition, container, and port where production traffic is rerouted.
+ *  For an EC2/On-premises deployment, this is an archive file that contains source content—source code, webpages,
+ *  executable files, and deployment scripts—along with an AppSpec file. Revisions are stored in Amazon S3 buckets or GitHub
+ *  repositories. For Amazon S3, a revision is uniquely identified by its Amazon S3 object key and its ETag, version, or
+ *  both. For GitHub, a revision is uniquely identified by its commit
  * 
  *  ID> </li> </ul>
  * 
  *  This guide also contains information to help you get details about the instances in your deployments, to make
- *  on-premises instances available for AWS CodeDeploy deployments, and to get details about a Lambda function
+ *  on-premises instances available for AWS CodeDeploy deployments, to get details about a Lambda function deployment, and
+ *  to get details about Amazon ECS service
  * 
- *  deployment>
+ *  deployments>
  * 
  *  <b>AWS CodeDeploy Information Resources</b>
  * 
  *  </p <ul> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/codedeploy/latest/userguide">AWS CodeDeploy User Guide</a>
+ *  <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide">AWS CodeDeploy User Guide</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/codedeploy/latest/APIReference/">AWS CodeDeploy API Reference Guide</a>
+ *  <a href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/">AWS CodeDeploy API Reference Guide</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/cli/latest/reference/deploy/index.html">AWS CLI Reference for AWS CodeDeploy</a>
+ *  <a href="https://docs.aws.amazon.com/cli/latest/reference/deploy/index.html">AWS CLI Reference for AWS CodeDeploy</a>
  * 
  *  </p </li> <li>
  * 
@@ -285,7 +296,8 @@ AddTagsToOnPremisesInstancesResponse * CodeDeployClient::addTagsToOnPremisesInst
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about one or more application
+ * Gets information about one or more application revisions. The maximum number of application revisions that can be
+ * returned is
  */
 BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevisions(const BatchGetApplicationRevisionsRequest &request)
 {
@@ -298,7 +310,7 @@ BatchGetApplicationRevisionsResponse * CodeDeployClient::batchGetApplicationRevi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about one or more
+ * Gets information about one or more applications. The maximum number of applications that can be returned is
  */
 BatchGetApplicationsResponse * CodeDeployClient::batchGetApplications(const BatchGetApplicationsRequest &request)
 {
@@ -326,12 +338,13 @@ BatchGetDeploymentGroupsResponse * CodeDeployClient::batchGetDeploymentGroups(co
  *
  * <note>
  *
- * This method works, but is considered deprecated. Use <code>BatchGetDeploymentTargets</code> instead.
+ * This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead.
  *
  * </p </note>
  *
- * Returns an array of instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda
- * compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms.
+ * Returns an array of one or more instances associated with a deployment. This method works with EC2/On-premises and AWS
+ * Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. The maximum
+ * number of instances that can be returned is
  */
 BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstances(const BatchGetDeploymentInstancesRequest &request)
 {
@@ -344,24 +357,25 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of targets associated with a deployment. This method works with all compute types and should be used
- * instead of the deprecated <code>BatchGetDeploymentInstances</code>.
+ * Returns an array of one or more targets associated with a deployment. This method works with all compute types and
+ * should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. The maximum number of targets that
+ * can be returned is
  *
- * </p
+ * 25>
  *
  * The type of targets returned depends on the deployment's compute platform:
  *
  * </p <ul> <li>
  *
- * <b>EC2/On-premises</b> - Information about EC2 instance targets.
+ * <b>EC2/On-premises</b>: Information about EC2 instance targets.
  *
  * </p </li> <li>
  *
- * <b>AWS Lambda</b> - Information about Lambda functions targets.
+ * <b>AWS Lambda</b>: Information about Lambda functions targets.
  *
  * </p </li> <li>
  *
- * <b>Amazon ECS</b> - Information about ECS service targets.
+ * <b>Amazon ECS</b>: Information about Amazon ECS service targets.
  */
 BatchGetDeploymentTargetsResponse * CodeDeployClient::batchGetDeploymentTargets(const BatchGetDeploymentTargetsRequest &request)
 {
@@ -374,7 +388,7 @@ BatchGetDeploymentTargetsResponse * CodeDeployClient::batchGetDeploymentTargets(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about one or more
+ * Gets information about one or more deployments. The maximum number of deployments that can be returned is
  */
 BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchGetDeploymentsRequest &request)
 {
@@ -387,7 +401,8 @@ BatchGetDeploymentsResponse * CodeDeployClient::batchGetDeployments(const BatchG
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about one or more on-premises
+ * Gets information about one or more on-premises instances. The maximum number of on-premises instances that can be
+ * returned is
  */
 BatchGetOnPremisesInstancesResponse * CodeDeployClient::batchGetOnPremisesInstances(const BatchGetOnPremisesInstancesRequest &request)
 {
@@ -455,7 +470,7 @@ CreateDeploymentConfigResponse * CodeDeployClient::createDeploymentConfig(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a deployment group to which application revisions will be
+ * Creates a deployment group to which application revisions are
  */
 CreateDeploymentGroupResponse * CodeDeployClient::createDeploymentGroup(const CreateDeploymentGroupRequest &request)
 {
@@ -564,6 +579,12 @@ GetApplicationRevisionResponse * CodeDeployClient::getApplicationRevision(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a
+ *
+ * deployment> <note>
+ *
+ * The <code>content</code> property of the <code>appSpecContent</code> object in the returned revision is always null. Use
+ * <code>GetApplicationRevision</code> and the <code>sha256</code> property of the returned <code>appSpecContent</code>
+ * object to get the content of the deployment’s AppSpec file.
  */
 GetDeploymentResponse * CodeDeployClient::getDeployment(const GetDeploymentRequest &request)
 {
@@ -654,7 +675,7 @@ ListApplicationRevisionsResponse * CodeDeployClient::listApplicationRevisions(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the applications registered with the applicable IAM user or AWS
+ * Lists the applications registered with the IAM user or AWS
  */
 ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicationsRequest &request)
 {
@@ -667,7 +688,7 @@ ListApplicationsResponse * CodeDeployClient::listApplications(const ListApplicat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the deployment configurations with the applicable IAM user or AWS
+ * Lists the deployment configurations with the IAM user or AWS
  */
 ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const ListDeploymentConfigsRequest &request)
 {
@@ -680,7 +701,7 @@ ListDeploymentConfigsResponse * CodeDeployClient::listDeploymentConfigs(const Li
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the deployment groups for an application registered with the applicable IAM user or AWS
+ * Lists the deployment groups for an application registered with the IAM user or AWS
  */
 ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const ListDeploymentGroupsRequest &request)
 {
@@ -701,7 +722,7 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
  *
  * </p </note>
  *
- * Lists the instance for a deployment associated with the applicable IAM user or AWS account.
+ * Lists the instance for a deployment associated with the IAM user or AWS account.
  */
 ListDeploymentInstancesResponse * CodeDeployClient::listDeploymentInstances(const ListDeploymentInstancesRequest &request)
 {
@@ -727,7 +748,7 @@ ListDeploymentTargetsResponse * CodeDeployClient::listDeploymentTargets(const Li
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the deployments in a deployment group for an application registered with the applicable IAM user or AWS
+ * Lists the deployments in a deployment group for an application registered with the IAM user or AWS
  */
 ListDeploymentsResponse * CodeDeployClient::listDeployments(const ListDeploymentsRequest &request)
 {
@@ -757,12 +778,26 @@ ListGitHubAccountTokenNamesResponse * CodeDeployClient::listGitHubAccountTokenNa
  *
  * instances>
  *
- * Unless otherwise specified, both registered and deregistered on-premises instance names will be listed. To list only
+ * Unless otherwise specified, both registered and deregistered on-premises instance names are listed. To list only
  * registered or deregistered on-premises instance names, use the registration status
  */
 ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(const ListOnPremisesInstancesRequest &request)
 {
     return qobject_cast<ListOnPremisesInstancesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of tags for the resource identified by a specified ARN. Tags are used to organize and categorize your
+ * CodeDeploy resources.
+ */
+ListTagsForResourceResponse * CodeDeployClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -848,6 +883,34 @@ SkipWaitTimeForInstanceTerminationResponse * CodeDeployClient::skipWaitTimeForIn
 StopDeploymentResponse * CodeDeployClient::stopDeployment(const StopDeploymentRequest &request)
 {
     return qobject_cast<StopDeploymentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the list of tags in the input <code>Tags</code> parameter with the resource identified by the
+ * <code>ResourceArn</code> input parameter.
+ */
+TagResourceResponse * CodeDeployClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates a resource from a list of tags. The resource is identified by the <code>ResourceArn</code> input
+ * parameter. The tags are identfied by the list of keys in the <code>TagKeys</code> input parameter.
+ */
+UntagResourceResponse * CodeDeployClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

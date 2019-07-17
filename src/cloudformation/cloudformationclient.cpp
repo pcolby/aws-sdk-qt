@@ -237,7 +237,7 @@ CancelUpdateStackResponse * CloudFormationClient::cancelUpdateStack(const Cancel
  *
  * For a specified stack that is in the <code>UPDATE_ROLLBACK_FAILED</code> state, continues rolling it back to the
  * <code>UPDATE_ROLLBACK_COMPLETE</code> state. Depending on the cause of the failure, you can manually <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed">
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed">
  * fix the error</a> and continue the rollback. By continuing the rollback, you can return your stack to a working state
  * (the <code>UPDATE_ROLLBACK_COMPLETE</code> state), and then try to update the stack
  *
@@ -391,6 +391,9 @@ DeleteStackSetResponse * CloudFormationClient::deleteStackSet(const DeleteStackS
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves your account's AWS CloudFormation limits, such as the maximum number of stacks that you can create in your
+ * account. For more information about account limits, see <a
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">AWS CloudFormation
+ * Limits</a> in the <i>AWS CloudFormation User
  */
 DescribeAccountLimitsResponse * CloudFormationClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
@@ -405,7 +408,7 @@ DescribeAccountLimitsResponse * CloudFormationClient::describeAccountLimits(cons
  *
  * Returns the inputs for the change set and a list of changes that AWS CloudFormation will make if you execute the change
  * set. For more information, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html">Updating
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html">Updating
  * Stacks Using Change Sets</a> in the AWS CloudFormation User
  */
 DescribeChangeSetResponse * CloudFormationClient::describeChangeSet(const DescribeChangeSetRequest &request)
@@ -423,7 +426,7 @@ DescribeChangeSetResponse * CloudFormationClient::describeChangeSet(const Descri
  * actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template
  * and any values specified as template parameters. A stack is considered to have drifted if one or more of its resources
  * have drifted. For more information on stack and resource drift, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated
  * Configuration Changes to Stacks and
  *
  * Resources</a>>
@@ -446,7 +449,7 @@ DescribeStackDriftDetectionStatusResponse * CloudFormationClient::describeStackD
  *
  * Returns all stack related events for a specified stack in reverse chronological order. For more information about a
  * stack's event history, go to <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the AWS
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the AWS
  * CloudFormation User
  *
  * Guide> <note>
@@ -507,7 +510,7 @@ DescribeStackResourceResponse * CloudFormationClient::describeStackResource(cons
  * For a given stack, there will be one <code>StackResourceDrift</code> for each stack resource that has been checked for
  * drift. Resources that have not yet been checked for drift are not included. Resources that do not currently support
  * drift detection are not checked, and so not included. For a list of resources that support drift detection, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources
  * that Support Drift
  *
  * Detection</a>>
@@ -545,7 +548,7 @@ DescribeStackResourceDriftsResponse * CloudFormationClient::describeStackResourc
  * You must specify either <code>StackName</code> or <code>PhysicalResourceId</code>, but not both. In addition, you can
  * specify <code>LogicalResourceId</code> to filter the returned result. For more information about resources, the
  * <code>LogicalResourceId</code> and <code>PhysicalResourceId</code>, go to the <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/">AWS CloudFormation User
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/">AWS CloudFormation User
  *
  * Guide</a>> <note>
  *
@@ -613,7 +616,7 @@ DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStac
  * template configuration. Only resource properties explicitly defined in the stack template are checked for drift. A stack
  * is considered to have drifted if one or more of its resources differ from their expected template configurations. For
  * more information, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated
  * Configuration Changes to Stacks and
  *
  * Resources</a>>
@@ -624,7 +627,7 @@ DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStac
  * resources>
  *
  * For a list of stack resources that currently support drift detection, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources
  * that Support Drift
  *
  * Detection</a>>
@@ -654,7 +657,7 @@ DetectStackDriftResponse * CloudFormationClient::detectStackDrift(const DetectSt
  * configuration, as defined in the stack template and any values specified as template parameters. This information
  * includes actual and expected property values for resources in which AWS CloudFormation detects drift. Only resource
  * properties explicitly defined in the stack template are checked for drift. For more information about stack and resource
- * drift, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
+ * drift, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
  * Unregulated Configuration Changes to Stacks and
  *
  * Resources</a>>
@@ -666,7 +669,7 @@ DetectStackDriftResponse * CloudFormationClient::detectStackDrift(const DetectSt
  *
  * Resources that do not currently support drift detection cannot be checked. For a list of resources that support drift
  * detection, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources
  * that Support Drift
  */
 DetectStackResourceDriftResponse * CloudFormationClient::detectStackResourceDrift(const DetectStackResourceDriftRequest &request)
@@ -794,13 +797,13 @@ ListChangeSetsResponse * CloudFormationClient::listChangeSets(const ListChangeSe
  *
  * Lists all exported output values in the account and region in which you call this action. Use this action to see the
  * exported output values that you can import into other stacks. To import values, use the <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
  * <code>Fn::ImportValue</code> </a> function.
  *
  * </p
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html"> AWS CloudFormation
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html"> AWS CloudFormation
  * Export Stack Output
  */
 ListExportsResponse * CloudFormationClient::listExports(const ListExportsRequest &request)
@@ -820,7 +823,7 @@ ListExportsResponse * CloudFormationClient::listExports(const ListExportsRequest
  * </p
  *
  * For more information about importing an exported output value, see the <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
  * <code>Fn::ImportValue</code> </a> function.
  */
 ListImportsResponse * CloudFormationClient::listImports(const ListImportsRequest &request)
@@ -971,7 +974,7 @@ StopStackSetOperationResponse * CloudFormationClient::stopStackSetOperation(cons
  * action>
  *
  * For more information about creating an update template, updating a stack, and monitoring the progress of the update, see
- * <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html">Updating a
+ * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html">Updating a
  */
 UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest &request)
 {
@@ -991,7 +994,7 @@ UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest
  *
  * You can only update stack instances in regions and accounts where they already exist; to create additional stack
  * instances, use <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackInstances.html">CreateStackInstances</a>.
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackInstances.html">CreateStackInstances</a>.
  *
  * </p
  *
@@ -1001,10 +1004,10 @@ UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest
  *
  * You can only update the parameter <i>values</i> that are specified in the stack set; to add or delete a parameter
  * itself, use <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html">UpdateStackSet</a> to
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html">UpdateStackSet</a> to
  * update the stack set template. If you add a parameter to a template, before you can override the parameter value
  * specified in the stack set you must first use <a
- * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html">UpdateStackSet</a> to
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html">UpdateStackSet</a> to
  * update all stack instances with the updated template and parameter value specified in the stack set. Once a stack
  * instance has been updated with the new parameter, you can then override the parameter value using
  */

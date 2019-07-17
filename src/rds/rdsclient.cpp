@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "addroletodbclusterrequest.h"
 #include "addroletodbclusterresponse.h"
+#include "addroletodbinstancerequest.h"
+#include "addroletodbinstanceresponse.h"
 #include "addsourceidentifiertosubscriptionrequest.h"
 #include "addsourceidentifiertosubscriptionresponse.h"
 #include "addtagstoresourcerequest.h"
@@ -205,6 +207,8 @@
 #include "removefromglobalclusterresponse.h"
 #include "removerolefromdbclusterrequest.h"
 #include "removerolefromdbclusterresponse.h"
+#include "removerolefromdbinstancerequest.h"
+#include "removerolefromdbinstanceresponse.h"
 #include "removesourceidentifierfromsubscriptionrequest.h"
 #include "removesourceidentifierfromsubscriptionresponse.h"
 #include "removetagsfromresourcerequest.h"
@@ -227,10 +231,14 @@
 #include "restoredbinstancetopointintimeresponse.h"
 #include "revokedbsecuritygroupingressrequest.h"
 #include "revokedbsecuritygroupingressresponse.h"
+#include "startactivitystreamrequest.h"
+#include "startactivitystreamresponse.h"
 #include "startdbclusterrequest.h"
 #include "startdbclusterresponse.h"
 #include "startdbinstancerequest.h"
 #include "startdbinstanceresponse.h"
+#include "stopactivitystreamrequest.h"
+#include "stopactivitystreamresponse.h"
 #include "stopdbclusterrequest.h"
 #include "stopdbclusterresponse.h"
 #include "stopdbinstancerequest.h"
@@ -292,22 +300,22 @@ namespace RDS {
  *  </p <ul> <li>
  * 
  *  For the alphabetical list of API actions, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
  * 
  *  Actions</a>> </li> <li>
  * 
  *  For the alphabetical list of data types, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
  * 
  *  Types</a>> </li> <li>
  * 
  *  For a list of common query parameters, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
  * 
  *  Parameters</a>> </li> <li>
  * 
  *  For descriptions of the error codes, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
  * 
  *  Errors</a>> </li> </ul>
  * 
@@ -316,12 +324,12 @@ namespace RDS {
  *  </p <ul> <li>
  * 
  *  For a summary of the Amazon RDS interfaces, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
  * 
  *  Interfaces</a>> </li> <li>
  * 
  *  For more information about how to use the Query API, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
  */
 
 /*!
@@ -383,13 +391,34 @@ RdsClient::RdsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.html">Authorizing
+ * Associates an Identity and Access Management (IAM) role from an Amazon Aurora DB cluster. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.html">Authorizing
  * Amazon Aurora MySQL to Access Other AWS Services on Your Behalf</a> in the <i>Amazon Aurora User
+ *
+ * Guide</i>> <note>
+ *
+ * This action only applies to Aurora DB
  */
 AddRoleToDBClusterResponse * RdsClient::addRoleToDBCluster(const AddRoleToDBClusterRequest &request)
 {
     return qobject_cast<AddRoleToDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * AddRoleToDBInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates an AWS Identity and Access Management (IAM) role with a DB
+ *
+ * instance> <note>
+ *
+ * To add a role to a DB instance, the status of the DB instance must be
+ */
+AddRoleToDBInstanceResponse * RdsClient::addRoleToDBInstance(const AddRoleToDBInstanceRequest &request)
+{
+    return qobject_cast<AddRoleToDBInstanceResponse *>(send(request));
 }
 
 /*!
@@ -417,7 +446,7 @@ AddSourceIdentifierToSubscriptionResponse * RdsClient::addSourceIdentifierToSubs
  * RDS>
  *
  * For an overview on tagging Amazon RDS resources, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS
  */
 AddTagsToResourceResponse * RdsClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -475,8 +504,12 @@ AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIng
  * cluster>
  *
  * For more information on backtracking, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html"> Backtracking an
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html"> Backtracking an
  * Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 BacktrackDBClusterResponse * RdsClient::backtrackDBCluster(const BacktrackDBClusterRequest &request)
 {
@@ -490,6 +523,10 @@ BacktrackDBClusterResponse * RdsClient::backtrackDBCluster(const BacktrackDBClus
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Copies the specified DB cluster parameter
+ *
+ * group> <note>
+ *
+ * This action only applies to Aurora DB
  */
 CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(const CopyDBClusterParameterGroupRequest &request)
 {
@@ -551,9 +588,9 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  * <code>arn:aws:rds:us-west-2:123456789012:cluster-snapshot:aurora-cluster1-snapshot-20161115</code>> </li> </ul>
  *
  * To learn how to generate a Signature Version 4 signed request, see <a
- * href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html"> Authenticating Requests: Using Query
- * Parameters (AWS Signature Version 4)</a> and <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"> Signature Version 4 Signing
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html"> Authenticating Requests: Using
+ * Query Parameters (AWS Signature Version 4)</a> and <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"> Signature Version 4 Signing
  *
  * Process</a>> </li> <li>
  *
@@ -574,14 +611,18 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  * status>
  *
  * For more information on copying encrypted DB cluster snapshots from one AWS Region to another, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html"> Copying a Snapshot</a> in the
- * <i>Amazon Aurora User Guide.</i>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html"> Copying a Snapshot</a> in
+ * the <i>Amazon Aurora User Guide.</i>
  *
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 CopyDBClusterSnapshotResponse * RdsClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
@@ -617,7 +658,7 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
  * </p
  *
  * For more information about copying snapshots, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopyDBSnapshot.html">Copying a DB Snapshot</a> in the
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopyDBSnapshot.html">Copying a DB Snapshot</a> in the
  * <i>Amazon RDS User Guide.</i>
  */
 CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &request)
@@ -655,8 +696,12 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
  * parameter>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterRequest &request)
 {
@@ -670,6 +715,10 @@ CreateDBClusterResponse * RdsClient::createDBCluster(const CreateDBClusterReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new custom endpoint and associates it with an Amazon Aurora DB
+ *
+ * cluster> <note>
+ *
+ * This action only applies to Aurora DB
  */
 CreateDBClusterEndpointResponse * RdsClient::createDBClusterEndpoint(const CreateDBClusterEndpointRequest &request)
 {
@@ -692,10 +741,10 @@ CreateDBClusterEndpointResponse * RdsClient::createDBClusterEndpoint(const Creat
  *
  * A DB cluster parameter group is initially created with the default parameters for the database engine used by instances
  * in the DB cluster. To provide custom values for any of the parameters, you must modify the group after creating it using
- * <a>ModifyDBClusterParameterGroup</a>. Once you've created a DB cluster parameter group, you need to associate it with
- * your DB cluster using <a>ModifyDBCluster</a>. When you associate a new DB cluster parameter group with a running DB
- * cluster, you need to reboot the DB instances in the DB cluster without failover for the new DB cluster parameter group
- * and associated settings to take effect.
+ * <code>ModifyDBClusterParameterGroup</code>. Once you've created a DB cluster parameter group, you need to associate it
+ * with your DB cluster using <code>ModifyDBCluster</code>. When you associate a new DB cluster parameter group with a
+ * running DB cluster, you need to reboot the DB instances in the DB cluster without failover for the new DB cluster
+ * parameter group and associated settings to take effect.
  *
  * </p <b>
  *
@@ -705,13 +754,17 @@ CreateDBClusterEndpointResponse * RdsClient::createDBClusterEndpoint(const Creat
  * important for parameters that are critical when creating the default database for a DB cluster, such as the character
  * set for the default database defined by the <code>character_set_database</code> parameter. You can use the <i>Parameter
  * Groups</i> option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the
- * <a>DescribeDBClusterParameters</a> command to verify that your DB cluster parameter group has been created or
+ * <code>DescribeDBClusterParameters</code> action to verify that your DB cluster parameter group has been created or
  *
  * modified> </b>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request)
 {
@@ -725,8 +778,12 @@ CreateDBClusterParameterGroupResponse * RdsClient::createDBClusterParameterGroup
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a snapshot of a DB cluster. For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 CreateDBClusterSnapshotResponse * RdsClient::createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request)
 {
@@ -753,9 +810,9 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new DB instance that acts as a Read Replica for an existing source DB instance. You can create a Read Replica
- * for a DB instance running MySQL, MariaDB, or PostgreSQL. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with PostgreSQL, MySQL, and
- * MariaDB Read Replicas</a> in the <i>Amazon RDS User Guide</i>.
+ * for a DB instance running MySQL, MariaDB, Oracle, or PostgreSQL. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with Read Replicas</a> in the
+ * <i>Amazon RDS User Guide</i>.
  *
  * </p
  *
@@ -897,6 +954,10 @@ CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const Creat
  * You can create a global database that is initially empty, and then add a primary cluster and a secondary cluster to it.
  * Or you can specify an existing Aurora cluster during the create operation, and this cluster becomes the primary cluster
  * of the global database.
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 CreateGlobalClusterResponse * RdsClient::createGlobalCluster(const CreateGlobalClusterRequest &request)
 {
@@ -929,8 +990,12 @@ CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroup
  * deleted> <p/>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterRequest &request)
 {
@@ -944,6 +1009,10 @@ DeleteDBClusterResponse * RdsClient::deleteDBCluster(const DeleteDBClusterReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a custom endpoint and removes it from an Amazon Aurora DB
+ *
+ * cluster> <note>
+ *
+ * This action only applies to Aurora DB
  */
 DeleteDBClusterEndpointResponse * RdsClient::deleteDBClusterEndpoint(const DeleteDBClusterEndpointRequest &request)
 {
@@ -962,8 +1031,12 @@ DeleteDBClusterEndpointResponse * RdsClient::deleteDBClusterEndpoint(const Delet
  * clusters>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request)
 {
@@ -985,8 +1058,12 @@ DeleteDBClusterParameterGroupResponse * RdsClient::deleteDBClusterParameterGroup
  * deleted> </note>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request)
 {
@@ -1012,10 +1089,10 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  * </p
  *
  * Note that when a DB instance is in a failure state and has a status of <code>failed</code>,
- * <code>incompatible-restore</code>, or <code>incompatible-network</code>, you can only delete it when the
- * <code>SkipFinalSnapshot</code> parameter is set to
+ * <code>incompatible-restore</code>, or <code>incompatible-network</code>, you can only delete it when you skip creation
+ * of the final snapshot with the <code>SkipFinalSnapshot</code>
  *
- * <code>true</code>>
+ * parameter>
  *
  * If the specified DB instance is part of an Amazon Aurora DB cluster, you can't delete the DB instance if both of the
  * following conditions are
@@ -1030,9 +1107,9 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  *
  * cluster> </li> </ul>
  *
- * To delete a DB instance in this case, first call the <a>PromoteReadReplicaDBCluster</a> API action to promote the DB
- * cluster so it's no longer a Read Replica. After the promotion completes, then call the <code>DeleteDBInstance</code> API
- * action to delete the final instance in the DB
+ * To delete a DB instance in this case, first call the <code>PromoteReadReplicaDBCluster</code> API action to promote the
+ * DB cluster so it's no longer a Read Replica. After the promotion completes, then call the <code>DeleteDBInstance</code>
+ * API action to delete the final instance in the DB
  */
 DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
 {
@@ -1137,6 +1214,10 @@ DeleteEventSubscriptionResponse * RdsClient::deleteEventSubscription(const Delet
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a global database cluster. The primary and secondary clusters must already be detached or destroyed first.
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DeleteGlobalClusterResponse * RdsClient::deleteGlobalCluster(const DeleteGlobalClusterRequest &request)
 {
@@ -1199,8 +1280,12 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
  * cluster>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClusterBacktracksResponse * RdsClient::describeDBClusterBacktracks(const DescribeDBClusterBacktracksRequest &request)
 {
@@ -1214,6 +1299,10 @@ DescribeDBClusterBacktracksResponse * RdsClient::describeDBClusterBacktracks(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about endpoints for an Amazon Aurora DB
+ *
+ * cluster> <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClusterEndpointsResponse * RdsClient::describeDBClusterEndpoints(const DescribeDBClusterEndpointsRequest &request)
 {
@@ -1232,8 +1321,12 @@ DescribeDBClusterEndpointsResponse * RdsClient::describeDBClusterEndpoints(const
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request)
 {
@@ -1251,8 +1344,12 @@ DescribeDBClusterParameterGroupsResponse * RdsClient::describeDBClusterParameter
  * group>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(const DescribeDBClusterParametersRequest &request)
 {
@@ -1277,7 +1374,11 @@ DescribeDBClusterParametersResponse * RdsClient::describeDBClusterParameters(con
  * accounts>
  *
  * To add or remove access for an AWS account to copy or restore a manual DB cluster snapshot, or to make the manual DB
- * cluster snapshot public or private, use the <a>ModifyDBClusterSnapshotAttribute</a> API
+ * cluster snapshot public or private, use the <code>ModifyDBClusterSnapshotAttribute</code> API
+ *
+ * action> <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request)
 {
@@ -1295,8 +1396,12 @@ DescribeDBClusterSnapshotAttributesResponse * RdsClient::describeDBClusterSnapsh
  * pagination>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const DescribeDBClusterSnapshotsRequest &request)
 {
@@ -1314,8 +1419,12 @@ DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const
  * pagination>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
@@ -1439,7 +1548,7 @@ DescribeDBSecurityGroupsResponse * RdsClient::describeDBSecurityGroups(const Des
  * accounts>
  *
  * To add or remove access for an AWS account to copy or restore a manual DB snapshot, or to make the manual DB snapshot
- * public or private, use the <a>ModifyDBSnapshotAttribute</a> API
+ * public or private, use the <code>ModifyDBSnapshotAttribute</code> API
  */
 DescribeDBSnapshotAttributesResponse * RdsClient::describeDBSnapshotAttributes(const DescribeDBSnapshotAttributesRequest &request)
 {
@@ -1489,7 +1598,7 @@ DescribeDBSubnetGroupsResponse * RdsClient::describeDBSubnetGroups(const Describ
  * engine>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
  */
 DescribeEngineDefaultClusterParametersResponse * RdsClient::describeEngineDefaultClusterParameters(const DescribeEngineDefaultClusterParametersRequest &request)
@@ -1518,7 +1627,7 @@ DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParame
  *
  * Displays a list of categories for all event source types, or, if specified, for a specified source type. You can see a
  * list of the event categories and source types in the <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html"> Events</a> topic in the <i>Amazon RDS
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html"> Events</a> topic in the <i>Amazon RDS
  * User Guide.</i>
  */
 DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
@@ -1570,8 +1679,12 @@ DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 DescribeGlobalClustersResponse * RdsClient::describeGlobalClusters(const DescribeGlobalClustersRequest &request)
 {
@@ -1676,8 +1789,8 @@ DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You can call <a>DescribeValidDBInstanceModifications</a> to learn what modifications you can make to your DB instance.
- * You can use this information when you call <a>ModifyDBInstance</a>.
+ * You can call <code>DescribeValidDBInstanceModifications</code> to learn what modifications you can make to your DB
+ * instance. You can use this information when you call <code>ModifyDBInstance</code>.
  */
 DescribeValidDBInstanceModificationsResponse * RdsClient::describeValidDBInstanceModifications(const DescribeValidDBInstanceModificationsRequest &request)
 {
@@ -1720,8 +1833,12 @@ DownloadDBLogFilePortionResponse * RdsClient::downloadDBLogFilePortion(const Dow
  * complete>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBClusterRequest &request)
 {
@@ -1739,7 +1856,7 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
  * resource>
  *
  * For an overview on tagging an Amazon RDS resource, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS Resources</a> in
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS Resources</a> in
  * the <i>Amazon RDS User
  */
 ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForResourceRequest &request)
@@ -1769,7 +1886,7 @@ ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForRe
  * down>
  *
  * For more information about Aurora Serverless, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
  * Serverless</a> in the <i>Amazon Aurora User
  *
  * Guide</i>> <b>
@@ -1777,8 +1894,12 @@ ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForRe
  * If you call <code>ModifyCurrentDBClusterCapacity</code> with the default <code>TimeoutAction</code>, connections that
  * prevent Aurora Serverless from finding a scaling point might be dropped. For more information about scaling points, see
  * <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling">
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling">
  * Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User
+ *
+ * Guide</i>> </b> <note>
+ *
+ * This action only applies to Aurora DB
  */
 ModifyCurrentDBClusterCapacityResponse * RdsClient::modifyCurrentDBClusterCapacity(const ModifyCurrentDBClusterCapacityRequest &request)
 {
@@ -1793,8 +1914,12 @@ ModifyCurrentDBClusterCapacityResponse * RdsClient::modifyCurrentDBClusterCapaci
  *
  * Modify a setting for an Amazon Aurora DB cluster. You can change one or more database configuration parameters by
  * specifying these parameters and the new values in the request. For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterRequest &request)
 {
@@ -1808,6 +1933,10 @@ ModifyDBClusterResponse * RdsClient::modifyDBCluster(const ModifyDBClusterReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the properties of an endpoint in an Amazon Aurora DB
+ *
+ * cluster> <note>
+ *
+ * This action only applies to Aurora DB
  */
 ModifyDBClusterEndpointResponse * RdsClient::modifyDBClusterEndpoint(const ModifyDBClusterEndpointRequest &request)
 {
@@ -1827,7 +1956,7 @@ ModifyDBClusterEndpointResponse * RdsClient::modifyDBClusterEndpoint(const Modif
  * </p
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
  *
  * </p <note>
@@ -1843,7 +1972,11 @@ ModifyDBClusterEndpointResponse * RdsClient::modifyDBClusterEndpoint(const Modif
  * parameters that are critical when creating the default database for a DB cluster, such as the character set for the
  * default database defined by the <code>character_set_database</code> parameter. You can use the <i>Parameter Groups</i>
  * option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the
- * <a>DescribeDBClusterParameters</a> command to verify that your DB cluster parameter group has been created or
+ * <code>DescribeDBClusterParameters</code> action to verify that your DB cluster parameter group has been created or
+ *
+ * modified> </b> <note>
+ *
+ * This action only applies to Aurora DB
  */
 ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request)
 {
@@ -1872,7 +2005,11 @@ ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup
  * case>
  *
  * To view which AWS accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster
- * snapshot public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API
+ * snapshot public or private, use the <code>DescribeDBClusterSnapshotAttributes</code> API
+ *
+ * action> <note>
+ *
+ * This action only applies to Aurora DB
  */
 ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request)
 {
@@ -1887,7 +2024,7 @@ ModifyDBClusterSnapshotAttributeResponse * RdsClient::modifyDBClusterSnapshotAtt
  *
  * Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these
  * parameters and the new values in the request. To learn what modifications you can make to your DB instance, call
- * <a>DescribeValidDBInstanceModifications</a> before you call <a>ModifyDBInstance</a>.
+ * <code>DescribeValidDBInstanceModifications</code> before you call <code>ModifyDBInstance</code>.
  */
 ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceRequest &request)
 {
@@ -1962,7 +2099,7 @@ ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotReq
  * case>
  *
  * To view which AWS accounts have access to copy or restore a manual DB snapshot, or whether a manual DB snapshot public
- * or private, use the <a>DescribeDBSnapshotAttributes</a> API
+ * or private, use the <code>DescribeDBSnapshotAttributes</code> API
  */
 ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const ModifyDBSnapshotAttributeRequest &request)
 {
@@ -1989,14 +2126,14 @@ ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubne
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies an existing RDS event notification subscription. Note that you can't modify the source identifiers using this
- * call; to change source identifiers for a subscription, use the <a>AddSourceIdentifierToSubscription</a> and
- * <a>RemoveSourceIdentifierFromSubscription</a>
+ * call; to change source identifiers for a subscription, use the <code>AddSourceIdentifierToSubscription</code> and
+ * <code>RemoveSourceIdentifierFromSubscription</code>
  *
  * calls>
  *
  * You can see a list of the event categories for a given SourceType in the <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> topic in the <i>Amazon RDS User
- * Guide</i> or by using the <b>DescribeEventCategories</b>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> topic in the <i>Amazon RDS
+ * User Guide</i> or by using the <b>DescribeEventCategories</b>
  */
 ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
@@ -2011,8 +2148,12 @@ ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const Modif
  *
  * Modify a setting for an Amazon Aurora global cluster. You can change one or more database configuration parameters by
  * specifying these parameters and the new values in the request. For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 ModifyGlobalClusterResponse * RdsClient::modifyGlobalCluster(const ModifyGlobalClusterRequest &request)
 {
@@ -2064,6 +2205,10 @@ PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadRepl
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Promotes a Read Replica DB cluster to a standalone DB
+ *
+ * cluster> <note>
+ *
+ * This action only applies to Aurora DB
  */
 PromoteReadReplicaDBClusterResponse * RdsClient::promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request)
 {
@@ -2101,8 +2246,8 @@ PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInsta
  * </p
  *
  * For more information about rebooting, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html">Rebooting a DB Instance</a> in the
- * <i>Amazon RDS User Guide.</i>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html">Rebooting a DB Instance</a> in
+ * the <i>Amazon RDS User Guide.</i>
  */
 RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
@@ -2117,6 +2262,10 @@ RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceReq
  *
  * Detaches an Aurora secondary cluster from an Aurora global database cluster. The cluster becomes a standalone cluster
  * with read-write capability instead of being read-only and receiving data from a primary cluster in a different region.
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 RemoveFromGlobalClusterResponse * RdsClient::removeFromGlobalCluster(const RemoveFromGlobalClusterRequest &request)
 {
@@ -2129,13 +2278,31 @@ RemoveFromGlobalClusterResponse * RdsClient::removeFromGlobalCluster(const Remov
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates an Identity and Access Management (IAM) role from an Aurora DB cluster. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.html">Authorizing
+ * Disassociates an AWS Identity and Access Management (IAM) role from an Amazon Aurora DB cluster. For more information,
+ * see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.html">Authorizing
  * Amazon Aurora MySQL to Access Other AWS Services on Your Behalf </a> in the <i>Amazon Aurora User
+ *
+ * Guide</i>> <note>
+ *
+ * This action only applies to Aurora DB
  */
 RemoveRoleFromDBClusterResponse * RdsClient::removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request)
 {
     return qobject_cast<RemoveRoleFromDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * RemoveRoleFromDBInstanceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates an AWS Identity and Access Management (IAM) role from a DB
+ */
+RemoveRoleFromDBInstanceResponse * RdsClient::removeRoleFromDBInstance(const RemoveRoleFromDBInstanceRequest &request)
+{
+    return qobject_cast<RemoveRoleFromDBInstanceResponse *>(send(request));
 }
 
 /*!
@@ -2162,7 +2329,7 @@ RemoveSourceIdentifierFromSubscriptionResponse * RdsClient::removeSourceIdentifi
  * resource>
  *
  * For an overview on tagging an Amazon RDS resource, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS Resources</a> in
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Tagging.html">Tagging Amazon RDS Resources</a> in
  * the <i>Amazon RDS User Guide.</i>
  */
 RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
@@ -2183,15 +2350,19 @@ RemoveTagsFromResourceResponse * RdsClient::removeTagsFromResource(const RemoveT
  * </p
  *
  * When resetting the entire group, dynamic parameters are updated immediately and static parameters are set to
- * <code>pending-reboot</code> to take effect on the next DB instance restart or <a>RebootDBInstance</a> request. You must
- * call <a>RebootDBInstance</a> for every DB instance in your DB cluster that you want the updated static parameter to
- * apply
+ * <code>pending-reboot</code> to take effect on the next DB instance restart or <code>RebootDBInstance</code> request. You
+ * must call <code>RebootDBInstance</code> for every DB instance in your DB cluster that you want the updated static
+ * parameter to apply
  *
  * to>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 ResetDBClusterParameterGroupResponse * RdsClient::resetDBClusterParameterGroup(const ResetDBClusterParameterGroupRequest &request)
 {
@@ -2223,8 +2394,12 @@ ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBPa
  *
  * Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket. Amazon RDS must be authorized to access the
  * Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.html"> Migrating Data to an
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.html"> Migrating Data to an
  * Amazon Aurora MySQL DB Cluster</a> in the <i>Amazon Aurora User
+ *
+ * Guide</i>> <note>
+ *
+ * This action only applies to Aurora DB
  */
 RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const RestoreDBClusterFromS3Request &request)
 {
@@ -2253,8 +2428,12 @@ RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const Restore
  * group>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request)
 {
@@ -2275,15 +2454,19 @@ RestoreDBClusterFromSnapshotResponse * RdsClient::restoreDBClusterFromSnapshot(c
  * </p <note>
  *
  * This action only restores the DB cluster, not the DB instances for that DB cluster. You must invoke the
- * <a>CreateDBInstance</a> action to create DB instances for the restored DB cluster, specifying the identifier of the
- * restored DB cluster in <code>DBClusterIdentifier</code>. You can create DB instances only after the
+ * <code>CreateDBInstance</code> action to create DB instances for the restored DB cluster, specifying the identifier of
+ * the restored DB cluster in <code>DBClusterIdentifier</code>. You can create DB instances only after the
  * <code>RestoreDBClusterToPointInTime</code> action has completed and the DB cluster is
  *
  * available> </note>
  *
  * For more information on Amazon Aurora, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request)
 {
@@ -2333,7 +2516,7 @@ RestoreDBInstanceFromDBSnapshotResponse * RdsClient::restoreDBInstanceFromDBSnap
  * Amazon Relational Database Service (Amazon RDS) supports importing MySQL databases by using backup files. You can create
  * a backup of your on-premises database, store it on Amazon Simple Storage Service (Amazon S3), and then restore the
  * backup file onto a new Amazon RDS DB instance running MySQL. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an
  * Amazon RDS MySQL DB Instance</a> in the <i>Amazon RDS User Guide.</i>
  */
 RestoreDBInstanceFromS3Response * RdsClient::restoreDBInstanceFromS3(const RestoreDBInstanceFromS3Request &request)
@@ -2384,6 +2567,21 @@ RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(c
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StartActivityStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a database activity stream to monitor activity on the database. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html">Database Activity Streams</a>
+ * in the <i>Amazon Aurora User
+ */
+StartActivityStreamResponse * RdsClient::startActivityStream(const StartActivityStreamRequest &request)
+{
+    return qobject_cast<StartActivityStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * StartDBClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2394,8 +2592,12 @@ RevokeDBSecurityGroupIngressResponse * RdsClient::revokeDBSecurityGroupIngress(c
  * action>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and Starting
- * an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and
+ * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 StartDBClusterResponse * RdsClient::startDBCluster(const StartDBClusterRequest &request)
 {
@@ -2413,17 +2615,37 @@ StartDBClusterResponse * RdsClient::startDBCluster(const StartDBClusterRequest &
  *
  * </p
  *
- * For more information, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_StartInstance.html">
+ * For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_StartInstance.html">
  * Starting an Amazon RDS DB instance That Was Previously Stopped</a> in the <i>Amazon RDS User Guide.</i>
  *
  * </p <note>
  *
- * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora DB clusters, use <a>StartDBCluster</a>
- * instead.
+ * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora DB clusters, use
+ * <code>StartDBCluster</code> instead.
  */
 StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceRequest &request)
 {
     return qobject_cast<StartDBInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StopActivityStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a database activity stream that was started using the AWS console, the <code>start-activity-stream</code> AWS CLI
+ * command, or the <code>StartActivityStream</code>
+ *
+ * action>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/DBActivityStreams.html">Database Activity Streams</a>
+ * in the <i>Amazon Aurora User
+ */
+StopActivityStreamResponse * RdsClient::stopActivityStream(const StopActivityStreamRequest &request)
+{
+    return qobject_cast<StopActivityStreamResponse *>(send(request));
 }
 
 /*!
@@ -2439,8 +2661,12 @@ StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceReques
  * </p
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and Starting
- * an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and
+ * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB
  */
 StopDBClusterResponse * RdsClient::stopDBCluster(const StopDBClusterRequest &request)
 {
@@ -2459,12 +2685,13 @@ StopDBClusterResponse * RdsClient::stopDBCluster(const StopDBClusterRequest &req
  *
  * </p
  *
- * For more information, see <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_StopInstance.html">
+ * For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_StopInstance.html">
  * Stopping an Amazon RDS DB Instance Temporarily</a> in the <i>Amazon RDS User Guide.</i>
  *
  * </p <note>
  *
- * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora clusters, use <a>StopDBCluster</a> instead.
+ * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora clusters, use <code>StopDBCluster</code>
+ * instead.
  */
 StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &request)
 {

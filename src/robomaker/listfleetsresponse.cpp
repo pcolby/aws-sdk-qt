@@ -33,7 +33,7 @@ namespace RoboMaker {
  *
  * \inmodule QtAwsRoboMaker
  *
- *  his section provides documentation for the AWS RoboMaker API
+ *  This section provides documentation for the AWS RoboMaker API
  *
  * \sa RoboMakerClient::listFleets
  */

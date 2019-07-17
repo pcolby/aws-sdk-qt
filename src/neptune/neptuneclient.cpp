@@ -160,28 +160,21 @@ namespace Neptune {
  *
  *  <fullname>Amazon Neptune</fullname>
  * 
- * 
- *  </p
- * 
  *  Amazon Neptune is a fast, reliable, fully-managed graph database service that makes it easy to build and run
  *  applications that work with highly connected datasets. The core of Amazon Neptune is a purpose-built, high-performance
  *  graph database engine optimized for storing billions of relationships and querying the graph with milliseconds latency.
  *  Amazon Neptune supports popular graph models Property Graph and W3C's RDF, and their respective query languages Apache
  *  TinkerPop Gremlin and SPARQL, allowing you to easily build queries that efficiently navigate highly connected datasets.
  *  Neptune powers graph use cases such as recommendation engines, fraud detection, knowledge graphs, drug discovery, and
- *  network security.
+ *  network
  * 
- *  </p
+ *  security>
  * 
  *  This interface reference for Amazon Neptune contains documentation for a programming or command line interface you can
  *  use to manage Amazon Neptune. Note that Amazon Neptune is asynchronous, which means that some interfaces might require
  *  techniques such as polling or callback functions to determine when a command has been applied. In this reference, the
  *  parameter descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the
  *  maintenance window. The reference structure is as follows, and we list following some related topics from the user
- * 
- *  guide>
- * 
- *  <b>Amazon Neptune API Reference</b>
  */
 
 /*!
@@ -243,7 +236,7 @@ NeptuneClient::NeptuneClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates an Identity and Access Management (IAM) role from an Neptune DB cluster.
+ * Associates an Identity and Access Management (IAM) role from an Neptune DB
  */
 AddRoleToDBClusterResponse * NeptuneClient::addRoleToDBCluster(const AddRoleToDBClusterRequest &request)
 {
@@ -318,65 +311,7 @@ CopyDBClusterParameterGroupResponse * NeptuneClient::copyDBClusterParameterGroup
  *
  * snapshot>
  *
- * You can copy an encrypted DB cluster snapshot from another AWS Region. In that case, the AWS Region where you call the
- * <code>CopyDBClusterSnapshot</code> action is the destination AWS Region for the encrypted DB cluster snapshot to be
- * copied to. To copy an encrypted DB cluster snapshot from another AWS Region, you must provide the following
- *
- * values> <ul> <li>
- *
- * <code>KmsKeyId</code> - The AWS Key Management System (AWS KMS) key identifier for the key to use to encrypt the copy of
- * the DB cluster snapshot in the destination AWS
- *
- * Region> </li> <li>
- *
- * <code>PreSignedUrl</code> - A URL that contains a Signature Version 4 signed request for the
- * <code>CopyDBClusterSnapshot</code> action to be called in the source AWS Region where the DB cluster snapshot is copied
- * from. The pre-signed URL must be a valid request for the <code>CopyDBClusterSnapshot</code> API action that can be
- * executed in the source AWS Region that contains the encrypted DB cluster snapshot to be
- *
- * copied>
- *
- * The pre-signed URL request must contain the following parameter
- *
- * values> <ul> <li>
- *
- * <code>KmsKeyId</code> - The KMS key identifier for the key to use to encrypt the copy of the DB cluster snapshot in the
- * destination AWS Region. This is the same identifier for both the <code>CopyDBClusterSnapshot</code> action that is
- * called in the destination AWS Region, and the action contained in the pre-signed
- *
- * URL> </li> <li>
- *
- * <code>DestinationRegion</code> - The name of the AWS Region that the DB cluster snapshot will be created
- *
- * in> </li> <li>
- *
- * <code>SourceDBClusterSnapshotIdentifier</code> - The DB cluster snapshot identifier for the encrypted DB cluster
- * snapshot to be copied. This identifier must be in the Amazon Resource Name (ARN) format for the source AWS Region. For
- * example, if you are copying an encrypted DB cluster snapshot from the us-west-2 AWS Region, then your
- * <code>SourceDBClusterSnapshotIdentifier</code> looks like the following example:
- *
- * <code>arn:aws:rds:us-west-2:123456789012:cluster-snapshot:neptune-cluster1-snapshot-20161115</code>> </li> </ul>
- *
- * To learn how to generate a Signature Version 4 signed request, see <a
- * href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html"> Authenticating Requests: Using Query
- * Parameters (AWS Signature Version 4)</a> and <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"> Signature Version 4 Signing
- *
- * Process</a>> </li> <li>
- *
- * <code>TargetDBClusterSnapshotIdentifier</code> - The identifier for the new copy of the DB cluster snapshot in the
- * destination AWS
- *
- * Region> </li> <li>
- *
- * <code>SourceDBClusterSnapshotIdentifier</code> - The DB cluster snapshot identifier for the encrypted DB cluster
- * snapshot to be copied. This identifier must be in the ARN format for the source AWS Region and is the same value as the
- * <code>SourceDBClusterSnapshotIdentifier</code> in the pre-signed URL.
- *
- * </p </li> </ul>
- *
- * To cancel the copy operation once it is in progress, delete the target DB cluster snapshot identified by
- * <code>TargetDBClusterSnapshotIdentifier</code> while that DB cluster snapshot is in "copying"
+ * You can't copy from one AWS Region to
  */
 CopyDBClusterSnapshotResponse * NeptuneClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
@@ -407,8 +342,7 @@ CopyDBParameterGroupResponse * NeptuneClient::copyDBParameterGroup(const CopyDBP
  * cluster>
  *
  * You can use the <code>ReplicationSourceIdentifier</code> parameter to create the DB cluster as a Read Replica of another
- * DB cluster or Amazon Neptune DB instance. For cross-region replication where the DB cluster identified by
- * <code>ReplicationSourceIdentifier</code> is encrypted, you must also specify the <code>PreSignedUrl</code>
+ * DB cluster or Amazon Neptune DB
  */
 CreateDBClusterResponse * NeptuneClient::createDBCluster(const CreateDBClusterRequest &request)
 {
@@ -434,9 +368,9 @@ CreateDBClusterResponse * NeptuneClient::createDBCluster(const CreateDBClusterRe
  * <a>ModifyDBClusterParameterGroup</a>. Once you've created a DB cluster parameter group, you need to associate it with
  * your DB cluster using <a>ModifyDBCluster</a>. When you associate a new DB cluster parameter group with a running DB
  * cluster, you need to reboot the DB instances in the DB cluster without failover for the new DB cluster parameter group
- * and associated settings to take effect.
+ * and associated settings to take
  *
- * </p <b>
+ * effect> <b>
  *
  * After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster
  * that uses that DB cluster parameter group as the default parameter group. This allows Amazon Neptune to fully complete
@@ -457,7 +391,7 @@ CreateDBClusterParameterGroupResponse * NeptuneClient::createDBClusterParameterG
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a snapshot of a DB cluster.
+ * Creates a snapshot of a DB
  */
 CreateDBClusterSnapshotResponse * NeptuneClient::createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request)
 {
@@ -491,9 +425,9 @@ CreateDBInstanceResponse * NeptuneClient::createDBInstance(const CreateDBInstanc
  * To provide custom values for any of the parameters, you must modify the group after creating it using
  * <i>ModifyDBParameterGroup</i>. Once you've created a DB parameter group, you need to associate it with your DB instance
  * using <i>ModifyDBInstance</i>. When you associate a new DB parameter group with a running DB instance, you need to
- * reboot the DB instance without failover for the new DB parameter group and associated settings to take effect.
+ * reboot the DB instance without failover for the new DB parameter group and associated settings to take
  *
- * </p <b>
+ * effect> <b>
  *
  * After you create a DB parameter group, you should wait at least 5 minutes before creating your first DB instance that
  * uses that DB parameter group as the default parameter group. This allows Amazon Neptune to fully complete the create
@@ -611,9 +545,9 @@ DeleteDBClusterSnapshotResponse * NeptuneClient::deleteDBClusterSnapshot(const D
  *
  * If you request a final DB snapshot the status of the Amazon Neptune DB instance is <code>deleting</code> until the DB
  * snapshot is created. The API action <code>DescribeDBInstance</code> is used to monitor the status of this operation. The
- * action can't be canceled or reverted once submitted.
+ * action can't be canceled or reverted once
  *
- * </p
+ * submitted>
  *
  * Note that when a DB instance is in a failure state and has a status of <code>failed</code>,
  * <code>incompatible-restore</code>, or <code>incompatible-network</code>, you can only delete it when the
@@ -621,22 +555,7 @@ DeleteDBClusterSnapshotResponse * NeptuneClient::deleteDBClusterSnapshot(const D
  *
  * <code>true</code>>
  *
- * If the specified DB instance is part of a DB cluster, you can't delete the DB instance if both of the following
- * conditions are
- *
- * true> <ul> <li>
- *
- * The DB cluster is a Read Replica of another DB
- *
- * cluster> </li> <li>
- *
- * The DB instance is the only instance in the DB
- *
- * cluster> </li> </ul>
- *
- * To delete a DB instance in this case, first call the <a>PromoteReadReplicaDBCluster</a> API action to promote the DB
- * cluster so it's no longer a Read Replica. After the promotion completes, then call the <code>DeleteDBInstance</code> API
- * action to delete the final instance in the DB
+ * You can't delete a DB instance if it is the only instance in the DB
  */
 DeleteDBInstanceResponse * NeptuneClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
 {
@@ -693,7 +612,7 @@ DeleteEventSubscriptionResponse * NeptuneClient::deleteEventSubscription(const D
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of <code>DBClusterParameterGroup</code> descriptions. If a <code>DBClusterParameterGroupName</code>
- * parameter is specified, the list will contain only the description of the specified DB cluster parameter group.
+ * parameter is specified, the list will contain only the description of the specified DB cluster parameter
  */
 DescribeDBClusterParameterGroupsResponse * NeptuneClient::describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request)
 {
@@ -797,7 +716,7 @@ DescribeDBInstancesResponse * NeptuneClient::describeDBInstances(const DescribeD
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of <code>DBParameterGroup</code> descriptions. If a <code>DBParameterGroupName</code> is specified, the
- * list will contain only the description of the specified DB parameter group.
+ * list will contain only the description of the specified DB parameter
  */
 DescribeDBParameterGroupsResponse * NeptuneClient::describeDBParameterGroups(const DescribeDBParameterGroupsRequest &request)
 {
@@ -829,7 +748,7 @@ DescribeDBParametersResponse * NeptuneClient::describeDBParameters(const Describ
  * DBSubnetGroup>
  *
  * For an overview of CIDR ranges, go to the <a
- * href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Wikipedia Tutorial</a>.
+ * href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Wikipedia
  */
 DescribeDBSubnetGroupsResponse * NeptuneClient::describeDBSubnetGroups(const DescribeDBSubnetGroupsRequest &request)
 {
@@ -868,7 +787,7 @@ DescribeEngineDefaultParametersResponse * NeptuneClient::describeEngineDefaultPa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Displays a list of categories for all event source types, or, if specified, for a specified source type.
+ * Displays a list of categories for all event source types, or, if specified, for a specified source
  */
 DescribeEventCategoriesResponse * NeptuneClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -941,7 +860,7 @@ DescribePendingMaintenanceActionsResponse * NeptuneClient::describePendingMainte
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * You can call <a>DescribeValidDBInstanceModifications</a> to learn what modifications you can make to your DB instance.
- * You can use this information when you call <a>ModifyDBInstance</a>.
+ * You can use this information when you call
  */
 DescribeValidDBInstanceModificationsResponse * NeptuneClient::describeValidDBInstanceModifications(const DescribeValidDBInstanceModificationsRequest &request)
 {
@@ -993,7 +912,7 @@ ListTagsForResourceResponse * NeptuneClient::listTagsForResource(const ListTagsF
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modify a setting for a DB cluster. You can change one or more database configuration parameters by specifying these
- * parameters and the new values in the request.
+ * parameters and the new values in the
  */
 ModifyDBClusterResponse * NeptuneClient::modifyDBCluster(const ModifyDBClusterRequest &request)
 {
@@ -1008,9 +927,9 @@ ModifyDBClusterResponse * NeptuneClient::modifyDBCluster(const ModifyDBClusterRe
  *
  * Modifies the parameters of a DB cluster parameter group. To modify more than one parameter, submit a list of the
  * following: <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20
- * parameters can be modified in a single request.
+ * parameters can be modified in a single
  *
- * </p <note>
+ * request> <note>
  *
  * Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to
  * the DB cluster associated with the parameter group before the change can take
@@ -1067,7 +986,7 @@ ModifyDBClusterSnapshotAttributeResponse * NeptuneClient::modifyDBClusterSnapsho
  *
  * Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these
  * parameters and the new values in the request. To learn what modifications you can make to your DB instance, call
- * <a>DescribeValidDBInstanceModifications</a> before you call <a>ModifyDBInstance</a>.
+ * <a>DescribeValidDBInstanceModifications</a> before you call
  */
 ModifyDBInstanceResponse * NeptuneClient::modifyDBInstance(const ModifyDBInstanceRequest &request)
 {
@@ -1082,9 +1001,9 @@ ModifyDBInstanceResponse * NeptuneClient::modifyDBInstance(const ModifyDBInstanc
  *
  * Modifies the parameters of a DB parameter group. To modify more than one parameter, submit a list of the following:
  * <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20 parameters can be
- * modified in a single request.
+ * modified in a single
  *
- * </p <note>
+ * request> <note>
  *
  * Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to
  * the DB instance associated with the parameter group before the change can take
@@ -1142,7 +1061,7 @@ ModifyEventSubscriptionResponse * NeptuneClient::modifyEventSubscription(const M
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Promotes a Read Replica DB cluster to a standalone DB
+ * Not
  */
 PromoteReadReplicaDBClusterResponse * NeptuneClient::promoteReadReplicaDBCluster(const PromoteReadReplicaDBClusterRequest &request)
 {
@@ -1157,12 +1076,12 @@ PromoteReadReplicaDBClusterResponse * NeptuneClient::promoteReadReplicaDBCluster
  *
  * You might need to reboot your DB instance, usually for maintenance reasons. For example, if you make certain
  * modifications, or if you change the DB parameter group associated with the DB instance, you must reboot the instance for
- * the changes to take effect.
+ * the changes to take
  *
- * </p
+ * effect>
  *
  * Rebooting a DB instance restarts the database engine service. Rebooting a DB instance results in a momentary outage,
- * during which the DB instance status is set to rebooting.
+ * during which the DB instance status is set to
  */
 RebootDBInstanceResponse * NeptuneClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
@@ -1175,7 +1094,7 @@ RebootDBInstanceResponse * NeptuneClient::rebootDBInstance(const RebootDBInstanc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates an Identity and Access Management (IAM) role from a DB cluster.
+ * Disassociates an Identity and Access Management (IAM) role from a DB
  */
 RemoveRoleFromDBClusterResponse * NeptuneClient::removeRoleFromDBCluster(const RemoveRoleFromDBClusterRequest &request)
 {
@@ -1216,9 +1135,9 @@ RemoveTagsFromResourceResponse * NeptuneClient::removeTagsFromResource(const Rem
  *
  * Modifies the parameters of a DB cluster parameter group to the default value. To reset specific parameters submit a list
  * of the following: <code>ParameterName</code> and <code>ApplyMethod</code>. To reset the entire DB cluster parameter
- * group, specify the <code>DBClusterParameterGroupName</code> and <code>ResetAllParameters</code> parameters.
+ * group, specify the <code>DBClusterParameterGroupName</code> and <code>ResetAllParameters</code>
  *
- * </p
+ * parameters>
  *
  * When resetting the entire group, dynamic parameters are updated immediately and static parameters are set to
  * <code>pending-reboot</code> to take effect on the next DB instance restart or <a>RebootDBInstance</a> request. You must
@@ -1240,7 +1159,7 @@ ResetDBClusterParameterGroupResponse * NeptuneClient::resetDBClusterParameterGro
  * provide a list of the following: <code>ParameterName</code> and <code>ApplyMethod</code>. To reset the entire DB
  * parameter group, specify the <code>DBParameterGroup</code> name and <code>ResetAllParameters</code> parameters. When
  * resetting the entire group, dynamic parameters are updated immediately and static parameters are set to
- * <code>pending-reboot</code> to take effect on the next DB instance restart or <code>RebootDBInstance</code> request.
+ * <code>pending-reboot</code> to take effect on the next DB instance restart or <code>RebootDBInstance</code>
  */
 ResetDBParameterGroupResponse * NeptuneClient::resetDBParameterGroup(const ResetDBParameterGroupRequest &request)
 {
@@ -1280,9 +1199,9 @@ RestoreDBClusterFromSnapshotResponse * NeptuneClient::restoreDBClusterFromSnapsh
  * Restores a DB cluster to an arbitrary point in time. Users can restore to any point in time before
  * <code>LatestRestorableTime</code> for up to <code>BackupRetentionPeriod</code> days. The target DB cluster is created
  * from the source DB cluster with the same configuration as the original DB cluster, except that the new DB cluster is
- * created with the default DB security group.
+ * created with the default DB security
  *
- * </p <note>
+ * group> <note>
  *
  * This action only restores the DB cluster, not the DB instances for that DB cluster. You must invoke the
  * <a>CreateDBInstance</a> action to create DB instances for the restored DB cluster, specifying the identifier of the

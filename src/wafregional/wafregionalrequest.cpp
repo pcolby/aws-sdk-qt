@@ -97,10 +97,13 @@ namespace WAFRegional {
  * \value ListSizeConstraintSetsAction WAFRegional ListSizeConstraintSets action.
  * \value ListSqlInjectionMatchSetsAction WAFRegional ListSqlInjectionMatchSets action.
  * \value ListSubscribedRuleGroupsAction WAFRegional ListSubscribedRuleGroups action.
+ * \value ListTagsForResourceAction WAFRegional ListTagsForResource action.
  * \value ListWebACLsAction WAFRegional ListWebACLs action.
  * \value ListXssMatchSetsAction WAFRegional ListXssMatchSets action.
  * \value PutLoggingConfigurationAction WAFRegional PutLoggingConfiguration action.
  * \value PutPermissionPolicyAction WAFRegional PutPermissionPolicy action.
+ * \value TagResourceAction WAFRegional TagResource action.
+ * \value UntagResourceAction WAFRegional UntagResource action.
  * \value UpdateByteMatchSetAction WAFRegional UpdateByteMatchSet action.
  * \value UpdateGeoMatchSetAction WAFRegional UpdateGeoMatchSet action.
  * \value UpdateIPSetAction WAFRegional UpdateIPSet action.

@@ -83,6 +83,7 @@ namespace DeviceFarm {
  * \value ListRunsAction DeviceFarm ListRuns action.
  * \value ListSamplesAction DeviceFarm ListSamples action.
  * \value ListSuitesAction DeviceFarm ListSuites action.
+ * \value ListTagsForResourceAction DeviceFarm ListTagsForResource action.
  * \value ListTestsAction DeviceFarm ListTests action.
  * \value ListUniqueProblemsAction DeviceFarm ListUniqueProblems action.
  * \value ListUploadsAction DeviceFarm ListUploads action.
@@ -93,6 +94,8 @@ namespace DeviceFarm {
  * \value StopJobAction DeviceFarm StopJob action.
  * \value StopRemoteAccessSessionAction DeviceFarm StopRemoteAccessSession action.
  * \value StopRunAction DeviceFarm StopRun action.
+ * \value TagResourceAction DeviceFarm TagResource action.
+ * \value UntagResourceAction DeviceFarm UntagResource action.
  * \value UpdateDeviceInstanceAction DeviceFarm UpdateDeviceInstance action.
  * \value UpdateDevicePoolAction DeviceFarm UpdateDevicePool action.
  * \value UpdateInstanceProfileAction DeviceFarm UpdateInstanceProfile action.

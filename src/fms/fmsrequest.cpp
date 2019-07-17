@@ -44,6 +44,7 @@ namespace FMS {
  * \value GetComplianceDetailAction FMS GetComplianceDetail action.
  * \value GetNotificationChannelAction FMS GetNotificationChannel action.
  * \value GetPolicyAction FMS GetPolicy action.
+ * \value GetProtectionStatusAction FMS GetProtectionStatus action.
  * \value ListComplianceStatusAction FMS ListComplianceStatus action.
  * \value ListMemberAccountsAction FMS ListMemberAccounts action.
  * \value ListPoliciesAction FMS ListPolicies action.

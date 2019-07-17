@@ -33,6 +33,8 @@
 #include "listclustersresponse.h"
 #include "listupdatesrequest.h"
 #include "listupdatesresponse.h"
+#include "updateclusterconfigrequest.h"
+#include "updateclusterconfigresponse.h"
 #include "updateclusterversionrequest.h"
 #include "updateclusterversionresponse.h"
 
@@ -41,7 +43,7 @@
 
 /*!
  * \namespace QtAws::EKS
- * \brief Contains classess for accessing Amazon Elastic Container Service for Kubernetes ( EKS).
+ * \brief Contains classess for accessing Amazon Elastic Kubernetes Service ( EKS).
  *
  * \inmodule QtAwsEks
  *
@@ -53,14 +55,14 @@ namespace EKS {
 
 /*!
  * \class QtAws::EKS::EksClient
- * \brief The EksClient class provides access to the Amazon Elastic Container Service for Kubernetes ( EKS) service.
+ * \brief The EksClient class provides access to the Amazon Elastic Kubernetes Service ( EKS) service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsEKS
  *
- *  Amazon Elastic Container Service for Kubernetes (Amazon EKS) is a managed service that makes it easy for you to run
- *  Kubernetes on AWS without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an
- *  open-source system for automating the deployment, scaling, and management of containerized applications.
+ *  Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on AWS
+ *  without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for
+ *  automating the deployment, scaling, and management of containerized applications.
  * 
  *  </p
  * 
@@ -91,7 +93,7 @@ EksClient::EksClient(
     d->endpointPrefix = QStringLiteral("eks");
     d->networkAccessManager = manager;
     d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Container Service for Kubernetes");
+    d->serviceFullName = QStringLiteral("Amazon Elastic Kubernetes Service");
     d->serviceName = QStringLiteral("eks");
 }
 
@@ -119,7 +121,7 @@ EksClient::EksClient(
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("eks");
     d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Container Service for Kubernetes");
+    d->serviceFullName = QStringLiteral("Amazon Elastic Kubernetes Service");
     d->serviceName = QStringLiteral("eks");
 }
 
@@ -133,16 +135,12 @@ EksClient::EksClient(
  *
  * </p
  *
- * The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, like
+ * The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, such as
  * <code>etcd</code> and the API server. The control plane runs in an account managed by AWS, and the Kubernetes API is
- * exposed via the Amazon EKS API server
+ * exposed via the Amazon EKS API server endpoint. Each Amazon EKS cluster control plane is single-tenant and unique and
+ * runs on its own set of Amazon EC2
  *
- * endpoint>
- *
- * Amazon EKS worker nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API
- * server endpoint and a certificate file that is created for your
- *
- * cluster>
+ * instances>
  *
  * The cluster control plane is provisioned across multiple Availability Zones and fronted by an Elastic Load Balancing
  * Network Load Balancer. Amazon EKS also provisions elastic network interfaces in your VPC subnets to provide connectivity
@@ -151,11 +149,36 @@ EksClient::EksClient(
  *
  * flows)>
  *
- * After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server
- * and launch worker nodes into your cluster. For more information, see <a
- * href="http://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster Authentication</a> and <a
- * href="http://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching Amazon EKS Worker Nodes</a>in the
- * <i>Amazon EKS User
+ * Amazon EKS worker nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API
+ * server endpoint and a certificate file that is created for your
+ *
+ * cluster>
+ *
+ * You can use the <code>endpointPublicAccess</code> and <code>endpointPrivateAccess</code> parameters to enable or disable
+ * public and private access to your cluster's Kubernetes API server endpoint. By default, public access is enabled, and
+ * private access is disabled. For more information, see <a
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
+ * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+ *
+ * </p
+ *
+ * You can use the <code>logging</code> parameter to enable or disable exporting the Kubernetes control plane logs for your
+ * cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs. For more
+ * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster
+ * Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+ *
+ * </i>> <note>
+ *
+ * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For more
+ * information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+ *
+ * Pricing</a>> </note>
+ *
+ * Cluster creation typically takes between 10 and 15 minutes. After you create an Amazon EKS cluster, you must configure
+ * your Kubernetes tooling to communicate with the API server and launch worker nodes into your cluster. For more
+ * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html">Managing Cluster
+ * Authentication</a> and <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">Launching Amazon
+ * EKS Worker Nodes</a> in the <i>Amazon EKS User
  */
 CreateClusterResponse * EksClient::createCluster(const CreateClusterRequest &request)
 {
@@ -175,7 +198,7 @@ CreateClusterResponse * EksClient::createCluster(const CreateClusterRequest &req
  * If you have active services in your cluster that are associated with a load balancer, you must delete those services
  * before deleting the cluster so that the load balancers are deleted properly. Otherwise, you can have orphaned resources
  * in your VPC that prevent you from being able to delete the VPC. For more information, see <a
- * href="http://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html">Deleting a Cluster</a> in the <i>Amazon EKS
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html">Deleting a Cluster</a> in the <i>Amazon EKS
  * User
  */
 DeleteClusterResponse * EksClient::deleteCluster(const DeleteClusterRequest &request)
@@ -195,11 +218,11 @@ DeleteClusterResponse * EksClient::deleteCluster(const DeleteClusterRequest &req
  *
  * The API server endpoint and certificate authority data returned by this operation are required for <code>kubelet</code>
  * and <code>kubectl</code> to communicate with your Kubernetes API server. For more information, see <a
- * href="http://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html">Create a kubeconfig for Amazon
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html">Create a kubeconfig for Amazon
  *
  * EKS</a>> <note>
  *
- * The API server endpoint and certificate authority data are not available until the cluster reaches the
+ * The API server endpoint and certificate authority data aren't available until the cluster reaches the
  * <code>ACTIVE</code>
  */
 DescribeClusterResponse * EksClient::describeCluster(const DescribeClusterRequest &request)
@@ -249,6 +272,49 @@ ListClustersResponse * EksClient::listClusters(const ListClustersRequest &reques
 ListUpdatesResponse * EksClient::listUpdates(const ListUpdatesRequest &request)
 {
     return qobject_cast<ListUpdatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EksClient service, and returns a pointer to an
+ * UpdateClusterConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an Amazon EKS cluster configuration. Your cluster continues to function during the update. The response output
+ * includes an update ID that you can use to track the status of your cluster update with the <a>DescribeUpdate</a> API
+ *
+ * operation>
+ *
+ * You can use this API operation to enable or disable exporting the Kubernetes control plane logs for your cluster to
+ * CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs. For more information, see <a
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster Control Plane
+ * Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+ *
+ * </i>> <note>
+ *
+ * CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For more
+ * information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+ *
+ * Pricing</a>> </note>
+ *
+ * You can also use this API operation to enable or disable public and private access to your cluster's Kubernetes API
+ * server endpoint. By default, public access is enabled, and private access is disabled. For more information, see <a
+ * href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS Cluster Endpoint Access
+ * Control</a> in the <i> <i>Amazon EKS User Guide</i> </i>.
+ *
+ * </p <b>
+ *
+ * At this time, you can not update the subnets or security group IDs for an existing
+ *
+ * cluster> </b>
+ *
+ * Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster status
+ * moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is complete (either
+ * <code>Failed</code> or <code>Successful</code>), the cluster status moves to
+ */
+UpdateClusterConfigResponse * EksClient::updateClusterConfig(const UpdateClusterConfigRequest &request)
+{
+    return qobject_cast<UpdateClusterConfigResponse *>(send(request));
 }
 
 /*!

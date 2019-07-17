@@ -43,6 +43,7 @@ public:
         DescribeUpdateAction,
         ListClustersAction,
         ListUpdatesAction,
+        UpdateClusterConfigAction,
         UpdateClusterVersionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

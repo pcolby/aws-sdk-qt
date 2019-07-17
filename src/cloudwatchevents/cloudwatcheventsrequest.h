@@ -37,21 +37,37 @@ class QTAWS_EXPORT CloudWatchEventsRequest : public QtAws::Core::AwsAbstractRequ
 public:
     /// Actions supported by CloudWatchEvents.
     enum Action {
+        ActivateEventSourceAction,
+        CreateEventBusAction,
+        CreatePartnerEventSourceAction,
+        DeactivateEventSourceAction,
+        DeleteEventBusAction,
+        DeletePartnerEventSourceAction,
         DeleteRuleAction,
         DescribeEventBusAction,
+        DescribeEventSourceAction,
+        DescribePartnerEventSourceAction,
         DescribeRuleAction,
         DisableRuleAction,
         EnableRuleAction,
+        ListEventBusesAction,
+        ListEventSourcesAction,
+        ListPartnerEventSourceAccountsAction,
+        ListPartnerEventSourcesAction,
         ListRuleNamesByTargetAction,
         ListRulesAction,
+        ListTagsForResourceAction,
         ListTargetsByRuleAction,
         PutEventsAction,
+        PutPartnerEventsAction,
         PutPermissionAction,
         PutRuleAction,
         PutTargetsAction,
         RemovePermissionAction,
         RemoveTargetsAction,
+        TagResourceAction,
         TestEventPatternAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -43,6 +43,12 @@
 #include "listplacementsresponse.h"
 #include "listprojectsrequest.h"
 #include "listprojectsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateplacementrequest.h"
 #include "updateplacementresponse.h"
 #include "updateprojectrequest.h"
@@ -70,7 +76,7 @@ namespace IoT1ClickProjects {
  * \ingroup aws-clients
  * \inmodule QtAwsIoT1ClickProjects
  *
- *  The AWS IoT 1-Click Project API
+ *  The AWS IoT 1-Click Projects API
  */
 
 /*!
@@ -276,6 +282,46 @@ ListPlacementsResponse * IoT1ClickProjectsClient::listPlacements(const ListPlace
 ListProjectsResponse * IoT1ClickProjectsClient::listProjects(const ListProjectsRequest &request)
 {
     return qobject_cast<ListProjectsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoT1ClickProjectsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags (metadata key/value pairs) which you have assigned to the
+ */
+ListTagsForResourceResponse * IoT1ClickProjectsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoT1ClickProjectsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or modifies tags for a resource. Tags are key/value pairs (metadata) that can be used to manage a resource. For
+ * more information, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS Tagging
+ */
+TagResourceResponse * IoT1ClickProjectsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoT1ClickProjectsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags (metadata key/value pairs) from a
+ */
+UntagResourceResponse * IoT1ClickProjectsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

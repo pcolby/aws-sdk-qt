@@ -139,7 +139,7 @@ KinesisVideoClient::KinesisVideoClient(
  * operation>
  *
  * For information about how the service works, see <a
- * href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html">How it Works</a>.
+ * href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html">How it Works</a>.
  *
  * </p
  *
@@ -257,7 +257,7 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
  * Adds one or more tags to a stream. A <i>tag</i> is a key-value pair (the value is optional) that you can define and
  * assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value that you
  * specify in the request. For more information, see <a
- * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
  * in the <i>AWS Billing and Cost Management User Guide</i>.
  *
  * </p

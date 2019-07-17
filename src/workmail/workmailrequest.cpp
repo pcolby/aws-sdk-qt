@@ -54,6 +54,7 @@ namespace WorkMail {
  * \value DescribeUserAction WorkMail DescribeUser action.
  * \value DisassociateDelegateFromResourceAction WorkMail DisassociateDelegateFromResource action.
  * \value DisassociateMemberFromGroupAction WorkMail DisassociateMemberFromGroup action.
+ * \value GetMailboxDetailsAction WorkMail GetMailboxDetails action.
  * \value ListAliasesAction WorkMail ListAliases action.
  * \value ListGroupMembersAction WorkMail ListGroupMembers action.
  * \value ListGroupsAction WorkMail ListGroups action.
@@ -65,6 +66,7 @@ namespace WorkMail {
  * \value PutMailboxPermissionsAction WorkMail PutMailboxPermissions action.
  * \value RegisterToWorkMailAction WorkMail RegisterToWorkMail action.
  * \value ResetPasswordAction WorkMail ResetPassword action.
+ * \value UpdateMailboxQuotaAction WorkMail UpdateMailboxQuota action.
  * \value UpdatePrimaryEmailAddressAction WorkMail UpdatePrimaryEmailAddress action.
  * \value UpdateResourceAction WorkMail UpdateResource action.
  */

@@ -21,12 +21,22 @@
 #include "s3controlclient_p.h"
 
 #include "core/awssignatures3v4.h"
+#include "createjobrequest.h"
+#include "createjobresponse.h"
 #include "deletepublicaccessblockrequest.h"
 #include "deletepublicaccessblockresponse.h"
+#include "describejobrequest.h"
+#include "describejobresponse.h"
 #include "getpublicaccessblockrequest.h"
 #include "getpublicaccessblockresponse.h"
+#include "listjobsrequest.h"
+#include "listjobsresponse.h"
 #include "putpublicaccessblockrequest.h"
 #include "putpublicaccessblockresponse.h"
+#include "updatejobpriorityrequest.h"
+#include "updatejobpriorityresponse.h"
+#include "updatejobstatusrequest.h"
+#include "updatejobstatusresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -108,11 +118,24 @@ S3ControlClient::S3ControlClient(
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * CreateJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon S3 batch operations
+ */
+CreateJobResponse * S3ControlClient::createJob(const CreateJobRequest &request)
+{
+    return qobject_cast<CreateJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * DeletePublicAccessBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the Public Access Block configuration for an Amazon Web Services
+ * Deletes the block public access configuration for the specified
  */
 DeletePublicAccessBlockResponse * S3ControlClient::deletePublicAccessBlock(const DeletePublicAccessBlockRequest &request)
 {
@@ -121,11 +144,23 @@ DeletePublicAccessBlockResponse * S3ControlClient::deletePublicAccessBlock(const
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * DescribeJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the configuration parameters and status for a batch operations
+ */
+DescribeJobResponse * S3ControlClient::describeJob(const DescribeJobRequest &request)
+{
+    return qobject_cast<DescribeJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * GetPublicAccessBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the Public Access Block configuration for an Amazon Web Services
  */
 GetPublicAccessBlockResponse * S3ControlClient::getPublicAccessBlock(const GetPublicAccessBlockRequest &request)
 {
@@ -134,15 +169,54 @@ GetPublicAccessBlockResponse * S3ControlClient::getPublicAccessBlock(const GetPu
 
 /*!
  * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists current jobs and jobs that have ended within the last 30 days for the AWS account making the
+ */
+ListJobsResponse * S3ControlClient::listJobs(const ListJobsRequest &request)
+{
+    return qobject_cast<ListJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
  * PutPublicAccessBlockResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or modifies the Public Access Block configuration for an Amazon Web Services
  */
 PutPublicAccessBlockResponse * S3ControlClient::putPublicAccessBlock(const PutPublicAccessBlockRequest &request)
 {
     return qobject_cast<PutPublicAccessBlockResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * UpdateJobPriorityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing job's
+ */
+UpdateJobPriorityResponse * S3ControlClient::updateJobPriority(const UpdateJobPriorityRequest &request)
+{
+    return qobject_cast<UpdateJobPriorityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the S3ControlClient service, and returns a pointer to an
+ * UpdateJobStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the status for the specified job. Use this operation to confirm that you want to run a job or to cancel an
+ * existing
+ */
+UpdateJobStatusResponse * S3ControlClient::updateJobStatus(const UpdateJobStatusRequest &request)
+{
+    return qobject_cast<UpdateJobStatusResponse *>(send(request));
 }
 
 /*!

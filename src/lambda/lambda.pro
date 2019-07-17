@@ -70,6 +70,10 @@ HEADERS += \
     getfunctionrequest_p.h \
     getfunctionresponse.h \
     getfunctionresponse_p.h \
+    getlayerversionbyarnrequest.h \
+    getlayerversionbyarnrequest_p.h \
+    getlayerversionbyarnresponse.h \
+    getlayerversionbyarnresponse_p.h \
     getlayerversionpolicyrequest.h \
     getlayerversionpolicyrequest_p.h \
     getlayerversionpolicyresponse.h \
@@ -200,6 +204,8 @@ SOURCES += \
     getfunctionconfigurationresponse.cpp \
     getfunctionrequest.cpp \
     getfunctionresponse.cpp \
+    getlayerversionbyarnrequest.cpp \
+    getlayerversionbyarnresponse.cpp \
     getlayerversionpolicyrequest.cpp \
     getlayerversionpolicyresponse.cpp \
     getlayerversionrequest.cpp \

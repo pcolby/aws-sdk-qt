@@ -25,8 +25,12 @@
 #include "createappresponse.h"
 #include "createbranchrequest.h"
 #include "createbranchresponse.h"
+#include "createdeploymentrequest.h"
+#include "createdeploymentresponse.h"
 #include "createdomainassociationrequest.h"
 #include "createdomainassociationresponse.h"
+#include "createwebhookrequest.h"
+#include "createwebhookresponse.h"
 #include "deleteapprequest.h"
 #include "deleteappresponse.h"
 #include "deletebranchrequest.h"
@@ -35,6 +39,8 @@
 #include "deletedomainassociationresponse.h"
 #include "deletejobrequest.h"
 #include "deletejobresponse.h"
+#include "deletewebhookrequest.h"
+#include "deletewebhookresponse.h"
 #include "getapprequest.h"
 #include "getappresponse.h"
 #include "getbranchrequest.h"
@@ -43,6 +49,8 @@
 #include "getdomainassociationresponse.h"
 #include "getjobrequest.h"
 #include "getjobresponse.h"
+#include "getwebhookrequest.h"
+#include "getwebhookresponse.h"
 #include "listappsrequest.h"
 #include "listappsresponse.h"
 #include "listbranchesrequest.h"
@@ -51,16 +59,28 @@
 #include "listdomainassociationsresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "listwebhooksrequest.h"
+#include "listwebhooksresponse.h"
+#include "startdeploymentrequest.h"
+#include "startdeploymentresponse.h"
 #include "startjobrequest.h"
 #include "startjobresponse.h"
 #include "stopjobrequest.h"
 #include "stopjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateapprequest.h"
 #include "updateappresponse.h"
 #include "updatebranchrequest.h"
 #include "updatebranchresponse.h"
 #include "updatedomainassociationrequest.h"
 #include "updatedomainassociationresponse.h"
+#include "updatewebhookrequest.h"
+#include "updatewebhookresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -168,6 +188,19 @@ CreateBranchResponse * AmplifyClient::createBranch(const CreateBranchRequest &re
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * CreateDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create a deployment for manual deploy apps. (Apps are not connected to repository)
+ */
+CreateDeploymentResponse * AmplifyClient::createDeployment(const CreateDeploymentRequest &request)
+{
+    return qobject_cast<CreateDeploymentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * CreateDomainAssociationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -177,6 +210,19 @@ CreateBranchResponse * AmplifyClient::createBranch(const CreateBranchRequest &re
 CreateDomainAssociationResponse * AmplifyClient::createDomainAssociation(const CreateDomainAssociationRequest &request)
 {
     return qobject_cast<CreateDomainAssociationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * CreateWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create a new webhook on an App.
+ */
+CreateWebhookResponse * AmplifyClient::createWebhook(const CreateWebhookRequest &request)
+{
+    return qobject_cast<CreateWebhookResponse *>(send(request));
 }
 
 /*!
@@ -233,6 +279,19 @@ DeleteJobResponse * AmplifyClient::deleteJob(const DeleteJobRequest &request)
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * DeleteWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a webhook.
+ */
+DeleteWebhookResponse * AmplifyClient::deleteWebhook(const DeleteWebhookRequest &request)
+{
+    return qobject_cast<DeleteWebhookResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * GetAppResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -281,6 +340,19 @@ GetDomainAssociationResponse * AmplifyClient::getDomainAssociation(const GetDoma
 GetJobResponse * AmplifyClient::getJob(const GetJobRequest &request)
 {
     return qobject_cast<GetJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * GetWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves webhook info that corresponds to a webhookId.
+ */
+GetWebhookResponse * AmplifyClient::getWebhook(const GetWebhookRequest &request)
+{
+    return qobject_cast<GetWebhookResponse *>(send(request));
 }
 
 /*!
@@ -337,6 +409,45 @@ ListJobsResponse * AmplifyClient::listJobs(const ListJobsRequest &request)
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List tags for resource.
+ */
+ListTagsForResourceResponse * AmplifyClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * ListWebhooksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List webhooks with an app.
+ */
+ListWebhooksResponse * AmplifyClient::listWebhooks(const ListWebhooksRequest &request)
+{
+    return qobject_cast<ListWebhooksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * StartDeploymentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Start a deployment for manual deploy apps. (Apps are not connected to repository)
+ */
+StartDeploymentResponse * AmplifyClient::startDeployment(const StartDeploymentRequest &request)
+{
+    return qobject_cast<StartDeploymentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * StartJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -359,6 +470,32 @@ StartJobResponse * AmplifyClient::startJob(const StartJobRequest &request)
 StopJobResponse * AmplifyClient::stopJob(const StopJobRequest &request)
 {
     return qobject_cast<StopJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Tag resource with tag key and value.
+ */
+TagResourceResponse * AmplifyClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Untag resource with resourceArn.
+ */
+UntagResourceResponse * AmplifyClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
@@ -398,6 +535,19 @@ UpdateBranchResponse * AmplifyClient::updateBranch(const UpdateBranchRequest &re
 UpdateDomainAssociationResponse * AmplifyClient::updateDomainAssociation(const UpdateDomainAssociationRequest &request)
 {
     return qobject_cast<UpdateDomainAssociationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * UpdateWebhookResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update a webhook.
+ */
+UpdateWebhookResponse * AmplifyClient::updateWebhook(const UpdateWebhookRequest &request)
+{
+    return qobject_cast<UpdateWebhookResponse *>(send(request));
 }
 
 /*!

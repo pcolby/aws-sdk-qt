@@ -217,8 +217,8 @@ namespace Redshift {
  *  some interfaces may require techniques, such as polling or asynchronous callback handlers, to determine when a command
  *  has been applied. In this reference, the parameter descriptions indicate whether a change is applied immediately, on the
  *  next instance reboot, or during the next maintenance window. For a summary of the Amazon Redshift cluster management
- *  interfaces, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html">Using the Amazon Redshift
- *  Management
+ *  interfaces, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/using-aws-sdk.html">Using the Amazon
+ *  Redshift Management
  * 
  *  Interfaces</a>>
  * 
@@ -229,11 +229,11 @@ namespace Redshift {
  *  customers>
  * 
  *  If you are a first-time user of Amazon Redshift, we recommend that you begin by reading the <a
- *  href="http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html">Amazon Redshift Getting Started
+ *  href="https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html">Amazon Redshift Getting Started
  * 
  *  Guide</a>>
  * 
- *  If you are a database developer, the <a href="http://docs.aws.amazon.com/redshift/latest/dg/welcome.html">Amazon
+ *  If you are a database developer, the <a href="https://docs.aws.amazon.com/redshift/latest/dg/welcome.html">Amazon
  *  Redshift Database Developer Guide</a> explains how to design, build, query, and maintain the databases that make up your
  *  data warehouse.
  */
@@ -332,7 +332,7 @@ AcceptReservedNodeExchangeResponse * RedshiftClient::acceptReservedNodeExchange(
  *
  * You must also associate the security group with a cluster so that clients running on these IP addresses or the EC2
  * instance are authorized to connect to the cluster. For information about managing security groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Working with Security
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Working with Security
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterSecurityGroupIngress(const AuthorizeClusterSecurityGroupIngressRequest &request)
@@ -351,7 +351,7 @@ AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterS
  * snapshot>
  *
  * For more information about working with snapshots, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 AuthorizeSnapshotAccessResponse * RedshiftClient::authorizeSnapshotAccess(const AuthorizeSnapshotAccessRequest &request)
@@ -416,7 +416,7 @@ CancelResizeResponse * RedshiftClient::cancelResize(const CancelResizeRequest &r
  * them>
  *
  * For more information about working with snapshots, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClusterSnapshotRequest &request)
@@ -436,7 +436,7 @@ CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClus
  *
  * To create a cluster in Virtual Private Cloud (VPC), you must provide a cluster subnet group name. The cluster subnet
  * group identifies the subnets of your VPC that Amazon Redshift uses when creating the cluster. For more information about
- * managing clusters, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon
+ * managing clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon
  * Redshift Clusters</a> in the <i>Amazon Redshift Cluster Management
  */
 CreateClusterResponse * RedshiftClient::createCluster(const CreateClusterRequest &request)
@@ -462,7 +462,7 @@ CreateClusterResponse * RedshiftClient::createCluster(const CreateClusterRequest
  *
  * Parameters in the parameter group define specific behavior that applies to the databases you create on the cluster. For
  * more information about parameters and parameter groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 CreateClusterParameterGroupResponse * RedshiftClient::createClusterParameterGroup(const CreateClusterParameterGroupRequest &request)
@@ -481,7 +481,7 @@ CreateClusterParameterGroupResponse * RedshiftClient::createClusterParameterGrou
  * clusters>
  *
  * For information about managing security groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
  * Security Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 CreateClusterSecurityGroupResponse * RedshiftClient::createClusterSecurityGroup(const CreateClusterSecurityGroupRequest &request)
@@ -500,7 +500,7 @@ CreateClusterSecurityGroupResponse * RedshiftClient::createClusterSecurityGroup(
  * </p
  *
  * For more information about working with snapshots, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 CreateClusterSnapshotResponse * RedshiftClient::createClusterSnapshot(const CreateClusterSnapshotRequest &request)
@@ -520,7 +520,7 @@ CreateClusterSnapshotResponse * RedshiftClient::createClusterSnapshot(const Crea
  * group>
  *
  * For information about subnet groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html">Amazon Redshift Cluster
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html">Amazon Redshift Cluster
  * Subnet Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 CreateClusterSubnetGroupResponse * RedshiftClient::createClusterSubnetGroup(const CreateClusterSubnetGroupRequest &request)
@@ -574,8 +574,8 @@ CreateEventSubscriptionResponse * RedshiftClient::createEventSubscription(const 
  * The command returns a public key, which you must store in the HSM. In addition to creating the HSM certificate, you must
  * create an Amazon Redshift HSM configuration that provides a cluster the information needed to store and use encryption
  * keys in the HSM. For more information, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the Amazon
- * Redshift Cluster Management
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the
+ * Amazon Redshift Cluster Management
  */
 CreateHsmClientCertificateResponse * RedshiftClient::createHsmClientCertificate(const CreateHsmClientCertificateRequest &request)
 {
@@ -595,7 +595,7 @@ CreateHsmClientCertificateResponse * RedshiftClient::createHsmClientCertificate(
  * HSM>
  *
  * In addition to creating an HSM configuration, you must also create an HSM client certificate. For more information, go
- * to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the
+ * to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the
  * Amazon Redshift Cluster Management
  */
 CreateHsmConfigurationResponse * RedshiftClient::createHsmConfiguration(const CreateHsmConfigurationRequest &request)
@@ -615,7 +615,7 @@ CreateHsmConfigurationResponse * RedshiftClient::createHsmConfiguration(const Cr
  * region>
  *
  * For more information about managing snapshot copy grants, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database
  * Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  */
 CreateSnapshotCopyGrantResponse * RedshiftClient::createSnapshotCopyGrant(const CreateSnapshotCopyGrantRequest &request)
@@ -667,7 +667,7 @@ CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request
  * Deletes a previously provisioned cluster. A successful response from the web service indicates that the request was
  * received correctly. Use <a>DescribeClusters</a> to monitor the status of the deletion. The delete operation cannot be
  * canceled or reverted once submitted. For more information about managing clusters, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  *
  * Guide</i>>
@@ -680,7 +680,7 @@ CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request
  * </p
  *
  * For more information about managing clusters, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 DeleteClusterResponse * RedshiftClient::deleteCluster(const DeleteClusterRequest &request)
@@ -720,7 +720,7 @@ DeleteClusterParameterGroupResponse * RedshiftClient::deleteClusterParameterGrou
  * group> </note>
  *
  * For information about managing security groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
  * Security Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 DeleteClusterSecurityGroupResponse * RedshiftClient::deleteClusterSecurityGroup(const DeleteClusterSecurityGroupRequest &request)
@@ -878,7 +878,7 @@ DescribeClusterDbRevisionsResponse * RedshiftClient::describeClusterDbRevisions(
  * group>
  *
  * For more information about parameters and parameter groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  *
  * Guide</i>>
@@ -917,7 +917,7 @@ DescribeClusterParameterGroupsResponse * RedshiftClient::describeClusterParamete
  * <i>user</i>>
  *
  * For more information about parameters and parameter groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 DescribeClusterParametersResponse * RedshiftClient::describeClusterParameters(const DescribeClusterParametersRequest &request)
@@ -937,7 +937,7 @@ DescribeClusterParametersResponse * RedshiftClient::describeClusterParameters(co
  * group>
  *
  * For information about managing security groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon Redshift Cluster
  * Security Groups</a> in the <i>Amazon Redshift Cluster Management
  *
  * Guide</i>>
@@ -1032,7 +1032,7 @@ DescribeClusterTracksResponse * RedshiftClient::describeClusterTracks(const Desc
  *
  * Returns descriptions of the available Amazon Redshift cluster versions. You can call this operation even before creating
  * any clusters to learn more about the Amazon Redshift versions. For more information about managing clusters, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 DescribeClusterVersionsResponse * RedshiftClient::describeClusterVersions(const DescribeClusterVersionsRequest &request)
@@ -1049,7 +1049,7 @@ DescribeClusterVersionsResponse * RedshiftClient::describeClusterVersions(const 
  * Returns properties of provisioned clusters including general cluster properties, cluster database properties,
  * maintenance and backup properties, and security and access properties. This operation supports pagination. For more
  * information about managing clusters, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  *
  * Guide</i>>
@@ -1080,7 +1080,7 @@ DescribeClustersResponse * RedshiftClient::describeClusters(const DescribeCluste
  * family>
  *
  * For more information about parameters and parameter groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 DescribeDefaultClusterParametersResponse * RedshiftClient::describeDefaultClusterParameters(const DescribeDefaultClusterParametersRequest &request)
@@ -1096,7 +1096,7 @@ DescribeDefaultClusterParametersResponse * RedshiftClient::describeDefaultCluste
  *
  * Displays a list of event categories for all event source types, or for a specified source type. For a list of the event
  * categories and source types, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html">Amazon Redshift Event
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html">Amazon Redshift Event
  */
 DescribeEventCategoriesResponse * RedshiftClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -1221,7 +1221,7 @@ DescribeLoggingStatusResponse * RedshiftClient::describeLoggingStatus(const Desc
  * node types you can request. The node types differ by available storage, memory, CPU and price. With the cost involved
  * you might want to obtain a list of cluster options in the specific region and specify values when creating a cluster.
  * For more information about managing clusters, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClusterOptions(const DescribeOrderableClusterOptionsRequest &request)
@@ -1243,7 +1243,7 @@ DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClust
  * </p
  *
  * For more information about reserved node offerings, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/purchase-reserved-node-instance.html">Purchasing Reserved
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/purchase-reserved-node-instance.html">Purchasing Reserved
  * Nodes</a> in the <i>Amazon Redshift Cluster Management
  */
 DescribeReservedNodeOfferingsResponse * RedshiftClient::describeReservedNodeOfferings(const DescribeReservedNodeOfferingsRequest &request)
@@ -1295,7 +1295,7 @@ DescribeResizeResponse * RedshiftClient::describeResize(const DescribeResizeRequ
  * region>
  *
  * For more information about managing snapshot copy grants, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html">Amazon Redshift Database
  * Encryption</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  */
 DescribeSnapshotCopyGrantsResponse * RedshiftClient::describeSnapshotCopyGrants(const DescribeSnapshotCopyGrantsRequest &request)
@@ -1470,14 +1470,14 @@ EnableSnapshotCopyResponse * RedshiftClient::enableSnapshotCopy(const EnableSnap
  * <code>False</code> or <code>IAMA:</code> if <code>AutoCreate</code> is <code>True</code>. You can optionally specify one
  * or more database user groups that the user will join at log on. By default, the temporary credentials expire in 900
  * seconds. You can optionally specify a duration between 900 seconds (15 minutes) and 3600 seconds (60 minutes). For more
- * information, see <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/generating-user-credentials.html">Using IAM
+ * information, see <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/generating-user-credentials.html">Using IAM
  * Authentication to Generate Database User Credentials</a> in the Amazon Redshift Cluster Management
  *
  * Guide>
  *
  * The AWS Identity and Access Management (IAM)user or role that executes GetClusterCredentials must have an IAM policy
  * attached that allows access to all necessary actions and resources. For more information about permissions, see <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html#redshift-policy-resources.getclustercredentials-resources">Resource
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html#redshift-policy-resources.getclustercredentials-resources">Resource
  * Policies for GetClusterCredentials</a> in the Amazon Redshift Cluster Management
  *
  * Guide>
@@ -1524,7 +1524,7 @@ GetReservedNodeExchangeOfferingsResponse * RedshiftClient::getReservedNodeExchan
  * maintenance window, or change the master user password. Resetting a cluster password or modifying the security groups
  * associated with a cluster do not need a reboot. However, modifying a parameter group requires a reboot for parameters to
  * take effect. For more information about managing clusters, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
  * <i>Amazon Redshift Cluster Management
  *
  * Guide</i>>
@@ -1592,7 +1592,7 @@ ModifyClusterMaintenanceResponse * RedshiftClient::modifyClusterMaintenance(cons
  * group>
  *
  * For more information about parameters and parameter groups, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html">Amazon Redshift Parameter
  * Groups</a> in the <i>Amazon Redshift Cluster Management
  */
 ModifyClusterParameterGroupResponse * RedshiftClient::modifyClusterParameterGroup(const ModifyClusterParameterGroupRequest &request)
@@ -1697,7 +1697,7 @@ ModifySnapshotScheduleResponse * RedshiftClient::modifySnapshotSchedule(const Mo
  * </p
  *
  * For more information about reserved node offerings, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/purchase-reserved-node-instance.html">Purchasing Reserved
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/purchase-reserved-node-instance.html">Purchasing Reserved
  * Nodes</a> in the <i>Amazon Redshift Cluster Management
  */
 PurchaseReservedNodeOfferingResponse * RedshiftClient::purchaseReservedNodeOffering(const PurchaseReservedNodeOfferingRequest &request)
@@ -1714,7 +1714,7 @@ PurchaseReservedNodeOfferingResponse * RedshiftClient::purchaseReservedNodeOffer
  * Reboots a cluster. This action is taken as soon as possible. It results in a momentary outage to the cluster, during
  * which the cluster status is set to <code>rebooting</code>. A cluster event is created when the reboot is completed. Any
  * pending cluster modifications (see <a>ModifyCluster</a>) are applied at this reboot. For more information about managing
- * clusters, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift
+ * clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift
  * Clusters</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  */
 RebootClusterResponse * RedshiftClient::rebootCluster(const RebootClusterRequest &request)
@@ -1791,7 +1791,7 @@ ResizeClusterResponse * RedshiftClient::resizeCluster(const ResizeClusterRequest
  * restored>
  *
  * For more information about working with snapshots, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 RestoreFromClusterSnapshotResponse * RedshiftClient::restoreFromClusterSnapshot(const RestoreFromClusterSnapshotRequest &request)
@@ -1831,7 +1831,7 @@ RestoreTableFromClusterSnapshotResponse * RedshiftClient::restoreTableFromCluste
  *
  * Revokes an ingress rule in an Amazon Redshift security group for a previously authorized IP range or Amazon EC2 security
  * group. To add an ingress rule, see <a>AuthorizeClusterSecurityGroupIngress</a>. For information about managing security
- * groups, go to <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon
+ * groups, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html">Amazon
  * Redshift Cluster Security Groups</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
  */
 RevokeClusterSecurityGroupIngressResponse * RedshiftClient::revokeClusterSecurityGroupIngress(const RevokeClusterSecurityGroupIngressRequest &request)
@@ -1851,7 +1851,7 @@ RevokeClusterSecurityGroupIngressResponse * RedshiftClient::revokeClusterSecurit
  * completion>
  *
  * For more information about working with snapshots, go to <a
- * href="http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html">Amazon Redshift Snapshots</a> in the
  * <i>Amazon Redshift Cluster Management
  */
 RevokeSnapshotAccessResponse * RedshiftClient::revokeSnapshotAccess(const RevokeSnapshotAccessRequest &request)

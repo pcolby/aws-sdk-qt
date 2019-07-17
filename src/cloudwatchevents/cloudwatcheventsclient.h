@@ -28,24 +28,52 @@ namespace QtAws {
 namespace CloudWatchEvents {
 
 class CloudWatchEventsClientPrivate;
+class ActivateEventSourceRequest;
+class ActivateEventSourceResponse;
+class CreateEventBusRequest;
+class CreateEventBusResponse;
+class CreatePartnerEventSourceRequest;
+class CreatePartnerEventSourceResponse;
+class DeactivateEventSourceRequest;
+class DeactivateEventSourceResponse;
+class DeleteEventBusRequest;
+class DeleteEventBusResponse;
+class DeletePartnerEventSourceRequest;
+class DeletePartnerEventSourceResponse;
 class DeleteRuleRequest;
 class DeleteRuleResponse;
 class DescribeEventBusRequest;
 class DescribeEventBusResponse;
+class DescribeEventSourceRequest;
+class DescribeEventSourceResponse;
+class DescribePartnerEventSourceRequest;
+class DescribePartnerEventSourceResponse;
 class DescribeRuleRequest;
 class DescribeRuleResponse;
 class DisableRuleRequest;
 class DisableRuleResponse;
 class EnableRuleRequest;
 class EnableRuleResponse;
+class ListEventBusesRequest;
+class ListEventBusesResponse;
+class ListEventSourcesRequest;
+class ListEventSourcesResponse;
+class ListPartnerEventSourceAccountsRequest;
+class ListPartnerEventSourceAccountsResponse;
+class ListPartnerEventSourcesRequest;
+class ListPartnerEventSourcesResponse;
 class ListRuleNamesByTargetRequest;
 class ListRuleNamesByTargetResponse;
 class ListRulesRequest;
 class ListRulesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ListTargetsByRuleRequest;
 class ListTargetsByRuleResponse;
 class PutEventsRequest;
 class PutEventsResponse;
+class PutPartnerEventsRequest;
+class PutPartnerEventsResponse;
 class PutPermissionRequest;
 class PutPermissionResponse;
 class PutRuleRequest;
@@ -56,8 +84,12 @@ class RemovePermissionRequest;
 class RemovePermissionResponse;
 class RemoveTargetsRequest;
 class RemoveTargetsResponse;
+class TagResourceRequest;
+class TagResourceResponse;
 class TestEventPatternRequest;
 class TestEventPatternResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT CloudWatchEventsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -75,21 +107,37 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    ActivateEventSourceResponse * activateEventSource(const ActivateEventSourceRequest &request);
+    CreateEventBusResponse * createEventBus(const CreateEventBusRequest &request);
+    CreatePartnerEventSourceResponse * createPartnerEventSource(const CreatePartnerEventSourceRequest &request);
+    DeactivateEventSourceResponse * deactivateEventSource(const DeactivateEventSourceRequest &request);
+    DeleteEventBusResponse * deleteEventBus(const DeleteEventBusRequest &request);
+    DeletePartnerEventSourceResponse * deletePartnerEventSource(const DeletePartnerEventSourceRequest &request);
     DeleteRuleResponse * deleteRule(const DeleteRuleRequest &request);
     DescribeEventBusResponse * describeEventBus(const DescribeEventBusRequest &request);
+    DescribeEventSourceResponse * describeEventSource(const DescribeEventSourceRequest &request);
+    DescribePartnerEventSourceResponse * describePartnerEventSource(const DescribePartnerEventSourceRequest &request);
     DescribeRuleResponse * describeRule(const DescribeRuleRequest &request);
     DisableRuleResponse * disableRule(const DisableRuleRequest &request);
     EnableRuleResponse * enableRule(const EnableRuleRequest &request);
+    ListEventBusesResponse * listEventBuses(const ListEventBusesRequest &request);
+    ListEventSourcesResponse * listEventSources(const ListEventSourcesRequest &request);
+    ListPartnerEventSourceAccountsResponse * listPartnerEventSourceAccounts(const ListPartnerEventSourceAccountsRequest &request);
+    ListPartnerEventSourcesResponse * listPartnerEventSources(const ListPartnerEventSourcesRequest &request);
     ListRuleNamesByTargetResponse * listRuleNamesByTarget(const ListRuleNamesByTargetRequest &request);
     ListRulesResponse * listRules(const ListRulesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListTargetsByRuleResponse * listTargetsByRule(const ListTargetsByRuleRequest &request);
     PutEventsResponse * putEvents(const PutEventsRequest &request);
+    PutPartnerEventsResponse * putPartnerEvents(const PutPartnerEventsRequest &request);
     PutPermissionResponse * putPermission(const PutPermissionRequest &request);
     PutRuleResponse * putRule(const PutRuleRequest &request);
     PutTargetsResponse * putTargets(const PutTargetsRequest &request);
     RemovePermissionResponse * removePermission(const RemovePermissionRequest &request);
     RemoveTargetsResponse * removeTargets(const RemoveTargetsRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     TestEventPatternResponse * testEventPattern(const TestEventPatternRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(CloudWatchEventsClient)

@@ -57,10 +57,16 @@
 #include "listapplicationsnapshotsresponse.h"
 #include "listapplicationsrequest.h"
 #include "listapplicationsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "startapplicationrequest.h"
 #include "startapplicationresponse.h"
 #include "stopapplicationrequest.h"
 #include "stopapplicationresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateapplicationrequest.h"
 #include "updateapplicationresponse.h"
 
@@ -86,7 +92,9 @@ namespace KinesisAnalyticsV2 {
  * \ingroup aws-clients
  * \inmodule QtAwsKinesisAnalyticsV2
  *
- *  Documentation for Kinesis Data Analytics API
+ *  Amazon Kinesis Data Analytics is a fully managed service that you can use to process and analyze streaming data using
+ *  SQL or Java. The service enables you to quickly author and run SQL or Java code against streaming sources to perform
+ *  time series analytics, feed real-time dashboards, and create real-time
  */
 
 /*!
@@ -250,13 +258,8 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsV2Client::addApplica
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an Amazon Kinesis Data Analytics application. For information about creating a Kinesis Data Analytics
- * application, see <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/Java/creating-app.html">Creating an
+ * application, see <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/getting-started.html">Creating an
  * Application</a>.
- *
- * </p <note>
- *
- * SQL is not enabled for this private beta release. Using SQL parameters (such as <a>SqlApplicationConfiguration</a>) will
- * result in an
  */
 CreateApplicationResponse * KinesisAnalyticsV2Client::createApplication(const CreateApplicationRequest &request)
 {
@@ -445,17 +448,25 @@ ListApplicationsResponse * KinesisAnalyticsV2Client::listApplications(const List
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the list of key-value tags assigned to the
+ */
+ListTagsForResourceResponse * KinesisAnalyticsV2Client::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * StartApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Starts the specified Amazon Kinesis Data Analytics application. After creating an application, you must exclusively call
  * this operation to start your
- *
- * application> <note>
- *
- * SQL is not enabled for this private beta. Using SQL parameters (such as <a>RunConfiguration$SqlRunConfigurations</a>)
- * will result in an
  */
 StartApplicationResponse * KinesisAnalyticsV2Client::startApplication(const StartApplicationRequest &request)
 {
@@ -478,6 +489,33 @@ StopApplicationResponse * KinesisAnalyticsV2Client::stopApplication(const StopAp
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more key-value tags to a Kinesis Analytics application. Note that the maximum number of application tags
+ * includes system tags. The maximum number of user-defined application tags is
+ */
+TagResourceResponse * KinesisAnalyticsV2Client::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from a Kinesis Analytics
+ */
+UntagResourceResponse * KinesisAnalyticsV2Client::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * UpdateApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -488,11 +526,6 @@ StopApplicationResponse * KinesisAnalyticsV2Client::stopApplication(const StopAp
  * </p
  *
  * Kinesis Data Analytics updates the <code>ApplicationVersionId</code> each time you update your application.
- *
- * </p <note>
- *
- * SQL is not enabled for this private beta. Using SQL parameters (such as <a>SqlApplicationConfigurationUpdate</a>) will
- * result in an
  */
 UpdateApplicationResponse * KinesisAnalyticsV2Client::updateApplication(const UpdateApplicationRequest &request)
 {

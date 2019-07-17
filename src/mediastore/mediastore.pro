@@ -50,6 +50,10 @@ HEADERS += \
     listcontainersrequest_p.h \
     listcontainersresponse.h \
     listcontainersresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     mediastoreclient.h \
     mediastoreclient_p.h \
     mediastorerequest.h \
@@ -68,6 +72,22 @@ HEADERS += \
     putlifecyclepolicyrequest_p.h \
     putlifecyclepolicyresponse.h \
     putlifecyclepolicyresponse_p.h \
+    startaccessloggingrequest.h \
+    startaccessloggingrequest_p.h \
+    startaccessloggingresponse.h \
+    startaccessloggingresponse_p.h \
+    stopaccessloggingrequest.h \
+    stopaccessloggingrequest_p.h \
+    stopaccessloggingresponse.h \
+    stopaccessloggingresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     createcontainerrequest.cpp \
@@ -90,6 +110,8 @@ SOURCES += \
     getlifecyclepolicyresponse.cpp \
     listcontainersrequest.cpp \
     listcontainersresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     mediastoreclient.cpp \
     mediastorerequest.cpp \
     mediastoreresponse.cpp \
@@ -99,5 +121,13 @@ SOURCES += \
     putcorspolicyresponse.cpp \
     putlifecyclepolicyrequest.cpp \
     putlifecyclepolicyresponse.cpp \
+    startaccessloggingrequest.cpp \
+    startaccessloggingresponse.cpp \
+    stopaccessloggingrequest.cpp \
+    stopaccessloggingresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

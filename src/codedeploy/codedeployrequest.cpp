@@ -71,12 +71,15 @@ namespace CodeDeploy {
  * \value ListDeploymentsAction CodeDeploy ListDeployments action.
  * \value ListGitHubAccountTokenNamesAction CodeDeploy ListGitHubAccountTokenNames action.
  * \value ListOnPremisesInstancesAction CodeDeploy ListOnPremisesInstances action.
+ * \value ListTagsForResourceAction CodeDeploy ListTagsForResource action.
  * \value PutLifecycleEventHookExecutionStatusAction CodeDeploy PutLifecycleEventHookExecutionStatus action.
  * \value RegisterApplicationRevisionAction CodeDeploy RegisterApplicationRevision action.
  * \value RegisterOnPremisesInstanceAction CodeDeploy RegisterOnPremisesInstance action.
  * \value RemoveTagsFromOnPremisesInstancesAction CodeDeploy RemoveTagsFromOnPremisesInstances action.
  * \value SkipWaitTimeForInstanceTerminationAction CodeDeploy SkipWaitTimeForInstanceTermination action.
  * \value StopDeploymentAction CodeDeploy StopDeployment action.
+ * \value TagResourceAction CodeDeploy TagResource action.
+ * \value UntagResourceAction CodeDeploy UntagResource action.
  * \value UpdateApplicationAction CodeDeploy UpdateApplication action.
  * \value UpdateDeploymentGroupAction CodeDeploy UpdateDeploymentGroup action.
  */

@@ -54,7 +54,7 @@ namespace OpsWorksCM {
  *  deleted> </li> <li>
  * 
  *  <b>Engine</b>: The engine is the specific configuration manager that you want to use. Valid values in this release
- *  include <code>Chef</code> and
+ *  include <code>ChefAutomate</code> and
  * 
  *  <code>Puppet</code>> </li> <li>
  * 

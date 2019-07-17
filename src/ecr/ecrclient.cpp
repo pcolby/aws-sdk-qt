@@ -118,7 +118,7 @@ EcrClient::EcrClient(
     Q_D(EcrClient);
     d->apiVersion = QStringLiteral("2015-09-21");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ecr");
+    d->endpointPrefix = QStringLiteral("api.ecr");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("Amazon EC2 Container Registry");
@@ -147,7 +147,7 @@ EcrClient::EcrClient(
     d->apiVersion = QStringLiteral("2015-09-21");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ecr");
+    d->endpointPrefix = QStringLiteral("api.ecr");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("Amazon EC2 Container Registry");
     d->serviceName = QStringLiteral("ecr");

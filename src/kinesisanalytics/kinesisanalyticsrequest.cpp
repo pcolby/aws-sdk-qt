@@ -50,8 +50,11 @@ namespace KinesisAnalytics {
  * \value DescribeApplicationAction KinesisAnalytics DescribeApplication action.
  * \value DiscoverInputSchemaAction KinesisAnalytics DiscoverInputSchema action.
  * \value ListApplicationsAction KinesisAnalytics ListApplications action.
+ * \value ListTagsForResourceAction KinesisAnalytics ListTagsForResource action.
  * \value StartApplicationAction KinesisAnalytics StartApplication action.
  * \value StopApplicationAction KinesisAnalytics StopApplication action.
+ * \value TagResourceAction KinesisAnalytics TagResource action.
+ * \value UntagResourceAction KinesisAnalytics UntagResource action.
  * \value UpdateApplicationAction KinesisAnalytics UpdateApplication action.
  */
 

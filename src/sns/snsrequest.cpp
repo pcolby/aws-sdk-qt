@@ -55,6 +55,7 @@ namespace SNS {
  * \value ListPlatformApplicationsAction SNS ListPlatformApplications action.
  * \value ListSubscriptionsAction SNS ListSubscriptions action.
  * \value ListSubscriptionsByTopicAction SNS ListSubscriptionsByTopic action.
+ * \value ListTagsForResourceAction SNS ListTagsForResource action.
  * \value ListTopicsAction SNS ListTopics action.
  * \value OptInPhoneNumberAction SNS OptInPhoneNumber action.
  * \value PublishAction SNS Publish action.
@@ -65,7 +66,9 @@ namespace SNS {
  * \value SetSubscriptionAttributesAction SNS SetSubscriptionAttributes action.
  * \value SetTopicAttributesAction SNS SetTopicAttributes action.
  * \value SubscribeAction SNS Subscribe action.
+ * \value TagResourceAction SNS TagResource action.
  * \value UnsubscribeAction SNS Unsubscribe action.
+ * \value UntagResourceAction SNS UntagResource action.
  */
 
 /*!

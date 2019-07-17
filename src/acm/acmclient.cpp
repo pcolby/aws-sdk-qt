@@ -39,6 +39,8 @@
 #include "listtagsforcertificateresponse.h"
 #include "removetagsfromcertificaterequest.h"
 #include "removetagsfromcertificateresponse.h"
+#include "renewcertificaterequest.h"
+#include "renewcertificateresponse.h"
 #include "requestcertificaterequest.h"
 #include "requestcertificateresponse.h"
 #include "resendvalidationemailrequest.h"
@@ -75,7 +77,7 @@ namespace ACM {
  *  documentation>
  * 
  *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
- *  about using ACM, see the <a href="http://docs.aws.amazon.com/acm/latest/userguide/"> <i>AWS Certificate Manager User
+ *  about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/"> <i>AWS Certificate Manager User
  *  Guide</i>
  */
 
@@ -149,7 +151,7 @@ AcmClient::AcmClient(
  * certificates. Similarly, you can apply the same tag to multiple resources if you want to specify a relationship among
  * those resources. For example, you can add the same tag to an ACM certificate and an Elastic Load Balancing load balancer
  * to indicate that they are both used by the same website. For more information, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/tags.html">Tagging ACM certificates</a>.
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/tags.html">Tagging ACM certificates</a>.
  *
  * </p
  *
@@ -238,16 +240,16 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/acm-services.html">integrated services</a> allow only certificate
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html">integrated services</a> allow only certificate
  * types and keys they support to be associated with their resources. Further, their support differs depending on whether
  * the certificate is imported into IAM or into ACM. For more information, see the documentation for each service. For more
  * information about importing certificates into ACM, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing Certificates</a> in the <i>AWS
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing Certificates</a> in the <i>AWS
  * Certificate Manager User Guide</i>.
  *
  * </p <note>
  *
- * ACM does not provide <a href="http://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> for
+ * ACM does not provide <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> for
  * certificates that you
  *
  * import> </note>
@@ -305,7 +307,7 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  *
  * </p </li> </ul>
  *
- * This operation returns the <a href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon
+ * This operation returns the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon
  * Resource Name (ARN)</a> of the imported
  */
 ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificateRequest &request)
@@ -364,6 +366,23 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
 
 /*!
  * Sends \a request to the AcmClient service, and returns a pointer to an
+ * RenewCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Renews an eligable ACM certificate. At this time, only exported private certificates can be renewed with this operation.
+ * In order to renew your ACM PCA certificates with ACM, you must first <a
+ * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaPermissions.html">grant the ACM service principal
+ * permission to do so</a>. For more information, see <a
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/manual-renewal.html">Testing Managed Renewal</a> in the ACM User
+ */
+RenewCertificateResponse * AcmClient::renewCertificate(const RenewCertificateRequest &request)
+{
+    return qobject_cast<RenewCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AcmClient service, and returns a pointer to an
  * RequestCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -376,8 +395,8 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
  *
  * If you are requesting a private certificate, domain validation is not required. If you are requesting a public
  * certificate, each domain name that you specify must be validated to verify that you own or control the domain. You can
- * use <a href="http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">DNS validation</a> or <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html">email validation</a>. We recommend
+ * use <a href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">DNS validation</a> or <a
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html">email validation</a>. We recommend
  * that you use DNS validation. ACM issues public certificates after receiving approval from the domain owner.
  */
 RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertificateRequest &request)
@@ -398,7 +417,7 @@ RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertific
  * resent within 72 hours of requesting the ACM certificate. If more than 72 hours have elapsed since your original request
  * or since your last attempt to resend validation mail, you must request a new certificate. For more information about
  * setting up your contact email addresses, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/setup-email.html">Configure Email for your Domain</a>.
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/setup-email.html">Configure Email for your Domain</a>.
  */
 ResendValidationEmailResponse * AcmClient::resendValidationEmail(const ResendValidationEmailRequest &request)
 {
@@ -413,8 +432,8 @@ ResendValidationEmailResponse * AcmClient::resendValidationEmail(const ResendVal
  *
  * Updates a certificate. Currently, you can use this function to specify whether to opt in to or out of recording your
  * certificate in a certificate transparency log. For more information, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/acm-bestpractices.html#best-practices-transparency"> Opting Out of
- * Certificate Transparency Logging</a>.
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/acm-bestpractices.html#best-practices-transparency"> Opting Out
+ * of Certificate Transparency Logging</a>.
  */
 UpdateCertificateOptionsResponse * AcmClient::updateCertificateOptions(const UpdateCertificateOptionsRequest &request)
 {

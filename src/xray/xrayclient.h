@@ -52,6 +52,8 @@ class GetSamplingTargetsRequest;
 class GetSamplingTargetsResponse;
 class GetServiceGraphRequest;
 class GetServiceGraphResponse;
+class GetTimeSeriesServiceStatisticsRequest;
+class GetTimeSeriesServiceStatisticsResponse;
 class GetTraceGraphRequest;
 class GetTraceGraphResponse;
 class GetTraceSummariesRequest;
@@ -95,6 +97,7 @@ public slots:
     GetSamplingStatisticSummariesResponse * getSamplingStatisticSummaries(const GetSamplingStatisticSummariesRequest &request);
     GetSamplingTargetsResponse * getSamplingTargets(const GetSamplingTargetsRequest &request);
     GetServiceGraphResponse * getServiceGraph(const GetServiceGraphRequest &request);
+    GetTimeSeriesServiceStatisticsResponse * getTimeSeriesServiceStatistics(const GetTimeSeriesServiceStatisticsRequest &request);
     GetTraceGraphResponse * getTraceGraph(const GetTraceGraphRequest &request);
     GetTraceSummariesResponse * getTraceSummaries(const GetTraceSummariesRequest &request);
     PutEncryptionConfigResponse * putEncryptionConfig(const PutEncryptionConfigRequest &request);

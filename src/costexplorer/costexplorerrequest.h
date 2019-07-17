@@ -44,6 +44,7 @@ public:
         GetReservationPurchaseRecommendationAction,
         GetReservationUtilizationAction,
         GetTagsAction,
+        GetUsageForecastAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

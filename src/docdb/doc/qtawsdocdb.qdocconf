@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsDocDB
+description = AWS DocDB SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsdocdb-index.html"
+navigation.landingtitle = "DocDB"
+navigation.cppclassespage = "DocDB C++ Classes"

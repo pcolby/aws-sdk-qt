@@ -59,6 +59,8 @@
 #include "listsubscriptionsresponse.h"
 #include "listsubscriptionsbytopicrequest.h"
 #include "listsubscriptionsbytopicresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtopicsrequest.h"
 #include "listtopicsresponse.h"
 #include "optinphonenumberrequest.h"
@@ -79,8 +81,12 @@
 #include "settopicattributesresponse.h"
 #include "subscriberequest.h"
 #include "subscriberesponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "unsubscriberequest.h"
 #include "unsubscriberesponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -109,8 +115,8 @@ namespace SNS {
  *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
  *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
  *  over multiple delivery protocols. For more information about this product see <a
- *  href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
- *  their associated API calls, see the <a href="http://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ *  href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  their associated API calls, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
  * 
  *  </p
  * 
@@ -226,7 +232,7 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a platform application object for one of the supported push notification services, such as APNS and GCM, to
+ * Creates a platform application object for one of the supported push notification services, such as APNS and FCM, to
  * which devices and mobile apps may register. You must specify PlatformPrincipal and PlatformCredential attributes when
  * using the <code>CreatePlatformApplication</code> action. The PlatformPrincipal is received from the notification
  * service. For APNS/APNS_SANDBOX, PlatformPrincipal is "SSL certificate". For GCM, PlatformPrincipal is not applicable.
@@ -240,15 +246,15 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
  * PlatformCredential is "client secret". For WNS, PlatformCredential is "secret key". For MPNS, PlatformCredential is
  * "private key". For Baidu, PlatformCredential is "secret key". The PlatformApplicationArn that is returned when using
  * <code>CreatePlatformApplication</code> is then used as an attribute for the <code>CreatePlatformEndpoint</code> action.
- * For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
+ * For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
  * Push Notifications</a>. For more information about obtaining the PlatformPrincipal and PlatformCredential for each of
  * the supported push notification services, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-apns.html">Getting Started with Apple Push Notification
- * Service</a>, <a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-adm.html">Getting Started with Amazon Device
- * Messaging</a>, <a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-baidu.html">Getting Started with Baidu
- * Cloud Push</a>, <a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-gcm.html">Getting Started with Google
- * Cloud Messaging for Android</a>, <a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-mpns.html">Getting
- * Started with MPNS</a>, or <a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-wns.html">Getting Started with
+ * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-apns.html">Getting Started with Apple Push Notification
+ * Service</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-adm.html">Getting Started with Amazon Device
+ * Messaging</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-baidu.html">Getting Started with Baidu
+ * Cloud Push</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-gcm.html">Getting Started with Google
+ * Cloud Messaging for Android</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-mpns.html">Getting
+ * Started with MPNS</a>, or <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-wns.html">Getting Started with
  * WNS</a>.
  */
 CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const CreatePlatformApplicationRequest &request)
@@ -268,14 +274,14 @@ CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const C
  * can then be used by the <code>Publish</code> action to send a message to a mobile app or by the <code>Subscribe</code>
  * action for subscription to a topic. The <code>CreatePlatformEndpoint</code> action is idempotent, so if the requester
  * already owns an endpoint with the same device token and attributes, that endpoint's ARN is returned without creating a
- * new endpoint. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using
+ * new endpoint. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using
  * Amazon SNS Mobile Push Notifications</a>.
  *
  * </p
  *
  * When using <code>CreatePlatformEndpoint</code> with Baidu, two attributes must be provided: ChannelId and UserId. The
  * token field must also contain the ChannelId. For more information, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePushBaiduEndpoint.html">Creating an Amazon SNS Endpoint for
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePushBaiduEndpoint.html">Creating an Amazon SNS Endpoint for
  * Baidu</a>.
  */
 CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreatePlatformEndpointRequest &request)
@@ -290,7 +296,7 @@ CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreateP
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a topic to which notifications can be published. Users can create at most 100,000 topics. For more information,
- * see <a href="http://aws.amazon.com/sns/">http://aws.amazon.com/sns</a>. This action is idempotent, so if the requester
+ * see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This action is idempotent, so if the requester
  * already owns a topic with the specified name, that topic's ARN is returned without creating a new
  */
 CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
@@ -305,7 +311,7 @@ CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the endpoint for a device and mobile app from Amazon SNS. This action is idempotent. For more information, see
- * <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
+ * <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  *
  * </p
  *
@@ -323,8 +329,8 @@ DeleteEndpointResponse * SnsClient::deleteEndpoint(const DeleteEndpointRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a platform application object for one of the supported push notification services, such as APNS and GCM. For
- * more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
- * Notifications</a>.
+ * more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
+ * Push Notifications</a>.
  */
 DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const DeletePlatformApplicationRequest &request)
 {
@@ -353,7 +359,7 @@ DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM and APNS.
- * For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
+ * For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
  * Push Notifications</a>.
  */
 GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpointAttributesRequest &request)
@@ -368,7 +374,7 @@ GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpoi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the attributes of the platform application object for the supported push notification services, such as APNS
- * and GCM. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon
+ * and GCM. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon
  * SNS Mobile Push Notifications</a>.
  */
 GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttributes(const GetPlatformApplicationAttributesRequest &request)
@@ -430,7 +436,7 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
  * to 100. If additional records are available after the first page results, then a NextToken string will be returned. To
  * receive the next page, you call <code>ListEndpointsByPlatformApplication</code> again using the NextToken string
  * received from the previous call. When there are no more records to return, NextToken will be null. For more information,
- * see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
+ * see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
  * Notifications</a>.
  *
  * </p
@@ -474,7 +480,7 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
  * additional records are available after the first page results, then a NextToken string will be returned. To receive the
  * next page, you call <code>ListPlatformApplications</code> using the NextToken string received from the previous call.
  * When there are no more records to return, NextToken will be null. For more information, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  *
  * </p
  *
@@ -521,6 +527,21 @@ ListSubscriptionsResponse * SnsClient::listSubscriptions(const ListSubscriptions
 ListSubscriptionsByTopicResponse * SnsClient::listSubscriptionsByTopic(const ListSubscriptionsByTopicRequest &request)
 {
     return qobject_cast<ListSubscriptionsByTopicResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List all tags added to the specified Amazon SNS topic. For an overview, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-tags.html">Amazon SNS Tags</a> in the <i>Amazon Simple Notification
+ * Service Developer
+ */
+ListTagsForResourceResponse * SnsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -585,7 +606,7 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  * </p
  *
  * For more information about formatting messages, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send Custom Platform-Specific
+ * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send Custom Platform-Specific
  * Payloads in Messages to Mobile Devices</a>.
  */
 PublishResponse * SnsClient::publish(const PublishRequest &request)
@@ -613,7 +634,7 @@ RemovePermissionResponse * SnsClient::removePermission(const RemovePermissionReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM and
- * APNS. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
+ * APNS. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
  * Mobile Push Notifications</a>.
  */
 SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpointAttributesRequest &request)
@@ -628,9 +649,9 @@ SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpoi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the attributes of the platform application object for the supported push notification services, such as APNS and
- * GCM. For more information, see <a href="http://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
+ * GCM. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
  * Mobile Push Notifications</a>. For information on configuring attributes for message delivery status, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/sns-msg-status.html">Using Amazon SNS Application Attributes for Message
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-msg-status.html">Using Amazon SNS Application Attributes for Message
  * Delivery Status</a>.
  */
 SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttributes(const SetPlatformApplicationAttributesRequest &request)
@@ -650,7 +671,7 @@ SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttr
  *
  * You can override some of these settings for a single message when you use the <code>Publish</code> action with the
  * <code>MessageAttributes.entry.N</code> parameter. For more information, see <a
- * href="http://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Sending an SMS Message</a> in the <i>Amazon
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Sending an SMS Message</a> in the <i>Amazon
  * SNS Developer
  */
 SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesRequest &request)
@@ -705,6 +726,51 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
 
 /*!
  * Sends \a request to the SnsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Add tags to the specified Amazon SNS topic. For an overview, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-tags.html">Amazon SNS Tags</a> in the <i>Amazon SNS Developer
+ *
+ * Guide</i>>
+ *
+ * When you use topic tags, keep the following guidelines in
+ *
+ * mind> <ul> <li>
+ *
+ * Adding more than 50 tags to a topic isn't
+ *
+ * recommended> </li> <li>
+ *
+ * Tags don't have any semantic meaning. Amazon SNS interprets tags as character
+ *
+ * strings> </li> <li>
+ *
+ * Tags are
+ *
+ * case-sensitive> </li> <li>
+ *
+ * A new tag with a key identical to that of an existing tag overwrites the existing
+ *
+ * tag> </li> <li>
+ *
+ * Tagging actions are limited to 10 TPS per AWS account. If your application requires a higher throughput, file a <a
+ * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
+ *
+ * request</a>> </li> </ul>
+ *
+ * For a full list of tag restrictions, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-limits.html#limits-topics">Limits Related to Topics</a> in the
+ * <i>Amazon SNS Developer
+ */
+TagResourceResponse * SnsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
  * UnsubscribeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -721,6 +787,20 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
 UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
 {
     return qobject_cast<UnsubscribeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove tags from the specified Amazon SNS topic. For an overview, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sns-tags.html">Amazon SNS Tags</a> in the <i>Amazon SNS Developer
+ */
+UntagResourceResponse * SnsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

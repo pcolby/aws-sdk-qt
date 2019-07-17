@@ -40,6 +40,7 @@ namespace Organizations {
  * \value AttachPolicyAction Organizations AttachPolicy action.
  * \value CancelHandshakeAction Organizations CancelHandshake action.
  * \value CreateAccountAction Organizations CreateAccount action.
+ * \value CreateGovCloudAccountAction Organizations CreateGovCloudAccount action.
  * \value CreateOrganizationAction Organizations CreateOrganization action.
  * \value CreateOrganizationalUnitAction Organizations CreateOrganizationalUnit action.
  * \value CreatePolicyAction Organizations CreatePolicy action.
@@ -73,9 +74,12 @@ namespace Organizations {
  * \value ListPoliciesAction Organizations ListPolicies action.
  * \value ListPoliciesForTargetAction Organizations ListPoliciesForTarget action.
  * \value ListRootsAction Organizations ListRoots action.
+ * \value ListTagsForResourceAction Organizations ListTagsForResource action.
  * \value ListTargetsForPolicyAction Organizations ListTargetsForPolicy action.
  * \value MoveAccountAction Organizations MoveAccount action.
  * \value RemoveAccountFromOrganizationAction Organizations RemoveAccountFromOrganization action.
+ * \value TagResourceAction Organizations TagResource action.
+ * \value UntagResourceAction Organizations UntagResource action.
  * \value UpdateOrganizationalUnitAction Organizations UpdateOrganizationalUnit action.
  * \value UpdatePolicyAction Organizations UpdatePolicy action.
  */

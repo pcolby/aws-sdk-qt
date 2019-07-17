@@ -25,6 +25,8 @@
 #include "associateipgroupsresponse.h"
 #include "authorizeiprulesrequest.h"
 #include "authorizeiprulesresponse.h"
+#include "copyworkspaceimagerequest.h"
+#include "copyworkspaceimageresponse.h"
 #include "createipgrouprequest.h"
 #include "createipgroupresponse.h"
 #include "createtagsrequest.h"
@@ -198,6 +200,19 @@ AuthorizeIpRulesResponse * WorkSpacesClient::authorizeIpRules(const AuthorizeIpR
 
 /*!
  * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
+ * CopyWorkspaceImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Copies the specified image from the specified Region to the current
+ */
+CopyWorkspaceImageResponse * WorkSpacesClient::copyWorkspaceImage(const CopyWorkspaceImageRequest &request)
+{
+    return qobject_cast<CopyWorkspaceImageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkSpacesClient service, and returns a pointer to an
  * CreateIpGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -227,7 +242,7 @@ CreateIpGroupResponse * WorkSpacesClient::createIpGroup(const CreateIpGroupReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates the specified tags for the specified
+ * Creates the specified tags for the specified WorkSpaces
  */
 CreateTagsResponse * WorkSpacesClient::createTags(const CreateTagsRequest &request)
 {
@@ -274,7 +289,7 @@ DeleteIpGroupResponse * WorkSpacesClient::deleteIpGroup(const DeleteIpGroupReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified tags from the specified
+ * Deletes the specified tags from the specified WorkSpaces
  */
 DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &request)
 {
@@ -288,7 +303,7 @@ DeleteTagsResponse * WorkSpacesClient::deleteTags(const DeleteTagsRequest &reque
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified image from your account. To delete an image, you must first delete any bundles that are associated
- * with the image.
+ * with the image and un-share the image if it is shared with other accounts.
  */
 DeleteWorkspaceImageResponse * WorkSpacesClient::deleteWorkspaceImage(const DeleteWorkspaceImageRequest &request)
 {
@@ -353,7 +368,7 @@ DescribeIpGroupsResponse * WorkSpacesClient::describeIpGroups(const DescribeIpGr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified tags for the specified
+ * Describes the specified tags for the specified WorkSpaces
  */
 DescribeTagsResponse * WorkSpacesClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -532,8 +547,8 @@ ModifyWorkspacePropertiesResponse * WorkSpacesClient::modifyWorkspaceProperties(
  * WorkSpace>
  *
  * To maintain a WorkSpace without being interrupted, set the WorkSpace state to <code>ADMIN_MAINTENANCE</code>. WorkSpaces
- * in this state do not respond to requests to reboot, stop, start, or rebuild. An AutoStop WorkSpace in this state is not
- * stopped. Users can log into a WorkSpace in the <code>ADMIN_MAINTENANCE</code>
+ * in this state do not respond to requests to reboot, stop, start, rebuild, or restore. An AutoStop WorkSpace in this
+ * state is not stopped. Users cannot log into a WorkSpace in the <code>ADMIN_MAINTENANCE</code>
  */
 ModifyWorkspaceStateResponse * WorkSpacesClient::modifyWorkspaceState(const ModifyWorkspaceStateRequest &request)
 {
@@ -576,7 +591,7 @@ RebootWorkspacesResponse * WorkSpacesClient::rebootWorkspaces(const RebootWorksp
  * <code>UNHEALTHY</code>>
  *
  * Rebuilding a WorkSpace is a potentially destructive action that can result in the loss of data. For more information,
- * see <a href="http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild a
+ * see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild a
  *
  * WorkSpace</a>>
  *

@@ -126,6 +126,10 @@ HEADERS += \
     deletekeypairrequest_p.h \
     deletekeypairresponse.h \
     deletekeypairresponse_p.h \
+    deleteknownhostkeysrequest.h \
+    deleteknownhostkeysrequest_p.h \
+    deleteknownhostkeysresponse.h \
+    deleteknownhostkeysresponse_p.h \
     deleteloadbalancerrequest.h \
     deleteloadbalancerrequest_p.h \
     deleteloadbalancerresponse.h \
@@ -476,6 +480,8 @@ SOURCES += \
     deleteinstancesnapshotresponse.cpp \
     deletekeypairrequest.cpp \
     deletekeypairresponse.cpp \
+    deleteknownhostkeysrequest.cpp \
+    deleteknownhostkeysresponse.cpp \
     deleteloadbalancerrequest.cpp \
     deleteloadbalancerresponse.cpp \
     deleteloadbalancertlscertificaterequest.cpp \

@@ -28,12 +28,22 @@ namespace QtAws {
 namespace S3Control {
 
 class S3ControlClientPrivate;
+class CreateJobRequest;
+class CreateJobResponse;
 class DeletePublicAccessBlockRequest;
 class DeletePublicAccessBlockResponse;
+class DescribeJobRequest;
+class DescribeJobResponse;
 class GetPublicAccessBlockRequest;
 class GetPublicAccessBlockResponse;
+class ListJobsRequest;
+class ListJobsResponse;
 class PutPublicAccessBlockRequest;
 class PutPublicAccessBlockResponse;
+class UpdateJobPriorityRequest;
+class UpdateJobPriorityResponse;
+class UpdateJobStatusRequest;
+class UpdateJobStatusResponse;
 
 class QTAWS_EXPORT S3ControlClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -51,9 +61,14 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateJobResponse * createJob(const CreateJobRequest &request);
     DeletePublicAccessBlockResponse * deletePublicAccessBlock(const DeletePublicAccessBlockRequest &request);
+    DescribeJobResponse * describeJob(const DescribeJobRequest &request);
     GetPublicAccessBlockResponse * getPublicAccessBlock(const GetPublicAccessBlockRequest &request);
+    ListJobsResponse * listJobs(const ListJobsRequest &request);
     PutPublicAccessBlockResponse * putPublicAccessBlock(const PutPublicAccessBlockRequest &request);
+    UpdateJobPriorityResponse * updateJobPriority(const UpdateJobPriorityRequest &request);
+    UpdateJobStatusResponse * updateJobStatus(const UpdateJobStatusRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(S3ControlClient)

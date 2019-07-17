@@ -51,9 +51,11 @@ namespace CodePipeline {
  * \value GetPipelineExecutionAction CodePipeline GetPipelineExecution action.
  * \value GetPipelineStateAction CodePipeline GetPipelineState action.
  * \value GetThirdPartyJobDetailsAction CodePipeline GetThirdPartyJobDetails action.
+ * \value ListActionExecutionsAction CodePipeline ListActionExecutions action.
  * \value ListActionTypesAction CodePipeline ListActionTypes action.
  * \value ListPipelineExecutionsAction CodePipeline ListPipelineExecutions action.
  * \value ListPipelinesAction CodePipeline ListPipelines action.
+ * \value ListTagsForResourceAction CodePipeline ListTagsForResource action.
  * \value ListWebhooksAction CodePipeline ListWebhooks action.
  * \value PollForJobsAction CodePipeline PollForJobs action.
  * \value PollForThirdPartyJobsAction CodePipeline PollForThirdPartyJobs action.
@@ -67,6 +69,8 @@ namespace CodePipeline {
  * \value RegisterWebhookWithThirdPartyAction CodePipeline RegisterWebhookWithThirdParty action.
  * \value RetryStageExecutionAction CodePipeline RetryStageExecution action.
  * \value StartPipelineExecutionAction CodePipeline StartPipelineExecution action.
+ * \value TagResourceAction CodePipeline TagResource action.
+ * \value UntagResourceAction CodePipeline UntagResource action.
  * \value UpdatePipelineAction CodePipeline UpdatePipeline action.
  */
 

@@ -55,6 +55,8 @@
 #include "getdeliverabilitydashboardoptionsresponse.h"
 #include "getdeliverabilitytestreportrequest.h"
 #include "getdeliverabilitytestreportresponse.h"
+#include "getdomaindeliverabilitycampaignrequest.h"
+#include "getdomaindeliverabilitycampaignresponse.h"
 #include "getdomainstatisticsreportrequest.h"
 #include "getdomainstatisticsreportresponse.h"
 #include "getemailidentityrequest.h"
@@ -65,8 +67,12 @@
 #include "listdedicatedippoolsresponse.h"
 #include "listdeliverabilitytestreportsrequest.h"
 #include "listdeliverabilitytestreportsresponse.h"
+#include "listdomaindeliverabilitycampaignsrequest.h"
+#include "listdomaindeliverabilitycampaignsresponse.h"
 #include "listemailidentitiesrequest.h"
 #include "listemailidentitiesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putaccountdedicatedipwarmupattributesrequest.h"
 #include "putaccountdedicatedipwarmupattributesresponse.h"
 #include "putaccountsendingattributesrequest.h"
@@ -93,6 +99,10 @@
 #include "putemailidentitymailfromattributesresponse.h"
 #include "sendemailrequest.h"
 #include "sendemailresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateconfigurationseteventdestinationrequest.h"
 #include "updateconfigurationseteventdestinationresponse.h"
 
@@ -122,24 +132,22 @@ namespace PinpointEmail {
  * 
  *  This document contains reference information for the <a href="https://aws.amazon.com/pinpoint">Amazon Pinpoint</a> Email
  *  API, version 1.0. This document is best used in conjunction with the <a
- *  href="http://docs.aws.amazon.com/pinpoint/latest/developerguide/welcome.html">Amazon Pinpoint Developer
+ *  href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/welcome.html">Amazon Pinpoint Developer
  * 
  *  Guide</a>>
  * 
- *  The Amazon Pinpoint Email API is available in the US East (N. Virginia), US West (Oregon) and the EU (Ireland) Regions
- *  at the following
+ *  The Amazon Pinpoint Email API is available in several AWS Regions and it provides an endpoint for each of these Regions.
+ *  For a list of all the Regions and endpoints where the API is currently available, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/rande.html#pinpoint_region">AWS Regions and Endpoints</a> in the
+ *  <i>Amazon Web Services General
  * 
- *  endpoints> <ul> <li>
+ *  Reference</i>>
  * 
- *  <b>US East (N. Virginia)</b>: <code>email.us-east-1.amazonaws.com</code>
- * 
- *  </p </li> <li>
- * 
- *  <b>US West (Oregon)</b>: <code>email.us-west-2.amazonaws.com</code>
- * 
- *  </p </li> <li>
- * 
- *  <b>EU (Ireland)</b>: <code>email.eu-west-1.amazonaws.com</code>
+ *  In each Region, AWS maintains multiple Availability Zones. These Availability Zones are physically isolated from each
+ *  other, but are united by private, low-latency, high-throughput, and highly redundant network connections. These
+ *  Availability Zones enable us to provide very high levels of availability and redundancy, while also minimizing latency.
+ *  To learn more about the number of Availability Zones that are available in each Region, see <a
+ *  href="http://aws.amazon.com/about-aws/global-infrastructure/">AWS Global
  */
 
 /*!
@@ -455,15 +463,15 @@ GetDedicatedIpsResponse * PinpointEmailClient::getDedicatedIps(const GetDedicate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Show the status of the Deliverability dashboard. When the Deliverability dashboard is enabled, you gain access to
- * reputation metrics for the domains that you use to send email using Amazon Pinpoint. You also gain the ability to
- * perform predictive inbox placement
+ * Retrieve information about the status of the Deliverability dashboard for your Amazon Pinpoint account. When the
+ * Deliverability dashboard is enabled, you gain access to reputation, deliverability, and other metrics for the domains
+ * that you use to send email using Amazon Pinpoint. You also gain the ability to perform predictive inbox placement
  *
  * tests>
  *
- * When you use the Deliverability dashboard, you pay a monthly charge of USD$1,250.00, in addition to any other fees that
- * you accrue by using Amazon Pinpoint. If you enable the Deliverability dashboard after the first day of a calendar month,
- * AWS prorates the monthly charge based on how many days have elapsed in the current calendar
+ * When you use the Deliverability dashboard, you pay a monthly subscription charge, in addition to any other fees that you
+ * accrue by using Amazon Pinpoint. For more information about the features and cost of a Deliverability dashboard
+ * subscription, see <a href="http://aws.amazon.com/pinpoint/pricing/">Amazon Pinpoint
  */
 GetDeliverabilityDashboardOptionsResponse * PinpointEmailClient::getDeliverabilityDashboardOptions(const GetDeliverabilityDashboardOptionsRequest &request)
 {
@@ -481,6 +489,21 @@ GetDeliverabilityDashboardOptionsResponse * PinpointEmailClient::getDeliverabili
 GetDeliverabilityTestReportResponse * PinpointEmailClient::getDeliverabilityTestReport(const GetDeliverabilityTestReportRequest &request)
 {
     return qobject_cast<GetDeliverabilityTestReportResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointEmailClient service, and returns a pointer to an
+ * GetDomainDeliverabilityCampaignResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve all the deliverability data for a specific campaign. This data is available for a campaign only if the campaign
+ * sent email by using a domain that the Deliverability dashboard is enabled for
+ * (<code>PutDeliverabilityDashboardOption</code>
+ */
+GetDomainDeliverabilityCampaignResponse * PinpointEmailClient::getDomainDeliverabilityCampaign(const GetDomainDeliverabilityCampaignRequest &request)
+{
+    return qobject_cast<GetDomainDeliverabilityCampaignResponse *>(send(request));
 }
 
 /*!
@@ -558,6 +581,21 @@ ListDeliverabilityTestReportsResponse * PinpointEmailClient::listDeliverabilityT
 
 /*!
  * Sends \a request to the PinpointEmailClient service, and returns a pointer to an
+ * ListDomainDeliverabilityCampaignsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve deliverability data for all the campaigns that used a specific domain to send email during a specified time
+ * range. This data is available for a domain only if you enabled the Deliverability dashboard
+ * (<code>PutDeliverabilityDashboardOption</code> operation) for the
+ */
+ListDomainDeliverabilityCampaignsResponse * PinpointEmailClient::listDomainDeliverabilityCampaigns(const ListDomainDeliverabilityCampaignsRequest &request)
+{
+    return qobject_cast<ListDomainDeliverabilityCampaignsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointEmailClient service, and returns a pointer to an
  * ListEmailIdentitiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -568,6 +606,22 @@ ListDeliverabilityTestReportsResponse * PinpointEmailClient::listDeliverabilityT
 ListEmailIdentitiesResponse * PinpointEmailClient::listEmailIdentities(const ListEmailIdentitiesRequest &request)
 {
     return qobject_cast<ListEmailIdentitiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointEmailClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieve a list of the tags (keys and values) that are associated with a specified resource. A <i>tag</i> is a label
+ * that you optionally define and associate with a resource in Amazon Pinpoint. Each tag consists of a required <i>tag
+ * key</i> and an optional associated <i>tag value</i>. A tag key is a general label that acts as a category for more
+ * specific tag values. A tag value acts as a descriptor within a tag
+ */
+ListTagsForResourceResponse * PinpointEmailClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -690,15 +744,15 @@ PutDedicatedIpWarmupAttributesResponse * PinpointEmailClient::putDedicatedIpWarm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enable or disable the Deliverability dashboard. When you enable the Deliverability dashboard, you gain access to
- * reputation metrics for the domains that you use to send email using Amazon Pinpoint. You also gain the ability to
- * perform predictive inbox placement
+ * Enable or disable the Deliverability dashboard for your Amazon Pinpoint account. When you enable the Deliverability
+ * dashboard, you gain access to reputation, deliverability, and other metrics for the domains that you use to send email
+ * using Amazon Pinpoint. You also gain the ability to perform predictive inbox placement
  *
  * tests>
  *
- * When you use the Deliverability dashboard, you pay a monthly charge of USD$1,250.00, in addition to any other fees that
- * you accrue by using Amazon Pinpoint. If you enable the Deliverability dashboard after the first day of a calendar month,
- * we prorate the monthly charge based on how many days have elapsed in the current calendar
+ * When you use the Deliverability dashboard, you pay a monthly subscription charge, in addition to any other fees that you
+ * accrue by using Amazon Pinpoint. For more information about the features and cost of a Deliverability dashboard
+ * subscription, see <a href="http://aws.amazon.com/pinpoint/pricing/">Amazon Pinpoint
  */
 PutDeliverabilityDashboardOptionResponse * PinpointEmailClient::putDeliverabilityDashboardOption(const PutDeliverabilityDashboardOptionRequest &request)
 {
@@ -780,6 +834,39 @@ PutEmailIdentityMailFromAttributesResponse * PinpointEmailClient::putEmailIdenti
 SendEmailResponse * PinpointEmailClient::sendEmail(const SendEmailRequest &request)
 {
     return qobject_cast<SendEmailResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointEmailClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Add one or more tags (keys and values) to a specified resource. A <i>tag</i> is a label that you optionally define and
+ * associate with a resource in Amazon Pinpoint. Tags can help you categorize and manage resources in different ways, such
+ * as by purpose, owner, environment, or other criteria. A resource can have as many as 50
+ *
+ * tags>
+ *
+ * Each tag consists of a required <i>tag key</i> and an associated <i>tag value</i>, both of which you define. A tag key
+ * is a general label that acts as a category for more specific tag values. A tag value acts as a descriptor within a tag
+ */
+TagResourceResponse * PinpointEmailClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointEmailClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove one or more tags (keys and values) from a specified
+ */
+UntagResourceResponse * PinpointEmailClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

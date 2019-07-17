@@ -21,14 +21,20 @@
 #include "codecommitclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchdescribemergeconflictsrequest.h"
+#include "batchdescribemergeconflictsresponse.h"
 #include "batchgetrepositoriesrequest.h"
 #include "batchgetrepositoriesresponse.h"
 #include "createbranchrequest.h"
 #include "createbranchresponse.h"
+#include "createcommitrequest.h"
+#include "createcommitresponse.h"
 #include "createpullrequestrequest.h"
 #include "createpullrequestresponse.h"
 #include "createrepositoryrequest.h"
 #include "createrepositoryresponse.h"
+#include "createunreferencedmergecommitrequest.h"
+#include "createunreferencedmergecommitresponse.h"
 #include "deletebranchrequest.h"
 #include "deletebranchresponse.h"
 #include "deletecommentcontentrequest.h"
@@ -37,6 +43,8 @@
 #include "deletefileresponse.h"
 #include "deleterepositoryrequest.h"
 #include "deleterepositoryresponse.h"
+#include "describemergeconflictsrequest.h"
+#include "describemergeconflictsresponse.h"
 #include "describepullrequesteventsrequest.h"
 #include "describepullrequesteventsresponse.h"
 #include "getblobrequest.h"
@@ -57,8 +65,12 @@
 #include "getfileresponse.h"
 #include "getfolderrequest.h"
 #include "getfolderresponse.h"
+#include "getmergecommitrequest.h"
+#include "getmergecommitresponse.h"
 #include "getmergeconflictsrequest.h"
 #include "getmergeconflictsresponse.h"
+#include "getmergeoptionsrequest.h"
+#include "getmergeoptionsresponse.h"
 #include "getpullrequestrequest.h"
 #include "getpullrequestresponse.h"
 #include "getrepositoryrequest.h"
@@ -71,8 +83,20 @@
 #include "listpullrequestsresponse.h"
 #include "listrepositoriesrequest.h"
 #include "listrepositoriesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "mergebranchesbyfastforwardrequest.h"
+#include "mergebranchesbyfastforwardresponse.h"
+#include "mergebranchesbysquashrequest.h"
+#include "mergebranchesbysquashresponse.h"
+#include "mergebranchesbythreewayrequest.h"
+#include "mergebranchesbythreewayresponse.h"
 #include "mergepullrequestbyfastforwardrequest.h"
 #include "mergepullrequestbyfastforwardresponse.h"
+#include "mergepullrequestbysquashrequest.h"
+#include "mergepullrequestbysquashresponse.h"
+#include "mergepullrequestbythreewayrequest.h"
+#include "mergepullrequestbythreewayresponse.h"
 #include "postcommentforcomparedcommitrequest.h"
 #include "postcommentforcomparedcommitresponse.h"
 #include "postcommentforpullrequestrequest.h"
@@ -83,8 +107,12 @@
 #include "putfileresponse.h"
 #include "putrepositorytriggersrequest.h"
 #include "putrepositorytriggersresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "testrepositorytriggersrequest.h"
 #include "testrepositorytriggersresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatecommentrequest.h"
 #include "updatecommentresponse.h"
 #include "updatedefaultbranchrequest.h"
@@ -198,6 +226,10 @@ namespace CodeCommit {
  * 
  *  branch> </li> <li>
  * 
+ *  <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object within a
+ * 
+ *  repository> </li> <li>
+ * 
  *  <a>GetFile</a>, which returns the base-64 encoded content of a specified
  * 
  *  file> </li> <li>
@@ -206,15 +238,15 @@ namespace CodeCommit {
  * 
  *  directory> </li> <li>
  * 
- *  <a>PutFile</a>, which adds or modifies a file in a specified repository and
+ *  <a>PutFile</a>, which adds or modifies a single file in a specified repository and
  * 
  *  branch> </li> </ul>
  * 
- *  Information about committed code in a repository, by calling the
+ *  Commits, by calling the
  * 
  *  following> <ul> <li>
  * 
- *  <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object within a
+ *  <a>CreateCommit</a>, which creates a commit for changes to a
  * 
  *  repository> </li> <li>
  * 
@@ -226,6 +258,49 @@ namespace CodeCommit {
  *  tag, HEAD, commit ID or other fully qualified
  * 
  *  reference)> </li> </ul>
+ * 
+ *  Merges, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <a>BatchDescribeMergeConflicts</a>, which returns information about conflicts in a merge between commits in a
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>CreateUnreferencedMergeCommit</a>, which creates an unreferenced commit between two branches or commits for the
+ *  purpose of comparing them and identifying any potential
+ * 
+ *  conflicts> </li> <li>
+ * 
+ *  <a>DescribeMergeConflicts</a>, which returns information about merge conflicts between the base, source, and destination
+ *  versions of a file in a potential
+ * 
+ *  merge> </li> <li>
+ * 
+ *  <a>GetMergeCommit</a>, which returns information about the merge between a source and destination commit.
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a>GetMergeConflicts</a>, which returns information about merge conflicts between the source and destination branch in a
+ *  pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>GetMergeOptions</a>, which returns information about the available merge options between two branches or commit
+ * 
+ *  specifiers> </li> <li>
+ * 
+ *  <a>MergeBranchesByFastForward</a>, which merges two branches using the fast-forward merge
+ * 
+ *  option> </li> <li>
+ * 
+ *  <a>MergeBranchesBySquash</a>, which merges two branches using the squash merge
+ * 
+ *  option> </li> <li>
+ * 
+ *  <a>MergeBranchesByThreeWay</a>, which merges two branches using the three-way merge
+ * 
+ *  option> </li> </ul>
  * 
  *  Pull requests, by calling the
  * 
@@ -243,11 +318,6 @@ namespace CodeCommit {
  * 
  *  request> </li> <li>
  * 
- *  <a>GetMergeConflicts</a>, which returns information about merge conflicts between the source and destination branch in a
- *  pull
- * 
- *  request> </li> <li>
- * 
  *  <a>GetPullRequest</a>, which returns information about a specified pull
  * 
  *  request> </li> <li>
@@ -258,6 +328,16 @@ namespace CodeCommit {
  * 
  *  <a>MergePullRequestByFastForward</a>, which merges the source destination branch of a pull request into the specified
  *  destination branch for that pull request using the fast-forward merge
+ * 
+ *  option> </li> <li>
+ * 
+ *  <a>MergePullRequestBySquash</a>, which merges the source destination branch of a pull request into the specified
+ *  destination branch for that pull request using the squash merge
+ * 
+ *  option> </li> <li>
+ * 
+ *  <a>MergePullRequestByThreeWay</a>. which merges the source destination branch of a pull request into the specified
+ *  destination branch for that pull request using the three-way merge
  * 
  *  option> </li> <li>
  * 
@@ -277,7 +357,7 @@ namespace CodeCommit {
  * 
  *  request> </li> </ul>
  * 
- *  Information about comments in a repository, by calling the
+ *  Comments in a repository, by calling the
  * 
  *  following> <ul> <li>
  * 
@@ -306,6 +386,22 @@ namespace CodeCommit {
  * 
  *  repository> </li> </ul>
  * 
+ *  Tags used to tag resources in AWS CodeCommit (not Git tags), by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <a>ListTagsForResource</a>, which gets information about AWS tags for a specified Amazon Resource Name (ARN) in AWS
+ * 
+ *  CodeCommit> </li> <li>
+ * 
+ *  <a>TagResource</a>, which adds or updates tags for a resource in AWS
+ * 
+ *  CodeCommit> </li> <li>
+ * 
+ *  <a>UntagResource</a>, which removes tags for a resource in AWS
+ * 
+ *  CodeCommit> </li> </ul>
+ * 
  *  Triggers, by calling the
  * 
  *  following> <ul> <li>
@@ -323,7 +419,7 @@ namespace CodeCommit {
  *  target> </li> </ul>
  * 
  *  For information about how to use AWS CodeCommit, see the <a
- *  href="http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS CodeCommit User
+ *  href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS CodeCommit User
  */
 
 /*!
@@ -381,6 +477,20 @@ CodeCommitClient::CodeCommitClient(
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * BatchDescribeMergeConflictsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash
+ * or three-way merge
+ */
+BatchDescribeMergeConflictsResponse * CodeCommitClient::batchDescribeMergeConflicts(const BatchDescribeMergeConflictsRequest &request)
+{
+    return qobject_cast<BatchDescribeMergeConflictsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * BatchGetRepositoriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -419,6 +529,19 @@ CreateBranchResponse * CodeCommitClient::createBranch(const CreateBranchRequest 
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * CreateCommitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a commit for a repository on the tip of a specified
+ */
+CreateCommitResponse * CodeCommitClient::createCommit(const CreateCommitRequest &request)
+{
+    return qobject_cast<CreateCommitResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * CreatePullRequestResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -441,6 +564,26 @@ CreatePullRequestResponse * CodeCommitClient::createPullRequest(const CreatePull
 CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateRepositoryRequest &request)
 {
     return qobject_cast<CreateRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * CreateUnreferencedMergeCommitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an unreferenced commit that represents the result of merging two branches using a specified merge strategy. This
+ * can help you determine the outcome of a potential merge. This API cannot be used with the fast-forward merge strategy,
+ * as that strategy does not create a merge
+ *
+ * commit> <note>
+ *
+ * This unreferenced merge commit can only be accessed using the GetCommit API or through git commands such as git fetch.
+ * To retrieve this commit, you must specify its commit ID or otherwise reference
+ */
+CreateUnreferencedMergeCommitResponse * CodeCommitClient::createUnreferencedMergeCommit(const CreateUnreferencedMergeCommitRequest &request)
+{
+    return qobject_cast<CreateUnreferencedMergeCommitResponse *>(send(request));
 }
 
 /*!
@@ -499,6 +642,21 @@ DeleteFileResponse * CodeCommitClient::deleteFile(const DeleteFileRequest &reque
 DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
     return qobject_cast<DeleteRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * DescribeMergeConflictsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash
+ * or three-way merge strategy. If the merge option for the attempted merge is specified as FAST_FORWARD_MERGE, an
+ * exception will be
+ */
+DescribeMergeConflictsResponse * CodeCommitClient::describeMergeConflicts(const DescribeMergeConflictsRequest &request)
+{
+    return qobject_cast<DescribeMergeConflictsResponse *>(send(request));
 }
 
 /*!
@@ -634,6 +792,19 @@ GetFolderResponse * CodeCommitClient::getFolder(const GetFolderRequest &request)
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetMergeCommitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a specified merge
+ */
+GetMergeCommitResponse * CodeCommitClient::getMergeCommit(const GetMergeCommitRequest &request)
+{
+    return qobject_cast<GetMergeCommitResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * GetMergeConflictsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -643,6 +814,20 @@ GetFolderResponse * CodeCommitClient::getFolder(const GetFolderRequest &request)
 GetMergeConflictsResponse * CodeCommitClient::getMergeConflicts(const GetMergeConflictsRequest &request)
 {
     return qobject_cast<GetMergeConflictsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetMergeOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the merge options available for merging two specified branches. For details about why a
+ * particular merge option is not available, use GetMergeConflicts or
+ */
+GetMergeOptionsResponse * CodeCommitClient::getMergeOptions(const GetMergeOptionsRequest &request)
+{
+    return qobject_cast<GetMergeOptionsResponse *>(send(request));
 }
 
 /*!
@@ -733,16 +918,99 @@ ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListReposito
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about AWS tags for a specified Amazon Resource Name (ARN) in AWS CodeCommit. For a list of valid
+ * resources in AWS CodeCommit, see <a
+ * href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">CodeCommit
+ * Resources and Operations</a> in the AWS CodeCommit User
+ */
+ListTagsForResourceResponse * CodeCommitClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * MergeBranchesByFastForwardResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Merges two branches using the fast-forward merge
+ */
+MergeBranchesByFastForwardResponse * CodeCommitClient::mergeBranchesByFastForward(const MergeBranchesByFastForwardRequest &request)
+{
+    return qobject_cast<MergeBranchesByFastForwardResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * MergeBranchesBySquashResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Merges two branches using the squash merge
+ */
+MergeBranchesBySquashResponse * CodeCommitClient::mergeBranchesBySquash(const MergeBranchesBySquashRequest &request)
+{
+    return qobject_cast<MergeBranchesBySquashResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * MergeBranchesByThreeWayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Merges two specified branches using the three-way merge
+ */
+MergeBranchesByThreeWayResponse * CodeCommitClient::mergeBranchesByThreeWay(const MergeBranchesByThreeWayRequest &request)
+{
+    return qobject_cast<MergeBranchesByThreeWayResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * MergePullRequestByFastForwardResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Closes a pull request and attempts to merge the source commit of a pull request into the specified destination branch
- * for that pull request at the specified commit using the fast-forward merge
+ * Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the
+ * specified commit using the fast-forward merge strategy. If the merge is successful, it closes the pull
  */
 MergePullRequestByFastForwardResponse * CodeCommitClient::mergePullRequestByFastForward(const MergePullRequestByFastForwardRequest &request)
 {
     return qobject_cast<MergePullRequestByFastForwardResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * MergePullRequestBySquashResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the
+ * specified commit using the squash merge strategy. If the merge is successful, it closes the pull
+ */
+MergePullRequestBySquashResponse * CodeCommitClient::mergePullRequestBySquash(const MergePullRequestBySquashRequest &request)
+{
+    return qobject_cast<MergePullRequestBySquashResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * MergePullRequestByThreeWayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attempts to merge the source commit of a pull request into the specified destination branch for that pull request at the
+ * specified commit using the three-way merge strategy. If the merge is successful, it closes the pull
+ */
+MergePullRequestByThreeWayResponse * CodeCommitClient::mergePullRequestByThreeWay(const MergePullRequestByThreeWayRequest &request)
+{
+    return qobject_cast<MergePullRequestByThreeWayResponse *>(send(request));
 }
 
 /*!
@@ -813,6 +1081,21 @@ PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const Pu
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates tags for a resource in AWS CodeCommit. For a list of valid resources in AWS CodeCommit, see <a
+ * href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">CodeCommit
+ * Resources and Operations</a> in the AWS CodeCommit User
+ */
+TagResourceResponse * CodeCommitClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * TestRepositoryTriggersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -823,6 +1106,21 @@ PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const Pu
 TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const TestRepositoryTriggersRequest &request)
 {
     return qobject_cast<TestRepositoryTriggersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags for a resource in AWS CodeCommit. For a list of valid resources in AWS CodeCommit, see <a
+ * href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">CodeCommit
+ * Resources and Operations</a> in the AWS CodeCommit User
+ */
+UntagResourceResponse * CodeCommitClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
@@ -924,7 +1222,7 @@ UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescript
  * Renames a repository. The repository name must be unique across the calling AWS account. In addition, repository names
  * are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix
  * ".git" is prohibited. For a full description of the limits on repository names, see <a
- * href="http://docs.aws.amazon.com/codecommit/latest/userguide/limits.html">Limits</a> in the AWS CodeCommit User
+ * href="https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html">Limits</a> in the AWS CodeCommit User
  */
 UpdateRepositoryNameResponse * CodeCommitClient::updateRepositoryName(const UpdateRepositoryNameRequest &request)
 {

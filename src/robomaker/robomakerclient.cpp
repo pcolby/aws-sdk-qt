@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "batchdescribesimulationjobrequest.h"
 #include "batchdescribesimulationjobresponse.h"
+#include "canceldeploymentjobrequest.h"
+#include "canceldeploymentjobresponse.h"
 #include "cancelsimulationjobrequest.h"
 #include "cancelsimulationjobresponse.h"
 #include "createdeploymentjobrequest.h"
@@ -75,12 +77,18 @@
 #include "listsimulationapplicationsresponse.h"
 #include "listsimulationjobsrequest.h"
 #include "listsimulationjobsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "registerrobotrequest.h"
 #include "registerrobotresponse.h"
 #include "restartsimulationjobrequest.h"
 #include "restartsimulationjobresponse.h"
 #include "syncdeploymentjobrequest.h"
 #include "syncdeploymentjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updaterobotapplicationrequest.h"
 #include "updaterobotapplicationresponse.h"
 #include "updatesimulationapplicationrequest.h"
@@ -108,7 +116,7 @@ namespace RoboMaker {
  * \ingroup aws-clients
  * \inmodule QtAwsRoboMaker
  *
- *  his section provides documentation for the AWS RoboMaker API
+ *  This section provides documentation for the AWS RoboMaker API
  */
 
 /*!
@@ -179,6 +187,19 @@ BatchDescribeSimulationJobResponse * RoboMakerClient::batchDescribeSimulationJob
 
 /*!
  * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CancelDeploymentJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels the specified deployment
+ */
+CancelDeploymentJobResponse * RoboMakerClient::cancelDeploymentJob(const CancelDeploymentJobRequest &request)
+{
+    return qobject_cast<CancelDeploymentJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
  * CancelSimulationJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -196,7 +217,18 @@ CancelSimulationJobResponse * RoboMakerClient::cancelSimulationJob(const CancelS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a deployment
+ * Deploys a specific version of a robot application to robots in a
+ *
+ * fleet>
+ *
+ * The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a new
+ * version, use <code>CreateRobotApplicationVersion</code> or see <a
+ * href="https://docs.aws.amazon.com/robomaker/latest/dg/create-robot-application-version.html">Creating a Robot
+ * Application Version</a>.
+ *
+ * </p <note>
+ *
+ * After 90 days, deployment jobs expire and will be deleted. They will no longer be accessible.
  */
 CreateDeploymentJobResponse * RoboMakerClient::createDeploymentJob(const CreateDeploymentJobRequest &request)
 {
@@ -288,6 +320,10 @@ CreateSimulationApplicationVersionResponse * RoboMakerClient::createSimulationAp
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a simulation
+ *
+ * job> <note>
+ *
+ * After 90 days, simulation jobs expire and will be deleted. They will no longer be accessible.
  */
 CreateSimulationJobResponse * RoboMakerClient::createSimulationJob(const CreateSimulationJobRequest &request)
 {
@@ -365,7 +401,7 @@ DeregisterRobotResponse * RoboMakerClient::deregisterRobot(const DeregisterRobot
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes a deployment job. [Does it work regardless of deployment status, e.g.
+ * Describes a deployment
  */
 DescribeDeploymentJobResponse * RoboMakerClient::describeDeploymentJob(const DescribeDeploymentJobRequest &request)
 {
@@ -443,7 +479,9 @@ DescribeSimulationJobResponse * RoboMakerClient::describeSimulationJob(const Des
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment
+ * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.
+ *
+ * </p <note>
  */
 ListDeploymentJobsResponse * RoboMakerClient::listDeploymentJobs(const ListDeploymentJobsRequest &request)
 {
@@ -456,7 +494,7 @@ ListDeploymentJobsResponse * RoboMakerClient::listDeploymentJobs(const ListDeplo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of fleets. You can optionally provide filters to retrieve specific
+ * Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.
  */
 ListFleetsResponse * RoboMakerClient::listFleets(const ListFleetsRequest &request)
 {
@@ -496,6 +534,7 @@ ListRobotsResponse * RoboMakerClient::listRobots(const ListRobotsRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of simulation applications. You can optionally provide filters to retrieve specific simulation
+ * applications.
  */
 ListSimulationApplicationsResponse * RoboMakerClient::listSimulationApplications(const ListSimulationApplicationsRequest &request)
 {
@@ -508,11 +547,24 @@ ListSimulationApplicationsResponse * RoboMakerClient::listSimulationApplications
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of simulation jobs. You can optionally provide filters to retrieve specific simulation
+ * Returns a list of simulation jobs. You can optionally provide filters to retrieve specific simulation jobs.
  */
 ListSimulationJobsResponse * RoboMakerClient::listSimulationJobs(const ListSimulationJobsRequest &request)
 {
     return qobject_cast<ListSimulationJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all tags on a AWS RoboMaker
+ */
+ListTagsForResourceResponse * RoboMakerClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -552,6 +604,48 @@ RestartSimulationJobResponse * RoboMakerClient::restartSimulationJob(const Resta
 SyncDeploymentJobResponse * RoboMakerClient::syncDeploymentJob(const SyncDeploymentJobRequest &request)
 {
     return qobject_cast<SyncDeploymentJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or edits tags for a AWS RoboMaker
+ *
+ * resource>
+ *
+ * Each tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty
+ * strings.
+ *
+ * </p
+ *
+ * For information about the rules that apply to tag keys and tag values, see <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag
+ * Restrictions</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+ */
+TagResourceResponse * RoboMakerClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified tags from the specified AWS RoboMaker
+ *
+ * resource>
+ *
+ * To remove a tag, specify the tag key. To change the tag value of an existing tag key, use <a
+ * href="https://docs.aws.amazon.com/robomaker/latest/dg/API_TagResource.html"> <code>TagResource</code> </a>.
+ */
+UntagResourceResponse * RoboMakerClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

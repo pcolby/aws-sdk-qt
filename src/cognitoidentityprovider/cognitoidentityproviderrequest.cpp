@@ -57,6 +57,7 @@ namespace CognitoIdentityProvider {
  * \value AdminResetUserPasswordAction CognitoIdentityProvider AdminResetUserPassword action.
  * \value AdminRespondToAuthChallengeAction CognitoIdentityProvider AdminRespondToAuthChallenge action.
  * \value AdminSetUserMFAPreferenceAction CognitoIdentityProvider AdminSetUserMFAPreference action.
+ * \value AdminSetUserPasswordAction CognitoIdentityProvider AdminSetUserPassword action.
  * \value AdminSetUserSettingsAction CognitoIdentityProvider AdminSetUserSettings action.
  * \value AdminUpdateAuthEventFeedbackAction CognitoIdentityProvider AdminUpdateAuthEventFeedback action.
  * \value AdminUpdateDeviceStatusAction CognitoIdentityProvider AdminUpdateDeviceStatus action.
@@ -106,6 +107,7 @@ namespace CognitoIdentityProvider {
  * \value ListGroupsAction CognitoIdentityProvider ListGroups action.
  * \value ListIdentityProvidersAction CognitoIdentityProvider ListIdentityProviders action.
  * \value ListResourceServersAction CognitoIdentityProvider ListResourceServers action.
+ * \value ListTagsForResourceAction CognitoIdentityProvider ListTagsForResource action.
  * \value ListUserImportJobsAction CognitoIdentityProvider ListUserImportJobs action.
  * \value ListUserPoolClientsAction CognitoIdentityProvider ListUserPoolClients action.
  * \value ListUserPoolsAction CognitoIdentityProvider ListUserPools action.
@@ -121,6 +123,8 @@ namespace CognitoIdentityProvider {
  * \value SignUpAction CognitoIdentityProvider SignUp action.
  * \value StartUserImportJobAction CognitoIdentityProvider StartUserImportJob action.
  * \value StopUserImportJobAction CognitoIdentityProvider StopUserImportJob action.
+ * \value TagResourceAction CognitoIdentityProvider TagResource action.
+ * \value UntagResourceAction CognitoIdentityProvider UntagResource action.
  * \value UpdateAuthEventFeedbackAction CognitoIdentityProvider UpdateAuthEventFeedback action.
  * \value UpdateDeviceStatusAction CognitoIdentityProvider UpdateDeviceStatus action.
  * \value UpdateGroupAction CognitoIdentityProvider UpdateGroup action.

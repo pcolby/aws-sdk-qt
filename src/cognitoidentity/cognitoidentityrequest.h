@@ -49,11 +49,14 @@ public:
         GetOpenIdTokenForDeveloperIdentityAction,
         ListIdentitiesAction,
         ListIdentityPoolsAction,
+        ListTagsForResourceAction,
         LookupDeveloperIdentityAction,
         MergeDeveloperIdentitiesAction,
         SetIdentityPoolRolesAction,
+        TagResourceAction,
         UnlinkDeveloperIdentityAction,
         UnlinkIdentityAction,
+        UntagResourceAction,
         UpdateIdentityPoolAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

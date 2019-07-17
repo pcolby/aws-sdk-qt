@@ -38,6 +38,7 @@ public:
     /// Actions supported by RoboMaker.
     enum Action {
         BatchDescribeSimulationJobAction,
+        CancelDeploymentJobAction,
         CancelSimulationJobAction,
         CreateDeploymentJobAction,
         CreateFleetAction,
@@ -64,9 +65,12 @@ public:
         ListRobotsAction,
         ListSimulationApplicationsAction,
         ListSimulationJobsAction,
+        ListTagsForResourceAction,
         RegisterRobotAction,
         RestartSimulationJobAction,
         SyncDeploymentJobAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateRobotApplicationAction,
         UpdateSimulationApplicationAction,
     };

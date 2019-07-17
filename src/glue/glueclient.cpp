@@ -31,8 +31,18 @@
 #include "batchdeletetableresponse.h"
 #include "batchdeletetableversionrequest.h"
 #include "batchdeletetableversionresponse.h"
+#include "batchgetcrawlersrequest.h"
+#include "batchgetcrawlersresponse.h"
+#include "batchgetdevendpointsrequest.h"
+#include "batchgetdevendpointsresponse.h"
+#include "batchgetjobsrequest.h"
+#include "batchgetjobsresponse.h"
 #include "batchgetpartitionrequest.h"
 #include "batchgetpartitionresponse.h"
+#include "batchgettriggersrequest.h"
+#include "batchgettriggersresponse.h"
+#include "batchgetworkflowsrequest.h"
+#include "batchgetworkflowsresponse.h"
 #include "batchstopjobrunrequest.h"
 #include "batchstopjobrunresponse.h"
 #include "createclassifierrequest.h"
@@ -59,6 +69,8 @@
 #include "createtriggerresponse.h"
 #include "createuserdefinedfunctionrequest.h"
 #include "createuserdefinedfunctionresponse.h"
+#include "createworkflowrequest.h"
+#include "createworkflowresponse.h"
 #include "deleteclassifierrequest.h"
 #include "deleteclassifierresponse.h"
 #include "deleteconnectionrequest.h"
@@ -85,6 +97,8 @@
 #include "deletetriggerresponse.h"
 #include "deleteuserdefinedfunctionrequest.h"
 #include "deleteuserdefinedfunctionresponse.h"
+#include "deleteworkflowrequest.h"
+#include "deleteworkflowresponse.h"
 #include "getcatalogimportstatusrequest.h"
 #include "getcatalogimportstatusresponse.h"
 #include "getclassifierrequest.h"
@@ -143,6 +157,8 @@
 #include "gettableversionsresponse.h"
 #include "gettablesrequest.h"
 #include "gettablesresponse.h"
+#include "gettagsrequest.h"
+#include "gettagsresponse.h"
 #include "gettriggerrequest.h"
 #include "gettriggerresponse.h"
 #include "gettriggersrequest.h"
@@ -151,12 +167,32 @@
 #include "getuserdefinedfunctionresponse.h"
 #include "getuserdefinedfunctionsrequest.h"
 #include "getuserdefinedfunctionsresponse.h"
+#include "getworkflowrequest.h"
+#include "getworkflowresponse.h"
+#include "getworkflowrunrequest.h"
+#include "getworkflowrunresponse.h"
+#include "getworkflowrunpropertiesrequest.h"
+#include "getworkflowrunpropertiesresponse.h"
+#include "getworkflowrunsrequest.h"
+#include "getworkflowrunsresponse.h"
 #include "importcatalogtogluerequest.h"
 #include "importcatalogtoglueresponse.h"
+#include "listcrawlersrequest.h"
+#include "listcrawlersresponse.h"
+#include "listdevendpointsrequest.h"
+#include "listdevendpointsresponse.h"
+#include "listjobsrequest.h"
+#include "listjobsresponse.h"
+#include "listtriggersrequest.h"
+#include "listtriggersresponse.h"
+#include "listworkflowsrequest.h"
+#include "listworkflowsresponse.h"
 #include "putdatacatalogencryptionsettingsrequest.h"
 #include "putdatacatalogencryptionsettingsresponse.h"
 #include "putresourcepolicyrequest.h"
 #include "putresourcepolicyresponse.h"
+#include "putworkflowrunpropertiesrequest.h"
+#include "putworkflowrunpropertiesresponse.h"
 #include "resetjobbookmarkrequest.h"
 #include "resetjobbookmarkresponse.h"
 #include "startcrawlerrequest.h"
@@ -167,12 +203,18 @@
 #include "startjobrunresponse.h"
 #include "starttriggerrequest.h"
 #include "starttriggerresponse.h"
+#include "startworkflowrunrequest.h"
+#include "startworkflowrunresponse.h"
 #include "stopcrawlerrequest.h"
 #include "stopcrawlerresponse.h"
 #include "stopcrawlerschedulerequest.h"
 #include "stopcrawlerscheduleresponse.h"
 #include "stoptriggerrequest.h"
 #include "stoptriggerresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateclassifierrequest.h"
 #include "updateclassifierresponse.h"
 #include "updateconnectionrequest.h"
@@ -195,6 +237,8 @@
 #include "updatetriggerresponse.h"
 #include "updateuserdefinedfunctionrequest.h"
 #include "updateuserdefinedfunctionresponse.h"
+#include "updateworkflowrequest.h"
+#include "updateworkflowresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -354,6 +398,51 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetCrawlersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of resource metadata for a given list of crawler names. After calling the <code>ListCrawlers</code>
+ * operation, you can call this operation to access the data to which you have been granted permissions. This operation
+ * supports all IAM permissions, including permission conditions that uses
+ */
+BatchGetCrawlersResponse * GlueClient::batchGetCrawlers(const BatchGetCrawlersRequest &request)
+{
+    return qobject_cast<BatchGetCrawlersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetDevEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of resource metadata for a given list of DevEndpoint names. After calling the
+ * <code>ListDevEndpoints</code> operation, you can call this operation to access the data to which you have been granted
+ * permissions. This operation supports all IAM permissions, including permission conditions that uses
+ */
+BatchGetDevEndpointsResponse * GlueClient::batchGetDevEndpoints(const BatchGetDevEndpointsRequest &request)
+{
+    return qobject_cast<BatchGetDevEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of resource metadata for a given list of job names. After calling the <code>ListJobs</code> operation,
+ * you can call this operation to access the data to which you have been granted permissions. This operation supports all
+ * IAM permissions, including permission conditions that uses tags.
+ */
+BatchGetJobsResponse * GlueClient::batchGetJobs(const BatchGetJobsRequest &request)
+{
+    return qobject_cast<BatchGetJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * BatchGetPartitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -363,6 +452,36 @@ BatchDeleteTableVersionResponse * GlueClient::batchDeleteTableVersion(const Batc
 BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitionRequest &request)
 {
     return qobject_cast<BatchGetPartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetTriggersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of resource metadata for a given list of trigger names. After calling the <code>ListTriggers</code>
+ * operation, you can call this operation to access the data to which you have been granted permissions. This operation
+ * supports all IAM permissions, including permission conditions that uses
+ */
+BatchGetTriggersResponse * GlueClient::batchGetTriggers(const BatchGetTriggersRequest &request)
+{
+    return qobject_cast<BatchGetTriggersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchGetWorkflowsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of resource metadata for a given list of workflow names. After calling the <code>ListWorkflows</code>
+ * operation, you can call this operation to access the data to which you have been granted permissions. This operation
+ * supports all IAM permissions, including permission conditions that uses
+ */
+BatchGetWorkflowsResponse * GlueClient::batchGetWorkflows(const BatchGetWorkflowsRequest &request)
+{
+    return qobject_cast<BatchGetWorkflowsResponse *>(send(request));
 }
 
 /*!
@@ -384,8 +503,8 @@ BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a classifier in the user's account. This may be a <code>GrokClassifier</code>, an <code>XMLClassifier</code>, or
- * abbrev <code>JsonClassifier</code>, depending on which field of the request is
+ * Creates a classifier in the user's account. This can be a <code>GrokClassifier</code>, an <code>XMLClassifier</code>, a
+ * <code>JsonClassifier</code>, or a <code>CsvClassifier</code>, depending on which field of the request is
  */
 CreateClassifierResponse * GlueClient::createClassifier(const CreateClassifierRequest &request)
 {
@@ -412,7 +531,8 @@ CreateConnectionResponse * GlueClient::createConnection(const CreateConnectionRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new crawler with specified targets, role, configuration, and optional schedule. At least one crawl target must
- * be specified, in the <i>s3Targets</i> field, the <i>jdbcTargets</i> field, or the <i>DynamoDBTargets</i>
+ * be specified, in the <code>s3Targets</code> field, the <code>jdbcTargets</code> field, or the
+ * <code>DynamoDBTargets</code>
  */
 CreateCrawlerResponse * GlueClient::createCrawler(const CreateCrawlerRequest &request)
 {
@@ -538,6 +658,19 @@ CreateUserDefinedFunctionResponse * GlueClient::createUserDefinedFunction(const 
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new
+ */
+CreateWorkflowResponse * GlueClient::createWorkflow(const CreateWorkflowRequest &request)
+{
+    return qobject_cast<CreateWorkflowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * DeleteClassifierResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -568,7 +701,7 @@ DeleteConnectionResponse * GlueClient::deleteConnection(const DeleteConnectionRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a specified crawler from the Data Catalog, unless the crawler state is
+ * Removes a specified crawler from the AWS Glue Data Catalog, unless the crawler state is
  */
 DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &request)
 {
@@ -727,6 +860,19 @@ DeleteTriggerResponse * GlueClient::deleteTrigger(const DeleteTriggerRequest &re
 DeleteUserDefinedFunctionResponse * GlueClient::deleteUserDefinedFunction(const DeleteUserDefinedFunctionRequest &request)
 {
     return qobject_cast<DeleteUserDefinedFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a
+ */
+DeleteWorkflowResponse * GlueClient::deleteWorkflow(const DeleteWorkflowRequest &request)
+{
+    return qobject_cast<DeleteWorkflowResponse *>(send(request));
 }
 
 /*!
@@ -1120,6 +1266,19 @@ GetTablesResponse * GlueClient::getTables(const GetTablesRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of tags associated with a
+ */
+GetTagsResponse * GlueClient::getTags(const GetTagsRequest &request)
+{
+    return qobject_cast<GetTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetTriggerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1172,6 +1331,58 @@ GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetU
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves resource metadata for a
+ */
+GetWorkflowResponse * GlueClient::getWorkflow(const GetWorkflowRequest &request)
+{
+    return qobject_cast<GetWorkflowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetWorkflowRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the metadata for a given workflow run.
+ */
+GetWorkflowRunResponse * GlueClient::getWorkflowRun(const GetWorkflowRunRequest &request)
+{
+    return qobject_cast<GetWorkflowRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetWorkflowRunPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the workflow run properties which were set during the
+ */
+GetWorkflowRunPropertiesResponse * GlueClient::getWorkflowRunProperties(const GetWorkflowRunPropertiesRequest &request)
+{
+    return qobject_cast<GetWorkflowRunPropertiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetWorkflowRunsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves metadata for all runs of a given
+ */
+GetWorkflowRunsResponse * GlueClient::getWorkflowRuns(const GetWorkflowRunsRequest &request)
+{
+    return qobject_cast<GetWorkflowRunsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * ImportCatalogToGlueResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1185,11 +1396,100 @@ ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalo
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListCrawlersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the names of all crawler resources in this AWS account, or the resources with the specified tag. This
+ * operation allows you to see which resources are available in your account, and their
+ *
+ * names>
+ *
+ * This operation takes the optional <code>Tags</code> field, which you can use as a filter on the response so that tagged
+ * resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are
+ */
+ListCrawlersResponse * GlueClient::listCrawlers(const ListCrawlersRequest &request)
+{
+    return qobject_cast<ListCrawlersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListDevEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the names of all <code>DevEndpoint</code> resources in this AWS account, or the resources with the specified
+ * tag. This operation allows you to see which resources are available in your account, and their
+ *
+ * names>
+ *
+ * This operation takes the optional <code>Tags</code> field, which you can use as a filter on the response so that tagged
+ * resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are
+ */
+ListDevEndpointsResponse * GlueClient::listDevEndpoints(const ListDevEndpointsRequest &request)
+{
+    return qobject_cast<ListDevEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the names of all job resources in this AWS account, or the resources with the specified tag. This operation
+ * allows you to see which resources are available in your account, and their
+ *
+ * names>
+ *
+ * This operation takes the optional <code>Tags</code> field, which you can use as a filter on the response so that tagged
+ * resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are
+ */
+ListJobsResponse * GlueClient::listJobs(const ListJobsRequest &request)
+{
+    return qobject_cast<ListJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListTriggersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the names of all trigger resources in this AWS account, or the resources with the specified tag. This
+ * operation allows you to see which resources are available in your account, and their
+ *
+ * names>
+ *
+ * This operation takes the optional <code>Tags</code> field, which you can use as a filter on the response so that tagged
+ * resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are
+ */
+ListTriggersResponse * GlueClient::listTriggers(const ListTriggersRequest &request)
+{
+    return qobject_cast<ListTriggersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListWorkflowsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists names of workflows created in the
+ */
+ListWorkflowsResponse * GlueClient::listWorkflows(const ListWorkflowsRequest &request)
+{
+    return qobject_cast<ListWorkflowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * PutDataCatalogEncryptionSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the security configuration for a specified catalog. Once the configuration has been set, the specified encryption
+ * Sets the security configuration for a specified catalog. After the configuration has been set, the specified encryption
  * is applied to every catalog write
  */
 PutDataCatalogEncryptionSettingsResponse * GlueClient::putDataCatalogEncryptionSettings(const PutDataCatalogEncryptionSettingsRequest &request)
@@ -1208,6 +1508,20 @@ PutDataCatalogEncryptionSettingsResponse * GlueClient::putDataCatalogEncryptionS
 PutResourcePolicyResponse * GlueClient::putResourcePolicy(const PutResourcePolicyRequest &request)
 {
     return qobject_cast<PutResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * PutWorkflowRunPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Puts the specified workflow run properties for the given workflow run. If a property already exists for the specified
+ * run, then it overrides the value otherwise adds the property to existing
+ */
+PutWorkflowRunPropertiesResponse * GlueClient::putWorkflowRunProperties(const PutWorkflowRunPropertiesRequest &request)
+{
+    return qobject_cast<PutWorkflowRunPropertiesResponse *>(send(request));
 }
 
 /*!
@@ -1270,12 +1584,25 @@ StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts an existing trigger. See <a href="http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering Jobs</a>
- * for information about how different types of trigger are
+ * Starts an existing trigger. See <a href="https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
+ * Jobs</a> for information about how different types of trigger are
  */
 StartTriggerResponse * GlueClient::startTrigger(const StartTriggerRequest &request)
 {
     return qobject_cast<StartTriggerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StartWorkflowRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a new run of the specified
+ */
+StartWorkflowRunResponse * GlueClient::startWorkflowRun(const StartWorkflowRunRequest &request)
+{
+    return qobject_cast<StartWorkflowRunResponse *>(send(request));
 }
 
 /*!
@@ -1320,12 +1647,40 @@ StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds tags to a resource. A tag is a label you can assign to an AWS resource. In AWS Glue, you can tag only certain
+ * resources. For information about what resources you can tag, see <a
+ * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in AWS
+ */
+TagResourceResponse * GlueClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from a
+ */
+UntagResourceResponse * GlueClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * UpdateClassifierResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an existing classifier (a <code>GrokClassifier</code>, <code>XMLClassifier</code>, or
- * <code>JsonClassifier</code>, depending on which field is
+ * Modifies an existing classifier (a <code>GrokClassifier</code>, an <code>XMLClassifier</code>, a
+ * <code>JsonClassifier</code>, or a <code>CsvClassifier</code>, depending on which field is
  */
 UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRequest &request)
 {
@@ -1460,6 +1815,19 @@ UpdateTriggerResponse * GlueClient::updateTrigger(const UpdateTriggerRequest &re
 UpdateUserDefinedFunctionResponse * GlueClient::updateUserDefinedFunction(const UpdateUserDefinedFunctionRequest &request)
 {
     return qobject_cast<UpdateUserDefinedFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateWorkflowResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing
+ */
+UpdateWorkflowResponse * GlueClient::updateWorkflow(const UpdateWorkflowRequest &request)
+{
+    return qobject_cast<UpdateWorkflowResponse *>(send(request));
 }
 
 /*!

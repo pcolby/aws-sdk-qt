@@ -50,6 +50,12 @@ class ListPlacementsRequest;
 class ListPlacementsResponse;
 class ListProjectsRequest;
 class ListProjectsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdatePlacementRequest;
 class UpdatePlacementResponse;
 class UpdateProjectRequest;
@@ -82,6 +88,9 @@ public slots:
     GetDevicesInPlacementResponse * getDevicesInPlacement(const GetDevicesInPlacementRequest &request);
     ListPlacementsResponse * listPlacements(const ListPlacementsRequest &request);
     ListProjectsResponse * listProjects(const ListProjectsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdatePlacementResponse * updatePlacement(const UpdatePlacementRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
 

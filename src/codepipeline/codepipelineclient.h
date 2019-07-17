@@ -58,12 +58,16 @@ class GetPipelineStateRequest;
 class GetPipelineStateResponse;
 class GetThirdPartyJobDetailsRequest;
 class GetThirdPartyJobDetailsResponse;
+class ListActionExecutionsRequest;
+class ListActionExecutionsResponse;
 class ListActionTypesRequest;
 class ListActionTypesResponse;
 class ListPipelineExecutionsRequest;
 class ListPipelineExecutionsResponse;
 class ListPipelinesRequest;
 class ListPipelinesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ListWebhooksRequest;
 class ListWebhooksResponse;
 class PollForJobsRequest;
@@ -90,6 +94,10 @@ class RetryStageExecutionRequest;
 class RetryStageExecutionResponse;
 class StartPipelineExecutionRequest;
 class StartPipelineExecutionResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdatePipelineRequest;
 class UpdatePipelineResponse;
 
@@ -124,9 +132,11 @@ public slots:
     GetPipelineExecutionResponse * getPipelineExecution(const GetPipelineExecutionRequest &request);
     GetPipelineStateResponse * getPipelineState(const GetPipelineStateRequest &request);
     GetThirdPartyJobDetailsResponse * getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request);
+    ListActionExecutionsResponse * listActionExecutions(const ListActionExecutionsRequest &request);
     ListActionTypesResponse * listActionTypes(const ListActionTypesRequest &request);
     ListPipelineExecutionsResponse * listPipelineExecutions(const ListPipelineExecutionsRequest &request);
     ListPipelinesResponse * listPipelines(const ListPipelinesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListWebhooksResponse * listWebhooks(const ListWebhooksRequest &request);
     PollForJobsResponse * pollForJobs(const PollForJobsRequest &request);
     PollForThirdPartyJobsResponse * pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request);
@@ -140,6 +150,8 @@ public slots:
     RegisterWebhookWithThirdPartyResponse * registerWebhookWithThirdParty(const RegisterWebhookWithThirdPartyRequest &request);
     RetryStageExecutionResponse * retryStageExecution(const RetryStageExecutionRequest &request);
     StartPipelineExecutionResponse * startPipelineExecution(const StartPipelineExecutionRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdatePipelineResponse * updatePipeline(const UpdatePipelineRequest &request);
 
 private:

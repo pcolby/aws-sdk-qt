@@ -27,8 +27,14 @@
 #include "getplaybackconfigurationresponse.h"
 #include "listplaybackconfigurationsrequest.h"
 #include "listplaybackconfigurationsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putplaybackconfigurationrequest.h"
 #include "putplaybackconfigurationresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -119,7 +125,7 @@ MediaTailorClient::MediaTailorClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the configuration for the specified name.
+ * Deletes the playback configuration for the specified name.
  */
 DeletePlaybackConfigurationResponse * MediaTailorClient::deletePlaybackConfiguration(const DeletePlaybackConfigurationRequest &request)
 {
@@ -132,7 +138,7 @@ DeletePlaybackConfigurationResponse * MediaTailorClient::deletePlaybackConfigura
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the configuration for the specified name.
+ * Returns the playback configuration for the specified name.
  */
 GetPlaybackConfigurationResponse * MediaTailorClient::getPlaybackConfiguration(const GetPlaybackConfigurationRequest &request)
 {
@@ -145,10 +151,10 @@ GetPlaybackConfigurationResponse * MediaTailorClient::getPlaybackConfiguration(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the configurations defined in AWS Elemental MediaTailor. You can specify a max number of
- * configurations to return at a time. The default max is 50. Results are returned in pagefuls. If AWS Elemental
- * MediaTailor has more configurations than the specified max, it provides parameters in the response that you can use to
- * retrieve the next pageful.
+ * Returns a list of the playback configurations defined in AWS Elemental MediaTailor. You can specify a maximum number of
+ * configurations to return at a time. The default maximum is 50. Results are returned in pagefuls. If MediaTailor has more
+ * configurations than the specified maximum, it provides parameters in the response that you can use to retrieve the next
+ * pageful.
  */
 ListPlaybackConfigurationsResponse * MediaTailorClient::listPlaybackConfigurations(const ListPlaybackConfigurationsRequest &request)
 {
@@ -157,15 +163,54 @@ ListPlaybackConfigurationsResponse * MediaTailorClient::listPlaybackConfiguratio
 
 /*!
  * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the tags assigned to the specified playback configuration resource.
+ */
+ListTagsForResourceResponse * MediaTailorClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
  * PutPlaybackConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a new configuration to AWS Elemental
+ * Adds a new playback configuration to AWS Elemental MediaTailor.
  */
 PutPlaybackConfigurationResponse * MediaTailorClient::putPlaybackConfiguration(const PutPlaybackConfigurationRequest &request)
 {
     return qobject_cast<PutPlaybackConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds tags to the specified playback configuration resource. You can specify one or more tags to add.
+ */
+TagResourceResponse * MediaTailorClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaTailorClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from the specified playback configuration resource. You can specify one or more tags to remove.
+ */
+UntagResourceResponse * MediaTailorClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

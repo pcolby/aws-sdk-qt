@@ -60,6 +60,18 @@ HEADERS += \
     listprojectsrequest_p.h \
     listprojectsresponse.h \
     listprojectsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateplacementrequest.h \
     updateplacementrequest_p.h \
     updateplacementresponse.h \
@@ -95,6 +107,12 @@ SOURCES += \
     listplacementsresponse.cpp \
     listprojectsrequest.cpp \
     listprojectsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateplacementrequest.cpp \
     updateplacementresponse.cpp \
     updateprojectrequest.cpp \

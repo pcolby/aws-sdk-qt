@@ -26,6 +26,10 @@ HEADERS += \
     createaccountrequest_p.h \
     createaccountresponse.h \
     createaccountresponse_p.h \
+    creategovcloudaccountrequest.h \
+    creategovcloudaccountrequest_p.h \
+    creategovcloudaccountresponse.h \
+    creategovcloudaccountresponse_p.h \
     createorganizationalunitrequest.h \
     createorganizationalunitrequest_p.h \
     createorganizationalunitresponse.h \
@@ -158,6 +162,10 @@ HEADERS += \
     listrootsrequest_p.h \
     listrootsresponse.h \
     listrootsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtargetsforpolicyrequest.h \
     listtargetsforpolicyrequest_p.h \
     listtargetsforpolicyresponse.h \
@@ -176,6 +184,14 @@ HEADERS += \
     removeaccountfromorganizationrequest_p.h \
     removeaccountfromorganizationresponse.h \
     removeaccountfromorganizationresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateorganizationalunitrequest.h \
     updateorganizationalunitrequest_p.h \
     updateorganizationalunitresponse.h \
@@ -194,6 +210,8 @@ SOURCES += \
     cancelhandshakeresponse.cpp \
     createaccountrequest.cpp \
     createaccountresponse.cpp \
+    creategovcloudaccountrequest.cpp \
+    creategovcloudaccountresponse.cpp \
     createorganizationalunitrequest.cpp \
     createorganizationalunitresponse.cpp \
     createorganizationrequest.cpp \
@@ -260,6 +278,8 @@ SOURCES += \
     listpoliciesresponse.cpp \
     listrootsrequest.cpp \
     listrootsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtargetsforpolicyrequest.cpp \
     listtargetsforpolicyresponse.cpp \
     moveaccountrequest.cpp \
@@ -269,6 +289,10 @@ SOURCES += \
     organizationsresponse.cpp \
     removeaccountfromorganizationrequest.cpp \
     removeaccountfromorganizationresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateorganizationalunitrequest.cpp \
     updateorganizationalunitresponse.cpp \
     updatepolicyrequest.cpp \

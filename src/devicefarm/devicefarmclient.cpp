@@ -115,6 +115,8 @@
 #include "listsamplesresponse.h"
 #include "listsuitesrequest.h"
 #include "listsuitesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtestsrequest.h"
 #include "listtestsresponse.h"
 #include "listuniqueproblemsrequest.h"
@@ -135,6 +137,10 @@
 #include "stopremoteaccesssessionresponse.h"
 #include "stoprunrequest.h"
 #include "stoprunresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatedeviceinstancerequest.h"
 #include "updatedeviceinstanceresponse.h"
 #include "updatedevicepoolrequest.h"
@@ -866,6 +872,19 @@ ListSuitesResponse * DeviceFarmClient::listSuites(const ListSuitesRequest &reque
 
 /*!
  * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the tags for an AWS Device Farm
+ */
+ListTagsForResourceResponse * DeviceFarmClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
  * ListTestsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1005,6 +1024,34 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
 StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 {
     return qobject_cast<StopRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource
+ * are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with
+ * that resource are deleted as
+ */
+TagResourceResponse * DeviceFarmClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified tags from a
+ */
+UntagResourceResponse * DeviceFarmClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

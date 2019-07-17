@@ -43,6 +43,7 @@ namespace CostExplorer {
  * \value GetReservationPurchaseRecommendationAction CostExplorer GetReservationPurchaseRecommendation action.
  * \value GetReservationUtilizationAction CostExplorer GetReservationUtilization action.
  * \value GetTagsAction CostExplorer GetTags action.
+ * \value GetUsageForecastAction CostExplorer GetUsageForecast action.
  */
 
 /*!

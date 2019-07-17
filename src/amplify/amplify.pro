@@ -24,10 +24,18 @@ HEADERS += \
     createbranchrequest_p.h \
     createbranchresponse.h \
     createbranchresponse_p.h \
+    createdeploymentrequest.h \
+    createdeploymentrequest_p.h \
+    createdeploymentresponse.h \
+    createdeploymentresponse_p.h \
     createdomainassociationrequest.h \
     createdomainassociationrequest_p.h \
     createdomainassociationresponse.h \
     createdomainassociationresponse_p.h \
+    createwebhookrequest.h \
+    createwebhookrequest_p.h \
+    createwebhookresponse.h \
+    createwebhookresponse_p.h \
     deleteapprequest.h \
     deleteapprequest_p.h \
     deleteappresponse.h \
@@ -44,6 +52,10 @@ HEADERS += \
     deletejobrequest_p.h \
     deletejobresponse.h \
     deletejobresponse_p.h \
+    deletewebhookrequest.h \
+    deletewebhookrequest_p.h \
+    deletewebhookresponse.h \
+    deletewebhookresponse_p.h \
     getapprequest.h \
     getapprequest_p.h \
     getappresponse.h \
@@ -60,6 +72,10 @@ HEADERS += \
     getjobrequest_p.h \
     getjobresponse.h \
     getjobresponse_p.h \
+    getwebhookrequest.h \
+    getwebhookrequest_p.h \
+    getwebhookresponse.h \
+    getwebhookresponse_p.h \
     listappsrequest.h \
     listappsrequest_p.h \
     listappsresponse.h \
@@ -76,6 +92,18 @@ HEADERS += \
     listjobsrequest_p.h \
     listjobsresponse.h \
     listjobsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
+    listwebhooksrequest.h \
+    listwebhooksrequest_p.h \
+    listwebhooksresponse.h \
+    listwebhooksresponse_p.h \
+    startdeploymentrequest.h \
+    startdeploymentrequest_p.h \
+    startdeploymentresponse.h \
+    startdeploymentresponse_p.h \
     startjobrequest.h \
     startjobrequest_p.h \
     startjobresponse.h \
@@ -84,6 +112,14 @@ HEADERS += \
     stopjobrequest_p.h \
     stopjobresponse.h \
     stopjobresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateapprequest.h \
     updateapprequest_p.h \
     updateappresponse.h \
@@ -96,6 +132,10 @@ HEADERS += \
     updatedomainassociationrequest_p.h \
     updatedomainassociationresponse.h \
     updatedomainassociationresponse_p.h \
+    updatewebhookrequest.h \
+    updatewebhookrequest_p.h \
+    updatewebhookresponse.h \
+    updatewebhookresponse_p.h \
 
 SOURCES += \
     amplifyclient.cpp \
@@ -105,8 +145,12 @@ SOURCES += \
     createappresponse.cpp \
     createbranchrequest.cpp \
     createbranchresponse.cpp \
+    createdeploymentrequest.cpp \
+    createdeploymentresponse.cpp \
     createdomainassociationrequest.cpp \
     createdomainassociationresponse.cpp \
+    createwebhookrequest.cpp \
+    createwebhookresponse.cpp \
     deleteapprequest.cpp \
     deleteappresponse.cpp \
     deletebranchrequest.cpp \
@@ -115,6 +159,8 @@ SOURCES += \
     deletedomainassociationresponse.cpp \
     deletejobrequest.cpp \
     deletejobresponse.cpp \
+    deletewebhookrequest.cpp \
+    deletewebhookresponse.cpp \
     getapprequest.cpp \
     getappresponse.cpp \
     getbranchrequest.cpp \
@@ -123,6 +169,8 @@ SOURCES += \
     getdomainassociationresponse.cpp \
     getjobrequest.cpp \
     getjobresponse.cpp \
+    getwebhookrequest.cpp \
+    getwebhookresponse.cpp \
     listappsrequest.cpp \
     listappsresponse.cpp \
     listbranchesrequest.cpp \
@@ -131,15 +179,27 @@ SOURCES += \
     listdomainassociationsresponse.cpp \
     listjobsrequest.cpp \
     listjobsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
+    listwebhooksrequest.cpp \
+    listwebhooksresponse.cpp \
+    startdeploymentrequest.cpp \
+    startdeploymentresponse.cpp \
     startjobrequest.cpp \
     startjobresponse.cpp \
     stopjobrequest.cpp \
     stopjobresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateapprequest.cpp \
     updateappresponse.cpp \
     updatebranchrequest.cpp \
     updatebranchresponse.cpp \
     updatedomainassociationrequest.cpp \
     updatedomainassociationresponse.cpp \
+    updatewebhookrequest.cpp \
+    updatewebhookresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

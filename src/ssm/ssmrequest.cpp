@@ -44,6 +44,7 @@ namespace SSM {
  * \value CreateAssociationBatchAction SSM CreateAssociationBatch action.
  * \value CreateDocumentAction SSM CreateDocument action.
  * \value CreateMaintenanceWindowAction SSM CreateMaintenanceWindow action.
+ * \value CreateOpsItemAction SSM CreateOpsItem action.
  * \value CreatePatchBaselineAction SSM CreatePatchBaseline action.
  * \value CreateResourceDataSyncAction SSM CreateResourceDataSync action.
  * \value DeleteActivationAction SSM DeleteActivation action.
@@ -84,10 +85,12 @@ namespace SSM {
  * \value DescribeMaintenanceWindowTasksAction SSM DescribeMaintenanceWindowTasks action.
  * \value DescribeMaintenanceWindowsAction SSM DescribeMaintenanceWindows action.
  * \value DescribeMaintenanceWindowsForTargetAction SSM DescribeMaintenanceWindowsForTarget action.
+ * \value DescribeOpsItemsAction SSM DescribeOpsItems action.
  * \value DescribeParametersAction SSM DescribeParameters action.
  * \value DescribePatchBaselinesAction SSM DescribePatchBaselines action.
  * \value DescribePatchGroupStateAction SSM DescribePatchGroupState action.
  * \value DescribePatchGroupsAction SSM DescribePatchGroups action.
+ * \value DescribePatchPropertiesAction SSM DescribePatchProperties action.
  * \value DescribeSessionsAction SSM DescribeSessions action.
  * \value GetAutomationExecutionAction SSM GetAutomationExecution action.
  * \value GetCommandInvocationAction SSM GetCommandInvocation action.
@@ -102,12 +105,15 @@ namespace SSM {
  * \value GetMaintenanceWindowExecutionTaskAction SSM GetMaintenanceWindowExecutionTask action.
  * \value GetMaintenanceWindowExecutionTaskInvocationAction SSM GetMaintenanceWindowExecutionTaskInvocation action.
  * \value GetMaintenanceWindowTaskAction SSM GetMaintenanceWindowTask action.
+ * \value GetOpsItemAction SSM GetOpsItem action.
+ * \value GetOpsSummaryAction SSM GetOpsSummary action.
  * \value GetParameterAction SSM GetParameter action.
  * \value GetParameterHistoryAction SSM GetParameterHistory action.
  * \value GetParametersAction SSM GetParameters action.
  * \value GetParametersByPathAction SSM GetParametersByPath action.
  * \value GetPatchBaselineAction SSM GetPatchBaseline action.
  * \value GetPatchBaselineForPatchGroupAction SSM GetPatchBaselineForPatchGroup action.
+ * \value GetServiceSettingAction SSM GetServiceSetting action.
  * \value LabelParameterVersionAction SSM LabelParameterVersion action.
  * \value ListAssociationVersionsAction SSM ListAssociationVersions action.
  * \value ListAssociationsAction SSM ListAssociations action.
@@ -130,6 +136,7 @@ namespace SSM {
  * \value RegisterTargetWithMaintenanceWindowAction SSM RegisterTargetWithMaintenanceWindow action.
  * \value RegisterTaskWithMaintenanceWindowAction SSM RegisterTaskWithMaintenanceWindow action.
  * \value RemoveTagsFromResourceAction SSM RemoveTagsFromResource action.
+ * \value ResetServiceSettingAction SSM ResetServiceSetting action.
  * \value ResumeSessionAction SSM ResumeSession action.
  * \value SendAutomationSignalAction SSM SendAutomationSignal action.
  * \value SendCommandAction SSM SendCommand action.
@@ -146,7 +153,9 @@ namespace SSM {
  * \value UpdateMaintenanceWindowTargetAction SSM UpdateMaintenanceWindowTarget action.
  * \value UpdateMaintenanceWindowTaskAction SSM UpdateMaintenanceWindowTask action.
  * \value UpdateManagedInstanceRoleAction SSM UpdateManagedInstanceRole action.
+ * \value UpdateOpsItemAction SSM UpdateOpsItem action.
  * \value UpdatePatchBaselineAction SSM UpdatePatchBaseline action.
+ * \value UpdateServiceSettingAction SSM UpdateServiceSetting action.
  */
 
 /*!

@@ -25,6 +25,10 @@
 #include "addtagstoresourceresponse.h"
 #include "authorizecachesecuritygroupingressrequest.h"
 #include "authorizecachesecuritygroupingressresponse.h"
+#include "batchapplyupdateactionrequest.h"
+#include "batchapplyupdateactionresponse.h"
+#include "batchstopupdateactionrequest.h"
+#include "batchstopupdateactionresponse.h"
 #include "copysnapshotrequest.h"
 #include "copysnapshotresponse.h"
 #include "createcacheclusterrequest.h"
@@ -75,8 +79,12 @@
 #include "describereservedcachenodesresponse.h"
 #include "describereservedcachenodesofferingsrequest.h"
 #include "describereservedcachenodesofferingsresponse.h"
+#include "describeserviceupdatesrequest.h"
+#include "describeserviceupdatesresponse.h"
 #include "describesnapshotsrequest.h"
 #include "describesnapshotsresponse.h"
+#include "describeupdateactionsrequest.h"
+#include "describeupdateactionsresponse.h"
 #include "increasereplicacountrequest.h"
 #include "increasereplicacountresponse.h"
 #include "listallowednodetypemodificationsrequest.h"
@@ -211,8 +219,8 @@ ElastiCacheClient::ElastiCacheClient(
  * When you apply tags to your ElastiCache resources, AWS generates a cost allocation report as a comma-separated value
  * (CSV) file with your usage and costs aggregated by your tags. You can apply tags that represent business categories
  * (such as cost centers, application names, or owners) to organize your costs across multiple services. For more
- * information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Using Cost Allocation
- * Tags in Amazon ElastiCache</a> in the <i>ElastiCache User
+ * information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Using Cost
+ * Allocation Tags in Amazon ElastiCache</a> in the <i>ElastiCache User
  */
 AddTagsToResourceResponse * ElastiCacheClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -239,6 +247,34 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * BatchApplyUpdateActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Apply the service update. For more information on service updates and applying them, see <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/applying-updates.html">Applying Service
+ */
+BatchApplyUpdateActionResponse * ElastiCacheClient::batchApplyUpdateAction(const BatchApplyUpdateActionRequest &request)
+{
+    return qobject_cast<BatchApplyUpdateActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * BatchStopUpdateActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stop the service update. For more information on service updates and stopping them, see <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/stopping-self-service-updates.html">Stopping Service
+ */
+BatchStopUpdateActionResponse * ElastiCacheClient::batchStopUpdateAction(const BatchStopUpdateActionRequest &request)
+{
+    return qobject_cast<BatchStopUpdateActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * CopySnapshotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -254,8 +290,8 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * Users or groups that have permissions to use the <code>CopySnapshot</code> operation can create their own Amazon S3
  * buckets and copy snapshots to it. To control access to your snapshots, use an IAM policy to control who has the ability
  * to use the <code>CopySnapshot</code> operation. For more information about using IAM to control the use of ElastiCache
- * operations, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html">Exporting
- * Snapshots</a> and <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.html">Authentication &amp;
+ * operations, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html">Exporting
+ * Snapshots</a> and <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.html">Authentication &amp;
  * Access
  *
  * Control</a>> </b>
@@ -271,7 +307,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * region>
  *
  * <b>Solution:</b> Create an Amazon S3 bucket in the same region as your snapshot. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html#Snapshots.Exporting.CreateBucket">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-create-s3-bucket">Step
  * 1: Create an Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -281,7 +317,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * exist>
  *
  * <b>Solution:</b> Create an Amazon S3 bucket in the same region as your snapshot. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html#Snapshots.Exporting.CreateBucket">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-create-s3-bucket">Step
  * 1: Create an Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -291,7 +327,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * user>
  *
  * <b>Solution:</b> Create an Amazon S3 bucket in the same region as your snapshot. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html#Snapshots.Exporting.CreateBucket">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-create-s3-bucket">Step
  * 1: Create an Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -318,7 +354,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * Bucket>
  *
  * <b>Solution:</b> Add List and Read permissions on the bucket. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access.html">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -328,7 +364,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * Bucket>
  *
  * <b>Solution:</b> Add Upload/Delete permissions on the bucket. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access.html">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -338,7 +374,7 @@ AuthorizeCacheSecurityGroupIngressResponse * ElastiCacheClient::authorizeCacheSe
  * Bucket>
  *
  * <b>Solution:</b> Add View Permissions on the bucket. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Snapshots.Exporting.html#Snapshots.Exporting.GrantAccess">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access.html">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  */
 CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest &request)
@@ -381,12 +417,12 @@ CreateCacheClusterResponse * ElastiCacheClient::createCacheCluster(const CreateC
  * see> <ul> <li>
  *
  * <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html">ModifyCacheParameterGroup</a>
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html">ModifyCacheParameterGroup</a>
  * in the ElastiCache API
  *
  * Reference> </li> <li>
  *
- * <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.html">Parameters and Parameter
+ * <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.html">Parameters and Parameter
  * Groups</a> in the ElastiCache User
  */
 CreateCacheParameterGroupResponse * ElastiCacheClient::createCacheParameterGroup(const CreateCacheParameterGroupRequest &request)
@@ -454,7 +490,7 @@ CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const
  * replicas to it, up to a total of 5 read replicas. You cannot alter a Redis (cluster mode enabled) replication group
  * after it has been created. However, if you need to increase or decrease the number of node groups (console: shards), you
  * can avail yourself of ElastiCache for Redis' enhanced backup and restore. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-restoring.html">Restoring From a Backup with
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-restoring.html">Restoring From a Backup with
  * Cluster Resizing</a> in the <i>ElastiCache User
  *
  * Guide</i>> <note>
@@ -510,12 +546,27 @@ DecreaseReplicaCountResponse * ElastiCacheClient::decreaseReplicaCount(const Dec
  *
  * operation>
  *
- * This operation cannot be used to delete a cluster that is the last read replica of a replication group or node group
- * (shard) that has Multi-AZ mode enabled or a cluster from a Redis (cluster mode enabled) replication
+ * This operation is not valid
  *
- * group>
+ * for> <ul> <li>
  *
- * This operation is not valid for Redis (cluster mode enabled)
+ * Redis (cluster mode enabled)
+ *
+ * cluster> </li> <li>
+ *
+ * A cluster that is the last read replica of a replication
+ *
+ * grou> </li> <li>
+ *
+ * A node group (shard) that has Multi-AZ mode
+ *
+ * enable> </li> <li>
+ *
+ * A cluster from a Redis (cluster mode enabled) replication
+ *
+ * grou> </li> <li>
+ *
+ * A cluster that is not in the <code>available</code>
  */
 DeleteCacheClusterResponse * ElastiCacheClient::deleteCacheCluster(const DeleteCacheClusterRequest &request)
 {
@@ -698,7 +749,7 @@ DescribeCacheParametersResponse * ElastiCacheClient::describeCacheParameters(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of cache security group descriptions. If a cache security group name is specified, the list contains only
- * the description of that
+ * the description of that group. This applicable only when you have ElastiCache in Classic setup
  */
 DescribeCacheSecurityGroupsResponse * ElastiCacheClient::describeCacheSecurityGroups(const DescribeCacheSecurityGroupsRequest &request)
 {
@@ -712,7 +763,8 @@ DescribeCacheSecurityGroupsResponse * ElastiCacheClient::describeCacheSecurityGr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of cache subnet group descriptions. If a subnet group name is specified, the list contains only the
- * description of that
+ * description of that group. This is applicable only when you have ElastiCache in VPC setup. All ElastiCache clusters now
+ * launch in VPC by default.
  */
 DescribeCacheSubnetGroupsResponse * ElastiCacheClient::describeCacheSubnetGroups(const DescribeCacheSubnetGroupsRequest &request)
 {
@@ -797,6 +849,19 @@ DescribeReservedCacheNodesOfferingsResponse * ElastiCacheClient::describeReserve
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DescribeServiceUpdatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details of the service
+ */
+DescribeServiceUpdatesResponse * ElastiCacheClient::describeServiceUpdates(const DescribeServiceUpdatesRequest &request)
+{
+    return qobject_cast<DescribeServiceUpdatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * DescribeSnapshotsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -812,6 +877,19 @@ DescribeReservedCacheNodesOfferingsResponse * ElastiCacheClient::describeReserve
 DescribeSnapshotsResponse * ElastiCacheClient::describeSnapshots(const DescribeSnapshotsRequest &request)
 {
     return qobject_cast<DescribeSnapshotsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DescribeUpdateActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details of the update actions
+ */
+DescribeUpdateActionsResponse * ElastiCacheClient::describeUpdateActions(const DescribeUpdateActionsRequest &request)
+{
+    return qobject_cast<DescribeUpdateActionsResponse *>(send(request));
 }
 
 /*!
@@ -865,7 +943,7 @@ ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTyp
  * error>
  *
  * You can have a maximum of 50 cost allocation tags on an ElastiCache resource. For more information, see <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Monitoring Costs with
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Monitoring Costs with
  */
 ListTagsForResourceResponse * ElastiCacheClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -928,13 +1006,13 @@ ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const
  *
  * see> <ul> <li>
  *
- * <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/scaling-redis-cluster-mode-enabled.html">Scaling for
- * Amazon ElastiCache for Redis—Redis (cluster mode enabled)</a> in the ElastiCache User
+ * <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/scaling-redis-cluster-mode-enabled.html">Scaling
+ * for Amazon ElastiCache for Redis (cluster mode enabled)</a> in the ElastiCache User
  *
  * Guid> </li> <li>
  *
  * <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyReplicationGroupShardConfiguration.html">ModifyReplicationGroupShardConfiguration</a>
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyReplicationGroupShardConfiguration.html">ModifyReplicationGroupShardConfiguration</a>
  * in the ElastiCache API
  *
  * Referenc> </li> </ul> <note>
@@ -1111,18 +1189,18 @@ RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurity
  *
  * see> <ul> <li>
  *
- * <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ECEvents.Viewing.html">Viewing ElastiCache
+ * <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ECEvents.Viewing.html">Viewing ElastiCache
  * Events</a> in the <i>ElastiCache User Guide</i>
  *
  * </p </li> <li>
  *
- * <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeEvents.html">DescribeEvents</a> in
- * the ElastiCache API
+ * <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_DescribeEvents.html">DescribeEvents</a>
+ * in the ElastiCache API
  *
  * Referenc> </li> </ul> </li> </ul>
  *
  * Also see, <a
- * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html#auto-failover-test">Testing Multi-AZ
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html#auto-failover-test">Testing Multi-AZ
  * with Automatic Failover</a> in the <i>ElastiCache User
  */
 TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest &request)

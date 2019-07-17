@@ -34,8 +34,14 @@ class GetPlaybackConfigurationRequest;
 class GetPlaybackConfigurationResponse;
 class ListPlaybackConfigurationsRequest;
 class ListPlaybackConfigurationsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutPlaybackConfigurationRequest;
 class PutPlaybackConfigurationResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT MediaTailorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -56,7 +62,10 @@ public slots:
     DeletePlaybackConfigurationResponse * deletePlaybackConfiguration(const DeletePlaybackConfigurationRequest &request);
     GetPlaybackConfigurationResponse * getPlaybackConfiguration(const GetPlaybackConfigurationRequest &request);
     ListPlaybackConfigurationsResponse * listPlaybackConfigurations(const ListPlaybackConfigurationsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutPlaybackConfigurationResponse * putPlaybackConfiguration(const PutPlaybackConfigurationRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaTailorClient)

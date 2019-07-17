@@ -46,6 +46,7 @@ public:
         ListCertificatesAction,
         ListTagsForCertificateAction,
         RemoveTagsFromCertificateAction,
+        RenewCertificateAction,
         RequestCertificateAction,
         ResendValidationEmailAction,
         UpdateCertificateOptionsAction,

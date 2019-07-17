@@ -31,6 +31,7 @@ namespace Pinpoint {
  *
  * \inmodule QtAwsPinpoint
  *
+ *  Doc Engage API - Amazon Pinpoint
  *
  * \sa PinpointClient::getCampaign
  */

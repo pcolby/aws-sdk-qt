@@ -135,6 +135,8 @@
 #include "listsqlinjectionmatchsetsresponse.h"
 #include "listsubscribedrulegroupsrequest.h"
 #include "listsubscribedrulegroupsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listwebaclsrequest.h"
 #include "listwebaclsresponse.h"
 #include "listxssmatchsetsrequest.h"
@@ -143,6 +145,10 @@
 #include "putloggingconfigurationresponse.h"
 #include "putpermissionpolicyrequest.h"
 #include "putpermissionpolicyresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatebytematchsetrequest.h"
 #include "updatebytematchsetresponse.h"
 #include "updategeomatchsetrequest.h"
@@ -194,7 +200,7 @@ namespace WAF {
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
  *  types via the endpoint <i>waf.amazonaws.com</i>. This guide is for developers who need detailed information about the
  *  AWS WAF API actions, data types, and errors. For detailed information about AWS WAF features and an overview of how to
- *  use the AWS WAF API, see the <a href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *  use the AWS WAF API, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 
 /*!
@@ -287,7 +293,7 @@ WafClient::WafClient(
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateByteMatchSetResponse * WafClient::createByteMatchSet(const CreateByteMatchSetRequest &request)
 {
@@ -330,7 +336,7 @@ CreateByteMatchSetResponse * WafClient::createByteMatchSet(const CreateByteMatch
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateGeoMatchSetResponse * WafClient::createGeoMatchSet(const CreateGeoMatchSetRequest &request)
 {
@@ -373,7 +379,7 @@ CreateGeoMatchSetResponse * WafClient::createGeoMatchSet(const CreateGeoMatchSet
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateIPSetResponse * WafClient::createIPSet(const CreateIPSetRequest &request)
 {
@@ -478,7 +484,7 @@ CreateIPSetResponse * WafClient::createIPSet(const CreateIPSetRequest &request)
  * <a>CreateWebACL</a>> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateRateBasedRuleResponse * WafClient::createRateBasedRule(const CreateRateBasedRuleRequest &request)
 {
@@ -523,7 +529,7 @@ CreateRateBasedRuleResponse * WafClient::createRateBasedRule(const CreateRateBas
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateRegexMatchSetResponse * WafClient::createRegexMatchSet(const CreateRegexMatchSetRequest &request)
 {
@@ -565,7 +571,7 @@ CreateRegexMatchSetResponse * WafClient::createRegexMatchSet(const CreateRegexMa
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateRegexPatternSetResponse * WafClient::createRegexPatternSet(const CreateRegexPatternSetRequest &request)
 {
@@ -631,7 +637,7 @@ CreateRegexPatternSetResponse * WafClient::createRegexPatternSet(const CreateReg
  * <a>CreateWebACL</a>> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateRuleResponse * WafClient::createRule(const CreateRuleRequest &request)
 {
@@ -666,7 +672,7 @@ CreateRuleResponse * WafClient::createRule(const CreateRuleRequest &request)
  * group> </li> </ul>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateRuleGroupResponse * WafClient::createRuleGroup(const CreateRuleGroupRequest &request)
 {
@@ -710,7 +716,7 @@ CreateRuleGroupResponse * WafClient::createRuleGroup(const CreateRuleGroupReques
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateSizeConstraintSetResponse * WafClient::createSizeConstraintSet(const CreateSizeConstraintSetRequest &request)
 {
@@ -752,7 +758,7 @@ CreateSizeConstraintSetResponse * WafClient::createSizeConstraintSet(const Creat
  * code> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateSqlInjectionMatchSetResponse * WafClient::createSqlInjectionMatchSet(const CreateSqlInjectionMatchSetRequest &request)
 {
@@ -811,7 +817,7 @@ CreateSqlInjectionMatchSetResponse * WafClient::createSqlInjectionMatchSet(const
  * distribution> </li> </ol>
  *
  * For more information about how to use the AWS WAF API, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateWebACLResponse * WafClient::createWebACL(const CreateWebACLRequest &request)
 {
@@ -853,7 +859,7 @@ CreateWebACLResponse * WafClient::createWebACL(const CreateWebACLRequest &reques
  * attacks> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 CreateXssMatchSetResponse * WafClient::createXssMatchSet(const CreateXssMatchSetRequest &request)
 {
@@ -1344,7 +1350,7 @@ GetChangeTokenResponse * WafClient::getChangeToken(const GetChangeTokenRequest &
  *
  * servers> </li> <li>
  *
- * <code>IN_SYNC</code>: Propagation is
+ * <code>INSYNC</code>: Propagation is
  */
 GetChangeTokenStatusResponse * WafClient::getChangeTokenStatus(const GetChangeTokenStatusRequest &request)
 {
@@ -1734,6 +1740,18 @@ ListSubscribedRuleGroupsResponse * WafClient::listSubscribedRuleGroups(const Lis
 
 /*!
  * Sends \a request to the WafClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsForResourceResponse * WafClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WafClient service, and returns a pointer to an
  * ListWebACLsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1774,7 +1792,16 @@ ListXssMatchSetsResponse * WafClient::listXssMatchSets(const ListXssMatchSetsReq
  *
  * Create an Amazon Kinesis Data Firehose .
  *
- * </p </li> <li>
+ * </p
+ *
+ * Create the data firehose with a PUT source and in the region that you are operating. However, if you are capturing logs
+ * for Amazon CloudFront, always create the firehose in US East (N. Virginia).
+ *
+ * </p <note>
+ *
+ * Do not create the data firehose using a <code>Kinesis stream</code> as your
+ *
+ * source> </note> </li> <li>
  *
  * Associate that firehose to your web ACL using a <code>PutLoggingConfiguration</code>
  *
@@ -1782,7 +1809,7 @@ ListXssMatchSetsResponse * WafClient::listXssMatchSets(const ListXssMatchSetsReq
  *
  * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, AWS WAF will create a service
  * linked role with the necessary permissions to write logs to the Amazon Kinesis Data Firehose. For more information, see
- * <a href="http://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging Web ACL Traffic Information</a> in
+ * <a href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging Web ACL Traffic Information</a> in
  * the <i>AWS WAF Developer
  */
 PutLoggingConfigurationResponse * WafClient::putLoggingConfiguration(const PutLoggingConfigurationRequest &request)
@@ -1852,6 +1879,30 @@ PutPermissionPolicyResponse * WafClient::putPermissionPolicy(const PutPermission
 
 /*!
  * Sends \a request to the WafClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+TagResourceResponse * WafClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WafClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UntagResourceResponse * WafClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WafClient service, and returns a pointer to an
  * UpdateByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1910,7 +1961,7 @@ PutPermissionPolicyResponse * WafClient::putPermissionPolicy(const PutPermission
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateByteMatchSetResponse * WafClient::updateByteMatchSet(const UpdateByteMatchSetRequest &request)
 {
@@ -1965,7 +2016,7 @@ UpdateByteMatchSetResponse * WafClient::updateByteMatchSet(const UpdateByteMatch
  * one>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSetRequest &request)
 {
@@ -1999,7 +2050,7 @@ UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSet
  * </p </li> </ul>
  *
  * AWS WAF supports IPv4 address ranges: /8 and any range between /16 through /32. AWS WAF supports IPv6 address ranges:
- * /16, /24, /32, /48, /56, /64, and /128. For more information about CIDR notation, see the Wikipedia entry <a
+ * /24, /32, /48, /56, /64, and /128. For more information about CIDR notation, see the Wikipedia entry <a
  * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain
  *
  * Routing</a>>
@@ -2050,7 +2101,7 @@ UpdateGeoMatchSetResponse * WafClient::updateGeoMatchSet(const UpdateGeoMatchSet
  * request>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateIPSetResponse * WafClient::updateIPSet(const UpdateIPSetRequest &request)
 {
@@ -2183,7 +2234,7 @@ UpdateRateBasedRuleResponse * WafClient::updateRateBasedRule(const UpdateRateBas
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateRegexMatchSetResponse * WafClient::updateRegexMatchSet(const UpdateRegexMatchSetRequest &request)
 {
@@ -2241,7 +2292,7 @@ UpdateRegexMatchSetResponse * WafClient::updateRegexMatchSet(const UpdateRegexMa
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateRegexPatternSetResponse * WafClient::updateRegexPatternSet(const UpdateRegexPatternSetRequest &request)
 {
@@ -2307,7 +2358,7 @@ UpdateRegexPatternSetResponse * WafClient::updateRegexPatternSet(const UpdateReg
  * one>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateRuleResponse * WafClient::updateRule(const UpdateRuleRequest &request)
 {
@@ -2358,7 +2409,7 @@ UpdateRuleResponse * WafClient::updateRule(const UpdateRuleRequest &request)
  * one>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateRuleGroupResponse * WafClient::updateRuleGroup(const UpdateRuleGroupRequest &request)
 {
@@ -2430,7 +2481,7 @@ UpdateRuleGroupResponse * WafClient::updateRuleGroup(const UpdateRuleGroupReques
  * for> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateSizeConstraintSetResponse * WafClient::updateSizeConstraintSet(const UpdateSizeConstraintSetRequest &request)
 {
@@ -2493,7 +2544,7 @@ UpdateSizeConstraintSetResponse * WafClient::updateSizeConstraintSet(const Updat
  * code> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateSqlInjectionMatchSetResponse * WafClient::updateSqlInjectionMatchSet(const UpdateSqlInjectionMatchSetRequest &request)
 {
@@ -2583,7 +2634,7 @@ UpdateSqlInjectionMatchSetResponse * WafClient::updateSqlInjectionMatchSet(const
  * </p
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateWebACLResponse * WafClient::updateWebACL(const UpdateWebACLRequest &request)
 {
@@ -2646,7 +2697,7 @@ UpdateWebACLResponse * WafClient::updateWebACL(const UpdateWebACLRequest &reques
  * attacks> </li> </ol>
  *
  * For more information about how to use the AWS WAF API to allow or block HTTP requests, see the <a
- * href="http://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
  */
 UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSetRequest &request)
 {

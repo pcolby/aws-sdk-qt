@@ -354,6 +354,10 @@ HEADERS += \
     getregistrationcoderequest_p.h \
     getregistrationcoderesponse.h \
     getregistrationcoderesponse_p.h \
+    getstatisticsrequest.h \
+    getstatisticsrequest_p.h \
+    getstatisticsresponse.h \
+    getstatisticsresponse_p.h \
     gettopicrulerequest.h \
     gettopicrulerequest_p.h \
     gettopicruleresponse.h \
@@ -854,6 +858,8 @@ SOURCES += \
     getpolicyversionresponse.cpp \
     getregistrationcoderequest.cpp \
     getregistrationcoderesponse.cpp \
+    getstatisticsrequest.cpp \
+    getstatisticsresponse.cpp \
     gettopicrulerequest.cpp \
     gettopicruleresponse.cpp \
     getv2loggingoptionsrequest.cpp \

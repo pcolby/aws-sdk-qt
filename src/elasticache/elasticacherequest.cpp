@@ -38,6 +38,8 @@ namespace ElastiCache {
  *
  * \value AddTagsToResourceAction ElastiCache AddTagsToResource action.
  * \value AuthorizeCacheSecurityGroupIngressAction ElastiCache AuthorizeCacheSecurityGroupIngress action.
+ * \value BatchApplyUpdateActionAction ElastiCache BatchApplyUpdateAction action.
+ * \value BatchStopUpdateActionAction ElastiCache BatchStopUpdateAction action.
  * \value CopySnapshotAction ElastiCache CopySnapshot action.
  * \value CreateCacheClusterAction ElastiCache CreateCacheCluster action.
  * \value CreateCacheParameterGroupAction ElastiCache CreateCacheParameterGroup action.
@@ -63,7 +65,9 @@ namespace ElastiCache {
  * \value DescribeReplicationGroupsAction ElastiCache DescribeReplicationGroups action.
  * \value DescribeReservedCacheNodesAction ElastiCache DescribeReservedCacheNodes action.
  * \value DescribeReservedCacheNodesOfferingsAction ElastiCache DescribeReservedCacheNodesOfferings action.
+ * \value DescribeServiceUpdatesAction ElastiCache DescribeServiceUpdates action.
  * \value DescribeSnapshotsAction ElastiCache DescribeSnapshots action.
+ * \value DescribeUpdateActionsAction ElastiCache DescribeUpdateActions action.
  * \value IncreaseReplicaCountAction ElastiCache IncreaseReplicaCount action.
  * \value ListAllowedNodeTypeModificationsAction ElastiCache ListAllowedNodeTypeModifications action.
  * \value ListTagsForResourceAction ElastiCache ListTagsForResource action.

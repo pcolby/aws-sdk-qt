@@ -41,6 +41,7 @@ namespace PinpointSMSVoice {
  * \value DeleteConfigurationSetAction PinpointSMSVoice DeleteConfigurationSet action.
  * \value DeleteConfigurationSetEventDestinationAction PinpointSMSVoice DeleteConfigurationSetEventDestination action.
  * \value GetConfigurationSetEventDestinationsAction PinpointSMSVoice GetConfigurationSetEventDestinations action.
+ * \value ListConfigurationSetsAction PinpointSMSVoice ListConfigurationSets action.
  * \value SendVoiceMessageAction PinpointSMSVoice SendVoiceMessage action.
  * \value UpdateConfigurationSetEventDestinationAction PinpointSMSVoice UpdateConfigurationSetEventDestination action.
  */

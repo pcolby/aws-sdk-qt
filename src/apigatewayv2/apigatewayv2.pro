@@ -196,6 +196,18 @@ HEADERS += \
     getstagesrequest_p.h \
     getstagesresponse.h \
     getstagesresponse_p.h \
+    gettagsrequest.h \
+    gettagsrequest_p.h \
+    gettagsresponse.h \
+    gettagsresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateapimappingrequest.h \
     updateapimappingrequest_p.h \
     updateapimappingresponse.h \
@@ -335,6 +347,12 @@ SOURCES += \
     getstageresponse.cpp \
     getstagesrequest.cpp \
     getstagesresponse.cpp \
+    gettagsrequest.cpp \
+    gettagsresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateapimappingrequest.cpp \
     updateapimappingresponse.cpp \
     updateapirequest.cpp \

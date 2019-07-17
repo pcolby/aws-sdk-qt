@@ -111,6 +111,12 @@
 #include "getstageresponse.h"
 #include "getstagesrequest.h"
 #include "getstagesresponse.h"
+#include "gettagsrequest.h"
+#include "gettagsresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateapirequest.h"
 #include "updateapiresponse.h"
 #include "updateapimappingrequest.h"
@@ -795,6 +801,45 @@ GetStageResponse * ApiGatewayV2Client::getStage(const GetStageRequest &request)
 GetStagesResponse * ApiGatewayV2Client::getStages(const GetStagesRequest &request)
 {
     return qobject_cast<GetStagesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * GetTagsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the Tags for an
+ */
+GetTagsResponse * ApiGatewayV2Client::getTags(const GetTagsRequest &request)
+{
+    return qobject_cast<GetTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Tag an APIGW
+ */
+TagResourceResponse * ApiGatewayV2Client::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Untag an APIGW
+ */
+UntagResourceResponse * ApiGatewayV2Client::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

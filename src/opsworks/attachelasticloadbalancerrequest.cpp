@@ -53,21 +53,21 @@ namespace OpsWorks {
  * 
  *  see> <ul> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS CLI</a>
+ *  <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS CLI</a>
  * 
  *  </p </li> <li>
  * 
  *  <a
- *  href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html">AWS
+ *  href="https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html">AWS
  *  SDK for Java</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/sdkfornet/latest/apidocs/html/N_Amazon_OpsWorks.htm">AWS SDK for .NET</a>
+ *  <a href="https://docs.aws.amazon.com/sdkfornet/latest/apidocs/html/N_Amazon_OpsWorks.htm">AWS SDK for .NET</a>
  * 
  *  </p </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.OpsWorks.OpsWorksClient.html">AWS SDK for PHP 2</a>
+ *  <a href="https://docs.aws.amazon.com/aws-sdk-php-2/latest/class-Aws.OpsWorks.OpsWorksClient.html">AWS SDK for PHP 2</a>
  * 
  *  </p </li> <li>
  * 
@@ -131,7 +131,7 @@ namespace OpsWorks {
  *  When you call <a>CreateStack</a>, <a>CloneStack</a>, or <a>UpdateStack</a> we recommend you use the
  *  <code>ConfigurationManager</code> parameter to specify the Chef version. The recommended and default value for Linux
  *  stacks is currently 12. Windows stacks use Chef 12.2. For more information, see <a
- *  href="http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef
+ *  href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-chef11.html">Chef
  * 
  *  Versions</a>> <note>
  * 

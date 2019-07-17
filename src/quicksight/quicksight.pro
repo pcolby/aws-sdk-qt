@@ -26,6 +26,10 @@ HEADERS += \
     deletegrouprequest_p.h \
     deletegroupresponse.h \
     deletegroupresponse_p.h \
+    deleteuserbyprincipalidrequest.h \
+    deleteuserbyprincipalidrequest_p.h \
+    deleteuserbyprincipalidresponse.h \
+    deleteuserbyprincipalidresponse_p.h \
     deleteuserrequest.h \
     deleteuserrequest_p.h \
     deleteuserresponse.h \
@@ -86,6 +90,8 @@ SOURCES += \
     deletegroupmembershipresponse.cpp \
     deletegrouprequest.cpp \
     deletegroupresponse.cpp \
+    deleteuserbyprincipalidrequest.cpp \
+    deleteuserbyprincipalidresponse.cpp \
     deleteuserrequest.cpp \
     deleteuserresponse.cpp \
     describegrouprequest.cpp \

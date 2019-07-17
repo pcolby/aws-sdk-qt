@@ -37,6 +37,8 @@
 #include "createdocumentresponse.h"
 #include "createmaintenancewindowrequest.h"
 #include "createmaintenancewindowresponse.h"
+#include "createopsitemrequest.h"
+#include "createopsitemresponse.h"
 #include "createpatchbaselinerequest.h"
 #include "createpatchbaselineresponse.h"
 #include "createresourcedatasyncrequest.h"
@@ -117,6 +119,8 @@
 #include "describemaintenancewindowsresponse.h"
 #include "describemaintenancewindowsfortargetrequest.h"
 #include "describemaintenancewindowsfortargetresponse.h"
+#include "describeopsitemsrequest.h"
+#include "describeopsitemsresponse.h"
 #include "describeparametersrequest.h"
 #include "describeparametersresponse.h"
 #include "describepatchbaselinesrequest.h"
@@ -125,6 +129,8 @@
 #include "describepatchgroupstateresponse.h"
 #include "describepatchgroupsrequest.h"
 #include "describepatchgroupsresponse.h"
+#include "describepatchpropertiesrequest.h"
+#include "describepatchpropertiesresponse.h"
 #include "describesessionsrequest.h"
 #include "describesessionsresponse.h"
 #include "getautomationexecutionrequest.h"
@@ -153,6 +159,10 @@
 #include "getmaintenancewindowexecutiontaskinvocationresponse.h"
 #include "getmaintenancewindowtaskrequest.h"
 #include "getmaintenancewindowtaskresponse.h"
+#include "getopsitemrequest.h"
+#include "getopsitemresponse.h"
+#include "getopssummaryrequest.h"
+#include "getopssummaryresponse.h"
 #include "getparameterrequest.h"
 #include "getparameterresponse.h"
 #include "getparameterhistoryrequest.h"
@@ -165,6 +175,8 @@
 #include "getpatchbaselineresponse.h"
 #include "getpatchbaselineforpatchgrouprequest.h"
 #include "getpatchbaselineforpatchgroupresponse.h"
+#include "getservicesettingrequest.h"
+#include "getservicesettingresponse.h"
 #include "labelparameterversionrequest.h"
 #include "labelparameterversionresponse.h"
 #include "listassociationversionsrequest.h"
@@ -209,6 +221,8 @@
 #include "registertaskwithmaintenancewindowresponse.h"
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourceresponse.h"
+#include "resetservicesettingrequest.h"
+#include "resetservicesettingresponse.h"
 #include "resumesessionrequest.h"
 #include "resumesessionresponse.h"
 #include "sendautomationsignalrequest.h"
@@ -241,8 +255,12 @@
 #include "updatemaintenancewindowtaskresponse.h"
 #include "updatemanagedinstancerolerequest.h"
 #include "updatemanagedinstanceroleresponse.h"
+#include "updateopsitemrequest.h"
+#include "updateopsitemresponse.h"
 #include "updatepatchbaselinerequest.h"
 #include "updatepatchbaselineresponse.h"
+#include "updateservicesettingrequest.h"
+#include "updateservicesettingresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -282,8 +300,8 @@ namespace SSM {
  *  Guide</a>>
  * 
  *  To get started, verify prerequisites and configure managed instances. For more information, see <a
- *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Systems Manager
- *  Prerequisites</a> in the <i>AWS Systems Manager User
+ *  href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Setting Up AWS
+ *  Systems Manager</a> in the <i>AWS Systems Manager User
  * 
  *  Guide</i>>
  * 
@@ -353,7 +371,7 @@ SsmClient::SsmClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds or overwrites one or more tags for the specified resource. Tags are metadata that you can assign to your documents,
- * managed instances, Maintenance Windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize
+ * managed instances, maintenance windows, Parameter Store parameters, and patch baselines. Tags enable you to categorize
  * your resources in different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an
  * optional value, both of which you define. For example, you could define a set of tags for your account's managed
  * instances that helps you track each instance's owner and stack level. For example: Key=Owner and Value=DbAdmin,
@@ -400,7 +418,7 @@ CancelCommandResponse * SsmClient::cancelCommand(const CancelCommandRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops a Maintenance Window execution that is already in progress and cancels any tasks in the window that have not
+ * Stops a maintenance window execution that is already in progress and cancels any tasks in the window that have not
  * already starting running. (Tasks already in progress will continue to
  */
 CancelMaintenanceWindowExecutionResponse * SsmClient::cancelMaintenanceWindowExecution(const CancelMaintenanceWindowExecutionRequest &request)
@@ -417,8 +435,8 @@ CancelMaintenanceWindowExecutionResponse * SsmClient::cancelMaintenanceWindowExe
  * Registers your on-premises server or virtual machine with Amazon EC2 so that you can manage these resources using Run
  * Command. An on-premises server or virtual machine that has been registered with EC2 is called a managed instance. For
  * more information about activations, see <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting Up
- * Systems Manager in Hybrid
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-managedinstances.html">Setting Up AWS
+ * Systems Manager for Hybrid
  */
 CreateActivationResponse * SsmClient::createActivation(const CreateActivationRequest &request)
 {
@@ -494,11 +512,34 @@ CreateDocumentResponse * SsmClient::createDocument(const CreateDocumentRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Maintenance
+ * Creates a new maintenance
  */
 CreateMaintenanceWindowResponse * SsmClient::createMaintenanceWindow(const CreateMaintenanceWindowRequest &request)
 {
     return qobject_cast<CreateMaintenanceWindowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * CreateOpsItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new OpsItem. You must have permission in AWS Identity and Access Management (IAM) to create a new OpsItem. For
+ * more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting Started with
+ * OpsCenter</a> in the <i>AWS Systems Manager User
+ *
+ * Guide</i>>
+ *
+ * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
+ * the performance and health of their AWS resources. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
+ * the <i>AWS Systems Manager User Guide</i>.
+ */
+CreateOpsItemResponse * SsmClient::createOpsItem(const CreateOpsItemRequest &request)
+{
+    return qobject_cast<CreateOpsItemResponse *>(send(request));
 }
 
 /*!
@@ -533,9 +574,9 @@ CreatePatchBaselineResponse * SsmClient::createPatchBaseline(const CreatePatchBa
  *
  * By default, data is not encrypted in Amazon S3. We strongly recommend that you enable encryption in Amazon S3 to ensure
  * secure data storage. We also recommend that you secure access to the Amazon S3 bucket by creating a restrictive bucket
- * policy. To view an example of a restrictive Amazon S3 bucket policy for Resource Data Sync, see <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync-create.html">Create a
- * Resource Data Sync for Inventory</a> in the <i>AWS Systems Manager User
+ * policy. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">Configuring Resource
+ * Data Sync for Inventory</a> in the <i>AWS Systems Manager User
  */
 CreateResourceDataSyncResponse * SsmClient::createResourceDataSync(const CreateResourceDataSyncRequest &request)
 {
@@ -614,7 +655,7 @@ DeleteInventoryResponse * SsmClient::deleteInventory(const DeleteInventoryReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a Maintenance
+ * Deletes a maintenance
  */
 DeleteMaintenanceWindowResponse * SsmClient::deleteMaintenanceWindow(const DeleteMaintenanceWindowRequest &request)
 {
@@ -708,7 +749,7 @@ DeregisterPatchBaselineForPatchGroupResponse * SsmClient::deregisterPatchBaselin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a target from a Maintenance
+ * Removes a target from a maintenance
  */
 DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromMaintenanceWindow(const DeregisterTargetFromMaintenanceWindowRequest &request)
 {
@@ -721,7 +762,7 @@ DeregisterTargetFromMaintenanceWindowResponse * SsmClient::deregisterTargetFromM
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a task from a Maintenance
+ * Removes a task from a maintenance
  */
 DeregisterTaskFromMaintenanceWindowResponse * SsmClient::deregisterTaskFromMaintenanceWindow(const DeregisterTaskFromMaintenanceWindowRequest &request)
 {
@@ -970,7 +1011,7 @@ DescribeInventoryDeletionsResponse * SsmClient::describeInventoryDeletions(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the individual task executions (one per target) for a particular task executed as part of a Maintenance Window
+ * Retrieves the individual task executions (one per target) for a particular task run as part of a maintenance window
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeMaintenanceWindowExecutionTaskInvocations(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &request)
 {
@@ -983,7 +1024,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsResponse * SsmClient::describeM
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * For a given Maintenance Window execution, lists the tasks that were
+ * For a given maintenance window execution, lists the tasks that were
  */
 DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenanceWindowExecutionTasks(const DescribeMaintenanceWindowExecutionTasksRequest &request)
 {
@@ -996,8 +1037,8 @@ DescribeMaintenanceWindowExecutionTasksResponse * SsmClient::describeMaintenance
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the executions of a Maintenance Window. This includes information about when the Maintenance Window was scheduled
- * to be active, and information about tasks registered and run with the Maintenance
+ * Lists the executions of a maintenance window. This includes information about when the maintenance window was scheduled
+ * to be active, and information about tasks registered and run with the maintenance
  */
 DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWindowExecutions(const DescribeMaintenanceWindowExecutionsRequest &request)
 {
@@ -1010,7 +1051,7 @@ DescribeMaintenanceWindowExecutionsResponse * SsmClient::describeMaintenanceWind
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about upcoming executions of a Maintenance
+ * Retrieves information about upcoming executions of a maintenance
  */
 DescribeMaintenanceWindowScheduleResponse * SsmClient::describeMaintenanceWindowSchedule(const DescribeMaintenanceWindowScheduleRequest &request)
 {
@@ -1023,7 +1064,7 @@ DescribeMaintenanceWindowScheduleResponse * SsmClient::describeMaintenanceWindow
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the targets registered with the Maintenance
+ * Lists the targets registered with the maintenance
  */
 DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowTargets(const DescribeMaintenanceWindowTargetsRequest &request)
 {
@@ -1036,7 +1077,7 @@ DescribeMaintenanceWindowTargetsResponse * SsmClient::describeMaintenanceWindowT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tasks in a Maintenance
+ * Lists the tasks in a maintenance
  */
 DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTasks(const DescribeMaintenanceWindowTasksRequest &request)
 {
@@ -1049,7 +1090,7 @@ DescribeMaintenanceWindowTasksResponse * SsmClient::describeMaintenanceWindowTas
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the Maintenance Windows in an AWS
+ * Retrieves the maintenance windows in an AWS
  */
 DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const DescribeMaintenanceWindowsRequest &request)
 {
@@ -1062,11 +1103,34 @@ DescribeMaintenanceWindowsResponse * SsmClient::describeMaintenanceWindows(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the Maintenance Windows targets or tasks that an instance is associated
+ * Retrieves information about the maintenance window targets or tasks that an instance is associated
  */
 DescribeMaintenanceWindowsForTargetResponse * SsmClient::describeMaintenanceWindowsForTarget(const DescribeMaintenanceWindowsForTargetRequest &request)
 {
     return qobject_cast<DescribeMaintenanceWindowsForTargetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeOpsItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Query a set of OpsItems. You must have permission in AWS Identity and Access Management (IAM) to query a list of
+ * OpsItems. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting Started with
+ * OpsCenter</a> in the <i>AWS Systems Manager User
+ *
+ * Guide</i>>
+ *
+ * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
+ * the performance and health of their AWS resources. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
+ * the <i>AWS Systems Manager User Guide</i>.
+ */
+DescribeOpsItemsResponse * SsmClient::describeOpsItems(const DescribeOpsItemsRequest &request)
+{
+    return qobject_cast<DescribeOpsItemsResponse *>(send(request));
 }
 
 /*!
@@ -1127,6 +1191,53 @@ DescribePatchGroupStateResponse * SsmClient::describePatchGroupState(const Descr
 DescribePatchGroupsResponse * SsmClient::describePatchGroups(const DescribePatchGroupsRequest &request)
 {
     return qobject_cast<DescribePatchGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribePatchPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the properties of available patches organized by product, product family, classification, severity, and other
+ * properties of available patches. You can use the reported properties in the filters you specify in requests for actions
+ * such as <a>CreatePatchBaseline</a>, <a>UpdatePatchBaseline</a>, <a>DescribeAvailablePatches</a>, and
+ *
+ * <a>DescribePatchBaselines</a>>
+ *
+ * The following section lists the properties that can be used in filters for each major operating system
+ *
+ * type> <dl> <dt>WINDOWS</dt> <dd>
+ *
+ * Valid properties: PRODUCT, PRODUCT_FAMILY, CLASSIFICATION,
+ *
+ * MSRC_SEVERIT> </dd> <dt>AMAZON_LINUX</dt> <dd>
+ *
+ * Valid properties: PRODUCT, CLASSIFICATION,
+ *
+ * SEVERIT> </dd> <dt>AMAZON_LINUX_2</dt> <dd>
+ *
+ * Valid properties: PRODUCT, CLASSIFICATION,
+ *
+ * SEVERIT> </dd> <dt>UBUNTU </dt> <dd>
+ *
+ * Valid properties: PRODUCT,
+ *
+ * PRIORIT> </dd> <dt>REDHAT_ENTERPRISE_LINUX</dt> <dd>
+ *
+ * Valid properties: PRODUCT, CLASSIFICATION,
+ *
+ * SEVERIT> </dd> <dt>SUSE</dt> <dd>
+ *
+ * Valid properties: PRODUCT, CLASSIFICATION,
+ *
+ * SEVERIT> </dd> <dt>CENTOS</dt> <dd>
+ *
+ * Valid properties: PRODUCT, CLASSIFICATION,
+ */
+DescribePatchPropertiesResponse * SsmClient::describePatchProperties(const DescribePatchPropertiesRequest &request)
+{
+    return qobject_cast<DescribePatchPropertiesResponse *>(send(request));
 }
 
 /*!
@@ -1260,7 +1371,7 @@ GetInventorySchemaResponse * SsmClient::getInventorySchema(const GetInventorySch
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a Maintenance
+ * Retrieves a maintenance
  */
 GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintenanceWindowRequest &request)
 {
@@ -1273,7 +1384,7 @@ GetMaintenanceWindowResponse * SsmClient::getMaintenanceWindow(const GetMaintena
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves details about a specific task executed as part of a Maintenance Window
+ * Retrieves details about a specific task run as part of a maintenance window
  */
 GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution(const GetMaintenanceWindowExecutionRequest &request)
 {
@@ -1286,7 +1397,7 @@ GetMaintenanceWindowExecutionResponse * SsmClient::getMaintenanceWindowExecution
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the details about a specific task executed as part of a Maintenance Window
+ * Retrieves the details about a specific task run as part of a maintenance window
  */
 GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecutionTask(const GetMaintenanceWindowExecutionTaskRequest &request)
 {
@@ -1299,7 +1410,7 @@ GetMaintenanceWindowExecutionTaskResponse * SsmClient::getMaintenanceWindowExecu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a task invocation. A task invocation is a specific task executing on a specific target. Maintenance Windows
+ * Retrieves a task invocation. A task invocation is a specific task running on a specific target. maintenance windows
  * report status for all invocations.
  */
 GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceWindowExecutionTaskInvocation(const GetMaintenanceWindowExecutionTaskInvocationRequest &request)
@@ -1313,11 +1424,47 @@ GetMaintenanceWindowExecutionTaskInvocationResponse * SsmClient::getMaintenanceW
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tasks in a Maintenance
+ * Lists the tasks in a maintenance
  */
 GetMaintenanceWindowTaskResponse * SsmClient::getMaintenanceWindowTask(const GetMaintenanceWindowTaskRequest &request)
 {
     return qobject_cast<GetMaintenanceWindowTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetOpsItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get information about an OpsItem by using the ID. You must have permission in AWS Identity and Access Management (IAM)
+ * to view information about an OpsItem. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting Started with
+ * OpsCenter</a> in the <i>AWS Systems Manager User
+ *
+ * Guide</i>>
+ *
+ * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
+ * the performance and health of their AWS resources. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
+ * the <i>AWS Systems Manager User Guide</i>.
+ */
+GetOpsItemResponse * SsmClient::getOpsItem(const GetOpsItemRequest &request)
+{
+    return qobject_cast<GetOpsItemResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetOpsSummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * View a summary of OpsItems based on specified filters and
+ */
+GetOpsSummaryResponse * SsmClient::getOpsSummary(const GetOpsSummaryRequest &request)
+{
+    return qobject_cast<GetOpsSummaryResponse *>(send(request));
 }
 
 /*!
@@ -1415,6 +1562,34 @@ GetPatchBaselineForPatchGroupResponse * SsmClient::getPatchBaselineForPatchGroup
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * GetServiceSettingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <code>ServiceSetting</code> is an account-level setting for an AWS service. This setting defines how a user interacts
+ * with or uses a service or a feature of a service. For example, if an AWS service charges money to the account based on
+ * feature or service usage, then the AWS service team might create a default setting of "false". This means the user can't
+ * use this feature unless they change the setting to "true" and intentionally opt in for a paid
+ *
+ * feature>
+ *
+ * Services map a <code>SettingId</code> object to a setting value. AWS services teams define the default value for a
+ * <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default value if you
+ * have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>UpdateServiceSetting</a> API
+ * action to change the default setting. Or use the <a>ResetServiceSetting</a> to change the value back to the original
+ * value defined by the AWS service
+ *
+ * team>
+ *
+ * Query the current service setting for the account.
+ */
+GetServiceSettingResponse * SsmClient::getServiceSetting(const GetServiceSettingRequest &request)
+{
+    return qobject_cast<GetServiceSettingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * LabelParameterVersionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1500,7 +1675,7 @@ ListAssociationsResponse * SsmClient::listAssociations(const ListAssociationsReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * An invocation is copy of a command sent to a specific instance. A command can apply to one or more instances. A command
- * invocation applies to one instance. For example, if a user executes SendCommand against three instances, then a command
+ * invocation applies to one instance. For example, if a user runs SendCommand against three instances, then a command
  * invocation is created for each requested instance ID. ListCommandInvocations provide status about command
  */
 ListCommandInvocationsResponse * SsmClient::listCommandInvocations(const ListCommandInvocationsRequest &request)
@@ -1792,7 +1967,7 @@ RegisterPatchBaselineForPatchGroupResponse * SsmClient::registerPatchBaselineFor
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers a target with a Maintenance
+ * Registers a target with a maintenance
  */
 RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaintenanceWindow(const RegisterTargetWithMaintenanceWindowRequest &request)
 {
@@ -1805,7 +1980,7 @@ RegisterTargetWithMaintenanceWindowResponse * SsmClient::registerTargetWithMaint
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a new task to a Maintenance
+ * Adds a new task to a maintenance
  */
 RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenanceWindow(const RegisterTaskWithMaintenanceWindowRequest &request)
 {
@@ -1823,6 +1998,33 @@ RegisterTaskWithMaintenanceWindowResponse * SsmClient::registerTaskWithMaintenan
 RemoveTagsFromResourceResponse * SsmClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
     return qobject_cast<RemoveTagsFromResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * ResetServiceSettingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <code>ServiceSetting</code> is an account-level setting for an AWS service. This setting defines how a user interacts
+ * with or uses a service or a feature of a service. For example, if an AWS service charges money to the account based on
+ * feature or service usage, then the AWS service team might create a default setting of "false". This means the user can't
+ * use this feature unless they change the setting to "true" and intentionally opt in for a paid
+ *
+ * feature>
+ *
+ * Services map a <code>SettingId</code> object to a setting value. AWS services teams define the default value for a
+ * <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default value if you
+ * have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>GetServiceSetting</a> API action
+ * to view the current value. Use the <a>UpdateServiceSetting</a> API action to change the default setting.
+ *
+ * </p
+ *
+ * Reset the service setting for the account to the default value as provisioned by the AWS service team.
+ */
+ResetServiceSettingResponse * SsmClient::resetServiceSetting(const ResetServiceSettingRequest &request)
+{
+    return qobject_cast<ResetServiceSettingResponse *>(send(request));
 }
 
 /*!
@@ -1863,7 +2065,7 @@ SendAutomationSignalResponse * SsmClient::sendAutomationSignal(const SendAutomat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Executes commands on one or more managed
+ * Runs commands on one or more managed
  */
 SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
 {
@@ -1876,8 +2078,7 @@ SendCommandResponse * SsmClient::sendCommand(const SendCommandRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Use this API action to execute an association immediately and only one time. This action can be helpful when
- * troubleshooting
+ * Use this API action to run an association immediately and only one time. This action can be helpful when troubleshooting
  */
 StartAssociationsOnceResponse * SsmClient::startAssociationsOnce(const StartAssociationsOnceRequest &request)
 {
@@ -1953,6 +2154,10 @@ TerminateSessionResponse * SsmClient::terminateSession(const TerminateSessionReq
  *
  * Updates an association. You can update the association name and version, the document version, schedule, parameters, and
  * Amazon S3
+ *
+ * output> <b>
+ *
+ * When you update an association, the association immediately runs against the specified
  */
 UpdateAssociationResponse * SsmClient::updateAssociation(const UpdateAssociationRequest &request)
 {
@@ -2004,7 +2209,7 @@ UpdateDocumentDefaultVersionResponse * SsmClient::updateDocumentDefaultVersion(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing Maintenance Window. Only specified parameters are
+ * Updates an existing maintenance window. Only specified parameters are
  */
 UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const UpdateMaintenanceWindowRequest &request)
 {
@@ -2017,7 +2222,7 @@ UpdateMaintenanceWindowResponse * SsmClient::updateMaintenanceWindow(const Updat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the target of an existing Maintenance Window. You can't change the target type, but you can change the
+ * Modifies the target of an existing maintenance window. You can't change the target type, but you can change the
  *
  * following>
  *
@@ -2052,7 +2257,7 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies a task assigned to a Maintenance Window. You can't change the task type, but you can change the following
+ * Modifies a task assigned to a maintenance window. You can't change the task type, but you can change the following
  *
  * values> <ul> <li>
  *
@@ -2094,6 +2299,29 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateOpsItemResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Edit or change an OpsItem. You must have permission in AWS Identity and Access Management (IAM) to update an OpsItem.
+ * For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter-getting-started.html">Getting Started with
+ * OpsCenter</a> in the <i>AWS Systems Manager User
+ *
+ * Guide</i>>
+ *
+ * Operations engineers and IT professionals use OpsCenter to view, investigate, and remediate operational issues impacting
+ * the performance and health of their AWS resources. For more information, see <a
+ * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">AWS Systems Manager OpsCenter</a> in
+ * the <i>AWS Systems Manager User Guide</i>.
+ */
+UpdateOpsItemResponse * SsmClient::updateOpsItem(const UpdateOpsItemRequest &request)
+{
+    return qobject_cast<UpdateOpsItemResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * UpdatePatchBaselineResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2108,6 +2336,34 @@ UpdateManagedInstanceRoleResponse * SsmClient::updateManagedInstanceRole(const U
 UpdatePatchBaselineResponse * SsmClient::updatePatchBaseline(const UpdatePatchBaselineRequest &request)
 {
     return qobject_cast<UpdatePatchBaselineResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * UpdateServiceSettingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <code>ServiceSetting</code> is an account-level setting for an AWS service. This setting defines how a user interacts
+ * with or uses a service or a feature of a service. For example, if an AWS service charges money to the account based on
+ * feature or service usage, then the AWS service team might create a default setting of "false". This means the user can't
+ * use this feature unless they change the setting to "true" and intentionally opt in for a paid
+ *
+ * feature>
+ *
+ * Services map a <code>SettingId</code> object to a setting value. AWS services teams define the default value for a
+ * <code>SettingId</code>. You can't create a new <code>SettingId</code>, but you can overwrite the default value if you
+ * have the <code>ssm:UpdateServiceSetting</code> permission for the setting. Use the <a>GetServiceSetting</a> API action
+ * to view the current value. Or, use the <a>ResetServiceSetting</a> to change the value back to the original value defined
+ * by the AWS service
+ *
+ * team>
+ *
+ * Update the service setting for the account.
+ */
+UpdateServiceSettingResponse * SsmClient::updateServiceSetting(const UpdateServiceSettingRequest &request)
+{
+    return qobject_cast<UpdateServiceSettingResponse *>(send(request));
 }
 
 /*!

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsWorkLink
+description = AWS WorkLink SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsworklink-index.html"
+navigation.landingtitle = "WorkLink"
+navigation.cppclassespage = "WorkLink C++ Classes"

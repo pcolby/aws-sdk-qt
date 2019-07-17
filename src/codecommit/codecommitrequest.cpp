@@ -36,14 +36,18 @@ namespace CodeCommit {
  * This enum describes the actions that can be performed as CodeCommit
  * requests.
  *
+ * \value BatchDescribeMergeConflictsAction CodeCommit BatchDescribeMergeConflicts action.
  * \value BatchGetRepositoriesAction CodeCommit BatchGetRepositories action.
  * \value CreateBranchAction CodeCommit CreateBranch action.
+ * \value CreateCommitAction CodeCommit CreateCommit action.
  * \value CreatePullRequestAction CodeCommit CreatePullRequest action.
  * \value CreateRepositoryAction CodeCommit CreateRepository action.
+ * \value CreateUnreferencedMergeCommitAction CodeCommit CreateUnreferencedMergeCommit action.
  * \value DeleteBranchAction CodeCommit DeleteBranch action.
  * \value DeleteCommentContentAction CodeCommit DeleteCommentContent action.
  * \value DeleteFileAction CodeCommit DeleteFile action.
  * \value DeleteRepositoryAction CodeCommit DeleteRepository action.
+ * \value DescribeMergeConflictsAction CodeCommit DescribeMergeConflicts action.
  * \value DescribePullRequestEventsAction CodeCommit DescribePullRequestEvents action.
  * \value GetBlobAction CodeCommit GetBlob action.
  * \value GetBranchAction CodeCommit GetBranch action.
@@ -54,20 +58,30 @@ namespace CodeCommit {
  * \value GetDifferencesAction CodeCommit GetDifferences action.
  * \value GetFileAction CodeCommit GetFile action.
  * \value GetFolderAction CodeCommit GetFolder action.
+ * \value GetMergeCommitAction CodeCommit GetMergeCommit action.
  * \value GetMergeConflictsAction CodeCommit GetMergeConflicts action.
+ * \value GetMergeOptionsAction CodeCommit GetMergeOptions action.
  * \value GetPullRequestAction CodeCommit GetPullRequest action.
  * \value GetRepositoryAction CodeCommit GetRepository action.
  * \value GetRepositoryTriggersAction CodeCommit GetRepositoryTriggers action.
  * \value ListBranchesAction CodeCommit ListBranches action.
  * \value ListPullRequestsAction CodeCommit ListPullRequests action.
  * \value ListRepositoriesAction CodeCommit ListRepositories action.
+ * \value ListTagsForResourceAction CodeCommit ListTagsForResource action.
+ * \value MergeBranchesByFastForwardAction CodeCommit MergeBranchesByFastForward action.
+ * \value MergeBranchesBySquashAction CodeCommit MergeBranchesBySquash action.
+ * \value MergeBranchesByThreeWayAction CodeCommit MergeBranchesByThreeWay action.
  * \value MergePullRequestByFastForwardAction CodeCommit MergePullRequestByFastForward action.
+ * \value MergePullRequestBySquashAction CodeCommit MergePullRequestBySquash action.
+ * \value MergePullRequestByThreeWayAction CodeCommit MergePullRequestByThreeWay action.
  * \value PostCommentForComparedCommitAction CodeCommit PostCommentForComparedCommit action.
  * \value PostCommentForPullRequestAction CodeCommit PostCommentForPullRequest action.
  * \value PostCommentReplyAction CodeCommit PostCommentReply action.
  * \value PutFileAction CodeCommit PutFile action.
  * \value PutRepositoryTriggersAction CodeCommit PutRepositoryTriggers action.
+ * \value TagResourceAction CodeCommit TagResource action.
  * \value TestRepositoryTriggersAction CodeCommit TestRepositoryTriggers action.
+ * \value UntagResourceAction CodeCommit UntagResource action.
  * \value UpdateCommentAction CodeCommit UpdateComment action.
  * \value UpdateDefaultBranchAction CodeCommit UpdateDefaultBranch action.
  * \value UpdatePullRequestDescriptionAction CodeCommit UpdatePullRequestDescription action.

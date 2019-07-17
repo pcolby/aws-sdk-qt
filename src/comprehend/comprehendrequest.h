@@ -66,6 +66,7 @@ public:
         ListEntityRecognizersAction,
         ListKeyPhrasesDetectionJobsAction,
         ListSentimentDetectionJobsAction,
+        ListTagsForResourceAction,
         ListTopicsDetectionJobsAction,
         StartDocumentClassificationJobAction,
         StartDominantLanguageDetectionJobAction,
@@ -79,6 +80,8 @@ public:
         StopSentimentDetectionJobAction,
         StopTrainingDocumentClassifierAction,
         StopTrainingEntityRecognizerAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

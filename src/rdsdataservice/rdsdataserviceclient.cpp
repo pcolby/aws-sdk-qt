@@ -21,8 +21,18 @@
 #include "rdsdataserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchexecutestatementrequest.h"
+#include "batchexecutestatementresponse.h"
+#include "begintransactionrequest.h"
+#include "begintransactionresponse.h"
+#include "committransactionrequest.h"
+#include "committransactionresponse.h"
 #include "executesqlrequest.h"
 #include "executesqlresponse.h"
+#include "executestatementrequest.h"
+#include "executestatementresponse.h"
+#include "rollbacktransactionrequest.h"
+#include "rollbacktransactionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -46,6 +56,16 @@ namespace RDSDataService {
  * \ingroup aws-clients
  * \inmodule QtAwsRDSDataService
  *
+ *  <fullname>Amazon RDS Data Service</fullname>
+ * 
+ *  Amazon RDS provides an HTTP endpoint to run SQL statements on an Amazon Aurora Serverless DB cluster. To run these
+ *  statements, you work with the Data Service
+ * 
+ *  API>
+ * 
+ *  For more information about the Data Service API, see <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
+ *  Serverless</a> in the <i>Amazon Aurora User
  */
 
 /*!
@@ -103,14 +123,118 @@ RDSDataServiceClient::RDSDataServiceClient(
 
 /*!
  * Sends \a request to the RDSDataServiceClient service, and returns a pointer to an
+ * BatchExecuteStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Runs a batch SQL statement over an array of
+ *
+ * data>
+ *
+ * You can run bulk update and insert operations for multiple records using a DML statement with different parameter sets.
+ * Bulk operations can provide a significant performance improvement over individual insert and update
+ *
+ * operations> <b>
+ *
+ * If a call isn't part of a transaction because it doesn't include the <code>transactionID</code> parameter, changes that
+ * result from the call are committed
+ */
+BatchExecuteStatementResponse * RDSDataServiceClient::batchExecuteStatement(const BatchExecuteStatementRequest &request)
+{
+    return qobject_cast<BatchExecuteStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RDSDataServiceClient service, and returns a pointer to an
+ * BeginTransactionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a SQL
+ *
+ * transaction> <b>
+ *
+ * A transaction can run for a maximum of 24 hours. A transaction is terminated and rolled back automatically after 24
+ *
+ * hours>
+ *
+ * A transaction times out if no calls use its transaction ID in three minutes. If a transaction times out before it's
+ * committed, it's rolled back
+ *
+ * automatically>
+ *
+ * DDL statements inside a transaction cause an implicit commit. We recommend that you run each DDL statement in a separate
+ * <code>ExecuteStatement</code> call with <code>continueAfterTimeout</code>
+ */
+BeginTransactionResponse * RDSDataServiceClient::beginTransaction(const BeginTransactionRequest &request)
+{
+    return qobject_cast<BeginTransactionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RDSDataServiceClient service, and returns a pointer to an
+ * CommitTransactionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Ends a SQL transaction started with the <code>BeginTransaction</code> operation and commits the
+ */
+CommitTransactionResponse * RDSDataServiceClient::commitTransaction(const CommitTransactionRequest &request)
+{
+    return qobject_cast<CommitTransactionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RDSDataServiceClient service, and returns a pointer to an
  * ExecuteSqlResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Runs one or more SQL
+ *
+ * statements> <b>
+ *
+ * This operation is deprecated. Use the <code>BatchExecuteStatement</code> or <code>ExecuteStatement</code>
  */
 ExecuteSqlResponse * RDSDataServiceClient::executeSql(const ExecuteSqlRequest &request)
 {
     return qobject_cast<ExecuteSqlResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RDSDataServiceClient service, and returns a pointer to an
+ * ExecuteStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Runs a SQL statement against a
+ *
+ * database> <b>
+ *
+ * If a call isn't part of a transaction because it doesn't include the <code>transactionID</code> parameter, changes that
+ * result from the call are committed
+ *
+ * automatically> </b>
+ *
+ * The response size limit is 1 MB or 1,000 records. If the call returns more than 1 MB of response data or over 1,000
+ * records, the call is
+ */
+ExecuteStatementResponse * RDSDataServiceClient::executeStatement(const ExecuteStatementRequest &request)
+{
+    return qobject_cast<ExecuteStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RDSDataServiceClient service, and returns a pointer to an
+ * RollbackTransactionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Performs a rollback of a transaction. Rolling back a transaction cancels its
+ */
+RollbackTransactionResponse * RDSDataServiceClient::rollbackTransaction(const RollbackTransactionRequest &request)
+{
+    return qobject_cast<RollbackTransactionResponse *>(send(request));
 }
 
 /*!

@@ -89,12 +89,15 @@ namespace Pinpoint {
  * \value GetSmsChannelAction Pinpoint GetSmsChannel action.
  * \value GetUserEndpointsAction Pinpoint GetUserEndpoints action.
  * \value GetVoiceChannelAction Pinpoint GetVoiceChannel action.
+ * \value ListTagsForResourceAction Pinpoint ListTagsForResource action.
  * \value PhoneNumberValidateAction Pinpoint PhoneNumberValidate action.
  * \value PutEventStreamAction Pinpoint PutEventStream action.
  * \value PutEventsAction Pinpoint PutEvents action.
  * \value RemoveAttributesAction Pinpoint RemoveAttributes action.
  * \value SendMessagesAction Pinpoint SendMessages action.
  * \value SendUsersMessagesAction Pinpoint SendUsersMessages action.
+ * \value TagResourceAction Pinpoint TagResource action.
+ * \value UntagResourceAction Pinpoint UntagResource action.
  * \value UpdateAdmChannelAction Pinpoint UpdateAdmChannel action.
  * \value UpdateApnsChannelAction Pinpoint UpdateApnsChannel action.
  * \value UpdateApnsSandboxChannelAction Pinpoint UpdateApnsSandboxChannel action.

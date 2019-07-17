@@ -200,6 +200,8 @@ class GetPolicyVersionRequest;
 class GetPolicyVersionResponse;
 class GetRegistrationCodeRequest;
 class GetRegistrationCodeResponse;
+class GetStatisticsRequest;
+class GetStatisticsResponse;
 class GetTopicRuleRequest;
 class GetTopicRuleResponse;
 class GetV2LoggingOptionsRequest;
@@ -463,6 +465,7 @@ public slots:
     GetPolicyResponse * getPolicy(const GetPolicyRequest &request);
     GetPolicyVersionResponse * getPolicyVersion(const GetPolicyVersionRequest &request);
     GetRegistrationCodeResponse * getRegistrationCode(const GetRegistrationCodeRequest &request);
+    GetStatisticsResponse * getStatistics(const GetStatisticsRequest &request);
     GetTopicRuleResponse * getTopicRule(const GetTopicRuleRequest &request);
     GetV2LoggingOptionsResponse * getV2LoggingOptions(const GetV2LoggingOptionsRequest &request);
     ListActiveViolationsResponse * listActiveViolations(const ListActiveViolationsRequest &request);

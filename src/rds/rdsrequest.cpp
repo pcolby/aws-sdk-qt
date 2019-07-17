@@ -37,6 +37,7 @@ namespace RDS {
  * requests.
  *
  * \value AddRoleToDBClusterAction RDS AddRoleToDBCluster action.
+ * \value AddRoleToDBInstanceAction RDS AddRoleToDBInstance action.
  * \value AddSourceIdentifierToSubscriptionAction RDS AddSourceIdentifierToSubscription action.
  * \value AddTagsToResourceAction RDS AddTagsToResource action.
  * \value ApplyPendingMaintenanceActionAction RDS ApplyPendingMaintenanceAction action.
@@ -128,6 +129,7 @@ namespace RDS {
  * \value RebootDBInstanceAction RDS RebootDBInstance action.
  * \value RemoveFromGlobalClusterAction RDS RemoveFromGlobalCluster action.
  * \value RemoveRoleFromDBClusterAction RDS RemoveRoleFromDBCluster action.
+ * \value RemoveRoleFromDBInstanceAction RDS RemoveRoleFromDBInstance action.
  * \value RemoveSourceIdentifierFromSubscriptionAction RDS RemoveSourceIdentifierFromSubscription action.
  * \value RemoveTagsFromResourceAction RDS RemoveTagsFromResource action.
  * \value ResetDBClusterParameterGroupAction RDS ResetDBClusterParameterGroup action.
@@ -139,8 +141,10 @@ namespace RDS {
  * \value RestoreDBInstanceFromS3Action RDS RestoreDBInstanceFromS3 action.
  * \value RestoreDBInstanceToPointInTimeAction RDS RestoreDBInstanceToPointInTime action.
  * \value RevokeDBSecurityGroupIngressAction RDS RevokeDBSecurityGroupIngress action.
+ * \value StartActivityStreamAction RDS StartActivityStream action.
  * \value StartDBClusterAction RDS StartDBCluster action.
  * \value StartDBInstanceAction RDS StartDBInstance action.
+ * \value StopActivityStreamAction RDS StopActivityStream action.
  * \value StopDBClusterAction RDS StopDBCluster action.
  * \value StopDBInstanceAction RDS StopDBInstance action.
  */

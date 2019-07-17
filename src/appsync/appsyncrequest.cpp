@@ -61,8 +61,11 @@ namespace AppSync {
  * \value ListGraphqlApisAction AppSync ListGraphqlApis action.
  * \value ListResolversAction AppSync ListResolvers action.
  * \value ListResolversByFunctionAction AppSync ListResolversByFunction action.
+ * \value ListTagsForResourceAction AppSync ListTagsForResource action.
  * \value ListTypesAction AppSync ListTypes action.
  * \value StartSchemaCreationAction AppSync StartSchemaCreation action.
+ * \value TagResourceAction AppSync TagResource action.
+ * \value UntagResourceAction AppSync UntagResource action.
  * \value UpdateApiKeyAction AppSync UpdateApiKey action.
  * \value UpdateDataSourceAction AppSync UpdateDataSource action.
  * \value UpdateFunctionAction AppSync UpdateFunction action.

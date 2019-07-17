@@ -30,10 +30,30 @@ HEADERS += \
     batchdeletetableversionrequest_p.h \
     batchdeletetableversionresponse.h \
     batchdeletetableversionresponse_p.h \
+    batchgetcrawlersrequest.h \
+    batchgetcrawlersrequest_p.h \
+    batchgetcrawlersresponse.h \
+    batchgetcrawlersresponse_p.h \
+    batchgetdevendpointsrequest.h \
+    batchgetdevendpointsrequest_p.h \
+    batchgetdevendpointsresponse.h \
+    batchgetdevendpointsresponse_p.h \
+    batchgetjobsrequest.h \
+    batchgetjobsrequest_p.h \
+    batchgetjobsresponse.h \
+    batchgetjobsresponse_p.h \
     batchgetpartitionrequest.h \
     batchgetpartitionrequest_p.h \
     batchgetpartitionresponse.h \
     batchgetpartitionresponse_p.h \
+    batchgettriggersrequest.h \
+    batchgettriggersrequest_p.h \
+    batchgettriggersresponse.h \
+    batchgettriggersresponse_p.h \
+    batchgetworkflowsrequest.h \
+    batchgetworkflowsrequest_p.h \
+    batchgetworkflowsresponse.h \
+    batchgetworkflowsresponse_p.h \
     batchstopjobrunrequest.h \
     batchstopjobrunrequest_p.h \
     batchstopjobrunresponse.h \
@@ -86,6 +106,10 @@ HEADERS += \
     createuserdefinedfunctionrequest_p.h \
     createuserdefinedfunctionresponse.h \
     createuserdefinedfunctionresponse_p.h \
+    createworkflowrequest.h \
+    createworkflowrequest_p.h \
+    createworkflowresponse.h \
+    createworkflowresponse_p.h \
     deleteclassifierrequest.h \
     deleteclassifierrequest_p.h \
     deleteclassifierresponse.h \
@@ -138,6 +162,10 @@ HEADERS += \
     deleteuserdefinedfunctionrequest_p.h \
     deleteuserdefinedfunctionresponse.h \
     deleteuserdefinedfunctionresponse_p.h \
+    deleteworkflowrequest.h \
+    deleteworkflowrequest_p.h \
+    deleteworkflowresponse.h \
+    deleteworkflowresponse_p.h \
     getcatalogimportstatusrequest.h \
     getcatalogimportstatusrequest_p.h \
     getcatalogimportstatusresponse.h \
@@ -254,6 +282,10 @@ HEADERS += \
     gettableversionsrequest_p.h \
     gettableversionsresponse.h \
     gettableversionsresponse_p.h \
+    gettagsrequest.h \
+    gettagsrequest_p.h \
+    gettagsresponse.h \
+    gettagsresponse_p.h \
     gettriggerrequest.h \
     gettriggerrequest_p.h \
     gettriggerresponse.h \
@@ -270,6 +302,22 @@ HEADERS += \
     getuserdefinedfunctionsrequest_p.h \
     getuserdefinedfunctionsresponse.h \
     getuserdefinedfunctionsresponse_p.h \
+    getworkflowrequest.h \
+    getworkflowrequest_p.h \
+    getworkflowresponse.h \
+    getworkflowresponse_p.h \
+    getworkflowrunpropertiesrequest.h \
+    getworkflowrunpropertiesrequest_p.h \
+    getworkflowrunpropertiesresponse.h \
+    getworkflowrunpropertiesresponse_p.h \
+    getworkflowrunrequest.h \
+    getworkflowrunrequest_p.h \
+    getworkflowrunresponse.h \
+    getworkflowrunresponse_p.h \
+    getworkflowrunsrequest.h \
+    getworkflowrunsrequest_p.h \
+    getworkflowrunsresponse.h \
+    getworkflowrunsresponse_p.h \
     glueclient.h \
     glueclient_p.h \
     gluerequest.h \
@@ -280,6 +328,26 @@ HEADERS += \
     importcatalogtogluerequest_p.h \
     importcatalogtoglueresponse.h \
     importcatalogtoglueresponse_p.h \
+    listcrawlersrequest.h \
+    listcrawlersrequest_p.h \
+    listcrawlersresponse.h \
+    listcrawlersresponse_p.h \
+    listdevendpointsrequest.h \
+    listdevendpointsrequest_p.h \
+    listdevendpointsresponse.h \
+    listdevendpointsresponse_p.h \
+    listjobsrequest.h \
+    listjobsrequest_p.h \
+    listjobsresponse.h \
+    listjobsresponse_p.h \
+    listtriggersrequest.h \
+    listtriggersrequest_p.h \
+    listtriggersresponse.h \
+    listtriggersresponse_p.h \
+    listworkflowsrequest.h \
+    listworkflowsrequest_p.h \
+    listworkflowsresponse.h \
+    listworkflowsresponse_p.h \
     putdatacatalogencryptionsettingsrequest.h \
     putdatacatalogencryptionsettingsrequest_p.h \
     putdatacatalogencryptionsettingsresponse.h \
@@ -288,6 +356,10 @@ HEADERS += \
     putresourcepolicyrequest_p.h \
     putresourcepolicyresponse.h \
     putresourcepolicyresponse_p.h \
+    putworkflowrunpropertiesrequest.h \
+    putworkflowrunpropertiesrequest_p.h \
+    putworkflowrunpropertiesresponse.h \
+    putworkflowrunpropertiesresponse_p.h \
     resetjobbookmarkrequest.h \
     resetjobbookmarkrequest_p.h \
     resetjobbookmarkresponse.h \
@@ -308,6 +380,10 @@ HEADERS += \
     starttriggerrequest_p.h \
     starttriggerresponse.h \
     starttriggerresponse_p.h \
+    startworkflowrunrequest.h \
+    startworkflowrunrequest_p.h \
+    startworkflowrunresponse.h \
+    startworkflowrunresponse_p.h \
     stopcrawlerrequest.h \
     stopcrawlerrequest_p.h \
     stopcrawlerresponse.h \
@@ -320,6 +396,14 @@ HEADERS += \
     stoptriggerrequest_p.h \
     stoptriggerresponse.h \
     stoptriggerresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateclassifierrequest.h \
     updateclassifierrequest_p.h \
     updateclassifierresponse.h \
@@ -364,6 +448,10 @@ HEADERS += \
     updateuserdefinedfunctionrequest_p.h \
     updateuserdefinedfunctionresponse.h \
     updateuserdefinedfunctionresponse_p.h \
+    updateworkflowrequest.h \
+    updateworkflowrequest_p.h \
+    updateworkflowresponse.h \
+    updateworkflowresponse_p.h \
 
 SOURCES += \
     batchcreatepartitionrequest.cpp \
@@ -376,8 +464,18 @@ SOURCES += \
     batchdeletetableresponse.cpp \
     batchdeletetableversionrequest.cpp \
     batchdeletetableversionresponse.cpp \
+    batchgetcrawlersrequest.cpp \
+    batchgetcrawlersresponse.cpp \
+    batchgetdevendpointsrequest.cpp \
+    batchgetdevendpointsresponse.cpp \
+    batchgetjobsrequest.cpp \
+    batchgetjobsresponse.cpp \
     batchgetpartitionrequest.cpp \
     batchgetpartitionresponse.cpp \
+    batchgettriggersrequest.cpp \
+    batchgettriggersresponse.cpp \
+    batchgetworkflowsrequest.cpp \
+    batchgetworkflowsresponse.cpp \
     batchstopjobrunrequest.cpp \
     batchstopjobrunresponse.cpp \
     createclassifierrequest.cpp \
@@ -404,6 +502,8 @@ SOURCES += \
     createtriggerresponse.cpp \
     createuserdefinedfunctionrequest.cpp \
     createuserdefinedfunctionresponse.cpp \
+    createworkflowrequest.cpp \
+    createworkflowresponse.cpp \
     deleteclassifierrequest.cpp \
     deleteclassifierresponse.cpp \
     deleteconnectionrequest.cpp \
@@ -430,6 +530,8 @@ SOURCES += \
     deletetriggerresponse.cpp \
     deleteuserdefinedfunctionrequest.cpp \
     deleteuserdefinedfunctionresponse.cpp \
+    deleteworkflowrequest.cpp \
+    deleteworkflowresponse.cpp \
     getcatalogimportstatusrequest.cpp \
     getcatalogimportstatusresponse.cpp \
     getclassifierrequest.cpp \
@@ -488,6 +590,8 @@ SOURCES += \
     gettableversionresponse.cpp \
     gettableversionsrequest.cpp \
     gettableversionsresponse.cpp \
+    gettagsrequest.cpp \
+    gettagsresponse.cpp \
     gettriggerrequest.cpp \
     gettriggerresponse.cpp \
     gettriggersrequest.cpp \
@@ -496,15 +600,35 @@ SOURCES += \
     getuserdefinedfunctionresponse.cpp \
     getuserdefinedfunctionsrequest.cpp \
     getuserdefinedfunctionsresponse.cpp \
+    getworkflowrequest.cpp \
+    getworkflowresponse.cpp \
+    getworkflowrunpropertiesrequest.cpp \
+    getworkflowrunpropertiesresponse.cpp \
+    getworkflowrunrequest.cpp \
+    getworkflowrunresponse.cpp \
+    getworkflowrunsrequest.cpp \
+    getworkflowrunsresponse.cpp \
     glueclient.cpp \
     gluerequest.cpp \
     glueresponse.cpp \
     importcatalogtogluerequest.cpp \
     importcatalogtoglueresponse.cpp \
+    listcrawlersrequest.cpp \
+    listcrawlersresponse.cpp \
+    listdevendpointsrequest.cpp \
+    listdevendpointsresponse.cpp \
+    listjobsrequest.cpp \
+    listjobsresponse.cpp \
+    listtriggersrequest.cpp \
+    listtriggersresponse.cpp \
+    listworkflowsrequest.cpp \
+    listworkflowsresponse.cpp \
     putdatacatalogencryptionsettingsrequest.cpp \
     putdatacatalogencryptionsettingsresponse.cpp \
     putresourcepolicyrequest.cpp \
     putresourcepolicyresponse.cpp \
+    putworkflowrunpropertiesrequest.cpp \
+    putworkflowrunpropertiesresponse.cpp \
     resetjobbookmarkrequest.cpp \
     resetjobbookmarkresponse.cpp \
     startcrawlerrequest.cpp \
@@ -515,12 +639,18 @@ SOURCES += \
     startjobrunresponse.cpp \
     starttriggerrequest.cpp \
     starttriggerresponse.cpp \
+    startworkflowrunrequest.cpp \
+    startworkflowrunresponse.cpp \
     stopcrawlerrequest.cpp \
     stopcrawlerresponse.cpp \
     stopcrawlerschedulerequest.cpp \
     stopcrawlerscheduleresponse.cpp \
     stoptriggerrequest.cpp \
     stoptriggerresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateclassifierrequest.cpp \
     updateclassifierresponse.cpp \
     updateconnectionrequest.cpp \
@@ -543,5 +673,7 @@ SOURCES += \
     updatetriggerresponse.cpp \
     updateuserdefinedfunctionrequest.cpp \
     updateuserdefinedfunctionresponse.cpp \
+    updateworkflowrequest.cpp \
+    updateworkflowresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -50,6 +50,10 @@ HEADERS += \
     createplayersessionsrequest_p.h \
     createplayersessionsresponse.h \
     createplayersessionsresponse_p.h \
+    createscriptrequest.h \
+    createscriptrequest_p.h \
+    createscriptresponse.h \
+    createscriptresponse_p.h \
     createvpcpeeringauthorizationrequest.h \
     createvpcpeeringauthorizationrequest_p.h \
     createvpcpeeringauthorizationresponse.h \
@@ -78,10 +82,18 @@ HEADERS += \
     deletematchmakingconfigurationrequest_p.h \
     deletematchmakingconfigurationresponse.h \
     deletematchmakingconfigurationresponse_p.h \
+    deletematchmakingrulesetrequest.h \
+    deletematchmakingrulesetrequest_p.h \
+    deletematchmakingrulesetresponse.h \
+    deletematchmakingrulesetresponse_p.h \
     deletescalingpolicyrequest.h \
     deletescalingpolicyrequest_p.h \
     deletescalingpolicyresponse.h \
     deletescalingpolicyresponse_p.h \
+    deletescriptrequest.h \
+    deletescriptrequest_p.h \
+    deletescriptresponse.h \
+    deletescriptresponse_p.h \
     deletevpcpeeringauthorizationrequest.h \
     deletevpcpeeringauthorizationrequest_p.h \
     deletevpcpeeringauthorizationresponse.h \
@@ -166,6 +178,10 @@ HEADERS += \
     describescalingpoliciesrequest_p.h \
     describescalingpoliciesresponse.h \
     describescalingpoliciesresponse_p.h \
+    describescriptrequest.h \
+    describescriptrequest_p.h \
+    describescriptresponse.h \
+    describescriptresponse_p.h \
     describevpcpeeringauthorizationsrequest.h \
     describevpcpeeringauthorizationsrequest_p.h \
     describevpcpeeringauthorizationsresponse.h \
@@ -200,6 +216,10 @@ HEADERS += \
     listfleetsrequest_p.h \
     listfleetsresponse.h \
     listfleetsresponse_p.h \
+    listscriptsrequest.h \
+    listscriptsrequest_p.h \
+    listscriptsresponse.h \
+    listscriptsresponse_p.h \
     putscalingpolicyrequest.h \
     putscalingpolicyrequest_p.h \
     putscalingpolicyresponse.h \
@@ -280,6 +300,10 @@ HEADERS += \
     updateruntimeconfigurationrequest_p.h \
     updateruntimeconfigurationresponse.h \
     updateruntimeconfigurationresponse_p.h \
+    updatescriptrequest.h \
+    updatescriptrequest_p.h \
+    updatescriptresponse.h \
+    updatescriptresponse_p.h \
     validatematchmakingrulesetrequest.h \
     validatematchmakingrulesetrequest_p.h \
     validatematchmakingrulesetresponse.h \
@@ -306,6 +330,8 @@ SOURCES += \
     createplayersessionresponse.cpp \
     createplayersessionsrequest.cpp \
     createplayersessionsresponse.cpp \
+    createscriptrequest.cpp \
+    createscriptresponse.cpp \
     createvpcpeeringauthorizationrequest.cpp \
     createvpcpeeringauthorizationresponse.cpp \
     createvpcpeeringconnectionrequest.cpp \
@@ -320,8 +346,12 @@ SOURCES += \
     deletegamesessionqueueresponse.cpp \
     deletematchmakingconfigurationrequest.cpp \
     deletematchmakingconfigurationresponse.cpp \
+    deletematchmakingrulesetrequest.cpp \
+    deletematchmakingrulesetresponse.cpp \
     deletescalingpolicyrequest.cpp \
     deletescalingpolicyresponse.cpp \
+    deletescriptrequest.cpp \
+    deletescriptresponse.cpp \
     deletevpcpeeringauthorizationrequest.cpp \
     deletevpcpeeringauthorizationresponse.cpp \
     deletevpcpeeringconnectionrequest.cpp \
@@ -364,6 +394,8 @@ SOURCES += \
     describeruntimeconfigurationresponse.cpp \
     describescalingpoliciesrequest.cpp \
     describescalingpoliciesresponse.cpp \
+    describescriptrequest.cpp \
+    describescriptresponse.cpp \
     describevpcpeeringauthorizationsrequest.cpp \
     describevpcpeeringauthorizationsresponse.cpp \
     describevpcpeeringconnectionsrequest.cpp \
@@ -381,6 +413,8 @@ SOURCES += \
     listbuildsresponse.cpp \
     listfleetsrequest.cpp \
     listfleetsresponse.cpp \
+    listscriptsrequest.cpp \
+    listscriptsresponse.cpp \
     putscalingpolicyrequest.cpp \
     putscalingpolicyresponse.cpp \
     requestuploadcredentialsrequest.cpp \
@@ -421,6 +455,8 @@ SOURCES += \
     updatematchmakingconfigurationresponse.cpp \
     updateruntimeconfigurationrequest.cpp \
     updateruntimeconfigurationresponse.cpp \
+    updatescriptrequest.cpp \
+    updatescriptresponse.cpp \
     validatematchmakingrulesetrequest.cpp \
     validatematchmakingrulesetresponse.cpp \
 

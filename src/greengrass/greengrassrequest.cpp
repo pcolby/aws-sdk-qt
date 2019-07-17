@@ -110,9 +110,12 @@ namespace Greengrass {
  * \value ListResourceDefinitionsAction Greengrass ListResourceDefinitions action.
  * \value ListSubscriptionDefinitionVersionsAction Greengrass ListSubscriptionDefinitionVersions action.
  * \value ListSubscriptionDefinitionsAction Greengrass ListSubscriptionDefinitions action.
+ * \value ListTagsForResourceAction Greengrass ListTagsForResource action.
  * \value ResetDeploymentsAction Greengrass ResetDeployments action.
  * \value StartBulkDeploymentAction Greengrass StartBulkDeployment action.
  * \value StopBulkDeploymentAction Greengrass StopBulkDeployment action.
+ * \value TagResourceAction Greengrass TagResource action.
+ * \value UntagResourceAction Greengrass UntagResource action.
  * \value UpdateConnectivityInfoAction Greengrass UpdateConnectivityInfo action.
  * \value UpdateConnectorDefinitionAction Greengrass UpdateConnectorDefinition action.
  * \value UpdateCoreDefinitionAction Greengrass UpdateCoreDefinition action.

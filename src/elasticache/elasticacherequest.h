@@ -39,6 +39,8 @@ public:
     enum Action {
         AddTagsToResourceAction,
         AuthorizeCacheSecurityGroupIngressAction,
+        BatchApplyUpdateActionAction,
+        BatchStopUpdateActionAction,
         CopySnapshotAction,
         CreateCacheClusterAction,
         CreateCacheParameterGroupAction,
@@ -64,7 +66,9 @@ public:
         DescribeReplicationGroupsAction,
         DescribeReservedCacheNodesAction,
         DescribeReservedCacheNodesOfferingsAction,
+        DescribeServiceUpdatesAction,
         DescribeSnapshotsAction,
+        DescribeUpdateActionsAction,
         IncreaseReplicaCountAction,
         ListAllowedNodeTypeModificationsAction,
         ListTagsForResourceAction,

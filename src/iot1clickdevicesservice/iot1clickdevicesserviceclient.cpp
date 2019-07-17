@@ -37,8 +37,14 @@
 #include "listdeviceeventsresponse.h"
 #include "listdevicesrequest.h"
 #include "listdevicesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "unclaimdevicerequest.h"
 #include "unclaimdeviceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatedevicestaterequest.h"
 #include "updatedevicestateresponse.h"
 
@@ -64,7 +70,8 @@ namespace IoT1ClickDevicesService {
  * \ingroup aws-clients
  * \inmodule QtAwsIoT1ClickDevicesService
  *
- *  Stub
+ *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
+ *  responses, and errors for the supported web services
  */
 
 /*!
@@ -233,6 +240,34 @@ ListDevicesResponse * IoT1ClickDevicesServiceClient::listDevices(const ListDevic
 
 /*!
  * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags associated with the specified resource
+ */
+ListTagsForResourceResponse * IoT1ClickDevicesServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates the tags associated with the resource ARN. See <a
+ * href="https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-appendix.html#1click-limits">AWS IoT 1-Click
+ * Service Limits</a> for the maximum number of tags allowed per
+ */
+TagResourceResponse * IoT1ClickDevicesServiceClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
  * UnclaimDeviceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -242,6 +277,19 @@ ListDevicesResponse * IoT1ClickDevicesServiceClient::listDevices(const ListDevic
 UnclaimDeviceResponse * IoT1ClickDevicesServiceClient::unclaimDevice(const UnclaimDeviceRequest &request)
 {
     return qobject_cast<UnclaimDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoT1ClickDevicesServiceClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Using tag keys, deletes the tags (key/value pairs) associated with the specified resource
+ */
+UntagResourceResponse * IoT1ClickDevicesServiceClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

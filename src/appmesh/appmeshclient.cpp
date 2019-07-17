@@ -29,6 +29,8 @@
 #include "createvirtualnoderesponse.h"
 #include "createvirtualrouterrequest.h"
 #include "createvirtualrouterresponse.h"
+#include "createvirtualservicerequest.h"
+#include "createvirtualserviceresponse.h"
 #include "deletemeshrequest.h"
 #include "deletemeshresponse.h"
 #include "deleterouterequest.h"
@@ -37,6 +39,8 @@
 #include "deletevirtualnoderesponse.h"
 #include "deletevirtualrouterrequest.h"
 #include "deletevirtualrouterresponse.h"
+#include "deletevirtualservicerequest.h"
+#include "deletevirtualserviceresponse.h"
 #include "describemeshrequest.h"
 #include "describemeshresponse.h"
 #include "describerouterequest.h"
@@ -45,20 +49,34 @@
 #include "describevirtualnoderesponse.h"
 #include "describevirtualrouterrequest.h"
 #include "describevirtualrouterresponse.h"
+#include "describevirtualservicerequest.h"
+#include "describevirtualserviceresponse.h"
 #include "listmeshesrequest.h"
 #include "listmeshesresponse.h"
 #include "listroutesrequest.h"
 #include "listroutesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listvirtualnodesrequest.h"
 #include "listvirtualnodesresponse.h"
 #include "listvirtualroutersrequest.h"
 #include "listvirtualroutersresponse.h"
+#include "listvirtualservicesrequest.h"
+#include "listvirtualservicesresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
+#include "updatemeshrequest.h"
+#include "updatemeshresponse.h"
 #include "updaterouterequest.h"
 #include "updaterouteresponse.h"
 #include "updatevirtualnoderequest.h"
 #include "updatevirtualnoderesponse.h"
 #include "updatevirtualrouterrequest.h"
 #include "updatevirtualrouterresponse.h"
+#include "updatevirtualservicerequest.h"
+#include "updatevirtualserviceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -82,24 +100,24 @@ namespace AppMesh {
  * \ingroup aws-clients
  * \inmodule QtAwsAppMesh
  *
- *  AWS App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and control containerized
- *  microservices. App Mesh standardizes how your microservices communicate, giving you end-to-end visibility and helping to
- *  ensure high-availability for your
+ *  AWS App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and control microservices. App
+ *  Mesh standardizes how your microservices communicate, giving you end-to-end visibility and helping to ensure high
+ *  availability for your
  * 
  *  applications>
  * 
  *  App Mesh gives you consistent visibility and network traffic controls for every microservice in an application. You can
- *  use App Mesh with Amazon ECS (using the Amazon EC2 launch type), Amazon EKS, and Kubernetes on
+ *  use App Mesh with AWS Fargate, Amazon ECS, Amazon EKS, Kubernetes on AWS, and Amazon
  * 
- *  AWS> <note>
+ *  EC2> <note>
  * 
- *  App Mesh supports containerized microservice applications that use service discovery naming for their components. To use
- *  App Mesh, you must have a containerized application running on Amazon EC2 instances, hosted in either Amazon ECS, Amazon
- *  EKS, or Kubernetes on AWS. For more information about service discovery on Amazon ECS, see <a
- *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguideservice-discovery.html">Service Discovery</a> in the
- *  <i>Amazon Elastic Container Service Developer Guide</i>. Kubernetes <code>kube-dns</code> is supported. For more
- *  information, see <a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/">DNS for Services and
- *  Pods</a> in the Kubernetes
+ *  App Mesh supports microservice applications that use service discovery naming for their components. For more information
+ *  about service discovery on Amazon ECS, see <a
+ *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a> in the
+ *  <i>Amazon Elastic Container Service Developer Guide</i>. Kubernetes <code>kube-dns</code> and <code>coredns</code> are
+ *  supported. For more information, see <a
+ *  href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/">DNS for Services and Pods</a> in the
+ *  Kubernetes
  */
 
 /*!
@@ -118,7 +136,7 @@ AppMeshClient::AppMeshClient(
 : QtAws::Core::AwsAbstractClient(new AppMeshClientPrivate(this), parent)
 {
     Q_D(AppMeshClient);
-    d->apiVersion = QStringLiteral("2018-10-01");
+    d->apiVersion = QStringLiteral("2019-01-25");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("appmesh");
     d->networkAccessManager = manager;
@@ -146,7 +164,7 @@ AppMeshClient::AppMeshClient(
 : QtAws::Core::AwsAbstractClient(new AppMeshClientPrivate(this), parent)
 {
     Q_D(AppMeshClient);
-    d->apiVersion = QStringLiteral("2018-10-01");
+    d->apiVersion = QStringLiteral("2019-01-25");
     d->credentials = credentials;
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("appmesh");
@@ -161,13 +179,12 @@ AppMeshClient::AppMeshClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new service mesh. A service mesh is a logical boundary for network traffic between the services that reside
- * within
+ * Creates a service mesh. A service mesh is a logical boundary for network traffic between the services that reside within
  *
  * it>
  *
- * After you create your service mesh, you can create virtual nodes, virtual routers, and routes to distribute traffic
- * between the applications in your
+ * After you create your service mesh, you can create virtual services, virtual nodes, virtual routers, and routes to
+ * distribute traffic between the applications in your
  */
 CreateMeshResponse * AppMeshClient::createMesh(const CreateMeshRequest &request)
 {
@@ -180,13 +197,13 @@ CreateMeshResponse * AppMeshClient::createMesh(const CreateMeshRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new route that is associated with a virtual
+ * Creates a route that is associated with a virtual
  *
  * router>
  *
  * You can use the <code>prefix</code> parameter in your route specification for path-based routing of requests. For
- * example, if your virtual router service name is <code>my-service.local</code>, and you want the route to match requests
- * to <code>my-service.local/metrics</code>, then your prefix should be
+ * example, if your virtual service name is <code>my-service.local</code> and you want the route to match requests to
+ * <code>my-service.local/metrics</code>, your prefix should be
  *
  * <code>/metrics</code>>
  *
@@ -203,12 +220,12 @@ CreateRouteResponse * AppMeshClient::createRoute(const CreateRouteRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new virtual node within a service
+ * Creates a virtual node within a service
  *
  * mesh>
  *
- * A virtual node acts as logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes
- * deployment. When you create a virtual node, you must specify the DNS service discovery name for your task
+ * A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes
+ * deployment. When you create a virtual node, you can specify the service discovery information for your task
  *
  * group>
  *
@@ -218,8 +235,8 @@ CreateRouteResponse * AppMeshClient::createRoute(const CreateRouteRequest &reque
  * <code>backend</code>>
  *
  * The response metadata for your new virtual node contains the <code>arn</code> that is associated with the virtual node.
- * Set this value (either the full ARN or the truncated resource name, for example,
- * <code>mesh/default/virtualNode/simpleapp</code>, as the <code>APPMESH_VIRTUAL_NODE_NAME</code> environment variable for
+ * Set this value (either the full ARN or the truncated resource name: for example,
+ * <code>mesh/default/virtualNode/simpleapp</code>) as the <code>APPMESH_VIRTUAL_NODE_NAME</code> environment variable for
  * your task group's Envoy proxy container in your task definition or pod spec. This is then mapped to the
  * <code>node.id</code> and <code>node.cluster</code> Envoy
  *
@@ -239,16 +256,39 @@ CreateVirtualNodeResponse * AppMeshClient::createVirtualNode(const CreateVirtual
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new virtual router within a service
+ * Creates a virtual router within a service
  *
  * mesh>
  *
- * Virtual routers handle traffic for one or more service names within your mesh. After you create your virtual router,
+ * Any inbound traffic that your virtual router expects should be specified as a <code>listener</code>.
+ *
+ * </p
+ *
+ * Virtual routers handle traffic for one or more virtual services within your mesh. After you create your virtual router,
  * create and associate routes for your virtual router that direct incoming requests to different virtual
  */
 CreateVirtualRouterResponse * AppMeshClient::createVirtualRouter(const CreateVirtualRouterRequest &request)
 {
     return qobject_cast<CreateVirtualRouterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * CreateVirtualServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a virtual service within a service
+ *
+ * mesh>
+ *
+ * A virtual service is an abstraction of a real service that is provided by a virtual node directly or indirectly by means
+ * of a virtual router. Dependent services call your virtual service by its <code>virtualServiceName</code>, and those
+ * requests are routed to the virtual node or virtual router that is specified as the provider for the virtual
+ */
+CreateVirtualServiceResponse * AppMeshClient::createVirtualService(const CreateVirtualServiceRequest &request)
+{
+    return qobject_cast<CreateVirtualServiceResponse *>(send(request));
 }
 
 /*!
@@ -261,8 +301,8 @@ CreateVirtualRouterResponse * AppMeshClient::createVirtualRouter(const CreateVir
  *
  * mesh>
  *
- * You must delete all resources (routes, virtual routers, virtual nodes) in the service mesh before you can delete the
- * mesh
+ * You must delete all resources (virtual services, routes, virtual routers, and virtual nodes) in the service mesh before
+ * you can delete the mesh
  */
 DeleteMeshResponse * AppMeshClient::deleteMesh(const DeleteMeshRequest &request)
 {
@@ -289,6 +329,11 @@ DeleteRouteResponse * AppMeshClient::deleteRoute(const DeleteRouteRequest &reque
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an existing virtual
+ *
+ * node>
+ *
+ * You must delete any virtual services that list a virtual node as a service provider before you can delete the virtual
+ * node
  */
 DeleteVirtualNodeResponse * AppMeshClient::deleteVirtualNode(const DeleteVirtualNodeRequest &request)
 {
@@ -314,11 +359,24 @@ DeleteVirtualRouterResponse * AppMeshClient::deleteVirtualRouter(const DeleteVir
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * DeleteVirtualServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing virtual
+ */
+DeleteVirtualServiceResponse * AppMeshClient::deleteVirtualService(const DeleteVirtualServiceRequest &request)
+{
+    return qobject_cast<DeleteVirtualServiceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * DescribeMeshResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes an existing
+ * Describes an existing service
  */
 DescribeMeshResponse * AppMeshClient::describeMesh(const DescribeMeshRequest &request)
 {
@@ -366,6 +424,19 @@ DescribeVirtualRouterResponse * AppMeshClient::describeVirtualRouter(const Descr
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * DescribeVirtualServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an existing virtual
+ */
+DescribeVirtualServiceResponse * AppMeshClient::describeVirtualService(const DescribeVirtualServiceRequest &request)
+{
+    return qobject_cast<DescribeVirtualServiceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * ListMeshesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -392,6 +463,19 @@ ListRoutesResponse * AppMeshClient::listRoutes(const ListRoutesRequest &request)
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the tags for an App Mesh
+ */
+ListTagsForResourceResponse * AppMeshClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * ListVirtualNodesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -414,6 +498,60 @@ ListVirtualNodesResponse * AppMeshClient::listVirtualNodes(const ListVirtualNode
 ListVirtualRoutersResponse * AppMeshClient::listVirtualRouters(const ListVirtualRoutersRequest &request)
 {
     return qobject_cast<ListVirtualRoutersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * ListVirtualServicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of existing virtual services in a service
+ */
+ListVirtualServicesResponse * AppMeshClient::listVirtualServices(const ListVirtualServicesRequest &request)
+{
+    return qobject_cast<ListVirtualServicesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource
+ * aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags associated with
+ * that resource are also
+ */
+TagResourceResponse * AppMeshClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes specified tags from a
+ */
+UntagResourceResponse * AppMeshClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * UpdateMeshResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing service
+ */
+UpdateMeshResponse * AppMeshClient::updateMesh(const UpdateMeshRequest &request)
+{
+    return qobject_cast<UpdateMeshResponse *>(send(request));
 }
 
 /*!
@@ -453,6 +591,19 @@ UpdateVirtualNodeResponse * AppMeshClient::updateVirtualNode(const UpdateVirtual
 UpdateVirtualRouterResponse * AppMeshClient::updateVirtualRouter(const UpdateVirtualRouterRequest &request)
 {
     return qobject_cast<UpdateVirtualRouterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * UpdateVirtualServiceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing virtual service in a specified service
+ */
+UpdateVirtualServiceResponse * AppMeshClient::updateVirtualService(const UpdateVirtualServiceRequest &request)
+{
+    return qobject_cast<UpdateVirtualServiceResponse *>(send(request));
 }
 
 /*!

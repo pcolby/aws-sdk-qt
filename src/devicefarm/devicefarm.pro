@@ -204,6 +204,10 @@ HEADERS += \
     listsuitesrequest_p.h \
     listsuitesresponse.h \
     listsuitesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtestsrequest.h \
     listtestsrequest_p.h \
     listtestsresponse.h \
@@ -244,6 +248,14 @@ HEADERS += \
     stoprunrequest_p.h \
     stoprunresponse.h \
     stoprunresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatedeviceinstancerequest.h \
     updatedeviceinstancerequest_p.h \
     updatedeviceinstanceresponse.h \
@@ -371,6 +383,8 @@ SOURCES += \
     listsamplesresponse.cpp \
     listsuitesrequest.cpp \
     listsuitesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtestsrequest.cpp \
     listtestsresponse.cpp \
     listuniqueproblemsrequest.cpp \
@@ -391,6 +405,10 @@ SOURCES += \
     stopremoteaccesssessionresponse.cpp \
     stoprunrequest.cpp \
     stoprunresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatedeviceinstancerequest.cpp \
     updatedeviceinstanceresponse.cpp \
     updatedevicepoolrequest.cpp \

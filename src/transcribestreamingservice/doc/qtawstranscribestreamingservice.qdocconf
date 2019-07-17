@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsTranscribeStreamingService
+description = AWS TranscribeStreamingService SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawstranscribestreamingservice-index.html"
+navigation.landingtitle = "TranscribeStreamingService"
+navigation.cppclassespage = "TranscribeStreamingService C++ Classes"

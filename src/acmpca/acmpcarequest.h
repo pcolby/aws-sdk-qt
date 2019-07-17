@@ -39,7 +39,9 @@ public:
     enum Action {
         CreateCertificateAuthorityAction,
         CreateCertificateAuthorityAuditReportAction,
+        CreatePermissionAction,
         DeleteCertificateAuthorityAction,
+        DeletePermissionAction,
         DescribeCertificateAuthorityAction,
         DescribeCertificateAuthorityAuditReportAction,
         GetCertificateAction,
@@ -48,6 +50,7 @@ public:
         ImportCertificateAuthorityCertificateAction,
         IssueCertificateAction,
         ListCertificateAuthoritiesAction,
+        ListPermissionsAction,
         ListTagsAction,
         RestoreCertificateAuthorityAction,
         RevokeCertificateAction,

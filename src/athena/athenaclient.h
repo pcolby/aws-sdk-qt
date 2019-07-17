@@ -34,22 +34,38 @@ class BatchGetQueryExecutionRequest;
 class BatchGetQueryExecutionResponse;
 class CreateNamedQueryRequest;
 class CreateNamedQueryResponse;
+class CreateWorkGroupRequest;
+class CreateWorkGroupResponse;
 class DeleteNamedQueryRequest;
 class DeleteNamedQueryResponse;
+class DeleteWorkGroupRequest;
+class DeleteWorkGroupResponse;
 class GetNamedQueryRequest;
 class GetNamedQueryResponse;
 class GetQueryExecutionRequest;
 class GetQueryExecutionResponse;
 class GetQueryResultsRequest;
 class GetQueryResultsResponse;
+class GetWorkGroupRequest;
+class GetWorkGroupResponse;
 class ListNamedQueriesRequest;
 class ListNamedQueriesResponse;
 class ListQueryExecutionsRequest;
 class ListQueryExecutionsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class ListWorkGroupsRequest;
+class ListWorkGroupsResponse;
 class StartQueryExecutionRequest;
 class StartQueryExecutionResponse;
 class StopQueryExecutionRequest;
 class StopQueryExecutionResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
+class UpdateWorkGroupRequest;
+class UpdateWorkGroupResponse;
 
 class QTAWS_EXPORT AthenaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -70,14 +86,22 @@ public slots:
     BatchGetNamedQueryResponse * batchGetNamedQuery(const BatchGetNamedQueryRequest &request);
     BatchGetQueryExecutionResponse * batchGetQueryExecution(const BatchGetQueryExecutionRequest &request);
     CreateNamedQueryResponse * createNamedQuery(const CreateNamedQueryRequest &request);
+    CreateWorkGroupResponse * createWorkGroup(const CreateWorkGroupRequest &request);
     DeleteNamedQueryResponse * deleteNamedQuery(const DeleteNamedQueryRequest &request);
+    DeleteWorkGroupResponse * deleteWorkGroup(const DeleteWorkGroupRequest &request);
     GetNamedQueryResponse * getNamedQuery(const GetNamedQueryRequest &request);
     GetQueryExecutionResponse * getQueryExecution(const GetQueryExecutionRequest &request);
     GetQueryResultsResponse * getQueryResults(const GetQueryResultsRequest &request);
+    GetWorkGroupResponse * getWorkGroup(const GetWorkGroupRequest &request);
     ListNamedQueriesResponse * listNamedQueries(const ListNamedQueriesRequest &request);
     ListQueryExecutionsResponse * listQueryExecutions(const ListQueryExecutionsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ListWorkGroupsResponse * listWorkGroups(const ListWorkGroupsRequest &request);
     StartQueryExecutionResponse * startQueryExecution(const StartQueryExecutionRequest &request);
     StopQueryExecutionResponse * stopQueryExecution(const StopQueryExecutionRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateWorkGroupResponse * updateWorkGroup(const UpdateWorkGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(AthenaClient)

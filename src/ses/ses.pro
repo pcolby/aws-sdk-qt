@@ -178,6 +178,10 @@ HEADERS += \
     listverifiedemailaddressesrequest_p.h \
     listverifiedemailaddressesresponse.h \
     listverifiedemailaddressesresponse_p.h \
+    putconfigurationsetdeliveryoptionsrequest.h \
+    putconfigurationsetdeliveryoptionsrequest_p.h \
+    putconfigurationsetdeliveryoptionsresponse.h \
+    putconfigurationsetdeliveryoptionsresponse_p.h \
     putidentitypolicyrequest.h \
     putidentitypolicyrequest_p.h \
     putidentitypolicyresponse.h \
@@ -382,6 +386,8 @@ SOURCES += \
     listtemplatesresponse.cpp \
     listverifiedemailaddressesrequest.cpp \
     listverifiedemailaddressesresponse.cpp \
+    putconfigurationsetdeliveryoptionsrequest.cpp \
+    putconfigurationsetdeliveryoptionsresponse.cpp \
     putidentitypolicyrequest.cpp \
     putidentitypolicyresponse.cpp \
     reorderreceiptrulesetrequest.cpp \

@@ -14,6 +14,10 @@ HEADERS += \
     batchdescribesimulationjobrequest_p.h \
     batchdescribesimulationjobresponse.h \
     batchdescribesimulationjobresponse_p.h \
+    canceldeploymentjobrequest.h \
+    canceldeploymentjobrequest_p.h \
+    canceldeploymentjobresponse.h \
+    canceldeploymentjobresponse_p.h \
     cancelsimulationjobrequest.h \
     cancelsimulationjobrequest_p.h \
     cancelsimulationjobresponse.h \
@@ -118,6 +122,10 @@ HEADERS += \
     listsimulationjobsrequest_p.h \
     listsimulationjobsresponse.h \
     listsimulationjobsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     registerrobotrequest.h \
     registerrobotrequest_p.h \
     registerrobotresponse.h \
@@ -136,6 +144,14 @@ HEADERS += \
     syncdeploymentjobrequest_p.h \
     syncdeploymentjobresponse.h \
     syncdeploymentjobresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updaterobotapplicationrequest.h \
     updaterobotapplicationrequest_p.h \
     updaterobotapplicationresponse.h \
@@ -148,6 +164,8 @@ HEADERS += \
 SOURCES += \
     batchdescribesimulationjobrequest.cpp \
     batchdescribesimulationjobresponse.cpp \
+    canceldeploymentjobrequest.cpp \
+    canceldeploymentjobresponse.cpp \
     cancelsimulationjobrequest.cpp \
     cancelsimulationjobresponse.cpp \
     createdeploymentjobrequest.cpp \
@@ -200,6 +218,8 @@ SOURCES += \
     listsimulationapplicationsresponse.cpp \
     listsimulationjobsrequest.cpp \
     listsimulationjobsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     registerrobotrequest.cpp \
     registerrobotresponse.cpp \
     restartsimulationjobrequest.cpp \
@@ -209,6 +229,10 @@ SOURCES += \
     robomakerresponse.cpp \
     syncdeploymentjobrequest.cpp \
     syncdeploymentjobresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updaterobotapplicationrequest.cpp \
     updaterobotapplicationresponse.cpp \
     updatesimulationapplicationrequest.cpp \

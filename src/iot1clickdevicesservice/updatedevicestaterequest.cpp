@@ -31,7 +31,8 @@ namespace IoT1ClickDevicesService {
  *
  * \inmodule QtAwsIoT1ClickDevicesService
  *
- *  Stub
+ *  Describes all of the AWS IoT 1-Click device-related API operations for the service. Also provides sample requests,
+ *  responses, and errors for the supported web services
  *
  * \sa IoT1ClickDevicesServiceClient::updateDeviceState
  */

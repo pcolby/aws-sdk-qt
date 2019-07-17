@@ -10,6 +10,7 @@ SUBDIRS += \
     apigatewaymanagementapi/apigatewaymanagementapi.pro \
     apigatewayv2/apigatewayv2.pro \
     applicationautoscaling/applicationautoscaling.pro \
+    applicationinsights/applicationinsights.pro \
     appmesh/appmesh.pro \
     appstream/appstream.pro \
     appsync/appsync.pro \
@@ -17,6 +18,7 @@ SUBDIRS += \
     autoscaling/autoscaling.pro \
     autoscalingplans/autoscalingplans.pro \
     migrationhub/migrationhub.pro \
+    backup/backup.pro \
     batch/batch.pro \
     budgets/budgets.pro \
     costexplorer/costexplorer.pro \
@@ -51,10 +53,12 @@ SUBDIRS += \
     applicationdiscoveryservice/applicationdiscoveryservice.pro \
     dlm/dlm.pro \
     databasemigrationservice/databasemigrationservice.pro \
+    docdb/docdb.pro \
     directoryservice/directoryservice.pro \
     dynamodb/dynamodb.pro \
     dynamodbstreams/dynamodbstreams.pro \
     ec2/ec2.pro \
+    ec2instanceconnect/ec2instanceconnect.pro \
     ecr/ecr.pro \
     ecs/ecs.pro \
     eks/eks.pro \
@@ -68,6 +72,7 @@ SUBDIRS += \
     ses/ses.pro \
     marketplaceentitlementservice/marketplaceentitlementservice.pro \
     elasticsearchservice/elasticsearchservice.pro \
+    eventbridge/eventbridge.pro \
     cloudwatchevents/cloudwatchevents.pro \
     firehose/firehose.pro \
     fms/fms.pro \
@@ -77,6 +82,7 @@ SUBDIRS += \
     globalaccelerator/globalaccelerator.pro \
     glue/glue.pro \
     greengrass/greengrass.pro \
+    groundstation/groundstation.pro \
     guardduty/guardduty.pro \
     health/health.pro \
     iam/iam.pro \
@@ -88,6 +94,9 @@ SUBDIRS += \
     iot1clickdevicesservice/iot1clickdevicesservice.pro \
     iot1clickprojects/iot1clickprojects.pro \
     iotanalytics/iotanalytics.pro \
+    iotevents/iotevents.pro \
+    ioteventsdata/ioteventsdata.pro \
+    iotthingsgraph/iotthingsgraph.pro \
     kafka/kafka.pro \
     kinesis/kinesis.pro \
     kinesisvideoarchivedmedia/kinesisvideoarchivedmedia.pro \
@@ -103,11 +112,13 @@ SUBDIRS += \
     cloudwatchlogs/cloudwatchlogs.pro \
     machinelearning/machinelearning.pro \
     macie/macie.pro \
+    managedblockchain/managedblockchain.pro \
     marketplacecommerceanalytics/marketplacecommerceanalytics.pro \
     mediaconnect/mediaconnect.pro \
     mediaconvert/mediaconvert.pro \
     medialive/medialive.pro \
     mediapackage/mediapackage.pro \
+    mediapackagevod/mediapackagevod.pro \
     mediastore/mediastore.pro \
     mediastoredata/mediastoredata.pro \
     mediatailor/mediatailor.pro \
@@ -121,6 +132,9 @@ SUBDIRS += \
     opsworks/opsworks.pro \
     opsworkscm/opsworkscm.pro \
     organizations/organizations.pro \
+    personalize/personalize.pro \
+    personalizeevents/personalizeevents.pro \
+    personalizeruntime/personalizeruntime.pro \
     pi/pi.pro \
     pinpoint/pinpoint.pro \
     pinpointemail/pinpointemail.pro \
@@ -147,6 +161,7 @@ SUBDIRS += \
     secretsmanager/secretsmanager.pro \
     securityhub/securityhub.pro \
     serverlessapplicationrepository/serverlessapplicationrepository.pro \
+    servicequotas/servicequotas.pro \
     servicecatalog/servicecatalog.pro \
     servicediscovery/servicediscovery.pro \
     shield/shield.pro \
@@ -162,12 +177,15 @@ SUBDIRS += \
     sts/sts.pro \
     support/support.pro \
     swf/swf.pro \
+    textract/textract.pro \
     transcribeservice/transcribeservice.pro \
+    transcribestreamingservice/transcribestreamingservice.pro \
     transfer/transfer.pro \
     translate/translate.pro \
     waf/waf.pro \
     wafregional/wafregional.pro \
     workdocs/workdocs.pro \
+    worklink/worklink.pro \
     workmail/workmail.pro \
     workspaces/workspaces.pro \
     xray/xray.pro \

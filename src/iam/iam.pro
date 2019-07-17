@@ -210,6 +210,10 @@ HEADERS += \
     generatecredentialreportrequest_p.h \
     generatecredentialreportresponse.h \
     generatecredentialreportresponse_p.h \
+    generateorganizationsaccessreportrequest.h \
+    generateorganizationsaccessreportrequest_p.h \
+    generateorganizationsaccessreportresponse.h \
+    generateorganizationsaccessreportresponse_p.h \
     generateservicelastaccesseddetailsrequest.h \
     generateservicelastaccesseddetailsrequest_p.h \
     generateservicelastaccesseddetailsresponse.h \
@@ -262,6 +266,10 @@ HEADERS += \
     getopenidconnectproviderrequest_p.h \
     getopenidconnectproviderresponse.h \
     getopenidconnectproviderresponse_p.h \
+    getorganizationsaccessreportrequest.h \
+    getorganizationsaccessreportrequest_p.h \
+    getorganizationsaccessreportresponse.h \
+    getorganizationsaccessreportresponse_p.h \
     getpolicyrequest.h \
     getpolicyrequest_p.h \
     getpolicyresponse.h \
@@ -472,6 +480,10 @@ HEADERS += \
     setdefaultpolicyversionrequest_p.h \
     setdefaultpolicyversionresponse.h \
     setdefaultpolicyversionresponse_p.h \
+    setsecuritytokenservicepreferencesrequest.h \
+    setsecuritytokenservicepreferencesrequest_p.h \
+    setsecuritytokenservicepreferencesresponse.h \
+    setsecuritytokenservicepreferencesresponse_p.h \
     simulatecustompolicyrequest.h \
     simulatecustompolicyrequest_p.h \
     simulatecustompolicyresponse.h \
@@ -666,6 +678,8 @@ SOURCES += \
     enablemfadeviceresponse.cpp \
     generatecredentialreportrequest.cpp \
     generatecredentialreportresponse.cpp \
+    generateorganizationsaccessreportrequest.cpp \
+    generateorganizationsaccessreportresponse.cpp \
     generateservicelastaccesseddetailsrequest.cpp \
     generateservicelastaccesseddetailsresponse.cpp \
     getaccesskeylastusedrequest.cpp \
@@ -692,6 +706,8 @@ SOURCES += \
     getloginprofileresponse.cpp \
     getopenidconnectproviderrequest.cpp \
     getopenidconnectproviderresponse.cpp \
+    getorganizationsaccessreportrequest.cpp \
+    getorganizationsaccessreportresponse.cpp \
     getpolicyrequest.cpp \
     getpolicyresponse.cpp \
     getpolicyversionrequest.cpp \
@@ -797,6 +813,8 @@ SOURCES += \
     resyncmfadeviceresponse.cpp \
     setdefaultpolicyversionrequest.cpp \
     setdefaultpolicyversionresponse.cpp \
+    setsecuritytokenservicepreferencesrequest.cpp \
+    setsecuritytokenservicepreferencesresponse.cpp \
     simulatecustompolicyrequest.cpp \
     simulatecustompolicyresponse.cpp \
     simulateprincipalpolicyrequest.cpp \

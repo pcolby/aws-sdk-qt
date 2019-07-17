@@ -87,14 +87,20 @@
 #include "listinvitationsresponse.h"
 #include "listmembersrequest.h"
 #include "listmembersresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listthreatintelsetsrequest.h"
 #include "listthreatintelsetsresponse.h"
 #include "startmonitoringmembersrequest.h"
 #include "startmonitoringmembersresponse.h"
 #include "stopmonitoringmembersrequest.h"
 #include "stopmonitoringmembersresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "unarchivefindingsrequest.h"
 #include "unarchivefindingsresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatedetectorrequest.h"
 #include "updatedetectorresponse.h"
 #include "updatefilterrequest.h"
@@ -128,6 +134,17 @@ namespace GuardDuty {
  * \ingroup aws-clients
  * \inmodule QtAwsGuardDuty
  *
+ *  Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following data sources: VPC
+ *  Flow Logs, AWS CloudTrail event logs, and DNS logs. It uses threat intelligence feeds, such as lists of malicious IPs
+ *  and domains, and machine learning to identify unexpected and potentially unauthorized and malicious activity within your
+ *  AWS environment. This can include issues like escalations of privileges, uses of exposed credentials, or communication
+ *  with malicious IPs, URLs, or domains. For example, GuardDuty can detect compromised EC2 instances serving malware or
+ *  mining bitcoin. It also monitors AWS account access behavior for signs of compromise, such as unauthorized
+ *  infrastructure deployments, like instances deployed in a region that has never been used, or unusual API calls, like a
+ *  password policy change to reduce password strength. GuardDuty informs you of the status of your AWS environment by
+ *  producing security findings that you can view in the GuardDuty console or through Amazon CloudWatch events. For more
+ *  information, see <a href="https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html"> Amazon GuardDuty User
+ *  Guide</a>.
  */
 
 /*!
@@ -189,6 +206,7 @@ GuardDutyClient::GuardDutyClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Accepts the invitation to be monitored by a master GuardDuty
  */
 AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitationRequest &request)
 {
@@ -201,6 +219,7 @@ AcceptInvitationResponse * GuardDutyClient::acceptInvitation(const AcceptInvitat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Archives Amazon GuardDuty findings specified by the list of finding
  */
 ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindingsRequest &request)
 {
@@ -214,6 +233,7 @@ ArchiveFindingsResponse * GuardDutyClient::archiveFindings(const ArchiveFindings
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a single Amazon GuardDuty detector. A detector is an object that represents the GuardDuty service. A detector
+ * must be created in order for GuardDuty to become
  */
 CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorRequest &request)
 {
@@ -226,6 +246,7 @@ CreateDetectorResponse * GuardDutyClient::createDetector(const CreateDetectorReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a filter using the specified finding
  */
 CreateFilterResponse * GuardDutyClient::createFilter(const CreateFilterRequest &request)
 {
@@ -239,6 +260,7 @@ CreateFilterResponse * GuardDutyClient::createFilter(const CreateFilterRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new IPSet - a list of trusted IP addresses that have been whitelisted for secure communication with AWS
+ * infrastructure and
  */
 CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &request)
 {
@@ -252,6 +274,7 @@ CreateIPSetResponse * GuardDutyClient::createIPSet(const CreateIPSetRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates member accounts of the current AWS account by specifying a list of AWS account IDs. The current AWS account can
+ * then invite these members to manage GuardDuty in their
  */
 CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersRequest &request)
 {
@@ -265,6 +288,7 @@ CreateMembersResponse * GuardDutyClient::createMembers(const CreateMembersReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Generates example findings of types specified by the list of finding types. If 'NULL' is specified for findingTypes, the
+ * API generates example findings of all supported finding
  */
 CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const CreateSampleFindingsRequest &request)
 {
@@ -278,6 +302,7 @@ CreateSampleFindingsResponse * GuardDutyClient::createSampleFindings(const Creat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Create a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based
+ * on
  */
 CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const CreateThreatIntelSetRequest &request)
 {
@@ -290,6 +315,7 @@ CreateThreatIntelSetResponse * GuardDutyClient::createThreatIntelSet(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Declines invitations sent to the current member account by AWS account specified by their account
  */
 DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineInvitationsRequest &request)
 {
@@ -302,6 +328,7 @@ DeclineInvitationsResponse * GuardDutyClient::declineInvitations(const DeclineIn
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes a Amazon GuardDuty detector specified by the detector
  */
 DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorRequest &request)
 {
@@ -314,6 +341,7 @@ DeleteDetectorResponse * GuardDutyClient::deleteDetector(const DeleteDetectorReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the filter specified by the filter
  */
 DeleteFilterResponse * GuardDutyClient::deleteFilter(const DeleteFilterRequest &request)
 {
@@ -326,6 +354,7 @@ DeleteFilterResponse * GuardDutyClient::deleteFilter(const DeleteFilterRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the IPSet specified by the IPSet
  */
 DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &request)
 {
@@ -338,6 +367,7 @@ DeleteIPSetResponse * GuardDutyClient::deleteIPSet(const DeleteIPSetRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes invitations sent to the current member account by AWS accounts specified by their account
  */
 DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvitationsRequest &request)
 {
@@ -350,6 +380,7 @@ DeleteInvitationsResponse * GuardDutyClient::deleteInvitations(const DeleteInvit
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes GuardDuty member accounts (to the current GuardDuty master account) specified by the account
  */
 DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersRequest &request)
 {
@@ -362,6 +393,7 @@ DeleteMembersResponse * GuardDutyClient::deleteMembers(const DeleteMembersReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes ThreatIntelSet specified by the ThreatIntelSet
  */
 DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const DeleteThreatIntelSetRequest &request)
 {
@@ -374,6 +406,7 @@ DeleteThreatIntelSetResponse * GuardDutyClient::deleteThreatIntelSet(const Delet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disassociates the current GuardDuty member account from its master
  */
 DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterAccount(const DisassociateFromMasterAccountRequest &request)
 {
@@ -386,6 +419,7 @@ DisassociateFromMasterAccountResponse * GuardDutyClient::disassociateFromMasterA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Disassociates GuardDuty member accounts (to the current GuardDuty master account) specified by the account
  */
 DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const DisassociateMembersRequest &request)
 {
@@ -398,6 +432,7 @@ DisassociateMembersResponse * GuardDutyClient::disassociateMembers(const Disasso
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves an Amazon GuardDuty detector specified by the
  */
 GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &request)
 {
@@ -410,6 +445,7 @@ GetDetectorResponse * GuardDutyClient::getDetector(const GetDetectorRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns the details of the filter specified by the filter
  */
 GetFilterResponse * GuardDutyClient::getFilter(const GetFilterRequest &request)
 {
@@ -422,6 +458,7 @@ GetFilterResponse * GuardDutyClient::getFilter(const GetFilterRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Describes Amazon GuardDuty findings specified by finding
  */
 GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &request)
 {
@@ -434,6 +471,7 @@ GetFindingsResponse * GuardDutyClient::getFindings(const GetFindingsRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists Amazon GuardDuty findings' statistics for the specified detector
  */
 GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const GetFindingsStatisticsRequest &request)
 {
@@ -446,6 +484,7 @@ GetFindingsStatisticsResponse * GuardDutyClient::getFindingsStatistics(const Get
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves the IPSet specified by the IPSet
  */
 GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
 {
@@ -459,6 +498,7 @@ GetIPSetResponse * GuardDutyClient::getIPSet(const GetIPSetRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the count of all GuardDuty membership invitations that were sent to the current member account except the
+ * currently accepted
  */
 GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvitationsCountRequest &request)
 {
@@ -471,6 +511,7 @@ GetInvitationsCountResponse * GuardDutyClient::getInvitationsCount(const GetInvi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Provides the details for the GuardDuty master account to the current GuardDuty member
  */
 GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAccountRequest &request)
 {
@@ -483,6 +524,7 @@ GetMasterAccountResponse * GuardDutyClient::getMasterAccount(const GetMasterAcco
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves GuardDuty member accounts (to the current GuardDuty master account) specified by the account
  */
 GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &request)
 {
@@ -495,6 +537,7 @@ GetMembersResponse * GuardDutyClient::getMembers(const GetMembersRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet
  */
 GetThreatIntelSetResponse * GuardDutyClient::getThreatIntelSet(const GetThreatIntelSetRequest &request)
 {
@@ -521,6 +564,7 @@ InviteMembersResponse * GuardDutyClient::inviteMembers(const InviteMembersReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists detectorIds of all the existing Amazon GuardDuty detector
  */
 ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsRequest &request)
 {
@@ -533,6 +577,7 @@ ListDetectorsResponse * GuardDutyClient::listDetectors(const ListDetectorsReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a paginated list of the current
  */
 ListFiltersResponse * GuardDutyClient::listFilters(const ListFiltersRequest &request)
 {
@@ -545,6 +590,7 @@ ListFiltersResponse * GuardDutyClient::listFilters(const ListFiltersRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists Amazon GuardDuty findings for the specified detector
  */
 ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &request)
 {
@@ -557,6 +603,7 @@ ListFindingsResponse * GuardDutyClient::listFindings(const ListFindingsRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists the IPSets of the GuardDuty service specified by the detector
  */
 ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &request)
 {
@@ -569,6 +616,7 @@ ListIPSetsResponse * GuardDutyClient::listIPSets(const ListIPSetsRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists all GuardDuty membership invitations that were sent to the current AWS
  */
 ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitationsRequest &request)
 {
@@ -581,6 +629,7 @@ ListInvitationsResponse * GuardDutyClient::listInvitations(const ListInvitations
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists details about all member accounts for the current GuardDuty master
  */
 ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &request)
 {
@@ -589,10 +638,25 @@ ListMembersResponse * GuardDutyClient::listMembers(const ListMembersRequest &req
 
 /*!
  * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists tags for a resource. Tagging is currently supported for detectors, finding filters, IP sets, and Threat Intel
+ * sets, with a limit of 50 tags per resource. When invoked, this operation returns all assigned tags for a given
+ */
+ListTagsForResourceResponse * GuardDutyClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
  * ListThreatIntelSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists the ThreatIntelSets of the GuardDuty service specified by the detector
  */
 ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThreatIntelSetsRequest &request)
 {
@@ -606,6 +670,7 @@ ListThreatIntelSetsResponse * GuardDutyClient::listThreatIntelSets(const ListThr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Re-enables GuardDuty to monitor findings of the member accounts specified by the account IDs. A master GuardDuty account
+ * can run this command after disabling GuardDuty from monitoring these members' findings by running
  */
 StartMonitoringMembersResponse * GuardDutyClient::startMonitoringMembers(const StartMonitoringMembersRequest &request)
 {
@@ -628,10 +693,24 @@ StopMonitoringMembersResponse * GuardDutyClient::stopMonitoringMembers(const Sto
 
 /*!
  * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds tags to a
+ */
+TagResourceResponse * GuardDutyClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
  * UnarchiveFindingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Unarchives Amazon GuardDuty findings specified by the list of finding
  */
 UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFindingsRequest &request)
 {
@@ -640,10 +719,24 @@ UnarchiveFindingsResponse * GuardDutyClient::unarchiveFindings(const UnarchiveFi
 
 /*!
  * Sends \a request to the GuardDutyClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from a
+ */
+UntagResourceResponse * GuardDutyClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GuardDutyClient service, and returns a pointer to an
  * UpdateDetectorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates an Amazon GuardDuty detector specified by the
  */
 UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorRequest &request)
 {
@@ -656,6 +749,7 @@ UpdateDetectorResponse * GuardDutyClient::updateDetector(const UpdateDetectorReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the filter specified by the filter
  */
 UpdateFilterResponse * GuardDutyClient::updateFilter(const UpdateFilterRequest &request)
 {
@@ -668,6 +762,7 @@ UpdateFilterResponse * GuardDutyClient::updateFilter(const UpdateFilterRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Marks specified Amazon GuardDuty findings as useful or not
  */
 UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const UpdateFindingsFeedbackRequest &request)
 {
@@ -680,6 +775,7 @@ UpdateFindingsFeedbackResponse * GuardDutyClient::updateFindingsFeedback(const U
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the IPSet specified by the IPSet
  */
 UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &request)
 {
@@ -692,6 +788,7 @@ UpdateIPSetResponse * GuardDutyClient::updateIPSet(const UpdateIPSetRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Updates the ThreatIntelSet specified by ThreatIntelSet
  */
 UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const UpdateThreatIntelSetRequest &request)
 {

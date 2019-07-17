@@ -38,6 +38,8 @@ class DeleteGroupMembershipRequest;
 class DeleteGroupMembershipResponse;
 class DeleteUserRequest;
 class DeleteUserResponse;
+class DeleteUserByPrincipalIdRequest;
+class DeleteUserByPrincipalIdResponse;
 class DescribeGroupRequest;
 class DescribeGroupResponse;
 class DescribeUserRequest;
@@ -80,6 +82,7 @@ public slots:
     DeleteGroupResponse * deleteGroup(const DeleteGroupRequest &request);
     DeleteGroupMembershipResponse * deleteGroupMembership(const DeleteGroupMembershipRequest &request);
     DeleteUserResponse * deleteUser(const DeleteUserRequest &request);
+    DeleteUserByPrincipalIdResponse * deleteUserByPrincipalId(const DeleteUserByPrincipalIdRequest &request);
     DescribeGroupResponse * describeGroup(const DescribeGroupRequest &request);
     DescribeUserResponse * describeUser(const DescribeUserRequest &request);
     GetDashboardEmbedUrlResponse * getDashboardEmbedUrl(const GetDashboardEmbedUrlRequest &request);

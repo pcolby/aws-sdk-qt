@@ -40,12 +40,17 @@ namespace SecurityHub {
  * \value BatchDisableStandardsAction SecurityHub BatchDisableStandards action.
  * \value BatchEnableStandardsAction SecurityHub BatchEnableStandards action.
  * \value BatchImportFindingsAction SecurityHub BatchImportFindings action.
+ * \value CreateActionTargetAction SecurityHub CreateActionTarget action.
  * \value CreateInsightAction SecurityHub CreateInsight action.
  * \value CreateMembersAction SecurityHub CreateMembers action.
  * \value DeclineInvitationsAction SecurityHub DeclineInvitations action.
+ * \value DeleteActionTargetAction SecurityHub DeleteActionTarget action.
  * \value DeleteInsightAction SecurityHub DeleteInsight action.
  * \value DeleteInvitationsAction SecurityHub DeleteInvitations action.
  * \value DeleteMembersAction SecurityHub DeleteMembers action.
+ * \value DescribeActionTargetsAction SecurityHub DescribeActionTargets action.
+ * \value DescribeHubAction SecurityHub DescribeHub action.
+ * \value DescribeProductsAction SecurityHub DescribeProducts action.
  * \value DisableImportFindingsForProductAction SecurityHub DisableImportFindingsForProduct action.
  * \value DisableSecurityHubAction SecurityHub DisableSecurityHub action.
  * \value DisassociateFromMasterAccountAction SecurityHub DisassociateFromMasterAccount action.
@@ -63,6 +68,10 @@ namespace SecurityHub {
  * \value ListEnabledProductsForImportAction SecurityHub ListEnabledProductsForImport action.
  * \value ListInvitationsAction SecurityHub ListInvitations action.
  * \value ListMembersAction SecurityHub ListMembers action.
+ * \value ListTagsForResourceAction SecurityHub ListTagsForResource action.
+ * \value TagResourceAction SecurityHub TagResource action.
+ * \value UntagResourceAction SecurityHub UntagResource action.
+ * \value UpdateActionTargetAction SecurityHub UpdateActionTarget action.
  * \value UpdateFindingsAction SecurityHub UpdateFindings action.
  * \value UpdateInsightAction SecurityHub UpdateInsight action.
  */

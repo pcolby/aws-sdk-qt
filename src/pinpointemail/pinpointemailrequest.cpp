@@ -53,12 +53,15 @@ namespace PinpointEmail {
  * \value GetDedicatedIpsAction PinpointEmail GetDedicatedIps action.
  * \value GetDeliverabilityDashboardOptionsAction PinpointEmail GetDeliverabilityDashboardOptions action.
  * \value GetDeliverabilityTestReportAction PinpointEmail GetDeliverabilityTestReport action.
+ * \value GetDomainDeliverabilityCampaignAction PinpointEmail GetDomainDeliverabilityCampaign action.
  * \value GetDomainStatisticsReportAction PinpointEmail GetDomainStatisticsReport action.
  * \value GetEmailIdentityAction PinpointEmail GetEmailIdentity action.
  * \value ListConfigurationSetsAction PinpointEmail ListConfigurationSets action.
  * \value ListDedicatedIpPoolsAction PinpointEmail ListDedicatedIpPools action.
  * \value ListDeliverabilityTestReportsAction PinpointEmail ListDeliverabilityTestReports action.
+ * \value ListDomainDeliverabilityCampaignsAction PinpointEmail ListDomainDeliverabilityCampaigns action.
  * \value ListEmailIdentitiesAction PinpointEmail ListEmailIdentities action.
+ * \value ListTagsForResourceAction PinpointEmail ListTagsForResource action.
  * \value PutAccountDedicatedIpWarmupAttributesAction PinpointEmail PutAccountDedicatedIpWarmupAttributes action.
  * \value PutAccountSendingAttributesAction PinpointEmail PutAccountSendingAttributes action.
  * \value PutConfigurationSetDeliveryOptionsAction PinpointEmail PutConfigurationSetDeliveryOptions action.
@@ -72,6 +75,8 @@ namespace PinpointEmail {
  * \value PutEmailIdentityFeedbackAttributesAction PinpointEmail PutEmailIdentityFeedbackAttributes action.
  * \value PutEmailIdentityMailFromAttributesAction PinpointEmail PutEmailIdentityMailFromAttributes action.
  * \value SendEmailAction PinpointEmail SendEmail action.
+ * \value TagResourceAction PinpointEmail TagResource action.
+ * \value UntagResourceAction PinpointEmail UntagResource action.
  * \value UpdateConfigurationSetEventDestinationAction PinpointEmail UpdateConfigurationSetEventDestination action.
  */
 

@@ -86,6 +86,7 @@ namespace IAM {
  * \value DetachUserPolicyAction IAM DetachUserPolicy action.
  * \value EnableMFADeviceAction IAM EnableMFADevice action.
  * \value GenerateCredentialReportAction IAM GenerateCredentialReport action.
+ * \value GenerateOrganizationsAccessReportAction IAM GenerateOrganizationsAccessReport action.
  * \value GenerateServiceLastAccessedDetailsAction IAM GenerateServiceLastAccessedDetails action.
  * \value GetAccessKeyLastUsedAction IAM GetAccessKeyLastUsed action.
  * \value GetAccountAuthorizationDetailsAction IAM GetAccountAuthorizationDetails action.
@@ -99,6 +100,7 @@ namespace IAM {
  * \value GetInstanceProfileAction IAM GetInstanceProfile action.
  * \value GetLoginProfileAction IAM GetLoginProfile action.
  * \value GetOpenIDConnectProviderAction IAM GetOpenIDConnectProvider action.
+ * \value GetOrganizationsAccessReportAction IAM GetOrganizationsAccessReport action.
  * \value GetPolicyAction IAM GetPolicy action.
  * \value GetPolicyVersionAction IAM GetPolicyVersion action.
  * \value GetRoleAction IAM GetRole action.
@@ -150,6 +152,7 @@ namespace IAM {
  * \value ResetServiceSpecificCredentialAction IAM ResetServiceSpecificCredential action.
  * \value ResyncMFADeviceAction IAM ResyncMFADevice action.
  * \value SetDefaultPolicyVersionAction IAM SetDefaultPolicyVersion action.
+ * \value SetSecurityTokenServicePreferencesAction IAM SetSecurityTokenServicePreferences action.
  * \value SimulateCustomPolicyAction IAM SimulateCustomPolicy action.
  * \value SimulatePrincipalPolicyAction IAM SimulatePrincipalPolicy action.
  * \value TagRoleAction IAM TagRole action.

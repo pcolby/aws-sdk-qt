@@ -36,22 +36,64 @@ namespace Chime {
  * This enum describes the actions that can be performed as Chime
  * requests.
  *
+ * \value AssociatePhoneNumberWithUserAction Chime AssociatePhoneNumberWithUser action.
+ * \value AssociatePhoneNumbersWithVoiceConnectorAction Chime AssociatePhoneNumbersWithVoiceConnector action.
+ * \value BatchDeletePhoneNumberAction Chime BatchDeletePhoneNumber action.
  * \value BatchSuspendUserAction Chime BatchSuspendUser action.
  * \value BatchUnsuspendUserAction Chime BatchUnsuspendUser action.
+ * \value BatchUpdatePhoneNumberAction Chime BatchUpdatePhoneNumber action.
  * \value BatchUpdateUserAction Chime BatchUpdateUser action.
  * \value CreateAccountAction Chime CreateAccount action.
+ * \value CreateBotAction Chime CreateBot action.
+ * \value CreatePhoneNumberOrderAction Chime CreatePhoneNumberOrder action.
+ * \value CreateVoiceConnectorAction Chime CreateVoiceConnector action.
  * \value DeleteAccountAction Chime DeleteAccount action.
+ * \value DeleteEventsConfigurationAction Chime DeleteEventsConfiguration action.
+ * \value DeletePhoneNumberAction Chime DeletePhoneNumber action.
+ * \value DeleteVoiceConnectorAction Chime DeleteVoiceConnector action.
+ * \value DeleteVoiceConnectorOriginationAction Chime DeleteVoiceConnectorOrigination action.
+ * \value DeleteVoiceConnectorTerminationAction Chime DeleteVoiceConnectorTermination action.
+ * \value DeleteVoiceConnectorTerminationCredentialsAction Chime DeleteVoiceConnectorTerminationCredentials action.
+ * \value DisassociatePhoneNumberFromUserAction Chime DisassociatePhoneNumberFromUser action.
+ * \value DisassociatePhoneNumbersFromVoiceConnectorAction Chime DisassociatePhoneNumbersFromVoiceConnector action.
  * \value GetAccountAction Chime GetAccount action.
  * \value GetAccountSettingsAction Chime GetAccountSettings action.
+ * \value GetBotAction Chime GetBot action.
+ * \value GetEventsConfigurationAction Chime GetEventsConfiguration action.
+ * \value GetGlobalSettingsAction Chime GetGlobalSettings action.
+ * \value GetPhoneNumberAction Chime GetPhoneNumber action.
+ * \value GetPhoneNumberOrderAction Chime GetPhoneNumberOrder action.
  * \value GetUserAction Chime GetUser action.
+ * \value GetUserSettingsAction Chime GetUserSettings action.
+ * \value GetVoiceConnectorAction Chime GetVoiceConnector action.
+ * \value GetVoiceConnectorOriginationAction Chime GetVoiceConnectorOrigination action.
+ * \value GetVoiceConnectorTerminationAction Chime GetVoiceConnectorTermination action.
+ * \value GetVoiceConnectorTerminationHealthAction Chime GetVoiceConnectorTerminationHealth action.
  * \value InviteUsersAction Chime InviteUsers action.
  * \value ListAccountsAction Chime ListAccounts action.
+ * \value ListBotsAction Chime ListBots action.
+ * \value ListPhoneNumberOrdersAction Chime ListPhoneNumberOrders action.
+ * \value ListPhoneNumbersAction Chime ListPhoneNumbers action.
  * \value ListUsersAction Chime ListUsers action.
+ * \value ListVoiceConnectorTerminationCredentialsAction Chime ListVoiceConnectorTerminationCredentials action.
+ * \value ListVoiceConnectorsAction Chime ListVoiceConnectors action.
  * \value LogoutUserAction Chime LogoutUser action.
+ * \value PutEventsConfigurationAction Chime PutEventsConfiguration action.
+ * \value PutVoiceConnectorOriginationAction Chime PutVoiceConnectorOrigination action.
+ * \value PutVoiceConnectorTerminationAction Chime PutVoiceConnectorTermination action.
+ * \value PutVoiceConnectorTerminationCredentialsAction Chime PutVoiceConnectorTerminationCredentials action.
+ * \value RegenerateSecurityTokenAction Chime RegenerateSecurityToken action.
  * \value ResetPersonalPINAction Chime ResetPersonalPIN action.
+ * \value RestorePhoneNumberAction Chime RestorePhoneNumber action.
+ * \value SearchAvailablePhoneNumbersAction Chime SearchAvailablePhoneNumbers action.
  * \value UpdateAccountAction Chime UpdateAccount action.
  * \value UpdateAccountSettingsAction Chime UpdateAccountSettings action.
+ * \value UpdateBotAction Chime UpdateBot action.
+ * \value UpdateGlobalSettingsAction Chime UpdateGlobalSettings action.
+ * \value UpdatePhoneNumberAction Chime UpdatePhoneNumber action.
  * \value UpdateUserAction Chime UpdateUser action.
+ * \value UpdateUserSettingsAction Chime UpdateUserSettings action.
+ * \value UpdateVoiceConnectorAction Chime UpdateVoiceConnector action.
  */
 
 /*!

@@ -30,6 +30,8 @@ namespace RoboMaker {
 class RoboMakerClientPrivate;
 class BatchDescribeSimulationJobRequest;
 class BatchDescribeSimulationJobResponse;
+class CancelDeploymentJobRequest;
+class CancelDeploymentJobResponse;
 class CancelSimulationJobRequest;
 class CancelSimulationJobResponse;
 class CreateDeploymentJobRequest;
@@ -82,12 +84,18 @@ class ListSimulationApplicationsRequest;
 class ListSimulationApplicationsResponse;
 class ListSimulationJobsRequest;
 class ListSimulationJobsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class RegisterRobotRequest;
 class RegisterRobotResponse;
 class RestartSimulationJobRequest;
 class RestartSimulationJobResponse;
 class SyncDeploymentJobRequest;
 class SyncDeploymentJobResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateRobotApplicationRequest;
 class UpdateRobotApplicationResponse;
 class UpdateSimulationApplicationRequest;
@@ -110,6 +118,7 @@ public:
 
 public slots:
     BatchDescribeSimulationJobResponse * batchDescribeSimulationJob(const BatchDescribeSimulationJobRequest &request);
+    CancelDeploymentJobResponse * cancelDeploymentJob(const CancelDeploymentJobRequest &request);
     CancelSimulationJobResponse * cancelSimulationJob(const CancelSimulationJobRequest &request);
     CreateDeploymentJobResponse * createDeploymentJob(const CreateDeploymentJobRequest &request);
     CreateFleetResponse * createFleet(const CreateFleetRequest &request);
@@ -136,9 +145,12 @@ public slots:
     ListRobotsResponse * listRobots(const ListRobotsRequest &request);
     ListSimulationApplicationsResponse * listSimulationApplications(const ListSimulationApplicationsRequest &request);
     ListSimulationJobsResponse * listSimulationJobs(const ListSimulationJobsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RegisterRobotResponse * registerRobot(const RegisterRobotRequest &request);
     RestartSimulationJobResponse * restartSimulationJob(const RestartSimulationJobRequest &request);
     SyncDeploymentJobResponse * syncDeploymentJob(const SyncDeploymentJobRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateRobotApplicationResponse * updateRobotApplication(const UpdateRobotApplicationRequest &request);
     UpdateSimulationApplicationResponse * updateSimulationApplication(const UpdateSimulationApplicationRequest &request);
 

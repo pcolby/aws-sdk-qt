@@ -79,6 +79,8 @@
 #include "deleteinstancesnapshotresponse.h"
 #include "deletekeypairrequest.h"
 #include "deletekeypairresponse.h"
+#include "deleteknownhostkeysrequest.h"
+#include "deleteknownhostkeysresponse.h"
 #include "deleteloadbalancerrequest.h"
 #include "deleteloadbalancerresponse.h"
 #include "deleteloadbalancertlscertificaterequest.h"
@@ -245,9 +247,9 @@ namespace Lightsail {
  * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
- *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
- *  transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the
- *  Lightsail console or by using the API or command-line interface
+ *  Lightsail includes everything you need to launch your project quickly - a virtual machine, a managed database, SSD-based
+ *  storage, data transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail
+ *  servers through the Lightsail console or by using the API or command-line interface
  * 
  *  (CLI)>
  * 
@@ -528,6 +530,15 @@ CreateDiskFromSnapshotResponse * LightsailClient::createDiskFromSnapshot(const C
  *
  * pending>
  *
+ * You can also use this operation to create a snapshot of an instance's system volume. You might want to do this, for
+ * example, to recover data from the system volume of a botched instance or to create a backup of the system volume like
+ * you would for a block storage disk. To create a snapshot of a system volume, just define the <code>instance name</code>
+ * parameter when issuing the snapshot command, and a snapshot of the defined instance's system volume will be created.
+ * After the snapshot is available, you can create a block storage disk from the snapshot and attach it to a running
+ * instance to access the data on the
+ *
+ * disk>
+ *
  * The <code>create disk snapshot</code> operation supports tag-based access control via request tags. For more
  * information, see the <a
  * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-controlling-access-using-tags">Lightsail Dev
@@ -562,9 +573,10 @@ CreateDomainResponse * LightsailClient::createDomain(const CreateDomainRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates one of the following entry records associated with the domain: A record, CNAME record, TXT record, or MX
+ * Creates one of the following entry records associated with the domain: Address (A), canonical name (CNAME), mail
+ * exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text
  *
- * record>
+ * (TXT)>
  *
  * The <code>create domain entry</code> operation supports tag-based access control via resource tags applied to the
  * resource identified by domainName. For more information, see the <a
@@ -914,6 +926,28 @@ DeleteKeyPairResponse * LightsailClient::deleteKeyPair(const DeleteKeyPairReques
 
 /*!
  * Sends \a request to the LightsailClient service, and returns a pointer to an
+ * DeleteKnownHostKeysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the known host key or certificate used by the Amazon Lightsail browser-based SSH or RDP clients to authenticate
+ * an instance. This operation enables the Lightsail browser-based SSH or RDP clients to connect to the instance after a
+ * host key
+ *
+ * mismatch> <b>
+ *
+ * Perform this operation only if you were expecting the host key or certificate mismatch or if you are familiar with the
+ * new host key or certificate on the instance. For more information, see <a
+ * href="https://lightsail.aws.amazon.com/ls/docs/en/articles/amazon-lightsail-troubleshooting-browser-based-ssh-rdp-client-connection">Troubleshooting
+ * connection issues when using the Amazon Lightsail browser-based SSH or RDP
+ */
+DeleteKnownHostKeysResponse * LightsailClient::deleteKnownHostKeys(const DeleteKnownHostKeysRequest &request)
+{
+    return qobject_cast<DeleteKnownHostKeysResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LightsailClient service, and returns a pointer to an
  * DeleteLoadBalancerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1064,7 +1098,7 @@ DownloadDefaultKeyPairResponse * LightsailClient::downloadDefaultKeyPair(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Exports a Amazon Lightsail instance or block storage disk snapshot to Amazon Elastic Compute Cloud (Amazon EC2). This
+ * Exports an Amazon Lightsail instance or block storage disk snapshot to Amazon Elastic Compute Cloud (Amazon EC2). This
  * operation results in an export snapshot record that can be used with the <code>create cloud formation stack</code>
  * operation to create new Amazon EC2
  *
@@ -1802,8 +1836,7 @@ PutInstancePublicPortsResponse * LightsailClient::putInstancePublicPorts(const P
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Restarts a specific instance. When your Amazon Lightsail instance is finished rebooting, Lightsail assigns a new public
- * IP address. To use the same IP address after restarting, create a static IP address and attach it to the
+ * Restarts a specific
  *
  * instance>
  *
@@ -1854,9 +1887,16 @@ ReleaseStaticIpResponse * LightsailClient::releaseStaticIp(const ReleaseStaticIp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the reboot instance
+ * Starts a specific Amazon Lightsail instance from a stopped state. To restart an instance, use the <code>reboot
+ * instance</code>
  *
- * operation>
+ * operation> <note>
+ *
+ * When you start a stopped instance, Lightsail assigns a new public IP address to the instance. To use the same IP address
+ * after stopping and starting an instance, create a static IP address and attach it to the instance. For more information,
+ * see the <a href="https://lightsail.aws.amazon.com/ls/docs/en/articles/lightsail-create-static-ip">Lightsail Dev
+ *
+ * Guide</a>> </note>
  *
  * The <code>start instance</code> operation supports tag-based access control via resource tags applied to the resource
  * identified by instanceName. For more information, see the <a
@@ -1895,7 +1935,13 @@ StartRelationalDatabaseResponse * LightsailClient::startRelationalDatabase(const
  *
  * Stops a specific Amazon Lightsail instance that is currently
  *
- * running>
+ * running> <note>
+ *
+ * When you start a stopped instance, Lightsail assigns a new public IP address to the instance. To use the same IP address
+ * after stopping and starting an instance, create a static IP address and attach it to the instance. For more information,
+ * see the <a href="https://lightsail.aws.amazon.com/ls/docs/en/articles/lightsail-create-static-ip">Lightsail Dev
+ *
+ * Guide</a>> </note>
  *
  * The <code>stop instance</code> operation supports tag-based access control via resource tags applied to the resource
  * identified by instanceName. For more information, see the <a

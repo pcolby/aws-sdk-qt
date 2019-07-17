@@ -44,10 +44,12 @@ public:
         DeleteMountTargetAction,
         DeleteTagsAction,
         DescribeFileSystemsAction,
+        DescribeLifecycleConfigurationAction,
         DescribeMountTargetSecurityGroupsAction,
         DescribeMountTargetsAction,
         DescribeTagsAction,
         ModifyMountTargetSecurityGroupsAction,
+        PutLifecycleConfigurationAction,
         UpdateFileSystemAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

@@ -81,6 +81,9 @@ namespace ApiGatewayV2 {
  * \value GetRoutesAction ApiGatewayV2 GetRoutes action.
  * \value GetStageAction ApiGatewayV2 GetStage action.
  * \value GetStagesAction ApiGatewayV2 GetStages action.
+ * \value GetTagsAction ApiGatewayV2 GetTags action.
+ * \value TagResourceAction ApiGatewayV2 TagResource action.
+ * \value UntagResourceAction ApiGatewayV2 UntagResource action.
  * \value UpdateApiAction ApiGatewayV2 UpdateApi action.
  * \value UpdateApiMappingAction ApiGatewayV2 UpdateApiMapping action.
  * \value UpdateAuthorizerAction ApiGatewayV2 UpdateAuthorizer action.

@@ -20,6 +20,10 @@ HEADERS += \
     deletealarmsrequest_p.h \
     deletealarmsresponse.h \
     deletealarmsresponse_p.h \
+    deleteanomalydetectorrequest.h \
+    deleteanomalydetectorrequest_p.h \
+    deleteanomalydetectorresponse.h \
+    deleteanomalydetectorresponse_p.h \
     deletedashboardsrequest.h \
     deletedashboardsrequest_p.h \
     deletedashboardsresponse.h \
@@ -36,6 +40,10 @@ HEADERS += \
     describealarmsrequest_p.h \
     describealarmsresponse.h \
     describealarmsresponse_p.h \
+    describeanomalydetectorsrequest.h \
+    describeanomalydetectorsrequest_p.h \
+    describeanomalydetectorsresponse.h \
+    describeanomalydetectorsresponse_p.h \
     disablealarmactionsrequest.h \
     disablealarmactionsrequest_p.h \
     disablealarmactionsresponse.h \
@@ -68,6 +76,14 @@ HEADERS += \
     listmetricsrequest_p.h \
     listmetricsresponse.h \
     listmetricsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
+    putanomalydetectorrequest.h \
+    putanomalydetectorrequest_p.h \
+    putanomalydetectorresponse.h \
+    putanomalydetectorresponse_p.h \
     putdashboardrequest.h \
     putdashboardrequest_p.h \
     putdashboardresponse.h \
@@ -84,6 +100,14 @@ HEADERS += \
     setalarmstaterequest_p.h \
     setalarmstateresponse.h \
     setalarmstateresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     cloudwatchclient.cpp \
@@ -91,6 +115,8 @@ SOURCES += \
     cloudwatchresponse.cpp \
     deletealarmsrequest.cpp \
     deletealarmsresponse.cpp \
+    deleteanomalydetectorrequest.cpp \
+    deleteanomalydetectorresponse.cpp \
     deletedashboardsrequest.cpp \
     deletedashboardsresponse.cpp \
     describealarmhistoryrequest.cpp \
@@ -99,6 +125,8 @@ SOURCES += \
     describealarmsformetricresponse.cpp \
     describealarmsrequest.cpp \
     describealarmsresponse.cpp \
+    describeanomalydetectorsrequest.cpp \
+    describeanomalydetectorsresponse.cpp \
     disablealarmactionsrequest.cpp \
     disablealarmactionsresponse.cpp \
     enablealarmactionsrequest.cpp \
@@ -115,6 +143,10 @@ SOURCES += \
     listdashboardsresponse.cpp \
     listmetricsrequest.cpp \
     listmetricsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
+    putanomalydetectorrequest.cpp \
+    putanomalydetectorresponse.cpp \
     putdashboardrequest.cpp \
     putdashboardresponse.cpp \
     putmetricalarmrequest.cpp \
@@ -123,5 +155,9 @@ SOURCES += \
     putmetricdataresponse.cpp \
     setalarmstaterequest.cpp \
     setalarmstateresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

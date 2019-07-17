@@ -56,6 +56,10 @@ HEADERS += \
     createstreamingurlrequest_p.h \
     createstreamingurlresponse.h \
     createstreamingurlresponse_p.h \
+    createusagereportsubscriptionrequest.h \
+    createusagereportsubscriptionrequest_p.h \
+    createusagereportsubscriptionresponse.h \
+    createusagereportsubscriptionresponse_p.h \
     createuserrequest.h \
     createuserrequest_p.h \
     createuserresponse.h \
@@ -84,6 +88,10 @@ HEADERS += \
     deletestackrequest_p.h \
     deletestackresponse.h \
     deletestackresponse_p.h \
+    deleteusagereportsubscriptionrequest.h \
+    deleteusagereportsubscriptionrequest_p.h \
+    deleteusagereportsubscriptionresponse.h \
+    deleteusagereportsubscriptionresponse_p.h \
     deleteuserrequest.h \
     deleteuserrequest_p.h \
     deleteuserresponse.h \
@@ -116,6 +124,10 @@ HEADERS += \
     describestacksrequest_p.h \
     describestacksresponse.h \
     describestacksresponse_p.h \
+    describeusagereportsubscriptionsrequest.h \
+    describeusagereportsubscriptionsrequest_p.h \
+    describeusagereportsubscriptionsresponse.h \
+    describeusagereportsubscriptionsresponse_p.h \
     describeusersrequest.h \
     describeusersrequest_p.h \
     describeusersresponse.h \
@@ -217,6 +229,8 @@ SOURCES += \
     createstackresponse.cpp \
     createstreamingurlrequest.cpp \
     createstreamingurlresponse.cpp \
+    createusagereportsubscriptionrequest.cpp \
+    createusagereportsubscriptionresponse.cpp \
     createuserrequest.cpp \
     createuserresponse.cpp \
     deletedirectoryconfigrequest.cpp \
@@ -231,6 +245,8 @@ SOURCES += \
     deleteimageresponse.cpp \
     deletestackrequest.cpp \
     deletestackresponse.cpp \
+    deleteusagereportsubscriptionrequest.cpp \
+    deleteusagereportsubscriptionresponse.cpp \
     deleteuserrequest.cpp \
     deleteuserresponse.cpp \
     describedirectoryconfigsrequest.cpp \
@@ -247,6 +263,8 @@ SOURCES += \
     describesessionsresponse.cpp \
     describestacksrequest.cpp \
     describestacksresponse.cpp \
+    describeusagereportsubscriptionsrequest.cpp \
+    describeusagereportsubscriptionsresponse.cpp \
     describeusersrequest.cpp \
     describeusersresponse.cpp \
     describeuserstackassociationsrequest.cpp \

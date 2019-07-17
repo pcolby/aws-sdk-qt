@@ -79,6 +79,8 @@
 #include "listkeyphrasesdetectionjobsresponse.h"
 #include "listsentimentdetectionjobsrequest.h"
 #include "listsentimentdetectionjobsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtopicsdetectionjobsrequest.h"
 #include "listtopicsdetectionjobsresponse.h"
 #include "startdocumentclassificationjobrequest.h"
@@ -105,6 +107,10 @@
 #include "stoptrainingdocumentclassifierresponse.h"
 #include "stoptrainingentityrecognizerrequest.h"
 #include "stoptrainingentityrecognizerresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -193,7 +199,7 @@ ComprehendClient::ComprehendClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Determines the dominant language of the input text for a batch of documents. For a list of languages that Amazon
- * Comprehend can detect, see <a href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
+ * Comprehend can detect, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon
  * Comprehend Supported Languages</a>.
  */
 BatchDetectDominantLanguageResponse * ComprehendClient::batchDetectDominantLanguage(const BatchDetectDominantLanguageRequest &request)
@@ -445,7 +451,7 @@ DescribeTopicsDetectionJobResponse * ComprehendClient::describeTopicsDetectionJo
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Determines the dominant language of the input text. For a list of languages that Amazon Comprehend can detect, see <a
- * href="http://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
+ * href="https://docs.aws.amazon.com/comprehend/latest/dg/how-languages.html">Amazon Comprehend Supported Languages</a>.
  */
 DetectDominantLanguageResponse * ComprehendClient::detectDominantLanguage(const DetectDominantLanguageRequest &request)
 {
@@ -601,6 +607,19 @@ ListKeyPhrasesDetectionJobsResponse * ComprehendClient::listKeyPhrasesDetectionJ
 ListSentimentDetectionJobsResponse * ComprehendClient::listSentimentDetectionJobs(const ListSentimentDetectionJobsRequest &request)
 {
     return qobject_cast<ListSentimentDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all tags associated with a given Amazon Comprehend resource.
+ */
+ListTagsForResourceResponse * ComprehendClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -853,6 +872,34 @@ StopTrainingDocumentClassifierResponse * ComprehendClient::stopTrainingDocumentC
 StopTrainingEntityRecognizerResponse * ComprehendClient::stopTrainingEntityRecognizer(const StopTrainingEntityRecognizerRequest &request)
 {
     return qobject_cast<StopTrainingEntityRecognizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a specific tag with an Amazon Comprehend resource. A tag is a key-value pair that adds as a metadata to a
+ * resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to indicate
+ * its use by the sales department.
+ */
+TagResourceResponse * ComprehendClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a specific tag associated with an Amazon Comprehend resource.
+ */
+UntagResourceResponse * ComprehendClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -38,11 +38,23 @@ public:
     /// Actions supported by Kafka.
     enum Action {
         CreateClusterAction,
+        CreateConfigurationAction,
         DeleteClusterAction,
         DescribeClusterAction,
+        DescribeClusterOperationAction,
+        DescribeConfigurationAction,
+        DescribeConfigurationRevisionAction,
         GetBootstrapBrokersAction,
+        ListClusterOperationsAction,
         ListClustersAction,
+        ListConfigurationRevisionsAction,
+        ListConfigurationsAction,
         ListNodesAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateBrokerStorageAction,
+        UpdateClusterConfigurationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

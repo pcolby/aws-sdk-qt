@@ -40,7 +40,10 @@ public:
         DeletePlaybackConfigurationAction,
         GetPlaybackConfigurationAction,
         ListPlaybackConfigurationsAction,
+        ListTagsForResourceAction,
         PutPlaybackConfigurationAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

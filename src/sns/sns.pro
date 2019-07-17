@@ -86,6 +86,10 @@ HEADERS += \
     listsubscriptionsrequest_p.h \
     listsubscriptionsresponse.h \
     listsubscriptionsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtopicsrequest.h \
     listtopicsrequest_p.h \
     listtopicsresponse.h \
@@ -132,10 +136,18 @@ HEADERS += \
     subscriberequest_p.h \
     subscriberesponse.h \
     subscriberesponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     unsubscriberequest.h \
     unsubscriberequest_p.h \
     unsubscriberesponse.h \
     unsubscriberesponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     addpermissionrequest.cpp \
@@ -176,6 +188,8 @@ SOURCES += \
     listsubscriptionsbytopicresponse.cpp \
     listsubscriptionsrequest.cpp \
     listsubscriptionsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtopicsrequest.cpp \
     listtopicsresponse.cpp \
     optinphonenumberrequest.cpp \
@@ -199,7 +213,11 @@ SOURCES += \
     snsresponse.cpp \
     subscriberequest.cpp \
     subscriberesponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     unsubscriberequest.cpp \
     unsubscriberesponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

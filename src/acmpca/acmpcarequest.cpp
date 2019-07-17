@@ -38,7 +38,9 @@ namespace ACMPCA {
  *
  * \value CreateCertificateAuthorityAction ACMPCA CreateCertificateAuthority action.
  * \value CreateCertificateAuthorityAuditReportAction ACMPCA CreateCertificateAuthorityAuditReport action.
+ * \value CreatePermissionAction ACMPCA CreatePermission action.
  * \value DeleteCertificateAuthorityAction ACMPCA DeleteCertificateAuthority action.
+ * \value DeletePermissionAction ACMPCA DeletePermission action.
  * \value DescribeCertificateAuthorityAction ACMPCA DescribeCertificateAuthority action.
  * \value DescribeCertificateAuthorityAuditReportAction ACMPCA DescribeCertificateAuthorityAuditReport action.
  * \value GetCertificateAction ACMPCA GetCertificate action.
@@ -47,6 +49,7 @@ namespace ACMPCA {
  * \value ImportCertificateAuthorityCertificateAction ACMPCA ImportCertificateAuthorityCertificate action.
  * \value IssueCertificateAction ACMPCA IssueCertificate action.
  * \value ListCertificateAuthoritiesAction ACMPCA ListCertificateAuthorities action.
+ * \value ListPermissionsAction ACMPCA ListPermissions action.
  * \value ListTagsAction ACMPCA ListTags action.
  * \value RestoreCertificateAuthorityAction ACMPCA RestoreCertificateAuthority action.
  * \value RevokeCertificateAction ACMPCA RevokeCertificate action.

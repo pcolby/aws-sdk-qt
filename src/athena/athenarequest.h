@@ -40,14 +40,22 @@ public:
         BatchGetNamedQueryAction,
         BatchGetQueryExecutionAction,
         CreateNamedQueryAction,
+        CreateWorkGroupAction,
         DeleteNamedQueryAction,
+        DeleteWorkGroupAction,
         GetNamedQueryAction,
         GetQueryExecutionAction,
         GetQueryResultsAction,
+        GetWorkGroupAction,
         ListNamedQueriesAction,
         ListQueryExecutionsAction,
+        ListTagsForResourceAction,
+        ListWorkGroupsAction,
         StartQueryExecutionAction,
         StopQueryExecutionAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateWorkGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

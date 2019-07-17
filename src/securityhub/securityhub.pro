@@ -26,6 +26,10 @@ HEADERS += \
     batchimportfindingsrequest_p.h \
     batchimportfindingsresponse.h \
     batchimportfindingsresponse_p.h \
+    createactiontargetrequest.h \
+    createactiontargetrequest_p.h \
+    createactiontargetresponse.h \
+    createactiontargetresponse_p.h \
     createinsightrequest.h \
     createinsightrequest_p.h \
     createinsightresponse.h \
@@ -38,6 +42,10 @@ HEADERS += \
     declineinvitationsrequest_p.h \
     declineinvitationsresponse.h \
     declineinvitationsresponse_p.h \
+    deleteactiontargetrequest.h \
+    deleteactiontargetrequest_p.h \
+    deleteactiontargetresponse.h \
+    deleteactiontargetresponse_p.h \
     deleteinsightrequest.h \
     deleteinsightrequest_p.h \
     deleteinsightresponse.h \
@@ -50,6 +58,18 @@ HEADERS += \
     deletemembersrequest_p.h \
     deletemembersresponse.h \
     deletemembersresponse_p.h \
+    describeactiontargetsrequest.h \
+    describeactiontargetsrequest_p.h \
+    describeactiontargetsresponse.h \
+    describeactiontargetsresponse_p.h \
+    describehubrequest.h \
+    describehubrequest_p.h \
+    describehubresponse.h \
+    describehubresponse_p.h \
+    describeproductsrequest.h \
+    describeproductsrequest_p.h \
+    describeproductsresponse.h \
+    describeproductsresponse_p.h \
     disableimportfindingsforproductrequest.h \
     disableimportfindingsforproductrequest_p.h \
     disableimportfindingsforproductresponse.h \
@@ -118,12 +138,28 @@ HEADERS += \
     listmembersrequest_p.h \
     listmembersresponse.h \
     listmembersresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     securityhubclient.h \
     securityhubclient_p.h \
     securityhubrequest.h \
     securityhubrequest_p.h \
     securityhubresponse.h \
     securityhubresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
+    updateactiontargetrequest.h \
+    updateactiontargetrequest_p.h \
+    updateactiontargetresponse.h \
+    updateactiontargetresponse_p.h \
     updatefindingsrequest.h \
     updatefindingsrequest_p.h \
     updatefindingsresponse.h \
@@ -142,18 +178,28 @@ SOURCES += \
     batchenablestandardsresponse.cpp \
     batchimportfindingsrequest.cpp \
     batchimportfindingsresponse.cpp \
+    createactiontargetrequest.cpp \
+    createactiontargetresponse.cpp \
     createinsightrequest.cpp \
     createinsightresponse.cpp \
     createmembersrequest.cpp \
     createmembersresponse.cpp \
     declineinvitationsrequest.cpp \
     declineinvitationsresponse.cpp \
+    deleteactiontargetrequest.cpp \
+    deleteactiontargetresponse.cpp \
     deleteinsightrequest.cpp \
     deleteinsightresponse.cpp \
     deleteinvitationsrequest.cpp \
     deleteinvitationsresponse.cpp \
     deletemembersrequest.cpp \
     deletemembersresponse.cpp \
+    describeactiontargetsrequest.cpp \
+    describeactiontargetsresponse.cpp \
+    describehubrequest.cpp \
+    describehubresponse.cpp \
+    describeproductsrequest.cpp \
+    describeproductsresponse.cpp \
     disableimportfindingsforproductrequest.cpp \
     disableimportfindingsforproductresponse.cpp \
     disablesecurityhubrequest.cpp \
@@ -188,9 +234,17 @@ SOURCES += \
     listinvitationsresponse.cpp \
     listmembersrequest.cpp \
     listmembersresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     securityhubclient.cpp \
     securityhubrequest.cpp \
     securityhubresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
+    updateactiontargetrequest.cpp \
+    updateactiontargetresponse.cpp \
     updatefindingsrequest.cpp \
     updatefindingsresponse.cpp \
     updateinsightrequest.cpp \

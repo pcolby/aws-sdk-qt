@@ -52,6 +52,7 @@ namespace Lambda {
  * \value GetFunctionAction Lambda GetFunction action.
  * \value GetFunctionConfigurationAction Lambda GetFunctionConfiguration action.
  * \value GetLayerVersionAction Lambda GetLayerVersion action.
+ * \value GetLayerVersionByArnAction Lambda GetLayerVersionByArn action.
  * \value GetLayerVersionPolicyAction Lambda GetLayerVersionPolicy action.
  * \value GetPolicyAction Lambda GetPolicy action.
  * \value InvokeAction Lambda Invoke action.

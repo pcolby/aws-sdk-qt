@@ -38,6 +38,8 @@ class DeleteConfigurationSetEventDestinationRequest;
 class DeleteConfigurationSetEventDestinationResponse;
 class GetConfigurationSetEventDestinationsRequest;
 class GetConfigurationSetEventDestinationsResponse;
+class ListConfigurationSetsRequest;
+class ListConfigurationSetsResponse;
 class SendVoiceMessageRequest;
 class SendVoiceMessageResponse;
 class UpdateConfigurationSetEventDestinationRequest;
@@ -64,6 +66,7 @@ public slots:
     DeleteConfigurationSetResponse * deleteConfigurationSet(const DeleteConfigurationSetRequest &request);
     DeleteConfigurationSetEventDestinationResponse * deleteConfigurationSetEventDestination(const DeleteConfigurationSetEventDestinationRequest &request);
     GetConfigurationSetEventDestinationsResponse * getConfigurationSetEventDestinations(const GetConfigurationSetEventDestinationsRequest &request);
+    ListConfigurationSetsResponse * listConfigurationSets(const ListConfigurationSetsRequest &request);
     SendVoiceMessageResponse * sendVoiceMessage(const SendVoiceMessageRequest &request);
     UpdateConfigurationSetEventDestinationResponse * updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request);
 

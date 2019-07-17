@@ -42,6 +42,10 @@ HEADERS += \
     createmaintenancewindowrequest_p.h \
     createmaintenancewindowresponse.h \
     createmaintenancewindowresponse_p.h \
+    createopsitemrequest.h \
+    createopsitemrequest_p.h \
+    createopsitemresponse.h \
+    createopsitemresponse_p.h \
     createpatchbaselinerequest.h \
     createpatchbaselinerequest_p.h \
     createpatchbaselineresponse.h \
@@ -202,6 +206,10 @@ HEADERS += \
     describemaintenancewindowtasksrequest_p.h \
     describemaintenancewindowtasksresponse.h \
     describemaintenancewindowtasksresponse_p.h \
+    describeopsitemsrequest.h \
+    describeopsitemsrequest_p.h \
+    describeopsitemsresponse.h \
+    describeopsitemsresponse_p.h \
     describeparametersrequest.h \
     describeparametersrequest_p.h \
     describeparametersresponse.h \
@@ -218,6 +226,10 @@ HEADERS += \
     describepatchgroupstaterequest_p.h \
     describepatchgroupstateresponse.h \
     describepatchgroupstateresponse_p.h \
+    describepatchpropertiesrequest.h \
+    describepatchpropertiesrequest_p.h \
+    describepatchpropertiesresponse.h \
+    describepatchpropertiesresponse_p.h \
     describesessionsrequest.h \
     describesessionsrequest_p.h \
     describesessionsresponse.h \
@@ -274,6 +286,14 @@ HEADERS += \
     getmaintenancewindowtaskrequest_p.h \
     getmaintenancewindowtaskresponse.h \
     getmaintenancewindowtaskresponse_p.h \
+    getopsitemrequest.h \
+    getopsitemrequest_p.h \
+    getopsitemresponse.h \
+    getopsitemresponse_p.h \
+    getopssummaryrequest.h \
+    getopssummaryrequest_p.h \
+    getopssummaryresponse.h \
+    getopssummaryresponse_p.h \
     getparameterhistoryrequest.h \
     getparameterhistoryrequest_p.h \
     getparameterhistoryresponse.h \
@@ -298,6 +318,10 @@ HEADERS += \
     getpatchbaselinerequest_p.h \
     getpatchbaselineresponse.h \
     getpatchbaselineresponse_p.h \
+    getservicesettingrequest.h \
+    getservicesettingrequest_p.h \
+    getservicesettingresponse.h \
+    getservicesettingresponse_p.h \
     labelparameterversionrequest.h \
     labelparameterversionrequest_p.h \
     labelparameterversionresponse.h \
@@ -386,6 +410,10 @@ HEADERS += \
     removetagsfromresourcerequest_p.h \
     removetagsfromresourceresponse.h \
     removetagsfromresourceresponse_p.h \
+    resetservicesettingrequest.h \
+    resetservicesettingrequest_p.h \
+    resetservicesettingresponse.h \
+    resetservicesettingresponse_p.h \
     resumesessionrequest.h \
     resumesessionrequest_p.h \
     resumesessionresponse.h \
@@ -456,10 +484,18 @@ HEADERS += \
     updatemanagedinstancerolerequest_p.h \
     updatemanagedinstanceroleresponse.h \
     updatemanagedinstanceroleresponse_p.h \
+    updateopsitemrequest.h \
+    updateopsitemrequest_p.h \
+    updateopsitemresponse.h \
+    updateopsitemresponse_p.h \
     updatepatchbaselinerequest.h \
     updatepatchbaselinerequest_p.h \
     updatepatchbaselineresponse.h \
     updatepatchbaselineresponse_p.h \
+    updateservicesettingrequest.h \
+    updateservicesettingrequest_p.h \
+    updateservicesettingresponse.h \
+    updateservicesettingresponse_p.h \
 
 SOURCES += \
     addtagstoresourcerequest.cpp \
@@ -478,6 +514,8 @@ SOURCES += \
     createdocumentresponse.cpp \
     createmaintenancewindowrequest.cpp \
     createmaintenancewindowresponse.cpp \
+    createopsitemrequest.cpp \
+    createopsitemresponse.cpp \
     createpatchbaselinerequest.cpp \
     createpatchbaselineresponse.cpp \
     createresourcedatasyncrequest.cpp \
@@ -558,6 +596,8 @@ SOURCES += \
     describemaintenancewindowtargetsresponse.cpp \
     describemaintenancewindowtasksrequest.cpp \
     describemaintenancewindowtasksresponse.cpp \
+    describeopsitemsrequest.cpp \
+    describeopsitemsresponse.cpp \
     describeparametersrequest.cpp \
     describeparametersresponse.cpp \
     describepatchbaselinesrequest.cpp \
@@ -566,6 +606,8 @@ SOURCES += \
     describepatchgroupsresponse.cpp \
     describepatchgroupstaterequest.cpp \
     describepatchgroupstateresponse.cpp \
+    describepatchpropertiesrequest.cpp \
+    describepatchpropertiesresponse.cpp \
     describesessionsrequest.cpp \
     describesessionsresponse.cpp \
     getautomationexecutionrequest.cpp \
@@ -594,6 +636,10 @@ SOURCES += \
     getmaintenancewindowresponse.cpp \
     getmaintenancewindowtaskrequest.cpp \
     getmaintenancewindowtaskresponse.cpp \
+    getopsitemrequest.cpp \
+    getopsitemresponse.cpp \
+    getopssummaryrequest.cpp \
+    getopssummaryresponse.cpp \
     getparameterhistoryrequest.cpp \
     getparameterhistoryresponse.cpp \
     getparameterrequest.cpp \
@@ -606,6 +652,8 @@ SOURCES += \
     getpatchbaselineforpatchgroupresponse.cpp \
     getpatchbaselinerequest.cpp \
     getpatchbaselineresponse.cpp \
+    getservicesettingrequest.cpp \
+    getservicesettingresponse.cpp \
     labelparameterversionrequest.cpp \
     labelparameterversionresponse.cpp \
     listassociationsrequest.cpp \
@@ -650,6 +698,8 @@ SOURCES += \
     registertaskwithmaintenancewindowresponse.cpp \
     removetagsfromresourcerequest.cpp \
     removetagsfromresourceresponse.cpp \
+    resetservicesettingrequest.cpp \
+    resetservicesettingresponse.cpp \
     resumesessionrequest.cpp \
     resumesessionresponse.cpp \
     sendautomationsignalrequest.cpp \
@@ -685,7 +735,11 @@ SOURCES += \
     updatemaintenancewindowtaskresponse.cpp \
     updatemanagedinstancerolerequest.cpp \
     updatemanagedinstanceroleresponse.cpp \
+    updateopsitemrequest.cpp \
+    updateopsitemresponse.cpp \
     updatepatchbaselinerequest.cpp \
     updatepatchbaselineresponse.cpp \
+    updateservicesettingrequest.cpp \
+    updateservicesettingresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -56,6 +56,7 @@ public:
         ListPlatformApplicationsAction,
         ListSubscriptionsAction,
         ListSubscriptionsByTopicAction,
+        ListTagsForResourceAction,
         ListTopicsAction,
         OptInPhoneNumberAction,
         PublishAction,
@@ -66,7 +67,9 @@ public:
         SetSubscriptionAttributesAction,
         SetTopicAttributesAction,
         SubscribeAction,
+        TagResourceAction,
         UnsubscribeAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

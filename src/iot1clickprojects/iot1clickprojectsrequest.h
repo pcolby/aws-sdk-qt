@@ -48,6 +48,9 @@ public:
         GetDevicesInPlacementAction,
         ListPlacementsAction,
         ListProjectsAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdatePlacementAction,
         UpdateProjectAction,
     };

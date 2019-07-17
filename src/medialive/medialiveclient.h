@@ -36,6 +36,8 @@ class CreateInputRequest;
 class CreateInputResponse;
 class CreateInputSecurityGroupRequest;
 class CreateInputSecurityGroupResponse;
+class CreateTagsRequest;
+class CreateTagsResponse;
 class DeleteChannelRequest;
 class DeleteChannelResponse;
 class DeleteInputRequest;
@@ -44,6 +46,10 @@ class DeleteInputSecurityGroupRequest;
 class DeleteInputSecurityGroupResponse;
 class DeleteReservationRequest;
 class DeleteReservationResponse;
+class DeleteScheduleRequest;
+class DeleteScheduleResponse;
+class DeleteTagsRequest;
+class DeleteTagsResponse;
 class DescribeChannelRequest;
 class DescribeChannelResponse;
 class DescribeInputRequest;
@@ -66,6 +72,8 @@ class ListOfferingsRequest;
 class ListOfferingsResponse;
 class ListReservationsRequest;
 class ListReservationsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PurchaseOfferingRequest;
 class PurchaseOfferingResponse;
 class StartChannelRequest;
@@ -74,10 +82,14 @@ class StopChannelRequest;
 class StopChannelResponse;
 class UpdateChannelRequest;
 class UpdateChannelResponse;
+class UpdateChannelClassRequest;
+class UpdateChannelClassResponse;
 class UpdateInputRequest;
 class UpdateInputResponse;
 class UpdateInputSecurityGroupRequest;
 class UpdateInputSecurityGroupResponse;
+class UpdateReservationRequest;
+class UpdateReservationResponse;
 
 class QTAWS_EXPORT MediaLiveClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -99,10 +111,13 @@ public slots:
     CreateChannelResponse * createChannel(const CreateChannelRequest &request);
     CreateInputResponse * createInput(const CreateInputRequest &request);
     CreateInputSecurityGroupResponse * createInputSecurityGroup(const CreateInputSecurityGroupRequest &request);
+    CreateTagsResponse * createTags(const CreateTagsRequest &request);
     DeleteChannelResponse * deleteChannel(const DeleteChannelRequest &request);
     DeleteInputResponse * deleteInput(const DeleteInputRequest &request);
     DeleteInputSecurityGroupResponse * deleteInputSecurityGroup(const DeleteInputSecurityGroupRequest &request);
     DeleteReservationResponse * deleteReservation(const DeleteReservationRequest &request);
+    DeleteScheduleResponse * deleteSchedule(const DeleteScheduleRequest &request);
+    DeleteTagsResponse * deleteTags(const DeleteTagsRequest &request);
     DescribeChannelResponse * describeChannel(const DescribeChannelRequest &request);
     DescribeInputResponse * describeInput(const DescribeInputRequest &request);
     DescribeInputSecurityGroupResponse * describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request);
@@ -114,12 +129,15 @@ public slots:
     ListInputsResponse * listInputs(const ListInputsRequest &request);
     ListOfferingsResponse * listOfferings(const ListOfferingsRequest &request);
     ListReservationsResponse * listReservations(const ListReservationsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PurchaseOfferingResponse * purchaseOffering(const PurchaseOfferingRequest &request);
     StartChannelResponse * startChannel(const StartChannelRequest &request);
     StopChannelResponse * stopChannel(const StopChannelRequest &request);
     UpdateChannelResponse * updateChannel(const UpdateChannelRequest &request);
+    UpdateChannelClassResponse * updateChannelClass(const UpdateChannelClassRequest &request);
     UpdateInputResponse * updateInput(const UpdateInputRequest &request);
     UpdateInputSecurityGroupResponse * updateInputSecurityGroup(const UpdateInputSecurityGroupRequest &request);
+    UpdateReservationResponse * updateReservation(const UpdateReservationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaLiveClient)

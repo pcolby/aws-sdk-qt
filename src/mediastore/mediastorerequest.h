@@ -47,9 +47,14 @@ public:
         GetCorsPolicyAction,
         GetLifecyclePolicyAction,
         ListContainersAction,
+        ListTagsForResourceAction,
         PutContainerPolicyAction,
         PutCorsPolicyAction,
         PutLifecyclePolicyAction,
+        StartAccessLoggingAction,
+        StopAccessLoggingAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

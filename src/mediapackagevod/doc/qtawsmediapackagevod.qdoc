@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsMediaPackageVod
+    \title MediaPackageVod C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS MediaPackageVod functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

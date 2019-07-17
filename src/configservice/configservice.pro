@@ -48,10 +48,18 @@ HEADERS += \
     deleteevaluationresultsrequest_p.h \
     deleteevaluationresultsresponse.h \
     deleteevaluationresultsresponse_p.h \
+    deleteorganizationconfigrulerequest.h \
+    deleteorganizationconfigrulerequest_p.h \
+    deleteorganizationconfigruleresponse.h \
+    deleteorganizationconfigruleresponse_p.h \
     deletependingaggregationrequestrequest.h \
     deletependingaggregationrequestrequest_p.h \
     deletependingaggregationrequestresponse.h \
     deletependingaggregationrequestresponse_p.h \
+    deleteremediationconfigurationrequest.h \
+    deleteremediationconfigurationrequest_p.h \
+    deleteremediationconfigurationresponse.h \
+    deleteremediationconfigurationresponse_p.h \
     deleteretentionconfigurationrequest.h \
     deleteretentionconfigurationrequest_p.h \
     deleteretentionconfigurationresponse.h \
@@ -108,10 +116,26 @@ HEADERS += \
     describedeliverychannelstatusrequest_p.h \
     describedeliverychannelstatusresponse.h \
     describedeliverychannelstatusresponse_p.h \
+    describeorganizationconfigrulesrequest.h \
+    describeorganizationconfigrulesrequest_p.h \
+    describeorganizationconfigrulesresponse.h \
+    describeorganizationconfigrulesresponse_p.h \
+    describeorganizationconfigrulestatusesrequest.h \
+    describeorganizationconfigrulestatusesrequest_p.h \
+    describeorganizationconfigrulestatusesresponse.h \
+    describeorganizationconfigrulestatusesresponse_p.h \
     describependingaggregationrequestsrequest.h \
     describependingaggregationrequestsrequest_p.h \
     describependingaggregationrequestsresponse.h \
     describependingaggregationrequestsresponse_p.h \
+    describeremediationconfigurationsrequest.h \
+    describeremediationconfigurationsrequest_p.h \
+    describeremediationconfigurationsresponse.h \
+    describeremediationconfigurationsresponse_p.h \
+    describeremediationexecutionstatusrequest.h \
+    describeremediationexecutionstatusrequest_p.h \
+    describeremediationexecutionstatusresponse.h \
+    describeremediationexecutionstatusresponse_p.h \
     describeretentionconfigurationsrequest.h \
     describeretentionconfigurationsrequest_p.h \
     describeretentionconfigurationsresponse.h \
@@ -152,6 +176,10 @@ HEADERS += \
     getdiscoveredresourcecountsrequest_p.h \
     getdiscoveredresourcecountsresponse.h \
     getdiscoveredresourcecountsresponse_p.h \
+    getorganizationconfigruledetailedstatusrequest.h \
+    getorganizationconfigruledetailedstatusrequest_p.h \
+    getorganizationconfigruledetailedstatusresponse.h \
+    getorganizationconfigruledetailedstatusresponse_p.h \
     getresourceconfighistoryrequest.h \
     getresourceconfighistoryrequest_p.h \
     getresourceconfighistoryresponse.h \
@@ -164,6 +192,10 @@ HEADERS += \
     listdiscoveredresourcesrequest_p.h \
     listdiscoveredresourcesresponse.h \
     listdiscoveredresourcesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     putaggregationauthorizationrequest.h \
     putaggregationauthorizationrequest_p.h \
     putaggregationauthorizationresponse.h \
@@ -188,10 +220,22 @@ HEADERS += \
     putevaluationsrequest_p.h \
     putevaluationsresponse.h \
     putevaluationsresponse_p.h \
+    putorganizationconfigrulerequest.h \
+    putorganizationconfigrulerequest_p.h \
+    putorganizationconfigruleresponse.h \
+    putorganizationconfigruleresponse_p.h \
+    putremediationconfigurationsrequest.h \
+    putremediationconfigurationsrequest_p.h \
+    putremediationconfigurationsresponse.h \
+    putremediationconfigurationsresponse_p.h \
     putretentionconfigurationrequest.h \
     putretentionconfigurationrequest_p.h \
     putretentionconfigurationresponse.h \
     putretentionconfigurationresponse_p.h \
+    selectresourceconfigrequest.h \
+    selectresourceconfigrequest_p.h \
+    selectresourceconfigresponse.h \
+    selectresourceconfigresponse_p.h \
     startconfigrulesevaluationrequest.h \
     startconfigrulesevaluationrequest_p.h \
     startconfigrulesevaluationresponse.h \
@@ -200,10 +244,22 @@ HEADERS += \
     startconfigurationrecorderrequest_p.h \
     startconfigurationrecorderresponse.h \
     startconfigurationrecorderresponse_p.h \
+    startremediationexecutionrequest.h \
+    startremediationexecutionrequest_p.h \
+    startremediationexecutionresponse.h \
+    startremediationexecutionresponse_p.h \
     stopconfigurationrecorderrequest.h \
     stopconfigurationrecorderrequest_p.h \
     stopconfigurationrecorderresponse.h \
     stopconfigurationrecorderresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     batchgetaggregateresourceconfigrequest.cpp \
@@ -225,8 +281,12 @@ SOURCES += \
     deletedeliverychannelresponse.cpp \
     deleteevaluationresultsrequest.cpp \
     deleteevaluationresultsresponse.cpp \
+    deleteorganizationconfigrulerequest.cpp \
+    deleteorganizationconfigruleresponse.cpp \
     deletependingaggregationrequestrequest.cpp \
     deletependingaggregationrequestresponse.cpp \
+    deleteremediationconfigurationrequest.cpp \
+    deleteremediationconfigurationresponse.cpp \
     deleteretentionconfigurationrequest.cpp \
     deleteretentionconfigurationresponse.cpp \
     deliverconfigsnapshotrequest.cpp \
@@ -255,8 +315,16 @@ SOURCES += \
     describedeliverychannelsresponse.cpp \
     describedeliverychannelstatusrequest.cpp \
     describedeliverychannelstatusresponse.cpp \
+    describeorganizationconfigrulesrequest.cpp \
+    describeorganizationconfigrulesresponse.cpp \
+    describeorganizationconfigrulestatusesrequest.cpp \
+    describeorganizationconfigrulestatusesresponse.cpp \
     describependingaggregationrequestsrequest.cpp \
     describependingaggregationrequestsresponse.cpp \
+    describeremediationconfigurationsrequest.cpp \
+    describeremediationconfigurationsresponse.cpp \
+    describeremediationexecutionstatusrequest.cpp \
+    describeremediationexecutionstatusresponse.cpp \
     describeretentionconfigurationsrequest.cpp \
     describeretentionconfigurationsresponse.cpp \
     getaggregatecompliancedetailsbyconfigrulerequest.cpp \
@@ -277,12 +345,16 @@ SOURCES += \
     getcompliancesummarybyresourcetyperesponse.cpp \
     getdiscoveredresourcecountsrequest.cpp \
     getdiscoveredresourcecountsresponse.cpp \
+    getorganizationconfigruledetailedstatusrequest.cpp \
+    getorganizationconfigruledetailedstatusresponse.cpp \
     getresourceconfighistoryrequest.cpp \
     getresourceconfighistoryresponse.cpp \
     listaggregatediscoveredresourcesrequest.cpp \
     listaggregatediscoveredresourcesresponse.cpp \
     listdiscoveredresourcesrequest.cpp \
     listdiscoveredresourcesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     putaggregationauthorizationrequest.cpp \
     putaggregationauthorizationresponse.cpp \
     putconfigrulerequest.cpp \
@@ -295,13 +367,25 @@ SOURCES += \
     putdeliverychannelresponse.cpp \
     putevaluationsrequest.cpp \
     putevaluationsresponse.cpp \
+    putorganizationconfigrulerequest.cpp \
+    putorganizationconfigruleresponse.cpp \
+    putremediationconfigurationsrequest.cpp \
+    putremediationconfigurationsresponse.cpp \
     putretentionconfigurationrequest.cpp \
     putretentionconfigurationresponse.cpp \
+    selectresourceconfigrequest.cpp \
+    selectresourceconfigresponse.cpp \
     startconfigrulesevaluationrequest.cpp \
     startconfigrulesevaluationresponse.cpp \
     startconfigurationrecorderrequest.cpp \
     startconfigurationrecorderresponse.cpp \
+    startremediationexecutionrequest.cpp \
+    startremediationexecutionresponse.cpp \
     stopconfigurationrecorderrequest.cpp \
     stopconfigurationrecorderresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

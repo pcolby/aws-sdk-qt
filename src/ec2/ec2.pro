@@ -278,6 +278,10 @@ HEADERS += \
     createsnapshotrequest_p.h \
     createsnapshotresponse.h \
     createsnapshotresponse_p.h \
+    createsnapshotsrequest.h \
+    createsnapshotsrequest_p.h \
+    createsnapshotsresponse.h \
+    createsnapshotsresponse_p.h \
     createspotdatafeedsubscriptionrequest.h \
     createspotdatafeedsubscriptionrequest_p.h \
     createspotdatafeedsubscriptionresponse.h \
@@ -290,6 +294,22 @@ HEADERS += \
     createtagsrequest_p.h \
     createtagsresponse.h \
     createtagsresponse_p.h \
+    createtrafficmirrorfilterrequest.h \
+    createtrafficmirrorfilterrequest_p.h \
+    createtrafficmirrorfilterresponse.h \
+    createtrafficmirrorfilterresponse_p.h \
+    createtrafficmirrorfilterrulerequest.h \
+    createtrafficmirrorfilterrulerequest_p.h \
+    createtrafficmirrorfilterruleresponse.h \
+    createtrafficmirrorfilterruleresponse_p.h \
+    createtrafficmirrorsessionrequest.h \
+    createtrafficmirrorsessionrequest_p.h \
+    createtrafficmirrorsessionresponse.h \
+    createtrafficmirrorsessionresponse_p.h \
+    createtrafficmirrortargetrequest.h \
+    createtrafficmirrortargetrequest_p.h \
+    createtrafficmirrortargetresponse.h \
+    createtrafficmirrortargetresponse_p.h \
     createtransitgatewayrequest.h \
     createtransitgatewayrequest_p.h \
     createtransitgatewayresponse.h \
@@ -442,6 +462,22 @@ HEADERS += \
     deletetagsrequest_p.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
+    deletetrafficmirrorfilterrequest.h \
+    deletetrafficmirrorfilterrequest_p.h \
+    deletetrafficmirrorfilterresponse.h \
+    deletetrafficmirrorfilterresponse_p.h \
+    deletetrafficmirrorfilterrulerequest.h \
+    deletetrafficmirrorfilterrulerequest_p.h \
+    deletetrafficmirrorfilterruleresponse.h \
+    deletetrafficmirrorfilterruleresponse_p.h \
+    deletetrafficmirrorsessionrequest.h \
+    deletetrafficmirrorsessionrequest_p.h \
+    deletetrafficmirrorsessionresponse.h \
+    deletetrafficmirrorsessionresponse_p.h \
+    deletetrafficmirrortargetrequest.h \
+    deletetrafficmirrortargetrequest_p.h \
+    deletetrafficmirrortargetresponse.h \
+    deletetrafficmirrortargetresponse_p.h \
     deletetransitgatewayrequest.h \
     deletetransitgatewayrequest_p.h \
     deletetransitgatewayresponse.h \
@@ -798,6 +834,18 @@ HEADERS += \
     describetagsrequest_p.h \
     describetagsresponse.h \
     describetagsresponse_p.h \
+    describetrafficmirrorfiltersrequest.h \
+    describetrafficmirrorfiltersrequest_p.h \
+    describetrafficmirrorfiltersresponse.h \
+    describetrafficmirrorfiltersresponse_p.h \
+    describetrafficmirrorsessionsrequest.h \
+    describetrafficmirrorsessionsrequest_p.h \
+    describetrafficmirrorsessionsresponse.h \
+    describetrafficmirrorsessionsresponse_p.h \
+    describetrafficmirrortargetsrequest.h \
+    describetrafficmirrortargetsrequest_p.h \
+    describetrafficmirrortargetsresponse.h \
+    describetrafficmirrortargetsresponse_p.h \
     describetransitgatewayattachmentsrequest.h \
     describetransitgatewayattachmentsrequest_p.h \
     describetransitgatewayattachmentsresponse.h \
@@ -902,6 +950,10 @@ HEADERS += \
     detachvpngatewayrequest_p.h \
     detachvpngatewayresponse.h \
     detachvpngatewayresponse_p.h \
+    disableebsencryptionbydefaultrequest.h \
+    disableebsencryptionbydefaultrequest_p.h \
+    disableebsencryptionbydefaultresponse.h \
+    disableebsencryptionbydefaultresponse_p.h \
     disabletransitgatewayroutetablepropagationrequest.h \
     disabletransitgatewayroutetablepropagationrequest_p.h \
     disabletransitgatewayroutetablepropagationresponse.h \
@@ -952,6 +1004,10 @@ HEADERS += \
     ec2request_p.h \
     ec2response.h \
     ec2response_p.h \
+    enableebsencryptionbydefaultrequest.h \
+    enableebsencryptionbydefaultrequest_p.h \
+    enableebsencryptionbydefaultresponse.h \
+    enableebsencryptionbydefaultresponse_p.h \
     enabletransitgatewayroutetablepropagationrequest.h \
     enabletransitgatewayroutetablepropagationrequest_p.h \
     enabletransitgatewayroutetablepropagationresponse.h \
@@ -992,6 +1048,14 @@ HEADERS += \
     getconsolescreenshotrequest_p.h \
     getconsolescreenshotresponse.h \
     getconsolescreenshotresponse_p.h \
+    getebsdefaultkmskeyidrequest.h \
+    getebsdefaultkmskeyidrequest_p.h \
+    getebsdefaultkmskeyidresponse.h \
+    getebsdefaultkmskeyidresponse_p.h \
+    getebsencryptionbydefaultrequest.h \
+    getebsencryptionbydefaultrequest_p.h \
+    getebsencryptionbydefaultresponse.h \
+    getebsencryptionbydefaultresponse_p.h \
     gethostreservationpurchasepreviewrequest.h \
     gethostreservationpurchasepreviewrequest_p.h \
     gethostreservationpurchasepreviewresponse.h \
@@ -1052,6 +1116,10 @@ HEADERS += \
     modifyclientvpnendpointrequest_p.h \
     modifyclientvpnendpointresponse.h \
     modifyclientvpnendpointresponse_p.h \
+    modifyebsdefaultkmskeyidrequest.h \
+    modifyebsdefaultkmskeyidrequest_p.h \
+    modifyebsdefaultkmskeyidresponse.h \
+    modifyebsdefaultkmskeyidresponse_p.h \
     modifyfleetrequest.h \
     modifyfleetrequest_p.h \
     modifyfleetresponse.h \
@@ -1088,6 +1156,10 @@ HEADERS += \
     modifyinstancecreditspecificationrequest_p.h \
     modifyinstancecreditspecificationresponse.h \
     modifyinstancecreditspecificationresponse_p.h \
+    modifyinstanceeventstarttimerequest.h \
+    modifyinstanceeventstarttimerequest_p.h \
+    modifyinstanceeventstarttimeresponse.h \
+    modifyinstanceeventstarttimeresponse_p.h \
     modifyinstanceplacementrequest.h \
     modifyinstanceplacementrequest_p.h \
     modifyinstanceplacementresponse.h \
@@ -1116,6 +1188,18 @@ HEADERS += \
     modifysubnetattributerequest_p.h \
     modifysubnetattributeresponse.h \
     modifysubnetattributeresponse_p.h \
+    modifytrafficmirrorfilternetworkservicesrequest.h \
+    modifytrafficmirrorfilternetworkservicesrequest_p.h \
+    modifytrafficmirrorfilternetworkservicesresponse.h \
+    modifytrafficmirrorfilternetworkservicesresponse_p.h \
+    modifytrafficmirrorfilterrulerequest.h \
+    modifytrafficmirrorfilterrulerequest_p.h \
+    modifytrafficmirrorfilterruleresponse.h \
+    modifytrafficmirrorfilterruleresponse_p.h \
+    modifytrafficmirrorsessionrequest.h \
+    modifytrafficmirrorsessionrequest_p.h \
+    modifytrafficmirrorsessionresponse.h \
+    modifytrafficmirrorsessionresponse_p.h \
     modifytransitgatewayvpcattachmentrequest.h \
     modifytransitgatewayvpcattachmentrequest_p.h \
     modifytransitgatewayvpcattachmentresponse.h \
@@ -1156,6 +1240,10 @@ HEADERS += \
     modifyvpctenancyrequest_p.h \
     modifyvpctenancyresponse.h \
     modifyvpctenancyresponse_p.h \
+    modifyvpnconnectionrequest.h \
+    modifyvpnconnectionrequest_p.h \
+    modifyvpnconnectionresponse.h \
+    modifyvpnconnectionresponse_p.h \
     monitorinstancesrequest.h \
     monitorinstancesrequest_p.h \
     monitorinstancesresponse.h \
@@ -1244,6 +1332,10 @@ HEADERS += \
     requestspotinstancesrequest_p.h \
     requestspotinstancesresponse.h \
     requestspotinstancesresponse_p.h \
+    resetebsdefaultkmskeyidrequest.h \
+    resetebsdefaultkmskeyidrequest_p.h \
+    resetebsdefaultkmskeyidresponse.h \
+    resetebsdefaultkmskeyidresponse_p.h \
     resetfpgaimageattributerequest.h \
     resetfpgaimageattributerequest_p.h \
     resetfpgaimageattributeresponse.h \
@@ -1468,12 +1560,22 @@ SOURCES += \
     createsecuritygroupresponse.cpp \
     createsnapshotrequest.cpp \
     createsnapshotresponse.cpp \
+    createsnapshotsrequest.cpp \
+    createsnapshotsresponse.cpp \
     createspotdatafeedsubscriptionrequest.cpp \
     createspotdatafeedsubscriptionresponse.cpp \
     createsubnetrequest.cpp \
     createsubnetresponse.cpp \
     createtagsrequest.cpp \
     createtagsresponse.cpp \
+    createtrafficmirrorfilterrequest.cpp \
+    createtrafficmirrorfilterresponse.cpp \
+    createtrafficmirrorfilterrulerequest.cpp \
+    createtrafficmirrorfilterruleresponse.cpp \
+    createtrafficmirrorsessionrequest.cpp \
+    createtrafficmirrorsessionresponse.cpp \
+    createtrafficmirrortargetrequest.cpp \
+    createtrafficmirrortargetresponse.cpp \
     createtransitgatewayrequest.cpp \
     createtransitgatewayresponse.cpp \
     createtransitgatewayrouterequest.cpp \
@@ -1550,6 +1652,14 @@ SOURCES += \
     deletesubnetresponse.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
+    deletetrafficmirrorfilterrequest.cpp \
+    deletetrafficmirrorfilterresponse.cpp \
+    deletetrafficmirrorfilterrulerequest.cpp \
+    deletetrafficmirrorfilterruleresponse.cpp \
+    deletetrafficmirrorsessionrequest.cpp \
+    deletetrafficmirrorsessionresponse.cpp \
+    deletetrafficmirrortargetrequest.cpp \
+    deletetrafficmirrortargetresponse.cpp \
     deletetransitgatewayrequest.cpp \
     deletetransitgatewayresponse.cpp \
     deletetransitgatewayrouterequest.cpp \
@@ -1728,6 +1838,12 @@ SOURCES += \
     describesubnetsresponse.cpp \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
+    describetrafficmirrorfiltersrequest.cpp \
+    describetrafficmirrorfiltersresponse.cpp \
+    describetrafficmirrorsessionsrequest.cpp \
+    describetrafficmirrorsessionsresponse.cpp \
+    describetrafficmirrortargetsrequest.cpp \
+    describetrafficmirrortargetsresponse.cpp \
     describetransitgatewayattachmentsrequest.cpp \
     describetransitgatewayattachmentsresponse.cpp \
     describetransitgatewayroutetablesrequest.cpp \
@@ -1780,6 +1896,8 @@ SOURCES += \
     detachvolumeresponse.cpp \
     detachvpngatewayrequest.cpp \
     detachvpngatewayresponse.cpp \
+    disableebsencryptionbydefaultrequest.cpp \
+    disableebsencryptionbydefaultresponse.cpp \
     disabletransitgatewayroutetablepropagationrequest.cpp \
     disabletransitgatewayroutetablepropagationresponse.cpp \
     disablevgwroutepropagationrequest.cpp \
@@ -1805,6 +1923,8 @@ SOURCES += \
     ec2client.cpp \
     ec2request.cpp \
     ec2response.cpp \
+    enableebsencryptionbydefaultrequest.cpp \
+    enableebsencryptionbydefaultresponse.cpp \
     enabletransitgatewayroutetablepropagationrequest.cpp \
     enabletransitgatewayroutetablepropagationresponse.cpp \
     enablevgwroutepropagationrequest.cpp \
@@ -1825,6 +1945,10 @@ SOURCES += \
     getconsoleoutputresponse.cpp \
     getconsolescreenshotrequest.cpp \
     getconsolescreenshotresponse.cpp \
+    getebsdefaultkmskeyidrequest.cpp \
+    getebsdefaultkmskeyidresponse.cpp \
+    getebsencryptionbydefaultrequest.cpp \
+    getebsencryptionbydefaultresponse.cpp \
     gethostreservationpurchasepreviewrequest.cpp \
     gethostreservationpurchasepreviewresponse.cpp \
     getlaunchtemplatedatarequest.cpp \
@@ -1855,6 +1979,8 @@ SOURCES += \
     modifycapacityreservationresponse.cpp \
     modifyclientvpnendpointrequest.cpp \
     modifyclientvpnendpointresponse.cpp \
+    modifyebsdefaultkmskeyidrequest.cpp \
+    modifyebsdefaultkmskeyidresponse.cpp \
     modifyfleetrequest.cpp \
     modifyfleetresponse.cpp \
     modifyfpgaimageattributerequest.cpp \
@@ -1873,6 +1999,8 @@ SOURCES += \
     modifyinstancecapacityreservationattributesresponse.cpp \
     modifyinstancecreditspecificationrequest.cpp \
     modifyinstancecreditspecificationresponse.cpp \
+    modifyinstanceeventstarttimerequest.cpp \
+    modifyinstanceeventstarttimeresponse.cpp \
     modifyinstanceplacementrequest.cpp \
     modifyinstanceplacementresponse.cpp \
     modifylaunchtemplaterequest.cpp \
@@ -1887,6 +2015,12 @@ SOURCES += \
     modifyspotfleetrequestresponse.cpp \
     modifysubnetattributerequest.cpp \
     modifysubnetattributeresponse.cpp \
+    modifytrafficmirrorfilternetworkservicesrequest.cpp \
+    modifytrafficmirrorfilternetworkservicesresponse.cpp \
+    modifytrafficmirrorfilterrulerequest.cpp \
+    modifytrafficmirrorfilterruleresponse.cpp \
+    modifytrafficmirrorsessionrequest.cpp \
+    modifytrafficmirrorsessionresponse.cpp \
     modifytransitgatewayvpcattachmentrequest.cpp \
     modifytransitgatewayvpcattachmentresponse.cpp \
     modifyvolumeattributerequest.cpp \
@@ -1907,6 +2041,8 @@ SOURCES += \
     modifyvpcpeeringconnectionoptionsresponse.cpp \
     modifyvpctenancyrequest.cpp \
     modifyvpctenancyresponse.cpp \
+    modifyvpnconnectionrequest.cpp \
+    modifyvpnconnectionresponse.cpp \
     monitorinstancesrequest.cpp \
     monitorinstancesresponse.cpp \
     moveaddresstovpcrequest.cpp \
@@ -1951,6 +2087,8 @@ SOURCES += \
     requestspotfleetresponse.cpp \
     requestspotinstancesrequest.cpp \
     requestspotinstancesresponse.cpp \
+    resetebsdefaultkmskeyidrequest.cpp \
+    resetebsdefaultkmskeyidresponse.cpp \
     resetfpgaimageattributerequest.cpp \
     resetfpgaimageattributeresponse.cpp \
     resetimageattributerequest.cpp \

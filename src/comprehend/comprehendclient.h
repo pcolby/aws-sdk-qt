@@ -86,6 +86,8 @@ class ListKeyPhrasesDetectionJobsRequest;
 class ListKeyPhrasesDetectionJobsResponse;
 class ListSentimentDetectionJobsRequest;
 class ListSentimentDetectionJobsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ListTopicsDetectionJobsRequest;
 class ListTopicsDetectionJobsResponse;
 class StartDocumentClassificationJobRequest;
@@ -112,6 +114,10 @@ class StopTrainingDocumentClassifierRequest;
 class StopTrainingDocumentClassifierResponse;
 class StopTrainingEntityRecognizerRequest;
 class StopTrainingEntityRecognizerResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT ComprehendClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -158,6 +164,7 @@ public slots:
     ListEntityRecognizersResponse * listEntityRecognizers(const ListEntityRecognizersRequest &request);
     ListKeyPhrasesDetectionJobsResponse * listKeyPhrasesDetectionJobs(const ListKeyPhrasesDetectionJobsRequest &request);
     ListSentimentDetectionJobsResponse * listSentimentDetectionJobs(const ListSentimentDetectionJobsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListTopicsDetectionJobsResponse * listTopicsDetectionJobs(const ListTopicsDetectionJobsRequest &request);
     StartDocumentClassificationJobResponse * startDocumentClassificationJob(const StartDocumentClassificationJobRequest &request);
     StartDominantLanguageDetectionJobResponse * startDominantLanguageDetectionJob(const StartDominantLanguageDetectionJobRequest &request);
@@ -171,6 +178,8 @@ public slots:
     StopSentimentDetectionJobResponse * stopSentimentDetectionJob(const StopSentimentDetectionJobRequest &request);
     StopTrainingDocumentClassifierResponse * stopTrainingDocumentClassifier(const StopTrainingDocumentClassifierRequest &request);
     StopTrainingEntityRecognizerResponse * stopTrainingEntityRecognizer(const StopTrainingEntityRecognizerRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ComprehendClient)

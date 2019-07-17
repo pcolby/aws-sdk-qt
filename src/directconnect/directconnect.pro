@@ -10,6 +10,10 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    acceptdirectconnectgatewayassociationproposalrequest.h \
+    acceptdirectconnectgatewayassociationproposalrequest_p.h \
+    acceptdirectconnectgatewayassociationproposalresponse.h \
+    acceptdirectconnectgatewayassociationproposalresponse_p.h \
     allocateconnectiononinterconnectrequest.h \
     allocateconnectiononinterconnectrequest_p.h \
     allocateconnectiononinterconnectresponse.h \
@@ -26,6 +30,10 @@ HEADERS += \
     allocatepublicvirtualinterfacerequest_p.h \
     allocatepublicvirtualinterfaceresponse.h \
     allocatepublicvirtualinterfaceresponse_p.h \
+    allocatetransitvirtualinterfacerequest.h \
+    allocatetransitvirtualinterfacerequest_p.h \
+    allocatetransitvirtualinterfaceresponse.h \
+    allocatetransitvirtualinterfaceresponse_p.h \
     associateconnectionwithlagrequest.h \
     associateconnectionwithlagrequest_p.h \
     associateconnectionwithlagresponse.h \
@@ -50,6 +58,10 @@ HEADERS += \
     confirmpublicvirtualinterfacerequest_p.h \
     confirmpublicvirtualinterfaceresponse.h \
     confirmpublicvirtualinterfaceresponse_p.h \
+    confirmtransitvirtualinterfacerequest.h \
+    confirmtransitvirtualinterfacerequest_p.h \
+    confirmtransitvirtualinterfaceresponse.h \
+    confirmtransitvirtualinterfaceresponse_p.h \
     createbgppeerrequest.h \
     createbgppeerrequest_p.h \
     createbgppeerresponse.h \
@@ -58,6 +70,10 @@ HEADERS += \
     createconnectionrequest_p.h \
     createconnectionresponse.h \
     createconnectionresponse_p.h \
+    createdirectconnectgatewayassociationproposalrequest.h \
+    createdirectconnectgatewayassociationproposalrequest_p.h \
+    createdirectconnectgatewayassociationproposalresponse.h \
+    createdirectconnectgatewayassociationproposalresponse_p.h \
     createdirectconnectgatewayassociationrequest.h \
     createdirectconnectgatewayassociationrequest_p.h \
     createdirectconnectgatewayassociationresponse.h \
@@ -82,6 +98,10 @@ HEADERS += \
     createpublicvirtualinterfacerequest_p.h \
     createpublicvirtualinterfaceresponse.h \
     createpublicvirtualinterfaceresponse_p.h \
+    createtransitvirtualinterfacerequest.h \
+    createtransitvirtualinterfacerequest_p.h \
+    createtransitvirtualinterfaceresponse.h \
+    createtransitvirtualinterfaceresponse_p.h \
     deletebgppeerrequest.h \
     deletebgppeerrequest_p.h \
     deletebgppeerresponse.h \
@@ -90,6 +110,10 @@ HEADERS += \
     deleteconnectionrequest_p.h \
     deleteconnectionresponse.h \
     deleteconnectionresponse_p.h \
+    deletedirectconnectgatewayassociationproposalrequest.h \
+    deletedirectconnectgatewayassociationproposalrequest_p.h \
+    deletedirectconnectgatewayassociationproposalresponse.h \
+    deletedirectconnectgatewayassociationproposalresponse_p.h \
     deletedirectconnectgatewayassociationrequest.h \
     deletedirectconnectgatewayassociationrequest_p.h \
     deletedirectconnectgatewayassociationresponse.h \
@@ -122,6 +146,10 @@ HEADERS += \
     describeconnectionsrequest_p.h \
     describeconnectionsresponse.h \
     describeconnectionsresponse_p.h \
+    describedirectconnectgatewayassociationproposalsrequest.h \
+    describedirectconnectgatewayassociationproposalsrequest_p.h \
+    describedirectconnectgatewayassociationproposalsresponse.h \
+    describedirectconnectgatewayassociationproposalsresponse_p.h \
     describedirectconnectgatewayassociationsrequest.h \
     describedirectconnectgatewayassociationsrequest_p.h \
     describedirectconnectgatewayassociationsresponse.h \
@@ -188,6 +216,10 @@ HEADERS += \
     untagresourcerequest_p.h \
     untagresourceresponse.h \
     untagresourceresponse_p.h \
+    updatedirectconnectgatewayassociationrequest.h \
+    updatedirectconnectgatewayassociationrequest_p.h \
+    updatedirectconnectgatewayassociationresponse.h \
+    updatedirectconnectgatewayassociationresponse_p.h \
     updatelagrequest.h \
     updatelagrequest_p.h \
     updatelagresponse.h \
@@ -198,6 +230,8 @@ HEADERS += \
     updatevirtualinterfaceattributesresponse_p.h \
 
 SOURCES += \
+    acceptdirectconnectgatewayassociationproposalrequest.cpp \
+    acceptdirectconnectgatewayassociationproposalresponse.cpp \
     allocateconnectiononinterconnectrequest.cpp \
     allocateconnectiononinterconnectresponse.cpp \
     allocatehostedconnectionrequest.cpp \
@@ -206,6 +240,8 @@ SOURCES += \
     allocateprivatevirtualinterfaceresponse.cpp \
     allocatepublicvirtualinterfacerequest.cpp \
     allocatepublicvirtualinterfaceresponse.cpp \
+    allocatetransitvirtualinterfacerequest.cpp \
+    allocatetransitvirtualinterfaceresponse.cpp \
     associateconnectionwithlagrequest.cpp \
     associateconnectionwithlagresponse.cpp \
     associatehostedconnectionrequest.cpp \
@@ -218,10 +254,14 @@ SOURCES += \
     confirmprivatevirtualinterfaceresponse.cpp \
     confirmpublicvirtualinterfacerequest.cpp \
     confirmpublicvirtualinterfaceresponse.cpp \
+    confirmtransitvirtualinterfacerequest.cpp \
+    confirmtransitvirtualinterfaceresponse.cpp \
     createbgppeerrequest.cpp \
     createbgppeerresponse.cpp \
     createconnectionrequest.cpp \
     createconnectionresponse.cpp \
+    createdirectconnectgatewayassociationproposalrequest.cpp \
+    createdirectconnectgatewayassociationproposalresponse.cpp \
     createdirectconnectgatewayassociationrequest.cpp \
     createdirectconnectgatewayassociationresponse.cpp \
     createdirectconnectgatewayrequest.cpp \
@@ -234,10 +274,14 @@ SOURCES += \
     createprivatevirtualinterfaceresponse.cpp \
     createpublicvirtualinterfacerequest.cpp \
     createpublicvirtualinterfaceresponse.cpp \
+    createtransitvirtualinterfacerequest.cpp \
+    createtransitvirtualinterfaceresponse.cpp \
     deletebgppeerrequest.cpp \
     deletebgppeerresponse.cpp \
     deleteconnectionrequest.cpp \
     deleteconnectionresponse.cpp \
+    deletedirectconnectgatewayassociationproposalrequest.cpp \
+    deletedirectconnectgatewayassociationproposalresponse.cpp \
     deletedirectconnectgatewayassociationrequest.cpp \
     deletedirectconnectgatewayassociationresponse.cpp \
     deletedirectconnectgatewayrequest.cpp \
@@ -254,6 +298,8 @@ SOURCES += \
     describeconnectionsoninterconnectresponse.cpp \
     describeconnectionsrequest.cpp \
     describeconnectionsresponse.cpp \
+    describedirectconnectgatewayassociationproposalsrequest.cpp \
+    describedirectconnectgatewayassociationproposalsresponse.cpp \
     describedirectconnectgatewayassociationsrequest.cpp \
     describedirectconnectgatewayassociationsresponse.cpp \
     describedirectconnectgatewayattachmentsrequest.cpp \
@@ -287,6 +333,8 @@ SOURCES += \
     tagresourceresponse.cpp \
     untagresourcerequest.cpp \
     untagresourceresponse.cpp \
+    updatedirectconnectgatewayassociationrequest.cpp \
+    updatedirectconnectgatewayassociationresponse.cpp \
     updatelagrequest.cpp \
     updatelagresponse.cpp \
     updatevirtualinterfaceattributesrequest.cpp \

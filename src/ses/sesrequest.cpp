@@ -78,6 +78,7 @@ namespace SES {
  * \value ListReceiptRuleSetsAction SES ListReceiptRuleSets action.
  * \value ListTemplatesAction SES ListTemplates action.
  * \value ListVerifiedEmailAddressesAction SES ListVerifiedEmailAddresses action.
+ * \value PutConfigurationSetDeliveryOptionsAction SES PutConfigurationSetDeliveryOptions action.
  * \value PutIdentityPolicyAction SES PutIdentityPolicy action.
  * \value ReorderReceiptRuleSetAction SES ReorderReceiptRuleSet action.
  * \value SendBounceAction SES SendBounce action.

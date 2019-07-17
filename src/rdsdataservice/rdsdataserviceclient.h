@@ -28,8 +28,18 @@ namespace QtAws {
 namespace RDSDataService {
 
 class RDSDataServiceClientPrivate;
+class BatchExecuteStatementRequest;
+class BatchExecuteStatementResponse;
+class BeginTransactionRequest;
+class BeginTransactionResponse;
+class CommitTransactionRequest;
+class CommitTransactionResponse;
 class ExecuteSqlRequest;
 class ExecuteSqlResponse;
+class ExecuteStatementRequest;
+class ExecuteStatementResponse;
+class RollbackTransactionRequest;
+class RollbackTransactionResponse;
 
 class QTAWS_EXPORT RDSDataServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -47,7 +57,12 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    BatchExecuteStatementResponse * batchExecuteStatement(const BatchExecuteStatementRequest &request);
+    BeginTransactionResponse * beginTransaction(const BeginTransactionRequest &request);
+    CommitTransactionResponse * commitTransaction(const CommitTransactionRequest &request);
     ExecuteSqlResponse * executeSql(const ExecuteSqlRequest &request);
+    ExecuteStatementResponse * executeStatement(const ExecuteStatementRequest &request);
+    RollbackTransactionResponse * rollbackTransaction(const RollbackTransactionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(RDSDataServiceClient)

@@ -40,10 +40,13 @@ namespace MediaLive {
  * \value CreateChannelAction MediaLive CreateChannel action.
  * \value CreateInputAction MediaLive CreateInput action.
  * \value CreateInputSecurityGroupAction MediaLive CreateInputSecurityGroup action.
+ * \value CreateTagsAction MediaLive CreateTags action.
  * \value DeleteChannelAction MediaLive DeleteChannel action.
  * \value DeleteInputAction MediaLive DeleteInput action.
  * \value DeleteInputSecurityGroupAction MediaLive DeleteInputSecurityGroup action.
  * \value DeleteReservationAction MediaLive DeleteReservation action.
+ * \value DeleteScheduleAction MediaLive DeleteSchedule action.
+ * \value DeleteTagsAction MediaLive DeleteTags action.
  * \value DescribeChannelAction MediaLive DescribeChannel action.
  * \value DescribeInputAction MediaLive DescribeInput action.
  * \value DescribeInputSecurityGroupAction MediaLive DescribeInputSecurityGroup action.
@@ -55,12 +58,15 @@ namespace MediaLive {
  * \value ListInputsAction MediaLive ListInputs action.
  * \value ListOfferingsAction MediaLive ListOfferings action.
  * \value ListReservationsAction MediaLive ListReservations action.
+ * \value ListTagsForResourceAction MediaLive ListTagsForResource action.
  * \value PurchaseOfferingAction MediaLive PurchaseOffering action.
  * \value StartChannelAction MediaLive StartChannel action.
  * \value StopChannelAction MediaLive StopChannel action.
  * \value UpdateChannelAction MediaLive UpdateChannel action.
+ * \value UpdateChannelClassAction MediaLive UpdateChannelClass action.
  * \value UpdateInputAction MediaLive UpdateInput action.
  * \value UpdateInputSecurityGroupAction MediaLive UpdateInputSecurityGroup action.
+ * \value UpdateReservationAction MediaLive UpdateReservation action.
  */
 
 /*!

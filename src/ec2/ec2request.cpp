@@ -103,9 +103,14 @@ namespace EC2 {
  * \value CreateRouteTableAction EC2 CreateRouteTable action.
  * \value CreateSecurityGroupAction EC2 CreateSecurityGroup action.
  * \value CreateSnapshotAction EC2 CreateSnapshot action.
+ * \value CreateSnapshotsAction EC2 CreateSnapshots action.
  * \value CreateSpotDatafeedSubscriptionAction EC2 CreateSpotDatafeedSubscription action.
  * \value CreateSubnetAction EC2 CreateSubnet action.
  * \value CreateTagsAction EC2 CreateTags action.
+ * \value CreateTrafficMirrorFilterAction EC2 CreateTrafficMirrorFilter action.
+ * \value CreateTrafficMirrorFilterRuleAction EC2 CreateTrafficMirrorFilterRule action.
+ * \value CreateTrafficMirrorSessionAction EC2 CreateTrafficMirrorSession action.
+ * \value CreateTrafficMirrorTargetAction EC2 CreateTrafficMirrorTarget action.
  * \value CreateTransitGatewayAction EC2 CreateTransitGateway action.
  * \value CreateTransitGatewayRouteAction EC2 CreateTransitGatewayRoute action.
  * \value CreateTransitGatewayRouteTableAction EC2 CreateTransitGatewayRouteTable action.
@@ -144,6 +149,10 @@ namespace EC2 {
  * \value DeleteSpotDatafeedSubscriptionAction EC2 DeleteSpotDatafeedSubscription action.
  * \value DeleteSubnetAction EC2 DeleteSubnet action.
  * \value DeleteTagsAction EC2 DeleteTags action.
+ * \value DeleteTrafficMirrorFilterAction EC2 DeleteTrafficMirrorFilter action.
+ * \value DeleteTrafficMirrorFilterRuleAction EC2 DeleteTrafficMirrorFilterRule action.
+ * \value DeleteTrafficMirrorSessionAction EC2 DeleteTrafficMirrorSession action.
+ * \value DeleteTrafficMirrorTargetAction EC2 DeleteTrafficMirrorTarget action.
  * \value DeleteTransitGatewayAction EC2 DeleteTransitGateway action.
  * \value DeleteTransitGatewayRouteAction EC2 DeleteTransitGatewayRoute action.
  * \value DeleteTransitGatewayRouteTableAction EC2 DeleteTransitGatewayRouteTable action.
@@ -233,6 +242,9 @@ namespace EC2 {
  * \value DescribeStaleSecurityGroupsAction EC2 DescribeStaleSecurityGroups action.
  * \value DescribeSubnetsAction EC2 DescribeSubnets action.
  * \value DescribeTagsAction EC2 DescribeTags action.
+ * \value DescribeTrafficMirrorFiltersAction EC2 DescribeTrafficMirrorFilters action.
+ * \value DescribeTrafficMirrorSessionsAction EC2 DescribeTrafficMirrorSessions action.
+ * \value DescribeTrafficMirrorTargetsAction EC2 DescribeTrafficMirrorTargets action.
  * \value DescribeTransitGatewayAttachmentsAction EC2 DescribeTransitGatewayAttachments action.
  * \value DescribeTransitGatewayRouteTablesAction EC2 DescribeTransitGatewayRouteTables action.
  * \value DescribeTransitGatewayVpcAttachmentsAction EC2 DescribeTransitGatewayVpcAttachments action.
@@ -259,6 +271,7 @@ namespace EC2 {
  * \value DetachNetworkInterfaceAction EC2 DetachNetworkInterface action.
  * \value DetachVolumeAction EC2 DetachVolume action.
  * \value DetachVpnGatewayAction EC2 DetachVpnGateway action.
+ * \value DisableEbsEncryptionByDefaultAction EC2 DisableEbsEncryptionByDefault action.
  * \value DisableTransitGatewayRouteTablePropagationAction EC2 DisableTransitGatewayRouteTablePropagation action.
  * \value DisableVgwRoutePropagationAction EC2 DisableVgwRoutePropagation action.
  * \value DisableVpcClassicLinkAction EC2 DisableVpcClassicLink action.
@@ -270,6 +283,7 @@ namespace EC2 {
  * \value DisassociateSubnetCidrBlockAction EC2 DisassociateSubnetCidrBlock action.
  * \value DisassociateTransitGatewayRouteTableAction EC2 DisassociateTransitGatewayRouteTable action.
  * \value DisassociateVpcCidrBlockAction EC2 DisassociateVpcCidrBlock action.
+ * \value EnableEbsEncryptionByDefaultAction EC2 EnableEbsEncryptionByDefault action.
  * \value EnableTransitGatewayRouteTablePropagationAction EC2 EnableTransitGatewayRouteTablePropagation action.
  * \value EnableVgwRoutePropagationAction EC2 EnableVgwRoutePropagation action.
  * \value EnableVolumeIOAction EC2 EnableVolumeIO action.
@@ -280,6 +294,8 @@ namespace EC2 {
  * \value ExportTransitGatewayRoutesAction EC2 ExportTransitGatewayRoutes action.
  * \value GetConsoleOutputAction EC2 GetConsoleOutput action.
  * \value GetConsoleScreenshotAction EC2 GetConsoleScreenshot action.
+ * \value GetEbsDefaultKmsKeyIdAction EC2 GetEbsDefaultKmsKeyId action.
+ * \value GetEbsEncryptionByDefaultAction EC2 GetEbsEncryptionByDefault action.
  * \value GetHostReservationPurchasePreviewAction EC2 GetHostReservationPurchasePreview action.
  * \value GetLaunchTemplateDataAction EC2 GetLaunchTemplateData action.
  * \value GetPasswordDataAction EC2 GetPasswordData action.
@@ -295,6 +311,7 @@ namespace EC2 {
  * \value ImportVolumeAction EC2 ImportVolume action.
  * \value ModifyCapacityReservationAction EC2 ModifyCapacityReservation action.
  * \value ModifyClientVpnEndpointAction EC2 ModifyClientVpnEndpoint action.
+ * \value ModifyEbsDefaultKmsKeyIdAction EC2 ModifyEbsDefaultKmsKeyId action.
  * \value ModifyFleetAction EC2 ModifyFleet action.
  * \value ModifyFpgaImageAttributeAction EC2 ModifyFpgaImageAttribute action.
  * \value ModifyHostsAction EC2 ModifyHosts action.
@@ -304,6 +321,7 @@ namespace EC2 {
  * \value ModifyInstanceAttributeAction EC2 ModifyInstanceAttribute action.
  * \value ModifyInstanceCapacityReservationAttributesAction EC2 ModifyInstanceCapacityReservationAttributes action.
  * \value ModifyInstanceCreditSpecificationAction EC2 ModifyInstanceCreditSpecification action.
+ * \value ModifyInstanceEventStartTimeAction EC2 ModifyInstanceEventStartTime action.
  * \value ModifyInstancePlacementAction EC2 ModifyInstancePlacement action.
  * \value ModifyLaunchTemplateAction EC2 ModifyLaunchTemplate action.
  * \value ModifyNetworkInterfaceAttributeAction EC2 ModifyNetworkInterfaceAttribute action.
@@ -311,6 +329,9 @@ namespace EC2 {
  * \value ModifySnapshotAttributeAction EC2 ModifySnapshotAttribute action.
  * \value ModifySpotFleetRequestAction EC2 ModifySpotFleetRequest action.
  * \value ModifySubnetAttributeAction EC2 ModifySubnetAttribute action.
+ * \value ModifyTrafficMirrorFilterNetworkServicesAction EC2 ModifyTrafficMirrorFilterNetworkServices action.
+ * \value ModifyTrafficMirrorFilterRuleAction EC2 ModifyTrafficMirrorFilterRule action.
+ * \value ModifyTrafficMirrorSessionAction EC2 ModifyTrafficMirrorSession action.
  * \value ModifyTransitGatewayVpcAttachmentAction EC2 ModifyTransitGatewayVpcAttachment action.
  * \value ModifyVolumeAction EC2 ModifyVolume action.
  * \value ModifyVolumeAttributeAction EC2 ModifyVolumeAttribute action.
@@ -321,6 +342,7 @@ namespace EC2 {
  * \value ModifyVpcEndpointServicePermissionsAction EC2 ModifyVpcEndpointServicePermissions action.
  * \value ModifyVpcPeeringConnectionOptionsAction EC2 ModifyVpcPeeringConnectionOptions action.
  * \value ModifyVpcTenancyAction EC2 ModifyVpcTenancy action.
+ * \value ModifyVpnConnectionAction EC2 ModifyVpnConnection action.
  * \value MonitorInstancesAction EC2 MonitorInstances action.
  * \value MoveAddressToVpcAction EC2 MoveAddressToVpc action.
  * \value ProvisionByoipCidrAction EC2 ProvisionByoipCidr action.
@@ -343,6 +365,7 @@ namespace EC2 {
  * \value ReportInstanceStatusAction EC2 ReportInstanceStatus action.
  * \value RequestSpotFleetAction EC2 RequestSpotFleet action.
  * \value RequestSpotInstancesAction EC2 RequestSpotInstances action.
+ * \value ResetEbsDefaultKmsKeyIdAction EC2 ResetEbsDefaultKmsKeyId action.
  * \value ResetFpgaImageAttributeAction EC2 ResetFpgaImageAttribute action.
  * \value ResetImageAttributeAction EC2 ResetImageAttribute action.
  * \value ResetInstanceAttributeAction EC2 ResetInstanceAttribute action.

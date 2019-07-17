@@ -86,6 +86,8 @@ class DeleteInstanceSnapshotRequest;
 class DeleteInstanceSnapshotResponse;
 class DeleteKeyPairRequest;
 class DeleteKeyPairResponse;
+class DeleteKnownHostKeysRequest;
+class DeleteKnownHostKeysResponse;
 class DeleteLoadBalancerRequest;
 class DeleteLoadBalancerResponse;
 class DeleteLoadBalancerTlsCertificateRequest;
@@ -274,6 +276,7 @@ public slots:
     DeleteInstanceResponse * deleteInstance(const DeleteInstanceRequest &request);
     DeleteInstanceSnapshotResponse * deleteInstanceSnapshot(const DeleteInstanceSnapshotRequest &request);
     DeleteKeyPairResponse * deleteKeyPair(const DeleteKeyPairRequest &request);
+    DeleteKnownHostKeysResponse * deleteKnownHostKeys(const DeleteKnownHostKeysRequest &request);
     DeleteLoadBalancerResponse * deleteLoadBalancer(const DeleteLoadBalancerRequest &request);
     DeleteLoadBalancerTlsCertificateResponse * deleteLoadBalancerTlsCertificate(const DeleteLoadBalancerTlsCertificateRequest &request);
     DeleteRelationalDatabaseResponse * deleteRelationalDatabase(const DeleteRelationalDatabaseRequest &request);

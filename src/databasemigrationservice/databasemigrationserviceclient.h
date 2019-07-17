@@ -30,6 +30,8 @@ namespace DatabaseMigrationService {
 class DatabaseMigrationServiceClientPrivate;
 class AddTagsToResourceRequest;
 class AddTagsToResourceResponse;
+class ApplyPendingMaintenanceActionRequest;
+class ApplyPendingMaintenanceActionResponse;
 class CreateEndpointRequest;
 class CreateEndpointResponse;
 class CreateEventSubscriptionRequest;
@@ -70,6 +72,8 @@ class DescribeEventsRequest;
 class DescribeEventsResponse;
 class DescribeOrderableReplicationInstancesRequest;
 class DescribeOrderableReplicationInstancesResponse;
+class DescribePendingMaintenanceActionsRequest;
+class DescribePendingMaintenanceActionsResponse;
 class DescribeRefreshSchemasStatusRequest;
 class DescribeRefreshSchemasStatusResponse;
 class DescribeReplicationInstanceTaskLogsRequest;
@@ -134,6 +138,7 @@ public:
 
 public slots:
     AddTagsToResourceResponse * addTagsToResource(const AddTagsToResourceRequest &request);
+    ApplyPendingMaintenanceActionResponse * applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request);
     CreateEndpointResponse * createEndpoint(const CreateEndpointRequest &request);
     CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
     CreateReplicationInstanceResponse * createReplicationInstance(const CreateReplicationInstanceRequest &request);
@@ -154,6 +159,7 @@ public slots:
     DescribeEventSubscriptionsResponse * describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request);
     DescribeEventsResponse * describeEvents(const DescribeEventsRequest &request);
     DescribeOrderableReplicationInstancesResponse * describeOrderableReplicationInstances(const DescribeOrderableReplicationInstancesRequest &request);
+    DescribePendingMaintenanceActionsResponse * describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request);
     DescribeRefreshSchemasStatusResponse * describeRefreshSchemasStatus(const DescribeRefreshSchemasStatusRequest &request);
     DescribeReplicationInstanceTaskLogsResponse * describeReplicationInstanceTaskLogs(const DescribeReplicationInstanceTaskLogsRequest &request);
     DescribeReplicationInstancesResponse * describeReplicationInstances(const DescribeReplicationInstancesRequest &request);

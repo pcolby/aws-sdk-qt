@@ -55,6 +55,7 @@ public:
         DescribeUserAction,
         DisassociateDelegateFromResourceAction,
         DisassociateMemberFromGroupAction,
+        GetMailboxDetailsAction,
         ListAliasesAction,
         ListGroupMembersAction,
         ListGroupsAction,
@@ -66,6 +67,7 @@ public:
         PutMailboxPermissionsAction,
         RegisterToWorkMailAction,
         ResetPasswordAction,
+        UpdateMailboxQuotaAction,
         UpdatePrimaryEmailAddressAction,
         UpdateResourceAction,
     };

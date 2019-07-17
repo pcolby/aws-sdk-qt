@@ -60,6 +60,8 @@ class GetFunctionConfigurationRequest;
 class GetFunctionConfigurationResponse;
 class GetLayerVersionRequest;
 class GetLayerVersionResponse;
+class GetLayerVersionByArnRequest;
+class GetLayerVersionByArnResponse;
 class GetLayerVersionPolicyRequest;
 class GetLayerVersionPolicyResponse;
 class GetPolicyRequest;
@@ -137,6 +139,7 @@ public slots:
     GetFunctionResponse * getFunction(const GetFunctionRequest &request);
     GetFunctionConfigurationResponse * getFunctionConfiguration(const GetFunctionConfigurationRequest &request);
     GetLayerVersionResponse * getLayerVersion(const GetLayerVersionRequest &request);
+    GetLayerVersionByArnResponse * getLayerVersionByArn(const GetLayerVersionByArnRequest &request);
     GetLayerVersionPolicyResponse * getLayerVersionPolicy(const GetLayerVersionPolicyRequest &request);
     GetPolicyResponse * getPolicy(const GetPolicyRequest &request);
     InvokeResponse * invoke(const InvokeRequest &request);

@@ -143,7 +143,8 @@ DescribeObjectResponse * MediaStoreDataClient::describeObject(const DescribeObje
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Downloads the object at the specified
+ * Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS
+ * Elemental MediaStore downloads the object even if it’s still uploading the
  */
 GetObjectResponse * MediaStoreDataClient::getObject(const GetObjectRequest &request)
 {
@@ -169,7 +170,8 @@ ListItemsResponse * MediaStoreDataClient::listItems(const ListItemsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Uploads an object to the specified path. Object sizes are limited to 25
+ * Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB
+ * for streaming upload
  */
 PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &request)
 {

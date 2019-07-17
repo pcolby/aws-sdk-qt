@@ -248,7 +248,8 @@ CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates the content of a data set by applying a SQL
+ * Creates the content of a data set by applying a "queryAction" (a SQL query) or a "containerAction" (executing a
+ * containerized
  */
 CreateDatasetContentResponse * IoTAnalyticsClient::createDatasetContent(const CreateDatasetContentRequest &request)
 {
@@ -275,7 +276,8 @@ CreateDatastoreResponse * IoTAnalyticsClient::createDatastore(const CreateDatast
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a pipeline. A pipeline consumes messages from one or more channels and allows you to process the messages before
- * storing them in a data
+ * storing them in a data store. You must specify both a <code>channel</code> and a <code>datastore</code> activity and,
+ * optionally, as many as 23 additional activities in the <code>pipelineActivities</code>
  */
 CreatePipelineResponse * IoTAnalyticsClient::createPipeline(const CreatePipelineRequest &request)
 {
@@ -637,7 +639,8 @@ UpdateDatastoreResponse * IoTAnalyticsClient::updateDatastore(const UpdateDatast
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings of a
+ * Updates the settings of a pipeline. You must specify both a <code>channel</code> and a <code>datastore</code> activity
+ * and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code>
  */
 UpdatePipelineResponse * IoTAnalyticsClient::updatePipeline(const UpdatePipelineRequest &request)
 {

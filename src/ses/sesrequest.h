@@ -79,6 +79,7 @@ public:
         ListReceiptRuleSetsAction,
         ListTemplatesAction,
         ListVerifiedEmailAddressesAction,
+        PutConfigurationSetDeliveryOptionsAction,
         PutIdentityPolicyAction,
         ReorderReceiptRuleSetAction,
         SendBounceAction,

@@ -51,12 +51,16 @@
 #include "getpipelinestateresponse.h"
 #include "getthirdpartyjobdetailsrequest.h"
 #include "getthirdpartyjobdetailsresponse.h"
+#include "listactionexecutionsrequest.h"
+#include "listactionexecutionsresponse.h"
 #include "listactiontypesrequest.h"
 #include "listactiontypesresponse.h"
 #include "listpipelineexecutionsrequest.h"
 #include "listpipelineexecutionsresponse.h"
 #include "listpipelinesrequest.h"
 #include "listpipelinesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listwebhooksrequest.h"
 #include "listwebhooksresponse.h"
 #include "pollforjobsrequest.h"
@@ -83,6 +87,10 @@
 #include "retrystageexecutionresponse.h"
 #include "startpipelineexecutionrequest.h"
 #include "startpipelineexecutionresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatepipelinerequest.h"
 #include "updatepipelineresponse.h"
 
@@ -116,7 +124,7 @@ namespace CodePipeline {
  * 
  *  This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS
  *  CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see
- *  the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
+ *  the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
  * 
  *  Guide</a>>
  * 
@@ -154,6 +162,12 @@ namespace CodePipeline {
  * 
  *  pipeline> </li> <li>
  * 
+ *  <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and
+ *  action-level details, including individual action duration, status, any errors which occurred during the execution, and
+ *  input and output artifact location
+ * 
+ *  details> </li> <li>
+ * 
  *  <a>ListPipelines</a>, which gets a summary of all of the pipelines associated with your
  * 
  *  account> </li> <li>
@@ -176,7 +190,7 @@ namespace CodePipeline {
  *  re-run the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of
  *  a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of
  *  the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions,
- *  also refer to the <a href="http://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS
+ *  also refer to the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS
  *  CodePipeline Pipeline Structure
  * 
  *  Reference</a>>
@@ -396,8 +410,8 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Marks a custom action as deleted. PollForJobs for the custom action will fail after the action is marked for deletion.
- * Only used for custom
+ * Marks a custom action as deleted. <code>PollForJobs</code> for the custom action will fail after the action is marked
+ * for deletion. Only used for custom
  *
  * actions> <b>
  *
@@ -532,6 +546,11 @@ GetPipelineExecutionResponse * CodePipelineClient::getPipelineExecution(const Ge
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about the state of a pipeline, including the stages and
+ *
+ * actions> <note>
+ *
+ * Values returned in the <code>revisionId</code> and <code>revisionUrl</code> fields indicate the source revision
+ * information, such as the commit ID, for the current
  */
 GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelineStateRequest &request)
 {
@@ -555,6 +574,19 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
 GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request)
 {
     return qobject_cast<GetThirdPartyJobDetailsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * ListActionExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the action executions that have occurred in a
+ */
+ListActionExecutionsResponse * CodePipelineClient::listActionExecutions(const ListActionExecutionsRequest &request)
+{
+    return qobject_cast<ListActionExecutionsResponse *>(send(request));
 }
 
 /*!
@@ -598,6 +630,19 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
 
 /*!
  * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the set of key/value pairs (metadata) that are used to manage the
+ */
+ListTagsForResourceResponse * CodePipelineClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
  * ListWebhooksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -616,9 +661,9 @@ ListWebhooksResponse * CodePipelineClient::listWebhooks(const ListWebhooksReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about any jobs for AWS CodePipeline to act upon. PollForJobs is only valid for action types with
- * "Custom" in the owner field. If the action type contains "AWS" or "ThirdParty" in the owner field, the PollForJobs
- * action returns an
+ * Returns information about any jobs for AWS CodePipeline to act upon. <code>PollForJobs</code> is only valid for action
+ * types with "Custom" in the owner field. If the action type contains "AWS" or "ThirdParty" in the owner field, the
+ * <code>PollForJobs</code> action returns an
  *
  * error> <b>
  *
@@ -787,13 +832,39 @@ StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(cons
 
 /*!
  * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a resource.
+ */
+TagResourceResponse * CodePipelineClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from an AWS
+ */
+UntagResourceResponse * CodePipelineClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
  * UpdatePipelineResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure in
- * conjunction with UpdatePipeline to provide the full structure of the pipeline. Updating the pipeline increases the
- * version number of the pipeline by
+ * conjunction with <code>UpdatePipeline</code> to provide the full structure of the pipeline. Updating the pipeline
+ * increases the version number of the pipeline by
  */
 UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipelineRequest &request)
 {

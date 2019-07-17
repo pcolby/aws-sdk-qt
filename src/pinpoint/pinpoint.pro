@@ -222,6 +222,10 @@ HEADERS += \
     getvoicechannelrequest_p.h \
     getvoicechannelresponse.h \
     getvoicechannelresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     phonenumbervalidaterequest.h \
     phonenumbervalidaterequest_p.h \
     phonenumbervalidateresponse.h \
@@ -252,6 +256,14 @@ HEADERS += \
     sendusersmessagesrequest_p.h \
     sendusersmessagesresponse.h \
     sendusersmessagesresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updateadmchannelrequest.h \
     updateadmchannelrequest_p.h \
     updateadmchannelresponse.h \
@@ -420,6 +432,8 @@ SOURCES += \
     getuserendpointsresponse.cpp \
     getvoicechannelrequest.cpp \
     getvoicechannelresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     phonenumbervalidaterequest.cpp \
     phonenumbervalidateresponse.cpp \
     pinpointclient.cpp \
@@ -435,6 +449,10 @@ SOURCES += \
     sendmessagesresponse.cpp \
     sendusersmessagesrequest.cpp \
     sendusersmessagesresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updateadmchannelrequest.cpp \
     updateadmchannelresponse.cpp \
     updateapnschannelrequest.cpp \

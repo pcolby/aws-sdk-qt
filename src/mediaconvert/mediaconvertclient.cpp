@@ -167,7 +167,6 @@ AssociateCertificateResponse * MediaConvertClient::associateCertificate(const As
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Permanently remove a job from a queue. Once you have canceled a job, you can't start it again. You can't delete a
  */
 CancelJobResponse * MediaConvertClient::cancelJob(const CancelJobRequest &request)
 {

@@ -152,7 +152,7 @@ namespace ElasticBeanstalk {
  *  </p
  * 
  *  For a list of region-specific endpoints that AWS Elastic Beanstalk supports, go to <a
- *  href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
+ *  href="https://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">Regions and Endpoints</a> in the
  *  <i>Amazon Web Services
  */
 
@@ -259,7 +259,7 @@ CheckDNSAvailabilityResponse * ElasticBeanstalkClient::checkDNSAvailability(cons
  * version labels that specify application source bundles for each of the environments to create or update. The name of
  * each environment and other required information must be included in the source bundles in an environment manifest named
  * <code>env.yaml</code>. See <a
- * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-mgmt-compose.html">Compose Environments</a> for
+ * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-mgmt-compose.html">Compose Environments</a> for
  */
 ComposeEnvironmentsResponse * ElasticBeanstalkClient::composeEnvironments(const ComposeEnvironmentsRequest &request)
 {
@@ -686,7 +686,7 @@ DescribeEventsResponse * ElasticBeanstalkClient::describeEvents(const DescribeEv
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves detailed information about the health of instances in your AWS Elastic Beanstalk. This operation requires <a
- * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced.html">enhanced health
+ * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced.html">enhanced health
  */
 DescribeInstancesHealthResponse * ElasticBeanstalkClient::describeInstancesHealth(const DescribeInstancesHealthRequest &request)
 {
@@ -756,7 +756,7 @@ ListPlatformVersionsResponse * ElasticBeanstalkClient::listPlatformVersions(cons
  * pairs>
  *
  * Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment
- * tagging, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging
+ * tagging, see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging
  * Resources in Your Elastic Beanstalk
  */
 ListTagsForResourceResponse * ElasticBeanstalkClient::listTagsForResource(const ListTagsForResourceRequest &request)
@@ -985,7 +985,7 @@ UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const Upda
  * <code>TagsToRemove</code>>
  *
  * Currently, Elastic Beanstalk only supports tagging of Elastic Beanstalk environments. For details about environment
- * tagging, see <a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging
+ * tagging, see <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.tagging.html">Tagging
  * Resources in Your Elastic Beanstalk
  *
  * Environment</a>>
@@ -1006,7 +1006,7 @@ UpdateEnvironmentResponse * ElasticBeanstalkClient::updateEnvironment(const Upda
  * parameter> </dd> </dl>
  *
  * For details about creating a custom user policy, see <a
- * href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html#AWSHowTo.iam.policies">Creating
+ * href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html#AWSHowTo.iam.policies">Creating
  * a Custom User
  */
 UpdateTagsForResourceResponse * ElasticBeanstalkClient::updateTagsForResource(const UpdateTagsForResourceRequest &request)

@@ -194,6 +194,7 @@ namespace SageMaker {
  * \ingroup aws-clients
  * \inmodule QtAwsSageMaker
  *
+ *  Provides APIs for creating and managing Amazon SageMaker
  */
 
 /*!
@@ -256,7 +257,8 @@ SageMakerClient::SageMakerClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Adds or overwrites one or more tags for the specified Amazon SageMaker resource. You can add tags to notebook instances,
- * training jobs, hyperparameter tuning jobs, models, endpoint configurations, and
+ * training jobs, hyperparameter tuning jobs, batch transform jobs, models, labeling jobs, work teams, endpoint
+ * configurations, and
  *
  * endpoints>
  *
@@ -296,15 +298,15 @@ CreateAlgorithmResponse * SageMakerClient::createAlgorithm(const CreateAlgorithm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a git repository as a resource in your Amazon SageMaker account. You can associate the repository with notebook
- * instances so that you can use git source control for the notebooks you create. The git repository is a resource in your
+ * Creates a Git repository as a resource in your Amazon SageMaker account. You can associate the repository with notebook
+ * instances so that you can use Git source control for the notebooks you create. The Git repository is a resource in your
  * Amazon SageMaker account, so it can be associated with more than one notebook instance, and it persists independently
  * from the lifecycle of any notebook instances it is associated
  *
  * with>
  *
  * The repository can be hosted either in <a href="http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">AWS
- * CodeCommit</a> or in any other git
+ * CodeCommit</a> or in any other Git
  */
 CreateCodeRepositoryResponse * SageMakerClient::createCodeRepository(const CreateCodeRepositoryRequest &request)
 {
@@ -369,13 +371,19 @@ CreateCompilationJobResponse * SageMakerClient::createCompilationJob(const Creat
  *
  * Creates an endpoint using the endpoint configuration specified in the request. Amazon SageMaker uses the endpoint to
  * provision resources and deploy models. You create the endpoint configuration with the <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html">CreateEndpointConfig</a> API.
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html">CreateEndpointConfig</a> API.
  *
  * </p <note>
  *
  * Use this API only for hosting models using Amazon SageMaker hosting services.
  *
- * </p </note>
+ * </p
+ *
+ * You must not delete an <code>EndpointConfig</code> in use by an endpoint that is live or while the
+ * <code>UpdateEndpoint</code> or <code>CreateEndpoint</code> operations are being performed on the endpoint. To update an
+ * endpoint, you must create a new
+ *
+ * <code>EndpointConfig</code>> </note>
  *
  * The endpoint name must be unique within an AWS Region in your AWS account.
  *
@@ -389,11 +397,11 @@ CreateCompilationJobResponse * SageMakerClient::createCompilationJob(const Creat
  * When Amazon SageMaker receives the request, it sets the endpoint status to <code>Creating</code>. After it creates the
  * endpoint, it sets the status to <code>InService</code>. Amazon SageMaker can then process incoming requests for
  * inferences. To check the status of an endpoint, use the <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a>
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a>
  *
  * API>
  *
- * For an example, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/ex1.html">Exercise 1: Using the K-Means
+ * For an example, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1.html">Exercise 1: Using the K-Means
  * Algorithm Provided by Amazon SageMaker</a>.
  *
  * </p
@@ -419,7 +427,7 @@ CreateEndpointResponse * SageMakerClient::createEndpoint(const CreateEndpointReq
  * Creates an endpoint configuration that Amazon SageMaker hosting services uses to deploy models. In the configuration,
  * you identify one or more models, created using the <code>CreateModel</code> API, to deploy and the resources that you
  * want Amazon SageMaker to provision. Then you call the <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html">CreateEndpoint</a>
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html">CreateEndpoint</a>
  *
  * API> <note>
  *
@@ -621,7 +629,7 @@ CreateModelPackageResponse * SageMakerClient::createModelPackage(const CreateMod
  *
  * </p
  *
- * For more information, see <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
+ * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
  */
 CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const CreateNotebookInstanceRequest &request)
 {
@@ -658,7 +666,7 @@ CreateNotebookInstanceResponse * SageMakerClient::createNotebookInstance(const C
  * started>
  *
  * For information about notebook instance lifestyle configurations, see <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html">Step 2.1: (Optional) Customize a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html">Step 2.1: (Optional) Customize a
  * Notebook
  */
 CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookInstanceLifecycleConfig(const CreateNotebookInstanceLifecycleConfigRequest &request)
@@ -678,13 +686,17 @@ CreateNotebookInstanceLifecycleConfigResponse * SageMakerClient::createNotebookI
  *
  * page>
  *
- * You can restrict access to this API and to the URL that it returns to a list of IP addresses that you specify. To
- * restrict access, attach an IAM policy that denies access to this API unless the call comes from an IP address in the
- * specified list to every AWS Identity and Access Management user, group, or role used to access the notebook instance.
- * Use the <code>NotIpAddress</code> condition operator and the <code>aws:SourceIP</code> condition context key to specify
- * the list of IP addresses that you want to have access to the notebook instance. For more information, see <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-access-ws.html#nbi-ip-filter">Limit Access to a Notebook
- * Instance by IP
+ * IAM authorization policies for this API are also enforced for every HTTP request and WebSocket frame that attempts to
+ * connect to the notebook instance.For example, you can restrict access to this API and to the URL that it returns to a
+ * list of IP addresses that you specify. Use the <code>NotIpAddress</code> condition operator and the
+ * <code>aws:SourceIP</code> condition context key to specify the list of IP addresses that you want to have access to the
+ * notebook instance. For more information, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-ip-filter.html">Limit Access to a Notebook Instance by IP
+ *
+ * Address</a>> <note>
+ *
+ * The URL that you get from a call to is valid only for 5 minutes. If you try to use the URL after the 5-minute limit
+ * expires, you are directed to the AWS console sign-in
  */
 CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNotebookInstanceUrl(const CreatePresignedNotebookInstanceUrlRequest &request)
 {
@@ -703,8 +715,8 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
  * </p
  *
  * If you choose to host your model using Amazon SageMaker hosting services, you can use the resulting model artifacts as
- * part of the model. You can also use the artifacts in a deep learning service other than Amazon SageMaker, provided that
- * you know how to use them for inferences.
+ * part of the model. You can also use the artifacts in a machine learning service other than Amazon SageMaker, provided
+ * that you know how to use them for inferences.
  *
  * </p
  *
@@ -716,9 +728,10 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
  *
  * </p </li> <li>
  *
- * <code>HyperParameters</code> - Specify these algorithm-specific parameters to influence the quality of the final model.
- * For a list of hyperparameters for each training algorithm provided by Amazon SageMaker, see <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
+ * <code>HyperParameters</code> - Specify these algorithm-specific parameters to enable the estimation of model parameters
+ * during training. Hyperparameters can be tuned to optimize this learning process. For a list of hyperparameters for each
+ * training algorithm provided by Amazon SageMaker, see <a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
  *
  * </p </li> <li>
  *
@@ -742,12 +755,12 @@ CreatePresignedNotebookInstanceUrlResponse * SageMakerClient::createPresignedNot
  *
  * </p </li> <li>
  *
- * <code>StoppingCondition</code> - Sets a duration for training. Use this parameter to cap model training costs.
+ * <code>StoppingCondition</code> - Sets a time limit for training. Use this parameter to cap model training costs.
  *
  * </p </li> </ul>
  *
  * For more information about Amazon SageMaker, see <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How It Works</a>.
  */
 CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrainingJobRequest &request)
 {
@@ -796,7 +809,7 @@ CreateTrainingJobResponse * SageMakerClient::createTrainingJob(const CreateTrain
  * job> </li> </ul>
  *
  * For more information about how batch transformation works Amazon SageMaker, see <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform.html">How It Works</a>.
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/batch-transform.html">How It Works</a>.
  */
 CreateTransformJobResponse * SageMakerClient::createTransformJob(const CreateTransformJobRequest &request)
 {
@@ -840,7 +853,7 @@ DeleteAlgorithmResponse * SageMakerClient::deleteAlgorithm(const DeleteAlgorithm
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified git repository from your
+ * Deletes the specified Git repository from your
  */
 DeleteCodeRepositoryResponse * SageMakerClient::deleteCodeRepository(const DeleteCodeRepositoryRequest &request)
 {
@@ -886,7 +899,7 @@ DeleteEndpointConfigResponse * SageMakerClient::deleteEndpointConfig(const Delet
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a model. The <code>DeleteModel</code> API deletes only the model entry that was created in Amazon SageMaker when
- * you called the <a href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a> API. It
+ * you called the <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a> API. It
  * does not delete model artifacts, inference code, or the IAM role that you specified when creating the model.
  */
 DeleteModelResponse * SageMakerClient::deleteModel(const DeleteModelRequest &request)
@@ -998,7 +1011,7 @@ DescribeAlgorithmResponse * SageMakerClient::describeAlgorithm(const DescribeAlg
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets details about the specified git
+ * Gets details about the specified Git
  */
 DescribeCodeRepositoryResponse * SageMakerClient::describeCodeRepository(const DescribeCodeRepositoryRequest &request)
 {
@@ -1130,7 +1143,7 @@ DescribeNotebookInstanceResponse * SageMakerClient::describeNotebookInstance(con
  * configuration>
  *
  * For information about notebook instance lifestyle configurations, see <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html">Step 2.1: (Optional) Customize a
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html">Step 2.1: (Optional) Customize a
  * Notebook
  */
 DescribeNotebookInstanceLifecycleConfigResponse * SageMakerClient::describeNotebookInstanceLifecycleConfig(const DescribeNotebookInstanceLifecycleConfigRequest &request)
@@ -1226,7 +1239,7 @@ ListAlgorithmsResponse * SageMakerClient::listAlgorithms(const ListAlgorithmsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of the git repositories in your
+ * Gets a list of the Git repositories in your
  */
 ListCodeRepositoriesResponse * SageMakerClient::listCodeRepositories(const ListCodeRepositoriesRequest &request)
 {
@@ -1337,7 +1350,7 @@ ListModelPackagesResponse * SageMakerClient::listModelPackages(const ListModelPa
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists models created with the <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a>
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateModel.html">CreateModel</a>
  */
 ListModelsResponse * SageMakerClient::listModels(const ListModelsRequest &request)
 {
@@ -1561,9 +1574,10 @@ StopLabelingJobResponse * SageMakerClient::stopLabelingJob(const StopLabelingJob
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Terminates the ML compute instance. Before terminating the instance, Amazon SageMaker disconnects the ML storage volume
- * from it. Amazon SageMaker preserves the ML storage volume.
+ * from it. Amazon SageMaker preserves the ML storage volume. Amazon SageMaker stops charging you for the ML compute
+ * instance when you call
  *
- * </p
+ * <code>StopNotebookInstance</code>>
  *
  * To access data on the ML storage volume for a notebook instance that has been terminated, call the
  * <code>StartNotebookInstance</code> API. <code>StartNotebookInstance</code> launches another ML compute instance,
@@ -1583,12 +1597,6 @@ StopNotebookInstanceResponse * SageMakerClient::stopNotebookInstance(const StopN
  * Stops a training job. To stop a job, Amazon SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays
  * job termination for 120 seconds. Algorithms might use this 120-second window to save the model artifacts, so the results
  * of the training is not lost.
- *
- * </p
- *
- * Training algorithms provided by Amazon SageMaker save the intermediate results of a model training job. This
- * intermediate data is a valid model artifact. You can use the model artifacts that are saved when Amazon SageMaker stops
- * a training job to create a model.
  *
  * </p
  *
@@ -1625,7 +1633,7 @@ StopTransformJobResponse * SageMakerClient::stopTransformJob(const StopTransform
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified git repository with the specified
+ * Updates the specified Git repository with the specified
  */
 UpdateCodeRepositoryResponse * SageMakerClient::updateCodeRepository(const UpdateCodeRepositoryRequest &request)
 {
@@ -1646,11 +1654,13 @@ UpdateCodeRepositoryResponse * SageMakerClient::updateCodeRepository(const Updat
  *
  * When Amazon SageMaker receives the request, it sets the endpoint status to <code>Updating</code>. After updating the
  * endpoint, it sets the status to <code>InService</code>. To check the status of an endpoint, use the <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
  *
  * </p <note>
  *
- * You cannot update an endpoint with the current <code>EndpointConfig</code>. To update an endpoint, you must create a new
+ * You must not delete an <code>EndpointConfig</code> in use by an endpoint that is live or while the
+ * <code>UpdateEndpoint</code> or <code>CreateEndpoint</code> operations are being performed on the endpoint. To update an
+ * endpoint, you must create a new
  */
 UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -1667,7 +1677,7 @@ UpdateEndpointResponse * SageMakerClient::updateEndpoint(const UpdateEndpointReq
  * associated with an existing endpoint. When it receives the request, Amazon SageMaker sets the endpoint status to
  * <code>Updating</code>. After updating the endpoint, it sets the status to <code>InService</code>. To check the status of
  * an endpoint, use the <a
- * href="http://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
+ * href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_DescribeEndpoint.html">DescribeEndpoint</a> API.
  */
 UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeightsAndCapacities(const UpdateEndpointWeightsAndCapacitiesRequest &request)
 {
@@ -1681,7 +1691,7 @@ UpdateEndpointWeightsAndCapacitiesResponse * SageMakerClient::updateEndpointWeig
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates a notebook instance. NotebookInstance updates include upgrading or downgrading the ML compute instance used for
- * your notebook instance to accommodate changes in your workload requirements. You can also update the VPC security
+ * your notebook instance to accommodate changes in your workload
  */
 UpdateNotebookInstanceResponse * SageMakerClient::updateNotebookInstance(const UpdateNotebookInstanceRequest &request)
 {

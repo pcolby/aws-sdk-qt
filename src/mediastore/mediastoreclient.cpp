@@ -41,12 +41,22 @@
 #include "getlifecyclepolicyresponse.h"
 #include "listcontainersrequest.h"
 #include "listcontainersresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putcontainerpolicyrequest.h"
 #include "putcontainerpolicyresponse.h"
 #include "putcorspolicyrequest.h"
 #include "putcorspolicyresponse.h"
 #include "putlifecyclepolicyrequest.h"
 #include "putlifecyclepolicyresponse.h"
+#include "startaccessloggingrequest.h"
+#include "startaccessloggingresponse.h"
+#include "stopaccessloggingrequest.h"
+#include "stopaccessloggingresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -191,7 +201,7 @@ DeleteCorsPolicyResponse * MediaStoreClient::deleteCorsPolicy(const DeleteCorsPo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes an object lifecycle policy from a
+ * Removes an object lifecycle policy from a container. It takes up to 20 minutes for the change to take
  */
 DeleteLifecyclePolicyResponse * MediaStoreClient::deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request)
 {
@@ -286,6 +296,19 @@ ListContainersResponse * MediaStoreClient::listContainers(const ListContainersRe
 
 /*!
  * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the tags assigned to the specified container.
+ */
+ListTagsForResourceResponse * MediaStoreClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
  * PutContainerPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -320,6 +343,11 @@ PutContainerPolicyResponse * MediaStoreClient::putContainerPolicy(const PutConta
  * identify origins and the HTTP methods that can be executed on your container. The policy can contain up to 398,000
  * characters. You can add up to 100 rules to a CORS policy. If more than one rule applies, the service uses the first
  * applicable rule
+ *
+ * listed>
+ *
+ * To learn more about CORS, see <a href="https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html">Cross-Origin
+ * Resource Sharing (CORS) in AWS Elemental
  */
 PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyRequest &request)
 {
@@ -333,11 +361,75 @@ PutCorsPolicyResponse * MediaStoreClient::putCorsPolicy(const PutCorsPolicyReque
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Writes an object lifecycle policy to a container. If the container already has an object lifecycle policy, the service
- * replaces the existing policy with the new policy.
+ * replaces the existing policy with the new policy. It takes up to 20 minutes for the change to take
+ *
+ * effect>
+ *
+ * For information about how to construct an object lifecycle policy, see <a
+ * href="https://docs.aws.amazon.com/mediastore/latest/ug/policies-object-lifecycle-components.html">Components of an
+ * Object Lifecycle
  */
 PutLifecyclePolicyResponse * MediaStoreClient::putLifecyclePolicy(const PutLifecyclePolicyRequest &request)
 {
     return qobject_cast<PutLifecyclePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * StartAccessLoggingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts access logging on the specified container. When you enable access logging on a container, MediaStore delivers
+ * access logs for objects stored in that container to Amazon CloudWatch
+ */
+StartAccessLoggingResponse * MediaStoreClient::startAccessLogging(const StartAccessLoggingRequest &request)
+{
+    return qobject_cast<StartAccessLoggingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * StopAccessLoggingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops access logging on the specified container. When you stop access logging on a container, MediaStore stops sending
+ * access logs to Amazon CloudWatch Logs. These access logs are not saved and are not
+ */
+StopAccessLoggingResponse * MediaStoreClient::stopAccessLogging(const StopAccessLoggingRequest &request)
+{
+    return qobject_cast<StopAccessLoggingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds tags to the specified AWS Elemental MediaStore container. Tags are key:value pairs that you can associate with AWS
+ * resources. For example, the tag key might be "customer" and the tag value might be "companyA." You can specify one or
+ * more tags to add to each container. You can add up to 50 tags to each container. For more information about tagging,
+ * including naming and usage conventions, see <a href="https://aws.amazon.com/documentation/mediastore/tagging">Tagging
+ * Resources in
+ */
+TagResourceResponse * MediaStoreClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from the specified container. You can specify one or more tags to remove.
+ */
+UntagResourceResponse * MediaStoreClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

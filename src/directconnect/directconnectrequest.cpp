@@ -36,34 +36,41 @@ namespace DirectConnect {
  * This enum describes the actions that can be performed as DirectConnect
  * requests.
  *
+ * \value AcceptDirectConnectGatewayAssociationProposalAction DirectConnect AcceptDirectConnectGatewayAssociationProposal action.
  * \value AllocateConnectionOnInterconnectAction DirectConnect AllocateConnectionOnInterconnect action.
  * \value AllocateHostedConnectionAction DirectConnect AllocateHostedConnection action.
  * \value AllocatePrivateVirtualInterfaceAction DirectConnect AllocatePrivateVirtualInterface action.
  * \value AllocatePublicVirtualInterfaceAction DirectConnect AllocatePublicVirtualInterface action.
+ * \value AllocateTransitVirtualInterfaceAction DirectConnect AllocateTransitVirtualInterface action.
  * \value AssociateConnectionWithLagAction DirectConnect AssociateConnectionWithLag action.
  * \value AssociateHostedConnectionAction DirectConnect AssociateHostedConnection action.
  * \value AssociateVirtualInterfaceAction DirectConnect AssociateVirtualInterface action.
  * \value ConfirmConnectionAction DirectConnect ConfirmConnection action.
  * \value ConfirmPrivateVirtualInterfaceAction DirectConnect ConfirmPrivateVirtualInterface action.
  * \value ConfirmPublicVirtualInterfaceAction DirectConnect ConfirmPublicVirtualInterface action.
+ * \value ConfirmTransitVirtualInterfaceAction DirectConnect ConfirmTransitVirtualInterface action.
  * \value CreateBGPPeerAction DirectConnect CreateBGPPeer action.
  * \value CreateConnectionAction DirectConnect CreateConnection action.
  * \value CreateDirectConnectGatewayAction DirectConnect CreateDirectConnectGateway action.
  * \value CreateDirectConnectGatewayAssociationAction DirectConnect CreateDirectConnectGatewayAssociation action.
+ * \value CreateDirectConnectGatewayAssociationProposalAction DirectConnect CreateDirectConnectGatewayAssociationProposal action.
  * \value CreateInterconnectAction DirectConnect CreateInterconnect action.
  * \value CreateLagAction DirectConnect CreateLag action.
  * \value CreatePrivateVirtualInterfaceAction DirectConnect CreatePrivateVirtualInterface action.
  * \value CreatePublicVirtualInterfaceAction DirectConnect CreatePublicVirtualInterface action.
+ * \value CreateTransitVirtualInterfaceAction DirectConnect CreateTransitVirtualInterface action.
  * \value DeleteBGPPeerAction DirectConnect DeleteBGPPeer action.
  * \value DeleteConnectionAction DirectConnect DeleteConnection action.
  * \value DeleteDirectConnectGatewayAction DirectConnect DeleteDirectConnectGateway action.
  * \value DeleteDirectConnectGatewayAssociationAction DirectConnect DeleteDirectConnectGatewayAssociation action.
+ * \value DeleteDirectConnectGatewayAssociationProposalAction DirectConnect DeleteDirectConnectGatewayAssociationProposal action.
  * \value DeleteInterconnectAction DirectConnect DeleteInterconnect action.
  * \value DeleteLagAction DirectConnect DeleteLag action.
  * \value DeleteVirtualInterfaceAction DirectConnect DeleteVirtualInterface action.
  * \value DescribeConnectionLoaAction DirectConnect DescribeConnectionLoa action.
  * \value DescribeConnectionsAction DirectConnect DescribeConnections action.
  * \value DescribeConnectionsOnInterconnectAction DirectConnect DescribeConnectionsOnInterconnect action.
+ * \value DescribeDirectConnectGatewayAssociationProposalsAction DirectConnect DescribeDirectConnectGatewayAssociationProposals action.
  * \value DescribeDirectConnectGatewayAssociationsAction DirectConnect DescribeDirectConnectGatewayAssociations action.
  * \value DescribeDirectConnectGatewayAttachmentsAction DirectConnect DescribeDirectConnectGatewayAttachments action.
  * \value DescribeDirectConnectGatewaysAction DirectConnect DescribeDirectConnectGateways action.
@@ -79,6 +86,7 @@ namespace DirectConnect {
  * \value DisassociateConnectionFromLagAction DirectConnect DisassociateConnectionFromLag action.
  * \value TagResourceAction DirectConnect TagResource action.
  * \value UntagResourceAction DirectConnect UntagResource action.
+ * \value UpdateDirectConnectGatewayAssociationAction DirectConnect UpdateDirectConnectGatewayAssociation action.
  * \value UpdateLagAction DirectConnect UpdateLag action.
  * \value UpdateVirtualInterfaceAttributesAction DirectConnect UpdateVirtualInterfaceAttributes action.
  */

@@ -37,10 +37,16 @@
 #include "listchannelsresponse.h"
 #include "listoriginendpointsrequest.h"
 #include "listoriginendpointsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "rotatechannelcredentialsrequest.h"
 #include "rotatechannelcredentialsresponse.h"
 #include "rotateingestendpointcredentialsrequest.h"
 #include "rotateingestendpointcredentialsresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatechannelrequest.h"
 #include "updatechannelresponse.h"
 #include "updateoriginendpointrequest.h"
@@ -221,6 +227,18 @@ ListOriginEndpointsResponse * MediaPackageClient::listOriginEndpoints(const List
 
 /*!
  * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsForResourceResponse * MediaPackageClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
  * RotateChannelCredentialsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -242,6 +260,30 @@ RotateChannelCredentialsResponse * MediaPackageClient::rotateChannelCredentials(
 RotateIngestEndpointCredentialsResponse * MediaPackageClient::rotateIngestEndpointCredentials(const RotateIngestEndpointCredentialsRequest &request)
 {
     return qobject_cast<RotateIngestEndpointCredentialsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+TagResourceResponse * MediaPackageClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UntagResourceResponse * MediaPackageClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

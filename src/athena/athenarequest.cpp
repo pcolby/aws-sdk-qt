@@ -39,14 +39,22 @@ namespace Athena {
  * \value BatchGetNamedQueryAction Athena BatchGetNamedQuery action.
  * \value BatchGetQueryExecutionAction Athena BatchGetQueryExecution action.
  * \value CreateNamedQueryAction Athena CreateNamedQuery action.
+ * \value CreateWorkGroupAction Athena CreateWorkGroup action.
  * \value DeleteNamedQueryAction Athena DeleteNamedQuery action.
+ * \value DeleteWorkGroupAction Athena DeleteWorkGroup action.
  * \value GetNamedQueryAction Athena GetNamedQuery action.
  * \value GetQueryExecutionAction Athena GetQueryExecution action.
  * \value GetQueryResultsAction Athena GetQueryResults action.
+ * \value GetWorkGroupAction Athena GetWorkGroup action.
  * \value ListNamedQueriesAction Athena ListNamedQueries action.
  * \value ListQueryExecutionsAction Athena ListQueryExecutions action.
+ * \value ListTagsForResourceAction Athena ListTagsForResource action.
+ * \value ListWorkGroupsAction Athena ListWorkGroups action.
  * \value StartQueryExecutionAction Athena StartQueryExecution action.
  * \value StopQueryExecutionAction Athena StopQueryExecution action.
+ * \value TagResourceAction Athena TagResource action.
+ * \value UntagResourceAction Athena UntagResource action.
+ * \value UpdateWorkGroupAction Athena UpdateWorkGroup action.
  */
 
 /*!

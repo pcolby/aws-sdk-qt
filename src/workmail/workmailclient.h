@@ -64,6 +64,8 @@ class DisassociateDelegateFromResourceRequest;
 class DisassociateDelegateFromResourceResponse;
 class DisassociateMemberFromGroupRequest;
 class DisassociateMemberFromGroupResponse;
+class GetMailboxDetailsRequest;
+class GetMailboxDetailsResponse;
 class ListAliasesRequest;
 class ListAliasesResponse;
 class ListGroupMembersRequest;
@@ -86,6 +88,8 @@ class RegisterToWorkMailRequest;
 class RegisterToWorkMailResponse;
 class ResetPasswordRequest;
 class ResetPasswordResponse;
+class UpdateMailboxQuotaRequest;
+class UpdateMailboxQuotaResponse;
 class UpdatePrimaryEmailAddressRequest;
 class UpdatePrimaryEmailAddressResponse;
 class UpdateResourceRequest;
@@ -125,6 +129,7 @@ public slots:
     DescribeUserResponse * describeUser(const DescribeUserRequest &request);
     DisassociateDelegateFromResourceResponse * disassociateDelegateFromResource(const DisassociateDelegateFromResourceRequest &request);
     DisassociateMemberFromGroupResponse * disassociateMemberFromGroup(const DisassociateMemberFromGroupRequest &request);
+    GetMailboxDetailsResponse * getMailboxDetails(const GetMailboxDetailsRequest &request);
     ListAliasesResponse * listAliases(const ListAliasesRequest &request);
     ListGroupMembersResponse * listGroupMembers(const ListGroupMembersRequest &request);
     ListGroupsResponse * listGroups(const ListGroupsRequest &request);
@@ -136,6 +141,7 @@ public slots:
     PutMailboxPermissionsResponse * putMailboxPermissions(const PutMailboxPermissionsRequest &request);
     RegisterToWorkMailResponse * registerToWorkMail(const RegisterToWorkMailRequest &request);
     ResetPasswordResponse * resetPassword(const ResetPasswordRequest &request);
+    UpdateMailboxQuotaResponse * updateMailboxQuota(const UpdateMailboxQuotaRequest &request);
     UpdatePrimaryEmailAddressResponse * updatePrimaryEmailAddress(const UpdatePrimaryEmailAddressRequest &request);
     UpdateResourceResponse * updateResource(const UpdateResourceRequest &request);
 

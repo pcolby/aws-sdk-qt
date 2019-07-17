@@ -44,6 +44,8 @@ namespace MQ {
  * \value DeleteTagsAction MQ DeleteTags action.
  * \value DeleteUserAction MQ DeleteUser action.
  * \value DescribeBrokerAction MQ DescribeBroker action.
+ * \value DescribeBrokerEngineTypesAction MQ DescribeBrokerEngineTypes action.
+ * \value DescribeBrokerInstanceOptionsAction MQ DescribeBrokerInstanceOptions action.
  * \value DescribeConfigurationAction MQ DescribeConfiguration action.
  * \value DescribeConfigurationRevisionAction MQ DescribeConfigurationRevision action.
  * \value DescribeUserAction MQ DescribeUser action.

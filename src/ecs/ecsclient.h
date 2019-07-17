@@ -32,6 +32,8 @@ class CreateClusterRequest;
 class CreateClusterResponse;
 class CreateServiceRequest;
 class CreateServiceResponse;
+class CreateTaskSetRequest;
+class CreateTaskSetResponse;
 class DeleteAccountSettingRequest;
 class DeleteAccountSettingResponse;
 class DeleteAttributesRequest;
@@ -40,6 +42,8 @@ class DeleteClusterRequest;
 class DeleteClusterResponse;
 class DeleteServiceRequest;
 class DeleteServiceResponse;
+class DeleteTaskSetRequest;
+class DeleteTaskSetResponse;
 class DeregisterContainerInstanceRequest;
 class DeregisterContainerInstanceResponse;
 class DeregisterTaskDefinitionRequest;
@@ -52,6 +56,8 @@ class DescribeServicesRequest;
 class DescribeServicesResponse;
 class DescribeTaskDefinitionRequest;
 class DescribeTaskDefinitionResponse;
+class DescribeTaskSetsRequest;
+class DescribeTaskSetsResponse;
 class DescribeTasksRequest;
 class DescribeTasksResponse;
 class DiscoverPollEndpointRequest;
@@ -76,6 +82,8 @@ class ListTasksRequest;
 class ListTasksResponse;
 class PutAccountSettingRequest;
 class PutAccountSettingResponse;
+class PutAccountSettingDefaultRequest;
+class PutAccountSettingDefaultResponse;
 class PutAttributesRequest;
 class PutAttributesResponse;
 class RegisterContainerInstanceRequest;
@@ -88,6 +96,8 @@ class StartTaskRequest;
 class StartTaskResponse;
 class StopTaskRequest;
 class StopTaskResponse;
+class SubmitAttachmentStateChangesRequest;
+class SubmitAttachmentStateChangesResponse;
 class SubmitContainerStateChangeRequest;
 class SubmitContainerStateChangeResponse;
 class SubmitTaskStateChangeRequest;
@@ -102,6 +112,10 @@ class UpdateContainerInstancesStateRequest;
 class UpdateContainerInstancesStateResponse;
 class UpdateServiceRequest;
 class UpdateServiceResponse;
+class UpdateServicePrimaryTaskSetRequest;
+class UpdateServicePrimaryTaskSetResponse;
+class UpdateTaskSetRequest;
+class UpdateTaskSetResponse;
 
 class QTAWS_EXPORT EcsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -121,16 +135,19 @@ public:
 public slots:
     CreateClusterResponse * createCluster(const CreateClusterRequest &request);
     CreateServiceResponse * createService(const CreateServiceRequest &request);
+    CreateTaskSetResponse * createTaskSet(const CreateTaskSetRequest &request);
     DeleteAccountSettingResponse * deleteAccountSetting(const DeleteAccountSettingRequest &request);
     DeleteAttributesResponse * deleteAttributes(const DeleteAttributesRequest &request);
     DeleteClusterResponse * deleteCluster(const DeleteClusterRequest &request);
     DeleteServiceResponse * deleteService(const DeleteServiceRequest &request);
+    DeleteTaskSetResponse * deleteTaskSet(const DeleteTaskSetRequest &request);
     DeregisterContainerInstanceResponse * deregisterContainerInstance(const DeregisterContainerInstanceRequest &request);
     DeregisterTaskDefinitionResponse * deregisterTaskDefinition(const DeregisterTaskDefinitionRequest &request);
     DescribeClustersResponse * describeClusters(const DescribeClustersRequest &request);
     DescribeContainerInstancesResponse * describeContainerInstances(const DescribeContainerInstancesRequest &request);
     DescribeServicesResponse * describeServices(const DescribeServicesRequest &request);
     DescribeTaskDefinitionResponse * describeTaskDefinition(const DescribeTaskDefinitionRequest &request);
+    DescribeTaskSetsResponse * describeTaskSets(const DescribeTaskSetsRequest &request);
     DescribeTasksResponse * describeTasks(const DescribeTasksRequest &request);
     DiscoverPollEndpointResponse * discoverPollEndpoint(const DiscoverPollEndpointRequest &request);
     ListAccountSettingsResponse * listAccountSettings(const ListAccountSettingsRequest &request);
@@ -143,12 +160,14 @@ public slots:
     ListTaskDefinitionsResponse * listTaskDefinitions(const ListTaskDefinitionsRequest &request);
     ListTasksResponse * listTasks(const ListTasksRequest &request);
     PutAccountSettingResponse * putAccountSetting(const PutAccountSettingRequest &request);
+    PutAccountSettingDefaultResponse * putAccountSettingDefault(const PutAccountSettingDefaultRequest &request);
     PutAttributesResponse * putAttributes(const PutAttributesRequest &request);
     RegisterContainerInstanceResponse * registerContainerInstance(const RegisterContainerInstanceRequest &request);
     RegisterTaskDefinitionResponse * registerTaskDefinition(const RegisterTaskDefinitionRequest &request);
     RunTaskResponse * runTask(const RunTaskRequest &request);
     StartTaskResponse * startTask(const StartTaskRequest &request);
     StopTaskResponse * stopTask(const StopTaskRequest &request);
+    SubmitAttachmentStateChangesResponse * submitAttachmentStateChanges(const SubmitAttachmentStateChangesRequest &request);
     SubmitContainerStateChangeResponse * submitContainerStateChange(const SubmitContainerStateChangeRequest &request);
     SubmitTaskStateChangeResponse * submitTaskStateChange(const SubmitTaskStateChangeRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
@@ -156,6 +175,8 @@ public slots:
     UpdateContainerAgentResponse * updateContainerAgent(const UpdateContainerAgentRequest &request);
     UpdateContainerInstancesStateResponse * updateContainerInstancesState(const UpdateContainerInstancesStateRequest &request);
     UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
+    UpdateServicePrimaryTaskSetResponse * updateServicePrimaryTaskSet(const UpdateServicePrimaryTaskSetRequest &request);
+    UpdateTaskSetResponse * updateTaskSet(const UpdateTaskSetRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EcsClient)

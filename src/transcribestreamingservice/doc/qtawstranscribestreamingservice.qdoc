@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsTranscribeStreamingService
+    \title TranscribeStreamingService C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS TranscribeStreamingService functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

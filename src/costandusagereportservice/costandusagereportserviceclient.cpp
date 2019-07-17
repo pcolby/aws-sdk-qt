@@ -50,6 +50,23 @@ namespace CostandUsageReportService {
  * \ingroup aws-clients
  * \inmodule QtAwsCostandUsageReportService
  *
+ *  The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report
+ * 
+ *  definitions>
+ * 
+ *  AWS Cost and Usage reports track the monthly AWS costs and usage associated with your AWS account. The report contains
+ *  line items for each unique combination of AWS product, usage type, and operation that your AWS account uses. You can
+ *  configure the AWS Cost and Usage report to show only the data that you want, using the AWS Cost and Usage
+ * 
+ *  API>
+ * 
+ *  Service
+ * 
+ *  Endpoin>
+ * 
+ *  The AWS Cost and Usage Report API provides the following
+ * 
+ *  endpoint> <ul> <li>
  */
 
 /*!
@@ -111,6 +128,7 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the specified
  */
 DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDefinition(const DeleteReportDefinitionRequest &request)
 {
@@ -123,6 +141,7 @@ DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Lists the AWS Cost and Usage reports available to this
  */
 DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
 {
@@ -135,6 +154,7 @@ DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeRep
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Creates a new report using the description that you
  */
 PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefinition(const PutReportDefinitionRequest &request)
 {

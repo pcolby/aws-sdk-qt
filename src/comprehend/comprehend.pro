@@ -132,6 +132,10 @@ HEADERS += \
     listsentimentdetectionjobsrequest_p.h \
     listsentimentdetectionjobsresponse.h \
     listsentimentdetectionjobsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     listtopicsdetectionjobsrequest.h \
     listtopicsdetectionjobsrequest_p.h \
     listtopicsdetectionjobsresponse.h \
@@ -184,6 +188,14 @@ HEADERS += \
     stoptrainingentityrecognizerrequest_p.h \
     stoptrainingentityrecognizerresponse.h \
     stoptrainingentityrecognizerresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
 
 SOURCES += \
     batchdetectdominantlanguagerequest.cpp \
@@ -247,6 +259,8 @@ SOURCES += \
     listkeyphrasesdetectionjobsresponse.cpp \
     listsentimentdetectionjobsrequest.cpp \
     listsentimentdetectionjobsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     listtopicsdetectionjobsrequest.cpp \
     listtopicsdetectionjobsresponse.cpp \
     startdocumentclassificationjobrequest.cpp \
@@ -273,5 +287,9 @@ SOURCES += \
     stoptrainingdocumentclassifierresponse.cpp \
     stoptrainingentityrecognizerrequest.cpp \
     stoptrainingentityrecognizerresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

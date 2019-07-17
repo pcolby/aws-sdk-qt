@@ -42,6 +42,7 @@ public:
         DeleteConfigurationSetAction,
         DeleteConfigurationSetEventDestinationAction,
         GetConfigurationSetEventDestinationsAction,
+        ListConfigurationSetsAction,
         SendVoiceMessageAction,
         UpdateConfigurationSetEventDestinationAction,
     };

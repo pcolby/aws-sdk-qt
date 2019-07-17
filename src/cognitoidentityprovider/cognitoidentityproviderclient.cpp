@@ -63,6 +63,8 @@
 #include "adminrespondtoauthchallengeresponse.h"
 #include "adminsetusermfapreferencerequest.h"
 #include "adminsetusermfapreferenceresponse.h"
+#include "adminsetuserpasswordrequest.h"
+#include "adminsetuserpasswordresponse.h"
 #include "adminsetusersettingsrequest.h"
 #include "adminsetusersettingsresponse.h"
 #include "adminupdateautheventfeedbackrequest.h"
@@ -161,6 +163,8 @@
 #include "listidentityprovidersresponse.h"
 #include "listresourceserversrequest.h"
 #include "listresourceserversresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listuserimportjobsrequest.h"
 #include "listuserimportjobsresponse.h"
 #include "listuserpoolclientsrequest.h"
@@ -191,6 +195,10 @@
 #include "startuserimportjobresponse.h"
 #include "stopuserimportjobrequest.h"
 #include "stopuserimportjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateautheventfeedbackrequest.h"
 #include "updateautheventfeedbackresponse.h"
 #include "updatedevicestatusrequest.h"
@@ -718,6 +726,18 @@ AdminRespondToAuthChallengeResponse * CognitoIdentityProviderClient::adminRespon
 AdminSetUserMFAPreferenceResponse * CognitoIdentityProviderClient::adminSetUserMFAPreference(const AdminSetUserMFAPreferenceRequest &request)
 {
     return qobject_cast<AdminSetUserMFAPreferenceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
+ * AdminSetUserPasswordResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+AdminSetUserPasswordResponse * CognitoIdentityProviderClient::adminSetUserPassword(const AdminSetUserPasswordRequest &request)
+{
+    return qobject_cast<AdminSetUserPasswordResponse *>(send(request));
 }
 
 /*!
@@ -1407,6 +1427,28 @@ ListResourceServersResponse * CognitoIdentityProviderClient::listResourceServers
 
 /*!
  * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags that are assigned to an Amazon Cognito user
+ *
+ * pool>
+ *
+ * A tag is a label that you can apply to user pools to categorize and manage them in different ways, such as by purpose,
+ * owner, environment, or other
+ *
+ * criteria>
+ *
+ * You can use this action up to 10 times per second, per
+ */
+ListTagsForResourceResponse * CognitoIdentityProviderClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
  * ListUserImportJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1628,6 +1670,50 @@ StopUserImportJobResponse * CognitoIdentityProviderClient::stopUserImportJob(con
 
 /*!
  * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Assigns a set of tags to an Amazon Cognito user pool. A tag is a label that you can use to categorize and manage user
+ * pools in different ways, such as by purpose, owner, environment, or other
+ *
+ * criteria>
+ *
+ * Each tag consists of a key and value, both of which you define. A key is a general category for more specific values.
+ * For example, if you have two versions of a user pool, one for testing and another for production, you might assign an
+ * <code>Environment</code> tag key to both user pools. The value of this key might be <code>Test</code> for one user pool
+ * and <code>Production</code> for the
+ *
+ * other>
+ *
+ * Tags are useful for cost tracking and access control. You can activate your tags so that they appear on the Billing and
+ * Cost Management console, where you can track the costs associated with your user pools. In an IAM policy, you can
+ * constrain permissions for user pools based on specific tags or tag
+ *
+ * values>
+ *
+ * You can use this action up to 5 times per second, per account. A user pool can have as many as 50
+ */
+TagResourceResponse * CognitoIdentityProviderClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified tags from an Amazon Cognito user pool. You can use this action up to 5 times per second, per
+ */
+UntagResourceResponse * CognitoIdentityProviderClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityProviderClient service, and returns a pointer to an
  * UpdateAuthEventFeedbackResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1777,8 +1863,8 @@ UpdateUserPoolClientResponse * CognitoIdentityProviderClient::updateUserPoolClie
  * domain>
  *
  * For more information about adding a custom domain to your user pool, see <a
- * href="http://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html">Using Your Own
- * Domain for the Hosted
+ * href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-add-custom-domain.html">Using Your
+ * Own Domain for the Hosted
  */
 UpdateUserPoolDomainResponse * CognitoIdentityProviderClient::updateUserPoolDomain(const UpdateUserPoolDomainRequest &request)
 {

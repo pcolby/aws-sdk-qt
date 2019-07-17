@@ -24,6 +24,10 @@ HEADERS += \
     associatecontactwithaddressbookrequest_p.h \
     associatecontactwithaddressbookresponse.h \
     associatecontactwithaddressbookresponse_p.h \
+    associatedevicewithnetworkprofilerequest.h \
+    associatedevicewithnetworkprofilerequest_p.h \
+    associatedevicewithnetworkprofileresponse.h \
+    associatedevicewithnetworkprofileresponse_p.h \
     associatedevicewithroomrequest.h \
     associatedevicewithroomrequest_p.h \
     associatedevicewithroomresponse.h \
@@ -56,6 +60,14 @@ HEADERS += \
     createcontactrequest_p.h \
     createcontactresponse.h \
     createcontactresponse_p.h \
+    creategatewaygrouprequest.h \
+    creategatewaygrouprequest_p.h \
+    creategatewaygroupresponse.h \
+    creategatewaygroupresponse_p.h \
+    createnetworkprofilerequest.h \
+    createnetworkprofilerequest_p.h \
+    createnetworkprofileresponse.h \
+    createnetworkprofileresponse_p.h \
     createprofilerequest.h \
     createprofilerequest_p.h \
     createprofileresponse.h \
@@ -92,6 +104,18 @@ HEADERS += \
     deletedevicerequest_p.h \
     deletedeviceresponse.h \
     deletedeviceresponse_p.h \
+    deletedeviceusagedatarequest.h \
+    deletedeviceusagedatarequest_p.h \
+    deletedeviceusagedataresponse.h \
+    deletedeviceusagedataresponse_p.h \
+    deletegatewaygrouprequest.h \
+    deletegatewaygrouprequest_p.h \
+    deletegatewaygroupresponse.h \
+    deletegatewaygroupresponse_p.h \
+    deletenetworkprofilerequest.h \
+    deletenetworkprofilerequest_p.h \
+    deletenetworkprofileresponse.h \
+    deletenetworkprofileresponse_p.h \
     deleteprofilerequest.h \
     deleteprofilerequest_p.h \
     deleteprofileresponse.h \
@@ -160,6 +184,22 @@ HEADERS += \
     getdevicerequest_p.h \
     getdeviceresponse.h \
     getdeviceresponse_p.h \
+    getgatewaygrouprequest.h \
+    getgatewaygrouprequest_p.h \
+    getgatewaygroupresponse.h \
+    getgatewaygroupresponse_p.h \
+    getgatewayrequest.h \
+    getgatewayrequest_p.h \
+    getgatewayresponse.h \
+    getgatewayresponse_p.h \
+    getinvitationconfigurationrequest.h \
+    getinvitationconfigurationrequest_p.h \
+    getinvitationconfigurationresponse.h \
+    getinvitationconfigurationresponse_p.h \
+    getnetworkprofilerequest.h \
+    getnetworkprofilerequest_p.h \
+    getnetworkprofileresponse.h \
+    getnetworkprofileresponse_p.h \
     getprofilerequest.h \
     getprofilerequest_p.h \
     getprofileresponse.h \
@@ -188,6 +228,14 @@ HEADERS += \
     listdeviceeventsrequest_p.h \
     listdeviceeventsresponse.h \
     listdeviceeventsresponse_p.h \
+    listgatewaygroupsrequest.h \
+    listgatewaygroupsrequest_p.h \
+    listgatewaygroupsresponse.h \
+    listgatewaygroupsresponse_p.h \
+    listgatewaysrequest.h \
+    listgatewaysrequest_p.h \
+    listgatewaysresponse.h \
+    listgatewaysresponse_p.h \
     listskillsrequest.h \
     listskillsrequest_p.h \
     listskillsresponse.h \
@@ -212,6 +260,10 @@ HEADERS += \
     putconferencepreferencerequest_p.h \
     putconferencepreferenceresponse.h \
     putconferencepreferenceresponse_p.h \
+    putinvitationconfigurationrequest.h \
+    putinvitationconfigurationrequest_p.h \
+    putinvitationconfigurationresponse.h \
+    putinvitationconfigurationresponse_p.h \
     putroomskillparameterrequest.h \
     putroomskillparameterrequest_p.h \
     putroomskillparameterresponse.h \
@@ -248,6 +300,10 @@ HEADERS += \
     searchdevicesrequest_p.h \
     searchdevicesresponse.h \
     searchdevicesresponse_p.h \
+    searchnetworkprofilesrequest.h \
+    searchnetworkprofilesrequest_p.h \
+    searchnetworkprofilesresponse.h \
+    searchnetworkprofilesresponse_p.h \
     searchprofilesrequest.h \
     searchprofilesrequest_p.h \
     searchprofilesresponse.h \
@@ -264,6 +320,10 @@ HEADERS += \
     searchusersrequest_p.h \
     searchusersresponse.h \
     searchusersresponse_p.h \
+    sendannouncementrequest.h \
+    sendannouncementrequest_p.h \
+    sendannouncementresponse.h \
+    sendannouncementresponse_p.h \
     sendinvitationrequest.h \
     sendinvitationrequest_p.h \
     sendinvitationresponse.h \
@@ -304,6 +364,18 @@ HEADERS += \
     updatedevicerequest_p.h \
     updatedeviceresponse.h \
     updatedeviceresponse_p.h \
+    updategatewaygrouprequest.h \
+    updategatewaygrouprequest_p.h \
+    updategatewaygroupresponse.h \
+    updategatewaygroupresponse_p.h \
+    updategatewayrequest.h \
+    updategatewayrequest_p.h \
+    updategatewayresponse.h \
+    updategatewayresponse_p.h \
+    updatenetworkprofilerequest.h \
+    updatenetworkprofilerequest_p.h \
+    updatenetworkprofileresponse.h \
+    updatenetworkprofileresponse_p.h \
     updateprofilerequest.h \
     updateprofilerequest_p.h \
     updateprofileresponse.h \
@@ -325,6 +397,8 @@ SOURCES += \
     approveskillresponse.cpp \
     associatecontactwithaddressbookrequest.cpp \
     associatecontactwithaddressbookresponse.cpp \
+    associatedevicewithnetworkprofilerequest.cpp \
+    associatedevicewithnetworkprofileresponse.cpp \
     associatedevicewithroomrequest.cpp \
     associatedevicewithroomresponse.cpp \
     associateskillgroupwithroomrequest.cpp \
@@ -341,6 +415,10 @@ SOURCES += \
     createconferenceproviderresponse.cpp \
     createcontactrequest.cpp \
     createcontactresponse.cpp \
+    creategatewaygrouprequest.cpp \
+    creategatewaygroupresponse.cpp \
+    createnetworkprofilerequest.cpp \
+    createnetworkprofileresponse.cpp \
     createprofilerequest.cpp \
     createprofileresponse.cpp \
     createroomrequest.cpp \
@@ -359,6 +437,12 @@ SOURCES += \
     deletecontactresponse.cpp \
     deletedevicerequest.cpp \
     deletedeviceresponse.cpp \
+    deletedeviceusagedatarequest.cpp \
+    deletedeviceusagedataresponse.cpp \
+    deletegatewaygrouprequest.cpp \
+    deletegatewaygroupresponse.cpp \
+    deletenetworkprofilerequest.cpp \
+    deletenetworkprofileresponse.cpp \
     deleteprofilerequest.cpp \
     deleteprofileresponse.cpp \
     deleteroomrequest.cpp \
@@ -393,6 +477,14 @@ SOURCES += \
     getcontactresponse.cpp \
     getdevicerequest.cpp \
     getdeviceresponse.cpp \
+    getgatewaygrouprequest.cpp \
+    getgatewaygroupresponse.cpp \
+    getgatewayrequest.cpp \
+    getgatewayresponse.cpp \
+    getinvitationconfigurationrequest.cpp \
+    getinvitationconfigurationresponse.cpp \
+    getnetworkprofilerequest.cpp \
+    getnetworkprofileresponse.cpp \
     getprofilerequest.cpp \
     getprofileresponse.cpp \
     getroomrequest.cpp \
@@ -407,6 +499,10 @@ SOURCES += \
     listconferenceprovidersresponse.cpp \
     listdeviceeventsrequest.cpp \
     listdeviceeventsresponse.cpp \
+    listgatewaygroupsrequest.cpp \
+    listgatewaygroupsresponse.cpp \
+    listgatewaysrequest.cpp \
+    listgatewaysresponse.cpp \
     listskillsrequest.cpp \
     listskillsresponse.cpp \
     listskillsstorecategoriesrequest.cpp \
@@ -419,6 +515,8 @@ SOURCES += \
     listtagsresponse.cpp \
     putconferencepreferencerequest.cpp \
     putconferencepreferenceresponse.cpp \
+    putinvitationconfigurationrequest.cpp \
+    putinvitationconfigurationresponse.cpp \
     putroomskillparameterrequest.cpp \
     putroomskillparameterresponse.cpp \
     putskillauthorizationrequest.cpp \
@@ -437,6 +535,8 @@ SOURCES += \
     searchcontactsresponse.cpp \
     searchdevicesrequest.cpp \
     searchdevicesresponse.cpp \
+    searchnetworkprofilesrequest.cpp \
+    searchnetworkprofilesresponse.cpp \
     searchprofilesrequest.cpp \
     searchprofilesresponse.cpp \
     searchroomsrequest.cpp \
@@ -445,6 +545,8 @@ SOURCES += \
     searchskillgroupsresponse.cpp \
     searchusersrequest.cpp \
     searchusersresponse.cpp \
+    sendannouncementrequest.cpp \
+    sendannouncementresponse.cpp \
     sendinvitationrequest.cpp \
     sendinvitationresponse.cpp \
     startdevicesyncrequest.cpp \
@@ -465,6 +567,12 @@ SOURCES += \
     updatecontactresponse.cpp \
     updatedevicerequest.cpp \
     updatedeviceresponse.cpp \
+    updategatewaygrouprequest.cpp \
+    updategatewaygroupresponse.cpp \
+    updategatewayrequest.cpp \
+    updategatewayresponse.cpp \
+    updatenetworkprofilerequest.cpp \
+    updatenetworkprofileresponse.cpp \
     updateprofilerequest.cpp \
     updateprofileresponse.cpp \
     updateroomrequest.cpp \

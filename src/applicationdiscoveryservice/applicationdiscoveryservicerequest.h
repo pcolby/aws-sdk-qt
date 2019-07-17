@@ -38,6 +38,7 @@ public:
     /// Actions supported by ApplicationDiscoveryService.
     enum Action {
         AssociateConfigurationItemsToApplicationAction,
+        BatchDeleteImportDataAction,
         CreateApplicationAction,
         CreateTagsAction,
         DeleteApplicationsAction,
@@ -47,6 +48,7 @@ public:
         DescribeContinuousExportsAction,
         DescribeExportConfigurationsAction,
         DescribeExportTasksAction,
+        DescribeImportTasksAction,
         DescribeTagsAction,
         DisassociateConfigurationItemsFromApplicationAction,
         ExportConfigurationsAction,
@@ -56,6 +58,7 @@ public:
         StartContinuousExportAction,
         StartDataCollectionByAgentIdsAction,
         StartExportTaskAction,
+        StartImportTaskAction,
         StopContinuousExportAction,
         StopDataCollectionByAgentIdsAction,
         UpdateApplicationAction,

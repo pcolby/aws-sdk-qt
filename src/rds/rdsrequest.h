@@ -38,6 +38,7 @@ public:
     /// Actions supported by RDS.
     enum Action {
         AddRoleToDBClusterAction,
+        AddRoleToDBInstanceAction,
         AddSourceIdentifierToSubscriptionAction,
         AddTagsToResourceAction,
         ApplyPendingMaintenanceActionAction,
@@ -129,6 +130,7 @@ public:
         RebootDBInstanceAction,
         RemoveFromGlobalClusterAction,
         RemoveRoleFromDBClusterAction,
+        RemoveRoleFromDBInstanceAction,
         RemoveSourceIdentifierFromSubscriptionAction,
         RemoveTagsFromResourceAction,
         ResetDBClusterParameterGroupAction,
@@ -140,8 +142,10 @@ public:
         RestoreDBInstanceFromS3Action,
         RestoreDBInstanceToPointInTimeAction,
         RevokeDBSecurityGroupIngressAction,
+        StartActivityStreamAction,
         StartDBClusterAction,
         StartDBInstanceAction,
+        StopActivityStreamAction,
         StopDBClusterAction,
         StopDBInstanceAction,
     };

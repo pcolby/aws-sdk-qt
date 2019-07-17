@@ -37,9 +37,14 @@ class QTAWS_EXPORT S3ControlRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by S3Control.
     enum Action {
+        CreateJobAction,
         DeletePublicAccessBlockAction,
+        DescribeJobAction,
         GetPublicAccessBlockAction,
+        ListJobsAction,
         PutPublicAccessBlockAction,
+        UpdateJobPriorityAction,
+        UpdateJobStatusAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

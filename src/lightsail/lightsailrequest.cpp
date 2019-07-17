@@ -65,6 +65,7 @@ namespace Lightsail {
  * \value DeleteInstanceAction Lightsail DeleteInstance action.
  * \value DeleteInstanceSnapshotAction Lightsail DeleteInstanceSnapshot action.
  * \value DeleteKeyPairAction Lightsail DeleteKeyPair action.
+ * \value DeleteKnownHostKeysAction Lightsail DeleteKnownHostKeys action.
  * \value DeleteLoadBalancerAction Lightsail DeleteLoadBalancer action.
  * \value DeleteLoadBalancerTlsCertificateAction Lightsail DeleteLoadBalancerTlsCertificate action.
  * \value DeleteRelationalDatabaseAction Lightsail DeleteRelationalDatabase action.

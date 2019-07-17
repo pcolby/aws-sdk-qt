@@ -130,7 +130,7 @@ namespace KMS {
  * 
  *  AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS
  *  operations that you can call programmatically. For general information about AWS KMS, see the <a
- *  href="http://docs.aws.amazon.com/kms/latest/developerguide/"> <i>AWS Key Management Service Developer Guide</i>
+ *  href="https://docs.aws.amazon.com/kms/latest/developerguide/"> <i>AWS Key Management Service Developer Guide</i>
  * 
  *  </a>> <note>
  * 
@@ -158,13 +158,13 @@ namespace KMS {
  * 
  *  Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you <i>do not</i>
  *  use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID
- *  and secret access key for an IAM user, or you can use the AWS Security Token Service to generate temporary security
+ *  and secret access key for an IAM user. You can also use the AWS Security Token Service to generate temporary security
  *  credentials that you can use to sign
  * 
  *  requests>
  * 
- *  All AWS KMS operations require <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
- *  Version
+ *  All AWS KMS operations require <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version
  * 
  *  4</a>>
  * 
@@ -176,7 +176,7 @@ namespace KMS {
  *  them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what
  *  requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail,
  *  including how to turn it on and find your log files, see the <a
- *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
+ *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
  * 
  *  Guide</a>>
  * 
@@ -188,27 +188,27 @@ namespace KMS {
  * 
  *  following> <ul> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> - This
- *  topic provides general information about the of credentials used for accessing
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> -
+ *  This topic provides general information about the types of credentials used for accessing
  * 
  *  AWS> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
+ *  <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
  *  This section of the <i>IAM User Guide</i> describes how to create and use temporary security
  * 
  *  credentials> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>
  *  - This set of topics walks you through the process of signing a request using an access key ID and a secret access
  * 
  *  key> </li> </ul>
  * 
- *  <b>Commonly Used APIs</b>
+ *  <b>Commonly Used API Operations</b>
  * 
  *  </p
  * 
- *  Of the APIs discussed in this guide, the following will prove the most useful for most applications. You will likely
- *  perform actions other than these, such as creating keys and assigning policies, by using the
+ *  Of the API operations discussed in this guide, the following will prove the most useful for most applications. You will
+ *  likely perform operations other than these, such as creating keys and assigning policies, by using the
  * 
  *  console> <ul> <li>
  * 
@@ -293,13 +293,13 @@ KmsClient::KmsClient(
  * account>
  *
  * For more information about scheduling and canceling deletion of a CMK, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the
  * <i>AWS Key Management Service Developer
  *
  * Guide</i>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletionRequest &request)
@@ -313,8 +313,9 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Connects or reconnects a <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom
- * key store</a> to its associated AWS CloudHSM
+ * Connects or reconnects a <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a> to its
+ * associated AWS CloudHSM
  *
  * cluster>
  *
@@ -325,9 +326,9 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
  *
  * To connect a custom key store, its associated AWS CloudHSM cluster must have at least one active HSM. To get the number
  * of active HSMs in a cluster, use the <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters">DescribeClusters</a> operation. To
- * add HSMs to the cluster, use the <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_CreateHsm">CreateHsm</a>
+ * href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a>
+ * operation. To add HSMs to the cluster, use the <a
+ * href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_CreateHsm.html">CreateHsm</a>
  *
  * operation>
  *
@@ -340,7 +341,7 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
  *
  * During the connection process, AWS KMS finds the AWS CloudHSM cluster that is associated with the custom key store,
  * creates the connection infrastructure, connects to the cluster, logs into the AWS CloudHSM client as the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
  * <code>kmsuser</code> crypto user</a> (CU), and rotates its
  *
  * password>
@@ -357,7 +358,7 @@ CancelKeyDeletionResponse * KmsClient::cancelKeyDeletion(const CancelKeyDeletion
  * again>
  *
  * If you are having trouble connecting or disconnecting a custom key store, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html">Troubleshooting a Custom Key Store</a> in
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html">Troubleshooting a Custom Key Store</a> in
  * the <i>AWS Key Management Service Developer
  */
 ConnectCustomKeyStoreResponse * KmsClient::connectCustomKeyStore(const ConnectCustomKeyStoreRequest &request)
@@ -371,8 +372,8 @@ ConnectCustomKeyStoreResponse * KmsClient::connectCustomKeyStore(const ConnectCu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a display name for a customer master key (CMK). You can use an alias to identify a CMK in selected operations,
- * such as <a>Encrypt</a> and <a>GenerateDataKey</a>.
+ * Creates a display name for a customer managed customer master key (CMK). You can use an alias to identify a CMK in
+ * selected operations, such as <a>Encrypt</a> and <a>GenerateDataKey</a>.
  *
  * </p
  *
@@ -388,11 +389,12 @@ ConnectCustomKeyStoreResponse * KmsClient::connectCustomKeyStore(const ConnectCu
  *
  * operation>
  *
- * An alias must start with the word <code>alias</code> followed by a forward slash (<code>alias/</code>). The alias name
- * can contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). Alias names cannot begin
- * with <code>aws</code>; that alias name prefix is reserved by Amazon Web Services
+ * The alias name must begin with <code>alias/</code> followed by a name, such as <code>alias/ExampleAlias</code>. It can
+ * contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). The alias name cannot begin
+ * with <code>alias/aws/</code>. The <code>alias/aws/</code> prefix is reserved for <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed CMKs</a>.
  *
- * (AWS)>
+ * </p
  *
  * The alias and the CMK it is mapped to must be in the same AWS account and the same region. You cannot perform this
  * operation on an alias in a different AWS
@@ -404,7 +406,7 @@ ConnectCustomKeyStoreResponse * KmsClient::connectCustomKeyStore(const ConnectCu
  * <a>UpdateAlias</a>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 CreateAliasResponse * KmsClient::createAlias(const CreateAliasRequest &request)
@@ -418,94 +420,36 @@ CreateAliasResponse * KmsClient::createAlias(const CreateAliasRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key store</a>
- * that is associated with an <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/clusters.html">AWS CloudHSM
- * cluster</a> that you own and
+ * Creates a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+ * store</a> that is associated with an <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/clusters.html">AWS
+ * CloudHSM cluster</a> that you own and
  *
  * manage>
  *
  * This operation is part of the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
  * feature in AWS KMS, which combines the convenience and extensive integration of AWS KMS with the isolation and control
  * of a single-tenant key
  *
  * store>
  *
+ * Before you create the custom key store, you must assemble the required elements, including an AWS CloudHSM cluster that
+ * fulfills the requirements for a custom key store. For details about the required elements, see <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/create-keystore.html#before-keystore">Assemble the
+ * Prerequisites</a> in the <i>AWS Key Management Service Developer
+ *
+ * Guide</i>>
+ *
  * When the operation completes successfully, it returns the ID of the new custom key store. Before you can use your new
  * custom key store, you need to use the <a>ConnectCustomKeyStore</a> operation to connect the new key store to its AWS
- * CloudHSM
- *
- * cluster>
- *
- * The <code>CreateCustomKeyStore</code> operation requires the following
- *
- * elements> <ul> <li>
- *
- * You must specify an active AWS CloudHSM cluster in the same account and AWS Region as the custom key store. You can use
- * an existing cluster or <a href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/create-cluster.html">create and
- * activate a new AWS CloudHSM cluster</a> for the key store. AWS KMS does not require exclusive use of the
- *
- * cluster> </li> <li>
- *
- * You must include the content of the <i>trust anchor certificate</i> for the cluster. You created this certificate, and
- * saved it in the <code>customerCA.crt</code> file, when you <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/initialize-cluster.html#sign-csr">initialized the
- *
- * cluster</a>> </li> <li>
- *
- * You must provide the password of the dedicated <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
- * <code>kmsuser</code> crypto user</a> (CU) account in the
- *
- * cluster>
- *
- * Before you create the custom key store, use the <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/cloudhsm_mgmt_util-createUser.html">createUser</a> command in
- * <code>cloudhsm_mgmt_util</code> to create <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">a crypto user (CU)
- * named <code>kmsuser</code> </a>in specified AWS CloudHSM cluster. AWS KMS uses the <code>kmsuser</code> CU account to
- * create and manage key material on your behalf. For instructions, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/create-keystore.html#before-keystore">Create the kmsuser
- * Crypto User</a> in the <i>AWS Key Management Service Developer
- *
- * Guide</i>> </li> </ul>
- *
- * The AWS CloudHSM cluster that you specify must meet the following
- *
- * requirements> <ul> <li>
- *
- * The cluster must be active and be in the same AWS account and Region as the custom key
- *
- * store> </li> <li>
- *
- * Each custom key store must be associated with a different AWS CloudHSM cluster. The cluster cannot be associated with
- * another custom key store or have the same cluster certificate as a cluster that is associated with another custom key
- * store. To view the cluster certificate, use the AWS CloudHSM <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a> operation.
- * Clusters that share a backup history have the same cluster
- *
- * certificate> </li> <li>
- *
- * The cluster must be configured with subnets in at least two different Availability Zones in the Region. Because AWS
- * CloudHSM is not supported in all Availability Zones, we recommend that the cluster have subnets in all Availability
- * Zones in the
- *
- * Region> </li> <li>
- *
- * The cluster must contain at least two active HSMs, each in a different Availability
- *
- * Zone> </li> </ul>
- *
- * New custom key stores are not automatically connected. After you create your custom key store, use the
- * <a>ConnectCustomKeyStore</a> operation to connect the custom key store to its associated AWS CloudHSM cluster. Even if
- * you are not going to use your custom key store immediately, you might want to connect it to verify that all settings are
- * correct and then disconnect it until you are ready to use
+ * CloudHSM cluster. Even if you are not going to use your custom key store immediately, you might want to connect it to
+ * verify that all settings are correct and then disconnect it until you are ready to use
  *
  * it>
  *
- * If this operation succeeds, it returns the ID of the new custom key store. For help with failures, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html">Troubleshoot a Custom Key Store</a> in the
- * <i>AWS KMS Developer
+ * For help with failures, see <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html">Troubleshooting a Custom Key Store</a> in
+ * the <i>AWS Key Management Service Developer
  */
 CreateCustomKeyStoreResponse * KmsClient::createCustomKeyStore(const CreateCustomKeyStoreRequest &request)
 {
@@ -518,20 +462,25 @@ CreateCustomKeyStoreResponse * KmsClient::createCustomKeyStore(const CreateCusto
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a grant to a customer master key (CMK). The grant specifies who can use the CMK and under what conditions. When
- * setting permissions, grants are an alternative to key policies.
+ * Adds a grant to a customer master key (CMK). The grant allows the grantee principal to use the CMK when the conditions
+ * specified in the grant are met. When setting permissions, grants are an alternative to key policies.
  *
  * </p
  *
+ * To create a grant that allows a cryptographic operation only when the encryption context in the operation request
+ * matches or includes a specified encryption context, use the <code>Constraints</code> parameter. For details, see
+ *
+ * <a>GrantConstraints</a>>
+ *
  * To perform this operation on a CMK in a different AWS account, specify the key ARN in the value of the
  * <code>KeyId</code> parameter. For more information about grants, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants</a> in the <i>AWS Key Management Service
- * Developer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html">Grants</a> in the <i> <i>AWS Key Management
+ * Service Developer Guide</i>
  *
- * Guide</i>>
+ * </i>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 CreateGrantResponse * KmsClient::createGrant(const CreateGrantRequest &request)
@@ -545,34 +494,27 @@ CreateGrantResponse * KmsClient::createGrant(const CreateGrantRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a customer master key (CMK) in the caller's AWS
+ * Creates a customer managed <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">customer master key</a> (CMK) in
+ * your AWS
  *
  * account>
  *
- * You can use a CMK to encrypt small amounts of data (4 KiB or less) directly, but CMKs are more commonly used to encrypt
- * data keys, which are used to encrypt raw data. For more information about data keys and the difference between CMKs and
- * data keys, see the
+ * You can use a CMK to encrypt small amounts of data (up to 4096 bytes) directly. But CMKs are more commonly used to
+ * encrypt the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#data-keys">data keys</a> that
+ * are used to encrypt
  *
- * following> <ul> <li>
+ * data>
  *
- * The <a>GenerateDataKey</a>
+ * To create a CMK for imported key material, use the <code>Origin</code> parameter with a value of
  *
- * operatio> </li> <li>
+ * <code>EXTERNAL</code>>
  *
- * <a href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">AWS Key Management Service Concepts</a> in
- * the <i>AWS Key Management Service Developer Guide</i>
- *
- * </p </li> </ul>
- *
- * If you plan to <a href="http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">import key
- * material</a>, use the <code>Origin</code> parameter with a value of <code>EXTERNAL</code> to create a CMK with no key
- *
- * material>
- *
- * To create a CMK in a <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key
- * store</a>, use <code>CustomKeyStoreId</code> parameter to specify the custom key store. You must also use the
- * <code>Origin</code> parameter with a value of <code>AWS_CLOUDHSM</code>. The AWS CloudHSM cluster that is associated
- * with the custom key store must have at least two active HSMs, each in a different Availability Zone in the
+ * To create a CMK in a <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>, use
+ * the <code>CustomKeyStoreId</code> parameter to specify the custom key store. You must also use the <code>Origin</code>
+ * parameter with a value of <code>AWS_CLOUDHSM</code>. The AWS CloudHSM cluster that is associated with the custom key
+ * store must have at least two active HSMs in different Availability Zones in the AWS
  *
  * Region>
  *
@@ -605,17 +547,16 @@ CreateKeyResponse * KmsClient::createKey(const CreateKeyRequest &request)
  *
  * </p </li> </ul>
  *
- * Note that if a caller has been granted access permissions to all keys (through, for example, IAM user policies that
- * grant <code>Decrypt</code> permission on all resources), then ciphertext encrypted by using keys in other accounts where
- * the key grants access to the caller can be decrypted. To remedy this, we recommend that you do not grant
- * <code>Decrypt</code> access in an IAM user policy. Instead grant <code>Decrypt</code> access only in key policies. If
- * you must grant <code>Decrypt</code> access in an IAM user policy, you should scope the resource to specific keys or to
- * specific trusted
+ * Whenever possible, use key policies to give users permission to call the Decrypt operation on the CMK, instead of IAM
+ * policies. Otherwise, you might create an IAM user policy that gives the user Decrypt permission on all CMKs. This user
+ * could decrypt ciphertext that was encrypted by CMKs in other accounts if the key policy for the cross-account CMK
+ * permits it. If you must use an IAM policy for <code>Decrypt</code> permissions, limit the user to particular CMKs or
+ * particular trusted
  *
  * accounts>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 DecryptResponse * KmsClient::decrypt(const DecryptRequest &request)
@@ -654,20 +595,20 @@ DeleteAliasResponse * KmsClient::deleteAlias(const DeleteAliasRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key store</a>.
- * This operation does not delete the AWS CloudHSM cluster that is associated with the custom key store, or affect any
- * users or keys in the
+ * Deletes a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+ * store</a>. This operation does not delete the AWS CloudHSM cluster that is associated with the custom key store, or
+ * affect any users or keys in the
  *
  * cluster>
  *
  * The custom key store that you delete cannot contain any AWS KMS <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">customer master keys (CMKs)</a>.
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">customer master keys (CMKs)</a>.
  * Before deleting the key store, verify that you will never need to use any of the CMKs in the key store for any
  * cryptographic operations. Then, use <a>ScheduleKeyDeletion</a> to delete the AWS KMS customer master keys (CMKs) from
  * the key store. When the scheduled waiting period expires, the <code>ScheduleKeyDeletion</code> operation deletes the
  * CMKs. Then it makes a best effort to delete the key material from the associated cluster. However, you might need to
  * manually <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#fix-keystore-orphaned-key">delete the
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#fix-keystore-orphaned-key">delete the
  * orphaned key material</a> from the cluster and its
  *
  * backups>
@@ -688,7 +629,7 @@ DeleteAliasResponse * KmsClient::deleteAlias(const DeleteAliasRequest &request)
  * properties>
  *
  * This operation is part of the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
  * feature in AWS KMS, which combines the convenience and extensive integration of AWS KMS with the isolation and control
  * of a single-tenant key
  */
@@ -705,8 +646,8 @@ DeleteCustomKeyStoreResponse * KmsClient::deleteCustomKeyStore(const DeleteCusto
  *
  * Deletes key material that you previously imported. This operation makes the specified customer master key (CMK)
  * unusable. For more information about importing key material into AWS KMS, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the <i>AWS
- * Key Management Service Developer Guide</i>. You cannot perform this operation on a CMK in a different AWS
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the
+ * <i>AWS Key Management Service Developer Guide</i>. You cannot perform this operation on a CMK in a different AWS
  *
  * account>
  *
@@ -720,7 +661,7 @@ DeleteCustomKeyStoreResponse * KmsClient::deleteCustomKeyStore(const DeleteCusto
  * CMK>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const DeleteImportedKeyMaterialRequest &request)
@@ -734,13 +675,14 @@ DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key
- * stores</a> in the account and
+ * Gets information about <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key stores</a> in the
+ * account and
  *
  * region>
  *
  * This operation is part of the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
  * feature in AWS KMS, which combines the convenience and extensive integration of AWS KMS with the isolation and control
  * of a single-tenant key
  *
@@ -767,7 +709,7 @@ DeleteImportedKeyMaterialResponse * KmsClient::deleteImportedKeyMaterial(const D
  * any>
  *
  * For help repairing your custom key store, see the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore-html">Troubleshooting Custom Key Stores</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html">Troubleshooting Custom Key Stores</a>
  * topic in the <i>AWS Key Management Service Developer
  */
 DescribeCustomKeyStoresResponse * KmsClient::describeCustomKeyStores(const DescribeCustomKeyStoresRequest &request)
@@ -785,9 +727,10 @@ DescribeCustomKeyStoresResponse * KmsClient::describeCustomKeyStores(const Descr
  *
  * (CMK)>
  *
- * If you use <code>DescribeKey</code> on a predefined AWS alias, that is, an AWS alias with no key ID, AWS KMS associates
- * the alias with an <a href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">AWS managed
- * CMK</a> and returns its <code>KeyId</code> and <code>Arn</code> in the
+ * You can use <code>DescribeKey</code> on a predefined AWS alias, that is, an AWS alias with no key ID. When you do, AWS
+ * KMS associates the alias with an <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">AWS managed CMK</a> and returns
+ * its <code>KeyId</code> and <code>Arn</code> in the
  *
  * response>
  *
@@ -811,13 +754,13 @@ DescribeKeyResponse * KmsClient::describeKey(const DescribeKeyRequest &request)
  * account>
  *
  * For more information about how key state affects the use of a CMK, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects the Use of a Customer
- * Master Key</a> in the <i>AWS Key Management Service Developer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects the Use of a Customer
+ * Master Key</a> in the <i> <i>AWS Key Management Service Developer Guide</i>
  *
- * Guide</i>>
+ * </i>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 DisableKeyResponse * KmsClient::disableKey(const DisableKeyRequest &request)
@@ -831,13 +774,13 @@ DisableKeyResponse * KmsClient::disableKey(const DisableKeyRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables <a href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of the key
+ * Disables <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of the key
  * material</a> for the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS
  *
  * account>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotationRequest &request)
@@ -851,9 +794,9 @@ DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disconnects the <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key
- * store</a> from its associated AWS CloudHSM cluster. While a custom key store is disconnected, you can manage the custom
- * key store and its customer master keys (CMKs), but you cannot create or use CMKs in the custom key store. You can
+ * Disconnects the <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom
+ * key store</a> from its associated AWS CloudHSM cluster. While a custom key store is disconnected, you can manage the
+ * custom key store and its customer master keys (CMKs), but you cannot create or use CMKs in the custom key store. You can
  * reconnect the custom key store at any
  *
  * time> <note>
@@ -874,7 +817,7 @@ DisableKeyRotationResponse * KmsClient::disableKeyRotation(const DisableKeyRotat
  * properties>
  *
  * This operation is part of the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
  * feature in AWS KMS, which combines the convenience and extensive integration of AWS KMS with the isolation and control
  * of a single-tenant key
  */
@@ -895,7 +838,7 @@ DisconnectCustomKeyStoreResponse * KmsClient::disconnectCustomKeyStore(const Dis
  * account>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 EnableKeyResponse * KmsClient::enableKey(const EnableKeyRequest &request)
@@ -909,18 +852,18 @@ EnableKeyResponse * KmsClient::enableKey(const EnableKeyRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables <a href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of the key
+ * Enables <a href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of the key
  * material</a> for the specified customer master key (CMK). You cannot perform this operation on a CMK in a different AWS
  *
  * account>
  *
  * You cannot enable automatic rotation of CMKs with imported key material or CMKs in a <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
  *
  * store</a>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 EnableKeyRotationResponse * KmsClient::enableKeyRotation(const EnableKeyRotationRequest &request)
@@ -944,31 +887,31 @@ EnableKeyRotationResponse * KmsClient::enableKeyRotation(const EnableKeyRotation
  *
  * information> </li> <li>
  *
- * To move encrypted data from one AWS region to another, you can use this operation to encrypt in the new region the
- * plaintext data key that was used to encrypt the data in the original region. This provides you with an encrypted copy of
- * the data key that can be decrypted in the new region and used there to decrypt the encrypted
+ * You can use the <code>Encrypt</code> operation to move encrypted data from one AWS region to another. In the first
+ * region, generate a data key and use the plaintext key to encrypt the data. Then, in the new region, call the
+ * <code>Encrypt</code> method on same plaintext data key. Now, you can safely move the encrypted data and encrypted data
+ * key to the new region, and decrypt in the new region when
  *
- * data> </li> </ul>
+ * necessary> </li> </ul>
+ *
+ * You don't need use this operation to encrypt a data key within a region. The <a>GenerateDataKey</a> and
+ * <a>GenerateDataKeyWithoutPlaintext</a> operations return an encrypted data
+ *
+ * key>
+ *
+ * Also, you don't need to use this operation to encrypt data in your application. You can use the plaintext and encrypted
+ * data keys that the <code>GenerateDataKey</code> operation
+ *
+ * returns>
+ *
+ * The result of this operation varies with the key state of the CMK. For details, see <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * Master Key</a> in the <i>AWS Key Management Service Developer
+ *
+ * Guide</i>>
  *
  * To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the
  * KeyId
- *
- * parameter>
- *
- * Unless you are moving encrypted data from one region to another, you don't use this operation to encrypt a generated
- * data key within a region. To get data keys that are already encrypted, call the <a>GenerateDataKey</a> or
- * <a>GenerateDataKeyWithoutPlaintext</a> operation. Data keys don't need to be encrypted again by calling
- *
- * <code>Encrypt</code>>
- *
- * To encrypt data locally in your application, use the <a>GenerateDataKey</a> operation to return a plaintext data
- * encryption key and a copy of the key encrypted under the CMK of your
- *
- * choosing>
- *
- * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
- * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
 {
@@ -981,34 +924,40 @@ EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a data encryption key that you can use in your application to encrypt data locally.
+ * Generates a unique data key. This operation returns a plaintext copy of the data key and a copy that is encrypted under
+ * a customer master key (CMK) that you specify. You can use the plaintext key to encrypt your data outside of KMS and
+ * store the encrypted data key with the encrypted
  *
- * </p
+ * data>
  *
- * You must specify the customer master key (CMK) under which to generate the data key. You must also specify the length of
- * the data key using either the <code>KeySpec</code> or <code>NumberOfBytes</code> field. You must specify one field or
- * the other, but not both. For common key lengths (128-bit and 256-bit symmetric keys), we recommend that you use
+ * <code>GenerateDataKey</code> returns a unique data key for each request. The bytes in the key are not related to the
+ * caller or CMK that is used to encrypt the data
+ *
+ * key>
+ *
+ * To generate a data key, you need to specify the customer master key (CMK) that will be used to encrypt the data key. You
+ * must also specify the length of the data key using either the <code>KeySpec</code> or <code>NumberOfBytes</code> field
+ * (but not both). For common key lengths (128-bit and 256-bit symmetric keys), we recommend that you use
  * <code>KeySpec</code>. To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in
  * the value of the KeyId
  *
  * parameter>
  *
- * This operation returns a plaintext copy of the data key in the <code>Plaintext</code> field of the response, and an
- * encrypted copy of the data key in the <code>CiphertextBlob</code> field. The data key is encrypted under the CMK
- * specified in the <code>KeyId</code> field of the request.
+ * You will find the plaintext copy of the data key in the <code>Plaintext</code> field of the response, and the encrypted
+ * copy of the data key in the <code>CiphertextBlob</code>
  *
- * </p
+ * field>
  *
  * We recommend that you use the following pattern to encrypt data locally in your
  *
  * application> <ol> <li>
  *
- * Use this operation (<code>GenerateDataKey</code>) to get a data encryption
+ * Use the <code>GenerateDataKey</code> operation to get a data encryption
  *
  * key> </li> <li>
  *
- * Use the plaintext data encryption key (returned in the <code>Plaintext</code> field of the response) to encrypt data
- * locally, then erase the plaintext data key from
+ * Use the plaintext data key (returned in the <code>Plaintext</code> field of the response) to encrypt data locally, then
+ * erase the plaintext data key from
  *
  * memory> </li> <li>
  *
@@ -1021,7 +970,7 @@ EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
  *
  * locally> <ol> <li>
  *
- * Use the <a>Decrypt</a> operation to decrypt the encrypted data key into a plaintext copy of the data
+ * Use the <a>Decrypt</a> operation to decrypt the encrypted data key. The operation returns a plaintext copy of the data
  *
  * key> </li> <li>
  *
@@ -1029,21 +978,22 @@ EncryptResponse * KmsClient::encrypt(const EncryptRequest &request)
  *
  * memory> </li> </ol>
  *
- * To return only an encrypted copy of the data key, use <a>GenerateDataKeyWithoutPlaintext</a>. To return a random byte
- * string that is cryptographically secure, use
+ * To get only an encrypted copy of the data key, use <a>GenerateDataKeyWithoutPlaintext</a>. To get a cryptographically
+ * secure random byte string, use
  *
  * <a>GenerateRandom</a>>
  *
- * If you use the optional <code>EncryptionContext</code> field, you must store at least enough information to be able to
- * reconstruct the full encryption context when you later send the ciphertext to the <a>Decrypt</a> operation. It is a good
- * practice to choose an encryption context that you can reconstruct on the fly to better secure the ciphertext. For more
- * information, see <a href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption
- * Context</a> in the <i>AWS Key Management Service Developer
+ * You can use the optional encryption context to add additional security to your encryption operation. When you specify an
+ * <code>EncryptionContext</code> in the <code>GenerateDataKey</code> operation, you must specify the same encryption
+ * context (a case-sensitive exact match) in your request to <a>Decrypt</a> the data key. Otherwise, the request to decrypt
+ * fails with an <code>InvalidCiphertextException</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a> in the
+ * <i> <i>AWS Key Management Service Developer Guide</i>
  *
- * Guide</i>>
+ * </i>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 GenerateDataKeyResponse * KmsClient::generateDataKey(const GenerateDataKeyRequest &request)
@@ -1057,29 +1007,32 @@ GenerateDataKeyResponse * KmsClient::generateDataKey(const GenerateDataKeyReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a data encryption key encrypted under a customer master key (CMK). This operation is identical to
- * <a>GenerateDataKey</a> but returns only the encrypted copy of the data key.
+ * Generates a unique data key. This operation returns a data key that is encrypted under a customer master key (CMK) that
+ * you specify. <code>GenerateDataKeyWithoutPlaintext</code> is identical to <a>GenerateDataKey</a> except that returns
+ * only the encrypted copy of the data
  *
- * </p
+ * key>
  *
- * To perform this operation on a CMK in a different AWS account, specify the key ARN or alias ARN in the value of the
- * KeyId
+ * Like <code>GenerateDataKey</code>, <code>GenerateDataKeyWithoutPlaintext</code> returns a unique data key for each
+ * request. The bytes in the key are not related to the caller or CMK that is used to encrypt the data
  *
- * parameter>
+ * key>
  *
- * This operation is useful in a system that has multiple components with different degrees of trust. For example, consider
- * a system that stores encrypted data in containers. Each container stores the encrypted data and an encrypted copy of the
- * data key. One component of the system, called the <i>control plane</i>, creates new containers. When it creates a new
- * container, it uses this operation (<code>GenerateDataKeyWithoutPlaintext</code>) to get an encrypted data key and then
- * stores it in the container. Later, a different component of the system, called the <i>data plane</i>, puts encrypted
- * data into the containers. To do this, it passes the encrypted data key to the <a>Decrypt</a> operation, then uses the
- * returned plaintext data key to encrypt data, and finally stores the encrypted data in the container. In this system, the
- * control plane never sees the plaintext data
+ * This operation is useful for systems that need to encrypt data at some point, but not immediately. When you need to
+ * encrypt the data, you call the <a>Decrypt</a> operation on the encrypted copy of the
+ *
+ * key>
+ *
+ * It's also useful in distributed systems with different levels of trust. For example, you might store encrypted data in
+ * containers. One component of your system creates new containers and stores an encrypted data key with each container.
+ * Then, a different component puts the data into the containers. That component first decrypts the data key, uses the
+ * plaintext data key to encrypt data, puts the encrypted data into the container, and then destroys the plaintext data
+ * key. In this system, the component that creates the containers never sees the plaintext data
  *
  * key>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 GenerateDataKeyWithoutPlaintextResponse * KmsClient::generateDataKeyWithoutPlaintext(const GenerateDataKeyWithoutPlaintextRequest &request)
@@ -1098,8 +1051,9 @@ GenerateDataKeyWithoutPlaintextResponse * KmsClient::generateDataKeyWithoutPlain
  * secure>
  *
  * By default, the random byte string is generated in AWS KMS. To generate the byte string in the AWS CloudHSM cluster that
- * is associated with a <a href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key
- * store</a>, specify the custom key store
+ * is associated with a <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>,
+ * specify the custom key store
  *
  * ID>
  *
@@ -1133,13 +1087,13 @@ GetKeyPolicyResponse * KmsClient::getKeyPolicy(const GetKeyPolicyRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets a Boolean value that indicates whether <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of the key material</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">automatic rotation of the key material</a>
  * is enabled for the specified customer master key
  *
  * (CMK)>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  *
  * Guide</i>> <ul> <li>
@@ -1170,8 +1124,8 @@ GetKeyRotationStatusResponse * KmsClient::getKeyRotationStatus(const GetKeyRotat
  *
  * Returns the items you need in order to import key material into AWS KMS from your existing key management
  * infrastructure. For more information about importing key material into AWS KMS, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the <i>AWS
- * Key Management Service Developer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the
+ * <i>AWS Key Management Service Developer
  *
  * Guide</i>>
  *
@@ -1190,7 +1144,7 @@ GetKeyRotationStatusResponse * KmsClient::getKeyRotationStatus(const GetKeyRotat
  * request>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 GetParametersForImportResponse * KmsClient::getParametersForImport(const GetParametersForImportRequest &request)
@@ -1207,8 +1161,8 @@ GetParametersForImportResponse * KmsClient::getParametersForImport(const GetPara
  * Imports key material into an existing AWS KMS customer master key (CMK) that was created without key material. You
  * cannot perform this operation on a CMK in a different AWS account. For more information about creating CMKs with no key
  * material and then importing key material, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the <i>AWS
- * Key Management Service Developer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html">Importing Key Material</a> in the
+ * <i>AWS Key Management Service Developer
  *
  * Guide</i>>
  *
@@ -1253,7 +1207,7 @@ GetParametersForImportResponse * KmsClient::getParametersForImport(const GetPara
  * material>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 ImportKeyMaterialResponse * KmsClient::importKeyMaterial(const ImportKeyMaterialRequest &request)
@@ -1267,20 +1221,26 @@ ImportKeyMaterialResponse * KmsClient::importKeyMaterial(const ImportKeyMaterial
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a list of all aliases in the caller's AWS account and region. You cannot list aliases in other accounts. For more
+ * Gets a list of aliases in the caller's AWS account and region. You cannot list aliases in other accounts. For more
  * information about aliases, see
  *
  * <a>CreateAlias</a>>
  *
- * By default, the <code>ListAliases</code> command returns all aliases in the account and region. To get only the aliases
- * that point to a particular customer master key (CMK), use the <code>KeyId</code>
+ * By default, the ListAliases command returns all aliases in the account and region. To get only the aliases that point to
+ * a particular customer master key (CMK), use the <code>KeyId</code>
  *
  * parameter>
  *
- * The <code>ListAliases</code> response might include several aliases have no <code>TargetKeyId</code> field. These are
- * predefined aliases that AWS has created but has not yet associated with a CMK. Aliases that AWS creates in your account,
- * including predefined aliases, do not count against your <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html#aliases-limit">AWS KMS aliases
+ * The <code>ListAliases</code> response can include aliases that you created and associated with your customer managed
+ * CMKs, and aliases that AWS created and associated with AWS managed CMKs in your account. You can recognize AWS aliases
+ * because their names have the format <code>aws/&lt;service-name&gt;</code>, such as
+ *
+ * <code>aws/dynamodb</code>>
+ *
+ * The response might also include aliases that have no <code>TargetKeyId</code> field. These are predefined aliases that
+ * AWS has created but has not yet associated with a CMK. Aliases that AWS creates in your account, including predefined
+ * aliases, do not count against your <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html#aliases-limit">AWS KMS aliases
  */
 ListAliasesResponse * KmsClient::listAliases(const ListAliasesRequest &request)
 {
@@ -1379,7 +1339,7 @@ ListRetirableGrantsResponse * KmsClient::listRetirableGrants(const ListRetirable
  * account>
  *
  * For more information about key policies, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key Policies</a> in the <i>AWS Key
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key Policies</a> in the <i>AWS Key
  * Management Service Developer
  */
 PutKeyPolicyResponse * KmsClient::putKeyPolicy(const PutKeyPolicyRequest &request)
@@ -1406,15 +1366,15 @@ PutKeyPolicyResponse * KmsClient::putKeyPolicy(const PutKeyPolicyRequest &reques
  * Unlike other operations, <code>ReEncrypt</code> is authorized twice, once as <code>ReEncryptFrom</code> on the source
  * CMK and once as <code>ReEncryptTo</code> on the destination CMK. We recommend that you include the
  * <code>"kms:ReEncrypt*"</code> permission in your <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">key policies</a> to permit reencryption
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">key policies</a> to permit reencryption
  * from or to the CMK. This permission is automatically included in the key policy when you create a CMK through the
- * console, but you must include it manually when you create a CMK programmatically or when you set a key policy with the
+ * console. But you must include it manually when you create a CMK programmatically or when you set a key policy with the
  * <a>PutKeyPolicy</a>
  *
  * operation>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 ReEncryptResponse * KmsClient::reEncrypt(const ReEncryptRequest &request)
@@ -1493,10 +1453,10 @@ RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
  * <a>DisableKey</a>> </b>
  *
  * If you schedule deletion of a CMK from a <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-overview.html">custom key store</a>, when the
- * waiting period expires, <code>ScheduleKeyDeletion</code> deletes the CMK from AWS KMS. Then AWS KMS makes a best effort
- * to delete the key material from the associated AWS CloudHSM cluster. However, you might need to manually <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#fix-keystore-orphaned-key">delete the
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>, when
+ * the waiting period expires, <code>ScheduleKeyDeletion</code> deletes the CMK from AWS KMS. Then AWS KMS makes a best
+ * effort to delete the key material from the associated AWS CloudHSM cluster. However, you might need to manually <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#fix-keystore-orphaned-key">delete the
  * orphaned key material</a> from the cluster and its
  *
  * backups>
@@ -1506,13 +1466,13 @@ RevokeGrantResponse * KmsClient::revokeGrant(const RevokeGrantRequest &request)
  * account>
  *
  * For more information about scheduling a CMK for deletion, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html">Deleting Customer Master Keys</a> in the
  * <i>AWS Key Management Service Developer
  *
  * Guide</i>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 ScheduleKeyDeletionResponse * KmsClient::scheduleKeyDeletion(const ScheduleKeyDeletionRequest &request)
@@ -1541,13 +1501,13 @@ ScheduleKeyDeletionResponse * KmsClient::scheduleKeyDeletion(const ScheduleKeyDe
  * value>
  *
  * For information about the rules that apply to tag keys and tag values, see <a
- * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag
  * Restrictions</a> in the <i>AWS Billing and Cost Management User
  *
  * Guide</i>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 TagResourceResponse * KmsClient::tagResource(const TagResourceRequest &request)
@@ -1571,7 +1531,7 @@ TagResourceResponse * KmsClient::tagResource(const TagResourceRequest &request)
  * <a>TagResource</a>>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 UntagResourceResponse * KmsClient::untagResource(const UntagResourceRequest &request)
@@ -1601,15 +1561,15 @@ UntagResourceResponse * KmsClient::untagResource(const UntagResourceRequest &req
  *
  * </p
  *
- * An alias name can contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). An alias
- * must start with the word <code>alias</code> followed by a forward slash (<code>alias/</code>). The alias name can
- * contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). Alias names cannot begin
- * with <code>aws</code>; that alias name prefix is reserved by Amazon Web Services
+ * The alias name must begin with <code>alias/</code> followed by a name, such as <code>alias/ExampleAlias</code>. It can
+ * contain only alphanumeric characters, forward slashes (/), underscores (_), and dashes (-). The alias name cannot begin
+ * with <code>alias/aws/</code>. The <code>alias/aws/</code> prefix is reserved for <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed CMKs</a>.
  *
- * (AWS)>
+ * </p
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 UpdateAliasResponse * KmsClient::updateAlias(const UpdateAliasRequest &request)
@@ -1634,57 +1594,41 @@ UpdateAliasResponse * KmsClient::updateAlias(const UpdateAliasRequest &request)
  *
  * operation>
  *
- * Use the <code>NewCustomKeyStoreName</code> parameter to change the friendly name of the custom key store to the value
- * that you
+ * Use the parameters of <code>UpdateCustomKeyStore</code> to edit your keystore
+ *
+ * settings> <ul> <li>
+ *
+ * Use the <b>NewCustomKeyStoreName</b> parameter to change the friendly name of the custom key store to the value that you
  *
  * specify>
  *
- * Use the <code>KeyStorePassword</code> parameter tell AWS KMS the current password of the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
- * <code>kmsuser</code> crypto user (CU)</a> in the associated AWS CloudHSM cluster. You can use this parameter to fix
- * connection failures that occur when AWS KMS cannot log into the associated cluster because the <code>kmsuser</code>
- * password has changed. This value does not change the password in the AWS CloudHSM
+ *
+ * </p </li> <li>
+ *
+ * Use the <b>KeyStorePassword</b> parameter tell AWS KMS the current password of the <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
+ * <code>kmsuser</code> crypto user (CU)</a> in the associated AWS CloudHSM cluster. You can use this parameter to <a
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/fix-keystore.html#fix-keystore-password">fix connection
+ * failures</a> that occur when AWS KMS cannot log into the associated cluster because the <code>kmsuser</code> password
+ * has changed. This value does not change the password in the AWS CloudHSM
  *
  * cluster>
  *
- * Use the <code>CloudHsmClusterId</code> parameter to associate the custom key store with a related AWS CloudHSM cluster,
- * that is, a cluster that shares a backup history with the original cluster. You can use this parameter to repair a custom
- * key store if its AWS CloudHSM cluster becomes corrupted or is deleted, or when you need to create or restore a cluster
- * from a
  *
- * backup>
+ * </p </li> <li>
  *
- * The cluster ID must identify a AWS CloudHSM cluster with the following
+ * Use the <b>CloudHsmClusterId</b> parameter to associate the custom key store with a different, but related, AWS CloudHSM
+ * cluster. You can use this parameter to repair a custom key store if its AWS CloudHSM cluster becomes corrupted or is
+ * deleted, or when you need to create or restore a cluster from a backup.
  *
- * requirements> <ul> <li>
- *
- * The cluster must be active and be in the same AWS account and Region as the custom key
- *
- * store> </li> <li>
- *
- * The cluster must have the same cluster certificate as the original cluster. You cannot use this parameter to associate
- * the custom key store with an unrelated cluster. To view the cluster certificate, use the AWS CloudHSM <a
- * href="http://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a> operation.
- * Clusters that share a backup history have the same cluster
- *
- * certificate> </li> <li>
- *
- * The cluster must be configured with subnets in at least two different Availability Zones in the Region. Because AWS
- * CloudHSM is not supported in all Availability Zones, we recommend that the cluster have subnets in all Availability
- * Zones in the
- *
- * Region> </li> <li>
- *
- * The cluster must contain at least two active HSMs, each in a different Availability
- *
- * Zone> </li> </ul>
+ * </p </li> </ul>
  *
  * If the operation succeeds, it returns a JSON object with no
  *
  * properties>
  *
  * This operation is part of the <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store feature</a>
  * feature in AWS KMS, which combines the convenience and extensive integration of AWS KMS with the isolation and control
  * of a single-tenant key
  */
@@ -1699,7 +1643,7 @@ UpdateCustomKeyStoreResponse * KmsClient::updateCustomKeyStore(const UpdateCusto
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the description of a customer master key (CMK). To see the decription of a CMK, use <a>DescribeKey</a>.
+ * Updates the description of a customer master key (CMK). To see the description of a CMK, use <a>DescribeKey</a>.
  *
  * </p
  *
@@ -1708,7 +1652,7 @@ UpdateCustomKeyStoreResponse * KmsClient::updateCustomKeyStore(const UpdateCusto
  * account>
  *
  * The result of this operation varies with the key state of the CMK. For details, see <a
- * href="http://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
+ * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How Key State Affects Use of a Customer
  * Master Key</a> in the <i>AWS Key Management Service Developer
  */
 UpdateKeyDescriptionResponse * KmsClient::updateKeyDescription(const UpdateKeyDescriptionRequest &request)

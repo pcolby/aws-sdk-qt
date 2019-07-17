@@ -36,21 +36,37 @@ namespace CloudWatchEvents {
  * This enum describes the actions that can be performed as CloudWatchEvents
  * requests.
  *
+ * \value ActivateEventSourceAction CloudWatchEvents ActivateEventSource action.
+ * \value CreateEventBusAction CloudWatchEvents CreateEventBus action.
+ * \value CreatePartnerEventSourceAction CloudWatchEvents CreatePartnerEventSource action.
+ * \value DeactivateEventSourceAction CloudWatchEvents DeactivateEventSource action.
+ * \value DeleteEventBusAction CloudWatchEvents DeleteEventBus action.
+ * \value DeletePartnerEventSourceAction CloudWatchEvents DeletePartnerEventSource action.
  * \value DeleteRuleAction CloudWatchEvents DeleteRule action.
  * \value DescribeEventBusAction CloudWatchEvents DescribeEventBus action.
+ * \value DescribeEventSourceAction CloudWatchEvents DescribeEventSource action.
+ * \value DescribePartnerEventSourceAction CloudWatchEvents DescribePartnerEventSource action.
  * \value DescribeRuleAction CloudWatchEvents DescribeRule action.
  * \value DisableRuleAction CloudWatchEvents DisableRule action.
  * \value EnableRuleAction CloudWatchEvents EnableRule action.
+ * \value ListEventBusesAction CloudWatchEvents ListEventBuses action.
+ * \value ListEventSourcesAction CloudWatchEvents ListEventSources action.
+ * \value ListPartnerEventSourceAccountsAction CloudWatchEvents ListPartnerEventSourceAccounts action.
+ * \value ListPartnerEventSourcesAction CloudWatchEvents ListPartnerEventSources action.
  * \value ListRuleNamesByTargetAction CloudWatchEvents ListRuleNamesByTarget action.
  * \value ListRulesAction CloudWatchEvents ListRules action.
+ * \value ListTagsForResourceAction CloudWatchEvents ListTagsForResource action.
  * \value ListTargetsByRuleAction CloudWatchEvents ListTargetsByRule action.
  * \value PutEventsAction CloudWatchEvents PutEvents action.
+ * \value PutPartnerEventsAction CloudWatchEvents PutPartnerEvents action.
  * \value PutPermissionAction CloudWatchEvents PutPermission action.
  * \value PutRuleAction CloudWatchEvents PutRule action.
  * \value PutTargetsAction CloudWatchEvents PutTargets action.
  * \value RemovePermissionAction CloudWatchEvents RemovePermission action.
  * \value RemoveTargetsAction CloudWatchEvents RemoveTargets action.
+ * \value TagResourceAction CloudWatchEvents TagResource action.
  * \value TestEventPatternAction CloudWatchEvents TestEventPattern action.
+ * \value UntagResourceAction CloudWatchEvents UntagResource action.
  */
 
 /*!

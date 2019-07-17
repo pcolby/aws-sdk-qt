@@ -159,9 +159,10 @@ namespace AutoScaling {
  * 
  *  Balancing>
  * 
- *  For more information, see the <a
- *  href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">Amazon EC2 Auto Scaling
- *  User
+ *  For more information, including information about granting IAM users required permissions for Amazon EC2 Auto Scaling
+ *  actions, see the <a
+ *  href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">Amazon EC2 Auto
+ *  Scaling User
  */
 
 /*!
@@ -239,8 +240,9 @@ AutoScalingClient::AutoScalingClient(
  *
  * groups>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-instance-asg.html">Attach
- * EC2 Instances to Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-instance-asg.html">Attach EC2 Instances to Your Auto
+ * Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstancesRequest &request)
 {
@@ -253,18 +255,19 @@ AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstanc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches one or more target groups to the specified Auto Scaling
+ * Attaches one or more target groups to the specified Auto Scaling group.
  *
- * group>
+ * </p
  *
  * To describe the target groups for an Auto Scaling group, use <a>DescribeLoadBalancerTargetGroups</a>. To detach the
  * target group from the Auto Scaling group, use
  *
  * <a>DetachLoadBalancerTargetGroups</a>>
  *
- * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html">Attach a Load Balancer to Your
- * Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * With Application Load Balancers and Network Load Balancers, instances are registered as targets with a target group.
+ * With Classic Load Balancers, instances are registered with the load balancer. For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html">Attaching a Load Balancer to
+ * Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTargetGroups(const AttachLoadBalancerTargetGroupsRequest &request)
 {
@@ -281,7 +284,7 @@ AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTa
  *
  * group>
  *
- * To attach an Application Load Balancer instead, see
+ * To attach an Application Load Balancer or a Network Load Balancer instead, see
  *
  * <a>AttachLoadBalancerTargetGroups</a>>
  *
@@ -291,8 +294,8 @@ AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTa
  * <a>DetachLoadBalancers</a>>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html">Attach a Load Balancer to Your
- * Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html">Attaching a Load Balancer to
+ * Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const AttachLoadBalancersRequest &request)
 {
@@ -362,9 +365,8 @@ BatchPutScheduledUpdateGroupActionResponse * AutoScalingClient::batchPutSchedule
  *
  * </p </li> </ol>
  *
- * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto Scaling Lifecycle</a> in
- * the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
+ * EC2 Auto Scaling Lifecycle Hooks</a> in the <i>Amazon EC2 Auto Scaling User
  */
 CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(const CompleteLifecycleActionRequest &request)
 {
@@ -383,13 +385,8 @@ CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(con
  *
  * If you exceed your maximum limit of Auto Scaling groups, the call fails. For information about viewing this limit, see
  * <a>DescribeAccountLimits</a>. For information about updating this limit, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Auto Scaling Limits</a> in the
- * <i>Amazon EC2 Auto Scaling User
- *
- * Guide</i>>
- *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html">Auto
- * Scaling Groups</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
+ * in the <i>Amazon EC2 Auto Scaling User
  */
 CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const CreateAutoScalingGroupRequest &request)
 {
@@ -408,13 +405,14 @@ CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const
  *
  * If you exceed your maximum limit of launch configurations, the call fails. For information about viewing this limit, see
  * <a>DescribeAccountLimits</a>. For information about updating this limit, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Auto Scaling Limits</a> in the
- * <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
+ * in the <i>Amazon EC2 Auto Scaling User
  *
  * Guide</i>>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html">Launch
- * Configurations</a> in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html">Launch Configurations</a> in the
+ * <i>Amazon EC2 Auto Scaling User
  */
 CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration(const CreateLaunchConfigurationRequest &request)
 {
@@ -437,7 +435,7 @@ CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration
  * message>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html">Tagging Auto Scaling Groups and
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html">Tagging Auto Scaling Groups and
  * Instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateOrUpdateTagsRequest &request)
@@ -534,7 +532,7 @@ DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified Auto Scaling
+ * Deletes the specified scaling
  *
  * policy>
  *
@@ -578,13 +576,13 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the current Auto Scaling resource limits for your AWS
+ * Describes the current Amazon EC2 Auto Scaling resource limits for your AWS
  *
  * account>
  *
  * For information about requesting an increase in these limits, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Auto Scaling Limits</a> in the
- * <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
+ * in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
@@ -597,13 +595,13 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the current Auto Scaling resource limits for your AWS
+ * Describes the current Amazon EC2 Auto Scaling resource limits for your AWS
  *
  * account>
  *
  * For information about requesting an increase in these limits, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Auto Scaling Limits</a> in the
- * <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
+ * in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 {
@@ -779,8 +777,8 @@ DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalanc
  *
  * group>
  *
- * This operation describes only Classic Load Balancers. If you have Application Load Balancers, use
- * <a>DescribeLoadBalancerTargetGroups</a>
+ * This operation describes only Classic Load Balancers. If you have Application Load Balancers or Network Load Balancers,
+ * use <a>DescribeLoadBalancerTargetGroups</a>
  */
 DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
 {
@@ -937,7 +935,7 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
  * Scaling>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling Which Auto Scaling
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling Which Auto Scaling
  * Instances Terminate During Scale In</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes(const DescribeTerminationPolicyTypesRequest &request)
@@ -956,7 +954,7 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
  * Scaling>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling Which Auto Scaling
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling Which Auto Scaling
  * Instances Terminate During Scale In</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes()
@@ -988,8 +986,9 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
  *
  * groups>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/detach-instance-asg.html">Detach
- * EC2 Instances from Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/detach-instance-asg.html">Detach EC2 Instances from Your
+ * Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstancesRequest &request)
 {
@@ -1019,8 +1018,8 @@ DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTa
  *
  * group>
  *
- * This operation detaches only Classic Load Balancers. If you have Application Load Balancers, use
- * <a>DetachLoadBalancerTargetGroups</a>
+ * This operation detaches only Classic Load Balancers. If you have Application Load Balancers or Network Load Balancers,
+ * use <a>DetachLoadBalancerTargetGroups</a>
  *
  * instead>
  *
@@ -1053,7 +1052,7 @@ DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(c
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables group metrics for the specified Auto Scaling group. For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html">Monitoring Your Auto Scaling
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html">Monitoring Your Auto Scaling
  * Groups and Instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(const EnableMetricsCollectionRequest &request)
@@ -1072,7 +1071,7 @@ EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(con
  * state>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
  * from Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest &request)
@@ -1104,7 +1103,7 @@ ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequ
  * state>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
  * from Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &request)
@@ -1122,10 +1121,10 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
  *
  * group>
  *
- * A lifecycle hook tells Amazon EC2 Auto Scaling to perform an action on an instance that is not actively in service; for
- * example, either when the instance launches or before the instance
+ * A lifecycle hook tells Amazon EC2 Auto Scaling to perform an action on an instance when the instance launches (before it
+ * is put into service) or as the instance terminates (before it is fully
  *
- * terminates>
+ * terminated)>
  *
  * This step is a part of the procedure for adding a lifecycle hook to an Auto Scaling
  *
@@ -1145,23 +1144,25 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
  *
  * </p </li> <li>
  *
- * If you need more time, record the lifecycle action heartbeat to keep the instance in a pending
+ * If you need more time, record the lifecycle action heartbeat to keep the instance in a pending state using using
  *
- * state> </li> <li>
+ * <a>RecordLifecycleActionHeartbeat</a>> </li> <li>
  *
- * If you finish before the timeout period ends, complete the lifecycle
+ * If you finish before the timeout period ends, complete the lifecycle action using
  *
- * action> </li> </ol>
+ * <a>CompleteLifecycleAction</a>> </li> </ol>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Auto
- * Scaling Lifecycle Hooks</a> in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
+ * EC2 Auto Scaling Lifecycle Hooks</a> in the <i>Amazon EC2 Auto Scaling User
  *
  * Guide</i>>
  *
- * If you exceed your maximum limit of lifecycle hooks, which by default is 50 per Auto Scaling group, the call fails. For
- * information about updating this limit, see <a
- * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS Service Limits</a> in the <i>Amazon Web
- * Services General
+ * If you exceed your maximum limit of lifecycle hooks, which by default is 50 per Auto Scaling group, the call
+ *
+ * fails>
+ *
+ * You can view the lifecycle hooks for an Auto Scaling group using <a>DescribeLifecycleHooks</a>. If you are no longer
+ * using a lifecycle hook, you can delete it using
  */
 PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycleHookRequest &request)
 {
@@ -1184,8 +1185,8 @@ PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycl
  * configuration>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html">Getting SNS Notifications When
- * Your Auto Scaling Group Scales</a> in the <i>Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html">Getting Amazon SNS
+ * Notifications When Your Auto Scaling Group Scales</a> in the <i>Amazon EC2 Auto Scaling User
  */
 PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfiguration(const PutNotificationConfigurationRequest &request)
 {
@@ -1201,12 +1202,6 @@ PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfigu
  * Creates or updates a policy for an Auto Scaling group. To update an existing policy, use the existing policy name and
  * set the parameters to change. Any existing parameter not changed in an update to an existing policy is not changed in
  * this update
- *
- * request>
- *
- * If you exceed your maximum limit of step adjustments, which by default is 20 per region, the call fails. For information
- * about updating this limit, see <a href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
- * Service Limits</a> in the <i>Amazon Web Services General
  */
 PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -1224,7 +1219,7 @@ PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingP
  *
  * unchanged>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">Scheduled
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">Scheduled
  * Scaling</a> in the <i>Amazon EC2 Auto Scaling User
  */
 PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGroupAction(const PutScheduledUpdateGroupActionRequest &request)
@@ -1270,8 +1265,8 @@ PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGro
  * action> </li> </ol>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto Scaling Lifecycle</a> in
- * the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto Scaling Lifecycle</a>
+ * in the <i>Amazon EC2 Auto Scaling User
  */
 RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActionHeartbeat(const RecordLifecycleActionHeartbeatRequest &request)
 {
@@ -1289,7 +1284,7 @@ RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActio
  * group>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and Resuming
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and Resuming
  * Scaling Processes</a> in the <i>Amazon EC2 Auto Scaling User
  */
 ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcessesRequest &request)
@@ -1308,8 +1303,8 @@ ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcess
  * group>
  *
  * For more information about desired capacity, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/WhatIsAutoScaling.html">What Is Amazon EC2 Auto Scaling?</a>
- * in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">What Is Amazon EC2
+ * Auto Scaling?</a> in the <i>Amazon EC2 Auto Scaling User
  */
 SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesiredCapacityRequest &request)
 {
@@ -1326,8 +1321,8 @@ SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesi
  *
  * instance>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health
- * Checks</a> in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health Checks
+ * for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstanceHealthRequest &request)
 {
@@ -1344,8 +1339,9 @@ SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstan
  *
  * instances>
  *
- * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection">Instance
+ * For more information about preventing instances that are part of an Auto Scaling group from terminating on scale in, see
+ * <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection">Instance
  * Protection</a> in the <i>Amazon EC2 Auto Scaling User
  */
 SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const SetInstanceProtectionRequest &request)
@@ -1373,7 +1369,7 @@ SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const S
  * <a>ResumeProcesses</a>>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and Resuming
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and Resuming
  * Scaling Processes</a> in the <i>Amazon EC2 Auto Scaling User
  */
 SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProcessesRequest &request)

@@ -39,6 +39,7 @@ public:
     enum Action {
         AssociateIpGroupsAction,
         AuthorizeIpRulesAction,
+        CopyWorkspaceImageAction,
         CreateIpGroupAction,
         CreateTagsAction,
         CreateWorkspacesAction,

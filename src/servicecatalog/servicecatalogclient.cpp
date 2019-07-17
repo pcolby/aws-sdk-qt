@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "acceptportfoliosharerequest.h"
 #include "acceptportfolioshareresponse.h"
+#include "associatebudgetwithresourcerequest.h"
+#include "associatebudgetwithresourceresponse.h"
 #include "associateprincipalwithportfoliorequest.h"
 #include "associateprincipalwithportfolioresponse.h"
 #include "associateproductwithportfoliorequest.h"
@@ -95,10 +97,14 @@
 #include "describerecordresponse.h"
 #include "describeserviceactionrequest.h"
 #include "describeserviceactionresponse.h"
+#include "describeserviceactionexecutionparametersrequest.h"
+#include "describeserviceactionexecutionparametersresponse.h"
 #include "describetagoptionrequest.h"
 #include "describetagoptionresponse.h"
 #include "disableawsorganizationsaccessrequest.h"
 #include "disableawsorganizationsaccessresponse.h"
+#include "disassociatebudgetfromresourcerequest.h"
+#include "disassociatebudgetfromresourceresponse.h"
 #include "disassociateprincipalfromportfoliorequest.h"
 #include "disassociateprincipalfromportfolioresponse.h"
 #include "disassociateproductfromportfoliorequest.h"
@@ -117,6 +123,8 @@
 #include "getawsorganizationsaccessstatusresponse.h"
 #include "listacceptedportfoliosharesrequest.h"
 #include "listacceptedportfoliosharesresponse.h"
+#include "listbudgetsforresourcerequest.h"
+#include "listbudgetsforresourceresponse.h"
 #include "listconstraintsforportfoliorequest.h"
 #include "listconstraintsforportfolioresponse.h"
 #include "listlaunchpathsrequest.h"
@@ -145,6 +153,8 @@
 #include "listserviceactionsresponse.h"
 #include "listserviceactionsforprovisioningartifactrequest.h"
 #include "listserviceactionsforprovisioningartifactresponse.h"
+#include "liststackinstancesforprovisionedproductrequest.h"
+#include "liststackinstancesforprovisionedproductresponse.h"
 #include "listtagoptionsrequest.h"
 #include "listtagoptionsresponse.h"
 #include "provisionproductrequest.h"
@@ -169,6 +179,8 @@
 #include "updateproductresponse.h"
 #include "updateprovisionedproductrequest.h"
 #include "updateprovisionedproductresponse.h"
+#include "updateprovisionedproductpropertiesrequest.h"
+#include "updateprovisionedproductpropertiesresponse.h"
 #include "updateprovisioningartifactrequest.h"
 #include "updateprovisioningartifactresponse.h"
 #include "updateserviceactionrequest.h"
@@ -270,6 +282,19 @@ ServiceCatalogClient::ServiceCatalogClient(
 AcceptPortfolioShareResponse * ServiceCatalogClient::acceptPortfolioShare(const AcceptPortfolioShareRequest &request)
 {
     return qobject_cast<AcceptPortfolioShareResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * AssociateBudgetWithResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified budget with the specified
+ */
+AssociateBudgetWithResourceResponse * ServiceCatalogClient::associateBudgetWithResource(const AssociateBudgetWithResourceRequest &request)
+{
+    return qobject_cast<AssociateBudgetWithResourceResponse *>(send(request));
 }
 
 /*!
@@ -776,6 +801,12 @@ DescribeProvisioningParametersResponse * ServiceCatalogClient::describeProvision
  *
  * Use this operation after calling a request operation (for example, <a>ProvisionProduct</a>,
  * <a>TerminateProvisionedProduct</a>, or <a>UpdateProvisionedProduct</a>).
+ *
+ * </p <note>
+ *
+ * If a provisioned product was transferred to a new owner using <a>UpdateProvisionedProductProperties</a>, the new owner
+ * will be able to describe all past records for that product. The previous owner will no longer be able to describe the
+ * records, but will be able to use <a>ListRecordHistory</a> to see the product's history from when he was the
  */
 DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeRecordRequest &request)
 {
@@ -793,6 +824,18 @@ DescribeRecordResponse * ServiceCatalogClient::describeRecord(const DescribeReco
 DescribeServiceActionResponse * ServiceCatalogClient::describeServiceAction(const DescribeServiceActionRequest &request)
 {
     return qobject_cast<DescribeServiceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribeServiceActionExecutionParametersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeServiceActionExecutionParametersResponse * ServiceCatalogClient::describeServiceActionExecutionParameters(const DescribeServiceActionExecutionParametersRequest &request)
+{
+    return qobject_cast<DescribeServiceActionExecutionParametersResponse *>(send(request));
 }
 
 /*!
@@ -821,6 +864,19 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
 DisableAWSOrganizationsAccessResponse * ServiceCatalogClient::disableAWSOrganizationsAccess(const DisableAWSOrganizationsAccessRequest &request)
 {
     return qobject_cast<DisableAWSOrganizationsAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DisassociateBudgetFromResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates the specified budget from the specified
+ */
+DisassociateBudgetFromResourceResponse * ServiceCatalogClient::disassociateBudgetFromResource(const DisassociateBudgetFromResourceRequest &request)
+{
+    return qobject_cast<DisassociateBudgetFromResourceResponse *>(send(request));
 }
 
 /*!
@@ -946,6 +1002,19 @@ GetAWSOrganizationsAccessStatusResponse * ServiceCatalogClient::getAWSOrganizati
 ListAcceptedPortfolioSharesResponse * ServiceCatalogClient::listAcceptedPortfolioShares(const ListAcceptedPortfolioSharesRequest &request)
 {
     return qobject_cast<ListAcceptedPortfolioSharesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListBudgetsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the budgets associated to the specified
+ */
+ListBudgetsForResourceResponse * ServiceCatalogClient::listBudgetsForResource(const ListBudgetsForResourceRequest &request)
+{
+    return qobject_cast<ListBudgetsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -1130,6 +1199,20 @@ ListServiceActionsResponse * ServiceCatalogClient::listServiceActions(const List
 ListServiceActionsForProvisioningArtifactResponse * ServiceCatalogClient::listServiceActionsForProvisioningArtifact(const ListServiceActionsForProvisioningArtifactRequest &request)
 {
     return qobject_cast<ListServiceActionsForProvisioningArtifactResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ListStackInstancesForProvisionedProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns summary information about stack instances that are associated with the specified <code>CFN_STACKSET</code> type
+ * provisioned product. You can filter for stack instances that are associated with a specific AWS account name or region.
+ */
+ListStackInstancesForProvisionedProductResponse * ServiceCatalogClient::listStackInstancesForProvisionedProduct(const ListStackInstancesForProvisionedProductRequest &request)
+{
+    return qobject_cast<ListStackInstancesForProvisionedProductResponse *>(send(request));
 }
 
 /*!
@@ -1322,6 +1405,19 @@ UpdateProductResponse * ServiceCatalogClient::updateProduct(const UpdateProductR
 UpdateProvisionedProductResponse * ServiceCatalogClient::updateProvisionedProduct(const UpdateProvisionedProductRequest &request)
 {
     return qobject_cast<UpdateProvisionedProductResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdateProvisionedProductPropertiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Requests updates to the properties of the specified provisioned
+ */
+UpdateProvisionedProductPropertiesResponse * ServiceCatalogClient::updateProvisionedProductProperties(const UpdateProvisionedProductPropertiesRequest &request)
+{
+    return qobject_cast<UpdateProvisionedProductPropertiesResponse *>(send(request));
 }
 
 /*!

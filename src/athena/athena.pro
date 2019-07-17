@@ -28,10 +28,18 @@ HEADERS += \
     createnamedqueryrequest_p.h \
     createnamedqueryresponse.h \
     createnamedqueryresponse_p.h \
+    createworkgrouprequest.h \
+    createworkgrouprequest_p.h \
+    createworkgroupresponse.h \
+    createworkgroupresponse_p.h \
     deletenamedqueryrequest.h \
     deletenamedqueryrequest_p.h \
     deletenamedqueryresponse.h \
     deletenamedqueryresponse_p.h \
+    deleteworkgrouprequest.h \
+    deleteworkgrouprequest_p.h \
+    deleteworkgroupresponse.h \
+    deleteworkgroupresponse_p.h \
     getnamedqueryrequest.h \
     getnamedqueryrequest_p.h \
     getnamedqueryresponse.h \
@@ -44,6 +52,10 @@ HEADERS += \
     getqueryresultsrequest_p.h \
     getqueryresultsresponse.h \
     getqueryresultsresponse_p.h \
+    getworkgrouprequest.h \
+    getworkgrouprequest_p.h \
+    getworkgroupresponse.h \
+    getworkgroupresponse_p.h \
     listnamedqueriesrequest.h \
     listnamedqueriesrequest_p.h \
     listnamedqueriesresponse.h \
@@ -52,6 +64,14 @@ HEADERS += \
     listqueryexecutionsrequest_p.h \
     listqueryexecutionsresponse.h \
     listqueryexecutionsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
+    listworkgroupsrequest.h \
+    listworkgroupsrequest_p.h \
+    listworkgroupsresponse.h \
+    listworkgroupsresponse_p.h \
     startqueryexecutionrequest.h \
     startqueryexecutionrequest_p.h \
     startqueryexecutionresponse.h \
@@ -60,6 +80,18 @@ HEADERS += \
     stopqueryexecutionrequest_p.h \
     stopqueryexecutionresponse.h \
     stopqueryexecutionresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
+    updateworkgrouprequest.h \
+    updateworkgrouprequest_p.h \
+    updateworkgroupresponse.h \
+    updateworkgroupresponse_p.h \
 
 SOURCES += \
     athenaclient.cpp \
@@ -71,21 +103,37 @@ SOURCES += \
     batchgetqueryexecutionresponse.cpp \
     createnamedqueryrequest.cpp \
     createnamedqueryresponse.cpp \
+    createworkgrouprequest.cpp \
+    createworkgroupresponse.cpp \
     deletenamedqueryrequest.cpp \
     deletenamedqueryresponse.cpp \
+    deleteworkgrouprequest.cpp \
+    deleteworkgroupresponse.cpp \
     getnamedqueryrequest.cpp \
     getnamedqueryresponse.cpp \
     getqueryexecutionrequest.cpp \
     getqueryexecutionresponse.cpp \
     getqueryresultsrequest.cpp \
     getqueryresultsresponse.cpp \
+    getworkgrouprequest.cpp \
+    getworkgroupresponse.cpp \
     listnamedqueriesrequest.cpp \
     listnamedqueriesresponse.cpp \
     listqueryexecutionsrequest.cpp \
     listqueryexecutionsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
+    listworkgroupsrequest.cpp \
+    listworkgroupsresponse.cpp \
     startqueryexecutionrequest.cpp \
     startqueryexecutionresponse.cpp \
     stopqueryexecutionrequest.cpp \
     stopqueryexecutionresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
+    updateworkgrouprequest.cpp \
+    updateworkgroupresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

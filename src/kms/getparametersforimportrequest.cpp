@@ -35,7 +35,7 @@ namespace KMS {
  * 
  *  AWS Key Management Service (AWS KMS) is an encryption and key management web service. This guide describes the AWS KMS
  *  operations that you can call programmatically. For general information about AWS KMS, see the <a
- *  href="http://docs.aws.amazon.com/kms/latest/developerguide/"> <i>AWS Key Management Service Developer Guide</i>
+ *  href="https://docs.aws.amazon.com/kms/latest/developerguide/"> <i>AWS Key Management Service Developer Guide</i>
  * 
  *  </a>> <note>
  * 
@@ -63,13 +63,13 @@ namespace KMS {
  * 
  *  Requests must be signed by using an access key ID and a secret access key. We strongly recommend that you <i>do not</i>
  *  use your AWS account (root) access key ID and secret key for everyday work with AWS KMS. Instead, use the access key ID
- *  and secret access key for an IAM user, or you can use the AWS Security Token Service to generate temporary security
+ *  and secret access key for an IAM user. You can also use the AWS Security Token Service to generate temporary security
  *  credentials that you can use to sign
  * 
  *  requests>
  * 
- *  All AWS KMS operations require <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
- *  Version
+ *  All AWS KMS operations require <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version
  * 
  *  4</a>>
  * 
@@ -81,7 +81,7 @@ namespace KMS {
  *  them to an Amazon S3 bucket that you specify. By using the information collected by CloudTrail, you can determine what
  *  requests were made to AWS KMS, who made the request, when it was made, and so on. To learn more about CloudTrail,
  *  including how to turn it on and find your log files, see the <a
- *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
+ *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/">AWS CloudTrail User
  * 
  *  Guide</a>>
  * 
@@ -93,27 +93,27 @@ namespace KMS {
  * 
  *  following> <ul> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> - This
- *  topic provides general information about the of credentials used for accessing
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html">AWS Security Credentials</a> -
+ *  This topic provides general information about the types of credentials used for accessing
  * 
  *  AWS> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
+ *  <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary Security Credentials</a> -
  *  This section of the <i>IAM User Guide</i> describes how to create and use temporary security
  * 
  *  credentials> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>
  *  - This set of topics walks you through the process of signing a request using an access key ID and a secret access
  * 
  *  key> </li> </ul>
  * 
- *  <b>Commonly Used APIs</b>
+ *  <b>Commonly Used API Operations</b>
  * 
  *  </p
  * 
- *  Of the APIs discussed in this guide, the following will prove the most useful for most applications. You will likely
- *  perform actions other than these, such as creating keys and assigning policies, by using the
+ *  Of the API operations discussed in this guide, the following will prove the most useful for most applications. You will
+ *  likely perform operations other than these, such as creating keys and assigning policies, by using the
  * 
  *  console> <ul> <li>
  * 

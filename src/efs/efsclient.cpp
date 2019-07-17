@@ -35,6 +35,8 @@
 #include "deletetagsresponse.h"
 #include "describefilesystemsrequest.h"
 #include "describefilesystemsresponse.h"
+#include "describelifecycleconfigurationrequest.h"
+#include "describelifecycleconfigurationresponse.h"
 #include "describemounttargetsecuritygroupsrequest.h"
 #include "describemounttargetsecuritygroupsresponse.h"
 #include "describemounttargetsrequest.h"
@@ -43,6 +45,8 @@
 #include "describetagsresponse.h"
 #include "modifymounttargetsecuritygroupsrequest.h"
 #include "modifymounttargetsecuritygroupsresponse.h"
+#include "putlifecycleconfigurationrequest.h"
+#include "putlifecycleconfigurationresponse.h"
 #include "updatefilesystemrequest.h"
 #include "updatefilesystemresponse.h"
 
@@ -73,7 +77,7 @@ namespace EFS {
  *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
  *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
  *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="http://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
  */
 
 /*!
@@ -176,15 +180,15 @@ EfsClient::EfsClient(
  * performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of
  * slightly higher latencies for most file operations. The performance mode can't be changed after the file system has been
  * created. For more information, see <a
- * href="http://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html">Amazon EFS: Performance
+ * href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html">Amazon EFS: Performance
  *
  * Modes</a>>
  *
  * After the file system is fully created, Amazon EFS sets its lifecycle state to <code>available</code>, at which point
  * you can create one or more mount targets for the file system in your VPC. For more information, see
- * <a>CreateMountTarget</a>. You mount your Amazon EFS file system on an EC2 instances in your VPC via the mount target.
- * For more information, see <a href="http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it
- * Works</a>.
+ * <a>CreateMountTarget</a>. You mount your Amazon EFS file system on an EC2 instances in your VPC by using the mount
+ * target. For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How
+ * it Works</a>.
  *
  * </p
  *
@@ -201,7 +205,7 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a mount target for a file system. You can then mount the file system on EC2 instances via the mount
+ * Creates a mount target for a file system. You can then mount the file system on EC2 instances by using the mount
  *
  * target>
  *
@@ -209,7 +213,7 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  * Availability Zone share a single mount target for a given file system. If you have multiple subnets in an Availability
  * Zone, you create a mount target in one of the subnets. EC2 instances do not need to be in the same subnet as the mount
  * target in order to access their file system. For more information, see <a
- * href="http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it Works</a>.
+ * href="https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it Works</a>.
  *
  * </p
  *
@@ -237,9 +241,9 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  *
  * After creating the mount target, Amazon EFS returns a response that includes, a <code>MountTargetId</code> and an
  * <code>IpAddress</code>. You use this IP address when mounting the file system in an EC2 instance. You can also use the
- * mount target's DNS name when mounting the file system. The EC2 instance on which you mount the file system via the mount
- * target can resolve the mount target's DNS name to its IP address. For more information, see <a
- * href="http://docs.aws.amazon.com/efs/latest/ug/how-it-works.html#how-it-works-implementation">How it Works:
+ * mount target's DNS name when mounting the file system. The EC2 instance on which you mount the file system by using the
+ * mount target can resolve the mount target's DNS name to its IP address. For more information, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html#how-it-works-implementation">How it Works:
  * Implementation Overview</a>.
  *
  * </p
@@ -304,11 +308,11 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  *
  * state> </note>
  *
- * We recommend you create a mount target in each of the Availability Zones. There are cost considerations for using a file
- * system in an Availability Zone through a mount target created in another Availability Zone. For more information, see <a
- * href="http://aws.amazon.com/efs/">Amazon EFS</a>. In addition, by always using a mount target local to the instance's
- * Availability Zone, you eliminate a partial failure scenario. If the Availability Zone in which your mount target is
- * created goes down, then you won't be able to access your file system through that mount target.
+ * We recommend that you create a mount target in each of the Availability Zones. There are cost considerations for using a
+ * file system in an Availability Zone through a mount target created in another Availability Zone. For more information,
+ * see <a href="http://aws.amazon.com/efs/">Amazon EFS</a>. In addition, by always using a mount target local to the
+ * instance's Availability Zone, you eliminate a partial failure scenario. If the Availability Zone in which your mount
+ * target is created goes down, then you can't access your file system through that mount target.
  *
  * </p
  *
@@ -399,11 +403,11 @@ DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemReq
  *
  * target>
  *
- * This operation forcibly breaks any mounts of the file system via the mount target that is being deleted, which might
- * disrupt instances or applications using those mounts. To avoid applications getting cut off abruptly, you might consider
- * unmounting any mounts of the mount target, if feasible. The operation also deletes the associated network interface.
- * Uncommitted writes may be lost, but breaking a mount target using this operation does not corrupt the file system
- * itself. The file system you created remains. You can mount an EC2 instance in your VPC via another mount
+ * This operation forcibly breaks any mounts of the file system by using the mount target that is being deleted, which
+ * might disrupt instances or applications using those mounts. To avoid applications getting cut off abruptly, you might
+ * consider unmounting any mounts of the mount target, if feasible. The operation also deletes the associated network
+ * interface. Uncommitted writes might be lost, but breaking a mount target using this operation does not corrupt the file
+ * system itself. The file system you created remains. You can mount an EC2 instance in your VPC by using another mount
  *
  * target>
  *
@@ -438,9 +442,9 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that does not
+ * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that doesn't
  * exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related restrictions, see
- * <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the
+ * <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the
  * <i>AWS Billing and Cost Management User
  *
  * Guide</i>>
@@ -465,9 +469,10 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
  * calling>
  *
  * When retrieving all file system descriptions, you can optionally specify the <code>MaxItems</code> parameter to limit
- * the number of descriptions in a response. If more file system descriptions remain, Amazon EFS returns a
- * <code>NextMarker</code>, an opaque token, in the response. In this case, you should send a subsequent request with the
- * <code>Marker</code> request parameter set to the value of <code>NextMarker</code>.
+ * the number of descriptions in a response. Currently, this number is automatically set to 10. If more file system
+ * descriptions remain, Amazon EFS returns a <code>NextMarker</code>, an opaque token, in the response. In this case, you
+ * should send a subsequent request with the <code>Marker</code> request parameter set to the value of
+ * <code>NextMarker</code>.
  *
  * </p
  *
@@ -475,11 +480,6 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
  * <code>DescribeFileSystems</code> is called first without the <code>Marker</code> and then the operation continues to
  * call it with the <code>Marker</code> parameter set to the value of the <code>NextMarker</code> from the previous
  * response until the response has no <code>NextMarker</code>.
- *
- * </p
- *
- * The implementation may return fewer than <code>MaxItems</code> file system descriptions while still including a
- * <code>NextMarker</code> value.
  *
  * </p
  *
@@ -493,6 +493,26 @@ DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
 DescribeFileSystemsResponse * EfsClient::describeFileSystems(const DescribeFileSystemsRequest &request)
 {
     return qobject_cast<DescribeFileSystemsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeLifecycleConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the current <code>LifecycleConfiguration</code> object for the specified Amazon EFS file system. EFS lifecycle
+ * management uses the <code>LifecycleConfiguration</code> object to identify which files to move to the EFS Infrequent
+ * Access (IA) storage class. For a file system without a <code>LifecycleConfiguration</code> object, the call returns an
+ * empty array in the
+ *
+ * response>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:DescribeLifecycleConfiguration</code>
+ */
+DescribeLifecycleConfigurationResponse * EfsClient::describeLifecycleConfiguration(const DescribeLifecycleConfigurationRequest &request)
+{
+    return qobject_cast<DescribeLifecycleConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -548,8 +568,8 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the tags associated with a file system. The order of tags returned in the response of one
- * <code>DescribeTags</code> call and the order of tags returned across the responses of a multi-call iteration (when using
- * pagination) is unspecified.
+ * <code>DescribeTags</code> call and the order of tags returned across the responses of a multiple-call iteration (when
+ * using pagination) is unspecified.
  *
  * </p
  *
@@ -591,6 +611,52 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
 ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request)
 {
     return qobject_cast<ModifyMountTargetSecurityGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * PutLifecycleConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables lifecycle management by creating a new <code>LifecycleConfiguration</code> object. A
+ * <code>LifecycleConfiguration</code> object defines when files in an Amazon EFS file system are automatically
+ * transitioned to the lower-cost EFS Infrequent Access (IA) storage class. A <code>LifecycleConfiguration</code> applies
+ * to all files in a file
+ *
+ * system>
+ *
+ * Each Amazon EFS file system supports one lifecycle configuration, which applies to all files in the file system. If a
+ * <code>LifecycleConfiguration</code> object already exists for the specified file system, a
+ * <code>PutLifecycleConfiguration</code> call modifies the existing configuration. A
+ * <code>PutLifecycleConfiguration</code> call with an empty <code>LifecyclePolicies</code> array in the request body
+ * deletes any existing <code>LifecycleConfiguration</code> and disables lifecycle
+ *
+ * management>
+ *
+ * In the request, specify the following:
+ *
+ * </p <ul> <li>
+ *
+ * The ID for the file system for which you are enabling, disabling, or modifying lifecycle
+ *
+ * management> </li> <li>
+ *
+ * A <code>LifecyclePolicies</code> array of <code>LifecyclePolicy</code> objects that define when files are moved to the
+ * IA storage class. The array can contain only one <code>LifecyclePolicy</code>
+ *
+ * item> </li> </ul>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:PutLifecycleConfiguration</code>
+ *
+ * operation>
+ *
+ * To apply a <code>LifecycleConfiguration</code> object to an encrypted file system, you need the same AWS Key Management
+ * Service (AWS KMS) permissions as when you created the encrypted file system.
+ */
+PutLifecycleConfigurationResponse * EfsClient::putLifecycleConfiguration(const PutLifecycleConfigurationRequest &request)
+{
+    return qobject_cast<PutLifecycleConfigurationResponse *>(send(request));
 }
 
 /*!

@@ -90,43 +90,43 @@ namespace ApplicationAutoScaling {
  *  resources> <ul> <li>
  * 
  *  Amazon ECS services. For more information, see <a
- *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service Auto Scaling</a> in
+ *  href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service Auto Scaling</a> in
  *  the <i>Amazon Elastic Container Service Developer
  * 
  *  Guide</i>> </li> <li>
  * 
  *  Amazon EC2 Spot fleets. For more information, see <a
- *  href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-auto-scaling.html">Automatic Scaling for Spot Fleet</a>
+ *  href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-auto-scaling.html">Automatic Scaling for Spot Fleet</a>
  *  in the <i>Amazon EC2 User
  * 
  *  Guide</i>> </li> <li>
  * 
  *  Amazon EMR clusters. For more information, see <a
- *  href="http://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-automatic-scaling.html">Using Automatic
+ *  href="https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-automatic-scaling.html">Using Automatic
  *  Scaling in Amazon EMR</a> in the <i>Amazon EMR Management
  * 
  *  Guide</i>> </li> <li>
  * 
  *  AppStream 2.0 fleets. For more information, see <a
- *  href="http://docs.aws.amazon.com/appstream2/latest/developerguide/autoscaling.html">Fleet Auto Scaling for Amazon
+ *  href="https://docs.aws.amazon.com/appstream2/latest/developerguide/autoscaling.html">Fleet Auto Scaling for Amazon
  *  AppStream 2.0</a> in the <i>Amazon AppStream 2.0 Developer
  * 
  *  Guide</i>> </li> <li>
  * 
  *  Provisioned read and write capacity for Amazon DynamoDB tables and global secondary indexes. For more information, see
- *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AutoScaling.html">Managing Throughput Capacity
+ *  <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AutoScaling.html">Managing Throughput Capacity
  *  Automatically with DynamoDB Auto Scaling</a> in the <i>Amazon DynamoDB Developer
  * 
  *  Guide</i>> </li> <li>
  * 
  *  Amazon Aurora Replicas. For more information, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Integrating.AutoScaling.html">Using Amazon Aurora
- *  Auto Scaling with Aurora
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Integrating.AutoScaling.html">Using Amazon
+ *  Aurora Auto Scaling with Aurora
  * 
  *  Replicas</a>> </li> <li>
  * 
  *  Amazon SageMaker endpoint variants. For more information, see <a
- *  href="http://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html">Automatically Scaling Amazon SageMaker
+ *  href="https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html">Automatically Scaling Amazon SageMaker
  * 
  *  Models</a>> </li> <li>
  * 
@@ -135,15 +135,10 @@ namespace ApplicationAutoScaling {
  * 
  *  </p </li> </ul>
  * 
- *  To learn more about Application Auto Scaling, see the <a
- *  href="http://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html">Application
+ *  To learn more about Application Auto Scaling, including information about granting IAM users required permissions for
+ *  Application Auto Scaling actions, see the <a
+ *  href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html">Application
  *  Auto Scaling User
- * 
- *  Guide</a>>
- * 
- *  To configure automatic scaling for multiple resources across multiple services, use AWS Auto Scaling to create a scaling
- *  plan for your application. For more information, see the <a
- *  href="http://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html">AWS Auto Scaling User
  */
 
 /*!
@@ -248,7 +243,7 @@ DeleteScheduledActionResponse * ApplicationAutoScalingClient::deleteScheduledAct
  *
  * it>
  *
- * To create a scalable target or update an existing one, see
+ * To create a scalable target or update an existing one, see <a>RegisterScalableTarget</a>.
  */
 DeregisterScalableTargetResponse * ApplicationAutoScalingClient::deregisterScalableTarget(const DeregisterScalableTargetRequest &request)
 {
@@ -357,8 +352,8 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
  * target>
  *
  * Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scaling policy applies
- * to the scalable target identified by those three attributes. You cannot create a scaling policy until you register the
- * scalable target using
+ * to the scalable target identified by those three attributes. You cannot create a scaling policy until you have
+ * registered the resource as a scalable target using
  *
  * <a>RegisterScalableTarget</a>>
  *
@@ -369,6 +364,21 @@ DescribeScheduledActionsResponse * ApplicationAutoScalingClient::describeSchedul
  *
  * You can view the scaling policies for a service namespace using <a>DescribeScalingPolicies</a>. If you are no longer
  * using a scaling policy, you can delete it using
+ *
+ * <a>DeleteScalingPolicy</a>>
+ *
+ * Multiple scaling policies can be in force at the same time for the same scalable target. You can have one or more target
+ * tracking scaling policies, one or more step scaling policies, or both. However, there is a chance that multiple policies
+ * could conflict, instructing the scalable target to scale out or in at the same time. Application Auto Scaling gives
+ * precedence to the policy that provides the largest capacity for both scale in and scale out. For example, if one policy
+ * increases capacity by 3, another policy increases capacity by 200 percent, and the current capacity is 10, Application
+ * Auto Scaling uses the policy with the highest calculated capacity (200% of 10 = 20) and scales out to 30.
+ *
+ * </p
+ *
+ * Learn more about how to work with scaling policies in the <a
+ * href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html">Application
+ * Auto Scaling User
  */
 PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -386,10 +396,10 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
  * target>
  *
  * Each scalable target is identified by a service namespace, resource ID, and scalable dimension. A scheduled action
- * applies to the scalable target identified by those three attributes. You cannot create a scheduled action until you
- * register the scalable target using
+ * applies to the scalable target identified by those three attributes. You cannot create a scheduled action until you have
+ * registered the resource as a scalable target using <a>RegisterScalableTarget</a>.
  *
- * <a>RegisterScalableTarget</a>>
+ * </p
  *
  * To update an action, specify its name and the parameters that you want to change. If you don't specify start and end
  * times, the old values are deleted. Any other parameters that you don't specify are not changed by this update
@@ -398,6 +408,12 @@ PutScalingPolicyResponse * ApplicationAutoScalingClient::putScalingPolicy(const 
  *
  * You can view the scheduled actions using <a>DescribeScheduledActions</a>. If you are no longer using a scheduled action,
  * you can delete it using
+ *
+ * <a>DeleteScheduledAction</a>>
+ *
+ * Learn more about how to work with scheduled actions in the <a
+ * href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html">Application
+ * Auto Scaling User
  */
 PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(const PutScheduledActionRequest &request)
 {
@@ -410,15 +426,19 @@ PutScheduledActionResponse * ApplicationAutoScalingClient::putScheduledAction(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out or
- * scale in. After you have registered a scalable target, you can use this operation to update the minimum and maximum
- * values for its scalable
+ * Registers or updates a scalable target. A scalable target is a resource that Application Auto Scaling can scale out and
+ * scale in. Each scalable target has a resource ID, scalable dimension, and namespace, as well as values for minimum and
+ * maximum capacity.
  *
- * dimension>
+ * </p
  *
- * After you register a scalable target, you can create and apply scaling policies using <a>PutScalingPolicy</a>. You can
- * view the scaling policies for a service namespace using <a>DescribeScalableTargets</a>. If you no longer need a scalable
- * target, you can deregister it using
+ * After you register a scalable target, you do not need to register it again to use other Application Auto Scaling
+ * operations. To see which resources have been registered, use <a>DescribeScalableTargets</a>. You can also view the
+ * scaling policies for a service namespace using <a>DescribeScalableTargets</a>.
+ *
+ * </p
+ *
+ * If you no longer need a scalable target, you can deregister it using
  */
 RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableTarget(const RegisterScalableTargetRequest &request)
 {

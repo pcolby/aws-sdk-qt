@@ -54,8 +54,11 @@ namespace KinesisAnalyticsV2 {
  * \value DiscoverInputSchemaAction KinesisAnalyticsV2 DiscoverInputSchema action.
  * \value ListApplicationSnapshotsAction KinesisAnalyticsV2 ListApplicationSnapshots action.
  * \value ListApplicationsAction KinesisAnalyticsV2 ListApplications action.
+ * \value ListTagsForResourceAction KinesisAnalyticsV2 ListTagsForResource action.
  * \value StartApplicationAction KinesisAnalyticsV2 StartApplication action.
  * \value StopApplicationAction KinesisAnalyticsV2 StopApplication action.
+ * \value TagResourceAction KinesisAnalyticsV2 TagResource action.
+ * \value UntagResourceAction KinesisAnalyticsV2 UntagResource action.
  * \value UpdateApplicationAction KinesisAnalyticsV2 UpdateApplication action.
  */
 

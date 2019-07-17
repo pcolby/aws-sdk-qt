@@ -37,8 +37,12 @@
 #include "deletedeliverychannelresponse.h"
 #include "deleteevaluationresultsrequest.h"
 #include "deleteevaluationresultsresponse.h"
+#include "deleteorganizationconfigrulerequest.h"
+#include "deleteorganizationconfigruleresponse.h"
 #include "deletependingaggregationrequestrequest.h"
 #include "deletependingaggregationrequestresponse.h"
+#include "deleteremediationconfigurationrequest.h"
+#include "deleteremediationconfigurationresponse.h"
 #include "deleteretentionconfigurationrequest.h"
 #include "deleteretentionconfigurationresponse.h"
 #include "deliverconfigsnapshotrequest.h"
@@ -67,8 +71,16 @@
 #include "describedeliverychannelstatusresponse.h"
 #include "describedeliverychannelsrequest.h"
 #include "describedeliverychannelsresponse.h"
+#include "describeorganizationconfigrulestatusesrequest.h"
+#include "describeorganizationconfigrulestatusesresponse.h"
+#include "describeorganizationconfigrulesrequest.h"
+#include "describeorganizationconfigrulesresponse.h"
 #include "describependingaggregationrequestsrequest.h"
 #include "describependingaggregationrequestsresponse.h"
+#include "describeremediationconfigurationsrequest.h"
+#include "describeremediationconfigurationsresponse.h"
+#include "describeremediationexecutionstatusrequest.h"
+#include "describeremediationexecutionstatusresponse.h"
 #include "describeretentionconfigurationsrequest.h"
 #include "describeretentionconfigurationsresponse.h"
 #include "getaggregatecompliancedetailsbyconfigrulerequest.h"
@@ -89,12 +101,16 @@
 #include "getcompliancesummarybyresourcetyperesponse.h"
 #include "getdiscoveredresourcecountsrequest.h"
 #include "getdiscoveredresourcecountsresponse.h"
+#include "getorganizationconfigruledetailedstatusrequest.h"
+#include "getorganizationconfigruledetailedstatusresponse.h"
 #include "getresourceconfighistoryrequest.h"
 #include "getresourceconfighistoryresponse.h"
 #include "listaggregatediscoveredresourcesrequest.h"
 #include "listaggregatediscoveredresourcesresponse.h"
 #include "listdiscoveredresourcesrequest.h"
 #include "listdiscoveredresourcesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putaggregationauthorizationrequest.h"
 #include "putaggregationauthorizationresponse.h"
 #include "putconfigrulerequest.h"
@@ -107,14 +123,26 @@
 #include "putdeliverychannelresponse.h"
 #include "putevaluationsrequest.h"
 #include "putevaluationsresponse.h"
+#include "putorganizationconfigrulerequest.h"
+#include "putorganizationconfigruleresponse.h"
+#include "putremediationconfigurationsrequest.h"
+#include "putremediationconfigurationsresponse.h"
 #include "putretentionconfigurationrequest.h"
 #include "putretentionconfigurationresponse.h"
+#include "selectresourceconfigrequest.h"
+#include "selectresourceconfigresponse.h"
 #include "startconfigrulesevaluationrequest.h"
 #include "startconfigrulesevaluationresponse.h"
 #include "startconfigurationrecorderrequest.h"
 #include "startconfigurationrecorderresponse.h"
+#include "startremediationexecutionrequest.h"
+#include "startremediationexecutionresponse.h"
 #include "stopconfigurationrecorderrequest.h"
 #include "stopconfigurationrecorderresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -145,7 +173,7 @@ namespace ConfigService {
  *  about the relationship between the resources. An AWS resource can be an Amazon Compute Cloud (Amazon EC2) instance, an
  *  Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of
  *  resources currently supported by AWS Config, see <a
- *  href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported
+ *  href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported
  *  AWS
  * 
  *  Resources</a>>
@@ -154,9 +182,9 @@ namespace ConfigService {
  *  AWS Config API, or the AWS SDKs for AWS Config. This reference guide contains documentation for the AWS Config API and
  *  the AWS CLI commands that you can use to manage AWS Config. The AWS Config API uses the Signature Version 4 protocol for
  *  signing requests. For more information about how to sign a request with this protocol, see <a
- *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.
+ *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.
  *  For detailed information about AWS Config features and their associated actions or commands, as well as how to work with
- *  AWS Management Console, see <a href="http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
+ *  AWS Management Console, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
  *  AWS Config</a> in the <i>AWS Config Developer
  */
 
@@ -368,6 +396,18 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteOrganizationConfigRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteOrganizationConfigRuleResponse * ConfigServiceClient::deleteOrganizationConfigRule(const DeleteOrganizationConfigRuleRequest &request)
+{
+    return qobject_cast<DeleteOrganizationConfigRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * DeletePendingAggregationRequestResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -377,6 +417,19 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
 DeletePendingAggregationRequestResponse * ConfigServiceClient::deletePendingAggregationRequest(const DeletePendingAggregationRequestRequest &request)
 {
     return qobject_cast<DeletePendingAggregationRequestResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteRemediationConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the remediation
+ */
+DeleteRemediationConfigurationResponse * ConfigServiceClient::deleteRemediationConfiguration(const DeleteRemediationConfigurationRequest &request)
+{
+    return qobject_cast<DeleteRemediationConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -562,8 +615,8 @@ DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const Des
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns status information for sources within an aggregator. The status includes information about the last time AWS
- * Config aggregated data from source accounts or AWS Config failed to aggregate data from source accounts with the related
- * error code or message.
+ * Config verified authorization between the source account and an aggregator account. In case of a failure, the status
+ * contains the related error code or message.
  */
 DescribeConfigurationAggregatorSourcesStatusResponse * ConfigServiceClient::describeConfigurationAggregatorSourcesStatus(const DescribeConfigurationAggregatorSourcesStatusRequest &request)
 {
@@ -658,6 +711,30 @@ DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeOrganizationConfigRuleStatusesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeOrganizationConfigRuleStatusesResponse * ConfigServiceClient::describeOrganizationConfigRuleStatuses(const DescribeOrganizationConfigRuleStatusesRequest &request)
+{
+    return qobject_cast<DescribeOrganizationConfigRuleStatusesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeOrganizationConfigRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeOrganizationConfigRulesResponse * ConfigServiceClient::describeOrganizationConfigRules(const DescribeOrganizationConfigRulesRequest &request)
+{
+    return qobject_cast<DescribeOrganizationConfigRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * DescribePendingAggregationRequestsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -667,6 +744,34 @@ DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels
 DescribePendingAggregationRequestsResponse * ConfigServiceClient::describePendingAggregationRequests(const DescribePendingAggregationRequestsRequest &request)
 {
     return qobject_cast<DescribePendingAggregationRequestsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeRemediationConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the details of one or more remediation
+ */
+DescribeRemediationConfigurationsResponse * ConfigServiceClient::describeRemediationConfigurations(const DescribeRemediationConfigurationsRequest &request)
+{
+    return qobject_cast<DescribeRemediationConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeRemediationExecutionStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a detailed view of a Remediation Execution for a set of resources including state, timestamps for when steps
+ * for the remediation execution occur, and any error messages for steps that have failed. When you specify the limit and
+ * the next token, you receive a paginated
+ */
+DescribeRemediationExecutionStatusResponse * ConfigServiceClient::describeRemediationExecutionStatus(const DescribeRemediationExecutionStatusRequest &request)
+{
+    return qobject_cast<DescribeRemediationExecutionStatusResponse *>(send(request));
 }
 
 /*!
@@ -891,6 +996,18 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetOrganizationConfigRuleDetailedStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetOrganizationConfigRuleDetailedStatusResponse * ConfigServiceClient::getOrganizationConfigRuleDetailedStatus(const GetOrganizationConfigRuleDetailedStatusRequest &request)
+{
+    return qobject_cast<GetOrganizationConfigRuleDetailedStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * GetResourceConfigHistoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -966,6 +1083,19 @@ ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(c
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the tags for AWS Config
+ */
+ListTagsForResourceResponse * ConfigServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * PutAggregationAuthorizationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1002,7 +1132,7 @@ PutAggregationAuthorizationResponse * ConfigServiceClient::putAggregationAuthori
  *
  * If you are adding an AWS managed Config rule, specify the rule's identifier for the <code>SourceIdentifier</code> key.
  * To reference AWS managed Config rule identifiers, see <a
- * href="http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">About AWS Managed
+ * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">About AWS Managed
  * Config
  *
  * Rules</a>>
@@ -1020,7 +1150,7 @@ PutAggregationAuthorizationResponse * ConfigServiceClient::putAggregationAuthori
  *
  * The maximum number of rules that AWS Config supports is
  *
- * 50>
+ * 150>
  *
  * For information about requesting a rule limit increase, see <a
  * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config Limits</a> in the
@@ -1029,7 +1159,7 @@ PutAggregationAuthorizationResponse * ConfigServiceClient::putAggregationAuthori
  * Guide</i>>
  *
  * For more information about developing and using AWS Config rules, see <a
- * href="http://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating AWS Resource
+ * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating AWS Resource
  * Configurations with AWS Config</a> in the <i>AWS Config Developer
  */
 PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRequest &request)
@@ -1132,6 +1262,34 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutOrganizationConfigRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+PutOrganizationConfigRuleResponse * ConfigServiceClient::putOrganizationConfigRule(const PutOrganizationConfigRuleRequest &request)
+{
+    return qobject_cast<PutOrganizationConfigRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutRemediationConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates the remediation configuration with a specific AWS Config rule with the selected target or action. The
+ * API creates the <code>RemediationConfiguration</code> object for the AWS Config rule. The AWS Config rule must already
+ * exist for you to add a remediation configuration. The target (SSM document) must exist and have permissions to use the
+ * target.
+ */
+PutRemediationConfigurationsResponse * ConfigServiceClient::putRemediationConfigurations(const PutRemediationConfigurationsRequest &request)
+{
+    return qobject_cast<PutRemediationConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * PutRetentionConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1148,6 +1306,26 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
 PutRetentionConfigurationResponse * ConfigServiceClient::putRetentionConfiguration(const PutRetentionConfigurationRequest &request)
 {
     return qobject_cast<PutRetentionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * SelectResourceConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts a structured query language (SQL) <code>SELECT</code> command, performs the corresponding search, and returns
+ * resource configurations matching the
+ *
+ * properties>
+ *
+ * For more information about query components, see the <a
+ * href="https://docs.aws.amazon.com/config/latest/developerguide/query-components.html"> <b>Query Components</b> </a>
+ * section in the AWS Config Developer
+ */
+SelectResourceConfigResponse * ConfigServiceClient::selectResourceConfig(const SelectResourceConfigRequest &request)
+{
+    return qobject_cast<SelectResourceConfigResponse *>(send(request));
 }
 
 /*!
@@ -1225,6 +1403,25 @@ StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationReco
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * StartRemediationExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Runs an on-demand remediation for the specified AWS Config rules against the last known remediation configuration. It
+ * runs an execution against the current state of your resources. Remediation execution is
+ *
+ * asynchronous>
+ *
+ * You can specify up to 100 resource keys per request. An existing StartRemediationExecution call for the specified
+ * resource keys must complete before you can call the API
+ */
+StartRemediationExecutionResponse * ConfigServiceClient::startRemediationExecution(const StartRemediationExecutionRequest &request)
+{
+    return qobject_cast<StartRemediationExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * StopConfigurationRecorderResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1234,6 +1431,34 @@ StartConfigurationRecorderResponse * ConfigServiceClient::startConfigurationReco
 StopConfigurationRecorderResponse * ConfigServiceClient::stopConfigurationRecorder(const StopConfigurationRecorderRequest &request)
 {
     return qobject_cast<StopConfigurationRecorderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified tags to a resource with the specified resourceArn. If existing tags on a resource are not
+ * specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with that
+ * resource are deleted as
+ */
+TagResourceResponse * ConfigServiceClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes specified tags from a
+ */
+UntagResourceResponse * ConfigServiceClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

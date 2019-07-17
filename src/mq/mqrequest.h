@@ -45,6 +45,8 @@ public:
         DeleteTagsAction,
         DeleteUserAction,
         DescribeBrokerAction,
+        DescribeBrokerEngineTypesAction,
+        DescribeBrokerInstanceOptionsAction,
         DescribeConfigurationAction,
         DescribeConfigurationRevisionAction,
         DescribeUserAction,

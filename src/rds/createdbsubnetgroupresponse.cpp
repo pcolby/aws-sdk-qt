@@ -67,22 +67,22 @@ namespace RDS {
  *  </p <ul> <li>
  * 
  *  For the alphabetical list of API actions, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html">API
  * 
  *  Actions</a>> </li> <li>
  * 
  *  For the alphabetical list of data types, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html">Data
  * 
  *  Types</a>> </li> <li>
  * 
  *  For a list of common query parameters, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html">Common
  * 
  *  Parameters</a>> </li> <li>
  * 
  *  For descriptions of the error codes, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html">Common
  * 
  *  Errors</a>> </li> </ul>
  * 
@@ -91,12 +91,12 @@ namespace RDS {
  *  </p <ul> <li>
  * 
  *  For a summary of the Amazon RDS interfaces, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces">Available RDS
  * 
  *  Interfaces</a>> </li> <li>
  * 
  *  For more information about how to use the Query API, see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html">Using the Query
  *
  * \sa RdsClient::createDBSubnetGroup
  */

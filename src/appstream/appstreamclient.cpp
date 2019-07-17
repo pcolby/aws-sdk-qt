@@ -41,6 +41,8 @@
 #include "createstackresponse.h"
 #include "createstreamingurlrequest.h"
 #include "createstreamingurlresponse.h"
+#include "createusagereportsubscriptionrequest.h"
+#include "createusagereportsubscriptionresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
 #include "deletedirectoryconfigrequest.h"
@@ -55,6 +57,8 @@
 #include "deleteimagepermissionsresponse.h"
 #include "deletestackrequest.h"
 #include "deletestackresponse.h"
+#include "deleteusagereportsubscriptionrequest.h"
+#include "deleteusagereportsubscriptionresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
 #include "describedirectoryconfigsrequest.h"
@@ -71,6 +75,8 @@
 #include "describesessionsresponse.h"
 #include "describestacksrequest.h"
 #include "describestacksresponse.h"
+#include "describeusagereportsubscriptionsrequest.h"
+#include "describeusagereportsubscriptionsresponse.h"
 #include "describeuserstackassociationsrequest.h"
 #include "describeuserstackassociationsresponse.h"
 #include "describeusersrequest.h"
@@ -134,7 +140,22 @@ namespace AppStream {
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
- *  You can use Amazon AppStream 2.0 to stream desktop applications to any device running a web browser, without rewriting
+ *  This is the <i>Amazon AppStream 2.0 API Reference</i>. This documentation provides descriptions and syntax for each of
+ *  the actions and data types in AppStream 2.0. AppStream 2.0 is a fully managed, secure application streaming service that
+ *  lets you stream desktop applications to users without rewriting applications. AppStream 2.0 manages the AWS resources
+ *  that are required to host and run your applications, scales automatically, and provides access to your users on
+ * 
+ *  demand>
+ * 
+ *  To learn more about AppStream 2.0, see the following
+ * 
+ *  resources> <ul> <li>
+ * 
+ *  <a href="http://aws.amazon.com/appstream2">Amazon AppStream 2.0 product page</a>
+ * 
+ *  </p </li> <li>
+ * 
+ *  <a href="http://aws.amazon.com/documentation/appstream2">Amazon AppStream 2.0 documentation</a>
  */
 
 /*!
@@ -250,8 +271,8 @@ CopyImageResponse * AppStreamClient::copyImage(const CopyImageRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Directory Config object in AppStream 2.0. This object includes the information required to join streaming
- * instances to an Active Directory
+ * Creates a Directory Config object in AppStream 2.0. This object includes the configuration information required to join
+ * fleets and image builders to Microsoft Active Directory
  */
 CreateDirectoryConfigResponse * AppStreamClient::createDirectoryConfig(const CreateDirectoryConfigRequest &request)
 {
@@ -327,6 +348,19 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
 CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStreamingURLRequest &request)
 {
     return qobject_cast<CreateStreamingURLResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateUsageReportSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a usage report subscription. Usage reports are generated
+ */
+CreateUsageReportSubscriptionResponse * AppStreamClient::createUsageReportSubscription(const CreateUsageReportSubscriptionRequest &request)
+{
+    return qobject_cast<CreateUsageReportSubscriptionResponse *>(send(request));
 }
 
 /*!
@@ -426,6 +460,19 @@ DeleteStackResponse * AppStreamClient::deleteStack(const DeleteStackRequest &req
 
 /*!
  * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DeleteUsageReportSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables usage report
+ */
+DeleteUsageReportSubscriptionResponse * AppStreamClient::deleteUsageReportSubscription(const DeleteUsageReportSubscriptionRequest &request)
+{
+    return qobject_cast<DeleteUsageReportSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
  * DeleteUserResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -445,7 +492,7 @@ DeleteUserResponse * AppStreamClient::deleteUser(const DeleteUserRequest &reques
  *
  * Retrieves a list that describes one or more specified Directory Config objects for AppStream 2.0, if the names for these
  * objects are provided. Otherwise, all Directory Config objects in the account are described. These objects include the
- * information required to join streaming instances to an Active Directory domain.
+ * configuration information required to join fleets and image builders to Microsoft Active Directory domains.
  *
  * </p
  *
@@ -517,7 +564,7 @@ DescribeImagesResponse * AppStreamClient::describeImages(const DescribeImagesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list that describes the streaming sessions for a specified stack and fleet. If a user ID is provided for the
+ * Retrieves a list that describes the streaming sessions for a specified stack and fleet. If a UserId is provided for the
  * stack and fleet, only streaming sessions for that user are described. If an authentication type is not provided, the
  * default is to authenticate users using a streaming
  */
@@ -538,6 +585,19 @@ DescribeSessionsResponse * AppStreamClient::describeSessions(const DescribeSessi
 DescribeStacksResponse * AppStreamClient::describeStacks(const DescribeStacksRequest &request)
 {
     return qobject_cast<DescribeStacksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * DescribeUsageReportSubscriptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list that describes one or more usage report
+ */
+DescribeUsageReportSubscriptionsResponse * AppStreamClient::describeUsageReportSubscriptions(const DescribeUsageReportSubscriptionsRequest &request)
+{
+    return qobject_cast<DescribeUsageReportSubscriptionsResponse *>(send(request));
 }
 
 /*!
@@ -567,8 +627,7 @@ DescribeUserStackAssociationsResponse * AppStreamClient::describeUserStackAssoci
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a list that describes one or more specified users in the user pool, if user names are provided. Otherwise, all
- * users in the user pool are
+ * Retrieves a list that describes one or more specified users in the user
  */
 DescribeUsersResponse * AppStreamClient::describeUsers(const DescribeUsersRequest &request)
 {
@@ -667,7 +726,7 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  * stacks>
  *
  * For more information about tags, see <a
- * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
+ * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
  */
 ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTagsForResourceRequest &request)
@@ -749,7 +808,7 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
  * <a>UntagResource</a>>
  *
  * For more information about tags, see <a
- * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
+ * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
  */
 TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &request)
@@ -772,7 +831,7 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  * <a>ListTagsForResource</a>>
  *
  * For more information about tags, see <a
- * href="http://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
+ * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
  * <i>Amazon AppStream 2.0 Developer
  */
 UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceRequest &request)
@@ -786,8 +845,8 @@ UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the specified Directory Config object in AppStream 2.0. This object includes the information required to join
- * streaming instances to an Active Directory
+ * Updates the specified Directory Config object in AppStream 2.0. This object includes the configuration information
+ * required to join fleets and image builders to Microsoft Active Directory
  */
 UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const UpdateDirectoryConfigRequest &request)
 {
@@ -805,8 +864,9 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  * fleet>
  *
  * If the fleet is in the <code>STOPPED</code> state, you can update any attribute except the fleet name. If the fleet is
- * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code> and <code>ComputeCapacity</code>
- * attributes. If the fleet is in the <code>STARTING</code> or <code>STOPPING</code> state, you can't update
+ * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code>, <code>ComputeCapacity</code>,
+ * <code>ImageARN</code>, <code>ImageName</code>, and <code>DisconnectTimeoutInSeconds</code> attributes. If the fleet is
+ * in the <code>STARTING</code> or <code>STOPPING</code> state, you can't update
  */
 UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &request)
 {

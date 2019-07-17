@@ -52,9 +52,11 @@ public:
         GetPipelineExecutionAction,
         GetPipelineStateAction,
         GetThirdPartyJobDetailsAction,
+        ListActionExecutionsAction,
         ListActionTypesAction,
         ListPipelineExecutionsAction,
         ListPipelinesAction,
+        ListTagsForResourceAction,
         ListWebhooksAction,
         PollForJobsAction,
         PollForThirdPartyJobsAction,
@@ -68,6 +70,8 @@ public:
         RegisterWebhookWithThirdPartyAction,
         RetryStageExecutionAction,
         StartPipelineExecutionAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdatePipelineAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

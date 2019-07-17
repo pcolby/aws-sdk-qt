@@ -65,6 +65,7 @@ namespace Comprehend {
  * \value ListEntityRecognizersAction Comprehend ListEntityRecognizers action.
  * \value ListKeyPhrasesDetectionJobsAction Comprehend ListKeyPhrasesDetectionJobs action.
  * \value ListSentimentDetectionJobsAction Comprehend ListSentimentDetectionJobs action.
+ * \value ListTagsForResourceAction Comprehend ListTagsForResource action.
  * \value ListTopicsDetectionJobsAction Comprehend ListTopicsDetectionJobs action.
  * \value StartDocumentClassificationJobAction Comprehend StartDocumentClassificationJob action.
  * \value StartDominantLanguageDetectionJobAction Comprehend StartDominantLanguageDetectionJob action.
@@ -78,6 +79,8 @@ namespace Comprehend {
  * \value StopSentimentDetectionJobAction Comprehend StopSentimentDetectionJob action.
  * \value StopTrainingDocumentClassifierAction Comprehend StopTrainingDocumentClassifier action.
  * \value StopTrainingEntityRecognizerAction Comprehend StopTrainingEntityRecognizer action.
+ * \value TagResourceAction Comprehend TagResource action.
+ * \value UntagResourceAction Comprehend UntagResource action.
  */
 
 /*!

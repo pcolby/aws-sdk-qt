@@ -41,12 +41,12 @@ namespace IoT {
  *  devices>
  * 
  *  For more information about how AWS IoT works, see the <a
- *  href="http://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
  * 
  *  Guide</a>>
  * 
  *  For information about how to use the credentials provider for AWS IoT, see <a
- *  href="http://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html">Authorizing Direct Calls to AWS
+ *  href="https://docs.aws.amazon.com/iot/latest/developerguide/authorizing-direct-aws.html">Authorizing Direct Calls to AWS
  *
  * \sa IoTClient::createSecurityProfile
  */

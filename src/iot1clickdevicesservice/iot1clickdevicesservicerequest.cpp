@@ -44,7 +44,10 @@ namespace IoT1ClickDevicesService {
  * \value InvokeDeviceMethodAction IoT1ClickDevicesService InvokeDeviceMethod action.
  * \value ListDeviceEventsAction IoT1ClickDevicesService ListDeviceEvents action.
  * \value ListDevicesAction IoT1ClickDevicesService ListDevices action.
+ * \value ListTagsForResourceAction IoT1ClickDevicesService ListTagsForResource action.
+ * \value TagResourceAction IoT1ClickDevicesService TagResource action.
  * \value UnclaimDeviceAction IoT1ClickDevicesService UnclaimDevice action.
+ * \value UntagResourceAction IoT1ClickDevicesService UntagResource action.
  * \value UpdateDeviceStateAction IoT1ClickDevicesService UpdateDeviceState action.
  */
 

@@ -47,6 +47,9 @@ namespace IoT1ClickProjects {
  * \value GetDevicesInPlacementAction IoT1ClickProjects GetDevicesInPlacement action.
  * \value ListPlacementsAction IoT1ClickProjects ListPlacements action.
  * \value ListProjectsAction IoT1ClickProjects ListProjects action.
+ * \value ListTagsForResourceAction IoT1ClickProjects ListTagsForResource action.
+ * \value TagResourceAction IoT1ClickProjects TagResource action.
+ * \value UntagResourceAction IoT1ClickProjects UntagResource action.
  * \value UpdatePlacementAction IoT1ClickProjects UpdatePlacement action.
  * \value UpdateProjectAction IoT1ClickProjects UpdateProject action.
  */

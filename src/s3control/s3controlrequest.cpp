@@ -36,9 +36,14 @@ namespace S3Control {
  * This enum describes the actions that can be performed as S3Control
  * requests.
  *
+ * \value CreateJobAction S3Control CreateJob action.
  * \value DeletePublicAccessBlockAction S3Control DeletePublicAccessBlock action.
+ * \value DescribeJobAction S3Control DescribeJob action.
  * \value GetPublicAccessBlockAction S3Control GetPublicAccessBlock action.
+ * \value ListJobsAction S3Control ListJobs action.
  * \value PutPublicAccessBlockAction S3Control PutPublicAccessBlock action.
+ * \value UpdateJobPriorityAction S3Control UpdateJobPriority action.
+ * \value UpdateJobStatusAction S3Control UpdateJobStatus action.
  */
 
 /*!

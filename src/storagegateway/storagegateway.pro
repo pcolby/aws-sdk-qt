@@ -30,6 +30,14 @@ HEADERS += \
     addworkingstoragerequest_p.h \
     addworkingstorageresponse.h \
     addworkingstorageresponse_p.h \
+    assigntapepoolrequest.h \
+    assigntapepoolrequest_p.h \
+    assigntapepoolresponse.h \
+    assigntapepoolresponse_p.h \
+    attachvolumerequest.h \
+    attachvolumerequest_p.h \
+    attachvolumeresponse.h \
+    attachvolumeresponse_p.h \
     cancelarchivalrequest.h \
     cancelarchivalrequest_p.h \
     cancelarchivalresponse.h \
@@ -170,6 +178,10 @@ HEADERS += \
     describeworkingstoragerequest_p.h \
     describeworkingstorageresponse.h \
     describeworkingstorageresponse_p.h \
+    detachvolumerequest.h \
+    detachvolumerequest_p.h \
+    detachvolumeresponse.h \
+    detachvolumeresponse_p.h \
     disablegatewayrequest.h \
     disablegatewayrequest_p.h \
     disablegatewayresponse.h \
@@ -284,6 +296,10 @@ HEADERS += \
     updatesmbfilesharerequest_p.h \
     updatesmbfileshareresponse.h \
     updatesmbfileshareresponse_p.h \
+    updatesmbsecuritystrategyrequest.h \
+    updatesmbsecuritystrategyrequest_p.h \
+    updatesmbsecuritystrategyresponse.h \
+    updatesmbsecuritystrategyresponse_p.h \
     updatesnapshotschedulerequest.h \
     updatesnapshotschedulerequest_p.h \
     updatesnapshotscheduleresponse.h \
@@ -304,6 +320,10 @@ SOURCES += \
     adduploadbufferresponse.cpp \
     addworkingstoragerequest.cpp \
     addworkingstorageresponse.cpp \
+    assigntapepoolrequest.cpp \
+    assigntapepoolresponse.cpp \
+    attachvolumerequest.cpp \
+    attachvolumeresponse.cpp \
     cancelarchivalrequest.cpp \
     cancelarchivalresponse.cpp \
     cancelretrievalrequest.cpp \
@@ -374,6 +394,8 @@ SOURCES += \
     describevtldevicesresponse.cpp \
     describeworkingstoragerequest.cpp \
     describeworkingstorageresponse.cpp \
+    detachvolumerequest.cpp \
+    detachvolumeresponse.cpp \
     disablegatewayrequest.cpp \
     disablegatewayresponse.cpp \
     joindomainrequest.cpp \
@@ -431,6 +453,8 @@ SOURCES += \
     updatenfsfileshareresponse.cpp \
     updatesmbfilesharerequest.cpp \
     updatesmbfileshareresponse.cpp \
+    updatesmbsecuritystrategyrequest.cpp \
+    updatesmbsecuritystrategyresponse.cpp \
     updatesnapshotschedulerequest.cpp \
     updatesnapshotscheduleresponse.cpp \
     updatevtldevicetyperequest.cpp \

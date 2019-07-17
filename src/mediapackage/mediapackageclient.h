@@ -44,10 +44,16 @@ class ListChannelsRequest;
 class ListChannelsResponse;
 class ListOriginEndpointsRequest;
 class ListOriginEndpointsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class RotateChannelCredentialsRequest;
 class RotateChannelCredentialsResponse;
 class RotateIngestEndpointCredentialsRequest;
 class RotateIngestEndpointCredentialsResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateChannelRequest;
 class UpdateChannelResponse;
 class UpdateOriginEndpointRequest;
@@ -77,8 +83,11 @@ public slots:
     DescribeOriginEndpointResponse * describeOriginEndpoint(const DescribeOriginEndpointRequest &request);
     ListChannelsResponse * listChannels(const ListChannelsRequest &request);
     ListOriginEndpointsResponse * listOriginEndpoints(const ListOriginEndpointsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RotateChannelCredentialsResponse * rotateChannelCredentials(const RotateChannelCredentialsRequest &request);
     RotateIngestEndpointCredentialsResponse * rotateIngestEndpointCredentials(const RotateIngestEndpointCredentialsRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateChannelResponse * updateChannel(const UpdateChannelRequest &request);
     UpdateOriginEndpointResponse * updateOriginEndpoint(const UpdateOriginEndpointRequest &request);
 

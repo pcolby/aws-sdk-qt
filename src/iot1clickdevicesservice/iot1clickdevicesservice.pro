@@ -48,10 +48,22 @@ HEADERS += \
     listdevicesrequest_p.h \
     listdevicesresponse.h \
     listdevicesresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
     unclaimdevicerequest.h \
     unclaimdevicerequest_p.h \
     unclaimdeviceresponse.h \
     unclaimdeviceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatedevicestaterequest.h \
     updatedevicestaterequest_p.h \
     updatedevicestateresponse.h \
@@ -77,8 +89,14 @@ SOURCES += \
     listdeviceeventsresponse.cpp \
     listdevicesrequest.cpp \
     listdevicesresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
     unclaimdevicerequest.cpp \
     unclaimdeviceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatedevicestaterequest.cpp \
     updatedevicestateresponse.cpp \
 

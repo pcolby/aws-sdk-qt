@@ -20,6 +20,10 @@ HEADERS += \
     associateconfigurationitemstoapplicationrequest_p.h \
     associateconfigurationitemstoapplicationresponse.h \
     associateconfigurationitemstoapplicationresponse_p.h \
+    batchdeleteimportdatarequest.h \
+    batchdeleteimportdatarequest_p.h \
+    batchdeleteimportdataresponse.h \
+    batchdeleteimportdataresponse_p.h \
     createapplicationrequest.h \
     createapplicationrequest_p.h \
     createapplicationresponse.h \
@@ -56,6 +60,10 @@ HEADERS += \
     describeexporttasksrequest_p.h \
     describeexporttasksresponse.h \
     describeexporttasksresponse_p.h \
+    describeimporttasksrequest.h \
+    describeimporttasksrequest_p.h \
+    describeimporttasksresponse.h \
+    describeimporttasksresponse_p.h \
     describetagsrequest.h \
     describetagsrequest_p.h \
     describetagsresponse.h \
@@ -92,6 +100,10 @@ HEADERS += \
     startexporttaskrequest_p.h \
     startexporttaskresponse.h \
     startexporttaskresponse_p.h \
+    startimporttaskrequest.h \
+    startimporttaskrequest_p.h \
+    startimporttaskresponse.h \
+    startimporttaskresponse_p.h \
     stopcontinuousexportrequest.h \
     stopcontinuousexportrequest_p.h \
     stopcontinuousexportresponse.h \
@@ -111,6 +123,8 @@ SOURCES += \
     applicationdiscoveryserviceresponse.cpp \
     associateconfigurationitemstoapplicationrequest.cpp \
     associateconfigurationitemstoapplicationresponse.cpp \
+    batchdeleteimportdatarequest.cpp \
+    batchdeleteimportdataresponse.cpp \
     createapplicationrequest.cpp \
     createapplicationresponse.cpp \
     createtagsrequest.cpp \
@@ -129,6 +143,8 @@ SOURCES += \
     describeexportconfigurationsresponse.cpp \
     describeexporttasksrequest.cpp \
     describeexporttasksresponse.cpp \
+    describeimporttasksrequest.cpp \
+    describeimporttasksresponse.cpp \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
     disassociateconfigurationitemsfromapplicationrequest.cpp \
@@ -147,6 +163,8 @@ SOURCES += \
     startdatacollectionbyagentidsresponse.cpp \
     startexporttaskrequest.cpp \
     startexporttaskresponse.cpp \
+    startimporttaskrequest.cpp \
+    startimporttaskresponse.cpp \
     stopcontinuousexportrequest.cpp \
     stopcontinuousexportresponse.cpp \
     stopdatacollectionbyagentidsrequest.cpp \

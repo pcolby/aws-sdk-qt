@@ -42,6 +42,10 @@ HEADERS += \
     listoriginendpointsrequest_p.h \
     listoriginendpointsresponse.h \
     listoriginendpointsresponse_p.h \
+    listtagsforresourcerequest.h \
+    listtagsforresourcerequest_p.h \
+    listtagsforresourceresponse.h \
+    listtagsforresourceresponse_p.h \
     mediapackageclient.h \
     mediapackageclient_p.h \
     mediapackagerequest.h \
@@ -56,6 +60,14 @@ HEADERS += \
     rotateingestendpointcredentialsrequest_p.h \
     rotateingestendpointcredentialsresponse.h \
     rotateingestendpointcredentialsresponse_p.h \
+    tagresourcerequest.h \
+    tagresourcerequest_p.h \
+    tagresourceresponse.h \
+    tagresourceresponse_p.h \
+    untagresourcerequest.h \
+    untagresourcerequest_p.h \
+    untagresourceresponse.h \
+    untagresourceresponse_p.h \
     updatechannelrequest.h \
     updatechannelrequest_p.h \
     updatechannelresponse.h \
@@ -82,6 +94,8 @@ SOURCES += \
     listchannelsresponse.cpp \
     listoriginendpointsrequest.cpp \
     listoriginendpointsresponse.cpp \
+    listtagsforresourcerequest.cpp \
+    listtagsforresourceresponse.cpp \
     mediapackageclient.cpp \
     mediapackagerequest.cpp \
     mediapackageresponse.cpp \
@@ -89,6 +103,10 @@ SOURCES += \
     rotatechannelcredentialsresponse.cpp \
     rotateingestendpointcredentialsrequest.cpp \
     rotateingestendpointcredentialsresponse.cpp \
+    tagresourcerequest.cpp \
+    tagresourceresponse.cpp \
+    untagresourcerequest.cpp \
+    untagresourceresponse.cpp \
     updatechannelrequest.cpp \
     updatechannelresponse.cpp \
     updateoriginendpointrequest.cpp \
