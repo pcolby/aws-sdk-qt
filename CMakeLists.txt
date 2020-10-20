@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 project(
   QtAwsSdk
   VERSION 0.3
@@ -7,6 +9,7 @@ project(
   HOMEPAGE_URL "https://github.com/pcolby/aws-sdk-qt"
   LANGUAGES CXX)
 
+add_subdirectory(codegen)
 add_subdirectory(doc)
 add_subdirectory(src)
 add_subdirectory(test)

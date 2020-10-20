@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    // Set default paths reletive to the codegen project's directory.
+    // Set default paths relative to the codegen project's directory.
     const QDir projectcDir(QStringLiteral(CODEGEN_PROJECT_DIR));
     const QString defaultTemplatesPath = QDir::cleanPath(projectcDir.absoluteFilePath(
         QStringLiteral("aws-sdk-cpp/code-generation/api-descriptions")));
