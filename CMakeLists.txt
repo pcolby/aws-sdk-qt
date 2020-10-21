@@ -6,7 +6,7 @@ project(
   QtAwsSdk
   VERSION 0.3
   DESCRIPTION "Unnoficial AWS SDK for Qt"
-  HOMEPAGE_URL "https://github.com/pcolby/aws-sdk-qt"
+ #HOMEPAGE_URL "https://github.com/pcolby/aws-sdk-qt"
   LANGUAGES CXX)
 
 find_package(Grantlee5)
