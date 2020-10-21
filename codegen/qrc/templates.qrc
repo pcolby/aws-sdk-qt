@@ -5,7 +5,9 @@
     <file>templates/doc/module.qdocconf</file>
     <file>templates/doc/module-index.qdoc</file>
     <file>templates/license.txt</file>
+    <file>templates/src/CMakeLists.txt</file>
     <file>templates/src/master.qdocconf</file>
+    <file>templates/src/service/CMakeLists.txt</file>
     <file>templates/src/service/client.cpp</file>
     <file>templates/src/service/client.h</file>
     <file>templates/src/service/client_p.h</file>

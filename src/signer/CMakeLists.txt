@@ -1,0 +1,70 @@
+find_package(Qt5 COMPONENTS Core Network REQUIRED)
+
+add_library(QtAwssigner
+  cancelsigningprofilerequest.h
+  cancelsigningprofilerequest_p.h
+  cancelsigningprofileresponse.h
+  cancelsigningprofileresponse_p.h
+  describesigningjobrequest.h
+  describesigningjobrequest_p.h
+  describesigningjobresponse.h
+  describesigningjobresponse_p.h
+  getsigningplatformrequest.h
+  getsigningplatformrequest_p.h
+  getsigningplatformresponse.h
+  getsigningplatformresponse_p.h
+  getsigningprofilerequest.h
+  getsigningprofilerequest_p.h
+  getsigningprofileresponse.h
+  getsigningprofileresponse_p.h
+  listsigningjobsrequest.h
+  listsigningjobsrequest_p.h
+  listsigningjobsresponse.h
+  listsigningjobsresponse_p.h
+  listsigningplatformsrequest.h
+  listsigningplatformsrequest_p.h
+  listsigningplatformsresponse.h
+  listsigningplatformsresponse_p.h
+  listsigningprofilesrequest.h
+  listsigningprofilesrequest_p.h
+  listsigningprofilesresponse.h
+  listsigningprofilesresponse_p.h
+  putsigningprofilerequest.h
+  putsigningprofilerequest_p.h
+  putsigningprofileresponse.h
+  putsigningprofileresponse_p.h
+  signerclient.h
+  signerclient_p.h
+  signerrequest.h
+  signerrequest_p.h
+  signerresponse.h
+  signerresponse_p.h
+  startsigningjobrequest.h
+  startsigningjobrequest_p.h
+  startsigningjobresponse.h
+  startsigningjobresponse_p.h
+  cancelsigningprofilerequest.cpp
+  cancelsigningprofileresponse.cpp
+  describesigningjobrequest.cpp
+  describesigningjobresponse.cpp
+  getsigningplatformrequest.cpp
+  getsigningplatformresponse.cpp
+  getsigningprofilerequest.cpp
+  getsigningprofileresponse.cpp
+  listsigningjobsrequest.cpp
+  listsigningjobsresponse.cpp
+  listsigningplatformsrequest.cpp
+  listsigningplatformsresponse.cpp
+  listsigningprofilesrequest.cpp
+  listsigningprofilesresponse.cpp
+  putsigningprofilerequest.cpp
+  putsigningprofileresponse.cpp
+  signerclient.cpp
+  signerrequest.cpp
+  signerresponse.cpp
+  startsigningjobrequest.cpp
+  startsigningjobresponse.cpp)
+
+add_dependencies(QtAwssigner QtAwsCore)
+
+target_link_libraries(QtAwssigner Qt5::Core Qt5::Network)
