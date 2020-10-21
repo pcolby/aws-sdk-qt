@@ -74,9 +74,6 @@ int Generator::generate(const QFileInfoList &descriptions)
     Grantlee::Context context;
     context.insert(QSL("ModuleNames"), modules);
     render(QSL("src/master.qdocconf"), context, outputDir.absoluteFilePath(QSL("master.qdocconf")));
-    if (!render(QSL("src/src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")))) {
-        return -1;
-    }
     if (!render(QSL("src/CMakeLists.txt"), context, outputDir.absoluteFilePath(QSL("CMakeLists.txt")))) {
         return -1;
     }
@@ -154,10 +151,6 @@ int Generator::generate(const QString &serviceFileName,
     sources.sort();
     context.insert(QSL("HeaderFiles"), headers);
     context.insert(QSL("SourceFiles"), sources);
-    if (!render(QSL("src/service/service.pro"), context, moduleDirPath, moduleDirName + QSL(".pro"))) {
-        context.pop();
-        return -1;
-    }
     if (!render(QSL("src/service/CMakeLists.txt"), context, moduleDirPath, QSL("CMakeLists.txt"))) {
         context.pop();
         return -1;

@@ -1,3 +1,9 @@
+###
+### This is an old file, left over from a time when this project
+### used qmake instead of cmake.  It's here as a reminder that I
+### may want to port some of this to cmake.
+###
+
 VERSION = 0.3.0
 RELEASE_PHASE = pre-alpha
 TOPDIR = $$PWD
