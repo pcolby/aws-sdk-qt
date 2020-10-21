@@ -73,8 +73,8 @@ int Generator::generate(const QFileInfoList &descriptions)
 
     Grantlee::Context context;
     context.insert(QSL("ModuleNames"), modules);
-    render(QSL("master.qdocconf"), context, outputDir.absoluteFilePath(QSL("master.qdocconf")));
-    if (!render(QSL("src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")))) {
+    render(QSL("src/master.qdocconf"), context, outputDir.absoluteFilePath(QSL("master.qdocconf")));
+    if (!render(QSL("src/src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")))) {
         return -1;
     }
     return ++count;
@@ -111,8 +111,8 @@ int Generator::generate(const QString &serviceFileName,
     // Generate model classes.
     context.push();
     context.insert(QSL("ClientClassName"), serviceClassName + QSL("Client"));
-    renderClassFiles(QSL("requestbase"),  context, moduleDirPath, serviceClassName + QSL("Request"));
-    renderClassFiles(QSL("responsebase"), context, moduleDirPath, serviceClassName + QSL("Response"));
+    renderClassFiles(QSL("src/service/requestbase"),  context, moduleDirPath, serviceClassName + QSL("Request"));
+    renderClassFiles(QSL("src/service/responsebase"), context, moduleDirPath, serviceClassName + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
         generateModelClasses(context, moduleDirPath, operationName, description);
     }
@@ -130,7 +130,7 @@ int Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QSL("operations"), operations);
-    renderClassFiles(QSL("client"), context, moduleDirPath, serviceClassName + QSL("Client"));
+    renderClassFiles(QSL("src/service/client"), context, moduleDirPath, serviceClassName + QSL("Client"));
     context.pop();
 
     // Generate documentation.
@@ -151,7 +151,7 @@ int Generator::generate(const QString &serviceFileName,
     sources.sort();
     context.insert(QSL("HeaderFiles"), headers);
     context.insert(QSL("SourceFiles"), sources);
-    if (!render(QSL("service.pro"), context, moduleDirPath, moduleDirName + QSL(".pro"))) {
+    if (!render(QSL("src/service/service.pro"), context, moduleDirPath, moduleDirName + QSL(".pro"))) {
         context.pop();
         return -1;
     }
@@ -223,12 +223,12 @@ bool Generator::generateModelClasses(Grantlee::Context &context, const QString &
 
     // Generate request class.
     context.push();
-    renderClassFiles(QSL("request"), context, projectDir, operationName + QSL("Request"));
+    renderClassFiles(QSL("src/service/request"), context, projectDir, operationName + QSL("Request"));
     context.pop();
 
     // Generate response class.
     context.push();
-    renderClassFiles(QSL("response"), context, projectDir, operationName + QSL("Response"));
+    renderClassFiles(QSL("src/service/response"), context, projectDir, operationName + QSL("Response"));
     context.pop();
     return true;
 }

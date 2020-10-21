@@ -4,24 +4,24 @@
     <file>templates/doc/module.qdoc</file>
     <file>templates/doc/module.qdocconf</file>
     <file>templates/doc/module-index.qdoc</file>
-    <file>templates/client.cpp</file>
-    <file>templates/client.h</file>
-    <file>templates/client_p.h</file>
     <file>templates/license.txt</file>
-    <file>templates/master.qdocconf</file>
-    <file>templates/request.cpp</file>
-    <file>templates/request.h</file>
-    <file>templates/request_p.h</file>
-    <file>templates/requestbase.cpp</file>
-    <file>templates/requestbase.h</file>
-    <file>templates/requestbase_p.h</file>
-    <file>templates/response.cpp</file>
-    <file>templates/response.h</file>
-    <file>templates/response_p.h</file>
-    <file>templates/responsebase.cpp</file>
-    <file>templates/responsebase.h</file>
-    <file>templates/responsebase_p.h</file>
-    <file>templates/service.pro</file>
-    <file>templates/src.pro</file>
+    <file>templates/src/master.qdocconf</file>
+    <file>templates/src/service/client.cpp</file>
+    <file>templates/src/service/client.h</file>
+    <file>templates/src/service/client_p.h</file>
+    <file>templates/src/service/request.cpp</file>
+    <file>templates/src/service/request.h</file>
+    <file>templates/src/service/request_p.h</file>
+    <file>templates/src/service/requestbase.cpp</file>
+    <file>templates/src/service/requestbase.h</file>
+    <file>templates/src/service/requestbase_p.h</file>
+    <file>templates/src/service/response.cpp</file>
+    <file>templates/src/service/response.h</file>
+    <file>templates/src/service/response_p.h</file>
+    <file>templates/src/service/responsebase.cpp</file>
+    <file>templates/src/service/responsebase.h</file>
+    <file>templates/src/service/responsebase_p.h</file>
+    <file>templates/src/service/service.pro</file>
+    <file>templates/src/src.pro</file>
   </qresource>
 </RCC>
