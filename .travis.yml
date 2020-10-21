@@ -1,10 +1,21 @@
 language: cpp
 
-os:
-  - linux
-  - osx
+dist: focal
 
-dist: trusty
+addons:
+  apt:
+    packages:
+      - cppcheck
+      - doxygen
+      - graphviz
+      - lcov
+      - libgrantlee5-dev
+  homebrew:
+    packages:
+      - cppcheck
+      - doxygen
+      - graphviz
+      - qt
 
 compiler:
   - clang
@@ -15,48 +26,22 @@ env:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
-  matrix:
-    - QT=5  BREW=
-    - QT=5  BREW=ex  PPA=ubuntu-sdk-team/ppa
-    - QT=51 BREW=ex  PPA=beineri/opt-qt511-trusty
-    - QT=52 BREW=ex  PPA=beineri/opt-qt521-trusty
-    - QT=53 BREW=ex  PPA=beineri/opt-qt532-trusty
-    - QT=54 BREW=ex  PPA=beineri/opt-qt542-trusty
-    - QT=55 BREW=ex  PPA=beineri/opt-qt551-trusty
-    - QT=56 BREW=ex  PPA=beineri/opt-qt562-trusty
-    - QT=56 BREW=ex  PPA=beineri/opt-qt563-trusty
-    - QT=57 BREW=ex  PPA=beineri/opt-qt571-trusty
-    - QT=58 BREW=ex  PPA=beineri/opt-qt58-trusty
-    - QT=59 BREW=ex  PPA=beineri/opt-qt591-trusty
-    - QT=59 BREW=ex  PPA=beineri/opt-qt592-trusty
-    - QT=59 BREW=ex  PPA=beineri/opt-qt593-trusty
-    - QT=59 BREW=ex  PPA=beineri/opt-qt594-trusty
-    - QT=59 BREW=ex  PPA=beineri/opt-qt595-trusty
-    - QT=59 BREW=ex  PPA=beineri/opt-qt596-trusty
-    - QT=510 BREW=ex PPA=beineri/opt-qt-5.10.1-trusty
 
 matrix:
-  # Qt no longer supports GCC on OSX.
-  allow_failures:
-    - { os: osx, compiler: gcc, env: QT=5  BREW= }
-  exclude:
-    - { os: osx, env: QT=5  BREW=ex  PPA=ubuntu-sdk-team/ppa      }
-    - { os: osx, env: QT=51 BREW=ex  PPA=beineri/opt-qt511-trusty }
-    - { os: osx, env: QT=52 BREW=ex  PPA=beineri/opt-qt521-trusty }
-    - { os: osx, env: QT=53 BREW=ex  PPA=beineri/opt-qt532-trusty }
-    - { os: osx, env: QT=54 BREW=ex  PPA=beineri/opt-qt542-trusty }
-    - { os: osx, env: QT=55 BREW=ex  PPA=beineri/opt-qt551-trusty }
-    - { os: osx, env: QT=56 BREW=ex  PPA=beineri/opt-qt562-trusty }
-    - { os: osx, env: QT=56 BREW=ex  PPA=beineri/opt-qt563-trusty }
-    - { os: osx, env: QT=57 BREW=ex  PPA=beineri/opt-qt571-trusty }
-    - { os: osx, env: QT=58 BREW=ex  PPA=beineri/opt-qt58-trusty  }
-    - { os: osx, env: QT=59 BREW=ex  PPA=beineri/opt-qt591-trusty }
-    - { os: osx, env: QT=59 BREW=ex  PPA=beineri/opt-qt592-trusty }
-    - { os: osx, env: QT=59 BREW=ex  PPA=beineri/opt-qt593-trusty }
-    - { os: osx, env: QT=59 BREW=ex  PPA=beineri/opt-qt594-trusty }
-    - { os: osx, env: QT=59 BREW=ex  PPA=beineri/opt-qt595-trusty }
-    - { os: osx, env: QT=59 BREW=ex  PPA=beineri/opt-qt596-trusty }
-    - { os: osx, env: QT=510 BREW=ex PPA=beineri/opt-qt-5.10.1-trusty }
+  include:
+    - os: linux
+      end: QT=5
+      addons: { apt: { packages: [ qtbase5-dev, qtxmlpatterns5-dev ] } }
+    - os: linux
+      end: QT=512
+      addons: { apt: { packages: [ qt${QT}base, qt${QT}xmlpatterns ] sources: [ beineri/opt-qt-5.12.9-focal ] } }
+    - os: linux
+      end: QT=514
+      addons: { apt: { packages: [ qt${QT}base, qt${QT}xmlpatterns ] sources: [ beineri/opt-qt-5.14.2-focal ] } }
+    - os: linux
+      end: QT=515
+      addons: { apt: { packages: [ qt${QT}base, qt${QT}xmlpatterns ] sources: [ beineri/opt-qt-5.15.0-focal ] } }
+    - os: osx
 
 addons:
   coverity_scan:
@@ -72,29 +57,22 @@ addons:
     branch_pattern: coverity
 
 before_install:
-  - '[[ "$TRAVIS_OS_NAME" != linux || -z "$PPA" ]] || sudo add-apt-repository -y ppa:$PPA'
-  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy update'
-  - '[ "$TRAVIS_OS_NAME" != osx   ] || brew update'
 
 install:
-  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install cppcheck doxygen graphviz lcov'
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || sudo apt-get -qy install qt${QT}base qt${QT}xmlpatterns'
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || sudo apt-get -qy install qtbase5-dev libqt5xmlpatterns5-dev'
-  - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install libgrantlee5-dev'
   - '[ "$TRAVIS_OS_NAME" != linux ] || gem install lcoveralls'
-  - '[ "$TRAVIS_OS_NAME" != osx ] || brew install cppcheck doxygen graphviz qt$BREW'
-  - '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt$BREW'
+  #- '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt'
 
 before_script:
   - cppcheck --error-exitcode=1 --quiet
     --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
     code-generation/src src test
   - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || export QT_SELECT=qt5'
+  #- '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || export QT_SELECT=qt5'
   - mkdir -p "$TRAVIS_BUILD_DIR-build"
-  - cmake -B"$TRAVIS_BUILD_DIR-build" -H"$TRAVIS_BUILD_DIR" && make -C"$TRAVIS_BUILD_DIR-build" -j2 codegen all
+  - cmake -B"$TRAVIS_BUILD_DIR-build" -H"$TRAVIS_BUILD_DIR"
 
 script:
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 codegen all
   #- make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
 
