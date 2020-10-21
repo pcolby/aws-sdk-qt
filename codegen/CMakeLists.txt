@@ -1,7 +1,7 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS Core)
 find_package(Grantlee5 REQUIRED)
 
 # Used by codegen to default paths relative to the codegen project's directory.

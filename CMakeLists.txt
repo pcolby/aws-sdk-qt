@@ -9,7 +9,11 @@ project(
   HOMEPAGE_URL "https://github.com/pcolby/aws-sdk-qt"
   LANGUAGES CXX)
 
-add_subdirectory(codegen)
+find_package(Grantlee5)
+if (Grantlee5_FOUND)
+  add_subdirectory(codegen)
+endif()
+
 add_subdirectory(doc)
 add_subdirectory(src)
 add_subdirectory(test)
