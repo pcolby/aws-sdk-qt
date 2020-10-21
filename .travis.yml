@@ -79,28 +79,23 @@ before_install:
 install:
   - '[ "$TRAVIS_OS_NAME" != linux ] || sudo apt-get -qy install cppcheck doxygen graphviz lcov'
   - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || sudo apt-get -qy install qt${QT}base qt${QT}xmlpatterns'
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || sudo apt-get -qy install qt5-qmake qtbase5-dev libqt5xmlpatterns5-dev'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || sudo apt-get -qy install qtbase5-dev libqt5xmlpatterns5-dev'
   - '[ "$TRAVIS_OS_NAME" != linux ] || gem install lcoveralls'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew install cppcheck doxygen graphviz qt$BREW'
   - '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt$BREW'
-  - qmake -v
 
 before_script:
   - cppcheck --error-exitcode=1 --quiet
     --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
     code-generation/src src test
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != clang++ ]] || export QMAKESPEC=linux-clang'
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$CXX" != g++     ]] || export QMAKESPEC=linux-g++'
-  - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != clang++ ]] || export QMAKESPEC=macx-clang'
-  - '[[ "$TRAVIS_OS_NAME" != osx   || "$CXX" != g++     ]] || export QMAKESPEC=macx-g++'
   - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
   - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || export QT_SELECT=qt5'
   - mkdir -p "$TRAVIS_BUILD_DIR-build"
-  - qmake -o "$TRAVIS_BUILD_DIR-build" -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release "$TRAVIS_BUILD_DIR"
+  - cmake -B"$TRAVIS_BUILD_DIR-build" -H"$TRAVIS_BUILD_DIR" && make -C"$TRAVIS_BUILD_DIR-build" -j2 codegen all
 
 script:
-  - make -C "$TRAVIS_BUILD_DIR-build" all
-  - make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
+  - make -C "$TRAVIS_BUILD_DIR-build" -j2 codegen all
+  #- make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
 
 after_success:
   # Generate LCOV coverage reports
