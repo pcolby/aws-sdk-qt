@@ -30,7 +30,7 @@ matrix:
 
 addons:
   apt: { packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev ] }
-  homebrew: { packages: [ cppcheck, doxygen, graphviz, qt ] }
+  homebrew: { packages: [ cppcheck, doxygen, graphviz, qt ], update: true }
   coverity_scan:
     project:
       name: "pcolby/aws-sdk-qt"
