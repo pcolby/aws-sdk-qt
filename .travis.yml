@@ -2,12 +2,6 @@ language: cpp
 
 dist: focal
 
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
-
 jobs:
   include:
     - os: linux
@@ -47,6 +41,12 @@ jobs:
       addons: { apt: { packages: [ qt515base, qt515xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.15.0-focal' ] } }
     - os: osx
       compiler: clang
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
 
 addons:
   apt: { packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev ] }
