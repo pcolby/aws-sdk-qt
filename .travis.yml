@@ -85,19 +85,16 @@ before_install:
 
 install:
   - '[ "$TRAVIS_OS_NAME" != linux ] || gem install lcoveralls'
-  #- '[ "$TRAVIS_OS_NAME" != osx ] || brew link --force qt'
 
 before_script:
   #- cppcheck --error-exitcode=1 --quiet
   #  --suppress=syntaxError:test/unit/src/core/testawsabstractresponse.cpp
   #  code-generation/src src test
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
-  #- '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" == */opt-* ]] || export QT_SELECT=qt5'
+  - '[[ "$TRAVIS_OS_NAME" != linux || "$QT" != 5?* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
   - mkdir -p "$TRAVIS_BUILD_DIR-build"
   - cmake -B "$TRAVIS_BUILD_DIR-build" -S "$TRAVIS_BUILD_DIR" -L
 
 script:
-  - '[[ "$TRAVIS_OS_NAME" != linux || "$PPA" != */opt-* ]] || . /opt/qt$QT/bin/qt$QT-env.sh'
   - make -C "$TRAVIS_BUILD_DIR-build" -j2 codegen all
   #- make -C "$TRAVIS_BUILD_DIR-build" -j2 check TESTARGS=-silent
 
