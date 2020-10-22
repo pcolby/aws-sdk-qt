@@ -19,13 +19,13 @@ jobs:
       addons: { apt: { packages: [ qtbase5-dev, libqt5xmlpatterns5-dev ] } }
     - os: linux
       env: QT=512
-      addons: { apt: { packages: [ qt512base, qt512xmlpatterns ], sources: [ { sourceline: beineri/opt-qt-5.12.9-focal } ] } }
+      addons: { apt: { packages: [ qt512base, qt512xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.12.9-focal' ] } }
     - os: linux
       env: QT=514
-      addons: { apt: { packages: [ qt514base, qt514xmlpatterns ], sources: [ { sourceline: beineri/opt-qt-5.14.2-focal } ] } }
+      addons: { apt: { packages: [ qt514base, qt514xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.14.2-focal' ] } }
     - os: linux
       env: QT=515
-      addons: { apt: { packages: [ qt515base, qt515xmlpatterns ], sources: [ { sourceline: beineri/opt-qt-5.15.0-focal } ] } }
+      addons: { apt: { packages: [ qt515base, qt515xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.15.0-focal' ] } }
     - os: osx
 
 addons:
