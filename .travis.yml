@@ -7,11 +7,15 @@ jobs:
     - os: linux
       compiler: clang
       env: QT=5
-      addons: { apt: { packages: [ qtbase5-dev, libqt5xmlpatterns5-dev ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qtbase5-dev, libqt5xmlpatterns5-dev ]
     - os: linux
       compiler: gcc
       env: QT=5
-      addons: { apt: { packages: [ qtbase5-dev, libqt5xmlpatterns5-dev ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qtbase5-dev, libqt5xmlpatterns5-dev ]
     - os: linux
       compiler: clang
       env: QT=512
@@ -22,25 +26,41 @@ jobs:
     - os: linux
       compiler: gcc
       env: QT=512
-      addons: { apt: { packages: [ qt512base, qt512xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.12.9-focal' ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qt512base, qt512xmlpatterns ]
+          sources: [ sourceline: 'ppa:beineri/opt-qt-5.12.9-focal' ]
     - os: linux
       compiler: clang
       env: QT=514
-      addons: { apt: { packages: [ qt514base, qt514xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.14.2-focal' ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qt514base, qt514xmlpatterns ]
+          sources: [ sourceline: 'ppa:beineri/opt-qt-5.14.2-focal' ]
     - os: linux
       compiler: gcc
       env: QT=514
-      addons: { apt: { packages: [ qt514base, qt514xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.14.2-focal' ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qt514base, qt514xmlpatterns ]
+          sources: [ sourceline: 'ppa:beineri/opt-qt-5.14.2-focal' ]
     - os: linux
       compiler: clang
       env: QT=515
-      addons: { apt: { packages: [ qt515base, qt515xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.15.0-focal' ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qt515base, qt515xmlpatterns ]
+          sources: [ sourceline: 'ppa:beineri/opt-qt-5.15.0-focal' ]
     - os: linux
       compiler: gcc
       env: QT=515
-      addons: { apt: { packages: [ qt515base, qt515xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.15.0-focal' ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qt515base, qt515xmlpatterns ]
+          sources: [ sourceline: 'ppa:beineri/opt-qt-5.15.0-focal' ]
     - os: osx
       compiler: clang
+      addons: { homebrew: { packages: [ cppcheck, doxygen, graphviz, qt ], update: true } }
 
 env:
   global:
@@ -49,8 +69,6 @@ env:
    - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
 
 addons:
-  apt: { packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev ] }
-  homebrew: { packages: [ cppcheck, doxygen, graphviz, qt ], update: true }
   coverity_scan:
     project:
       name: "pcolby/aws-sdk-qt"
