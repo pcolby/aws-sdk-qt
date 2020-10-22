@@ -2,21 +2,6 @@ language: cpp
 
 dist: focal
 
-addons:
-  apt:
-    packages:
-      - cppcheck
-      - doxygen
-      - graphviz
-      - lcov
-      - libgrantlee5-dev
-  homebrew:
-    packages:
-      - cppcheck
-      - doxygen
-      - graphviz
-      - qt
-
 compiler:
   - clang
   - gcc
@@ -30,20 +15,22 @@ env:
 matrix:
   include:
     - os: linux
-      end: QT=5
+      env: QT=5
       addons: { apt: { packages: [ qtbase5-dev, qtxmlpatterns5-dev ] } }
     - os: linux
-      end: QT=512
-      addons: { apt: { packages: [ qt${QT}base, qt${QT}xmlpatterns ] sources: [ beineri/opt-qt-5.12.9-focal ] } }
+      env: QT=512
+      addons: { apt: { packages: [ 'qt${QT}base', 'qt${QT}xmlpatterns' ] } } #, sources: [ beineri/opt-qt-5.12.9-focal ] } }
     - os: linux
-      end: QT=514
-      addons: { apt: { packages: [ qt${QT}base, qt${QT}xmlpatterns ] sources: [ beineri/opt-qt-5.14.2-focal ] } }
+      env: QT=514
+      addons: { apt: { packages: [ 'qt${QT}base', 'qt${QT}xmlpatterns' ], sources: [ beineri/opt-qt-5.14.2-focal ] } }
     - os: linux
-      end: QT=515
-      addons: { apt: { packages: [ qt${QT}base, qt${QT}xmlpatterns ] sources: [ beineri/opt-qt-5.15.0-focal ] } }
+      env: QT=515
+      addons: { apt: { packages: [ 'qt${QT}base', 'qt${QT}xmlpatterns' ], sources: [ beineri/opt-qt-5.15.0-focal ] } }
     - os: osx
 
 addons:
+  apt: { packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev ] }
+  homebrew: { packages: [ cppcheck, doxygen, graphviz, qt ] }
   coverity_scan:
     project:
       name: "pcolby/aws-sdk-qt"
