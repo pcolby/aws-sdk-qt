@@ -21,7 +21,10 @@ jobs:
     - os: linux
       compiler: clang
       env: QT=512
-      addons: { apt: { packages: [ qt512base, qt512xmlpatterns ], sources: [ sourceline: 'ppa:beineri/opt-qt-5.12.9-focal' ] } }
+      addons:
+        apt:
+          packages: [ cppcheck, doxygen, graphviz, lcov, libgrantlee5-dev, qt512base, qt512xmlpatterns ]
+          sources: [ sourceline: 'ppa:beineri/opt-qt-5.12.9-focal' ]
     - os: linux
       compiler: gcc
       env: QT=512
