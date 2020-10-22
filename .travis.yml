@@ -12,7 +12,7 @@ env:
    #   via the "travis encrypt" command using the project repo's public key
    - secure: "YlZmQnVY0FCZ0jwXlHB/vqdfSFgHRyGWZej6oEC9YQyhXSiiz4C2zEVW6RuHQT6OPWsehDsjNFBBJyGsJIX8xp1Z5Y2n8YhVPsv6fLFiz0AF5WrJXhycC4Gz174CqPT6vSTZ42KmSrXqPE6fpH1mZNSFBwXrTmhwWcjLlbWvnmo="
 
-matrix:
+jobs:
   include:
     - os: linux
       env: QT=5
