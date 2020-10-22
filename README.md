@@ -58,11 +58,9 @@ This library supports out-of-source builds (highly recommended), for example:
 
 ~~~{.sh}
 mkdir -p <tmp-build-dir>
-pushd <tmp-build-dir>
-qmake -Wall -Wlogic -Wparser CONFIG+=debug_and_release <path-to-cloned-repo>
-make # or `nmake` on Windows
+cmake -B <tmp-build-dir> -S <path-to-cloned-repo>
+make -C <tmp-build-dir> # or `nmake` on Windows
 make check
-popd
 ~~~
 
 ## API Documentation
