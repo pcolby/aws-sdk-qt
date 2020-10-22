@@ -16,7 +16,7 @@ matrix:
   include:
     - os: linux
       env: QT=5
-      addons: { apt: { packages: [ qtbase5-dev, qtxmlpatterns5-dev ] } }
+      addons: { apt: { packages: [ qtbase5-dev, libqt5xmlpatterns5-dev ] } }
     - os: linux
       env: QT=512
       addons: { apt: { packages: [ 'qt${QT}base', 'qt${QT}xmlpatterns' ] } } #, sources: [ beineri/opt-qt-5.12.9-focal ] } }
