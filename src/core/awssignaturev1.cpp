@@ -125,7 +125,7 @@ AwsSignatureV1Private::AwsSignatureV1Private(AwsSignatureV1 * const q) : AwsSign
 QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
 {
     QList<QStringPair> list = query.queryItems(QUrl::FullyDecoded);
-    qSort(list.begin(), list.end(), AwsSignatureV1Private::caseInsensitiveLessThan);
+    std::sort(list.begin(), list.end(), AwsSignatureV1Private::caseInsensitiveLessThan);
     QString result;
     foreach (const QStringPair &pair, list) {
         if (!pair.second.isEmpty()) {
@@ -149,7 +149,7 @@ QByteArray AwsSignatureV1Private::canonicalQuery(const QUrlQuery &query) const
  * pair first, then if equal, on the values of each pair.
  *
  * This static function is used by canonicalQuery() to sort query string
- * parameters in case-insensitive order, via Qt's qSort function.
+ * parameters in case-insensitive order.
  */
 bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &pair1, const QStringPair &pair2)
 {

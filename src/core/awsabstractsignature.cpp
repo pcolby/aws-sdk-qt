@@ -164,7 +164,7 @@ QByteArray AwsAbstractSignaturePrivate::canonicalQuery(const QUrlQuery &query) c
 {
     typedef QPair<QString, QString> QStringPair;
     QList<QStringPair> list = query.queryItems(QUrl::FullyDecoded);
-    qSort(list);
+    std::sort(list.begin(), list.end());
     QString result;
     foreach (const QStringPair &pair, list) {
         if (!result.isEmpty()) result += QLatin1Char('&');
