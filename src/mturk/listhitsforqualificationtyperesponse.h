@@ -1,5 +1,5 @@
 /*
-    Copyright 2013-2020 Paul Colby
+    Copyright 2013-2021 Paul Colby
 
     This file is part of QtAws.
 
