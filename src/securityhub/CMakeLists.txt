@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsSecurityHub
+  acceptadministratorinvitationrequest.h
+  acceptadministratorinvitationrequest_p.h
+  acceptadministratorinvitationresponse.h
+  acceptadministratorinvitationresponse_p.h
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
   acceptinvitationresponse.h
@@ -17,6 +21,10 @@ add_library(QtAwsSecurityHub
   batchimportfindingsrequest_p.h
   batchimportfindingsresponse.h
   batchimportfindingsresponse_p.h
+  batchupdatefindingsrequest.h
+  batchupdatefindingsrequest_p.h
+  batchupdatefindingsresponse.h
+  batchupdatefindingsresponse_p.h
   createactiontargetrequest.h
   createactiontargetrequest_p.h
   createactiontargetresponse.h
@@ -57,18 +65,38 @@ add_library(QtAwsSecurityHub
   describehubrequest_p.h
   describehubresponse.h
   describehubresponse_p.h
+  describeorganizationconfigurationrequest.h
+  describeorganizationconfigurationrequest_p.h
+  describeorganizationconfigurationresponse.h
+  describeorganizationconfigurationresponse_p.h
   describeproductsrequest.h
   describeproductsrequest_p.h
   describeproductsresponse.h
   describeproductsresponse_p.h
+  describestandardscontrolsrequest.h
+  describestandardscontrolsrequest_p.h
+  describestandardscontrolsresponse.h
+  describestandardscontrolsresponse_p.h
+  describestandardsrequest.h
+  describestandardsrequest_p.h
+  describestandardsresponse.h
+  describestandardsresponse_p.h
   disableimportfindingsforproductrequest.h
   disableimportfindingsforproductrequest_p.h
   disableimportfindingsforproductresponse.h
   disableimportfindingsforproductresponse_p.h
+  disableorganizationadminaccountrequest.h
+  disableorganizationadminaccountrequest_p.h
+  disableorganizationadminaccountresponse.h
+  disableorganizationadminaccountresponse_p.h
   disablesecurityhubrequest.h
   disablesecurityhubrequest_p.h
   disablesecurityhubresponse.h
   disablesecurityhubresponse_p.h
+  disassociatefromadministratoraccountrequest.h
+  disassociatefromadministratoraccountrequest_p.h
+  disassociatefromadministratoraccountresponse.h
+  disassociatefromadministratoraccountresponse_p.h
   disassociatefrommasteraccountrequest.h
   disassociatefrommasteraccountrequest_p.h
   disassociatefrommasteraccountresponse.h
@@ -81,10 +109,18 @@ add_library(QtAwsSecurityHub
   enableimportfindingsforproductrequest_p.h
   enableimportfindingsforproductresponse.h
   enableimportfindingsforproductresponse_p.h
+  enableorganizationadminaccountrequest.h
+  enableorganizationadminaccountrequest_p.h
+  enableorganizationadminaccountresponse.h
+  enableorganizationadminaccountresponse_p.h
   enablesecurityhubrequest.h
   enablesecurityhubrequest_p.h
   enablesecurityhubresponse.h
   enablesecurityhubresponse_p.h
+  getadministratoraccountrequest.h
+  getadministratoraccountrequest_p.h
+  getadministratoraccountresponse.h
+  getadministratoraccountresponse_p.h
   getenabledstandardsrequest.h
   getenabledstandardsrequest_p.h
   getenabledstandardsresponse.h
@@ -129,6 +165,10 @@ add_library(QtAwsSecurityHub
   listmembersrequest_p.h
   listmembersresponse.h
   listmembersresponse_p.h
+  listorganizationadminaccountsrequest.h
+  listorganizationadminaccountsrequest_p.h
+  listorganizationadminaccountsresponse.h
+  listorganizationadminaccountsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -159,6 +199,20 @@ add_library(QtAwsSecurityHub
   updateinsightrequest_p.h
   updateinsightresponse.h
   updateinsightresponse_p.h
+  updateorganizationconfigurationrequest.h
+  updateorganizationconfigurationrequest_p.h
+  updateorganizationconfigurationresponse.h
+  updateorganizationconfigurationresponse_p.h
+  updatesecurityhubconfigurationrequest.h
+  updatesecurityhubconfigurationrequest_p.h
+  updatesecurityhubconfigurationresponse.h
+  updatesecurityhubconfigurationresponse_p.h
+  updatestandardscontrolrequest.h
+  updatestandardscontrolrequest_p.h
+  updatestandardscontrolresponse.h
+  updatestandardscontrolresponse_p.h
+  acceptadministratorinvitationrequest.cpp
+  acceptadministratorinvitationresponse.cpp
   acceptinvitationrequest.cpp
   acceptinvitationresponse.cpp
   batchdisablestandardsrequest.cpp
@@ -167,6 +221,8 @@ add_library(QtAwsSecurityHub
   batchenablestandardsresponse.cpp
   batchimportfindingsrequest.cpp
   batchimportfindingsresponse.cpp
+  batchupdatefindingsrequest.cpp
+  batchupdatefindingsresponse.cpp
   createactiontargetrequest.cpp
   createactiontargetresponse.cpp
   createinsightrequest.cpp
@@ -187,20 +243,34 @@ add_library(QtAwsSecurityHub
   describeactiontargetsresponse.cpp
   describehubrequest.cpp
   describehubresponse.cpp
+  describeorganizationconfigurationrequest.cpp
+  describeorganizationconfigurationresponse.cpp
   describeproductsrequest.cpp
   describeproductsresponse.cpp
+  describestandardscontrolsrequest.cpp
+  describestandardscontrolsresponse.cpp
+  describestandardsrequest.cpp
+  describestandardsresponse.cpp
   disableimportfindingsforproductrequest.cpp
   disableimportfindingsforproductresponse.cpp
+  disableorganizationadminaccountrequest.cpp
+  disableorganizationadminaccountresponse.cpp
   disablesecurityhubrequest.cpp
   disablesecurityhubresponse.cpp
+  disassociatefromadministratoraccountrequest.cpp
+  disassociatefromadministratoraccountresponse.cpp
   disassociatefrommasteraccountrequest.cpp
   disassociatefrommasteraccountresponse.cpp
   disassociatemembersrequest.cpp
   disassociatemembersresponse.cpp
   enableimportfindingsforproductrequest.cpp
   enableimportfindingsforproductresponse.cpp
+  enableorganizationadminaccountrequest.cpp
+  enableorganizationadminaccountresponse.cpp
   enablesecurityhubrequest.cpp
   enablesecurityhubresponse.cpp
+  getadministratoraccountrequest.cpp
+  getadministratoraccountresponse.cpp
   getenabledstandardsrequest.cpp
   getenabledstandardsresponse.cpp
   getfindingsrequest.cpp
@@ -223,6 +293,8 @@ add_library(QtAwsSecurityHub
   listinvitationsresponse.cpp
   listmembersrequest.cpp
   listmembersresponse.cpp
+  listorganizationadminaccountsrequest.cpp
+  listorganizationadminaccountsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   securityhubclient.cpp
@@ -237,7 +309,13 @@ add_library(QtAwsSecurityHub
   updatefindingsrequest.cpp
   updatefindingsresponse.cpp
   updateinsightrequest.cpp
-  updateinsightresponse.cpp)
+  updateinsightresponse.cpp
+  updateorganizationconfigurationrequest.cpp
+  updateorganizationconfigurationresponse.cpp
+  updatesecurityhubconfigurationrequest.cpp
+  updatesecurityhubconfigurationresponse.cpp
+  updatestandardscontrolrequest.cpp
+  updatestandardscontrolresponse.cpp)
 
 add_dependencies(QtAwsSecurityHub QtAwsCore)
 

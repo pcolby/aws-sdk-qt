@@ -217,6 +217,10 @@ add_library(QtAwsGreengrass
   getsubscriptiondefinitionversionrequest_p.h
   getsubscriptiondefinitionversionresponse.h
   getsubscriptiondefinitionversionresponse_p.h
+  getthingruntimeconfigurationrequest.h
+  getthingruntimeconfigurationrequest_p.h
+  getthingruntimeconfigurationresponse.h
+  getthingruntimeconfigurationresponse_p.h
   greengrassclient.h
   greengrassclient_p.h
   greengrassrequest.h
@@ -367,6 +371,10 @@ add_library(QtAwsGreengrass
   updatesubscriptiondefinitionrequest_p.h
   updatesubscriptiondefinitionresponse.h
   updatesubscriptiondefinitionresponse_p.h
+  updatethingruntimeconfigurationrequest.h
+  updatethingruntimeconfigurationrequest_p.h
+  updatethingruntimeconfigurationresponse.h
+  updatethingruntimeconfigurationresponse_p.h
   associateroletogrouprequest.cpp
   associateroletogroupresponse.cpp
   associateserviceroletoaccountrequest.cpp
@@ -475,6 +483,8 @@ add_library(QtAwsGreengrass
   getsubscriptiondefinitionresponse.cpp
   getsubscriptiondefinitionversionrequest.cpp
   getsubscriptiondefinitionversionresponse.cpp
+  getthingruntimeconfigurationrequest.cpp
+  getthingruntimeconfigurationresponse.cpp
   greengrassclient.cpp
   greengrassrequest.cpp
   greengrassresponse.cpp
@@ -549,7 +559,9 @@ add_library(QtAwsGreengrass
   updateresourcedefinitionrequest.cpp
   updateresourcedefinitionresponse.cpp
   updatesubscriptiondefinitionrequest.cpp
-  updatesubscriptiondefinitionresponse.cpp)
+  updatesubscriptiondefinitionresponse.cpp
+  updatethingruntimeconfigurationrequest.cpp
+  updatethingruntimeconfigurationresponse.cpp)
 
 add_dependencies(QtAwsGreengrass QtAwsCore)
 

@@ -5,6 +5,10 @@ add_library(QtAwsCodeBuild
   batchdeletebuildsrequest_p.h
   batchdeletebuildsresponse.h
   batchdeletebuildsresponse_p.h
+  batchgetbuildbatchesrequest.h
+  batchgetbuildbatchesrequest_p.h
+  batchgetbuildbatchesresponse.h
+  batchgetbuildbatchesresponse_p.h
   batchgetbuildsrequest.h
   batchgetbuildsrequest_p.h
   batchgetbuildsresponse.h
@@ -13,6 +17,14 @@ add_library(QtAwsCodeBuild
   batchgetprojectsrequest_p.h
   batchgetprojectsresponse.h
   batchgetprojectsresponse_p.h
+  batchgetreportgroupsrequest.h
+  batchgetreportgroupsrequest_p.h
+  batchgetreportgroupsresponse.h
+  batchgetreportgroupsresponse_p.h
+  batchgetreportsrequest.h
+  batchgetreportsrequest_p.h
+  batchgetreportsresponse.h
+  batchgetreportsresponse_p.h
   codebuildclient.h
   codebuildclient_p.h
   codebuildrequest.h
@@ -23,14 +35,34 @@ add_library(QtAwsCodeBuild
   createprojectrequest_p.h
   createprojectresponse.h
   createprojectresponse_p.h
+  createreportgrouprequest.h
+  createreportgrouprequest_p.h
+  createreportgroupresponse.h
+  createreportgroupresponse_p.h
   createwebhookrequest.h
   createwebhookrequest_p.h
   createwebhookresponse.h
   createwebhookresponse_p.h
+  deletebuildbatchrequest.h
+  deletebuildbatchrequest_p.h
+  deletebuildbatchresponse.h
+  deletebuildbatchresponse_p.h
   deleteprojectrequest.h
   deleteprojectrequest_p.h
   deleteprojectresponse.h
   deleteprojectresponse_p.h
+  deletereportgrouprequest.h
+  deletereportgrouprequest_p.h
+  deletereportgroupresponse.h
+  deletereportgroupresponse_p.h
+  deletereportrequest.h
+  deletereportrequest_p.h
+  deletereportresponse.h
+  deletereportresponse_p.h
+  deleteresourcepolicyrequest.h
+  deleteresourcepolicyrequest_p.h
+  deleteresourcepolicyresponse.h
+  deleteresourcepolicyresponse_p.h
   deletesourcecredentialsrequest.h
   deletesourcecredentialsrequest_p.h
   deletesourcecredentialsresponse.h
@@ -39,6 +71,22 @@ add_library(QtAwsCodeBuild
   deletewebhookrequest_p.h
   deletewebhookresponse.h
   deletewebhookresponse_p.h
+  describecodecoveragesrequest.h
+  describecodecoveragesrequest_p.h
+  describecodecoveragesresponse.h
+  describecodecoveragesresponse_p.h
+  describetestcasesrequest.h
+  describetestcasesrequest_p.h
+  describetestcasesresponse.h
+  describetestcasesresponse_p.h
+  getreportgrouptrendrequest.h
+  getreportgrouptrendrequest_p.h
+  getreportgrouptrendresponse.h
+  getreportgrouptrendresponse_p.h
+  getresourcepolicyrequest.h
+  getresourcepolicyrequest_p.h
+  getresourcepolicyresponse.h
+  getresourcepolicyresponse_p.h
   importsourcecredentialsrequest.h
   importsourcecredentialsrequest_p.h
   importsourcecredentialsresponse.h
@@ -47,6 +95,14 @@ add_library(QtAwsCodeBuild
   invalidateprojectcacherequest_p.h
   invalidateprojectcacheresponse.h
   invalidateprojectcacheresponse_p.h
+  listbuildbatchesforprojectrequest.h
+  listbuildbatchesforprojectrequest_p.h
+  listbuildbatchesforprojectresponse.h
+  listbuildbatchesforprojectresponse_p.h
+  listbuildbatchesrequest.h
+  listbuildbatchesrequest_p.h
+  listbuildbatchesresponse.h
+  listbuildbatchesresponse_p.h
   listbuildsforprojectrequest.h
   listbuildsforprojectrequest_p.h
   listbuildsforprojectresponse.h
@@ -63,14 +119,54 @@ add_library(QtAwsCodeBuild
   listprojectsrequest_p.h
   listprojectsresponse.h
   listprojectsresponse_p.h
+  listreportgroupsrequest.h
+  listreportgroupsrequest_p.h
+  listreportgroupsresponse.h
+  listreportgroupsresponse_p.h
+  listreportsforreportgrouprequest.h
+  listreportsforreportgrouprequest_p.h
+  listreportsforreportgroupresponse.h
+  listreportsforreportgroupresponse_p.h
+  listreportsrequest.h
+  listreportsrequest_p.h
+  listreportsresponse.h
+  listreportsresponse_p.h
+  listsharedprojectsrequest.h
+  listsharedprojectsrequest_p.h
+  listsharedprojectsresponse.h
+  listsharedprojectsresponse_p.h
+  listsharedreportgroupsrequest.h
+  listsharedreportgroupsrequest_p.h
+  listsharedreportgroupsresponse.h
+  listsharedreportgroupsresponse_p.h
   listsourcecredentialsrequest.h
   listsourcecredentialsrequest_p.h
   listsourcecredentialsresponse.h
   listsourcecredentialsresponse_p.h
+  putresourcepolicyrequest.h
+  putresourcepolicyrequest_p.h
+  putresourcepolicyresponse.h
+  putresourcepolicyresponse_p.h
+  retrybuildbatchrequest.h
+  retrybuildbatchrequest_p.h
+  retrybuildbatchresponse.h
+  retrybuildbatchresponse_p.h
+  retrybuildrequest.h
+  retrybuildrequest_p.h
+  retrybuildresponse.h
+  retrybuildresponse_p.h
+  startbuildbatchrequest.h
+  startbuildbatchrequest_p.h
+  startbuildbatchresponse.h
+  startbuildbatchresponse_p.h
   startbuildrequest.h
   startbuildrequest_p.h
   startbuildresponse.h
   startbuildresponse_p.h
+  stopbuildbatchrequest.h
+  stopbuildbatchrequest_p.h
+  stopbuildbatchresponse.h
+  stopbuildbatchresponse_p.h
   stopbuildrequest.h
   stopbuildrequest_p.h
   stopbuildresponse.h
@@ -79,33 +175,65 @@ add_library(QtAwsCodeBuild
   updateprojectrequest_p.h
   updateprojectresponse.h
   updateprojectresponse_p.h
+  updatereportgrouprequest.h
+  updatereportgrouprequest_p.h
+  updatereportgroupresponse.h
+  updatereportgroupresponse_p.h
   updatewebhookrequest.h
   updatewebhookrequest_p.h
   updatewebhookresponse.h
   updatewebhookresponse_p.h
   batchdeletebuildsrequest.cpp
   batchdeletebuildsresponse.cpp
+  batchgetbuildbatchesrequest.cpp
+  batchgetbuildbatchesresponse.cpp
   batchgetbuildsrequest.cpp
   batchgetbuildsresponse.cpp
   batchgetprojectsrequest.cpp
   batchgetprojectsresponse.cpp
+  batchgetreportgroupsrequest.cpp
+  batchgetreportgroupsresponse.cpp
+  batchgetreportsrequest.cpp
+  batchgetreportsresponse.cpp
   codebuildclient.cpp
   codebuildrequest.cpp
   codebuildresponse.cpp
   createprojectrequest.cpp
   createprojectresponse.cpp
+  createreportgrouprequest.cpp
+  createreportgroupresponse.cpp
   createwebhookrequest.cpp
   createwebhookresponse.cpp
+  deletebuildbatchrequest.cpp
+  deletebuildbatchresponse.cpp
   deleteprojectrequest.cpp
   deleteprojectresponse.cpp
+  deletereportgrouprequest.cpp
+  deletereportgroupresponse.cpp
+  deletereportrequest.cpp
+  deletereportresponse.cpp
+  deleteresourcepolicyrequest.cpp
+  deleteresourcepolicyresponse.cpp
   deletesourcecredentialsrequest.cpp
   deletesourcecredentialsresponse.cpp
   deletewebhookrequest.cpp
   deletewebhookresponse.cpp
+  describecodecoveragesrequest.cpp
+  describecodecoveragesresponse.cpp
+  describetestcasesrequest.cpp
+  describetestcasesresponse.cpp
+  getreportgrouptrendrequest.cpp
+  getreportgrouptrendresponse.cpp
+  getresourcepolicyrequest.cpp
+  getresourcepolicyresponse.cpp
   importsourcecredentialsrequest.cpp
   importsourcecredentialsresponse.cpp
   invalidateprojectcacherequest.cpp
   invalidateprojectcacheresponse.cpp
+  listbuildbatchesforprojectrequest.cpp
+  listbuildbatchesforprojectresponse.cpp
+  listbuildbatchesrequest.cpp
+  listbuildbatchesresponse.cpp
   listbuildsforprojectrequest.cpp
   listbuildsforprojectresponse.cpp
   listbuildsrequest.cpp
@@ -114,14 +242,36 @@ add_library(QtAwsCodeBuild
   listcuratedenvironmentimagesresponse.cpp
   listprojectsrequest.cpp
   listprojectsresponse.cpp
+  listreportgroupsrequest.cpp
+  listreportgroupsresponse.cpp
+  listreportsforreportgrouprequest.cpp
+  listreportsforreportgroupresponse.cpp
+  listreportsrequest.cpp
+  listreportsresponse.cpp
+  listsharedprojectsrequest.cpp
+  listsharedprojectsresponse.cpp
+  listsharedreportgroupsrequest.cpp
+  listsharedreportgroupsresponse.cpp
   listsourcecredentialsrequest.cpp
   listsourcecredentialsresponse.cpp
+  putresourcepolicyrequest.cpp
+  putresourcepolicyresponse.cpp
+  retrybuildbatchrequest.cpp
+  retrybuildbatchresponse.cpp
+  retrybuildrequest.cpp
+  retrybuildresponse.cpp
+  startbuildbatchrequest.cpp
+  startbuildbatchresponse.cpp
   startbuildrequest.cpp
   startbuildresponse.cpp
+  stopbuildbatchrequest.cpp
+  stopbuildbatchresponse.cpp
   stopbuildrequest.cpp
   stopbuildresponse.cpp
   updateprojectrequest.cpp
   updateprojectresponse.cpp
+  updatereportgrouprequest.cpp
+  updatereportgroupresponse.cpp
   updatewebhookrequest.cpp
   updatewebhookresponse.cpp)
 

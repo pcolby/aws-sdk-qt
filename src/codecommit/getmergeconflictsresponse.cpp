@@ -73,7 +73,7 @@ namespace CodeCommit {
  *  repository> </li> <li>
  * 
  *  <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no other
- *  users of that repository will be able to access it until you send them the new HTTPS or SSH URL to
+ *  users of that repository can access it until you send them the new HTTPS or SSH URL to
  * 
  *  use> </li> </ul>
  * 
@@ -81,7 +81,7 @@ namespace CodeCommit {
  * 
  *  following> <ul> <li>
  * 
- *  <a>CreateBranch</a>, which creates a new branch in a specified
+ *  <a>CreateBranch</a>, which creates a branch in a specified
  * 
  *  repository> </li> <li>
  * 
@@ -109,7 +109,7 @@ namespace CodeCommit {
  * 
  *  branch> </li> <li>
  * 
- *  <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object within a
+ *  <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object in a
  * 
  *  repository> </li> <li>
  * 
@@ -129,6 +129,10 @@ namespace CodeCommit {
  * 
  *  following> <ul> <li>
  * 
+ *  <a>BatchGetCommits</a>, which returns information about one or more commits in a
+ * 
+ *  repository> </li> <li>
+ * 
  *  <a>CreateCommit</a>, which creates a commit for changes to a
  * 
  *  repository> </li> <li>
@@ -138,7 +142,7 @@ namespace CodeCommit {
  *  information> </li> <li>
  * 
  *  <a>GetDifferences</a>, which returns information about the differences in a valid commit specifier (such as a branch,
- *  tag, HEAD, commit ID or other fully qualified
+ *  tag, HEAD, commit ID, or other fully qualified
  * 
  *  reference)> </li> </ul>
  * 
@@ -193,15 +197,38 @@ namespace CodeCommit {
  * 
  *  repository> </li> <li>
  * 
+ *  <a>CreatePullRequestApprovalRule</a>, which creates an approval rule for a specified pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>DeletePullRequestApprovalRule</a>, which deletes an approval rule for a specified pull
+ * 
+ *  request> </li> <li>
+ * 
  *  <a>DescribePullRequestEvents</a>, which returns information about one or more pull request
  * 
  *  events> </li> <li>
+ * 
+ *  <a>EvaluatePullRequestApprovalRules</a>, which evaluates whether a pull request has met all the conditions specified in
+ *  its associated approval
+ * 
+ *  rules> </li> <li>
  * 
  *  <a>GetCommentsForPullRequest</a>, which returns information about comments on a specified pull
  * 
  *  request> </li> <li>
  * 
  *  <a>GetPullRequest</a>, which returns information about a specified pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>GetPullRequestApprovalStates</a>, which returns information about the approval states for a specified pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>GetPullRequestOverrideState</a>, which returns information about whether approval rules have been set aside
+ *  (overriden) for a pull request, and if so, the Amazon Resource Name (ARN) of the user or identity that overrode the
+ *  rules and their requirements for the pull
  * 
  *  request> </li> <li>
  * 
@@ -224,7 +251,19 @@ namespace CodeCommit {
  * 
  *  option> </li> <li>
  * 
+ *  <a>OverridePullRequestApprovalRules</a>, which sets aside all approval rule requirements for a pull
+ * 
+ *  request> </li> <li>
+ * 
  *  <a>PostCommentForPullRequest</a>, which posts a comment to a pull request at the specified line, file, or
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>UpdatePullRequestApprovalRuleContent</a>, which updates the structure of an approval rule for a pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>UpdatePullRequestApprovalState</a>, which updates the state of an approval on a pull
  * 
  *  request> </li> <li>
  * 
@@ -240,6 +279,73 @@ namespace CodeCommit {
  * 
  *  request> </li> </ul>
  * 
+ *  Approval rule templates, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <a>AssociateApprovalRuleTemplateWithRepository</a>, which associates a template with a specified repository. After the
+ *  template is associated with a repository, AWS CodeCommit creates approval rules that match the template conditions on
+ *  every pull request created in the specified
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>BatchAssociateApprovalRuleTemplateWithRepositories</a>, which associates a template with one or more specified
+ *  repositories. After the template is associated with a repository, AWS CodeCommit creates approval rules that match the
+ *  template conditions on every pull request created in the specified
+ * 
+ *  repositories> </li> <li>
+ * 
+ *  <a>BatchDisassociateApprovalRuleTemplateFromRepositories</a>, which removes the association between a template and
+ *  specified repositories so that approval rules based on the template are not automatically created when pull requests are
+ *  created in those
+ * 
+ *  repositories> </li> <li>
+ * 
+ *  <a>CreateApprovalRuleTemplate</a>, which creates a template for approval rules that can then be associated with one or
+ *  more repositories in your AWS
+ * 
+ *  account> </li> <li>
+ * 
+ *  <a>DeleteApprovalRuleTemplate</a>, which deletes the specified template. It does not remove approval rules on pull
+ *  requests already created with the
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>DisassociateApprovalRuleTemplateFromRepository</a>, which removes the association between a template and a repository
+ *  so that approval rules based on the template are not automatically created when pull requests are created in the
+ *  specified
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>GetApprovalRuleTemplate</a>, which returns information about an approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>ListApprovalRuleTemplates</a>, which lists all approval rule templates in the AWS Region in your AWS
+ * 
+ *  account> </li> <li>
+ * 
+ *  <a>ListAssociatedApprovalRuleTemplatesForRepository</a>, which lists all approval rule templates that are associated
+ *  with a specified
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>ListRepositoriesForApprovalRuleTemplate</a>, which lists all repositories associated with the specified approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>UpdateApprovalRuleTemplateDescription</a>, which updates the description of an approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>UpdateApprovalRuleTemplateName</a>, which updates the name of an approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>UpdateApprovalRuleTemplateContent</a>, which updates the content of an approval rule
+ * 
+ *  template> </li> </ul>
+ * 
  *  Comments in a repository, by calling the
  * 
  *  following> <ul> <li>
@@ -252,6 +358,10 @@ namespace CodeCommit {
  * 
  *  commit> </li> <li>
  * 
+ *  <a>GetCommentReactions</a>, which returns information about emoji reactions to
+ * 
+ *  comments> </li> <li>
+ * 
  *  <a>GetCommentsForComparedCommit</a>, which returns information about comments on the comparison between two commit
  *  specifiers in a
  * 
@@ -262,6 +372,10 @@ namespace CodeCommit {
  *  repository> </li> <li>
  * 
  *  <a>PostCommentReply</a>, which creates a reply to a
+ * 
+ *  comment> </li> <li>
+ * 
+ *  <a>PutCommentReaction</a>, which creates or updates an emoji reaction to a
  * 
  *  comment> </li> <li>
  * 

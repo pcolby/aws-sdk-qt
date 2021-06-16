@@ -23,6 +23,10 @@
 #include "core/awssignaturev4.h"
 #include "puteventsrequest.h"
 #include "puteventsresponse.h"
+#include "putitemsrequest.h"
+#include "putitemsresponse.h"
+#include "putusersrequest.h"
+#include "putusersresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -46,6 +50,9 @@ namespace PersonalizeEvents {
  * \ingroup aws-clients
  * \inmodule QtAwsPersonalizeEvents
  *
+ *  Amazon Personalize can consume real-time user event data, such as <i>stream</i> or <i>click</i> data, and use it for
+ *  model training either alone or combined with historical data. For more information see <a
+ *  href="https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html">Recording
  */
 
 /*!
@@ -107,11 +114,40 @@ PersonalizeEventsClient::PersonalizeEventsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Records user interaction event
+ * Records user interaction event data. For more information see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html">Recording
  */
 PutEventsResponse * PersonalizeEventsClient::putEvents(const PutEventsRequest &request)
 {
     return qobject_cast<PutEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeEventsClient service, and returns a pointer to an
+ * PutItemsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more items to an Items dataset. For more information see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html">Importing Items Incrementally</a>.
+ */
+PutItemsResponse * PersonalizeEventsClient::putItems(const PutItemsRequest &request)
+{
+    return qobject_cast<PutItemsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeEventsClient service, and returns a pointer to an
+ * PutUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more users to a Users dataset. For more information see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html">Importing Users
+ */
+PutUsersResponse * PersonalizeEventsClient::putUsers(const PutUsersRequest &request)
+{
+    return qobject_cast<PutUsersResponse *>(send(request));
 }
 
 /*!

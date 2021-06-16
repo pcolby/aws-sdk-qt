@@ -1,0 +1,9 @@
+
+/*!
+    \page qtawsidentitystore-index.html
+    \title Qt Aws IdentityStore
+
+    \brief Classes for the AWS SSO Identity Store (IdentityStore) service
+
+    (This is the page the forms the overview for the servce.)
+*/

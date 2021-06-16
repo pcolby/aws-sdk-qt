@@ -37,6 +37,8 @@
 #include "copydbparametergroupresponse.h"
 #include "createdbclusterrequest.h"
 #include "createdbclusterresponse.h"
+#include "createdbclusterendpointrequest.h"
+#include "createdbclusterendpointresponse.h"
 #include "createdbclusterparametergrouprequest.h"
 #include "createdbclusterparametergroupresponse.h"
 #include "createdbclustersnapshotrequest.h"
@@ -51,6 +53,8 @@
 #include "createeventsubscriptionresponse.h"
 #include "deletedbclusterrequest.h"
 #include "deletedbclusterresponse.h"
+#include "deletedbclusterendpointrequest.h"
+#include "deletedbclusterendpointresponse.h"
 #include "deletedbclusterparametergrouprequest.h"
 #include "deletedbclusterparametergroupresponse.h"
 #include "deletedbclustersnapshotrequest.h"
@@ -63,6 +67,8 @@
 #include "deletedbsubnetgroupresponse.h"
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionresponse.h"
+#include "describedbclusterendpointsrequest.h"
+#include "describedbclusterendpointsresponse.h"
 #include "describedbclusterparametergroupsrequest.h"
 #include "describedbclusterparametergroupsresponse.h"
 #include "describedbclusterparametersrequest.h"
@@ -105,6 +111,8 @@
 #include "listtagsforresourceresponse.h"
 #include "modifydbclusterrequest.h"
 #include "modifydbclusterresponse.h"
+#include "modifydbclusterendpointrequest.h"
+#include "modifydbclusterendpointresponse.h"
 #include "modifydbclusterparametergrouprequest.h"
 #include "modifydbclusterparametergroupresponse.h"
 #include "modifydbclustersnapshotattributerequest.h"
@@ -135,6 +143,10 @@
 #include "restoredbclusterfromsnapshotresponse.h"
 #include "restoredbclustertopointintimerequest.h"
 #include "restoredbclustertopointintimeresponse.h"
+#include "startdbclusterrequest.h"
+#include "startdbclusterresponse.h"
+#include "stopdbclusterrequest.h"
+#include "stopdbclusterresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -308,10 +320,6 @@ CopyDBClusterParameterGroupResponse * NeptuneClient::copyDBClusterParameterGroup
  *
  * To copy a DB cluster snapshot from a shared manual DB cluster snapshot, <code>SourceDBClusterSnapshotIdentifier</code>
  * must be the Amazon Resource Name (ARN) of the shared DB cluster
- *
- * snapshot>
- *
- * You can't copy from one AWS Region to
  */
 CopyDBClusterSnapshotResponse * NeptuneClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
@@ -343,10 +351,29 @@ CopyDBParameterGroupResponse * NeptuneClient::copyDBParameterGroup(const CopyDBP
  *
  * You can use the <code>ReplicationSourceIdentifier</code> parameter to create the DB cluster as a Read Replica of another
  * DB cluster or Amazon Neptune DB
+ *
+ * instance>
+ *
+ * Note that when you create a new cluster using <code>CreateDBCluster</code> directly, deletion protection is disabled by
+ * default (when you create a new production cluster in the console, deletion protection is enabled by default). You can
+ * only delete a DB cluster if its <code>DeletionProtection</code> field is set to
  */
 CreateDBClusterResponse * NeptuneClient::createDBCluster(const CreateDBClusterRequest &request)
 {
     return qobject_cast<CreateDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * CreateDBClusterEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new custom endpoint and associates it with an Amazon Neptune DB
+ */
+CreateDBClusterEndpointResponse * NeptuneClient::createDBClusterEndpoint(const CreateDBClusterEndpointRequest &request)
+{
+    return qobject_cast<CreateDBClusterEndpointResponse *>(send(request));
 }
 
 /*!
@@ -448,7 +475,7 @@ CreateDBParameterGroupResponse * NeptuneClient::createDBParameterGroup(const Cre
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS
+ * Creates a new DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the Amazon
  */
 CreateDBSubnetGroupResponse * NeptuneClient::createDBSubnetGroup(const CreateDBSubnetGroupRequest &request)
 {
@@ -494,10 +521,28 @@ CreateEventSubscriptionResponse * NeptuneClient::createEventSubscription(const C
  * The DeleteDBCluster action deletes a previously provisioned DB cluster. When you delete a DB cluster, all automated
  * backups for that DB cluster are deleted and can't be recovered. Manual DB cluster snapshots of the specified DB cluster
  * are not
+ *
+ * deleted>
+ *
+ * Note that the DB Cluster cannot be deleted if deletion protection is enabled. To delete it, you must first set its
+ * <code>DeletionProtection</code> field to
  */
 DeleteDBClusterResponse * NeptuneClient::deleteDBCluster(const DeleteDBClusterRequest &request)
 {
     return qobject_cast<DeleteDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * DeleteDBClusterEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a custom endpoint and removes it from an Amazon Neptune DB
+ */
+DeleteDBClusterEndpointResponse * NeptuneClient::deleteDBClusterEndpoint(const DeleteDBClusterEndpointRequest &request)
+{
+    return qobject_cast<DeleteDBClusterEndpointResponse *>(send(request));
 }
 
 /*!
@@ -555,7 +600,7 @@ DeleteDBClusterSnapshotResponse * NeptuneClient::deleteDBClusterSnapshot(const D
  *
  * <code>true</code>>
  *
- * You can't delete a DB instance if it is the only instance in the DB
+ * You can't delete a DB instance if it is the only instance in the DB cluster, or if it has deletion protection
  */
 DeleteDBInstanceResponse * NeptuneClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
 {
@@ -607,6 +652,23 @@ DeleteEventSubscriptionResponse * NeptuneClient::deleteEventSubscription(const D
 
 /*!
  * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * DescribeDBClusterEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about endpoints for an Amazon Neptune DB
+ *
+ * cluster> <note>
+ *
+ * This operation can also return information for Amazon RDS clusters and Amazon DocDB
+ */
+DescribeDBClusterEndpointsResponse * NeptuneClient::describeDBClusterEndpoints(const DescribeDBClusterEndpointsRequest &request)
+{
+    return qobject_cast<DescribeDBClusterEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
  * DescribeDBClusterParameterGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -642,14 +704,14 @@ DescribeDBClusterParametersResponse * NeptuneClient::describeDBClusterParameters
  *
  * snapshot>
  *
- * When sharing snapshots with other AWS accounts, <code>DescribeDBClusterSnapshotAttributes</code> returns the
- * <code>restore</code> attribute and a list of IDs for the AWS accounts that are authorized to copy or restore the manual
- * DB cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code> attribute, then
- * the manual DB cluster snapshot is public and can be copied or restored by all AWS
+ * When sharing snapshots with other Amazon accounts, <code>DescribeDBClusterSnapshotAttributes</code> returns the
+ * <code>restore</code> attribute and a list of IDs for the Amazon accounts that are authorized to copy or restore the
+ * manual DB cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code>
+ * attribute, then the manual DB cluster snapshot is public and can be copied or restored by all Amazon
  *
  * accounts>
  *
- * To add or remove access for an AWS account to copy or restore a manual DB cluster snapshot, or to make the manual DB
+ * To add or remove access for an Amazon account to copy or restore a manual DB cluster snapshot, or to make the manual DB
  * cluster snapshot public or private, use the <a>ModifyDBClusterSnapshotAttribute</a> API
  */
 DescribeDBClusterSnapshotAttributesResponse * NeptuneClient::describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request)
@@ -676,7 +738,11 @@ DescribeDBClusterSnapshotsResponse * NeptuneClient::describeDBClusterSnapshots(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about provisioned DB clusters. This API supports
+ * Returns information about provisioned DB clusters, and supports
+ *
+ * pagination> <note>
+ *
+ * This operation can also return information for Amazon RDS clusters and Amazon DocDB
  */
 DescribeDBClustersResponse * NeptuneClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
@@ -702,7 +768,11 @@ DescribeDBEngineVersionsResponse * NeptuneClient::describeDBEngineVersions(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about provisioned instances. This API supports
+ * Returns information about provisioned instances, and supports
+ *
+ * pagination> <note>
+ *
+ * This operation can also return information for Amazon RDS instances and Amazon DocDB
  */
 DescribeDBInstancesResponse * NeptuneClient::describeDBInstances(const DescribeDBInstancesRequest &request)
 {
@@ -921,6 +991,19 @@ ModifyDBClusterResponse * NeptuneClient::modifyDBCluster(const ModifyDBClusterRe
 
 /*!
  * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * ModifyDBClusterEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the properties of an endpoint in an Amazon Neptune DB
+ */
+ModifyDBClusterEndpointResponse * NeptuneClient::modifyDBClusterEndpoint(const ModifyDBClusterEndpointRequest &request)
+{
+    return qobject_cast<ModifyDBClusterEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
  * ModifyDBClusterParameterGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -959,19 +1042,19 @@ ModifyDBClusterParameterGroupResponse * NeptuneClient::modifyDBClusterParameterG
  *
  * snapshot>
  *
- * To share a manual DB cluster snapshot with other AWS accounts, specify <code>restore</code> as the
- * <code>AttributeName</code> and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the AWS accounts that
- * are authorized to restore the manual DB cluster snapshot. Use the value <code>all</code> to make the manual DB cluster
- * snapshot public, which means that it can be copied or restored by all AWS accounts. Do not add the <code>all</code>
- * value for any manual DB cluster snapshots that contain private information that you don't want available to all AWS
- * accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized
- * AWS account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter
- * in this
+ * To share a manual DB cluster snapshot with other Amazon accounts, specify <code>restore</code> as the
+ * <code>AttributeName</code> and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the Amazon accounts
+ * that are authorized to restore the manual DB cluster snapshot. Use the value <code>all</code> to make the manual DB
+ * cluster snapshot public, which means that it can be copied or restored by all Amazon accounts. Do not add the
+ * <code>all</code> value for any manual DB cluster snapshots that contain private information that you don't want
+ * available to all Amazon accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying
+ * a list of authorized Amazon account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a
+ * value for that parameter in this
  *
  * case>
  *
- * To view which AWS accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster
- * snapshot public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API
+ * To view which Amazon accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB
+ * cluster snapshot public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API
  */
 ModifyDBClusterSnapshotAttributeResponse * NeptuneClient::modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request)
 {
@@ -1029,7 +1112,8 @@ ModifyDBParameterGroupResponse * NeptuneClient::modifyDBParameterGroup(const Mod
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the AWS
+ * Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two AZs in the
+ * Amazon
  */
 ModifyDBSubnetGroupResponse * NeptuneClient::modifyDBSubnetGroup(const ModifyDBSubnetGroupRequest &request)
 {
@@ -1211,6 +1295,38 @@ RestoreDBClusterFromSnapshotResponse * NeptuneClient::restoreDBClusterFromSnapsh
 RestoreDBClusterToPointInTimeResponse * NeptuneClient::restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request)
 {
     return qobject_cast<RestoreDBClusterToPointInTimeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * StartDBClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an Amazon Neptune DB cluster that was stopped using the AWS console, the Amazon CLI stop-db-cluster command, or
+ * the StopDBCluster
+ */
+StartDBClusterResponse * NeptuneClient::startDBCluster(const StartDBClusterRequest &request)
+{
+    return qobject_cast<StartDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the NeptuneClient service, and returns a pointer to an
+ * StopDBClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an Amazon Neptune DB cluster. When you stop a DB cluster, Neptune retains the DB cluster's metadata, including its
+ * endpoints and DB parameter
+ *
+ * groups>
+ *
+ * Neptune also retains the transaction logs so you can do a point-in-time restore if
+ */
+StopDBClusterResponse * NeptuneClient::stopDBCluster(const StopDBClusterRequest &request)
+{
+    return qobject_cast<StopDBClusterResponse *>(send(request));
 }
 
 /*!

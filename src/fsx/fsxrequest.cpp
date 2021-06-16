@@ -36,13 +36,20 @@ namespace FSx {
  * This enum describes the actions that can be performed as FSx
  * requests.
  *
+ * \value AssociateFileSystemAliasesAction FSx AssociateFileSystemAliases action.
+ * \value CancelDataRepositoryTaskAction FSx CancelDataRepositoryTask action.
+ * \value CopyBackupAction FSx CopyBackup action.
  * \value CreateBackupAction FSx CreateBackup action.
+ * \value CreateDataRepositoryTaskAction FSx CreateDataRepositoryTask action.
  * \value CreateFileSystemAction FSx CreateFileSystem action.
  * \value CreateFileSystemFromBackupAction FSx CreateFileSystemFromBackup action.
  * \value DeleteBackupAction FSx DeleteBackup action.
  * \value DeleteFileSystemAction FSx DeleteFileSystem action.
  * \value DescribeBackupsAction FSx DescribeBackups action.
+ * \value DescribeDataRepositoryTasksAction FSx DescribeDataRepositoryTasks action.
+ * \value DescribeFileSystemAliasesAction FSx DescribeFileSystemAliases action.
  * \value DescribeFileSystemsAction FSx DescribeFileSystems action.
+ * \value DisassociateFileSystemAliasesAction FSx DisassociateFileSystemAliases action.
  * \value ListTagsForResourceAction FSx ListTagsForResource action.
  * \value TagResourceAction FSx TagResource action.
  * \value UntagResourceAction FSx UntagResource action.

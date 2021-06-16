@@ -113,6 +113,10 @@ add_library(QtAwsServiceCatalog
   describeportfoliorequest_p.h
   describeportfolioresponse.h
   describeportfolioresponse_p.h
+  describeportfoliosharesrequest.h
+  describeportfoliosharesrequest_p.h
+  describeportfoliosharesresponse.h
+  describeportfoliosharesresponse_p.h
   describeportfoliosharestatusrequest.h
   describeportfoliosharestatusrequest_p.h
   describeportfoliosharestatusresponse.h
@@ -201,6 +205,14 @@ add_library(QtAwsServiceCatalog
   getawsorganizationsaccessstatusrequest_p.h
   getawsorganizationsaccessstatusresponse.h
   getawsorganizationsaccessstatusresponse_p.h
+  getprovisionedproductoutputsrequest.h
+  getprovisionedproductoutputsrequest_p.h
+  getprovisionedproductoutputsresponse.h
+  getprovisionedproductoutputsresponse_p.h
+  importasprovisionedproductrequest.h
+  importasprovisionedproductrequest_p.h
+  importasprovisionedproductresponse.h
+  importasprovisionedproductresponse_p.h
   listacceptedportfoliosharesrequest.h
   listacceptedportfoliosharesrequest_p.h
   listacceptedportfoliosharesresponse.h
@@ -315,6 +327,10 @@ add_library(QtAwsServiceCatalog
   updateportfoliorequest_p.h
   updateportfolioresponse.h
   updateportfolioresponse_p.h
+  updateportfoliosharerequest.h
+  updateportfoliosharerequest_p.h
+  updateportfolioshareresponse.h
+  updateportfolioshareresponse_p.h
   updateproductrequest.h
   updateproductrequest_p.h
   updateproductresponse.h
@@ -395,6 +411,8 @@ add_library(QtAwsServiceCatalog
   describecopyproductstatusresponse.cpp
   describeportfoliorequest.cpp
   describeportfolioresponse.cpp
+  describeportfoliosharesrequest.cpp
+  describeportfoliosharesresponse.cpp
   describeportfoliosharestatusrequest.cpp
   describeportfoliosharestatusresponse.cpp
   describeproductasadminrequest.cpp
@@ -439,6 +457,10 @@ add_library(QtAwsServiceCatalog
   executeprovisionedproductserviceactionresponse.cpp
   getawsorganizationsaccessstatusrequest.cpp
   getawsorganizationsaccessstatusresponse.cpp
+  getprovisionedproductoutputsrequest.cpp
+  getprovisionedproductoutputsresponse.cpp
+  importasprovisionedproductrequest.cpp
+  importasprovisionedproductresponse.cpp
   listacceptedportfoliosharesrequest.cpp
   listacceptedportfoliosharesresponse.cpp
   listbudgetsforresourcerequest.cpp
@@ -496,6 +518,8 @@ add_library(QtAwsServiceCatalog
   updateconstraintresponse.cpp
   updateportfoliorequest.cpp
   updateportfolioresponse.cpp
+  updateportfoliosharerequest.cpp
+  updateportfolioshareresponse.cpp
   updateproductrequest.cpp
   updateproductresponse.cpp
   updateprovisionedproductpropertiesrequest.cpp

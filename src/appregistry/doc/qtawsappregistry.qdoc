@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsAppRegistry
+    \title AppRegistry C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS AppRegistry functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

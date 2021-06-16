@@ -15,6 +15,10 @@ add_library(QtAwsApplicationInsights
   createcomponentrequest_p.h
   createcomponentresponse.h
   createcomponentresponse_p.h
+  createlogpatternrequest.h
+  createlogpatternrequest_p.h
+  createlogpatternresponse.h
+  createlogpatternresponse_p.h
   deleteapplicationrequest.h
   deleteapplicationrequest_p.h
   deleteapplicationresponse.h
@@ -23,6 +27,10 @@ add_library(QtAwsApplicationInsights
   deletecomponentrequest_p.h
   deletecomponentresponse.h
   deletecomponentresponse_p.h
+  deletelogpatternrequest.h
+  deletelogpatternrequest_p.h
+  deletelogpatternresponse.h
+  deletelogpatternresponse_p.h
   describeapplicationrequest.h
   describeapplicationrequest_p.h
   describeapplicationresponse.h
@@ -39,6 +47,10 @@ add_library(QtAwsApplicationInsights
   describecomponentrequest_p.h
   describecomponentresponse.h
   describecomponentresponse_p.h
+  describelogpatternrequest.h
+  describelogpatternrequest_p.h
+  describelogpatternresponse.h
+  describelogpatternresponse_p.h
   describeobservationrequest.h
   describeobservationrequest_p.h
   describeobservationresponse.h
@@ -59,10 +71,38 @@ add_library(QtAwsApplicationInsights
   listcomponentsrequest_p.h
   listcomponentsresponse.h
   listcomponentsresponse_p.h
+  listconfigurationhistoryrequest.h
+  listconfigurationhistoryrequest_p.h
+  listconfigurationhistoryresponse.h
+  listconfigurationhistoryresponse_p.h
+  listlogpatternsetsrequest.h
+  listlogpatternsetsrequest_p.h
+  listlogpatternsetsresponse.h
+  listlogpatternsetsresponse_p.h
+  listlogpatternsrequest.h
+  listlogpatternsrequest_p.h
+  listlogpatternsresponse.h
+  listlogpatternsresponse_p.h
   listproblemsrequest.h
   listproblemsrequest_p.h
   listproblemsresponse.h
   listproblemsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updateapplicationrequest.h
+  updateapplicationrequest_p.h
+  updateapplicationresponse.h
+  updateapplicationresponse_p.h
   updatecomponentconfigurationrequest.h
   updatecomponentconfigurationrequest_p.h
   updatecomponentconfigurationresponse.h
@@ -71,6 +111,10 @@ add_library(QtAwsApplicationInsights
   updatecomponentrequest_p.h
   updatecomponentresponse.h
   updatecomponentresponse_p.h
+  updatelogpatternrequest.h
+  updatelogpatternrequest_p.h
+  updatelogpatternresponse.h
+  updatelogpatternresponse_p.h
   applicationinsightsclient.cpp
   applicationinsightsrequest.cpp
   applicationinsightsresponse.cpp
@@ -78,10 +122,14 @@ add_library(QtAwsApplicationInsights
   createapplicationresponse.cpp
   createcomponentrequest.cpp
   createcomponentresponse.cpp
+  createlogpatternrequest.cpp
+  createlogpatternresponse.cpp
   deleteapplicationrequest.cpp
   deleteapplicationresponse.cpp
   deletecomponentrequest.cpp
   deletecomponentresponse.cpp
+  deletelogpatternrequest.cpp
+  deletelogpatternresponse.cpp
   describeapplicationrequest.cpp
   describeapplicationresponse.cpp
   describecomponentconfigurationrecommendationrequest.cpp
@@ -90,6 +138,8 @@ add_library(QtAwsApplicationInsights
   describecomponentconfigurationresponse.cpp
   describecomponentrequest.cpp
   describecomponentresponse.cpp
+  describelogpatternrequest.cpp
+  describelogpatternresponse.cpp
   describeobservationrequest.cpp
   describeobservationresponse.cpp
   describeproblemobservationsrequest.cpp
@@ -100,12 +150,28 @@ add_library(QtAwsApplicationInsights
   listapplicationsresponse.cpp
   listcomponentsrequest.cpp
   listcomponentsresponse.cpp
+  listconfigurationhistoryrequest.cpp
+  listconfigurationhistoryresponse.cpp
+  listlogpatternsetsrequest.cpp
+  listlogpatternsetsresponse.cpp
+  listlogpatternsrequest.cpp
+  listlogpatternsresponse.cpp
   listproblemsrequest.cpp
   listproblemsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updateapplicationrequest.cpp
+  updateapplicationresponse.cpp
   updatecomponentconfigurationrequest.cpp
   updatecomponentconfigurationresponse.cpp
   updatecomponentrequest.cpp
-  updatecomponentresponse.cpp)
+  updatecomponentresponse.cpp
+  updatelogpatternrequest.cpp
+  updatelogpatternresponse.cpp)
 
 add_dependencies(QtAwsApplicationInsights QtAwsCore)
 

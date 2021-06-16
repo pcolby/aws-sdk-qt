@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsBraket
+description = AWS Braket SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsbraket-index.html"
+navigation.landingtitle = "Braket"
+navigation.cppclassespage = "Braket C++ Classes"

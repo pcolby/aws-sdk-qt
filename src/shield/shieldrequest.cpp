@@ -38,21 +38,36 @@ namespace Shield {
  *
  * \value AssociateDRTLogBucketAction Shield AssociateDRTLogBucket action.
  * \value AssociateDRTRoleAction Shield AssociateDRTRole action.
+ * \value AssociateHealthCheckAction Shield AssociateHealthCheck action.
+ * \value AssociateProactiveEngagementDetailsAction Shield AssociateProactiveEngagementDetails action.
  * \value CreateProtectionAction Shield CreateProtection action.
+ * \value CreateProtectionGroupAction Shield CreateProtectionGroup action.
  * \value CreateSubscriptionAction Shield CreateSubscription action.
  * \value DeleteProtectionAction Shield DeleteProtection action.
+ * \value DeleteProtectionGroupAction Shield DeleteProtectionGroup action.
  * \value DeleteSubscriptionAction Shield DeleteSubscription action.
  * \value DescribeAttackAction Shield DescribeAttack action.
+ * \value DescribeAttackStatisticsAction Shield DescribeAttackStatistics action.
  * \value DescribeDRTAccessAction Shield DescribeDRTAccess action.
  * \value DescribeEmergencyContactSettingsAction Shield DescribeEmergencyContactSettings action.
  * \value DescribeProtectionAction Shield DescribeProtection action.
+ * \value DescribeProtectionGroupAction Shield DescribeProtectionGroup action.
  * \value DescribeSubscriptionAction Shield DescribeSubscription action.
+ * \value DisableProactiveEngagementAction Shield DisableProactiveEngagement action.
  * \value DisassociateDRTLogBucketAction Shield DisassociateDRTLogBucket action.
  * \value DisassociateDRTRoleAction Shield DisassociateDRTRole action.
+ * \value DisassociateHealthCheckAction Shield DisassociateHealthCheck action.
+ * \value EnableProactiveEngagementAction Shield EnableProactiveEngagement action.
  * \value GetSubscriptionStateAction Shield GetSubscriptionState action.
  * \value ListAttacksAction Shield ListAttacks action.
+ * \value ListProtectionGroupsAction Shield ListProtectionGroups action.
  * \value ListProtectionsAction Shield ListProtections action.
+ * \value ListResourcesInProtectionGroupAction Shield ListResourcesInProtectionGroup action.
+ * \value ListTagsForResourceAction Shield ListTagsForResource action.
+ * \value TagResourceAction Shield TagResource action.
+ * \value UntagResourceAction Shield UntagResource action.
  * \value UpdateEmergencyContactSettingsAction Shield UpdateEmergencyContactSettings action.
+ * \value UpdateProtectionGroupAction Shield UpdateProtectionGroup action.
  * \value UpdateSubscriptionAction Shield UpdateSubscription action.
  */
 

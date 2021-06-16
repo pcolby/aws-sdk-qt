@@ -36,15 +36,23 @@ namespace signer {
  * This enum describes the actions that can be performed as signer
  * requests.
  *
+ * \value AddProfilePermissionAction signer AddProfilePermission action.
  * \value CancelSigningProfileAction signer CancelSigningProfile action.
  * \value DescribeSigningJobAction signer DescribeSigningJob action.
  * \value GetSigningPlatformAction signer GetSigningPlatform action.
  * \value GetSigningProfileAction signer GetSigningProfile action.
+ * \value ListProfilePermissionsAction signer ListProfilePermissions action.
  * \value ListSigningJobsAction signer ListSigningJobs action.
  * \value ListSigningPlatformsAction signer ListSigningPlatforms action.
  * \value ListSigningProfilesAction signer ListSigningProfiles action.
+ * \value ListTagsForResourceAction signer ListTagsForResource action.
  * \value PutSigningProfileAction signer PutSigningProfile action.
+ * \value RemoveProfilePermissionAction signer RemoveProfilePermission action.
+ * \value RevokeSignatureAction signer RevokeSignature action.
+ * \value RevokeSigningProfileAction signer RevokeSigningProfile action.
  * \value StartSigningJobAction signer StartSigningJob action.
+ * \value TagResourceAction signer TagResource action.
+ * \value UntagResourceAction signer UntagResource action.
  */
 
 /*!

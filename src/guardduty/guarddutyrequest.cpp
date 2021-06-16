@@ -42,6 +42,7 @@ namespace GuardDuty {
  * \value CreateFilterAction GuardDuty CreateFilter action.
  * \value CreateIPSetAction GuardDuty CreateIPSet action.
  * \value CreateMembersAction GuardDuty CreateMembers action.
+ * \value CreatePublishingDestinationAction GuardDuty CreatePublishingDestination action.
  * \value CreateSampleFindingsAction GuardDuty CreateSampleFindings action.
  * \value CreateThreatIntelSetAction GuardDuty CreateThreatIntelSet action.
  * \value DeclineInvitationsAction GuardDuty DeclineInvitations action.
@@ -50,9 +51,14 @@ namespace GuardDuty {
  * \value DeleteIPSetAction GuardDuty DeleteIPSet action.
  * \value DeleteInvitationsAction GuardDuty DeleteInvitations action.
  * \value DeleteMembersAction GuardDuty DeleteMembers action.
+ * \value DeletePublishingDestinationAction GuardDuty DeletePublishingDestination action.
  * \value DeleteThreatIntelSetAction GuardDuty DeleteThreatIntelSet action.
+ * \value DescribeOrganizationConfigurationAction GuardDuty DescribeOrganizationConfiguration action.
+ * \value DescribePublishingDestinationAction GuardDuty DescribePublishingDestination action.
+ * \value DisableOrganizationAdminAccountAction GuardDuty DisableOrganizationAdminAccount action.
  * \value DisassociateFromMasterAccountAction GuardDuty DisassociateFromMasterAccount action.
  * \value DisassociateMembersAction GuardDuty DisassociateMembers action.
+ * \value EnableOrganizationAdminAccountAction GuardDuty EnableOrganizationAdminAccount action.
  * \value GetDetectorAction GuardDuty GetDetector action.
  * \value GetFilterAction GuardDuty GetFilter action.
  * \value GetFindingsAction GuardDuty GetFindings action.
@@ -60,8 +66,10 @@ namespace GuardDuty {
  * \value GetIPSetAction GuardDuty GetIPSet action.
  * \value GetInvitationsCountAction GuardDuty GetInvitationsCount action.
  * \value GetMasterAccountAction GuardDuty GetMasterAccount action.
+ * \value GetMemberDetectorsAction GuardDuty GetMemberDetectors action.
  * \value GetMembersAction GuardDuty GetMembers action.
  * \value GetThreatIntelSetAction GuardDuty GetThreatIntelSet action.
+ * \value GetUsageStatisticsAction GuardDuty GetUsageStatistics action.
  * \value InviteMembersAction GuardDuty InviteMembers action.
  * \value ListDetectorsAction GuardDuty ListDetectors action.
  * \value ListFiltersAction GuardDuty ListFilters action.
@@ -69,6 +77,8 @@ namespace GuardDuty {
  * \value ListIPSetsAction GuardDuty ListIPSets action.
  * \value ListInvitationsAction GuardDuty ListInvitations action.
  * \value ListMembersAction GuardDuty ListMembers action.
+ * \value ListOrganizationAdminAccountsAction GuardDuty ListOrganizationAdminAccounts action.
+ * \value ListPublishingDestinationsAction GuardDuty ListPublishingDestinations action.
  * \value ListTagsForResourceAction GuardDuty ListTagsForResource action.
  * \value ListThreatIntelSetsAction GuardDuty ListThreatIntelSets action.
  * \value StartMonitoringMembersAction GuardDuty StartMonitoringMembers action.
@@ -80,6 +90,9 @@ namespace GuardDuty {
  * \value UpdateFilterAction GuardDuty UpdateFilter action.
  * \value UpdateFindingsFeedbackAction GuardDuty UpdateFindingsFeedback action.
  * \value UpdateIPSetAction GuardDuty UpdateIPSet action.
+ * \value UpdateMemberDetectorsAction GuardDuty UpdateMemberDetectors action.
+ * \value UpdateOrganizationConfigurationAction GuardDuty UpdateOrganizationConfiguration action.
+ * \value UpdatePublishingDestinationAction GuardDuty UpdatePublishingDestination action.
  * \value UpdateThreatIntelSetAction GuardDuty UpdateThreatIntelSet action.
  */
 

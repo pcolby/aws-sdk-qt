@@ -48,6 +48,7 @@ public:
         CreateSizeConstraintSetAction,
         CreateSqlInjectionMatchSetAction,
         CreateWebACLAction,
+        CreateWebACLMigrationStackAction,
         CreateXssMatchSetAction,
         DeleteByteMatchSetAction,
         DeleteGeoMatchSetAction,

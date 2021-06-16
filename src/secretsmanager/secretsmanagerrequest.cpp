@@ -48,12 +48,16 @@ namespace SecretsManager {
  * \value ListSecretsAction SecretsManager ListSecrets action.
  * \value PutResourcePolicyAction SecretsManager PutResourcePolicy action.
  * \value PutSecretValueAction SecretsManager PutSecretValue action.
+ * \value RemoveRegionsFromReplicationAction SecretsManager RemoveRegionsFromReplication action.
+ * \value ReplicateSecretToRegionsAction SecretsManager ReplicateSecretToRegions action.
  * \value RestoreSecretAction SecretsManager RestoreSecret action.
  * \value RotateSecretAction SecretsManager RotateSecret action.
+ * \value StopReplicationToReplicaAction SecretsManager StopReplicationToReplica action.
  * \value TagResourceAction SecretsManager TagResource action.
  * \value UntagResourceAction SecretsManager UntagResource action.
  * \value UpdateSecretAction SecretsManager UpdateSecret action.
  * \value UpdateSecretVersionStageAction SecretsManager UpdateSecretVersionStage action.
+ * \value ValidateResourcePolicyAction SecretsManager ValidateResourcePolicy action.
  */
 
 /*!

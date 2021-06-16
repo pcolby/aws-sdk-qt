@@ -36,12 +36,19 @@ namespace Health {
  * This enum describes the actions that can be performed as Health
  * requests.
  *
+ * \value DescribeAffectedAccountsForOrganizationAction Health DescribeAffectedAccountsForOrganization action.
  * \value DescribeAffectedEntitiesAction Health DescribeAffectedEntities action.
+ * \value DescribeAffectedEntitiesForOrganizationAction Health DescribeAffectedEntitiesForOrganization action.
  * \value DescribeEntityAggregatesAction Health DescribeEntityAggregates action.
  * \value DescribeEventAggregatesAction Health DescribeEventAggregates action.
  * \value DescribeEventDetailsAction Health DescribeEventDetails action.
+ * \value DescribeEventDetailsForOrganizationAction Health DescribeEventDetailsForOrganization action.
  * \value DescribeEventTypesAction Health DescribeEventTypes action.
  * \value DescribeEventsAction Health DescribeEvents action.
+ * \value DescribeEventsForOrganizationAction Health DescribeEventsForOrganization action.
+ * \value DescribeHealthServiceStatusForOrganizationAction Health DescribeHealthServiceStatusForOrganization action.
+ * \value DisableHealthServiceAccessForOrganizationAction Health DisableHealthServiceAccessForOrganization action.
+ * \value EnableHealthServiceAccessForOrganizationAction Health EnableHealthServiceAccessForOrganization action.
  */
 
 /*!

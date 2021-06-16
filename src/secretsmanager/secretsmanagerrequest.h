@@ -49,12 +49,16 @@ public:
         ListSecretsAction,
         PutResourcePolicyAction,
         PutSecretValueAction,
+        RemoveRegionsFromReplicationAction,
+        ReplicateSecretToRegionsAction,
         RestoreSecretAction,
         RotateSecretAction,
+        StopReplicationToReplicaAction,
         TagResourceAction,
         UntagResourceAction,
         UpdateSecretAction,
         UpdateSecretVersionStageAction,
+        ValidateResourcePolicyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

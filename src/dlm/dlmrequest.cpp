@@ -40,6 +40,9 @@ namespace DLM {
  * \value DeleteLifecyclePolicyAction DLM DeleteLifecyclePolicy action.
  * \value GetLifecyclePoliciesAction DLM GetLifecyclePolicies action.
  * \value GetLifecyclePolicyAction DLM GetLifecyclePolicy action.
+ * \value ListTagsForResourceAction DLM ListTagsForResource action.
+ * \value TagResourceAction DLM TagResource action.
+ * \value UntagResourceAction DLM UntagResource action.
  * \value UpdateLifecyclePolicyAction DLM UpdateLifecyclePolicy action.
  */
 

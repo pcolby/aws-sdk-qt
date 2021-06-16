@@ -1,36 +1,124 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsEks
+  associateencryptionconfigrequest.h
+  associateencryptionconfigrequest_p.h
+  associateencryptionconfigresponse.h
+  associateencryptionconfigresponse_p.h
+  associateidentityproviderconfigrequest.h
+  associateidentityproviderconfigrequest_p.h
+  associateidentityproviderconfigresponse.h
+  associateidentityproviderconfigresponse_p.h
+  createaddonrequest.h
+  createaddonrequest_p.h
+  createaddonresponse.h
+  createaddonresponse_p.h
   createclusterrequest.h
   createclusterrequest_p.h
   createclusterresponse.h
   createclusterresponse_p.h
+  createfargateprofilerequest.h
+  createfargateprofilerequest_p.h
+  createfargateprofileresponse.h
+  createfargateprofileresponse_p.h
+  createnodegrouprequest.h
+  createnodegrouprequest_p.h
+  createnodegroupresponse.h
+  createnodegroupresponse_p.h
+  deleteaddonrequest.h
+  deleteaddonrequest_p.h
+  deleteaddonresponse.h
+  deleteaddonresponse_p.h
   deleteclusterrequest.h
   deleteclusterrequest_p.h
   deleteclusterresponse.h
   deleteclusterresponse_p.h
+  deletefargateprofilerequest.h
+  deletefargateprofilerequest_p.h
+  deletefargateprofileresponse.h
+  deletefargateprofileresponse_p.h
+  deletenodegrouprequest.h
+  deletenodegrouprequest_p.h
+  deletenodegroupresponse.h
+  deletenodegroupresponse_p.h
+  describeaddonrequest.h
+  describeaddonrequest_p.h
+  describeaddonresponse.h
+  describeaddonresponse_p.h
+  describeaddonversionsrequest.h
+  describeaddonversionsrequest_p.h
+  describeaddonversionsresponse.h
+  describeaddonversionsresponse_p.h
   describeclusterrequest.h
   describeclusterrequest_p.h
   describeclusterresponse.h
   describeclusterresponse_p.h
+  describefargateprofilerequest.h
+  describefargateprofilerequest_p.h
+  describefargateprofileresponse.h
+  describefargateprofileresponse_p.h
+  describeidentityproviderconfigrequest.h
+  describeidentityproviderconfigrequest_p.h
+  describeidentityproviderconfigresponse.h
+  describeidentityproviderconfigresponse_p.h
+  describenodegrouprequest.h
+  describenodegrouprequest_p.h
+  describenodegroupresponse.h
+  describenodegroupresponse_p.h
   describeupdaterequest.h
   describeupdaterequest_p.h
   describeupdateresponse.h
   describeupdateresponse_p.h
+  disassociateidentityproviderconfigrequest.h
+  disassociateidentityproviderconfigrequest_p.h
+  disassociateidentityproviderconfigresponse.h
+  disassociateidentityproviderconfigresponse_p.h
   eksclient.h
   eksclient_p.h
   eksrequest.h
   eksrequest_p.h
   eksresponse.h
   eksresponse_p.h
+  listaddonsrequest.h
+  listaddonsrequest_p.h
+  listaddonsresponse.h
+  listaddonsresponse_p.h
   listclustersrequest.h
   listclustersrequest_p.h
   listclustersresponse.h
   listclustersresponse_p.h
+  listfargateprofilesrequest.h
+  listfargateprofilesrequest_p.h
+  listfargateprofilesresponse.h
+  listfargateprofilesresponse_p.h
+  listidentityproviderconfigsrequest.h
+  listidentityproviderconfigsrequest_p.h
+  listidentityproviderconfigsresponse.h
+  listidentityproviderconfigsresponse_p.h
+  listnodegroupsrequest.h
+  listnodegroupsrequest_p.h
+  listnodegroupsresponse.h
+  listnodegroupsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   listupdatesrequest.h
   listupdatesrequest_p.h
   listupdatesresponse.h
   listupdatesresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updateaddonrequest.h
+  updateaddonrequest_p.h
+  updateaddonresponse.h
+  updateaddonresponse_p.h
   updateclusterconfigrequest.h
   updateclusterconfigrequest_p.h
   updateclusterconfigresponse.h
@@ -39,25 +127,81 @@ add_library(QtAwsEks
   updateclusterversionrequest_p.h
   updateclusterversionresponse.h
   updateclusterversionresponse_p.h
+  updatenodegroupconfigrequest.h
+  updatenodegroupconfigrequest_p.h
+  updatenodegroupconfigresponse.h
+  updatenodegroupconfigresponse_p.h
+  updatenodegroupversionrequest.h
+  updatenodegroupversionrequest_p.h
+  updatenodegroupversionresponse.h
+  updatenodegroupversionresponse_p.h
+  associateencryptionconfigrequest.cpp
+  associateencryptionconfigresponse.cpp
+  associateidentityproviderconfigrequest.cpp
+  associateidentityproviderconfigresponse.cpp
+  createaddonrequest.cpp
+  createaddonresponse.cpp
   createclusterrequest.cpp
   createclusterresponse.cpp
+  createfargateprofilerequest.cpp
+  createfargateprofileresponse.cpp
+  createnodegrouprequest.cpp
+  createnodegroupresponse.cpp
+  deleteaddonrequest.cpp
+  deleteaddonresponse.cpp
   deleteclusterrequest.cpp
   deleteclusterresponse.cpp
+  deletefargateprofilerequest.cpp
+  deletefargateprofileresponse.cpp
+  deletenodegrouprequest.cpp
+  deletenodegroupresponse.cpp
+  describeaddonrequest.cpp
+  describeaddonresponse.cpp
+  describeaddonversionsrequest.cpp
+  describeaddonversionsresponse.cpp
   describeclusterrequest.cpp
   describeclusterresponse.cpp
+  describefargateprofilerequest.cpp
+  describefargateprofileresponse.cpp
+  describeidentityproviderconfigrequest.cpp
+  describeidentityproviderconfigresponse.cpp
+  describenodegrouprequest.cpp
+  describenodegroupresponse.cpp
   describeupdaterequest.cpp
   describeupdateresponse.cpp
+  disassociateidentityproviderconfigrequest.cpp
+  disassociateidentityproviderconfigresponse.cpp
   eksclient.cpp
   eksrequest.cpp
   eksresponse.cpp
+  listaddonsrequest.cpp
+  listaddonsresponse.cpp
   listclustersrequest.cpp
   listclustersresponse.cpp
+  listfargateprofilesrequest.cpp
+  listfargateprofilesresponse.cpp
+  listidentityproviderconfigsrequest.cpp
+  listidentityproviderconfigsresponse.cpp
+  listnodegroupsrequest.cpp
+  listnodegroupsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   listupdatesrequest.cpp
   listupdatesresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updateaddonrequest.cpp
+  updateaddonresponse.cpp
   updateclusterconfigrequest.cpp
   updateclusterconfigresponse.cpp
   updateclusterversionrequest.cpp
-  updateclusterversionresponse.cpp)
+  updateclusterversionresponse.cpp
+  updatenodegroupconfigrequest.cpp
+  updatenodegroupconfigresponse.cpp
+  updatenodegroupversionrequest.cpp
+  updatenodegroupversionresponse.cpp)
 
 add_dependencies(QtAwsEks QtAwsCore)
 

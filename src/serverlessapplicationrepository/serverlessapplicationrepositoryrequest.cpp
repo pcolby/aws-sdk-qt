@@ -48,6 +48,7 @@ namespace ServerlessApplicationRepository {
  * \value ListApplicationVersionsAction ServerlessApplicationRepository ListApplicationVersions action.
  * \value ListApplicationsAction ServerlessApplicationRepository ListApplications action.
  * \value PutApplicationPolicyAction ServerlessApplicationRepository PutApplicationPolicy action.
+ * \value UnshareApplicationAction ServerlessApplicationRepository UnshareApplication action.
  * \value UpdateApplicationAction ServerlessApplicationRepository UpdateApplication action.
  */
 

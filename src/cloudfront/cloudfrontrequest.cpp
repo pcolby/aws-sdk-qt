@@ -36,21 +36,36 @@ namespace CloudFront {
  * This enum describes the actions that can be performed as CloudFront
  * requests.
  *
+ * \value CreateCachePolicyAction CloudFront CreateCachePolicy action.
  * \value CreateCloudFrontOriginAccessIdentityAction CloudFront CreateCloudFrontOriginAccessIdentity action.
  * \value CreateDistributionAction CloudFront CreateDistribution action.
  * \value CreateDistributionWithTagsAction CloudFront CreateDistributionWithTags action.
  * \value CreateFieldLevelEncryptionConfigAction CloudFront CreateFieldLevelEncryptionConfig action.
  * \value CreateFieldLevelEncryptionProfileAction CloudFront CreateFieldLevelEncryptionProfile action.
+ * \value CreateFunctionAction CloudFront CreateFunction action.
  * \value CreateInvalidationAction CloudFront CreateInvalidation action.
+ * \value CreateKeyGroupAction CloudFront CreateKeyGroup action.
+ * \value CreateMonitoringSubscriptionAction CloudFront CreateMonitoringSubscription action.
+ * \value CreateOriginRequestPolicyAction CloudFront CreateOriginRequestPolicy action.
  * \value CreatePublicKeyAction CloudFront CreatePublicKey action.
+ * \value CreateRealtimeLogConfigAction CloudFront CreateRealtimeLogConfig action.
  * \value CreateStreamingDistributionAction CloudFront CreateStreamingDistribution action.
  * \value CreateStreamingDistributionWithTagsAction CloudFront CreateStreamingDistributionWithTags action.
+ * \value DeleteCachePolicyAction CloudFront DeleteCachePolicy action.
  * \value DeleteCloudFrontOriginAccessIdentityAction CloudFront DeleteCloudFrontOriginAccessIdentity action.
  * \value DeleteDistributionAction CloudFront DeleteDistribution action.
  * \value DeleteFieldLevelEncryptionConfigAction CloudFront DeleteFieldLevelEncryptionConfig action.
  * \value DeleteFieldLevelEncryptionProfileAction CloudFront DeleteFieldLevelEncryptionProfile action.
+ * \value DeleteFunctionAction CloudFront DeleteFunction action.
+ * \value DeleteKeyGroupAction CloudFront DeleteKeyGroup action.
+ * \value DeleteMonitoringSubscriptionAction CloudFront DeleteMonitoringSubscription action.
+ * \value DeleteOriginRequestPolicyAction CloudFront DeleteOriginRequestPolicy action.
  * \value DeletePublicKeyAction CloudFront DeletePublicKey action.
+ * \value DeleteRealtimeLogConfigAction CloudFront DeleteRealtimeLogConfig action.
  * \value DeleteStreamingDistributionAction CloudFront DeleteStreamingDistribution action.
+ * \value DescribeFunctionAction CloudFront DescribeFunction action.
+ * \value GetCachePolicyAction CloudFront GetCachePolicy action.
+ * \value GetCachePolicyConfigAction CloudFront GetCachePolicyConfig action.
  * \value GetCloudFrontOriginAccessIdentityAction CloudFront GetCloudFrontOriginAccessIdentity action.
  * \value GetCloudFrontOriginAccessIdentityConfigAction CloudFront GetCloudFrontOriginAccessIdentityConfig action.
  * \value GetDistributionAction CloudFront GetDistribution action.
@@ -59,27 +74,50 @@ namespace CloudFront {
  * \value GetFieldLevelEncryptionConfigAction CloudFront GetFieldLevelEncryptionConfig action.
  * \value GetFieldLevelEncryptionProfileAction CloudFront GetFieldLevelEncryptionProfile action.
  * \value GetFieldLevelEncryptionProfileConfigAction CloudFront GetFieldLevelEncryptionProfileConfig action.
+ * \value GetFunctionAction CloudFront GetFunction action.
  * \value GetInvalidationAction CloudFront GetInvalidation action.
+ * \value GetKeyGroupAction CloudFront GetKeyGroup action.
+ * \value GetKeyGroupConfigAction CloudFront GetKeyGroupConfig action.
+ * \value GetMonitoringSubscriptionAction CloudFront GetMonitoringSubscription action.
+ * \value GetOriginRequestPolicyAction CloudFront GetOriginRequestPolicy action.
+ * \value GetOriginRequestPolicyConfigAction CloudFront GetOriginRequestPolicyConfig action.
  * \value GetPublicKeyAction CloudFront GetPublicKey action.
  * \value GetPublicKeyConfigAction CloudFront GetPublicKeyConfig action.
+ * \value GetRealtimeLogConfigAction CloudFront GetRealtimeLogConfig action.
  * \value GetStreamingDistributionAction CloudFront GetStreamingDistribution action.
  * \value GetStreamingDistributionConfigAction CloudFront GetStreamingDistributionConfig action.
+ * \value ListCachePoliciesAction CloudFront ListCachePolicies action.
  * \value ListCloudFrontOriginAccessIdentitiesAction CloudFront ListCloudFrontOriginAccessIdentities action.
  * \value ListDistributionsAction CloudFront ListDistributions action.
+ * \value ListDistributionsByCachePolicyIdAction CloudFront ListDistributionsByCachePolicyId action.
+ * \value ListDistributionsByKeyGroupAction CloudFront ListDistributionsByKeyGroup action.
+ * \value ListDistributionsByOriginRequestPolicyIdAction CloudFront ListDistributionsByOriginRequestPolicyId action.
+ * \value ListDistributionsByRealtimeLogConfigAction CloudFront ListDistributionsByRealtimeLogConfig action.
  * \value ListDistributionsByWebACLIdAction CloudFront ListDistributionsByWebACLId action.
  * \value ListFieldLevelEncryptionConfigsAction CloudFront ListFieldLevelEncryptionConfigs action.
  * \value ListFieldLevelEncryptionProfilesAction CloudFront ListFieldLevelEncryptionProfiles action.
+ * \value ListFunctionsAction CloudFront ListFunctions action.
  * \value ListInvalidationsAction CloudFront ListInvalidations action.
+ * \value ListKeyGroupsAction CloudFront ListKeyGroups action.
+ * \value ListOriginRequestPoliciesAction CloudFront ListOriginRequestPolicies action.
  * \value ListPublicKeysAction CloudFront ListPublicKeys action.
+ * \value ListRealtimeLogConfigsAction CloudFront ListRealtimeLogConfigs action.
  * \value ListStreamingDistributionsAction CloudFront ListStreamingDistributions action.
  * \value ListTagsForResourceAction CloudFront ListTagsForResource action.
+ * \value PublishFunctionAction CloudFront PublishFunction action.
  * \value TagResourceAction CloudFront TagResource action.
+ * \value TestFunctionAction CloudFront TestFunction action.
  * \value UntagResourceAction CloudFront UntagResource action.
+ * \value UpdateCachePolicyAction CloudFront UpdateCachePolicy action.
  * \value UpdateCloudFrontOriginAccessIdentityAction CloudFront UpdateCloudFrontOriginAccessIdentity action.
  * \value UpdateDistributionAction CloudFront UpdateDistribution action.
  * \value UpdateFieldLevelEncryptionConfigAction CloudFront UpdateFieldLevelEncryptionConfig action.
  * \value UpdateFieldLevelEncryptionProfileAction CloudFront UpdateFieldLevelEncryptionProfile action.
+ * \value UpdateFunctionAction CloudFront UpdateFunction action.
+ * \value UpdateKeyGroupAction CloudFront UpdateKeyGroup action.
+ * \value UpdateOriginRequestPolicyAction CloudFront UpdateOriginRequestPolicy action.
  * \value UpdatePublicKeyAction CloudFront UpdatePublicKey action.
+ * \value UpdateRealtimeLogConfigAction CloudFront UpdateRealtimeLogConfig action.
  * \value UpdateStreamingDistributionAction CloudFront UpdateStreamingDistribution action.
  */
 

@@ -28,6 +28,8 @@ namespace QtAws {
 namespace SecurityHub {
 
 class SecurityHubClientPrivate;
+class AcceptAdministratorInvitationRequest;
+class AcceptAdministratorInvitationResponse;
 class AcceptInvitationRequest;
 class AcceptInvitationResponse;
 class BatchDisableStandardsRequest;
@@ -36,6 +38,8 @@ class BatchEnableStandardsRequest;
 class BatchEnableStandardsResponse;
 class BatchImportFindingsRequest;
 class BatchImportFindingsResponse;
+class BatchUpdateFindingsRequest;
+class BatchUpdateFindingsResponse;
 class CreateActionTargetRequest;
 class CreateActionTargetResponse;
 class CreateInsightRequest;
@@ -56,20 +60,34 @@ class DescribeActionTargetsRequest;
 class DescribeActionTargetsResponse;
 class DescribeHubRequest;
 class DescribeHubResponse;
+class DescribeOrganizationConfigurationRequest;
+class DescribeOrganizationConfigurationResponse;
 class DescribeProductsRequest;
 class DescribeProductsResponse;
+class DescribeStandardsRequest;
+class DescribeStandardsResponse;
+class DescribeStandardsControlsRequest;
+class DescribeStandardsControlsResponse;
 class DisableImportFindingsForProductRequest;
 class DisableImportFindingsForProductResponse;
+class DisableOrganizationAdminAccountRequest;
+class DisableOrganizationAdminAccountResponse;
 class DisableSecurityHubRequest;
 class DisableSecurityHubResponse;
+class DisassociateFromAdministratorAccountRequest;
+class DisassociateFromAdministratorAccountResponse;
 class DisassociateFromMasterAccountRequest;
 class DisassociateFromMasterAccountResponse;
 class DisassociateMembersRequest;
 class DisassociateMembersResponse;
 class EnableImportFindingsForProductRequest;
 class EnableImportFindingsForProductResponse;
+class EnableOrganizationAdminAccountRequest;
+class EnableOrganizationAdminAccountResponse;
 class EnableSecurityHubRequest;
 class EnableSecurityHubResponse;
+class GetAdministratorAccountRequest;
+class GetAdministratorAccountResponse;
 class GetEnabledStandardsRequest;
 class GetEnabledStandardsResponse;
 class GetFindingsRequest;
@@ -92,6 +110,8 @@ class ListInvitationsRequest;
 class ListInvitationsResponse;
 class ListMembersRequest;
 class ListMembersResponse;
+class ListOrganizationAdminAccountsRequest;
+class ListOrganizationAdminAccountsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class TagResourceRequest;
@@ -104,6 +124,12 @@ class UpdateFindingsRequest;
 class UpdateFindingsResponse;
 class UpdateInsightRequest;
 class UpdateInsightResponse;
+class UpdateOrganizationConfigurationRequest;
+class UpdateOrganizationConfigurationResponse;
+class UpdateSecurityHubConfigurationRequest;
+class UpdateSecurityHubConfigurationResponse;
+class UpdateStandardsControlRequest;
+class UpdateStandardsControlResponse;
 
 class QTAWS_EXPORT SecurityHubClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -121,10 +147,12 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AcceptAdministratorInvitationResponse * acceptAdministratorInvitation(const AcceptAdministratorInvitationRequest &request);
     AcceptInvitationResponse * acceptInvitation(const AcceptInvitationRequest &request);
     BatchDisableStandardsResponse * batchDisableStandards(const BatchDisableStandardsRequest &request);
     BatchEnableStandardsResponse * batchEnableStandards(const BatchEnableStandardsRequest &request);
     BatchImportFindingsResponse * batchImportFindings(const BatchImportFindingsRequest &request);
+    BatchUpdateFindingsResponse * batchUpdateFindings(const BatchUpdateFindingsRequest &request);
     CreateActionTargetResponse * createActionTarget(const CreateActionTargetRequest &request);
     CreateInsightResponse * createInsight(const CreateInsightRequest &request);
     CreateMembersResponse * createMembers(const CreateMembersRequest &request);
@@ -135,13 +163,20 @@ public slots:
     DeleteMembersResponse * deleteMembers(const DeleteMembersRequest &request);
     DescribeActionTargetsResponse * describeActionTargets(const DescribeActionTargetsRequest &request);
     DescribeHubResponse * describeHub(const DescribeHubRequest &request);
+    DescribeOrganizationConfigurationResponse * describeOrganizationConfiguration(const DescribeOrganizationConfigurationRequest &request);
     DescribeProductsResponse * describeProducts(const DescribeProductsRequest &request);
+    DescribeStandardsResponse * describeStandards(const DescribeStandardsRequest &request);
+    DescribeStandardsControlsResponse * describeStandardsControls(const DescribeStandardsControlsRequest &request);
     DisableImportFindingsForProductResponse * disableImportFindingsForProduct(const DisableImportFindingsForProductRequest &request);
+    DisableOrganizationAdminAccountResponse * disableOrganizationAdminAccount(const DisableOrganizationAdminAccountRequest &request);
     DisableSecurityHubResponse * disableSecurityHub(const DisableSecurityHubRequest &request);
+    DisassociateFromAdministratorAccountResponse * disassociateFromAdministratorAccount(const DisassociateFromAdministratorAccountRequest &request);
     DisassociateFromMasterAccountResponse * disassociateFromMasterAccount(const DisassociateFromMasterAccountRequest &request);
     DisassociateMembersResponse * disassociateMembers(const DisassociateMembersRequest &request);
     EnableImportFindingsForProductResponse * enableImportFindingsForProduct(const EnableImportFindingsForProductRequest &request);
+    EnableOrganizationAdminAccountResponse * enableOrganizationAdminAccount(const EnableOrganizationAdminAccountRequest &request);
     EnableSecurityHubResponse * enableSecurityHub(const EnableSecurityHubRequest &request);
+    GetAdministratorAccountResponse * getAdministratorAccount(const GetAdministratorAccountRequest &request);
     GetEnabledStandardsResponse * getEnabledStandards(const GetEnabledStandardsRequest &request);
     GetFindingsResponse * getFindings(const GetFindingsRequest &request);
     GetInsightResultsResponse * getInsightResults(const GetInsightResultsRequest &request);
@@ -153,12 +188,16 @@ public slots:
     ListEnabledProductsForImportResponse * listEnabledProductsForImport(const ListEnabledProductsForImportRequest &request);
     ListInvitationsResponse * listInvitations(const ListInvitationsRequest &request);
     ListMembersResponse * listMembers(const ListMembersRequest &request);
+    ListOrganizationAdminAccountsResponse * listOrganizationAdminAccounts(const ListOrganizationAdminAccountsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateActionTargetResponse * updateActionTarget(const UpdateActionTargetRequest &request);
     UpdateFindingsResponse * updateFindings(const UpdateFindingsRequest &request);
     UpdateInsightResponse * updateInsight(const UpdateInsightRequest &request);
+    UpdateOrganizationConfigurationResponse * updateOrganizationConfiguration(const UpdateOrganizationConfigurationRequest &request);
+    UpdateSecurityHubConfigurationResponse * updateSecurityHubConfiguration(const UpdateSecurityHubConfigurationRequest &request);
+    UpdateStandardsControlResponse * updateStandardsControl(const UpdateStandardsControlRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SecurityHubClient)

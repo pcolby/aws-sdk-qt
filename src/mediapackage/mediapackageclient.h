@@ -28,8 +28,12 @@ namespace QtAws {
 namespace MediaPackage {
 
 class MediaPackageClientPrivate;
+class ConfigureLogsRequest;
+class ConfigureLogsResponse;
 class CreateChannelRequest;
 class CreateChannelResponse;
+class CreateHarvestJobRequest;
+class CreateHarvestJobResponse;
 class CreateOriginEndpointRequest;
 class CreateOriginEndpointResponse;
 class DeleteChannelRequest;
@@ -38,10 +42,14 @@ class DeleteOriginEndpointRequest;
 class DeleteOriginEndpointResponse;
 class DescribeChannelRequest;
 class DescribeChannelResponse;
+class DescribeHarvestJobRequest;
+class DescribeHarvestJobResponse;
 class DescribeOriginEndpointRequest;
 class DescribeOriginEndpointResponse;
 class ListChannelsRequest;
 class ListChannelsResponse;
+class ListHarvestJobsRequest;
+class ListHarvestJobsResponse;
 class ListOriginEndpointsRequest;
 class ListOriginEndpointsResponse;
 class ListTagsForResourceRequest;
@@ -75,13 +83,17 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    ConfigureLogsResponse * configureLogs(const ConfigureLogsRequest &request);
     CreateChannelResponse * createChannel(const CreateChannelRequest &request);
+    CreateHarvestJobResponse * createHarvestJob(const CreateHarvestJobRequest &request);
     CreateOriginEndpointResponse * createOriginEndpoint(const CreateOriginEndpointRequest &request);
     DeleteChannelResponse * deleteChannel(const DeleteChannelRequest &request);
     DeleteOriginEndpointResponse * deleteOriginEndpoint(const DeleteOriginEndpointRequest &request);
     DescribeChannelResponse * describeChannel(const DescribeChannelRequest &request);
+    DescribeHarvestJobResponse * describeHarvestJob(const DescribeHarvestJobRequest &request);
     DescribeOriginEndpointResponse * describeOriginEndpoint(const DescribeOriginEndpointRequest &request);
     ListChannelsResponse * listChannels(const ListChannelsRequest &request);
+    ListHarvestJobsResponse * listHarvestJobs(const ListHarvestJobsRequest &request);
     ListOriginEndpointsResponse * listOriginEndpoints(const ListOriginEndpointsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RotateChannelCredentialsResponse * rotateChannelCredentials(const RotateChannelCredentialsRequest &request);

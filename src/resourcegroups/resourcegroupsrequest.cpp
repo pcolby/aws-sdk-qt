@@ -39,12 +39,16 @@ namespace ResourceGroups {
  * \value CreateGroupAction ResourceGroups CreateGroup action.
  * \value DeleteGroupAction ResourceGroups DeleteGroup action.
  * \value GetGroupAction ResourceGroups GetGroup action.
+ * \value GetGroupConfigurationAction ResourceGroups GetGroupConfiguration action.
  * \value GetGroupQueryAction ResourceGroups GetGroupQuery action.
  * \value GetTagsAction ResourceGroups GetTags action.
+ * \value GroupResourcesAction ResourceGroups GroupResources action.
  * \value ListGroupResourcesAction ResourceGroups ListGroupResources action.
  * \value ListGroupsAction ResourceGroups ListGroups action.
+ * \value PutGroupConfigurationAction ResourceGroups PutGroupConfiguration action.
  * \value SearchResourcesAction ResourceGroups SearchResources action.
  * \value TagAction ResourceGroups Tag action.
+ * \value UngroupResourcesAction ResourceGroups UngroupResources action.
  * \value UntagAction ResourceGroups Untag action.
  * \value UpdateGroupAction ResourceGroups UpdateGroup action.
  * \value UpdateGroupQueryAction ResourceGroups UpdateGroupQuery action.

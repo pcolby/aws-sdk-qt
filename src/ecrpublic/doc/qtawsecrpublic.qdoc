@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsECRPublic
+    \title ECRPublic C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS ECRPublic functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

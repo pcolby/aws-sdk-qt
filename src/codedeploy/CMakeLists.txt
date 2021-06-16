@@ -75,6 +75,10 @@ add_library(QtAwsCodeDeploy
   deletegithubaccounttokenrequest_p.h
   deletegithubaccounttokenresponse.h
   deletegithubaccounttokenresponse_p.h
+  deleteresourcesbyexternalidrequest.h
+  deleteresourcesbyexternalidrequest_p.h
+  deleteresourcesbyexternalidresponse.h
+  deleteresourcesbyexternalidresponse_p.h
   deregisteronpremisesinstancerequest.h
   deregisteronpremisesinstancerequest_p.h
   deregisteronpremisesinstanceresponse.h
@@ -228,6 +232,8 @@ add_library(QtAwsCodeDeploy
   deletedeploymentgroupresponse.cpp
   deletegithubaccounttokenrequest.cpp
   deletegithubaccounttokenresponse.cpp
+  deleteresourcesbyexternalidrequest.cpp
+  deleteresourcesbyexternalidresponse.cpp
   deregisteronpremisesinstancerequest.cpp
   deregisteronpremisesinstanceresponse.cpp
   getapplicationrequest.cpp

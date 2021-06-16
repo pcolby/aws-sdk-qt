@@ -31,6 +31,8 @@
 #include "deletecorspolicyresponse.h"
 #include "deletelifecyclepolicyrequest.h"
 #include "deletelifecyclepolicyresponse.h"
+#include "deletemetricpolicyrequest.h"
+#include "deletemetricpolicyresponse.h"
 #include "describecontainerrequest.h"
 #include "describecontainerresponse.h"
 #include "getcontainerpolicyrequest.h"
@@ -39,6 +41,8 @@
 #include "getcorspolicyresponse.h"
 #include "getlifecyclepolicyrequest.h"
 #include "getlifecyclepolicyresponse.h"
+#include "getmetricpolicyrequest.h"
+#include "getmetricpolicyresponse.h"
 #include "listcontainersrequest.h"
 #include "listcontainersresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -49,6 +53,8 @@
 #include "putcorspolicyresponse.h"
 #include "putlifecyclepolicyrequest.h"
 #include "putlifecyclepolicyresponse.h"
+#include "putmetricpolicyrequest.h"
+#include "putmetricpolicyresponse.h"
 #include "startaccessloggingrequest.h"
 #include "startaccessloggingresponse.h"
 #include "stopaccessloggingrequest.h"
@@ -210,6 +216,20 @@ DeleteLifecyclePolicyResponse * MediaStoreClient::deleteLifecyclePolicy(const De
 
 /*!
  * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * DeleteMetricPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the metric policy that is associated with the specified container. If there is no metric policy associated with
+ * the container, MediaStore doesn't send metrics to
+ */
+DeleteMetricPolicyResponse * MediaStoreClient::deleteMetricPolicy(const DeleteMetricPolicyRequest &request)
+{
+    return qobject_cast<DeleteMetricPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
  * DescribeContainerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -268,6 +288,19 @@ GetCorsPolicyResponse * MediaStoreClient::getCorsPolicy(const GetCorsPolicyReque
 GetLifecyclePolicyResponse * MediaStoreClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
 {
     return qobject_cast<GetLifecyclePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * GetMetricPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the metric policy for the specified container.
+ */
+GetMetricPolicyResponse * MediaStoreClient::getMetricPolicy(const GetMetricPolicyRequest &request)
+{
+    return qobject_cast<GetMetricPolicyResponse *>(send(request));
 }
 
 /*!
@@ -376,6 +409,20 @@ PutLifecyclePolicyResponse * MediaStoreClient::putLifecyclePolicy(const PutLifec
 
 /*!
  * Sends \a request to the MediaStoreClient service, and returns a pointer to an
+ * PutMetricPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * The metric policy that you want to add to the container. A metric policy allows AWS Elemental MediaStore to send metrics
+ * to Amazon CloudWatch. It takes up to 20 minutes for the new policy to take
+ */
+PutMetricPolicyResponse * MediaStoreClient::putMetricPolicy(const PutMetricPolicyRequest &request)
+{
+    return qobject_cast<PutMetricPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaStoreClient service, and returns a pointer to an
  * StartAccessLoggingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -411,8 +458,8 @@ StopAccessLoggingResponse * MediaStoreClient::stopAccessLogging(const StopAccess
  * Adds tags to the specified AWS Elemental MediaStore container. Tags are key:value pairs that you can associate with AWS
  * resources. For example, the tag key might be "customer" and the tag value might be "companyA." You can specify one or
  * more tags to add to each container. You can add up to 50 tags to each container. For more information about tagging,
- * including naming and usage conventions, see <a href="https://aws.amazon.com/documentation/mediastore/tagging">Tagging
- * Resources in
+ * including naming and usage conventions, see <a
+ * href="https://docs.aws.amazon.com/mediastore/latest/ug/tagging.html">Tagging Resources in
  */
 TagResourceResponse * MediaStoreClient::tagResource(const TagResourceRequest &request)
 {

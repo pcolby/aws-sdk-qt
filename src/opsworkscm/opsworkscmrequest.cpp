@@ -48,8 +48,11 @@ namespace OpsWorksCM {
  * \value DescribeServersAction OpsWorksCM DescribeServers action.
  * \value DisassociateNodeAction OpsWorksCM DisassociateNode action.
  * \value ExportServerEngineAttributeAction OpsWorksCM ExportServerEngineAttribute action.
+ * \value ListTagsForResourceAction OpsWorksCM ListTagsForResource action.
  * \value RestoreServerAction OpsWorksCM RestoreServer action.
  * \value StartMaintenanceAction OpsWorksCM StartMaintenance action.
+ * \value TagResourceAction OpsWorksCM TagResource action.
+ * \value UntagResourceAction OpsWorksCM UntagResource action.
  * \value UpdateServerAction OpsWorksCM UpdateServer action.
  * \value UpdateServerEngineAttributesAction OpsWorksCM UpdateServerEngineAttributes action.
  */

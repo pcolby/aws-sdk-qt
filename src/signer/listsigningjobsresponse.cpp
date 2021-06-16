@@ -33,12 +33,31 @@ namespace signer {
  *
  * \inmodule QtAwssigner
  *
- *  You can use Code Signing for Amazon FreeRTOS (AWS Signer) to sign code that you created for any of the IoT devices that
- *  Amazon Web Services supports. AWS Signer is integrated with Amazon FreeRTOS, AWS Certificate Manager, and AWS
- *  CloudTrail. Amazon FreeRTOS customers can use AWS Signer to sign code images before making them available for
- *  microcontrollers. You can use ACM to import third-party certificates to be used by AWS Signer. For general information
- *  about using AWS Signer, see the <a href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">Code
- *  Signing for Amazon FreeRTOS Developer
+ *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
+ * 
+ *  </p
+ * 
+ *  AWS Signer supports the following
+ * 
+ *  applications>
+ * 
+ *  With <i>code signing for AWS Lambda</i>, you can sign AWS Lambda deployment packages. Integrated support is provided for
+ *  Amazon S3, Amazon CloudWatch, and AWS CloudTrail. In order to sign code, you create a signing profile and then use
+ *  Signer to sign Lambda zip files in S3.
+ * 
+ *  </p
+ * 
+ *  With <i>code signing for IoT</i>, you can sign code for any IoT device that is supported by AWS. IoT code signing is
+ *  available for <a href="http://docs.aws.amazon.com/freertos/latest/userguide/">Amazon FreeRTOS</a> and <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/">AWS IoT Device Management</a>, and is integrated with <a
+ *  href="http://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager (ACM)</a>. In order to sign code, you
+ *  import a third-party code signing certificate using ACM, and use that to sign updates in Amazon FreeRTOS and AWS IoT
+ *  Device Management.
+ * 
+ *  </p
+ * 
+ *  For more information about AWS Signer, see the <a
+ *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
  *
  * \sa signerClient::listSigningJobs
  */

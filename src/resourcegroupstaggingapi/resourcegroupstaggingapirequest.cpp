@@ -36,9 +36,12 @@ namespace ResourceGroupsTaggingAPI {
  * This enum describes the actions that can be performed as ResourceGroupsTaggingAPI
  * requests.
  *
+ * \value DescribeReportCreationAction ResourceGroupsTaggingAPI DescribeReportCreation action.
+ * \value GetComplianceSummaryAction ResourceGroupsTaggingAPI GetComplianceSummary action.
  * \value GetResourcesAction ResourceGroupsTaggingAPI GetResources action.
  * \value GetTagKeysAction ResourceGroupsTaggingAPI GetTagKeys action.
  * \value GetTagValuesAction ResourceGroupsTaggingAPI GetTagValues action.
+ * \value StartReportCreationAction ResourceGroupsTaggingAPI StartReportCreation action.
  * \value TagResourcesAction ResourceGroupsTaggingAPI TagResources action.
  * \value UntagResourcesAction ResourceGroupsTaggingAPI UntagResources action.
  */

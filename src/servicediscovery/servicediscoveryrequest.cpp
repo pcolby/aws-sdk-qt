@@ -53,7 +53,10 @@ namespace ServiceDiscovery {
  * \value ListNamespacesAction ServiceDiscovery ListNamespaces action.
  * \value ListOperationsAction ServiceDiscovery ListOperations action.
  * \value ListServicesAction ServiceDiscovery ListServices action.
+ * \value ListTagsForResourceAction ServiceDiscovery ListTagsForResource action.
  * \value RegisterInstanceAction ServiceDiscovery RegisterInstance action.
+ * \value TagResourceAction ServiceDiscovery TagResource action.
+ * \value UntagResourceAction ServiceDiscovery UntagResource action.
  * \value UpdateInstanceCustomHealthStatusAction ServiceDiscovery UpdateInstanceCustomHealthStatus action.
  * \value UpdateServiceAction ServiceDiscovery UpdateService action.
  */

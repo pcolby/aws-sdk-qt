@@ -136,7 +136,7 @@ PollyClient::PollyClient(
  *
  * APIs>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ * For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
  */
 DeleteLexiconResponse * PollyClient::deleteLexicon(const DeleteLexiconRequest &request)
 {
@@ -184,7 +184,7 @@ DescribeVoicesResponse * PollyClient::describeVoices(const DescribeVoicesRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the content of the specified pronunciation lexicon stored in an AWS Region. For more information, see <a
- * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ * href="https://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
  */
 GetLexiconResponse * PollyClient::getLexicon(const GetLexiconRequest &request)
 {
@@ -212,7 +212,7 @@ GetSpeechSynthesisTaskResponse * PollyClient::getSpeechSynthesisTask(const GetSp
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of pronunciation lexicons stored in an AWS Region. For more information, see <a
- * href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ * href="https://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
  */
 ListLexiconsResponse * PollyClient::listLexicons(const ListLexiconsRequest &request)
 {
@@ -245,7 +245,7 @@ ListSpeechSynthesisTasksResponse * PollyClient::listSpeechSynthesisTasks(const L
  *
  * operation>
  *
- * For more information, see <a href="http://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
+ * For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing
  */
 PutLexiconResponse * PollyClient::putLexicon(const PutLexiconRequest &request)
 {
@@ -278,7 +278,7 @@ StartSpeechSynthesisTaskResponse * PollyClient::startSpeechSynthesisTask(const S
  * Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes. SSML input must be valid, well-formed SSML. Some
  * alphabets might not be available with all the voices (for example, Cyrillic might not be read at all by English voices)
  * unless phoneme mapping is used. For more information, see <a
- * href="http://docs.aws.amazon.com/polly/latest/dg/how-text-to-speech-works.html">How it
+ * href="https://docs.aws.amazon.com/polly/latest/dg/how-text-to-speech-works.html">How it
  */
 SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechRequest &request)
 {

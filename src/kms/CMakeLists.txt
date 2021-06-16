@@ -73,6 +73,14 @@ add_library(QtAwsKms
   encryptrequest_p.h
   encryptresponse.h
   encryptresponse_p.h
+  generatedatakeypairrequest.h
+  generatedatakeypairrequest_p.h
+  generatedatakeypairresponse.h
+  generatedatakeypairresponse_p.h
+  generatedatakeypairwithoutplaintextrequest.h
+  generatedatakeypairwithoutplaintextrequest_p.h
+  generatedatakeypairwithoutplaintextresponse.h
+  generatedatakeypairwithoutplaintextresponse_p.h
   generatedatakeyrequest.h
   generatedatakeyrequest_p.h
   generatedatakeyresponse.h
@@ -97,6 +105,10 @@ add_library(QtAwsKms
   getparametersforimportrequest_p.h
   getparametersforimportresponse.h
   getparametersforimportresponse_p.h
+  getpublickeyrequest.h
+  getpublickeyrequest_p.h
+  getpublickeyresponse.h
+  getpublickeyresponse_p.h
   importkeymaterialrequest.h
   importkeymaterialrequest_p.h
   importkeymaterialresponse.h
@@ -151,6 +163,10 @@ add_library(QtAwsKms
   schedulekeydeletionrequest_p.h
   schedulekeydeletionresponse.h
   schedulekeydeletionresponse_p.h
+  signrequest.h
+  signrequest_p.h
+  signresponse.h
+  signresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -171,6 +187,10 @@ add_library(QtAwsKms
   updatekeydescriptionrequest_p.h
   updatekeydescriptionresponse.h
   updatekeydescriptionresponse_p.h
+  verifyrequest.h
+  verifyrequest_p.h
+  verifyresponse.h
+  verifyresponse_p.h
   cancelkeydeletionrequest.cpp
   cancelkeydeletionresponse.cpp
   connectcustomkeystorerequest.cpp
@@ -207,6 +227,10 @@ add_library(QtAwsKms
   enablekeyrotationresponse.cpp
   encryptrequest.cpp
   encryptresponse.cpp
+  generatedatakeypairrequest.cpp
+  generatedatakeypairresponse.cpp
+  generatedatakeypairwithoutplaintextrequest.cpp
+  generatedatakeypairwithoutplaintextresponse.cpp
   generatedatakeyrequest.cpp
   generatedatakeyresponse.cpp
   generatedatakeywithoutplaintextrequest.cpp
@@ -219,6 +243,8 @@ add_library(QtAwsKms
   getkeyrotationstatusresponse.cpp
   getparametersforimportrequest.cpp
   getparametersforimportresponse.cpp
+  getpublickeyrequest.cpp
+  getpublickeyresponse.cpp
   importkeymaterialrequest.cpp
   importkeymaterialresponse.cpp
   kmsclient.cpp
@@ -246,6 +272,8 @@ add_library(QtAwsKms
   revokegrantresponse.cpp
   schedulekeydeletionrequest.cpp
   schedulekeydeletionresponse.cpp
+  signrequest.cpp
+  signresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
@@ -255,7 +283,9 @@ add_library(QtAwsKms
   updatecustomkeystorerequest.cpp
   updatecustomkeystoreresponse.cpp
   updatekeydescriptionrequest.cpp
-  updatekeydescriptionresponse.cpp)
+  updatekeydescriptionresponse.cpp
+  verifyrequest.cpp
+  verifyresponse.cpp)
 
 add_dependencies(QtAwsKms QtAwsCore)
 

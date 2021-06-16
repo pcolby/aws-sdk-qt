@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsMwaa
+    \title MWAA C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS MWAA functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

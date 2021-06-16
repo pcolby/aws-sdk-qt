@@ -41,6 +41,8 @@ namespace DeviceFarm {
  * \value CreateNetworkProfileAction DeviceFarm CreateNetworkProfile action.
  * \value CreateProjectAction DeviceFarm CreateProject action.
  * \value CreateRemoteAccessSessionAction DeviceFarm CreateRemoteAccessSession action.
+ * \value CreateTestGridProjectAction DeviceFarm CreateTestGridProject action.
+ * \value CreateTestGridUrlAction DeviceFarm CreateTestGridUrl action.
  * \value CreateUploadAction DeviceFarm CreateUpload action.
  * \value CreateVPCEConfigurationAction DeviceFarm CreateVPCEConfiguration action.
  * \value DeleteDevicePoolAction DeviceFarm DeleteDevicePool action.
@@ -49,6 +51,7 @@ namespace DeviceFarm {
  * \value DeleteProjectAction DeviceFarm DeleteProject action.
  * \value DeleteRemoteAccessSessionAction DeviceFarm DeleteRemoteAccessSession action.
  * \value DeleteRunAction DeviceFarm DeleteRun action.
+ * \value DeleteTestGridProjectAction DeviceFarm DeleteTestGridProject action.
  * \value DeleteUploadAction DeviceFarm DeleteUpload action.
  * \value DeleteVPCEConfigurationAction DeviceFarm DeleteVPCEConfiguration action.
  * \value GetAccountSettingsAction DeviceFarm GetAccountSettings action.
@@ -65,6 +68,8 @@ namespace DeviceFarm {
  * \value GetRunAction DeviceFarm GetRun action.
  * \value GetSuiteAction DeviceFarm GetSuite action.
  * \value GetTestAction DeviceFarm GetTest action.
+ * \value GetTestGridProjectAction DeviceFarm GetTestGridProject action.
+ * \value GetTestGridSessionAction DeviceFarm GetTestGridSession action.
  * \value GetUploadAction DeviceFarm GetUpload action.
  * \value GetVPCEConfigurationAction DeviceFarm GetVPCEConfiguration action.
  * \value InstallToRemoteAccessSessionAction DeviceFarm InstallToRemoteAccessSession action.
@@ -84,6 +89,10 @@ namespace DeviceFarm {
  * \value ListSamplesAction DeviceFarm ListSamples action.
  * \value ListSuitesAction DeviceFarm ListSuites action.
  * \value ListTagsForResourceAction DeviceFarm ListTagsForResource action.
+ * \value ListTestGridProjectsAction DeviceFarm ListTestGridProjects action.
+ * \value ListTestGridSessionActionsAction DeviceFarm ListTestGridSessionActions action.
+ * \value ListTestGridSessionArtifactsAction DeviceFarm ListTestGridSessionArtifacts action.
+ * \value ListTestGridSessionsAction DeviceFarm ListTestGridSessions action.
  * \value ListTestsAction DeviceFarm ListTests action.
  * \value ListUniqueProblemsAction DeviceFarm ListUniqueProblems action.
  * \value ListUploadsAction DeviceFarm ListUploads action.
@@ -101,6 +110,7 @@ namespace DeviceFarm {
  * \value UpdateInstanceProfileAction DeviceFarm UpdateInstanceProfile action.
  * \value UpdateNetworkProfileAction DeviceFarm UpdateNetworkProfile action.
  * \value UpdateProjectAction DeviceFarm UpdateProject action.
+ * \value UpdateTestGridProjectAction DeviceFarm UpdateTestGridProject action.
  * \value UpdateUploadAction DeviceFarm UpdateUpload action.
  * \value UpdateVPCEConfigurationAction DeviceFarm UpdateVPCEConfiguration action.
  */

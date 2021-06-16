@@ -36,13 +36,37 @@ namespace MediaTailor {
  * This enum describes the actions that can be performed as MediaTailor
  * requests.
  *
+ * \value CreateChannelAction MediaTailor CreateChannel action.
+ * \value CreateProgramAction MediaTailor CreateProgram action.
+ * \value CreateSourceLocationAction MediaTailor CreateSourceLocation action.
+ * \value CreateVodSourceAction MediaTailor CreateVodSource action.
+ * \value DeleteChannelAction MediaTailor DeleteChannel action.
+ * \value DeleteChannelPolicyAction MediaTailor DeleteChannelPolicy action.
  * \value DeletePlaybackConfigurationAction MediaTailor DeletePlaybackConfiguration action.
+ * \value DeleteProgramAction MediaTailor DeleteProgram action.
+ * \value DeleteSourceLocationAction MediaTailor DeleteSourceLocation action.
+ * \value DeleteVodSourceAction MediaTailor DeleteVodSource action.
+ * \value DescribeChannelAction MediaTailor DescribeChannel action.
+ * \value DescribeProgramAction MediaTailor DescribeProgram action.
+ * \value DescribeSourceLocationAction MediaTailor DescribeSourceLocation action.
+ * \value DescribeVodSourceAction MediaTailor DescribeVodSource action.
+ * \value GetChannelPolicyAction MediaTailor GetChannelPolicy action.
+ * \value GetChannelScheduleAction MediaTailor GetChannelSchedule action.
  * \value GetPlaybackConfigurationAction MediaTailor GetPlaybackConfiguration action.
+ * \value ListChannelsAction MediaTailor ListChannels action.
  * \value ListPlaybackConfigurationsAction MediaTailor ListPlaybackConfigurations action.
+ * \value ListSourceLocationsAction MediaTailor ListSourceLocations action.
  * \value ListTagsForResourceAction MediaTailor ListTagsForResource action.
+ * \value ListVodSourcesAction MediaTailor ListVodSources action.
+ * \value PutChannelPolicyAction MediaTailor PutChannelPolicy action.
  * \value PutPlaybackConfigurationAction MediaTailor PutPlaybackConfiguration action.
+ * \value StartChannelAction MediaTailor StartChannel action.
+ * \value StopChannelAction MediaTailor StopChannel action.
  * \value TagResourceAction MediaTailor TagResource action.
  * \value UntagResourceAction MediaTailor UntagResource action.
+ * \value UpdateChannelAction MediaTailor UpdateChannel action.
+ * \value UpdateSourceLocationAction MediaTailor UpdateSourceLocation action.
+ * \value UpdateVodSourceAction MediaTailor UpdateVodSource action.
  */
 
 /*!

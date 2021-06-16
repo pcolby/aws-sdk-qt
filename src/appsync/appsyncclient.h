@@ -28,6 +28,8 @@ namespace QtAws {
 namespace AppSync {
 
 class AppSyncClientPrivate;
+class CreateApiCacheRequest;
+class CreateApiCacheResponse;
 class CreateApiKeyRequest;
 class CreateApiKeyResponse;
 class CreateDataSourceRequest;
@@ -40,6 +42,8 @@ class CreateResolverRequest;
 class CreateResolverResponse;
 class CreateTypeRequest;
 class CreateTypeResponse;
+class DeleteApiCacheRequest;
+class DeleteApiCacheResponse;
 class DeleteApiKeyRequest;
 class DeleteApiKeyResponse;
 class DeleteDataSourceRequest;
@@ -52,6 +56,10 @@ class DeleteResolverRequest;
 class DeleteResolverResponse;
 class DeleteTypeRequest;
 class DeleteTypeResponse;
+class FlushApiCacheRequest;
+class FlushApiCacheResponse;
+class GetApiCacheRequest;
+class GetApiCacheResponse;
 class GetDataSourceRequest;
 class GetDataSourceResponse;
 class GetFunctionRequest;
@@ -88,6 +96,8 @@ class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateApiCacheRequest;
+class UpdateApiCacheResponse;
 class UpdateApiKeyRequest;
 class UpdateApiKeyResponse;
 class UpdateDataSourceRequest;
@@ -117,18 +127,22 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateApiCacheResponse * createApiCache(const CreateApiCacheRequest &request);
     CreateApiKeyResponse * createApiKey(const CreateApiKeyRequest &request);
     CreateDataSourceResponse * createDataSource(const CreateDataSourceRequest &request);
     CreateFunctionResponse * createFunction(const CreateFunctionRequest &request);
     CreateGraphqlApiResponse * createGraphqlApi(const CreateGraphqlApiRequest &request);
     CreateResolverResponse * createResolver(const CreateResolverRequest &request);
     CreateTypeResponse * createType(const CreateTypeRequest &request);
+    DeleteApiCacheResponse * deleteApiCache(const DeleteApiCacheRequest &request);
     DeleteApiKeyResponse * deleteApiKey(const DeleteApiKeyRequest &request);
     DeleteDataSourceResponse * deleteDataSource(const DeleteDataSourceRequest &request);
     DeleteFunctionResponse * deleteFunction(const DeleteFunctionRequest &request);
     DeleteGraphqlApiResponse * deleteGraphqlApi(const DeleteGraphqlApiRequest &request);
     DeleteResolverResponse * deleteResolver(const DeleteResolverRequest &request);
     DeleteTypeResponse * deleteType(const DeleteTypeRequest &request);
+    FlushApiCacheResponse * flushApiCache(const FlushApiCacheRequest &request);
+    GetApiCacheResponse * getApiCache(const GetApiCacheRequest &request);
     GetDataSourceResponse * getDataSource(const GetDataSourceRequest &request);
     GetFunctionResponse * getFunction(const GetFunctionRequest &request);
     GetGraphqlApiResponse * getGraphqlApi(const GetGraphqlApiRequest &request);
@@ -147,6 +161,7 @@ public slots:
     StartSchemaCreationResponse * startSchemaCreation(const StartSchemaCreationRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateApiCacheResponse * updateApiCache(const UpdateApiCacheRequest &request);
     UpdateApiKeyResponse * updateApiKey(const UpdateApiKeyRequest &request);
     UpdateDataSourceResponse * updateDataSource(const UpdateDataSourceRequest &request);
     UpdateFunctionResponse * updateFunction(const UpdateFunctionRequest &request);

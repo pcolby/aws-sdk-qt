@@ -28,20 +28,68 @@ namespace QtAws {
 namespace MediaTailor {
 
 class MediaTailorClientPrivate;
+class CreateChannelRequest;
+class CreateChannelResponse;
+class CreateProgramRequest;
+class CreateProgramResponse;
+class CreateSourceLocationRequest;
+class CreateSourceLocationResponse;
+class CreateVodSourceRequest;
+class CreateVodSourceResponse;
+class DeleteChannelRequest;
+class DeleteChannelResponse;
+class DeleteChannelPolicyRequest;
+class DeleteChannelPolicyResponse;
 class DeletePlaybackConfigurationRequest;
 class DeletePlaybackConfigurationResponse;
+class DeleteProgramRequest;
+class DeleteProgramResponse;
+class DeleteSourceLocationRequest;
+class DeleteSourceLocationResponse;
+class DeleteVodSourceRequest;
+class DeleteVodSourceResponse;
+class DescribeChannelRequest;
+class DescribeChannelResponse;
+class DescribeProgramRequest;
+class DescribeProgramResponse;
+class DescribeSourceLocationRequest;
+class DescribeSourceLocationResponse;
+class DescribeVodSourceRequest;
+class DescribeVodSourceResponse;
+class GetChannelPolicyRequest;
+class GetChannelPolicyResponse;
+class GetChannelScheduleRequest;
+class GetChannelScheduleResponse;
 class GetPlaybackConfigurationRequest;
 class GetPlaybackConfigurationResponse;
+class ListChannelsRequest;
+class ListChannelsResponse;
 class ListPlaybackConfigurationsRequest;
 class ListPlaybackConfigurationsResponse;
+class ListSourceLocationsRequest;
+class ListSourceLocationsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class ListVodSourcesRequest;
+class ListVodSourcesResponse;
+class PutChannelPolicyRequest;
+class PutChannelPolicyResponse;
 class PutPlaybackConfigurationRequest;
 class PutPlaybackConfigurationResponse;
+class StartChannelRequest;
+class StartChannelResponse;
+class StopChannelRequest;
+class StopChannelResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateChannelRequest;
+class UpdateChannelResponse;
+class UpdateSourceLocationRequest;
+class UpdateSourceLocationResponse;
+class UpdateVodSourceRequest;
+class UpdateVodSourceResponse;
 
 class QTAWS_EXPORT MediaTailorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -59,13 +107,37 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateChannelResponse * createChannel(const CreateChannelRequest &request);
+    CreateProgramResponse * createProgram(const CreateProgramRequest &request);
+    CreateSourceLocationResponse * createSourceLocation(const CreateSourceLocationRequest &request);
+    CreateVodSourceResponse * createVodSource(const CreateVodSourceRequest &request);
+    DeleteChannelResponse * deleteChannel(const DeleteChannelRequest &request);
+    DeleteChannelPolicyResponse * deleteChannelPolicy(const DeleteChannelPolicyRequest &request);
     DeletePlaybackConfigurationResponse * deletePlaybackConfiguration(const DeletePlaybackConfigurationRequest &request);
+    DeleteProgramResponse * deleteProgram(const DeleteProgramRequest &request);
+    DeleteSourceLocationResponse * deleteSourceLocation(const DeleteSourceLocationRequest &request);
+    DeleteVodSourceResponse * deleteVodSource(const DeleteVodSourceRequest &request);
+    DescribeChannelResponse * describeChannel(const DescribeChannelRequest &request);
+    DescribeProgramResponse * describeProgram(const DescribeProgramRequest &request);
+    DescribeSourceLocationResponse * describeSourceLocation(const DescribeSourceLocationRequest &request);
+    DescribeVodSourceResponse * describeVodSource(const DescribeVodSourceRequest &request);
+    GetChannelPolicyResponse * getChannelPolicy(const GetChannelPolicyRequest &request);
+    GetChannelScheduleResponse * getChannelSchedule(const GetChannelScheduleRequest &request);
     GetPlaybackConfigurationResponse * getPlaybackConfiguration(const GetPlaybackConfigurationRequest &request);
+    ListChannelsResponse * listChannels(const ListChannelsRequest &request);
     ListPlaybackConfigurationsResponse * listPlaybackConfigurations(const ListPlaybackConfigurationsRequest &request);
+    ListSourceLocationsResponse * listSourceLocations(const ListSourceLocationsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    ListVodSourcesResponse * listVodSources(const ListVodSourcesRequest &request);
+    PutChannelPolicyResponse * putChannelPolicy(const PutChannelPolicyRequest &request);
     PutPlaybackConfigurationResponse * putPlaybackConfiguration(const PutPlaybackConfigurationRequest &request);
+    StartChannelResponse * startChannel(const StartChannelRequest &request);
+    StopChannelResponse * stopChannel(const StopChannelRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateChannelResponse * updateChannel(const UpdateChannelRequest &request);
+    UpdateSourceLocationResponse * updateSourceLocation(const UpdateSourceLocationRequest &request);
+    UpdateVodSourceResponse * updateVodSource(const UpdateVodSourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaTailorClient)

@@ -7,6 +7,10 @@ add_library(QtAwsAppMesh
   appmeshrequest_p.h
   appmeshresponse.h
   appmeshresponse_p.h
+  creategatewayrouterequest.h
+  creategatewayrouterequest_p.h
+  creategatewayrouteresponse.h
+  creategatewayrouteresponse_p.h
   createmeshrequest.h
   createmeshrequest_p.h
   createmeshresponse.h
@@ -15,6 +19,10 @@ add_library(QtAwsAppMesh
   createrouterequest_p.h
   createrouteresponse.h
   createrouteresponse_p.h
+  createvirtualgatewayrequest.h
+  createvirtualgatewayrequest_p.h
+  createvirtualgatewayresponse.h
+  createvirtualgatewayresponse_p.h
   createvirtualnoderequest.h
   createvirtualnoderequest_p.h
   createvirtualnoderesponse.h
@@ -27,6 +35,10 @@ add_library(QtAwsAppMesh
   createvirtualservicerequest_p.h
   createvirtualserviceresponse.h
   createvirtualserviceresponse_p.h
+  deletegatewayrouterequest.h
+  deletegatewayrouterequest_p.h
+  deletegatewayrouteresponse.h
+  deletegatewayrouteresponse_p.h
   deletemeshrequest.h
   deletemeshrequest_p.h
   deletemeshresponse.h
@@ -35,6 +47,10 @@ add_library(QtAwsAppMesh
   deleterouterequest_p.h
   deleterouteresponse.h
   deleterouteresponse_p.h
+  deletevirtualgatewayrequest.h
+  deletevirtualgatewayrequest_p.h
+  deletevirtualgatewayresponse.h
+  deletevirtualgatewayresponse_p.h
   deletevirtualnoderequest.h
   deletevirtualnoderequest_p.h
   deletevirtualnoderesponse.h
@@ -47,6 +63,10 @@ add_library(QtAwsAppMesh
   deletevirtualservicerequest_p.h
   deletevirtualserviceresponse.h
   deletevirtualserviceresponse_p.h
+  describegatewayrouterequest.h
+  describegatewayrouterequest_p.h
+  describegatewayrouteresponse.h
+  describegatewayrouteresponse_p.h
   describemeshrequest.h
   describemeshrequest_p.h
   describemeshresponse.h
@@ -55,6 +75,10 @@ add_library(QtAwsAppMesh
   describerouterequest_p.h
   describerouteresponse.h
   describerouteresponse_p.h
+  describevirtualgatewayrequest.h
+  describevirtualgatewayrequest_p.h
+  describevirtualgatewayresponse.h
+  describevirtualgatewayresponse_p.h
   describevirtualnoderequest.h
   describevirtualnoderequest_p.h
   describevirtualnoderesponse.h
@@ -67,6 +91,10 @@ add_library(QtAwsAppMesh
   describevirtualservicerequest_p.h
   describevirtualserviceresponse.h
   describevirtualserviceresponse_p.h
+  listgatewayroutesrequest.h
+  listgatewayroutesrequest_p.h
+  listgatewayroutesresponse.h
+  listgatewayroutesresponse_p.h
   listmeshesrequest.h
   listmeshesrequest_p.h
   listmeshesresponse.h
@@ -79,6 +107,10 @@ add_library(QtAwsAppMesh
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listvirtualgatewaysrequest.h
+  listvirtualgatewaysrequest_p.h
+  listvirtualgatewaysresponse.h
+  listvirtualgatewaysresponse_p.h
   listvirtualnodesrequest.h
   listvirtualnodesrequest_p.h
   listvirtualnodesresponse.h
@@ -99,6 +131,10 @@ add_library(QtAwsAppMesh
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updategatewayrouterequest.h
+  updategatewayrouterequest_p.h
+  updategatewayrouteresponse.h
+  updategatewayrouteresponse_p.h
   updatemeshrequest.h
   updatemeshrequest_p.h
   updatemeshresponse.h
@@ -107,6 +143,10 @@ add_library(QtAwsAppMesh
   updaterouterequest_p.h
   updaterouteresponse.h
   updaterouteresponse_p.h
+  updatevirtualgatewayrequest.h
+  updatevirtualgatewayrequest_p.h
+  updatevirtualgatewayresponse.h
+  updatevirtualgatewayresponse_p.h
   updatevirtualnoderequest.h
   updatevirtualnoderequest_p.h
   updatevirtualnoderesponse.h
@@ -122,42 +162,58 @@ add_library(QtAwsAppMesh
   appmeshclient.cpp
   appmeshrequest.cpp
   appmeshresponse.cpp
+  creategatewayrouterequest.cpp
+  creategatewayrouteresponse.cpp
   createmeshrequest.cpp
   createmeshresponse.cpp
   createrouterequest.cpp
   createrouteresponse.cpp
+  createvirtualgatewayrequest.cpp
+  createvirtualgatewayresponse.cpp
   createvirtualnoderequest.cpp
   createvirtualnoderesponse.cpp
   createvirtualrouterrequest.cpp
   createvirtualrouterresponse.cpp
   createvirtualservicerequest.cpp
   createvirtualserviceresponse.cpp
+  deletegatewayrouterequest.cpp
+  deletegatewayrouteresponse.cpp
   deletemeshrequest.cpp
   deletemeshresponse.cpp
   deleterouterequest.cpp
   deleterouteresponse.cpp
+  deletevirtualgatewayrequest.cpp
+  deletevirtualgatewayresponse.cpp
   deletevirtualnoderequest.cpp
   deletevirtualnoderesponse.cpp
   deletevirtualrouterrequest.cpp
   deletevirtualrouterresponse.cpp
   deletevirtualservicerequest.cpp
   deletevirtualserviceresponse.cpp
+  describegatewayrouterequest.cpp
+  describegatewayrouteresponse.cpp
   describemeshrequest.cpp
   describemeshresponse.cpp
   describerouterequest.cpp
   describerouteresponse.cpp
+  describevirtualgatewayrequest.cpp
+  describevirtualgatewayresponse.cpp
   describevirtualnoderequest.cpp
   describevirtualnoderesponse.cpp
   describevirtualrouterrequest.cpp
   describevirtualrouterresponse.cpp
   describevirtualservicerequest.cpp
   describevirtualserviceresponse.cpp
+  listgatewayroutesrequest.cpp
+  listgatewayroutesresponse.cpp
   listmeshesrequest.cpp
   listmeshesresponse.cpp
   listroutesrequest.cpp
   listroutesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listvirtualgatewaysrequest.cpp
+  listvirtualgatewaysresponse.cpp
   listvirtualnodesrequest.cpp
   listvirtualnodesresponse.cpp
   listvirtualroutersrequest.cpp
@@ -168,10 +224,14 @@ add_library(QtAwsAppMesh
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updategatewayrouterequest.cpp
+  updategatewayrouteresponse.cpp
   updatemeshrequest.cpp
   updatemeshresponse.cpp
   updaterouterequest.cpp
   updaterouteresponse.cpp
+  updatevirtualgatewayrequest.cpp
+  updatevirtualgatewayresponse.cpp
   updatevirtualnoderequest.cpp
   updatevirtualnoderesponse.cpp
   updatevirtualrouterrequest.cpp

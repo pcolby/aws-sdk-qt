@@ -37,14 +37,36 @@ class QTAWS_EXPORT CostExplorerRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by CostExplorer.
     enum Action {
+        CreateAnomalyMonitorAction,
+        CreateAnomalySubscriptionAction,
+        CreateCostCategoryDefinitionAction,
+        DeleteAnomalyMonitorAction,
+        DeleteAnomalySubscriptionAction,
+        DeleteCostCategoryDefinitionAction,
+        DescribeCostCategoryDefinitionAction,
+        GetAnomaliesAction,
+        GetAnomalyMonitorsAction,
+        GetAnomalySubscriptionsAction,
         GetCostAndUsageAction,
+        GetCostAndUsageWithResourcesAction,
+        GetCostCategoriesAction,
         GetCostForecastAction,
         GetDimensionValuesAction,
         GetReservationCoverageAction,
         GetReservationPurchaseRecommendationAction,
         GetReservationUtilizationAction,
+        GetRightsizingRecommendationAction,
+        GetSavingsPlansCoverageAction,
+        GetSavingsPlansPurchaseRecommendationAction,
+        GetSavingsPlansUtilizationAction,
+        GetSavingsPlansUtilizationDetailsAction,
         GetTagsAction,
         GetUsageForecastAction,
+        ListCostCategoryDefinitionsAction,
+        ProvideAnomalyFeedbackAction,
+        UpdateAnomalyMonitorAction,
+        UpdateAnomalySubscriptionAction,
+        UpdateCostCategoryDefinitionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

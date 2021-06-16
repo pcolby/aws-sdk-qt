@@ -38,62 +38,187 @@ namespace Chime {
  *
  * \value AssociatePhoneNumberWithUserAction Chime AssociatePhoneNumberWithUser action.
  * \value AssociatePhoneNumbersWithVoiceConnectorAction Chime AssociatePhoneNumbersWithVoiceConnector action.
+ * \value AssociatePhoneNumbersWithVoiceConnectorGroupAction Chime AssociatePhoneNumbersWithVoiceConnectorGroup action.
+ * \value AssociateSigninDelegateGroupsWithAccountAction Chime AssociateSigninDelegateGroupsWithAccount action.
+ * \value BatchCreateAttendeeAction Chime BatchCreateAttendee action.
+ * \value BatchCreateChannelMembershipAction Chime BatchCreateChannelMembership action.
+ * \value BatchCreateRoomMembershipAction Chime BatchCreateRoomMembership action.
  * \value BatchDeletePhoneNumberAction Chime BatchDeletePhoneNumber action.
  * \value BatchSuspendUserAction Chime BatchSuspendUser action.
  * \value BatchUnsuspendUserAction Chime BatchUnsuspendUser action.
  * \value BatchUpdatePhoneNumberAction Chime BatchUpdatePhoneNumber action.
  * \value BatchUpdateUserAction Chime BatchUpdateUser action.
  * \value CreateAccountAction Chime CreateAccount action.
+ * \value CreateAppInstanceAction Chime CreateAppInstance action.
+ * \value CreateAppInstanceAdminAction Chime CreateAppInstanceAdmin action.
+ * \value CreateAppInstanceUserAction Chime CreateAppInstanceUser action.
+ * \value CreateAttendeeAction Chime CreateAttendee action.
  * \value CreateBotAction Chime CreateBot action.
+ * \value CreateChannelAction Chime CreateChannel action.
+ * \value CreateChannelBanAction Chime CreateChannelBan action.
+ * \value CreateChannelMembershipAction Chime CreateChannelMembership action.
+ * \value CreateChannelModeratorAction Chime CreateChannelModerator action.
+ * \value CreateMeetingAction Chime CreateMeeting action.
+ * \value CreateMeetingDialOutAction Chime CreateMeetingDialOut action.
+ * \value CreateMeetingWithAttendeesAction Chime CreateMeetingWithAttendees action.
  * \value CreatePhoneNumberOrderAction Chime CreatePhoneNumberOrder action.
+ * \value CreateProxySessionAction Chime CreateProxySession action.
+ * \value CreateRoomAction Chime CreateRoom action.
+ * \value CreateRoomMembershipAction Chime CreateRoomMembership action.
+ * \value CreateSipMediaApplicationAction Chime CreateSipMediaApplication action.
+ * \value CreateSipMediaApplicationCallAction Chime CreateSipMediaApplicationCall action.
+ * \value CreateSipRuleAction Chime CreateSipRule action.
+ * \value CreateUserAction Chime CreateUser action.
  * \value CreateVoiceConnectorAction Chime CreateVoiceConnector action.
+ * \value CreateVoiceConnectorGroupAction Chime CreateVoiceConnectorGroup action.
  * \value DeleteAccountAction Chime DeleteAccount action.
+ * \value DeleteAppInstanceAction Chime DeleteAppInstance action.
+ * \value DeleteAppInstanceAdminAction Chime DeleteAppInstanceAdmin action.
+ * \value DeleteAppInstanceStreamingConfigurationsAction Chime DeleteAppInstanceStreamingConfigurations action.
+ * \value DeleteAppInstanceUserAction Chime DeleteAppInstanceUser action.
+ * \value DeleteAttendeeAction Chime DeleteAttendee action.
+ * \value DeleteChannelAction Chime DeleteChannel action.
+ * \value DeleteChannelBanAction Chime DeleteChannelBan action.
+ * \value DeleteChannelMembershipAction Chime DeleteChannelMembership action.
+ * \value DeleteChannelMessageAction Chime DeleteChannelMessage action.
+ * \value DeleteChannelModeratorAction Chime DeleteChannelModerator action.
  * \value DeleteEventsConfigurationAction Chime DeleteEventsConfiguration action.
+ * \value DeleteMeetingAction Chime DeleteMeeting action.
  * \value DeletePhoneNumberAction Chime DeletePhoneNumber action.
+ * \value DeleteProxySessionAction Chime DeleteProxySession action.
+ * \value DeleteRoomAction Chime DeleteRoom action.
+ * \value DeleteRoomMembershipAction Chime DeleteRoomMembership action.
+ * \value DeleteSipMediaApplicationAction Chime DeleteSipMediaApplication action.
+ * \value DeleteSipRuleAction Chime DeleteSipRule action.
  * \value DeleteVoiceConnectorAction Chime DeleteVoiceConnector action.
+ * \value DeleteVoiceConnectorEmergencyCallingConfigurationAction Chime DeleteVoiceConnectorEmergencyCallingConfiguration action.
+ * \value DeleteVoiceConnectorGroupAction Chime DeleteVoiceConnectorGroup action.
  * \value DeleteVoiceConnectorOriginationAction Chime DeleteVoiceConnectorOrigination action.
+ * \value DeleteVoiceConnectorProxyAction Chime DeleteVoiceConnectorProxy action.
+ * \value DeleteVoiceConnectorStreamingConfigurationAction Chime DeleteVoiceConnectorStreamingConfiguration action.
  * \value DeleteVoiceConnectorTerminationAction Chime DeleteVoiceConnectorTermination action.
  * \value DeleteVoiceConnectorTerminationCredentialsAction Chime DeleteVoiceConnectorTerminationCredentials action.
+ * \value DescribeAppInstanceAction Chime DescribeAppInstance action.
+ * \value DescribeAppInstanceAdminAction Chime DescribeAppInstanceAdmin action.
+ * \value DescribeAppInstanceUserAction Chime DescribeAppInstanceUser action.
+ * \value DescribeChannelAction Chime DescribeChannel action.
+ * \value DescribeChannelBanAction Chime DescribeChannelBan action.
+ * \value DescribeChannelMembershipAction Chime DescribeChannelMembership action.
+ * \value DescribeChannelMembershipForAppInstanceUserAction Chime DescribeChannelMembershipForAppInstanceUser action.
+ * \value DescribeChannelModeratedByAppInstanceUserAction Chime DescribeChannelModeratedByAppInstanceUser action.
+ * \value DescribeChannelModeratorAction Chime DescribeChannelModerator action.
  * \value DisassociatePhoneNumberFromUserAction Chime DisassociatePhoneNumberFromUser action.
  * \value DisassociatePhoneNumbersFromVoiceConnectorAction Chime DisassociatePhoneNumbersFromVoiceConnector action.
+ * \value DisassociatePhoneNumbersFromVoiceConnectorGroupAction Chime DisassociatePhoneNumbersFromVoiceConnectorGroup action.
+ * \value DisassociateSigninDelegateGroupsFromAccountAction Chime DisassociateSigninDelegateGroupsFromAccount action.
  * \value GetAccountAction Chime GetAccount action.
  * \value GetAccountSettingsAction Chime GetAccountSettings action.
+ * \value GetAppInstanceRetentionSettingsAction Chime GetAppInstanceRetentionSettings action.
+ * \value GetAppInstanceStreamingConfigurationsAction Chime GetAppInstanceStreamingConfigurations action.
+ * \value GetAttendeeAction Chime GetAttendee action.
  * \value GetBotAction Chime GetBot action.
+ * \value GetChannelMessageAction Chime GetChannelMessage action.
  * \value GetEventsConfigurationAction Chime GetEventsConfiguration action.
  * \value GetGlobalSettingsAction Chime GetGlobalSettings action.
+ * \value GetMeetingAction Chime GetMeeting action.
+ * \value GetMessagingSessionEndpointAction Chime GetMessagingSessionEndpoint action.
  * \value GetPhoneNumberAction Chime GetPhoneNumber action.
  * \value GetPhoneNumberOrderAction Chime GetPhoneNumberOrder action.
+ * \value GetPhoneNumberSettingsAction Chime GetPhoneNumberSettings action.
+ * \value GetProxySessionAction Chime GetProxySession action.
+ * \value GetRetentionSettingsAction Chime GetRetentionSettings action.
+ * \value GetRoomAction Chime GetRoom action.
+ * \value GetSipMediaApplicationAction Chime GetSipMediaApplication action.
+ * \value GetSipMediaApplicationLoggingConfigurationAction Chime GetSipMediaApplicationLoggingConfiguration action.
+ * \value GetSipRuleAction Chime GetSipRule action.
  * \value GetUserAction Chime GetUser action.
  * \value GetUserSettingsAction Chime GetUserSettings action.
  * \value GetVoiceConnectorAction Chime GetVoiceConnector action.
+ * \value GetVoiceConnectorEmergencyCallingConfigurationAction Chime GetVoiceConnectorEmergencyCallingConfiguration action.
+ * \value GetVoiceConnectorGroupAction Chime GetVoiceConnectorGroup action.
+ * \value GetVoiceConnectorLoggingConfigurationAction Chime GetVoiceConnectorLoggingConfiguration action.
  * \value GetVoiceConnectorOriginationAction Chime GetVoiceConnectorOrigination action.
+ * \value GetVoiceConnectorProxyAction Chime GetVoiceConnectorProxy action.
+ * \value GetVoiceConnectorStreamingConfigurationAction Chime GetVoiceConnectorStreamingConfiguration action.
  * \value GetVoiceConnectorTerminationAction Chime GetVoiceConnectorTermination action.
  * \value GetVoiceConnectorTerminationHealthAction Chime GetVoiceConnectorTerminationHealth action.
  * \value InviteUsersAction Chime InviteUsers action.
  * \value ListAccountsAction Chime ListAccounts action.
+ * \value ListAppInstanceAdminsAction Chime ListAppInstanceAdmins action.
+ * \value ListAppInstanceUsersAction Chime ListAppInstanceUsers action.
+ * \value ListAppInstancesAction Chime ListAppInstances action.
+ * \value ListAttendeeTagsAction Chime ListAttendeeTags action.
+ * \value ListAttendeesAction Chime ListAttendees action.
  * \value ListBotsAction Chime ListBots action.
+ * \value ListChannelBansAction Chime ListChannelBans action.
+ * \value ListChannelMembershipsAction Chime ListChannelMemberships action.
+ * \value ListChannelMembershipsForAppInstanceUserAction Chime ListChannelMembershipsForAppInstanceUser action.
+ * \value ListChannelMessagesAction Chime ListChannelMessages action.
+ * \value ListChannelModeratorsAction Chime ListChannelModerators action.
+ * \value ListChannelsAction Chime ListChannels action.
+ * \value ListChannelsModeratedByAppInstanceUserAction Chime ListChannelsModeratedByAppInstanceUser action.
+ * \value ListMeetingTagsAction Chime ListMeetingTags action.
+ * \value ListMeetingsAction Chime ListMeetings action.
  * \value ListPhoneNumberOrdersAction Chime ListPhoneNumberOrders action.
  * \value ListPhoneNumbersAction Chime ListPhoneNumbers action.
+ * \value ListProxySessionsAction Chime ListProxySessions action.
+ * \value ListRoomMembershipsAction Chime ListRoomMemberships action.
+ * \value ListRoomsAction Chime ListRooms action.
+ * \value ListSipMediaApplicationsAction Chime ListSipMediaApplications action.
+ * \value ListSipRulesAction Chime ListSipRules action.
+ * \value ListSupportedPhoneNumberCountriesAction Chime ListSupportedPhoneNumberCountries action.
+ * \value ListTagsForResourceAction Chime ListTagsForResource action.
  * \value ListUsersAction Chime ListUsers action.
+ * \value ListVoiceConnectorGroupsAction Chime ListVoiceConnectorGroups action.
  * \value ListVoiceConnectorTerminationCredentialsAction Chime ListVoiceConnectorTerminationCredentials action.
  * \value ListVoiceConnectorsAction Chime ListVoiceConnectors action.
  * \value LogoutUserAction Chime LogoutUser action.
+ * \value PutAppInstanceRetentionSettingsAction Chime PutAppInstanceRetentionSettings action.
+ * \value PutAppInstanceStreamingConfigurationsAction Chime PutAppInstanceStreamingConfigurations action.
  * \value PutEventsConfigurationAction Chime PutEventsConfiguration action.
+ * \value PutRetentionSettingsAction Chime PutRetentionSettings action.
+ * \value PutSipMediaApplicationLoggingConfigurationAction Chime PutSipMediaApplicationLoggingConfiguration action.
+ * \value PutVoiceConnectorEmergencyCallingConfigurationAction Chime PutVoiceConnectorEmergencyCallingConfiguration action.
+ * \value PutVoiceConnectorLoggingConfigurationAction Chime PutVoiceConnectorLoggingConfiguration action.
  * \value PutVoiceConnectorOriginationAction Chime PutVoiceConnectorOrigination action.
+ * \value PutVoiceConnectorProxyAction Chime PutVoiceConnectorProxy action.
+ * \value PutVoiceConnectorStreamingConfigurationAction Chime PutVoiceConnectorStreamingConfiguration action.
  * \value PutVoiceConnectorTerminationAction Chime PutVoiceConnectorTermination action.
  * \value PutVoiceConnectorTerminationCredentialsAction Chime PutVoiceConnectorTerminationCredentials action.
+ * \value RedactChannelMessageAction Chime RedactChannelMessage action.
+ * \value RedactConversationMessageAction Chime RedactConversationMessage action.
+ * \value RedactRoomMessageAction Chime RedactRoomMessage action.
  * \value RegenerateSecurityTokenAction Chime RegenerateSecurityToken action.
  * \value ResetPersonalPINAction Chime ResetPersonalPIN action.
  * \value RestorePhoneNumberAction Chime RestorePhoneNumber action.
  * \value SearchAvailablePhoneNumbersAction Chime SearchAvailablePhoneNumbers action.
+ * \value SendChannelMessageAction Chime SendChannelMessage action.
+ * \value TagAttendeeAction Chime TagAttendee action.
+ * \value TagMeetingAction Chime TagMeeting action.
+ * \value TagResourceAction Chime TagResource action.
+ * \value UntagAttendeeAction Chime UntagAttendee action.
+ * \value UntagMeetingAction Chime UntagMeeting action.
+ * \value UntagResourceAction Chime UntagResource action.
  * \value UpdateAccountAction Chime UpdateAccount action.
  * \value UpdateAccountSettingsAction Chime UpdateAccountSettings action.
+ * \value UpdateAppInstanceAction Chime UpdateAppInstance action.
+ * \value UpdateAppInstanceUserAction Chime UpdateAppInstanceUser action.
  * \value UpdateBotAction Chime UpdateBot action.
+ * \value UpdateChannelAction Chime UpdateChannel action.
+ * \value UpdateChannelMessageAction Chime UpdateChannelMessage action.
+ * \value UpdateChannelReadMarkerAction Chime UpdateChannelReadMarker action.
  * \value UpdateGlobalSettingsAction Chime UpdateGlobalSettings action.
  * \value UpdatePhoneNumberAction Chime UpdatePhoneNumber action.
+ * \value UpdatePhoneNumberSettingsAction Chime UpdatePhoneNumberSettings action.
+ * \value UpdateProxySessionAction Chime UpdateProxySession action.
+ * \value UpdateRoomAction Chime UpdateRoom action.
+ * \value UpdateRoomMembershipAction Chime UpdateRoomMembership action.
+ * \value UpdateSipMediaApplicationAction Chime UpdateSipMediaApplication action.
+ * \value UpdateSipRuleAction Chime UpdateSipRule action.
  * \value UpdateUserAction Chime UpdateUser action.
  * \value UpdateUserSettingsAction Chime UpdateUserSettings action.
  * \value UpdateVoiceConnectorAction Chime UpdateVoiceConnector action.
+ * \value UpdateVoiceConnectorGroupAction Chime UpdateVoiceConnectorGroup action.
  */
 
 /*!

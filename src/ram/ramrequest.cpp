@@ -38,16 +38,24 @@ namespace RAM {
  *
  * \value AcceptResourceShareInvitationAction RAM AcceptResourceShareInvitation action.
  * \value AssociateResourceShareAction RAM AssociateResourceShare action.
+ * \value AssociateResourceSharePermissionAction RAM AssociateResourceSharePermission action.
  * \value CreateResourceShareAction RAM CreateResourceShare action.
  * \value DeleteResourceShareAction RAM DeleteResourceShare action.
  * \value DisassociateResourceShareAction RAM DisassociateResourceShare action.
+ * \value DisassociateResourceSharePermissionAction RAM DisassociateResourceSharePermission action.
  * \value EnableSharingWithAwsOrganizationAction RAM EnableSharingWithAwsOrganization action.
+ * \value GetPermissionAction RAM GetPermission action.
  * \value GetResourcePoliciesAction RAM GetResourcePolicies action.
  * \value GetResourceShareAssociationsAction RAM GetResourceShareAssociations action.
  * \value GetResourceShareInvitationsAction RAM GetResourceShareInvitations action.
  * \value GetResourceSharesAction RAM GetResourceShares action.
+ * \value ListPendingInvitationResourcesAction RAM ListPendingInvitationResources action.
+ * \value ListPermissionsAction RAM ListPermissions action.
  * \value ListPrincipalsAction RAM ListPrincipals action.
+ * \value ListResourceSharePermissionsAction RAM ListResourceSharePermissions action.
+ * \value ListResourceTypesAction RAM ListResourceTypes action.
  * \value ListResourcesAction RAM ListResources action.
+ * \value PromoteResourceShareCreatedFromPolicyAction RAM PromoteResourceShareCreatedFromPolicy action.
  * \value RejectResourceShareInvitationAction RAM RejectResourceShareInvitation action.
  * \value TagResourceAction RAM TagResource action.
  * \value UntagResourceAction RAM UntagResource action.

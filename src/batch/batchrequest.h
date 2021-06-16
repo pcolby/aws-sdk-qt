@@ -48,9 +48,12 @@ public:
         DescribeJobQueuesAction,
         DescribeJobsAction,
         ListJobsAction,
+        ListTagsForResourceAction,
         RegisterJobDefinitionAction,
         SubmitJobAction,
+        TagResourceAction,
         TerminateJobAction,
+        UntagResourceAction,
         UpdateComputeEnvironmentAction,
         UpdateJobQueueAction,
     };

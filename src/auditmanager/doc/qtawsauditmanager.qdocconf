@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsAuditManager
+description = AWS AuditManager SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsauditmanager-index.html"
+navigation.landingtitle = "AuditManager"
+navigation.cppclassespage = "AuditManager C++ Classes"

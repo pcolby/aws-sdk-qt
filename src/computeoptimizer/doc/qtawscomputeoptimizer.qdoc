@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsComputeOptimizer
+    \title ComputeOptimizer C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS ComputeOptimizer functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

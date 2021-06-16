@@ -21,6 +21,8 @@
 #include "route53client_p.h"
 
 #include "core/awssignaturev4.h"
+#include "activatekeysigningkeyrequest.h"
+#include "activatekeysigningkeyresponse.h"
 #include "associatevpcwithhostedzonerequest.h"
 #include "associatevpcwithhostedzoneresponse.h"
 #include "changeresourcerecordsetsrequest.h"
@@ -31,6 +33,8 @@
 #include "createhealthcheckresponse.h"
 #include "createhostedzonerequest.h"
 #include "createhostedzoneresponse.h"
+#include "createkeysigningkeyrequest.h"
+#include "createkeysigningkeyresponse.h"
 #include "createqueryloggingconfigrequest.h"
 #include "createqueryloggingconfigresponse.h"
 #include "createreusabledelegationsetrequest.h"
@@ -43,10 +47,14 @@
 #include "createtrafficpolicyversionresponse.h"
 #include "createvpcassociationauthorizationrequest.h"
 #include "createvpcassociationauthorizationresponse.h"
+#include "deactivatekeysigningkeyrequest.h"
+#include "deactivatekeysigningkeyresponse.h"
 #include "deletehealthcheckrequest.h"
 #include "deletehealthcheckresponse.h"
 #include "deletehostedzonerequest.h"
 #include "deletehostedzoneresponse.h"
+#include "deletekeysigningkeyrequest.h"
+#include "deletekeysigningkeyresponse.h"
 #include "deletequeryloggingconfigrequest.h"
 #include "deletequeryloggingconfigresponse.h"
 #include "deletereusabledelegationsetrequest.h"
@@ -57,14 +65,20 @@
 #include "deletetrafficpolicyinstanceresponse.h"
 #include "deletevpcassociationauthorizationrequest.h"
 #include "deletevpcassociationauthorizationresponse.h"
+#include "disablehostedzonednssecrequest.h"
+#include "disablehostedzonednssecresponse.h"
 #include "disassociatevpcfromhostedzonerequest.h"
 #include "disassociatevpcfromhostedzoneresponse.h"
+#include "enablehostedzonednssecrequest.h"
+#include "enablehostedzonednssecresponse.h"
 #include "getaccountlimitrequest.h"
 #include "getaccountlimitresponse.h"
 #include "getchangerequest.h"
 #include "getchangeresponse.h"
 #include "getcheckeriprangesrequest.h"
 #include "getcheckeriprangesresponse.h"
+#include "getdnssecrequest.h"
+#include "getdnssecresponse.h"
 #include "getgeolocationrequest.h"
 #include "getgeolocationresponse.h"
 #include "gethealthcheckrequest.h"
@@ -101,6 +115,8 @@
 #include "listhostedzonesresponse.h"
 #include "listhostedzonesbynamerequest.h"
 #include "listhostedzonesbynameresponse.h"
+#include "listhostedzonesbyvpcrequest.h"
+#include "listhostedzonesbyvpcresponse.h"
 #include "listqueryloggingconfigsrequest.h"
 #include "listqueryloggingconfigsresponse.h"
 #include "listresourcerecordsetsrequest.h"
@@ -214,6 +230,19 @@ Route53Client::Route53Client(
 
 /*!
  * Sends \a request to the Route53Client service, and returns a pointer to an
+ * ActivateKeySigningKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Activates a key-signing key (KSK) so that it can be used for signing by DNSSEC. This operation changes the KSK status to
+ */
+ActivateKeySigningKeyResponse * Route53Client::activateKeySigningKey(const ActivateKeySigningKeyRequest &request)
+{
+    return qobject_cast<ActivateKeySigningKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
  * AssociateVPCWithHostedZoneResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -249,30 +278,37 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  *
  * 192.0.2.44>
  *
+ * <b>Deleting Resource Record Sets</b>
+ *
+ * </p
+ *
+ * To delete a resource record set, you must specify all the same values that you specified when you created
+ *
+ * it>
+ *
  * <b>Change Batches and Transactional Changes</b>
  *
  * </p
  *
  * The request body must include a document with a <code>ChangeResourceRecordSetsRequest</code> element. The request body
- * contains a list of change items, known as a change batch. Change batches are considered transactional changes. When
- * using the Amazon Route 53 API to change resource record sets, Route 53 either makes all or none of the changes in a
- * change batch request. This ensures that Route 53 never partially implements the intended changes to the resource record
- * sets in a hosted zone.
+ * contains a list of change items, known as a change batch. Change batches are considered transactional changes. Route 53
+ * validates the changes in the request and then either makes all or none of the changes in the change batch request. This
+ * ensures that DNS routing isn't adversely affected by partial changes to the resource record sets in a hosted zone.
  *
  * </p
  *
- * For example, a change batch request that deletes the <code>CNAME</code> record for www.example.com and creates an alias
- * resource record set for www.example.com. Route 53 deletes the first resource record set and creates the second resource
- * record set in a single operation. If either the <code>DELETE</code> or the <code>CREATE</code> action fails, then both
- * changes (plus any other changes in the batch) fail, and the original <code>CNAME</code> record continues to
+ * For example, suppose a change batch request contains two changes: it deletes the <code>CNAME</code> resource record set
+ * for www.example.com and creates an alias resource record set for www.example.com. If validation for both records
+ * succeeds, Route 53 deletes the first resource record set and creates the second resource record set in a single
+ * operation. If validation for either the <code>DELETE</code> or the <code>CREATE</code> action fails, then the request is
+ * canceled, and the original <code>CNAME</code> record continues to
  *
- * exist> <b>
+ * exist> <note>
  *
- * Due to the nature of transactional changes, you can't delete the same resource record set more than once in a single
- * change batch. If you attempt to delete the same change batch more than once, Route 53 returns an
+ * If you try to delete the same resource record set more than once in a single change batch, Route 53 returns an
  * <code>InvalidChangeBatch</code>
  *
- * error> </b>
+ * error> </note>
  *
  * <b>Traffic Flow</b>
  *
@@ -283,7 +319,7 @@ AssociateVPCWithHostedZoneResponse * Route53Client::associateVPCWithHostedZone(c
  * traffic policy, then associate the traffic policy with one or more domain names (such as example.com) or subdomain names
  * (such as www.example.com), in the same hosted zone or in multiple hosted zones. You can roll back the updates if the new
  * configuration isn't performing as expected. For more information, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/traffic-flow.html">Using Traffic Flow to Route DNS
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/traffic-flow.html">Using Traffic Flow to Route DNS
  * Traffic</a> in the <i>Amazon Route 53 Developer
  *
  * Guide</i>>
@@ -419,7 +455,7 @@ ChangeTagsForResourceResponse * Route53Client::changeTagsForResource(const Chang
  * the state of the alarm. For example, you might create a CloudWatch metric that checks the status of the Amazon EC2
  * <code>StatusCheckFailed</code> metric, add an alarm to the metric, and then create a health check that is based on the
  * state of the alarm. For information about creating CloudWatch metrics and alarms by using the CloudWatch console, see
- * the <a href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html">Amazon CloudWatch
+ * the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html">Amazon CloudWatch
  * User
  */
 CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthCheckRequest &request)
@@ -458,9 +494,9 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * .com> </li> <li>
  *
- * For public hosted zones, Amazon Route 53 automatically creates a default SOA record and four NS records for the zone.
- * For more information about SOA and NS records, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html">NS and SOA Records that Route 53
+ * For public hosted zones, Route 53 automatically creates a default SOA record and four NS records for the zone. For more
+ * information about SOA and NS records, see <a
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/SOA-NSrecords.html">NS and SOA Records that Route 53
  * Creates for a Hosted Zone</a> in the <i>Amazon Route 53 Developer
  *
  * Guide</i>>
@@ -472,7 +508,7 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  *
  * If your domain is registered with a registrar other than Route 53, you must update the name servers with your registrar
  * to make Route 53 the DNS service for the domain. For more information, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html">Migrating DNS Service for an Existing
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html">Migrating DNS Service for an Existing
  * Domain to Amazon Route 53</a> in the <i>Amazon Route 53 Developer Guide</i>.
  *
  * </p </li> </ul>
@@ -480,10 +516,27 @@ CreateHealthCheckResponse * Route53Client::createHealthCheck(const CreateHealthC
  * When you submit a <code>CreateHostedZone</code> request, the initial status of the hosted zone is <code>PENDING</code>.
  * For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers. When
  * the NS and SOA records are available, the status of the zone changes to
+ *
+ * <code>INSYNC</code>>
+ *
+ * The <code>CreateHostedZone</code> request requires the caller to have an <code>ec2:DescribeVpcs</code>
  */
 CreateHostedZoneResponse * Route53Client::createHostedZone(const CreateHostedZoneRequest &request)
 {
     return qobject_cast<CreateHostedZoneResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * CreateKeySigningKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new key-signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted
+ */
+CreateKeySigningKeyResponse * Route53Client::createKeySigningKey(const CreateKeySigningKeyRequest &request)
+{
+    return qobject_cast<CreateKeySigningKeyResponse *>(send(request));
 }
 
 /*!
@@ -635,17 +688,22 @@ CreateQueryLoggingConfigResponse * Route53Client::createQueryLoggingConfig(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones. If a hosted zoned
- * ID is specified, <code>CreateReusableDelegationSet</code> marks the delegation set associated with that zone as
+ * Creates a delegation set (a group of four name servers) that can be reused by multiple hosted zones that were created by
+ * the same AWS account.
  *
- * reusable> <note>
+ * </p
+ *
+ * You can also create a reusable delegation set that uses the four name servers that are associated with an existing
+ * hosted zone. Specify the hosted zone ID in the <code>CreateReusableDelegationSet</code>
+ *
+ * request> <note>
  *
  * You can't associate a reusable delegation set with a private hosted
  *
  * zone> </note>
  *
  * For information about using a reusable delegation set to configure white label name servers, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html">Configuring White Label
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/white-label-name-servers.html">Configuring White Label
  * Name
  *
  * Servers</a>>
@@ -772,6 +830,20 @@ CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationA
 
 /*!
  * Sends \a request to the Route53Client service, and returns a pointer to an
+ * DeactivateKeySigningKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deactivates a key-signing key (KSK) so that it will not be used for signing by DNSSEC. This operation changes the KSK
+ * status to
+ */
+DeactivateKeySigningKeyResponse * Route53Client::deactivateKeySigningKey(const DeactivateKeySigningKeyRequest &request)
+{
+    return qobject_cast<DeactivateKeySigningKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
  * DeleteHealthCheckResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -784,8 +856,15 @@ CreateVPCAssociationAuthorizationResponse * Route53Client::createVPCAssociationA
  * more resource record sets. If you delete a health check and you don't update the associated resource record sets, the
  * future status of the health check can't be predicted and may change. This will affect the routing of DNS queries for
  * your DNS failover configuration. For more information, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html">Replacing
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html#health-checks-deleting.html">Replacing
  * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
+ *
+ * Guide</i>> </b>
+ *
+ * If you're using AWS Cloud Map and you configured Cloud Map to create a Route 53 health check when you register an
+ * instance, you can't use the Route 53 <code>DeleteHealthCheck</code> command to delete the health check. The health check
+ * is deleted automatically when you deregister the instance; there can be a delay of several hours before the health check
+ * is deleted from Route 53.
  */
 DeleteHealthCheckResponse * Route53Client::deleteHealthCheck(const DeleteHealthCheckRequest &request)
 {
@@ -857,6 +936,20 @@ DeleteHostedZoneResponse * Route53Client::deleteHostedZone(const DeleteHostedZon
 
 /*!
  * Sends \a request to the Route53Client service, and returns a pointer to an
+ * DeleteKeySigningKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a key-signing key (KSK). Before you can delete a KSK, you must deactivate it. The KSK must be deactivated before
+ * you can delete it regardless of whether the hosted zone is enabled for DNSSEC
+ */
+DeleteKeySigningKeyResponse * Route53Client::deleteKeySigningKey(const DeleteKeySigningKeyRequest &request)
+{
+    return qobject_cast<DeleteKeySigningKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
  * DeleteQueryLoggingConfigResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -903,6 +996,27 @@ DeleteReusableDelegationSetResponse * Route53Client::deleteReusableDelegationSet
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a traffic
+ *
+ * policy>
+ *
+ * When you delete a traffic policy, Route 53 sets a flag on the policy to indicate that it has been deleted. However,
+ * Route 53 never fully deletes the traffic policy. Note the
+ *
+ * following> <ul> <li>
+ *
+ * Deleted traffic policies aren't listed if you run <a
+ *
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListTrafficPolicies.html">ListTrafficPolicies</a>>
+ * </li> <li>
+ *
+ * There's no way to get a list of deleted
+ *
+ * policies> </li> <li>
+ *
+ * If you retain the ID of the policy, you can get information about the policy, including the traffic policy document, by
+ * running <a
+ *
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetTrafficPolicy.html">GetTrafficPolicy</a>> </li>
  */
 DeleteTrafficPolicyResponse * Route53Client::deleteTrafficPolicy(const DeleteTrafficPolicyRequest &request)
 {
@@ -950,15 +1064,29 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
 
 /*!
  * Sends \a request to the Route53Client service, and returns a pointer to an
+ * DisableHostedZoneDNSSECResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables DNSSEC signing in a specific hosted zone. This action does not deactivate any key-signing keys (KSKs) that are
+ * active in the hosted
+ */
+DisableHostedZoneDNSSECResponse * Route53Client::disableHostedZoneDNSSEC(const DisableHostedZoneDNSSECRequest &request)
+{
+    return qobject_cast<DisableHostedZoneDNSSECResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
  * DisassociateVPCFromHostedZoneResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociates a VPC from a Amazon Route 53 private hosted zone. Note the
+ * Disassociates an Amazon Virtual Private Cloud (Amazon VPC) from an Amazon Route 53 private hosted zone. Note the
  *
  * following> <ul> <li>
  *
- * You can't disassociate the last VPC from a private hosted
+ * You can't disassociate the last Amazon VPC from a private hosted
  *
  * zone> </li> <li>
  *
@@ -967,11 +1095,37 @@ DeleteVPCAssociationAuthorizationResponse * Route53Client::deleteVPCAssociationA
  * zone> </li> <li>
  *
  * You can submit a <code>DisassociateVPCFromHostedZone</code> request using either the account that created the hosted
- * zone or the account that created the
+ * zone or the account that created the Amazon
+ *
+ * VPC> </li> <li>
+ *
+ * Some services, such as AWS Cloud Map and Amazon Elastic File System (Amazon EFS) automatically create hosted zones and
+ * associate VPCs with the hosted zones. A service can create a hosted zone using your account or using its own account.
+ * You can disassociate a VPC from a hosted zone only if the service created the hosted zone using your
+ *
+ * account>
+ *
+ * When you run <a
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html">DisassociateVPCFromHostedZone</a>,
+ * if the hosted zone has a value for <code>OwningAccount</code>, you can use <code>DisassociateVPCFromHostedZone</code>.
+ * If the hosted zone has a value for <code>OwningService</code>, you can't use
  */
 DisassociateVPCFromHostedZoneResponse * Route53Client::disassociateVPCFromHostedZone(const DisassociateVPCFromHostedZoneRequest &request)
 {
     return qobject_cast<DisassociateVPCFromHostedZoneResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * EnableHostedZoneDNSSECResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables DNSSEC signing in a specific hosted
+ */
+EnableHostedZoneDNSSECResponse * Route53Client::enableHostedZoneDNSSEC(const EnableHostedZoneDNSSECRequest &request)
+{
+    return qobject_cast<EnableHostedZoneDNSSECResponse *>(send(request));
 }
 
 /*!
@@ -1031,16 +1185,31 @@ GetChangeResponse * Route53Client::getChange(const GetChangeRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * <b>
+ * Route 53 does not perform authorization for this API because it retrieves information that is already available to the
+ *
+ * public> <b>
  *
  * <code>GetCheckerIpRanges</code> still works, but we recommend that you download ip-ranges.json, which includes IP
  * address ranges for all AWS services. For more information, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP Address Ranges of Amazon
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/route-53-ip-addresses.html">IP Address Ranges of Amazon
  * Route 53 Servers</a> in the <i>Amazon Route 53 Developer
  */
 GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerIpRangesRequest &request)
 {
     return qobject_cast<GetCheckerIpRangesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
+ * GetDNSSECResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about DNSSEC for a specific hosted zone, including the key-signing keys (KSKs) in the hosted
+ */
+GetDNSSECResponse * Route53Client::getDNSSEC(const GetDNSSECRequest &request)
+{
+    return qobject_cast<GetDNSSECResponse *>(send(request));
 }
 
 /*!
@@ -1053,6 +1222,10 @@ GetCheckerIpRangesResponse * Route53Client::getCheckerIpRanges(const GetCheckerI
  * record
  *
  * sets>
+ *
+ * Route 53 does not perform authorization for this API because it retrieves information that is already available to the
+ *
+ * public>
  *
  * Use the following syntax to determine whether a continent is supported for
  *
@@ -1243,6 +1416,11 @@ GetReusableDelegationSetLimitResponse * Route53Client::getReusableDelegationSetL
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about a specific traffic policy
+ *
+ * version>
+ *
+ * For information about how of deleting a traffic policy affects the response from <code>GetTrafficPolicy</code>, see <a
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteTrafficPolicy.html">DeleteTrafficPolicy</a>.
  */
 GetTrafficPolicyResponse * Route53Client::getTrafficPolicy(const GetTrafficPolicyRequest &request)
 {
@@ -1298,6 +1476,15 @@ GetTrafficPolicyInstanceCountResponse * Route53Client::getTrafficPolicyInstanceC
  * Countries are listed first, and continents are listed last. If Amazon Route 53 supports subdivisions for a country (for
  * example, states or provinces), the subdivisions for that country are listed in alphabetical order immediately after the
  * corresponding
+ *
+ * country>
+ *
+ * Route 53 does not perform authorization for this API because it retrieves information that is already available to the
+ *
+ * public>
+ *
+ * For a list of supported geolocation codes, see the <a
+ * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html">GeoLocation</a> data
  */
 ListGeoLocationsResponse * Route53Client::listGeoLocations(const ListGeoLocationsRequest &request)
 {
@@ -1372,7 +1559,7 @@ ListHostedZonesResponse * Route53Client::listHostedZones(const ListHostedZonesRe
  *
  * The labels are reversed and alphabetized using the escaped value. For more information about valid domain name formats,
  * including internationalized domain names, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html">DNS Domain Name Format</a> in the
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html">DNS Domain Name Format</a> in the
  * <i>Amazon Route 53 Developer
  *
  * Guide</i>>
@@ -1415,6 +1602,31 @@ ListHostedZonesByNameResponse * Route53Client::listHostedZonesByName(const ListH
 
 /*!
  * Sends \a request to the Route53Client service, and returns a pointer to an
+ * ListHostedZonesByVPCResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the private hosted zones that a specified VPC is associated with, regardless of which AWS account or AWS
+ * service owns the hosted zones. The <code>HostedZoneOwner</code> structure in the response contains one of the following
+ *
+ * values> <ul> <li>
+ *
+ * An <code>OwningAccount</code> element, which contains the account number of either the current AWS account or another
+ * AWS account. Some services, such as AWS Cloud Map, create hosted zones using the current account.
+ *
+ * </p </li> <li>
+ *
+ * An <code>OwningService</code> element, which identifies the AWS service that created and owns the hosted zone. For
+ * example, if a hosted zone was created by Amazon Elastic File System (Amazon EFS), the value of <code>Owner</code> is
+ * <code>efs.amazonaws.com</code>.
+ */
+ListHostedZonesByVPCResponse * Route53Client::listHostedZonesByVPC(const ListHostedZonesByVPCRequest &request)
+{
+    return qobject_cast<ListHostedZonesByVPCResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Route53Client service, and returns a pointer to an
  * ListQueryLoggingConfigsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1445,7 +1657,7 @@ ListQueryLoggingConfigsResponse * Route53Client::listQueryLoggingConfigs(const L
  *
  * zone>
  *
- * <code>ListResourceRecordSets</code> returns up to 100 resource record sets at a time in ASCII order, beginning at a
+ * <code>ListResourceRecordSets</code> returns up to 300 resource record sets at a time in ASCII order, beginning at a
  * position specified by the <code>name</code> and <code>type</code>
  *
  * elements>
@@ -1591,6 +1803,11 @@ ListTagsForResourcesResponse * Route53Client::listTagsForResources(const ListTag
  *
  * Gets information about the latest version for every traffic policy that is associated with the current AWS account.
  * Policies are listed in the order that they were created in.
+ *
+ * </p
+ *
+ * For information about how of deleting a traffic policy affects the response from <code>ListTrafficPolicies</code>, see
+ * <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteTrafficPolicy.html">DeleteTrafficPolicy</a>.
  */
 ListTrafficPoliciesResponse * Route53Client::listTrafficPolicies(const ListTrafficPoliciesRequest &request)
 {
@@ -1713,6 +1930,10 @@ ListVPCAssociationAuthorizationsResponse * Route53Client::listVPCAssociationAuth
  *
  * Gets the value that Amazon Route 53 returns in response to a DNS request for a specified record name and type. You can
  * optionally specify the IP address of a DNS resolver, an EDNS0 client subnet IP address, and a subnet mask.
+ *
+ * </p
+ *
+ * This call only supports querying public hosted
  */
 TestDNSAnswerResponse * Route53Client::testDNSAnswer(const TestDNSAnswerRequest &request)
 {
@@ -1730,8 +1951,8 @@ TestDNSAnswerResponse * Route53Client::testDNSAnswer(const TestDNSAnswerRequest 
  * </p
  *
  * For more information about updating health checks, see <a
- * href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html">Creating, Updating,
- * and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
+ * href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-deleting.html">Creating,
+ * Updating, and Deleting Health Checks</a> in the <i>Amazon Route 53 Developer
  */
 UpdateHealthCheckResponse * Route53Client::updateHealthCheck(const UpdateHealthCheckRequest &request)
 {

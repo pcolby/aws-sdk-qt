@@ -15,6 +15,10 @@ add_library(QtAwsIoTDataPlane
   iotdataplanerequest_p.h
   iotdataplaneresponse.h
   iotdataplaneresponse_p.h
+  listnamedshadowsforthingrequest.h
+  listnamedshadowsforthingrequest_p.h
+  listnamedshadowsforthingresponse.h
+  listnamedshadowsforthingresponse_p.h
   publishrequest.h
   publishrequest_p.h
   publishresponse.h
@@ -30,6 +34,8 @@ add_library(QtAwsIoTDataPlane
   iotdataplaneclient.cpp
   iotdataplanerequest.cpp
   iotdataplaneresponse.cpp
+  listnamedshadowsforthingrequest.cpp
+  listnamedshadowsforthingresponse.cpp
   publishrequest.cpp
   publishresponse.cpp
   updatethingshadowrequest.cpp

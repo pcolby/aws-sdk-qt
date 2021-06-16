@@ -37,6 +37,7 @@ namespace PI {
  * requests.
  *
  * \value DescribeDimensionKeysAction PI DescribeDimensionKeys action.
+ * \value GetDimensionKeyDetailsAction PI GetDimensionKeyDetails action.
  * \value GetResourceMetricsAction PI GetResourceMetrics action.
  */
 

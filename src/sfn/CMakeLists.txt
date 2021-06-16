@@ -79,6 +79,10 @@ add_library(QtAwsSfn
   startexecutionrequest_p.h
   startexecutionresponse.h
   startexecutionresponse_p.h
+  startsyncexecutionrequest.h
+  startsyncexecutionrequest_p.h
+  startsyncexecutionresponse.h
+  startsyncexecutionresponse_p.h
   stopexecutionrequest.h
   stopexecutionrequest_p.h
   stopexecutionresponse.h
@@ -134,6 +138,8 @@ add_library(QtAwsSfn
   sfnresponse.cpp
   startexecutionrequest.cpp
   startexecutionresponse.cpp
+  startsyncexecutionrequest.cpp
+  startsyncexecutionresponse.cpp
   stopexecutionrequest.cpp
   stopexecutionresponse.cpp
   tagresourcerequest.cpp

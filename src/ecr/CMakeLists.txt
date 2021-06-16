@@ -25,6 +25,10 @@ add_library(QtAwsEcr
   deletelifecyclepolicyrequest_p.h
   deletelifecyclepolicyresponse.h
   deletelifecyclepolicyresponse_p.h
+  deleteregistrypolicyrequest.h
+  deleteregistrypolicyrequest_p.h
+  deleteregistrypolicyresponse.h
+  deleteregistrypolicyresponse_p.h
   deleterepositorypolicyrequest.h
   deleterepositorypolicyrequest_p.h
   deleterepositorypolicyresponse.h
@@ -33,10 +37,18 @@ add_library(QtAwsEcr
   deleterepositoryrequest_p.h
   deleterepositoryresponse.h
   deleterepositoryresponse_p.h
+  describeimagescanfindingsrequest.h
+  describeimagescanfindingsrequest_p.h
+  describeimagescanfindingsresponse.h
+  describeimagescanfindingsresponse_p.h
   describeimagesrequest.h
   describeimagesrequest_p.h
   describeimagesresponse.h
   describeimagesresponse_p.h
+  describeregistryrequest.h
+  describeregistryrequest_p.h
+  describeregistryresponse.h
+  describeregistryresponse_p.h
   describerepositoriesrequest.h
   describerepositoriesrequest_p.h
   describerepositoriesresponse.h
@@ -63,6 +75,10 @@ add_library(QtAwsEcr
   getlifecyclepolicyrequest_p.h
   getlifecyclepolicyresponse.h
   getlifecyclepolicyresponse_p.h
+  getregistrypolicyrequest.h
+  getregistrypolicyrequest_p.h
+  getregistrypolicyresponse.h
+  getregistrypolicyresponse_p.h
   getrepositorypolicyrequest.h
   getrepositorypolicyrequest_p.h
   getrepositorypolicyresponse.h
@@ -83,14 +99,34 @@ add_library(QtAwsEcr
   putimagerequest_p.h
   putimageresponse.h
   putimageresponse_p.h
+  putimagescanningconfigurationrequest.h
+  putimagescanningconfigurationrequest_p.h
+  putimagescanningconfigurationresponse.h
+  putimagescanningconfigurationresponse_p.h
+  putimagetagmutabilityrequest.h
+  putimagetagmutabilityrequest_p.h
+  putimagetagmutabilityresponse.h
+  putimagetagmutabilityresponse_p.h
   putlifecyclepolicyrequest.h
   putlifecyclepolicyrequest_p.h
   putlifecyclepolicyresponse.h
   putlifecyclepolicyresponse_p.h
+  putregistrypolicyrequest.h
+  putregistrypolicyrequest_p.h
+  putregistrypolicyresponse.h
+  putregistrypolicyresponse_p.h
+  putreplicationconfigurationrequest.h
+  putreplicationconfigurationrequest_p.h
+  putreplicationconfigurationresponse.h
+  putreplicationconfigurationresponse_p.h
   setrepositorypolicyrequest.h
   setrepositorypolicyrequest_p.h
   setrepositorypolicyresponse.h
   setrepositorypolicyresponse_p.h
+  startimagescanrequest.h
+  startimagescanrequest_p.h
+  startimagescanresponse.h
+  startimagescanresponse_p.h
   startlifecyclepolicypreviewrequest.h
   startlifecyclepolicypreviewrequest_p.h
   startlifecyclepolicypreviewresponse.h
@@ -119,12 +155,18 @@ add_library(QtAwsEcr
   createrepositoryresponse.cpp
   deletelifecyclepolicyrequest.cpp
   deletelifecyclepolicyresponse.cpp
+  deleteregistrypolicyrequest.cpp
+  deleteregistrypolicyresponse.cpp
   deleterepositorypolicyrequest.cpp
   deleterepositorypolicyresponse.cpp
   deleterepositoryrequest.cpp
   deleterepositoryresponse.cpp
+  describeimagescanfindingsrequest.cpp
+  describeimagescanfindingsresponse.cpp
   describeimagesrequest.cpp
   describeimagesresponse.cpp
+  describeregistryrequest.cpp
+  describeregistryresponse.cpp
   describerepositoriesrequest.cpp
   describerepositoriesresponse.cpp
   ecrclient.cpp
@@ -138,6 +180,8 @@ add_library(QtAwsEcr
   getlifecyclepolicypreviewresponse.cpp
   getlifecyclepolicyrequest.cpp
   getlifecyclepolicyresponse.cpp
+  getregistrypolicyrequest.cpp
+  getregistrypolicyresponse.cpp
   getrepositorypolicyrequest.cpp
   getrepositorypolicyresponse.cpp
   initiatelayeruploadrequest.cpp
@@ -148,10 +192,20 @@ add_library(QtAwsEcr
   listtagsforresourceresponse.cpp
   putimagerequest.cpp
   putimageresponse.cpp
+  putimagescanningconfigurationrequest.cpp
+  putimagescanningconfigurationresponse.cpp
+  putimagetagmutabilityrequest.cpp
+  putimagetagmutabilityresponse.cpp
   putlifecyclepolicyrequest.cpp
   putlifecyclepolicyresponse.cpp
+  putregistrypolicyrequest.cpp
+  putregistrypolicyresponse.cpp
+  putreplicationconfigurationrequest.cpp
+  putreplicationconfigurationresponse.cpp
   setrepositorypolicyrequest.cpp
   setrepositorypolicyresponse.cpp
+  startimagescanrequest.cpp
+  startimagescanresponse.cpp
   startlifecyclepolicypreviewrequest.cpp
   startlifecyclepolicypreviewresponse.cpp
   tagresourcerequest.cpp

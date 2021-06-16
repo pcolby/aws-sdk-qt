@@ -42,10 +42,9 @@ namespace ACMPCA {
  * 
  *  SDKs</a>> <note>
  * 
- *  Each ACM Private CA API action has a throttling limit which determines the number of times the action can be called per
- *  second. For more information, see <a
- *  href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API Rate Limits in ACM Private
- *  CA</a> in the ACM Private CA user
+ *  Each ACM Private CA API action has a quota that determines the number of times the action can be called per second. For
+ *  more information, see <a href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaLimits.html#PcaLimits-api">API
+ *  Rate Quotas in ACM Private CA</a> in the ACM Private CA user
  *
  * \sa AcmpcaClient::untagCertificateAuthority
  */

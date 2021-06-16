@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsIoTEvents
+  createalarmmodelrequest.h
+  createalarmmodelrequest_p.h
+  createalarmmodelresponse.h
+  createalarmmodelresponse_p.h
   createdetectormodelrequest.h
   createdetectormodelrequest_p.h
   createdetectormodelresponse.h
@@ -9,6 +13,10 @@ add_library(QtAwsIoTEvents
   createinputrequest_p.h
   createinputresponse.h
   createinputresponse_p.h
+  deletealarmmodelrequest.h
+  deletealarmmodelrequest_p.h
+  deletealarmmodelresponse.h
+  deletealarmmodelresponse_p.h
   deletedetectormodelrequest.h
   deletedetectormodelrequest_p.h
   deletedetectormodelresponse.h
@@ -17,6 +25,14 @@ add_library(QtAwsIoTEvents
   deleteinputrequest_p.h
   deleteinputresponse.h
   deleteinputresponse_p.h
+  describealarmmodelrequest.h
+  describealarmmodelrequest_p.h
+  describealarmmodelresponse.h
+  describealarmmodelresponse_p.h
+  describedetectormodelanalysisrequest.h
+  describedetectormodelanalysisrequest_p.h
+  describedetectormodelanalysisresponse.h
+  describedetectormodelanalysisresponse_p.h
   describedetectormodelrequest.h
   describedetectormodelrequest_p.h
   describedetectormodelresponse.h
@@ -29,12 +45,24 @@ add_library(QtAwsIoTEvents
   describeloggingoptionsrequest_p.h
   describeloggingoptionsresponse.h
   describeloggingoptionsresponse_p.h
+  getdetectormodelanalysisresultsrequest.h
+  getdetectormodelanalysisresultsrequest_p.h
+  getdetectormodelanalysisresultsresponse.h
+  getdetectormodelanalysisresultsresponse_p.h
   ioteventsclient.h
   ioteventsclient_p.h
   ioteventsrequest.h
   ioteventsrequest_p.h
   ioteventsresponse.h
   ioteventsresponse_p.h
+  listalarmmodelsrequest.h
+  listalarmmodelsrequest_p.h
+  listalarmmodelsresponse.h
+  listalarmmodelsresponse_p.h
+  listalarmmodelversionsrequest.h
+  listalarmmodelversionsrequest_p.h
+  listalarmmodelversionsresponse.h
+  listalarmmodelversionsresponse_p.h
   listdetectormodelsrequest.h
   listdetectormodelsrequest_p.h
   listdetectormodelsresponse.h
@@ -43,6 +71,10 @@ add_library(QtAwsIoTEvents
   listdetectormodelversionsrequest_p.h
   listdetectormodelversionsresponse.h
   listdetectormodelversionsresponse_p.h
+  listinputroutingsrequest.h
+  listinputroutingsrequest_p.h
+  listinputroutingsresponse.h
+  listinputroutingsresponse_p.h
   listinputsrequest.h
   listinputsrequest_p.h
   listinputsresponse.h
@@ -55,6 +87,10 @@ add_library(QtAwsIoTEvents
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
+  startdetectormodelanalysisrequest.h
+  startdetectormodelanalysisrequest_p.h
+  startdetectormodelanalysisresponse.h
+  startdetectormodelanalysisresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -63,6 +99,10 @@ add_library(QtAwsIoTEvents
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatealarmmodelrequest.h
+  updatealarmmodelrequest_p.h
+  updatealarmmodelresponse.h
+  updatealarmmodelresponse_p.h
   updatedetectormodelrequest.h
   updatedetectormodelrequest_p.h
   updatedetectormodelresponse.h
@@ -71,37 +111,57 @@ add_library(QtAwsIoTEvents
   updateinputrequest_p.h
   updateinputresponse.h
   updateinputresponse_p.h
+  createalarmmodelrequest.cpp
+  createalarmmodelresponse.cpp
   createdetectormodelrequest.cpp
   createdetectormodelresponse.cpp
   createinputrequest.cpp
   createinputresponse.cpp
+  deletealarmmodelrequest.cpp
+  deletealarmmodelresponse.cpp
   deletedetectormodelrequest.cpp
   deletedetectormodelresponse.cpp
   deleteinputrequest.cpp
   deleteinputresponse.cpp
+  describealarmmodelrequest.cpp
+  describealarmmodelresponse.cpp
+  describedetectormodelanalysisrequest.cpp
+  describedetectormodelanalysisresponse.cpp
   describedetectormodelrequest.cpp
   describedetectormodelresponse.cpp
   describeinputrequest.cpp
   describeinputresponse.cpp
   describeloggingoptionsrequest.cpp
   describeloggingoptionsresponse.cpp
+  getdetectormodelanalysisresultsrequest.cpp
+  getdetectormodelanalysisresultsresponse.cpp
   ioteventsclient.cpp
   ioteventsrequest.cpp
   ioteventsresponse.cpp
+  listalarmmodelsrequest.cpp
+  listalarmmodelsresponse.cpp
+  listalarmmodelversionsrequest.cpp
+  listalarmmodelversionsresponse.cpp
   listdetectormodelsrequest.cpp
   listdetectormodelsresponse.cpp
   listdetectormodelversionsrequest.cpp
   listdetectormodelversionsresponse.cpp
+  listinputroutingsrequest.cpp
+  listinputroutingsresponse.cpp
   listinputsrequest.cpp
   listinputsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putloggingoptionsrequest.cpp
   putloggingoptionsresponse.cpp
+  startdetectormodelanalysisrequest.cpp
+  startdetectormodelanalysisresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatealarmmodelrequest.cpp
+  updatealarmmodelresponse.cpp
   updatedetectormodelrequest.cpp
   updatedetectormodelresponse.cpp
   updateinputrequest.cpp

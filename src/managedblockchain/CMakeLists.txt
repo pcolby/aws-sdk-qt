@@ -65,6 +65,10 @@ add_library(QtAwsManagedBlockchain
   listproposalvotesrequest_p.h
   listproposalvotesresponse.h
   listproposalvotesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   managedblockchainclient.h
   managedblockchainclient_p.h
   managedblockchainrequest.h
@@ -75,6 +79,22 @@ add_library(QtAwsManagedBlockchain
   rejectinvitationrequest_p.h
   rejectinvitationresponse.h
   rejectinvitationresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updatememberrequest.h
+  updatememberrequest_p.h
+  updatememberresponse.h
+  updatememberresponse_p.h
+  updatenoderequest.h
+  updatenoderequest_p.h
+  updatenoderesponse.h
+  updatenoderesponse_p.h
   voteonproposalrequest.h
   voteonproposalrequest_p.h
   voteonproposalresponse.h
@@ -111,11 +131,21 @@ add_library(QtAwsManagedBlockchain
   listproposalsresponse.cpp
   listproposalvotesrequest.cpp
   listproposalvotesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   managedblockchainclient.cpp
   managedblockchainrequest.cpp
   managedblockchainresponse.cpp
   rejectinvitationrequest.cpp
   rejectinvitationresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updatememberrequest.cpp
+  updatememberresponse.cpp
+  updatenoderequest.cpp
+  updatenoderesponse.cpp
   voteonproposalrequest.cpp
   voteonproposalresponse.cpp)
 

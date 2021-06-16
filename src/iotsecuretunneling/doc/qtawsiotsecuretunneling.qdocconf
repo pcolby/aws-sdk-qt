@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoTSecureTunneling
+description = AWS IoTSecureTunneling SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiotsecuretunneling-index.html"
+navigation.landingtitle = "IoTSecureTunneling"
+navigation.cppclassespage = "IoTSecureTunneling C++ Classes"

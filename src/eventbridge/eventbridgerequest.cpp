@@ -37,22 +37,38 @@ namespace EventBridge {
  * requests.
  *
  * \value ActivateEventSourceAction EventBridge ActivateEventSource action.
+ * \value CancelReplayAction EventBridge CancelReplay action.
+ * \value CreateApiDestinationAction EventBridge CreateApiDestination action.
+ * \value CreateArchiveAction EventBridge CreateArchive action.
+ * \value CreateConnectionAction EventBridge CreateConnection action.
  * \value CreateEventBusAction EventBridge CreateEventBus action.
  * \value CreatePartnerEventSourceAction EventBridge CreatePartnerEventSource action.
  * \value DeactivateEventSourceAction EventBridge DeactivateEventSource action.
+ * \value DeauthorizeConnectionAction EventBridge DeauthorizeConnection action.
+ * \value DeleteApiDestinationAction EventBridge DeleteApiDestination action.
+ * \value DeleteArchiveAction EventBridge DeleteArchive action.
+ * \value DeleteConnectionAction EventBridge DeleteConnection action.
  * \value DeleteEventBusAction EventBridge DeleteEventBus action.
  * \value DeletePartnerEventSourceAction EventBridge DeletePartnerEventSource action.
  * \value DeleteRuleAction EventBridge DeleteRule action.
+ * \value DescribeApiDestinationAction EventBridge DescribeApiDestination action.
+ * \value DescribeArchiveAction EventBridge DescribeArchive action.
+ * \value DescribeConnectionAction EventBridge DescribeConnection action.
  * \value DescribeEventBusAction EventBridge DescribeEventBus action.
  * \value DescribeEventSourceAction EventBridge DescribeEventSource action.
  * \value DescribePartnerEventSourceAction EventBridge DescribePartnerEventSource action.
+ * \value DescribeReplayAction EventBridge DescribeReplay action.
  * \value DescribeRuleAction EventBridge DescribeRule action.
  * \value DisableRuleAction EventBridge DisableRule action.
  * \value EnableRuleAction EventBridge EnableRule action.
+ * \value ListApiDestinationsAction EventBridge ListApiDestinations action.
+ * \value ListArchivesAction EventBridge ListArchives action.
+ * \value ListConnectionsAction EventBridge ListConnections action.
  * \value ListEventBusesAction EventBridge ListEventBuses action.
  * \value ListEventSourcesAction EventBridge ListEventSources action.
  * \value ListPartnerEventSourceAccountsAction EventBridge ListPartnerEventSourceAccounts action.
  * \value ListPartnerEventSourcesAction EventBridge ListPartnerEventSources action.
+ * \value ListReplaysAction EventBridge ListReplays action.
  * \value ListRuleNamesByTargetAction EventBridge ListRuleNamesByTarget action.
  * \value ListRulesAction EventBridge ListRules action.
  * \value ListTagsForResourceAction EventBridge ListTagsForResource action.
@@ -64,9 +80,13 @@ namespace EventBridge {
  * \value PutTargetsAction EventBridge PutTargets action.
  * \value RemovePermissionAction EventBridge RemovePermission action.
  * \value RemoveTargetsAction EventBridge RemoveTargets action.
+ * \value StartReplayAction EventBridge StartReplay action.
  * \value TagResourceAction EventBridge TagResource action.
  * \value TestEventPatternAction EventBridge TestEventPattern action.
  * \value UntagResourceAction EventBridge UntagResource action.
+ * \value UpdateApiDestinationAction EventBridge UpdateApiDestination action.
+ * \value UpdateArchiveAction EventBridge UpdateArchive action.
+ * \value UpdateConnectionAction EventBridge UpdateConnection action.
  */
 
 /*!

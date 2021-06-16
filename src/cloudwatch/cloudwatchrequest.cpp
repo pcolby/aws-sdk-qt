@@ -39,24 +39,37 @@ namespace CloudWatch {
  * \value DeleteAlarmsAction CloudWatch DeleteAlarms action.
  * \value DeleteAnomalyDetectorAction CloudWatch DeleteAnomalyDetector action.
  * \value DeleteDashboardsAction CloudWatch DeleteDashboards action.
+ * \value DeleteInsightRulesAction CloudWatch DeleteInsightRules action.
+ * \value DeleteMetricStreamAction CloudWatch DeleteMetricStream action.
  * \value DescribeAlarmHistoryAction CloudWatch DescribeAlarmHistory action.
  * \value DescribeAlarmsAction CloudWatch DescribeAlarms action.
  * \value DescribeAlarmsForMetricAction CloudWatch DescribeAlarmsForMetric action.
  * \value DescribeAnomalyDetectorsAction CloudWatch DescribeAnomalyDetectors action.
+ * \value DescribeInsightRulesAction CloudWatch DescribeInsightRules action.
  * \value DisableAlarmActionsAction CloudWatch DisableAlarmActions action.
+ * \value DisableInsightRulesAction CloudWatch DisableInsightRules action.
  * \value EnableAlarmActionsAction CloudWatch EnableAlarmActions action.
+ * \value EnableInsightRulesAction CloudWatch EnableInsightRules action.
  * \value GetDashboardAction CloudWatch GetDashboard action.
+ * \value GetInsightRuleReportAction CloudWatch GetInsightRuleReport action.
  * \value GetMetricDataAction CloudWatch GetMetricData action.
  * \value GetMetricStatisticsAction CloudWatch GetMetricStatistics action.
+ * \value GetMetricStreamAction CloudWatch GetMetricStream action.
  * \value GetMetricWidgetImageAction CloudWatch GetMetricWidgetImage action.
  * \value ListDashboardsAction CloudWatch ListDashboards action.
+ * \value ListMetricStreamsAction CloudWatch ListMetricStreams action.
  * \value ListMetricsAction CloudWatch ListMetrics action.
  * \value ListTagsForResourceAction CloudWatch ListTagsForResource action.
  * \value PutAnomalyDetectorAction CloudWatch PutAnomalyDetector action.
+ * \value PutCompositeAlarmAction CloudWatch PutCompositeAlarm action.
  * \value PutDashboardAction CloudWatch PutDashboard action.
+ * \value PutInsightRuleAction CloudWatch PutInsightRule action.
  * \value PutMetricAlarmAction CloudWatch PutMetricAlarm action.
  * \value PutMetricDataAction CloudWatch PutMetricData action.
+ * \value PutMetricStreamAction CloudWatch PutMetricStream action.
  * \value SetAlarmStateAction CloudWatch SetAlarmState action.
+ * \value StartMetricStreamsAction CloudWatch StartMetricStreams action.
+ * \value StopMetricStreamsAction CloudWatch StopMetricStreams action.
  * \value TagResourceAction CloudWatch TagResource action.
  * \value UntagResourceAction CloudWatch UntagResource action.
  */

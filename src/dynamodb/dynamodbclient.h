@@ -28,6 +28,8 @@ namespace QtAws {
 namespace DynamoDB {
 
 class DynamoDBClientPrivate;
+class BatchExecuteStatementRequest;
+class BatchExecuteStatementResponse;
 class BatchGetItemRequest;
 class BatchGetItemResponse;
 class BatchWriteItemRequest;
@@ -48,22 +50,44 @@ class DescribeBackupRequest;
 class DescribeBackupResponse;
 class DescribeContinuousBackupsRequest;
 class DescribeContinuousBackupsResponse;
+class DescribeContributorInsightsRequest;
+class DescribeContributorInsightsResponse;
 class DescribeEndpointsRequest;
 class DescribeEndpointsResponse;
+class DescribeExportRequest;
+class DescribeExportResponse;
 class DescribeGlobalTableRequest;
 class DescribeGlobalTableResponse;
 class DescribeGlobalTableSettingsRequest;
 class DescribeGlobalTableSettingsResponse;
+class DescribeKinesisStreamingDestinationRequest;
+class DescribeKinesisStreamingDestinationResponse;
 class DescribeLimitsRequest;
 class DescribeLimitsResponse;
 class DescribeTableRequest;
 class DescribeTableResponse;
+class DescribeTableReplicaAutoScalingRequest;
+class DescribeTableReplicaAutoScalingResponse;
 class DescribeTimeToLiveRequest;
 class DescribeTimeToLiveResponse;
+class DisableKinesisStreamingDestinationRequest;
+class DisableKinesisStreamingDestinationResponse;
+class EnableKinesisStreamingDestinationRequest;
+class EnableKinesisStreamingDestinationResponse;
+class ExecuteStatementRequest;
+class ExecuteStatementResponse;
+class ExecuteTransactionRequest;
+class ExecuteTransactionResponse;
+class ExportTableToPointInTimeRequest;
+class ExportTableToPointInTimeResponse;
 class GetItemRequest;
 class GetItemResponse;
 class ListBackupsRequest;
 class ListBackupsResponse;
+class ListContributorInsightsRequest;
+class ListContributorInsightsResponse;
+class ListExportsRequest;
+class ListExportsResponse;
 class ListGlobalTablesRequest;
 class ListGlobalTablesResponse;
 class ListTablesRequest;
@@ -90,6 +114,8 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateContinuousBackupsRequest;
 class UpdateContinuousBackupsResponse;
+class UpdateContributorInsightsRequest;
+class UpdateContributorInsightsResponse;
 class UpdateGlobalTableRequest;
 class UpdateGlobalTableResponse;
 class UpdateGlobalTableSettingsRequest;
@@ -98,6 +124,8 @@ class UpdateItemRequest;
 class UpdateItemResponse;
 class UpdateTableRequest;
 class UpdateTableResponse;
+class UpdateTableReplicaAutoScalingRequest;
+class UpdateTableReplicaAutoScalingResponse;
 class UpdateTimeToLiveRequest;
 class UpdateTimeToLiveResponse;
 
@@ -117,6 +145,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    BatchExecuteStatementResponse * batchExecuteStatement(const BatchExecuteStatementRequest &request);
     BatchGetItemResponse * batchGetItem(const BatchGetItemRequest &request);
     BatchWriteItemResponse * batchWriteItem(const BatchWriteItemRequest &request);
     CreateBackupResponse * createBackup(const CreateBackupRequest &request);
@@ -127,14 +156,25 @@ public slots:
     DeleteTableResponse * deleteTable(const DeleteTableRequest &request);
     DescribeBackupResponse * describeBackup(const DescribeBackupRequest &request);
     DescribeContinuousBackupsResponse * describeContinuousBackups(const DescribeContinuousBackupsRequest &request);
+    DescribeContributorInsightsResponse * describeContributorInsights(const DescribeContributorInsightsRequest &request);
     DescribeEndpointsResponse * describeEndpoints(const DescribeEndpointsRequest &request);
+    DescribeExportResponse * describeExport(const DescribeExportRequest &request);
     DescribeGlobalTableResponse * describeGlobalTable(const DescribeGlobalTableRequest &request);
     DescribeGlobalTableSettingsResponse * describeGlobalTableSettings(const DescribeGlobalTableSettingsRequest &request);
+    DescribeKinesisStreamingDestinationResponse * describeKinesisStreamingDestination(const DescribeKinesisStreamingDestinationRequest &request);
     DescribeLimitsResponse * describeLimits(const DescribeLimitsRequest &request);
     DescribeTableResponse * describeTable(const DescribeTableRequest &request);
+    DescribeTableReplicaAutoScalingResponse * describeTableReplicaAutoScaling(const DescribeTableReplicaAutoScalingRequest &request);
     DescribeTimeToLiveResponse * describeTimeToLive(const DescribeTimeToLiveRequest &request);
+    DisableKinesisStreamingDestinationResponse * disableKinesisStreamingDestination(const DisableKinesisStreamingDestinationRequest &request);
+    EnableKinesisStreamingDestinationResponse * enableKinesisStreamingDestination(const EnableKinesisStreamingDestinationRequest &request);
+    ExecuteStatementResponse * executeStatement(const ExecuteStatementRequest &request);
+    ExecuteTransactionResponse * executeTransaction(const ExecuteTransactionRequest &request);
+    ExportTableToPointInTimeResponse * exportTableToPointInTime(const ExportTableToPointInTimeRequest &request);
     GetItemResponse * getItem(const GetItemRequest &request);
     ListBackupsResponse * listBackups(const ListBackupsRequest &request);
+    ListContributorInsightsResponse * listContributorInsights(const ListContributorInsightsRequest &request);
+    ListExportsResponse * listExports(const ListExportsRequest &request);
     ListGlobalTablesResponse * listGlobalTables(const ListGlobalTablesRequest &request);
     ListTablesResponse * listTables(const ListTablesRequest &request);
     ListTagsOfResourceResponse * listTagsOfResource(const ListTagsOfResourceRequest &request);
@@ -148,10 +188,12 @@ public slots:
     TransactWriteItemsResponse * transactWriteItems(const TransactWriteItemsRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateContinuousBackupsResponse * updateContinuousBackups(const UpdateContinuousBackupsRequest &request);
+    UpdateContributorInsightsResponse * updateContributorInsights(const UpdateContributorInsightsRequest &request);
     UpdateGlobalTableResponse * updateGlobalTable(const UpdateGlobalTableRequest &request);
     UpdateGlobalTableSettingsResponse * updateGlobalTableSettings(const UpdateGlobalTableSettingsRequest &request);
     UpdateItemResponse * updateItem(const UpdateItemRequest &request);
     UpdateTableResponse * updateTable(const UpdateTableRequest &request);
+    UpdateTableReplicaAutoScalingResponse * updateTableReplicaAutoScaling(const UpdateTableReplicaAutoScalingRequest &request);
     UpdateTimeToLiveResponse * updateTimeToLive(const UpdateTimeToLiveRequest &request);
 
 private:

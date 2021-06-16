@@ -1,10 +1,18 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsMediaPackage
+  configurelogsrequest.h
+  configurelogsrequest_p.h
+  configurelogsresponse.h
+  configurelogsresponse_p.h
   createchannelrequest.h
   createchannelrequest_p.h
   createchannelresponse.h
   createchannelresponse_p.h
+  createharvestjobrequest.h
+  createharvestjobrequest_p.h
+  createharvestjobresponse.h
+  createharvestjobresponse_p.h
   createoriginendpointrequest.h
   createoriginendpointrequest_p.h
   createoriginendpointresponse.h
@@ -21,6 +29,10 @@ add_library(QtAwsMediaPackage
   describechannelrequest_p.h
   describechannelresponse.h
   describechannelresponse_p.h
+  describeharvestjobrequest.h
+  describeharvestjobrequest_p.h
+  describeharvestjobresponse.h
+  describeharvestjobresponse_p.h
   describeoriginendpointrequest.h
   describeoriginendpointrequest_p.h
   describeoriginendpointresponse.h
@@ -29,6 +41,10 @@ add_library(QtAwsMediaPackage
   listchannelsrequest_p.h
   listchannelsresponse.h
   listchannelsresponse_p.h
+  listharvestjobsrequest.h
+  listharvestjobsrequest_p.h
+  listharvestjobsresponse.h
+  listharvestjobsresponse_p.h
   listoriginendpointsrequest.h
   listoriginendpointsrequest_p.h
   listoriginendpointsresponse.h
@@ -67,8 +83,12 @@ add_library(QtAwsMediaPackage
   updateoriginendpointrequest_p.h
   updateoriginendpointresponse.h
   updateoriginendpointresponse_p.h
+  configurelogsrequest.cpp
+  configurelogsresponse.cpp
   createchannelrequest.cpp
   createchannelresponse.cpp
+  createharvestjobrequest.cpp
+  createharvestjobresponse.cpp
   createoriginendpointrequest.cpp
   createoriginendpointresponse.cpp
   deletechannelrequest.cpp
@@ -77,10 +97,14 @@ add_library(QtAwsMediaPackage
   deleteoriginendpointresponse.cpp
   describechannelrequest.cpp
   describechannelresponse.cpp
+  describeharvestjobrequest.cpp
+  describeharvestjobresponse.cpp
   describeoriginendpointrequest.cpp
   describeoriginendpointresponse.cpp
   listchannelsrequest.cpp
   listchannelsresponse.cpp
+  listharvestjobsrequest.cpp
+  listharvestjobsresponse.cpp
   listoriginendpointsrequest.cpp
   listoriginendpointsresponse.cpp
   listtagsforresourcerequest.cpp

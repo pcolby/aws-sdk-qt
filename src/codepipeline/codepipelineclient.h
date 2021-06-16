@@ -48,6 +48,8 @@ class DisableStageTransitionRequest;
 class DisableStageTransitionResponse;
 class EnableStageTransitionRequest;
 class EnableStageTransitionResponse;
+class GetActionTypeRequest;
+class GetActionTypeResponse;
 class GetJobDetailsRequest;
 class GetJobDetailsResponse;
 class GetPipelineRequest;
@@ -94,10 +96,14 @@ class RetryStageExecutionRequest;
 class RetryStageExecutionResponse;
 class StartPipelineExecutionRequest;
 class StartPipelineExecutionResponse;
+class StopPipelineExecutionRequest;
+class StopPipelineExecutionResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateActionTypeRequest;
+class UpdateActionTypeResponse;
 class UpdatePipelineRequest;
 class UpdatePipelineResponse;
 
@@ -127,6 +133,7 @@ public slots:
     DeregisterWebhookWithThirdPartyResponse * deregisterWebhookWithThirdParty(const DeregisterWebhookWithThirdPartyRequest &request);
     DisableStageTransitionResponse * disableStageTransition(const DisableStageTransitionRequest &request);
     EnableStageTransitionResponse * enableStageTransition(const EnableStageTransitionRequest &request);
+    GetActionTypeResponse * getActionType(const GetActionTypeRequest &request);
     GetJobDetailsResponse * getJobDetails(const GetJobDetailsRequest &request);
     GetPipelineResponse * getPipeline(const GetPipelineRequest &request);
     GetPipelineExecutionResponse * getPipelineExecution(const GetPipelineExecutionRequest &request);
@@ -150,8 +157,10 @@ public slots:
     RegisterWebhookWithThirdPartyResponse * registerWebhookWithThirdParty(const RegisterWebhookWithThirdPartyRequest &request);
     RetryStageExecutionResponse * retryStageExecution(const RetryStageExecutionRequest &request);
     StartPipelineExecutionResponse * startPipelineExecution(const StartPipelineExecutionRequest &request);
+    StopPipelineExecutionResponse * stopPipelineExecution(const StopPipelineExecutionRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateActionTypeResponse * updateActionType(const UpdateActionTypeRequest &request);
     UpdatePipelineResponse * updatePipeline(const UpdatePipelineRequest &request);
 
 private:

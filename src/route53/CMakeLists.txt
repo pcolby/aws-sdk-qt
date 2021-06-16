@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsRoute53
+  activatekeysigningkeyrequest.h
+  activatekeysigningkeyrequest_p.h
+  activatekeysigningkeyresponse.h
+  activatekeysigningkeyresponse_p.h
   associatevpcwithhostedzonerequest.h
   associatevpcwithhostedzonerequest_p.h
   associatevpcwithhostedzoneresponse.h
@@ -21,6 +25,10 @@ add_library(QtAwsRoute53
   createhostedzonerequest_p.h
   createhostedzoneresponse.h
   createhostedzoneresponse_p.h
+  createkeysigningkeyrequest.h
+  createkeysigningkeyrequest_p.h
+  createkeysigningkeyresponse.h
+  createkeysigningkeyresponse_p.h
   createqueryloggingconfigrequest.h
   createqueryloggingconfigrequest_p.h
   createqueryloggingconfigresponse.h
@@ -45,6 +53,10 @@ add_library(QtAwsRoute53
   createvpcassociationauthorizationrequest_p.h
   createvpcassociationauthorizationresponse.h
   createvpcassociationauthorizationresponse_p.h
+  deactivatekeysigningkeyrequest.h
+  deactivatekeysigningkeyrequest_p.h
+  deactivatekeysigningkeyresponse.h
+  deactivatekeysigningkeyresponse_p.h
   deletehealthcheckrequest.h
   deletehealthcheckrequest_p.h
   deletehealthcheckresponse.h
@@ -53,6 +65,10 @@ add_library(QtAwsRoute53
   deletehostedzonerequest_p.h
   deletehostedzoneresponse.h
   deletehostedzoneresponse_p.h
+  deletekeysigningkeyrequest.h
+  deletekeysigningkeyrequest_p.h
+  deletekeysigningkeyresponse.h
+  deletekeysigningkeyresponse_p.h
   deletequeryloggingconfigrequest.h
   deletequeryloggingconfigrequest_p.h
   deletequeryloggingconfigresponse.h
@@ -73,10 +89,18 @@ add_library(QtAwsRoute53
   deletevpcassociationauthorizationrequest_p.h
   deletevpcassociationauthorizationresponse.h
   deletevpcassociationauthorizationresponse_p.h
+  disablehostedzonednssecrequest.h
+  disablehostedzonednssecrequest_p.h
+  disablehostedzonednssecresponse.h
+  disablehostedzonednssecresponse_p.h
   disassociatevpcfromhostedzonerequest.h
   disassociatevpcfromhostedzonerequest_p.h
   disassociatevpcfromhostedzoneresponse.h
   disassociatevpcfromhostedzoneresponse_p.h
+  enablehostedzonednssecrequest.h
+  enablehostedzonednssecrequest_p.h
+  enablehostedzonednssecresponse.h
+  enablehostedzonednssecresponse_p.h
   getaccountlimitrequest.h
   getaccountlimitrequest_p.h
   getaccountlimitresponse.h
@@ -89,6 +113,10 @@ add_library(QtAwsRoute53
   getcheckeriprangesrequest_p.h
   getcheckeriprangesresponse.h
   getcheckeriprangesresponse_p.h
+  getdnssecrequest.h
+  getdnssecrequest_p.h
+  getdnssecresponse.h
+  getdnssecresponse_p.h
   getgeolocationrequest.h
   getgeolocationrequest_p.h
   getgeolocationresponse.h
@@ -157,6 +185,10 @@ add_library(QtAwsRoute53
   listhostedzonesbynamerequest_p.h
   listhostedzonesbynameresponse.h
   listhostedzonesbynameresponse_p.h
+  listhostedzonesbyvpcrequest.h
+  listhostedzonesbyvpcrequest_p.h
+  listhostedzonesbyvpcresponse.h
+  listhostedzonesbyvpcresponse_p.h
   listhostedzonesrequest.h
   listhostedzonesrequest_p.h
   listhostedzonesresponse.h
@@ -231,6 +263,8 @@ add_library(QtAwsRoute53
   updatetrafficpolicyinstancerequest_p.h
   updatetrafficpolicyinstanceresponse.h
   updatetrafficpolicyinstanceresponse_p.h
+  activatekeysigningkeyrequest.cpp
+  activatekeysigningkeyresponse.cpp
   associatevpcwithhostedzonerequest.cpp
   associatevpcwithhostedzoneresponse.cpp
   changeresourcerecordsetsrequest.cpp
@@ -241,6 +275,8 @@ add_library(QtAwsRoute53
   createhealthcheckresponse.cpp
   createhostedzonerequest.cpp
   createhostedzoneresponse.cpp
+  createkeysigningkeyrequest.cpp
+  createkeysigningkeyresponse.cpp
   createqueryloggingconfigrequest.cpp
   createqueryloggingconfigresponse.cpp
   createreusabledelegationsetrequest.cpp
@@ -253,10 +289,14 @@ add_library(QtAwsRoute53
   createtrafficpolicyversionresponse.cpp
   createvpcassociationauthorizationrequest.cpp
   createvpcassociationauthorizationresponse.cpp
+  deactivatekeysigningkeyrequest.cpp
+  deactivatekeysigningkeyresponse.cpp
   deletehealthcheckrequest.cpp
   deletehealthcheckresponse.cpp
   deletehostedzonerequest.cpp
   deletehostedzoneresponse.cpp
+  deletekeysigningkeyrequest.cpp
+  deletekeysigningkeyresponse.cpp
   deletequeryloggingconfigrequest.cpp
   deletequeryloggingconfigresponse.cpp
   deletereusabledelegationsetrequest.cpp
@@ -267,14 +307,20 @@ add_library(QtAwsRoute53
   deletetrafficpolicyresponse.cpp
   deletevpcassociationauthorizationrequest.cpp
   deletevpcassociationauthorizationresponse.cpp
+  disablehostedzonednssecrequest.cpp
+  disablehostedzonednssecresponse.cpp
   disassociatevpcfromhostedzonerequest.cpp
   disassociatevpcfromhostedzoneresponse.cpp
+  enablehostedzonednssecrequest.cpp
+  enablehostedzonednssecresponse.cpp
   getaccountlimitrequest.cpp
   getaccountlimitresponse.cpp
   getchangerequest.cpp
   getchangeresponse.cpp
   getcheckeriprangesrequest.cpp
   getcheckeriprangesresponse.cpp
+  getdnssecrequest.cpp
+  getdnssecresponse.cpp
   getgeolocationrequest.cpp
   getgeolocationresponse.cpp
   gethealthcheckcountrequest.cpp
@@ -309,6 +355,8 @@ add_library(QtAwsRoute53
   listhealthchecksresponse.cpp
   listhostedzonesbynamerequest.cpp
   listhostedzonesbynameresponse.cpp
+  listhostedzonesbyvpcrequest.cpp
+  listhostedzonesbyvpcresponse.cpp
   listhostedzonesrequest.cpp
   listhostedzonesresponse.cpp
   listqueryloggingconfigsrequest.cpp

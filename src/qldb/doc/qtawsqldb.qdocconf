@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsQldb
+description = AWS QLDB SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsqldb-index.html"
+navigation.landingtitle = "QLDB"
+navigation.cppclassespage = "QLDB C++ Classes"

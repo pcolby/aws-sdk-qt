@@ -55,6 +55,8 @@
 #include "deletedeploymentgroupresponse.h"
 #include "deletegithubaccounttokenrequest.h"
 #include "deletegithubaccounttokenresponse.h"
+#include "deleteresourcesbyexternalidrequest.h"
+#include "deleteresourcesbyexternalidresponse.h"
 #include "deregisteronpremisesinstancerequest.h"
 #include "deregisteronpremisesinstanceresponse.h"
 #include "getapplicationrequest.h"
@@ -363,7 +365,7 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
  *
  * 25>
  *
- * The type of targets returned depends on the deployment's compute platform:
+ * The type of targets returned depends on the deployment's compute platform or deployment method:
  *
  * </p <ul> <li>
  *
@@ -376,6 +378,10 @@ BatchGetDeploymentInstancesResponse * CodeDeployClient::batchGetDeploymentInstan
  * </p </li> <li>
  *
  * <b>Amazon ECS</b>: Information about Amazon ECS service targets.
+ *
+ * </p </li> <li>
+ *
+ * <b>CloudFormation</b>: Information about targets of blue/green deployments initiated by a CloudFormation stack
  */
 BatchGetDeploymentTargetsResponse * CodeDeployClient::batchGetDeploymentTargets(const BatchGetDeploymentTargetsRequest &request)
 {
@@ -531,6 +537,19 @@ DeleteDeploymentGroupResponse * CodeDeployClient::deleteDeploymentGroup(const De
 DeleteGitHubAccountTokenResponse * CodeDeployClient::deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request)
 {
     return qobject_cast<DeleteGitHubAccountTokenResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeDeployClient service, and returns a pointer to an
+ * DeleteResourcesByExternalIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes resources linked to an external
+ */
+DeleteResourcesByExternalIdResponse * CodeDeployClient::deleteResourcesByExternalId(const DeleteResourcesByExternalIdRequest &request)
+{
+    return qobject_cast<DeleteResourcesByExternalIdResponse *>(send(request));
 }
 
 /*!
@@ -716,7 +735,7 @@ ListDeploymentGroupsResponse * CodeDeployClient::listDeploymentGroups(const List
  *
  * <note>
  *
- * The newer BatchGetDeploymentTargets should be used instead because it works with all compute types.
+ * The newer <code>BatchGetDeploymentTargets</code> should be used instead because it works with all compute types.
  * <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than
  * EC2/On-premises or AWS Lambda.
  *
@@ -792,8 +811,8 @@ ListOnPremisesInstancesResponse * CodeDeployClient::listOnPremisesInstances(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of tags for the resource identified by a specified ARN. Tags are used to organize and categorize your
- * CodeDeploy resources.
+ * Returns a list of tags for the resource identified by a specified Amazon Resource Name (ARN). Tags are used to organize
+ * and categorize your CodeDeploy resources.
  */
 ListTagsForResourceResponse * CodeDeployClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -806,9 +825,16 @@ ListTagsForResourceResponse * CodeDeployClient::listTagsForResource(const ListTa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the result of a Lambda validation function. The function validates one or both lifecycle events
- * (<code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>) and returns <code>Succeeded</code> or
- * <code>Failed</code>.
+ * Sets the result of a Lambda validation function. The function validates lifecycle hooks during a deployment that uses
+ * the AWS Lambda or Amazon ECS compute platform. For AWS Lambda deployments, the available lifecycle hooks are
+ * <code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>. For Amazon ECS deployments, the available lifecycle
+ * hooks are <code>BeforeInstall</code>, <code>AfterInstall</code>, <code>AfterAllowTestTraffic</code>,
+ * <code>BeforeAllowTraffic</code>, and <code>AfterAllowTraffic</code>. Lambda validation functions return
+ * <code>Succeeded</code> or <code>Failed</code>. For more information, see <a
+ * href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-lambda">AppSpec
+ * 'hooks' Section for an AWS Lambda Deployment </a> and <a
+ * href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-ecs">AppSpec
+ * 'hooks' Section for an Amazon ECS
  */
 PutLifecycleEventHookExecutionStatusResponse * CodeDeployClient::putLifecycleEventHookExecutionStatus(const PutLifecycleEventHookExecutionStatusRequest &request)
 {
@@ -906,7 +932,7 @@ TagResourceResponse * CodeDeployClient::tagResource(const TagResourceRequest &re
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates a resource from a list of tags. The resource is identified by the <code>ResourceArn</code> input
- * parameter. The tags are identfied by the list of keys in the <code>TagKeys</code> input parameter.
+ * parameter. The tags are identified by the list of keys in the <code>TagKeys</code> input parameter.
  */
 UntagResourceResponse * CodeDeployClient::untagResource(const UntagResourceRequest &request)
 {

@@ -21,6 +21,8 @@
 #include "transcribestreamingserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "startmedicalstreamtranscriptionrequest.h"
+#include "startmedicalstreamtranscriptionresponse.h"
 #include "startstreamtranscriptionrequest.h"
 #include "startstreamtranscriptionresponse.h"
 
@@ -100,6 +102,20 @@ TranscribeStreamingServiceClient::TranscribeStreamingServiceClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("Amazon Transcribe Streaming Service");
     d->serviceName = QStringLiteral("transcribe");
+}
+
+/*!
+ * Sends \a request to the TranscribeStreamingServiceClient service, and returns a pointer to an
+ * StartMedicalStreamTranscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a bidirectional HTTP/2 stream where audio is streamed to Amazon Transcribe Medical and the transcription results
+ * are streamed to your
+ */
+StartMedicalStreamTranscriptionResponse * TranscribeStreamingServiceClient::startMedicalStreamTranscription(const StartMedicalStreamTranscriptionRequest &request)
+{
+    return qobject_cast<StartMedicalStreamTranscriptionResponse *>(send(request));
 }
 
 /*!

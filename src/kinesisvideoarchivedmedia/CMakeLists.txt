@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsKinesisVideoArchivedMedia
+  getcliprequest.h
+  getcliprequest_p.h
+  getclipresponse.h
+  getclipresponse_p.h
   getdashstreamingsessionurlrequest.h
   getdashstreamingsessionurlrequest_p.h
   getdashstreamingsessionurlresponse.h
@@ -23,6 +27,8 @@ add_library(QtAwsKinesisVideoArchivedMedia
   listfragmentsrequest_p.h
   listfragmentsresponse.h
   listfragmentsresponse_p.h
+  getcliprequest.cpp
+  getclipresponse.cpp
   getdashstreamingsessionurlrequest.cpp
   getdashstreamingsessionurlresponse.cpp
   gethlsstreamingsessionurlrequest.cpp

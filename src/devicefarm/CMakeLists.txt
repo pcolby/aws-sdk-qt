@@ -21,6 +21,14 @@ add_library(QtAwsDeviceFarm
   createremoteaccesssessionrequest_p.h
   createremoteaccesssessionresponse.h
   createremoteaccesssessionresponse_p.h
+  createtestgridprojectrequest.h
+  createtestgridprojectrequest_p.h
+  createtestgridprojectresponse.h
+  createtestgridprojectresponse_p.h
+  createtestgridurlrequest.h
+  createtestgridurlrequest_p.h
+  createtestgridurlresponse.h
+  createtestgridurlresponse_p.h
   createuploadrequest.h
   createuploadrequest_p.h
   createuploadresponse.h
@@ -53,6 +61,10 @@ add_library(QtAwsDeviceFarm
   deleterunrequest_p.h
   deleterunresponse.h
   deleterunresponse_p.h
+  deletetestgridprojectrequest.h
+  deletetestgridprojectrequest_p.h
+  deletetestgridprojectresponse.h
+  deletetestgridprojectresponse_p.h
   deleteuploadrequest.h
   deleteuploadrequest_p.h
   deleteuploadresponse.h
@@ -119,6 +131,14 @@ add_library(QtAwsDeviceFarm
   getsuiterequest_p.h
   getsuiteresponse.h
   getsuiteresponse_p.h
+  gettestgridprojectrequest.h
+  gettestgridprojectrequest_p.h
+  gettestgridprojectresponse.h
+  gettestgridprojectresponse_p.h
+  gettestgridsessionrequest.h
+  gettestgridsessionrequest_p.h
+  gettestgridsessionresponse.h
+  gettestgridsessionresponse_p.h
   gettestrequest.h
   gettestrequest_p.h
   gettestresponse.h
@@ -199,6 +219,22 @@ add_library(QtAwsDeviceFarm
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listtestgridprojectsrequest.h
+  listtestgridprojectsrequest_p.h
+  listtestgridprojectsresponse.h
+  listtestgridprojectsresponse_p.h
+  listtestgridsessionactionsrequest.h
+  listtestgridsessionactionsrequest_p.h
+  listtestgridsessionactionsresponse.h
+  listtestgridsessionactionsresponse_p.h
+  listtestgridsessionartifactsrequest.h
+  listtestgridsessionartifactsrequest_p.h
+  listtestgridsessionartifactsresponse.h
+  listtestgridsessionartifactsresponse_p.h
+  listtestgridsessionsrequest.h
+  listtestgridsessionsrequest_p.h
+  listtestgridsessionsresponse.h
+  listtestgridsessionsresponse_p.h
   listtestsrequest.h
   listtestsrequest_p.h
   listtestsresponse.h
@@ -267,6 +303,10 @@ add_library(QtAwsDeviceFarm
   updateprojectrequest_p.h
   updateprojectresponse.h
   updateprojectresponse_p.h
+  updatetestgridprojectrequest.h
+  updatetestgridprojectrequest_p.h
+  updatetestgridprojectresponse.h
+  updatetestgridprojectresponse_p.h
   updateuploadrequest.h
   updateuploadrequest_p.h
   updateuploadresponse.h
@@ -285,6 +325,10 @@ add_library(QtAwsDeviceFarm
   createprojectresponse.cpp
   createremoteaccesssessionrequest.cpp
   createremoteaccesssessionresponse.cpp
+  createtestgridprojectrequest.cpp
+  createtestgridprojectresponse.cpp
+  createtestgridurlrequest.cpp
+  createtestgridurlresponse.cpp
   createuploadrequest.cpp
   createuploadresponse.cpp
   createvpceconfigurationrequest.cpp
@@ -301,6 +345,8 @@ add_library(QtAwsDeviceFarm
   deleteremoteaccesssessionresponse.cpp
   deleterunrequest.cpp
   deleterunresponse.cpp
+  deletetestgridprojectrequest.cpp
+  deletetestgridprojectresponse.cpp
   deleteuploadrequest.cpp
   deleteuploadresponse.cpp
   deletevpceconfigurationrequest.cpp
@@ -334,6 +380,10 @@ add_library(QtAwsDeviceFarm
   getrunresponse.cpp
   getsuiterequest.cpp
   getsuiteresponse.cpp
+  gettestgridprojectrequest.cpp
+  gettestgridprojectresponse.cpp
+  gettestgridsessionrequest.cpp
+  gettestgridsessionresponse.cpp
   gettestrequest.cpp
   gettestresponse.cpp
   getuploadrequest.cpp
@@ -374,6 +424,14 @@ add_library(QtAwsDeviceFarm
   listsuitesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listtestgridprojectsrequest.cpp
+  listtestgridprojectsresponse.cpp
+  listtestgridsessionactionsrequest.cpp
+  listtestgridsessionactionsresponse.cpp
+  listtestgridsessionartifactsrequest.cpp
+  listtestgridsessionartifactsresponse.cpp
+  listtestgridsessionsrequest.cpp
+  listtestgridsessionsresponse.cpp
   listtestsrequest.cpp
   listtestsresponse.cpp
   listuniqueproblemsrequest.cpp
@@ -408,6 +466,8 @@ add_library(QtAwsDeviceFarm
   updatenetworkprofileresponse.cpp
   updateprojectrequest.cpp
   updateprojectresponse.cpp
+  updatetestgridprojectrequest.cpp
+  updatetestgridprojectresponse.cpp
   updateuploadrequest.cpp
   updateuploadresponse.cpp
   updatevpceconfigurationrequest.cpp

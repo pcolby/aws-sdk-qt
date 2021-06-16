@@ -39,6 +39,7 @@ public:
     enum Action {
         DeleteThingShadowAction,
         GetThingShadowAction,
+        ListNamedShadowsForThingAction,
         PublishAction,
         UpdateThingShadowAction,
     };

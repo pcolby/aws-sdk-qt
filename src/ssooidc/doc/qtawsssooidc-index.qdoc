@@ -1,0 +1,9 @@
+
+/*!
+    \page qtawsssooidc-index.html
+    \title Qt Aws SSOOIDC
+
+    \brief Classes for the AWS SSO OIDC service
+
+    (This is the page the forms the overview for the servce.)
+*/

@@ -90,6 +90,8 @@ class GetSlotTypesRequest;
 class GetSlotTypesResponse;
 class GetUtterancesViewRequest;
 class GetUtterancesViewResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutBotRequest;
 class PutBotResponse;
 class PutBotAliasRequest;
@@ -100,6 +102,10 @@ class PutSlotTypeRequest;
 class PutSlotTypeResponse;
 class StartImportRequest;
 class StartImportResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT LexModelBuildingServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -148,11 +154,14 @@ public slots:
     GetSlotTypeVersionsResponse * getSlotTypeVersions(const GetSlotTypeVersionsRequest &request);
     GetSlotTypesResponse * getSlotTypes(const GetSlotTypesRequest &request);
     GetUtterancesViewResponse * getUtterancesView(const GetUtterancesViewRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutBotResponse * putBot(const PutBotRequest &request);
     PutBotAliasResponse * putBotAlias(const PutBotAliasRequest &request);
     PutIntentResponse * putIntent(const PutIntentRequest &request);
     PutSlotTypeResponse * putSlotType(const PutSlotTypeRequest &request);
     StartImportResponse * startImport(const StartImportRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(LexModelBuildingServiceClient)

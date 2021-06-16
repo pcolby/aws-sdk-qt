@@ -36,36 +36,61 @@ namespace MediaLive {
  * This enum describes the actions that can be performed as MediaLive
  * requests.
  *
+ * \value AcceptInputDeviceTransferAction MediaLive AcceptInputDeviceTransfer action.
+ * \value BatchDeleteAction MediaLive BatchDelete action.
+ * \value BatchStartAction MediaLive BatchStart action.
+ * \value BatchStopAction MediaLive BatchStop action.
  * \value BatchUpdateScheduleAction MediaLive BatchUpdateSchedule action.
+ * \value CancelInputDeviceTransferAction MediaLive CancelInputDeviceTransfer action.
  * \value CreateChannelAction MediaLive CreateChannel action.
  * \value CreateInputAction MediaLive CreateInput action.
  * \value CreateInputSecurityGroupAction MediaLive CreateInputSecurityGroup action.
+ * \value CreateMultiplexAction MediaLive CreateMultiplex action.
+ * \value CreateMultiplexProgramAction MediaLive CreateMultiplexProgram action.
+ * \value CreatePartnerInputAction MediaLive CreatePartnerInput action.
  * \value CreateTagsAction MediaLive CreateTags action.
  * \value DeleteChannelAction MediaLive DeleteChannel action.
  * \value DeleteInputAction MediaLive DeleteInput action.
  * \value DeleteInputSecurityGroupAction MediaLive DeleteInputSecurityGroup action.
+ * \value DeleteMultiplexAction MediaLive DeleteMultiplex action.
+ * \value DeleteMultiplexProgramAction MediaLive DeleteMultiplexProgram action.
  * \value DeleteReservationAction MediaLive DeleteReservation action.
  * \value DeleteScheduleAction MediaLive DeleteSchedule action.
  * \value DeleteTagsAction MediaLive DeleteTags action.
  * \value DescribeChannelAction MediaLive DescribeChannel action.
  * \value DescribeInputAction MediaLive DescribeInput action.
+ * \value DescribeInputDeviceAction MediaLive DescribeInputDevice action.
+ * \value DescribeInputDeviceThumbnailAction MediaLive DescribeInputDeviceThumbnail action.
  * \value DescribeInputSecurityGroupAction MediaLive DescribeInputSecurityGroup action.
+ * \value DescribeMultiplexAction MediaLive DescribeMultiplex action.
+ * \value DescribeMultiplexProgramAction MediaLive DescribeMultiplexProgram action.
  * \value DescribeOfferingAction MediaLive DescribeOffering action.
  * \value DescribeReservationAction MediaLive DescribeReservation action.
  * \value DescribeScheduleAction MediaLive DescribeSchedule action.
  * \value ListChannelsAction MediaLive ListChannels action.
+ * \value ListInputDeviceTransfersAction MediaLive ListInputDeviceTransfers action.
+ * \value ListInputDevicesAction MediaLive ListInputDevices action.
  * \value ListInputSecurityGroupsAction MediaLive ListInputSecurityGroups action.
  * \value ListInputsAction MediaLive ListInputs action.
+ * \value ListMultiplexProgramsAction MediaLive ListMultiplexPrograms action.
+ * \value ListMultiplexesAction MediaLive ListMultiplexes action.
  * \value ListOfferingsAction MediaLive ListOfferings action.
  * \value ListReservationsAction MediaLive ListReservations action.
  * \value ListTagsForResourceAction MediaLive ListTagsForResource action.
  * \value PurchaseOfferingAction MediaLive PurchaseOffering action.
+ * \value RejectInputDeviceTransferAction MediaLive RejectInputDeviceTransfer action.
  * \value StartChannelAction MediaLive StartChannel action.
+ * \value StartMultiplexAction MediaLive StartMultiplex action.
  * \value StopChannelAction MediaLive StopChannel action.
+ * \value StopMultiplexAction MediaLive StopMultiplex action.
+ * \value TransferInputDeviceAction MediaLive TransferInputDevice action.
  * \value UpdateChannelAction MediaLive UpdateChannel action.
  * \value UpdateChannelClassAction MediaLive UpdateChannelClass action.
  * \value UpdateInputAction MediaLive UpdateInput action.
+ * \value UpdateInputDeviceAction MediaLive UpdateInputDevice action.
  * \value UpdateInputSecurityGroupAction MediaLive UpdateInputSecurityGroup action.
+ * \value UpdateMultiplexAction MediaLive UpdateMultiplex action.
+ * \value UpdateMultiplexProgramAction MediaLive UpdateMultiplexProgram action.
  * \value UpdateReservationAction MediaLive UpdateReservation action.
  */
 

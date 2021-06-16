@@ -46,6 +46,8 @@ class DisassociateDiscoveredResourceRequest;
 class DisassociateDiscoveredResourceResponse;
 class ImportMigrationTaskRequest;
 class ImportMigrationTaskResponse;
+class ListApplicationStatesRequest;
+class ListApplicationStatesResponse;
 class ListCreatedArtifactsRequest;
 class ListCreatedArtifactsResponse;
 class ListDiscoveredResourcesRequest;
@@ -86,6 +88,7 @@ public slots:
     DisassociateCreatedArtifactResponse * disassociateCreatedArtifact(const DisassociateCreatedArtifactRequest &request);
     DisassociateDiscoveredResourceResponse * disassociateDiscoveredResource(const DisassociateDiscoveredResourceRequest &request);
     ImportMigrationTaskResponse * importMigrationTask(const ImportMigrationTaskRequest &request);
+    ListApplicationStatesResponse * listApplicationStates(const ListApplicationStatesRequest &request);
     ListCreatedArtifactsResponse * listCreatedArtifacts(const ListCreatedArtifactsRequest &request);
     ListDiscoveredResourcesResponse * listDiscoveredResources(const ListDiscoveredResourcesRequest &request);
     ListMigrationTasksResponse * listMigrationTasks(const ListMigrationTasksRequest &request);

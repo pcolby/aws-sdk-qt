@@ -29,6 +29,8 @@
 #include "batchapplyupdateactionresponse.h"
 #include "batchstopupdateactionrequest.h"
 #include "batchstopupdateactionresponse.h"
+#include "completemigrationrequest.h"
+#include "completemigrationresponse.h"
 #include "copysnapshotrequest.h"
 #include "copysnapshotresponse.h"
 #include "createcacheclusterrequest.h"
@@ -39,10 +41,18 @@
 #include "createcachesecuritygroupresponse.h"
 #include "createcachesubnetgrouprequest.h"
 #include "createcachesubnetgroupresponse.h"
+#include "createglobalreplicationgrouprequest.h"
+#include "createglobalreplicationgroupresponse.h"
 #include "createreplicationgrouprequest.h"
 #include "createreplicationgroupresponse.h"
 #include "createsnapshotrequest.h"
 #include "createsnapshotresponse.h"
+#include "createuserrequest.h"
+#include "createuserresponse.h"
+#include "createusergrouprequest.h"
+#include "createusergroupresponse.h"
+#include "decreasenodegroupsinglobalreplicationgrouprequest.h"
+#include "decreasenodegroupsinglobalreplicationgroupresponse.h"
 #include "decreasereplicacountrequest.h"
 #include "decreasereplicacountresponse.h"
 #include "deletecacheclusterrequest.h"
@@ -53,10 +63,16 @@
 #include "deletecachesecuritygroupresponse.h"
 #include "deletecachesubnetgrouprequest.h"
 #include "deletecachesubnetgroupresponse.h"
+#include "deleteglobalreplicationgrouprequest.h"
+#include "deleteglobalreplicationgroupresponse.h"
 #include "deletereplicationgrouprequest.h"
 #include "deletereplicationgroupresponse.h"
 #include "deletesnapshotrequest.h"
 #include "deletesnapshotresponse.h"
+#include "deleteuserrequest.h"
+#include "deleteuserresponse.h"
+#include "deleteusergrouprequest.h"
+#include "deleteusergroupresponse.h"
 #include "describecacheclustersrequest.h"
 #include "describecacheclustersresponse.h"
 #include "describecacheengineversionsrequest.h"
@@ -73,6 +89,8 @@
 #include "describeenginedefaultparametersresponse.h"
 #include "describeeventsrequest.h"
 #include "describeeventsresponse.h"
+#include "describeglobalreplicationgroupsrequest.h"
+#include "describeglobalreplicationgroupsresponse.h"
 #include "describereplicationgroupsrequest.h"
 #include "describereplicationgroupsresponse.h"
 #include "describereservedcachenodesrequest.h"
@@ -85,6 +103,16 @@
 #include "describesnapshotsresponse.h"
 #include "describeupdateactionsrequest.h"
 #include "describeupdateactionsresponse.h"
+#include "describeusergroupsrequest.h"
+#include "describeusergroupsresponse.h"
+#include "describeusersrequest.h"
+#include "describeusersresponse.h"
+#include "disassociateglobalreplicationgrouprequest.h"
+#include "disassociateglobalreplicationgroupresponse.h"
+#include "failoverglobalreplicationgrouprequest.h"
+#include "failoverglobalreplicationgroupresponse.h"
+#include "increasenodegroupsinglobalreplicationgrouprequest.h"
+#include "increasenodegroupsinglobalreplicationgroupresponse.h"
 #include "increasereplicacountrequest.h"
 #include "increasereplicacountresponse.h"
 #include "listallowednodetypemodificationsrequest.h"
@@ -97,12 +125,20 @@
 #include "modifycacheparametergroupresponse.h"
 #include "modifycachesubnetgrouprequest.h"
 #include "modifycachesubnetgroupresponse.h"
+#include "modifyglobalreplicationgrouprequest.h"
+#include "modifyglobalreplicationgroupresponse.h"
 #include "modifyreplicationgrouprequest.h"
 #include "modifyreplicationgroupresponse.h"
 #include "modifyreplicationgroupshardconfigurationrequest.h"
 #include "modifyreplicationgroupshardconfigurationresponse.h"
+#include "modifyuserrequest.h"
+#include "modifyuserresponse.h"
+#include "modifyusergrouprequest.h"
+#include "modifyusergroupresponse.h"
 #include "purchasereservedcachenodesofferingrequest.h"
 #include "purchasereservedcachenodesofferingresponse.h"
+#include "rebalanceslotsinglobalreplicationgrouprequest.h"
+#include "rebalanceslotsinglobalreplicationgroupresponse.h"
 #include "rebootcacheclusterrequest.h"
 #include "rebootcacheclusterresponse.h"
 #include "removetagsfromresourcerequest.h"
@@ -111,6 +147,8 @@
 #include "resetcacheparametergroupresponse.h"
 #include "revokecachesecuritygroupingressrequest.h"
 #include "revokecachesecuritygroupingressresponse.h"
+#include "startmigrationrequest.h"
+#include "startmigrationresponse.h"
 #include "testfailoverrequest.h"
 #include "testfailoverresponse.h"
 
@@ -211,15 +249,20 @@ ElastiCacheClient::ElastiCacheClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds up to 50 cost allocation tags to the named resource. A cost allocation tag is a key-value pair where the key and
- * value are case-sensitive. You can use cost allocation tags to categorize and track your AWS
+ * A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your
+ * ElastiCache resources, with the exception of global replication group. When you add or remove tags on replication
+ * groups, those actions will be replicated to all nodes in the replication group. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level
  *
- * costs>
+ * permissions</a>>
  *
- * When you apply tags to your ElastiCache resources, AWS generates a cost allocation report as a comma-separated value
- * (CSV) file with your usage and costs aggregated by your tags. You can apply tags that represent business categories
- * (such as cost centers, application names, or owners) to organize your costs across multiple services. For more
- * information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Using Cost
+ * For example, you can use cost-allocation tags to your ElastiCache resources, AWS generates a cost allocation report as a
+ * comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply tags that represent
+ * business categories (such as cost centers, application names, or owners) to organize your costs across multiple
+ *
+ * services>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Using Cost
  * Allocation Tags in Amazon ElastiCache</a> in the <i>ElastiCache User
  */
 AddTagsToResourceResponse * ElastiCacheClient::addTagsToResource(const AddTagsToResourceRequest &request)
@@ -271,6 +314,19 @@ BatchApplyUpdateActionResponse * ElastiCacheClient::batchApplyUpdateAction(const
 BatchStopUpdateActionResponse * ElastiCacheClient::batchStopUpdateAction(const BatchStopUpdateActionRequest &request)
 {
     return qobject_cast<BatchStopUpdateActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * CompleteMigrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Complete the migration of
+ */
+CompleteMigrationResponse * ElastiCacheClient::completeMigration(const CompleteMigrationRequest &request)
+{
+    return qobject_cast<CompleteMigrationResponse *>(send(request));
 }
 
 /*!
@@ -354,7 +410,7 @@ BatchStopUpdateActionResponse * ElastiCacheClient::batchStopUpdateAction(const B
  * Bucket>
  *
  * <b>Solution:</b> Add List and Read permissions on the bucket. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access.html">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -364,7 +420,7 @@ BatchStopUpdateActionResponse * ElastiCacheClient::batchStopUpdateAction(const B
  * Bucket>
  *
  * <b>Solution:</b> Add Upload/Delete permissions on the bucket. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access.html">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  *
  * Guide> </li> <li>
@@ -374,7 +430,7 @@ BatchStopUpdateActionResponse * ElastiCacheClient::batchStopUpdateAction(const B
  * Bucket>
  *
  * <b>Solution:</b> Add View Permissions on the bucket. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access.html">Step
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access">Step
  * 2: Grant ElastiCache Access to Your Amazon S3 Bucket</a> in the ElastiCache User
  */
 CopySnapshotResponse * ElastiCacheClient::copySnapshot(const CopySnapshotRequest &request)
@@ -467,6 +523,32 @@ CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * CreateGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Global Datastore for Redis offers fully managed, fast, reliable and secure cross-region replication. Using Global
+ * Datastore for Redis, you can create cross-region read replica clusters for ElastiCache for Redis to enable low-latency
+ * reads and disaster recovery across regions. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html">Replication Across
+ * Regions Using Global Datastore</a>.
+ *
+ * </p <ul> <li>
+ *
+ * The <b>GlobalReplicationGroupIdSuffix</b> is the name of the Global
+ *
+ * datastore> </li> <li>
+ *
+ * The <b>PrimaryReplicationGroupId</b> represents the name of the primary cluster that accepts writes and will replicate
+ * updates to the secondary
+ */
+CreateGlobalReplicationGroupResponse * ElastiCacheClient::createGlobalReplicationGroup(const CreateGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<CreateGlobalReplicationGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * CreateReplicationGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -475,23 +557,42 @@ CreateCacheSubnetGroupResponse * ElastiCacheClient::createCacheSubnetGroup(const
  *
  * group>
  *
+ * This API can be used to create a standalone regional replication group or a secondary replication group associated with
+ * a Global
+ *
+ * datastore>
+ *
  * A Redis (cluster mode disabled) replication group is a collection of clusters, where one of the clusters is a read/write
  * primary and the others are read-only replicas. Writes to the primary are asynchronously propagated to the
  *
  * replicas>
  *
- * A Redis (cluster mode enabled) replication group is a collection of 1 to 15 node groups (shards). Each node group
- * (shard) has one read/write primary node and up to 5 read-only replica nodes. Writes to the primary are asynchronously
- * propagated to the replicas. Redis (cluster mode enabled) replication groups partition the data across node groups
+ * A Redis cluster-mode enabled cluster is comprised of from 1 to 90 shards (API/CLI: node groups). Each shard has a
+ * primary node and up to 5 read-only replica nodes. The configuration can range from 90 shards and 0 replicas to 15 shards
+ * and 5 replicas, which is the maximum number or replicas allowed.
  *
- * (shards)>
+ * </p
+ *
+ * The node or shard limit can be increased to a maximum of 500 per cluster if the Redis engine version is 5.0.6 or higher.
+ * For example, you can choose to configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas
+ * per shard) and 500 shards (single primary and no replicas). Make sure there are enough available IP addresses to
+ * accommodate the increase. Common pitfalls include the subnets in the subnet group have too small a CIDR range or the
+ * subnets are shared and heavily used by other clusters. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.Creating.html">Creating a Subnet
+ * Group</a>. For versions below 5.0.6, the limit is 250 per
+ *
+ * cluster>
+ *
+ * To request a limit increase, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
+ * Service Limits</a> and choose the limit type <b>Nodes per cluster per instance type</b>.
+ *
+ * </p
  *
  * When a Redis (cluster mode disabled) replication group has been successfully created, you can add one or more read
- * replicas to it, up to a total of 5 read replicas. You cannot alter a Redis (cluster mode enabled) replication group
- * after it has been created. However, if you need to increase or decrease the number of node groups (console: shards), you
- * can avail yourself of ElastiCache for Redis' enhanced backup and restore. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-restoring.html">Restoring From a Backup with
- * Cluster Resizing</a> in the <i>ElastiCache User
+ * replicas to it, up to a total of 5 read replicas. If you need to increase or decrease the number of node groups
+ * (console: shards), you can avail yourself of ElastiCache for Redis' scaling. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Scaling.html">Scaling ElastiCache for Redis
+ * Clusters</a> in the <i>ElastiCache User
  *
  * Guide</i>> <note>
  *
@@ -521,11 +622,53 @@ CreateSnapshotResponse * ElastiCacheClient::createSnapshot(const CreateSnapshotR
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * CreateUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * For Redis engine version 6.x onwards: Creates a Redis user. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
+ */
+CreateUserResponse * ElastiCacheClient::createUser(const CreateUserRequest &request)
+{
+    return qobject_cast<CreateUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * CreateUserGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * For Redis engine version 6.x onwards: Creates a Redis user group. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
+ * (RBAC)</a>
+ */
+CreateUserGroupResponse * ElastiCacheClient::createUserGroup(const CreateUserGroupRequest &request)
+{
+    return qobject_cast<CreateUserGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DecreaseNodeGroupsInGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Decreases the number of node groups in a Global
+ */
+DecreaseNodeGroupsInGlobalReplicationGroupResponse * ElastiCacheClient::decreaseNodeGroupsInGlobalReplicationGroup(const DecreaseNodeGroupsInGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<DecreaseNodeGroupsInGlobalReplicationGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * DecreaseReplicaCountResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Dynamically decreases the number of replics in a Redis (cluster mode disabled) replication group or the number of
+ * Dynamically decreases the number of replicas in a Redis (cluster mode disabled) replication group or the number of
  * replica nodes in one or more node groups (shards) of a Redis (cluster mode enabled) replication group. This operation is
  * performed with no cluster down
  */
@@ -554,7 +697,15 @@ DecreaseReplicaCountResponse * ElastiCacheClient::decreaseReplicaCount(const Dec
  *
  * cluster> </li> <li>
  *
+ * Redis (cluster mode disabled)
+ *
+ * cluster> </li> <li>
+ *
  * A cluster that is the last read replica of a replication
+ *
+ * grou> </li> <li>
+ *
+ * A cluster that is the primary node of a replication
  *
  * grou> </li> <li>
  *
@@ -580,7 +731,7 @@ DeleteCacheClusterResponse * ElastiCacheClient::deleteCacheCluster(const DeleteC
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified cache parameter group. You cannot delete a cache parameter group if it is associated with any
- * cache
+ * cache clusters. You cannot delete the default cache parameter groups in your
  */
 DeleteCacheParameterGroupResponse * ElastiCacheClient::deleteCacheParameterGroup(const DeleteCacheParameterGroupRequest &request)
 {
@@ -614,11 +765,44 @@ DeleteCacheSecurityGroupResponse * ElastiCacheClient::deleteCacheSecurityGroup(c
  *
  * group> <note>
  *
- * You cannot delete a cache subnet group if it is associated with any
+ * You cannot delete a default cache subnet group or one that is associated with any
  */
 DeleteCacheSubnetGroupResponse * ElastiCacheClient::deleteCacheSubnetGroup(const DeleteCacheSubnetGroupRequest &request)
 {
     return qobject_cast<DeleteCacheSubnetGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DeleteGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deleting a Global datastore is a two-step process:
+ *
+ * </p <ul> <li>
+ *
+ * First, you must <a>DisassociateGlobalReplicationGroup</a> to remove the secondary clusters in the Global
+ *
+ * datastore> </li> <li>
+ *
+ * Once the Global datastore contains only the primary cluster, you can use the <code>DeleteGlobalReplicationGroup</code>
+ * API to delete the Global datastore while retainining the primary cluster using
+ *
+ * <code>RetainPrimaryReplicationGroup=true</code>> </li> </ul>
+ *
+ * Since the Global Datastore has only a primary cluster, you can delete the Global Datastore while retaining the primary
+ * by setting <code>RetainPrimaryReplicationGroup=true</code>. The primary cluster is never deleted when deleting a Global
+ * Datastore. It can only be deleted when it no longer is associated with any Global
+ *
+ * Datastore>
+ *
+ * When you receive a successful response from this operation, Amazon ElastiCache immediately begins deleting the selected
+ * resources; you cannot cancel or revert this
+ */
+DeleteGlobalReplicationGroupResponse * ElastiCacheClient::deleteGlobalReplicationGroup(const DeleteGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<DeleteGlobalReplicationGroupResponse *>(send(request));
 }
 
 /*!
@@ -661,6 +845,38 @@ DeleteReplicationGroupResponse * ElastiCacheClient::deleteReplicationGroup(const
 DeleteSnapshotResponse * ElastiCacheClient::deleteSnapshot(const DeleteSnapshotRequest &request)
 {
     return qobject_cast<DeleteSnapshotResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DeleteUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * For Redis engine version 6.x onwards: Deletes a user. The user will be removed from all user groups and in turn removed
+ * from all replication groups. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
+ * (RBAC)</a>.
+ */
+DeleteUserResponse * ElastiCacheClient::deleteUser(const DeleteUserRequest &request)
+{
+    return qobject_cast<DeleteUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DeleteUserGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * For Redis engine version 6.x onwards: Deletes a user group. The user group must first be disassociated from the
+ * replication group before it can be deleted. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access Control
+ * (RBAC)</a>.
+ */
+DeleteUserGroupResponse * ElastiCacheClient::deleteUserGroup(const DeleteUserGroupRequest &request)
+{
+    return qobject_cast<DeleteUserGroupResponse *>(send(request));
 }
 
 /*!
@@ -805,6 +1021,20 @@ DescribeEventsResponse * ElastiCacheClient::describeEvents(const DescribeEventsR
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DescribeGlobalReplicationGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a particular global replication group. If no identifier is specified, returns information
+ * about all Global datastores.
+ */
+DescribeGlobalReplicationGroupsResponse * ElastiCacheClient::describeGlobalReplicationGroups(const DescribeGlobalReplicationGroupsRequest &request)
+{
+    return qobject_cast<DescribeGlobalReplicationGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * DescribeReplicationGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -894,11 +1124,78 @@ DescribeUpdateActionsResponse * ElastiCacheClient::describeUpdateActions(const D
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DescribeUserGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of user
+ */
+DescribeUserGroupsResponse * ElastiCacheClient::describeUserGroups(const DescribeUserGroupsRequest &request)
+{
+    return qobject_cast<DescribeUserGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DescribeUsersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of
+ */
+DescribeUsersResponse * ElastiCacheClient::describeUsers(const DescribeUsersRequest &request)
+{
+    return qobject_cast<DescribeUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * DisassociateGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove a secondary cluster from the Global datastore using the Global datastore name. The secondary cluster will no
+ * longer receive updates from the primary cluster, but will remain as a standalone cluster in that AWS
+ */
+DisassociateGlobalReplicationGroupResponse * ElastiCacheClient::disassociateGlobalReplicationGroup(const DisassociateGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<DisassociateGlobalReplicationGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * FailoverGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Used to failover the primary region to a selected secondary region. The selected secondary region will become primary,
+ * and all other clusters will become
+ */
+FailoverGlobalReplicationGroupResponse * ElastiCacheClient::failoverGlobalReplicationGroup(const FailoverGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<FailoverGlobalReplicationGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * IncreaseNodeGroupsInGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Increase the number of node groups in the Global
+ */
+IncreaseNodeGroupsInGlobalReplicationGroupResponse * ElastiCacheClient::increaseNodeGroupsInGlobalReplicationGroup(const IncreaseNodeGroupsInGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<IncreaseNodeGroupsInGlobalReplicationGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * IncreaseReplicaCountResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Dynamically increases the number of replics in a Redis (cluster mode disabled) replication group or the number of
+ * Dynamically increases the number of replicas in a Redis (cluster mode disabled) replication group or the number of
  * replica nodes in one or more node groups (shards) of a Redis (cluster mode enabled) replication group. This operation is
  * performed with no cluster down
  */
@@ -913,13 +1210,13 @@ IncreaseReplicaCountResponse * ElastiCacheClient::increaseReplicaCount(const Inc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all available node types that you can scale your Redis cluster's or replication group's current node type up
+ * Lists all available node types that you can scale your Redis cluster's or replication group's current node
  *
- * to>
+ * type>
  *
- * When you use the <code>ModifyCacheCluster</code> or <code>ModifyReplicationGroup</code> operations to scale up your
- * cluster or replication group, the value of the <code>CacheNodeType</code> parameter must be one of the node types
- * returned by this
+ * When you use the <code>ModifyCacheCluster</code> or <code>ModifyReplicationGroup</code> operations to scale your cluster
+ * or replication group, the value of the <code>CacheNodeType</code> parameter must be one of the node types returned by
+ * this
  */
 ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTypeModifications(const ListAllowedNodeTypeModificationsRequest &request)
 {
@@ -932,18 +1229,18 @@ ListAllowedNodeTypeModificationsResponse * ElastiCacheClient::listAllowedNodeTyp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all cost allocation tags currently on the named resource. A <code>cost allocation tag</code> is a key-value pair
- * where the key is case-sensitive and the value is optional. You can use cost allocation tags to categorize and track your
- * AWS
+ * Lists all tags currently on a named
  *
- * costs>
+ * resource>
+ *
+ * A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your
+ * ElastiCache resources, with the exception of global replication group. When you add or remove tags on replication
+ * groups, those actions will be replicated to all nodes in the replication group. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level
+ *
+ * permissions</a>>
  *
  * If the cluster is not in the <i>available</i> state, <code>ListTagsForResource</code> returns an
- *
- * error>
- *
- * You can have a maximum of 50 cost allocation tags on an ElastiCache resource. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Tagging.html">Monitoring Costs with
  */
 ListTagsForResourceResponse * ElastiCacheClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -993,18 +1290,26 @@ ModifyCacheSubnetGroupResponse * ElastiCacheClient::modifyCacheSubnetGroup(const
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * ModifyGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the settings for a Global
+ */
+ModifyGlobalReplicationGroupResponse * ElastiCacheClient::modifyGlobalReplicationGroup(const ModifyGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<ModifyGlobalReplicationGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * ModifyReplicationGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the settings for a replication
  *
- * group>
- *
- * For Redis (cluster mode enabled) clusters, this operation cannot be used to change a cluster's node type or engine
- * version. For more information,
- *
- * see> <ul> <li>
+ * group> <ul> <li>
  *
  * <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/scaling-redis-cluster-mode-enabled.html">Scaling
  * for Amazon ElastiCache for Redis (cluster mode enabled)</a> in the ElastiCache User
@@ -1031,7 +1336,7 @@ ModifyReplicationGroupResponse * ElastiCacheClient::modifyReplicationGroup(const
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies a replication group's shards (node groups) by allowing you to add shards, remove shards, or rebalance the
- * keyspaces among exisiting
+ * keyspaces among existing
  */
 ModifyReplicationGroupShardConfigurationResponse * ElastiCacheClient::modifyReplicationGroupShardConfiguration(const ModifyReplicationGroupShardConfigurationRequest &request)
 {
@@ -1040,15 +1345,59 @@ ModifyReplicationGroupShardConfigurationResponse * ElastiCacheClient::modifyRepl
 
 /*!
  * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * ModifyUserResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes user password(s) and/or access
+ */
+ModifyUserResponse * ElastiCacheClient::modifyUser(const ModifyUserRequest &request)
+{
+    return qobject_cast<ModifyUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * ModifyUserGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the list of users that belong to the user
+ */
+ModifyUserGroupResponse * ElastiCacheClient::modifyUserGroup(const ModifyUserGroupRequest &request)
+{
+    return qobject_cast<ModifyUserGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
  * PurchaseReservedCacheNodesOfferingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Allows you to purchase a reserved cache node
+ * Allows you to purchase a reserved cache node offering. Reserved nodes are not eligible for cancellation and are
+ * non-refundable. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/reserved-nodes.html">Managing Costs with Reserved
+ * Nodes</a> for Redis or <a
+ * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/reserved-nodes.html">Managing Costs with Reserved
+ * Nodes</a> for
  */
 PurchaseReservedCacheNodesOfferingResponse * ElastiCacheClient::purchaseReservedCacheNodesOffering(const PurchaseReservedCacheNodesOfferingRequest &request)
 {
     return qobject_cast<PurchaseReservedCacheNodesOfferingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * RebalanceSlotsInGlobalReplicationGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Redistribute slots to ensure uniform distribution across existing shards in the
+ */
+RebalanceSlotsInGlobalReplicationGroupResponse * ElastiCacheClient::rebalanceSlotsInGlobalReplicationGroup(const RebalanceSlotsInGlobalReplicationGroupRequest &request)
+{
+    return qobject_cast<RebalanceSlotsInGlobalReplicationGroupResponse *>(send(request));
 }
 
 /*!
@@ -1091,7 +1440,11 @@ RebootCacheClusterResponse * ElastiCacheClient::rebootCacheCluster(const RebootC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the tags identified by the <code>TagKeys</code> list from the named
+ * Removes the tags identified by the <code>TagKeys</code> list from the named resource. A tag is a key-value pair where
+ * the key and value are case-sensitive. You can use tags to categorize and track all your ElastiCache resources, with the
+ * exception of global replication group. When you add or remove tags on replication groups, those actions will be
+ * replicated to all nodes in the replication group. For more information, see <a
+ * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level
  */
 RemoveTagsFromResourceResponse * ElastiCacheClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -1125,6 +1478,19 @@ ResetCacheParameterGroupResponse * ElastiCacheClient::resetCacheParameterGroup(c
 RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurityGroupIngress(const RevokeCacheSecurityGroupIngressRequest &request)
 {
     return qobject_cast<RevokeCacheSecurityGroupIngressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ElastiCacheClient service, and returns a pointer to an
+ * StartMigrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Start the migration of
+ */
+StartMigrationResponse * ElastiCacheClient::startMigration(const StartMigrationRequest &request)
+{
+    return qobject_cast<StartMigrationResponse *>(send(request));
 }
 
 /*!
@@ -1167,12 +1533,12 @@ RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurity
  *
  * </p </li> <li>
  *
- * Cache cluster message: <code>Failover from master node &lt;primary-node-id&gt; to replica node &lt;node-id&gt;
+ * Cache cluster message: <code>Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt;
  * completed</code>
  *
  * </p </li> <li>
  *
- * Replication group message: <code>Failover from master node &lt;primary-node-id&gt; to replica node &lt;node-id&gt;
+ * Replication group message: <code>Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt;
  * completed</code>
  *
  * </p </li> <li>
@@ -1201,7 +1567,7 @@ RevokeCacheSecurityGroupIngressResponse * ElastiCacheClient::revokeCacheSecurity
  *
  * Also see, <a
  * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html#auto-failover-test">Testing Multi-AZ
- * with Automatic Failover</a> in the <i>ElastiCache User
+ * </a> in the <i>ElastiCache User
  */
 TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest &request)
 {

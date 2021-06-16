@@ -36,19 +36,32 @@ namespace EFS {
  * This enum describes the actions that can be performed as EFS
  * requests.
  *
+ * \value CreateAccessPointAction EFS CreateAccessPoint action.
  * \value CreateFileSystemAction EFS CreateFileSystem action.
  * \value CreateMountTargetAction EFS CreateMountTarget action.
  * \value CreateTagsAction EFS CreateTags action.
+ * \value DeleteAccessPointAction EFS DeleteAccessPoint action.
  * \value DeleteFileSystemAction EFS DeleteFileSystem action.
+ * \value DeleteFileSystemPolicyAction EFS DeleteFileSystemPolicy action.
  * \value DeleteMountTargetAction EFS DeleteMountTarget action.
  * \value DeleteTagsAction EFS DeleteTags action.
+ * \value DescribeAccessPointsAction EFS DescribeAccessPoints action.
+ * \value DescribeAccountPreferencesAction EFS DescribeAccountPreferences action.
+ * \value DescribeBackupPolicyAction EFS DescribeBackupPolicy action.
+ * \value DescribeFileSystemPolicyAction EFS DescribeFileSystemPolicy action.
  * \value DescribeFileSystemsAction EFS DescribeFileSystems action.
  * \value DescribeLifecycleConfigurationAction EFS DescribeLifecycleConfiguration action.
  * \value DescribeMountTargetSecurityGroupsAction EFS DescribeMountTargetSecurityGroups action.
  * \value DescribeMountTargetsAction EFS DescribeMountTargets action.
  * \value DescribeTagsAction EFS DescribeTags action.
+ * \value ListTagsForResourceAction EFS ListTagsForResource action.
  * \value ModifyMountTargetSecurityGroupsAction EFS ModifyMountTargetSecurityGroups action.
+ * \value PutAccountPreferencesAction EFS PutAccountPreferences action.
+ * \value PutBackupPolicyAction EFS PutBackupPolicy action.
+ * \value PutFileSystemPolicyAction EFS PutFileSystemPolicy action.
  * \value PutLifecycleConfigurationAction EFS PutLifecycleConfiguration action.
+ * \value TagResourceAction EFS TagResource action.
+ * \value UntagResourceAction EFS UntagResource action.
  * \value UpdateFileSystemAction EFS UpdateFileSystem action.
  */
 

@@ -36,9 +36,13 @@ namespace RoboMaker {
  * This enum describes the actions that can be performed as RoboMaker
  * requests.
  *
+ * \value BatchDeleteWorldsAction RoboMaker BatchDeleteWorlds action.
  * \value BatchDescribeSimulationJobAction RoboMaker BatchDescribeSimulationJob action.
  * \value CancelDeploymentJobAction RoboMaker CancelDeploymentJob action.
  * \value CancelSimulationJobAction RoboMaker CancelSimulationJob action.
+ * \value CancelSimulationJobBatchAction RoboMaker CancelSimulationJobBatch action.
+ * \value CancelWorldExportJobAction RoboMaker CancelWorldExportJob action.
+ * \value CancelWorldGenerationJobAction RoboMaker CancelWorldGenerationJob action.
  * \value CreateDeploymentJobAction RoboMaker CreateDeploymentJob action.
  * \value CreateFleetAction RoboMaker CreateFleet action.
  * \value CreateRobotAction RoboMaker CreateRobot action.
@@ -47,10 +51,14 @@ namespace RoboMaker {
  * \value CreateSimulationApplicationAction RoboMaker CreateSimulationApplication action.
  * \value CreateSimulationApplicationVersionAction RoboMaker CreateSimulationApplicationVersion action.
  * \value CreateSimulationJobAction RoboMaker CreateSimulationJob action.
+ * \value CreateWorldExportJobAction RoboMaker CreateWorldExportJob action.
+ * \value CreateWorldGenerationJobAction RoboMaker CreateWorldGenerationJob action.
+ * \value CreateWorldTemplateAction RoboMaker CreateWorldTemplate action.
  * \value DeleteFleetAction RoboMaker DeleteFleet action.
  * \value DeleteRobotAction RoboMaker DeleteRobot action.
  * \value DeleteRobotApplicationAction RoboMaker DeleteRobotApplication action.
  * \value DeleteSimulationApplicationAction RoboMaker DeleteSimulationApplication action.
+ * \value DeleteWorldTemplateAction RoboMaker DeleteWorldTemplate action.
  * \value DeregisterRobotAction RoboMaker DeregisterRobot action.
  * \value DescribeDeploymentJobAction RoboMaker DescribeDeploymentJob action.
  * \value DescribeFleetAction RoboMaker DescribeFleet action.
@@ -58,20 +66,33 @@ namespace RoboMaker {
  * \value DescribeRobotApplicationAction RoboMaker DescribeRobotApplication action.
  * \value DescribeSimulationApplicationAction RoboMaker DescribeSimulationApplication action.
  * \value DescribeSimulationJobAction RoboMaker DescribeSimulationJob action.
+ * \value DescribeSimulationJobBatchAction RoboMaker DescribeSimulationJobBatch action.
+ * \value DescribeWorldAction RoboMaker DescribeWorld action.
+ * \value DescribeWorldExportJobAction RoboMaker DescribeWorldExportJob action.
+ * \value DescribeWorldGenerationJobAction RoboMaker DescribeWorldGenerationJob action.
+ * \value DescribeWorldTemplateAction RoboMaker DescribeWorldTemplate action.
+ * \value GetWorldTemplateBodyAction RoboMaker GetWorldTemplateBody action.
  * \value ListDeploymentJobsAction RoboMaker ListDeploymentJobs action.
  * \value ListFleetsAction RoboMaker ListFleets action.
  * \value ListRobotApplicationsAction RoboMaker ListRobotApplications action.
  * \value ListRobotsAction RoboMaker ListRobots action.
  * \value ListSimulationApplicationsAction RoboMaker ListSimulationApplications action.
+ * \value ListSimulationJobBatchesAction RoboMaker ListSimulationJobBatches action.
  * \value ListSimulationJobsAction RoboMaker ListSimulationJobs action.
  * \value ListTagsForResourceAction RoboMaker ListTagsForResource action.
+ * \value ListWorldExportJobsAction RoboMaker ListWorldExportJobs action.
+ * \value ListWorldGenerationJobsAction RoboMaker ListWorldGenerationJobs action.
+ * \value ListWorldTemplatesAction RoboMaker ListWorldTemplates action.
+ * \value ListWorldsAction RoboMaker ListWorlds action.
  * \value RegisterRobotAction RoboMaker RegisterRobot action.
  * \value RestartSimulationJobAction RoboMaker RestartSimulationJob action.
+ * \value StartSimulationJobBatchAction RoboMaker StartSimulationJobBatch action.
  * \value SyncDeploymentJobAction RoboMaker SyncDeploymentJob action.
  * \value TagResourceAction RoboMaker TagResource action.
  * \value UntagResourceAction RoboMaker UntagResource action.
  * \value UpdateRobotApplicationAction RoboMaker UpdateRobotApplication action.
  * \value UpdateSimulationApplicationAction RoboMaker UpdateSimulationApplication action.
+ * \value UpdateWorldTemplateAction RoboMaker UpdateWorldTemplate action.
  */
 
 /*!

@@ -37,14 +37,20 @@ class QTAWS_EXPORT TransferRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Transfer.
     enum Action {
+        CreateAccessAction,
         CreateServerAction,
         CreateUserAction,
+        DeleteAccessAction,
         DeleteServerAction,
         DeleteSshPublicKeyAction,
         DeleteUserAction,
+        DescribeAccessAction,
+        DescribeSecurityPolicyAction,
         DescribeServerAction,
         DescribeUserAction,
         ImportSshPublicKeyAction,
+        ListAccessesAction,
+        ListSecurityPoliciesAction,
         ListServersAction,
         ListTagsForResourceAction,
         ListUsersAction,
@@ -53,6 +59,7 @@ public:
         TagResourceAction,
         TestIdentityProviderAction,
         UntagResourceAction,
+        UpdateAccessAction,
         UpdateServerAction,
         UpdateUserAction,
     };

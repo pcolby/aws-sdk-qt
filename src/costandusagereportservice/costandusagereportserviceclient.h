@@ -32,6 +32,8 @@ class DeleteReportDefinitionRequest;
 class DeleteReportDefinitionResponse;
 class DescribeReportDefinitionsRequest;
 class DescribeReportDefinitionsResponse;
+class ModifyReportDefinitionRequest;
+class ModifyReportDefinitionResponse;
 class PutReportDefinitionRequest;
 class PutReportDefinitionResponse;
 
@@ -53,6 +55,7 @@ public:
 public slots:
     DeleteReportDefinitionResponse * deleteReportDefinition(const DeleteReportDefinitionRequest &request);
     DescribeReportDefinitionsResponse * describeReportDefinitions(const DescribeReportDefinitionsRequest &request);
+    ModifyReportDefinitionResponse * modifyReportDefinition(const ModifyReportDefinitionRequest &request);
     PutReportDefinitionResponse * putReportDefinition(const PutReportDefinitionRequest &request);
 
 private:

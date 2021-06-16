@@ -37,14 +37,38 @@ class QTAWS_EXPORT EksRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by EKS.
     enum Action {
+        AssociateEncryptionConfigAction,
+        AssociateIdentityProviderConfigAction,
+        CreateAddonAction,
         CreateClusterAction,
+        CreateFargateProfileAction,
+        CreateNodegroupAction,
+        DeleteAddonAction,
         DeleteClusterAction,
+        DeleteFargateProfileAction,
+        DeleteNodegroupAction,
+        DescribeAddonAction,
+        DescribeAddonVersionsAction,
         DescribeClusterAction,
+        DescribeFargateProfileAction,
+        DescribeIdentityProviderConfigAction,
+        DescribeNodegroupAction,
         DescribeUpdateAction,
+        DisassociateIdentityProviderConfigAction,
+        ListAddonsAction,
         ListClustersAction,
+        ListFargateProfilesAction,
+        ListIdentityProviderConfigsAction,
+        ListNodegroupsAction,
+        ListTagsForResourceAction,
         ListUpdatesAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateAddonAction,
         UpdateClusterConfigAction,
         UpdateClusterVersionAction,
+        UpdateNodegroupConfigAction,
+        UpdateNodegroupVersionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

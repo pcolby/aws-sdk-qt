@@ -55,11 +55,14 @@ namespace KMS {
  * \value EnableKeyRotationAction KMS EnableKeyRotation action.
  * \value EncryptAction KMS Encrypt action.
  * \value GenerateDataKeyAction KMS GenerateDataKey action.
+ * \value GenerateDataKeyPairAction KMS GenerateDataKeyPair action.
+ * \value GenerateDataKeyPairWithoutPlaintextAction KMS GenerateDataKeyPairWithoutPlaintext action.
  * \value GenerateDataKeyWithoutPlaintextAction KMS GenerateDataKeyWithoutPlaintext action.
  * \value GenerateRandomAction KMS GenerateRandom action.
  * \value GetKeyPolicyAction KMS GetKeyPolicy action.
  * \value GetKeyRotationStatusAction KMS GetKeyRotationStatus action.
  * \value GetParametersForImportAction KMS GetParametersForImport action.
+ * \value GetPublicKeyAction KMS GetPublicKey action.
  * \value ImportKeyMaterialAction KMS ImportKeyMaterial action.
  * \value ListAliasesAction KMS ListAliases action.
  * \value ListGrantsAction KMS ListGrants action.
@@ -72,11 +75,13 @@ namespace KMS {
  * \value RetireGrantAction KMS RetireGrant action.
  * \value RevokeGrantAction KMS RevokeGrant action.
  * \value ScheduleKeyDeletionAction KMS ScheduleKeyDeletion action.
+ * \value SignAction KMS Sign action.
  * \value TagResourceAction KMS TagResource action.
  * \value UntagResourceAction KMS UntagResource action.
  * \value UpdateAliasAction KMS UpdateAlias action.
  * \value UpdateCustomKeyStoreAction KMS UpdateCustomKeyStore action.
  * \value UpdateKeyDescriptionAction KMS UpdateKeyDescription action.
+ * \value VerifyAction KMS Verify action.
  */
 
 /*!

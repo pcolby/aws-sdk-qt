@@ -46,6 +46,7 @@ public:
         DisassociateCreatedArtifactAction,
         DisassociateDiscoveredResourceAction,
         ImportMigrationTaskAction,
+        ListApplicationStatesAction,
         ListCreatedArtifactsAction,
         ListDiscoveredResourcesAction,
         ListMigrationTasksAction,

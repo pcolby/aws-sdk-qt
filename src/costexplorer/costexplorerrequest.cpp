@@ -36,14 +36,36 @@ namespace CostExplorer {
  * This enum describes the actions that can be performed as CostExplorer
  * requests.
  *
+ * \value CreateAnomalyMonitorAction CostExplorer CreateAnomalyMonitor action.
+ * \value CreateAnomalySubscriptionAction CostExplorer CreateAnomalySubscription action.
+ * \value CreateCostCategoryDefinitionAction CostExplorer CreateCostCategoryDefinition action.
+ * \value DeleteAnomalyMonitorAction CostExplorer DeleteAnomalyMonitor action.
+ * \value DeleteAnomalySubscriptionAction CostExplorer DeleteAnomalySubscription action.
+ * \value DeleteCostCategoryDefinitionAction CostExplorer DeleteCostCategoryDefinition action.
+ * \value DescribeCostCategoryDefinitionAction CostExplorer DescribeCostCategoryDefinition action.
+ * \value GetAnomaliesAction CostExplorer GetAnomalies action.
+ * \value GetAnomalyMonitorsAction CostExplorer GetAnomalyMonitors action.
+ * \value GetAnomalySubscriptionsAction CostExplorer GetAnomalySubscriptions action.
  * \value GetCostAndUsageAction CostExplorer GetCostAndUsage action.
+ * \value GetCostAndUsageWithResourcesAction CostExplorer GetCostAndUsageWithResources action.
+ * \value GetCostCategoriesAction CostExplorer GetCostCategories action.
  * \value GetCostForecastAction CostExplorer GetCostForecast action.
  * \value GetDimensionValuesAction CostExplorer GetDimensionValues action.
  * \value GetReservationCoverageAction CostExplorer GetReservationCoverage action.
  * \value GetReservationPurchaseRecommendationAction CostExplorer GetReservationPurchaseRecommendation action.
  * \value GetReservationUtilizationAction CostExplorer GetReservationUtilization action.
+ * \value GetRightsizingRecommendationAction CostExplorer GetRightsizingRecommendation action.
+ * \value GetSavingsPlansCoverageAction CostExplorer GetSavingsPlansCoverage action.
+ * \value GetSavingsPlansPurchaseRecommendationAction CostExplorer GetSavingsPlansPurchaseRecommendation action.
+ * \value GetSavingsPlansUtilizationAction CostExplorer GetSavingsPlansUtilization action.
+ * \value GetSavingsPlansUtilizationDetailsAction CostExplorer GetSavingsPlansUtilizationDetails action.
  * \value GetTagsAction CostExplorer GetTags action.
  * \value GetUsageForecastAction CostExplorer GetUsageForecast action.
+ * \value ListCostCategoryDefinitionsAction CostExplorer ListCostCategoryDefinitions action.
+ * \value ProvideAnomalyFeedbackAction CostExplorer ProvideAnomalyFeedback action.
+ * \value UpdateAnomalyMonitorAction CostExplorer UpdateAnomalyMonitor action.
+ * \value UpdateAnomalySubscriptionAction CostExplorer UpdateAnomalySubscription action.
+ * \value UpdateCostCategoryDefinitionAction CostExplorer UpdateCostCategoryDefinition action.
  */
 
 /*!

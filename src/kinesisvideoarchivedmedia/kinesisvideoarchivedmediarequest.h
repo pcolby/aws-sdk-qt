@@ -37,6 +37,7 @@ class QTAWS_EXPORT KinesisVideoArchivedMediaRequest : public QtAws::Core::AwsAbs
 public:
     /// Actions supported by KinesisVideoArchivedMedia.
     enum Action {
+        GetClipAction,
         GetDASHStreamingSessionURLAction,
         GetHLSStreamingSessionURLAction,
         GetMediaForFragmentListAction,

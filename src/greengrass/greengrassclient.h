@@ -136,6 +136,8 @@ class GetSubscriptionDefinitionRequest;
 class GetSubscriptionDefinitionResponse;
 class GetSubscriptionDefinitionVersionRequest;
 class GetSubscriptionDefinitionVersionResponse;
+class GetThingRuntimeConfigurationRequest;
+class GetThingRuntimeConfigurationResponse;
 class ListBulkDeploymentDetailedReportsRequest;
 class ListBulkDeploymentDetailedReportsResponse;
 class ListBulkDeploymentsRequest;
@@ -208,6 +210,8 @@ class UpdateResourceDefinitionRequest;
 class UpdateResourceDefinitionResponse;
 class UpdateSubscriptionDefinitionRequest;
 class UpdateSubscriptionDefinitionResponse;
+class UpdateThingRuntimeConfigurationRequest;
+class UpdateThingRuntimeConfigurationResponse;
 
 class QTAWS_EXPORT GreengrassClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -279,6 +283,7 @@ public slots:
     GetServiceRoleForAccountResponse * getServiceRoleForAccount(const GetServiceRoleForAccountRequest &request);
     GetSubscriptionDefinitionResponse * getSubscriptionDefinition(const GetSubscriptionDefinitionRequest &request);
     GetSubscriptionDefinitionVersionResponse * getSubscriptionDefinitionVersion(const GetSubscriptionDefinitionVersionRequest &request);
+    GetThingRuntimeConfigurationResponse * getThingRuntimeConfiguration(const GetThingRuntimeConfigurationRequest &request);
     ListBulkDeploymentDetailedReportsResponse * listBulkDeploymentDetailedReports(const ListBulkDeploymentDetailedReportsRequest &request);
     ListBulkDeploymentsResponse * listBulkDeployments(const ListBulkDeploymentsRequest &request);
     ListConnectorDefinitionVersionsResponse * listConnectorDefinitionVersions(const ListConnectorDefinitionVersionsRequest &request);
@@ -315,6 +320,7 @@ public slots:
     UpdateLoggerDefinitionResponse * updateLoggerDefinition(const UpdateLoggerDefinitionRequest &request);
     UpdateResourceDefinitionResponse * updateResourceDefinition(const UpdateResourceDefinitionRequest &request);
     UpdateSubscriptionDefinitionResponse * updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request);
+    UpdateThingRuntimeConfigurationResponse * updateThingRuntimeConfiguration(const UpdateThingRuntimeConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(GreengrassClient)

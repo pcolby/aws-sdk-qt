@@ -36,6 +36,12 @@ class GetLifecyclePoliciesRequest;
 class GetLifecyclePoliciesResponse;
 class GetLifecyclePolicyRequest;
 class GetLifecyclePolicyResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateLifecyclePolicyRequest;
 class UpdateLifecyclePolicyResponse;
 
@@ -59,6 +65,9 @@ public slots:
     DeleteLifecyclePolicyResponse * deleteLifecyclePolicy(const DeleteLifecyclePolicyRequest &request);
     GetLifecyclePoliciesResponse * getLifecyclePolicies(const GetLifecyclePoliciesRequest &request);
     GetLifecyclePolicyResponse * getLifecyclePolicy(const GetLifecyclePolicyRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateLifecyclePolicyResponse * updateLifecyclePolicy(const UpdateLifecyclePolicyRequest &request);
 
 private:

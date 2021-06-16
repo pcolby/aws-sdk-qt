@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "sendsshpublickeyrequest.h"
 #include "sendsshpublickeyresponse.h"
+#include "sendserialconsolesshpublickeyrequest.h"
+#include "sendserialconsolesshpublickeyresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -46,8 +48,8 @@ namespace EC2InstanceConnect {
  * \ingroup aws-clients
  * \inmodule QtAwsEC2InstanceConnect
  *
- *  AWS EC2 Connect Service is a service that enables system administrators to publish temporary SSH keys to their EC2
- *  instances in order to establish connections to their instances without leaving a permanent authentication
+ *  Amazon EC2 Instance Connect enables system administrators to publish one-time use SSH public keys to EC2, providing
+ *  users a simple and secure way to connect to their
  */
 
 /*!
@@ -109,11 +111,30 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Pushes an SSH public key to a particular OS user on a given EC2 instance for 60
+ * Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds.
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux
+ * instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User
  */
 SendSSHPublicKeyResponse * EC2InstanceConnectClient::sendSSHPublicKey(const SendSSHPublicKeyRequest &request)
 {
     return qobject_cast<SendSSHPublicKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EC2InstanceConnectClient service, and returns a pointer to an
+ * SendSerialConsoleSSHPublicKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to
+ * establish a serial console connection to the instance using SSH. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the
+ * <i>Amazon EC2 User
+ */
+SendSerialConsoleSSHPublicKeyResponse * EC2InstanceConnectClient::sendSerialConsoleSSHPublicKey(const SendSerialConsoleSSHPublicKeyRequest &request)
+{
+    return qobject_cast<SendSerialConsoleSSHPublicKeyResponse *>(send(request));
 }
 
 /*!

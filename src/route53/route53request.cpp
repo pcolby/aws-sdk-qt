@@ -36,28 +36,35 @@ namespace Route53 {
  * This enum describes the actions that can be performed as Route53
  * requests.
  *
+ * \value ActivateKeySigningKeyAction Route53 ActivateKeySigningKey action.
  * \value AssociateVPCWithHostedZoneAction Route53 AssociateVPCWithHostedZone action.
  * \value ChangeResourceRecordSetsAction Route53 ChangeResourceRecordSets action.
  * \value ChangeTagsForResourceAction Route53 ChangeTagsForResource action.
  * \value CreateHealthCheckAction Route53 CreateHealthCheck action.
  * \value CreateHostedZoneAction Route53 CreateHostedZone action.
+ * \value CreateKeySigningKeyAction Route53 CreateKeySigningKey action.
  * \value CreateQueryLoggingConfigAction Route53 CreateQueryLoggingConfig action.
  * \value CreateReusableDelegationSetAction Route53 CreateReusableDelegationSet action.
  * \value CreateTrafficPolicyAction Route53 CreateTrafficPolicy action.
  * \value CreateTrafficPolicyInstanceAction Route53 CreateTrafficPolicyInstance action.
  * \value CreateTrafficPolicyVersionAction Route53 CreateTrafficPolicyVersion action.
  * \value CreateVPCAssociationAuthorizationAction Route53 CreateVPCAssociationAuthorization action.
+ * \value DeactivateKeySigningKeyAction Route53 DeactivateKeySigningKey action.
  * \value DeleteHealthCheckAction Route53 DeleteHealthCheck action.
  * \value DeleteHostedZoneAction Route53 DeleteHostedZone action.
+ * \value DeleteKeySigningKeyAction Route53 DeleteKeySigningKey action.
  * \value DeleteQueryLoggingConfigAction Route53 DeleteQueryLoggingConfig action.
  * \value DeleteReusableDelegationSetAction Route53 DeleteReusableDelegationSet action.
  * \value DeleteTrafficPolicyAction Route53 DeleteTrafficPolicy action.
  * \value DeleteTrafficPolicyInstanceAction Route53 DeleteTrafficPolicyInstance action.
  * \value DeleteVPCAssociationAuthorizationAction Route53 DeleteVPCAssociationAuthorization action.
+ * \value DisableHostedZoneDNSSECAction Route53 DisableHostedZoneDNSSEC action.
  * \value DisassociateVPCFromHostedZoneAction Route53 DisassociateVPCFromHostedZone action.
+ * \value EnableHostedZoneDNSSECAction Route53 EnableHostedZoneDNSSEC action.
  * \value GetAccountLimitAction Route53 GetAccountLimit action.
  * \value GetChangeAction Route53 GetChange action.
  * \value GetCheckerIpRangesAction Route53 GetCheckerIpRanges action.
+ * \value GetDNSSECAction Route53 GetDNSSEC action.
  * \value GetGeoLocationAction Route53 GetGeoLocation action.
  * \value GetHealthCheckAction Route53 GetHealthCheck action.
  * \value GetHealthCheckCountAction Route53 GetHealthCheckCount action.
@@ -76,6 +83,7 @@ namespace Route53 {
  * \value ListHealthChecksAction Route53 ListHealthChecks action.
  * \value ListHostedZonesAction Route53 ListHostedZones action.
  * \value ListHostedZonesByNameAction Route53 ListHostedZonesByName action.
+ * \value ListHostedZonesByVPCAction Route53 ListHostedZonesByVPC action.
  * \value ListQueryLoggingConfigsAction Route53 ListQueryLoggingConfigs action.
  * \value ListResourceRecordSetsAction Route53 ListResourceRecordSets action.
  * \value ListReusableDelegationSetsAction Route53 ListReusableDelegationSets action.

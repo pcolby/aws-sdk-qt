@@ -37,9 +37,12 @@ namespace GameLift {
  * requests.
  *
  * \value AcceptMatchAction GameLift AcceptMatch action.
+ * \value ClaimGameServerAction GameLift ClaimGameServer action.
  * \value CreateAliasAction GameLift CreateAlias action.
  * \value CreateBuildAction GameLift CreateBuild action.
  * \value CreateFleetAction GameLift CreateFleet action.
+ * \value CreateFleetLocationsAction GameLift CreateFleetLocations action.
+ * \value CreateGameServerGroupAction GameLift CreateGameServerGroup action.
  * \value CreateGameSessionAction GameLift CreateGameSession action.
  * \value CreateGameSessionQueueAction GameLift CreateGameSessionQueue action.
  * \value CreateMatchmakingConfigurationAction GameLift CreateMatchmakingConfiguration action.
@@ -52,6 +55,8 @@ namespace GameLift {
  * \value DeleteAliasAction GameLift DeleteAlias action.
  * \value DeleteBuildAction GameLift DeleteBuild action.
  * \value DeleteFleetAction GameLift DeleteFleet action.
+ * \value DeleteFleetLocationsAction GameLift DeleteFleetLocations action.
+ * \value DeleteGameServerGroupAction GameLift DeleteGameServerGroup action.
  * \value DeleteGameSessionQueueAction GameLift DeleteGameSessionQueue action.
  * \value DeleteMatchmakingConfigurationAction GameLift DeleteMatchmakingConfiguration action.
  * \value DeleteMatchmakingRuleSetAction GameLift DeleteMatchmakingRuleSet action.
@@ -59,14 +64,21 @@ namespace GameLift {
  * \value DeleteScriptAction GameLift DeleteScript action.
  * \value DeleteVpcPeeringAuthorizationAction GameLift DeleteVpcPeeringAuthorization action.
  * \value DeleteVpcPeeringConnectionAction GameLift DeleteVpcPeeringConnection action.
+ * \value DeregisterGameServerAction GameLift DeregisterGameServer action.
  * \value DescribeAliasAction GameLift DescribeAlias action.
  * \value DescribeBuildAction GameLift DescribeBuild action.
  * \value DescribeEC2InstanceLimitsAction GameLift DescribeEC2InstanceLimits action.
  * \value DescribeFleetAttributesAction GameLift DescribeFleetAttributes action.
  * \value DescribeFleetCapacityAction GameLift DescribeFleetCapacity action.
  * \value DescribeFleetEventsAction GameLift DescribeFleetEvents action.
+ * \value DescribeFleetLocationAttributesAction GameLift DescribeFleetLocationAttributes action.
+ * \value DescribeFleetLocationCapacityAction GameLift DescribeFleetLocationCapacity action.
+ * \value DescribeFleetLocationUtilizationAction GameLift DescribeFleetLocationUtilization action.
  * \value DescribeFleetPortSettingsAction GameLift DescribeFleetPortSettings action.
  * \value DescribeFleetUtilizationAction GameLift DescribeFleetUtilization action.
+ * \value DescribeGameServerAction GameLift DescribeGameServer action.
+ * \value DescribeGameServerGroupAction GameLift DescribeGameServerGroup action.
+ * \value DescribeGameServerInstancesAction GameLift DescribeGameServerInstances action.
  * \value DescribeGameSessionDetailsAction GameLift DescribeGameSessionDetails action.
  * \value DescribeGameSessionPlacementAction GameLift DescribeGameSessionPlacement action.
  * \value DescribeGameSessionQueuesAction GameLift DescribeGameSessionQueues action.
@@ -86,10 +98,15 @@ namespace GameLift {
  * \value ListAliasesAction GameLift ListAliases action.
  * \value ListBuildsAction GameLift ListBuilds action.
  * \value ListFleetsAction GameLift ListFleets action.
+ * \value ListGameServerGroupsAction GameLift ListGameServerGroups action.
+ * \value ListGameServersAction GameLift ListGameServers action.
  * \value ListScriptsAction GameLift ListScripts action.
+ * \value ListTagsForResourceAction GameLift ListTagsForResource action.
  * \value PutScalingPolicyAction GameLift PutScalingPolicy action.
+ * \value RegisterGameServerAction GameLift RegisterGameServer action.
  * \value RequestUploadCredentialsAction GameLift RequestUploadCredentials action.
  * \value ResolveAliasAction GameLift ResolveAlias action.
+ * \value ResumeGameServerGroupAction GameLift ResumeGameServerGroup action.
  * \value SearchGameSessionsAction GameLift SearchGameSessions action.
  * \value StartFleetActionsAction GameLift StartFleetActions action.
  * \value StartGameSessionPlacementAction GameLift StartGameSessionPlacement action.
@@ -98,11 +115,16 @@ namespace GameLift {
  * \value StopFleetActionsAction GameLift StopFleetActions action.
  * \value StopGameSessionPlacementAction GameLift StopGameSessionPlacement action.
  * \value StopMatchmakingAction GameLift StopMatchmaking action.
+ * \value SuspendGameServerGroupAction GameLift SuspendGameServerGroup action.
+ * \value TagResourceAction GameLift TagResource action.
+ * \value UntagResourceAction GameLift UntagResource action.
  * \value UpdateAliasAction GameLift UpdateAlias action.
  * \value UpdateBuildAction GameLift UpdateBuild action.
  * \value UpdateFleetAttributesAction GameLift UpdateFleetAttributes action.
  * \value UpdateFleetCapacityAction GameLift UpdateFleetCapacity action.
  * \value UpdateFleetPortSettingsAction GameLift UpdateFleetPortSettings action.
+ * \value UpdateGameServerAction GameLift UpdateGameServer action.
+ * \value UpdateGameServerGroupAction GameLift UpdateGameServerGroup action.
  * \value UpdateGameSessionAction GameLift UpdateGameSession action.
  * \value UpdateGameSessionQueueAction GameLift UpdateGameSessionQueue action.
  * \value UpdateMatchmakingConfigurationAction GameLift UpdateMatchmakingConfiguration action.

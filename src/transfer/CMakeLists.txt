@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsTransfer
+  createaccessrequest.h
+  createaccessrequest_p.h
+  createaccessresponse.h
+  createaccessresponse_p.h
   createserverrequest.h
   createserverrequest_p.h
   createserverresponse.h
@@ -9,6 +13,10 @@ add_library(QtAwsTransfer
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  deleteaccessrequest.h
+  deleteaccessrequest_p.h
+  deleteaccessresponse.h
+  deleteaccessresponse_p.h
   deleteserverrequest.h
   deleteserverrequest_p.h
   deleteserverresponse.h
@@ -21,6 +29,14 @@ add_library(QtAwsTransfer
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  describeaccessrequest.h
+  describeaccessrequest_p.h
+  describeaccessresponse.h
+  describeaccessresponse_p.h
+  describesecuritypolicyrequest.h
+  describesecuritypolicyrequest_p.h
+  describesecuritypolicyresponse.h
+  describesecuritypolicyresponse_p.h
   describeserverrequest.h
   describeserverrequest_p.h
   describeserverresponse.h
@@ -33,6 +49,14 @@ add_library(QtAwsTransfer
   importsshpublickeyrequest_p.h
   importsshpublickeyresponse.h
   importsshpublickeyresponse_p.h
+  listaccessesrequest.h
+  listaccessesrequest_p.h
+  listaccessesresponse.h
+  listaccessesresponse_p.h
+  listsecuritypoliciesrequest.h
+  listsecuritypoliciesrequest_p.h
+  listsecuritypoliciesresponse.h
+  listsecuritypoliciesresponse_p.h
   listserversrequest.h
   listserversrequest_p.h
   listserversresponse.h
@@ -71,6 +95,10 @@ add_library(QtAwsTransfer
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateaccessrequest.h
+  updateaccessrequest_p.h
+  updateaccessresponse.h
+  updateaccessresponse_p.h
   updateserverrequest.h
   updateserverrequest_p.h
   updateserverresponse.h
@@ -79,22 +107,34 @@ add_library(QtAwsTransfer
   updateuserrequest_p.h
   updateuserresponse.h
   updateuserresponse_p.h
+  createaccessrequest.cpp
+  createaccessresponse.cpp
   createserverrequest.cpp
   createserverresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  deleteaccessrequest.cpp
+  deleteaccessresponse.cpp
   deleteserverrequest.cpp
   deleteserverresponse.cpp
   deletesshpublickeyrequest.cpp
   deletesshpublickeyresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  describeaccessrequest.cpp
+  describeaccessresponse.cpp
+  describesecuritypolicyrequest.cpp
+  describesecuritypolicyresponse.cpp
   describeserverrequest.cpp
   describeserverresponse.cpp
   describeuserrequest.cpp
   describeuserresponse.cpp
   importsshpublickeyrequest.cpp
   importsshpublickeyresponse.cpp
+  listaccessesrequest.cpp
+  listaccessesresponse.cpp
+  listsecuritypoliciesrequest.cpp
+  listsecuritypoliciesresponse.cpp
   listserversrequest.cpp
   listserversresponse.cpp
   listtagsforresourcerequest.cpp
@@ -114,6 +154,8 @@ add_library(QtAwsTransfer
   transferresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateaccessrequest.cpp
+  updateaccessresponse.cpp
   updateserverrequest.cpp
   updateserverresponse.cpp
   updateuserrequest.cpp

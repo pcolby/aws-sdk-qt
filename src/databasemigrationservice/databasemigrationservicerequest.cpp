@@ -38,20 +38,25 @@ namespace DatabaseMigrationService {
  *
  * \value AddTagsToResourceAction DatabaseMigrationService AddTagsToResource action.
  * \value ApplyPendingMaintenanceActionAction DatabaseMigrationService ApplyPendingMaintenanceAction action.
+ * \value CancelReplicationTaskAssessmentRunAction DatabaseMigrationService CancelReplicationTaskAssessmentRun action.
  * \value CreateEndpointAction DatabaseMigrationService CreateEndpoint action.
  * \value CreateEventSubscriptionAction DatabaseMigrationService CreateEventSubscription action.
  * \value CreateReplicationInstanceAction DatabaseMigrationService CreateReplicationInstance action.
  * \value CreateReplicationSubnetGroupAction DatabaseMigrationService CreateReplicationSubnetGroup action.
  * \value CreateReplicationTaskAction DatabaseMigrationService CreateReplicationTask action.
  * \value DeleteCertificateAction DatabaseMigrationService DeleteCertificate action.
+ * \value DeleteConnectionAction DatabaseMigrationService DeleteConnection action.
  * \value DeleteEndpointAction DatabaseMigrationService DeleteEndpoint action.
  * \value DeleteEventSubscriptionAction DatabaseMigrationService DeleteEventSubscription action.
  * \value DeleteReplicationInstanceAction DatabaseMigrationService DeleteReplicationInstance action.
  * \value DeleteReplicationSubnetGroupAction DatabaseMigrationService DeleteReplicationSubnetGroup action.
  * \value DeleteReplicationTaskAction DatabaseMigrationService DeleteReplicationTask action.
+ * \value DeleteReplicationTaskAssessmentRunAction DatabaseMigrationService DeleteReplicationTaskAssessmentRun action.
  * \value DescribeAccountAttributesAction DatabaseMigrationService DescribeAccountAttributes action.
+ * \value DescribeApplicableIndividualAssessmentsAction DatabaseMigrationService DescribeApplicableIndividualAssessments action.
  * \value DescribeCertificatesAction DatabaseMigrationService DescribeCertificates action.
  * \value DescribeConnectionsAction DatabaseMigrationService DescribeConnections action.
+ * \value DescribeEndpointSettingsAction DatabaseMigrationService DescribeEndpointSettings action.
  * \value DescribeEndpointTypesAction DatabaseMigrationService DescribeEndpointTypes action.
  * \value DescribeEndpointsAction DatabaseMigrationService DescribeEndpoints action.
  * \value DescribeEventCategoriesAction DatabaseMigrationService DescribeEventCategories action.
@@ -64,6 +69,8 @@ namespace DatabaseMigrationService {
  * \value DescribeReplicationInstancesAction DatabaseMigrationService DescribeReplicationInstances action.
  * \value DescribeReplicationSubnetGroupsAction DatabaseMigrationService DescribeReplicationSubnetGroups action.
  * \value DescribeReplicationTaskAssessmentResultsAction DatabaseMigrationService DescribeReplicationTaskAssessmentResults action.
+ * \value DescribeReplicationTaskAssessmentRunsAction DatabaseMigrationService DescribeReplicationTaskAssessmentRuns action.
+ * \value DescribeReplicationTaskIndividualAssessmentsAction DatabaseMigrationService DescribeReplicationTaskIndividualAssessments action.
  * \value DescribeReplicationTasksAction DatabaseMigrationService DescribeReplicationTasks action.
  * \value DescribeSchemasAction DatabaseMigrationService DescribeSchemas action.
  * \value DescribeTableStatisticsAction DatabaseMigrationService DescribeTableStatistics action.
@@ -74,12 +81,14 @@ namespace DatabaseMigrationService {
  * \value ModifyReplicationInstanceAction DatabaseMigrationService ModifyReplicationInstance action.
  * \value ModifyReplicationSubnetGroupAction DatabaseMigrationService ModifyReplicationSubnetGroup action.
  * \value ModifyReplicationTaskAction DatabaseMigrationService ModifyReplicationTask action.
+ * \value MoveReplicationTaskAction DatabaseMigrationService MoveReplicationTask action.
  * \value RebootReplicationInstanceAction DatabaseMigrationService RebootReplicationInstance action.
  * \value RefreshSchemasAction DatabaseMigrationService RefreshSchemas action.
  * \value ReloadTablesAction DatabaseMigrationService ReloadTables action.
  * \value RemoveTagsFromResourceAction DatabaseMigrationService RemoveTagsFromResource action.
  * \value StartReplicationTaskAction DatabaseMigrationService StartReplicationTask action.
  * \value StartReplicationTaskAssessmentAction DatabaseMigrationService StartReplicationTaskAssessment action.
+ * \value StartReplicationTaskAssessmentRunAction DatabaseMigrationService StartReplicationTaskAssessmentRun action.
  * \value StopReplicationTaskAction DatabaseMigrationService StopReplicationTask action.
  * \value TestConnectionAction DatabaseMigrationService TestConnection action.
  */

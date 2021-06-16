@@ -7,6 +7,10 @@ add_library(QtAwsBudgets
   budgetsrequest_p.h
   budgetsresponse.h
   budgetsresponse_p.h
+  createbudgetactionrequest.h
+  createbudgetactionrequest_p.h
+  createbudgetactionresponse.h
+  createbudgetactionresponse_p.h
   createbudgetrequest.h
   createbudgetrequest_p.h
   createbudgetresponse.h
@@ -19,6 +23,10 @@ add_library(QtAwsBudgets
   createsubscriberrequest_p.h
   createsubscriberresponse.h
   createsubscriberresponse_p.h
+  deletebudgetactionrequest.h
+  deletebudgetactionrequest_p.h
+  deletebudgetactionresponse.h
+  deletebudgetactionresponse_p.h
   deletebudgetrequest.h
   deletebudgetrequest_p.h
   deletebudgetresponse.h
@@ -31,6 +39,22 @@ add_library(QtAwsBudgets
   deletesubscriberrequest_p.h
   deletesubscriberresponse.h
   deletesubscriberresponse_p.h
+  describebudgetactionhistoriesrequest.h
+  describebudgetactionhistoriesrequest_p.h
+  describebudgetactionhistoriesresponse.h
+  describebudgetactionhistoriesresponse_p.h
+  describebudgetactionrequest.h
+  describebudgetactionrequest_p.h
+  describebudgetactionresponse.h
+  describebudgetactionresponse_p.h
+  describebudgetactionsforaccountrequest.h
+  describebudgetactionsforaccountrequest_p.h
+  describebudgetactionsforaccountresponse.h
+  describebudgetactionsforaccountresponse_p.h
+  describebudgetactionsforbudgetrequest.h
+  describebudgetactionsforbudgetrequest_p.h
+  describebudgetactionsforbudgetresponse.h
+  describebudgetactionsforbudgetresponse_p.h
   describebudgetperformancehistoryrequest.h
   describebudgetperformancehistoryrequest_p.h
   describebudgetperformancehistoryresponse.h
@@ -51,6 +75,14 @@ add_library(QtAwsBudgets
   describesubscribersfornotificationrequest_p.h
   describesubscribersfornotificationresponse.h
   describesubscribersfornotificationresponse_p.h
+  executebudgetactionrequest.h
+  executebudgetactionrequest_p.h
+  executebudgetactionresponse.h
+  executebudgetactionresponse_p.h
+  updatebudgetactionrequest.h
+  updatebudgetactionrequest_p.h
+  updatebudgetactionresponse.h
+  updatebudgetactionresponse_p.h
   updatebudgetrequest.h
   updatebudgetrequest_p.h
   updatebudgetresponse.h
@@ -66,18 +98,30 @@ add_library(QtAwsBudgets
   budgetsclient.cpp
   budgetsrequest.cpp
   budgetsresponse.cpp
+  createbudgetactionrequest.cpp
+  createbudgetactionresponse.cpp
   createbudgetrequest.cpp
   createbudgetresponse.cpp
   createnotificationrequest.cpp
   createnotificationresponse.cpp
   createsubscriberrequest.cpp
   createsubscriberresponse.cpp
+  deletebudgetactionrequest.cpp
+  deletebudgetactionresponse.cpp
   deletebudgetrequest.cpp
   deletebudgetresponse.cpp
   deletenotificationrequest.cpp
   deletenotificationresponse.cpp
   deletesubscriberrequest.cpp
   deletesubscriberresponse.cpp
+  describebudgetactionhistoriesrequest.cpp
+  describebudgetactionhistoriesresponse.cpp
+  describebudgetactionrequest.cpp
+  describebudgetactionresponse.cpp
+  describebudgetactionsforaccountrequest.cpp
+  describebudgetactionsforaccountresponse.cpp
+  describebudgetactionsforbudgetrequest.cpp
+  describebudgetactionsforbudgetresponse.cpp
   describebudgetperformancehistoryrequest.cpp
   describebudgetperformancehistoryresponse.cpp
   describebudgetrequest.cpp
@@ -88,6 +132,10 @@ add_library(QtAwsBudgets
   describenotificationsforbudgetresponse.cpp
   describesubscribersfornotificationrequest.cpp
   describesubscribersfornotificationresponse.cpp
+  executebudgetactionrequest.cpp
+  executebudgetactionresponse.cpp
+  updatebudgetactionrequest.cpp
+  updatebudgetactionresponse.cpp
   updatebudgetrequest.cpp
   updatebudgetresponse.cpp
   updatenotificationrequest.cpp

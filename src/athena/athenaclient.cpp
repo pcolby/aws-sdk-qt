@@ -25,26 +25,52 @@
 #include "batchgetnamedqueryresponse.h"
 #include "batchgetqueryexecutionrequest.h"
 #include "batchgetqueryexecutionresponse.h"
+#include "createdatacatalogrequest.h"
+#include "createdatacatalogresponse.h"
 #include "createnamedqueryrequest.h"
 #include "createnamedqueryresponse.h"
+#include "createpreparedstatementrequest.h"
+#include "createpreparedstatementresponse.h"
 #include "createworkgrouprequest.h"
 #include "createworkgroupresponse.h"
+#include "deletedatacatalogrequest.h"
+#include "deletedatacatalogresponse.h"
 #include "deletenamedqueryrequest.h"
 #include "deletenamedqueryresponse.h"
+#include "deletepreparedstatementrequest.h"
+#include "deletepreparedstatementresponse.h"
 #include "deleteworkgrouprequest.h"
 #include "deleteworkgroupresponse.h"
+#include "getdatacatalogrequest.h"
+#include "getdatacatalogresponse.h"
+#include "getdatabaserequest.h"
+#include "getdatabaseresponse.h"
 #include "getnamedqueryrequest.h"
 #include "getnamedqueryresponse.h"
+#include "getpreparedstatementrequest.h"
+#include "getpreparedstatementresponse.h"
 #include "getqueryexecutionrequest.h"
 #include "getqueryexecutionresponse.h"
 #include "getqueryresultsrequest.h"
 #include "getqueryresultsresponse.h"
+#include "gettablemetadatarequest.h"
+#include "gettablemetadataresponse.h"
 #include "getworkgrouprequest.h"
 #include "getworkgroupresponse.h"
+#include "listdatacatalogsrequest.h"
+#include "listdatacatalogsresponse.h"
+#include "listdatabasesrequest.h"
+#include "listdatabasesresponse.h"
+#include "listengineversionsrequest.h"
+#include "listengineversionsresponse.h"
 #include "listnamedqueriesrequest.h"
 #include "listnamedqueriesresponse.h"
+#include "listpreparedstatementsrequest.h"
+#include "listpreparedstatementsresponse.h"
 #include "listqueryexecutionsrequest.h"
 #include "listqueryexecutionsresponse.h"
+#include "listtablemetadatarequest.h"
+#include "listtablemetadataresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "listworkgroupsrequest.h"
@@ -57,6 +83,10 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatedatacatalogrequest.h"
+#include "updatedatacatalogresponse.h"
+#include "updatepreparedstatementrequest.h"
+#include "updatepreparedstatementresponse.h"
 #include "updateworkgrouprequest.h"
 #include "updateworkgroupresponse.h"
 
@@ -191,6 +221,20 @@ BatchGetQueryExecutionResponse * AthenaClient::batchGetQueryExecution(const Batc
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * CreateDataCatalogResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates (registers) a data catalog with the specified name and properties. Catalogs created are visible to all users of
+ * the same AWS
+ */
+CreateDataCatalogResponse * AthenaClient::createDataCatalog(const CreateDataCatalogRequest &request)
+{
+    return qobject_cast<CreateDataCatalogResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * CreateNamedQueryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -210,6 +254,19 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * CreatePreparedStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a prepared statement for use with SQL queries in
+ */
+CreatePreparedStatementResponse * AthenaClient::createPreparedStatement(const CreatePreparedStatementRequest &request)
+{
+    return qobject_cast<CreatePreparedStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * CreateWorkGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -219,6 +276,19 @@ CreateNamedQueryResponse * AthenaClient::createNamedQuery(const CreateNamedQuery
 CreateWorkGroupResponse * AthenaClient::createWorkGroup(const CreateWorkGroupRequest &request)
 {
     return qobject_cast<CreateWorkGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * DeleteDataCatalogResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a data
+ */
+DeleteDataCatalogResponse * AthenaClient::deleteDataCatalog(const DeleteDataCatalogRequest &request)
+{
+    return qobject_cast<DeleteDataCatalogResponse *>(send(request));
 }
 
 /*!
@@ -242,6 +312,19 @@ DeleteNamedQueryResponse * AthenaClient::deleteNamedQuery(const DeleteNamedQuery
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * DeletePreparedStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the prepared statement with the specified name from the specified
+ */
+DeletePreparedStatementResponse * AthenaClient::deletePreparedStatement(const DeletePreparedStatementRequest &request)
+{
+    return qobject_cast<DeletePreparedStatementResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * DeleteWorkGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -255,6 +338,32 @@ DeleteWorkGroupResponse * AthenaClient::deleteWorkGroup(const DeleteWorkGroupReq
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * GetDataCatalogResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the specified data
+ */
+GetDataCatalogResponse * AthenaClient::getDataCatalog(const GetDataCatalogRequest &request)
+{
+    return qobject_cast<GetDataCatalogResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * GetDatabaseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a database object for the specified database and data
+ */
+GetDatabaseResponse * AthenaClient::getDatabase(const GetDatabaseRequest &request)
+{
+    return qobject_cast<GetDatabaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * GetNamedQueryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -264,6 +373,19 @@ DeleteWorkGroupResponse * AthenaClient::deleteWorkGroup(const DeleteWorkGroupReq
 GetNamedQueryResponse * AthenaClient::getNamedQuery(const GetNamedQueryRequest &request)
 {
     return qobject_cast<GetNamedQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * GetPreparedStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the prepared statement with the specified name from the specified
+ */
+GetPreparedStatementResponse * AthenaClient::getPreparedStatement(const GetPreparedStatementRequest &request)
+{
+    return qobject_cast<GetPreparedStatementResponse *>(send(request));
 }
 
 /*!
@@ -286,13 +408,38 @@ GetQueryExecutionResponse * AthenaClient::getQueryExecution(const GetQueryExecut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the results of a single query execution specified by <code>QueryExecutionId</code> if you have access to the
- * workgroup in which the query ran. This request does not execute the query but returns results. Use
- * <a>StartQueryExecution</a> to run a
+ * Streams the results of a single query execution specified by <code>QueryExecutionId</code> from the Athena query results
+ * location in Amazon S3. For more information, see <a
+ * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a> in the <i>Amazon Athena User
+ * Guide</i>. This request does not execute the query but returns results. Use <a>StartQueryExecution</a> to run a
+ *
+ * query>
+ *
+ * To stream query results successfully, the IAM principal with permission to call <code>GetQueryResults</code> also must
+ * have permissions to the Amazon S3 <code>GetObject</code> action for the Athena query results
+ *
+ * location> <b>
+ *
+ * IAM principals with permission to the Amazon S3 <code>GetObject</code> action for the query results location are able to
+ * retrieve query results from Amazon S3 even if permission to the <code>GetQueryResults</code> action is denied. To
+ * restrict user or role access, ensure that Amazon S3 permissions to the Athena query location are
  */
 GetQueryResultsResponse * AthenaClient::getQueryResults(const GetQueryResultsRequest &request)
 {
     return qobject_cast<GetQueryResultsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * GetTableMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns table metadata for the specified catalog, database, and
+ */
+GetTableMetadataResponse * AthenaClient::getTableMetadata(const GetTableMetadataRequest &request)
+{
+    return qobject_cast<GetTableMetadataResponse *>(send(request));
 }
 
 /*!
@@ -310,12 +457,51 @@ GetWorkGroupResponse * AthenaClient::getWorkGroup(const GetWorkGroupRequest &req
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListDataCatalogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the data catalogs in the current AWS
+ */
+ListDataCatalogsResponse * AthenaClient::listDataCatalogs(const ListDataCatalogsRequest &request)
+{
+    return qobject_cast<ListDataCatalogsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListDatabasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the databases in the specified data
+ */
+ListDatabasesResponse * AthenaClient::listDatabases(const ListDatabasesRequest &request)
+{
+    return qobject_cast<ListDatabasesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListEngineVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of engine versions that are available to choose from, including the Auto
+ */
+ListEngineVersionsResponse * AthenaClient::listEngineVersions(const ListEngineVersionsRequest &request)
+{
+    return qobject_cast<ListEngineVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * ListNamedQueriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Provides a list of available query IDs only for queries saved in the specified workgroup. Requires that you have access
- * to the
+ * to the specified workgroup. If a workgroup is not specified, lists the saved queries for the primary
  *
  * workgroup>
  *
@@ -330,12 +516,26 @@ ListNamedQueriesResponse * AthenaClient::listNamedQueries(const ListNamedQueries
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListPreparedStatementsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the prepared statements in the specfied
+ */
+ListPreparedStatementsResponse * AthenaClient::listPreparedStatements(const ListPreparedStatementsRequest &request)
+{
+    return qobject_cast<ListPreparedStatementsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * ListQueryExecutionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides a list of available query execution IDs for the queries in the specified workgroup. Requires you to have access
- * to the workgroup in which the queries
+ * Provides a list of available query execution IDs for the queries in the specified workgroup. If a workgroup is not
+ * specified, returns a list of query execution IDs for the primary workgroup. Requires you to have access to the workgroup
+ * in which the queries
  *
  * ran>
  *
@@ -350,11 +550,24 @@ ListQueryExecutionsResponse * AthenaClient::listQueryExecutions(const ListQueryE
 
 /*!
  * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * ListTableMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the metadata for the tables in the specified data catalog
+ */
+ListTableMetadataResponse * AthenaClient::listTableMetadata(const ListTableMetadataRequest &request)
+{
+    return qobject_cast<ListTableMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tags associated with this
+ * Lists the tags associated with an Athena workgroup or data catalog
  */
 ListTagsForResourceResponse * AthenaClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -381,11 +594,8 @@ ListWorkGroupsResponse * AthenaClient::listWorkGroups(const ListWorkGroupsReques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Runs the SQL query statements contained in the <code>Query</code>. Requires you to have access to the workgroup in which
- * the query
- *
- * ran>
- *
- * For code samples using the AWS SDK for Java, see <a
+ * the query ran. Running queries against an external catalog requires <a>GetDataCatalog</a> permission to the catalog. For
+ * code samples using the AWS SDK for Java, see <a
  * href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon
  * Athena User
  */
@@ -419,15 +629,14 @@ StopQueryExecutionResponse * AthenaClient::stopQueryExecution(const StopQueryExe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags to the resource, such as a workgroup. A tag is a label that you assign to an AWS Athena resource
- * (a workgroup). Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize
- * resources (workgroups) in Athena, for example, by purpose, owner, or environment. Use a consistent set of tag keys to
- * make it easier to search and filter workgroups in your account. For best practices, see <a
- * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">AWS Tagging Strategies</a>. The key
- * length is from 1 (minimum) to 128 (maximum) Unicode characters in UTF-8. The tag value length is from 0 (minimum) to 256
- * (maximum) Unicode characters in UTF-8. You can use letters and numbers representable in UTF-8, and the following
- * characters: + - = . _ : / @. Tag keys and values are case-sensitive. Tag keys must be unique per resource. If you
- * specify more than one, separate them by
+ * Adds one or more tags to an Athena resource. A tag is a label that you assign to a resource. In Athena, a resource can
+ * be a workgroup or data catalog. Each tag consists of a key and an optional value, both of which you define. For example,
+ * you can use tags to categorize Athena workgroups or data catalogs by purpose, owner, or environment. Use a consistent
+ * set of tag keys to make it easier to search and filter workgroups or data catalogs in your account. For best practices,
+ * see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Tagging Best Practices</a>. Tag
+ * keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256 UTF-8 Unicode characters. Tags
+ * can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag keys and values
+ * are case-sensitive. Tag keys must be unique per resource. If you specify more than one tag, separate them by
  */
 TagResourceResponse * AthenaClient::tagResource(const TagResourceRequest &request)
 {
@@ -440,12 +649,37 @@ TagResourceResponse * AthenaClient::tagResource(const TagResourceRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags from the workgroup resource. Takes as an input a list of TagKey Strings separated by commas,
- * and removes their tags at the same
+ * Removes one or more tags from a data catalog or workgroup
  */
 UntagResourceResponse * AthenaClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * UpdateDataCatalogResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the data catalog that has the specified
+ */
+UpdateDataCatalogResponse * AthenaClient::updateDataCatalog(const UpdateDataCatalogRequest &request)
+{
+    return qobject_cast<UpdateDataCatalogResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AthenaClient service, and returns a pointer to an
+ * UpdatePreparedStatementResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a prepared
+ */
+UpdatePreparedStatementResponse * AthenaClient::updatePreparedStatement(const UpdatePreparedStatementRequest &request)
+{
+    return qobject_cast<UpdatePreparedStatementResponse *>(send(request));
 }
 
 /*!

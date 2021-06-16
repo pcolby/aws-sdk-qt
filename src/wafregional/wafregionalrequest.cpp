@@ -48,6 +48,7 @@ namespace WAFRegional {
  * \value CreateSizeConstraintSetAction WAFRegional CreateSizeConstraintSet action.
  * \value CreateSqlInjectionMatchSetAction WAFRegional CreateSqlInjectionMatchSet action.
  * \value CreateWebACLAction WAFRegional CreateWebACL action.
+ * \value CreateWebACLMigrationStackAction WAFRegional CreateWebACLMigrationStack action.
  * \value CreateXssMatchSetAction WAFRegional CreateXssMatchSet action.
  * \value DeleteByteMatchSetAction WAFRegional DeleteByteMatchSet action.
  * \value DeleteGeoMatchSetAction WAFRegional DeleteGeoMatchSet action.

@@ -21,6 +21,8 @@
 #include "signerclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "addprofilepermissionrequest.h"
+#include "addprofilepermissionresponse.h"
 #include "cancelsigningprofilerequest.h"
 #include "cancelsigningprofileresponse.h"
 #include "describesigningjobrequest.h"
@@ -29,16 +31,30 @@
 #include "getsigningplatformresponse.h"
 #include "getsigningprofilerequest.h"
 #include "getsigningprofileresponse.h"
+#include "listprofilepermissionsrequest.h"
+#include "listprofilepermissionsresponse.h"
 #include "listsigningjobsrequest.h"
 #include "listsigningjobsresponse.h"
 #include "listsigningplatformsrequest.h"
 #include "listsigningplatformsresponse.h"
 #include "listsigningprofilesrequest.h"
 #include "listsigningprofilesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putsigningprofilerequest.h"
 #include "putsigningprofileresponse.h"
+#include "removeprofilepermissionrequest.h"
+#include "removeprofilepermissionresponse.h"
+#include "revokesignaturerequest.h"
+#include "revokesignatureresponse.h"
+#include "revokesigningprofilerequest.h"
+#include "revokesigningprofileresponse.h"
 #include "startsigningjobrequest.h"
 #include "startsigningjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -62,12 +78,31 @@ namespace signer {
  * \ingroup aws-clients
  * \inmodule QtAwssigner
  *
- *  You can use Code Signing for Amazon FreeRTOS (AWS Signer) to sign code that you created for any of the IoT devices that
- *  Amazon Web Services supports. AWS Signer is integrated with Amazon FreeRTOS, AWS Certificate Manager, and AWS
- *  CloudTrail. Amazon FreeRTOS customers can use AWS Signer to sign code images before making them available for
- *  microcontrollers. You can use ACM to import third-party certificates to be used by AWS Signer. For general information
- *  about using AWS Signer, see the <a href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">Code
- *  Signing for Amazon FreeRTOS Developer
+ *  AWS Signer is a fully managed code signing service to help you ensure the trust and integrity of your code.
+ * 
+ *  </p
+ * 
+ *  AWS Signer supports the following
+ * 
+ *  applications>
+ * 
+ *  With <i>code signing for AWS Lambda</i>, you can sign AWS Lambda deployment packages. Integrated support is provided for
+ *  Amazon S3, Amazon CloudWatch, and AWS CloudTrail. In order to sign code, you create a signing profile and then use
+ *  Signer to sign Lambda zip files in S3.
+ * 
+ *  </p
+ * 
+ *  With <i>code signing for IoT</i>, you can sign code for any IoT device that is supported by AWS. IoT code signing is
+ *  available for <a href="http://docs.aws.amazon.com/freertos/latest/userguide/">Amazon FreeRTOS</a> and <a
+ *  href="http://docs.aws.amazon.com/iot/latest/developerguide/">AWS IoT Device Management</a>, and is integrated with <a
+ *  href="http://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager (ACM)</a>. In order to sign code, you
+ *  import a third-party code signing certificate using ACM, and use that to sign updates in Amazon FreeRTOS and AWS IoT
+ *  Device Management.
+ * 
+ *  </p
+ * 
+ *  For more information about AWS Signer, see the <a
+ *  href="http://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html">AWS Signer Developer
  */
 
 /*!
@@ -121,6 +156,19 @@ signerClient::signerClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Signer");
     d->serviceName = QStringLiteral("signer");
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
+ * AddProfilePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds cross-account permissions to a signing
+ */
+AddProfilePermissionResponse * signerClient::addProfilePermission(const AddProfilePermissionRequest &request)
+{
+    return qobject_cast<AddProfilePermissionResponse *>(send(request));
 }
 
 /*!
@@ -180,15 +228,28 @@ GetSigningProfileResponse * signerClient::getSigningProfile(const GetSigningProf
 
 /*!
  * Sends \a request to the signerClient service, and returns a pointer to an
+ * ListProfilePermissionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the cross-account permissions associated with a signing
+ */
+ListProfilePermissionsResponse * signerClient::listProfilePermissions(const ListProfilePermissionsRequest &request)
+{
+    return qobject_cast<ListProfilePermissionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
  * ListSigningJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all your signing jobs. You can use the <code>maxResults</code> parameter to limit the number of signing jobs that
- * are returned in the response. If additional jobs remain to be listed, AWS Signer returns a <code>nextToken</code> value.
- * Use this value in subsequent calls to <code>ListSigningJobs</code> to fetch the remaining values. You can continue
- * calling <code>ListSigningJobs</code> with your <code>maxResults</code> parameter and with new values that AWS Signer
- * returns in the <code>nextToken</code> parameter until all of your signing jobs have been returned.
+ * are returned in the response. If additional jobs remain to be listed, code signing returns a <code>nextToken</code>
+ * value. Use this value in subsequent calls to <code>ListSigningJobs</code> to fetch the remaining values. You can
+ * continue calling <code>ListSigningJobs</code> with your <code>maxResults</code> parameter and with new values that code
+ * signing returns in the <code>nextToken</code> parameter until all of your signing jobs have been returned.
  */
 ListSigningJobsResponse * signerClient::listSigningJobs(const ListSigningJobsRequest &request)
 {
@@ -201,10 +262,10 @@ ListSigningJobsResponse * signerClient::listSigningJobs(const ListSigningJobsReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all signing platforms available in AWS Signer that match the request parameters. If additional jobs remain to be
- * listed, AWS Signer returns a <code>nextToken</code> value. Use this value in subsequent calls to
+ * Lists all signing platforms available in code signing that match the request parameters. If additional jobs remain to be
+ * listed, code signing returns a <code>nextToken</code> value. Use this value in subsequent calls to
  * <code>ListSigningJobs</code> to fetch the remaining values. You can continue calling <code>ListSigningJobs</code> with
- * your <code>maxResults</code> parameter and with new values that AWS Signer returns in the <code>nextToken</code>
+ * your <code>maxResults</code> parameter and with new values that code signing returns in the <code>nextToken</code>
  * parameter until all of your signing jobs have been
  */
 ListSigningPlatformsResponse * signerClient::listSigningPlatforms(const ListSigningPlatformsRequest &request)
@@ -220,9 +281,9 @@ ListSigningPlatformsResponse * signerClient::listSigningPlatforms(const ListSign
  *
  * Lists all available signing profiles in your AWS account. Returns only profiles with an <code>ACTIVE</code> status
  * unless the <code>includeCanceled</code> request field is set to <code>true</code>. If additional jobs remain to be
- * listed, AWS Signer returns a <code>nextToken</code> value. Use this value in subsequent calls to
+ * listed, code signing returns a <code>nextToken</code> value. Use this value in subsequent calls to
  * <code>ListSigningJobs</code> to fetch the remaining values. You can continue calling <code>ListSigningJobs</code> with
- * your <code>maxResults</code> parameter and with new values that AWS Signer returns in the <code>nextToken</code>
+ * your <code>maxResults</code> parameter and with new values that code signing returns in the <code>nextToken</code>
  * parameter until all of your signing jobs have been
  */
 ListSigningProfilesResponse * signerClient::listSigningProfiles(const ListSigningProfilesRequest &request)
@@ -232,17 +293,70 @@ ListSigningProfilesResponse * signerClient::listSigningProfiles(const ListSignin
 
 /*!
  * Sends \a request to the signerClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the tags associated with a signing profile
+ */
+ListTagsForResourceResponse * signerClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
  * PutSigningProfileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a signing profile. A signing profile is an AWS Signer template that can be used to carry out a pre-defined
+ * Creates a signing profile. A signing profile is a code signing template that can be used to carry out a pre-defined
  * signing job. For more information, see <a
  * href="http://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html">http://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html</a>
  */
 PutSigningProfileResponse * signerClient::putSigningProfile(const PutSigningProfileRequest &request)
 {
     return qobject_cast<PutSigningProfileResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
+ * RemoveProfilePermissionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes cross-account permissions from a signing
+ */
+RemoveProfilePermissionResponse * signerClient::removeProfilePermission(const RemoveProfilePermissionRequest &request)
+{
+    return qobject_cast<RemoveProfilePermissionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
+ * RevokeSignatureResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the state of a signing job to REVOKED. This indicates that the signature is no longer
+ */
+RevokeSignatureResponse * signerClient::revokeSignature(const RevokeSignatureRequest &request)
+{
+    return qobject_cast<RevokeSignatureResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
+ * RevokeSigningProfileResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the state of a signing profile to REVOKED. This indicates that signatures generated using the signing profile
+ * after an effective start date are no longer
+ */
+RevokeSigningProfileResponse * signerClient::revokeSigningProfile(const RevokeSigningProfileRequest &request)
+{
+    return qobject_cast<RevokeSigningProfileResponse *>(send(request));
 }
 
 /*!
@@ -266,7 +380,7 @@ PutSigningProfileResponse * signerClient::putSigningProfile(const PutSigningProf
  *
  * enabled> </li> <li>
  *
- * You must create an S3 destination bucket. AWS Signer uses your S3 destination bucket to write your signed
+ * You must create an S3 destination bucket. Code signing uses your S3 destination bucket to write your signed
  *
  * code> </li> <li>
  *
@@ -274,9 +388,9 @@ PutSigningProfileResponse * signerClient::putSigningProfile(const PutSigningProf
  *
  * operation> </li> <li>
  *
- * You must also specify a request token that identifies your request to AWS Signer.
+ * You must also specify a request token that identifies your request to code
  *
- * </p </li> </ul>
+ * signing> </li> </ul>
  *
  * You can call the <a>DescribeSigningJob</a> and the <a>ListSigningJobs</a> actions after you call
  *
@@ -288,6 +402,34 @@ PutSigningProfileResponse * signerClient::putSigningProfile(const PutSigningProf
 StartSigningJobResponse * signerClient::startSigningJob(const StartSigningJobRequest &request)
 {
     return qobject_cast<StartSigningJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to a signing profile. Tags are labels that you can use to identify and organize your AWS
+ * resources. Each tag consists of a key and an optional value. To specify the signing profile, use its Amazon Resource
+ * Name (ARN). To specify the tag, use a key-value
+ */
+TagResourceResponse * signerClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the signerClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from a signing profile. To remove the tags, specify a list of tag
+ */
+UntagResourceResponse * signerClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -38,35 +38,56 @@ namespace WorkMail {
  *
  * \value AssociateDelegateToResourceAction WorkMail AssociateDelegateToResource action.
  * \value AssociateMemberToGroupAction WorkMail AssociateMemberToGroup action.
+ * \value CancelMailboxExportJobAction WorkMail CancelMailboxExportJob action.
  * \value CreateAliasAction WorkMail CreateAlias action.
  * \value CreateGroupAction WorkMail CreateGroup action.
+ * \value CreateMobileDeviceAccessRuleAction WorkMail CreateMobileDeviceAccessRule action.
+ * \value CreateOrganizationAction WorkMail CreateOrganization action.
  * \value CreateResourceAction WorkMail CreateResource action.
  * \value CreateUserAction WorkMail CreateUser action.
+ * \value DeleteAccessControlRuleAction WorkMail DeleteAccessControlRule action.
  * \value DeleteAliasAction WorkMail DeleteAlias action.
  * \value DeleteGroupAction WorkMail DeleteGroup action.
  * \value DeleteMailboxPermissionsAction WorkMail DeleteMailboxPermissions action.
+ * \value DeleteMobileDeviceAccessRuleAction WorkMail DeleteMobileDeviceAccessRule action.
+ * \value DeleteOrganizationAction WorkMail DeleteOrganization action.
  * \value DeleteResourceAction WorkMail DeleteResource action.
+ * \value DeleteRetentionPolicyAction WorkMail DeleteRetentionPolicy action.
  * \value DeleteUserAction WorkMail DeleteUser action.
  * \value DeregisterFromWorkMailAction WorkMail DeregisterFromWorkMail action.
  * \value DescribeGroupAction WorkMail DescribeGroup action.
+ * \value DescribeMailboxExportJobAction WorkMail DescribeMailboxExportJob action.
  * \value DescribeOrganizationAction WorkMail DescribeOrganization action.
  * \value DescribeResourceAction WorkMail DescribeResource action.
  * \value DescribeUserAction WorkMail DescribeUser action.
  * \value DisassociateDelegateFromResourceAction WorkMail DisassociateDelegateFromResource action.
  * \value DisassociateMemberFromGroupAction WorkMail DisassociateMemberFromGroup action.
+ * \value GetAccessControlEffectAction WorkMail GetAccessControlEffect action.
+ * \value GetDefaultRetentionPolicyAction WorkMail GetDefaultRetentionPolicy action.
  * \value GetMailboxDetailsAction WorkMail GetMailboxDetails action.
+ * \value GetMobileDeviceAccessEffectAction WorkMail GetMobileDeviceAccessEffect action.
+ * \value ListAccessControlRulesAction WorkMail ListAccessControlRules action.
  * \value ListAliasesAction WorkMail ListAliases action.
  * \value ListGroupMembersAction WorkMail ListGroupMembers action.
  * \value ListGroupsAction WorkMail ListGroups action.
+ * \value ListMailboxExportJobsAction WorkMail ListMailboxExportJobs action.
  * \value ListMailboxPermissionsAction WorkMail ListMailboxPermissions action.
+ * \value ListMobileDeviceAccessRulesAction WorkMail ListMobileDeviceAccessRules action.
  * \value ListOrganizationsAction WorkMail ListOrganizations action.
  * \value ListResourceDelegatesAction WorkMail ListResourceDelegates action.
  * \value ListResourcesAction WorkMail ListResources action.
+ * \value ListTagsForResourceAction WorkMail ListTagsForResource action.
  * \value ListUsersAction WorkMail ListUsers action.
+ * \value PutAccessControlRuleAction WorkMail PutAccessControlRule action.
  * \value PutMailboxPermissionsAction WorkMail PutMailboxPermissions action.
+ * \value PutRetentionPolicyAction WorkMail PutRetentionPolicy action.
  * \value RegisterToWorkMailAction WorkMail RegisterToWorkMail action.
  * \value ResetPasswordAction WorkMail ResetPassword action.
+ * \value StartMailboxExportJobAction WorkMail StartMailboxExportJob action.
+ * \value TagResourceAction WorkMail TagResource action.
+ * \value UntagResourceAction WorkMail UntagResource action.
  * \value UpdateMailboxQuotaAction WorkMail UpdateMailboxQuota action.
+ * \value UpdateMobileDeviceAccessRuleAction WorkMail UpdateMobileDeviceAccessRule action.
  * \value UpdatePrimaryEmailAddressAction WorkMail UpdatePrimaryEmailAddress action.
  * \value UpdateResourceAction WorkMail UpdateResource action.
  */

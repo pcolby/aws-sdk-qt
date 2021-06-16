@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSchemas
+description = AWS Schemas SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsschemas-index.html"
+navigation.landingtitle = "Schemas"
+navigation.cppclassespage = "Schemas C++ Classes"

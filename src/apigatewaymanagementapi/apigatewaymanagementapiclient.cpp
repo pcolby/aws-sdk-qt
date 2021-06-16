@@ -21,6 +21,10 @@
 #include "apigatewaymanagementapiclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deleteconnectionrequest.h"
+#include "deleteconnectionresponse.h"
+#include "getconnectionrequest.h"
+#include "getconnectionresponse.h"
 #include "posttoconnectionrequest.h"
 #include "posttoconnectionresponse.h"
 
@@ -103,6 +107,32 @@ ApiGatewayManagementApiClient::ApiGatewayManagementApiClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AmazonApiGatewayManagementApi");
     d->serviceName = QStringLiteral("execute-api");
+}
+
+/*!
+ * Sends \a request to the ApiGatewayManagementApiClient service, and returns a pointer to an
+ * DeleteConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete the connection with the provided
+ */
+DeleteConnectionResponse * ApiGatewayManagementApiClient::deleteConnection(const DeleteConnectionRequest &request)
+{
+    return qobject_cast<DeleteConnectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayManagementApiClient service, and returns a pointer to an
+ * GetConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get information about the connection with the provided
+ */
+GetConnectionResponse * ApiGatewayManagementApiClient::getConnection(const GetConnectionRequest &request)
+{
+    return qobject_cast<GetConnectionResponse *>(send(request));
 }
 
 /*!

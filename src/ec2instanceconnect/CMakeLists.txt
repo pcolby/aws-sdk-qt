@@ -7,6 +7,10 @@ add_library(QtAwsEC2InstanceConnect
   ec2instanceconnectrequest_p.h
   ec2instanceconnectresponse.h
   ec2instanceconnectresponse_p.h
+  sendserialconsolesshpublickeyrequest.h
+  sendserialconsolesshpublickeyrequest_p.h
+  sendserialconsolesshpublickeyresponse.h
+  sendserialconsolesshpublickeyresponse_p.h
   sendsshpublickeyrequest.h
   sendsshpublickeyrequest_p.h
   sendsshpublickeyresponse.h
@@ -14,6 +18,8 @@ add_library(QtAwsEC2InstanceConnect
   ec2instanceconnectclient.cpp
   ec2instanceconnectrequest.cpp
   ec2instanceconnectresponse.cpp
+  sendserialconsolesshpublickeyrequest.cpp
+  sendserialconsolesshpublickeyresponse.cpp
   sendsshpublickeyrequest.cpp
   sendsshpublickeyresponse.cpp)
 

@@ -115,6 +115,7 @@ namespace CognitoIdentityProvider {
  * \value ListUsersInGroupAction CognitoIdentityProvider ListUsersInGroup action.
  * \value ResendConfirmationCodeAction CognitoIdentityProvider ResendConfirmationCode action.
  * \value RespondToAuthChallengeAction CognitoIdentityProvider RespondToAuthChallenge action.
+ * \value RevokeTokenAction CognitoIdentityProvider RevokeToken action.
  * \value SetRiskConfigurationAction CognitoIdentityProvider SetRiskConfiguration action.
  * \value SetUICustomizationAction CognitoIdentityProvider SetUICustomization action.
  * \value SetUserMFAPreferenceAction CognitoIdentityProvider SetUserMFAPreference action.

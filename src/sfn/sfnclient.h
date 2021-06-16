@@ -64,6 +64,8 @@ class SendTaskSuccessRequest;
 class SendTaskSuccessResponse;
 class StartExecutionRequest;
 class StartExecutionResponse;
+class StartSyncExecutionRequest;
+class StartSyncExecutionResponse;
 class StopExecutionRequest;
 class StopExecutionResponse;
 class TagResourceRequest;
@@ -107,6 +109,7 @@ public slots:
     SendTaskHeartbeatResponse * sendTaskHeartbeat(const SendTaskHeartbeatRequest &request);
     SendTaskSuccessResponse * sendTaskSuccess(const SendTaskSuccessRequest &request);
     StartExecutionResponse * startExecution(const StartExecutionRequest &request);
+    StartSyncExecutionResponse * startSyncExecution(const StartSyncExecutionRequest &request);
     StopExecutionResponse * stopExecution(const StopExecutionRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);

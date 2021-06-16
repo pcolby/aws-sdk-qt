@@ -41,15 +41,18 @@ namespace MediaStore {
  * \value DeleteContainerPolicyAction MediaStore DeleteContainerPolicy action.
  * \value DeleteCorsPolicyAction MediaStore DeleteCorsPolicy action.
  * \value DeleteLifecyclePolicyAction MediaStore DeleteLifecyclePolicy action.
+ * \value DeleteMetricPolicyAction MediaStore DeleteMetricPolicy action.
  * \value DescribeContainerAction MediaStore DescribeContainer action.
  * \value GetContainerPolicyAction MediaStore GetContainerPolicy action.
  * \value GetCorsPolicyAction MediaStore GetCorsPolicy action.
  * \value GetLifecyclePolicyAction MediaStore GetLifecyclePolicy action.
+ * \value GetMetricPolicyAction MediaStore GetMetricPolicy action.
  * \value ListContainersAction MediaStore ListContainers action.
  * \value ListTagsForResourceAction MediaStore ListTagsForResource action.
  * \value PutContainerPolicyAction MediaStore PutContainerPolicy action.
  * \value PutCorsPolicyAction MediaStore PutCorsPolicy action.
  * \value PutLifecyclePolicyAction MediaStore PutLifecyclePolicy action.
+ * \value PutMetricPolicyAction MediaStore PutMetricPolicy action.
  * \value StartAccessLoggingAction MediaStore StartAccessLogging action.
  * \value StopAccessLoggingAction MediaStore StopAccessLogging action.
  * \value TagResourceAction MediaStore TagResource action.

@@ -30,6 +30,8 @@ namespace EC2InstanceConnect {
 class EC2InstanceConnectClientPrivate;
 class SendSSHPublicKeyRequest;
 class SendSSHPublicKeyResponse;
+class SendSerialConsoleSSHPublicKeyRequest;
+class SendSerialConsoleSSHPublicKeyResponse;
 
 class QTAWS_EXPORT EC2InstanceConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -48,6 +50,7 @@ public:
 
 public slots:
     SendSSHPublicKeyResponse * sendSSHPublicKey(const SendSSHPublicKeyRequest &request);
+    SendSerialConsoleSSHPublicKeyResponse * sendSerialConsoleSSHPublicKey(const SendSerialConsoleSSHPublicKeyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(EC2InstanceConnectClient)

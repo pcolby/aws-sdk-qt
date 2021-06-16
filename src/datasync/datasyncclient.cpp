@@ -27,10 +27,16 @@
 #include "createagentresponse.h"
 #include "createlocationefsrequest.h"
 #include "createlocationefsresponse.h"
+#include "createlocationfsxwindowsrequest.h"
+#include "createlocationfsxwindowsresponse.h"
 #include "createlocationnfsrequest.h"
 #include "createlocationnfsresponse.h"
+#include "createlocationobjectstoragerequest.h"
+#include "createlocationobjectstorageresponse.h"
 #include "createlocations3request.h"
 #include "createlocations3response.h"
+#include "createlocationsmbrequest.h"
+#include "createlocationsmbresponse.h"
 #include "createtaskrequest.h"
 #include "createtaskresponse.h"
 #include "deleteagentrequest.h"
@@ -43,10 +49,16 @@
 #include "describeagentresponse.h"
 #include "describelocationefsrequest.h"
 #include "describelocationefsresponse.h"
+#include "describelocationfsxwindowsrequest.h"
+#include "describelocationfsxwindowsresponse.h"
 #include "describelocationnfsrequest.h"
 #include "describelocationnfsresponse.h"
+#include "describelocationobjectstoragerequest.h"
+#include "describelocationobjectstorageresponse.h"
 #include "describelocations3request.h"
 #include "describelocations3response.h"
+#include "describelocationsmbrequest.h"
+#include "describelocationsmbresponse.h"
 #include "describetaskrequest.h"
 #include "describetaskresponse.h"
 #include "describetaskexecutionrequest.h"
@@ -69,8 +81,16 @@
 #include "untagresourceresponse.h"
 #include "updateagentrequest.h"
 #include "updateagentresponse.h"
+#include "updatelocationnfsrequest.h"
+#include "updatelocationnfsresponse.h"
+#include "updatelocationobjectstoragerequest.h"
+#include "updatelocationobjectstorageresponse.h"
+#include "updatelocationsmbrequest.h"
+#include "updatelocationsmbresponse.h"
 #include "updatetaskrequest.h"
 #include "updatetaskresponse.h"
+#include "updatetaskexecutionrequest.h"
+#include "updatetaskexecutionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -168,7 +188,7 @@ DataSyncClient::DataSyncClient(
  *
  * </p
  *
- * When you cancel a task execution, the transfer of some files are abruptly interrupted. The contents of files that are
+ * When you cancel a task execution, the transfer of some files is abruptly interrupted. The contents of files that are
  * transferred to the destination might be incomplete or inconsistent with the source files. However, if you start a new
  * task execution on the same task and you allow the task execution to complete, file content on the destination is
  * complete and consistent. This applies to other unexpected failures that interrupt a task execution. In all of these
@@ -188,19 +208,18 @@ CancelTaskExecutionResponse * DataSyncClient::cancelTaskExecution(const CancelTa
  * Activates an AWS DataSync agent that you have deployed on your host. The activation process associates your agent with
  * your account. In the activation process, you specify information such as the AWS Region that you want to activate the
  * agent in. You activate the agent in the AWS Region where your target locations (in Amazon S3 or Amazon EFS) reside. Your
- * tasks are created in this AWS Region.
+ * tasks are created in this AWS
  *
- * </p
+ * Region>
+ *
+ * You can activate the agent in a VPC (virtual private cloud) or provide the agent access to a VPC endpoint so you can run
+ * tasks without going over the public
+ *
+ * internet>
  *
  * You can use an agent for more than one location. If a task uses multiple agents, all of them need to have status
  * AVAILABLE for the task to run. If you use multiple agents for a source location, the status of all the agents must be
  * AVAILABLE for the task to run.
- *
- * </p
- *
- * For more information, see
- * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-agents.html#activating-agent" (Activating an Agent)
- * in the <i>AWS DataSync User Guide.</i>
  *
  * </p
  *
@@ -226,15 +245,43 @@ CreateLocationEfsResponse * DataSyncClient::createLocationEfs(const CreateLocati
 
 /*!
  * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * CreateLocationFsxWindowsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an endpoint for an Amazon FSx for Windows File Server file
+ */
+CreateLocationFsxWindowsResponse * DataSyncClient::createLocationFsxWindows(const CreateLocationFsxWindowsRequest &request)
+{
+    return qobject_cast<CreateLocationFsxWindowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
  * CreateLocationNfsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an endpoint for a Network File System (NFS) file
+ * Defines a file system on a Network File System (NFS) server that can be read from or written
  */
 CreateLocationNfsResponse * DataSyncClient::createLocationNfs(const CreateLocationNfsRequest &request)
 {
     return qobject_cast<CreateLocationNfsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * CreateLocationObjectStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an endpoint for a self-managed object storage bucket. For more information about self-managed object storage
+ * locations, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a
+ * location for object
+ */
+CreateLocationObjectStorageResponse * DataSyncClient::createLocationObjectStorage(const CreateLocationObjectStorageRequest &request)
+{
+    return qobject_cast<CreateLocationObjectStorageResponse *>(send(request));
 }
 
 /*!
@@ -247,15 +294,9 @@ CreateLocationNfsResponse * DataSyncClient::createLocationNfs(const CreateLocati
  *
  * bucket>
  *
- * For AWS DataSync to access a destination S3 bucket, it needs an AWS Identity and Access Management (IAM) role that has
- * the required permissions. You can set up the required permissions by creating an IAM policy that grants the required
- * permissions and attaching the policy to the role. An example of such a policy is shown in the examples
- *
- * section>
- *
  * For more information, see
- * "https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html#create-s3-location" (Configuring
- * Amazon S3 Location Settings) in the <i>AWS DataSync User
+ * https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli in the <i>AWS
+ * DataSync User
  */
 CreateLocationS3Response * DataSyncClient::createLocationS3(const CreateLocationS3Request &request)
 {
@@ -264,25 +305,45 @@ CreateLocationS3Response * DataSyncClient::createLocationS3(const CreateLocation
 
 /*!
  * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * CreateLocationSmbResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Defines a file system on a Server Message Block (SMB) server that can be read from or written
+ */
+CreateLocationSmbResponse * DataSyncClient::createLocationSmb(const CreateLocationSmbRequest &request)
+{
+    return qobject_cast<CreateLocationSmbResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
  * CreateTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a task. A task is a set of two locations (source and destination) and a set of Options that you use to control
- * the behavior of a task. If you don't specify Options when you create a task, AWS DataSync populates them with service
+ * Creates a
  *
- * defaults>
+ * task>
  *
- * When you create a task, it first enters the CREATING state. During CREATING AWS DataSync attempts to mount the
- * on-premises Network File System (NFS) location. The task transitions to the AVAILABLE state without waiting for the AWS
- * location to become mounted. If required, AWS DataSync mounts the AWS location before each task
+ * A task includes a source location and a destination location, and a configuration that specifies how data is
+ * transferred. A task always transfers data from the source location to the destination location. The configuration
+ * specifies options such as task scheduling, bandwidth limits, etc. A task is the complete definition of a data
  *
- * execution>
+ * transfer>
  *
- * If an agent that is associated with a source (NFS) location goes offline, the task transitions to the UNAVAILABLE
- * status. If the status of the task remains in the CREATING status for more than a few minutes, it means that your agent
- * might be having trouble mounting the source NFS file system. Check the task's ErrorCode and ErrorDetail. Mount issues
- * are often caused by either a misconfigured firewall or a mistyped NFS server host
+ * When you create a task that transfers data between AWS services in different AWS Regions, one of the two locations that
+ * you specify must reside in the Region where DataSync is being used. The other location must be specified in a different
+ *
+ * Region>
+ *
+ * You can transfer data between commercial AWS Regions except for China, or between AWS GovCloud (US-East and US-West)
+ *
+ * Regions> <b>
+ *
+ * When you use DataSync to copy files or objects between AWS Regions, you pay for data transfer between Regions. This is
+ * billed as data transfer OUT from your source Region to your destination Region. For more information, see <a
+ * href="http://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer">Data Transfer pricing</a>.
  */
 CreateTaskResponse * DataSyncClient::createTask(const CreateTaskRequest &request)
 {
@@ -359,15 +420,43 @@ DescribeLocationEfsResponse * DataSyncClient::describeLocationEfs(const Describe
 
 /*!
  * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * DescribeLocationFsxWindowsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns metadata, such as the path information about an Amazon FSx for Windows File Server
+ */
+DescribeLocationFsxWindowsResponse * DataSyncClient::describeLocationFsxWindows(const DescribeLocationFsxWindowsRequest &request)
+{
+    return qobject_cast<DescribeLocationFsxWindowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
  * DescribeLocationNfsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns metadata, such as the path information, about a NFS
+ * Returns metadata, such as the path information, about an NFS
  */
 DescribeLocationNfsResponse * DataSyncClient::describeLocationNfs(const DescribeLocationNfsRequest &request)
 {
     return qobject_cast<DescribeLocationNfsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * DescribeLocationObjectStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns metadata about a self-managed object storage server location. For more information about self-managed object
+ * storage locations, see <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for object
+ */
+DescribeLocationObjectStorageResponse * DataSyncClient::describeLocationObjectStorage(const DescribeLocationObjectStorageRequest &request)
+{
+    return qobject_cast<DescribeLocationObjectStorageResponse *>(send(request));
 }
 
 /*!
@@ -381,6 +470,19 @@ DescribeLocationNfsResponse * DataSyncClient::describeLocationNfs(const Describe
 DescribeLocationS3Response * DataSyncClient::describeLocationS3(const DescribeLocationS3Request &request)
 {
     return qobject_cast<DescribeLocationS3Response *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * DescribeLocationSmbResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns metadata, such as the path and user information about an SMB
+ */
+DescribeLocationSmbResponse * DataSyncClient::describeLocationSmb(const DescribeLocationSmbRequest &request)
+{
+    return qobject_cast<DescribeLocationSmbResponse *>(send(request));
 }
 
 /*!
@@ -439,7 +541,7 @@ ListAgentsResponse * DataSyncClient::listAgents(const ListAgentsRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a lists of source and destination
+ * Returns a list of source and destination
  *
  * locations>
  *
@@ -457,7 +559,7 @@ ListLocationsResponse * DataSyncClient::listLocations(const ListLocationsRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns all the tags associated with a specified resources.
+ * Returns all the tags associated with a specified resource.
  */
 ListTagsForResourceResponse * DataSyncClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -506,9 +608,8 @@ ListTasksResponse * DataSyncClient::listTasks(const ListTasksRequest &request)
  *
  * </p
  *
- * For detailed information, see <i>Task Execution</i> in
- * "https://docs.aws.amazon.com/datasync/latest/userguide/how-datasync-works.html#terminology" (Components and Terminology)
- * in the <i>AWS DataSync User
+ * For detailed information, see the Task Execution section in the Components and Terminology topic in the <i>AWS DataSync
+ * User
  */
 StartTaskExecutionResponse * DataSyncClient::startTaskExecution(const StartTaskExecutionRequest &request)
 {
@@ -556,6 +657,51 @@ UpdateAgentResponse * DataSyncClient::updateAgent(const UpdateAgentRequest &requ
 
 /*!
  * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * UpdateLocationNfsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates some of the parameters of a previously created location for Network File System (NFS) access. For information
+ * about creating an NFS location, see <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html">Creating a location for
+ */
+UpdateLocationNfsResponse * DataSyncClient::updateLocationNfs(const UpdateLocationNfsRequest &request)
+{
+    return qobject_cast<UpdateLocationNfsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * UpdateLocationObjectStorageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates some of the parameters of a previously created location for self-managed object storage server access. For
+ * information about creating a self-managed object storage location, see <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Creating a location for object
+ */
+UpdateLocationObjectStorageResponse * DataSyncClient::updateLocationObjectStorage(const UpdateLocationObjectStorageRequest &request)
+{
+    return qobject_cast<UpdateLocationObjectStorageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * UpdateLocationSmbResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates some of the parameters of a previously created location for Server Message Block (SMB) file system access. For
+ * information about creating an SMB location, see <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-smb-location.html">Creating a location for
+ */
+UpdateLocationSmbResponse * DataSyncClient::updateLocationSmb(const UpdateLocationSmbRequest &request)
+{
+    return qobject_cast<UpdateLocationSmbResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
  * UpdateTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -565,6 +711,30 @@ UpdateAgentResponse * DataSyncClient::updateAgent(const UpdateAgentRequest &requ
 UpdateTaskResponse * DataSyncClient::updateTask(const UpdateTaskRequest &request)
 {
     return qobject_cast<UpdateTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DataSyncClient service, and returns a pointer to an
+ * UpdateTaskExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates execution of a
+ *
+ * task>
+ *
+ * You can modify bandwidth throttling for a task execution that is running or queued. For more information, see <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-task-executions.html#adjust-bandwidth-throttling">Adjusting
+ * Bandwidth Throttling for a Task
+ *
+ * Execution</a>> <note>
+ *
+ * The only <code>Option</code> that can be modified by <code>UpdateTaskExecution</code> is <code> <a
+ * href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond">BytesPerSecond</a>
+ */
+UpdateTaskExecutionResponse * DataSyncClient::updateTaskExecution(const UpdateTaskExecutionRequest &request)
+{
+    return qobject_cast<UpdateTaskExecutionResponse *>(send(request));
 }
 
 /*!

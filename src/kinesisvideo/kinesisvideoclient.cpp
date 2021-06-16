@@ -21,24 +21,42 @@
 #include "kinesisvideoclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createsignalingchannelrequest.h"
+#include "createsignalingchannelresponse.h"
 #include "createstreamrequest.h"
 #include "createstreamresponse.h"
+#include "deletesignalingchannelrequest.h"
+#include "deletesignalingchannelresponse.h"
 #include "deletestreamrequest.h"
 #include "deletestreamresponse.h"
+#include "describesignalingchannelrequest.h"
+#include "describesignalingchannelresponse.h"
 #include "describestreamrequest.h"
 #include "describestreamresponse.h"
 #include "getdataendpointrequest.h"
 #include "getdataendpointresponse.h"
+#include "getsignalingchannelendpointrequest.h"
+#include "getsignalingchannelendpointresponse.h"
+#include "listsignalingchannelsrequest.h"
+#include "listsignalingchannelsresponse.h"
 #include "liststreamsrequest.h"
 #include "liststreamsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listtagsforstreamrequest.h"
 #include "listtagsforstreamresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "tagstreamrequest.h"
 #include "tagstreamresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "untagstreamrequest.h"
 #include "untagstreamresponse.h"
 #include "updatedataretentionrequest.h"
 #include "updatedataretentionresponse.h"
+#include "updatesignalingchannelrequest.h"
+#include "updatesignalingchannelresponse.h"
 #include "updatestreamrequest.h"
 #include "updatestreamresponse.h"
 
@@ -121,6 +139,23 @@ KinesisVideoClient::KinesisVideoClient(
 
 /*!
  * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * CreateSignalingChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a signaling channel.
+ *
+ * </p
+ *
+ * <code>CreateSignalingChannel</code> is an asynchronous
+ */
+CreateSignalingChannelResponse * KinesisVideoClient::createSignalingChannel(const CreateSignalingChannelRequest &request)
+{
+    return qobject_cast<CreateSignalingChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
  * CreateStreamResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -152,6 +187,20 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
 
 /*!
  * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * DeleteSignalingChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified signaling channel. <code>DeleteSignalingChannel</code> is an asynchronous operation. If you don't
+ * specify the channel's current version, the most recent version is
+ */
+DeleteSignalingChannelResponse * KinesisVideoClient::deleteSignalingChannel(const DeleteSignalingChannelRequest &request)
+{
+    return qobject_cast<DeleteSignalingChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
  * DeleteStreamResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -178,6 +227,20 @@ CreateStreamResponse * KinesisVideoClient::createStream(const CreateStreamReques
 DeleteStreamResponse * KinesisVideoClient::deleteStream(const DeleteStreamRequest &request)
 {
     return qobject_cast<DeleteStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * DescribeSignalingChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the most current information about the signaling channel. You must specify either the name or the Amazon
+ * Resource Name (ARN) of the channel that you want to
+ */
+DescribeSignalingChannelResponse * KinesisVideoClient::describeSignalingChannel(const DescribeSignalingChannelRequest &request)
+{
+    return qobject_cast<DescribeSignalingChannelResponse *>(send(request));
 }
 
 /*!
@@ -219,6 +282,47 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
 
 /*!
  * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * GetSignalingChannelEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides an endpoint for the specified signaling channel to send and receive messages. This API uses the
+ * <code>SingleMasterChannelEndpointConfiguration</code> input parameter, which consists of the <code>Protocols</code> and
+ * <code>Role</code>
+ *
+ * properties>
+ *
+ * <code>Protocols</code> is used to determine the communication mechanism. For example, if you specify <code>WSS</code> as
+ * the protocol, this API produces a secure websocket endpoint. If you specify <code>HTTPS</code> as the protocol, this API
+ * generates an HTTPS endpoint.
+ *
+ * </p
+ *
+ * <code>Role</code> determines the messaging permissions. A <code>MASTER</code> role results in this API generating an
+ * endpoint that a client can use to communicate with any of the viewers on the channel. A <code>VIEWER</code> role results
+ * in this API generating an endpoint that a client can use to communicate only with a <code>MASTER</code>.
+ */
+GetSignalingChannelEndpointResponse * KinesisVideoClient::getSignalingChannelEndpoint(const GetSignalingChannelEndpointRequest &request)
+{
+    return qobject_cast<GetSignalingChannelEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * ListSignalingChannelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of <code>ChannelInfo</code> objects. Each object describes a signaling channel. To retrieve only those
+ * channels that satisfy a specific condition, you can specify a
+ */
+ListSignalingChannelsResponse * KinesisVideoClient::listSignalingChannels(const ListSignalingChannelsRequest &request)
+{
+    return qobject_cast<ListSignalingChannelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
  * ListStreamsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -229,6 +333,19 @@ GetDataEndpointResponse * KinesisVideoClient::getDataEndpoint(const GetDataEndpo
 ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &request)
 {
     return qobject_cast<ListStreamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of tags associated with the specified signaling
+ */
+ListTagsForResourceResponse * KinesisVideoClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -246,6 +363,23 @@ ListStreamsResponse * KinesisVideoClient::listStreams(const ListStreamsRequest &
 ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTagsForStreamRequest &request)
 {
     return qobject_cast<ListTagsForStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to a signaling channel. A <i>tag</i> is a key-value pair (the value is optional) that you can
+ * define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value
+ * that you specify in the request. For more information, see <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
+ * in the <i>AWS Billing and Cost Management User
+ */
+TagResourceResponse * KinesisVideoClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
@@ -275,6 +409,20 @@ ListTagsForStreamResponse * KinesisVideoClient::listTagsForStream(const ListTags
 TagStreamResponse * KinesisVideoClient::tagStream(const TagStreamRequest &request)
 {
     return qobject_cast<TagStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from a signaling channel. In the request, specify only a tag key or keys; don't specify the
+ * value. If you specify a tag key that does not exist, it's
+ */
+UntagResourceResponse * KinesisVideoClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!
@@ -331,6 +479,25 @@ UntagStreamResponse * KinesisVideoClient::untagStream(const UntagStreamRequest &
 UpdateDataRetentionResponse * KinesisVideoClient::updateDataRetention(const UpdateDataRetentionRequest &request)
 {
     return qobject_cast<UpdateDataRetentionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoClient service, and returns a pointer to an
+ * UpdateSignalingChannelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the existing signaling channel. This is an asynchronous operation and takes time to complete.
+ *
+ * </p
+ *
+ * If the <code>MessageTtlSeconds</code> value is updated (either increased or reduced), it only applies to new messages
+ * sent via this channel after it's been updated. Existing messages are still expired as per the previous
+ * <code>MessageTtlSeconds</code>
+ */
+UpdateSignalingChannelResponse * KinesisVideoClient::updateSignalingChannel(const UpdateSignalingChannelRequest &request)
+{
+    return qobject_cast<UpdateSignalingChannelResponse *>(send(request));
 }
 
 /*!

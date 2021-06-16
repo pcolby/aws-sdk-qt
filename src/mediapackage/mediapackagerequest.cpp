@@ -36,13 +36,17 @@ namespace MediaPackage {
  * This enum describes the actions that can be performed as MediaPackage
  * requests.
  *
+ * \value ConfigureLogsAction MediaPackage ConfigureLogs action.
  * \value CreateChannelAction MediaPackage CreateChannel action.
+ * \value CreateHarvestJobAction MediaPackage CreateHarvestJob action.
  * \value CreateOriginEndpointAction MediaPackage CreateOriginEndpoint action.
  * \value DeleteChannelAction MediaPackage DeleteChannel action.
  * \value DeleteOriginEndpointAction MediaPackage DeleteOriginEndpoint action.
  * \value DescribeChannelAction MediaPackage DescribeChannel action.
+ * \value DescribeHarvestJobAction MediaPackage DescribeHarvestJob action.
  * \value DescribeOriginEndpointAction MediaPackage DescribeOriginEndpoint action.
  * \value ListChannelsAction MediaPackage ListChannels action.
+ * \value ListHarvestJobsAction MediaPackage ListHarvestJobs action.
  * \value ListOriginEndpointsAction MediaPackage ListOriginEndpoints action.
  * \value ListTagsForResourceAction MediaPackage ListTagsForResource action.
  * \value RotateChannelCredentialsAction MediaPackage RotateChannelCredentials action.

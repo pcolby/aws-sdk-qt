@@ -74,38 +74,48 @@ namespace Support {
  *
  *  <fullname>AWS Support</fullname>
  * 
- *  The AWS Support API reference is intended for programmers who need detailed information about the AWS Support operations
- *  and data types. This service enables you to manage your AWS Support cases programmatically. It uses HTTP methods that
- *  return results in JSON
+ *  The <i>AWS Support API Reference</i> is intended for programmers who need detailed information about the AWS Support
+ *  operations and data types. You can use the API to manage your support cases programmatically. The AWS Support API uses
+ *  HTTP methods that return results in JSON
  * 
- *  format>
+ *  format> <note> <ul> <li>
  * 
- *  The AWS Support service also exposes a set of <a href="http://aws.amazon.com/premiumsupport/trustedadvisor/">Trusted
+ *  You must have a Business or Enterprise Support plan to use the AWS Support API.
+ * 
+ *  </p </li> <li>
+ * 
+ *  If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ *  <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ *  <a href="http://aws.amazon.com/premiumsupport/">AWS
+ * 
+ *  Support</a>> </li> </ul> </note>
+ * 
+ *  The AWS Support service also exposes a set of <a href="http://aws.amazon.com/premiumsupport/trustedadvisor/">AWS Trusted
  *  Advisor</a> features. You can retrieve a list of checks and their descriptions, get check results, specify checks to
- *  refresh, and get the refresh status of checks.
+ *  refresh, and get the refresh status of
  * 
- *  </p
+ *  checks>
  * 
  *  The following list describes the AWS Support case management
  * 
  *  operations> <ul> <li>
  * 
- *  <b>Service names, issue categories, and available severity levels. </b>The <a>DescribeServices</a> and
+ *  Service names, issue categories, and available severity levels - The <a>DescribeServices</a> and
  *  <a>DescribeSeverityLevels</a> operations return AWS service names, service codes, service categories, and problem
- *  severity levels. You use these values when you call the <a>CreateCase</a> operation.
+ *  severity levels. You use these values when you call the <a>CreateCase</a>
  * 
- *  </p </li> <li>
+ *  operation> </li> <li>
  * 
- *  <b>Case creation, case details, and case resolution.</b> The <a>CreateCase</a>, <a>DescribeCases</a>,
+ *  Case creation, case details, and case resolution - The <a>CreateCase</a>, <a>DescribeCases</a>,
  *  <a>DescribeAttachment</a>, and <a>ResolveCase</a> operations create AWS Support cases, retrieve information about cases,
  *  and resolve
  * 
  *  cases> </li> <li>
  * 
- *  <b>Case communication.</b> The <a>DescribeCommunications</a>, <a>AddCommunicationToCase</a>, and
- *  <a>AddAttachmentsToSet</a> operations retrieve and add communications and attachments to AWS Support cases.
+ *  Case communication - The <a>DescribeCommunications</a>, <a>AddCommunicationToCase</a>, and <a>AddAttachmentsToSet</a>
+ *  operations retrieve and add communications and attachments to AWS Support
  * 
- *  </p </li> </ul>
+ *  cases> </li> </ul>
  * 
  *  The following list describes the operations available from the AWS Support service for Trusted
  * 
@@ -116,7 +126,7 @@ namespace Support {
  *  resources> </li> <li>
  * 
  *  Using the <code>checkId</code> for a specific check returned by <a>DescribeTrustedAdvisorChecks</a>, you can call
- *  <a>DescribeTrustedAdvisorCheckResult</a> to obtain the results for the check you
+ *  <a>DescribeTrustedAdvisorCheckResult</a> to obtain the results for the check that you
  * 
  *  specified> </li> <li>
  * 
@@ -124,22 +134,22 @@ namespace Support {
  * 
  *  checks> </li> <li>
  * 
- *  <a>RefreshTrustedAdvisorCheck</a> requests that Trusted Advisor rerun a specified check.
+ *  <a>RefreshTrustedAdvisorCheck</a> requests that Trusted Advisor rerun a specified
  * 
- *  </p </li> <li>
+ *  check> </li> <li>
  * 
- *  <a>DescribeTrustedAdvisorCheckRefreshStatuses</a> reports the refresh status of one or more checks.
+ *  <a>DescribeTrustedAdvisorCheckRefreshStatuses</a> reports the refresh status of one or more
  * 
- *  </p </li> </ul>
+ *  checks> </li> </ul>
  * 
  *  For authentication of requests, AWS Support uses <a
- *  href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing
+ *  href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing
  * 
  *  Process</a>>
  * 
- *  See <a href="http://docs.aws.amazon.com/awssupport/latest/user/Welcome.html">About the AWS Support API</a> in the <i>AWS
- *  Support User Guide</i> for information about how to use this service to create and manage your support cases, and how to
- *  call Trusted Advisor for results of checks on your resources.
+ *  See <a href="https://docs.aws.amazon.com/awssupport/latest/user/Welcome.html">About the AWS Support API</a> in the
+ *  <i>AWS Support User Guide</i> for information about how to use this service to create and manage your support cases, and
+ *  how to call Trusted Advisor for results of checks on your
  */
 
 /*!
@@ -201,15 +211,22 @@ SupportClient::SupportClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more attachments to an attachment set. If an <code>attachmentSetId</code> is not specified, a new attachment
- * set is created, and the ID of the set is returned in the response. If an <code>attachmentSetId</code> is specified, the
- * attachments are added to the specified set, if it
+ * Adds one or more attachments to an attachment set.
  *
- * exists>
+ * </p
  *
- * An attachment set is a temporary container for attachments that are to be added to a case or case communication. The set
- * is available for one hour after it is created; the <code>expiryTime</code> returned in the response indicates when the
- * set expires. The maximum number of attachments in a set is 3, and the maximum size of any attachment in the set is 5
+ * An attachment set is a temporary container for attachments that you add to a case or case communication. The set is
+ * available for 1 hour after it's created. The <code>expiryTime</code> returned in the response is when the set expires.
+ *
+ * </p <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttachmentsToSetRequest &request)
 {
@@ -222,17 +239,19 @@ AddAttachmentsToSetResponse * SupportClient::addAttachmentsToSet(const AddAttach
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds additional customer communication to an AWS Support case. You use the <code>caseId</code> value to identify the
- * case to add communication to. You can list a set of email addresses to copy on the communication using the
- * <code>ccEmailAddresses</code> value. The <code>communicationBody</code> value contains the text of the
+ * Adds additional customer communication to an AWS Support case. Use the <code>caseId</code> parameter to identify the
+ * case to which to add communication. You can list a set of email addresses to copy on the communication by using the
+ * <code>ccEmailAddresses</code> parameter. The <code>communicationBody</code> value contains the text of the
  *
- * communication>
+ * communication> <note> <ul> <li>
  *
- * The response indicates the success or failure of the
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
  *
- * request>
+ * </p </li> <li>
  *
- * This operation implements a subset of the features of the AWS Support
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const AddCommunicationToCaseRequest &request)
 {
@@ -245,64 +264,44 @@ AddCommunicationToCaseResponse * SupportClient::addCommunicationToCase(const Add
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new case in the AWS Support Center. This operation is modeled on the behavior of the AWS Support Center <a
- * href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a> page. Its parameters require you to
- * specify the following information:
+ * Creates a case in the AWS Support Center. This operation is similar to how you create a case in the AWS Support Center
+ * <a href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a>
+ *
+ * page>
+ *
+ * The AWS Support API doesn't support requesting service limit increases. You can submit a service limit increase in the
+ * following ways:
  *
  * </p <ul> <li>
  *
- * <b>issueType.</b> The type of issue for the case. You can specify either "customer-service" or "technical." If you do
- * not indicate a value, the default is "technical."
- *
- * </p </li> <li>
- *
- * <b>serviceCode.</b> The code for an AWS service. You obtain the <code>serviceCode</code> by calling
- * <a>DescribeServices</a>.
- *
- * </p </li> <li>
- *
- * <b>categoryCode.</b> The category for the service defined for the <code>serviceCode</code> value. You also obtain the
- * category code for a service by calling <a>DescribeServices</a>. Each AWS service defines its own set of category codes.
- *
- * </p </li> <li>
- *
- * <b>severityCode.</b> A value that indicates the urgency of the case, which in turn determines the response time
- * according to your service level agreement with AWS Support. You obtain the SeverityCode by calling
- *
- * <a>DescribeSeverityLevels</a>> </li> <li>
- *
- * <b>subject.</b> The <b>Subject</b> field on the AWS Support Center <a
- * href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a>
+ * Submit a request from the AWS Support Center <a href="https://console.aws.amazon.com/support/home#/case/create">Create
+ * Case</a>
  *
  * page> </li> <li>
  *
- * <b>communicationBody.</b> The <b>Description</b> field on the AWS Support Center <a
- * href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a>
+ * Use the Service Quotas <a
+ * href="https://docs.aws.amazon.com/servicequotas/2019-06-24/apireference/API_RequestServiceQuotaIncrease.html">RequestServiceQuotaIncrease</a>
  *
- * page> </li> <li>
+ * operation> </li> </ul>
  *
- * <b>attachmentSetId.</b> The ID of a set of attachments that has been created by using
+ * A successful <code>CreateCase</code> request returns an AWS Support case number. You can use the <a>DescribeCases</a>
+ * operation and specify the case number to get existing AWS Support cases. After you create a case, use the
+ * <a>AddCommunicationToCase</a> operation to add additional communication or attachments to an existing
  *
- * <a>AddAttachmentsToSet</a>> </li> <li>
+ * case>
  *
- * <b>language.</b> The human language in which AWS Support handles the case. English and Japanese are currently
+ * The <code>caseId</code> is separate from the <code>displayId</code> that appears in the <a
+ * href="https://console.aws.amazon.com/support">AWS Support Center</a>. Use the <a>DescribeCases</a> operation to get the
  *
- * supported> </li> <li>
+ * <code>displayId</code>> <note> <ul> <li>
  *
- * <b>ccEmailAddresses.</b> The AWS Support Center <b>CC</b> field on the <a
- * href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a> page. You can list email addresses to be
- * copied on any correspondence about the case. The account that opens the case is already identified by passing the AWS
- * Credentials in the HTTP POST method or in a method or function call from one of the programming languages supported by
- * an <a href="http://aws.amazon.com/tools/">AWS SDK</a>.
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
  *
- * </p </li> </ul> <note>
+ * </p </li> <li>
  *
- * To add additional communication or attachments to an existing case, use
- *
- * <a>AddCommunicationToCase</a>> </note>
- *
- * A successful <a>CreateCase</a> request returns an AWS Support case number. Case numbers are used by the
- * <a>DescribeCases</a> operation to retrieve existing AWS Support cases.
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
 {
@@ -315,9 +314,20 @@ CreateCaseResponse * SupportClient::createCase(const CreateCaseRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the attachment that has the specified ID. Attachment IDs are generated by the case management system when you
- * add an attachment to a case or case communication. Attachment IDs are returned in the <a>AttachmentDetails</a> objects
- * that are returned by the <a>DescribeCommunications</a>
+ * Returns the attachment that has the specified ID. Attachments can include screenshots, error logs, or other files that
+ * describe your issue. Attachment IDs are generated by the case management system when you add an attachment to a case or
+ * case communication. Attachment IDs are returned in the <a>AttachmentDetails</a> objects that are returned by the
+ * <a>DescribeCommunications</a>
+ *
+ * operation> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAttachmentRequest &request)
 {
@@ -330,28 +340,38 @@ DescribeAttachmentResponse * SupportClient::describeAttachment(const DescribeAtt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of cases that you specify by passing one or more case IDs. In addition, you can filter the cases by date
- * by setting values for the <code>afterTime</code> and <code>beforeTime</code> request parameters. You can set values for
- * the <code>includeResolvedCases</code> and <code>includeCommunications</code> request parameters to control how much
- * information is returned.
+ * Returns a list of cases that you specify by passing one or more case IDs. You can use the <code>afterTime</code> and
+ * <code>beforeTime</code> parameters to filter the cases by date. You can set values for the
+ * <code>includeResolvedCases</code> and <code>includeCommunications</code> parameters to specify how much information to
  *
- * </p
- *
- * Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request for data
- * might cause an
- *
- * error>
+ * return>
  *
  * The response returns the following in JSON
  *
  * format> <ul> <li>
  *
- * One or more <a>CaseDetails</a> data types.
+ * One or more <a href="https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CaseDetails.html">CaseDetails</a>
+ * data
  *
- * </p </li> <li>
+ * types> </li> <li>
  *
  * One or more <code>nextToken</code> values, which specify where to paginate the returned records represented by the
  * <code>CaseDetails</code>
+ *
+ * objects> </li> </ul>
+ *
+ * Case data is available for 12 months after creation. If a case was created more than 12 months ago, a request might
+ * return an
+ *
+ * error> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest &request)
 {
@@ -364,9 +384,9 @@ DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns communications (and attachments) for one or more support cases. You can use the <code>afterTime</code> and
+ * Returns communications and attachments for one or more support cases. Use the <code>afterTime</code> and
  * <code>beforeTime</code> parameters to filter by date. You can use the <code>caseId</code> parameter to restrict the
- * results to a particular
+ * results to a specific
  *
  * case>
  *
@@ -375,9 +395,19 @@ DescribeCasesResponse * SupportClient::describeCases(const DescribeCasesRequest 
  *
  * error>
  *
- * You can use the <code>maxResults</code> and <code>nextToken</code> parameters to control the pagination of the result
- * set. Set <code>maxResults</code> to the number of cases you want displayed on each page, and use <code>nextToken</code>
+ * You can use the <code>maxResults</code> and <code>nextToken</code> parameters to control the pagination of the results.
+ * Set <code>maxResults</code> to the number of cases that you want to display on each page, and use <code>nextToken</code>
  * to specify the resumption of
+ *
+ * pagination> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeCommunicationsResponse * SupportClient::describeCommunications(const DescribeCommunicationsRequest &request)
 {
@@ -390,17 +420,26 @@ DescribeCommunicationsResponse * SupportClient::describeCommunications(const Des
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the current list of AWS services and a list of service categories that applies to each one. You then use service
- * names and categories in your <a>CreateCase</a> requests. Each AWS service has its own set of
+ * Returns the current list of AWS services and a list of service categories for each service. You then use service names
+ * and categories in your <a>CreateCase</a> requests. Each AWS service has its own set of
  *
  * categories>
  *
- * The service codes and category codes correspond to the values that are displayed in the <b>Service</b> and
- * <b>Category</b> drop-down lists on the AWS Support Center <a
- * href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a> page. The values in those fields,
- * however, do not necessarily match the service codes and categories returned by the <code>DescribeServices</code>
- * request. Always use the service codes and categories obtained programmatically. This practice ensures that you always
- * have the most recent set of service and category
+ * The service codes and category codes correspond to the values that appear in the <b>Service</b> and <b>Category</b>
+ * lists on the AWS Support Center <a href="https://console.aws.amazon.com/support/home#/case/create">Create Case</a> page.
+ * The values in those fields don't necessarily match the service codes and categories returned by the
+ * <code>DescribeServices</code> operation. Always use the service codes and categories that the
+ * <code>DescribeServices</code> operation returns, so that you have the most recent set of service and category
+ *
+ * codes> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeServicesResponse * SupportClient::describeServices(const DescribeServicesRequest &request)
 {
@@ -413,8 +452,18 @@ DescribeServicesResponse * SupportClient::describeServices(const DescribeService
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the list of severity levels that you can assign to an AWS Support case. The severity level for a case is also a
- * field in the <a>CaseDetails</a> data type included in any <a>CreateCase</a> request.
+ * Returns the list of severity levels that you can assign to a support case. The severity level for a case is also a field
+ * in the <a>CaseDetails</a> data type that you include for a <a>CreateCase</a>
+ *
+ * request> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const DescribeSeverityLevelsRequest &request)
 {
@@ -427,14 +476,24 @@ DescribeSeverityLevelsResponse * SupportClient::describeSeverityLevels(const Des
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the refresh status of the Trusted Advisor checks that have the specified check IDs. Check IDs can be obtained by
- * calling
+ * Returns the refresh status of the AWS Trusted Advisor checks that have the specified check IDs. You can get the check
+ * IDs by calling the <a>DescribeTrustedAdvisorChecks</a>
  *
- * <a>DescribeTrustedAdvisorChecks</a>> <note>
+ * operation>
  *
- * Some checks are refreshed automatically, and their refresh statuses cannot be retrieved by using this operation. Use of
- * the <code>DescribeTrustedAdvisorCheckRefreshStatuses</code> operation for these checks causes an
- * <code>InvalidParameterValue</code>
+ * Some checks are refreshed automatically, and you can't return their refresh statuses by using the
+ * <code>DescribeTrustedAdvisorCheckRefreshStatuses</code> operation. If you call this operation for these checks, you
+ * might see an <code>InvalidParameterValue</code>
+ *
+ * error> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrustedAdvisorCheckRefreshStatuses(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &request)
 {
@@ -447,9 +506,10 @@ DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrus
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the results of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling
+ * Returns the results of the AWS Trusted Advisor check that has the specified check ID. You can get the check IDs by
+ * calling the <a>DescribeTrustedAdvisorChecks</a>
  *
- * <a>DescribeTrustedAdvisorChecks</a>>
+ * operation>
  *
  * The response contains a <a>TrustedAdvisorCheckResult</a> object, which contains these three
  *
@@ -471,15 +531,26 @@ DescribeTrustedAdvisorCheckRefreshStatusesResponse * SupportClient::describeTrus
  *
  * fields> <ul> <li>
  *
- * <b>status.</b> The alert status of the check: "ok" (green), "warning" (yellow), "error" (red), or
+ * <b>status</b> - The alert status of the check can be <code>ok</code> (green), <code>warning</code> (yellow),
+ * <code>error</code> (red), or
  *
- * "not_available"> </li> <li>
+ * <code>not_available</code>> </li> <li>
  *
- * <b>timestamp.</b> The time of the last refresh of the
+ * <b>timestamp</b> - The time of the last refresh of the
  *
  * check> </li> <li>
  *
- * <b>checkId.</b> The unique identifier for the
+ * <b>checkId</b> - The unique identifier for the
+ *
+ * check> </li> </ul> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdvisorCheckResult(const DescribeTrustedAdvisorCheckResultRequest &request)
 {
@@ -492,12 +563,22 @@ DescribeTrustedAdvisorCheckResultResponse * SupportClient::describeTrustedAdviso
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the summaries of the results of the Trusted Advisor checks that have the specified check IDs. Check IDs can be
- * obtained by calling
+ * Returns the results for the AWS Trusted Advisor check summaries for the check IDs that you specified. You can get the
+ * check IDs by calling the <a>DescribeTrustedAdvisorChecks</a>
  *
- * <a>DescribeTrustedAdvisorChecks</a>>
+ * operation>
  *
  * The response contains an array of <a>TrustedAdvisorCheckSummary</a>
+ *
+ * objects> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdvisorCheckSummaries(const DescribeTrustedAdvisorCheckSummariesRequest &request)
 {
@@ -510,9 +591,24 @@ DescribeTrustedAdvisorCheckSummariesResponse * SupportClient::describeTrustedAdv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about all available Trusted Advisor checks, including name, ID, category, description, and metadata.
- * You must specify a language code; English ("en") and Japanese ("ja") are currently supported. The response contains a
- * <a>TrustedAdvisorCheckDescription</a> for each
+ * Returns information about all available AWS Trusted Advisor checks, including the name, ID, category, description, and
+ * metadata. You must specify a language code. The AWS Support API currently supports English ("en") and Japanese ("ja").
+ * The response contains a <a>TrustedAdvisorCheckDescription</a> object for each check. You must set the AWS Region to
+ *
+ * us-east-1> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
+ *
+ * Support</a>> </li> <li>
+ *
+ * The names and descriptions for Trusted Advisor checks are subject to change. We recommend that you specify the check ID
+ * in your code to uniquely identify a
  */
 DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChecks(const DescribeTrustedAdvisorChecksRequest &request)
 {
@@ -525,28 +621,27 @@ DescribeTrustedAdvisorChecksResponse * SupportClient::describeTrustedAdvisorChec
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Requests a refresh of the Trusted Advisor check that has the specified check ID. Check IDs can be obtained by calling
+ * Refreshes the AWS Trusted Advisor check that you specify using the check ID. You can get the check IDs by calling the
+ * <a>DescribeTrustedAdvisorChecks</a>
  *
- * <a>DescribeTrustedAdvisorChecks</a>> <note>
+ * operation> <note>
  *
- * Some checks are refreshed automatically, and they cannot be refreshed by using this operation. Use of the
- * <code>RefreshTrustedAdvisorCheck</code> operation for these checks causes an <code>InvalidParameterValue</code>
+ * Some checks are refreshed automatically. If you call the <code>RefreshTrustedAdvisorCheck</code> operation to refresh
+ * them, you might see the <code>InvalidParameterValue</code>
  *
  * error> </note>
  *
- * The response contains a <a>TrustedAdvisorCheckRefreshStatus</a> object, which contains these
+ * The response contains a <a>TrustedAdvisorCheckRefreshStatus</a>
  *
- * fields> <ul> <li>
+ * object> <note> <ul> <li>
  *
- * <b>status.</b> The refresh status of the check: "none", "enqueued", "processing", "success", or
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
  *
- * "abandoned"> </li> <li>
+ * </p </li> <li>
  *
- * <b>millisUntilNextRefreshable.</b> The amount of time, in milliseconds, until the check is eligible for
- *
- * refresh> </li> <li>
- *
- * <b>checkId.</b> The unique identifier for the
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(const RefreshTrustedAdvisorCheckRequest &request)
 {
@@ -559,8 +654,17 @@ RefreshTrustedAdvisorCheckResponse * SupportClient::refreshTrustedAdvisorCheck(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Takes a <code>caseId</code> and returns the initial state of the case along with the state of the case after the call to
- * <a>ResolveCase</a>
+ * Resolves a support case. This operation takes a <code>caseId</code> and returns the initial and final state of the
+ *
+ * case> <note> <ul> <li>
+ *
+ * You must have a Business or Enterprise Support plan to use the AWS Support API.
+ *
+ * </p </li> <li>
+ *
+ * If you call the AWS Support API from an account that does not have a Business or Enterprise Support plan, the
+ * <code>SubscriptionRequiredException</code> error message appears. For information about changing your support plan, see
+ * <a href="http://aws.amazon.com/premiumsupport/">AWS
  */
 ResolveCaseResponse * SupportClient::resolveCase(const ResolveCaseRequest &request)
 {

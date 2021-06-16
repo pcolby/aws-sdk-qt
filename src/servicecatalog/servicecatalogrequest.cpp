@@ -65,6 +65,7 @@ namespace ServiceCatalog {
  * \value DescribeCopyProductStatusAction ServiceCatalog DescribeCopyProductStatus action.
  * \value DescribePortfolioAction ServiceCatalog DescribePortfolio action.
  * \value DescribePortfolioShareStatusAction ServiceCatalog DescribePortfolioShareStatus action.
+ * \value DescribePortfolioSharesAction ServiceCatalog DescribePortfolioShares action.
  * \value DescribeProductAction ServiceCatalog DescribeProduct action.
  * \value DescribeProductAsAdminAction ServiceCatalog DescribeProductAsAdmin action.
  * \value DescribeProductViewAction ServiceCatalog DescribeProductView action.
@@ -86,6 +87,8 @@ namespace ServiceCatalog {
  * \value ExecuteProvisionedProductPlanAction ServiceCatalog ExecuteProvisionedProductPlan action.
  * \value ExecuteProvisionedProductServiceActionAction ServiceCatalog ExecuteProvisionedProductServiceAction action.
  * \value GetAWSOrganizationsAccessStatusAction ServiceCatalog GetAWSOrganizationsAccessStatus action.
+ * \value GetProvisionedProductOutputsAction ServiceCatalog GetProvisionedProductOutputs action.
+ * \value ImportAsProvisionedProductAction ServiceCatalog ImportAsProvisionedProduct action.
  * \value ListAcceptedPortfolioSharesAction ServiceCatalog ListAcceptedPortfolioShares action.
  * \value ListBudgetsForResourceAction ServiceCatalog ListBudgetsForResource action.
  * \value ListConstraintsForPortfolioAction ServiceCatalog ListConstraintsForPortfolio action.
@@ -113,6 +116,7 @@ namespace ServiceCatalog {
  * \value TerminateProvisionedProductAction ServiceCatalog TerminateProvisionedProduct action.
  * \value UpdateConstraintAction ServiceCatalog UpdateConstraint action.
  * \value UpdatePortfolioAction ServiceCatalog UpdatePortfolio action.
+ * \value UpdatePortfolioShareAction ServiceCatalog UpdatePortfolioShare action.
  * \value UpdateProductAction ServiceCatalog UpdateProduct action.
  * \value UpdateProvisionedProductAction ServiceCatalog UpdateProvisionedProduct action.
  * \value UpdateProvisionedProductPropertiesAction ServiceCatalog UpdateProvisionedProductProperties action.

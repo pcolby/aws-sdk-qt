@@ -41,6 +41,7 @@ public:
         AssumeRoleWithSAMLAction,
         AssumeRoleWithWebIdentityAction,
         DecodeAuthorizationMessageAction,
+        GetAccessKeyInfoAction,
         GetCallerIdentityAction,
         GetFederationTokenAction,
         GetSessionTokenAction,

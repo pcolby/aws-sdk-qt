@@ -21,6 +21,14 @@ add_library(QtAwsSnowball
   createjobrequest_p.h
   createjobresponse.h
   createjobresponse_p.h
+  createlongtermpricingrequest.h
+  createlongtermpricingrequest_p.h
+  createlongtermpricingresponse.h
+  createlongtermpricingresponse_p.h
+  createreturnshippinglabelrequest.h
+  createreturnshippinglabelrequest_p.h
+  createreturnshippinglabelresponse.h
+  createreturnshippinglabelresponse_p.h
   describeaddressesrequest.h
   describeaddressesrequest_p.h
   describeaddressesresponse.h
@@ -37,6 +45,10 @@ add_library(QtAwsSnowball
   describejobrequest_p.h
   describejobresponse.h
   describejobresponse_p.h
+  describereturnshippinglabelrequest.h
+  describereturnshippinglabelrequest_p.h
+  describereturnshippinglabelresponse.h
+  describereturnshippinglabelresponse_p.h
   getjobmanifestrequest.h
   getjobmanifestrequest_p.h
   getjobmanifestresponse.h
@@ -49,6 +61,10 @@ add_library(QtAwsSnowball
   getsnowballusagerequest_p.h
   getsnowballusageresponse.h
   getsnowballusageresponse_p.h
+  getsoftwareupdatesrequest.h
+  getsoftwareupdatesrequest_p.h
+  getsoftwareupdatesresponse.h
+  getsoftwareupdatesresponse_p.h
   listclusterjobsrequest.h
   listclusterjobsrequest_p.h
   listclusterjobsresponse.h
@@ -65,6 +81,10 @@ add_library(QtAwsSnowball
   listjobsrequest_p.h
   listjobsresponse.h
   listjobsresponse_p.h
+  listlongtermpricingrequest.h
+  listlongtermpricingrequest_p.h
+  listlongtermpricingresponse.h
+  listlongtermpricingresponse_p.h
   snowballclient.h
   snowballclient_p.h
   snowballrequest.h
@@ -79,6 +99,14 @@ add_library(QtAwsSnowball
   updatejobrequest_p.h
   updatejobresponse.h
   updatejobresponse_p.h
+  updatejobshipmentstaterequest.h
+  updatejobshipmentstaterequest_p.h
+  updatejobshipmentstateresponse.h
+  updatejobshipmentstateresponse_p.h
+  updatelongtermpricingrequest.h
+  updatelongtermpricingrequest_p.h
+  updatelongtermpricingresponse.h
+  updatelongtermpricingresponse_p.h
   cancelclusterrequest.cpp
   cancelclusterresponse.cpp
   canceljobrequest.cpp
@@ -89,6 +117,10 @@ add_library(QtAwsSnowball
   createclusterresponse.cpp
   createjobrequest.cpp
   createjobresponse.cpp
+  createlongtermpricingrequest.cpp
+  createlongtermpricingresponse.cpp
+  createreturnshippinglabelrequest.cpp
+  createreturnshippinglabelresponse.cpp
   describeaddressesrequest.cpp
   describeaddressesresponse.cpp
   describeaddressrequest.cpp
@@ -97,12 +129,16 @@ add_library(QtAwsSnowball
   describeclusterresponse.cpp
   describejobrequest.cpp
   describejobresponse.cpp
+  describereturnshippinglabelrequest.cpp
+  describereturnshippinglabelresponse.cpp
   getjobmanifestrequest.cpp
   getjobmanifestresponse.cpp
   getjobunlockcoderequest.cpp
   getjobunlockcoderesponse.cpp
   getsnowballusagerequest.cpp
   getsnowballusageresponse.cpp
+  getsoftwareupdatesrequest.cpp
+  getsoftwareupdatesresponse.cpp
   listclusterjobsrequest.cpp
   listclusterjobsresponse.cpp
   listclustersrequest.cpp
@@ -111,13 +147,19 @@ add_library(QtAwsSnowball
   listcompatibleimagesresponse.cpp
   listjobsrequest.cpp
   listjobsresponse.cpp
+  listlongtermpricingrequest.cpp
+  listlongtermpricingresponse.cpp
   snowballclient.cpp
   snowballrequest.cpp
   snowballresponse.cpp
   updateclusterrequest.cpp
   updateclusterresponse.cpp
   updatejobrequest.cpp
-  updatejobresponse.cpp)
+  updatejobresponse.cpp
+  updatejobshipmentstaterequest.cpp
+  updatejobshipmentstateresponse.cpp
+  updatelongtermpricingrequest.cpp
+  updatelongtermpricingresponse.cpp)
 
 add_dependencies(QtAwsSnowball QtAwsCore)
 

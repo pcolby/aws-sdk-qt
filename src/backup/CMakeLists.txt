@@ -51,6 +51,14 @@ add_library(QtAwsBackup
   describebackupvaultrequest_p.h
   describebackupvaultresponse.h
   describebackupvaultresponse_p.h
+  describecopyjobrequest.h
+  describecopyjobrequest_p.h
+  describecopyjobresponse.h
+  describecopyjobresponse_p.h
+  describeglobalsettingsrequest.h
+  describeglobalsettingsrequest_p.h
+  describeglobalsettingsresponse.h
+  describeglobalsettingsresponse_p.h
   describeprotectedresourcerequest.h
   describeprotectedresourcerequest_p.h
   describeprotectedresourceresponse.h
@@ -59,10 +67,18 @@ add_library(QtAwsBackup
   describerecoverypointrequest_p.h
   describerecoverypointresponse.h
   describerecoverypointresponse_p.h
+  describeregionsettingsrequest.h
+  describeregionsettingsrequest_p.h
+  describeregionsettingsresponse.h
+  describeregionsettingsresponse_p.h
   describerestorejobrequest.h
   describerestorejobrequest_p.h
   describerestorejobresponse.h
   describerestorejobresponse_p.h
+  disassociaterecoverypointrequest.h
+  disassociaterecoverypointrequest_p.h
+  disassociaterecoverypointresponse.h
+  disassociaterecoverypointresponse_p.h
   exportbackupplantemplaterequest.h
   exportbackupplantemplaterequest_p.h
   exportbackupplantemplateresponse.h
@@ -123,6 +139,10 @@ add_library(QtAwsBackup
   listbackupvaultsrequest_p.h
   listbackupvaultsresponse.h
   listbackupvaultsresponse_p.h
+  listcopyjobsrequest.h
+  listcopyjobsrequest_p.h
+  listcopyjobsresponse.h
+  listcopyjobsresponse_p.h
   listprotectedresourcesrequest.h
   listprotectedresourcesrequest_p.h
   listprotectedresourcesresponse.h
@@ -155,6 +175,10 @@ add_library(QtAwsBackup
   startbackupjobrequest_p.h
   startbackupjobresponse.h
   startbackupjobresponse_p.h
+  startcopyjobrequest.h
+  startcopyjobrequest_p.h
+  startcopyjobresponse.h
+  startcopyjobresponse_p.h
   startrestorejobrequest.h
   startrestorejobrequest_p.h
   startrestorejobresponse.h
@@ -175,10 +199,18 @@ add_library(QtAwsBackup
   updatebackupplanrequest_p.h
   updatebackupplanresponse.h
   updatebackupplanresponse_p.h
+  updateglobalsettingsrequest.h
+  updateglobalsettingsrequest_p.h
+  updateglobalsettingsresponse.h
+  updateglobalsettingsresponse_p.h
   updaterecoverypointlifecyclerequest.h
   updaterecoverypointlifecyclerequest_p.h
   updaterecoverypointlifecycleresponse.h
   updaterecoverypointlifecycleresponse_p.h
+  updateregionsettingsrequest.h
+  updateregionsettingsrequest_p.h
+  updateregionsettingsresponse.h
+  updateregionsettingsresponse_p.h
   backupclient.cpp
   backuprequest.cpp
   backupresponse.cpp
@@ -204,12 +236,20 @@ add_library(QtAwsBackup
   describebackupjobresponse.cpp
   describebackupvaultrequest.cpp
   describebackupvaultresponse.cpp
+  describecopyjobrequest.cpp
+  describecopyjobresponse.cpp
+  describeglobalsettingsrequest.cpp
+  describeglobalsettingsresponse.cpp
   describeprotectedresourcerequest.cpp
   describeprotectedresourceresponse.cpp
   describerecoverypointrequest.cpp
   describerecoverypointresponse.cpp
+  describeregionsettingsrequest.cpp
+  describeregionsettingsresponse.cpp
   describerestorejobrequest.cpp
   describerestorejobresponse.cpp
+  disassociaterecoverypointrequest.cpp
+  disassociaterecoverypointresponse.cpp
   exportbackupplantemplaterequest.cpp
   exportbackupplantemplateresponse.cpp
   getbackupplanfromjsonrequest.cpp
@@ -240,6 +280,8 @@ add_library(QtAwsBackup
   listbackupselectionsresponse.cpp
   listbackupvaultsrequest.cpp
   listbackupvaultsresponse.cpp
+  listcopyjobsrequest.cpp
+  listcopyjobsresponse.cpp
   listprotectedresourcesrequest.cpp
   listprotectedresourcesresponse.cpp
   listrecoverypointsbybackupvaultrequest.cpp
@@ -256,6 +298,8 @@ add_library(QtAwsBackup
   putbackupvaultnotificationsresponse.cpp
   startbackupjobrequest.cpp
   startbackupjobresponse.cpp
+  startcopyjobrequest.cpp
+  startcopyjobresponse.cpp
   startrestorejobrequest.cpp
   startrestorejobresponse.cpp
   stopbackupjobrequest.cpp
@@ -266,8 +310,12 @@ add_library(QtAwsBackup
   untagresourceresponse.cpp
   updatebackupplanrequest.cpp
   updatebackupplanresponse.cpp
+  updateglobalsettingsrequest.cpp
+  updateglobalsettingsresponse.cpp
   updaterecoverypointlifecyclerequest.cpp
-  updaterecoverypointlifecycleresponse.cpp)
+  updaterecoverypointlifecycleresponse.cpp
+  updateregionsettingsrequest.cpp
+  updateregionsettingsresponse.cpp)
 
 add_dependencies(QtAwsBackup QtAwsCore)
 

@@ -9,6 +9,18 @@ add_library(QtAwsShield
   associatedrtrolerequest_p.h
   associatedrtroleresponse.h
   associatedrtroleresponse_p.h
+  associatehealthcheckrequest.h
+  associatehealthcheckrequest_p.h
+  associatehealthcheckresponse.h
+  associatehealthcheckresponse_p.h
+  associateproactiveengagementdetailsrequest.h
+  associateproactiveengagementdetailsrequest_p.h
+  associateproactiveengagementdetailsresponse.h
+  associateproactiveengagementdetailsresponse_p.h
+  createprotectiongrouprequest.h
+  createprotectiongrouprequest_p.h
+  createprotectiongroupresponse.h
+  createprotectiongroupresponse_p.h
   createprotectionrequest.h
   createprotectionrequest_p.h
   createprotectionresponse.h
@@ -17,6 +29,10 @@ add_library(QtAwsShield
   createsubscriptionrequest_p.h
   createsubscriptionresponse.h
   createsubscriptionresponse_p.h
+  deleteprotectiongrouprequest.h
+  deleteprotectiongrouprequest_p.h
+  deleteprotectiongroupresponse.h
+  deleteprotectiongroupresponse_p.h
   deleteprotectionrequest.h
   deleteprotectionrequest_p.h
   deleteprotectionresponse.h
@@ -29,6 +45,10 @@ add_library(QtAwsShield
   describeattackrequest_p.h
   describeattackresponse.h
   describeattackresponse_p.h
+  describeattackstatisticsrequest.h
+  describeattackstatisticsrequest_p.h
+  describeattackstatisticsresponse.h
+  describeattackstatisticsresponse_p.h
   describedrtaccessrequest.h
   describedrtaccessrequest_p.h
   describedrtaccessresponse.h
@@ -37,6 +57,10 @@ add_library(QtAwsShield
   describeemergencycontactsettingsrequest_p.h
   describeemergencycontactsettingsresponse.h
   describeemergencycontactsettingsresponse_p.h
+  describeprotectiongrouprequest.h
+  describeprotectiongrouprequest_p.h
+  describeprotectiongroupresponse.h
+  describeprotectiongroupresponse_p.h
   describeprotectionrequest.h
   describeprotectionrequest_p.h
   describeprotectionresponse.h
@@ -45,6 +69,10 @@ add_library(QtAwsShield
   describesubscriptionrequest_p.h
   describesubscriptionresponse.h
   describesubscriptionresponse_p.h
+  disableproactiveengagementrequest.h
+  disableproactiveengagementrequest_p.h
+  disableproactiveengagementresponse.h
+  disableproactiveengagementresponse_p.h
   disassociatedrtlogbucketrequest.h
   disassociatedrtlogbucketrequest_p.h
   disassociatedrtlogbucketresponse.h
@@ -53,6 +81,14 @@ add_library(QtAwsShield
   disassociatedrtrolerequest_p.h
   disassociatedrtroleresponse.h
   disassociatedrtroleresponse_p.h
+  disassociatehealthcheckrequest.h
+  disassociatehealthcheckrequest_p.h
+  disassociatehealthcheckresponse.h
+  disassociatehealthcheckresponse_p.h
+  enableproactiveengagementrequest.h
+  enableproactiveengagementrequest_p.h
+  enableproactiveengagementresponse.h
+  enableproactiveengagementresponse_p.h
   getsubscriptionstaterequest.h
   getsubscriptionstaterequest_p.h
   getsubscriptionstateresponse.h
@@ -61,20 +97,44 @@ add_library(QtAwsShield
   listattacksrequest_p.h
   listattacksresponse.h
   listattacksresponse_p.h
+  listprotectiongroupsrequest.h
+  listprotectiongroupsrequest_p.h
+  listprotectiongroupsresponse.h
+  listprotectiongroupsresponse_p.h
   listprotectionsrequest.h
   listprotectionsrequest_p.h
   listprotectionsresponse.h
   listprotectionsresponse_p.h
+  listresourcesinprotectiongrouprequest.h
+  listresourcesinprotectiongrouprequest_p.h
+  listresourcesinprotectiongroupresponse.h
+  listresourcesinprotectiongroupresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   shieldclient.h
   shieldclient_p.h
   shieldrequest.h
   shieldrequest_p.h
   shieldresponse.h
   shieldresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateemergencycontactsettingsrequest.h
   updateemergencycontactsettingsrequest_p.h
   updateemergencycontactsettingsresponse.h
   updateemergencycontactsettingsresponse_p.h
+  updateprotectiongrouprequest.h
+  updateprotectiongrouprequest_p.h
+  updateprotectiongroupresponse.h
+  updateprotectiongroupresponse_p.h
   updatesubscriptionrequest.h
   updatesubscriptionrequest_p.h
   updatesubscriptionresponse.h
@@ -83,39 +143,69 @@ add_library(QtAwsShield
   associatedrtlogbucketresponse.cpp
   associatedrtrolerequest.cpp
   associatedrtroleresponse.cpp
+  associatehealthcheckrequest.cpp
+  associatehealthcheckresponse.cpp
+  associateproactiveengagementdetailsrequest.cpp
+  associateproactiveengagementdetailsresponse.cpp
+  createprotectiongrouprequest.cpp
+  createprotectiongroupresponse.cpp
   createprotectionrequest.cpp
   createprotectionresponse.cpp
   createsubscriptionrequest.cpp
   createsubscriptionresponse.cpp
+  deleteprotectiongrouprequest.cpp
+  deleteprotectiongroupresponse.cpp
   deleteprotectionrequest.cpp
   deleteprotectionresponse.cpp
   deletesubscriptionrequest.cpp
   deletesubscriptionresponse.cpp
   describeattackrequest.cpp
   describeattackresponse.cpp
+  describeattackstatisticsrequest.cpp
+  describeattackstatisticsresponse.cpp
   describedrtaccessrequest.cpp
   describedrtaccessresponse.cpp
   describeemergencycontactsettingsrequest.cpp
   describeemergencycontactsettingsresponse.cpp
+  describeprotectiongrouprequest.cpp
+  describeprotectiongroupresponse.cpp
   describeprotectionrequest.cpp
   describeprotectionresponse.cpp
   describesubscriptionrequest.cpp
   describesubscriptionresponse.cpp
+  disableproactiveengagementrequest.cpp
+  disableproactiveengagementresponse.cpp
   disassociatedrtlogbucketrequest.cpp
   disassociatedrtlogbucketresponse.cpp
   disassociatedrtrolerequest.cpp
   disassociatedrtroleresponse.cpp
+  disassociatehealthcheckrequest.cpp
+  disassociatehealthcheckresponse.cpp
+  enableproactiveengagementrequest.cpp
+  enableproactiveengagementresponse.cpp
   getsubscriptionstaterequest.cpp
   getsubscriptionstateresponse.cpp
   listattacksrequest.cpp
   listattacksresponse.cpp
+  listprotectiongroupsrequest.cpp
+  listprotectiongroupsresponse.cpp
   listprotectionsrequest.cpp
   listprotectionsresponse.cpp
+  listresourcesinprotectiongrouprequest.cpp
+  listresourcesinprotectiongroupresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   shieldclient.cpp
   shieldrequest.cpp
   shieldresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateemergencycontactsettingsrequest.cpp
   updateemergencycontactsettingsresponse.cpp
+  updateprotectiongrouprequest.cpp
+  updateprotectiongroupresponse.cpp
   updatesubscriptionrequest.cpp
   updatesubscriptionresponse.cpp)
 

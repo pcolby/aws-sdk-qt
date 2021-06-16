@@ -40,10 +40,12 @@ namespace ACM {
  * \value DeleteCertificateAction ACM DeleteCertificate action.
  * \value DescribeCertificateAction ACM DescribeCertificate action.
  * \value ExportCertificateAction ACM ExportCertificate action.
+ * \value GetAccountConfigurationAction ACM GetAccountConfiguration action.
  * \value GetCertificateAction ACM GetCertificate action.
  * \value ImportCertificateAction ACM ImportCertificate action.
  * \value ListCertificatesAction ACM ListCertificates action.
  * \value ListTagsForCertificateAction ACM ListTagsForCertificate action.
+ * \value PutAccountConfigurationAction ACM PutAccountConfiguration action.
  * \value RemoveTagsFromCertificateAction ACM RemoveTagsFromCertificate action.
  * \value RenewCertificateAction ACM RenewCertificate action.
  * \value RequestCertificateAction ACM RequestCertificate action.

@@ -21,16 +21,28 @@ add_library(QtAwsComprehend
   batchdetectsyntaxrequest_p.h
   batchdetectsyntaxresponse.h
   batchdetectsyntaxresponse_p.h
+  classifydocumentrequest.h
+  classifydocumentrequest_p.h
+  classifydocumentresponse.h
+  classifydocumentresponse_p.h
   comprehendclient.h
   comprehendclient_p.h
   comprehendrequest.h
   comprehendrequest_p.h
   comprehendresponse.h
   comprehendresponse_p.h
+  containspiientitiesrequest.h
+  containspiientitiesrequest_p.h
+  containspiientitiesresponse.h
+  containspiientitiesresponse_p.h
   createdocumentclassifierrequest.h
   createdocumentclassifierrequest_p.h
   createdocumentclassifierresponse.h
   createdocumentclassifierresponse_p.h
+  createendpointrequest.h
+  createendpointrequest_p.h
+  createendpointresponse.h
+  createendpointresponse_p.h
   createentityrecognizerrequest.h
   createentityrecognizerrequest_p.h
   createentityrecognizerresponse.h
@@ -39,6 +51,10 @@ add_library(QtAwsComprehend
   deletedocumentclassifierrequest_p.h
   deletedocumentclassifierresponse.h
   deletedocumentclassifierresponse_p.h
+  deleteendpointrequest.h
+  deleteendpointrequest_p.h
+  deleteendpointresponse.h
+  deleteendpointresponse_p.h
   deleteentityrecognizerrequest.h
   deleteentityrecognizerrequest_p.h
   deleteentityrecognizerresponse.h
@@ -55,6 +71,10 @@ add_library(QtAwsComprehend
   describedominantlanguagedetectionjobrequest_p.h
   describedominantlanguagedetectionjobresponse.h
   describedominantlanguagedetectionjobresponse_p.h
+  describeendpointrequest.h
+  describeendpointrequest_p.h
+  describeendpointresponse.h
+  describeendpointresponse_p.h
   describeentitiesdetectionjobrequest.h
   describeentitiesdetectionjobrequest_p.h
   describeentitiesdetectionjobresponse.h
@@ -63,10 +83,18 @@ add_library(QtAwsComprehend
   describeentityrecognizerrequest_p.h
   describeentityrecognizerresponse.h
   describeentityrecognizerresponse_p.h
+  describeeventsdetectionjobrequest.h
+  describeeventsdetectionjobrequest_p.h
+  describeeventsdetectionjobresponse.h
+  describeeventsdetectionjobresponse_p.h
   describekeyphrasesdetectionjobrequest.h
   describekeyphrasesdetectionjobrequest_p.h
   describekeyphrasesdetectionjobresponse.h
   describekeyphrasesdetectionjobresponse_p.h
+  describepiientitiesdetectionjobrequest.h
+  describepiientitiesdetectionjobrequest_p.h
+  describepiientitiesdetectionjobresponse.h
+  describepiientitiesdetectionjobresponse_p.h
   describesentimentdetectionjobrequest.h
   describesentimentdetectionjobrequest_p.h
   describesentimentdetectionjobresponse.h
@@ -87,6 +115,10 @@ add_library(QtAwsComprehend
   detectkeyphrasesrequest_p.h
   detectkeyphrasesresponse.h
   detectkeyphrasesresponse_p.h
+  detectpiientitiesrequest.h
+  detectpiientitiesrequest_p.h
+  detectpiientitiesresponse.h
+  detectpiientitiesresponse_p.h
   detectsentimentrequest.h
   detectsentimentrequest_p.h
   detectsentimentresponse.h
@@ -107,6 +139,10 @@ add_library(QtAwsComprehend
   listdominantlanguagedetectionjobsrequest_p.h
   listdominantlanguagedetectionjobsresponse.h
   listdominantlanguagedetectionjobsresponse_p.h
+  listendpointsrequest.h
+  listendpointsrequest_p.h
+  listendpointsresponse.h
+  listendpointsresponse_p.h
   listentitiesdetectionjobsrequest.h
   listentitiesdetectionjobsrequest_p.h
   listentitiesdetectionjobsresponse.h
@@ -115,10 +151,18 @@ add_library(QtAwsComprehend
   listentityrecognizersrequest_p.h
   listentityrecognizersresponse.h
   listentityrecognizersresponse_p.h
+  listeventsdetectionjobsrequest.h
+  listeventsdetectionjobsrequest_p.h
+  listeventsdetectionjobsresponse.h
+  listeventsdetectionjobsresponse_p.h
   listkeyphrasesdetectionjobsrequest.h
   listkeyphrasesdetectionjobsrequest_p.h
   listkeyphrasesdetectionjobsresponse.h
   listkeyphrasesdetectionjobsresponse_p.h
+  listpiientitiesdetectionjobsrequest.h
+  listpiientitiesdetectionjobsrequest_p.h
+  listpiientitiesdetectionjobsresponse.h
+  listpiientitiesdetectionjobsresponse_p.h
   listsentimentdetectionjobsrequest.h
   listsentimentdetectionjobsrequest_p.h
   listsentimentdetectionjobsresponse.h
@@ -143,10 +187,18 @@ add_library(QtAwsComprehend
   startentitiesdetectionjobrequest_p.h
   startentitiesdetectionjobresponse.h
   startentitiesdetectionjobresponse_p.h
+  starteventsdetectionjobrequest.h
+  starteventsdetectionjobrequest_p.h
+  starteventsdetectionjobresponse.h
+  starteventsdetectionjobresponse_p.h
   startkeyphrasesdetectionjobrequest.h
   startkeyphrasesdetectionjobrequest_p.h
   startkeyphrasesdetectionjobresponse.h
   startkeyphrasesdetectionjobresponse_p.h
+  startpiientitiesdetectionjobrequest.h
+  startpiientitiesdetectionjobrequest_p.h
+  startpiientitiesdetectionjobresponse.h
+  startpiientitiesdetectionjobresponse_p.h
   startsentimentdetectionjobrequest.h
   startsentimentdetectionjobrequest_p.h
   startsentimentdetectionjobresponse.h
@@ -163,10 +215,18 @@ add_library(QtAwsComprehend
   stopentitiesdetectionjobrequest_p.h
   stopentitiesdetectionjobresponse.h
   stopentitiesdetectionjobresponse_p.h
+  stopeventsdetectionjobrequest.h
+  stopeventsdetectionjobrequest_p.h
+  stopeventsdetectionjobresponse.h
+  stopeventsdetectionjobresponse_p.h
   stopkeyphrasesdetectionjobrequest.h
   stopkeyphrasesdetectionjobrequest_p.h
   stopkeyphrasesdetectionjobresponse.h
   stopkeyphrasesdetectionjobresponse_p.h
+  stoppiientitiesdetectionjobrequest.h
+  stoppiientitiesdetectionjobrequest_p.h
+  stoppiientitiesdetectionjobresponse.h
+  stoppiientitiesdetectionjobresponse_p.h
   stopsentimentdetectionjobrequest.h
   stopsentimentdetectionjobrequest_p.h
   stopsentimentdetectionjobresponse.h
@@ -187,6 +247,10 @@ add_library(QtAwsComprehend
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateendpointrequest.h
+  updateendpointrequest_p.h
+  updateendpointresponse.h
+  updateendpointresponse_p.h
   batchdetectdominantlanguagerequest.cpp
   batchdetectdominantlanguageresponse.cpp
   batchdetectentitiesrequest.cpp
@@ -197,15 +261,23 @@ add_library(QtAwsComprehend
   batchdetectsentimentresponse.cpp
   batchdetectsyntaxrequest.cpp
   batchdetectsyntaxresponse.cpp
+  classifydocumentrequest.cpp
+  classifydocumentresponse.cpp
   comprehendclient.cpp
   comprehendrequest.cpp
   comprehendresponse.cpp
+  containspiientitiesrequest.cpp
+  containspiientitiesresponse.cpp
   createdocumentclassifierrequest.cpp
   createdocumentclassifierresponse.cpp
+  createendpointrequest.cpp
+  createendpointresponse.cpp
   createentityrecognizerrequest.cpp
   createentityrecognizerresponse.cpp
   deletedocumentclassifierrequest.cpp
   deletedocumentclassifierresponse.cpp
+  deleteendpointrequest.cpp
+  deleteendpointresponse.cpp
   deleteentityrecognizerrequest.cpp
   deleteentityrecognizerresponse.cpp
   describedocumentclassificationjobrequest.cpp
@@ -214,12 +286,18 @@ add_library(QtAwsComprehend
   describedocumentclassifierresponse.cpp
   describedominantlanguagedetectionjobrequest.cpp
   describedominantlanguagedetectionjobresponse.cpp
+  describeendpointrequest.cpp
+  describeendpointresponse.cpp
   describeentitiesdetectionjobrequest.cpp
   describeentitiesdetectionjobresponse.cpp
   describeentityrecognizerrequest.cpp
   describeentityrecognizerresponse.cpp
+  describeeventsdetectionjobrequest.cpp
+  describeeventsdetectionjobresponse.cpp
   describekeyphrasesdetectionjobrequest.cpp
   describekeyphrasesdetectionjobresponse.cpp
+  describepiientitiesdetectionjobrequest.cpp
+  describepiientitiesdetectionjobresponse.cpp
   describesentimentdetectionjobrequest.cpp
   describesentimentdetectionjobresponse.cpp
   describetopicsdetectionjobrequest.cpp
@@ -230,6 +308,8 @@ add_library(QtAwsComprehend
   detectentitiesresponse.cpp
   detectkeyphrasesrequest.cpp
   detectkeyphrasesresponse.cpp
+  detectpiientitiesrequest.cpp
+  detectpiientitiesresponse.cpp
   detectsentimentrequest.cpp
   detectsentimentresponse.cpp
   detectsyntaxrequest.cpp
@@ -240,12 +320,18 @@ add_library(QtAwsComprehend
   listdocumentclassifiersresponse.cpp
   listdominantlanguagedetectionjobsrequest.cpp
   listdominantlanguagedetectionjobsresponse.cpp
+  listendpointsrequest.cpp
+  listendpointsresponse.cpp
   listentitiesdetectionjobsrequest.cpp
   listentitiesdetectionjobsresponse.cpp
   listentityrecognizersrequest.cpp
   listentityrecognizersresponse.cpp
+  listeventsdetectionjobsrequest.cpp
+  listeventsdetectionjobsresponse.cpp
   listkeyphrasesdetectionjobsrequest.cpp
   listkeyphrasesdetectionjobsresponse.cpp
+  listpiientitiesdetectionjobsrequest.cpp
+  listpiientitiesdetectionjobsresponse.cpp
   listsentimentdetectionjobsrequest.cpp
   listsentimentdetectionjobsresponse.cpp
   listtagsforresourcerequest.cpp
@@ -258,8 +344,12 @@ add_library(QtAwsComprehend
   startdominantlanguagedetectionjobresponse.cpp
   startentitiesdetectionjobrequest.cpp
   startentitiesdetectionjobresponse.cpp
+  starteventsdetectionjobrequest.cpp
+  starteventsdetectionjobresponse.cpp
   startkeyphrasesdetectionjobrequest.cpp
   startkeyphrasesdetectionjobresponse.cpp
+  startpiientitiesdetectionjobrequest.cpp
+  startpiientitiesdetectionjobresponse.cpp
   startsentimentdetectionjobrequest.cpp
   startsentimentdetectionjobresponse.cpp
   starttopicsdetectionjobrequest.cpp
@@ -268,8 +358,12 @@ add_library(QtAwsComprehend
   stopdominantlanguagedetectionjobresponse.cpp
   stopentitiesdetectionjobrequest.cpp
   stopentitiesdetectionjobresponse.cpp
+  stopeventsdetectionjobrequest.cpp
+  stopeventsdetectionjobresponse.cpp
   stopkeyphrasesdetectionjobrequest.cpp
   stopkeyphrasesdetectionjobresponse.cpp
+  stoppiientitiesdetectionjobrequest.cpp
+  stoppiientitiesdetectionjobresponse.cpp
   stopsentimentdetectionjobrequest.cpp
   stopsentimentdetectionjobresponse.cpp
   stoptrainingdocumentclassifierrequest.cpp
@@ -279,7 +373,9 @@ add_library(QtAwsComprehend
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  updateendpointrequest.cpp
+  updateendpointresponse.cpp)
 
 add_dependencies(QtAwsComprehend QtAwsCore)
 

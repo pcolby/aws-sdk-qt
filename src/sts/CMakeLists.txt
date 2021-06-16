@@ -17,6 +17,10 @@ add_library(QtAwsSts
   decodeauthorizationmessagerequest_p.h
   decodeauthorizationmessageresponse.h
   decodeauthorizationmessageresponse_p.h
+  getaccesskeyinforequest.h
+  getaccesskeyinforequest_p.h
+  getaccesskeyinforesponse.h
+  getaccesskeyinforesponse_p.h
   getcalleridentityrequest.h
   getcalleridentityrequest_p.h
   getcalleridentityresponse.h
@@ -43,6 +47,8 @@ add_library(QtAwsSts
   assumerolewithwebidentityresponse.cpp
   decodeauthorizationmessagerequest.cpp
   decodeauthorizationmessageresponse.cpp
+  getaccesskeyinforequest.cpp
+  getaccesskeyinforesponse.cpp
   getcalleridentityrequest.cpp
   getcalleridentityresponse.cpp
   getfederationtokenrequest.cpp

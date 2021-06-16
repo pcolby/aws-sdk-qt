@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsRoboMaker
+  batchdeleteworldsrequest.h
+  batchdeleteworldsrequest_p.h
+  batchdeleteworldsresponse.h
+  batchdeleteworldsresponse_p.h
   batchdescribesimulationjobrequest.h
   batchdescribesimulationjobrequest_p.h
   batchdescribesimulationjobresponse.h
@@ -9,10 +13,22 @@ add_library(QtAwsRoboMaker
   canceldeploymentjobrequest_p.h
   canceldeploymentjobresponse.h
   canceldeploymentjobresponse_p.h
+  cancelsimulationjobbatchrequest.h
+  cancelsimulationjobbatchrequest_p.h
+  cancelsimulationjobbatchresponse.h
+  cancelsimulationjobbatchresponse_p.h
   cancelsimulationjobrequest.h
   cancelsimulationjobrequest_p.h
   cancelsimulationjobresponse.h
   cancelsimulationjobresponse_p.h
+  cancelworldexportjobrequest.h
+  cancelworldexportjobrequest_p.h
+  cancelworldexportjobresponse.h
+  cancelworldexportjobresponse_p.h
+  cancelworldgenerationjobrequest.h
+  cancelworldgenerationjobrequest_p.h
+  cancelworldgenerationjobresponse.h
+  cancelworldgenerationjobresponse_p.h
   createdeploymentjobrequest.h
   createdeploymentjobrequest_p.h
   createdeploymentjobresponse.h
@@ -45,6 +61,18 @@ add_library(QtAwsRoboMaker
   createsimulationjobrequest_p.h
   createsimulationjobresponse.h
   createsimulationjobresponse_p.h
+  createworldexportjobrequest.h
+  createworldexportjobrequest_p.h
+  createworldexportjobresponse.h
+  createworldexportjobresponse_p.h
+  createworldgenerationjobrequest.h
+  createworldgenerationjobrequest_p.h
+  createworldgenerationjobresponse.h
+  createworldgenerationjobresponse_p.h
+  createworldtemplaterequest.h
+  createworldtemplaterequest_p.h
+  createworldtemplateresponse.h
+  createworldtemplateresponse_p.h
   deletefleetrequest.h
   deletefleetrequest_p.h
   deletefleetresponse.h
@@ -61,6 +89,10 @@ add_library(QtAwsRoboMaker
   deletesimulationapplicationrequest_p.h
   deletesimulationapplicationresponse.h
   deletesimulationapplicationresponse_p.h
+  deleteworldtemplaterequest.h
+  deleteworldtemplaterequest_p.h
+  deleteworldtemplateresponse.h
+  deleteworldtemplateresponse_p.h
   deregisterrobotrequest.h
   deregisterrobotrequest_p.h
   deregisterrobotresponse.h
@@ -85,10 +117,34 @@ add_library(QtAwsRoboMaker
   describesimulationapplicationrequest_p.h
   describesimulationapplicationresponse.h
   describesimulationapplicationresponse_p.h
+  describesimulationjobbatchrequest.h
+  describesimulationjobbatchrequest_p.h
+  describesimulationjobbatchresponse.h
+  describesimulationjobbatchresponse_p.h
   describesimulationjobrequest.h
   describesimulationjobrequest_p.h
   describesimulationjobresponse.h
   describesimulationjobresponse_p.h
+  describeworldexportjobrequest.h
+  describeworldexportjobrequest_p.h
+  describeworldexportjobresponse.h
+  describeworldexportjobresponse_p.h
+  describeworldgenerationjobrequest.h
+  describeworldgenerationjobrequest_p.h
+  describeworldgenerationjobresponse.h
+  describeworldgenerationjobresponse_p.h
+  describeworldrequest.h
+  describeworldrequest_p.h
+  describeworldresponse.h
+  describeworldresponse_p.h
+  describeworldtemplaterequest.h
+  describeworldtemplaterequest_p.h
+  describeworldtemplateresponse.h
+  describeworldtemplateresponse_p.h
+  getworldtemplatebodyrequest.h
+  getworldtemplatebodyrequest_p.h
+  getworldtemplatebodyresponse.h
+  getworldtemplatebodyresponse_p.h
   listdeploymentjobsrequest.h
   listdeploymentjobsrequest_p.h
   listdeploymentjobsresponse.h
@@ -109,6 +165,10 @@ add_library(QtAwsRoboMaker
   listsimulationapplicationsrequest_p.h
   listsimulationapplicationsresponse.h
   listsimulationapplicationsresponse_p.h
+  listsimulationjobbatchesrequest.h
+  listsimulationjobbatchesrequest_p.h
+  listsimulationjobbatchesresponse.h
+  listsimulationjobbatchesresponse_p.h
   listsimulationjobsrequest.h
   listsimulationjobsrequest_p.h
   listsimulationjobsresponse.h
@@ -117,6 +177,22 @@ add_library(QtAwsRoboMaker
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listworldexportjobsrequest.h
+  listworldexportjobsrequest_p.h
+  listworldexportjobsresponse.h
+  listworldexportjobsresponse_p.h
+  listworldgenerationjobsrequest.h
+  listworldgenerationjobsrequest_p.h
+  listworldgenerationjobsresponse.h
+  listworldgenerationjobsresponse_p.h
+  listworldsrequest.h
+  listworldsrequest_p.h
+  listworldsresponse.h
+  listworldsresponse_p.h
+  listworldtemplatesrequest.h
+  listworldtemplatesrequest_p.h
+  listworldtemplatesresponse.h
+  listworldtemplatesresponse_p.h
   registerrobotrequest.h
   registerrobotrequest_p.h
   registerrobotresponse.h
@@ -131,6 +207,10 @@ add_library(QtAwsRoboMaker
   robomakerrequest_p.h
   robomakerresponse.h
   robomakerresponse_p.h
+  startsimulationjobbatchrequest.h
+  startsimulationjobbatchrequest_p.h
+  startsimulationjobbatchresponse.h
+  startsimulationjobbatchresponse_p.h
   syncdeploymentjobrequest.h
   syncdeploymentjobrequest_p.h
   syncdeploymentjobresponse.h
@@ -151,12 +231,24 @@ add_library(QtAwsRoboMaker
   updatesimulationapplicationrequest_p.h
   updatesimulationapplicationresponse.h
   updatesimulationapplicationresponse_p.h
+  updateworldtemplaterequest.h
+  updateworldtemplaterequest_p.h
+  updateworldtemplateresponse.h
+  updateworldtemplateresponse_p.h
+  batchdeleteworldsrequest.cpp
+  batchdeleteworldsresponse.cpp
   batchdescribesimulationjobrequest.cpp
   batchdescribesimulationjobresponse.cpp
   canceldeploymentjobrequest.cpp
   canceldeploymentjobresponse.cpp
+  cancelsimulationjobbatchrequest.cpp
+  cancelsimulationjobbatchresponse.cpp
   cancelsimulationjobrequest.cpp
   cancelsimulationjobresponse.cpp
+  cancelworldexportjobrequest.cpp
+  cancelworldexportjobresponse.cpp
+  cancelworldgenerationjobrequest.cpp
+  cancelworldgenerationjobresponse.cpp
   createdeploymentjobrequest.cpp
   createdeploymentjobresponse.cpp
   createfleetrequest.cpp
@@ -173,6 +265,12 @@ add_library(QtAwsRoboMaker
   createsimulationapplicationversionresponse.cpp
   createsimulationjobrequest.cpp
   createsimulationjobresponse.cpp
+  createworldexportjobrequest.cpp
+  createworldexportjobresponse.cpp
+  createworldgenerationjobrequest.cpp
+  createworldgenerationjobresponse.cpp
+  createworldtemplaterequest.cpp
+  createworldtemplateresponse.cpp
   deletefleetrequest.cpp
   deletefleetresponse.cpp
   deleterobotapplicationrequest.cpp
@@ -181,6 +279,8 @@ add_library(QtAwsRoboMaker
   deleterobotresponse.cpp
   deletesimulationapplicationrequest.cpp
   deletesimulationapplicationresponse.cpp
+  deleteworldtemplaterequest.cpp
+  deleteworldtemplateresponse.cpp
   deregisterrobotrequest.cpp
   deregisterrobotresponse.cpp
   describedeploymentjobrequest.cpp
@@ -193,8 +293,20 @@ add_library(QtAwsRoboMaker
   describerobotresponse.cpp
   describesimulationapplicationrequest.cpp
   describesimulationapplicationresponse.cpp
+  describesimulationjobbatchrequest.cpp
+  describesimulationjobbatchresponse.cpp
   describesimulationjobrequest.cpp
   describesimulationjobresponse.cpp
+  describeworldexportjobrequest.cpp
+  describeworldexportjobresponse.cpp
+  describeworldgenerationjobrequest.cpp
+  describeworldgenerationjobresponse.cpp
+  describeworldrequest.cpp
+  describeworldresponse.cpp
+  describeworldtemplaterequest.cpp
+  describeworldtemplateresponse.cpp
+  getworldtemplatebodyrequest.cpp
+  getworldtemplatebodyresponse.cpp
   listdeploymentjobsrequest.cpp
   listdeploymentjobsresponse.cpp
   listfleetsrequest.cpp
@@ -205,10 +317,20 @@ add_library(QtAwsRoboMaker
   listrobotsresponse.cpp
   listsimulationapplicationsrequest.cpp
   listsimulationapplicationsresponse.cpp
+  listsimulationjobbatchesrequest.cpp
+  listsimulationjobbatchesresponse.cpp
   listsimulationjobsrequest.cpp
   listsimulationjobsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listworldexportjobsrequest.cpp
+  listworldexportjobsresponse.cpp
+  listworldgenerationjobsrequest.cpp
+  listworldgenerationjobsresponse.cpp
+  listworldsrequest.cpp
+  listworldsresponse.cpp
+  listworldtemplatesrequest.cpp
+  listworldtemplatesresponse.cpp
   registerrobotrequest.cpp
   registerrobotresponse.cpp
   restartsimulationjobrequest.cpp
@@ -216,6 +338,8 @@ add_library(QtAwsRoboMaker
   robomakerclient.cpp
   robomakerrequest.cpp
   robomakerresponse.cpp
+  startsimulationjobbatchrequest.cpp
+  startsimulationjobbatchresponse.cpp
   syncdeploymentjobrequest.cpp
   syncdeploymentjobresponse.cpp
   tagresourcerequest.cpp
@@ -225,7 +349,9 @@ add_library(QtAwsRoboMaker
   updaterobotapplicationrequest.cpp
   updaterobotapplicationresponse.cpp
   updatesimulationapplicationrequest.cpp
-  updatesimulationapplicationresponse.cpp)
+  updatesimulationapplicationresponse.cpp
+  updateworldtemplaterequest.cpp
+  updateworldtemplateresponse.cpp)
 
 add_dependencies(QtAwsRoboMaker QtAwsCore)
 

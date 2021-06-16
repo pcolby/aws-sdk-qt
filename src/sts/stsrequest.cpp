@@ -40,6 +40,7 @@ namespace STS {
  * \value AssumeRoleWithSAMLAction STS AssumeRoleWithSAML action.
  * \value AssumeRoleWithWebIdentityAction STS AssumeRoleWithWebIdentity action.
  * \value DecodeAuthorizationMessageAction STS DecodeAuthorizationMessage action.
+ * \value GetAccessKeyInfoAction STS GetAccessKeyInfo action.
  * \value GetCallerIdentityAction STS GetCallerIdentity action.
  * \value GetFederationTokenAction STS GetFederationToken action.
  * \value GetSessionTokenAction STS GetSessionToken action.

@@ -33,6 +33,22 @@ add_library(QtAwsXRay
   getgroupsrequest_p.h
   getgroupsresponse.h
   getgroupsresponse_p.h
+  getinsighteventsrequest.h
+  getinsighteventsrequest_p.h
+  getinsighteventsresponse.h
+  getinsighteventsresponse_p.h
+  getinsightimpactgraphrequest.h
+  getinsightimpactgraphrequest_p.h
+  getinsightimpactgraphresponse.h
+  getinsightimpactgraphresponse_p.h
+  getinsightrequest.h
+  getinsightrequest_p.h
+  getinsightresponse.h
+  getinsightresponse_p.h
+  getinsightsummariesrequest.h
+  getinsightsummariesrequest_p.h
+  getinsightsummariesresponse.h
+  getinsightsummariesresponse_p.h
   getsamplingrulesrequest.h
   getsamplingrulesrequest_p.h
   getsamplingrulesresponse.h
@@ -61,6 +77,10 @@ add_library(QtAwsXRay
   gettracesummariesrequest_p.h
   gettracesummariesresponse.h
   gettracesummariesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   putencryptionconfigrequest.h
   putencryptionconfigrequest_p.h
   putencryptionconfigresponse.h
@@ -73,6 +93,14 @@ add_library(QtAwsXRay
   puttracesegmentsrequest_p.h
   puttracesegmentsresponse.h
   puttracesegmentsresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updategrouprequest.h
   updategrouprequest_p.h
   updategroupresponse.h
@@ -103,6 +131,14 @@ add_library(QtAwsXRay
   getgroupresponse.cpp
   getgroupsrequest.cpp
   getgroupsresponse.cpp
+  getinsighteventsrequest.cpp
+  getinsighteventsresponse.cpp
+  getinsightimpactgraphrequest.cpp
+  getinsightimpactgraphresponse.cpp
+  getinsightrequest.cpp
+  getinsightresponse.cpp
+  getinsightsummariesrequest.cpp
+  getinsightsummariesresponse.cpp
   getsamplingrulesrequest.cpp
   getsamplingrulesresponse.cpp
   getsamplingstatisticsummariesrequest.cpp
@@ -117,12 +153,18 @@ add_library(QtAwsXRay
   gettracegraphresponse.cpp
   gettracesummariesrequest.cpp
   gettracesummariesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   putencryptionconfigrequest.cpp
   putencryptionconfigresponse.cpp
   puttelemetryrecordsrequest.cpp
   puttelemetryrecordsresponse.cpp
   puttracesegmentsrequest.cpp
   puttracesegmentsresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updategrouprequest.cpp
   updategroupresponse.cpp
   updatesamplingrulerequest.cpp

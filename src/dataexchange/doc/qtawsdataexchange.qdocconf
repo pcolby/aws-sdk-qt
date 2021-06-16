@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsDataExchange
+description = AWS DataExchange SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsdataexchange-index.html"
+navigation.landingtitle = "DataExchange"
+navigation.cppclassespage = "DataExchange C++ Classes"

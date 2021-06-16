@@ -28,6 +28,10 @@ namespace QtAws {
 namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiClientPrivate;
+class DeleteConnectionRequest;
+class DeleteConnectionResponse;
+class GetConnectionRequest;
+class GetConnectionResponse;
 class PostToConnectionRequest;
 class PostToConnectionResponse;
 
@@ -47,6 +51,8 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    DeleteConnectionResponse * deleteConnection(const DeleteConnectionRequest &request);
+    GetConnectionResponse * getConnection(const GetConnectionRequest &request);
     PostToConnectionResponse * postToConnection(const PostToConnectionRequest &request);
 
 private:

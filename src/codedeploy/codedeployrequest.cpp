@@ -53,6 +53,7 @@ namespace CodeDeploy {
  * \value DeleteDeploymentConfigAction CodeDeploy DeleteDeploymentConfig action.
  * \value DeleteDeploymentGroupAction CodeDeploy DeleteDeploymentGroup action.
  * \value DeleteGitHubAccountTokenAction CodeDeploy DeleteGitHubAccountToken action.
+ * \value DeleteResourcesByExternalIdAction CodeDeploy DeleteResourcesByExternalId action.
  * \value DeregisterOnPremisesInstanceAction CodeDeploy DeregisterOnPremisesInstance action.
  * \value GetApplicationAction CodeDeploy GetApplication action.
  * \value GetApplicationRevisionAction CodeDeploy GetApplicationRevision action.

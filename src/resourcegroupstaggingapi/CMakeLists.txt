@@ -1,6 +1,14 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsResourceGroupsTaggingAPI
+  describereportcreationrequest.h
+  describereportcreationrequest_p.h
+  describereportcreationresponse.h
+  describereportcreationresponse_p.h
+  getcompliancesummaryrequest.h
+  getcompliancesummaryrequest_p.h
+  getcompliancesummaryresponse.h
+  getcompliancesummaryresponse_p.h
   getresourcesrequest.h
   getresourcesrequest_p.h
   getresourcesresponse.h
@@ -19,6 +27,10 @@ add_library(QtAwsResourceGroupsTaggingAPI
   resourcegroupstaggingapirequest_p.h
   resourcegroupstaggingapiresponse.h
   resourcegroupstaggingapiresponse_p.h
+  startreportcreationrequest.h
+  startreportcreationrequest_p.h
+  startreportcreationresponse.h
+  startreportcreationresponse_p.h
   tagresourcesrequest.h
   tagresourcesrequest_p.h
   tagresourcesresponse.h
@@ -27,6 +39,10 @@ add_library(QtAwsResourceGroupsTaggingAPI
   untagresourcesrequest_p.h
   untagresourcesresponse.h
   untagresourcesresponse_p.h
+  describereportcreationrequest.cpp
+  describereportcreationresponse.cpp
+  getcompliancesummaryrequest.cpp
+  getcompliancesummaryresponse.cpp
   getresourcesrequest.cpp
   getresourcesresponse.cpp
   gettagkeysrequest.cpp
@@ -36,6 +52,8 @@ add_library(QtAwsResourceGroupsTaggingAPI
   resourcegroupstaggingapiclient.cpp
   resourcegroupstaggingapirequest.cpp
   resourcegroupstaggingapiresponse.cpp
+  startreportcreationrequest.cpp
+  startreportcreationresponse.cpp
   tagresourcesrequest.cpp
   tagresourcesresponse.cpp
   untagresourcesrequest.cpp

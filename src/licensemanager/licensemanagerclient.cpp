@@ -21,32 +21,92 @@
 #include "licensemanagerclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "acceptgrantrequest.h"
+#include "acceptgrantresponse.h"
+#include "checkinlicenserequest.h"
+#include "checkinlicenseresponse.h"
+#include "checkoutborrowlicenserequest.h"
+#include "checkoutborrowlicenseresponse.h"
+#include "checkoutlicenserequest.h"
+#include "checkoutlicenseresponse.h"
+#include "creategrantrequest.h"
+#include "creategrantresponse.h"
+#include "creategrantversionrequest.h"
+#include "creategrantversionresponse.h"
+#include "createlicenserequest.h"
+#include "createlicenseresponse.h"
 #include "createlicenseconfigurationrequest.h"
 #include "createlicenseconfigurationresponse.h"
+#include "createlicensemanagerreportgeneratorrequest.h"
+#include "createlicensemanagerreportgeneratorresponse.h"
+#include "createlicenseversionrequest.h"
+#include "createlicenseversionresponse.h"
+#include "createtokenrequest.h"
+#include "createtokenresponse.h"
+#include "deletegrantrequest.h"
+#include "deletegrantresponse.h"
+#include "deletelicenserequest.h"
+#include "deletelicenseresponse.h"
 #include "deletelicenseconfigurationrequest.h"
 #include "deletelicenseconfigurationresponse.h"
+#include "deletelicensemanagerreportgeneratorrequest.h"
+#include "deletelicensemanagerreportgeneratorresponse.h"
+#include "deletetokenrequest.h"
+#include "deletetokenresponse.h"
+#include "extendlicenseconsumptionrequest.h"
+#include "extendlicenseconsumptionresponse.h"
+#include "getaccesstokenrequest.h"
+#include "getaccesstokenresponse.h"
+#include "getgrantrequest.h"
+#include "getgrantresponse.h"
+#include "getlicenserequest.h"
+#include "getlicenseresponse.h"
 #include "getlicenseconfigurationrequest.h"
 #include "getlicenseconfigurationresponse.h"
+#include "getlicensemanagerreportgeneratorrequest.h"
+#include "getlicensemanagerreportgeneratorresponse.h"
+#include "getlicenseusagerequest.h"
+#include "getlicenseusageresponse.h"
 #include "getservicesettingsrequest.h"
 #include "getservicesettingsresponse.h"
 #include "listassociationsforlicenseconfigurationrequest.h"
 #include "listassociationsforlicenseconfigurationresponse.h"
+#include "listdistributedgrantsrequest.h"
+#include "listdistributedgrantsresponse.h"
+#include "listfailuresforlicenseconfigurationoperationsrequest.h"
+#include "listfailuresforlicenseconfigurationoperationsresponse.h"
 #include "listlicenseconfigurationsrequest.h"
 #include "listlicenseconfigurationsresponse.h"
+#include "listlicensemanagerreportgeneratorsrequest.h"
+#include "listlicensemanagerreportgeneratorsresponse.h"
 #include "listlicensespecificationsforresourcerequest.h"
 #include "listlicensespecificationsforresourceresponse.h"
+#include "listlicenseversionsrequest.h"
+#include "listlicenseversionsresponse.h"
+#include "listlicensesrequest.h"
+#include "listlicensesresponse.h"
+#include "listreceivedgrantsrequest.h"
+#include "listreceivedgrantsresponse.h"
+#include "listreceivedlicensesrequest.h"
+#include "listreceivedlicensesresponse.h"
 #include "listresourceinventoryrequest.h"
 #include "listresourceinventoryresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtokensrequest.h"
+#include "listtokensresponse.h"
 #include "listusageforlicenseconfigurationrequest.h"
 #include "listusageforlicenseconfigurationresponse.h"
+#include "rejectgrantrequest.h"
+#include "rejectgrantresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
 #include "updatelicenseconfigurationrequest.h"
 #include "updatelicenseconfigurationresponse.h"
+#include "updatelicensemanagerreportgeneratorrequest.h"
+#include "updatelicensemanagerreportgeneratorresponse.h"
 #include "updatelicensespecificationsforresourcerequest.h"
 #include "updatelicensespecificationsforresourceresponse.h"
 #include "updateservicesettingsrequest.h"
@@ -76,14 +136,8 @@ namespace LicenseManager {
  *
  *  <fullname> AWS License Manager </fullname>
  * 
- *  <i>This is the AWS License Manager API Reference.</i> It provides descriptions, syntax, and usage examples for each of
- *  the actions and data types for License Manager. The topic for each action shows the Query API request parameters and the
- *  XML response. You can also view the XML request elements in the WSDL.
- * 
- *  </p
- * 
- *  Alternatively, you can use one of the AWS SDKs to access an API that's tailored to the programming language or platform
- *  that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS SDKs</a>.
+ *  AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
+ *  on-premises
  */
 
 /*!
@@ -141,14 +195,109 @@ LicenseManagerClient::LicenseManagerClient(
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * AcceptGrantResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts the specified
+ */
+AcceptGrantResponse * LicenseManagerClient::acceptGrant(const AcceptGrantRequest &request)
+{
+    return qobject_cast<AcceptGrantResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CheckInLicenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Checks in the specified license. Check in a license when it is no longer in
+ */
+CheckInLicenseResponse * LicenseManagerClient::checkInLicense(const CheckInLicenseRequest &request)
+{
+    return qobject_cast<CheckInLicenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CheckoutBorrowLicenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Checks out the specified license for offline
+ */
+CheckoutBorrowLicenseResponse * LicenseManagerClient::checkoutBorrowLicense(const CheckoutBorrowLicenseRequest &request)
+{
+    return qobject_cast<CheckoutBorrowLicenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CheckoutLicenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Checks out the specified
+ */
+CheckoutLicenseResponse * LicenseManagerClient::checkoutLicense(const CheckoutLicenseRequest &request)
+{
+    return qobject_cast<CheckoutLicenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateGrantResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a grant for the specified license. A grant shares the use of license entitlements with specific AWS
+ */
+CreateGrantResponse * LicenseManagerClient::createGrant(const CreateGrantRequest &request)
+{
+    return qobject_cast<CreateGrantResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateGrantVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new version of the specified
+ */
+CreateGrantVersionResponse * LicenseManagerClient::createGrantVersion(const CreateGrantVersionRequest &request)
+{
+    return qobject_cast<CreateGrantVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateLicenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a
+ */
+CreateLicenseResponse * LicenseManagerClient::createLicense(const CreateLicenseRequest &request)
+{
+    return qobject_cast<CreateLicenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * CreateLicenseConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new license configuration object. A license configuration is an abstraction of a customer license agreement
- * that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing
- * by instance, socket, CPU, or VCPU), tenancy (shared tenancy, Amazon EC2 Dedicated Instance, Amazon EC2 Dedicated Host,
- * or any of these), host affinity (how long a VM must be associated with a host), the number of licenses purchased and
+ * Creates a license
+ *
+ * configuration>
+ *
+ * A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License
+ * Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed
+ * tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), license affinity to host (how long a
+ * license must be associated with a host), and the number of licenses purchased and
  */
 CreateLicenseConfigurationResponse * LicenseManagerClient::createLicenseConfiguration(const CreateLicenseConfigurationRequest &request)
 {
@@ -157,11 +306,85 @@ CreateLicenseConfigurationResponse * LicenseManagerClient::createLicenseConfigur
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateLicenseManagerReportGeneratorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new report
+ */
+CreateLicenseManagerReportGeneratorResponse * LicenseManagerClient::createLicenseManagerReportGenerator(const CreateLicenseManagerReportGeneratorRequest &request)
+{
+    return qobject_cast<CreateLicenseManagerReportGeneratorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateLicenseVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new version of the specified
+ */
+CreateLicenseVersionResponse * LicenseManagerClient::createLicenseVersion(const CreateLicenseVersionRequest &request)
+{
+    return qobject_cast<CreateLicenseVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * CreateTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a long-lived
+ *
+ * token>
+ *
+ * A refresh token is a JWT token used to get an access token. With an access token, you can call AssumeRoleWithWebIdentity
+ * to get role credentials that you can use to call License Manager to manage the specified
+ */
+CreateTokenResponse * LicenseManagerClient::createToken(const CreateTokenRequest &request)
+{
+    return qobject_cast<CreateTokenResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * DeleteGrantResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified
+ */
+DeleteGrantResponse * LicenseManagerClient::deleteGrant(const DeleteGrantRequest &request)
+{
+    return qobject_cast<DeleteGrantResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * DeleteLicenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified
+ */
+DeleteLicenseResponse * LicenseManagerClient::deleteLicense(const DeleteLicenseRequest &request)
+{
+    return qobject_cast<DeleteLicenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * DeleteLicenseConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an existing license configuration. This action fails if the configuration is in
+ * Deletes the specified license
+ *
+ * configuration>
+ *
+ * You cannot delete a license configuration that is in
  */
 DeleteLicenseConfigurationResponse * LicenseManagerClient::deleteLicenseConfiguration(const DeleteLicenseConfigurationRequest &request)
 {
@@ -170,11 +393,94 @@ DeleteLicenseConfigurationResponse * LicenseManagerClient::deleteLicenseConfigur
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * DeleteLicenseManagerReportGeneratorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete an existing report
+ *
+ * generator>
+ *
+ * This action deletes the report generator, which stops it from generating future reports and cannot be reversed. However,
+ * the previous reports from this generator will remain in your S3
+ */
+DeleteLicenseManagerReportGeneratorResponse * LicenseManagerClient::deleteLicenseManagerReportGenerator(const DeleteLicenseManagerReportGeneratorRequest &request)
+{
+    return qobject_cast<DeleteLicenseManagerReportGeneratorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * DeleteTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified token. Must be called in the license home
+ */
+DeleteTokenResponse * LicenseManagerClient::deleteToken(const DeleteTokenRequest &request)
+{
+    return qobject_cast<DeleteTokenResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ExtendLicenseConsumptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Extends the expiration date for license
+ */
+ExtendLicenseConsumptionResponse * LicenseManagerClient::extendLicenseConsumption(const ExtendLicenseConsumptionRequest &request)
+{
+    return qobject_cast<ExtendLicenseConsumptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * GetAccessTokenResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a temporary access token to use with AssumeRoleWithWebIdentity. Access tokens are valid for one
+ */
+GetAccessTokenResponse * LicenseManagerClient::getAccessToken(const GetAccessTokenRequest &request)
+{
+    return qobject_cast<GetAccessTokenResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * GetGrantResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets detailed information about the specified
+ */
+GetGrantResponse * LicenseManagerClient::getGrant(const GetGrantRequest &request)
+{
+    return qobject_cast<GetGrantResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * GetLicenseResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets detailed information about the specified
+ */
+GetLicenseResponse * LicenseManagerClient::getLicense(const GetLicenseRequest &request)
+{
+    return qobject_cast<GetLicenseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * GetLicenseConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a detailed description of a license
+ * Gets detailed information about the specified license
  */
 GetLicenseConfigurationResponse * LicenseManagerClient::getLicenseConfiguration(const GetLicenseConfigurationRequest &request)
 {
@@ -183,11 +489,37 @@ GetLicenseConfigurationResponse * LicenseManagerClient::getLicenseConfiguration(
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * GetLicenseManagerReportGeneratorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information on the specified report
+ */
+GetLicenseManagerReportGeneratorResponse * LicenseManagerClient::getLicenseManagerReportGenerator(const GetLicenseManagerReportGeneratorRequest &request)
+{
+    return qobject_cast<GetLicenseManagerReportGeneratorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * GetLicenseUsageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets detailed information about the usage of the specified
+ */
+GetLicenseUsageResponse * LicenseManagerClient::getLicenseUsage(const GetLicenseUsageRequest &request)
+{
+    return qobject_cast<GetLicenseUsageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * GetServiceSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets License Manager settings for a region. Exposes the configured S3 bucket, SNS topic, etc., for inspection.
+ * Gets the License Manager settings for the current
  */
 GetServiceSettingsResponse * LicenseManagerClient::getServiceSettings(const GetServiceSettingsRequest &request)
 {
@@ -200,9 +532,12 @@ GetServiceSettingsResponse * LicenseManagerClient::getServiceSettings(const GetS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the resource associations for a license configuration. Resource associations need not consume licenses from a
- * license configuration. For example, an AMI or a stopped instance may not consume a license (depending on the license
- * rules). Use this operation to find all resources associated with a license
+ * Lists the resource associations for the specified license
+ *
+ * configuration>
+ *
+ * Resource associations need not consume licenses from a license configuration. For example, an AMI or a stopped instance
+ * might not consume a license (depending on the license
  */
 ListAssociationsForLicenseConfigurationResponse * LicenseManagerClient::listAssociationsForLicenseConfiguration(const ListAssociationsForLicenseConfigurationRequest &request)
 {
@@ -211,12 +546,37 @@ ListAssociationsForLicenseConfigurationResponse * LicenseManagerClient::listAsso
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListDistributedGrantsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the grants distributed for the specified
+ */
+ListDistributedGrantsResponse * LicenseManagerClient::listDistributedGrants(const ListDistributedGrantsRequest &request)
+{
+    return qobject_cast<ListDistributedGrantsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListFailuresForLicenseConfigurationOperationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the license configuration operations that
+ */
+ListFailuresForLicenseConfigurationOperationsResponse * LicenseManagerClient::listFailuresForLicenseConfigurationOperations(const ListFailuresForLicenseConfigurationOperationsRequest &request)
+{
+    return qobject_cast<ListFailuresForLicenseConfigurationOperationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * ListLicenseConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists license configuration objects for an account, each containing the name, description, license type, and other
- * license terms modeled from a license
+ * Lists the license configurations for your
  */
 ListLicenseConfigurationsResponse * LicenseManagerClient::listLicenseConfigurations(const ListLicenseConfigurationsRequest &request)
 {
@@ -225,11 +585,24 @@ ListLicenseConfigurationsResponse * LicenseManagerClient::listLicenseConfigurati
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListLicenseManagerReportGeneratorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the report generators for your
+ */
+ListLicenseManagerReportGeneratorsResponse * LicenseManagerClient::listLicenseManagerReportGenerators(const ListLicenseManagerReportGeneratorsRequest &request)
+{
+    return qobject_cast<ListLicenseManagerReportGeneratorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * ListLicenseSpecificationsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the license configuration for a
+ * Describes the license configurations for the specified
  */
 ListLicenseSpecificationsForResourceResponse * LicenseManagerClient::listLicenseSpecificationsForResource(const ListLicenseSpecificationsForResourceRequest &request)
 {
@@ -238,11 +611,63 @@ ListLicenseSpecificationsForResourceResponse * LicenseManagerClient::listLicense
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListLicenseVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all versions of the specified
+ */
+ListLicenseVersionsResponse * LicenseManagerClient::listLicenseVersions(const ListLicenseVersionsRequest &request)
+{
+    return qobject_cast<ListLicenseVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListLicensesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the licenses for your
+ */
+ListLicensesResponse * LicenseManagerClient::listLicenses(const ListLicensesRequest &request)
+{
+    return qobject_cast<ListLicensesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListReceivedGrantsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists grants that are received but not
+ */
+ListReceivedGrantsResponse * LicenseManagerClient::listReceivedGrants(const ListReceivedGrantsRequest &request)
+{
+    return qobject_cast<ListReceivedGrantsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListReceivedLicensesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists received
+ */
+ListReceivedLicensesResponse * LicenseManagerClient::listReceivedLicenses(const ListReceivedLicensesRequest &request)
+{
+    return qobject_cast<ListReceivedLicensesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * ListResourceInventoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a detailed list of
+ * Lists resources managed using Systems Manager
  */
 ListResourceInventoryResponse * LicenseManagerClient::listResourceInventory(const ListResourceInventoryRequest &request)
 {
@@ -255,11 +680,24 @@ ListResourceInventoryResponse * LicenseManagerClient::listResourceInventory(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists tags attached to a
+ * Lists the tags for the specified license
  */
 ListTagsForResourceResponse * LicenseManagerClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * ListTokensResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists your
+ */
+ListTokensResponse * LicenseManagerClient::listTokens(const ListTokensRequest &request)
+{
+    return qobject_cast<ListTokensResponse *>(send(request));
 }
 
 /*!
@@ -278,11 +716,24 @@ ListUsageForLicenseConfigurationResponse * LicenseManagerClient::listUsageForLic
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * RejectGrantResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Rejects the specified
+ */
+RejectGrantResponse * LicenseManagerClient::rejectGrant(const RejectGrantRequest &request)
+{
+    return qobject_cast<RejectGrantResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attach one of more tags to any
+ * Adds the specified tags to the specified license
  */
 TagResourceResponse * LicenseManagerClient::tagResource(const TagResourceRequest &request)
 {
@@ -295,7 +746,7 @@ TagResourceResponse * LicenseManagerClient::tagResource(const TagResourceRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Remove tags from a
+ * Removes the specified tags from the specified license
  */
 UntagResourceResponse * LicenseManagerClient::untagResource(const UntagResourceRequest &request)
 {
@@ -308,10 +759,7 @@ UntagResourceResponse * LicenseManagerClient::untagResource(const UntagResourceR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the attributes of an existing license configuration object. A license configuration is an abstraction of a
- * customer license agreement that can be consumed and enforced by License Manager. Components include specifications for
- * the license type (Instances, cores, sockets, VCPUs), tenancy (shared or Dedicated Host), host affinity (how long a VM is
- * associated with a host), the number of licenses purchased and
+ * Modifies the attributes of an existing license
  */
 UpdateLicenseConfigurationResponse * LicenseManagerClient::updateLicenseConfiguration(const UpdateLicenseConfigurationRequest &request)
 {
@@ -320,14 +768,34 @@ UpdateLicenseConfigurationResponse * LicenseManagerClient::updateLicenseConfigur
 
 /*!
  * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
+ * UpdateLicenseManagerReportGeneratorResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a report
+ *
+ * generator>
+ *
+ * After you make changes to a report generator, it will start generating new reports within 60 minutes of being
+ */
+UpdateLicenseManagerReportGeneratorResponse * LicenseManagerClient::updateLicenseManagerReportGenerator(const UpdateLicenseManagerReportGeneratorRequest &request)
+{
+    return qobject_cast<UpdateLicenseManagerReportGeneratorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LicenseManagerClient service, and returns a pointer to an
  * UpdateLicenseSpecificationsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds or removes license configurations for a specified AWS resource. This operation currently supports updating the
- * license specifications of AMIs, instances, and hosts. Launch templates and AWS CloudFormation templates are not managed
- * from this operation as those resources send the license configurations directly to a resource creation operation, such
- * as
+ * Adds or removes the specified license configurations for the specified AWS
+ *
+ * resource>
+ *
+ * You can update the license specifications of AMIs, instances, and hosts. You cannot update the license specifications
+ * for launch templates and AWS CloudFormation templates, as they send license configurations to the operation that creates
+ * the
  */
 UpdateLicenseSpecificationsForResourceResponse * LicenseManagerClient::updateLicenseSpecificationsForResource(const UpdateLicenseSpecificationsForResourceRequest &request)
 {
@@ -340,7 +808,7 @@ UpdateLicenseSpecificationsForResourceResponse * LicenseManagerClient::updateLic
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates License Manager service
+ * Updates License Manager settings for the current
  */
 UpdateServiceSettingsResponse * LicenseManagerClient::updateServiceSettings(const UpdateServiceSettingsRequest &request)
 {

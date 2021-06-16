@@ -43,11 +43,13 @@ namespace RDS {
  * \value ApplyPendingMaintenanceActionAction RDS ApplyPendingMaintenanceAction action.
  * \value AuthorizeDBSecurityGroupIngressAction RDS AuthorizeDBSecurityGroupIngress action.
  * \value BacktrackDBClusterAction RDS BacktrackDBCluster action.
+ * \value CancelExportTaskAction RDS CancelExportTask action.
  * \value CopyDBClusterParameterGroupAction RDS CopyDBClusterParameterGroup action.
  * \value CopyDBClusterSnapshotAction RDS CopyDBClusterSnapshot action.
  * \value CopyDBParameterGroupAction RDS CopyDBParameterGroup action.
  * \value CopyDBSnapshotAction RDS CopyDBSnapshot action.
  * \value CopyOptionGroupAction RDS CopyOptionGroup action.
+ * \value CreateCustomAvailabilityZoneAction RDS CreateCustomAvailabilityZone action.
  * \value CreateDBClusterAction RDS CreateDBCluster action.
  * \value CreateDBClusterEndpointAction RDS CreateDBClusterEndpoint action.
  * \value CreateDBClusterParameterGroupAction RDS CreateDBClusterParameterGroup action.
@@ -55,12 +57,15 @@ namespace RDS {
  * \value CreateDBInstanceAction RDS CreateDBInstance action.
  * \value CreateDBInstanceReadReplicaAction RDS CreateDBInstanceReadReplica action.
  * \value CreateDBParameterGroupAction RDS CreateDBParameterGroup action.
+ * \value CreateDBProxyAction RDS CreateDBProxy action.
+ * \value CreateDBProxyEndpointAction RDS CreateDBProxyEndpoint action.
  * \value CreateDBSecurityGroupAction RDS CreateDBSecurityGroup action.
  * \value CreateDBSnapshotAction RDS CreateDBSnapshot action.
  * \value CreateDBSubnetGroupAction RDS CreateDBSubnetGroup action.
  * \value CreateEventSubscriptionAction RDS CreateEventSubscription action.
  * \value CreateGlobalClusterAction RDS CreateGlobalCluster action.
  * \value CreateOptionGroupAction RDS CreateOptionGroup action.
+ * \value DeleteCustomAvailabilityZoneAction RDS DeleteCustomAvailabilityZone action.
  * \value DeleteDBClusterAction RDS DeleteDBCluster action.
  * \value DeleteDBClusterEndpointAction RDS DeleteDBClusterEndpoint action.
  * \value DeleteDBClusterParameterGroupAction RDS DeleteDBClusterParameterGroup action.
@@ -68,14 +73,19 @@ namespace RDS {
  * \value DeleteDBInstanceAction RDS DeleteDBInstance action.
  * \value DeleteDBInstanceAutomatedBackupAction RDS DeleteDBInstanceAutomatedBackup action.
  * \value DeleteDBParameterGroupAction RDS DeleteDBParameterGroup action.
+ * \value DeleteDBProxyAction RDS DeleteDBProxy action.
+ * \value DeleteDBProxyEndpointAction RDS DeleteDBProxyEndpoint action.
  * \value DeleteDBSecurityGroupAction RDS DeleteDBSecurityGroup action.
  * \value DeleteDBSnapshotAction RDS DeleteDBSnapshot action.
  * \value DeleteDBSubnetGroupAction RDS DeleteDBSubnetGroup action.
  * \value DeleteEventSubscriptionAction RDS DeleteEventSubscription action.
  * \value DeleteGlobalClusterAction RDS DeleteGlobalCluster action.
+ * \value DeleteInstallationMediaAction RDS DeleteInstallationMedia action.
  * \value DeleteOptionGroupAction RDS DeleteOptionGroup action.
+ * \value DeregisterDBProxyTargetsAction RDS DeregisterDBProxyTargets action.
  * \value DescribeAccountAttributesAction RDS DescribeAccountAttributes action.
  * \value DescribeCertificatesAction RDS DescribeCertificates action.
+ * \value DescribeCustomAvailabilityZonesAction RDS DescribeCustomAvailabilityZones action.
  * \value DescribeDBClusterBacktracksAction RDS DescribeDBClusterBacktracks action.
  * \value DescribeDBClusterEndpointsAction RDS DescribeDBClusterEndpoints action.
  * \value DescribeDBClusterParameterGroupsAction RDS DescribeDBClusterParameterGroups action.
@@ -89,6 +99,10 @@ namespace RDS {
  * \value DescribeDBLogFilesAction RDS DescribeDBLogFiles action.
  * \value DescribeDBParameterGroupsAction RDS DescribeDBParameterGroups action.
  * \value DescribeDBParametersAction RDS DescribeDBParameters action.
+ * \value DescribeDBProxiesAction RDS DescribeDBProxies action.
+ * \value DescribeDBProxyEndpointsAction RDS DescribeDBProxyEndpoints action.
+ * \value DescribeDBProxyTargetGroupsAction RDS DescribeDBProxyTargetGroups action.
+ * \value DescribeDBProxyTargetsAction RDS DescribeDBProxyTargets action.
  * \value DescribeDBSecurityGroupsAction RDS DescribeDBSecurityGroups action.
  * \value DescribeDBSnapshotAttributesAction RDS DescribeDBSnapshotAttributes action.
  * \value DescribeDBSnapshotsAction RDS DescribeDBSnapshots action.
@@ -98,7 +112,9 @@ namespace RDS {
  * \value DescribeEventCategoriesAction RDS DescribeEventCategories action.
  * \value DescribeEventSubscriptionsAction RDS DescribeEventSubscriptions action.
  * \value DescribeEventsAction RDS DescribeEvents action.
+ * \value DescribeExportTasksAction RDS DescribeExportTasks action.
  * \value DescribeGlobalClustersAction RDS DescribeGlobalClusters action.
+ * \value DescribeInstallationMediaAction RDS DescribeInstallationMedia action.
  * \value DescribeOptionGroupOptionsAction RDS DescribeOptionGroupOptions action.
  * \value DescribeOptionGroupsAction RDS DescribeOptionGroups action.
  * \value DescribeOrderableDBInstanceOptionsAction RDS DescribeOrderableDBInstanceOptions action.
@@ -109,7 +125,10 @@ namespace RDS {
  * \value DescribeValidDBInstanceModificationsAction RDS DescribeValidDBInstanceModifications action.
  * \value DownloadDBLogFilePortionAction RDS DownloadDBLogFilePortion action.
  * \value FailoverDBClusterAction RDS FailoverDBCluster action.
+ * \value FailoverGlobalClusterAction RDS FailoverGlobalCluster action.
+ * \value ImportInstallationMediaAction RDS ImportInstallationMedia action.
  * \value ListTagsForResourceAction RDS ListTagsForResource action.
+ * \value ModifyCertificatesAction RDS ModifyCertificates action.
  * \value ModifyCurrentDBClusterCapacityAction RDS ModifyCurrentDBClusterCapacity action.
  * \value ModifyDBClusterAction RDS ModifyDBCluster action.
  * \value ModifyDBClusterEndpointAction RDS ModifyDBClusterEndpoint action.
@@ -117,6 +136,9 @@ namespace RDS {
  * \value ModifyDBClusterSnapshotAttributeAction RDS ModifyDBClusterSnapshotAttribute action.
  * \value ModifyDBInstanceAction RDS ModifyDBInstance action.
  * \value ModifyDBParameterGroupAction RDS ModifyDBParameterGroup action.
+ * \value ModifyDBProxyAction RDS ModifyDBProxy action.
+ * \value ModifyDBProxyEndpointAction RDS ModifyDBProxyEndpoint action.
+ * \value ModifyDBProxyTargetGroupAction RDS ModifyDBProxyTargetGroup action.
  * \value ModifyDBSnapshotAction RDS ModifyDBSnapshot action.
  * \value ModifyDBSnapshotAttributeAction RDS ModifyDBSnapshotAttribute action.
  * \value ModifyDBSubnetGroupAction RDS ModifyDBSubnetGroup action.
@@ -127,6 +149,7 @@ namespace RDS {
  * \value PromoteReadReplicaDBClusterAction RDS PromoteReadReplicaDBCluster action.
  * \value PurchaseReservedDBInstancesOfferingAction RDS PurchaseReservedDBInstancesOffering action.
  * \value RebootDBInstanceAction RDS RebootDBInstance action.
+ * \value RegisterDBProxyTargetsAction RDS RegisterDBProxyTargets action.
  * \value RemoveFromGlobalClusterAction RDS RemoveFromGlobalCluster action.
  * \value RemoveRoleFromDBClusterAction RDS RemoveRoleFromDBCluster action.
  * \value RemoveRoleFromDBInstanceAction RDS RemoveRoleFromDBInstance action.
@@ -144,9 +167,12 @@ namespace RDS {
  * \value StartActivityStreamAction RDS StartActivityStream action.
  * \value StartDBClusterAction RDS StartDBCluster action.
  * \value StartDBInstanceAction RDS StartDBInstance action.
+ * \value StartDBInstanceAutomatedBackupsReplicationAction RDS StartDBInstanceAutomatedBackupsReplication action.
+ * \value StartExportTaskAction RDS StartExportTask action.
  * \value StopActivityStreamAction RDS StopActivityStream action.
  * \value StopDBClusterAction RDS StopDBCluster action.
  * \value StopDBInstanceAction RDS StopDBInstance action.
+ * \value StopDBInstanceAutomatedBackupsReplicationAction RDS StopDBInstanceAutomatedBackupsReplication action.
  */
 
 /*!

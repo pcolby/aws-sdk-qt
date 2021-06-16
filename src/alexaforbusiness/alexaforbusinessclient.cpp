@@ -590,11 +590,6 @@ DeleteDeviceResponse * AlexaForBusinessClient::deleteDevice(const DeleteDeviceRe
  * When this action is called for a specified shared device, it allows authorized users to delete the device's entire
  * previous history of voice input data and associated response data. This action can be called once every 24 hours for a
  * specific shared
- *
- * device>
- *
- * When this action is called for a specified shared device, it allows authorized users to delete the device's entire
- * previous history of voice input data. This action can be called once every 24 hours for a specific shared device.
  */
 DeleteDeviceUsageDataResponse * AlexaForBusinessClient::deleteDeviceUsageData(const DeleteDeviceUsageDataRequest &request)
 {
@@ -959,7 +954,8 @@ GetSkillGroupResponse * AlexaForBusinessClient::getSkillGroup(const GetSkillGrou
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the details of the schedules that a user
+ * Lists the details of the schedules that a user configured. A download URL of the report associated with each schedule is
+ * returned every time this action is called. A new download URL is returned each time, and is valid for 24
  */
 ListBusinessReportSchedulesResponse * AlexaForBusinessClient::listBusinessReportSchedules(const ListBusinessReportSchedulesRequest &request)
 {
@@ -1172,6 +1168,13 @@ RejectSkillResponse * AlexaForBusinessClient::rejectSkill(const RejectSkillReque
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Determines the details for the room from which a skill request was invoked. This operation is used by skill
+ *
+ * developers>
+ *
+ * To query ResolveRoom from an Alexa skill, the skill ID needs to be authorized. When the skill is using an AWS Lambda
+ * function, the skill is automatically authorized when you publish your skill as a private skill to your AWS account.
+ * Skills that are hosted using a custom web service must be manually authorized. To get your skill authorized, contact AWS
+ * Support with your AWS account ID that queries the ResolveRoom API and skill ID.
  */
 ResolveRoomResponse * AlexaForBusinessClient::resolveRoom(const ResolveRoomRequest &request)
 {

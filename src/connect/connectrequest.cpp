@@ -36,23 +36,104 @@ namespace Connect {
  * This enum describes the actions that can be performed as Connect
  * requests.
  *
+ * \value AssociateApprovedOriginAction Connect AssociateApprovedOrigin action.
+ * \value AssociateBotAction Connect AssociateBot action.
+ * \value AssociateInstanceStorageConfigAction Connect AssociateInstanceStorageConfig action.
+ * \value AssociateLambdaFunctionAction Connect AssociateLambdaFunction action.
+ * \value AssociateLexBotAction Connect AssociateLexBot action.
+ * \value AssociateQueueQuickConnectsAction Connect AssociateQueueQuickConnects action.
+ * \value AssociateRoutingProfileQueuesAction Connect AssociateRoutingProfileQueues action.
+ * \value AssociateSecurityKeyAction Connect AssociateSecurityKey action.
+ * \value CreateContactFlowAction Connect CreateContactFlow action.
+ * \value CreateInstanceAction Connect CreateInstance action.
+ * \value CreateIntegrationAssociationAction Connect CreateIntegrationAssociation action.
+ * \value CreateQueueAction Connect CreateQueue action.
+ * \value CreateQuickConnectAction Connect CreateQuickConnect action.
+ * \value CreateRoutingProfileAction Connect CreateRoutingProfile action.
+ * \value CreateUseCaseAction Connect CreateUseCase action.
  * \value CreateUserAction Connect CreateUser action.
+ * \value CreateUserHierarchyGroupAction Connect CreateUserHierarchyGroup action.
+ * \value DeleteInstanceAction Connect DeleteInstance action.
+ * \value DeleteIntegrationAssociationAction Connect DeleteIntegrationAssociation action.
+ * \value DeleteQuickConnectAction Connect DeleteQuickConnect action.
+ * \value DeleteUseCaseAction Connect DeleteUseCase action.
  * \value DeleteUserAction Connect DeleteUser action.
+ * \value DeleteUserHierarchyGroupAction Connect DeleteUserHierarchyGroup action.
+ * \value DescribeContactFlowAction Connect DescribeContactFlow action.
+ * \value DescribeHoursOfOperationAction Connect DescribeHoursOfOperation action.
+ * \value DescribeInstanceAction Connect DescribeInstance action.
+ * \value DescribeInstanceAttributeAction Connect DescribeInstanceAttribute action.
+ * \value DescribeInstanceStorageConfigAction Connect DescribeInstanceStorageConfig action.
+ * \value DescribeQueueAction Connect DescribeQueue action.
+ * \value DescribeQuickConnectAction Connect DescribeQuickConnect action.
+ * \value DescribeRoutingProfileAction Connect DescribeRoutingProfile action.
  * \value DescribeUserAction Connect DescribeUser action.
  * \value DescribeUserHierarchyGroupAction Connect DescribeUserHierarchyGroup action.
  * \value DescribeUserHierarchyStructureAction Connect DescribeUserHierarchyStructure action.
+ * \value DisassociateApprovedOriginAction Connect DisassociateApprovedOrigin action.
+ * \value DisassociateBotAction Connect DisassociateBot action.
+ * \value DisassociateInstanceStorageConfigAction Connect DisassociateInstanceStorageConfig action.
+ * \value DisassociateLambdaFunctionAction Connect DisassociateLambdaFunction action.
+ * \value DisassociateLexBotAction Connect DisassociateLexBot action.
+ * \value DisassociateQueueQuickConnectsAction Connect DisassociateQueueQuickConnects action.
+ * \value DisassociateRoutingProfileQueuesAction Connect DisassociateRoutingProfileQueues action.
+ * \value DisassociateSecurityKeyAction Connect DisassociateSecurityKey action.
  * \value GetContactAttributesAction Connect GetContactAttributes action.
  * \value GetCurrentMetricDataAction Connect GetCurrentMetricData action.
  * \value GetFederationTokenAction Connect GetFederationToken action.
  * \value GetMetricDataAction Connect GetMetricData action.
+ * \value ListApprovedOriginsAction Connect ListApprovedOrigins action.
+ * \value ListBotsAction Connect ListBots action.
+ * \value ListContactFlowsAction Connect ListContactFlows action.
+ * \value ListHoursOfOperationsAction Connect ListHoursOfOperations action.
+ * \value ListInstanceAttributesAction Connect ListInstanceAttributes action.
+ * \value ListInstanceStorageConfigsAction Connect ListInstanceStorageConfigs action.
+ * \value ListInstancesAction Connect ListInstances action.
+ * \value ListIntegrationAssociationsAction Connect ListIntegrationAssociations action.
+ * \value ListLambdaFunctionsAction Connect ListLambdaFunctions action.
+ * \value ListLexBotsAction Connect ListLexBots action.
+ * \value ListPhoneNumbersAction Connect ListPhoneNumbers action.
+ * \value ListPromptsAction Connect ListPrompts action.
+ * \value ListQueueQuickConnectsAction Connect ListQueueQuickConnects action.
+ * \value ListQueuesAction Connect ListQueues action.
+ * \value ListQuickConnectsAction Connect ListQuickConnects action.
+ * \value ListRoutingProfileQueuesAction Connect ListRoutingProfileQueues action.
  * \value ListRoutingProfilesAction Connect ListRoutingProfiles action.
+ * \value ListSecurityKeysAction Connect ListSecurityKeys action.
  * \value ListSecurityProfilesAction Connect ListSecurityProfiles action.
+ * \value ListTagsForResourceAction Connect ListTagsForResource action.
+ * \value ListUseCasesAction Connect ListUseCases action.
  * \value ListUserHierarchyGroupsAction Connect ListUserHierarchyGroups action.
  * \value ListUsersAction Connect ListUsers action.
+ * \value ResumeContactRecordingAction Connect ResumeContactRecording action.
+ * \value StartChatContactAction Connect StartChatContact action.
+ * \value StartContactRecordingAction Connect StartContactRecording action.
  * \value StartOutboundVoiceContactAction Connect StartOutboundVoiceContact action.
+ * \value StartTaskContactAction Connect StartTaskContact action.
  * \value StopContactAction Connect StopContact action.
+ * \value StopContactRecordingAction Connect StopContactRecording action.
+ * \value SuspendContactRecordingAction Connect SuspendContactRecording action.
+ * \value TagResourceAction Connect TagResource action.
+ * \value UntagResourceAction Connect UntagResource action.
  * \value UpdateContactAttributesAction Connect UpdateContactAttributes action.
+ * \value UpdateContactFlowContentAction Connect UpdateContactFlowContent action.
+ * \value UpdateContactFlowNameAction Connect UpdateContactFlowName action.
+ * \value UpdateInstanceAttributeAction Connect UpdateInstanceAttribute action.
+ * \value UpdateInstanceStorageConfigAction Connect UpdateInstanceStorageConfig action.
+ * \value UpdateQueueHoursOfOperationAction Connect UpdateQueueHoursOfOperation action.
+ * \value UpdateQueueMaxContactsAction Connect UpdateQueueMaxContacts action.
+ * \value UpdateQueueNameAction Connect UpdateQueueName action.
+ * \value UpdateQueueOutboundCallerConfigAction Connect UpdateQueueOutboundCallerConfig action.
+ * \value UpdateQueueStatusAction Connect UpdateQueueStatus action.
+ * \value UpdateQuickConnectConfigAction Connect UpdateQuickConnectConfig action.
+ * \value UpdateQuickConnectNameAction Connect UpdateQuickConnectName action.
+ * \value UpdateRoutingProfileConcurrencyAction Connect UpdateRoutingProfileConcurrency action.
+ * \value UpdateRoutingProfileDefaultOutboundQueueAction Connect UpdateRoutingProfileDefaultOutboundQueue action.
+ * \value UpdateRoutingProfileNameAction Connect UpdateRoutingProfileName action.
+ * \value UpdateRoutingProfileQueuesAction Connect UpdateRoutingProfileQueues action.
  * \value UpdateUserHierarchyAction Connect UpdateUserHierarchy action.
+ * \value UpdateUserHierarchyGroupNameAction Connect UpdateUserHierarchyGroupName action.
+ * \value UpdateUserHierarchyStructureAction Connect UpdateUserHierarchyStructure action.
  * \value UpdateUserIdentityInfoAction Connect UpdateUserIdentityInfo action.
  * \value UpdateUserPhoneConfigAction Connect UpdateUserPhoneConfig action.
  * \value UpdateUserRoutingProfileAction Connect UpdateUserRoutingProfile action.

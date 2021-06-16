@@ -37,11 +37,20 @@ class QTAWS_EXPORT TranslateRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Translate.
     enum Action {
+        CreateParallelDataAction,
+        DeleteParallelDataAction,
         DeleteTerminologyAction,
+        DescribeTextTranslationJobAction,
+        GetParallelDataAction,
         GetTerminologyAction,
         ImportTerminologyAction,
+        ListParallelDataAction,
         ListTerminologiesAction,
+        ListTextTranslationJobsAction,
+        StartTextTranslationJobAction,
+        StopTextTranslationJobAction,
         TranslateTextAction,
+        UpdateParallelDataAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

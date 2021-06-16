@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsCodeStarNotifications
+description = AWS CodeStarNotifications SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawscodestarnotifications-index.html"
+navigation.landingtitle = "CodeStarNotifications"
+navigation.cppclassespage = "CodeStarNotifications C++ Classes"

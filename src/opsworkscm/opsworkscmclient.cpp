@@ -45,10 +45,16 @@
 #include "disassociatenoderesponse.h"
 #include "exportserverengineattributerequest.h"
 #include "exportserverengineattributeresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "restoreserverrequest.h"
 #include "restoreserverresponse.h"
 #include "startmaintenancerequest.h"
 #include "startmaintenanceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateserverrequest.h"
 #include "updateserverresponse.h"
 #include "updateserverengineattributesrequest.h"
@@ -59,7 +65,7 @@
 
 /*!
  * \namespace QtAws::OpsWorksCM
- * \brief Contains classess for accessing AWS OpsWorks for Chef Automate (OpsWorksCM).
+ * \brief Contains classess for accessing AWS OpsWorks CM (OpsWorksCM).
  *
  * \inmodule QtAwsOpsWorksCM
  *
@@ -71,7 +77,7 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::OpsWorksCMClient
- * \brief The OpsWorksCMClient class provides access to the AWS OpsWorks for Chef Automate (OpsWorksCM) service.
+ * \brief The OpsWorksCMClient class provides access to the AWS OpsWorks CM (OpsWorksCM) service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsOpsWorksCM
@@ -145,6 +151,11 @@ namespace OpsWorksCM {
  * 
  *  opsworks-cm.eu-west-1.amazonaws.co> </li> </ul>
  * 
+ *  For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/opsworks-service.html">AWS OpsWorks
+ *  endpoints and quotas</a> in the AWS General
+ * 
+ *  Reference>
+ * 
  *  <b>Throttling limits</b>
  * 
  *  </p
@@ -173,7 +184,7 @@ OpsWorksCMClient::OpsWorksCMClient(
     d->endpointPrefix = QStringLiteral("opsworks-cm");
     d->networkAccessManager = manager;
     d->region = region;
-    d->serviceFullName = QStringLiteral("AWS OpsWorks for Chef Automate");
+    d->serviceFullName = QStringLiteral("AWS OpsWorks CM");
     d->serviceName = QStringLiteral("opsworks-cm");
 }
 
@@ -201,7 +212,7 @@ OpsWorksCMClient::OpsWorksCMClient(
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("opsworks-cm");
     d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS OpsWorks for Chef Automate");
+    d->serviceFullName = QStringLiteral("AWS OpsWorks CM");
     d->serviceName = QStringLiteral("opsworks-cm");
 }
 
@@ -230,7 +241,7 @@ OpsWorksCMClient::OpsWorksCMClient(
  *
  * </p
  *
- * Example (Chef): <code>aws opsworks-cm associate-node --server-name <i>MyServer</i> --node-name <i>MyManagedNode</i>
+ * Example (Puppet): <code>aws opsworks-cm associate-node --server-name <i>MyServer</i> --node-name <i>MyManagedNode</i>
  * --engine-attributes "Name=<i>PUPPET_NODE_CSR</i>,Value=<i>csr-pem</i>"</code>
  *
  * </p
@@ -316,6 +327,11 @@ CreateBackupResponse * OpsWorksCMClient::createBackup(const CreateBackupRequest 
  * By default, your server is accessible from any IP address. We recommend that you update your security group rules to
  * allow access from known IP addresses and address ranges only. To edit security group rules, open Security Groups in the
  * navigation pane of the EC2 management console.
+ *
+ * </p
+ *
+ * To specify your own domain for a server, and provide your own self-signed or CA-signed certificate and private key,
+ * specify values for <code>CustomDomain</code>, <code>CustomCertificate</code>, and
  */
 CreateServerResponse * OpsWorksCMClient::createServer(const CreateServerRequest &request)
 {
@@ -519,6 +535,20 @@ ExportServerEngineAttributeResponse * OpsWorksCMClient::exportServerEngineAttrib
 
 /*!
  * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of tags that are applied to the specified AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet
+ * Enterprise servers or
+ */
+ListTagsForResourceResponse * OpsWorksCMClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
  * RestoreServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -529,6 +559,12 @@ ExportServerEngineAttributeResponse * OpsWorksCMClient::exportServerEngineAttrib
  * management of the server's client devices (nodes) should continue to work.
  *
  * </p
+ *
+ * Restoring from a backup is performed by creating a new EC2 instance. If restoration is successful, and the server is in
+ * a <code>HEALTHY</code> state, AWS OpsWorks CM switches traffic over to the new instance. After restoration is finished,
+ * the old EC2 instance is maintained in a <code>Running</code> or <code>Stopped</code> state, but is eventually
+ *
+ * terminated>
  *
  * This operation is asynchronous.
  *
@@ -562,6 +598,32 @@ RestoreServerResponse * OpsWorksCMClient::restoreServer(const RestoreServerReque
 StartMaintenanceResponse * OpsWorksCMClient::startMaintenance(const StartMaintenanceRequest &request)
 {
     return qobject_cast<StartMaintenanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies tags to an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise server, or to server
+ */
+TagResourceResponse * OpsWorksCMClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the OpsWorksCMClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes specified tags from an AWS OpsWorks-CM server or
+ */
+UntagResourceResponse * OpsWorksCMClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

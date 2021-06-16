@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsLexRuntimeV2
+description = AWS LexRuntimeV2 SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawslexruntimev2-index.html"
+navigation.landingtitle = "LexRuntimeV2"
+navigation.cppclassespage = "LexRuntimeV2 C++ Classes"

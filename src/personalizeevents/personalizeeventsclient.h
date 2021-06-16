@@ -30,6 +30,10 @@ namespace PersonalizeEvents {
 class PersonalizeEventsClientPrivate;
 class PutEventsRequest;
 class PutEventsResponse;
+class PutItemsRequest;
+class PutItemsResponse;
+class PutUsersRequest;
+class PutUsersResponse;
 
 class QTAWS_EXPORT PersonalizeEventsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -48,6 +52,8 @@ public:
 
 public slots:
     PutEventsResponse * putEvents(const PutEventsRequest &request);
+    PutItemsResponse * putItems(const PutItemsRequest &request);
+    PutUsersResponse * putUsers(const PutUsersRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(PersonalizeEventsClient)

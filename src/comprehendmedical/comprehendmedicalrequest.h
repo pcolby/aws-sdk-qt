@@ -37,8 +37,27 @@ class QTAWS_EXPORT ComprehendMedicalRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by ComprehendMedical.
     enum Action {
+        DescribeEntitiesDetectionV2JobAction,
+        DescribeICD10CMInferenceJobAction,
+        DescribePHIDetectionJobAction,
+        DescribeRxNormInferenceJobAction,
         DetectEntitiesAction,
+        DetectEntitiesV2Action,
         DetectPHIAction,
+        InferICD10CMAction,
+        InferRxNormAction,
+        ListEntitiesDetectionV2JobsAction,
+        ListICD10CMInferenceJobsAction,
+        ListPHIDetectionJobsAction,
+        ListRxNormInferenceJobsAction,
+        StartEntitiesDetectionV2JobAction,
+        StartICD10CMInferenceJobAction,
+        StartPHIDetectionJobAction,
+        StartRxNormInferenceJobAction,
+        StopEntitiesDetectionV2JobAction,
+        StopICD10CMInferenceJobAction,
+        StopPHIDetectionJobAction,
+        StopRxNormInferenceJobAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

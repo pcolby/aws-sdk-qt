@@ -83,6 +83,8 @@
 #include "getslottypesresponse.h"
 #include "getutterancesviewrequest.h"
 #include "getutterancesviewresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putbotrequest.h"
 #include "putbotresponse.h"
 #include "putbotaliasrequest.h"
@@ -93,6 +95,10 @@
 #include "putslottyperesponse.h"
 #include "startimportrequest.h"
 #include "startimportresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -269,7 +275,13 @@ CreateSlotTypeVersionResponse * LexModelBuildingServiceClient::createSlotTypeVer
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes all versions of the bot, including the <code>$LATEST</code> version. To delete a specific version of the bot,
- * use the <a>DeleteBotVersion</a>
+ * use the <a>DeleteBotVersion</a> operation. The <code>DeleteBot</code> operation doesn't immediately remove the bot
+ * schema. Instead, it is marked for deletion and removed
+ *
+ * later>
+ *
+ * Amazon Lex stores utterances indefinitely for improving the ability of your bot to respond to user inputs. These
+ * utterances are not removed when the bot is deleted. To remove the utterances, use the <a>DeleteUtterances</a>
  *
  * operation>
  *
@@ -453,9 +465,12 @@ DeleteSlotTypeVersionResponse * LexModelBuildingServiceClient::deleteSlotTypeVer
  *
  * input>
  *
- * Use the <code>DeleteStoredUtterances</code> operation to manually delete stored utterances for a specific
+ * Use the <code>DeleteUtterances</code> operation to manually delete stored utterances for a specific user. When you use
+ * the <code>DeleteUtterances</code> operation, utterances stored for improving your bot's ability to respond to user input
+ * are deleted immediately. Utterances stored for use with the <code>GetUtterancesView</code> operation are deleted after
+ * 15
  *
- * user>
+ * days>
  *
  * This operation requires permissions for the <code>lex:DeleteUtterances</code>
  */
@@ -854,18 +869,38 @@ GetSlotTypesResponse * LexModelBuildingServiceClient::getSlotTypes(const GetSlot
  * After you publish a new version of a bot, you can get information about the old version and the new so that you can
  * compare the performance across the two versions.
  *
- * </p <note>
+ * </p
  *
  * Utterance statistics are generated once a day. Data is available for the last 15 days. You can request information for
- * up to 5 versions in each request. The response contains information about a maximum of 100 utterances for each
+ * up to 5 versions of your bot in each request. Amazon Lex returns the most frequent utterances received by the bot in the
+ * last 15 days. The response contains information about a maximum of 100 utterances for each
  *
- * version> </note>
+ * version>
+ *
+ * If you set <code>childDirected</code> field to true when you created your bot, or if you opted out of participating in
+ * improving Amazon Lex, utterances are not
+ *
+ * available>
  *
  * This operation requires permissions for the <code>lex:GetUtterancesView</code>
  */
 GetUtterancesViewResponse * LexModelBuildingServiceClient::getUtterancesView(const GetUtterancesViewRequest &request)
 {
     return qobject_cast<GetUtterancesViewResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of tags associated with the specified resource. Only bots, bot aliases, and bot channels can have tags
+ * associated with
+ */
+ListTagsForResourceResponse * LexModelBuildingServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -1030,6 +1065,33 @@ PutSlotTypeResponse * LexModelBuildingServiceClient::putSlotType(const PutSlotTy
 StartImportResponse * LexModelBuildingServiceClient::startImport(const StartImportRequest &request)
 {
     return qobject_cast<StartImportResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds the specified tags to the specified resource. If a tag key already exists, the existing value is replaced with the
+ * new
+ */
+TagResourceResponse * LexModelBuildingServiceClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexModelBuildingServiceClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from a bot, bot alias or bot
+ */
+UntagResourceResponse * LexModelBuildingServiceClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -37,6 +37,7 @@ class QTAWS_EXPORT TranscribeStreamingServiceRequest : public QtAws::Core::AwsAb
 public:
     /// Actions supported by TranscribeStreamingService.
     enum Action {
+        StartMedicalStreamTranscriptionAction,
         StartStreamTranscriptionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

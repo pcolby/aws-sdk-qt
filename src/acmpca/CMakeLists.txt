@@ -27,6 +27,10 @@ add_library(QtAwsAcmpca
   deletepermissionrequest_p.h
   deletepermissionresponse.h
   deletepermissionresponse_p.h
+  deletepolicyrequest.h
+  deletepolicyrequest_p.h
+  deletepolicyresponse.h
+  deletepolicyresponse_p.h
   describecertificateauthorityauditreportrequest.h
   describecertificateauthorityauditreportrequest_p.h
   describecertificateauthorityauditreportresponse.h
@@ -47,6 +51,10 @@ add_library(QtAwsAcmpca
   getcertificaterequest_p.h
   getcertificateresponse.h
   getcertificateresponse_p.h
+  getpolicyrequest.h
+  getpolicyrequest_p.h
+  getpolicyresponse.h
+  getpolicyresponse_p.h
   importcertificateauthoritycertificaterequest.h
   importcertificateauthoritycertificaterequest_p.h
   importcertificateauthoritycertificateresponse.h
@@ -67,6 +75,10 @@ add_library(QtAwsAcmpca
   listtagsrequest_p.h
   listtagsresponse.h
   listtagsresponse_p.h
+  putpolicyrequest.h
+  putpolicyrequest_p.h
+  putpolicyresponse.h
+  putpolicyresponse_p.h
   restorecertificateauthorityrequest.h
   restorecertificateauthorityrequest_p.h
   restorecertificateauthorityresponse.h
@@ -100,6 +112,8 @@ add_library(QtAwsAcmpca
   deletecertificateauthorityresponse.cpp
   deletepermissionrequest.cpp
   deletepermissionresponse.cpp
+  deletepolicyrequest.cpp
+  deletepolicyresponse.cpp
   describecertificateauthorityauditreportrequest.cpp
   describecertificateauthorityauditreportresponse.cpp
   describecertificateauthorityrequest.cpp
@@ -110,6 +124,8 @@ add_library(QtAwsAcmpca
   getcertificateauthoritycsrresponse.cpp
   getcertificaterequest.cpp
   getcertificateresponse.cpp
+  getpolicyrequest.cpp
+  getpolicyresponse.cpp
   importcertificateauthoritycertificaterequest.cpp
   importcertificateauthoritycertificateresponse.cpp
   issuecertificaterequest.cpp
@@ -120,6 +136,8 @@ add_library(QtAwsAcmpca
   listpermissionsresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
+  putpolicyrequest.cpp
+  putpolicyresponse.cpp
   restorecertificateauthorityrequest.cpp
   restorecertificateauthorityresponse.cpp
   revokecertificaterequest.cpp

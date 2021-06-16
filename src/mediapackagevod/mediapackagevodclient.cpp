@@ -21,6 +21,8 @@
 #include "mediapackagevodclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "configurelogsrequest.h"
+#include "configurelogsresponse.h"
 #include "createassetrequest.h"
 #include "createassetresponse.h"
 #include "createpackagingconfigurationrequest.h"
@@ -45,6 +47,14 @@
 #include "listpackagingconfigurationsresponse.h"
 #include "listpackaginggroupsrequest.h"
 #include "listpackaginggroupsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
+#include "updatepackaginggrouprequest.h"
+#include "updatepackaginggroupresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -121,6 +131,18 @@ MediaPackageVodClient::MediaPackageVodClient(
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage VOD");
     d->serviceName = QStringLiteral("mediapackage-vod");
+}
+
+/*!
+ * Sends \a request to the MediaPackageVodClient service, and returns a pointer to an
+ * ConfigureLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ConfigureLogsResponse * MediaPackageVodClient::configureLogs(const ConfigureLogsRequest &request)
+{
+    return qobject_cast<ConfigureLogsResponse *>(send(request));
 }
 
 /*!
@@ -265,6 +287,54 @@ ListPackagingConfigurationsResponse * MediaPackageVodClient::listPackagingConfig
 ListPackagingGroupsResponse * MediaPackageVodClient::listPackagingGroups(const ListPackagingGroupsRequest &request)
 {
     return qobject_cast<ListPackagingGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageVodClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListTagsForResourceResponse * MediaPackageVodClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageVodClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+TagResourceResponse * MediaPackageVodClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageVodClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UntagResourceResponse * MediaPackageVodClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageVodClient service, and returns a pointer to an
+ * UpdatePackagingGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdatePackagingGroupResponse * MediaPackageVodClient::updatePackagingGroup(const UpdatePackagingGroupRequest &request)
+{
+    return qobject_cast<UpdatePackagingGroupResponse *>(send(request));
 }
 
 /*!

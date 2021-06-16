@@ -36,6 +36,7 @@ namespace DynamoDB {
  * This enum describes the actions that can be performed as DynamoDB
  * requests.
  *
+ * \value BatchExecuteStatementAction DynamoDB BatchExecuteStatement action.
  * \value BatchGetItemAction DynamoDB BatchGetItem action.
  * \value BatchWriteItemAction DynamoDB BatchWriteItem action.
  * \value CreateBackupAction DynamoDB CreateBackup action.
@@ -46,14 +47,25 @@ namespace DynamoDB {
  * \value DeleteTableAction DynamoDB DeleteTable action.
  * \value DescribeBackupAction DynamoDB DescribeBackup action.
  * \value DescribeContinuousBackupsAction DynamoDB DescribeContinuousBackups action.
+ * \value DescribeContributorInsightsAction DynamoDB DescribeContributorInsights action.
  * \value DescribeEndpointsAction DynamoDB DescribeEndpoints action.
+ * \value DescribeExportAction DynamoDB DescribeExport action.
  * \value DescribeGlobalTableAction DynamoDB DescribeGlobalTable action.
  * \value DescribeGlobalTableSettingsAction DynamoDB DescribeGlobalTableSettings action.
+ * \value DescribeKinesisStreamingDestinationAction DynamoDB DescribeKinesisStreamingDestination action.
  * \value DescribeLimitsAction DynamoDB DescribeLimits action.
  * \value DescribeTableAction DynamoDB DescribeTable action.
+ * \value DescribeTableReplicaAutoScalingAction DynamoDB DescribeTableReplicaAutoScaling action.
  * \value DescribeTimeToLiveAction DynamoDB DescribeTimeToLive action.
+ * \value DisableKinesisStreamingDestinationAction DynamoDB DisableKinesisStreamingDestination action.
+ * \value EnableKinesisStreamingDestinationAction DynamoDB EnableKinesisStreamingDestination action.
+ * \value ExecuteStatementAction DynamoDB ExecuteStatement action.
+ * \value ExecuteTransactionAction DynamoDB ExecuteTransaction action.
+ * \value ExportTableToPointInTimeAction DynamoDB ExportTableToPointInTime action.
  * \value GetItemAction DynamoDB GetItem action.
  * \value ListBackupsAction DynamoDB ListBackups action.
+ * \value ListContributorInsightsAction DynamoDB ListContributorInsights action.
+ * \value ListExportsAction DynamoDB ListExports action.
  * \value ListGlobalTablesAction DynamoDB ListGlobalTables action.
  * \value ListTablesAction DynamoDB ListTables action.
  * \value ListTagsOfResourceAction DynamoDB ListTagsOfResource action.
@@ -67,10 +79,12 @@ namespace DynamoDB {
  * \value TransactWriteItemsAction DynamoDB TransactWriteItems action.
  * \value UntagResourceAction DynamoDB UntagResource action.
  * \value UpdateContinuousBackupsAction DynamoDB UpdateContinuousBackups action.
+ * \value UpdateContributorInsightsAction DynamoDB UpdateContributorInsights action.
  * \value UpdateGlobalTableAction DynamoDB UpdateGlobalTable action.
  * \value UpdateGlobalTableSettingsAction DynamoDB UpdateGlobalTableSettings action.
  * \value UpdateItemAction DynamoDB UpdateItem action.
  * \value UpdateTableAction DynamoDB UpdateTable action.
+ * \value UpdateTableReplicaAutoScalingAction DynamoDB UpdateTableReplicaAutoScaling action.
  * \value UpdateTimeToLiveAction DynamoDB UpdateTimeToLive action.
  */
 

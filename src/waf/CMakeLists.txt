@@ -41,6 +41,10 @@ add_library(QtAwsWaf
   createsqlinjectionmatchsetrequest_p.h
   createsqlinjectionmatchsetresponse.h
   createsqlinjectionmatchsetresponse_p.h
+  createwebaclmigrationstackrequest.h
+  createwebaclmigrationstackrequest_p.h
+  createwebaclmigrationstackresponse.h
+  createwebaclmigrationstackresponse_p.h
   createwebaclrequest.h
   createwebaclrequest_p.h
   createwebaclresponse.h
@@ -331,6 +335,8 @@ add_library(QtAwsWaf
   createsizeconstraintsetresponse.cpp
   createsqlinjectionmatchsetrequest.cpp
   createsqlinjectionmatchsetresponse.cpp
+  createwebaclmigrationstackrequest.cpp
+  createwebaclmigrationstackresponse.cpp
   createwebaclrequest.cpp
   createwebaclresponse.cpp
   createxssmatchsetrequest.cpp

@@ -21,6 +21,14 @@ add_library(QtAwsKinesisAnalyticsV2
   addapplicationreferencedatasourcerequest_p.h
   addapplicationreferencedatasourceresponse.h
   addapplicationreferencedatasourceresponse_p.h
+  addapplicationvpcconfigurationrequest.h
+  addapplicationvpcconfigurationrequest_p.h
+  addapplicationvpcconfigurationresponse.h
+  addapplicationvpcconfigurationresponse_p.h
+  createapplicationpresignedurlrequest.h
+  createapplicationpresignedurlrequest_p.h
+  createapplicationpresignedurlresponse.h
+  createapplicationpresignedurlresponse_p.h
   createapplicationrequest.h
   createapplicationrequest_p.h
   createapplicationresponse.h
@@ -53,6 +61,10 @@ add_library(QtAwsKinesisAnalyticsV2
   deleteapplicationsnapshotrequest_p.h
   deleteapplicationsnapshotresponse.h
   deleteapplicationsnapshotresponse_p.h
+  deleteapplicationvpcconfigurationrequest.h
+  deleteapplicationvpcconfigurationrequest_p.h
+  deleteapplicationvpcconfigurationresponse.h
+  deleteapplicationvpcconfigurationresponse_p.h
   describeapplicationrequest.h
   describeapplicationrequest_p.h
   describeapplicationresponse.h
@@ -61,6 +73,10 @@ add_library(QtAwsKinesisAnalyticsV2
   describeapplicationsnapshotrequest_p.h
   describeapplicationsnapshotresponse.h
   describeapplicationsnapshotresponse_p.h
+  describeapplicationversionrequest.h
+  describeapplicationversionrequest_p.h
+  describeapplicationversionresponse.h
+  describeapplicationversionresponse_p.h
   discoverinputschemarequest.h
   discoverinputschemarequest_p.h
   discoverinputschemaresponse.h
@@ -79,10 +95,18 @@ add_library(QtAwsKinesisAnalyticsV2
   listapplicationsrequest_p.h
   listapplicationsresponse.h
   listapplicationsresponse_p.h
+  listapplicationversionsrequest.h
+  listapplicationversionsrequest_p.h
+  listapplicationversionsresponse.h
+  listapplicationversionsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  rollbackapplicationrequest.h
+  rollbackapplicationrequest_p.h
+  rollbackapplicationresponse.h
+  rollbackapplicationresponse_p.h
   startapplicationrequest.h
   startapplicationrequest_p.h
   startapplicationresponse.h
@@ -99,6 +123,10 @@ add_library(QtAwsKinesisAnalyticsV2
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateapplicationmaintenanceconfigurationrequest.h
+  updateapplicationmaintenanceconfigurationrequest_p.h
+  updateapplicationmaintenanceconfigurationresponse.h
+  updateapplicationmaintenanceconfigurationresponse_p.h
   updateapplicationrequest.h
   updateapplicationrequest_p.h
   updateapplicationresponse.h
@@ -113,6 +141,10 @@ add_library(QtAwsKinesisAnalyticsV2
   addapplicationoutputresponse.cpp
   addapplicationreferencedatasourcerequest.cpp
   addapplicationreferencedatasourceresponse.cpp
+  addapplicationvpcconfigurationrequest.cpp
+  addapplicationvpcconfigurationresponse.cpp
+  createapplicationpresignedurlrequest.cpp
+  createapplicationpresignedurlresponse.cpp
   createapplicationrequest.cpp
   createapplicationresponse.cpp
   createapplicationsnapshotrequest.cpp
@@ -129,10 +161,14 @@ add_library(QtAwsKinesisAnalyticsV2
   deleteapplicationresponse.cpp
   deleteapplicationsnapshotrequest.cpp
   deleteapplicationsnapshotresponse.cpp
+  deleteapplicationvpcconfigurationrequest.cpp
+  deleteapplicationvpcconfigurationresponse.cpp
   describeapplicationrequest.cpp
   describeapplicationresponse.cpp
   describeapplicationsnapshotrequest.cpp
   describeapplicationsnapshotresponse.cpp
+  describeapplicationversionrequest.cpp
+  describeapplicationversionresponse.cpp
   discoverinputschemarequest.cpp
   discoverinputschemaresponse.cpp
   kinesisanalyticsv2client.cpp
@@ -142,8 +178,12 @@ add_library(QtAwsKinesisAnalyticsV2
   listapplicationsnapshotsresponse.cpp
   listapplicationsrequest.cpp
   listapplicationsresponse.cpp
+  listapplicationversionsrequest.cpp
+  listapplicationversionsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  rollbackapplicationrequest.cpp
+  rollbackapplicationresponse.cpp
   startapplicationrequest.cpp
   startapplicationresponse.cpp
   stopapplicationrequest.cpp
@@ -152,6 +192,8 @@ add_library(QtAwsKinesisAnalyticsV2
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateapplicationmaintenanceconfigurationrequest.cpp
+  updateapplicationmaintenanceconfigurationresponse.cpp
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 

@@ -57,6 +57,8 @@
 #include "sendtasksuccessresponse.h"
 #include "startexecutionrequest.h"
 #include "startexecutionresponse.h"
+#include "startsyncexecutionrequest.h"
+#include "startsyncexecutionresponse.h"
 #include "stopexecutionrequest.h"
 #include "stopexecutionresponse.h"
 #include "tagresourcerequest.h"
@@ -176,6 +178,13 @@ SfnClient::SfnClient(
  * activity> <note>
  *
  * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
+ *
+ * changes> </note> <note>
+ *
+ * <code>CreateActivity</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if it was
+ * already created. <code>CreateActivity</code>'s idempotency check is based on the activity <code>name</code>. If a
+ * following request has different <code>tags</code> values, Step Functions will ignore these differences and treat it as
+ * an idempotent request of the previous. In this case, <code>tags</code> will not be updated, even if they are
  */
 CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &request)
 {
@@ -190,11 +199,23 @@ CreateActivityResponse * SfnClient::createActivity(const CreateActivityRequest &
  *
  * Creates a state machine. A state machine consists of a collection of states that can do work (<code>Task</code> states),
  * determine to which states to transition next (<code>Choice</code> states), stop an execution with an error
- * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured
+ * (<code>Fail</code> states), and so on. State machines are specified using a JSON-based, structured language. For more
+ * information, see <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html">Amazon States
+ * Language</a> in the AWS Step Functions User
  *
- * language> <note>
+ * Guide> <note>
  *
  * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
+ *
+ * changes> </note> <note>
+ *
+ * <code>CreateStateMachine</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if it was
+ * already created. <code>CreateStateMachine</code>'s idempotency check is based on the state machine <code>name</code>,
+ * <code>definition</code>, <code>type</code>, <code>LoggingConfiguration</code> and <code>TracingConfiguration</code>. If
+ * a following request has a different <code>roleArn</code> or <code>tags</code>, Step Functions will ignore these
+ * differences and treat it as an idempotent request of the previous. In this case, <code>roleArn</code> and
+ * <code>tags</code> will not be updated, even if they are
  */
 CreateStateMachineResponse * SfnClient::createStateMachine(const CreateStateMachineRequest &request)
 {
@@ -221,11 +242,12 @@ DeleteActivityResponse * SfnClient::deleteActivity(const DeleteActivityRequest &
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a state machine. This is an asynchronous operation: It sets the state machine's status to <code>DELETING</code>
- * and begins the deletion process. Each state machine execution is deleted the next time it makes a state
+ * and begins the deletion process.
  *
- * transition> <note>
+ * </p <note>
  *
- * The state machine itself is deleted after all executions are completed or
+ * For <code>EXPRESS</code>state machines, the deletion will happen eventually (usually less than a minute). Running
+ * executions may emit logs after <code>DeleteStateMachine</code> API is
  */
 DeleteStateMachineResponse * SfnClient::deleteStateMachine(const DeleteStateMachineRequest &request)
 {
@@ -260,6 +282,10 @@ DescribeActivityResponse * SfnClient::describeActivity(const DescribeActivityReq
  * execution> <note>
  *
  * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
+ *
+ * changes> </note>
+ *
+ * This API action is not supported by <code>EXPRESS</code> state
  */
 DescribeExecutionResponse * SfnClient::describeExecution(const DescribeExecutionRequest &request)
 {
@@ -294,6 +320,10 @@ DescribeStateMachineResponse * SfnClient::describeStateMachine(const DescribeSta
  * execution> <note>
  *
  * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
+ *
+ * changes> </note>
+ *
+ * This API action is not supported by <code>EXPRESS</code> state
  */
 DescribeStateMachineForExecutionResponse * SfnClient::describeStateMachineForExecution(const DescribeStateMachineForExecutionRequest &request)
 {
@@ -343,6 +373,10 @@ GetActivityTaskResponse * SfnClient::getActivityTask(const GetActivityTaskReques
  * pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other
  * arguments unchanged. Each pagination token expires after 24 hours. Using an expired pagination token will return an
  * <i>HTTP 400 InvalidToken</i>
+ *
+ * error>
+ *
+ * This API action is not supported by <code>EXPRESS</code> state
  */
 GetExecutionHistoryResponse * SfnClient::getExecutionHistory(const GetExecutionHistoryRequest &request)
 {
@@ -392,6 +426,10 @@ ListActivitiesResponse * SfnClient::listActivities(const ListActivitiesRequest &
  * error> <note>
  *
  * This operation is eventually consistent. The results are best effort and may not reflect very recent updates and
+ *
+ * changes> </note>
+ *
+ * This API action is not supported by <code>EXPRESS</code> state
  */
 ListExecutionsResponse * SfnClient::listExecutions(const ListExecutionsRequest &request)
 {
@@ -429,6 +467,10 @@ ListStateMachinesResponse * SfnClient::listStateMachines(const ListStateMachines
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * List tags for a given
+ *
+ * resource>
+ *
+ * Tags may only contain Unicode letters, digits, white space, or these symbols: <code>_ . : / = + -
  */
 ListTagsForResourceResponse * SfnClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -441,7 +483,9 @@ ListTagsForResourceResponse * SfnClient::listTagsForResource(const ListTagsForRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Used by workers to report that the task identified by the <code>taskToken</code>
+ * Used by activity workers and task states using the <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token">callback</a>
+ * pattern to report that the task identified by the <code>taskToken</code>
  */
 SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureRequest &request)
 {
@@ -454,19 +498,21 @@ SendTaskFailureResponse * SfnClient::sendTaskFailure(const SendTaskFailureReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Used by workers to report to the service that the task represented by the specified <code>taskToken</code> is still
- * making progress. This action resets the <code>Heartbeat</code> clock. The <code>Heartbeat</code> threshold is specified
- * in the state machine's Amazon States Language definition. This action does not in itself create an event in the
- * execution history. However, if the task times out, the execution history contains an <code>ActivityTimedOut</code>
+ * Used by activity workers and task states using the <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token">callback</a>
+ * pattern to report to Step Functions that the task represented by the specified <code>taskToken</code> is still making
+ * progress. This action resets the <code>Heartbeat</code> clock. The <code>Heartbeat</code> threshold is specified in the
+ * state machine's Amazon States Language definition (<code>HeartbeatSeconds</code>). This action does not in itself create
+ * an event in the execution history. However, if the task times out, the execution history contains an
+ * <code>ActivityTimedOut</code> entry for activities, or a <code>TaskTimedOut</code> entry for for tasks using the <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-sync">job run</a> or <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token">callback</a>
  *
- * event> <note>
+ * pattern> <note>
  *
  * The <code>Timeout</code> of a task, defined in the state machine's Amazon States Language definition, is its maximum
- * allowed duration, regardless of the number of <a>SendTaskHeartbeat</a> requests
- *
- * received> </note> <note>
- *
- * This operation is only useful for long-lived tasks to report the liveliness of the
+ * allowed duration, regardless of the number of <a>SendTaskHeartbeat</a> requests received. Use
+ * <code>HeartbeatSeconds</code> to configure the timeout interval for
  */
 SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeatRequest &request)
 {
@@ -479,7 +525,9 @@ SendTaskHeartbeatResponse * SfnClient::sendTaskHeartbeat(const SendTaskHeartbeat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Used by workers to report that the task identified by the <code>taskToken</code> completed
+ * Used by activity workers and task states using the <a
+ * href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-resource.html#connect-wait-token">callback</a>
+ * pattern to report that the task identified by the <code>taskToken</code> completed
  */
 SendTaskSuccessResponse * SfnClient::sendTaskSuccess(const SendTaskSuccessRequest &request)
 {
@@ -508,11 +556,28 @@ StartExecutionResponse * SfnClient::startExecution(const StartExecutionRequest &
 
 /*!
  * Sends \a request to the SfnClient service, and returns a pointer to an
+ * StartSyncExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a Synchronous Express state machine
+ */
+StartSyncExecutionResponse * SfnClient::startSyncExecution(const StartSyncExecutionRequest &request)
+{
+    return qobject_cast<StartSyncExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SfnClient service, and returns a pointer to an
  * StopExecutionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stops an
+ *
+ * execution>
+ *
+ * This API action is not supported by <code>EXPRESS</code> state
  */
 StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &request)
 {
@@ -526,6 +591,17 @@ StopExecutionResponse * SfnClient::stopExecution(const StopExecutionRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Add a tag to a Step Functions
+ *
+ * resource>
+ *
+ * An array of key-value pairs. For more information, see <a
+ * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation Tags</a>
+ * in the <i>AWS Billing and Cost Management User Guide</i>, and <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html">Controlling Access Using IAM
+ *
+ * Tags</a>>
+ *
+ * Tags may only contain Unicode letters, digits, white space, or these symbols: <code>_ . : / = + -
  */
 TagResourceResponse * SfnClient::tagResource(const TagResourceRequest &request)
 {
@@ -551,9 +627,10 @@ UntagResourceResponse * SfnClient::untagResource(const UntagResourceRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing state machine by modifying its <code>definition</code> and/or <code>roleArn</code>. Running
- * executions will continue to use the previous <code>definition</code> and <code>roleArn</code>. You must include at least
- * one of <code>definition</code> or <code>roleArn</code> or you will receive a <code>MissingRequiredParameter</code>
+ * Updates an existing state machine by modifying its <code>definition</code>, <code>roleArn</code>, or
+ * <code>loggingConfiguration</code>. Running executions will continue to use the previous <code>definition</code> and
+ * <code>roleArn</code>. You must include at least one of <code>definition</code> or <code>roleArn</code> or you will
+ * receive a <code>MissingRequiredParameter</code>
  *
  * error> <note>
  *

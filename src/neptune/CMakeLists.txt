@@ -29,6 +29,10 @@ add_library(QtAwsNeptune
   copydbparametergrouprequest_p.h
   copydbparametergroupresponse.h
   copydbparametergroupresponse_p.h
+  createdbclusterendpointrequest.h
+  createdbclusterendpointrequest_p.h
+  createdbclusterendpointresponse.h
+  createdbclusterendpointresponse_p.h
   createdbclusterparametergrouprequest.h
   createdbclusterparametergrouprequest_p.h
   createdbclusterparametergroupresponse.h
@@ -57,6 +61,10 @@ add_library(QtAwsNeptune
   createeventsubscriptionrequest_p.h
   createeventsubscriptionresponse.h
   createeventsubscriptionresponse_p.h
+  deletedbclusterendpointrequest.h
+  deletedbclusterendpointrequest_p.h
+  deletedbclusterendpointresponse.h
+  deletedbclusterendpointresponse_p.h
   deletedbclusterparametergrouprequest.h
   deletedbclusterparametergrouprequest_p.h
   deletedbclusterparametergroupresponse.h
@@ -85,6 +93,10 @@ add_library(QtAwsNeptune
   deleteeventsubscriptionrequest_p.h
   deleteeventsubscriptionresponse.h
   deleteeventsubscriptionresponse_p.h
+  describedbclusterendpointsrequest.h
+  describedbclusterendpointsrequest_p.h
+  describedbclusterendpointsresponse.h
+  describedbclusterendpointsresponse_p.h
   describedbclusterparametergroupsrequest.h
   describedbclusterparametergroupsrequest_p.h
   describedbclusterparametergroupsresponse.h
@@ -165,6 +177,10 @@ add_library(QtAwsNeptune
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  modifydbclusterendpointrequest.h
+  modifydbclusterendpointrequest_p.h
+  modifydbclusterendpointresponse.h
+  modifydbclusterendpointresponse_p.h
   modifydbclusterparametergrouprequest.h
   modifydbclusterparametergrouprequest_p.h
   modifydbclusterparametergroupresponse.h
@@ -235,6 +251,14 @@ add_library(QtAwsNeptune
   restoredbclustertopointintimerequest_p.h
   restoredbclustertopointintimeresponse.h
   restoredbclustertopointintimeresponse_p.h
+  startdbclusterrequest.h
+  startdbclusterrequest_p.h
+  startdbclusterresponse.h
+  startdbclusterresponse_p.h
+  stopdbclusterrequest.h
+  stopdbclusterrequest_p.h
+  stopdbclusterresponse.h
+  stopdbclusterresponse_p.h
   addroletodbclusterrequest.cpp
   addroletodbclusterresponse.cpp
   addsourceidentifiertosubscriptionrequest.cpp
@@ -249,6 +273,8 @@ add_library(QtAwsNeptune
   copydbclustersnapshotresponse.cpp
   copydbparametergrouprequest.cpp
   copydbparametergroupresponse.cpp
+  createdbclusterendpointrequest.cpp
+  createdbclusterendpointresponse.cpp
   createdbclusterparametergrouprequest.cpp
   createdbclusterparametergroupresponse.cpp
   createdbclusterrequest.cpp
@@ -263,6 +289,8 @@ add_library(QtAwsNeptune
   createdbsubnetgroupresponse.cpp
   createeventsubscriptionrequest.cpp
   createeventsubscriptionresponse.cpp
+  deletedbclusterendpointrequest.cpp
+  deletedbclusterendpointresponse.cpp
   deletedbclusterparametergrouprequest.cpp
   deletedbclusterparametergroupresponse.cpp
   deletedbclusterrequest.cpp
@@ -277,6 +305,8 @@ add_library(QtAwsNeptune
   deletedbsubnetgroupresponse.cpp
   deleteeventsubscriptionrequest.cpp
   deleteeventsubscriptionresponse.cpp
+  describedbclusterendpointsrequest.cpp
+  describedbclusterendpointsresponse.cpp
   describedbclusterparametergroupsrequest.cpp
   describedbclusterparametergroupsresponse.cpp
   describedbclusterparametersrequest.cpp
@@ -317,6 +347,8 @@ add_library(QtAwsNeptune
   failoverdbclusterresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  modifydbclusterendpointrequest.cpp
+  modifydbclusterendpointresponse.cpp
   modifydbclusterparametergrouprequest.cpp
   modifydbclusterparametergroupresponse.cpp
   modifydbclusterrequest.cpp
@@ -351,7 +383,11 @@ add_library(QtAwsNeptune
   restoredbclusterfromsnapshotrequest.cpp
   restoredbclusterfromsnapshotresponse.cpp
   restoredbclustertopointintimerequest.cpp
-  restoredbclustertopointintimeresponse.cpp)
+  restoredbclustertopointintimeresponse.cpp
+  startdbclusterrequest.cpp
+  startdbclusterresponse.cpp
+  stopdbclusterrequest.cpp
+  stopdbclusterresponse.cpp)
 
 add_dependencies(QtAwsNeptune QtAwsCore)
 

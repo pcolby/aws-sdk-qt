@@ -28,6 +28,8 @@ namespace QtAws {
 namespace MediaPackageVod {
 
 class MediaPackageVodClientPrivate;
+class ConfigureLogsRequest;
+class ConfigureLogsResponse;
 class CreateAssetRequest;
 class CreateAssetResponse;
 class CreatePackagingConfigurationRequest;
@@ -52,6 +54,14 @@ class ListPackagingConfigurationsRequest;
 class ListPackagingConfigurationsResponse;
 class ListPackagingGroupsRequest;
 class ListPackagingGroupsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
+class UpdatePackagingGroupRequest;
+class UpdatePackagingGroupResponse;
 
 class QTAWS_EXPORT MediaPackageVodClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -69,6 +79,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    ConfigureLogsResponse * configureLogs(const ConfigureLogsRequest &request);
     CreateAssetResponse * createAsset(const CreateAssetRequest &request);
     CreatePackagingConfigurationResponse * createPackagingConfiguration(const CreatePackagingConfigurationRequest &request);
     CreatePackagingGroupResponse * createPackagingGroup(const CreatePackagingGroupRequest &request);
@@ -81,6 +92,10 @@ public slots:
     ListAssetsResponse * listAssets(const ListAssetsRequest &request);
     ListPackagingConfigurationsResponse * listPackagingConfigurations(const ListPackagingConfigurationsRequest &request);
     ListPackagingGroupsResponse * listPackagingGroups(const ListPackagingGroupsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdatePackagingGroupResponse * updatePackagingGroup(const UpdatePackagingGroupRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(MediaPackageVodClient)

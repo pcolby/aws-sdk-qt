@@ -23,18 +23,30 @@
 #include "core/awssignaturev4.h"
 #include "createbudgetrequest.h"
 #include "createbudgetresponse.h"
+#include "createbudgetactionrequest.h"
+#include "createbudgetactionresponse.h"
 #include "createnotificationrequest.h"
 #include "createnotificationresponse.h"
 #include "createsubscriberrequest.h"
 #include "createsubscriberresponse.h"
 #include "deletebudgetrequest.h"
 #include "deletebudgetresponse.h"
+#include "deletebudgetactionrequest.h"
+#include "deletebudgetactionresponse.h"
 #include "deletenotificationrequest.h"
 #include "deletenotificationresponse.h"
 #include "deletesubscriberrequest.h"
 #include "deletesubscriberresponse.h"
 #include "describebudgetrequest.h"
 #include "describebudgetresponse.h"
+#include "describebudgetactionrequest.h"
+#include "describebudgetactionresponse.h"
+#include "describebudgetactionhistoriesrequest.h"
+#include "describebudgetactionhistoriesresponse.h"
+#include "describebudgetactionsforaccountrequest.h"
+#include "describebudgetactionsforaccountresponse.h"
+#include "describebudgetactionsforbudgetrequest.h"
+#include "describebudgetactionsforbudgetresponse.h"
 #include "describebudgetperformancehistoryrequest.h"
 #include "describebudgetperformancehistoryresponse.h"
 #include "describebudgetsrequest.h"
@@ -43,8 +55,12 @@
 #include "describenotificationsforbudgetresponse.h"
 #include "describesubscribersfornotificationrequest.h"
 #include "describesubscribersfornotificationresponse.h"
+#include "executebudgetactionrequest.h"
+#include "executebudgetactionresponse.h"
 #include "updatebudgetrequest.h"
 #include "updatebudgetresponse.h"
+#include "updatebudgetactionrequest.h"
+#include "updatebudgetactionresponse.h"
 #include "updatenotificationrequest.h"
 #include "updatenotificationresponse.h"
 #include "updatesubscriberrequest.h"
@@ -211,6 +227,19 @@ CreateBudgetResponse * BudgetsClient::createBudget(const CreateBudgetRequest &re
 
 /*!
  * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * CreateBudgetActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a budget action.
+ */
+CreateBudgetActionResponse * BudgetsClient::createBudgetAction(const CreateBudgetActionRequest &request)
+{
+    return qobject_cast<CreateBudgetActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
  * CreateNotificationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -250,6 +279,19 @@ CreateSubscriberResponse * BudgetsClient::createSubscriber(const CreateSubscribe
 DeleteBudgetResponse * BudgetsClient::deleteBudget(const DeleteBudgetRequest &request)
 {
     return qobject_cast<DeleteBudgetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * DeleteBudgetActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a budget action.
+ */
+DeleteBudgetActionResponse * BudgetsClient::deleteBudgetAction(const DeleteBudgetActionRequest &request)
+{
+    return qobject_cast<DeleteBudgetActionResponse *>(send(request));
 }
 
 /*!
@@ -303,6 +345,58 @@ DeleteSubscriberResponse * BudgetsClient::deleteSubscriber(const DeleteSubscribe
 DescribeBudgetResponse * BudgetsClient::describeBudget(const DescribeBudgetRequest &request)
 {
     return qobject_cast<DescribeBudgetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * DescribeBudgetActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a budget action detail.
+ */
+DescribeBudgetActionResponse * BudgetsClient::describeBudgetAction(const DescribeBudgetActionRequest &request)
+{
+    return qobject_cast<DescribeBudgetActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * DescribeBudgetActionHistoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a budget action history detail.
+ */
+DescribeBudgetActionHistoriesResponse * BudgetsClient::describeBudgetActionHistories(const DescribeBudgetActionHistoriesRequest &request)
+{
+    return qobject_cast<DescribeBudgetActionHistoriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * DescribeBudgetActionsForAccountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes all of the budget actions for an account.
+ */
+DescribeBudgetActionsForAccountResponse * BudgetsClient::describeBudgetActionsForAccount(const DescribeBudgetActionsForAccountRequest &request)
+{
+    return qobject_cast<DescribeBudgetActionsForAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * DescribeBudgetActionsForBudgetResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes all of the budget actions for a budget.
+ */
+DescribeBudgetActionsForBudgetResponse * BudgetsClient::describeBudgetActionsForBudget(const DescribeBudgetActionsForBudgetRequest &request)
+{
+    return qobject_cast<DescribeBudgetActionsForBudgetResponse *>(send(request));
 }
 
 /*!
@@ -366,6 +460,19 @@ DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersF
 
 /*!
  * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * ExecuteBudgetActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Executes a budget action.
+ */
+ExecuteBudgetActionResponse * BudgetsClient::executeBudgetAction(const ExecuteBudgetActionRequest &request)
+{
+    return qobject_cast<ExecuteBudgetActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
  * UpdateBudgetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -385,6 +492,19 @@ DescribeSubscribersForNotificationResponse * BudgetsClient::describeSubscribersF
 UpdateBudgetResponse * BudgetsClient::updateBudget(const UpdateBudgetRequest &request)
 {
     return qobject_cast<UpdateBudgetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BudgetsClient service, and returns a pointer to an
+ * UpdateBudgetActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a budget action.
+ */
+UpdateBudgetActionResponse * BudgetsClient::updateBudgetAction(const UpdateBudgetActionRequest &request)
+{
+    return qobject_cast<UpdateBudgetActionResponse *>(send(request));
 }
 
 /*!

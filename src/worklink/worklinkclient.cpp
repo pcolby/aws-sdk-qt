@@ -59,6 +59,8 @@
 #include "listdomainsresponse.h"
 #include "listfleetsrequest.h"
 #include "listfleetsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listwebsiteauthorizationprovidersrequest.h"
 #include "listwebsiteauthorizationprovidersresponse.h"
 #include "listwebsitecertificateauthoritiesrequest.h"
@@ -69,6 +71,10 @@
 #include "revokedomainaccessresponse.h"
 #include "signoutuserrequest.h"
 #include "signoutuserresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateauditstreamconfigurationrequest.h"
 #include "updateauditstreamconfigurationresponse.h"
 #include "updatecompanynetworkconfigurationrequest.h"
@@ -104,11 +110,11 @@ namespace WorkLink {
  * \ingroup aws-clients
  * \inmodule QtAwsWorkLink
  *
- *  Amazon WorkLink is a cloud-based service that provides secure access to internal websites and web apps from iOS phones.
- *  In a single step, your users, such as employees, can access internal websites as efficiently as they access any other
- *  public website. They enter a URL in their web browser, or choose a link to an internal website in an email. Amazon
- *  WorkLink authenticates the user's access and securely renders authorized internal web content in a secure rendering
- *  service in the AWS cloud. Amazon WorkLink doesn't download or store any internal web content on mobile
+ *  Amazon WorkLink is a cloud-based service that provides secure access to internal websites and web apps from iOS and
+ *  Android phones. In a single step, your users, such as employees, can access internal websites as efficiently as they
+ *  access any other public website. They enter a URL in their web browser, or choose a link to an internal website in an
+ *  email. Amazon WorkLink authenticates the user's access and securely renders authorized internal web content in a secure
+ *  rendering service in the AWS cloud. Amazon WorkLink doesn't download or store any internal web content on mobile
  */
 
 /*!
@@ -417,6 +423,19 @@ ListFleetsResponse * WorkLinkClient::listFleets(const ListFleetsRequest &request
 
 /*!
  * Sends \a request to the WorkLinkClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of tags for the specified
+ */
+ListTagsForResourceResponse * WorkLinkClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkLinkClient service, and returns a pointer to an
  * ListWebsiteAuthorizationProvidersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -478,6 +497,33 @@ RevokeDomainAccessResponse * WorkLinkClient::revokeDomainAccess(const RevokeDoma
 SignOutUserResponse * WorkLinkClient::signOutUser(const SignOutUserRequest &request)
 {
     return qobject_cast<SignOutUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkLinkClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or overwrites one or more tags for the specified resource, such as a fleet. Each tag consists of a key and an
+ * optional value. If a resource already has a tag with the same key, this operation updates its
+ */
+TagResourceResponse * WorkLinkClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkLinkClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from the specified
+ */
+UntagResourceResponse * WorkLinkClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

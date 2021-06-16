@@ -39,42 +39,61 @@ namespace Lambda {
  * \value AddLayerVersionPermissionAction Lambda AddLayerVersionPermission action.
  * \value AddPermissionAction Lambda AddPermission action.
  * \value CreateAliasAction Lambda CreateAlias action.
+ * \value CreateCodeSigningConfigAction Lambda CreateCodeSigningConfig action.
  * \value CreateEventSourceMappingAction Lambda CreateEventSourceMapping action.
  * \value CreateFunctionAction Lambda CreateFunction action.
  * \value DeleteAliasAction Lambda DeleteAlias action.
+ * \value DeleteCodeSigningConfigAction Lambda DeleteCodeSigningConfig action.
  * \value DeleteEventSourceMappingAction Lambda DeleteEventSourceMapping action.
  * \value DeleteFunctionAction Lambda DeleteFunction action.
+ * \value DeleteFunctionCodeSigningConfigAction Lambda DeleteFunctionCodeSigningConfig action.
  * \value DeleteFunctionConcurrencyAction Lambda DeleteFunctionConcurrency action.
+ * \value DeleteFunctionEventInvokeConfigAction Lambda DeleteFunctionEventInvokeConfig action.
  * \value DeleteLayerVersionAction Lambda DeleteLayerVersion action.
+ * \value DeleteProvisionedConcurrencyConfigAction Lambda DeleteProvisionedConcurrencyConfig action.
  * \value GetAccountSettingsAction Lambda GetAccountSettings action.
  * \value GetAliasAction Lambda GetAlias action.
+ * \value GetCodeSigningConfigAction Lambda GetCodeSigningConfig action.
  * \value GetEventSourceMappingAction Lambda GetEventSourceMapping action.
  * \value GetFunctionAction Lambda GetFunction action.
+ * \value GetFunctionCodeSigningConfigAction Lambda GetFunctionCodeSigningConfig action.
+ * \value GetFunctionConcurrencyAction Lambda GetFunctionConcurrency action.
  * \value GetFunctionConfigurationAction Lambda GetFunctionConfiguration action.
+ * \value GetFunctionEventInvokeConfigAction Lambda GetFunctionEventInvokeConfig action.
  * \value GetLayerVersionAction Lambda GetLayerVersion action.
  * \value GetLayerVersionByArnAction Lambda GetLayerVersionByArn action.
  * \value GetLayerVersionPolicyAction Lambda GetLayerVersionPolicy action.
  * \value GetPolicyAction Lambda GetPolicy action.
+ * \value GetProvisionedConcurrencyConfigAction Lambda GetProvisionedConcurrencyConfig action.
  * \value InvokeAction Lambda Invoke action.
  * \value InvokeAsyncAction Lambda InvokeAsync action.
  * \value ListAliasesAction Lambda ListAliases action.
+ * \value ListCodeSigningConfigsAction Lambda ListCodeSigningConfigs action.
  * \value ListEventSourceMappingsAction Lambda ListEventSourceMappings action.
+ * \value ListFunctionEventInvokeConfigsAction Lambda ListFunctionEventInvokeConfigs action.
  * \value ListFunctionsAction Lambda ListFunctions action.
+ * \value ListFunctionsByCodeSigningConfigAction Lambda ListFunctionsByCodeSigningConfig action.
  * \value ListLayerVersionsAction Lambda ListLayerVersions action.
  * \value ListLayersAction Lambda ListLayers action.
+ * \value ListProvisionedConcurrencyConfigsAction Lambda ListProvisionedConcurrencyConfigs action.
  * \value ListTagsAction Lambda ListTags action.
  * \value ListVersionsByFunctionAction Lambda ListVersionsByFunction action.
  * \value PublishLayerVersionAction Lambda PublishLayerVersion action.
  * \value PublishVersionAction Lambda PublishVersion action.
+ * \value PutFunctionCodeSigningConfigAction Lambda PutFunctionCodeSigningConfig action.
  * \value PutFunctionConcurrencyAction Lambda PutFunctionConcurrency action.
+ * \value PutFunctionEventInvokeConfigAction Lambda PutFunctionEventInvokeConfig action.
+ * \value PutProvisionedConcurrencyConfigAction Lambda PutProvisionedConcurrencyConfig action.
  * \value RemoveLayerVersionPermissionAction Lambda RemoveLayerVersionPermission action.
  * \value RemovePermissionAction Lambda RemovePermission action.
  * \value TagResourceAction Lambda TagResource action.
  * \value UntagResourceAction Lambda UntagResource action.
  * \value UpdateAliasAction Lambda UpdateAlias action.
+ * \value UpdateCodeSigningConfigAction Lambda UpdateCodeSigningConfig action.
  * \value UpdateEventSourceMappingAction Lambda UpdateEventSourceMapping action.
  * \value UpdateFunctionCodeAction Lambda UpdateFunctionCode action.
  * \value UpdateFunctionConfigurationAction Lambda UpdateFunctionConfiguration action.
+ * \value UpdateFunctionEventInvokeConfigAction Lambda UpdateFunctionEventInvokeConfig action.
  */
 
 /*!

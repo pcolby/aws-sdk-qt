@@ -1,6 +1,14 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsRoute53Domains
+  acceptdomaintransferfromanotherawsaccountrequest.h
+  acceptdomaintransferfromanotherawsaccountrequest_p.h
+  acceptdomaintransferfromanotherawsaccountresponse.h
+  acceptdomaintransferfromanotherawsaccountresponse_p.h
+  canceldomaintransfertoanotherawsaccountrequest.h
+  canceldomaintransfertoanotherawsaccountrequest_p.h
+  canceldomaintransfertoanotherawsaccountresponse.h
+  canceldomaintransfertoanotherawsaccountresponse_p.h
   checkdomainavailabilityrequest.h
   checkdomainavailabilityrequest_p.h
   checkdomainavailabilityresponse.h
@@ -61,6 +69,10 @@ add_library(QtAwsRoute53Domains
   registerdomainrequest_p.h
   registerdomainresponse.h
   registerdomainresponse_p.h
+  rejectdomaintransferfromanotherawsaccountrequest.h
+  rejectdomaintransferfromanotherawsaccountrequest_p.h
+  rejectdomaintransferfromanotherawsaccountresponse.h
+  rejectdomaintransferfromanotherawsaccountresponse_p.h
   renewdomainrequest.h
   renewdomainrequest_p.h
   renewdomainresponse.h
@@ -83,6 +95,10 @@ add_library(QtAwsRoute53Domains
   transferdomainrequest_p.h
   transferdomainresponse.h
   transferdomainresponse_p.h
+  transferdomaintoanotherawsaccountrequest.h
+  transferdomaintoanotherawsaccountrequest_p.h
+  transferdomaintoanotherawsaccountresponse.h
+  transferdomaintoanotherawsaccountresponse_p.h
   updatedomaincontactprivacyrequest.h
   updatedomaincontactprivacyrequest_p.h
   updatedomaincontactprivacyresponse.h
@@ -103,6 +119,10 @@ add_library(QtAwsRoute53Domains
   viewbillingrequest_p.h
   viewbillingresponse.h
   viewbillingresponse_p.h
+  acceptdomaintransferfromanotherawsaccountrequest.cpp
+  acceptdomaintransferfromanotherawsaccountresponse.cpp
+  canceldomaintransfertoanotherawsaccountrequest.cpp
+  canceldomaintransfertoanotherawsaccountresponse.cpp
   checkdomainavailabilityrequest.cpp
   checkdomainavailabilityresponse.cpp
   checkdomaintransferabilityrequest.cpp
@@ -133,6 +153,8 @@ add_library(QtAwsRoute53Domains
   listtagsfordomainresponse.cpp
   registerdomainrequest.cpp
   registerdomainresponse.cpp
+  rejectdomaintransferfromanotherawsaccountrequest.cpp
+  rejectdomaintransferfromanotherawsaccountresponse.cpp
   renewdomainrequest.cpp
   renewdomainresponse.cpp
   resendcontactreachabilityemailrequest.cpp
@@ -144,6 +166,8 @@ add_library(QtAwsRoute53Domains
   route53domainsresponse.cpp
   transferdomainrequest.cpp
   transferdomainresponse.cpp
+  transferdomaintoanotherawsaccountrequest.cpp
+  transferdomaintoanotherawsaccountresponse.cpp
   updatedomaincontactprivacyrequest.cpp
   updatedomaincontactprivacyresponse.cpp
   updatedomaincontactrequest.cpp

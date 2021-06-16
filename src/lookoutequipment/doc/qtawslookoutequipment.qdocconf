@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsLookoutEquipment
+description = AWS LookoutEquipment SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawslookoutequipment-index.html"
+navigation.landingtitle = "LookoutEquipment"
+navigation.cppclassespage = "LookoutEquipment C++ Classes"

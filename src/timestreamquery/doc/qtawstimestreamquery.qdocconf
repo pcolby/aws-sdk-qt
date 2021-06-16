@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsTimestreamQuery
+description = AWS TimestreamQuery SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawstimestreamquery-index.html"
+navigation.landingtitle = "TimestreamQuery"
+navigation.cppclassespage = "TimestreamQuery C++ Classes"

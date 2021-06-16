@@ -23,6 +23,10 @@ add_library(QtAwsAcm
   exportcertificaterequest_p.h
   exportcertificateresponse.h
   exportcertificateresponse_p.h
+  getaccountconfigurationrequest.h
+  getaccountconfigurationrequest_p.h
+  getaccountconfigurationresponse.h
+  getaccountconfigurationresponse_p.h
   getcertificaterequest.h
   getcertificaterequest_p.h
   getcertificateresponse.h
@@ -39,6 +43,10 @@ add_library(QtAwsAcm
   listtagsforcertificaterequest_p.h
   listtagsforcertificateresponse.h
   listtagsforcertificateresponse_p.h
+  putaccountconfigurationrequest.h
+  putaccountconfigurationrequest_p.h
+  putaccountconfigurationresponse.h
+  putaccountconfigurationresponse_p.h
   removetagsfromcertificaterequest.h
   removetagsfromcertificaterequest_p.h
   removetagsfromcertificateresponse.h
@@ -70,6 +78,8 @@ add_library(QtAwsAcm
   describecertificateresponse.cpp
   exportcertificaterequest.cpp
   exportcertificateresponse.cpp
+  getaccountconfigurationrequest.cpp
+  getaccountconfigurationresponse.cpp
   getcertificaterequest.cpp
   getcertificateresponse.cpp
   importcertificaterequest.cpp
@@ -78,6 +88,8 @@ add_library(QtAwsAcm
   listcertificatesresponse.cpp
   listtagsforcertificaterequest.cpp
   listtagsforcertificateresponse.cpp
+  putaccountconfigurationrequest.cpp
+  putaccountconfigurationresponse.cpp
   removetagsfromcertificaterequest.cpp
   removetagsfromcertificateresponse.cpp
   renewcertificaterequest.cpp

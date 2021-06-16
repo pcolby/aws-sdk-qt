@@ -21,6 +21,10 @@ add_library(QtAwsMediaStore
   deletelifecyclepolicyrequest_p.h
   deletelifecyclepolicyresponse.h
   deletelifecyclepolicyresponse_p.h
+  deletemetricpolicyrequest.h
+  deletemetricpolicyrequest_p.h
+  deletemetricpolicyresponse.h
+  deletemetricpolicyresponse_p.h
   describecontainerrequest.h
   describecontainerrequest_p.h
   describecontainerresponse.h
@@ -37,6 +41,10 @@ add_library(QtAwsMediaStore
   getlifecyclepolicyrequest_p.h
   getlifecyclepolicyresponse.h
   getlifecyclepolicyresponse_p.h
+  getmetricpolicyrequest.h
+  getmetricpolicyrequest_p.h
+  getmetricpolicyresponse.h
+  getmetricpolicyresponse_p.h
   listcontainersrequest.h
   listcontainersrequest_p.h
   listcontainersresponse.h
@@ -63,6 +71,10 @@ add_library(QtAwsMediaStore
   putlifecyclepolicyrequest_p.h
   putlifecyclepolicyresponse.h
   putlifecyclepolicyresponse_p.h
+  putmetricpolicyrequest.h
+  putmetricpolicyrequest_p.h
+  putmetricpolicyresponse.h
+  putmetricpolicyresponse_p.h
   startaccessloggingrequest.h
   startaccessloggingrequest_p.h
   startaccessloggingresponse.h
@@ -89,6 +101,8 @@ add_library(QtAwsMediaStore
   deletecorspolicyresponse.cpp
   deletelifecyclepolicyrequest.cpp
   deletelifecyclepolicyresponse.cpp
+  deletemetricpolicyrequest.cpp
+  deletemetricpolicyresponse.cpp
   describecontainerrequest.cpp
   describecontainerresponse.cpp
   getcontainerpolicyrequest.cpp
@@ -97,6 +111,8 @@ add_library(QtAwsMediaStore
   getcorspolicyresponse.cpp
   getlifecyclepolicyrequest.cpp
   getlifecyclepolicyresponse.cpp
+  getmetricpolicyrequest.cpp
+  getmetricpolicyresponse.cpp
   listcontainersrequest.cpp
   listcontainersresponse.cpp
   listtagsforresourcerequest.cpp
@@ -110,6 +126,8 @@ add_library(QtAwsMediaStore
   putcorspolicyresponse.cpp
   putlifecyclepolicyrequest.cpp
   putlifecyclepolicyresponse.cpp
+  putmetricpolicyrequest.cpp
+  putmetricpolicyresponse.cpp
   startaccessloggingrequest.cpp
   startaccessloggingresponse.cpp
   stopaccessloggingrequest.cpp

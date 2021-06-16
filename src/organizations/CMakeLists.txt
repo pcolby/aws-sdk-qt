@@ -49,6 +49,10 @@ add_library(QtAwsOrganizations
   deletepolicyrequest_p.h
   deletepolicyresponse.h
   deletepolicyresponse_p.h
+  deregisterdelegatedadministratorrequest.h
+  deregisterdelegatedadministratorrequest_p.h
+  deregisterdelegatedadministratorresponse.h
+  deregisterdelegatedadministratorresponse_p.h
   describeaccountrequest.h
   describeaccountrequest_p.h
   describeaccountresponse.h
@@ -57,6 +61,10 @@ add_library(QtAwsOrganizations
   describecreateaccountstatusrequest_p.h
   describecreateaccountstatusresponse.h
   describecreateaccountstatusresponse_p.h
+  describeeffectivepolicyrequest.h
+  describeeffectivepolicyrequest_p.h
+  describeeffectivepolicyresponse.h
+  describeeffectivepolicyresponse_p.h
   describehandshakerequest.h
   describehandshakerequest_p.h
   describehandshakeresponse.h
@@ -125,6 +133,14 @@ add_library(QtAwsOrganizations
   listcreateaccountstatusrequest_p.h
   listcreateaccountstatusresponse.h
   listcreateaccountstatusresponse_p.h
+  listdelegatedadministratorsrequest.h
+  listdelegatedadministratorsrequest_p.h
+  listdelegatedadministratorsresponse.h
+  listdelegatedadministratorsresponse_p.h
+  listdelegatedservicesforaccountrequest.h
+  listdelegatedservicesforaccountrequest_p.h
+  listdelegatedservicesforaccountresponse.h
+  listdelegatedservicesforaccountresponse_p.h
   listhandshakesforaccountrequest.h
   listhandshakesforaccountrequest_p.h
   listhandshakesforaccountresponse.h
@@ -171,6 +187,10 @@ add_library(QtAwsOrganizations
   organizationsrequest_p.h
   organizationsresponse.h
   organizationsresponse_p.h
+  registerdelegatedadministratorrequest.h
+  registerdelegatedadministratorrequest_p.h
+  registerdelegatedadministratorresponse.h
+  registerdelegatedadministratorresponse_p.h
   removeaccountfromorganizationrequest.h
   removeaccountfromorganizationrequest_p.h
   removeaccountfromorganizationresponse.h
@@ -215,10 +235,14 @@ add_library(QtAwsOrganizations
   deleteorganizationresponse.cpp
   deletepolicyrequest.cpp
   deletepolicyresponse.cpp
+  deregisterdelegatedadministratorrequest.cpp
+  deregisterdelegatedadministratorresponse.cpp
   describeaccountrequest.cpp
   describeaccountresponse.cpp
   describecreateaccountstatusrequest.cpp
   describecreateaccountstatusresponse.cpp
+  describeeffectivepolicyrequest.cpp
+  describeeffectivepolicyresponse.cpp
   describehandshakerequest.cpp
   describehandshakeresponse.cpp
   describeorganizationalunitrequest.cpp
@@ -253,6 +277,10 @@ add_library(QtAwsOrganizations
   listchildrenresponse.cpp
   listcreateaccountstatusrequest.cpp
   listcreateaccountstatusresponse.cpp
+  listdelegatedadministratorsrequest.cpp
+  listdelegatedadministratorsresponse.cpp
+  listdelegatedservicesforaccountrequest.cpp
+  listdelegatedservicesforaccountresponse.cpp
   listhandshakesforaccountrequest.cpp
   listhandshakesforaccountresponse.cpp
   listhandshakesfororganizationrequest.cpp
@@ -276,6 +304,8 @@ add_library(QtAwsOrganizations
   organizationsclient.cpp
   organizationsrequest.cpp
   organizationsresponse.cpp
+  registerdelegatedadministratorrequest.cpp
+  registerdelegatedadministratorresponse.cpp
   removeaccountfromorganizationrequest.cpp
   removeaccountfromorganizationresponse.cpp
   tagresourcerequest.cpp

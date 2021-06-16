@@ -25,6 +25,10 @@ add_library(QtAwsGuardDuty
   createmembersrequest_p.h
   createmembersresponse.h
   createmembersresponse_p.h
+  createpublishingdestinationrequest.h
+  createpublishingdestinationrequest_p.h
+  createpublishingdestinationresponse.h
+  createpublishingdestinationresponse_p.h
   createsamplefindingsrequest.h
   createsamplefindingsrequest_p.h
   createsamplefindingsresponse.h
@@ -57,10 +61,26 @@ add_library(QtAwsGuardDuty
   deletemembersrequest_p.h
   deletemembersresponse.h
   deletemembersresponse_p.h
+  deletepublishingdestinationrequest.h
+  deletepublishingdestinationrequest_p.h
+  deletepublishingdestinationresponse.h
+  deletepublishingdestinationresponse_p.h
   deletethreatintelsetrequest.h
   deletethreatintelsetrequest_p.h
   deletethreatintelsetresponse.h
   deletethreatintelsetresponse_p.h
+  describeorganizationconfigurationrequest.h
+  describeorganizationconfigurationrequest_p.h
+  describeorganizationconfigurationresponse.h
+  describeorganizationconfigurationresponse_p.h
+  describepublishingdestinationrequest.h
+  describepublishingdestinationrequest_p.h
+  describepublishingdestinationresponse.h
+  describepublishingdestinationresponse_p.h
+  disableorganizationadminaccountrequest.h
+  disableorganizationadminaccountrequest_p.h
+  disableorganizationadminaccountresponse.h
+  disableorganizationadminaccountresponse_p.h
   disassociatefrommasteraccountrequest.h
   disassociatefrommasteraccountrequest_p.h
   disassociatefrommasteraccountresponse.h
@@ -69,6 +89,10 @@ add_library(QtAwsGuardDuty
   disassociatemembersrequest_p.h
   disassociatemembersresponse.h
   disassociatemembersresponse_p.h
+  enableorganizationadminaccountrequest.h
+  enableorganizationadminaccountrequest_p.h
+  enableorganizationadminaccountresponse.h
+  enableorganizationadminaccountresponse_p.h
   getdetectorrequest.h
   getdetectorrequest_p.h
   getdetectorresponse.h
@@ -97,6 +121,10 @@ add_library(QtAwsGuardDuty
   getmasteraccountrequest_p.h
   getmasteraccountresponse.h
   getmasteraccountresponse_p.h
+  getmemberdetectorsrequest.h
+  getmemberdetectorsrequest_p.h
+  getmemberdetectorsresponse.h
+  getmemberdetectorsresponse_p.h
   getmembersrequest.h
   getmembersrequest_p.h
   getmembersresponse.h
@@ -105,6 +133,10 @@ add_library(QtAwsGuardDuty
   getthreatintelsetrequest_p.h
   getthreatintelsetresponse.h
   getthreatintelsetresponse_p.h
+  getusagestatisticsrequest.h
+  getusagestatisticsrequest_p.h
+  getusagestatisticsresponse.h
+  getusagestatisticsresponse_p.h
   guarddutyclient.h
   guarddutyclient_p.h
   guarddutyrequest.h
@@ -139,6 +171,14 @@ add_library(QtAwsGuardDuty
   listmembersrequest_p.h
   listmembersresponse.h
   listmembersresponse_p.h
+  listorganizationadminaccountsrequest.h
+  listorganizationadminaccountsrequest_p.h
+  listorganizationadminaccountsresponse.h
+  listorganizationadminaccountsresponse_p.h
+  listpublishingdestinationsrequest.h
+  listpublishingdestinationsrequest_p.h
+  listpublishingdestinationsresponse.h
+  listpublishingdestinationsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -183,6 +223,18 @@ add_library(QtAwsGuardDuty
   updateipsetrequest_p.h
   updateipsetresponse.h
   updateipsetresponse_p.h
+  updatememberdetectorsrequest.h
+  updatememberdetectorsrequest_p.h
+  updatememberdetectorsresponse.h
+  updatememberdetectorsresponse_p.h
+  updateorganizationconfigurationrequest.h
+  updateorganizationconfigurationrequest_p.h
+  updateorganizationconfigurationresponse.h
+  updateorganizationconfigurationresponse_p.h
+  updatepublishingdestinationrequest.h
+  updatepublishingdestinationrequest_p.h
+  updatepublishingdestinationresponse.h
+  updatepublishingdestinationresponse_p.h
   updatethreatintelsetrequest.h
   updatethreatintelsetrequest_p.h
   updatethreatintelsetresponse.h
@@ -199,6 +251,8 @@ add_library(QtAwsGuardDuty
   createipsetresponse.cpp
   createmembersrequest.cpp
   createmembersresponse.cpp
+  createpublishingdestinationrequest.cpp
+  createpublishingdestinationresponse.cpp
   createsamplefindingsrequest.cpp
   createsamplefindingsresponse.cpp
   createthreatintelsetrequest.cpp
@@ -215,12 +269,22 @@ add_library(QtAwsGuardDuty
   deleteipsetresponse.cpp
   deletemembersrequest.cpp
   deletemembersresponse.cpp
+  deletepublishingdestinationrequest.cpp
+  deletepublishingdestinationresponse.cpp
   deletethreatintelsetrequest.cpp
   deletethreatintelsetresponse.cpp
+  describeorganizationconfigurationrequest.cpp
+  describeorganizationconfigurationresponse.cpp
+  describepublishingdestinationrequest.cpp
+  describepublishingdestinationresponse.cpp
+  disableorganizationadminaccountrequest.cpp
+  disableorganizationadminaccountresponse.cpp
   disassociatefrommasteraccountrequest.cpp
   disassociatefrommasteraccountresponse.cpp
   disassociatemembersrequest.cpp
   disassociatemembersresponse.cpp
+  enableorganizationadminaccountrequest.cpp
+  enableorganizationadminaccountresponse.cpp
   getdetectorrequest.cpp
   getdetectorresponse.cpp
   getfilterrequest.cpp
@@ -235,10 +299,14 @@ add_library(QtAwsGuardDuty
   getipsetresponse.cpp
   getmasteraccountrequest.cpp
   getmasteraccountresponse.cpp
+  getmemberdetectorsrequest.cpp
+  getmemberdetectorsresponse.cpp
   getmembersrequest.cpp
   getmembersresponse.cpp
   getthreatintelsetrequest.cpp
   getthreatintelsetresponse.cpp
+  getusagestatisticsrequest.cpp
+  getusagestatisticsresponse.cpp
   guarddutyclient.cpp
   guarddutyrequest.cpp
   guarddutyresponse.cpp
@@ -256,6 +324,10 @@ add_library(QtAwsGuardDuty
   listipsetsresponse.cpp
   listmembersrequest.cpp
   listmembersresponse.cpp
+  listorganizationadminaccountsrequest.cpp
+  listorganizationadminaccountsresponse.cpp
+  listpublishingdestinationsrequest.cpp
+  listpublishingdestinationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   listthreatintelsetsrequest.cpp
@@ -278,6 +350,12 @@ add_library(QtAwsGuardDuty
   updatefindingsfeedbackresponse.cpp
   updateipsetrequest.cpp
   updateipsetresponse.cpp
+  updatememberdetectorsrequest.cpp
+  updatememberdetectorsresponse.cpp
+  updateorganizationconfigurationrequest.cpp
+  updateorganizationconfigurationresponse.cpp
+  updatepublishingdestinationrequest.cpp
+  updatepublishingdestinationresponse.cpp
   updatethreatintelsetrequest.cpp
   updatethreatintelsetresponse.cpp)
 

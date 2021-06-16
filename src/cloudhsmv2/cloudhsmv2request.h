@@ -47,6 +47,8 @@ public:
         DescribeClustersAction,
         InitializeClusterAction,
         ListTagsAction,
+        ModifyBackupAttributesAction,
+        ModifyClusterAction,
         RestoreBackupAction,
         TagResourceAction,
         UntagResourceAction,

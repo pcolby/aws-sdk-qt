@@ -37,17 +37,25 @@ namespace Budgets {
  * requests.
  *
  * \value CreateBudgetAction Budgets CreateBudget action.
+ * \value CreateBudgetActionAction Budgets CreateBudgetAction action.
  * \value CreateNotificationAction Budgets CreateNotification action.
  * \value CreateSubscriberAction Budgets CreateSubscriber action.
  * \value DeleteBudgetAction Budgets DeleteBudget action.
+ * \value DeleteBudgetActionAction Budgets DeleteBudgetAction action.
  * \value DeleteNotificationAction Budgets DeleteNotification action.
  * \value DeleteSubscriberAction Budgets DeleteSubscriber action.
  * \value DescribeBudgetAction Budgets DescribeBudget action.
+ * \value DescribeBudgetActionAction Budgets DescribeBudgetAction action.
+ * \value DescribeBudgetActionHistoriesAction Budgets DescribeBudgetActionHistories action.
+ * \value DescribeBudgetActionsForAccountAction Budgets DescribeBudgetActionsForAccount action.
+ * \value DescribeBudgetActionsForBudgetAction Budgets DescribeBudgetActionsForBudget action.
  * \value DescribeBudgetPerformanceHistoryAction Budgets DescribeBudgetPerformanceHistory action.
  * \value DescribeBudgetsAction Budgets DescribeBudgets action.
  * \value DescribeNotificationsForBudgetAction Budgets DescribeNotificationsForBudget action.
  * \value DescribeSubscribersForNotificationAction Budgets DescribeSubscribersForNotification action.
+ * \value ExecuteBudgetActionAction Budgets ExecuteBudgetAction action.
  * \value UpdateBudgetAction Budgets UpdateBudget action.
+ * \value UpdateBudgetActionAction Budgets UpdateBudgetAction action.
  * \value UpdateNotificationAction Budgets UpdateNotification action.
  * \value UpdateSubscriberAction Budgets UpdateSubscriber action.
  */

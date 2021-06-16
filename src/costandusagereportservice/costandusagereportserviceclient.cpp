@@ -25,6 +25,8 @@
 #include "deletereportdefinitionresponse.h"
 #include "describereportdefinitionsrequest.h"
 #include "describereportdefinitionsresponse.h"
+#include "modifyreportdefinitionrequest.h"
+#include "modifyreportdefinitionresponse.h"
 #include "putreportdefinitionrequest.h"
 #include "putreportdefinitionresponse.h"
 
@@ -146,6 +148,19 @@ DeleteReportDefinitionResponse * CostandUsageReportServiceClient::deleteReportDe
 DescribeReportDefinitionsResponse * CostandUsageReportServiceClient::describeReportDefinitions(const DescribeReportDefinitionsRequest &request)
 {
     return qobject_cast<DescribeReportDefinitionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CostandUsageReportServiceClient service, and returns a pointer to an
+ * ModifyReportDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows you to programatically update your report
+ */
+ModifyReportDefinitionResponse * CostandUsageReportServiceClient::modifyReportDefinition(const ModifyReportDefinitionRequest &request)
+{
+    return qobject_cast<ModifyReportDefinitionResponse *>(send(request));
 }
 
 /*!

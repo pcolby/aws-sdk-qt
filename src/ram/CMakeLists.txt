@@ -5,6 +5,10 @@ add_library(QtAwsRam
   acceptresourceshareinvitationrequest_p.h
   acceptresourceshareinvitationresponse.h
   acceptresourceshareinvitationresponse_p.h
+  associateresourcesharepermissionrequest.h
+  associateresourcesharepermissionrequest_p.h
+  associateresourcesharepermissionresponse.h
+  associateresourcesharepermissionresponse_p.h
   associateresourcesharerequest.h
   associateresourcesharerequest_p.h
   associateresourceshareresponse.h
@@ -17,6 +21,10 @@ add_library(QtAwsRam
   deleteresourcesharerequest_p.h
   deleteresourceshareresponse.h
   deleteresourceshareresponse_p.h
+  disassociateresourcesharepermissionrequest.h
+  disassociateresourcesharepermissionrequest_p.h
+  disassociateresourcesharepermissionresponse.h
+  disassociateresourcesharepermissionresponse_p.h
   disassociateresourcesharerequest.h
   disassociateresourcesharerequest_p.h
   disassociateresourceshareresponse.h
@@ -25,6 +33,10 @@ add_library(QtAwsRam
   enablesharingwithawsorganizationrequest_p.h
   enablesharingwithawsorganizationresponse.h
   enablesharingwithawsorganizationresponse_p.h
+  getpermissionrequest.h
+  getpermissionrequest_p.h
+  getpermissionresponse.h
+  getpermissionresponse_p.h
   getresourcepoliciesrequest.h
   getresourcepoliciesrequest_p.h
   getresourcepoliciesresponse.h
@@ -41,14 +53,34 @@ add_library(QtAwsRam
   getresourcesharesrequest_p.h
   getresourcesharesresponse.h
   getresourcesharesresponse_p.h
+  listpendinginvitationresourcesrequest.h
+  listpendinginvitationresourcesrequest_p.h
+  listpendinginvitationresourcesresponse.h
+  listpendinginvitationresourcesresponse_p.h
+  listpermissionsrequest.h
+  listpermissionsrequest_p.h
+  listpermissionsresponse.h
+  listpermissionsresponse_p.h
   listprincipalsrequest.h
   listprincipalsrequest_p.h
   listprincipalsresponse.h
   listprincipalsresponse_p.h
+  listresourcesharepermissionsrequest.h
+  listresourcesharepermissionsrequest_p.h
+  listresourcesharepermissionsresponse.h
+  listresourcesharepermissionsresponse_p.h
   listresourcesrequest.h
   listresourcesrequest_p.h
   listresourcesresponse.h
   listresourcesresponse_p.h
+  listresourcetypesrequest.h
+  listresourcetypesrequest_p.h
+  listresourcetypesresponse.h
+  listresourcetypesresponse_p.h
+  promoteresourcesharecreatedfrompolicyrequest.h
+  promoteresourcesharecreatedfrompolicyrequest_p.h
+  promoteresourcesharecreatedfrompolicyresponse.h
+  promoteresourcesharecreatedfrompolicyresponse_p.h
   ramclient.h
   ramclient_p.h
   ramrequest.h
@@ -73,16 +105,22 @@ add_library(QtAwsRam
   updateresourceshareresponse_p.h
   acceptresourceshareinvitationrequest.cpp
   acceptresourceshareinvitationresponse.cpp
+  associateresourcesharepermissionrequest.cpp
+  associateresourcesharepermissionresponse.cpp
   associateresourcesharerequest.cpp
   associateresourceshareresponse.cpp
   createresourcesharerequest.cpp
   createresourceshareresponse.cpp
   deleteresourcesharerequest.cpp
   deleteresourceshareresponse.cpp
+  disassociateresourcesharepermissionrequest.cpp
+  disassociateresourcesharepermissionresponse.cpp
   disassociateresourcesharerequest.cpp
   disassociateresourceshareresponse.cpp
   enablesharingwithawsorganizationrequest.cpp
   enablesharingwithawsorganizationresponse.cpp
+  getpermissionrequest.cpp
+  getpermissionresponse.cpp
   getresourcepoliciesrequest.cpp
   getresourcepoliciesresponse.cpp
   getresourceshareassociationsrequest.cpp
@@ -91,10 +129,20 @@ add_library(QtAwsRam
   getresourceshareinvitationsresponse.cpp
   getresourcesharesrequest.cpp
   getresourcesharesresponse.cpp
+  listpendinginvitationresourcesrequest.cpp
+  listpendinginvitationresourcesresponse.cpp
+  listpermissionsrequest.cpp
+  listpermissionsresponse.cpp
   listprincipalsrequest.cpp
   listprincipalsresponse.cpp
+  listresourcesharepermissionsrequest.cpp
+  listresourcesharepermissionsresponse.cpp
   listresourcesrequest.cpp
   listresourcesresponse.cpp
+  listresourcetypesrequest.cpp
+  listresourcetypesresponse.cpp
+  promoteresourcesharecreatedfrompolicyrequest.cpp
+  promoteresourcesharecreatedfrompolicyresponse.cpp
   ramclient.cpp
   ramrequest.cpp
   ramresponse.cpp

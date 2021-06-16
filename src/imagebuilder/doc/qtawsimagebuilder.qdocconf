@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsimagebuilder
+description = AWS imagebuilder SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsimagebuilder-index.html"
+navigation.landingtitle = "imagebuilder"
+navigation.cppclassespage = "imagebuilder C++ Classes"

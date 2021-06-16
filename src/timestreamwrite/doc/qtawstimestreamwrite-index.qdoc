@@ -1,0 +1,9 @@
+
+/*!
+    \page qtawstimestreamwrite-index.html
+    \title Qt Aws TimestreamWrite
+
+    \brief Classes for the Amazon Timestream Write service
+
+    (This is the page the forms the overview for the servce.)
+*/

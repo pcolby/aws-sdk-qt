@@ -49,6 +49,7 @@ public:
         ListApplicationVersionsAction,
         ListApplicationsAction,
         PutApplicationPolicyAction,
+        UnshareApplicationAction,
         UpdateApplicationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

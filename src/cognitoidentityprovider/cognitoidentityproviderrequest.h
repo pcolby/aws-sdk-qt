@@ -116,6 +116,7 @@ public:
         ListUsersInGroupAction,
         ResendConfirmationCodeAction,
         RespondToAuthChallengeAction,
+        RevokeTokenAction,
         SetRiskConfigurationAction,
         SetUICustomizationAction,
         SetUserMFAPreferenceAction,

@@ -57,6 +57,10 @@ add_library(QtAwsServiceQuotas
   listservicesrequest_p.h
   listservicesresponse.h
   listservicesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   putservicequotaincreaserequestintotemplaterequest.h
   putservicequotaincreaserequestintotemplaterequest_p.h
   putservicequotaincreaserequestintotemplateresponse.h
@@ -71,6 +75,14 @@ add_library(QtAwsServiceQuotas
   servicequotasrequest_p.h
   servicequotasresponse.h
   servicequotasresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   associateservicequotatemplaterequest.cpp
   associateservicequotatemplateresponse.cpp
   deleteservicequotaincreaserequestfromtemplaterequest.cpp
@@ -99,13 +111,19 @@ add_library(QtAwsServiceQuotas
   listservicequotasresponse.cpp
   listservicesrequest.cpp
   listservicesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   putservicequotaincreaserequestintotemplaterequest.cpp
   putservicequotaincreaserequestintotemplateresponse.cpp
   requestservicequotaincreaserequest.cpp
   requestservicequotaincreaseresponse.cpp
   servicequotasclient.cpp
   servicequotasrequest.cpp
-  servicequotasresponse.cpp)
+  servicequotasresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 add_dependencies(QtAwsServiceQuotas QtAwsCore)
 

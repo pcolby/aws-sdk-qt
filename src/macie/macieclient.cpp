@@ -58,13 +58,13 @@ namespace Macie {
  * \ingroup aws-clients
  * \inmodule QtAwsMacie
  *
- *  <fullname>Amazon Macie</fullname>
+ *  <fullname>Amazon Macie Classic</fullname>
  * 
- *  Amazon Macie is a security service that uses machine learning to automatically discover, classify, and protect sensitive
- *  data in AWS. Macie recognizes sensitive data such as personally identifiable information (PII) or intellectual property,
- *  and provides you with dashboards and alerts that give visibility into how this data is being accessed or moved. For more
- *  information, see the <a href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Macie User
- *  Guide</a>.
+ *  Amazon Macie Classic is a security service that uses machine learning to automatically discover, classify, and protect
+ *  sensitive data in AWS. Macie Classic recognizes sensitive data such as personally identifiable information (PII) or
+ *  intellectual property, and provides you with dashboards and alerts that give visibility into how this data is being
+ *  accessed or moved. For more information, see the <a
+ *  href="https://docs.aws.amazon.com/macie/latest/userguide/what-is-macie.html">Amazon Macie Classic User Guide</a>.
  */
 
 /*!
@@ -126,7 +126,7 @@ MacieClient::MacieClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a specified AWS account with Amazon Macie as a member
+ * Associates a specified AWS account with Amazon Macie Classic as a member
  */
 AssociateMemberAccountResponse * MacieClient::associateMemberAccount(const AssociateMemberAccountRequest &request)
 {
@@ -139,9 +139,10 @@ AssociateMemberAccountResponse * MacieClient::associateMemberAccount(const Assoc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates specified S3 resources with Amazon Macie for monitoring and data classification. If memberAccountId isn't
- * specified, the action associates specified S3 resources with Macie for the current master account. If memberAccountId is
- * specified, the action associates specified S3 resources with Macie for the specified member account.
+ * Associates specified S3 resources with Amazon Macie Classic for monitoring and data classification. If memberAccountId
+ * isn't specified, the action associates specified S3 resources with Macie Classic for the current Macie Classic
+ * administrator account. If memberAccountId is specified, the action associates specified S3 resources with Macie Classic
+ * for the specified member account.
  */
 AssociateS3ResourcesResponse * MacieClient::associateS3Resources(const AssociateS3ResourcesRequest &request)
 {
@@ -154,7 +155,7 @@ AssociateS3ResourcesResponse * MacieClient::associateS3Resources(const Associate
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified member account from Amazon
+ * Removes the specified member account from Amazon Macie
  */
 DisassociateMemberAccountResponse * MacieClient::disassociateMemberAccount(const DisassociateMemberAccountRequest &request)
 {
@@ -167,9 +168,9 @@ DisassociateMemberAccountResponse * MacieClient::disassociateMemberAccount(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes specified S3 resources from being monitored by Amazon Macie. If memberAccountId isn't specified, the action
- * removes specified S3 resources from Macie for the current master account. If memberAccountId is specified, the action
- * removes specified S3 resources from Macie for the specified member
+ * Removes specified S3 resources from being monitored by Amazon Macie Classic. If memberAccountId isn't specified, the
+ * action removes specified S3 resources from Macie Classic for the current Macie Classic administrator account. If
+ * memberAccountId is specified, the action removes specified S3 resources from Macie Classic for the specified member
  */
 DisassociateS3ResourcesResponse * MacieClient::disassociateS3Resources(const DisassociateS3ResourcesRequest &request)
 {
@@ -182,7 +183,7 @@ DisassociateS3ResourcesResponse * MacieClient::disassociateS3Resources(const Dis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all Amazon Macie member accounts for the current Amazon Macie master
+ * Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator
  */
 ListMemberAccountsResponse * MacieClient::listMemberAccounts(const ListMemberAccountsRequest &request)
 {
@@ -195,9 +196,9 @@ ListMemberAccountsResponse * MacieClient::listMemberAccounts(const ListMemberAcc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all the S3 resources associated with Amazon Macie. If memberAccountId isn't specified, the action lists the S3
- * resources associated with Amazon Macie for the current master account. If memberAccountId is specified, the action lists
- * the S3 resources associated with Amazon Macie for the specified member account.
+ * Lists all the S3 resources associated with Amazon Macie Classic. If memberAccountId isn't specified, the action lists
+ * the S3 resources associated with Macie Classic for the current Macie Classic administrator account. If memberAccountId
+ * is specified, the action lists the S3 resources associated with Macie Classic for the specified member account.
  */
 ListS3ResourcesResponse * MacieClient::listS3Resources(const ListS3ResourcesRequest &request)
 {
@@ -211,9 +212,9 @@ ListS3ResourcesResponse * MacieClient::listS3Resources(const ListS3ResourcesRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates the classification types for the specified S3 resources. If memberAccountId isn't specified, the action updates
- * the classification types of the S3 resources associated with Amazon Macie for the current master account. If
- * memberAccountId is specified, the action updates the classification types of the S3 resources associated with Amazon
- * Macie for the specified member account.
+ * the classification types of the S3 resources associated with Amazon Macie Classic for the current Macie Classic
+ * administrator account. If memberAccountId is specified, the action updates the classification types of the S3 resources
+ * associated with Macie Classic for the specified member account.
  */
 UpdateS3ResourcesResponse * MacieClient::updateS3Resources(const UpdateS3ResourcesRequest &request)
 {

@@ -49,6 +49,14 @@ add_library(QtAwsSecretsManager
   putsecretvaluerequest_p.h
   putsecretvalueresponse.h
   putsecretvalueresponse_p.h
+  removeregionsfromreplicationrequest.h
+  removeregionsfromreplicationrequest_p.h
+  removeregionsfromreplicationresponse.h
+  removeregionsfromreplicationresponse_p.h
+  replicatesecrettoregionsrequest.h
+  replicatesecrettoregionsrequest_p.h
+  replicatesecrettoregionsresponse.h
+  replicatesecrettoregionsresponse_p.h
   restoresecretrequest.h
   restoresecretrequest_p.h
   restoresecretresponse.h
@@ -63,6 +71,10 @@ add_library(QtAwsSecretsManager
   secretsmanagerrequest_p.h
   secretsmanagerresponse.h
   secretsmanagerresponse_p.h
+  stopreplicationtoreplicarequest.h
+  stopreplicationtoreplicarequest_p.h
+  stopreplicationtoreplicaresponse.h
+  stopreplicationtoreplicaresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -79,6 +91,10 @@ add_library(QtAwsSecretsManager
   updatesecretversionstagerequest_p.h
   updatesecretversionstageresponse.h
   updatesecretversionstageresponse_p.h
+  validateresourcepolicyrequest.h
+  validateresourcepolicyrequest_p.h
+  validateresourcepolicyresponse.h
+  validateresourcepolicyresponse_p.h
   cancelrotatesecretrequest.cpp
   cancelrotatesecretresponse.cpp
   createsecretrequest.cpp
@@ -103,6 +119,10 @@ add_library(QtAwsSecretsManager
   putresourcepolicyresponse.cpp
   putsecretvaluerequest.cpp
   putsecretvalueresponse.cpp
+  removeregionsfromreplicationrequest.cpp
+  removeregionsfromreplicationresponse.cpp
+  replicatesecrettoregionsrequest.cpp
+  replicatesecrettoregionsresponse.cpp
   restoresecretrequest.cpp
   restoresecretresponse.cpp
   rotatesecretrequest.cpp
@@ -110,6 +130,8 @@ add_library(QtAwsSecretsManager
   secretsmanagerclient.cpp
   secretsmanagerrequest.cpp
   secretsmanagerresponse.cpp
+  stopreplicationtoreplicarequest.cpp
+  stopreplicationtoreplicaresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
@@ -117,7 +139,9 @@ add_library(QtAwsSecretsManager
   updatesecretrequest.cpp
   updatesecretresponse.cpp
   updatesecretversionstagerequest.cpp
-  updatesecretversionstageresponse.cpp)
+  updatesecretversionstageresponse.cpp
+  validateresourcepolicyrequest.cpp
+  validateresourcepolicyresponse.cpp)
 
 add_dependencies(QtAwsSecretsManager QtAwsCore)
 

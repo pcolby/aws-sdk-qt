@@ -37,24 +37,36 @@ class QTAWS_EXPORT KafkaRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by Kafka.
     enum Action {
+        BatchAssociateScramSecretAction,
+        BatchDisassociateScramSecretAction,
         CreateClusterAction,
         CreateConfigurationAction,
         DeleteClusterAction,
+        DeleteConfigurationAction,
         DescribeClusterAction,
         DescribeClusterOperationAction,
         DescribeConfigurationAction,
         DescribeConfigurationRevisionAction,
         GetBootstrapBrokersAction,
+        GetCompatibleKafkaVersionsAction,
         ListClusterOperationsAction,
         ListClustersAction,
         ListConfigurationRevisionsAction,
         ListConfigurationsAction,
+        ListKafkaVersionsAction,
         ListNodesAction,
+        ListScramSecretsAction,
         ListTagsForResourceAction,
+        RebootBrokerAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateBrokerCountAction,
         UpdateBrokerStorageAction,
+        UpdateBrokerTypeAction,
         UpdateClusterConfigurationAction,
+        UpdateClusterKafkaVersionAction,
+        UpdateConfigurationAction,
+        UpdateMonitoringAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

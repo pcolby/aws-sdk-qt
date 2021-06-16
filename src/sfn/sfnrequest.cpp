@@ -54,6 +54,7 @@ namespace SFN {
  * \value SendTaskHeartbeatAction SFN SendTaskHeartbeat action.
  * \value SendTaskSuccessAction SFN SendTaskSuccess action.
  * \value StartExecutionAction SFN StartExecution action.
+ * \value StartSyncExecutionAction SFN StartSyncExecution action.
  * \value StopExecutionAction SFN StopExecution action.
  * \value TagResourceAction SFN TagResource action.
  * \value UntagResourceAction SFN UntagResource action.

@@ -152,19 +152,11 @@ BatchExecuteStatementResponse * RDSDataServiceClient::batchExecuteStatement(cons
  *
  * Starts a SQL
  *
- * transaction> <b>
- *
- * A transaction can run for a maximum of 24 hours. A transaction is terminated and rolled back automatically after 24
- *
- * hours>
- *
- * A transaction times out if no calls use its transaction ID in three minutes. If a transaction times out before it's
- * committed, it's rolled back
- *
- * automatically>
- *
- * DDL statements inside a transaction cause an implicit commit. We recommend that you run each DDL statement in a separate
- * <code>ExecuteStatement</code> call with <code>continueAfterTimeout</code>
+ * transaction> <pre><code> &lt;important&gt; &lt;p&gt;A transaction can run for a maximum of 24 hours. A transaction is
+ * terminated and rolled back automatically after 24 hours.&lt;/p&gt; &lt;p&gt;A transaction times out if no calls use its
+ * transaction ID in three minutes. If a transaction times out before it's committed, it's rolled back
+ * automatically.&lt;/p&gt; &lt;p&gt;DDL statements inside a transaction cause an implicit commit. We recommend that you
+ * run each DDL statement in a separate &lt;code&gt;ExecuteStatement&lt;/code&gt; call with
  */
 BeginTransactionResponse * RDSDataServiceClient::beginTransaction(const BeginTransactionRequest &request)
 {
@@ -216,8 +208,7 @@ ExecuteSqlResponse * RDSDataServiceClient::executeSql(const ExecuteSqlRequest &r
  *
  * automatically> </b>
  *
- * The response size limit is 1 MB or 1,000 records. If the call returns more than 1 MB of response data or over 1,000
- * records, the call is
+ * The response size limit is 1 MB. If the call returns more than 1 MB of response data, the call is
  */
 ExecuteStatementResponse * RDSDataServiceClient::executeStatement(const ExecuteStatementRequest &request)
 {

@@ -9,6 +9,10 @@ add_library(QtAwsElasticBeanstalk
   applyenvironmentmanagedactionrequest_p.h
   applyenvironmentmanagedactionresponse.h
   applyenvironmentmanagedactionresponse_p.h
+  associateenvironmentoperationsrolerequest.h
+  associateenvironmentoperationsrolerequest_p.h
+  associateenvironmentoperationsroleresponse.h
+  associateenvironmentoperationsroleresponse_p.h
   checkdnsavailabilityrequest.h
   checkdnsavailabilityrequest_p.h
   checkdnsavailabilityresponse.h
@@ -113,6 +117,10 @@ add_library(QtAwsElasticBeanstalk
   describeplatformversionrequest_p.h
   describeplatformversionresponse.h
   describeplatformversionresponse_p.h
+  disassociateenvironmentoperationsrolerequest.h
+  disassociateenvironmentoperationsrolerequest_p.h
+  disassociateenvironmentoperationsroleresponse.h
+  disassociateenvironmentoperationsroleresponse_p.h
   elasticbeanstalkclient.h
   elasticbeanstalkclient_p.h
   elasticbeanstalkrequest.h
@@ -123,6 +131,10 @@ add_library(QtAwsElasticBeanstalk
   listavailablesolutionstacksrequest_p.h
   listavailablesolutionstacksresponse.h
   listavailablesolutionstacksresponse_p.h
+  listplatformbranchesrequest.h
+  listplatformbranchesrequest_p.h
+  listplatformbranchesresponse.h
+  listplatformbranchesresponse_p.h
   listplatformversionsrequest.h
   listplatformversionsrequest_p.h
   listplatformversionsresponse.h
@@ -187,6 +199,8 @@ add_library(QtAwsElasticBeanstalk
   abortenvironmentupdateresponse.cpp
   applyenvironmentmanagedactionrequest.cpp
   applyenvironmentmanagedactionresponse.cpp
+  associateenvironmentoperationsrolerequest.cpp
+  associateenvironmentoperationsroleresponse.cpp
   checkdnsavailabilityrequest.cpp
   checkdnsavailabilityresponse.cpp
   composeenvironmentsrequest.cpp
@@ -239,11 +253,15 @@ add_library(QtAwsElasticBeanstalk
   describeinstanceshealthresponse.cpp
   describeplatformversionrequest.cpp
   describeplatformversionresponse.cpp
+  disassociateenvironmentoperationsrolerequest.cpp
+  disassociateenvironmentoperationsroleresponse.cpp
   elasticbeanstalkclient.cpp
   elasticbeanstalkrequest.cpp
   elasticbeanstalkresponse.cpp
   listavailablesolutionstacksrequest.cpp
   listavailablesolutionstacksresponse.cpp
+  listplatformbranchesrequest.cpp
+  listplatformbranchesresponse.cpp
   listplatformversionsrequest.cpp
   listplatformversionsresponse.cpp
   listtagsforresourcerequest.cpp

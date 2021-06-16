@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsEbs
+    \title EBS C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS EBS functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

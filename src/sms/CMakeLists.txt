@@ -21,6 +21,10 @@ add_library(QtAwsSms
   deleteapprequest_p.h
   deleteappresponse.h
   deleteappresponse_p.h
+  deleteappvalidationconfigurationrequest.h
+  deleteappvalidationconfigurationrequest_p.h
+  deleteappvalidationconfigurationresponse.h
+  deleteappvalidationconfigurationresponse_p.h
   deletereplicationjobrequest.h
   deletereplicationjobrequest_p.h
   deletereplicationjobresponse.h
@@ -53,6 +57,14 @@ add_library(QtAwsSms
   getapprequest_p.h
   getappresponse.h
   getappresponse_p.h
+  getappvalidationconfigurationrequest.h
+  getappvalidationconfigurationrequest_p.h
+  getappvalidationconfigurationresponse.h
+  getappvalidationconfigurationresponse_p.h
+  getappvalidationoutputrequest.h
+  getappvalidationoutputrequest_p.h
+  getappvalidationoutputresponse.h
+  getappvalidationoutputresponse_p.h
   getconnectorsrequest.h
   getconnectorsrequest_p.h
   getconnectorsresponse.h
@@ -69,6 +81,10 @@ add_library(QtAwsSms
   getserversrequest_p.h
   getserversresponse.h
   getserversresponse_p.h
+  importappcatalogrequest.h
+  importappcatalogrequest_p.h
+  importappcatalogresponse.h
+  importappcatalogresponse_p.h
   importservercatalogrequest.h
   importservercatalogrequest_p.h
   importservercatalogresponse.h
@@ -81,6 +97,10 @@ add_library(QtAwsSms
   listappsrequest_p.h
   listappsresponse.h
   listappsresponse_p.h
+  notifyappvalidationoutputrequest.h
+  notifyappvalidationoutputrequest_p.h
+  notifyappvalidationoutputresponse.h
+  notifyappvalidationoutputresponse_p.h
   putapplaunchconfigurationrequest.h
   putapplaunchconfigurationrequest_p.h
   putapplaunchconfigurationresponse.h
@@ -89,6 +109,10 @@ add_library(QtAwsSms
   putappreplicationconfigurationrequest_p.h
   putappreplicationconfigurationresponse.h
   putappreplicationconfigurationresponse_p.h
+  putappvalidationconfigurationrequest.h
+  putappvalidationconfigurationrequest_p.h
+  putappvalidationconfigurationresponse.h
+  putappvalidationconfigurationresponse_p.h
   smsclient.h
   smsclient_p.h
   smsrequest.h
@@ -99,6 +123,10 @@ add_library(QtAwsSms
   startappreplicationrequest_p.h
   startappreplicationresponse.h
   startappreplicationresponse_p.h
+  startondemandappreplicationrequest.h
+  startondemandappreplicationrequest_p.h
+  startondemandappreplicationresponse.h
+  startondemandappreplicationresponse_p.h
   startondemandreplicationrunrequest.h
   startondemandreplicationrunrequest_p.h
   startondemandreplicationrunresponse.h
@@ -129,6 +157,8 @@ add_library(QtAwsSms
   deleteappreplicationconfigurationresponse.cpp
   deleteapprequest.cpp
   deleteappresponse.cpp
+  deleteappvalidationconfigurationrequest.cpp
+  deleteappvalidationconfigurationresponse.cpp
   deletereplicationjobrequest.cpp
   deletereplicationjobresponse.cpp
   deleteservercatalogrequest.cpp
@@ -145,6 +175,10 @@ add_library(QtAwsSms
   getappreplicationconfigurationresponse.cpp
   getapprequest.cpp
   getappresponse.cpp
+  getappvalidationconfigurationrequest.cpp
+  getappvalidationconfigurationresponse.cpp
+  getappvalidationoutputrequest.cpp
+  getappvalidationoutputresponse.cpp
   getconnectorsrequest.cpp
   getconnectorsresponse.cpp
   getreplicationjobsrequest.cpp
@@ -153,21 +187,29 @@ add_library(QtAwsSms
   getreplicationrunsresponse.cpp
   getserversrequest.cpp
   getserversresponse.cpp
+  importappcatalogrequest.cpp
+  importappcatalogresponse.cpp
   importservercatalogrequest.cpp
   importservercatalogresponse.cpp
   launchapprequest.cpp
   launchappresponse.cpp
   listappsrequest.cpp
   listappsresponse.cpp
+  notifyappvalidationoutputrequest.cpp
+  notifyappvalidationoutputresponse.cpp
   putapplaunchconfigurationrequest.cpp
   putapplaunchconfigurationresponse.cpp
   putappreplicationconfigurationrequest.cpp
   putappreplicationconfigurationresponse.cpp
+  putappvalidationconfigurationrequest.cpp
+  putappvalidationconfigurationresponse.cpp
   smsclient.cpp
   smsrequest.cpp
   smsresponse.cpp
   startappreplicationrequest.cpp
   startappreplicationresponse.cpp
+  startondemandappreplicationrequest.cpp
+  startondemandappreplicationresponse.cpp
   startondemandreplicationrunrequest.cpp
   startondemandreplicationrunresponse.cpp
   stopappreplicationrequest.cpp

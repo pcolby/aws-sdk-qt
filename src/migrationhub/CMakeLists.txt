@@ -37,6 +37,10 @@ add_library(QtAwsMigrationHub
   importmigrationtaskrequest_p.h
   importmigrationtaskresponse.h
   importmigrationtaskresponse_p.h
+  listapplicationstatesrequest.h
+  listapplicationstatesrequest_p.h
+  listapplicationstatesresponse.h
+  listapplicationstatesresponse_p.h
   listcreatedartifactsrequest.h
   listcreatedartifactsrequest_p.h
   listcreatedartifactsresponse.h
@@ -89,6 +93,8 @@ add_library(QtAwsMigrationHub
   disassociatediscoveredresourceresponse.cpp
   importmigrationtaskrequest.cpp
   importmigrationtaskresponse.cpp
+  listapplicationstatesrequest.cpp
+  listapplicationstatesresponse.cpp
   listcreatedartifactsrequest.cpp
   listcreatedartifactsresponse.cpp
   listdiscoveredresourcesrequest.cpp

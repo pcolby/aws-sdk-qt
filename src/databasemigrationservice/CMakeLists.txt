@@ -9,6 +9,10 @@ add_library(QtAwsDatabaseMigrationService
   applypendingmaintenanceactionrequest_p.h
   applypendingmaintenanceactionresponse.h
   applypendingmaintenanceactionresponse_p.h
+  cancelreplicationtaskassessmentrunrequest.h
+  cancelreplicationtaskassessmentrunrequest_p.h
+  cancelreplicationtaskassessmentrunresponse.h
+  cancelreplicationtaskassessmentrunresponse_p.h
   createendpointrequest.h
   createendpointrequest_p.h
   createendpointresponse.h
@@ -39,6 +43,10 @@ add_library(QtAwsDatabaseMigrationService
   deletecertificaterequest_p.h
   deletecertificateresponse.h
   deletecertificateresponse_p.h
+  deleteconnectionrequest.h
+  deleteconnectionrequest_p.h
+  deleteconnectionresponse.h
+  deleteconnectionresponse_p.h
   deleteendpointrequest.h
   deleteendpointrequest_p.h
   deleteendpointresponse.h
@@ -55,6 +63,10 @@ add_library(QtAwsDatabaseMigrationService
   deletereplicationsubnetgrouprequest_p.h
   deletereplicationsubnetgroupresponse.h
   deletereplicationsubnetgroupresponse_p.h
+  deletereplicationtaskassessmentrunrequest.h
+  deletereplicationtaskassessmentrunrequest_p.h
+  deletereplicationtaskassessmentrunresponse.h
+  deletereplicationtaskassessmentrunresponse_p.h
   deletereplicationtaskrequest.h
   deletereplicationtaskrequest_p.h
   deletereplicationtaskresponse.h
@@ -63,6 +75,10 @@ add_library(QtAwsDatabaseMigrationService
   describeaccountattributesrequest_p.h
   describeaccountattributesresponse.h
   describeaccountattributesresponse_p.h
+  describeapplicableindividualassessmentsrequest.h
+  describeapplicableindividualassessmentsrequest_p.h
+  describeapplicableindividualassessmentsresponse.h
+  describeapplicableindividualassessmentsresponse_p.h
   describecertificatesrequest.h
   describecertificatesrequest_p.h
   describecertificatesresponse.h
@@ -71,6 +87,10 @@ add_library(QtAwsDatabaseMigrationService
   describeconnectionsrequest_p.h
   describeconnectionsresponse.h
   describeconnectionsresponse_p.h
+  describeendpointsettingsrequest.h
+  describeendpointsettingsrequest_p.h
+  describeendpointsettingsresponse.h
+  describeendpointsettingsresponse_p.h
   describeendpointsrequest.h
   describeendpointsrequest_p.h
   describeendpointsresponse.h
@@ -119,6 +139,14 @@ add_library(QtAwsDatabaseMigrationService
   describereplicationtaskassessmentresultsrequest_p.h
   describereplicationtaskassessmentresultsresponse.h
   describereplicationtaskassessmentresultsresponse_p.h
+  describereplicationtaskassessmentrunsrequest.h
+  describereplicationtaskassessmentrunsrequest_p.h
+  describereplicationtaskassessmentrunsresponse.h
+  describereplicationtaskassessmentrunsresponse_p.h
+  describereplicationtaskindividualassessmentsrequest.h
+  describereplicationtaskindividualassessmentsrequest_p.h
+  describereplicationtaskindividualassessmentsresponse.h
+  describereplicationtaskindividualassessmentsresponse_p.h
   describereplicationtasksrequest.h
   describereplicationtasksrequest_p.h
   describereplicationtasksresponse.h
@@ -159,6 +187,10 @@ add_library(QtAwsDatabaseMigrationService
   modifyreplicationtaskrequest_p.h
   modifyreplicationtaskresponse.h
   modifyreplicationtaskresponse_p.h
+  movereplicationtaskrequest.h
+  movereplicationtaskrequest_p.h
+  movereplicationtaskresponse.h
+  movereplicationtaskresponse_p.h
   rebootreplicationinstancerequest.h
   rebootreplicationinstancerequest_p.h
   rebootreplicationinstanceresponse.h
@@ -179,6 +211,10 @@ add_library(QtAwsDatabaseMigrationService
   startreplicationtaskassessmentrequest_p.h
   startreplicationtaskassessmentresponse.h
   startreplicationtaskassessmentresponse_p.h
+  startreplicationtaskassessmentrunrequest.h
+  startreplicationtaskassessmentrunrequest_p.h
+  startreplicationtaskassessmentrunresponse.h
+  startreplicationtaskassessmentrunresponse_p.h
   startreplicationtaskrequest.h
   startreplicationtaskrequest_p.h
   startreplicationtaskresponse.h
@@ -195,6 +231,8 @@ add_library(QtAwsDatabaseMigrationService
   addtagstoresourceresponse.cpp
   applypendingmaintenanceactionrequest.cpp
   applypendingmaintenanceactionresponse.cpp
+  cancelreplicationtaskassessmentrunrequest.cpp
+  cancelreplicationtaskassessmentrunresponse.cpp
   createendpointrequest.cpp
   createendpointresponse.cpp
   createeventsubscriptionrequest.cpp
@@ -210,6 +248,8 @@ add_library(QtAwsDatabaseMigrationService
   databasemigrationserviceresponse.cpp
   deletecertificaterequest.cpp
   deletecertificateresponse.cpp
+  deleteconnectionrequest.cpp
+  deleteconnectionresponse.cpp
   deleteendpointrequest.cpp
   deleteendpointresponse.cpp
   deleteeventsubscriptionrequest.cpp
@@ -218,14 +258,20 @@ add_library(QtAwsDatabaseMigrationService
   deletereplicationinstanceresponse.cpp
   deletereplicationsubnetgrouprequest.cpp
   deletereplicationsubnetgroupresponse.cpp
+  deletereplicationtaskassessmentrunrequest.cpp
+  deletereplicationtaskassessmentrunresponse.cpp
   deletereplicationtaskrequest.cpp
   deletereplicationtaskresponse.cpp
   describeaccountattributesrequest.cpp
   describeaccountattributesresponse.cpp
+  describeapplicableindividualassessmentsrequest.cpp
+  describeapplicableindividualassessmentsresponse.cpp
   describecertificatesrequest.cpp
   describecertificatesresponse.cpp
   describeconnectionsrequest.cpp
   describeconnectionsresponse.cpp
+  describeendpointsettingsrequest.cpp
+  describeendpointsettingsresponse.cpp
   describeendpointsrequest.cpp
   describeendpointsresponse.cpp
   describeendpointtypesrequest.cpp
@@ -250,6 +296,10 @@ add_library(QtAwsDatabaseMigrationService
   describereplicationsubnetgroupsresponse.cpp
   describereplicationtaskassessmentresultsrequest.cpp
   describereplicationtaskassessmentresultsresponse.cpp
+  describereplicationtaskassessmentrunsrequest.cpp
+  describereplicationtaskassessmentrunsresponse.cpp
+  describereplicationtaskindividualassessmentsrequest.cpp
+  describereplicationtaskindividualassessmentsresponse.cpp
   describereplicationtasksrequest.cpp
   describereplicationtasksresponse.cpp
   describeschemasrequest.cpp
@@ -270,6 +320,8 @@ add_library(QtAwsDatabaseMigrationService
   modifyreplicationsubnetgroupresponse.cpp
   modifyreplicationtaskrequest.cpp
   modifyreplicationtaskresponse.cpp
+  movereplicationtaskrequest.cpp
+  movereplicationtaskresponse.cpp
   rebootreplicationinstancerequest.cpp
   rebootreplicationinstanceresponse.cpp
   refreshschemasrequest.cpp
@@ -280,6 +332,8 @@ add_library(QtAwsDatabaseMigrationService
   removetagsfromresourceresponse.cpp
   startreplicationtaskassessmentrequest.cpp
   startreplicationtaskassessmentresponse.cpp
+  startreplicationtaskassessmentrunrequest.cpp
+  startreplicationtaskassessmentrunresponse.cpp
   startreplicationtaskrequest.cpp
   startreplicationtaskresponse.cpp
   stopreplicationtaskrequest.cpp

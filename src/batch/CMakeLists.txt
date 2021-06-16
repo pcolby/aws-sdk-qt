@@ -51,6 +51,10 @@ add_library(QtAwsBatch
   listjobsrequest_p.h
   listjobsresponse.h
   listjobsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   registerjobdefinitionrequest.h
   registerjobdefinitionrequest_p.h
   registerjobdefinitionresponse.h
@@ -59,10 +63,18 @@ add_library(QtAwsBatch
   submitjobrequest_p.h
   submitjobresponse.h
   submitjobresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
   terminatejobrequest.h
   terminatejobrequest_p.h
   terminatejobresponse.h
   terminatejobresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatecomputeenvironmentrequest.h
   updatecomputeenvironmentrequest_p.h
   updatecomputeenvironmentresponse.h
@@ -96,12 +108,18 @@ add_library(QtAwsBatch
   describejobsresponse.cpp
   listjobsrequest.cpp
   listjobsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   registerjobdefinitionrequest.cpp
   registerjobdefinitionresponse.cpp
   submitjobrequest.cpp
   submitjobresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
   terminatejobrequest.cpp
   terminatejobresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatecomputeenvironmentrequest.cpp
   updatecomputeenvironmentresponse.cpp
   updatejobqueuerequest.cpp

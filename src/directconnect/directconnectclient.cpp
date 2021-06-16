@@ -37,6 +37,8 @@
 #include "associateconnectionwithlagresponse.h"
 #include "associatehostedconnectionrequest.h"
 #include "associatehostedconnectionresponse.h"
+#include "associatemacseckeyrequest.h"
+#include "associatemacseckeyresponse.h"
 #include "associatevirtualinterfacerequest.h"
 #include "associatevirtualinterfaceresponse.h"
 #include "confirmconnectionrequest.h"
@@ -117,10 +119,20 @@
 #include "describevirtualinterfacesresponse.h"
 #include "disassociateconnectionfromlagrequest.h"
 #include "disassociateconnectionfromlagresponse.h"
+#include "disassociatemacseckeyrequest.h"
+#include "disassociatemacseckeyresponse.h"
+#include "listvirtualinterfacetesthistoryrequest.h"
+#include "listvirtualinterfacetesthistoryresponse.h"
+#include "startbgpfailovertestrequest.h"
+#include "startbgpfailovertestresponse.h"
+#include "stopbgpfailovertestrequest.h"
+#include "stopbgpfailovertestresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateconnectionrequest.h"
+#include "updateconnectionresponse.h"
 #include "updatedirectconnectgatewayassociationrequest.h"
 #include "updatedirectconnectgatewayassociationresponse.h"
 #include "updatelagrequest.h"
@@ -391,6 +403,30 @@ AssociateHostedConnectionResponse * DirectConnectClient::associateHostedConnecti
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * AssociateMacSecKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates a MAC Security (MACsec) Connection Key Name (CKN)/ Connectivity Association Key (CAK) pair with an AWS Direct
+ * Connect dedicated
+ *
+ * connection>
+ *
+ * You must supply either the <code>secretARN,</code> or the CKN/CAK (<code>ckn</code> and <code>cak</code>) pair in the
+ *
+ * request>
+ *
+ * For information about MAC Security (MACsec) key considerations, see <a
+ * href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-mac-sec-getting-started.html#mac-sec-key-consideration">MACsec
+ * pre-shared CKN/CAK key considerations </a> in the <i>AWS Direct Connect User
+ */
+AssociateMacSecKeyResponse * DirectConnectClient::associateMacSecKey(const AssociateMacSecKeyRequest &request)
+{
+    return qobject_cast<AssociateMacSecKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * AssociateVirtualInterfaceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -512,7 +548,7 @@ ConfirmTransitVirtualInterfaceResponse * DirectConnectClient::confirmTransitVirt
  *
  * addresses>
  *
- * For a public virtual interface, the Autonomous System Number (ASN) must be private or already whitelisted for the
+ * For a public virtual interface, the Autonomous System Number (ASN) must be private or already on the allow list for the
  * virtual
  */
 CreateBGPPeerResponse * DirectConnectClient::createBGPPeer(const CreateBGPPeerRequest &request)
@@ -590,9 +626,8 @@ CreateDirectConnectGatewayAssociationResponse * DirectConnectClient::createDirec
  *
  * gateway>
  *
- * You can only associate a Direct Connect gateway and virtual private gateway or transit gateway when the account that
- * owns the Direct Connect gateway and the account that owns the virtual private gateway or transit gateway have the same
- * AWS Payer
+ * You can associate a Direct Connect gateway and virtual private gateway or transit gateway that is owned by any AWS
+ * account.
  */
 CreateDirectConnectGatewayAssociationProposalResponse * DirectConnectClient::createDirectConnectGatewayAssociationProposal(const CreateDirectConnectGatewayAssociationProposalRequest &request)
 {
@@ -641,26 +676,27 @@ CreateInterconnectResponse * DirectConnectClient::createInterconnect(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a link aggregation group (LAG) with the specified number of bundled physical connections between the customer
- * network and a specific AWS Direct Connect location. A LAG is a logical interface that uses the Link Aggregation Control
- * Protocol (LACP) to aggregate multiple interfaces, enabling you to treat them as a single
+ * Creates a link aggregation group (LAG) with the specified number of bundled physical dedicated connections between the
+ * customer network and a specific AWS Direct Connect location. A LAG is a logical interface that uses the Link Aggregation
+ * Control Protocol (LACP) to aggregate multiple interfaces, enabling you to treat them as a single
  *
  * interface>
  *
- * All connections in a LAG must use the same bandwidth and must terminate at the same AWS Direct Connect
+ * All connections in a LAG must use the same bandwidth (either 1Gbps or 10Gbps) and must terminate at the same AWS Direct
+ * Connect
  *
  * endpoint>
  *
- * You can have up to 10 connections per LAG. Regardless of this limit, if you request more connections for the LAG than
- * AWS Direct Connect can allocate on a single endpoint, no LAG is
+ * You can have up to 10 dedicated connections per LAG. Regardless of this limit, if you request more connections for the
+ * LAG than AWS Direct Connect can allocate on a single endpoint, no LAG is
  *
  * created>
  *
- * You can specify an existing physical connection or interconnect to include in the LAG (which counts towards the total
- * number of connections). Doing so interrupts the current physical connection or hosted connections, and re-establishes
- * them as a member of the LAG. The LAG will be created on the same AWS Direct Connect endpoint to which the connection
- * terminates. Any virtual interfaces associated with the connection are automatically disassociated and re-associated with
- * the LAG. The connection ID does not
+ * You can specify an existing physical dedicated connection or interconnect to include in the LAG (which counts towards
+ * the total number of connections). Doing so interrupts the current physical dedicated connection, and re-establishes them
+ * as a member of the LAG. The LAG will be created on the same AWS Direct Connect endpoint to which the dedicated
+ * connection terminates. Any virtual interfaces associated with the dedicated connection are automatically disassociated
+ * and re-associated with the LAG. The connection ID does not
  *
  * change>
  *
@@ -683,6 +719,13 @@ CreateLagResponse * DirectConnectClient::createLag(const CreateLagRequest &reque
  * Connecting the private virtual interface to a Direct Connect gateway enables the possibility for connecting to multiple
  * VPCs, including VPCs in different AWS Regions. Connecting the private virtual interface to a VGW only provides access to
  * a single VPC within the same
+ *
+ * Region>
+ *
+ * Setting the MTU of a virtual interface to 9001 (jumbo frames) can cause an update to the underlying physical connection
+ * if it wasn't updated to support jumbo frames. Updating the connection disrupts network connectivity for all virtual
+ * interfaces associated with the connection for up to 30 seconds. To check whether your connection supports jumbo frames,
+ * call <a>DescribeConnections</a>. To check whether your virtual interface supports jumbo frames, call
  */
 CreatePrivateVirtualInterfaceResponse * DirectConnectClient::createPrivateVirtualInterface(const CreatePrivateVirtualInterfaceRequest &request)
 {
@@ -724,6 +767,13 @@ CreatePublicVirtualInterfaceResponse * DirectConnectClient::createPublicVirtualI
  * If you associate your transit gateway with one or more Direct Connect gateways, the Autonomous System Number (ASN) used
  * by the transit gateway and the Direct Connect gateway must be different. For example, if you use the default ASN 64512
  * for both your the transit gateway and Direct Connect gateway, the association request
+ *
+ * fails> </b>
+ *
+ * Setting the MTU of a virtual interface to 8500 (jumbo frames) can cause an update to the underlying physical connection
+ * if it wasn't updated to support jumbo frames. Updating the connection disrupts network connectivity for all virtual
+ * interfaces associated with the connection for up to 30 seconds. To check whether your connection supports jumbo frames,
+ * call <a>DescribeConnections</a>. To check whether your virtual interface supports jumbo frames, call
  */
 CreateTransitVirtualInterfaceResponse * DirectConnectClient::createTransitVirtualInterface(const CreateTransitVirtualInterfaceRequest &request)
 {
@@ -772,7 +822,7 @@ DeleteConnectionResponse * DirectConnectClient::deleteConnection(const DeleteCon
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified Direct Connect gateway. You must first delete all virtual interfaces that are attached to the
- * Direct Connect gateway and disassociate all virtual private gateways that are associated with the Direct Connect
+ * Direct Connect gateway and disassociate all virtual private gateways associated with the Direct Connect
  */
 DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGateway(const DeleteDirectConnectGatewayRequest &request)
 {
@@ -786,6 +836,12 @@ DeleteDirectConnectGatewayResponse * DirectConnectClient::deleteDirectConnectGat
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the association between the specified Direct Connect gateway and virtual private
+ *
+ * gateway>
+ *
+ * We recommend that you specify the <code>associationID</code> to delete the association. Alternatively, if you own
+ * virtual gateway and a Direct Connect gateway association, you can specify the <code>virtualGatewayId</code> and
+ * <code>directConnectGatewayId</code> to delete an
  */
 DeleteDirectConnectGatewayAssociationResponse * DirectConnectClient::deleteDirectConnectGatewayAssociation(const DeleteDirectConnectGatewayAssociationRequest &request)
 {
@@ -928,11 +984,48 @@ DescribeDirectConnectGatewayAssociationProposalsResponse * DirectConnectClient::
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the associations between your Direct Connect gateways and virtual private gateways. You must specify a Direct
- * Connect gateway, a virtual private gateway, or both. If you specify a Direct Connect gateway, the response contains all
- * virtual private gateways associated with the Direct Connect gateway. If you specify a virtual private gateway, the
- * response contains all Direct Connect gateways associated with the virtual private gateway. If you specify both, the
- * response contains the association between the Direct Connect gateway and the virtual private
+ * Lists the associations between your Direct Connect gateways and virtual private gateways and transit gateways. You must
+ * specify one of the
+ *
+ * following> <ul> <li>
+ *
+ * A Direct Connect
+ *
+ * gatewa>
+ *
+ * The response contains all virtual private gateways and transit gateways associated with the Direct Connect
+ *
+ * gateway> </li> <li>
+ *
+ * A virtual private
+ *
+ * gatewa>
+ *
+ * The response contains the Direct Connect
+ *
+ * gateway> </li> <li>
+ *
+ * A transit
+ *
+ * gatewa>
+ *
+ * The response contains the Direct Connect
+ *
+ * gateway> </li> <li>
+ *
+ * A Direct Connect gateway and a virtual private
+ *
+ * gatewa>
+ *
+ * The response contains the association between the Direct Connect gateway and virtual private
+ *
+ * gateway> </li> <li>
+ *
+ * A Direct Connect gateway and a transit
+ *
+ * gatewa>
+ *
+ * The response contains the association between the Direct Connect gateway and transit
  */
 DescribeDirectConnectGatewayAssociationsResponse * DirectConnectClient::describeDirectConnectGatewayAssociations(const DescribeDirectConnectGatewayAssociationsRequest &request)
 {
@@ -1175,6 +1268,73 @@ DisassociateConnectionFromLagResponse * DirectConnectClient::disassociateConnect
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * DisassociateMacSecKeyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the association between a MAC Security (MACsec) security key and an AWS Direct Connect dedicated
+ */
+DisassociateMacSecKeyResponse * DirectConnectClient::disassociateMacSecKey(const DisassociateMacSecKeyRequest &request)
+{
+    return qobject_cast<DisassociateMacSecKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * ListVirtualInterfaceTestHistoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the virtual interface failover test
+ */
+ListVirtualInterfaceTestHistoryResponse * DirectConnectClient::listVirtualInterfaceTestHistory(const ListVirtualInterfaceTestHistoryRequest &request)
+{
+    return qobject_cast<ListVirtualInterfaceTestHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * StartBgpFailoverTestResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts the virtual interface failover test that verifies your configuration meets your resiliency requirements by
+ * placing the BGP peering session in the DOWN state. You can then send traffic to verify that there are no
+ *
+ * outages>
+ *
+ * You can run the test on public, private, transit, and hosted virtual
+ *
+ * interfaces>
+ *
+ * You can use <a
+ * href="https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ListVirtualInterfaceTestHistory.html">ListVirtualInterfaceTestHistory</a>
+ * to view the virtual interface test
+ *
+ * history>
+ *
+ * If you need to stop the test before the test interval completes, use <a
+ */
+StartBgpFailoverTestResponse * DirectConnectClient::startBgpFailoverTest(const StartBgpFailoverTestRequest &request)
+{
+    return qobject_cast<StartBgpFailoverTestResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * StopBgpFailoverTestResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the virtual interface failover
+ */
+StopBgpFailoverTestResponse * DirectConnectClient::stopBgpFailoverTest(const StopBgpFailoverTestRequest &request)
+{
+    return qobject_cast<StopBgpFailoverTestResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1206,6 +1366,31 @@ UntagResourceResponse * DirectConnectClient::untagResource(const UntagResourceRe
 
 /*!
  * Sends \a request to the DirectConnectClient service, and returns a pointer to an
+ * UpdateConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the AWS Direct Connect dedicated connection
+ *
+ * configuration>
+ *
+ * You can update the following parameters for a
+ *
+ * connection> <ul> <li>
+ *
+ * The connection
+ *
+ * nam> </li> <li>
+ *
+ * The connection's MAC Security (MACsec) encryption
+ */
+UpdateConnectionResponse * DirectConnectClient::updateConnection(const UpdateConnectionRequest &request)
+{
+    return qobject_cast<UpdateConnectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectConnectClient service, and returns a pointer to an
  * UpdateDirectConnectGatewayAssociationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1231,7 +1416,7 @@ UpdateDirectConnectGatewayAssociationResponse * DirectConnectClient::updateDirec
  *
  * (LAG)>
  *
- * You can update the following
+ * You can update the following LAG
  *
  * attributes> <ul> <li>
  *
@@ -1241,12 +1426,22 @@ UpdateDirectConnectGatewayAssociationResponse * DirectConnectClient::updateDirec
  *
  * The value for the minimum number of connections that must be operational for the LAG itself to be operational.
  *
- * </p </li> </ul>
+ * </p </li> <li>
  *
- * When you create a LAG, the default value for the minimum number of operational connections is zero (0). If you update
- * this value and the number of operational connections falls below the specified value, the LAG automatically goes down to
- * avoid over-utilization of the remaining connections. Adjust this value with care, as it could force the LAG down if it
- * is set higher than the current number of operational
+ * The LAG's MACsec encryption
+ *
+ * mode>
+ *
+ * AWS assigns this value to each connection which is part of the
+ *
+ * LAG> </li> <li>
+ *
+ * The
+ *
+ * tag> </li> </ul> <note>
+ *
+ * If you adjust the threshold value for the minimum number of operational connections, ensure that the new value does not
+ * cause the LAG to fall below the threshold and become
  */
 UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &request)
 {
@@ -1266,7 +1461,7 @@ UpdateLagResponse * DirectConnectClient::updateLag(const UpdateLagRequest &reque
  * Setting the MTU of a virtual interface to 9001 (jumbo frames) can cause an update to the underlying physical connection
  * if it wasn't updated to support jumbo frames. Updating the connection disrupts network connectivity for all virtual
  * interfaces associated with the connection for up to 30 seconds. To check whether your connection supports jumbo frames,
- * call <a>DescribeConnections</a>. To check whether your virtual interface supports jumbo frames, call
+ * call <a>DescribeConnections</a>. To check whether your virtual q interface supports jumbo frames, call
  */
 UpdateVirtualInterfaceAttributesResponse * DirectConnectClient::updateVirtualInterfaceAttributes(const UpdateVirtualInterfaceAttributesRequest &request)
 {

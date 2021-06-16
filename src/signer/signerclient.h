@@ -28,6 +28,8 @@ namespace QtAws {
 namespace signer {
 
 class signerClientPrivate;
+class AddProfilePermissionRequest;
+class AddProfilePermissionResponse;
 class CancelSigningProfileRequest;
 class CancelSigningProfileResponse;
 class DescribeSigningJobRequest;
@@ -36,16 +38,30 @@ class GetSigningPlatformRequest;
 class GetSigningPlatformResponse;
 class GetSigningProfileRequest;
 class GetSigningProfileResponse;
+class ListProfilePermissionsRequest;
+class ListProfilePermissionsResponse;
 class ListSigningJobsRequest;
 class ListSigningJobsResponse;
 class ListSigningPlatformsRequest;
 class ListSigningPlatformsResponse;
 class ListSigningProfilesRequest;
 class ListSigningProfilesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutSigningProfileRequest;
 class PutSigningProfileResponse;
+class RemoveProfilePermissionRequest;
+class RemoveProfilePermissionResponse;
+class RevokeSignatureRequest;
+class RevokeSignatureResponse;
+class RevokeSigningProfileRequest;
+class RevokeSigningProfileResponse;
 class StartSigningJobRequest;
 class StartSigningJobResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT signerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -63,15 +79,23 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AddProfilePermissionResponse * addProfilePermission(const AddProfilePermissionRequest &request);
     CancelSigningProfileResponse * cancelSigningProfile(const CancelSigningProfileRequest &request);
     DescribeSigningJobResponse * describeSigningJob(const DescribeSigningJobRequest &request);
     GetSigningPlatformResponse * getSigningPlatform(const GetSigningPlatformRequest &request);
     GetSigningProfileResponse * getSigningProfile(const GetSigningProfileRequest &request);
+    ListProfilePermissionsResponse * listProfilePermissions(const ListProfilePermissionsRequest &request);
     ListSigningJobsResponse * listSigningJobs(const ListSigningJobsRequest &request);
     ListSigningPlatformsResponse * listSigningPlatforms(const ListSigningPlatformsRequest &request);
     ListSigningProfilesResponse * listSigningProfiles(const ListSigningProfilesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutSigningProfileResponse * putSigningProfile(const PutSigningProfileRequest &request);
+    RemoveProfilePermissionResponse * removeProfilePermission(const RemoveProfilePermissionRequest &request);
+    RevokeSignatureResponse * revokeSignature(const RevokeSignatureRequest &request);
+    RevokeSigningProfileResponse * revokeSigningProfile(const RevokeSigningProfileRequest &request);
     StartSigningJobResponse * startSigningJob(const StartSigningJobRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(signerClient)

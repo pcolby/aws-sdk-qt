@@ -30,14 +30,20 @@ namespace FMS {
 class FmsClientPrivate;
 class AssociateAdminAccountRequest;
 class AssociateAdminAccountResponse;
+class DeleteAppsListRequest;
+class DeleteAppsListResponse;
 class DeleteNotificationChannelRequest;
 class DeleteNotificationChannelResponse;
 class DeletePolicyRequest;
 class DeletePolicyResponse;
+class DeleteProtocolsListRequest;
+class DeleteProtocolsListResponse;
 class DisassociateAdminAccountRequest;
 class DisassociateAdminAccountResponse;
 class GetAdminAccountRequest;
 class GetAdminAccountResponse;
+class GetAppsListRequest;
+class GetAppsListResponse;
 class GetComplianceDetailRequest;
 class GetComplianceDetailResponse;
 class GetNotificationChannelRequest;
@@ -46,16 +52,34 @@ class GetPolicyRequest;
 class GetPolicyResponse;
 class GetProtectionStatusRequest;
 class GetProtectionStatusResponse;
+class GetProtocolsListRequest;
+class GetProtocolsListResponse;
+class GetViolationDetailsRequest;
+class GetViolationDetailsResponse;
+class ListAppsListsRequest;
+class ListAppsListsResponse;
 class ListComplianceStatusRequest;
 class ListComplianceStatusResponse;
 class ListMemberAccountsRequest;
 class ListMemberAccountsResponse;
 class ListPoliciesRequest;
 class ListPoliciesResponse;
+class ListProtocolsListsRequest;
+class ListProtocolsListsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class PutAppsListRequest;
+class PutAppsListResponse;
 class PutNotificationChannelRequest;
 class PutNotificationChannelResponse;
 class PutPolicyRequest;
 class PutPolicyResponse;
+class PutProtocolsListRequest;
+class PutProtocolsListResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT FmsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -74,19 +98,31 @@ public:
 
 public slots:
     AssociateAdminAccountResponse * associateAdminAccount(const AssociateAdminAccountRequest &request);
+    DeleteAppsListResponse * deleteAppsList(const DeleteAppsListRequest &request);
     DeleteNotificationChannelResponse * deleteNotificationChannel(const DeleteNotificationChannelRequest &request);
     DeletePolicyResponse * deletePolicy(const DeletePolicyRequest &request);
+    DeleteProtocolsListResponse * deleteProtocolsList(const DeleteProtocolsListRequest &request);
     DisassociateAdminAccountResponse * disassociateAdminAccount(const DisassociateAdminAccountRequest &request);
     GetAdminAccountResponse * getAdminAccount(const GetAdminAccountRequest &request);
+    GetAppsListResponse * getAppsList(const GetAppsListRequest &request);
     GetComplianceDetailResponse * getComplianceDetail(const GetComplianceDetailRequest &request);
     GetNotificationChannelResponse * getNotificationChannel(const GetNotificationChannelRequest &request);
     GetPolicyResponse * getPolicy(const GetPolicyRequest &request);
     GetProtectionStatusResponse * getProtectionStatus(const GetProtectionStatusRequest &request);
+    GetProtocolsListResponse * getProtocolsList(const GetProtocolsListRequest &request);
+    GetViolationDetailsResponse * getViolationDetails(const GetViolationDetailsRequest &request);
+    ListAppsListsResponse * listAppsLists(const ListAppsListsRequest &request);
     ListComplianceStatusResponse * listComplianceStatus(const ListComplianceStatusRequest &request);
     ListMemberAccountsResponse * listMemberAccounts(const ListMemberAccountsRequest &request);
     ListPoliciesResponse * listPolicies(const ListPoliciesRequest &request);
+    ListProtocolsListsResponse * listProtocolsLists(const ListProtocolsListsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    PutAppsListResponse * putAppsList(const PutAppsListRequest &request);
     PutNotificationChannelResponse * putNotificationChannel(const PutNotificationChannelRequest &request);
     PutPolicyResponse * putPolicy(const PutPolicyRequest &request);
+    PutProtocolsListResponse * putProtocolsList(const PutProtocolsListRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(FmsClient)

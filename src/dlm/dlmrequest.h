@@ -41,6 +41,9 @@ public:
         DeleteLifecyclePolicyAction,
         GetLifecyclePoliciesAction,
         GetLifecyclePolicyAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateLifecyclePolicyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

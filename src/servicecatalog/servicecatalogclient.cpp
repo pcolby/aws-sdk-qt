@@ -79,6 +79,8 @@
 #include "describeportfolioresponse.h"
 #include "describeportfoliosharestatusrequest.h"
 #include "describeportfoliosharestatusresponse.h"
+#include "describeportfoliosharesrequest.h"
+#include "describeportfoliosharesresponse.h"
 #include "describeproductrequest.h"
 #include "describeproductresponse.h"
 #include "describeproductasadminrequest.h"
@@ -121,6 +123,10 @@
 #include "executeprovisionedproductserviceactionresponse.h"
 #include "getawsorganizationsaccessstatusrequest.h"
 #include "getawsorganizationsaccessstatusresponse.h"
+#include "getprovisionedproductoutputsrequest.h"
+#include "getprovisionedproductoutputsresponse.h"
+#include "importasprovisionedproductrequest.h"
+#include "importasprovisionedproductresponse.h"
 #include "listacceptedportfoliosharesrequest.h"
 #include "listacceptedportfoliosharesresponse.h"
 #include "listbudgetsforresourcerequest.h"
@@ -175,6 +181,8 @@
 #include "updateconstraintresponse.h"
 #include "updateportfoliorequest.h"
 #include "updateportfolioresponse.h"
+#include "updateportfoliosharerequest.h"
+#include "updateportfolioshareresponse.h"
 #include "updateproductrequest.h"
 #include "updateproductresponse.h"
 #include "updateprovisionedproductrequest.h"
@@ -213,8 +221,8 @@ namespace ServiceCatalog {
  *  <fullname>AWS Service Catalog</fullname>
  * 
  *  <a href="https://aws.amazon.com/servicecatalog/">AWS Service Catalog</a> enables organizations to create and manage
- *  catalogs of IT services that are approved for use on AWS. To get the most out of this documentation, you should be
- *  familiar with the terminology discussed in <a
+ *  catalogs of IT services that are approved for AWS. To get the most out of this documentation, you should be familiar
+ *  with the terminology discussed in <a
  *  href="http://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is_concepts.html">AWS Service Catalog
  */
 
@@ -317,6 +325,10 @@ AssociatePrincipalWithPortfolioResponse * ServiceCatalogClient::associatePrincip
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Associates the specified product with the specified
+ *
+ * portfolio>
+ *
+ * A delegated admin is authorized to invoke this
  */
 AssociateProductWithPortfolioResponse * ServiceCatalogClient::associateProductWithPortfolio(const AssociateProductWithPortfolioRequest &request)
 {
@@ -403,6 +415,10 @@ CopyProductResponse * ServiceCatalogClient::copyProduct(const CopyProductRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a
+ *
+ * constraint>
+ *
+ * A delegated admin is authorized to invoke this
  */
 CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateConstraintRequest &request)
 {
@@ -416,6 +432,10 @@ CreateConstraintResponse * ServiceCatalogClient::createConstraint(const CreateCo
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a
+ *
+ * portfolio>
+ *
+ * A delegated admin is authorized to invoke this
  */
 CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePortfolioRequest &request)
 {
@@ -429,8 +449,25 @@ CreatePortfolioResponse * ServiceCatalogClient::createPortfolio(const CreatePort
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Shares the specified portfolio with the specified account or organization node. Shares to an organization node can only
- * be created by the master account of an Organization. AWSOrganizationsAccess must be enabled in order to create a
- * portfolio share to an organization
+ * be created by the management account of an organization or by a delegated administrator. You can share portfolios to an
+ * organization, an organizational unit, or a specific
+ *
+ * account>
+ *
+ * Note that if a delegated admin is de-registered, they can no longer create portfolio
+ *
+ * shares>
+ *
+ * <code>AWSOrganizationsAccess</code> must be enabled in order to create a portfolio share to an organization
+ *
+ * node>
+ *
+ * You can't share a shared resource, including portfolios that contain a shared
+ *
+ * product>
+ *
+ * If the portfolio share with the specified account or organization node already exists, this action will have no effect
+ * and will not return an error. To update an existing share, you must use the <code> UpdatePortfolioShare</code> API
  */
 CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const CreatePortfolioShareRequest &request)
 {
@@ -444,6 +481,16 @@ CreatePortfolioShareResponse * ServiceCatalogClient::createPortfolioShare(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a
+ *
+ * product>
+ *
+ * A delegated admin is authorized to invoke this
+ *
+ * command>
+ *
+ * The user or role that performs this operation must have the <code>cloudformation:GetTemplate</code> IAM policy
+ * permission. This policy permission is required when using the <code>ImportFromPhysicalId</code> template source in the
+ * information data
  */
 CreateProductResponse * ServiceCatalogClient::createProduct(const CreateProductRequest &request)
 {
@@ -485,6 +532,12 @@ CreateProvisionedProductPlanResponse * ServiceCatalogClient::createProvisionedPr
  * product>
  *
  * You cannot create a provisioning artifact for a product that was shared with
+ *
+ * you>
+ *
+ * The user or role that performs this operation must have the <code>cloudformation:GetTemplate</code> IAM policy
+ * permission. This policy permission is required when using the <code>ImportFromPhysicalId</code> template source in the
+ * information data
  */
 CreateProvisioningArtifactResponse * ServiceCatalogClient::createProvisioningArtifact(const CreateProvisioningArtifactRequest &request)
 {
@@ -524,6 +577,10 @@ CreateTagOptionResponse * ServiceCatalogClient::createTagOption(const CreateTagO
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified
+ *
+ * constraint>
+ *
+ * A delegated admin is authorized to invoke this
  */
 DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteConstraintRequest &request)
 {
@@ -541,6 +598,10 @@ DeleteConstraintResponse * ServiceCatalogClient::deleteConstraint(const DeleteCo
  * portfolio>
  *
  * You cannot delete a portfolio if it was shared with you or if it has associated products, users, constraints, or shared
+ *
+ * accounts>
+ *
+ * A delegated admin is authorized to invoke this
  */
 DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePortfolioRequest &request)
 {
@@ -554,7 +615,11 @@ DeletePortfolioResponse * ServiceCatalogClient::deletePortfolio(const DeletePort
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Stops sharing the specified portfolio with the specified account or organization node. Shares to an organization node
- * can only be deleted by the master account of an
+ * can only be deleted by the management account of an organization or by a delegated
+ *
+ * administrator>
+ *
+ * Note that if a delegated admin is de-registered, portfolio shares created from that account are
  */
 DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const DeletePortfolioShareRequest &request)
 {
@@ -572,6 +637,10 @@ DeletePortfolioShareResponse * ServiceCatalogClient::deletePortfolioShare(const 
  * product>
  *
  * You cannot delete a product if it was shared with you or is associated with a
+ *
+ * portfolio>
+ *
+ * A delegated admin is authorized to invoke this
  */
 DeleteProductResponse * ServiceCatalogClient::deleteProduct(const DeleteProductRequest &request)
 {
@@ -672,6 +741,10 @@ DescribeCopyProductStatusResponse * ServiceCatalogClient::describeCopyProductSta
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Gets information about the specified
+ *
+ * portfolio>
+ *
+ * A delegated admin is authorized to invoke this
  */
 DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const DescribePortfolioRequest &request)
 {
@@ -684,11 +757,34 @@ DescribePortfolioResponse * ServiceCatalogClient::describePortfolio(const Descri
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the status of the specified portfolio share operation. This API can only be called by the master account in the
+ * Gets the status of the specified portfolio share operation. This API can only be called by the management account in the
+ * organization or by a delegated
  */
 DescribePortfolioShareStatusResponse * ServiceCatalogClient::describePortfolioShareStatus(const DescribePortfolioShareStatusRequest &request)
 {
     return qobject_cast<DescribePortfolioShareStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * DescribePortfolioSharesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a summary of each of the portfolio shares that were created for the specified
+ *
+ * portfolio>
+ *
+ * You can use this API to determine which accounts or organizational nodes this portfolio have been shared, whether the
+ * recipient entity has imported the share, and whether TagOptions are included with the
+ *
+ * share>
+ *
+ * The <code>PortfolioId</code> and <code>Type</code> parameters are both
+ */
+DescribePortfolioSharesResponse * ServiceCatalogClient::describePortfolioShares(const DescribePortfolioSharesRequest &request)
+{
+    return qobject_cast<DescribePortfolioSharesResponse *>(send(request));
 }
 
 /*!
@@ -832,6 +928,8 @@ DescribeServiceActionResponse * ServiceCatalogClient::describeServiceAction(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Finds the default parameters for a specific self-service action on a specific provisioned product and returns a map of
+ * the results to the
  */
 DescribeServiceActionExecutionParametersResponse * ServiceCatalogClient::describeServiceActionExecutionParameters(const DescribeServiceActionExecutionParametersRequest &request)
 {
@@ -859,7 +957,16 @@ DescribeTagOptionResponse * ServiceCatalogClient::describeTagOption(const Descri
  *
  * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it
  * will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your
- * organization structure if it changes after calling this API. This API can only be called by the master account in the
+ * organization structure if it changes after calling this API. This API can only be called by the management account in
+ * the
+ *
+ * organization>
+ *
+ * This API can't be invoked if there are active delegated administrators in the
+ *
+ * organization>
+ *
+ * Note that a delegated administrator is not authorized to invoke
  */
 DisableAWSOrganizationsAccessResponse * ServiceCatalogClient::disableAWSOrganizationsAccess(const DisableAWSOrganizationsAccessRequest &request)
 {
@@ -899,6 +1006,10 @@ DisassociatePrincipalFromPortfolioResponse * ServiceCatalogClient::disassociateP
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates the specified product from the specified portfolio.
+ *
+ * </p
+ *
+ * A delegated admin is authorized to invoke this
  */
 DisassociateProductFromPortfolioResponse * ServiceCatalogClient::disassociateProductFromPortfolio(const DisassociateProductFromPortfolioRequest &request)
 {
@@ -938,13 +1049,17 @@ DisassociateTagOptionFromResourceResponse * ServiceCatalogClient::disassociateTa
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on
- * your organization in order to sync your shares with the current structure. This API can only be called by the master
+ * your organization in order to sync your shares with the current structure. This API can only be called by the management
  * account in the
  *
  * organization>
  *
  * By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your
  * shares can be in sync with any changes in your AWS Organizations
+ *
+ * structure>
+ *
+ * Note that a delegated administrator is not authorized to invoke
  */
 EnableAWSOrganizationsAccessResponse * ServiceCatalogClient::enableAWSOrganizationsAccess(const EnableAWSOrganizationsAccessRequest &request)
 {
@@ -983,12 +1098,60 @@ ExecuteProvisionedProductServiceActionResponse * ServiceCatalogClient::executePr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the master account in
- * the
+ * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the management
+ * account in the organization or by a delegated
  */
 GetAWSOrganizationsAccessStatusResponse * ServiceCatalogClient::getAWSOrganizationsAccessStatus(const GetAWSOrganizationsAccessStatusRequest &request)
 {
     return qobject_cast<GetAWSOrganizationsAccessStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * GetProvisionedProductOutputsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This API takes either a <code>ProvisonedProductId</code> or a <code>ProvisionedProductName</code>, along with a list of
+ * one or more output keys, and responds with the key/value pairs of those
+ */
+GetProvisionedProductOutputsResponse * ServiceCatalogClient::getProvisionedProductOutputs(const GetProvisionedProductOutputsRequest &request)
+{
+    return qobject_cast<GetProvisionedProductOutputsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * ImportAsProvisionedProductResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Requests the import of a resource as a Service Catalog provisioned product that is associated to a Service Catalog
+ * product and provisioning artifact. Once imported, all supported Service Catalog governance actions are supported on the
+ * provisioned
+ *
+ * product>
+ *
+ * Resource import only supports CloudFormation stack ARNs. CloudFormation StackSets and non-root nested stacks are not
+ *
+ * supported>
+ *
+ * The CloudFormation stack must have one of the following statuses to be imported: <code>CREATE_COMPLETE</code>,
+ * <code>UPDATE_COMPLETE</code>, <code>UPDATE_ROLLBACK_COMPLETE</code>, <code>IMPORT_COMPLETE</code>,
+ *
+ * <code>IMPORT_ROLLBACK_COMPLETE</code>>
+ *
+ * Import of the resource requires that the CloudFormation stack template matches the associated Service Catalog product
+ * provisioning artifact.
+ *
+ * </p
+ *
+ * The user or role that performs this operation must have the <code>cloudformation:GetTemplate</code> and
+ * <code>cloudformation:DescribeStacks</code> IAM policy permissions.
+ */
+ImportAsProvisionedProductResponse * ServiceCatalogClient::importAsProvisionedProduct(const ImportAsProvisionedProductRequest &request)
+{
+    return qobject_cast<ImportAsProvisionedProductResponse *>(send(request));
 }
 
 /*!
@@ -1050,8 +1213,12 @@ ListLaunchPathsResponse * ServiceCatalogClient::listLaunchPaths(const ListLaunch
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the master
- * account in the
+ * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the management
+ * account in the organization or by a delegated
+ *
+ * admin>
+ *
+ * If a delegated admin is de-registered, they can no longer perform this
  */
 ListOrganizationPortfolioAccessResponse * ServiceCatalogClient::listOrganizationPortfolioAccess(const ListOrganizationPortfolioAccessRequest &request)
 {
@@ -1065,6 +1232,11 @@ ListOrganizationPortfolioAccessResponse * ServiceCatalogClient::listOrganization
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the account IDs that have access to the specified
+ *
+ * portfolio>
+ *
+ * A delegated admin can list the accounts that have access to the shared portfolio. Note that if a delegated admin is
+ * de-registered, they can no longer perform this
  */
 ListPortfolioAccessResponse * ServiceCatalogClient::listPortfolioAccess(const ListPortfolioAccessRequest &request)
 {
@@ -1370,6 +1542,39 @@ UpdateConstraintResponse * ServiceCatalogClient::updateConstraint(const UpdateCo
 UpdatePortfolioResponse * ServiceCatalogClient::updatePortfolio(const UpdatePortfolioRequest &request)
 {
     return qobject_cast<UpdatePortfolioResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceCatalogClient service, and returns a pointer to an
+ * UpdatePortfolioShareResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the specified portfolio share. You can use this API to enable or disable TagOptions sharing for an existing
+ * portfolio share.
+ *
+ * </p
+ *
+ * The portfolio share cannot be updated if the <code> CreatePortfolioShare</code> operation is <code>IN_PROGRESS</code>,
+ * as the share is not available to recipient entities. In this case, you must wait for the portfolio share to be
+ *
+ * COMPLETED>
+ *
+ * You must provide the <code>accountId</code> or organization node in the input, but not
+ *
+ * both>
+ *
+ * If the portfolio is shared to both an external account and an organization node, and both shares need to be updated, you
+ * must invoke <code>UpdatePortfolioShare</code> separately for each share type.
+ *
+ * </p
+ *
+ * This API cannot be used for removing the portfolio share. You must use <code>DeletePortfolioShare</code> API for that
+ * action.
+ */
+UpdatePortfolioShareResponse * ServiceCatalogClient::updatePortfolioShare(const UpdatePortfolioShareRequest &request)
+{
+    return qobject_cast<UpdatePortfolioShareResponse *>(send(request));
 }
 
 /*!

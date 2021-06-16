@@ -47,9 +47,13 @@ namespace Backup {
  * \value DeleteRecoveryPointAction Backup DeleteRecoveryPoint action.
  * \value DescribeBackupJobAction Backup DescribeBackupJob action.
  * \value DescribeBackupVaultAction Backup DescribeBackupVault action.
+ * \value DescribeCopyJobAction Backup DescribeCopyJob action.
+ * \value DescribeGlobalSettingsAction Backup DescribeGlobalSettings action.
  * \value DescribeProtectedResourceAction Backup DescribeProtectedResource action.
  * \value DescribeRecoveryPointAction Backup DescribeRecoveryPoint action.
+ * \value DescribeRegionSettingsAction Backup DescribeRegionSettings action.
  * \value DescribeRestoreJobAction Backup DescribeRestoreJob action.
+ * \value DisassociateRecoveryPointAction Backup DisassociateRecoveryPoint action.
  * \value ExportBackupPlanTemplateAction Backup ExportBackupPlanTemplate action.
  * \value GetBackupPlanAction Backup GetBackupPlan action.
  * \value GetBackupPlanFromJSONAction Backup GetBackupPlanFromJSON action.
@@ -65,6 +69,7 @@ namespace Backup {
  * \value ListBackupPlansAction Backup ListBackupPlans action.
  * \value ListBackupSelectionsAction Backup ListBackupSelections action.
  * \value ListBackupVaultsAction Backup ListBackupVaults action.
+ * \value ListCopyJobsAction Backup ListCopyJobs action.
  * \value ListProtectedResourcesAction Backup ListProtectedResources action.
  * \value ListRecoveryPointsByBackupVaultAction Backup ListRecoveryPointsByBackupVault action.
  * \value ListRecoveryPointsByResourceAction Backup ListRecoveryPointsByResource action.
@@ -73,12 +78,15 @@ namespace Backup {
  * \value PutBackupVaultAccessPolicyAction Backup PutBackupVaultAccessPolicy action.
  * \value PutBackupVaultNotificationsAction Backup PutBackupVaultNotifications action.
  * \value StartBackupJobAction Backup StartBackupJob action.
+ * \value StartCopyJobAction Backup StartCopyJob action.
  * \value StartRestoreJobAction Backup StartRestoreJob action.
  * \value StopBackupJobAction Backup StopBackupJob action.
  * \value TagResourceAction Backup TagResource action.
  * \value UntagResourceAction Backup UntagResource action.
  * \value UpdateBackupPlanAction Backup UpdateBackupPlan action.
+ * \value UpdateGlobalSettingsAction Backup UpdateGlobalSettings action.
  * \value UpdateRecoveryPointLifecycleAction Backup UpdateRecoveryPointLifecycle action.
+ * \value UpdateRegionSettingsAction Backup UpdateRegionSettings action.
  */
 
 /*!

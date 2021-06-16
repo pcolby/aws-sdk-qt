@@ -7,6 +7,14 @@ add_library(QtAwsApiGatewayManagementApi
   apigatewaymanagementapirequest_p.h
   apigatewaymanagementapiresponse.h
   apigatewaymanagementapiresponse_p.h
+  deleteconnectionrequest.h
+  deleteconnectionrequest_p.h
+  deleteconnectionresponse.h
+  deleteconnectionresponse_p.h
+  getconnectionrequest.h
+  getconnectionrequest_p.h
+  getconnectionresponse.h
+  getconnectionresponse_p.h
   posttoconnectionrequest.h
   posttoconnectionrequest_p.h
   posttoconnectionresponse.h
@@ -14,6 +22,10 @@ add_library(QtAwsApiGatewayManagementApi
   apigatewaymanagementapiclient.cpp
   apigatewaymanagementapirequest.cpp
   apigatewaymanagementapiresponse.cpp
+  deleteconnectionrequest.cpp
+  deleteconnectionresponse.cpp
+  getconnectionrequest.cpp
+  getconnectionresponse.cpp
   posttoconnectionrequest.cpp
   posttoconnectionresponse.cpp)
 

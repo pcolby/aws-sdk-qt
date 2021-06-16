@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwskendra
+description = AWS kendra SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawskendra-index.html"
+navigation.landingtitle = "kendra"
+navigation.cppclassespage = "kendra C++ Classes"

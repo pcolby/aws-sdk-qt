@@ -33,6 +33,10 @@ add_library(QtAwsDirectConnect
   associatehostedconnectionrequest_p.h
   associatehostedconnectionresponse.h
   associatehostedconnectionresponse_p.h
+  associatemacseckeyrequest.h
+  associatemacseckeyrequest_p.h
+  associatemacseckeyresponse.h
+  associatemacseckeyresponse_p.h
   associatevirtualinterfacerequest.h
   associatevirtualinterfacerequest_p.h
   associatevirtualinterfaceresponse.h
@@ -199,6 +203,22 @@ add_library(QtAwsDirectConnect
   disassociateconnectionfromlagrequest_p.h
   disassociateconnectionfromlagresponse.h
   disassociateconnectionfromlagresponse_p.h
+  disassociatemacseckeyrequest.h
+  disassociatemacseckeyrequest_p.h
+  disassociatemacseckeyresponse.h
+  disassociatemacseckeyresponse_p.h
+  listvirtualinterfacetesthistoryrequest.h
+  listvirtualinterfacetesthistoryrequest_p.h
+  listvirtualinterfacetesthistoryresponse.h
+  listvirtualinterfacetesthistoryresponse_p.h
+  startbgpfailovertestrequest.h
+  startbgpfailovertestrequest_p.h
+  startbgpfailovertestresponse.h
+  startbgpfailovertestresponse_p.h
+  stopbgpfailovertestrequest.h
+  stopbgpfailovertestrequest_p.h
+  stopbgpfailovertestresponse.h
+  stopbgpfailovertestresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -207,6 +227,10 @@ add_library(QtAwsDirectConnect
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateconnectionrequest.h
+  updateconnectionrequest_p.h
+  updateconnectionresponse.h
+  updateconnectionresponse_p.h
   updatedirectconnectgatewayassociationrequest.h
   updatedirectconnectgatewayassociationrequest_p.h
   updatedirectconnectgatewayassociationresponse.h
@@ -235,6 +259,8 @@ add_library(QtAwsDirectConnect
   associateconnectionwithlagresponse.cpp
   associatehostedconnectionrequest.cpp
   associatehostedconnectionresponse.cpp
+  associatemacseckeyrequest.cpp
+  associatemacseckeyresponse.cpp
   associatevirtualinterfacerequest.cpp
   associatevirtualinterfaceresponse.cpp
   confirmconnectionrequest.cpp
@@ -318,10 +344,20 @@ add_library(QtAwsDirectConnect
   directconnectresponse.cpp
   disassociateconnectionfromlagrequest.cpp
   disassociateconnectionfromlagresponse.cpp
+  disassociatemacseckeyrequest.cpp
+  disassociatemacseckeyresponse.cpp
+  listvirtualinterfacetesthistoryrequest.cpp
+  listvirtualinterfacetesthistoryresponse.cpp
+  startbgpfailovertestrequest.cpp
+  startbgpfailovertestresponse.cpp
+  stopbgpfailovertestrequest.cpp
+  stopbgpfailovertestresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateconnectionrequest.cpp
+  updateconnectionresponse.cpp
   updatedirectconnectgatewayassociationrequest.cpp
   updatedirectconnectgatewayassociationresponse.cpp
   updatelagrequest.cpp

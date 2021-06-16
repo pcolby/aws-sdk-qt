@@ -37,6 +37,8 @@ namespace PersonalizeEvents {
  * requests.
  *
  * \value PutEventsAction PersonalizeEvents PutEvents action.
+ * \value PutItemsAction PersonalizeEvents PutItems action.
+ * \value PutUsersAction PersonalizeEvents PutUsers action.
  */
 
 /*!

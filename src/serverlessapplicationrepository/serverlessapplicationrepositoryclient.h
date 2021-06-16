@@ -52,6 +52,8 @@ class ListApplicationsRequest;
 class ListApplicationsResponse;
 class PutApplicationPolicyRequest;
 class PutApplicationPolicyResponse;
+class UnshareApplicationRequest;
+class UnshareApplicationResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
@@ -83,6 +85,7 @@ public slots:
     ListApplicationVersionsResponse * listApplicationVersions(const ListApplicationVersionsRequest &request);
     ListApplicationsResponse * listApplications(const ListApplicationsRequest &request);
     PutApplicationPolicyResponse * putApplicationPolicy(const PutApplicationPolicyRequest &request);
+    UnshareApplicationResponse * unshareApplication(const UnshareApplicationRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
 private:

@@ -36,19 +36,49 @@ namespace LicenseManager {
  * This enum describes the actions that can be performed as LicenseManager
  * requests.
  *
+ * \value AcceptGrantAction LicenseManager AcceptGrant action.
+ * \value CheckInLicenseAction LicenseManager CheckInLicense action.
+ * \value CheckoutBorrowLicenseAction LicenseManager CheckoutBorrowLicense action.
+ * \value CheckoutLicenseAction LicenseManager CheckoutLicense action.
+ * \value CreateGrantAction LicenseManager CreateGrant action.
+ * \value CreateGrantVersionAction LicenseManager CreateGrantVersion action.
+ * \value CreateLicenseAction LicenseManager CreateLicense action.
  * \value CreateLicenseConfigurationAction LicenseManager CreateLicenseConfiguration action.
+ * \value CreateLicenseManagerReportGeneratorAction LicenseManager CreateLicenseManagerReportGenerator action.
+ * \value CreateLicenseVersionAction LicenseManager CreateLicenseVersion action.
+ * \value CreateTokenAction LicenseManager CreateToken action.
+ * \value DeleteGrantAction LicenseManager DeleteGrant action.
+ * \value DeleteLicenseAction LicenseManager DeleteLicense action.
  * \value DeleteLicenseConfigurationAction LicenseManager DeleteLicenseConfiguration action.
+ * \value DeleteLicenseManagerReportGeneratorAction LicenseManager DeleteLicenseManagerReportGenerator action.
+ * \value DeleteTokenAction LicenseManager DeleteToken action.
+ * \value ExtendLicenseConsumptionAction LicenseManager ExtendLicenseConsumption action.
+ * \value GetAccessTokenAction LicenseManager GetAccessToken action.
+ * \value GetGrantAction LicenseManager GetGrant action.
+ * \value GetLicenseAction LicenseManager GetLicense action.
  * \value GetLicenseConfigurationAction LicenseManager GetLicenseConfiguration action.
+ * \value GetLicenseManagerReportGeneratorAction LicenseManager GetLicenseManagerReportGenerator action.
+ * \value GetLicenseUsageAction LicenseManager GetLicenseUsage action.
  * \value GetServiceSettingsAction LicenseManager GetServiceSettings action.
  * \value ListAssociationsForLicenseConfigurationAction LicenseManager ListAssociationsForLicenseConfiguration action.
+ * \value ListDistributedGrantsAction LicenseManager ListDistributedGrants action.
+ * \value ListFailuresForLicenseConfigurationOperationsAction LicenseManager ListFailuresForLicenseConfigurationOperations action.
  * \value ListLicenseConfigurationsAction LicenseManager ListLicenseConfigurations action.
+ * \value ListLicenseManagerReportGeneratorsAction LicenseManager ListLicenseManagerReportGenerators action.
  * \value ListLicenseSpecificationsForResourceAction LicenseManager ListLicenseSpecificationsForResource action.
+ * \value ListLicenseVersionsAction LicenseManager ListLicenseVersions action.
+ * \value ListLicensesAction LicenseManager ListLicenses action.
+ * \value ListReceivedGrantsAction LicenseManager ListReceivedGrants action.
+ * \value ListReceivedLicensesAction LicenseManager ListReceivedLicenses action.
  * \value ListResourceInventoryAction LicenseManager ListResourceInventory action.
  * \value ListTagsForResourceAction LicenseManager ListTagsForResource action.
+ * \value ListTokensAction LicenseManager ListTokens action.
  * \value ListUsageForLicenseConfigurationAction LicenseManager ListUsageForLicenseConfiguration action.
+ * \value RejectGrantAction LicenseManager RejectGrant action.
  * \value TagResourceAction LicenseManager TagResource action.
  * \value UntagResourceAction LicenseManager UntagResource action.
  * \value UpdateLicenseConfigurationAction LicenseManager UpdateLicenseConfiguration action.
+ * \value UpdateLicenseManagerReportGeneratorAction LicenseManager UpdateLicenseManagerReportGenerator action.
  * \value UpdateLicenseSpecificationsForResourceAction LicenseManager UpdateLicenseSpecificationsForResource action.
  * \value UpdateServiceSettingsAction LicenseManager UpdateServiceSettings action.
  */

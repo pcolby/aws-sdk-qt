@@ -38,6 +38,7 @@ namespace IoTDataPlane {
  *
  * \value DeleteThingShadowAction IoTDataPlane DeleteThingShadow action.
  * \value GetThingShadowAction IoTDataPlane GetThingShadow action.
+ * \value ListNamedShadowsForThingAction IoTDataPlane ListNamedShadowsForThing action.
  * \value PublishAction IoTDataPlane Publish action.
  * \value UpdateThingShadowAction IoTDataPlane UpdateThingShadow action.
  */

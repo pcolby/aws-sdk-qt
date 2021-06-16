@@ -36,6 +36,8 @@ namespace ApiGatewayManagementApi {
  * This enum describes the actions that can be performed as ApiGatewayManagementApi
  * requests.
  *
+ * \value DeleteConnectionAction ApiGatewayManagementApi DeleteConnection action.
+ * \value GetConnectionAction ApiGatewayManagementApi GetConnection action.
  * \value PostToConnectionAction ApiGatewayManagementApi PostToConnection action.
  */
 

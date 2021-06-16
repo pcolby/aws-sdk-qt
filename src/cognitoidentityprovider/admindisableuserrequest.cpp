@@ -40,7 +40,8 @@ namespace CognitoIdentityProvider {
  * 
  *  Pools>
  * 
- *  For more information, see the Amazon Cognito
+ *  For more information, see the <a
+ *  href="https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html">Amazon Cognito
  *
  * \sa CognitoIdentityProviderClient::adminDisableUser
  */

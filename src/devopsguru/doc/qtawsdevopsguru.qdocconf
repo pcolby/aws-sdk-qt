@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsDevOpsGuru
+description = AWS DevOpsGuru SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsdevopsguru-index.html"
+navigation.landingtitle = "DevOpsGuru"
+navigation.cppclassespage = "DevOpsGuru C++ Classes"

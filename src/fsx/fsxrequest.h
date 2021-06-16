@@ -37,13 +37,20 @@ class QTAWS_EXPORT FSxRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by FSx.
     enum Action {
+        AssociateFileSystemAliasesAction,
+        CancelDataRepositoryTaskAction,
+        CopyBackupAction,
         CreateBackupAction,
+        CreateDataRepositoryTaskAction,
         CreateFileSystemAction,
         CreateFileSystemFromBackupAction,
         DeleteBackupAction,
         DeleteFileSystemAction,
         DescribeBackupsAction,
+        DescribeDataRepositoryTasksAction,
+        DescribeFileSystemAliasesAction,
         DescribeFileSystemsAction,
+        DisassociateFileSystemAliasesAction,
         ListTagsForResourceAction,
         TagResourceAction,
         UntagResourceAction,

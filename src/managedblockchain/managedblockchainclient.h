@@ -60,8 +60,18 @@ class ListProposalVotesRequest;
 class ListProposalVotesResponse;
 class ListProposalsRequest;
 class ListProposalsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class RejectInvitationRequest;
 class RejectInvitationResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
+class UpdateMemberRequest;
+class UpdateMemberResponse;
+class UpdateNodeRequest;
+class UpdateNodeResponse;
 class VoteOnProposalRequest;
 class VoteOnProposalResponse;
 
@@ -97,7 +107,12 @@ public slots:
     ListNodesResponse * listNodes(const ListNodesRequest &request);
     ListProposalVotesResponse * listProposalVotes(const ListProposalVotesRequest &request);
     ListProposalsResponse * listProposals(const ListProposalsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RejectInvitationResponse * rejectInvitation(const RejectInvitationRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateMemberResponse * updateMember(const UpdateMemberRequest &request);
+    UpdateNodeResponse * updateNode(const UpdateNodeRequest &request);
     VoteOnProposalResponse * voteOnProposal(const VoteOnProposalRequest &request);
 
 private:

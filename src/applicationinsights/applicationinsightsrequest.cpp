@@ -38,20 +38,31 @@ namespace ApplicationInsights {
  *
  * \value CreateApplicationAction ApplicationInsights CreateApplication action.
  * \value CreateComponentAction ApplicationInsights CreateComponent action.
+ * \value CreateLogPatternAction ApplicationInsights CreateLogPattern action.
  * \value DeleteApplicationAction ApplicationInsights DeleteApplication action.
  * \value DeleteComponentAction ApplicationInsights DeleteComponent action.
+ * \value DeleteLogPatternAction ApplicationInsights DeleteLogPattern action.
  * \value DescribeApplicationAction ApplicationInsights DescribeApplication action.
  * \value DescribeComponentAction ApplicationInsights DescribeComponent action.
  * \value DescribeComponentConfigurationAction ApplicationInsights DescribeComponentConfiguration action.
  * \value DescribeComponentConfigurationRecommendationAction ApplicationInsights DescribeComponentConfigurationRecommendation action.
+ * \value DescribeLogPatternAction ApplicationInsights DescribeLogPattern action.
  * \value DescribeObservationAction ApplicationInsights DescribeObservation action.
  * \value DescribeProblemAction ApplicationInsights DescribeProblem action.
  * \value DescribeProblemObservationsAction ApplicationInsights DescribeProblemObservations action.
  * \value ListApplicationsAction ApplicationInsights ListApplications action.
  * \value ListComponentsAction ApplicationInsights ListComponents action.
+ * \value ListConfigurationHistoryAction ApplicationInsights ListConfigurationHistory action.
+ * \value ListLogPatternSetsAction ApplicationInsights ListLogPatternSets action.
+ * \value ListLogPatternsAction ApplicationInsights ListLogPatterns action.
  * \value ListProblemsAction ApplicationInsights ListProblems action.
+ * \value ListTagsForResourceAction ApplicationInsights ListTagsForResource action.
+ * \value TagResourceAction ApplicationInsights TagResource action.
+ * \value UntagResourceAction ApplicationInsights UntagResource action.
+ * \value UpdateApplicationAction ApplicationInsights UpdateApplication action.
  * \value UpdateComponentAction ApplicationInsights UpdateComponent action.
  * \value UpdateComponentConfigurationAction ApplicationInsights UpdateComponentConfiguration action.
+ * \value UpdateLogPatternAction ApplicationInsights UpdateLogPattern action.
  */
 
 /*!

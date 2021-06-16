@@ -36,6 +36,8 @@ namespace Route53Domains {
  * This enum describes the actions that can be performed as Route53Domains
  * requests.
  *
+ * \value AcceptDomainTransferFromAnotherAwsAccountAction Route53Domains AcceptDomainTransferFromAnotherAwsAccount action.
+ * \value CancelDomainTransferToAnotherAwsAccountAction Route53Domains CancelDomainTransferToAnotherAwsAccount action.
  * \value CheckDomainAvailabilityAction Route53Domains CheckDomainAvailability action.
  * \value CheckDomainTransferabilityAction Route53Domains CheckDomainTransferability action.
  * \value DeleteTagsForDomainAction Route53Domains DeleteTagsForDomain action.
@@ -51,10 +53,12 @@ namespace Route53Domains {
  * \value ListOperationsAction Route53Domains ListOperations action.
  * \value ListTagsForDomainAction Route53Domains ListTagsForDomain action.
  * \value RegisterDomainAction Route53Domains RegisterDomain action.
+ * \value RejectDomainTransferFromAnotherAwsAccountAction Route53Domains RejectDomainTransferFromAnotherAwsAccount action.
  * \value RenewDomainAction Route53Domains RenewDomain action.
  * \value ResendContactReachabilityEmailAction Route53Domains ResendContactReachabilityEmail action.
  * \value RetrieveDomainAuthCodeAction Route53Domains RetrieveDomainAuthCode action.
  * \value TransferDomainAction Route53Domains TransferDomain action.
+ * \value TransferDomainToAnotherAwsAccountAction Route53Domains TransferDomainToAnotherAwsAccount action.
  * \value UpdateDomainContactAction Route53Domains UpdateDomainContact action.
  * \value UpdateDomainContactPrivacyAction Route53Domains UpdateDomainContactPrivacy action.
  * \value UpdateDomainNameserversAction Route53Domains UpdateDomainNameservers action.

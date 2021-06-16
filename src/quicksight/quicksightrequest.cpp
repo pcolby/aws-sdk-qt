@@ -36,21 +36,104 @@ namespace QuickSight {
  * This enum describes the actions that can be performed as QuickSight
  * requests.
  *
+ * \value CancelIngestionAction QuickSight CancelIngestion action.
+ * \value CreateAccountCustomizationAction QuickSight CreateAccountCustomization action.
+ * \value CreateAnalysisAction QuickSight CreateAnalysis action.
+ * \value CreateDashboardAction QuickSight CreateDashboard action.
+ * \value CreateDataSetAction QuickSight CreateDataSet action.
+ * \value CreateDataSourceAction QuickSight CreateDataSource action.
  * \value CreateGroupAction QuickSight CreateGroup action.
  * \value CreateGroupMembershipAction QuickSight CreateGroupMembership action.
+ * \value CreateIAMPolicyAssignmentAction QuickSight CreateIAMPolicyAssignment action.
+ * \value CreateIngestionAction QuickSight CreateIngestion action.
+ * \value CreateNamespaceAction QuickSight CreateNamespace action.
+ * \value CreateTemplateAction QuickSight CreateTemplate action.
+ * \value CreateTemplateAliasAction QuickSight CreateTemplateAlias action.
+ * \value CreateThemeAction QuickSight CreateTheme action.
+ * \value CreateThemeAliasAction QuickSight CreateThemeAlias action.
+ * \value DeleteAccountCustomizationAction QuickSight DeleteAccountCustomization action.
+ * \value DeleteAnalysisAction QuickSight DeleteAnalysis action.
+ * \value DeleteDashboardAction QuickSight DeleteDashboard action.
+ * \value DeleteDataSetAction QuickSight DeleteDataSet action.
+ * \value DeleteDataSourceAction QuickSight DeleteDataSource action.
  * \value DeleteGroupAction QuickSight DeleteGroup action.
  * \value DeleteGroupMembershipAction QuickSight DeleteGroupMembership action.
+ * \value DeleteIAMPolicyAssignmentAction QuickSight DeleteIAMPolicyAssignment action.
+ * \value DeleteNamespaceAction QuickSight DeleteNamespace action.
+ * \value DeleteTemplateAction QuickSight DeleteTemplate action.
+ * \value DeleteTemplateAliasAction QuickSight DeleteTemplateAlias action.
+ * \value DeleteThemeAction QuickSight DeleteTheme action.
+ * \value DeleteThemeAliasAction QuickSight DeleteThemeAlias action.
  * \value DeleteUserAction QuickSight DeleteUser action.
  * \value DeleteUserByPrincipalIdAction QuickSight DeleteUserByPrincipalId action.
+ * \value DescribeAccountCustomizationAction QuickSight DescribeAccountCustomization action.
+ * \value DescribeAccountSettingsAction QuickSight DescribeAccountSettings action.
+ * \value DescribeAnalysisAction QuickSight DescribeAnalysis action.
+ * \value DescribeAnalysisPermissionsAction QuickSight DescribeAnalysisPermissions action.
+ * \value DescribeDashboardAction QuickSight DescribeDashboard action.
+ * \value DescribeDashboardPermissionsAction QuickSight DescribeDashboardPermissions action.
+ * \value DescribeDataSetAction QuickSight DescribeDataSet action.
+ * \value DescribeDataSetPermissionsAction QuickSight DescribeDataSetPermissions action.
+ * \value DescribeDataSourceAction QuickSight DescribeDataSource action.
+ * \value DescribeDataSourcePermissionsAction QuickSight DescribeDataSourcePermissions action.
  * \value DescribeGroupAction QuickSight DescribeGroup action.
+ * \value DescribeIAMPolicyAssignmentAction QuickSight DescribeIAMPolicyAssignment action.
+ * \value DescribeIngestionAction QuickSight DescribeIngestion action.
+ * \value DescribeNamespaceAction QuickSight DescribeNamespace action.
+ * \value DescribeTemplateAction QuickSight DescribeTemplate action.
+ * \value DescribeTemplateAliasAction QuickSight DescribeTemplateAlias action.
+ * \value DescribeTemplatePermissionsAction QuickSight DescribeTemplatePermissions action.
+ * \value DescribeThemeAction QuickSight DescribeTheme action.
+ * \value DescribeThemeAliasAction QuickSight DescribeThemeAlias action.
+ * \value DescribeThemePermissionsAction QuickSight DescribeThemePermissions action.
  * \value DescribeUserAction QuickSight DescribeUser action.
  * \value GetDashboardEmbedUrlAction QuickSight GetDashboardEmbedUrl action.
+ * \value GetSessionEmbedUrlAction QuickSight GetSessionEmbedUrl action.
+ * \value ListAnalysesAction QuickSight ListAnalyses action.
+ * \value ListDashboardVersionsAction QuickSight ListDashboardVersions action.
+ * \value ListDashboardsAction QuickSight ListDashboards action.
+ * \value ListDataSetsAction QuickSight ListDataSets action.
+ * \value ListDataSourcesAction QuickSight ListDataSources action.
  * \value ListGroupMembershipsAction QuickSight ListGroupMemberships action.
  * \value ListGroupsAction QuickSight ListGroups action.
+ * \value ListIAMPolicyAssignmentsAction QuickSight ListIAMPolicyAssignments action.
+ * \value ListIAMPolicyAssignmentsForUserAction QuickSight ListIAMPolicyAssignmentsForUser action.
+ * \value ListIngestionsAction QuickSight ListIngestions action.
+ * \value ListNamespacesAction QuickSight ListNamespaces action.
+ * \value ListTagsForResourceAction QuickSight ListTagsForResource action.
+ * \value ListTemplateAliasesAction QuickSight ListTemplateAliases action.
+ * \value ListTemplateVersionsAction QuickSight ListTemplateVersions action.
+ * \value ListTemplatesAction QuickSight ListTemplates action.
+ * \value ListThemeAliasesAction QuickSight ListThemeAliases action.
+ * \value ListThemeVersionsAction QuickSight ListThemeVersions action.
+ * \value ListThemesAction QuickSight ListThemes action.
  * \value ListUserGroupsAction QuickSight ListUserGroups action.
  * \value ListUsersAction QuickSight ListUsers action.
  * \value RegisterUserAction QuickSight RegisterUser action.
+ * \value RestoreAnalysisAction QuickSight RestoreAnalysis action.
+ * \value SearchAnalysesAction QuickSight SearchAnalyses action.
+ * \value SearchDashboardsAction QuickSight SearchDashboards action.
+ * \value TagResourceAction QuickSight TagResource action.
+ * \value UntagResourceAction QuickSight UntagResource action.
+ * \value UpdateAccountCustomizationAction QuickSight UpdateAccountCustomization action.
+ * \value UpdateAccountSettingsAction QuickSight UpdateAccountSettings action.
+ * \value UpdateAnalysisAction QuickSight UpdateAnalysis action.
+ * \value UpdateAnalysisPermissionsAction QuickSight UpdateAnalysisPermissions action.
+ * \value UpdateDashboardAction QuickSight UpdateDashboard action.
+ * \value UpdateDashboardPermissionsAction QuickSight UpdateDashboardPermissions action.
+ * \value UpdateDashboardPublishedVersionAction QuickSight UpdateDashboardPublishedVersion action.
+ * \value UpdateDataSetAction QuickSight UpdateDataSet action.
+ * \value UpdateDataSetPermissionsAction QuickSight UpdateDataSetPermissions action.
+ * \value UpdateDataSourceAction QuickSight UpdateDataSource action.
+ * \value UpdateDataSourcePermissionsAction QuickSight UpdateDataSourcePermissions action.
  * \value UpdateGroupAction QuickSight UpdateGroup action.
+ * \value UpdateIAMPolicyAssignmentAction QuickSight UpdateIAMPolicyAssignment action.
+ * \value UpdateTemplateAction QuickSight UpdateTemplate action.
+ * \value UpdateTemplateAliasAction QuickSight UpdateTemplateAlias action.
+ * \value UpdateTemplatePermissionsAction QuickSight UpdateTemplatePermissions action.
+ * \value UpdateThemeAction QuickSight UpdateTheme action.
+ * \value UpdateThemeAliasAction QuickSight UpdateThemeAlias action.
+ * \value UpdateThemePermissionsAction QuickSight UpdateThemePermissions action.
  * \value UpdateUserAction QuickSight UpdateUser action.
  */
 

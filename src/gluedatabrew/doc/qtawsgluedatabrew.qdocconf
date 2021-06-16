@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsGlueDataBrew
+description = AWS GlueDataBrew SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsgluedatabrew-index.html"
+navigation.landingtitle = "GlueDataBrew"
+navigation.cppclassespage = "GlueDataBrew C++ Classes"

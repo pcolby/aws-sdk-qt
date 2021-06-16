@@ -36,20 +36,30 @@ namespace IoTEvents {
  * This enum describes the actions that can be performed as IoTEvents
  * requests.
  *
+ * \value CreateAlarmModelAction IoTEvents CreateAlarmModel action.
  * \value CreateDetectorModelAction IoTEvents CreateDetectorModel action.
  * \value CreateInputAction IoTEvents CreateInput action.
+ * \value DeleteAlarmModelAction IoTEvents DeleteAlarmModel action.
  * \value DeleteDetectorModelAction IoTEvents DeleteDetectorModel action.
  * \value DeleteInputAction IoTEvents DeleteInput action.
+ * \value DescribeAlarmModelAction IoTEvents DescribeAlarmModel action.
  * \value DescribeDetectorModelAction IoTEvents DescribeDetectorModel action.
+ * \value DescribeDetectorModelAnalysisAction IoTEvents DescribeDetectorModelAnalysis action.
  * \value DescribeInputAction IoTEvents DescribeInput action.
  * \value DescribeLoggingOptionsAction IoTEvents DescribeLoggingOptions action.
+ * \value GetDetectorModelAnalysisResultsAction IoTEvents GetDetectorModelAnalysisResults action.
+ * \value ListAlarmModelVersionsAction IoTEvents ListAlarmModelVersions action.
+ * \value ListAlarmModelsAction IoTEvents ListAlarmModels action.
  * \value ListDetectorModelVersionsAction IoTEvents ListDetectorModelVersions action.
  * \value ListDetectorModelsAction IoTEvents ListDetectorModels action.
+ * \value ListInputRoutingsAction IoTEvents ListInputRoutings action.
  * \value ListInputsAction IoTEvents ListInputs action.
  * \value ListTagsForResourceAction IoTEvents ListTagsForResource action.
  * \value PutLoggingOptionsAction IoTEvents PutLoggingOptions action.
+ * \value StartDetectorModelAnalysisAction IoTEvents StartDetectorModelAnalysis action.
  * \value TagResourceAction IoTEvents TagResource action.
  * \value UntagResourceAction IoTEvents UntagResource action.
+ * \value UpdateAlarmModelAction IoTEvents UpdateAlarmModel action.
  * \value UpdateDetectorModelAction IoTEvents UpdateDetectorModel action.
  * \value UpdateInputAction IoTEvents UpdateInput action.
  */

@@ -41,6 +41,7 @@ namespace SMS {
  * \value DeleteAppAction SMS DeleteApp action.
  * \value DeleteAppLaunchConfigurationAction SMS DeleteAppLaunchConfiguration action.
  * \value DeleteAppReplicationConfigurationAction SMS DeleteAppReplicationConfiguration action.
+ * \value DeleteAppValidationConfigurationAction SMS DeleteAppValidationConfiguration action.
  * \value DeleteReplicationJobAction SMS DeleteReplicationJob action.
  * \value DeleteServerCatalogAction SMS DeleteServerCatalog action.
  * \value DisassociateConnectorAction SMS DisassociateConnector action.
@@ -49,16 +50,22 @@ namespace SMS {
  * \value GetAppAction SMS GetApp action.
  * \value GetAppLaunchConfigurationAction SMS GetAppLaunchConfiguration action.
  * \value GetAppReplicationConfigurationAction SMS GetAppReplicationConfiguration action.
+ * \value GetAppValidationConfigurationAction SMS GetAppValidationConfiguration action.
+ * \value GetAppValidationOutputAction SMS GetAppValidationOutput action.
  * \value GetConnectorsAction SMS GetConnectors action.
  * \value GetReplicationJobsAction SMS GetReplicationJobs action.
  * \value GetReplicationRunsAction SMS GetReplicationRuns action.
  * \value GetServersAction SMS GetServers action.
+ * \value ImportAppCatalogAction SMS ImportAppCatalog action.
  * \value ImportServerCatalogAction SMS ImportServerCatalog action.
  * \value LaunchAppAction SMS LaunchApp action.
  * \value ListAppsAction SMS ListApps action.
+ * \value NotifyAppValidationOutputAction SMS NotifyAppValidationOutput action.
  * \value PutAppLaunchConfigurationAction SMS PutAppLaunchConfiguration action.
  * \value PutAppReplicationConfigurationAction SMS PutAppReplicationConfiguration action.
+ * \value PutAppValidationConfigurationAction SMS PutAppValidationConfiguration action.
  * \value StartAppReplicationAction SMS StartAppReplication action.
+ * \value StartOnDemandAppReplicationAction SMS StartOnDemandAppReplication action.
  * \value StartOnDemandReplicationRunAction SMS StartOnDemandReplicationRun action.
  * \value StopAppReplicationAction SMS StopAppReplication action.
  * \value TerminateAppAction SMS TerminateApp action.

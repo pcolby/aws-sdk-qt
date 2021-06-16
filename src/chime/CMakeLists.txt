@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsChime
+  associatephonenumberswithvoiceconnectorgrouprequest.h
+  associatephonenumberswithvoiceconnectorgrouprequest_p.h
+  associatephonenumberswithvoiceconnectorgroupresponse.h
+  associatephonenumberswithvoiceconnectorgroupresponse_p.h
   associatephonenumberswithvoiceconnectorrequest.h
   associatephonenumberswithvoiceconnectorrequest_p.h
   associatephonenumberswithvoiceconnectorresponse.h
@@ -9,6 +13,22 @@ add_library(QtAwsChime
   associatephonenumberwithuserrequest_p.h
   associatephonenumberwithuserresponse.h
   associatephonenumberwithuserresponse_p.h
+  associatesignindelegategroupswithaccountrequest.h
+  associatesignindelegategroupswithaccountrequest_p.h
+  associatesignindelegategroupswithaccountresponse.h
+  associatesignindelegategroupswithaccountresponse_p.h
+  batchcreateattendeerequest.h
+  batchcreateattendeerequest_p.h
+  batchcreateattendeeresponse.h
+  batchcreateattendeeresponse_p.h
+  batchcreatechannelmembershiprequest.h
+  batchcreatechannelmembershiprequest_p.h
+  batchcreatechannelmembershipresponse.h
+  batchcreatechannelmembershipresponse_p.h
+  batchcreateroommembershiprequest.h
+  batchcreateroommembershiprequest_p.h
+  batchcreateroommembershipresponse.h
+  batchcreateroommembershipresponse_p.h
   batchdeletephonenumberrequest.h
   batchdeletephonenumberrequest_p.h
   batchdeletephonenumberresponse.h
@@ -39,14 +59,90 @@ add_library(QtAwsChime
   createaccountrequest_p.h
   createaccountresponse.h
   createaccountresponse_p.h
+  createappinstanceadminrequest.h
+  createappinstanceadminrequest_p.h
+  createappinstanceadminresponse.h
+  createappinstanceadminresponse_p.h
+  createappinstancerequest.h
+  createappinstancerequest_p.h
+  createappinstanceresponse.h
+  createappinstanceresponse_p.h
+  createappinstanceuserrequest.h
+  createappinstanceuserrequest_p.h
+  createappinstanceuserresponse.h
+  createappinstanceuserresponse_p.h
+  createattendeerequest.h
+  createattendeerequest_p.h
+  createattendeeresponse.h
+  createattendeeresponse_p.h
   createbotrequest.h
   createbotrequest_p.h
   createbotresponse.h
   createbotresponse_p.h
+  createchannelbanrequest.h
+  createchannelbanrequest_p.h
+  createchannelbanresponse.h
+  createchannelbanresponse_p.h
+  createchannelmembershiprequest.h
+  createchannelmembershiprequest_p.h
+  createchannelmembershipresponse.h
+  createchannelmembershipresponse_p.h
+  createchannelmoderatorrequest.h
+  createchannelmoderatorrequest_p.h
+  createchannelmoderatorresponse.h
+  createchannelmoderatorresponse_p.h
+  createchannelrequest.h
+  createchannelrequest_p.h
+  createchannelresponse.h
+  createchannelresponse_p.h
+  createmeetingdialoutrequest.h
+  createmeetingdialoutrequest_p.h
+  createmeetingdialoutresponse.h
+  createmeetingdialoutresponse_p.h
+  createmeetingrequest.h
+  createmeetingrequest_p.h
+  createmeetingresponse.h
+  createmeetingresponse_p.h
+  createmeetingwithattendeesrequest.h
+  createmeetingwithattendeesrequest_p.h
+  createmeetingwithattendeesresponse.h
+  createmeetingwithattendeesresponse_p.h
   createphonenumberorderrequest.h
   createphonenumberorderrequest_p.h
   createphonenumberorderresponse.h
   createphonenumberorderresponse_p.h
+  createproxysessionrequest.h
+  createproxysessionrequest_p.h
+  createproxysessionresponse.h
+  createproxysessionresponse_p.h
+  createroommembershiprequest.h
+  createroommembershiprequest_p.h
+  createroommembershipresponse.h
+  createroommembershipresponse_p.h
+  createroomrequest.h
+  createroomrequest_p.h
+  createroomresponse.h
+  createroomresponse_p.h
+  createsipmediaapplicationcallrequest.h
+  createsipmediaapplicationcallrequest_p.h
+  createsipmediaapplicationcallresponse.h
+  createsipmediaapplicationcallresponse_p.h
+  createsipmediaapplicationrequest.h
+  createsipmediaapplicationrequest_p.h
+  createsipmediaapplicationresponse.h
+  createsipmediaapplicationresponse_p.h
+  createsiprulerequest.h
+  createsiprulerequest_p.h
+  createsipruleresponse.h
+  createsipruleresponse_p.h
+  createuserrequest.h
+  createuserrequest_p.h
+  createuserresponse.h
+  createuserresponse_p.h
+  createvoiceconnectorgrouprequest.h
+  createvoiceconnectorgrouprequest_p.h
+  createvoiceconnectorgroupresponse.h
+  createvoiceconnectorgroupresponse_p.h
   createvoiceconnectorrequest.h
   createvoiceconnectorrequest_p.h
   createvoiceconnectorresponse.h
@@ -55,22 +151,102 @@ add_library(QtAwsChime
   deleteaccountrequest_p.h
   deleteaccountresponse.h
   deleteaccountresponse_p.h
+  deleteappinstanceadminrequest.h
+  deleteappinstanceadminrequest_p.h
+  deleteappinstanceadminresponse.h
+  deleteappinstanceadminresponse_p.h
+  deleteappinstancerequest.h
+  deleteappinstancerequest_p.h
+  deleteappinstanceresponse.h
+  deleteappinstanceresponse_p.h
+  deleteappinstancestreamingconfigurationsrequest.h
+  deleteappinstancestreamingconfigurationsrequest_p.h
+  deleteappinstancestreamingconfigurationsresponse.h
+  deleteappinstancestreamingconfigurationsresponse_p.h
+  deleteappinstanceuserrequest.h
+  deleteappinstanceuserrequest_p.h
+  deleteappinstanceuserresponse.h
+  deleteappinstanceuserresponse_p.h
+  deleteattendeerequest.h
+  deleteattendeerequest_p.h
+  deleteattendeeresponse.h
+  deleteattendeeresponse_p.h
+  deletechannelbanrequest.h
+  deletechannelbanrequest_p.h
+  deletechannelbanresponse.h
+  deletechannelbanresponse_p.h
+  deletechannelmembershiprequest.h
+  deletechannelmembershiprequest_p.h
+  deletechannelmembershipresponse.h
+  deletechannelmembershipresponse_p.h
+  deletechannelmessagerequest.h
+  deletechannelmessagerequest_p.h
+  deletechannelmessageresponse.h
+  deletechannelmessageresponse_p.h
+  deletechannelmoderatorrequest.h
+  deletechannelmoderatorrequest_p.h
+  deletechannelmoderatorresponse.h
+  deletechannelmoderatorresponse_p.h
+  deletechannelrequest.h
+  deletechannelrequest_p.h
+  deletechannelresponse.h
+  deletechannelresponse_p.h
   deleteeventsconfigurationrequest.h
   deleteeventsconfigurationrequest_p.h
   deleteeventsconfigurationresponse.h
   deleteeventsconfigurationresponse_p.h
+  deletemeetingrequest.h
+  deletemeetingrequest_p.h
+  deletemeetingresponse.h
+  deletemeetingresponse_p.h
   deletephonenumberrequest.h
   deletephonenumberrequest_p.h
   deletephonenumberresponse.h
   deletephonenumberresponse_p.h
+  deleteproxysessionrequest.h
+  deleteproxysessionrequest_p.h
+  deleteproxysessionresponse.h
+  deleteproxysessionresponse_p.h
+  deleteroommembershiprequest.h
+  deleteroommembershiprequest_p.h
+  deleteroommembershipresponse.h
+  deleteroommembershipresponse_p.h
+  deleteroomrequest.h
+  deleteroomrequest_p.h
+  deleteroomresponse.h
+  deleteroomresponse_p.h
+  deletesipmediaapplicationrequest.h
+  deletesipmediaapplicationrequest_p.h
+  deletesipmediaapplicationresponse.h
+  deletesipmediaapplicationresponse_p.h
+  deletesiprulerequest.h
+  deletesiprulerequest_p.h
+  deletesipruleresponse.h
+  deletesipruleresponse_p.h
+  deletevoiceconnectoremergencycallingconfigurationrequest.h
+  deletevoiceconnectoremergencycallingconfigurationrequest_p.h
+  deletevoiceconnectoremergencycallingconfigurationresponse.h
+  deletevoiceconnectoremergencycallingconfigurationresponse_p.h
+  deletevoiceconnectorgrouprequest.h
+  deletevoiceconnectorgrouprequest_p.h
+  deletevoiceconnectorgroupresponse.h
+  deletevoiceconnectorgroupresponse_p.h
   deletevoiceconnectororiginationrequest.h
   deletevoiceconnectororiginationrequest_p.h
   deletevoiceconnectororiginationresponse.h
   deletevoiceconnectororiginationresponse_p.h
+  deletevoiceconnectorproxyrequest.h
+  deletevoiceconnectorproxyrequest_p.h
+  deletevoiceconnectorproxyresponse.h
+  deletevoiceconnectorproxyresponse_p.h
   deletevoiceconnectorrequest.h
   deletevoiceconnectorrequest_p.h
   deletevoiceconnectorresponse.h
   deletevoiceconnectorresponse_p.h
+  deletevoiceconnectorstreamingconfigurationrequest.h
+  deletevoiceconnectorstreamingconfigurationrequest_p.h
+  deletevoiceconnectorstreamingconfigurationresponse.h
+  deletevoiceconnectorstreamingconfigurationresponse_p.h
   deletevoiceconnectorterminationcredentialsrequest.h
   deletevoiceconnectorterminationcredentialsrequest_p.h
   deletevoiceconnectorterminationcredentialsresponse.h
@@ -79,14 +255,58 @@ add_library(QtAwsChime
   deletevoiceconnectorterminationrequest_p.h
   deletevoiceconnectorterminationresponse.h
   deletevoiceconnectorterminationresponse_p.h
+  describeappinstanceadminrequest.h
+  describeappinstanceadminrequest_p.h
+  describeappinstanceadminresponse.h
+  describeappinstanceadminresponse_p.h
+  describeappinstancerequest.h
+  describeappinstancerequest_p.h
+  describeappinstanceresponse.h
+  describeappinstanceresponse_p.h
+  describeappinstanceuserrequest.h
+  describeappinstanceuserrequest_p.h
+  describeappinstanceuserresponse.h
+  describeappinstanceuserresponse_p.h
+  describechannelbanrequest.h
+  describechannelbanrequest_p.h
+  describechannelbanresponse.h
+  describechannelbanresponse_p.h
+  describechannelmembershipforappinstanceuserrequest.h
+  describechannelmembershipforappinstanceuserrequest_p.h
+  describechannelmembershipforappinstanceuserresponse.h
+  describechannelmembershipforappinstanceuserresponse_p.h
+  describechannelmembershiprequest.h
+  describechannelmembershiprequest_p.h
+  describechannelmembershipresponse.h
+  describechannelmembershipresponse_p.h
+  describechannelmoderatedbyappinstanceuserrequest.h
+  describechannelmoderatedbyappinstanceuserrequest_p.h
+  describechannelmoderatedbyappinstanceuserresponse.h
+  describechannelmoderatedbyappinstanceuserresponse_p.h
+  describechannelmoderatorrequest.h
+  describechannelmoderatorrequest_p.h
+  describechannelmoderatorresponse.h
+  describechannelmoderatorresponse_p.h
+  describechannelrequest.h
+  describechannelrequest_p.h
+  describechannelresponse.h
+  describechannelresponse_p.h
   disassociatephonenumberfromuserrequest.h
   disassociatephonenumberfromuserrequest_p.h
   disassociatephonenumberfromuserresponse.h
   disassociatephonenumberfromuserresponse_p.h
+  disassociatephonenumbersfromvoiceconnectorgrouprequest.h
+  disassociatephonenumbersfromvoiceconnectorgrouprequest_p.h
+  disassociatephonenumbersfromvoiceconnectorgroupresponse.h
+  disassociatephonenumbersfromvoiceconnectorgroupresponse_p.h
   disassociatephonenumbersfromvoiceconnectorrequest.h
   disassociatephonenumbersfromvoiceconnectorrequest_p.h
   disassociatephonenumbersfromvoiceconnectorresponse.h
   disassociatephonenumbersfromvoiceconnectorresponse_p.h
+  disassociatesignindelegategroupsfromaccountrequest.h
+  disassociatesignindelegategroupsfromaccountrequest_p.h
+  disassociatesignindelegategroupsfromaccountresponse.h
+  disassociatesignindelegategroupsfromaccountresponse_p.h
   getaccountrequest.h
   getaccountrequest_p.h
   getaccountresponse.h
@@ -95,10 +315,26 @@ add_library(QtAwsChime
   getaccountsettingsrequest_p.h
   getaccountsettingsresponse.h
   getaccountsettingsresponse_p.h
+  getappinstanceretentionsettingsrequest.h
+  getappinstanceretentionsettingsrequest_p.h
+  getappinstanceretentionsettingsresponse.h
+  getappinstanceretentionsettingsresponse_p.h
+  getappinstancestreamingconfigurationsrequest.h
+  getappinstancestreamingconfigurationsrequest_p.h
+  getappinstancestreamingconfigurationsresponse.h
+  getappinstancestreamingconfigurationsresponse_p.h
+  getattendeerequest.h
+  getattendeerequest_p.h
+  getattendeeresponse.h
+  getattendeeresponse_p.h
   getbotrequest.h
   getbotrequest_p.h
   getbotresponse.h
   getbotresponse_p.h
+  getchannelmessagerequest.h
+  getchannelmessagerequest_p.h
+  getchannelmessageresponse.h
+  getchannelmessageresponse_p.h
   geteventsconfigurationrequest.h
   geteventsconfigurationrequest_p.h
   geteventsconfigurationresponse.h
@@ -107,6 +343,14 @@ add_library(QtAwsChime
   getglobalsettingsrequest_p.h
   getglobalsettingsresponse.h
   getglobalsettingsresponse_p.h
+  getmeetingrequest.h
+  getmeetingrequest_p.h
+  getmeetingresponse.h
+  getmeetingresponse_p.h
+  getmessagingsessionendpointrequest.h
+  getmessagingsessionendpointrequest_p.h
+  getmessagingsessionendpointresponse.h
+  getmessagingsessionendpointresponse_p.h
   getphonenumberorderrequest.h
   getphonenumberorderrequest_p.h
   getphonenumberorderresponse.h
@@ -115,6 +359,34 @@ add_library(QtAwsChime
   getphonenumberrequest_p.h
   getphonenumberresponse.h
   getphonenumberresponse_p.h
+  getphonenumbersettingsrequest.h
+  getphonenumbersettingsrequest_p.h
+  getphonenumbersettingsresponse.h
+  getphonenumbersettingsresponse_p.h
+  getproxysessionrequest.h
+  getproxysessionrequest_p.h
+  getproxysessionresponse.h
+  getproxysessionresponse_p.h
+  getretentionsettingsrequest.h
+  getretentionsettingsrequest_p.h
+  getretentionsettingsresponse.h
+  getretentionsettingsresponse_p.h
+  getroomrequest.h
+  getroomrequest_p.h
+  getroomresponse.h
+  getroomresponse_p.h
+  getsipmediaapplicationloggingconfigurationrequest.h
+  getsipmediaapplicationloggingconfigurationrequest_p.h
+  getsipmediaapplicationloggingconfigurationresponse.h
+  getsipmediaapplicationloggingconfigurationresponse_p.h
+  getsipmediaapplicationrequest.h
+  getsipmediaapplicationrequest_p.h
+  getsipmediaapplicationresponse.h
+  getsipmediaapplicationresponse_p.h
+  getsiprulerequest.h
+  getsiprulerequest_p.h
+  getsipruleresponse.h
+  getsipruleresponse_p.h
   getuserrequest.h
   getuserrequest_p.h
   getuserresponse.h
@@ -123,14 +395,34 @@ add_library(QtAwsChime
   getusersettingsrequest_p.h
   getusersettingsresponse.h
   getusersettingsresponse_p.h
+  getvoiceconnectoremergencycallingconfigurationrequest.h
+  getvoiceconnectoremergencycallingconfigurationrequest_p.h
+  getvoiceconnectoremergencycallingconfigurationresponse.h
+  getvoiceconnectoremergencycallingconfigurationresponse_p.h
+  getvoiceconnectorgrouprequest.h
+  getvoiceconnectorgrouprequest_p.h
+  getvoiceconnectorgroupresponse.h
+  getvoiceconnectorgroupresponse_p.h
+  getvoiceconnectorloggingconfigurationrequest.h
+  getvoiceconnectorloggingconfigurationrequest_p.h
+  getvoiceconnectorloggingconfigurationresponse.h
+  getvoiceconnectorloggingconfigurationresponse_p.h
   getvoiceconnectororiginationrequest.h
   getvoiceconnectororiginationrequest_p.h
   getvoiceconnectororiginationresponse.h
   getvoiceconnectororiginationresponse_p.h
+  getvoiceconnectorproxyrequest.h
+  getvoiceconnectorproxyrequest_p.h
+  getvoiceconnectorproxyresponse.h
+  getvoiceconnectorproxyresponse_p.h
   getvoiceconnectorrequest.h
   getvoiceconnectorrequest_p.h
   getvoiceconnectorresponse.h
   getvoiceconnectorresponse_p.h
+  getvoiceconnectorstreamingconfigurationrequest.h
+  getvoiceconnectorstreamingconfigurationrequest_p.h
+  getvoiceconnectorstreamingconfigurationresponse.h
+  getvoiceconnectorstreamingconfigurationresponse_p.h
   getvoiceconnectorterminationhealthrequest.h
   getvoiceconnectorterminationhealthrequest_p.h
   getvoiceconnectorterminationhealthresponse.h
@@ -147,10 +439,66 @@ add_library(QtAwsChime
   listaccountsrequest_p.h
   listaccountsresponse.h
   listaccountsresponse_p.h
+  listappinstanceadminsrequest.h
+  listappinstanceadminsrequest_p.h
+  listappinstanceadminsresponse.h
+  listappinstanceadminsresponse_p.h
+  listappinstancesrequest.h
+  listappinstancesrequest_p.h
+  listappinstancesresponse.h
+  listappinstancesresponse_p.h
+  listappinstanceusersrequest.h
+  listappinstanceusersrequest_p.h
+  listappinstanceusersresponse.h
+  listappinstanceusersresponse_p.h
+  listattendeesrequest.h
+  listattendeesrequest_p.h
+  listattendeesresponse.h
+  listattendeesresponse_p.h
+  listattendeetagsrequest.h
+  listattendeetagsrequest_p.h
+  listattendeetagsresponse.h
+  listattendeetagsresponse_p.h
   listbotsrequest.h
   listbotsrequest_p.h
   listbotsresponse.h
   listbotsresponse_p.h
+  listchannelbansrequest.h
+  listchannelbansrequest_p.h
+  listchannelbansresponse.h
+  listchannelbansresponse_p.h
+  listchannelmembershipsforappinstanceuserrequest.h
+  listchannelmembershipsforappinstanceuserrequest_p.h
+  listchannelmembershipsforappinstanceuserresponse.h
+  listchannelmembershipsforappinstanceuserresponse_p.h
+  listchannelmembershipsrequest.h
+  listchannelmembershipsrequest_p.h
+  listchannelmembershipsresponse.h
+  listchannelmembershipsresponse_p.h
+  listchannelmessagesrequest.h
+  listchannelmessagesrequest_p.h
+  listchannelmessagesresponse.h
+  listchannelmessagesresponse_p.h
+  listchannelmoderatorsrequest.h
+  listchannelmoderatorsrequest_p.h
+  listchannelmoderatorsresponse.h
+  listchannelmoderatorsresponse_p.h
+  listchannelsmoderatedbyappinstanceuserrequest.h
+  listchannelsmoderatedbyappinstanceuserrequest_p.h
+  listchannelsmoderatedbyappinstanceuserresponse.h
+  listchannelsmoderatedbyappinstanceuserresponse_p.h
+  listchannelsrequest.h
+  listchannelsrequest_p.h
+  listchannelsresponse.h
+  listchannelsresponse_p.h
+  listmeetingsrequest.h
+  listmeetingsrequest_p.h
+  listmeetingsresponse.h
+  listmeetingsresponse_p.h
+  listmeetingtagsrequest.h
+  listmeetingtagsrequest_p.h
+  listmeetingtagsresponse.h
+  listmeetingtagsresponse_p.h
   listphonenumberordersrequest.h
   listphonenumberordersrequest_p.h
   listphonenumberordersresponse.h
@@ -159,10 +507,42 @@ add_library(QtAwsChime
   listphonenumbersrequest_p.h
   listphonenumbersresponse.h
   listphonenumbersresponse_p.h
+  listproxysessionsrequest.h
+  listproxysessionsrequest_p.h
+  listproxysessionsresponse.h
+  listproxysessionsresponse_p.h
+  listroommembershipsrequest.h
+  listroommembershipsrequest_p.h
+  listroommembershipsresponse.h
+  listroommembershipsresponse_p.h
+  listroomsrequest.h
+  listroomsrequest_p.h
+  listroomsresponse.h
+  listroomsresponse_p.h
+  listsipmediaapplicationsrequest.h
+  listsipmediaapplicationsrequest_p.h
+  listsipmediaapplicationsresponse.h
+  listsipmediaapplicationsresponse_p.h
+  listsiprulesrequest.h
+  listsiprulesrequest_p.h
+  listsiprulesresponse.h
+  listsiprulesresponse_p.h
+  listsupportedphonenumbercountriesrequest.h
+  listsupportedphonenumbercountriesrequest_p.h
+  listsupportedphonenumbercountriesresponse.h
+  listsupportedphonenumbercountriesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   listusersrequest.h
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  listvoiceconnectorgroupsrequest.h
+  listvoiceconnectorgroupsrequest_p.h
+  listvoiceconnectorgroupsresponse.h
+  listvoiceconnectorgroupsresponse_p.h
   listvoiceconnectorsrequest.h
   listvoiceconnectorsrequest_p.h
   listvoiceconnectorsresponse.h
@@ -175,14 +555,46 @@ add_library(QtAwsChime
   logoutuserrequest_p.h
   logoutuserresponse.h
   logoutuserresponse_p.h
+  putappinstanceretentionsettingsrequest.h
+  putappinstanceretentionsettingsrequest_p.h
+  putappinstanceretentionsettingsresponse.h
+  putappinstanceretentionsettingsresponse_p.h
+  putappinstancestreamingconfigurationsrequest.h
+  putappinstancestreamingconfigurationsrequest_p.h
+  putappinstancestreamingconfigurationsresponse.h
+  putappinstancestreamingconfigurationsresponse_p.h
   puteventsconfigurationrequest.h
   puteventsconfigurationrequest_p.h
   puteventsconfigurationresponse.h
   puteventsconfigurationresponse_p.h
+  putretentionsettingsrequest.h
+  putretentionsettingsrequest_p.h
+  putretentionsettingsresponse.h
+  putretentionsettingsresponse_p.h
+  putsipmediaapplicationloggingconfigurationrequest.h
+  putsipmediaapplicationloggingconfigurationrequest_p.h
+  putsipmediaapplicationloggingconfigurationresponse.h
+  putsipmediaapplicationloggingconfigurationresponse_p.h
+  putvoiceconnectoremergencycallingconfigurationrequest.h
+  putvoiceconnectoremergencycallingconfigurationrequest_p.h
+  putvoiceconnectoremergencycallingconfigurationresponse.h
+  putvoiceconnectoremergencycallingconfigurationresponse_p.h
+  putvoiceconnectorloggingconfigurationrequest.h
+  putvoiceconnectorloggingconfigurationrequest_p.h
+  putvoiceconnectorloggingconfigurationresponse.h
+  putvoiceconnectorloggingconfigurationresponse_p.h
   putvoiceconnectororiginationrequest.h
   putvoiceconnectororiginationrequest_p.h
   putvoiceconnectororiginationresponse.h
   putvoiceconnectororiginationresponse_p.h
+  putvoiceconnectorproxyrequest.h
+  putvoiceconnectorproxyrequest_p.h
+  putvoiceconnectorproxyresponse.h
+  putvoiceconnectorproxyresponse_p.h
+  putvoiceconnectorstreamingconfigurationrequest.h
+  putvoiceconnectorstreamingconfigurationrequest_p.h
+  putvoiceconnectorstreamingconfigurationresponse.h
+  putvoiceconnectorstreamingconfigurationresponse_p.h
   putvoiceconnectorterminationcredentialsrequest.h
   putvoiceconnectorterminationcredentialsrequest_p.h
   putvoiceconnectorterminationcredentialsresponse.h
@@ -191,6 +603,18 @@ add_library(QtAwsChime
   putvoiceconnectorterminationrequest_p.h
   putvoiceconnectorterminationresponse.h
   putvoiceconnectorterminationresponse_p.h
+  redactchannelmessagerequest.h
+  redactchannelmessagerequest_p.h
+  redactchannelmessageresponse.h
+  redactchannelmessageresponse_p.h
+  redactconversationmessagerequest.h
+  redactconversationmessagerequest_p.h
+  redactconversationmessageresponse.h
+  redactconversationmessageresponse_p.h
+  redactroommessagerequest.h
+  redactroommessagerequest_p.h
+  redactroommessageresponse.h
+  redactroommessageresponse_p.h
   regeneratesecuritytokenrequest.h
   regeneratesecuritytokenrequest_p.h
   regeneratesecuritytokenresponse.h
@@ -207,6 +631,34 @@ add_library(QtAwsChime
   searchavailablephonenumbersrequest_p.h
   searchavailablephonenumbersresponse.h
   searchavailablephonenumbersresponse_p.h
+  sendchannelmessagerequest.h
+  sendchannelmessagerequest_p.h
+  sendchannelmessageresponse.h
+  sendchannelmessageresponse_p.h
+  tagattendeerequest.h
+  tagattendeerequest_p.h
+  tagattendeeresponse.h
+  tagattendeeresponse_p.h
+  tagmeetingrequest.h
+  tagmeetingrequest_p.h
+  tagmeetingresponse.h
+  tagmeetingresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagattendeerequest.h
+  untagattendeerequest_p.h
+  untagattendeeresponse.h
+  untagattendeeresponse_p.h
+  untagmeetingrequest.h
+  untagmeetingrequest_p.h
+  untagmeetingresponse.h
+  untagmeetingresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateaccountrequest.h
   updateaccountrequest_p.h
   updateaccountresponse.h
@@ -215,10 +667,30 @@ add_library(QtAwsChime
   updateaccountsettingsrequest_p.h
   updateaccountsettingsresponse.h
   updateaccountsettingsresponse_p.h
+  updateappinstancerequest.h
+  updateappinstancerequest_p.h
+  updateappinstanceresponse.h
+  updateappinstanceresponse_p.h
+  updateappinstanceuserrequest.h
+  updateappinstanceuserrequest_p.h
+  updateappinstanceuserresponse.h
+  updateappinstanceuserresponse_p.h
   updatebotrequest.h
   updatebotrequest_p.h
   updatebotresponse.h
   updatebotresponse_p.h
+  updatechannelmessagerequest.h
+  updatechannelmessagerequest_p.h
+  updatechannelmessageresponse.h
+  updatechannelmessageresponse_p.h
+  updatechannelreadmarkerrequest.h
+  updatechannelreadmarkerrequest_p.h
+  updatechannelreadmarkerresponse.h
+  updatechannelreadmarkerresponse_p.h
+  updatechannelrequest.h
+  updatechannelrequest_p.h
+  updatechannelresponse.h
+  updatechannelresponse_p.h
   updateglobalsettingsrequest.h
   updateglobalsettingsrequest_p.h
   updateglobalsettingsresponse.h
@@ -227,6 +699,30 @@ add_library(QtAwsChime
   updatephonenumberrequest_p.h
   updatephonenumberresponse.h
   updatephonenumberresponse_p.h
+  updatephonenumbersettingsrequest.h
+  updatephonenumbersettingsrequest_p.h
+  updatephonenumbersettingsresponse.h
+  updatephonenumbersettingsresponse_p.h
+  updateproxysessionrequest.h
+  updateproxysessionrequest_p.h
+  updateproxysessionresponse.h
+  updateproxysessionresponse_p.h
+  updateroommembershiprequest.h
+  updateroommembershiprequest_p.h
+  updateroommembershipresponse.h
+  updateroommembershipresponse_p.h
+  updateroomrequest.h
+  updateroomrequest_p.h
+  updateroomresponse.h
+  updateroomresponse_p.h
+  updatesipmediaapplicationrequest.h
+  updatesipmediaapplicationrequest_p.h
+  updatesipmediaapplicationresponse.h
+  updatesipmediaapplicationresponse_p.h
+  updatesiprulerequest.h
+  updatesiprulerequest_p.h
+  updatesipruleresponse.h
+  updatesipruleresponse_p.h
   updateuserrequest.h
   updateuserrequest_p.h
   updateuserresponse.h
@@ -235,14 +731,28 @@ add_library(QtAwsChime
   updateusersettingsrequest_p.h
   updateusersettingsresponse.h
   updateusersettingsresponse_p.h
+  updatevoiceconnectorgrouprequest.h
+  updatevoiceconnectorgrouprequest_p.h
+  updatevoiceconnectorgroupresponse.h
+  updatevoiceconnectorgroupresponse_p.h
   updatevoiceconnectorrequest.h
   updatevoiceconnectorrequest_p.h
   updatevoiceconnectorresponse.h
   updatevoiceconnectorresponse_p.h
+  associatephonenumberswithvoiceconnectorgrouprequest.cpp
+  associatephonenumberswithvoiceconnectorgroupresponse.cpp
   associatephonenumberswithvoiceconnectorrequest.cpp
   associatephonenumberswithvoiceconnectorresponse.cpp
   associatephonenumberwithuserrequest.cpp
   associatephonenumberwithuserresponse.cpp
+  associatesignindelegategroupswithaccountrequest.cpp
+  associatesignindelegategroupswithaccountresponse.cpp
+  batchcreateattendeerequest.cpp
+  batchcreateattendeeresponse.cpp
+  batchcreatechannelmembershiprequest.cpp
+  batchcreatechannelmembershipresponse.cpp
+  batchcreateroommembershiprequest.cpp
+  batchcreateroommembershipresponse.cpp
   batchdeletephonenumberrequest.cpp
   batchdeletephonenumberresponse.cpp
   batchsuspenduserrequest.cpp
@@ -258,52 +768,188 @@ add_library(QtAwsChime
   chimeresponse.cpp
   createaccountrequest.cpp
   createaccountresponse.cpp
+  createappinstanceadminrequest.cpp
+  createappinstanceadminresponse.cpp
+  createappinstancerequest.cpp
+  createappinstanceresponse.cpp
+  createappinstanceuserrequest.cpp
+  createappinstanceuserresponse.cpp
+  createattendeerequest.cpp
+  createattendeeresponse.cpp
   createbotrequest.cpp
   createbotresponse.cpp
+  createchannelbanrequest.cpp
+  createchannelbanresponse.cpp
+  createchannelmembershiprequest.cpp
+  createchannelmembershipresponse.cpp
+  createchannelmoderatorrequest.cpp
+  createchannelmoderatorresponse.cpp
+  createchannelrequest.cpp
+  createchannelresponse.cpp
+  createmeetingdialoutrequest.cpp
+  createmeetingdialoutresponse.cpp
+  createmeetingrequest.cpp
+  createmeetingresponse.cpp
+  createmeetingwithattendeesrequest.cpp
+  createmeetingwithattendeesresponse.cpp
   createphonenumberorderrequest.cpp
   createphonenumberorderresponse.cpp
+  createproxysessionrequest.cpp
+  createproxysessionresponse.cpp
+  createroommembershiprequest.cpp
+  createroommembershipresponse.cpp
+  createroomrequest.cpp
+  createroomresponse.cpp
+  createsipmediaapplicationcallrequest.cpp
+  createsipmediaapplicationcallresponse.cpp
+  createsipmediaapplicationrequest.cpp
+  createsipmediaapplicationresponse.cpp
+  createsiprulerequest.cpp
+  createsipruleresponse.cpp
+  createuserrequest.cpp
+  createuserresponse.cpp
+  createvoiceconnectorgrouprequest.cpp
+  createvoiceconnectorgroupresponse.cpp
   createvoiceconnectorrequest.cpp
   createvoiceconnectorresponse.cpp
   deleteaccountrequest.cpp
   deleteaccountresponse.cpp
+  deleteappinstanceadminrequest.cpp
+  deleteappinstanceadminresponse.cpp
+  deleteappinstancerequest.cpp
+  deleteappinstanceresponse.cpp
+  deleteappinstancestreamingconfigurationsrequest.cpp
+  deleteappinstancestreamingconfigurationsresponse.cpp
+  deleteappinstanceuserrequest.cpp
+  deleteappinstanceuserresponse.cpp
+  deleteattendeerequest.cpp
+  deleteattendeeresponse.cpp
+  deletechannelbanrequest.cpp
+  deletechannelbanresponse.cpp
+  deletechannelmembershiprequest.cpp
+  deletechannelmembershipresponse.cpp
+  deletechannelmessagerequest.cpp
+  deletechannelmessageresponse.cpp
+  deletechannelmoderatorrequest.cpp
+  deletechannelmoderatorresponse.cpp
+  deletechannelrequest.cpp
+  deletechannelresponse.cpp
   deleteeventsconfigurationrequest.cpp
   deleteeventsconfigurationresponse.cpp
+  deletemeetingrequest.cpp
+  deletemeetingresponse.cpp
   deletephonenumberrequest.cpp
   deletephonenumberresponse.cpp
+  deleteproxysessionrequest.cpp
+  deleteproxysessionresponse.cpp
+  deleteroommembershiprequest.cpp
+  deleteroommembershipresponse.cpp
+  deleteroomrequest.cpp
+  deleteroomresponse.cpp
+  deletesipmediaapplicationrequest.cpp
+  deletesipmediaapplicationresponse.cpp
+  deletesiprulerequest.cpp
+  deletesipruleresponse.cpp
+  deletevoiceconnectoremergencycallingconfigurationrequest.cpp
+  deletevoiceconnectoremergencycallingconfigurationresponse.cpp
+  deletevoiceconnectorgrouprequest.cpp
+  deletevoiceconnectorgroupresponse.cpp
   deletevoiceconnectororiginationrequest.cpp
   deletevoiceconnectororiginationresponse.cpp
+  deletevoiceconnectorproxyrequest.cpp
+  deletevoiceconnectorproxyresponse.cpp
   deletevoiceconnectorrequest.cpp
   deletevoiceconnectorresponse.cpp
+  deletevoiceconnectorstreamingconfigurationrequest.cpp
+  deletevoiceconnectorstreamingconfigurationresponse.cpp
   deletevoiceconnectorterminationcredentialsrequest.cpp
   deletevoiceconnectorterminationcredentialsresponse.cpp
   deletevoiceconnectorterminationrequest.cpp
   deletevoiceconnectorterminationresponse.cpp
+  describeappinstanceadminrequest.cpp
+  describeappinstanceadminresponse.cpp
+  describeappinstancerequest.cpp
+  describeappinstanceresponse.cpp
+  describeappinstanceuserrequest.cpp
+  describeappinstanceuserresponse.cpp
+  describechannelbanrequest.cpp
+  describechannelbanresponse.cpp
+  describechannelmembershipforappinstanceuserrequest.cpp
+  describechannelmembershipforappinstanceuserresponse.cpp
+  describechannelmembershiprequest.cpp
+  describechannelmembershipresponse.cpp
+  describechannelmoderatedbyappinstanceuserrequest.cpp
+  describechannelmoderatedbyappinstanceuserresponse.cpp
+  describechannelmoderatorrequest.cpp
+  describechannelmoderatorresponse.cpp
+  describechannelrequest.cpp
+  describechannelresponse.cpp
   disassociatephonenumberfromuserrequest.cpp
   disassociatephonenumberfromuserresponse.cpp
+  disassociatephonenumbersfromvoiceconnectorgrouprequest.cpp
+  disassociatephonenumbersfromvoiceconnectorgroupresponse.cpp
   disassociatephonenumbersfromvoiceconnectorrequest.cpp
   disassociatephonenumbersfromvoiceconnectorresponse.cpp
+  disassociatesignindelegategroupsfromaccountrequest.cpp
+  disassociatesignindelegategroupsfromaccountresponse.cpp
   getaccountrequest.cpp
   getaccountresponse.cpp
   getaccountsettingsrequest.cpp
   getaccountsettingsresponse.cpp
+  getappinstanceretentionsettingsrequest.cpp
+  getappinstanceretentionsettingsresponse.cpp
+  getappinstancestreamingconfigurationsrequest.cpp
+  getappinstancestreamingconfigurationsresponse.cpp
+  getattendeerequest.cpp
+  getattendeeresponse.cpp
   getbotrequest.cpp
   getbotresponse.cpp
+  getchannelmessagerequest.cpp
+  getchannelmessageresponse.cpp
   geteventsconfigurationrequest.cpp
   geteventsconfigurationresponse.cpp
   getglobalsettingsrequest.cpp
   getglobalsettingsresponse.cpp
+  getmeetingrequest.cpp
+  getmeetingresponse.cpp
+  getmessagingsessionendpointrequest.cpp
+  getmessagingsessionendpointresponse.cpp
   getphonenumberorderrequest.cpp
   getphonenumberorderresponse.cpp
   getphonenumberrequest.cpp
   getphonenumberresponse.cpp
+  getphonenumbersettingsrequest.cpp
+  getphonenumbersettingsresponse.cpp
+  getproxysessionrequest.cpp
+  getproxysessionresponse.cpp
+  getretentionsettingsrequest.cpp
+  getretentionsettingsresponse.cpp
+  getroomrequest.cpp
+  getroomresponse.cpp
+  getsipmediaapplicationloggingconfigurationrequest.cpp
+  getsipmediaapplicationloggingconfigurationresponse.cpp
+  getsipmediaapplicationrequest.cpp
+  getsipmediaapplicationresponse.cpp
+  getsiprulerequest.cpp
+  getsipruleresponse.cpp
   getuserrequest.cpp
   getuserresponse.cpp
   getusersettingsrequest.cpp
   getusersettingsresponse.cpp
+  getvoiceconnectoremergencycallingconfigurationrequest.cpp
+  getvoiceconnectoremergencycallingconfigurationresponse.cpp
+  getvoiceconnectorgrouprequest.cpp
+  getvoiceconnectorgroupresponse.cpp
+  getvoiceconnectorloggingconfigurationrequest.cpp
+  getvoiceconnectorloggingconfigurationresponse.cpp
   getvoiceconnectororiginationrequest.cpp
   getvoiceconnectororiginationresponse.cpp
+  getvoiceconnectorproxyrequest.cpp
+  getvoiceconnectorproxyresponse.cpp
   getvoiceconnectorrequest.cpp
   getvoiceconnectorresponse.cpp
+  getvoiceconnectorstreamingconfigurationrequest.cpp
+  getvoiceconnectorstreamingconfigurationresponse.cpp
   getvoiceconnectorterminationhealthrequest.cpp
   getvoiceconnectorterminationhealthresponse.cpp
   getvoiceconnectorterminationrequest.cpp
@@ -312,28 +958,94 @@ add_library(QtAwsChime
   inviteusersresponse.cpp
   listaccountsrequest.cpp
   listaccountsresponse.cpp
+  listappinstanceadminsrequest.cpp
+  listappinstanceadminsresponse.cpp
+  listappinstancesrequest.cpp
+  listappinstancesresponse.cpp
+  listappinstanceusersrequest.cpp
+  listappinstanceusersresponse.cpp
+  listattendeesrequest.cpp
+  listattendeesresponse.cpp
+  listattendeetagsrequest.cpp
+  listattendeetagsresponse.cpp
   listbotsrequest.cpp
   listbotsresponse.cpp
+  listchannelbansrequest.cpp
+  listchannelbansresponse.cpp
+  listchannelmembershipsforappinstanceuserrequest.cpp
+  listchannelmembershipsforappinstanceuserresponse.cpp
+  listchannelmembershipsrequest.cpp
+  listchannelmembershipsresponse.cpp
+  listchannelmessagesrequest.cpp
+  listchannelmessagesresponse.cpp
+  listchannelmoderatorsrequest.cpp
+  listchannelmoderatorsresponse.cpp
+  listchannelsmoderatedbyappinstanceuserrequest.cpp
+  listchannelsmoderatedbyappinstanceuserresponse.cpp
+  listchannelsrequest.cpp
+  listchannelsresponse.cpp
+  listmeetingsrequest.cpp
+  listmeetingsresponse.cpp
+  listmeetingtagsrequest.cpp
+  listmeetingtagsresponse.cpp
   listphonenumberordersrequest.cpp
   listphonenumberordersresponse.cpp
   listphonenumbersrequest.cpp
   listphonenumbersresponse.cpp
+  listproxysessionsrequest.cpp
+  listproxysessionsresponse.cpp
+  listroommembershipsrequest.cpp
+  listroommembershipsresponse.cpp
+  listroomsrequest.cpp
+  listroomsresponse.cpp
+  listsipmediaapplicationsrequest.cpp
+  listsipmediaapplicationsresponse.cpp
+  listsiprulesrequest.cpp
+  listsiprulesresponse.cpp
+  listsupportedphonenumbercountriesrequest.cpp
+  listsupportedphonenumbercountriesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
+  listvoiceconnectorgroupsrequest.cpp
+  listvoiceconnectorgroupsresponse.cpp
   listvoiceconnectorsrequest.cpp
   listvoiceconnectorsresponse.cpp
   listvoiceconnectorterminationcredentialsrequest.cpp
   listvoiceconnectorterminationcredentialsresponse.cpp
   logoutuserrequest.cpp
   logoutuserresponse.cpp
+  putappinstanceretentionsettingsrequest.cpp
+  putappinstanceretentionsettingsresponse.cpp
+  putappinstancestreamingconfigurationsrequest.cpp
+  putappinstancestreamingconfigurationsresponse.cpp
   puteventsconfigurationrequest.cpp
   puteventsconfigurationresponse.cpp
+  putretentionsettingsrequest.cpp
+  putretentionsettingsresponse.cpp
+  putsipmediaapplicationloggingconfigurationrequest.cpp
+  putsipmediaapplicationloggingconfigurationresponse.cpp
+  putvoiceconnectoremergencycallingconfigurationrequest.cpp
+  putvoiceconnectoremergencycallingconfigurationresponse.cpp
+  putvoiceconnectorloggingconfigurationrequest.cpp
+  putvoiceconnectorloggingconfigurationresponse.cpp
   putvoiceconnectororiginationrequest.cpp
   putvoiceconnectororiginationresponse.cpp
+  putvoiceconnectorproxyrequest.cpp
+  putvoiceconnectorproxyresponse.cpp
+  putvoiceconnectorstreamingconfigurationrequest.cpp
+  putvoiceconnectorstreamingconfigurationresponse.cpp
   putvoiceconnectorterminationcredentialsrequest.cpp
   putvoiceconnectorterminationcredentialsresponse.cpp
   putvoiceconnectorterminationrequest.cpp
   putvoiceconnectorterminationresponse.cpp
+  redactchannelmessagerequest.cpp
+  redactchannelmessageresponse.cpp
+  redactconversationmessagerequest.cpp
+  redactconversationmessageresponse.cpp
+  redactroommessagerequest.cpp
+  redactroommessageresponse.cpp
   regeneratesecuritytokenrequest.cpp
   regeneratesecuritytokenresponse.cpp
   resetpersonalpinrequest.cpp
@@ -342,20 +1054,58 @@ add_library(QtAwsChime
   restorephonenumberresponse.cpp
   searchavailablephonenumbersrequest.cpp
   searchavailablephonenumbersresponse.cpp
+  sendchannelmessagerequest.cpp
+  sendchannelmessageresponse.cpp
+  tagattendeerequest.cpp
+  tagattendeeresponse.cpp
+  tagmeetingrequest.cpp
+  tagmeetingresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagattendeerequest.cpp
+  untagattendeeresponse.cpp
+  untagmeetingrequest.cpp
+  untagmeetingresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateaccountrequest.cpp
   updateaccountresponse.cpp
   updateaccountsettingsrequest.cpp
   updateaccountsettingsresponse.cpp
+  updateappinstancerequest.cpp
+  updateappinstanceresponse.cpp
+  updateappinstanceuserrequest.cpp
+  updateappinstanceuserresponse.cpp
   updatebotrequest.cpp
   updatebotresponse.cpp
+  updatechannelmessagerequest.cpp
+  updatechannelmessageresponse.cpp
+  updatechannelreadmarkerrequest.cpp
+  updatechannelreadmarkerresponse.cpp
+  updatechannelrequest.cpp
+  updatechannelresponse.cpp
   updateglobalsettingsrequest.cpp
   updateglobalsettingsresponse.cpp
   updatephonenumberrequest.cpp
   updatephonenumberresponse.cpp
+  updatephonenumbersettingsrequest.cpp
+  updatephonenumbersettingsresponse.cpp
+  updateproxysessionrequest.cpp
+  updateproxysessionresponse.cpp
+  updateroommembershiprequest.cpp
+  updateroommembershipresponse.cpp
+  updateroomrequest.cpp
+  updateroomresponse.cpp
+  updatesipmediaapplicationrequest.cpp
+  updatesipmediaapplicationresponse.cpp
+  updatesiprulerequest.cpp
+  updatesipruleresponse.cpp
   updateuserrequest.cpp
   updateuserresponse.cpp
   updateusersettingsrequest.cpp
   updateusersettingsresponse.cpp
+  updatevoiceconnectorgrouprequest.cpp
+  updatevoiceconnectorgroupresponse.cpp
   updatevoiceconnectorrequest.cpp
   updatevoiceconnectorresponse.cpp)
 

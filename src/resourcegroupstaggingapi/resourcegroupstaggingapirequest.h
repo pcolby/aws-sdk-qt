@@ -37,9 +37,12 @@ class QTAWS_EXPORT ResourceGroupsTaggingAPIRequest : public QtAws::Core::AwsAbst
 public:
     /// Actions supported by ResourceGroupsTaggingAPI.
     enum Action {
+        DescribeReportCreationAction,
+        GetComplianceSummaryAction,
         GetResourcesAction,
         GetTagKeysAction,
         GetTagValuesAction,
+        StartReportCreationAction,
         TagResourcesAction,
         UntagResourcesAction,
     };

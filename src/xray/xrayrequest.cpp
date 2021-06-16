@@ -44,6 +44,10 @@ namespace XRay {
  * \value GetEncryptionConfigAction XRay GetEncryptionConfig action.
  * \value GetGroupAction XRay GetGroup action.
  * \value GetGroupsAction XRay GetGroups action.
+ * \value GetInsightAction XRay GetInsight action.
+ * \value GetInsightEventsAction XRay GetInsightEvents action.
+ * \value GetInsightImpactGraphAction XRay GetInsightImpactGraph action.
+ * \value GetInsightSummariesAction XRay GetInsightSummaries action.
  * \value GetSamplingRulesAction XRay GetSamplingRules action.
  * \value GetSamplingStatisticSummariesAction XRay GetSamplingStatisticSummaries action.
  * \value GetSamplingTargetsAction XRay GetSamplingTargets action.
@@ -51,9 +55,12 @@ namespace XRay {
  * \value GetTimeSeriesServiceStatisticsAction XRay GetTimeSeriesServiceStatistics action.
  * \value GetTraceGraphAction XRay GetTraceGraph action.
  * \value GetTraceSummariesAction XRay GetTraceSummaries action.
+ * \value ListTagsForResourceAction XRay ListTagsForResource action.
  * \value PutEncryptionConfigAction XRay PutEncryptionConfig action.
  * \value PutTelemetryRecordsAction XRay PutTelemetryRecords action.
  * \value PutTraceSegmentsAction XRay PutTraceSegments action.
+ * \value TagResourceAction XRay TagResource action.
+ * \value UntagResourceAction XRay UntagResource action.
  * \value UpdateGroupAction XRay UpdateGroup action.
  * \value UpdateSamplingRuleAction XRay UpdateSamplingRule action.
  */

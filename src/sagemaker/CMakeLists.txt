@@ -1,14 +1,42 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsSageMaker
+  addassociationrequest.h
+  addassociationrequest_p.h
+  addassociationresponse.h
+  addassociationresponse_p.h
   addtagsrequest.h
   addtagsrequest_p.h
   addtagsresponse.h
   addtagsresponse_p.h
+  associatetrialcomponentrequest.h
+  associatetrialcomponentrequest_p.h
+  associatetrialcomponentresponse.h
+  associatetrialcomponentresponse_p.h
+  createactionrequest.h
+  createactionrequest_p.h
+  createactionresponse.h
+  createactionresponse_p.h
   createalgorithmrequest.h
   createalgorithmrequest_p.h
   createalgorithmresponse.h
   createalgorithmresponse_p.h
+  createappimageconfigrequest.h
+  createappimageconfigrequest_p.h
+  createappimageconfigresponse.h
+  createappimageconfigresponse_p.h
+  createapprequest.h
+  createapprequest_p.h
+  createappresponse.h
+  createappresponse_p.h
+  createartifactrequest.h
+  createartifactrequest_p.h
+  createartifactresponse.h
+  createartifactresponse_p.h
+  createautomljobrequest.h
+  createautomljobrequest_p.h
+  createautomljobresponse.h
+  createautomljobresponse_p.h
   createcoderepositoryrequest.h
   createcoderepositoryrequest_p.h
   createcoderepositoryresponse.h
@@ -17,6 +45,26 @@ add_library(QtAwsSageMaker
   createcompilationjobrequest_p.h
   createcompilationjobresponse.h
   createcompilationjobresponse_p.h
+  createcontextrequest.h
+  createcontextrequest_p.h
+  createcontextresponse.h
+  createcontextresponse_p.h
+  createdataqualityjobdefinitionrequest.h
+  createdataqualityjobdefinitionrequest_p.h
+  createdataqualityjobdefinitionresponse.h
+  createdataqualityjobdefinitionresponse_p.h
+  createdevicefleetrequest.h
+  createdevicefleetrequest_p.h
+  createdevicefleetresponse.h
+  createdevicefleetresponse_p.h
+  createdomainrequest.h
+  createdomainrequest_p.h
+  createdomainresponse.h
+  createdomainresponse_p.h
+  createedgepackagingjobrequest.h
+  createedgepackagingjobrequest_p.h
+  createedgepackagingjobresponse.h
+  createedgepackagingjobresponse_p.h
   createendpointconfigrequest.h
   createendpointconfigrequest_p.h
   createendpointconfigresponse.h
@@ -25,22 +73,66 @@ add_library(QtAwsSageMaker
   createendpointrequest_p.h
   createendpointresponse.h
   createendpointresponse_p.h
+  createexperimentrequest.h
+  createexperimentrequest_p.h
+  createexperimentresponse.h
+  createexperimentresponse_p.h
+  createfeaturegrouprequest.h
+  createfeaturegrouprequest_p.h
+  createfeaturegroupresponse.h
+  createfeaturegroupresponse_p.h
+  createflowdefinitionrequest.h
+  createflowdefinitionrequest_p.h
+  createflowdefinitionresponse.h
+  createflowdefinitionresponse_p.h
+  createhumantaskuirequest.h
+  createhumantaskuirequest_p.h
+  createhumantaskuiresponse.h
+  createhumantaskuiresponse_p.h
   createhyperparametertuningjobrequest.h
   createhyperparametertuningjobrequest_p.h
   createhyperparametertuningjobresponse.h
   createhyperparametertuningjobresponse_p.h
+  createimagerequest.h
+  createimagerequest_p.h
+  createimageresponse.h
+  createimageresponse_p.h
+  createimageversionrequest.h
+  createimageversionrequest_p.h
+  createimageversionresponse.h
+  createimageversionresponse_p.h
   createlabelingjobrequest.h
   createlabelingjobrequest_p.h
   createlabelingjobresponse.h
   createlabelingjobresponse_p.h
+  createmodelbiasjobdefinitionrequest.h
+  createmodelbiasjobdefinitionrequest_p.h
+  createmodelbiasjobdefinitionresponse.h
+  createmodelbiasjobdefinitionresponse_p.h
+  createmodelexplainabilityjobdefinitionrequest.h
+  createmodelexplainabilityjobdefinitionrequest_p.h
+  createmodelexplainabilityjobdefinitionresponse.h
+  createmodelexplainabilityjobdefinitionresponse_p.h
+  createmodelpackagegrouprequest.h
+  createmodelpackagegrouprequest_p.h
+  createmodelpackagegroupresponse.h
+  createmodelpackagegroupresponse_p.h
   createmodelpackagerequest.h
   createmodelpackagerequest_p.h
   createmodelpackageresponse.h
   createmodelpackageresponse_p.h
+  createmodelqualityjobdefinitionrequest.h
+  createmodelqualityjobdefinitionrequest_p.h
+  createmodelqualityjobdefinitionresponse.h
+  createmodelqualityjobdefinitionresponse_p.h
   createmodelrequest.h
   createmodelrequest_p.h
   createmodelresponse.h
   createmodelresponse_p.h
+  createmonitoringschedulerequest.h
+  createmonitoringschedulerequest_p.h
+  createmonitoringscheduleresponse.h
+  createmonitoringscheduleresponse_p.h
   createnotebookinstancelifecycleconfigrequest.h
   createnotebookinstancelifecycleconfigrequest_p.h
   createnotebookinstancelifecycleconfigresponse.h
@@ -49,10 +141,26 @@ add_library(QtAwsSageMaker
   createnotebookinstancerequest_p.h
   createnotebookinstanceresponse.h
   createnotebookinstanceresponse_p.h
+  createpipelinerequest.h
+  createpipelinerequest_p.h
+  createpipelineresponse.h
+  createpipelineresponse_p.h
+  createpresigneddomainurlrequest.h
+  createpresigneddomainurlrequest_p.h
+  createpresigneddomainurlresponse.h
+  createpresigneddomainurlresponse_p.h
   createpresignednotebookinstanceurlrequest.h
   createpresignednotebookinstanceurlrequest_p.h
   createpresignednotebookinstanceurlresponse.h
   createpresignednotebookinstanceurlresponse_p.h
+  createprocessingjobrequest.h
+  createprocessingjobrequest_p.h
+  createprocessingjobresponse.h
+  createprocessingjobresponse_p.h
+  createprojectrequest.h
+  createprojectrequest_p.h
+  createprojectresponse.h
+  createprojectresponse_p.h
   createtrainingjobrequest.h
   createtrainingjobrequest_p.h
   createtrainingjobresponse.h
@@ -61,18 +169,70 @@ add_library(QtAwsSageMaker
   createtransformjobrequest_p.h
   createtransformjobresponse.h
   createtransformjobresponse_p.h
+  createtrialcomponentrequest.h
+  createtrialcomponentrequest_p.h
+  createtrialcomponentresponse.h
+  createtrialcomponentresponse_p.h
+  createtrialrequest.h
+  createtrialrequest_p.h
+  createtrialresponse.h
+  createtrialresponse_p.h
+  createuserprofilerequest.h
+  createuserprofilerequest_p.h
+  createuserprofileresponse.h
+  createuserprofileresponse_p.h
+  createworkforcerequest.h
+  createworkforcerequest_p.h
+  createworkforceresponse.h
+  createworkforceresponse_p.h
   createworkteamrequest.h
   createworkteamrequest_p.h
   createworkteamresponse.h
   createworkteamresponse_p.h
+  deleteactionrequest.h
+  deleteactionrequest_p.h
+  deleteactionresponse.h
+  deleteactionresponse_p.h
   deletealgorithmrequest.h
   deletealgorithmrequest_p.h
   deletealgorithmresponse.h
   deletealgorithmresponse_p.h
+  deleteappimageconfigrequest.h
+  deleteappimageconfigrequest_p.h
+  deleteappimageconfigresponse.h
+  deleteappimageconfigresponse_p.h
+  deleteapprequest.h
+  deleteapprequest_p.h
+  deleteappresponse.h
+  deleteappresponse_p.h
+  deleteartifactrequest.h
+  deleteartifactrequest_p.h
+  deleteartifactresponse.h
+  deleteartifactresponse_p.h
+  deleteassociationrequest.h
+  deleteassociationrequest_p.h
+  deleteassociationresponse.h
+  deleteassociationresponse_p.h
   deletecoderepositoryrequest.h
   deletecoderepositoryrequest_p.h
   deletecoderepositoryresponse.h
   deletecoderepositoryresponse_p.h
+  deletecontextrequest.h
+  deletecontextrequest_p.h
+  deletecontextresponse.h
+  deletecontextresponse_p.h
+  deletedataqualityjobdefinitionrequest.h
+  deletedataqualityjobdefinitionrequest_p.h
+  deletedataqualityjobdefinitionresponse.h
+  deletedataqualityjobdefinitionresponse_p.h
+  deletedevicefleetrequest.h
+  deletedevicefleetrequest_p.h
+  deletedevicefleetresponse.h
+  deletedevicefleetresponse_p.h
+  deletedomainrequest.h
+  deletedomainrequest_p.h
+  deletedomainresponse.h
+  deletedomainresponse_p.h
   deleteendpointconfigrequest.h
   deleteendpointconfigrequest_p.h
   deleteendpointconfigresponse.h
@@ -81,14 +241,62 @@ add_library(QtAwsSageMaker
   deleteendpointrequest_p.h
   deleteendpointresponse.h
   deleteendpointresponse_p.h
+  deleteexperimentrequest.h
+  deleteexperimentrequest_p.h
+  deleteexperimentresponse.h
+  deleteexperimentresponse_p.h
+  deletefeaturegrouprequest.h
+  deletefeaturegrouprequest_p.h
+  deletefeaturegroupresponse.h
+  deletefeaturegroupresponse_p.h
+  deleteflowdefinitionrequest.h
+  deleteflowdefinitionrequest_p.h
+  deleteflowdefinitionresponse.h
+  deleteflowdefinitionresponse_p.h
+  deletehumantaskuirequest.h
+  deletehumantaskuirequest_p.h
+  deletehumantaskuiresponse.h
+  deletehumantaskuiresponse_p.h
+  deleteimagerequest.h
+  deleteimagerequest_p.h
+  deleteimageresponse.h
+  deleteimageresponse_p.h
+  deleteimageversionrequest.h
+  deleteimageversionrequest_p.h
+  deleteimageversionresponse.h
+  deleteimageversionresponse_p.h
+  deletemodelbiasjobdefinitionrequest.h
+  deletemodelbiasjobdefinitionrequest_p.h
+  deletemodelbiasjobdefinitionresponse.h
+  deletemodelbiasjobdefinitionresponse_p.h
+  deletemodelexplainabilityjobdefinitionrequest.h
+  deletemodelexplainabilityjobdefinitionrequest_p.h
+  deletemodelexplainabilityjobdefinitionresponse.h
+  deletemodelexplainabilityjobdefinitionresponse_p.h
+  deletemodelpackagegrouppolicyrequest.h
+  deletemodelpackagegrouppolicyrequest_p.h
+  deletemodelpackagegrouppolicyresponse.h
+  deletemodelpackagegrouppolicyresponse_p.h
+  deletemodelpackagegrouprequest.h
+  deletemodelpackagegrouprequest_p.h
+  deletemodelpackagegroupresponse.h
+  deletemodelpackagegroupresponse_p.h
   deletemodelpackagerequest.h
   deletemodelpackagerequest_p.h
   deletemodelpackageresponse.h
   deletemodelpackageresponse_p.h
+  deletemodelqualityjobdefinitionrequest.h
+  deletemodelqualityjobdefinitionrequest_p.h
+  deletemodelqualityjobdefinitionresponse.h
+  deletemodelqualityjobdefinitionresponse_p.h
   deletemodelrequest.h
   deletemodelrequest_p.h
   deletemodelresponse.h
   deletemodelresponse_p.h
+  deletemonitoringschedulerequest.h
+  deletemonitoringschedulerequest_p.h
+  deletemonitoringscheduleresponse.h
+  deletemonitoringscheduleresponse_p.h
   deletenotebookinstancelifecycleconfigrequest.h
   deletenotebookinstancelifecycleconfigrequest_p.h
   deletenotebookinstancelifecycleconfigresponse.h
@@ -97,18 +305,66 @@ add_library(QtAwsSageMaker
   deletenotebookinstancerequest_p.h
   deletenotebookinstanceresponse.h
   deletenotebookinstanceresponse_p.h
+  deletepipelinerequest.h
+  deletepipelinerequest_p.h
+  deletepipelineresponse.h
+  deletepipelineresponse_p.h
+  deleteprojectrequest.h
+  deleteprojectrequest_p.h
+  deleteprojectresponse.h
+  deleteprojectresponse_p.h
   deletetagsrequest.h
   deletetagsrequest_p.h
   deletetagsresponse.h
   deletetagsresponse_p.h
+  deletetrialcomponentrequest.h
+  deletetrialcomponentrequest_p.h
+  deletetrialcomponentresponse.h
+  deletetrialcomponentresponse_p.h
+  deletetrialrequest.h
+  deletetrialrequest_p.h
+  deletetrialresponse.h
+  deletetrialresponse_p.h
+  deleteuserprofilerequest.h
+  deleteuserprofilerequest_p.h
+  deleteuserprofileresponse.h
+  deleteuserprofileresponse_p.h
+  deleteworkforcerequest.h
+  deleteworkforcerequest_p.h
+  deleteworkforceresponse.h
+  deleteworkforceresponse_p.h
   deleteworkteamrequest.h
   deleteworkteamrequest_p.h
   deleteworkteamresponse.h
   deleteworkteamresponse_p.h
+  deregisterdevicesrequest.h
+  deregisterdevicesrequest_p.h
+  deregisterdevicesresponse.h
+  deregisterdevicesresponse_p.h
+  describeactionrequest.h
+  describeactionrequest_p.h
+  describeactionresponse.h
+  describeactionresponse_p.h
   describealgorithmrequest.h
   describealgorithmrequest_p.h
   describealgorithmresponse.h
   describealgorithmresponse_p.h
+  describeappimageconfigrequest.h
+  describeappimageconfigrequest_p.h
+  describeappimageconfigresponse.h
+  describeappimageconfigresponse_p.h
+  describeapprequest.h
+  describeapprequest_p.h
+  describeappresponse.h
+  describeappresponse_p.h
+  describeartifactrequest.h
+  describeartifactrequest_p.h
+  describeartifactresponse.h
+  describeartifactresponse_p.h
+  describeautomljobrequest.h
+  describeautomljobrequest_p.h
+  describeautomljobresponse.h
+  describeautomljobresponse_p.h
   describecoderepositoryrequest.h
   describecoderepositoryrequest_p.h
   describecoderepositoryresponse.h
@@ -117,6 +373,30 @@ add_library(QtAwsSageMaker
   describecompilationjobrequest_p.h
   describecompilationjobresponse.h
   describecompilationjobresponse_p.h
+  describecontextrequest.h
+  describecontextrequest_p.h
+  describecontextresponse.h
+  describecontextresponse_p.h
+  describedataqualityjobdefinitionrequest.h
+  describedataqualityjobdefinitionrequest_p.h
+  describedataqualityjobdefinitionresponse.h
+  describedataqualityjobdefinitionresponse_p.h
+  describedevicefleetrequest.h
+  describedevicefleetrequest_p.h
+  describedevicefleetresponse.h
+  describedevicefleetresponse_p.h
+  describedevicerequest.h
+  describedevicerequest_p.h
+  describedeviceresponse.h
+  describedeviceresponse_p.h
+  describedomainrequest.h
+  describedomainrequest_p.h
+  describedomainresponse.h
+  describedomainresponse_p.h
+  describeedgepackagingjobrequest.h
+  describeedgepackagingjobrequest_p.h
+  describeedgepackagingjobresponse.h
+  describeedgepackagingjobresponse_p.h
   describeendpointconfigrequest.h
   describeendpointconfigrequest_p.h
   describeendpointconfigresponse.h
@@ -125,22 +405,66 @@ add_library(QtAwsSageMaker
   describeendpointrequest_p.h
   describeendpointresponse.h
   describeendpointresponse_p.h
+  describeexperimentrequest.h
+  describeexperimentrequest_p.h
+  describeexperimentresponse.h
+  describeexperimentresponse_p.h
+  describefeaturegrouprequest.h
+  describefeaturegrouprequest_p.h
+  describefeaturegroupresponse.h
+  describefeaturegroupresponse_p.h
+  describeflowdefinitionrequest.h
+  describeflowdefinitionrequest_p.h
+  describeflowdefinitionresponse.h
+  describeflowdefinitionresponse_p.h
+  describehumantaskuirequest.h
+  describehumantaskuirequest_p.h
+  describehumantaskuiresponse.h
+  describehumantaskuiresponse_p.h
   describehyperparametertuningjobrequest.h
   describehyperparametertuningjobrequest_p.h
   describehyperparametertuningjobresponse.h
   describehyperparametertuningjobresponse_p.h
+  describeimagerequest.h
+  describeimagerequest_p.h
+  describeimageresponse.h
+  describeimageresponse_p.h
+  describeimageversionrequest.h
+  describeimageversionrequest_p.h
+  describeimageversionresponse.h
+  describeimageversionresponse_p.h
   describelabelingjobrequest.h
   describelabelingjobrequest_p.h
   describelabelingjobresponse.h
   describelabelingjobresponse_p.h
+  describemodelbiasjobdefinitionrequest.h
+  describemodelbiasjobdefinitionrequest_p.h
+  describemodelbiasjobdefinitionresponse.h
+  describemodelbiasjobdefinitionresponse_p.h
+  describemodelexplainabilityjobdefinitionrequest.h
+  describemodelexplainabilityjobdefinitionrequest_p.h
+  describemodelexplainabilityjobdefinitionresponse.h
+  describemodelexplainabilityjobdefinitionresponse_p.h
+  describemodelpackagegrouprequest.h
+  describemodelpackagegrouprequest_p.h
+  describemodelpackagegroupresponse.h
+  describemodelpackagegroupresponse_p.h
   describemodelpackagerequest.h
   describemodelpackagerequest_p.h
   describemodelpackageresponse.h
   describemodelpackageresponse_p.h
+  describemodelqualityjobdefinitionrequest.h
+  describemodelqualityjobdefinitionrequest_p.h
+  describemodelqualityjobdefinitionresponse.h
+  describemodelqualityjobdefinitionresponse_p.h
   describemodelrequest.h
   describemodelrequest_p.h
   describemodelresponse.h
   describemodelresponse_p.h
+  describemonitoringschedulerequest.h
+  describemonitoringschedulerequest_p.h
+  describemonitoringscheduleresponse.h
+  describemonitoringscheduleresponse_p.h
   describenotebookinstancelifecycleconfigrequest.h
   describenotebookinstancelifecycleconfigrequest_p.h
   describenotebookinstancelifecycleconfigresponse.h
@@ -149,6 +473,26 @@ add_library(QtAwsSageMaker
   describenotebookinstancerequest_p.h
   describenotebookinstanceresponse.h
   describenotebookinstanceresponse_p.h
+  describepipelinedefinitionforexecutionrequest.h
+  describepipelinedefinitionforexecutionrequest_p.h
+  describepipelinedefinitionforexecutionresponse.h
+  describepipelinedefinitionforexecutionresponse_p.h
+  describepipelineexecutionrequest.h
+  describepipelineexecutionrequest_p.h
+  describepipelineexecutionresponse.h
+  describepipelineexecutionresponse_p.h
+  describepipelinerequest.h
+  describepipelinerequest_p.h
+  describepipelineresponse.h
+  describepipelineresponse_p.h
+  describeprocessingjobrequest.h
+  describeprocessingjobrequest_p.h
+  describeprocessingjobresponse.h
+  describeprocessingjobresponse_p.h
+  describeprojectrequest.h
+  describeprojectrequest_p.h
+  describeprojectresponse.h
+  describeprojectresponse_p.h
   describesubscribedworkteamrequest.h
   describesubscribedworkteamrequest_p.h
   describesubscribedworkteamresponse.h
@@ -161,18 +505,86 @@ add_library(QtAwsSageMaker
   describetransformjobrequest_p.h
   describetransformjobresponse.h
   describetransformjobresponse_p.h
+  describetrialcomponentrequest.h
+  describetrialcomponentrequest_p.h
+  describetrialcomponentresponse.h
+  describetrialcomponentresponse_p.h
+  describetrialrequest.h
+  describetrialrequest_p.h
+  describetrialresponse.h
+  describetrialresponse_p.h
+  describeuserprofilerequest.h
+  describeuserprofilerequest_p.h
+  describeuserprofileresponse.h
+  describeuserprofileresponse_p.h
+  describeworkforcerequest.h
+  describeworkforcerequest_p.h
+  describeworkforceresponse.h
+  describeworkforceresponse_p.h
   describeworkteamrequest.h
   describeworkteamrequest_p.h
   describeworkteamresponse.h
   describeworkteamresponse_p.h
+  disablesagemakerservicecatalogportfoliorequest.h
+  disablesagemakerservicecatalogportfoliorequest_p.h
+  disablesagemakerservicecatalogportfolioresponse.h
+  disablesagemakerservicecatalogportfolioresponse_p.h
+  disassociatetrialcomponentrequest.h
+  disassociatetrialcomponentrequest_p.h
+  disassociatetrialcomponentresponse.h
+  disassociatetrialcomponentresponse_p.h
+  enablesagemakerservicecatalogportfoliorequest.h
+  enablesagemakerservicecatalogportfoliorequest_p.h
+  enablesagemakerservicecatalogportfolioresponse.h
+  enablesagemakerservicecatalogportfolioresponse_p.h
+  getdevicefleetreportrequest.h
+  getdevicefleetreportrequest_p.h
+  getdevicefleetreportresponse.h
+  getdevicefleetreportresponse_p.h
+  getmodelpackagegrouppolicyrequest.h
+  getmodelpackagegrouppolicyrequest_p.h
+  getmodelpackagegrouppolicyresponse.h
+  getmodelpackagegrouppolicyresponse_p.h
+  getsagemakerservicecatalogportfoliostatusrequest.h
+  getsagemakerservicecatalogportfoliostatusrequest_p.h
+  getsagemakerservicecatalogportfoliostatusresponse.h
+  getsagemakerservicecatalogportfoliostatusresponse_p.h
   getsearchsuggestionsrequest.h
   getsearchsuggestionsrequest_p.h
   getsearchsuggestionsresponse.h
   getsearchsuggestionsresponse_p.h
+  listactionsrequest.h
+  listactionsrequest_p.h
+  listactionsresponse.h
+  listactionsresponse_p.h
   listalgorithmsrequest.h
   listalgorithmsrequest_p.h
   listalgorithmsresponse.h
   listalgorithmsresponse_p.h
+  listappimageconfigsrequest.h
+  listappimageconfigsrequest_p.h
+  listappimageconfigsresponse.h
+  listappimageconfigsresponse_p.h
+  listappsrequest.h
+  listappsrequest_p.h
+  listappsresponse.h
+  listappsresponse_p.h
+  listartifactsrequest.h
+  listartifactsrequest_p.h
+  listartifactsresponse.h
+  listartifactsresponse_p.h
+  listassociationsrequest.h
+  listassociationsrequest_p.h
+  listassociationsresponse.h
+  listassociationsresponse_p.h
+  listautomljobsrequest.h
+  listautomljobsrequest_p.h
+  listautomljobsresponse.h
+  listautomljobsresponse_p.h
+  listcandidatesforautomljobrequest.h
+  listcandidatesforautomljobrequest_p.h
+  listcandidatesforautomljobresponse.h
+  listcandidatesforautomljobresponse_p.h
   listcoderepositoriesrequest.h
   listcoderepositoriesrequest_p.h
   listcoderepositoriesresponse.h
@@ -181,6 +593,30 @@ add_library(QtAwsSageMaker
   listcompilationjobsrequest_p.h
   listcompilationjobsresponse.h
   listcompilationjobsresponse_p.h
+  listcontextsrequest.h
+  listcontextsrequest_p.h
+  listcontextsresponse.h
+  listcontextsresponse_p.h
+  listdataqualityjobdefinitionsrequest.h
+  listdataqualityjobdefinitionsrequest_p.h
+  listdataqualityjobdefinitionsresponse.h
+  listdataqualityjobdefinitionsresponse_p.h
+  listdevicefleetsrequest.h
+  listdevicefleetsrequest_p.h
+  listdevicefleetsresponse.h
+  listdevicefleetsresponse_p.h
+  listdevicesrequest.h
+  listdevicesrequest_p.h
+  listdevicesresponse.h
+  listdevicesresponse_p.h
+  listdomainsrequest.h
+  listdomainsrequest_p.h
+  listdomainsresponse.h
+  listdomainsresponse_p.h
+  listedgepackagingjobsrequest.h
+  listedgepackagingjobsrequest_p.h
+  listedgepackagingjobsresponse.h
+  listedgepackagingjobsresponse_p.h
   listendpointconfigsrequest.h
   listendpointconfigsrequest_p.h
   listendpointconfigsresponse.h
@@ -189,10 +625,34 @@ add_library(QtAwsSageMaker
   listendpointsrequest_p.h
   listendpointsresponse.h
   listendpointsresponse_p.h
+  listexperimentsrequest.h
+  listexperimentsrequest_p.h
+  listexperimentsresponse.h
+  listexperimentsresponse_p.h
+  listfeaturegroupsrequest.h
+  listfeaturegroupsrequest_p.h
+  listfeaturegroupsresponse.h
+  listfeaturegroupsresponse_p.h
+  listflowdefinitionsrequest.h
+  listflowdefinitionsrequest_p.h
+  listflowdefinitionsresponse.h
+  listflowdefinitionsresponse_p.h
+  listhumantaskuisrequest.h
+  listhumantaskuisrequest_p.h
+  listhumantaskuisresponse.h
+  listhumantaskuisresponse_p.h
   listhyperparametertuningjobsrequest.h
   listhyperparametertuningjobsrequest_p.h
   listhyperparametertuningjobsresponse.h
   listhyperparametertuningjobsresponse_p.h
+  listimagesrequest.h
+  listimagesrequest_p.h
+  listimagesresponse.h
+  listimagesresponse_p.h
+  listimageversionsrequest.h
+  listimageversionsrequest_p.h
+  listimageversionsresponse.h
+  listimageversionsresponse_p.h
   listlabelingjobsforworkteamrequest.h
   listlabelingjobsforworkteamrequest_p.h
   listlabelingjobsforworkteamresponse.h
@@ -201,14 +661,38 @@ add_library(QtAwsSageMaker
   listlabelingjobsrequest_p.h
   listlabelingjobsresponse.h
   listlabelingjobsresponse_p.h
+  listmodelbiasjobdefinitionsrequest.h
+  listmodelbiasjobdefinitionsrequest_p.h
+  listmodelbiasjobdefinitionsresponse.h
+  listmodelbiasjobdefinitionsresponse_p.h
+  listmodelexplainabilityjobdefinitionsrequest.h
+  listmodelexplainabilityjobdefinitionsrequest_p.h
+  listmodelexplainabilityjobdefinitionsresponse.h
+  listmodelexplainabilityjobdefinitionsresponse_p.h
+  listmodelpackagegroupsrequest.h
+  listmodelpackagegroupsrequest_p.h
+  listmodelpackagegroupsresponse.h
+  listmodelpackagegroupsresponse_p.h
   listmodelpackagesrequest.h
   listmodelpackagesrequest_p.h
   listmodelpackagesresponse.h
   listmodelpackagesresponse_p.h
+  listmodelqualityjobdefinitionsrequest.h
+  listmodelqualityjobdefinitionsrequest_p.h
+  listmodelqualityjobdefinitionsresponse.h
+  listmodelqualityjobdefinitionsresponse_p.h
   listmodelsrequest.h
   listmodelsrequest_p.h
   listmodelsresponse.h
   listmodelsresponse_p.h
+  listmonitoringexecutionsrequest.h
+  listmonitoringexecutionsrequest_p.h
+  listmonitoringexecutionsresponse.h
+  listmonitoringexecutionsresponse_p.h
+  listmonitoringschedulesrequest.h
+  listmonitoringschedulesrequest_p.h
+  listmonitoringschedulesresponse.h
+  listmonitoringschedulesresponse_p.h
   listnotebookinstancelifecycleconfigsrequest.h
   listnotebookinstancelifecycleconfigsrequest_p.h
   listnotebookinstancelifecycleconfigsresponse.h
@@ -217,6 +701,30 @@ add_library(QtAwsSageMaker
   listnotebookinstancesrequest_p.h
   listnotebookinstancesresponse.h
   listnotebookinstancesresponse_p.h
+  listpipelineexecutionsrequest.h
+  listpipelineexecutionsrequest_p.h
+  listpipelineexecutionsresponse.h
+  listpipelineexecutionsresponse_p.h
+  listpipelineexecutionstepsrequest.h
+  listpipelineexecutionstepsrequest_p.h
+  listpipelineexecutionstepsresponse.h
+  listpipelineexecutionstepsresponse_p.h
+  listpipelineparametersforexecutionrequest.h
+  listpipelineparametersforexecutionrequest_p.h
+  listpipelineparametersforexecutionresponse.h
+  listpipelineparametersforexecutionresponse_p.h
+  listpipelinesrequest.h
+  listpipelinesrequest_p.h
+  listpipelinesresponse.h
+  listpipelinesresponse_p.h
+  listprocessingjobsrequest.h
+  listprocessingjobsrequest_p.h
+  listprocessingjobsresponse.h
+  listprocessingjobsresponse_p.h
+  listprojectsrequest.h
+  listprojectsrequest_p.h
+  listprojectsresponse.h
+  listprojectsresponse_p.h
   listsubscribedworkteamsrequest.h
   listsubscribedworkteamsrequest_p.h
   listsubscribedworkteamsresponse.h
@@ -237,10 +745,34 @@ add_library(QtAwsSageMaker
   listtransformjobsrequest_p.h
   listtransformjobsresponse.h
   listtransformjobsresponse_p.h
+  listtrialcomponentsrequest.h
+  listtrialcomponentsrequest_p.h
+  listtrialcomponentsresponse.h
+  listtrialcomponentsresponse_p.h
+  listtrialsrequest.h
+  listtrialsrequest_p.h
+  listtrialsresponse.h
+  listtrialsresponse_p.h
+  listuserprofilesrequest.h
+  listuserprofilesrequest_p.h
+  listuserprofilesresponse.h
+  listuserprofilesresponse_p.h
+  listworkforcesrequest.h
+  listworkforcesrequest_p.h
+  listworkforcesresponse.h
+  listworkforcesresponse_p.h
   listworkteamsrequest.h
   listworkteamsrequest_p.h
   listworkteamsresponse.h
   listworkteamsresponse_p.h
+  putmodelpackagegrouppolicyrequest.h
+  putmodelpackagegrouppolicyrequest_p.h
+  putmodelpackagegrouppolicyresponse.h
+  putmodelpackagegrouppolicyresponse_p.h
+  registerdevicesrequest.h
+  registerdevicesrequest_p.h
+  registerdevicesresponse.h
+  registerdevicesresponse_p.h
   renderuitemplaterequest.h
   renderuitemplaterequest_p.h
   renderuitemplateresponse.h
@@ -255,14 +787,38 @@ add_library(QtAwsSageMaker
   searchrequest_p.h
   searchresponse.h
   searchresponse_p.h
+  sendpipelineexecutionstepfailurerequest.h
+  sendpipelineexecutionstepfailurerequest_p.h
+  sendpipelineexecutionstepfailureresponse.h
+  sendpipelineexecutionstepfailureresponse_p.h
+  sendpipelineexecutionstepsuccessrequest.h
+  sendpipelineexecutionstepsuccessrequest_p.h
+  sendpipelineexecutionstepsuccessresponse.h
+  sendpipelineexecutionstepsuccessresponse_p.h
+  startmonitoringschedulerequest.h
+  startmonitoringschedulerequest_p.h
+  startmonitoringscheduleresponse.h
+  startmonitoringscheduleresponse_p.h
   startnotebookinstancerequest.h
   startnotebookinstancerequest_p.h
   startnotebookinstanceresponse.h
   startnotebookinstanceresponse_p.h
+  startpipelineexecutionrequest.h
+  startpipelineexecutionrequest_p.h
+  startpipelineexecutionresponse.h
+  startpipelineexecutionresponse_p.h
+  stopautomljobrequest.h
+  stopautomljobrequest_p.h
+  stopautomljobresponse.h
+  stopautomljobresponse_p.h
   stopcompilationjobrequest.h
   stopcompilationjobrequest_p.h
   stopcompilationjobresponse.h
   stopcompilationjobresponse_p.h
+  stopedgepackagingjobrequest.h
+  stopedgepackagingjobrequest_p.h
+  stopedgepackagingjobresponse.h
+  stopedgepackagingjobresponse_p.h
   stophyperparametertuningjobrequest.h
   stophyperparametertuningjobrequest_p.h
   stophyperparametertuningjobresponse.h
@@ -271,10 +827,22 @@ add_library(QtAwsSageMaker
   stoplabelingjobrequest_p.h
   stoplabelingjobresponse.h
   stoplabelingjobresponse_p.h
+  stopmonitoringschedulerequest.h
+  stopmonitoringschedulerequest_p.h
+  stopmonitoringscheduleresponse.h
+  stopmonitoringscheduleresponse_p.h
   stopnotebookinstancerequest.h
   stopnotebookinstancerequest_p.h
   stopnotebookinstanceresponse.h
   stopnotebookinstanceresponse_p.h
+  stoppipelineexecutionrequest.h
+  stoppipelineexecutionrequest_p.h
+  stoppipelineexecutionresponse.h
+  stoppipelineexecutionresponse_p.h
+  stopprocessingjobrequest.h
+  stopprocessingjobrequest_p.h
+  stopprocessingjobresponse.h
+  stopprocessingjobresponse_p.h
   stoptrainingjobrequest.h
   stoptrainingjobrequest_p.h
   stoptrainingjobresponse.h
@@ -283,10 +851,38 @@ add_library(QtAwsSageMaker
   stoptransformjobrequest_p.h
   stoptransformjobresponse.h
   stoptransformjobresponse_p.h
+  updateactionrequest.h
+  updateactionrequest_p.h
+  updateactionresponse.h
+  updateactionresponse_p.h
+  updateappimageconfigrequest.h
+  updateappimageconfigrequest_p.h
+  updateappimageconfigresponse.h
+  updateappimageconfigresponse_p.h
+  updateartifactrequest.h
+  updateartifactrequest_p.h
+  updateartifactresponse.h
+  updateartifactresponse_p.h
   updatecoderepositoryrequest.h
   updatecoderepositoryrequest_p.h
   updatecoderepositoryresponse.h
   updatecoderepositoryresponse_p.h
+  updatecontextrequest.h
+  updatecontextrequest_p.h
+  updatecontextresponse.h
+  updatecontextresponse_p.h
+  updatedevicefleetrequest.h
+  updatedevicefleetrequest_p.h
+  updatedevicefleetresponse.h
+  updatedevicefleetresponse_p.h
+  updatedevicesrequest.h
+  updatedevicesrequest_p.h
+  updatedevicesresponse.h
+  updatedevicesresponse_p.h
+  updatedomainrequest.h
+  updatedomainrequest_p.h
+  updatedomainresponse.h
+  updatedomainresponse_p.h
   updateendpointrequest.h
   updateendpointrequest_p.h
   updateendpointresponse.h
@@ -295,6 +891,22 @@ add_library(QtAwsSageMaker
   updateendpointweightsandcapacitiesrequest_p.h
   updateendpointweightsandcapacitiesresponse.h
   updateendpointweightsandcapacitiesresponse_p.h
+  updateexperimentrequest.h
+  updateexperimentrequest_p.h
+  updateexperimentresponse.h
+  updateexperimentresponse_p.h
+  updateimagerequest.h
+  updateimagerequest_p.h
+  updateimageresponse.h
+  updateimageresponse_p.h
+  updatemodelpackagerequest.h
+  updatemodelpackagerequest_p.h
+  updatemodelpackageresponse.h
+  updatemodelpackageresponse_p.h
+  updatemonitoringschedulerequest.h
+  updatemonitoringschedulerequest_p.h
+  updatemonitoringscheduleresponse.h
+  updatemonitoringscheduleresponse_p.h
   updatenotebookinstancelifecycleconfigrequest.h
   updatenotebookinstancelifecycleconfigrequest_p.h
   updatenotebookinstancelifecycleconfigresponse.h
@@ -303,118 +915,400 @@ add_library(QtAwsSageMaker
   updatenotebookinstancerequest_p.h
   updatenotebookinstanceresponse.h
   updatenotebookinstanceresponse_p.h
+  updatepipelineexecutionrequest.h
+  updatepipelineexecutionrequest_p.h
+  updatepipelineexecutionresponse.h
+  updatepipelineexecutionresponse_p.h
+  updatepipelinerequest.h
+  updatepipelinerequest_p.h
+  updatepipelineresponse.h
+  updatepipelineresponse_p.h
+  updatetrainingjobrequest.h
+  updatetrainingjobrequest_p.h
+  updatetrainingjobresponse.h
+  updatetrainingjobresponse_p.h
+  updatetrialcomponentrequest.h
+  updatetrialcomponentrequest_p.h
+  updatetrialcomponentresponse.h
+  updatetrialcomponentresponse_p.h
+  updatetrialrequest.h
+  updatetrialrequest_p.h
+  updatetrialresponse.h
+  updatetrialresponse_p.h
+  updateuserprofilerequest.h
+  updateuserprofilerequest_p.h
+  updateuserprofileresponse.h
+  updateuserprofileresponse_p.h
+  updateworkforcerequest.h
+  updateworkforcerequest_p.h
+  updateworkforceresponse.h
+  updateworkforceresponse_p.h
   updateworkteamrequest.h
   updateworkteamrequest_p.h
   updateworkteamresponse.h
   updateworkteamresponse_p.h
+  addassociationrequest.cpp
+  addassociationresponse.cpp
   addtagsrequest.cpp
   addtagsresponse.cpp
+  associatetrialcomponentrequest.cpp
+  associatetrialcomponentresponse.cpp
+  createactionrequest.cpp
+  createactionresponse.cpp
   createalgorithmrequest.cpp
   createalgorithmresponse.cpp
+  createappimageconfigrequest.cpp
+  createappimageconfigresponse.cpp
+  createapprequest.cpp
+  createappresponse.cpp
+  createartifactrequest.cpp
+  createartifactresponse.cpp
+  createautomljobrequest.cpp
+  createautomljobresponse.cpp
   createcoderepositoryrequest.cpp
   createcoderepositoryresponse.cpp
   createcompilationjobrequest.cpp
   createcompilationjobresponse.cpp
+  createcontextrequest.cpp
+  createcontextresponse.cpp
+  createdataqualityjobdefinitionrequest.cpp
+  createdataqualityjobdefinitionresponse.cpp
+  createdevicefleetrequest.cpp
+  createdevicefleetresponse.cpp
+  createdomainrequest.cpp
+  createdomainresponse.cpp
+  createedgepackagingjobrequest.cpp
+  createedgepackagingjobresponse.cpp
   createendpointconfigrequest.cpp
   createendpointconfigresponse.cpp
   createendpointrequest.cpp
   createendpointresponse.cpp
+  createexperimentrequest.cpp
+  createexperimentresponse.cpp
+  createfeaturegrouprequest.cpp
+  createfeaturegroupresponse.cpp
+  createflowdefinitionrequest.cpp
+  createflowdefinitionresponse.cpp
+  createhumantaskuirequest.cpp
+  createhumantaskuiresponse.cpp
   createhyperparametertuningjobrequest.cpp
   createhyperparametertuningjobresponse.cpp
+  createimagerequest.cpp
+  createimageresponse.cpp
+  createimageversionrequest.cpp
+  createimageversionresponse.cpp
   createlabelingjobrequest.cpp
   createlabelingjobresponse.cpp
+  createmodelbiasjobdefinitionrequest.cpp
+  createmodelbiasjobdefinitionresponse.cpp
+  createmodelexplainabilityjobdefinitionrequest.cpp
+  createmodelexplainabilityjobdefinitionresponse.cpp
+  createmodelpackagegrouprequest.cpp
+  createmodelpackagegroupresponse.cpp
   createmodelpackagerequest.cpp
   createmodelpackageresponse.cpp
+  createmodelqualityjobdefinitionrequest.cpp
+  createmodelqualityjobdefinitionresponse.cpp
   createmodelrequest.cpp
   createmodelresponse.cpp
+  createmonitoringschedulerequest.cpp
+  createmonitoringscheduleresponse.cpp
   createnotebookinstancelifecycleconfigrequest.cpp
   createnotebookinstancelifecycleconfigresponse.cpp
   createnotebookinstancerequest.cpp
   createnotebookinstanceresponse.cpp
+  createpipelinerequest.cpp
+  createpipelineresponse.cpp
+  createpresigneddomainurlrequest.cpp
+  createpresigneddomainurlresponse.cpp
   createpresignednotebookinstanceurlrequest.cpp
   createpresignednotebookinstanceurlresponse.cpp
+  createprocessingjobrequest.cpp
+  createprocessingjobresponse.cpp
+  createprojectrequest.cpp
+  createprojectresponse.cpp
   createtrainingjobrequest.cpp
   createtrainingjobresponse.cpp
   createtransformjobrequest.cpp
   createtransformjobresponse.cpp
+  createtrialcomponentrequest.cpp
+  createtrialcomponentresponse.cpp
+  createtrialrequest.cpp
+  createtrialresponse.cpp
+  createuserprofilerequest.cpp
+  createuserprofileresponse.cpp
+  createworkforcerequest.cpp
+  createworkforceresponse.cpp
   createworkteamrequest.cpp
   createworkteamresponse.cpp
+  deleteactionrequest.cpp
+  deleteactionresponse.cpp
   deletealgorithmrequest.cpp
   deletealgorithmresponse.cpp
+  deleteappimageconfigrequest.cpp
+  deleteappimageconfigresponse.cpp
+  deleteapprequest.cpp
+  deleteappresponse.cpp
+  deleteartifactrequest.cpp
+  deleteartifactresponse.cpp
+  deleteassociationrequest.cpp
+  deleteassociationresponse.cpp
   deletecoderepositoryrequest.cpp
   deletecoderepositoryresponse.cpp
+  deletecontextrequest.cpp
+  deletecontextresponse.cpp
+  deletedataqualityjobdefinitionrequest.cpp
+  deletedataqualityjobdefinitionresponse.cpp
+  deletedevicefleetrequest.cpp
+  deletedevicefleetresponse.cpp
+  deletedomainrequest.cpp
+  deletedomainresponse.cpp
   deleteendpointconfigrequest.cpp
   deleteendpointconfigresponse.cpp
   deleteendpointrequest.cpp
   deleteendpointresponse.cpp
+  deleteexperimentrequest.cpp
+  deleteexperimentresponse.cpp
+  deletefeaturegrouprequest.cpp
+  deletefeaturegroupresponse.cpp
+  deleteflowdefinitionrequest.cpp
+  deleteflowdefinitionresponse.cpp
+  deletehumantaskuirequest.cpp
+  deletehumantaskuiresponse.cpp
+  deleteimagerequest.cpp
+  deleteimageresponse.cpp
+  deleteimageversionrequest.cpp
+  deleteimageversionresponse.cpp
+  deletemodelbiasjobdefinitionrequest.cpp
+  deletemodelbiasjobdefinitionresponse.cpp
+  deletemodelexplainabilityjobdefinitionrequest.cpp
+  deletemodelexplainabilityjobdefinitionresponse.cpp
+  deletemodelpackagegrouppolicyrequest.cpp
+  deletemodelpackagegrouppolicyresponse.cpp
+  deletemodelpackagegrouprequest.cpp
+  deletemodelpackagegroupresponse.cpp
   deletemodelpackagerequest.cpp
   deletemodelpackageresponse.cpp
+  deletemodelqualityjobdefinitionrequest.cpp
+  deletemodelqualityjobdefinitionresponse.cpp
   deletemodelrequest.cpp
   deletemodelresponse.cpp
+  deletemonitoringschedulerequest.cpp
+  deletemonitoringscheduleresponse.cpp
   deletenotebookinstancelifecycleconfigrequest.cpp
   deletenotebookinstancelifecycleconfigresponse.cpp
   deletenotebookinstancerequest.cpp
   deletenotebookinstanceresponse.cpp
+  deletepipelinerequest.cpp
+  deletepipelineresponse.cpp
+  deleteprojectrequest.cpp
+  deleteprojectresponse.cpp
   deletetagsrequest.cpp
   deletetagsresponse.cpp
+  deletetrialcomponentrequest.cpp
+  deletetrialcomponentresponse.cpp
+  deletetrialrequest.cpp
+  deletetrialresponse.cpp
+  deleteuserprofilerequest.cpp
+  deleteuserprofileresponse.cpp
+  deleteworkforcerequest.cpp
+  deleteworkforceresponse.cpp
   deleteworkteamrequest.cpp
   deleteworkteamresponse.cpp
+  deregisterdevicesrequest.cpp
+  deregisterdevicesresponse.cpp
+  describeactionrequest.cpp
+  describeactionresponse.cpp
   describealgorithmrequest.cpp
   describealgorithmresponse.cpp
+  describeappimageconfigrequest.cpp
+  describeappimageconfigresponse.cpp
+  describeapprequest.cpp
+  describeappresponse.cpp
+  describeartifactrequest.cpp
+  describeartifactresponse.cpp
+  describeautomljobrequest.cpp
+  describeautomljobresponse.cpp
   describecoderepositoryrequest.cpp
   describecoderepositoryresponse.cpp
   describecompilationjobrequest.cpp
   describecompilationjobresponse.cpp
+  describecontextrequest.cpp
+  describecontextresponse.cpp
+  describedataqualityjobdefinitionrequest.cpp
+  describedataqualityjobdefinitionresponse.cpp
+  describedevicefleetrequest.cpp
+  describedevicefleetresponse.cpp
+  describedevicerequest.cpp
+  describedeviceresponse.cpp
+  describedomainrequest.cpp
+  describedomainresponse.cpp
+  describeedgepackagingjobrequest.cpp
+  describeedgepackagingjobresponse.cpp
   describeendpointconfigrequest.cpp
   describeendpointconfigresponse.cpp
   describeendpointrequest.cpp
   describeendpointresponse.cpp
+  describeexperimentrequest.cpp
+  describeexperimentresponse.cpp
+  describefeaturegrouprequest.cpp
+  describefeaturegroupresponse.cpp
+  describeflowdefinitionrequest.cpp
+  describeflowdefinitionresponse.cpp
+  describehumantaskuirequest.cpp
+  describehumantaskuiresponse.cpp
   describehyperparametertuningjobrequest.cpp
   describehyperparametertuningjobresponse.cpp
+  describeimagerequest.cpp
+  describeimageresponse.cpp
+  describeimageversionrequest.cpp
+  describeimageversionresponse.cpp
   describelabelingjobrequest.cpp
   describelabelingjobresponse.cpp
+  describemodelbiasjobdefinitionrequest.cpp
+  describemodelbiasjobdefinitionresponse.cpp
+  describemodelexplainabilityjobdefinitionrequest.cpp
+  describemodelexplainabilityjobdefinitionresponse.cpp
+  describemodelpackagegrouprequest.cpp
+  describemodelpackagegroupresponse.cpp
   describemodelpackagerequest.cpp
   describemodelpackageresponse.cpp
+  describemodelqualityjobdefinitionrequest.cpp
+  describemodelqualityjobdefinitionresponse.cpp
   describemodelrequest.cpp
   describemodelresponse.cpp
+  describemonitoringschedulerequest.cpp
+  describemonitoringscheduleresponse.cpp
   describenotebookinstancelifecycleconfigrequest.cpp
   describenotebookinstancelifecycleconfigresponse.cpp
   describenotebookinstancerequest.cpp
   describenotebookinstanceresponse.cpp
+  describepipelinedefinitionforexecutionrequest.cpp
+  describepipelinedefinitionforexecutionresponse.cpp
+  describepipelineexecutionrequest.cpp
+  describepipelineexecutionresponse.cpp
+  describepipelinerequest.cpp
+  describepipelineresponse.cpp
+  describeprocessingjobrequest.cpp
+  describeprocessingjobresponse.cpp
+  describeprojectrequest.cpp
+  describeprojectresponse.cpp
   describesubscribedworkteamrequest.cpp
   describesubscribedworkteamresponse.cpp
   describetrainingjobrequest.cpp
   describetrainingjobresponse.cpp
   describetransformjobrequest.cpp
   describetransformjobresponse.cpp
+  describetrialcomponentrequest.cpp
+  describetrialcomponentresponse.cpp
+  describetrialrequest.cpp
+  describetrialresponse.cpp
+  describeuserprofilerequest.cpp
+  describeuserprofileresponse.cpp
+  describeworkforcerequest.cpp
+  describeworkforceresponse.cpp
   describeworkteamrequest.cpp
   describeworkteamresponse.cpp
+  disablesagemakerservicecatalogportfoliorequest.cpp
+  disablesagemakerservicecatalogportfolioresponse.cpp
+  disassociatetrialcomponentrequest.cpp
+  disassociatetrialcomponentresponse.cpp
+  enablesagemakerservicecatalogportfoliorequest.cpp
+  enablesagemakerservicecatalogportfolioresponse.cpp
+  getdevicefleetreportrequest.cpp
+  getdevicefleetreportresponse.cpp
+  getmodelpackagegrouppolicyrequest.cpp
+  getmodelpackagegrouppolicyresponse.cpp
+  getsagemakerservicecatalogportfoliostatusrequest.cpp
+  getsagemakerservicecatalogportfoliostatusresponse.cpp
   getsearchsuggestionsrequest.cpp
   getsearchsuggestionsresponse.cpp
+  listactionsrequest.cpp
+  listactionsresponse.cpp
   listalgorithmsrequest.cpp
   listalgorithmsresponse.cpp
+  listappimageconfigsrequest.cpp
+  listappimageconfigsresponse.cpp
+  listappsrequest.cpp
+  listappsresponse.cpp
+  listartifactsrequest.cpp
+  listartifactsresponse.cpp
+  listassociationsrequest.cpp
+  listassociationsresponse.cpp
+  listautomljobsrequest.cpp
+  listautomljobsresponse.cpp
+  listcandidatesforautomljobrequest.cpp
+  listcandidatesforautomljobresponse.cpp
   listcoderepositoriesrequest.cpp
   listcoderepositoriesresponse.cpp
   listcompilationjobsrequest.cpp
   listcompilationjobsresponse.cpp
+  listcontextsrequest.cpp
+  listcontextsresponse.cpp
+  listdataqualityjobdefinitionsrequest.cpp
+  listdataqualityjobdefinitionsresponse.cpp
+  listdevicefleetsrequest.cpp
+  listdevicefleetsresponse.cpp
+  listdevicesrequest.cpp
+  listdevicesresponse.cpp
+  listdomainsrequest.cpp
+  listdomainsresponse.cpp
+  listedgepackagingjobsrequest.cpp
+  listedgepackagingjobsresponse.cpp
   listendpointconfigsrequest.cpp
   listendpointconfigsresponse.cpp
   listendpointsrequest.cpp
   listendpointsresponse.cpp
+  listexperimentsrequest.cpp
+  listexperimentsresponse.cpp
+  listfeaturegroupsrequest.cpp
+  listfeaturegroupsresponse.cpp
+  listflowdefinitionsrequest.cpp
+  listflowdefinitionsresponse.cpp
+  listhumantaskuisrequest.cpp
+  listhumantaskuisresponse.cpp
   listhyperparametertuningjobsrequest.cpp
   listhyperparametertuningjobsresponse.cpp
+  listimagesrequest.cpp
+  listimagesresponse.cpp
+  listimageversionsrequest.cpp
+  listimageversionsresponse.cpp
   listlabelingjobsforworkteamrequest.cpp
   listlabelingjobsforworkteamresponse.cpp
   listlabelingjobsrequest.cpp
   listlabelingjobsresponse.cpp
+  listmodelbiasjobdefinitionsrequest.cpp
+  listmodelbiasjobdefinitionsresponse.cpp
+  listmodelexplainabilityjobdefinitionsrequest.cpp
+  listmodelexplainabilityjobdefinitionsresponse.cpp
+  listmodelpackagegroupsrequest.cpp
+  listmodelpackagegroupsresponse.cpp
   listmodelpackagesrequest.cpp
   listmodelpackagesresponse.cpp
+  listmodelqualityjobdefinitionsrequest.cpp
+  listmodelqualityjobdefinitionsresponse.cpp
   listmodelsrequest.cpp
   listmodelsresponse.cpp
+  listmonitoringexecutionsrequest.cpp
+  listmonitoringexecutionsresponse.cpp
+  listmonitoringschedulesrequest.cpp
+  listmonitoringschedulesresponse.cpp
   listnotebookinstancelifecycleconfigsrequest.cpp
   listnotebookinstancelifecycleconfigsresponse.cpp
   listnotebookinstancesrequest.cpp
   listnotebookinstancesresponse.cpp
+  listpipelineexecutionsrequest.cpp
+  listpipelineexecutionsresponse.cpp
+  listpipelineexecutionstepsrequest.cpp
+  listpipelineexecutionstepsresponse.cpp
+  listpipelineparametersforexecutionrequest.cpp
+  listpipelineparametersforexecutionresponse.cpp
+  listpipelinesrequest.cpp
+  listpipelinesresponse.cpp
+  listprocessingjobsrequest.cpp
+  listprocessingjobsresponse.cpp
+  listprojectsrequest.cpp
+  listprojectsresponse.cpp
   listsubscribedworkteamsrequest.cpp
   listsubscribedworkteamsresponse.cpp
   listtagsrequest.cpp
@@ -425,8 +1319,20 @@ add_library(QtAwsSageMaker
   listtrainingjobsresponse.cpp
   listtransformjobsrequest.cpp
   listtransformjobsresponse.cpp
+  listtrialcomponentsrequest.cpp
+  listtrialcomponentsresponse.cpp
+  listtrialsrequest.cpp
+  listtrialsresponse.cpp
+  listuserprofilesrequest.cpp
+  listuserprofilesresponse.cpp
+  listworkforcesrequest.cpp
+  listworkforcesresponse.cpp
   listworkteamsrequest.cpp
   listworkteamsresponse.cpp
+  putmodelpackagegrouppolicyrequest.cpp
+  putmodelpackagegrouppolicyresponse.cpp
+  registerdevicesrequest.cpp
+  registerdevicesresponse.cpp
   renderuitemplaterequest.cpp
   renderuitemplateresponse.cpp
   sagemakerclient.cpp
@@ -434,30 +1340,84 @@ add_library(QtAwsSageMaker
   sagemakerresponse.cpp
   searchrequest.cpp
   searchresponse.cpp
+  sendpipelineexecutionstepfailurerequest.cpp
+  sendpipelineexecutionstepfailureresponse.cpp
+  sendpipelineexecutionstepsuccessrequest.cpp
+  sendpipelineexecutionstepsuccessresponse.cpp
+  startmonitoringschedulerequest.cpp
+  startmonitoringscheduleresponse.cpp
   startnotebookinstancerequest.cpp
   startnotebookinstanceresponse.cpp
+  startpipelineexecutionrequest.cpp
+  startpipelineexecutionresponse.cpp
+  stopautomljobrequest.cpp
+  stopautomljobresponse.cpp
   stopcompilationjobrequest.cpp
   stopcompilationjobresponse.cpp
+  stopedgepackagingjobrequest.cpp
+  stopedgepackagingjobresponse.cpp
   stophyperparametertuningjobrequest.cpp
   stophyperparametertuningjobresponse.cpp
   stoplabelingjobrequest.cpp
   stoplabelingjobresponse.cpp
+  stopmonitoringschedulerequest.cpp
+  stopmonitoringscheduleresponse.cpp
   stopnotebookinstancerequest.cpp
   stopnotebookinstanceresponse.cpp
+  stoppipelineexecutionrequest.cpp
+  stoppipelineexecutionresponse.cpp
+  stopprocessingjobrequest.cpp
+  stopprocessingjobresponse.cpp
   stoptrainingjobrequest.cpp
   stoptrainingjobresponse.cpp
   stoptransformjobrequest.cpp
   stoptransformjobresponse.cpp
+  updateactionrequest.cpp
+  updateactionresponse.cpp
+  updateappimageconfigrequest.cpp
+  updateappimageconfigresponse.cpp
+  updateartifactrequest.cpp
+  updateartifactresponse.cpp
   updatecoderepositoryrequest.cpp
   updatecoderepositoryresponse.cpp
+  updatecontextrequest.cpp
+  updatecontextresponse.cpp
+  updatedevicefleetrequest.cpp
+  updatedevicefleetresponse.cpp
+  updatedevicesrequest.cpp
+  updatedevicesresponse.cpp
+  updatedomainrequest.cpp
+  updatedomainresponse.cpp
   updateendpointrequest.cpp
   updateendpointresponse.cpp
   updateendpointweightsandcapacitiesrequest.cpp
   updateendpointweightsandcapacitiesresponse.cpp
+  updateexperimentrequest.cpp
+  updateexperimentresponse.cpp
+  updateimagerequest.cpp
+  updateimageresponse.cpp
+  updatemodelpackagerequest.cpp
+  updatemodelpackageresponse.cpp
+  updatemonitoringschedulerequest.cpp
+  updatemonitoringscheduleresponse.cpp
   updatenotebookinstancelifecycleconfigrequest.cpp
   updatenotebookinstancelifecycleconfigresponse.cpp
   updatenotebookinstancerequest.cpp
   updatenotebookinstanceresponse.cpp
+  updatepipelineexecutionrequest.cpp
+  updatepipelineexecutionresponse.cpp
+  updatepipelinerequest.cpp
+  updatepipelineresponse.cpp
+  updatetrainingjobrequest.cpp
+  updatetrainingjobresponse.cpp
+  updatetrialcomponentrequest.cpp
+  updatetrialcomponentresponse.cpp
+  updatetrialrequest.cpp
+  updatetrialresponse.cpp
+  updateuserprofilerequest.cpp
+  updateuserprofileresponse.cpp
+  updateworkforcerequest.cpp
+  updateworkforceresponse.cpp
   updateworkteamrequest.cpp
   updateworkteamresponse.cpp)
 

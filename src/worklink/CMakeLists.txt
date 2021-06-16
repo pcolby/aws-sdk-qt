@@ -77,6 +77,10 @@ add_library(QtAwsWorkLink
   listfleetsrequest_p.h
   listfleetsresponse.h
   listfleetsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   listwebsiteauthorizationprovidersrequest.h
   listwebsiteauthorizationprovidersrequest_p.h
   listwebsiteauthorizationprovidersresponse.h
@@ -97,6 +101,14 @@ add_library(QtAwsWorkLink
   signoutuserrequest_p.h
   signoutuserresponse.h
   signoutuserresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateauditstreamconfigurationrequest.h
   updateauditstreamconfigurationrequest_p.h
   updateauditstreamconfigurationresponse.h
@@ -165,6 +177,8 @@ add_library(QtAwsWorkLink
   listdomainsresponse.cpp
   listfleetsrequest.cpp
   listfleetsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   listwebsiteauthorizationprovidersrequest.cpp
   listwebsiteauthorizationprovidersresponse.cpp
   listwebsitecertificateauthoritiesrequest.cpp
@@ -175,6 +189,10 @@ add_library(QtAwsWorkLink
   revokedomainaccessresponse.cpp
   signoutuserrequest.cpp
   signoutuserresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateauditstreamconfigurationrequest.cpp
   updateauditstreamconfigurationresponse.cpp
   updatecompanynetworkconfigurationrequest.cpp

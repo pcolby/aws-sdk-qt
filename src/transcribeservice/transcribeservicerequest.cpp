@@ -36,15 +36,33 @@ namespace TranscribeService {
  * This enum describes the actions that can be performed as TranscribeService
  * requests.
  *
+ * \value CreateLanguageModelAction TranscribeService CreateLanguageModel action.
+ * \value CreateMedicalVocabularyAction TranscribeService CreateMedicalVocabulary action.
  * \value CreateVocabularyAction TranscribeService CreateVocabulary action.
+ * \value CreateVocabularyFilterAction TranscribeService CreateVocabularyFilter action.
+ * \value DeleteLanguageModelAction TranscribeService DeleteLanguageModel action.
+ * \value DeleteMedicalTranscriptionJobAction TranscribeService DeleteMedicalTranscriptionJob action.
+ * \value DeleteMedicalVocabularyAction TranscribeService DeleteMedicalVocabulary action.
  * \value DeleteTranscriptionJobAction TranscribeService DeleteTranscriptionJob action.
  * \value DeleteVocabularyAction TranscribeService DeleteVocabulary action.
+ * \value DeleteVocabularyFilterAction TranscribeService DeleteVocabularyFilter action.
+ * \value DescribeLanguageModelAction TranscribeService DescribeLanguageModel action.
+ * \value GetMedicalTranscriptionJobAction TranscribeService GetMedicalTranscriptionJob action.
+ * \value GetMedicalVocabularyAction TranscribeService GetMedicalVocabulary action.
  * \value GetTranscriptionJobAction TranscribeService GetTranscriptionJob action.
  * \value GetVocabularyAction TranscribeService GetVocabulary action.
+ * \value GetVocabularyFilterAction TranscribeService GetVocabularyFilter action.
+ * \value ListLanguageModelsAction TranscribeService ListLanguageModels action.
+ * \value ListMedicalTranscriptionJobsAction TranscribeService ListMedicalTranscriptionJobs action.
+ * \value ListMedicalVocabulariesAction TranscribeService ListMedicalVocabularies action.
  * \value ListTranscriptionJobsAction TranscribeService ListTranscriptionJobs action.
  * \value ListVocabulariesAction TranscribeService ListVocabularies action.
+ * \value ListVocabularyFiltersAction TranscribeService ListVocabularyFilters action.
+ * \value StartMedicalTranscriptionJobAction TranscribeService StartMedicalTranscriptionJob action.
  * \value StartTranscriptionJobAction TranscribeService StartTranscriptionJob action.
+ * \value UpdateMedicalVocabularyAction TranscribeService UpdateMedicalVocabulary action.
  * \value UpdateVocabularyAction TranscribeService UpdateVocabulary action.
+ * \value UpdateVocabularyFilterAction TranscribeService UpdateVocabularyFilter action.
  */
 
 /*!

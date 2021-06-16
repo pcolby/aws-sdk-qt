@@ -36,24 +36,36 @@ namespace Kafka {
  * This enum describes the actions that can be performed as Kafka
  * requests.
  *
+ * \value BatchAssociateScramSecretAction Kafka BatchAssociateScramSecret action.
+ * \value BatchDisassociateScramSecretAction Kafka BatchDisassociateScramSecret action.
  * \value CreateClusterAction Kafka CreateCluster action.
  * \value CreateConfigurationAction Kafka CreateConfiguration action.
  * \value DeleteClusterAction Kafka DeleteCluster action.
+ * \value DeleteConfigurationAction Kafka DeleteConfiguration action.
  * \value DescribeClusterAction Kafka DescribeCluster action.
  * \value DescribeClusterOperationAction Kafka DescribeClusterOperation action.
  * \value DescribeConfigurationAction Kafka DescribeConfiguration action.
  * \value DescribeConfigurationRevisionAction Kafka DescribeConfigurationRevision action.
  * \value GetBootstrapBrokersAction Kafka GetBootstrapBrokers action.
+ * \value GetCompatibleKafkaVersionsAction Kafka GetCompatibleKafkaVersions action.
  * \value ListClusterOperationsAction Kafka ListClusterOperations action.
  * \value ListClustersAction Kafka ListClusters action.
  * \value ListConfigurationRevisionsAction Kafka ListConfigurationRevisions action.
  * \value ListConfigurationsAction Kafka ListConfigurations action.
+ * \value ListKafkaVersionsAction Kafka ListKafkaVersions action.
  * \value ListNodesAction Kafka ListNodes action.
+ * \value ListScramSecretsAction Kafka ListScramSecrets action.
  * \value ListTagsForResourceAction Kafka ListTagsForResource action.
+ * \value RebootBrokerAction Kafka RebootBroker action.
  * \value TagResourceAction Kafka TagResource action.
  * \value UntagResourceAction Kafka UntagResource action.
+ * \value UpdateBrokerCountAction Kafka UpdateBrokerCount action.
  * \value UpdateBrokerStorageAction Kafka UpdateBrokerStorage action.
+ * \value UpdateBrokerTypeAction Kafka UpdateBrokerType action.
  * \value UpdateClusterConfigurationAction Kafka UpdateClusterConfiguration action.
+ * \value UpdateClusterKafkaVersionAction Kafka UpdateClusterKafkaVersion action.
+ * \value UpdateConfigurationAction Kafka UpdateConfiguration action.
+ * \value UpdateMonitoringAction Kafka UpdateMonitoring action.
  */
 
 /*!

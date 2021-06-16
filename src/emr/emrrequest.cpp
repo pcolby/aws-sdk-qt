@@ -42,27 +42,47 @@ namespace EMR {
  * \value AddTagsAction EMR AddTags action.
  * \value CancelStepsAction EMR CancelSteps action.
  * \value CreateSecurityConfigurationAction EMR CreateSecurityConfiguration action.
+ * \value CreateStudioAction EMR CreateStudio action.
+ * \value CreateStudioSessionMappingAction EMR CreateStudioSessionMapping action.
  * \value DeleteSecurityConfigurationAction EMR DeleteSecurityConfiguration action.
+ * \value DeleteStudioAction EMR DeleteStudio action.
+ * \value DeleteStudioSessionMappingAction EMR DeleteStudioSessionMapping action.
  * \value DescribeClusterAction EMR DescribeCluster action.
  * \value DescribeJobFlowsAction EMR DescribeJobFlows action.
+ * \value DescribeNotebookExecutionAction EMR DescribeNotebookExecution action.
  * \value DescribeSecurityConfigurationAction EMR DescribeSecurityConfiguration action.
  * \value DescribeStepAction EMR DescribeStep action.
+ * \value DescribeStudioAction EMR DescribeStudio action.
+ * \value GetBlockPublicAccessConfigurationAction EMR GetBlockPublicAccessConfiguration action.
+ * \value GetManagedScalingPolicyAction EMR GetManagedScalingPolicy action.
+ * \value GetStudioSessionMappingAction EMR GetStudioSessionMapping action.
  * \value ListBootstrapActionsAction EMR ListBootstrapActions action.
  * \value ListClustersAction EMR ListClusters action.
  * \value ListInstanceFleetsAction EMR ListInstanceFleets action.
  * \value ListInstanceGroupsAction EMR ListInstanceGroups action.
  * \value ListInstancesAction EMR ListInstances action.
+ * \value ListNotebookExecutionsAction EMR ListNotebookExecutions action.
  * \value ListSecurityConfigurationsAction EMR ListSecurityConfigurations action.
  * \value ListStepsAction EMR ListSteps action.
+ * \value ListStudioSessionMappingsAction EMR ListStudioSessionMappings action.
+ * \value ListStudiosAction EMR ListStudios action.
+ * \value ModifyClusterAction EMR ModifyCluster action.
  * \value ModifyInstanceFleetAction EMR ModifyInstanceFleet action.
  * \value ModifyInstanceGroupsAction EMR ModifyInstanceGroups action.
  * \value PutAutoScalingPolicyAction EMR PutAutoScalingPolicy action.
+ * \value PutBlockPublicAccessConfigurationAction EMR PutBlockPublicAccessConfiguration action.
+ * \value PutManagedScalingPolicyAction EMR PutManagedScalingPolicy action.
  * \value RemoveAutoScalingPolicyAction EMR RemoveAutoScalingPolicy action.
+ * \value RemoveManagedScalingPolicyAction EMR RemoveManagedScalingPolicy action.
  * \value RemoveTagsAction EMR RemoveTags action.
  * \value RunJobFlowAction EMR RunJobFlow action.
  * \value SetTerminationProtectionAction EMR SetTerminationProtection action.
  * \value SetVisibleToAllUsersAction EMR SetVisibleToAllUsers action.
+ * \value StartNotebookExecutionAction EMR StartNotebookExecution action.
+ * \value StopNotebookExecutionAction EMR StopNotebookExecution action.
  * \value TerminateJobFlowsAction EMR TerminateJobFlows action.
+ * \value UpdateStudioAction EMR UpdateStudio action.
+ * \value UpdateStudioSessionMappingAction EMR UpdateStudioSessionMapping action.
  */
 
 /*!

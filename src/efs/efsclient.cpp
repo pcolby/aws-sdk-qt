@@ -21,18 +21,32 @@
 #include "efsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createaccesspointrequest.h"
+#include "createaccesspointresponse.h"
 #include "createfilesystemrequest.h"
 #include "createfilesystemresponse.h"
 #include "createmounttargetrequest.h"
 #include "createmounttargetresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
+#include "deleteaccesspointrequest.h"
+#include "deleteaccesspointresponse.h"
 #include "deletefilesystemrequest.h"
 #include "deletefilesystemresponse.h"
+#include "deletefilesystempolicyrequest.h"
+#include "deletefilesystempolicyresponse.h"
 #include "deletemounttargetrequest.h"
 #include "deletemounttargetresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "describeaccesspointsrequest.h"
+#include "describeaccesspointsresponse.h"
+#include "describeaccountpreferencesrequest.h"
+#include "describeaccountpreferencesresponse.h"
+#include "describebackuppolicyrequest.h"
+#include "describebackuppolicyresponse.h"
+#include "describefilesystempolicyrequest.h"
+#include "describefilesystempolicyresponse.h"
 #include "describefilesystemsrequest.h"
 #include "describefilesystemsresponse.h"
 #include "describelifecycleconfigurationrequest.h"
@@ -43,10 +57,22 @@
 #include "describemounttargetsresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "modifymounttargetsecuritygroupsrequest.h"
 #include "modifymounttargetsecuritygroupsresponse.h"
+#include "putaccountpreferencesrequest.h"
+#include "putaccountpreferencesresponse.h"
+#include "putbackuppolicyrequest.h"
+#include "putbackuppolicyresponse.h"
+#include "putfilesystempolicyrequest.h"
+#include "putfilesystempolicyresponse.h"
 #include "putlifecycleconfigurationrequest.h"
 #include "putlifecycleconfigurationresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatefilesystemrequest.h"
 #include "updatefilesystemresponse.h"
 
@@ -77,7 +103,8 @@ namespace EFS {
  *  Amazon Elastic File System (Amazon EFS) provides simple, scalable file storage for use with Amazon EC2 instances in the
  *  AWS Cloud. With Amazon EFS, storage capacity is elastic, growing and shrinking automatically as you add and remove
  *  files, so your applications have the storage they need, when they need it. For more information, see the <a
- *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">User
+ *  href="https://docs.aws.amazon.com/efs/latest/ug/api-reference.html">Amazon Elastic File System API Reference</a> and the
+ *  <a href="https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html">Amazon Elastic File System User
  */
 
 /*!
@@ -135,6 +162,28 @@ EfsClient::EfsClient(
 
 /*!
  * Sends \a request to the EfsClient service, and returns a pointer to an
+ * CreateAccessPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an EFS access point. An access point is an application-specific view into an EFS file system that applies an
+ * operating system user and group, and a file system path, to any file system request made through the access point. The
+ * operating system user and group override any identity information provided by the NFS client. The file system path is
+ * exposed as the access point's root directory. Applications using the access point can only access data in its own
+ * directory and below. To learn more, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html">Mounting a file system using EFS access
+ *
+ * points</a>>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:CreateAccessPoint</code>
+ */
+CreateAccessPointResponse * EfsClient::createAccessPoint(const CreateAccessPointRequest &request)
+{
+    return qobject_cast<CreateAccessPointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
  * CreateFileSystemResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -167,7 +216,13 @@ EfsClient::EfsClient(
  * you use the same creation token, if the initial call had succeeded in creating a file system, the client can learn of
  * its existence from the <code>FileSystemAlreadyExists</code>
  *
- * error> <note>
+ * error>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/creating-using-create-fs.html#creating-using-create-fs-part1">Creating a
+ * file system</a> in the <i>Amazon EFS User
+ *
+ * Guide</i>> <note>
  *
  * The <code>CreateFileSystem</code> call returns while the file system's lifecycle state is still <code>creating</code>.
  * You can check the file system creation status by calling the <a>DescribeFileSystems</a> operation, which among other
@@ -175,14 +230,18 @@ EfsClient::EfsClient(
  *
  * state> </note>
  *
- * This operation also takes an optional <code>PerformanceMode</code> parameter that you choose for your file system. We
+ * This operation accepts an optional <code>PerformanceMode</code> parameter that you choose for your file system. We
  * recommend <code>generalPurpose</code> performance mode for most file systems. File systems using the <code>maxIO</code>
  * performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of
  * slightly higher latencies for most file operations. The performance mode can't be changed after the file system has been
  * created. For more information, see <a
- * href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html">Amazon EFS: Performance
+ * href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#performancemodes.html">Amazon EFS performance
  *
- * Modes</a>>
+ * modes</a>>
+ *
+ * You can set the throughput mode for the file system using the <code>ThroughputMode</code>
+ *
+ * parameter>
  *
  * After the file system is fully created, Amazon EFS sets its lifecycle state to <code>available</code>, at which point
  * you can create one or more mount targets for the file system in your VPC. For more information, see
@@ -212,32 +271,51 @@ CreateFileSystemResponse * EfsClient::createFileSystem(const CreateFileSystemReq
  * You can create one mount target in each Availability Zone in your VPC. All EC2 instances in a VPC within a given
  * Availability Zone share a single mount target for a given file system. If you have multiple subnets in an Availability
  * Zone, you create a mount target in one of the subnets. EC2 instances do not need to be in the same subnet as the mount
- * target in order to access their file system. For more information, see <a
- * href="https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it Works</a>.
+ * target in order to access their file
+ *
+ * system>
+ *
+ * You can create only one mount target for an EFS file system using One Zone storage classes. You must create that mount
+ * target in the same Availability Zone in which the file system is located. Use the <code>AvailabilityZoneName</code> and
+ * <code>AvailabiltyZoneId</code> properties in the <a>DescribeFileSystems</a> response object to get this information. Use
+ * the <code>subnetId</code> associated with the file system's Availability Zone when creating the mount
+ *
+ * target>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html">Amazon EFS: How it
+ * Works</a>.
  *
  * </p
  *
- * In the request, you also specify a file system ID for which you are creating the mount target and the file system's
- * lifecycle state must be <code>available</code>. For more information, see
+ * To create a mount target for a file system, the file system's lifecycle state must be <code>available</code>. For more
+ * information, see
  *
  * <a>DescribeFileSystems</a>>
  *
- * In the request, you also provide a subnet ID, which determines the
+ * In the request, provide the
  *
  * following> <ul> <li>
  *
- * VPC in which Amazon EFS creates the mount
+ * The file system ID for which you are creating the mount
+ *
+ * target> </li> <li>
+ *
+ * A subnet ID, which determines the
+ *
+ * following> <ul> <li>
+ *
+ * The VPC in which Amazon EFS creates the mount
  *
  * targe> </li> <li>
  *
- * Availability Zone in which Amazon EFS creates the mount
+ * The Availability Zone in which Amazon EFS creates the mount
  *
  * targe> </li> <li>
  *
- * IP address range from which Amazon EFS selects the IP address of the mount target (if you don't specify an IP address in
- * the
+ * The IP address range from which Amazon EFS selects the IP address of the mount target (if you don't specify an IP
+ * address in the
  *
- * request> </li> </ul>
+ * request> </li> </ul> </li> </ul>
  *
  * After creating the mount target, Amazon EFS returns a response that includes, a <code>MountTargetId</code> and an
  * <code>IpAddress</code>. You use this IP address when mounting the file system in an EC2 instance. You can also use the
@@ -349,6 +427,12 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * DEPRECATED - CreateTags is deprecated and not maintained. Please use the API action to create tags for EFS
+ *
+ * resources> </note>
+ *
  * Creates or overwrites tags associated with a file system. Each tag is a key-value pair. If a tag key specified in the
  * request already exists on the file system, this operation overwrites its value with the value provided in the request.
  * If you add the <code>Name</code> tag to your file system, Amazon EFS returns it in the response to the
@@ -361,6 +445,24 @@ CreateMountTargetResponse * EfsClient::createMountTarget(const CreateMountTarget
 CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
 {
     return qobject_cast<CreateTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DeleteAccessPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified access point. After deletion is complete, new clients can no longer connect to the access points.
+ * Clients connected to the access point at the time of deletion will continue to function until they terminate their
+ *
+ * connection>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:DeleteAccessPoint</code>
+ */
+DeleteAccessPointResponse * EfsClient::deleteAccessPoint(const DeleteAccessPointRequest &request)
+{
+    return qobject_cast<DeleteAccessPointResponse *>(send(request));
 }
 
 /*!
@@ -391,6 +493,25 @@ CreateTagsResponse * EfsClient::createTags(const CreateTagsRequest &request)
 DeleteFileSystemResponse * EfsClient::deleteFileSystem(const DeleteFileSystemRequest &request)
 {
     return qobject_cast<DeleteFileSystemResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DeleteFileSystemPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the <code>FileSystemPolicy</code> for the specified file system. The default <code>FileSystemPolicy</code> goes
+ * into effect once the existing policy is deleted. For more information about the default file system policy, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/res-based-policies-efs.html">Using Resource-based Policies with
+ *
+ * EFS</a>>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:DeleteFileSystemPolicy</code>
+ */
+DeleteFileSystemPolicyResponse * EfsClient::deleteFileSystemPolicy(const DeleteFileSystemPolicyRequest &request)
+{
+    return qobject_cast<DeleteFileSystemPolicyResponse *>(send(request));
 }
 
 /*!
@@ -442,6 +563,12 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * DEPRECATED - DeleteTags is deprecated and not maintained. Please use the API action to remove tags from EFS
+ *
+ * resources> </note>
+ *
  * Deletes the specified tags from a file system. If the <code>DeleteTags</code> request includes a tag key that doesn't
  * exist, Amazon EFS ignores it and doesn't cause an error. For more information about tags and related restrictions, see
  * <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Tag Restrictions</a> in the
@@ -454,6 +581,67 @@ DeleteMountTargetResponse * EfsClient::deleteMountTarget(const DeleteMountTarget
 DeleteTagsResponse * EfsClient::deleteTags(const DeleteTagsRequest &request)
 {
     return qobject_cast<DeleteTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeAccessPointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the description of a specific Amazon EFS access point if the <code>AccessPointId</code> is provided. If you
+ * provide an EFS <code>FileSystemId</code>, it returns descriptions of all access points for that file system. You can
+ * provide either an <code>AccessPointId</code> or a <code>FileSystemId</code> in the request, but not both.
+ *
+ * </p
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:DescribeAccessPoints</code>
+ */
+DescribeAccessPointsResponse * EfsClient::describeAccessPoints(const DescribeAccessPointsRequest &request)
+{
+    return qobject_cast<DescribeAccessPointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeAccountPreferencesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeAccountPreferencesResponse * EfsClient::describeAccountPreferences(const DescribeAccountPreferencesRequest &request)
+{
+    return qobject_cast<DescribeAccountPreferencesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeBackupPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the backup policy for the specified EFS file
+ */
+DescribeBackupPolicyResponse * EfsClient::describeBackupPolicy(const DescribeBackupPolicyRequest &request)
+{
+    return qobject_cast<DescribeBackupPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * DescribeFileSystemPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the <code>FileSystemPolicy</code> for the specified EFS file
+ *
+ * system>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:DescribeFileSystemPolicy</code>
+ */
+DescribeFileSystemPolicyResponse * EfsClient::describeFileSystemPolicy(const DescribeFileSystemPolicyRequest &request)
+{
+    return qobject_cast<DescribeFileSystemPolicyResponse *>(send(request));
 }
 
 /*!
@@ -567,6 +755,12 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * DEPRECATED - The DeleteTags action is deprecated and not maintained. Please use the API action to remove tags from EFS
+ *
+ * resources> </note>
+ *
  * Returns the tags associated with a file system. The order of tags returned in the response of one
  * <code>DescribeTags</code> call and the order of tags returned across the responses of a multiple-call iteration (when
  * using pagination) is unspecified.
@@ -578,6 +772,23 @@ DescribeMountTargetsResponse * EfsClient::describeMountTargets(const DescribeMou
 DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &request)
 {
     return qobject_cast<DescribeTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all tags for a top-level EFS resource. You must provide the ID of the resource that you want to retrieve the tags
+ *
+ * for>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:DescribeAccessPoints</code>
+ */
+ListTagsForResourceResponse * EfsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -611,6 +822,58 @@ DescribeTagsResponse * EfsClient::describeTags(const DescribeTagsRequest &reques
 ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGroups(const ModifyMountTargetSecurityGroupsRequest &request)
 {
     return qobject_cast<ModifyMountTargetSecurityGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * PutAccountPreferencesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+PutAccountPreferencesResponse * EfsClient::putAccountPreferences(const PutAccountPreferencesRequest &request)
+{
+    return qobject_cast<PutAccountPreferencesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * PutBackupPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the file system's backup policy. Use this action to start or stop automatic backups of the file system.
+ */
+PutBackupPolicyResponse * EfsClient::putBackupPolicy(const PutBackupPolicyRequest &request)
+{
+    return qobject_cast<PutBackupPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * PutFileSystemPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies an Amazon EFS <code>FileSystemPolicy</code> to an Amazon EFS file system. A file system policy is an IAM
+ * resource-based policy and can contain multiple policy statements. A file system always has exactly one file system
+ * policy, which can be the default policy or an explicit policy set or updated using this API operation. EFS file system
+ * policies have a 20,000 character limit. When an explicit policy is set, it overrides the default policy. For more
+ * information about the default file system policy, see <a
+ * href="https://docs.aws.amazon.com/efs/latest/ug/iam-access-control-nfs-efs.html#default-filesystempolicy">Default EFS
+ * File System Policy</a>.
+ *
+ * </p
+ *
+ * EFS file system policies have a 20,000 character
+ *
+ * limit>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:PutFileSystemPolicy</code>
+ */
+PutFileSystemPolicyResponse * EfsClient::putFileSystemPolicy(const PutFileSystemPolicyRequest &request)
+{
+    return qobject_cast<PutFileSystemPolicyResponse *>(send(request));
 }
 
 /*!
@@ -657,6 +920,40 @@ ModifyMountTargetSecurityGroupsResponse * EfsClient::modifyMountTargetSecurityGr
 PutLifecycleConfigurationResponse * EfsClient::putLifecycleConfiguration(const PutLifecycleConfigurationRequest &request)
 {
     return qobject_cast<PutLifecycleConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a tag for an EFS resource. You can create tags for EFS file systems and access points using this API
+ *
+ * operation>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:TagResource</code>
+ */
+TagResourceResponse * EfsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EfsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from an EFS resource. You can remove tags from EFS file systems and access points using this API
+ *
+ * operation>
+ *
+ * This operation requires permissions for the <code>elasticfilesystem:UntagResource</code>
+ */
+UntagResourceResponse * EfsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsECRPublic
+description = AWS ECRPublic SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsecrpublic-index.html"
+navigation.landingtitle = "ECRPublic"
+navigation.cppclassespage = "ECRPublic C++ Classes"

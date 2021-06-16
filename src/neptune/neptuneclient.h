@@ -44,6 +44,8 @@ class CopyDBParameterGroupRequest;
 class CopyDBParameterGroupResponse;
 class CreateDBClusterRequest;
 class CreateDBClusterResponse;
+class CreateDBClusterEndpointRequest;
+class CreateDBClusterEndpointResponse;
 class CreateDBClusterParameterGroupRequest;
 class CreateDBClusterParameterGroupResponse;
 class CreateDBClusterSnapshotRequest;
@@ -58,6 +60,8 @@ class CreateEventSubscriptionRequest;
 class CreateEventSubscriptionResponse;
 class DeleteDBClusterRequest;
 class DeleteDBClusterResponse;
+class DeleteDBClusterEndpointRequest;
+class DeleteDBClusterEndpointResponse;
 class DeleteDBClusterParameterGroupRequest;
 class DeleteDBClusterParameterGroupResponse;
 class DeleteDBClusterSnapshotRequest;
@@ -70,6 +74,8 @@ class DeleteDBSubnetGroupRequest;
 class DeleteDBSubnetGroupResponse;
 class DeleteEventSubscriptionRequest;
 class DeleteEventSubscriptionResponse;
+class DescribeDBClusterEndpointsRequest;
+class DescribeDBClusterEndpointsResponse;
 class DescribeDBClusterParameterGroupsRequest;
 class DescribeDBClusterParameterGroupsResponse;
 class DescribeDBClusterParametersRequest;
@@ -112,6 +118,8 @@ class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class ModifyDBClusterRequest;
 class ModifyDBClusterResponse;
+class ModifyDBClusterEndpointRequest;
+class ModifyDBClusterEndpointResponse;
 class ModifyDBClusterParameterGroupRequest;
 class ModifyDBClusterParameterGroupResponse;
 class ModifyDBClusterSnapshotAttributeRequest;
@@ -142,6 +150,10 @@ class RestoreDBClusterFromSnapshotRequest;
 class RestoreDBClusterFromSnapshotResponse;
 class RestoreDBClusterToPointInTimeRequest;
 class RestoreDBClusterToPointInTimeResponse;
+class StartDBClusterRequest;
+class StartDBClusterResponse;
+class StopDBClusterRequest;
+class StopDBClusterResponse;
 
 class QTAWS_EXPORT NeptuneClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -167,6 +179,7 @@ public slots:
     CopyDBClusterSnapshotResponse * copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request);
     CopyDBParameterGroupResponse * copyDBParameterGroup(const CopyDBParameterGroupRequest &request);
     CreateDBClusterResponse * createDBCluster(const CreateDBClusterRequest &request);
+    CreateDBClusterEndpointResponse * createDBClusterEndpoint(const CreateDBClusterEndpointRequest &request);
     CreateDBClusterParameterGroupResponse * createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request);
     CreateDBClusterSnapshotResponse * createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request);
     CreateDBInstanceResponse * createDBInstance(const CreateDBInstanceRequest &request);
@@ -174,12 +187,14 @@ public slots:
     CreateDBSubnetGroupResponse * createDBSubnetGroup(const CreateDBSubnetGroupRequest &request);
     CreateEventSubscriptionResponse * createEventSubscription(const CreateEventSubscriptionRequest &request);
     DeleteDBClusterResponse * deleteDBCluster(const DeleteDBClusterRequest &request);
+    DeleteDBClusterEndpointResponse * deleteDBClusterEndpoint(const DeleteDBClusterEndpointRequest &request);
     DeleteDBClusterParameterGroupResponse * deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request);
     DeleteDBClusterSnapshotResponse * deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request);
     DeleteDBInstanceResponse * deleteDBInstance(const DeleteDBInstanceRequest &request);
     DeleteDBParameterGroupResponse * deleteDBParameterGroup(const DeleteDBParameterGroupRequest &request);
     DeleteDBSubnetGroupResponse * deleteDBSubnetGroup(const DeleteDBSubnetGroupRequest &request);
     DeleteEventSubscriptionResponse * deleteEventSubscription(const DeleteEventSubscriptionRequest &request);
+    DescribeDBClusterEndpointsResponse * describeDBClusterEndpoints(const DescribeDBClusterEndpointsRequest &request);
     DescribeDBClusterParameterGroupsResponse * describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request);
     DescribeDBClusterParametersResponse * describeDBClusterParameters(const DescribeDBClusterParametersRequest &request);
     DescribeDBClusterSnapshotAttributesResponse * describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request);
@@ -201,6 +216,7 @@ public slots:
     FailoverDBClusterResponse * failoverDBCluster(const FailoverDBClusterRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ModifyDBClusterResponse * modifyDBCluster(const ModifyDBClusterRequest &request);
+    ModifyDBClusterEndpointResponse * modifyDBClusterEndpoint(const ModifyDBClusterEndpointRequest &request);
     ModifyDBClusterParameterGroupResponse * modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request);
     ModifyDBClusterSnapshotAttributeResponse * modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request);
     ModifyDBInstanceResponse * modifyDBInstance(const ModifyDBInstanceRequest &request);
@@ -216,6 +232,8 @@ public slots:
     ResetDBParameterGroupResponse * resetDBParameterGroup(const ResetDBParameterGroupRequest &request);
     RestoreDBClusterFromSnapshotResponse * restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request);
     RestoreDBClusterToPointInTimeResponse * restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request);
+    StartDBClusterResponse * startDBCluster(const StartDBClusterRequest &request);
+    StopDBClusterResponse * stopDBCluster(const StopDBClusterRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(NeptuneClient)

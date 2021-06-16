@@ -33,8 +33,8 @@ namespace QuickSight {
  *
  *  <fullname>Amazon QuickSight API Reference</fullname>
  * 
- *  Amazon QuickSight is a fully managed, serverless, cloud business intelligence service that makes it easy to extend data
- *  and insights to every user in your organization. This API interface reference contains documentation for a programming
+ *  Amazon QuickSight is a fully managed, serverless business intelligence service for the AWS Cloud that makes it easy to
+ *  extend data and insights to every user in your organization. This API reference contains documentation for a programming
  *  interface that you can use to manage Amazon QuickSight.
  *
  * \sa QuickSightClient::deleteGroupMembership

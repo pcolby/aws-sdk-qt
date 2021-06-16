@@ -25,10 +25,26 @@ add_library(QtAwsEmr
   createsecurityconfigurationrequest_p.h
   createsecurityconfigurationresponse.h
   createsecurityconfigurationresponse_p.h
+  createstudiorequest.h
+  createstudiorequest_p.h
+  createstudioresponse.h
+  createstudioresponse_p.h
+  createstudiosessionmappingrequest.h
+  createstudiosessionmappingrequest_p.h
+  createstudiosessionmappingresponse.h
+  createstudiosessionmappingresponse_p.h
   deletesecurityconfigurationrequest.h
   deletesecurityconfigurationrequest_p.h
   deletesecurityconfigurationresponse.h
   deletesecurityconfigurationresponse_p.h
+  deletestudiorequest.h
+  deletestudiorequest_p.h
+  deletestudioresponse.h
+  deletestudioresponse_p.h
+  deletestudiosessionmappingrequest.h
+  deletestudiosessionmappingrequest_p.h
+  deletestudiosessionmappingresponse.h
+  deletestudiosessionmappingresponse_p.h
   describeclusterrequest.h
   describeclusterrequest_p.h
   describeclusterresponse.h
@@ -37,6 +53,10 @@ add_library(QtAwsEmr
   describejobflowsrequest_p.h
   describejobflowsresponse.h
   describejobflowsresponse_p.h
+  describenotebookexecutionrequest.h
+  describenotebookexecutionrequest_p.h
+  describenotebookexecutionresponse.h
+  describenotebookexecutionresponse_p.h
   describesecurityconfigurationrequest.h
   describesecurityconfigurationrequest_p.h
   describesecurityconfigurationresponse.h
@@ -45,12 +65,28 @@ add_library(QtAwsEmr
   describesteprequest_p.h
   describestepresponse.h
   describestepresponse_p.h
+  describestudiorequest.h
+  describestudiorequest_p.h
+  describestudioresponse.h
+  describestudioresponse_p.h
   emrclient.h
   emrclient_p.h
   emrrequest.h
   emrrequest_p.h
   emrresponse.h
   emrresponse_p.h
+  getblockpublicaccessconfigurationrequest.h
+  getblockpublicaccessconfigurationrequest_p.h
+  getblockpublicaccessconfigurationresponse.h
+  getblockpublicaccessconfigurationresponse_p.h
+  getmanagedscalingpolicyrequest.h
+  getmanagedscalingpolicyrequest_p.h
+  getmanagedscalingpolicyresponse.h
+  getmanagedscalingpolicyresponse_p.h
+  getstudiosessionmappingrequest.h
+  getstudiosessionmappingrequest_p.h
+  getstudiosessionmappingresponse.h
+  getstudiosessionmappingresponse_p.h
   listbootstrapactionsrequest.h
   listbootstrapactionsrequest_p.h
   listbootstrapactionsresponse.h
@@ -71,6 +107,10 @@ add_library(QtAwsEmr
   listinstancesrequest_p.h
   listinstancesresponse.h
   listinstancesresponse_p.h
+  listnotebookexecutionsrequest.h
+  listnotebookexecutionsrequest_p.h
+  listnotebookexecutionsresponse.h
+  listnotebookexecutionsresponse_p.h
   listsecurityconfigurationsrequest.h
   listsecurityconfigurationsrequest_p.h
   listsecurityconfigurationsresponse.h
@@ -79,6 +119,18 @@ add_library(QtAwsEmr
   liststepsrequest_p.h
   liststepsresponse.h
   liststepsresponse_p.h
+  liststudiosessionmappingsrequest.h
+  liststudiosessionmappingsrequest_p.h
+  liststudiosessionmappingsresponse.h
+  liststudiosessionmappingsresponse_p.h
+  liststudiosrequest.h
+  liststudiosrequest_p.h
+  liststudiosresponse.h
+  liststudiosresponse_p.h
+  modifyclusterrequest.h
+  modifyclusterrequest_p.h
+  modifyclusterresponse.h
+  modifyclusterresponse_p.h
   modifyinstancefleetrequest.h
   modifyinstancefleetrequest_p.h
   modifyinstancefleetresponse.h
@@ -91,10 +143,22 @@ add_library(QtAwsEmr
   putautoscalingpolicyrequest_p.h
   putautoscalingpolicyresponse.h
   putautoscalingpolicyresponse_p.h
+  putblockpublicaccessconfigurationrequest.h
+  putblockpublicaccessconfigurationrequest_p.h
+  putblockpublicaccessconfigurationresponse.h
+  putblockpublicaccessconfigurationresponse_p.h
+  putmanagedscalingpolicyrequest.h
+  putmanagedscalingpolicyrequest_p.h
+  putmanagedscalingpolicyresponse.h
+  putmanagedscalingpolicyresponse_p.h
   removeautoscalingpolicyrequest.h
   removeautoscalingpolicyrequest_p.h
   removeautoscalingpolicyresponse.h
   removeautoscalingpolicyresponse_p.h
+  removemanagedscalingpolicyrequest.h
+  removemanagedscalingpolicyrequest_p.h
+  removemanagedscalingpolicyresponse.h
+  removemanagedscalingpolicyresponse_p.h
   removetagsrequest.h
   removetagsrequest_p.h
   removetagsresponse.h
@@ -111,10 +175,26 @@ add_library(QtAwsEmr
   setvisibletoallusersrequest_p.h
   setvisibletoallusersresponse.h
   setvisibletoallusersresponse_p.h
+  startnotebookexecutionrequest.h
+  startnotebookexecutionrequest_p.h
+  startnotebookexecutionresponse.h
+  startnotebookexecutionresponse_p.h
+  stopnotebookexecutionrequest.h
+  stopnotebookexecutionrequest_p.h
+  stopnotebookexecutionresponse.h
+  stopnotebookexecutionresponse_p.h
   terminatejobflowsrequest.h
   terminatejobflowsrequest_p.h
   terminatejobflowsresponse.h
   terminatejobflowsresponse_p.h
+  updatestudiorequest.h
+  updatestudiorequest_p.h
+  updatestudioresponse.h
+  updatestudioresponse_p.h
+  updatestudiosessionmappingrequest.h
+  updatestudiosessionmappingrequest_p.h
+  updatestudiosessionmappingresponse.h
+  updatestudiosessionmappingresponse_p.h
   addinstancefleetrequest.cpp
   addinstancefleetresponse.cpp
   addinstancegroupsrequest.cpp
@@ -127,19 +207,37 @@ add_library(QtAwsEmr
   cancelstepsresponse.cpp
   createsecurityconfigurationrequest.cpp
   createsecurityconfigurationresponse.cpp
+  createstudiorequest.cpp
+  createstudioresponse.cpp
+  createstudiosessionmappingrequest.cpp
+  createstudiosessionmappingresponse.cpp
   deletesecurityconfigurationrequest.cpp
   deletesecurityconfigurationresponse.cpp
+  deletestudiorequest.cpp
+  deletestudioresponse.cpp
+  deletestudiosessionmappingrequest.cpp
+  deletestudiosessionmappingresponse.cpp
   describeclusterrequest.cpp
   describeclusterresponse.cpp
   describejobflowsrequest.cpp
   describejobflowsresponse.cpp
+  describenotebookexecutionrequest.cpp
+  describenotebookexecutionresponse.cpp
   describesecurityconfigurationrequest.cpp
   describesecurityconfigurationresponse.cpp
   describesteprequest.cpp
   describestepresponse.cpp
+  describestudiorequest.cpp
+  describestudioresponse.cpp
   emrclient.cpp
   emrrequest.cpp
   emrresponse.cpp
+  getblockpublicaccessconfigurationrequest.cpp
+  getblockpublicaccessconfigurationresponse.cpp
+  getmanagedscalingpolicyrequest.cpp
+  getmanagedscalingpolicyresponse.cpp
+  getstudiosessionmappingrequest.cpp
+  getstudiosessionmappingresponse.cpp
   listbootstrapactionsrequest.cpp
   listbootstrapactionsresponse.cpp
   listclustersrequest.cpp
@@ -150,18 +248,32 @@ add_library(QtAwsEmr
   listinstancegroupsresponse.cpp
   listinstancesrequest.cpp
   listinstancesresponse.cpp
+  listnotebookexecutionsrequest.cpp
+  listnotebookexecutionsresponse.cpp
   listsecurityconfigurationsrequest.cpp
   listsecurityconfigurationsresponse.cpp
   liststepsrequest.cpp
   liststepsresponse.cpp
+  liststudiosessionmappingsrequest.cpp
+  liststudiosessionmappingsresponse.cpp
+  liststudiosrequest.cpp
+  liststudiosresponse.cpp
+  modifyclusterrequest.cpp
+  modifyclusterresponse.cpp
   modifyinstancefleetrequest.cpp
   modifyinstancefleetresponse.cpp
   modifyinstancegroupsrequest.cpp
   modifyinstancegroupsresponse.cpp
   putautoscalingpolicyrequest.cpp
   putautoscalingpolicyresponse.cpp
+  putblockpublicaccessconfigurationrequest.cpp
+  putblockpublicaccessconfigurationresponse.cpp
+  putmanagedscalingpolicyrequest.cpp
+  putmanagedscalingpolicyresponse.cpp
   removeautoscalingpolicyrequest.cpp
   removeautoscalingpolicyresponse.cpp
+  removemanagedscalingpolicyrequest.cpp
+  removemanagedscalingpolicyresponse.cpp
   removetagsrequest.cpp
   removetagsresponse.cpp
   runjobflowrequest.cpp
@@ -170,8 +282,16 @@ add_library(QtAwsEmr
   setterminationprotectionresponse.cpp
   setvisibletoallusersrequest.cpp
   setvisibletoallusersresponse.cpp
+  startnotebookexecutionrequest.cpp
+  startnotebookexecutionresponse.cpp
+  stopnotebookexecutionrequest.cpp
+  stopnotebookexecutionresponse.cpp
   terminatejobflowsrequest.cpp
-  terminatejobflowsresponse.cpp)
+  terminatejobflowsresponse.cpp
+  updatestudiorequest.cpp
+  updatestudioresponse.cpp
+  updatestudiosessionmappingrequest.cpp
+  updatestudiosessionmappingresponse.cpp)
 
 add_dependencies(QtAwsEmr QtAwsCore)
 

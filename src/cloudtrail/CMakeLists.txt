@@ -27,6 +27,14 @@ add_library(QtAwsCloudTrail
   geteventselectorsrequest_p.h
   geteventselectorsresponse.h
   geteventselectorsresponse_p.h
+  getinsightselectorsrequest.h
+  getinsightselectorsrequest_p.h
+  getinsightselectorsresponse.h
+  getinsightselectorsresponse_p.h
+  gettrailrequest.h
+  gettrailrequest_p.h
+  gettrailresponse.h
+  gettrailresponse_p.h
   gettrailstatusrequest.h
   gettrailstatusrequest_p.h
   gettrailstatusresponse.h
@@ -39,6 +47,10 @@ add_library(QtAwsCloudTrail
   listtagsrequest_p.h
   listtagsresponse.h
   listtagsresponse_p.h
+  listtrailsrequest.h
+  listtrailsrequest_p.h
+  listtrailsresponse.h
+  listtrailsresponse_p.h
   lookupeventsrequest.h
   lookupeventsrequest_p.h
   lookupeventsresponse.h
@@ -47,6 +59,10 @@ add_library(QtAwsCloudTrail
   puteventselectorsrequest_p.h
   puteventselectorsresponse.h
   puteventselectorsresponse_p.h
+  putinsightselectorsrequest.h
+  putinsightselectorsrequest_p.h
+  putinsightselectorsresponse.h
+  putinsightselectorsresponse_p.h
   removetagsrequest.h
   removetagsrequest_p.h
   removetagsresponse.h
@@ -76,16 +92,24 @@ add_library(QtAwsCloudTrail
   describetrailsresponse.cpp
   geteventselectorsrequest.cpp
   geteventselectorsresponse.cpp
+  getinsightselectorsrequest.cpp
+  getinsightselectorsresponse.cpp
+  gettrailrequest.cpp
+  gettrailresponse.cpp
   gettrailstatusrequest.cpp
   gettrailstatusresponse.cpp
   listpublickeysrequest.cpp
   listpublickeysresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
+  listtrailsrequest.cpp
+  listtrailsresponse.cpp
   lookupeventsrequest.cpp
   lookupeventsresponse.cpp
   puteventselectorsrequest.cpp
   puteventselectorsresponse.cpp
+  putinsightselectorsrequest.cpp
+  putinsightselectorsresponse.cpp
   removetagsrequest.cpp
   removetagsresponse.cpp
   startloggingrequest.cpp

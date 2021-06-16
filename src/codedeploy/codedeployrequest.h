@@ -54,6 +54,7 @@ public:
         DeleteDeploymentConfigAction,
         DeleteDeploymentGroupAction,
         DeleteGitHubAccountTokenAction,
+        DeleteResourcesByExternalIdAction,
         DeregisterOnPremisesInstanceAction,
         GetApplicationAction,
         GetApplicationRevisionAction,

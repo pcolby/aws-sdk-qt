@@ -37,15 +37,24 @@ class QTAWS_EXPORT KinesisVideoRequest : public QtAws::Core::AwsAbstractRequest 
 public:
     /// Actions supported by KinesisVideo.
     enum Action {
+        CreateSignalingChannelAction,
         CreateStreamAction,
+        DeleteSignalingChannelAction,
         DeleteStreamAction,
+        DescribeSignalingChannelAction,
         DescribeStreamAction,
         GetDataEndpointAction,
+        GetSignalingChannelEndpointAction,
+        ListSignalingChannelsAction,
         ListStreamsAction,
+        ListTagsForResourceAction,
         ListTagsForStreamAction,
+        TagResourceAction,
         TagStreamAction,
+        UntagResourceAction,
         UntagStreamAction,
         UpdateDataRetentionAction,
+        UpdateSignalingChannelAction,
         UpdateStreamAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

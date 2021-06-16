@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsApplicationCostProfiler
+description = AWS ApplicationCostProfiler SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsapplicationcostprofiler-index.html"
+navigation.landingtitle = "ApplicationCostProfiler"
+navigation.cppclassespage = "ApplicationCostProfiler C++ Classes"

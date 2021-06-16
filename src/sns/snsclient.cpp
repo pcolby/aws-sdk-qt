@@ -31,12 +31,16 @@
 #include "createplatformapplicationresponse.h"
 #include "createplatformendpointrequest.h"
 #include "createplatformendpointresponse.h"
+#include "createsmssandboxphonenumberrequest.h"
+#include "createsmssandboxphonenumberresponse.h"
 #include "createtopicrequest.h"
 #include "createtopicresponse.h"
 #include "deleteendpointrequest.h"
 #include "deleteendpointresponse.h"
 #include "deleteplatformapplicationrequest.h"
 #include "deleteplatformapplicationresponse.h"
+#include "deletesmssandboxphonenumberrequest.h"
+#include "deletesmssandboxphonenumberresponse.h"
 #include "deletetopicrequest.h"
 #include "deletetopicresponse.h"
 #include "getendpointattributesrequest.h"
@@ -45,16 +49,22 @@
 #include "getplatformapplicationattributesresponse.h"
 #include "getsmsattributesrequest.h"
 #include "getsmsattributesresponse.h"
+#include "getsmssandboxaccountstatusrequest.h"
+#include "getsmssandboxaccountstatusresponse.h"
 #include "getsubscriptionattributesrequest.h"
 #include "getsubscriptionattributesresponse.h"
 #include "gettopicattributesrequest.h"
 #include "gettopicattributesresponse.h"
 #include "listendpointsbyplatformapplicationrequest.h"
 #include "listendpointsbyplatformapplicationresponse.h"
+#include "listoriginationnumbersrequest.h"
+#include "listoriginationnumbersresponse.h"
 #include "listphonenumbersoptedoutrequest.h"
 #include "listphonenumbersoptedoutresponse.h"
 #include "listplatformapplicationsrequest.h"
 #include "listplatformapplicationsresponse.h"
+#include "listsmssandboxphonenumbersrequest.h"
+#include "listsmssandboxphonenumbersresponse.h"
 #include "listsubscriptionsrequest.h"
 #include "listsubscriptionsresponse.h"
 #include "listsubscriptionsbytopicrequest.h"
@@ -87,6 +97,8 @@
 #include "unsubscriberesponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "verifysmssandboxphonenumberrequest.h"
+#include "verifysmssandboxphonenumberresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -114,9 +126,15 @@ namespace SNS {
  * 
  *  Amazon Simple Notification Service (Amazon SNS) is a web service that enables you to build distributed web-enabled
  *  applications. Applications can use Amazon SNS to easily push real-time notification messages to interested subscribers
- *  over multiple delivery protocols. For more information about this product see <a
- *  href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. For detailed information about Amazon SNS features and
+ *  over multiple delivery protocols. For more information about this product see the <a
+ *  href="http://aws.amazon.com/sns/">Amazon SNS product page</a>. For detailed information about Amazon SNS features and
  *  their associated API calls, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/">Amazon SNS Developer Guide</a>.
+ * 
+ *  </p
+ * 
+ *  For information on the permissions you need to use this API, see <a
+ *  href="https://docs.aws.amazon.com/sns/latest/dg/sns-authentication-and-access-control.html">Identity and access
+ *  management in Amazon SNS</a> in the <i>Amazon SNS Developer Guide.</i>
  * 
  *  </p
  * 
@@ -232,30 +250,48 @@ ConfirmSubscriptionResponse * SnsClient::confirmSubscription(const ConfirmSubscr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a platform application object for one of the supported push notification services, such as APNS and FCM, to
- * which devices and mobile apps may register. You must specify PlatformPrincipal and PlatformCredential attributes when
- * using the <code>CreatePlatformApplication</code> action. The PlatformPrincipal is received from the notification
- * service. For APNS/APNS_SANDBOX, PlatformPrincipal is "SSL certificate". For GCM, PlatformPrincipal is not applicable.
- * For ADM, PlatformPrincipal is "client id". The PlatformCredential is also received from the notification service. For
- * WNS, PlatformPrincipal is "Package Security Identifier". For MPNS, PlatformPrincipal is "TLS certificate". For Baidu,
- * PlatformPrincipal is "API
+ * Creates a platform application object for one of the supported push notification services, such as APNS and GCM
+ * (Firebase Cloud Messaging), to which devices and mobile apps may register. You must specify
+ * <code>PlatformPrincipal</code> and <code>PlatformCredential</code> attributes when using the
+ * <code>CreatePlatformApplication</code>
  *
- * key">
+ * action>
  *
- * For APNS/APNS_SANDBOX, PlatformCredential is "private key". For GCM, PlatformCredential is "API key". For ADM,
- * PlatformCredential is "client secret". For WNS, PlatformCredential is "secret key". For MPNS, PlatformCredential is
- * "private key". For Baidu, PlatformCredential is "secret key". The PlatformApplicationArn that is returned when using
- * <code>CreatePlatformApplication</code> is then used as an attribute for the <code>CreatePlatformEndpoint</code> action.
- * For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
- * Push Notifications</a>. For more information about obtaining the PlatformPrincipal and PlatformCredential for each of
- * the supported push notification services, see <a
- * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-apns.html">Getting Started with Apple Push Notification
- * Service</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-adm.html">Getting Started with Amazon Device
- * Messaging</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-baidu.html">Getting Started with Baidu
- * Cloud Push</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-gcm.html">Getting Started with Google
- * Cloud Messaging for Android</a>, <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-mpns.html">Getting
- * Started with MPNS</a>, or <a href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-wns.html">Getting Started with
- * WNS</a>.
+ * <code>PlatformPrincipal</code> and <code>PlatformCredential</code> are received from the notification
+ *
+ * service> <ul> <li>
+ *
+ * For <code>ADM</code>, <code>PlatformPrincipal</code> is <code>client id</code> and <code>PlatformCredential</code> is
+ * <code>client
+ *
+ * secret</code>> </li> <li>
+ *
+ * For <code>Baidu</code>, <code>PlatformPrincipal</code> is <code>API key</code> and <code>PlatformCredential</code> is
+ * <code>secret
+ *
+ * key</code>> </li> <li>
+ *
+ * For <code>APNS</code> and <code>APNS_SANDBOX</code>, <code>PlatformPrincipal</code> is <code>SSL certificate</code> and
+ * <code>PlatformCredential</code> is <code>private
+ *
+ * key</code>> </li> <li>
+ *
+ * For <code>GCM</code> (Firebase Cloud Messaging), there is no <code>PlatformPrincipal</code> and the
+ * <code>PlatformCredential</code> is <code>API
+ *
+ * key</code>> </li> <li>
+ *
+ * For <code>MPNS</code>, <code>PlatformPrincipal</code> is <code>TLS certificate</code> and
+ * <code>PlatformCredential</code> is <code>private
+ *
+ * key</code>> </li> <li>
+ *
+ * For <code>WNS</code>, <code>PlatformPrincipal</code> is <code>Package Security Identifier</code> and
+ * <code>PlatformCredential</code> is <code>secret
+ *
+ * key</code>> </li> </ul>
+ *
+ * You can use the returned <code>PlatformApplicationArn</code> as an attribute for the <code>CreatePlatformEndpoint</code>
  */
 CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const CreatePlatformApplicationRequest &request)
 {
@@ -268,14 +304,14 @@ CreatePlatformApplicationResponse * SnsClient::createPlatformApplication(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an endpoint for a device and mobile app on one of the supported push notification services, such as GCM and
- * APNS. <code>CreatePlatformEndpoint</code> requires the PlatformApplicationArn that is returned from
- * <code>CreatePlatformApplication</code>. The EndpointArn that is returned when using <code>CreatePlatformEndpoint</code>
- * can then be used by the <code>Publish</code> action to send a message to a mobile app or by the <code>Subscribe</code>
- * action for subscription to a topic. The <code>CreatePlatformEndpoint</code> action is idempotent, so if the requester
- * already owns an endpoint with the same device token and attributes, that endpoint's ARN is returned without creating a
- * new endpoint. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using
- * Amazon SNS Mobile Push Notifications</a>.
+ * Creates an endpoint for a device and mobile app on one of the supported push notification services, such as GCM
+ * (Firebase Cloud Messaging) and APNS. <code>CreatePlatformEndpoint</code> requires the
+ * <code>PlatformApplicationArn</code> that is returned from <code>CreatePlatformApplication</code>. You can use the
+ * returned <code>EndpointArn</code> to send a message to a mobile app or by the <code>Subscribe</code> action for
+ * subscription to a topic. The <code>CreatePlatformEndpoint</code> action is idempotent, so if the requester already owns
+ * an endpoint with the same device token and attributes, that endpoint's ARN is returned without creating a new endpoint.
+ * For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
+ * Push Notifications</a>.
  *
  * </p
  *
@@ -291,13 +327,36 @@ CreatePlatformEndpointResponse * SnsClient::createPlatformEndpoint(const CreateP
 
 /*!
  * Sends \a request to the SnsClient service, and returns a pointer to an
+ * CreateSMSSandboxPhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a destination phone number to an AWS account in the SMS sandbox and sends a one-time password (OTP) to that phone
+ *
+ * number>
+ *
+ * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
+ * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
+ * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
+ * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
+ * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+ * sandbox</a> in the <i>Amazon SNS Developer
+ */
+CreateSMSSandboxPhoneNumberResponse * SnsClient::createSMSSandboxPhoneNumber(const CreateSMSSandboxPhoneNumberRequest &request)
+{
+    return qobject_cast<CreateSMSSandboxPhoneNumberResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
  * CreateTopicResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a topic to which notifications can be published. Users can create at most 100,000 topics. For more information,
- * see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This action is idempotent, so if the requester
- * already owns a topic with the specified name, that topic's ARN is returned without creating a new
+ * Creates a topic to which notifications can be published. Users can create at most 100,000 standard topics (at most 1,000
+ * FIFO topics). For more information, see <a href="http://aws.amazon.com/sns/">https://aws.amazon.com/sns</a>. This action
+ * is idempotent, so if the requester already owns a topic with the specified name, that topic's ARN is returned without
+ * creating a new
  */
 CreateTopicResponse * SnsClient::createTopic(const CreateTopicRequest &request)
 {
@@ -328,13 +387,35 @@ DeleteEndpointResponse * SnsClient::deleteEndpoint(const DeleteEndpointRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a platform application object for one of the supported push notification services, such as APNS and GCM. For
- * more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
- * Push Notifications</a>.
+ * Deletes a platform application object for one of the supported push notification services, such as APNS and GCM
+ * (Firebase Cloud Messaging). For more information, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  */
 DeletePlatformApplicationResponse * SnsClient::deletePlatformApplication(const DeletePlatformApplicationRequest &request)
 {
     return qobject_cast<DeletePlatformApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * DeleteSMSSandboxPhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an AWS account's verified or pending phone number from the SMS
+ *
+ * sandbox>
+ *
+ * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
+ * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
+ * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
+ * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
+ * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+ * sandbox</a> in the <i>Amazon SNS Developer
+ */
+DeleteSMSSandboxPhoneNumberResponse * SnsClient::deleteSMSSandboxPhoneNumber(const DeleteSMSSandboxPhoneNumberRequest &request)
+{
+    return qobject_cast<DeleteSMSSandboxPhoneNumberResponse *>(send(request));
 }
 
 /*!
@@ -358,9 +439,9 @@ DeleteTopicResponse * SnsClient::deleteTopic(const DeleteTopicRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM and APNS.
- * For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
- * Push Notifications</a>.
+ * Retrieves the endpoint attributes for a device on one of the supported push notification services, such as GCM (Firebase
+ * Cloud Messaging) and APNS. For more information, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  */
 GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpointAttributesRequest &request)
 {
@@ -374,8 +455,8 @@ GetEndpointAttributesResponse * SnsClient::getEndpointAttributes(const GetEndpoi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the attributes of the platform application object for the supported push notification services, such as APNS
- * and GCM. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon
- * SNS Mobile Push Notifications</a>.
+ * and GCM (Firebase Cloud Messaging). For more information, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  */
 GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttributes(const GetPlatformApplicationAttributesRequest &request)
 {
@@ -397,6 +478,28 @@ GetPlatformApplicationAttributesResponse * SnsClient::getPlatformApplicationAttr
 GetSMSAttributesResponse * SnsClient::getSMSAttributes(const GetSMSAttributesRequest &request)
 {
     return qobject_cast<GetSMSAttributesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * GetSMSSandboxAccountStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the SMS sandbox status for the calling AWS account in the target AWS
+ *
+ * Region>
+ *
+ * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
+ * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
+ * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
+ * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
+ * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+ * sandbox</a> in the <i>Amazon SNS Developer
+ */
+GetSMSSandboxAccountStatusResponse * SnsClient::getSMSSandboxAccountStatus(const GetSMSSandboxAccountStatusRequest &request)
+{
+    return qobject_cast<GetSMSSandboxAccountStatusResponse *>(send(request));
 }
 
 /*!
@@ -431,13 +534,13 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the endpoints and endpoint attributes for devices in a supported push notification service, such as GCM and APNS.
- * The results for <code>ListEndpointsByPlatformApplication</code> are paginated and return a limited list of endpoints, up
- * to 100. If additional records are available after the first page results, then a NextToken string will be returned. To
- * receive the next page, you call <code>ListEndpointsByPlatformApplication</code> again using the NextToken string
- * received from the previous call. When there are no more records to return, NextToken will be null. For more information,
- * see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
- * Notifications</a>.
+ * Lists the endpoints and endpoint attributes for devices in a supported push notification service, such as GCM (Firebase
+ * Cloud Messaging) and APNS. The results for <code>ListEndpointsByPlatformApplication</code> are paginated and return a
+ * limited list of endpoints, up to 100. If additional records are available after the first page results, then a NextToken
+ * string will be returned. To receive the next page, you call <code>ListEndpointsByPlatformApplication</code> again using
+ * the NextToken string received from the previous call. When there are no more records to return, NextToken will be null.
+ * For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile
+ * Push Notifications</a>.
  *
  * </p
  *
@@ -446,6 +549,22 @@ GetTopicAttributesResponse * SnsClient::getTopicAttributes(const GetTopicAttribu
 ListEndpointsByPlatformApplicationResponse * SnsClient::listEndpointsByPlatformApplication(const ListEndpointsByPlatformApplicationRequest &request)
 {
     return qobject_cast<ListEndpointsByPlatformApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * ListOriginationNumbersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the calling AWS account's dedicated origination numbers and their metadata. For more information about origination
+ * numbers, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/channels-sms-originating-identities-origination-numbers.html">Origination
+ * numbers</a> in the <i>Amazon SNS Developer
+ */
+ListOriginationNumbersResponse * SnsClient::listOriginationNumbers(const ListOriginationNumbersRequest &request)
+{
+    return qobject_cast<ListOriginationNumbersResponse *>(send(request));
 }
 
 /*!
@@ -475,12 +594,13 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the platform application objects for the supported push notification services, such as APNS and GCM. The results
- * for <code>ListPlatformApplications</code> are paginated and return a limited list of applications, up to 100. If
- * additional records are available after the first page results, then a NextToken string will be returned. To receive the
- * next page, you call <code>ListPlatformApplications</code> using the NextToken string received from the previous call.
- * When there are no more records to return, NextToken will be null. For more information, see <a
- * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
+ * Lists the platform application objects for the supported push notification services, such as APNS and GCM (Firebase
+ * Cloud Messaging). The results for <code>ListPlatformApplications</code> are paginated and return a limited list of
+ * applications, up to 100. If additional records are available after the first page results, then a NextToken string will
+ * be returned. To receive the next page, you call <code>ListPlatformApplications</code> using the NextToken string
+ * received from the previous call. When there are no more records to return, <code>NextToken</code> will be null. For more
+ * information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push
+ * Notifications</a>.
  *
  * </p
  *
@@ -489,6 +609,28 @@ ListPhoneNumbersOptedOutResponse * SnsClient::listPhoneNumbersOptedOut(const Lis
 ListPlatformApplicationsResponse * SnsClient::listPlatformApplications(const ListPlatformApplicationsRequest &request)
 {
     return qobject_cast<ListPlatformApplicationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * ListSMSSandboxPhoneNumbersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the calling AWS account's current verified and pending destination phone numbers in the SMS
+ *
+ * sandbox>
+ *
+ * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
+ * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
+ * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
+ * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
+ * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+ * sandbox</a> in the <i>Amazon SNS Developer
+ */
+ListSMSSandboxPhoneNumbersResponse * SnsClient::listSMSSandboxPhoneNumbers(const ListSMSSandboxPhoneNumbersRequest &request)
+{
+    return qobject_cast<ListSMSSandboxPhoneNumbersResponse *>(send(request));
 }
 
 /*!
@@ -586,9 +728,10 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends a message to an Amazon SNS topic or sends a text message (SMS message) directly to a phone number.
+ * Sends a message to an Amazon SNS topic, a text message (SMS message) directly to a phone number, or a message to a
+ * mobile platform endpoint (when you specify the
  *
- * </p
+ * <code>TargetArn</code>)>
  *
  * If you send a message to a topic, Amazon SNS delivers the message to each endpoint that is subscribed to the topic. The
  * format of the message depends on the notification protocol for each subscribed
@@ -608,6 +751,10 @@ OptInPhoneNumberResponse * SnsClient::optInPhoneNumber(const OptInPhoneNumberReq
  * For more information about formatting messages, see <a
  * href="https://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-custommessage.html">Send Custom Platform-Specific
  * Payloads in Messages to Mobile Devices</a>.
+ *
+ * </p <b>
+ *
+ * You can publish messages only to topics and endpoints in the same AWS
  */
 PublishResponse * SnsClient::publish(const PublishRequest &request)
 {
@@ -633,9 +780,9 @@ RemovePermissionResponse * SnsClient::removePermission(const RemovePermissionReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM and
- * APNS. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
- * Mobile Push Notifications</a>.
+ * Sets the attributes for an endpoint for a device on one of the supported push notification services, such as GCM
+ * (Firebase Cloud Messaging) and APNS. For more information, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>.
  */
 SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpointAttributesRequest &request)
 {
@@ -649,8 +796,9 @@ SetEndpointAttributesResponse * SnsClient::setEndpointAttributes(const SetEndpoi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Sets the attributes of the platform application object for the supported push notification services, such as APNS and
- * GCM. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS
- * Mobile Push Notifications</a>. For information on configuring attributes for message delivery status, see <a
+ * GCM (Firebase Cloud Messaging). For more information, see <a
+ * href="https://docs.aws.amazon.com/sns/latest/dg/SNSMobilePush.html">Using Amazon SNS Mobile Push Notifications</a>. For
+ * information on configuring attributes for message delivery status, see <a
  * href="https://docs.aws.amazon.com/sns/latest/dg/sns-msg-status.html">Using Amazon SNS Application Attributes for Message
  * Delivery Status</a>.
  */
@@ -671,8 +819,13 @@ SetPlatformApplicationAttributesResponse * SnsClient::setPlatformApplicationAttr
  *
  * You can override some of these settings for a single message when you use the <code>Publish</code> action with the
  * <code>MessageAttributes.entry.N</code> parameter. For more information, see <a
- * href="https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Sending an SMS Message</a> in the <i>Amazon
- * SNS Developer
+ * href="https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html">Publishing to a mobile phone</a> in the
+ * <i>Amazon SNS Developer
+ *
+ * Guide</i>> <note>
+ *
+ * To use this operation, you must grant the Amazon SNS service principal (<code>sns.amazonaws.com</code>) permission to
+ * perform the <code>s3:ListBucket</code> action.
  */
 SetSMSAttributesResponse * SnsClient::setSMSAttributes(const SetSMSAttributesRequest &request)
 {
@@ -711,9 +864,13 @@ SetTopicAttributesResponse * SnsClient::setTopicAttributes(const SetTopicAttribu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Prepares to subscribe an endpoint by sending the endpoint a confirmation message. To actually create a subscription, the
- * endpoint owner must call the <code>ConfirmSubscription</code> action with the token from the confirmation message.
- * Confirmation tokens are valid for three
+ * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic
+ * are not in the same AWS account, the endpoint owner must run the <code>ConfirmSubscription</code> action to confirm the
+ *
+ * subscription>
+ *
+ * You call the <code>ConfirmSubscription</code> action with the token from the subscription response. Confirmation tokens
+ * are valid for three
  *
  * days>
  *
@@ -755,14 +912,8 @@ SubscribeResponse * SnsClient::subscribe(const SubscribeRequest &request)
  *
  * tag> </li> <li>
  *
- * Tagging actions are limited to 10 TPS per AWS account. If your application requires a higher throughput, file a <a
- * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
- *
- * request</a>> </li> </ul>
- *
- * For a full list of tag restrictions, see <a
- * href="https://docs.aws.amazon.com/sns/latest/dg/sns-limits.html#limits-topics">Limits Related to Topics</a> in the
- * <i>Amazon SNS Developer
+ * Tagging actions are limited to 10 TPS per AWS account, per AWS region. If your application requires a higher throughput,
+ * file a <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
  */
 TagResourceResponse * SnsClient::tagResource(const TagResourceRequest &request)
 {
@@ -801,6 +952,28 @@ UnsubscribeResponse * SnsClient::unsubscribe(const UnsubscribeRequest &request)
 UntagResourceResponse * SnsClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnsClient service, and returns a pointer to an
+ * VerifySMSSandboxPhoneNumberResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Verifies a destination phone number with a one-time password (OTP) for the calling AWS
+ *
+ * account>
+ *
+ * When you start using Amazon SNS to send SMS messages, your AWS account is in the <i>SMS sandbox</i>. The SMS sandbox
+ * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender. While
+ * your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send SMS messages
+ * only to verified destination phone numbers. For more information, including how to move out of the sandbox to send
+ * messages without restrictions, see <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
+ * sandbox</a> in the <i>Amazon SNS Developer
+ */
+VerifySMSSandboxPhoneNumberResponse * SnsClient::verifySMSSandboxPhoneNumber(const VerifySMSSandboxPhoneNumberRequest &request)
+{
+    return qobject_cast<VerifySMSSandboxPhoneNumberResponse *>(send(request));
 }
 
 /*!

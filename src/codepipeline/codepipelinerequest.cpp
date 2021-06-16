@@ -46,6 +46,7 @@ namespace CodePipeline {
  * \value DeregisterWebhookWithThirdPartyAction CodePipeline DeregisterWebhookWithThirdParty action.
  * \value DisableStageTransitionAction CodePipeline DisableStageTransition action.
  * \value EnableStageTransitionAction CodePipeline EnableStageTransition action.
+ * \value GetActionTypeAction CodePipeline GetActionType action.
  * \value GetJobDetailsAction CodePipeline GetJobDetails action.
  * \value GetPipelineAction CodePipeline GetPipeline action.
  * \value GetPipelineExecutionAction CodePipeline GetPipelineExecution action.
@@ -69,8 +70,10 @@ namespace CodePipeline {
  * \value RegisterWebhookWithThirdPartyAction CodePipeline RegisterWebhookWithThirdParty action.
  * \value RetryStageExecutionAction CodePipeline RetryStageExecution action.
  * \value StartPipelineExecutionAction CodePipeline StartPipelineExecution action.
+ * \value StopPipelineExecutionAction CodePipeline StopPipelineExecution action.
  * \value TagResourceAction CodePipeline TagResource action.
  * \value UntagResourceAction CodePipeline UntagResource action.
+ * \value UpdateActionTypeAction CodePipeline UpdateActionType action.
  * \value UpdatePipelineAction CodePipeline UpdatePipeline action.
  */
 

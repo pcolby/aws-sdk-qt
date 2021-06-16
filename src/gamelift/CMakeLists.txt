@@ -5,6 +5,10 @@ add_library(QtAwsGameLift
   acceptmatchrequest_p.h
   acceptmatchresponse.h
   acceptmatchresponse_p.h
+  claimgameserverrequest.h
+  claimgameserverrequest_p.h
+  claimgameserverresponse.h
+  claimgameserverresponse_p.h
   createaliasrequest.h
   createaliasrequest_p.h
   createaliasresponse.h
@@ -13,10 +17,18 @@ add_library(QtAwsGameLift
   createbuildrequest_p.h
   createbuildresponse.h
   createbuildresponse_p.h
+  createfleetlocationsrequest.h
+  createfleetlocationsrequest_p.h
+  createfleetlocationsresponse.h
+  createfleetlocationsresponse_p.h
   createfleetrequest.h
   createfleetrequest_p.h
   createfleetresponse.h
   createfleetresponse_p.h
+  creategameservergrouprequest.h
+  creategameservergrouprequest_p.h
+  creategameservergroupresponse.h
+  creategameservergroupresponse_p.h
   creategamesessionqueuerequest.h
   creategamesessionqueuerequest_p.h
   creategamesessionqueueresponse.h
@@ -61,10 +73,18 @@ add_library(QtAwsGameLift
   deletebuildrequest_p.h
   deletebuildresponse.h
   deletebuildresponse_p.h
+  deletefleetlocationsrequest.h
+  deletefleetlocationsrequest_p.h
+  deletefleetlocationsresponse.h
+  deletefleetlocationsresponse_p.h
   deletefleetrequest.h
   deletefleetrequest_p.h
   deletefleetresponse.h
   deletefleetresponse_p.h
+  deletegameservergrouprequest.h
+  deletegameservergrouprequest_p.h
+  deletegameservergroupresponse.h
+  deletegameservergroupresponse_p.h
   deletegamesessionqueuerequest.h
   deletegamesessionqueuerequest_p.h
   deletegamesessionqueueresponse.h
@@ -93,6 +113,10 @@ add_library(QtAwsGameLift
   deletevpcpeeringconnectionrequest_p.h
   deletevpcpeeringconnectionresponse.h
   deletevpcpeeringconnectionresponse_p.h
+  deregistergameserverrequest.h
+  deregistergameserverrequest_p.h
+  deregistergameserverresponse.h
+  deregistergameserverresponse_p.h
   describealiasrequest.h
   describealiasrequest_p.h
   describealiasresponse.h
@@ -117,6 +141,18 @@ add_library(QtAwsGameLift
   describefleeteventsrequest_p.h
   describefleeteventsresponse.h
   describefleeteventsresponse_p.h
+  describefleetlocationattributesrequest.h
+  describefleetlocationattributesrequest_p.h
+  describefleetlocationattributesresponse.h
+  describefleetlocationattributesresponse_p.h
+  describefleetlocationcapacityrequest.h
+  describefleetlocationcapacityrequest_p.h
+  describefleetlocationcapacityresponse.h
+  describefleetlocationcapacityresponse_p.h
+  describefleetlocationutilizationrequest.h
+  describefleetlocationutilizationrequest_p.h
+  describefleetlocationutilizationresponse.h
+  describefleetlocationutilizationresponse_p.h
   describefleetportsettingsrequest.h
   describefleetportsettingsrequest_p.h
   describefleetportsettingsresponse.h
@@ -125,6 +161,18 @@ add_library(QtAwsGameLift
   describefleetutilizationrequest_p.h
   describefleetutilizationresponse.h
   describefleetutilizationresponse_p.h
+  describegameservergrouprequest.h
+  describegameservergrouprequest_p.h
+  describegameservergroupresponse.h
+  describegameservergroupresponse_p.h
+  describegameserverinstancesrequest.h
+  describegameserverinstancesrequest_p.h
+  describegameserverinstancesresponse.h
+  describegameserverinstancesresponse_p.h
+  describegameserverrequest.h
+  describegameserverrequest_p.h
+  describegameserverresponse.h
+  describegameserverresponse_p.h
   describegamesessiondetailsrequest.h
   describegamesessiondetailsrequest_p.h
   describegamesessiondetailsresponse.h
@@ -207,14 +255,30 @@ add_library(QtAwsGameLift
   listfleetsrequest_p.h
   listfleetsresponse.h
   listfleetsresponse_p.h
+  listgameservergroupsrequest.h
+  listgameservergroupsrequest_p.h
+  listgameservergroupsresponse.h
+  listgameservergroupsresponse_p.h
+  listgameserversrequest.h
+  listgameserversrequest_p.h
+  listgameserversresponse.h
+  listgameserversresponse_p.h
   listscriptsrequest.h
   listscriptsrequest_p.h
   listscriptsresponse.h
   listscriptsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   putscalingpolicyrequest.h
   putscalingpolicyrequest_p.h
   putscalingpolicyresponse.h
   putscalingpolicyresponse_p.h
+  registergameserverrequest.h
+  registergameserverrequest_p.h
+  registergameserverresponse.h
+  registergameserverresponse_p.h
   requestuploadcredentialsrequest.h
   requestuploadcredentialsrequest_p.h
   requestuploadcredentialsresponse.h
@@ -223,6 +287,10 @@ add_library(QtAwsGameLift
   resolvealiasrequest_p.h
   resolvealiasresponse.h
   resolvealiasresponse_p.h
+  resumegameservergrouprequest.h
+  resumegameservergrouprequest_p.h
+  resumegameservergroupresponse.h
+  resumegameservergroupresponse_p.h
   searchgamesessionsrequest.h
   searchgamesessionsrequest_p.h
   searchgamesessionsresponse.h
@@ -255,6 +323,18 @@ add_library(QtAwsGameLift
   stopmatchmakingrequest_p.h
   stopmatchmakingresponse.h
   stopmatchmakingresponse_p.h
+  suspendgameservergrouprequest.h
+  suspendgameservergrouprequest_p.h
+  suspendgameservergroupresponse.h
+  suspendgameservergroupresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatealiasrequest.h
   updatealiasrequest_p.h
   updatealiasresponse.h
@@ -275,6 +355,14 @@ add_library(QtAwsGameLift
   updatefleetportsettingsrequest_p.h
   updatefleetportsettingsresponse.h
   updatefleetportsettingsresponse_p.h
+  updategameservergrouprequest.h
+  updategameservergrouprequest_p.h
+  updategameservergroupresponse.h
+  updategameservergroupresponse_p.h
+  updategameserverrequest.h
+  updategameserverrequest_p.h
+  updategameserverresponse.h
+  updategameserverresponse_p.h
   updategamesessionqueuerequest.h
   updategamesessionqueuerequest_p.h
   updategamesessionqueueresponse.h
@@ -301,12 +389,18 @@ add_library(QtAwsGameLift
   validatematchmakingrulesetresponse_p.h
   acceptmatchrequest.cpp
   acceptmatchresponse.cpp
+  claimgameserverrequest.cpp
+  claimgameserverresponse.cpp
   createaliasrequest.cpp
   createaliasresponse.cpp
   createbuildrequest.cpp
   createbuildresponse.cpp
+  createfleetlocationsrequest.cpp
+  createfleetlocationsresponse.cpp
   createfleetrequest.cpp
   createfleetresponse.cpp
+  creategameservergrouprequest.cpp
+  creategameservergroupresponse.cpp
   creategamesessionqueuerequest.cpp
   creategamesessionqueueresponse.cpp
   creategamesessionrequest.cpp
@@ -329,8 +423,12 @@ add_library(QtAwsGameLift
   deletealiasresponse.cpp
   deletebuildrequest.cpp
   deletebuildresponse.cpp
+  deletefleetlocationsrequest.cpp
+  deletefleetlocationsresponse.cpp
   deletefleetrequest.cpp
   deletefleetresponse.cpp
+  deletegameservergrouprequest.cpp
+  deletegameservergroupresponse.cpp
   deletegamesessionqueuerequest.cpp
   deletegamesessionqueueresponse.cpp
   deletematchmakingconfigurationrequest.cpp
@@ -345,6 +443,8 @@ add_library(QtAwsGameLift
   deletevpcpeeringauthorizationresponse.cpp
   deletevpcpeeringconnectionrequest.cpp
   deletevpcpeeringconnectionresponse.cpp
+  deregistergameserverrequest.cpp
+  deregistergameserverresponse.cpp
   describealiasrequest.cpp
   describealiasresponse.cpp
   describebuildrequest.cpp
@@ -357,10 +457,22 @@ add_library(QtAwsGameLift
   describefleetcapacityresponse.cpp
   describefleeteventsrequest.cpp
   describefleeteventsresponse.cpp
+  describefleetlocationattributesrequest.cpp
+  describefleetlocationattributesresponse.cpp
+  describefleetlocationcapacityrequest.cpp
+  describefleetlocationcapacityresponse.cpp
+  describefleetlocationutilizationrequest.cpp
+  describefleetlocationutilizationresponse.cpp
   describefleetportsettingsrequest.cpp
   describefleetportsettingsresponse.cpp
   describefleetutilizationrequest.cpp
   describefleetutilizationresponse.cpp
+  describegameservergrouprequest.cpp
+  describegameservergroupresponse.cpp
+  describegameserverinstancesrequest.cpp
+  describegameserverinstancesresponse.cpp
+  describegameserverrequest.cpp
+  describegameserverresponse.cpp
   describegamesessiondetailsrequest.cpp
   describegamesessiondetailsresponse.cpp
   describegamesessionplacementrequest.cpp
@@ -402,14 +514,24 @@ add_library(QtAwsGameLift
   listbuildsresponse.cpp
   listfleetsrequest.cpp
   listfleetsresponse.cpp
+  listgameservergroupsrequest.cpp
+  listgameservergroupsresponse.cpp
+  listgameserversrequest.cpp
+  listgameserversresponse.cpp
   listscriptsrequest.cpp
   listscriptsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   putscalingpolicyrequest.cpp
   putscalingpolicyresponse.cpp
+  registergameserverrequest.cpp
+  registergameserverresponse.cpp
   requestuploadcredentialsrequest.cpp
   requestuploadcredentialsresponse.cpp
   resolvealiasrequest.cpp
   resolvealiasresponse.cpp
+  resumegameservergrouprequest.cpp
+  resumegameservergroupresponse.cpp
   searchgamesessionsrequest.cpp
   searchgamesessionsresponse.cpp
   startfleetactionsrequest.cpp
@@ -426,6 +548,12 @@ add_library(QtAwsGameLift
   stopgamesessionplacementresponse.cpp
   stopmatchmakingrequest.cpp
   stopmatchmakingresponse.cpp
+  suspendgameservergrouprequest.cpp
+  suspendgameservergroupresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatealiasrequest.cpp
   updatealiasresponse.cpp
   updatebuildrequest.cpp
@@ -436,6 +564,10 @@ add_library(QtAwsGameLift
   updatefleetcapacityresponse.cpp
   updatefleetportsettingsrequest.cpp
   updatefleetportsettingsresponse.cpp
+  updategameservergrouprequest.cpp
+  updategameservergroupresponse.cpp
+  updategameserverrequest.cpp
+  updategameserverresponse.cpp
   updategamesessionqueuerequest.cpp
   updategamesessionqueueresponse.cpp
   updategamesessionrequest.cpp

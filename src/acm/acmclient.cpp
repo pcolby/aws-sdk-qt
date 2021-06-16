@@ -29,6 +29,8 @@
 #include "describecertificateresponse.h"
 #include "exportcertificaterequest.h"
 #include "exportcertificateresponse.h"
+#include "getaccountconfigurationrequest.h"
+#include "getaccountconfigurationresponse.h"
 #include "getcertificaterequest.h"
 #include "getcertificateresponse.h"
 #include "importcertificaterequest.h"
@@ -37,6 +39,8 @@
 #include "listcertificatesresponse.h"
 #include "listtagsforcertificaterequest.h"
 #include "listtagsforcertificateresponse.h"
+#include "putaccountconfigurationrequest.h"
+#include "putaccountconfigurationresponse.h"
 #include "removetagsfromcertificaterequest.h"
 #include "removetagsfromcertificateresponse.h"
 #include "renewcertificaterequest.h"
@@ -72,13 +76,9 @@ namespace ACM {
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
- *  Welcome to the AWS Certificate Manager (ACM) API
- * 
- *  documentation>
- * 
- *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
- *  about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/"> <i>AWS Certificate Manager User
- *  Guide</i>
+ *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
+ *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
+ *  Certificate Manager User
  */
 
 /*!
@@ -202,15 +202,15 @@ DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCerti
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Exports a private certificate issued by a private certificate authority (CA) for use anywhere. You can export the
- * certificate, the certificate chain, and the encrypted private key associated with the public key embedded in the
- * certificate. You must store the private key securely. The private key is a 2048 bit RSA key. You must provide a
- * passphrase for the private key when exporting it. You can use the following OpenSSL command to decrypt it later. Provide
- * the passphrase when prompted.
+ * Exports a private certificate issued by a private certificate authority (CA) for use anywhere. The exported file
+ * contains the certificate, the certificate chain, and the encrypted private 2048-bit RSA key associated with the public
+ * key that is embedded in the certificate. For security, you must assign a passphrase for the private key when exporting
+ * it.
  *
  * </p
  *
- * <code>openssl rsa -in encrypted_key.pem -out decrypted_key.pem</code>
+ * For information about exporting and formatting a certificate using the ACM console or CLI, see <a
+ * href="https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-export-private.html">Export a Private
  */
 ExportCertificateResponse * AcmClient::exportCertificate(const ExportCertificateRequest &request)
 {
@@ -219,14 +219,40 @@ ExportCertificateResponse * AcmClient::exportCertificate(const ExportCertificate
 
 /*!
  * Sends \a request to the AcmClient service, and returns a pointer to an
+ * GetAccountConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the account configuration options associated with an AWS
+ */
+GetAccountConfigurationResponse * AcmClient::getAccountConfiguration(const GetAccountConfigurationRequest &request)
+{
+    return qobject_cast<GetAccountConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends a GetAccountConfiguration request to the AcmClient service, and returns a pointer to an
+ * GetAccountConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the account configuration options associated with an AWS
+ */
+GetAccountConfigurationResponse * AcmClient::getAccountConfiguration()
+{
+    return getAccountConfiguration(GetAccountConfigurationRequest());
+}
+
+/*!
+ * Sends \a request to the AcmClient service, and returns a pointer to an
  * GetCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates
- * that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that
- * order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the
- * individual fields, you can use
+ * Retrieves an Amazon-issued certificate and its certificate chain. The chain consists of the certificate of the issuing
+ * CA and the intermediate certificates of any other subordinate CAs. All of the certificates are base64 encoded. You can
+ * use <a href="https://wiki.openssl.org/index.php/Command_Line_Utilities">OpenSSL</a> to decode the certificates and
+ * inspect individual
  */
 GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &request)
 {
@@ -266,6 +292,10 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  *
  * passphrase> </li> <li>
  *
+ * The private key must be no larger than 5 KB (5,120
+ *
+ * bytes)> </li> <li>
+ *
  * If the certificate you are importing is not self-signed, you must enter its certificate
  *
  * chain> </li> <li>
@@ -296,16 +326,21 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
  * certificate> </li> <li>
  *
  * When you import a certificate by using the CLI, you must specify the certificate, the certificate chain, and the private
- * key by their file names preceded by <code>file://</code>. For example, you can specify a certificate saved in the
- * <code>C:\temp</code> folder as <code>file://C:\temp\certificate_to_import.pem</code>. If you are making an HTTP or HTTPS
- * Query request, include these arguments as BLOBs.
+ * key by their file names preceded by <code>fileb://</code>. For example, you can specify a certificate saved in the
+ * <code>C:\temp</code> folder as <code>fileb://C:\temp\certificate_to_import.pem</code>. If you are making an HTTP or
+ * HTTPS Query request, include these arguments as BLOBs.
  *
  * </p </li> <li>
  *
  * When you import a certificate by using an SDK, you must specify the certificate, the certificate chain, and the private
  * key files in the manner required by the programming language you're using.
  *
- * </p </li> </ul>
+ * </p </li> <li>
+ *
+ * The cryptographic algorithm of an imported certificate must match the algorithm of the signing CA. For example, if the
+ * signing CA key type is RSA, then the certificate key type must also be
+ *
+ * RSA> </li> </ul>
  *
  * This operation returns the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon
  * Resource Name (ARN)</a> of the imported
@@ -322,7 +357,8 @@ ImportCertificateResponse * AcmClient::importCertificate(const ImportCertificate
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves a list of certificate ARNs and domain names. You can request that only certificates that match a specific
- * status be listed. You can also filter by specific attributes of the certificate.
+ * status be listed. You can also filter by specific attributes of the certificate. Default filtering returns only
+ * <code>RSA_2048</code> certificates. For more information, see
  */
 ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesRequest &request)
 {
@@ -342,6 +378,25 @@ ListCertificatesResponse * AcmClient::listCertificates(const ListCertificatesReq
 ListTagsForCertificateResponse * AcmClient::listTagsForCertificate(const ListTagsForCertificateRequest &request)
 {
     return qobject_cast<ListTagsForCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AcmClient service, and returns a pointer to an
+ * PutAccountConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or modifies account-level configurations in ACM.
+ *
+ * </p
+ *
+ * The supported configuration option is <code>DaysBeforeExpiry</code>. This option specifies the number of days prior to
+ * certificate expiration when ACM starts generating <code>EventBridge</code> events. ACM sends one event per day per
+ * certificate until the certificate expires. By default, accounts receive events starting 45 days before certificate
+ */
+PutAccountConfigurationResponse * AcmClient::putAccountConfiguration(const PutAccountConfigurationRequest &request)
+{
+    return qobject_cast<PutAccountConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -370,7 +425,7 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Renews an eligable ACM certificate. At this time, only exported private certificates can be renewed with this operation.
+ * Renews an eligible ACM certificate. At this time, only exported private certificates can be renewed with this operation.
  * In order to renew your ACM PCA certificates with ACM, you must first <a
  * href="https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaPermissions.html">grant the ACM service principal
  * permission to do so</a>. For more information, see <a

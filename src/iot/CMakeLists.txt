@@ -33,6 +33,10 @@ add_library(QtAwsIoT
   attachthingprincipalrequest_p.h
   attachthingprincipalresponse.h
   attachthingprincipalresponse_p.h
+  cancelauditmitigationactionstaskrequest.h
+  cancelauditmitigationactionstaskrequest_p.h
+  cancelauditmitigationactionstaskresponse.h
+  cancelauditmitigationactionstaskresponse_p.h
   cancelaudittaskrequest.h
   cancelaudittaskrequest_p.h
   cancelaudittaskresponse.h
@@ -41,6 +45,10 @@ add_library(QtAwsIoT
   cancelcertificatetransferrequest_p.h
   cancelcertificatetransferresponse.h
   cancelcertificatetransferresponse_p.h
+  canceldetectmitigationactionstaskrequest.h
+  canceldetectmitigationactionstaskrequest_p.h
+  canceldetectmitigationactionstaskresponse.h
+  canceldetectmitigationactionstaskresponse_p.h
   canceljobexecutionrequest.h
   canceljobexecutionrequest_p.h
   canceljobexecutionresponse.h
@@ -53,6 +61,14 @@ add_library(QtAwsIoT
   cleardefaultauthorizerrequest_p.h
   cleardefaultauthorizerresponse.h
   cleardefaultauthorizerresponse_p.h
+  confirmtopicruledestinationrequest.h
+  confirmtopicruledestinationrequest_p.h
+  confirmtopicruledestinationresponse.h
+  confirmtopicruledestinationresponse_p.h
+  createauditsuppressionrequest.h
+  createauditsuppressionrequest_p.h
+  createauditsuppressionresponse.h
+  createauditsuppressionresponse_p.h
   createauthorizerrequest.h
   createauthorizerrequest_p.h
   createauthorizerresponse.h
@@ -65,6 +81,18 @@ add_library(QtAwsIoT
   createcertificatefromcsrrequest_p.h
   createcertificatefromcsrresponse.h
   createcertificatefromcsrresponse_p.h
+  createcustommetricrequest.h
+  createcustommetricrequest_p.h
+  createcustommetricresponse.h
+  createcustommetricresponse_p.h
+  createdimensionrequest.h
+  createdimensionrequest_p.h
+  createdimensionresponse.h
+  createdimensionresponse_p.h
+  createdomainconfigurationrequest.h
+  createdomainconfigurationrequest_p.h
+  createdomainconfigurationresponse.h
+  createdomainconfigurationresponse_p.h
   createdynamicthinggrouprequest.h
   createdynamicthinggrouprequest_p.h
   createdynamicthinggroupresponse.h
@@ -73,10 +101,18 @@ add_library(QtAwsIoT
   createjobrequest_p.h
   createjobresponse.h
   createjobresponse_p.h
+  createjobtemplaterequest.h
+  createjobtemplaterequest_p.h
+  createjobtemplateresponse.h
+  createjobtemplateresponse_p.h
   createkeysandcertificaterequest.h
   createkeysandcertificaterequest_p.h
   createkeysandcertificateresponse.h
   createkeysandcertificateresponse_p.h
+  createmitigationactionrequest.h
+  createmitigationactionrequest_p.h
+  createmitigationactionresponse.h
+  createmitigationactionresponse_p.h
   createotaupdaterequest.h
   createotaupdaterequest_p.h
   createotaupdateresponse.h
@@ -89,6 +125,18 @@ add_library(QtAwsIoT
   createpolicyversionrequest_p.h
   createpolicyversionresponse.h
   createpolicyversionresponse_p.h
+  createprovisioningclaimrequest.h
+  createprovisioningclaimrequest_p.h
+  createprovisioningclaimresponse.h
+  createprovisioningclaimresponse_p.h
+  createprovisioningtemplaterequest.h
+  createprovisioningtemplaterequest_p.h
+  createprovisioningtemplateresponse.h
+  createprovisioningtemplateresponse_p.h
+  createprovisioningtemplateversionrequest.h
+  createprovisioningtemplateversionrequest_p.h
+  createprovisioningtemplateversionresponse.h
+  createprovisioningtemplateversionresponse_p.h
   createrolealiasrequest.h
   createrolealiasrequest_p.h
   createrolealiasresponse.h
@@ -117,6 +165,10 @@ add_library(QtAwsIoT
   createthingtyperequest_p.h
   createthingtyperesponse.h
   createthingtyperesponse_p.h
+  createtopicruledestinationrequest.h
+  createtopicruledestinationrequest_p.h
+  createtopicruledestinationresponse.h
+  createtopicruledestinationresponse_p.h
   createtopicrulerequest.h
   createtopicrulerequest_p.h
   createtopicruleresponse.h
@@ -125,6 +177,10 @@ add_library(QtAwsIoT
   deleteaccountauditconfigurationrequest_p.h
   deleteaccountauditconfigurationresponse.h
   deleteaccountauditconfigurationresponse_p.h
+  deleteauditsuppressionrequest.h
+  deleteauditsuppressionrequest_p.h
+  deleteauditsuppressionresponse.h
+  deleteauditsuppressionresponse_p.h
   deleteauthorizerrequest.h
   deleteauthorizerrequest_p.h
   deleteauthorizerresponse.h
@@ -141,6 +197,18 @@ add_library(QtAwsIoT
   deletecertificaterequest_p.h
   deletecertificateresponse.h
   deletecertificateresponse_p.h
+  deletecustommetricrequest.h
+  deletecustommetricrequest_p.h
+  deletecustommetricresponse.h
+  deletecustommetricresponse_p.h
+  deletedimensionrequest.h
+  deletedimensionrequest_p.h
+  deletedimensionresponse.h
+  deletedimensionresponse_p.h
+  deletedomainconfigurationrequest.h
+  deletedomainconfigurationrequest_p.h
+  deletedomainconfigurationresponse.h
+  deletedomainconfigurationresponse_p.h
   deletedynamicthinggrouprequest.h
   deletedynamicthinggrouprequest_p.h
   deletedynamicthinggroupresponse.h
@@ -153,6 +221,14 @@ add_library(QtAwsIoT
   deletejobrequest_p.h
   deletejobresponse.h
   deletejobresponse_p.h
+  deletejobtemplaterequest.h
+  deletejobtemplaterequest_p.h
+  deletejobtemplateresponse.h
+  deletejobtemplateresponse_p.h
+  deletemitigationactionrequest.h
+  deletemitigationactionrequest_p.h
+  deletemitigationactionresponse.h
+  deletemitigationactionresponse_p.h
   deleteotaupdaterequest.h
   deleteotaupdaterequest_p.h
   deleteotaupdateresponse.h
@@ -165,6 +241,14 @@ add_library(QtAwsIoT
   deletepolicyversionrequest_p.h
   deletepolicyversionresponse.h
   deletepolicyversionresponse_p.h
+  deleteprovisioningtemplaterequest.h
+  deleteprovisioningtemplaterequest_p.h
+  deleteprovisioningtemplateresponse.h
+  deleteprovisioningtemplateresponse_p.h
+  deleteprovisioningtemplateversionrequest.h
+  deleteprovisioningtemplateversionrequest_p.h
+  deleteprovisioningtemplateversionresponse.h
+  deleteprovisioningtemplateversionresponse_p.h
   deleteregistrationcoderequest.h
   deleteregistrationcoderequest_p.h
   deleteregistrationcoderesponse.h
@@ -197,6 +281,10 @@ add_library(QtAwsIoT
   deletethingtyperequest_p.h
   deletethingtyperesponse.h
   deletethingtyperesponse_p.h
+  deletetopicruledestinationrequest.h
+  deletetopicruledestinationrequest_p.h
+  deletetopicruledestinationresponse.h
+  deletetopicruledestinationresponse_p.h
   deletetopicrulerequest.h
   deletetopicrulerequest_p.h
   deletetopicruleresponse.h
@@ -213,6 +301,18 @@ add_library(QtAwsIoT
   describeaccountauditconfigurationrequest_p.h
   describeaccountauditconfigurationresponse.h
   describeaccountauditconfigurationresponse_p.h
+  describeauditfindingrequest.h
+  describeauditfindingrequest_p.h
+  describeauditfindingresponse.h
+  describeauditfindingresponse_p.h
+  describeauditmitigationactionstaskrequest.h
+  describeauditmitigationactionstaskrequest_p.h
+  describeauditmitigationactionstaskresponse.h
+  describeauditmitigationactionstaskresponse_p.h
+  describeauditsuppressionrequest.h
+  describeauditsuppressionrequest_p.h
+  describeauditsuppressionresponse.h
+  describeauditsuppressionresponse_p.h
   describeaudittaskrequest.h
   describeaudittaskrequest_p.h
   describeaudittaskresponse.h
@@ -233,10 +333,26 @@ add_library(QtAwsIoT
   describecertificaterequest_p.h
   describecertificateresponse.h
   describecertificateresponse_p.h
+  describecustommetricrequest.h
+  describecustommetricrequest_p.h
+  describecustommetricresponse.h
+  describecustommetricresponse_p.h
   describedefaultauthorizerrequest.h
   describedefaultauthorizerrequest_p.h
   describedefaultauthorizerresponse.h
   describedefaultauthorizerresponse_p.h
+  describedetectmitigationactionstaskrequest.h
+  describedetectmitigationactionstaskrequest_p.h
+  describedetectmitigationactionstaskresponse.h
+  describedetectmitigationactionstaskresponse_p.h
+  describedimensionrequest.h
+  describedimensionrequest_p.h
+  describedimensionresponse.h
+  describedimensionresponse_p.h
+  describedomainconfigurationrequest.h
+  describedomainconfigurationrequest_p.h
+  describedomainconfigurationresponse.h
+  describedomainconfigurationresponse_p.h
   describeendpointrequest.h
   describeendpointrequest_p.h
   describeendpointresponse.h
@@ -257,6 +373,22 @@ add_library(QtAwsIoT
   describejobrequest_p.h
   describejobresponse.h
   describejobresponse_p.h
+  describejobtemplaterequest.h
+  describejobtemplaterequest_p.h
+  describejobtemplateresponse.h
+  describejobtemplateresponse_p.h
+  describemitigationactionrequest.h
+  describemitigationactionrequest_p.h
+  describemitigationactionresponse.h
+  describemitigationactionresponse_p.h
+  describeprovisioningtemplaterequest.h
+  describeprovisioningtemplaterequest_p.h
+  describeprovisioningtemplateresponse.h
+  describeprovisioningtemplateresponse_p.h
+  describeprovisioningtemplateversionrequest.h
+  describeprovisioningtemplateversionrequest_p.h
+  describeprovisioningtemplateversionresponse.h
+  describeprovisioningtemplateversionresponse_p.h
   describerolealiasrequest.h
   describerolealiasrequest_p.h
   describerolealiasresponse.h
@@ -313,6 +445,14 @@ add_library(QtAwsIoT
   enabletopicrulerequest_p.h
   enabletopicruleresponse.h
   enabletopicruleresponse_p.h
+  getbehaviormodeltrainingsummariesrequest.h
+  getbehaviormodeltrainingsummariesrequest_p.h
+  getbehaviormodeltrainingsummariesresponse.h
+  getbehaviormodeltrainingsummariesresponse_p.h
+  getcardinalityrequest.h
+  getcardinalityrequest_p.h
+  getcardinalityresponse.h
+  getcardinalityresponse_p.h
   geteffectivepoliciesrequest.h
   geteffectivepoliciesrequest_p.h
   geteffectivepoliciesresponse.h
@@ -333,6 +473,10 @@ add_library(QtAwsIoT
   getotaupdaterequest_p.h
   getotaupdateresponse.h
   getotaupdateresponse_p.h
+  getpercentilesrequest.h
+  getpercentilesrequest_p.h
+  getpercentilesresponse.h
+  getpercentilesresponse_p.h
   getpolicyrequest.h
   getpolicyrequest_p.h
   getpolicyresponse.h
@@ -349,6 +493,10 @@ add_library(QtAwsIoT
   getstatisticsrequest_p.h
   getstatisticsresponse.h
   getstatisticsresponse_p.h
+  gettopicruledestinationrequest.h
+  gettopicruledestinationrequest_p.h
+  gettopicruledestinationresponse.h
+  gettopicruledestinationresponse_p.h
   gettopicrulerequest.h
   gettopicrulerequest_p.h
   gettopicruleresponse.h
@@ -375,6 +523,18 @@ add_library(QtAwsIoT
   listauditfindingsrequest_p.h
   listauditfindingsresponse.h
   listauditfindingsresponse_p.h
+  listauditmitigationactionsexecutionsrequest.h
+  listauditmitigationactionsexecutionsrequest_p.h
+  listauditmitigationactionsexecutionsresponse.h
+  listauditmitigationactionsexecutionsresponse_p.h
+  listauditmitigationactionstasksrequest.h
+  listauditmitigationactionstasksrequest_p.h
+  listauditmitigationactionstasksresponse.h
+  listauditmitigationactionstasksresponse_p.h
+  listauditsuppressionsrequest.h
+  listauditsuppressionsrequest_p.h
+  listauditsuppressionsresponse.h
+  listauditsuppressionsresponse_p.h
   listaudittasksrequest.h
   listaudittasksrequest_p.h
   listaudittasksresponse.h
@@ -399,6 +559,26 @@ add_library(QtAwsIoT
   listcertificatesrequest_p.h
   listcertificatesresponse.h
   listcertificatesresponse_p.h
+  listcustommetricsrequest.h
+  listcustommetricsrequest_p.h
+  listcustommetricsresponse.h
+  listcustommetricsresponse_p.h
+  listdetectmitigationactionsexecutionsrequest.h
+  listdetectmitigationactionsexecutionsrequest_p.h
+  listdetectmitigationactionsexecutionsresponse.h
+  listdetectmitigationactionsexecutionsresponse_p.h
+  listdetectmitigationactionstasksrequest.h
+  listdetectmitigationactionstasksrequest_p.h
+  listdetectmitigationactionstasksresponse.h
+  listdetectmitigationactionstasksresponse_p.h
+  listdimensionsrequest.h
+  listdimensionsrequest_p.h
+  listdimensionsresponse.h
+  listdimensionsresponse_p.h
+  listdomainconfigurationsrequest.h
+  listdomainconfigurationsrequest_p.h
+  listdomainconfigurationsresponse.h
+  listdomainconfigurationsresponse_p.h
   listindicesrequest.h
   listindicesrequest_p.h
   listindicesresponse.h
@@ -415,6 +595,14 @@ add_library(QtAwsIoT
   listjobsrequest_p.h
   listjobsresponse.h
   listjobsresponse_p.h
+  listjobtemplatesrequest.h
+  listjobtemplatesrequest_p.h
+  listjobtemplatesresponse.h
+  listjobtemplatesresponse_p.h
+  listmitigationactionsrequest.h
+  listmitigationactionsrequest_p.h
+  listmitigationactionsresponse.h
+  listmitigationactionsresponse_p.h
   listotaupdatesrequest.h
   listotaupdatesrequest_p.h
   listotaupdatesresponse.h
@@ -443,6 +631,14 @@ add_library(QtAwsIoT
   listprincipalthingsrequest_p.h
   listprincipalthingsresponse.h
   listprincipalthingsresponse_p.h
+  listprovisioningtemplatesrequest.h
+  listprovisioningtemplatesrequest_p.h
+  listprovisioningtemplatesresponse.h
+  listprovisioningtemplatesresponse_p.h
+  listprovisioningtemplateversionsrequest.h
+  listprovisioningtemplateversionsrequest_p.h
+  listprovisioningtemplateversionsresponse.h
+  listprovisioningtemplateversionsresponse_p.h
   listrolealiasesrequest.h
   listrolealiasesrequest_p.h
   listrolealiasesresponse.h
@@ -511,6 +707,10 @@ add_library(QtAwsIoT
   listthingtypesrequest_p.h
   listthingtypesresponse.h
   listthingtypesresponse_p.h
+  listtopicruledestinationsrequest.h
+  listtopicruledestinationsrequest_p.h
+  listtopicruledestinationsresponse.h
+  listtopicruledestinationsresponse_p.h
   listtopicrulesrequest.h
   listtopicrulesrequest_p.h
   listtopicrulesresponse.h
@@ -531,6 +731,10 @@ add_library(QtAwsIoT
   registercertificaterequest_p.h
   registercertificateresponse.h
   registercertificateresponse_p.h
+  registercertificatewithoutcarequest.h
+  registercertificatewithoutcarequest_p.h
+  registercertificatewithoutcaresponse.h
+  registercertificatewithoutcaresponse_p.h
   registerthingrequest.h
   registerthingrequest_p.h
   registerthingresponse.h
@@ -575,6 +779,14 @@ add_library(QtAwsIoT
   setv2loggingoptionsrequest_p.h
   setv2loggingoptionsresponse.h
   setv2loggingoptionsresponse_p.h
+  startauditmitigationactionstaskrequest.h
+  startauditmitigationactionstaskrequest_p.h
+  startauditmitigationactionstaskresponse.h
+  startauditmitigationactionstaskresponse_p.h
+  startdetectmitigationactionstaskrequest.h
+  startdetectmitigationactionstaskrequest_p.h
+  startdetectmitigationactionstaskresponse.h
+  startdetectmitigationactionstaskresponse_p.h
   startondemandaudittaskrequest.h
   startondemandaudittaskrequest_p.h
   startondemandaudittaskresponse.h
@@ -611,6 +823,10 @@ add_library(QtAwsIoT
   updateaccountauditconfigurationrequest_p.h
   updateaccountauditconfigurationresponse.h
   updateaccountauditconfigurationresponse_p.h
+  updateauditsuppressionrequest.h
+  updateauditsuppressionrequest_p.h
+  updateauditsuppressionresponse.h
+  updateauditsuppressionresponse_p.h
   updateauthorizerrequest.h
   updateauthorizerrequest_p.h
   updateauthorizerresponse.h
@@ -627,6 +843,18 @@ add_library(QtAwsIoT
   updatecertificaterequest_p.h
   updatecertificateresponse.h
   updatecertificateresponse_p.h
+  updatecustommetricrequest.h
+  updatecustommetricrequest_p.h
+  updatecustommetricresponse.h
+  updatecustommetricresponse_p.h
+  updatedimensionrequest.h
+  updatedimensionrequest_p.h
+  updatedimensionresponse.h
+  updatedimensionresponse_p.h
+  updatedomainconfigurationrequest.h
+  updatedomainconfigurationrequest_p.h
+  updatedomainconfigurationresponse.h
+  updatedomainconfigurationresponse_p.h
   updatedynamicthinggrouprequest.h
   updatedynamicthinggrouprequest_p.h
   updatedynamicthinggroupresponse.h
@@ -643,6 +871,14 @@ add_library(QtAwsIoT
   updatejobrequest_p.h
   updatejobresponse.h
   updatejobresponse_p.h
+  updatemitigationactionrequest.h
+  updatemitigationactionrequest_p.h
+  updatemitigationactionresponse.h
+  updatemitigationactionresponse_p.h
+  updateprovisioningtemplaterequest.h
+  updateprovisioningtemplaterequest_p.h
+  updateprovisioningtemplateresponse.h
+  updateprovisioningtemplateresponse_p.h
   updaterolealiasrequest.h
   updaterolealiasrequest_p.h
   updaterolealiasresponse.h
@@ -671,6 +907,10 @@ add_library(QtAwsIoT
   updatethingrequest_p.h
   updatethingresponse.h
   updatethingresponse_p.h
+  updatetopicruledestinationrequest.h
+  updatetopicruledestinationrequest_p.h
+  updatetopicruledestinationresponse.h
+  updatetopicruledestinationresponse_p.h
   validatesecurityprofilebehaviorsrequest.h
   validatesecurityprofilebehaviorsrequest_p.h
   validatesecurityprofilebehaviorsresponse.h
@@ -691,34 +931,58 @@ add_library(QtAwsIoT
   attachsecurityprofileresponse.cpp
   attachthingprincipalrequest.cpp
   attachthingprincipalresponse.cpp
+  cancelauditmitigationactionstaskrequest.cpp
+  cancelauditmitigationactionstaskresponse.cpp
   cancelaudittaskrequest.cpp
   cancelaudittaskresponse.cpp
   cancelcertificatetransferrequest.cpp
   cancelcertificatetransferresponse.cpp
+  canceldetectmitigationactionstaskrequest.cpp
+  canceldetectmitigationactionstaskresponse.cpp
   canceljobexecutionrequest.cpp
   canceljobexecutionresponse.cpp
   canceljobrequest.cpp
   canceljobresponse.cpp
   cleardefaultauthorizerrequest.cpp
   cleardefaultauthorizerresponse.cpp
+  confirmtopicruledestinationrequest.cpp
+  confirmtopicruledestinationresponse.cpp
+  createauditsuppressionrequest.cpp
+  createauditsuppressionresponse.cpp
   createauthorizerrequest.cpp
   createauthorizerresponse.cpp
   createbillinggrouprequest.cpp
   createbillinggroupresponse.cpp
   createcertificatefromcsrrequest.cpp
   createcertificatefromcsrresponse.cpp
+  createcustommetricrequest.cpp
+  createcustommetricresponse.cpp
+  createdimensionrequest.cpp
+  createdimensionresponse.cpp
+  createdomainconfigurationrequest.cpp
+  createdomainconfigurationresponse.cpp
   createdynamicthinggrouprequest.cpp
   createdynamicthinggroupresponse.cpp
   createjobrequest.cpp
   createjobresponse.cpp
+  createjobtemplaterequest.cpp
+  createjobtemplateresponse.cpp
   createkeysandcertificaterequest.cpp
   createkeysandcertificateresponse.cpp
+  createmitigationactionrequest.cpp
+  createmitigationactionresponse.cpp
   createotaupdaterequest.cpp
   createotaupdateresponse.cpp
   createpolicyrequest.cpp
   createpolicyresponse.cpp
   createpolicyversionrequest.cpp
   createpolicyversionresponse.cpp
+  createprovisioningclaimrequest.cpp
+  createprovisioningclaimresponse.cpp
+  createprovisioningtemplaterequest.cpp
+  createprovisioningtemplateresponse.cpp
+  createprovisioningtemplateversionrequest.cpp
+  createprovisioningtemplateversionresponse.cpp
   createrolealiasrequest.cpp
   createrolealiasresponse.cpp
   createscheduledauditrequest.cpp
@@ -733,10 +997,14 @@ add_library(QtAwsIoT
   createthingresponse.cpp
   createthingtyperequest.cpp
   createthingtyperesponse.cpp
+  createtopicruledestinationrequest.cpp
+  createtopicruledestinationresponse.cpp
   createtopicrulerequest.cpp
   createtopicruleresponse.cpp
   deleteaccountauditconfigurationrequest.cpp
   deleteaccountauditconfigurationresponse.cpp
+  deleteauditsuppressionrequest.cpp
+  deleteauditsuppressionresponse.cpp
   deleteauthorizerrequest.cpp
   deleteauthorizerresponse.cpp
   deletebillinggrouprequest.cpp
@@ -745,18 +1013,32 @@ add_library(QtAwsIoT
   deletecacertificateresponse.cpp
   deletecertificaterequest.cpp
   deletecertificateresponse.cpp
+  deletecustommetricrequest.cpp
+  deletecustommetricresponse.cpp
+  deletedimensionrequest.cpp
+  deletedimensionresponse.cpp
+  deletedomainconfigurationrequest.cpp
+  deletedomainconfigurationresponse.cpp
   deletedynamicthinggrouprequest.cpp
   deletedynamicthinggroupresponse.cpp
   deletejobexecutionrequest.cpp
   deletejobexecutionresponse.cpp
   deletejobrequest.cpp
   deletejobresponse.cpp
+  deletejobtemplaterequest.cpp
+  deletejobtemplateresponse.cpp
+  deletemitigationactionrequest.cpp
+  deletemitigationactionresponse.cpp
   deleteotaupdaterequest.cpp
   deleteotaupdateresponse.cpp
   deletepolicyrequest.cpp
   deletepolicyresponse.cpp
   deletepolicyversionrequest.cpp
   deletepolicyversionresponse.cpp
+  deleteprovisioningtemplaterequest.cpp
+  deleteprovisioningtemplateresponse.cpp
+  deleteprovisioningtemplateversionrequest.cpp
+  deleteprovisioningtemplateversionresponse.cpp
   deleteregistrationcoderequest.cpp
   deleteregistrationcoderesponse.cpp
   deleterolealiasrequest.cpp
@@ -773,6 +1055,8 @@ add_library(QtAwsIoT
   deletethingresponse.cpp
   deletethingtyperequest.cpp
   deletethingtyperesponse.cpp
+  deletetopicruledestinationrequest.cpp
+  deletetopicruledestinationresponse.cpp
   deletetopicrulerequest.cpp
   deletetopicruleresponse.cpp
   deletev2logginglevelrequest.cpp
@@ -781,6 +1065,12 @@ add_library(QtAwsIoT
   deprecatethingtyperesponse.cpp
   describeaccountauditconfigurationrequest.cpp
   describeaccountauditconfigurationresponse.cpp
+  describeauditfindingrequest.cpp
+  describeauditfindingresponse.cpp
+  describeauditmitigationactionstaskrequest.cpp
+  describeauditmitigationactionstaskresponse.cpp
+  describeauditsuppressionrequest.cpp
+  describeauditsuppressionresponse.cpp
   describeaudittaskrequest.cpp
   describeaudittaskresponse.cpp
   describeauthorizerrequest.cpp
@@ -791,8 +1081,16 @@ add_library(QtAwsIoT
   describecacertificateresponse.cpp
   describecertificaterequest.cpp
   describecertificateresponse.cpp
+  describecustommetricrequest.cpp
+  describecustommetricresponse.cpp
   describedefaultauthorizerrequest.cpp
   describedefaultauthorizerresponse.cpp
+  describedetectmitigationactionstaskrequest.cpp
+  describedetectmitigationactionstaskresponse.cpp
+  describedimensionrequest.cpp
+  describedimensionresponse.cpp
+  describedomainconfigurationrequest.cpp
+  describedomainconfigurationresponse.cpp
   describeendpointrequest.cpp
   describeendpointresponse.cpp
   describeeventconfigurationsrequest.cpp
@@ -803,6 +1101,14 @@ add_library(QtAwsIoT
   describejobexecutionresponse.cpp
   describejobrequest.cpp
   describejobresponse.cpp
+  describejobtemplaterequest.cpp
+  describejobtemplateresponse.cpp
+  describemitigationactionrequest.cpp
+  describemitigationactionresponse.cpp
+  describeprovisioningtemplaterequest.cpp
+  describeprovisioningtemplateresponse.cpp
+  describeprovisioningtemplateversionrequest.cpp
+  describeprovisioningtemplateversionresponse.cpp
   describerolealiasrequest.cpp
   describerolealiasresponse.cpp
   describescheduledauditrequest.cpp
@@ -831,6 +1137,10 @@ add_library(QtAwsIoT
   disabletopicruleresponse.cpp
   enabletopicrulerequest.cpp
   enabletopicruleresponse.cpp
+  getbehaviormodeltrainingsummariesrequest.cpp
+  getbehaviormodeltrainingsummariesresponse.cpp
+  getcardinalityrequest.cpp
+  getcardinalityresponse.cpp
   geteffectivepoliciesrequest.cpp
   geteffectivepoliciesresponse.cpp
   getindexingconfigurationrequest.cpp
@@ -841,6 +1151,8 @@ add_library(QtAwsIoT
   getloggingoptionsresponse.cpp
   getotaupdaterequest.cpp
   getotaupdateresponse.cpp
+  getpercentilesrequest.cpp
+  getpercentilesresponse.cpp
   getpolicyrequest.cpp
   getpolicyresponse.cpp
   getpolicyversionrequest.cpp
@@ -849,6 +1161,8 @@ add_library(QtAwsIoT
   getregistrationcoderesponse.cpp
   getstatisticsrequest.cpp
   getstatisticsresponse.cpp
+  gettopicruledestinationrequest.cpp
+  gettopicruledestinationresponse.cpp
   gettopicrulerequest.cpp
   gettopicruleresponse.cpp
   getv2loggingoptionsrequest.cpp
@@ -862,6 +1176,12 @@ add_library(QtAwsIoT
   listattachedpoliciesresponse.cpp
   listauditfindingsrequest.cpp
   listauditfindingsresponse.cpp
+  listauditmitigationactionsexecutionsrequest.cpp
+  listauditmitigationactionsexecutionsresponse.cpp
+  listauditmitigationactionstasksrequest.cpp
+  listauditmitigationactionstasksresponse.cpp
+  listauditsuppressionsrequest.cpp
+  listauditsuppressionsresponse.cpp
   listaudittasksrequest.cpp
   listaudittasksresponse.cpp
   listauthorizersrequest.cpp
@@ -874,6 +1194,16 @@ add_library(QtAwsIoT
   listcertificatesbycaresponse.cpp
   listcertificatesrequest.cpp
   listcertificatesresponse.cpp
+  listcustommetricsrequest.cpp
+  listcustommetricsresponse.cpp
+  listdetectmitigationactionsexecutionsrequest.cpp
+  listdetectmitigationactionsexecutionsresponse.cpp
+  listdetectmitigationactionstasksrequest.cpp
+  listdetectmitigationactionstasksresponse.cpp
+  listdimensionsrequest.cpp
+  listdimensionsresponse.cpp
+  listdomainconfigurationsrequest.cpp
+  listdomainconfigurationsresponse.cpp
   listindicesrequest.cpp
   listindicesresponse.cpp
   listjobexecutionsforjobrequest.cpp
@@ -882,6 +1212,10 @@ add_library(QtAwsIoT
   listjobexecutionsforthingresponse.cpp
   listjobsrequest.cpp
   listjobsresponse.cpp
+  listjobtemplatesrequest.cpp
+  listjobtemplatesresponse.cpp
+  listmitigationactionsrequest.cpp
+  listmitigationactionsresponse.cpp
   listotaupdatesrequest.cpp
   listotaupdatesresponse.cpp
   listoutgoingcertificatesrequest.cpp
@@ -896,6 +1230,10 @@ add_library(QtAwsIoT
   listprincipalpoliciesresponse.cpp
   listprincipalthingsrequest.cpp
   listprincipalthingsresponse.cpp
+  listprovisioningtemplatesrequest.cpp
+  listprovisioningtemplatesresponse.cpp
+  listprovisioningtemplateversionsrequest.cpp
+  listprovisioningtemplateversionsresponse.cpp
   listrolealiasesrequest.cpp
   listrolealiasesresponse.cpp
   listscheduledauditsrequest.cpp
@@ -930,6 +1268,8 @@ add_library(QtAwsIoT
   listthingsresponse.cpp
   listthingtypesrequest.cpp
   listthingtypesresponse.cpp
+  listtopicruledestinationsrequest.cpp
+  listtopicruledestinationsresponse.cpp
   listtopicrulesrequest.cpp
   listtopicrulesresponse.cpp
   listv2logginglevelsrequest.cpp
@@ -940,6 +1280,8 @@ add_library(QtAwsIoT
   registercacertificateresponse.cpp
   registercertificaterequest.cpp
   registercertificateresponse.cpp
+  registercertificatewithoutcarequest.cpp
+  registercertificatewithoutcaresponse.cpp
   registerthingrequest.cpp
   registerthingresponse.cpp
   rejectcertificatetransferrequest.cpp
@@ -962,6 +1304,10 @@ add_library(QtAwsIoT
   setv2logginglevelresponse.cpp
   setv2loggingoptionsrequest.cpp
   setv2loggingoptionsresponse.cpp
+  startauditmitigationactionstaskrequest.cpp
+  startauditmitigationactionstaskresponse.cpp
+  startdetectmitigationactionstaskrequest.cpp
+  startdetectmitigationactionstaskresponse.cpp
   startondemandaudittaskrequest.cpp
   startondemandaudittaskresponse.cpp
   startthingregistrationtaskrequest.cpp
@@ -980,6 +1326,8 @@ add_library(QtAwsIoT
   untagresourceresponse.cpp
   updateaccountauditconfigurationrequest.cpp
   updateaccountauditconfigurationresponse.cpp
+  updateauditsuppressionrequest.cpp
+  updateauditsuppressionresponse.cpp
   updateauthorizerrequest.cpp
   updateauthorizerresponse.cpp
   updatebillinggrouprequest.cpp
@@ -988,6 +1336,12 @@ add_library(QtAwsIoT
   updatecacertificateresponse.cpp
   updatecertificaterequest.cpp
   updatecertificateresponse.cpp
+  updatecustommetricrequest.cpp
+  updatecustommetricresponse.cpp
+  updatedimensionrequest.cpp
+  updatedimensionresponse.cpp
+  updatedomainconfigurationrequest.cpp
+  updatedomainconfigurationresponse.cpp
   updatedynamicthinggrouprequest.cpp
   updatedynamicthinggroupresponse.cpp
   updateeventconfigurationsrequest.cpp
@@ -996,6 +1350,10 @@ add_library(QtAwsIoT
   updateindexingconfigurationresponse.cpp
   updatejobrequest.cpp
   updatejobresponse.cpp
+  updatemitigationactionrequest.cpp
+  updatemitigationactionresponse.cpp
+  updateprovisioningtemplaterequest.cpp
+  updateprovisioningtemplateresponse.cpp
   updaterolealiasrequest.cpp
   updaterolealiasresponse.cpp
   updatescheduledauditrequest.cpp
@@ -1010,6 +1368,8 @@ add_library(QtAwsIoT
   updatethinggroupsforthingresponse.cpp
   updatethingrequest.cpp
   updatethingresponse.cpp
+  updatetopicruledestinationrequest.cpp
+  updatetopicruledestinationresponse.cpp
   validatesecurityprofilebehaviorsrequest.cpp
   validatesecurityprofilebehaviorsresponse.cpp)
 

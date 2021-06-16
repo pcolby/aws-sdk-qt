@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsComputeOptimizer
+description = AWS ComputeOptimizer SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawscomputeoptimizer-index.html"
+navigation.landingtitle = "ComputeOptimizer"
+navigation.cppclassespage = "ComputeOptimizer C++ Classes"

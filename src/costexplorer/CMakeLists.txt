@@ -7,10 +7,58 @@ add_library(QtAwsCostExplorer
   costexplorerrequest_p.h
   costexplorerresponse.h
   costexplorerresponse_p.h
+  createanomalymonitorrequest.h
+  createanomalymonitorrequest_p.h
+  createanomalymonitorresponse.h
+  createanomalymonitorresponse_p.h
+  createanomalysubscriptionrequest.h
+  createanomalysubscriptionrequest_p.h
+  createanomalysubscriptionresponse.h
+  createanomalysubscriptionresponse_p.h
+  createcostcategorydefinitionrequest.h
+  createcostcategorydefinitionrequest_p.h
+  createcostcategorydefinitionresponse.h
+  createcostcategorydefinitionresponse_p.h
+  deleteanomalymonitorrequest.h
+  deleteanomalymonitorrequest_p.h
+  deleteanomalymonitorresponse.h
+  deleteanomalymonitorresponse_p.h
+  deleteanomalysubscriptionrequest.h
+  deleteanomalysubscriptionrequest_p.h
+  deleteanomalysubscriptionresponse.h
+  deleteanomalysubscriptionresponse_p.h
+  deletecostcategorydefinitionrequest.h
+  deletecostcategorydefinitionrequest_p.h
+  deletecostcategorydefinitionresponse.h
+  deletecostcategorydefinitionresponse_p.h
+  describecostcategorydefinitionrequest.h
+  describecostcategorydefinitionrequest_p.h
+  describecostcategorydefinitionresponse.h
+  describecostcategorydefinitionresponse_p.h
+  getanomaliesrequest.h
+  getanomaliesrequest_p.h
+  getanomaliesresponse.h
+  getanomaliesresponse_p.h
+  getanomalymonitorsrequest.h
+  getanomalymonitorsrequest_p.h
+  getanomalymonitorsresponse.h
+  getanomalymonitorsresponse_p.h
+  getanomalysubscriptionsrequest.h
+  getanomalysubscriptionsrequest_p.h
+  getanomalysubscriptionsresponse.h
+  getanomalysubscriptionsresponse_p.h
   getcostandusagerequest.h
   getcostandusagerequest_p.h
   getcostandusageresponse.h
   getcostandusageresponse_p.h
+  getcostandusagewithresourcesrequest.h
+  getcostandusagewithresourcesrequest_p.h
+  getcostandusagewithresourcesresponse.h
+  getcostandusagewithresourcesresponse_p.h
+  getcostcategoriesrequest.h
+  getcostcategoriesrequest_p.h
+  getcostcategoriesresponse.h
+  getcostcategoriesresponse_p.h
   getcostforecastrequest.h
   getcostforecastrequest_p.h
   getcostforecastresponse.h
@@ -31,6 +79,26 @@ add_library(QtAwsCostExplorer
   getreservationutilizationrequest_p.h
   getreservationutilizationresponse.h
   getreservationutilizationresponse_p.h
+  getrightsizingrecommendationrequest.h
+  getrightsizingrecommendationrequest_p.h
+  getrightsizingrecommendationresponse.h
+  getrightsizingrecommendationresponse_p.h
+  getsavingsplanscoveragerequest.h
+  getsavingsplanscoveragerequest_p.h
+  getsavingsplanscoverageresponse.h
+  getsavingsplanscoverageresponse_p.h
+  getsavingsplanspurchaserecommendationrequest.h
+  getsavingsplanspurchaserecommendationrequest_p.h
+  getsavingsplanspurchaserecommendationresponse.h
+  getsavingsplanspurchaserecommendationresponse_p.h
+  getsavingsplansutilizationdetailsrequest.h
+  getsavingsplansutilizationdetailsrequest_p.h
+  getsavingsplansutilizationdetailsresponse.h
+  getsavingsplansutilizationdetailsresponse_p.h
+  getsavingsplansutilizationrequest.h
+  getsavingsplansutilizationrequest_p.h
+  getsavingsplansutilizationresponse.h
+  getsavingsplansutilizationresponse_p.h
   gettagsrequest.h
   gettagsrequest_p.h
   gettagsresponse.h
@@ -39,11 +107,55 @@ add_library(QtAwsCostExplorer
   getusageforecastrequest_p.h
   getusageforecastresponse.h
   getusageforecastresponse_p.h
+  listcostcategorydefinitionsrequest.h
+  listcostcategorydefinitionsrequest_p.h
+  listcostcategorydefinitionsresponse.h
+  listcostcategorydefinitionsresponse_p.h
+  provideanomalyfeedbackrequest.h
+  provideanomalyfeedbackrequest_p.h
+  provideanomalyfeedbackresponse.h
+  provideanomalyfeedbackresponse_p.h
+  updateanomalymonitorrequest.h
+  updateanomalymonitorrequest_p.h
+  updateanomalymonitorresponse.h
+  updateanomalymonitorresponse_p.h
+  updateanomalysubscriptionrequest.h
+  updateanomalysubscriptionrequest_p.h
+  updateanomalysubscriptionresponse.h
+  updateanomalysubscriptionresponse_p.h
+  updatecostcategorydefinitionrequest.h
+  updatecostcategorydefinitionrequest_p.h
+  updatecostcategorydefinitionresponse.h
+  updatecostcategorydefinitionresponse_p.h
   costexplorerclient.cpp
   costexplorerrequest.cpp
   costexplorerresponse.cpp
+  createanomalymonitorrequest.cpp
+  createanomalymonitorresponse.cpp
+  createanomalysubscriptionrequest.cpp
+  createanomalysubscriptionresponse.cpp
+  createcostcategorydefinitionrequest.cpp
+  createcostcategorydefinitionresponse.cpp
+  deleteanomalymonitorrequest.cpp
+  deleteanomalymonitorresponse.cpp
+  deleteanomalysubscriptionrequest.cpp
+  deleteanomalysubscriptionresponse.cpp
+  deletecostcategorydefinitionrequest.cpp
+  deletecostcategorydefinitionresponse.cpp
+  describecostcategorydefinitionrequest.cpp
+  describecostcategorydefinitionresponse.cpp
+  getanomaliesrequest.cpp
+  getanomaliesresponse.cpp
+  getanomalymonitorsrequest.cpp
+  getanomalymonitorsresponse.cpp
+  getanomalysubscriptionsrequest.cpp
+  getanomalysubscriptionsresponse.cpp
   getcostandusagerequest.cpp
   getcostandusageresponse.cpp
+  getcostandusagewithresourcesrequest.cpp
+  getcostandusagewithresourcesresponse.cpp
+  getcostcategoriesrequest.cpp
+  getcostcategoriesresponse.cpp
   getcostforecastrequest.cpp
   getcostforecastresponse.cpp
   getdimensionvaluesrequest.cpp
@@ -54,10 +166,30 @@ add_library(QtAwsCostExplorer
   getreservationpurchaserecommendationresponse.cpp
   getreservationutilizationrequest.cpp
   getreservationutilizationresponse.cpp
+  getrightsizingrecommendationrequest.cpp
+  getrightsizingrecommendationresponse.cpp
+  getsavingsplanscoveragerequest.cpp
+  getsavingsplanscoverageresponse.cpp
+  getsavingsplanspurchaserecommendationrequest.cpp
+  getsavingsplanspurchaserecommendationresponse.cpp
+  getsavingsplansutilizationdetailsrequest.cpp
+  getsavingsplansutilizationdetailsresponse.cpp
+  getsavingsplansutilizationrequest.cpp
+  getsavingsplansutilizationresponse.cpp
   gettagsrequest.cpp
   gettagsresponse.cpp
   getusageforecastrequest.cpp
-  getusageforecastresponse.cpp)
+  getusageforecastresponse.cpp
+  listcostcategorydefinitionsrequest.cpp
+  listcostcategorydefinitionsresponse.cpp
+  provideanomalyfeedbackrequest.cpp
+  provideanomalyfeedbackresponse.cpp
+  updateanomalymonitorrequest.cpp
+  updateanomalymonitorresponse.cpp
+  updateanomalysubscriptionrequest.cpp
+  updateanomalysubscriptionresponse.cpp
+  updatecostcategorydefinitionrequest.cpp
+  updatecostcategorydefinitionresponse.cpp)
 
 add_dependencies(QtAwsCostExplorer QtAwsCore)
 

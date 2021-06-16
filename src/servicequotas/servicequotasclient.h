@@ -56,10 +56,16 @@ class ListServiceQuotasRequest;
 class ListServiceQuotasResponse;
 class ListServicesRequest;
 class ListServicesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class PutServiceQuotaIncreaseRequestIntoTemplateRequest;
 class PutServiceQuotaIncreaseRequestIntoTemplateResponse;
 class RequestServiceQuotaIncreaseRequest;
 class RequestServiceQuotaIncreaseResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 
 class QTAWS_EXPORT ServiceQuotasClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -91,8 +97,11 @@ public slots:
     ListServiceQuotaIncreaseRequestsInTemplateResponse * listServiceQuotaIncreaseRequestsInTemplate(const ListServiceQuotaIncreaseRequestsInTemplateRequest &request);
     ListServiceQuotasResponse * listServiceQuotas(const ListServiceQuotasRequest &request);
     ListServicesResponse * listServices(const ListServicesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     PutServiceQuotaIncreaseRequestIntoTemplateResponse * putServiceQuotaIncreaseRequestIntoTemplate(const PutServiceQuotaIncreaseRequestIntoTemplateRequest &request);
     RequestServiceQuotaIncreaseResponse * requestServiceQuotaIncrease(const RequestServiceQuotaIncreaseRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(ServiceQuotasClient)

@@ -21,38 +21,62 @@
 #include "codecommitclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associateapprovalruletemplatewithrepositoryrequest.h"
+#include "associateapprovalruletemplatewithrepositoryresponse.h"
+#include "batchassociateapprovalruletemplatewithrepositoriesrequest.h"
+#include "batchassociateapprovalruletemplatewithrepositoriesresponse.h"
 #include "batchdescribemergeconflictsrequest.h"
 #include "batchdescribemergeconflictsresponse.h"
+#include "batchdisassociateapprovalruletemplatefromrepositoriesrequest.h"
+#include "batchdisassociateapprovalruletemplatefromrepositoriesresponse.h"
+#include "batchgetcommitsrequest.h"
+#include "batchgetcommitsresponse.h"
 #include "batchgetrepositoriesrequest.h"
 #include "batchgetrepositoriesresponse.h"
+#include "createapprovalruletemplaterequest.h"
+#include "createapprovalruletemplateresponse.h"
 #include "createbranchrequest.h"
 #include "createbranchresponse.h"
 #include "createcommitrequest.h"
 #include "createcommitresponse.h"
 #include "createpullrequestrequest.h"
 #include "createpullrequestresponse.h"
+#include "createpullrequestapprovalrulerequest.h"
+#include "createpullrequestapprovalruleresponse.h"
 #include "createrepositoryrequest.h"
 #include "createrepositoryresponse.h"
 #include "createunreferencedmergecommitrequest.h"
 #include "createunreferencedmergecommitresponse.h"
+#include "deleteapprovalruletemplaterequest.h"
+#include "deleteapprovalruletemplateresponse.h"
 #include "deletebranchrequest.h"
 #include "deletebranchresponse.h"
 #include "deletecommentcontentrequest.h"
 #include "deletecommentcontentresponse.h"
 #include "deletefilerequest.h"
 #include "deletefileresponse.h"
+#include "deletepullrequestapprovalrulerequest.h"
+#include "deletepullrequestapprovalruleresponse.h"
 #include "deleterepositoryrequest.h"
 #include "deleterepositoryresponse.h"
 #include "describemergeconflictsrequest.h"
 #include "describemergeconflictsresponse.h"
 #include "describepullrequesteventsrequest.h"
 #include "describepullrequesteventsresponse.h"
+#include "disassociateapprovalruletemplatefromrepositoryrequest.h"
+#include "disassociateapprovalruletemplatefromrepositoryresponse.h"
+#include "evaluatepullrequestapprovalrulesrequest.h"
+#include "evaluatepullrequestapprovalrulesresponse.h"
+#include "getapprovalruletemplaterequest.h"
+#include "getapprovalruletemplateresponse.h"
 #include "getblobrequest.h"
 #include "getblobresponse.h"
 #include "getbranchrequest.h"
 #include "getbranchresponse.h"
 #include "getcommentrequest.h"
 #include "getcommentresponse.h"
+#include "getcommentreactionsrequest.h"
+#include "getcommentreactionsresponse.h"
 #include "getcommentsforcomparedcommitrequest.h"
 #include "getcommentsforcomparedcommitresponse.h"
 #include "getcommentsforpullrequestrequest.h"
@@ -73,16 +97,26 @@
 #include "getmergeoptionsresponse.h"
 #include "getpullrequestrequest.h"
 #include "getpullrequestresponse.h"
+#include "getpullrequestapprovalstatesrequest.h"
+#include "getpullrequestapprovalstatesresponse.h"
+#include "getpullrequestoverridestaterequest.h"
+#include "getpullrequestoverridestateresponse.h"
 #include "getrepositoryrequest.h"
 #include "getrepositoryresponse.h"
 #include "getrepositorytriggersrequest.h"
 #include "getrepositorytriggersresponse.h"
+#include "listapprovalruletemplatesrequest.h"
+#include "listapprovalruletemplatesresponse.h"
+#include "listassociatedapprovalruletemplatesforrepositoryrequest.h"
+#include "listassociatedapprovalruletemplatesforrepositoryresponse.h"
 #include "listbranchesrequest.h"
 #include "listbranchesresponse.h"
 #include "listpullrequestsrequest.h"
 #include "listpullrequestsresponse.h"
 #include "listrepositoriesrequest.h"
 #include "listrepositoriesresponse.h"
+#include "listrepositoriesforapprovalruletemplaterequest.h"
+#include "listrepositoriesforapprovalruletemplateresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "mergebranchesbyfastforwardrequest.h"
@@ -97,12 +131,16 @@
 #include "mergepullrequestbysquashresponse.h"
 #include "mergepullrequestbythreewayrequest.h"
 #include "mergepullrequestbythreewayresponse.h"
+#include "overridepullrequestapprovalrulesrequest.h"
+#include "overridepullrequestapprovalrulesresponse.h"
 #include "postcommentforcomparedcommitrequest.h"
 #include "postcommentforcomparedcommitresponse.h"
 #include "postcommentforpullrequestrequest.h"
 #include "postcommentforpullrequestresponse.h"
 #include "postcommentreplyrequest.h"
 #include "postcommentreplyresponse.h"
+#include "putcommentreactionrequest.h"
+#include "putcommentreactionresponse.h"
 #include "putfilerequest.h"
 #include "putfileresponse.h"
 #include "putrepositorytriggersrequest.h"
@@ -113,10 +151,20 @@
 #include "testrepositorytriggersresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateapprovalruletemplatecontentrequest.h"
+#include "updateapprovalruletemplatecontentresponse.h"
+#include "updateapprovalruletemplatedescriptionrequest.h"
+#include "updateapprovalruletemplatedescriptionresponse.h"
+#include "updateapprovalruletemplatenamerequest.h"
+#include "updateapprovalruletemplatenameresponse.h"
 #include "updatecommentrequest.h"
 #include "updatecommentresponse.h"
 #include "updatedefaultbranchrequest.h"
 #include "updatedefaultbranchresponse.h"
+#include "updatepullrequestapprovalrulecontentrequest.h"
+#include "updatepullrequestapprovalrulecontentresponse.h"
+#include "updatepullrequestapprovalstaterequest.h"
+#include "updatepullrequestapprovalstateresponse.h"
 #include "updatepullrequestdescriptionrequest.h"
 #include "updatepullrequestdescriptionresponse.h"
 #include "updatepullrequeststatusrequest.h"
@@ -190,7 +238,7 @@ namespace CodeCommit {
  *  repository> </li> <li>
  * 
  *  <a>UpdateRepositoryName</a>, which changes the name of the repository. If you change the name of a repository, no other
- *  users of that repository will be able to access it until you send them the new HTTPS or SSH URL to
+ *  users of that repository can access it until you send them the new HTTPS or SSH URL to
  * 
  *  use> </li> </ul>
  * 
@@ -198,7 +246,7 @@ namespace CodeCommit {
  * 
  *  following> <ul> <li>
  * 
- *  <a>CreateBranch</a>, which creates a new branch in a specified
+ *  <a>CreateBranch</a>, which creates a branch in a specified
  * 
  *  repository> </li> <li>
  * 
@@ -226,7 +274,7 @@ namespace CodeCommit {
  * 
  *  branch> </li> <li>
  * 
- *  <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object within a
+ *  <a>GetBlob</a>, which returns the base-64 encoded content of an individual Git blob object in a
  * 
  *  repository> </li> <li>
  * 
@@ -246,6 +294,10 @@ namespace CodeCommit {
  * 
  *  following> <ul> <li>
  * 
+ *  <a>BatchGetCommits</a>, which returns information about one or more commits in a
+ * 
+ *  repository> </li> <li>
+ * 
  *  <a>CreateCommit</a>, which creates a commit for changes to a
  * 
  *  repository> </li> <li>
@@ -255,7 +307,7 @@ namespace CodeCommit {
  *  information> </li> <li>
  * 
  *  <a>GetDifferences</a>, which returns information about the differences in a valid commit specifier (such as a branch,
- *  tag, HEAD, commit ID or other fully qualified
+ *  tag, HEAD, commit ID, or other fully qualified
  * 
  *  reference)> </li> </ul>
  * 
@@ -310,15 +362,38 @@ namespace CodeCommit {
  * 
  *  repository> </li> <li>
  * 
+ *  <a>CreatePullRequestApprovalRule</a>, which creates an approval rule for a specified pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>DeletePullRequestApprovalRule</a>, which deletes an approval rule for a specified pull
+ * 
+ *  request> </li> <li>
+ * 
  *  <a>DescribePullRequestEvents</a>, which returns information about one or more pull request
  * 
  *  events> </li> <li>
+ * 
+ *  <a>EvaluatePullRequestApprovalRules</a>, which evaluates whether a pull request has met all the conditions specified in
+ *  its associated approval
+ * 
+ *  rules> </li> <li>
  * 
  *  <a>GetCommentsForPullRequest</a>, which returns information about comments on a specified pull
  * 
  *  request> </li> <li>
  * 
  *  <a>GetPullRequest</a>, which returns information about a specified pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>GetPullRequestApprovalStates</a>, which returns information about the approval states for a specified pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>GetPullRequestOverrideState</a>, which returns information about whether approval rules have been set aside
+ *  (overriden) for a pull request, and if so, the Amazon Resource Name (ARN) of the user or identity that overrode the
+ *  rules and their requirements for the pull
  * 
  *  request> </li> <li>
  * 
@@ -341,7 +416,19 @@ namespace CodeCommit {
  * 
  *  option> </li> <li>
  * 
+ *  <a>OverridePullRequestApprovalRules</a>, which sets aside all approval rule requirements for a pull
+ * 
+ *  request> </li> <li>
+ * 
  *  <a>PostCommentForPullRequest</a>, which posts a comment to a pull request at the specified line, file, or
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>UpdatePullRequestApprovalRuleContent</a>, which updates the structure of an approval rule for a pull
+ * 
+ *  request> </li> <li>
+ * 
+ *  <a>UpdatePullRequestApprovalState</a>, which updates the state of an approval on a pull
  * 
  *  request> </li> <li>
  * 
@@ -357,6 +444,73 @@ namespace CodeCommit {
  * 
  *  request> </li> </ul>
  * 
+ *  Approval rule templates, by calling the
+ * 
+ *  following> <ul> <li>
+ * 
+ *  <a>AssociateApprovalRuleTemplateWithRepository</a>, which associates a template with a specified repository. After the
+ *  template is associated with a repository, AWS CodeCommit creates approval rules that match the template conditions on
+ *  every pull request created in the specified
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>BatchAssociateApprovalRuleTemplateWithRepositories</a>, which associates a template with one or more specified
+ *  repositories. After the template is associated with a repository, AWS CodeCommit creates approval rules that match the
+ *  template conditions on every pull request created in the specified
+ * 
+ *  repositories> </li> <li>
+ * 
+ *  <a>BatchDisassociateApprovalRuleTemplateFromRepositories</a>, which removes the association between a template and
+ *  specified repositories so that approval rules based on the template are not automatically created when pull requests are
+ *  created in those
+ * 
+ *  repositories> </li> <li>
+ * 
+ *  <a>CreateApprovalRuleTemplate</a>, which creates a template for approval rules that can then be associated with one or
+ *  more repositories in your AWS
+ * 
+ *  account> </li> <li>
+ * 
+ *  <a>DeleteApprovalRuleTemplate</a>, which deletes the specified template. It does not remove approval rules on pull
+ *  requests already created with the
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>DisassociateApprovalRuleTemplateFromRepository</a>, which removes the association between a template and a repository
+ *  so that approval rules based on the template are not automatically created when pull requests are created in the
+ *  specified
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>GetApprovalRuleTemplate</a>, which returns information about an approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>ListApprovalRuleTemplates</a>, which lists all approval rule templates in the AWS Region in your AWS
+ * 
+ *  account> </li> <li>
+ * 
+ *  <a>ListAssociatedApprovalRuleTemplatesForRepository</a>, which lists all approval rule templates that are associated
+ *  with a specified
+ * 
+ *  repository> </li> <li>
+ * 
+ *  <a>ListRepositoriesForApprovalRuleTemplate</a>, which lists all repositories associated with the specified approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>UpdateApprovalRuleTemplateDescription</a>, which updates the description of an approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>UpdateApprovalRuleTemplateName</a>, which updates the name of an approval rule
+ * 
+ *  template> </li> <li>
+ * 
+ *  <a>UpdateApprovalRuleTemplateContent</a>, which updates the content of an approval rule
+ * 
+ *  template> </li> </ul>
+ * 
  *  Comments in a repository, by calling the
  * 
  *  following> <ul> <li>
@@ -369,6 +523,10 @@ namespace CodeCommit {
  * 
  *  commit> </li> <li>
  * 
+ *  <a>GetCommentReactions</a>, which returns information about emoji reactions to
+ * 
+ *  comments> </li> <li>
+ * 
  *  <a>GetCommentsForComparedCommit</a>, which returns information about comments on the comparison between two commit
  *  specifiers in a
  * 
@@ -379,6 +537,10 @@ namespace CodeCommit {
  *  repository> </li> <li>
  * 
  *  <a>PostCommentReply</a>, which creates a reply to a
+ * 
+ *  comment> </li> <li>
+ * 
+ *  <a>PutCommentReaction</a>, which creates or updates an emoji reaction to a
  * 
  *  comment> </li> <li>
  * 
@@ -477,6 +639,36 @@ CodeCommitClient::CodeCommitClient(
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * AssociateApprovalRuleTemplateWithRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an association between an approval rule template and a specified repository. Then, the next time a pull request
+ * is created in the repository where the destination reference (if specified) matches the destination reference (branch)
+ * for the pull request, an approval rule that matches the template conditions is automatically created for that pull
+ * request. If no destination references are specified in the template, an approval rule that matches the template contents
+ * is created for all pull requests in that
+ */
+AssociateApprovalRuleTemplateWithRepositoryResponse * CodeCommitClient::associateApprovalRuleTemplateWithRepository(const AssociateApprovalRuleTemplateWithRepositoryRequest &request)
+{
+    return qobject_cast<AssociateApprovalRuleTemplateWithRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * BatchAssociateApprovalRuleTemplateWithRepositoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an association between an approval rule template and one or more specified repositories.
+ */
+BatchAssociateApprovalRuleTemplateWithRepositoriesResponse * CodeCommitClient::batchAssociateApprovalRuleTemplateWithRepositories(const BatchAssociateApprovalRuleTemplateWithRepositoriesRequest &request)
+{
+    return qobject_cast<BatchAssociateApprovalRuleTemplateWithRepositoriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * BatchDescribeMergeConflictsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -491,6 +683,32 @@ BatchDescribeMergeConflictsResponse * CodeCommitClient::batchDescribeMergeConfli
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the association between an approval rule template and one or more specified repositories.
+ */
+BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse * CodeCommitClient::batchDisassociateApprovalRuleTemplateFromRepositories(const BatchDisassociateApprovalRuleTemplateFromRepositoriesRequest &request)
+{
+    return qobject_cast<BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * BatchGetCommitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the contents of one or more commits in a
+ */
+BatchGetCommitsResponse * CodeCommitClient::batchGetCommits(const BatchGetCommitsRequest &request)
+{
+    return qobject_cast<BatchGetCommitsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * BatchGetRepositoriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -500,9 +718,9 @@ BatchDescribeMergeConflictsResponse * CodeCommitClient::batchDescribeMergeConfli
  * repositories> <note>
  *
  * The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that
- * do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make
- * sure that you HTML-encode the description field in any application that uses this API to display the repository
- * description on a web
+ * do not HTML-encode the description and display it in a webpage can expose users to potentially malicious code. Make sure
+ * that you HTML-encode the description field in any application that uses this API to display the repository description
+ * on a
  */
 BatchGetRepositoriesResponse * CodeCommitClient::batchGetRepositories(const BatchGetRepositoriesRequest &request)
 {
@@ -511,11 +729,26 @@ BatchGetRepositoriesResponse * CodeCommitClient::batchGetRepositories(const Batc
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * CreateApprovalRuleTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a template for approval rules that can then be associated with one or more repositories in your AWS account.
+ * When you associate a template with a repository, AWS CodeCommit creates an approval rule that matches the conditions of
+ * the template for all pull requests that meet the conditions of the template. For more information, see
+ */
+CreateApprovalRuleTemplateResponse * CodeCommitClient::createApprovalRuleTemplate(const CreateApprovalRuleTemplateRequest &request)
+{
+    return qobject_cast<CreateApprovalRuleTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * CreateBranchResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new branch in a repository and points the branch to a
+ * Creates a branch in a repository and points the branch to a
  *
  * commit> <note>
  *
@@ -555,6 +788,19 @@ CreatePullRequestResponse * CodeCommitClient::createPullRequest(const CreatePull
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * CreatePullRequestApprovalRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an approval rule for a pull
+ */
+CreatePullRequestApprovalRuleResponse * CodeCommitClient::createPullRequestApprovalRule(const CreatePullRequestApprovalRuleRequest &request)
+{
+    return qobject_cast<CreatePullRequestApprovalRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * CreateRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -573,8 +819,8 @@ CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateReposi
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an unreferenced commit that represents the result of merging two branches using a specified merge strategy. This
- * can help you determine the outcome of a potential merge. This API cannot be used with the fast-forward merge strategy,
- * as that strategy does not create a merge
+ * can help you determine the outcome of a potential merge. This API cannot be used with the fast-forward merge strategy
+ * because that strategy does not create a merge
  *
  * commit> <note>
  *
@@ -584,6 +830,20 @@ CreateRepositoryResponse * CodeCommitClient::createRepository(const CreateReposi
 CreateUnreferencedMergeCommitResponse * CodeCommitClient::createUnreferencedMergeCommit(const CreateUnreferencedMergeCommitRequest &request)
 {
     return qobject_cast<CreateUnreferencedMergeCommitResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * DeleteApprovalRuleTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified approval rule template. Deleting a template does not remove approval rules on pull requests already
+ * created with the
+ */
+DeleteApprovalRuleTemplateResponse * CodeCommitClient::deleteApprovalRuleTemplate(const DeleteApprovalRuleTemplateRequest &request)
+{
+    return qobject_cast<DeleteApprovalRuleTemplateResponse *>(send(request));
 }
 
 /*!
@@ -619,7 +879,7 @@ DeleteCommentContentResponse * CodeCommitClient::deleteCommentContent(const Dele
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a specified file from a specified branch. A commit is created on the branch that contains the revision. The file
- * will still exist in the commits prior to the commit that contains the
+ * still exists in the commits earlier to the commit that contains the
  */
 DeleteFileResponse * CodeCommitClient::deleteFile(const DeleteFileRequest &request)
 {
@@ -628,16 +888,32 @@ DeleteFileResponse * CodeCommitClient::deleteFile(const DeleteFileRequest &reque
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * DeletePullRequestApprovalRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an approval rule from a specified pull request. Approval rules can be deleted from a pull request only if the
+ * pull request is open, and if the approval rule was created specifically for a pull request and not generated from an
+ * approval rule template associated with the repository where the pull request was created. You cannot delete an approval
+ * rule from a merged or closed pull
+ */
+DeletePullRequestApprovalRuleResponse * CodeCommitClient::deletePullRequestApprovalRule(const DeletePullRequestApprovalRuleRequest &request)
+{
+    return qobject_cast<DeletePullRequestApprovalRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * DeleteRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a repository. If a specified repository was already deleted, a null repository ID will be
+ * Deletes a repository. If a specified repository was already deleted, a null repository ID is
  *
  * returned> <b>
  *
  * Deleting a repository also deletes all associated objects and metadata. After a repository is deleted, all future push
- * calls to the deleted repository will
+ * calls to the deleted repository
  */
 DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteRepositoryRequest &request)
 {
@@ -652,7 +928,7 @@ DeleteRepositoryResponse * CodeCommitClient::deleteRepository(const DeleteReposi
  *
  * Returns information about one or more merge conflicts in the attempted merge of two commit specifiers using the squash
  * or three-way merge strategy. If the merge option for the attempted merge is specified as FAST_FORWARD_MERGE, an
- * exception will be
+ * exception is
  */
 DescribeMergeConflictsResponse * CodeCommitClient::describeMergeConflicts(const DescribeMergeConflictsRequest &request)
 {
@@ -674,11 +950,52 @@ DescribePullRequestEventsResponse * CodeCommitClient::describePullRequestEvents(
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * DisassociateApprovalRuleTemplateFromRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the association between a template and a repository so that approval rules based on the template are not
+ * automatically created when pull requests are created in the specified repository. This does not delete any approval
+ * rules previously created for pull requests through the template
+ */
+DisassociateApprovalRuleTemplateFromRepositoryResponse * CodeCommitClient::disassociateApprovalRuleTemplateFromRepository(const DisassociateApprovalRuleTemplateFromRepositoryRequest &request)
+{
+    return qobject_cast<DisassociateApprovalRuleTemplateFromRepositoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * EvaluatePullRequestApprovalRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Evaluates whether a pull request has met all the conditions specified in its associated approval
+ */
+EvaluatePullRequestApprovalRulesResponse * CodeCommitClient::evaluatePullRequestApprovalRules(const EvaluatePullRequestApprovalRulesRequest &request)
+{
+    return qobject_cast<EvaluatePullRequestApprovalRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetApprovalRuleTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a specified approval rule
+ */
+GetApprovalRuleTemplateResponse * CodeCommitClient::getApprovalRuleTemplate(const GetApprovalRuleTemplateRequest &request)
+{
+    return qobject_cast<GetApprovalRuleTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * GetBlobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the base-64 encoded content of an individual blob within a
+ * Returns the base-64 encoded content of an individual blob in a
  */
 GetBlobResponse * CodeCommitClient::getBlob(const GetBlobRequest &request)
 {
@@ -704,11 +1021,30 @@ GetBranchResponse * CodeCommitClient::getBranch(const GetBranchRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the content of a comment made on a change, file, or commit in a
+ * Returns the content of a comment made on a change, file, or commit in a repository.
+ *
+ * </p <note>
+ *
+ * Reaction counts might include numbers from user identities who were deleted after the reaction was made. For a count of
+ * reactions from active identities, use
  */
 GetCommentResponse * CodeCommitClient::getComment(const GetCommentRequest &request)
 {
     return qobject_cast<GetCommentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetCommentReactionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about reactions to a specified comment ID. Reactions from users who have been deleted will not be
+ * included in the
+ */
+GetCommentReactionsResponse * CodeCommitClient::getCommentReactions(const GetCommentReactionsRequest &request)
+{
+    return qobject_cast<GetCommentReactionsResponse *>(send(request));
 }
 
 /*!
@@ -718,6 +1054,11 @@ GetCommentResponse * CodeCommitClient::getComment(const GetCommentRequest &reque
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about comments made on the comparison between two
+ *
+ * commits> <note>
+ *
+ * Reaction counts might include numbers from user identities who were deleted after the reaction was made. For a count of
+ * reactions from active identities, use
  */
 GetCommentsForComparedCommitResponse * CodeCommitClient::getCommentsForComparedCommit(const GetCommentsForComparedCommitRequest &request)
 {
@@ -731,6 +1072,11 @@ GetCommentsForComparedCommitResponse * CodeCommitClient::getCommentsForComparedC
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns comments made on a pull
+ *
+ * request> <note>
+ *
+ * Reaction counts might include numbers from user identities who were deleted after the reaction was made. For a count of
+ * reactions from active identities, use
  */
 GetCommentsForPullRequestResponse * CodeCommitClient::getCommentsForPullRequest(const GetCommentsForPullRequestRequest &request)
 {
@@ -756,7 +1102,7 @@ GetCommitResponse * CodeCommitClient::getCommit(const GetCommitRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other
+ * Returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID, or other
  * fully qualified reference). Results can be limited to a specified
  */
 GetDifferencesResponse * CodeCommitClient::getDifferences(const GetDifferencesRequest &request)
@@ -822,8 +1168,8 @@ GetMergeConflictsResponse * CodeCommitClient::getMergeConflicts(const GetMergeCo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the merge options available for merging two specified branches. For details about why a
- * particular merge option is not available, use GetMergeConflicts or
+ * Returns information about the merge options available for merging two specified branches. For details about why a merge
+ * option is not available, use GetMergeConflicts or
  */
 GetMergeOptionsResponse * CodeCommitClient::getMergeOptions(const GetMergeOptionsRequest &request)
 {
@@ -845,6 +1191,34 @@ GetPullRequestResponse * CodeCommitClient::getPullRequest(const GetPullRequestRe
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetPullRequestApprovalStatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the approval states for a specified pull request. Approval states only apply to pull requests
+ * that have one or more approval rules applied to
+ */
+GetPullRequestApprovalStatesResponse * CodeCommitClient::getPullRequestApprovalStates(const GetPullRequestApprovalStatesRequest &request)
+{
+    return qobject_cast<GetPullRequestApprovalStatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * GetPullRequestOverrideStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about whether approval rules have been set aside (overridden) for a pull request, and if so, the
+ * Amazon Resource Name (ARN) of the user or identity that overrode the rules and their requirements for the pull
+ */
+GetPullRequestOverrideStateResponse * CodeCommitClient::getPullRequestOverrideState(const GetPullRequestOverrideStateRequest &request)
+{
+    return qobject_cast<GetPullRequestOverrideStateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * GetRepositoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -854,9 +1228,9 @@ GetPullRequestResponse * CodeCommitClient::getPullRequest(const GetPullRequestRe
  * repository> <note>
  *
  * The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that
- * do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make
- * sure that you HTML-encode the description field in any application that uses this API to display the repository
- * description on a web
+ * do not HTML-encode the description and display it in a webpage can expose users to potentially malicious code. Make sure
+ * that you HTML-encode the description field in any application that uses this API to display the repository description
+ * on a
  */
 GetRepositoryResponse * CodeCommitClient::getRepository(const GetRepositoryRequest &request)
 {
@@ -874,6 +1248,33 @@ GetRepositoryResponse * CodeCommitClient::getRepository(const GetRepositoryReque
 GetRepositoryTriggersResponse * CodeCommitClient::getRepositoryTriggers(const GetRepositoryTriggersRequest &request)
 {
     return qobject_cast<GetRepositoryTriggersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * ListApprovalRuleTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all approval rule templates in the specified AWS Region in your AWS account. If an AWS Region is not specified,
+ * the AWS Region where you are signed in is
+ */
+ListApprovalRuleTemplatesResponse * CodeCommitClient::listApprovalRuleTemplates(const ListApprovalRuleTemplatesRequest &request)
+{
+    return qobject_cast<ListApprovalRuleTemplatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * ListAssociatedApprovalRuleTemplatesForRepositoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all approval rule templates that are associated with a specified
+ */
+ListAssociatedApprovalRuleTemplatesForRepositoryResponse * CodeCommitClient::listAssociatedApprovalRuleTemplatesForRepository(const ListAssociatedApprovalRuleTemplatesForRepositoryRequest &request)
+{
+    return qobject_cast<ListAssociatedApprovalRuleTemplatesForRepositoryResponse *>(send(request));
 }
 
 /*!
@@ -918,6 +1319,19 @@ ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListReposito
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * ListRepositoriesForApprovalRuleTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all repositories associated with the specified approval rule
+ */
+ListRepositoriesForApprovalRuleTemplateResponse * CodeCommitClient::listRepositoriesForApprovalRuleTemplate(const ListRepositoriesForApprovalRuleTemplateRequest &request)
+{
+    return qobject_cast<ListRepositoriesForApprovalRuleTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -925,7 +1339,7 @@ ListRepositoriesResponse * CodeCommitClient::listRepositories(const ListReposito
  * Gets information about AWS tags for a specified Amazon Resource Name (ARN) in AWS CodeCommit. For a list of valid
  * resources in AWS CodeCommit, see <a
  * href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">CodeCommit
- * Resources and Operations</a> in the AWS CodeCommit User
+ * Resources and Operations</a> in the<i> AWS CodeCommit User
  */
 ListTagsForResourceResponse * CodeCommitClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -1015,6 +1429,19 @@ MergePullRequestByThreeWayResponse * CodeCommitClient::mergePullRequestByThreeWa
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * OverridePullRequestApprovalRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Sets aside (overrides) all approval rule requirements for a specified pull
+ */
+OverridePullRequestApprovalRulesResponse * CodeCommitClient::overridePullRequestApprovalRules(const OverridePullRequestApprovalRulesRequest &request)
+{
+    return qobject_cast<OverridePullRequestApprovalRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * PostCommentForComparedCommitResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1054,6 +1481,20 @@ PostCommentReplyResponse * CodeCommitClient::postCommentReply(const PostCommentR
 
 /*!
  * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * PutCommentReactionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds or updates a reaction to a specified comment for the user whose identity is used to make the request. You can only
+ * add or update a reaction for yourself. You cannot add, modify, or delete a reaction for another
+ */
+PutCommentReactionResponse * CodeCommitClient::putCommentReaction(const PutCommentReactionRequest &request)
+{
+    return qobject_cast<PutCommentReactionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
  * PutFileResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1072,7 +1513,7 @@ PutFileResponse * CodeCommitClient::putFile(const PutFileRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Replaces all triggers for a repository. This can be used to create or delete
+ * Replaces all triggers for a repository. Used to create or delete
  */
 PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const PutRepositoryTriggersRequest &request)
 {
@@ -1087,7 +1528,7 @@ PutRepositoryTriggersResponse * CodeCommitClient::putRepositoryTriggers(const Pu
  *
  * Adds or updates tags for a resource in AWS CodeCommit. For a list of valid resources in AWS CodeCommit, see <a
  * href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">CodeCommit
- * Resources and Operations</a> in the AWS CodeCommit User
+ * Resources and Operations</a> in the <i>AWS CodeCommit User
  */
 TagResourceResponse * CodeCommitClient::tagResource(const TagResourceRequest &request)
 {
@@ -1101,7 +1542,7 @@ TagResourceResponse * CodeCommitClient::tagResource(const TagResourceRequest &re
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Tests the functionality of repository triggers by sending information to the trigger target. If real data is available
- * in the repository, the test will send data from the last commit. If no data is available, sample data will be
+ * in the repository, the test sends data from the last commit. If no data is available, sample data is
  */
 TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const TestRepositoryTriggersRequest &request)
 {
@@ -1116,11 +1557,51 @@ TestRepositoryTriggersResponse * CodeCommitClient::testRepositoryTriggers(const 
  *
  * Removes tags for a resource in AWS CodeCommit. For a list of valid resources in AWS CodeCommit, see <a
  * href="https://docs.aws.amazon.com/codecommit/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats">CodeCommit
- * Resources and Operations</a> in the AWS CodeCommit User
+ * Resources and Operations</a> in the <i>AWS CodeCommit User
  */
 UntagResourceResponse * CodeCommitClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * UpdateApprovalRuleTemplateContentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the content of an approval rule template. You can change the number of required approvals, the membership of the
+ * approval rule, and whether an approval pool is
+ */
+UpdateApprovalRuleTemplateContentResponse * CodeCommitClient::updateApprovalRuleTemplateContent(const UpdateApprovalRuleTemplateContentRequest &request)
+{
+    return qobject_cast<UpdateApprovalRuleTemplateContentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * UpdateApprovalRuleTemplateDescriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the description for a specified approval rule
+ */
+UpdateApprovalRuleTemplateDescriptionResponse * CodeCommitClient::updateApprovalRuleTemplateDescription(const UpdateApprovalRuleTemplateDescriptionRequest &request)
+{
+    return qobject_cast<UpdateApprovalRuleTemplateDescriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * UpdateApprovalRuleTemplateNameResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the name of a specified approval rule
+ */
+UpdateApprovalRuleTemplateNameResponse * CodeCommitClient::updateApprovalRuleTemplateName(const UpdateApprovalRuleTemplateNameRequest &request)
+{
+    return qobject_cast<UpdateApprovalRuleTemplateNameResponse *>(send(request));
 }
 
 /*!
@@ -1152,6 +1633,34 @@ UpdateCommentResponse * CodeCommitClient::updateComment(const UpdateCommentReque
 UpdateDefaultBranchResponse * CodeCommitClient::updateDefaultBranch(const UpdateDefaultBranchRequest &request)
 {
     return qobject_cast<UpdateDefaultBranchResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * UpdatePullRequestApprovalRuleContentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the structure of an approval rule created specifically for a pull request. For example, you can change the
+ * number of required approvers and the approval pool for approvers.
+ */
+UpdatePullRequestApprovalRuleContentResponse * CodeCommitClient::updatePullRequestApprovalRuleContent(const UpdatePullRequestApprovalRuleContentRequest &request)
+{
+    return qobject_cast<UpdatePullRequestApprovalRuleContentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodeCommitClient service, and returns a pointer to an
+ * UpdatePullRequestApprovalStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the state of a user's approval on a pull request. The user is derived from the signed-in account when the
+ * request is
+ */
+UpdatePullRequestApprovalStateResponse * CodeCommitClient::updatePullRequestApprovalState(const UpdatePullRequestApprovalStateRequest &request)
+{
+    return qobject_cast<UpdatePullRequestApprovalStateResponse *>(send(request));
 }
 
 /*!
@@ -1204,9 +1713,9 @@ UpdatePullRequestTitleResponse * CodeCommitClient::updatePullRequestTitle(const 
  * repository> <note>
  *
  * The description field for a repository accepts all HTML characters and all valid Unicode characters. Applications that
- * do not HTML-encode the description and display it in a web page could expose users to potentially malicious code. Make
- * sure that you HTML-encode the description field in any application that uses this API to display the repository
- * description on a web
+ * do not HTML-encode the description and display it in a webpage can expose users to potentially malicious code. Make sure
+ * that you HTML-encode the description field in any application that uses this API to display the repository description
+ * on a
  */
 UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescription(const UpdateRepositoryDescriptionRequest &request)
 {
@@ -1219,9 +1728,9 @@ UpdateRepositoryDescriptionResponse * CodeCommitClient::updateRepositoryDescript
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Renames a repository. The repository name must be unique across the calling AWS account. In addition, repository names
- * are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix
- * ".git" is prohibited. For a full description of the limits on repository names, see <a
+ * Renames a repository. The repository name must be unique across the calling AWS account. Repository names are limited to
+ * 100 alphanumeric, dash, and underscore characters, and cannot include certain characters. The suffix .git is prohibited.
+ * For more information about the limits on repository names, see <a
  * href="https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html">Limits</a> in the AWS CodeCommit User
  */
 UpdateRepositoryNameResponse * CodeCommitClient::updateRepositoryName(const UpdateRepositoryNameRequest &request)

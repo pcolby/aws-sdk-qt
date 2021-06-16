@@ -34,27 +34,14 @@ namespace RAM {
  * \inmodule QtAwsRAM
  *
  *  Use AWS Resource Access Manager to share AWS resources between AWS accounts. To share a resource, you create a resource
- *  share, associate the resource with the resource share, and specify the principals that can access the resource. The
- *  following principals are
+ *  share, associate the resource with the resource share, and specify the principals that can access the resources
+ *  associated with the resource share. The following principals are supported: AWS accounts, organizational units (OU) from
+ *  AWS Organizations, and organizations from AWS
  * 
- *  supported> <ul> <li>
+ *  Organizations>
  * 
- *  The ID of an AWS
- * 
- *  accoun> </li> <li>
- * 
- *  The Amazon Resource Name (ARN) of an OU from AWS
- * 
- *  Organization> </li> <li>
- * 
- *  The Amazon Resource Name (ARN) of an organization from AWS
- * 
- *  Organization> </li> </ul>
- * 
- *  If you specify an AWS account that doesn't exist in the same organization as the account that owns the resource share,
- *  the owner of the specified account receives an invitation to accept the resource share. After the owner accepts the
- *  invitation, they can access the resources in the resource share. An administrator of the specified account can use IAM
- *  policies to restrict access resources in the resource
+ *  For more information, see the <a href="https://docs.aws.amazon.com/ram/latest/userguide/">AWS Resource Access Manager
+ *  User
  *
  * \sa RamClient::listResources
  */

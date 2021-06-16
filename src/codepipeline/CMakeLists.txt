@@ -47,6 +47,10 @@ add_library(QtAwsCodePipeline
   enablestagetransitionrequest_p.h
   enablestagetransitionresponse.h
   enablestagetransitionresponse_p.h
+  getactiontyperequest.h
+  getactiontyperequest_p.h
+  getactiontyperesponse.h
+  getactiontyperesponse_p.h
   getjobdetailsrequest.h
   getjobdetailsrequest_p.h
   getjobdetailsresponse.h
@@ -139,6 +143,10 @@ add_library(QtAwsCodePipeline
   startpipelineexecutionrequest_p.h
   startpipelineexecutionresponse.h
   startpipelineexecutionresponse_p.h
+  stoppipelineexecutionrequest.h
+  stoppipelineexecutionrequest_p.h
+  stoppipelineexecutionresponse.h
+  stoppipelineexecutionresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -147,6 +155,10 @@ add_library(QtAwsCodePipeline
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateactiontyperequest.h
+  updateactiontyperequest_p.h
+  updateactiontyperesponse.h
+  updateactiontyperesponse_p.h
   updatepipelinerequest.h
   updatepipelinerequest_p.h
   updatepipelineresponse.h
@@ -174,6 +186,8 @@ add_library(QtAwsCodePipeline
   disablestagetransitionresponse.cpp
   enablestagetransitionrequest.cpp
   enablestagetransitionresponse.cpp
+  getactiontyperequest.cpp
+  getactiontyperesponse.cpp
   getjobdetailsrequest.cpp
   getjobdetailsresponse.cpp
   getpipelineexecutionrequest.cpp
@@ -220,10 +234,14 @@ add_library(QtAwsCodePipeline
   retrystageexecutionresponse.cpp
   startpipelineexecutionrequest.cpp
   startpipelineexecutionresponse.cpp
+  stoppipelineexecutionrequest.cpp
+  stoppipelineexecutionresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateactiontyperequest.cpp
+  updateactiontyperesponse.cpp
   updatepipelinerequest.cpp
   updatepipelineresponse.cpp)
 

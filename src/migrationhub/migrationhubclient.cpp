@@ -39,6 +39,8 @@
 #include "disassociatediscoveredresourceresponse.h"
 #include "importmigrationtaskrequest.h"
 #include "importmigrationtaskresponse.h"
+#include "listapplicationstatesrequest.h"
+#include "listapplicationstatesresponse.h"
 #include "listcreatedartifactsrequest.h"
 #include "listcreatedartifactsresponse.h"
 #include "listdiscoveredresourcesrequest.h"
@@ -77,7 +79,12 @@ namespace MigrationHub {
  * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
- *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
+ *  resource-specific migration tool by providing a programmatic interface to Migration
+ * 
+ *  Hub>
+ * 
+ *  Remember that you must set your AWS Migration Hub home region before you call any of these APIs, or a
+ *  <code>HomeRegionNotSetException</code> error will be returned. Also, you must make the API calls while in your home
  */
 
 /*!
@@ -167,7 +174,7 @@ AssociateCreatedArtifactResponse * MigrationHubClient::associateCreatedArtifact(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a discovered resource ID from Application Discovery Service (ADS) with a migration
+ * Associates a discovered resource ID from Application Discovery Service with a migration
  */
 AssociateDiscoveredResourceResponse * MigrationHubClient::associateDiscoveredResource(const AssociateDiscoveredResourceRequest &request)
 {
@@ -216,7 +223,7 @@ CreateProgressUpdateStreamResponse * MigrationHubClient::createProgressUpdateStr
  * call> </li> <li>
  *
  * <code>CreateProgressUpdateStream</code>, <code>ImportMigrationTask</code>, <code>NotifyMigrationTaskState</code>, and
- * all Associate[*] APIs realted to the tasks belonging to the stream will throw "InvalidInputException" if the stream of
+ * all Associate[*] APIs related to the tasks belonging to the stream will throw "InvalidInputException" if the stream of
  * the same name is in the process of being
  *
  * deleted> </li> <li>
@@ -290,7 +297,7 @@ DisassociateCreatedArtifactResponse * MigrationHubClient::disassociateCreatedArt
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disassociate an Application Discovery Service (ADS) discovered resource from a migration
+ * Disassociate an Application Discovery Service discovered resource from a migration
  */
 DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscoveredResource(const DisassociateDiscoveredResourceRequest &request)
 {
@@ -313,6 +320,20 @@ DisassociateDiscoveredResourceResponse * MigrationHubClient::disassociateDiscove
 ImportMigrationTaskResponse * MigrationHubClient::importMigrationTask(const ImportMigrationTaskRequest &request)
 {
     return qobject_cast<ImportMigrationTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MigrationHubClient service, and returns a pointer to an
+ * ListApplicationStatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the migration statuses for your applications. If you use the optional <code>ApplicationIds</code> parameter,
+ * only the migration statuses for those applications will be
+ */
+ListApplicationStatesResponse * MigrationHubClient::listApplicationStates(const ListApplicationStatesRequest &request)
+{
+    return qobject_cast<ListApplicationStatesResponse *>(send(request));
 }
 
 /*!
@@ -440,21 +461,21 @@ NotifyMigrationTaskStateResponse * MigrationHubClient::notifyMigrationTaskState(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Provides identifying details of the resource being migrated so that it can be associated in the Application Discovery
- * Service (ADS)'s repository. This association occurs asynchronously after <code>PutResourceAttributes</code>
+ * Service repository. This association occurs asynchronously after <code>PutResourceAttributes</code>
  *
  * returns> <b> <ul> <li>
  *
  * Keep in mind that subsequent calls to PutResourceAttributes will override previously stored attributes. For example, if
  * it is first called with a MAC address, but later, it is desired to <i>add</i> an IP address, it will then be required to
- * call it with <i>both</i> the IP and MAC addresses to prevent overiding the MAC
+ * call it with <i>both</i> the IP and MAC addresses to prevent overriding the MAC
  *
  * address> </li> <li>
  *
  * Note the instructions regarding the special use case of the <a
  * href="https://docs.aws.amazon.com/migrationhub/latest/ug/API_PutResourceAttributes.html#migrationhub-PutResourceAttributes-request-ResourceAttributeList">
- * <code>ResourceAttributeList</code> </a> parameter when specifying any "VM" related value.
+ * <code>ResourceAttributeList</code> </a> parameter when specifying any "VM" related
  *
- * </p </li> </ul> </b> <note>
+ * value> </li> </ul> </b> <note>
  *
  * Because this is an asynchronous call, it will always return 200, whether an association occurs or not. To confirm if an
  * association was found based on the provided details, call

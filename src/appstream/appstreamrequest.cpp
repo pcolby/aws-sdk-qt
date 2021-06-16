@@ -46,6 +46,7 @@ namespace AppStream {
  * \value CreateImageBuilderStreamingURLAction AppStream CreateImageBuilderStreamingURL action.
  * \value CreateStackAction AppStream CreateStack action.
  * \value CreateStreamingURLAction AppStream CreateStreamingURL action.
+ * \value CreateUpdatedImageAction AppStream CreateUpdatedImage action.
  * \value CreateUsageReportSubscriptionAction AppStream CreateUsageReportSubscription action.
  * \value CreateUserAction AppStream CreateUser action.
  * \value DeleteDirectoryConfigAction AppStream DeleteDirectoryConfig action.

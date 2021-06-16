@@ -46,6 +46,8 @@ namespace CloudHSMV2 {
  * \value DescribeClustersAction CloudHSMV2 DescribeClusters action.
  * \value InitializeClusterAction CloudHSMV2 InitializeCluster action.
  * \value ListTagsAction CloudHSMV2 ListTags action.
+ * \value ModifyBackupAttributesAction CloudHSMV2 ModifyBackupAttributes action.
+ * \value ModifyClusterAction CloudHSMV2 ModifyCluster action.
  * \value RestoreBackupAction CloudHSMV2 RestoreBackup action.
  * \value TagResourceAction CloudHSMV2 TagResource action.
  * \value UntagResourceAction CloudHSMV2 UntagResource action.

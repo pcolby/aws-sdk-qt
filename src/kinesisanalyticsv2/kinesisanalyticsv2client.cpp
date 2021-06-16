@@ -31,8 +31,12 @@
 #include "addapplicationoutputresponse.h"
 #include "addapplicationreferencedatasourcerequest.h"
 #include "addapplicationreferencedatasourceresponse.h"
+#include "addapplicationvpcconfigurationrequest.h"
+#include "addapplicationvpcconfigurationresponse.h"
 #include "createapplicationrequest.h"
 #include "createapplicationresponse.h"
+#include "createapplicationpresignedurlrequest.h"
+#include "createapplicationpresignedurlresponse.h"
 #include "createapplicationsnapshotrequest.h"
 #include "createapplicationsnapshotresponse.h"
 #include "deleteapplicationrequest.h"
@@ -47,18 +51,26 @@
 #include "deleteapplicationreferencedatasourceresponse.h"
 #include "deleteapplicationsnapshotrequest.h"
 #include "deleteapplicationsnapshotresponse.h"
+#include "deleteapplicationvpcconfigurationrequest.h"
+#include "deleteapplicationvpcconfigurationresponse.h"
 #include "describeapplicationrequest.h"
 #include "describeapplicationresponse.h"
 #include "describeapplicationsnapshotrequest.h"
 #include "describeapplicationsnapshotresponse.h"
+#include "describeapplicationversionrequest.h"
+#include "describeapplicationversionresponse.h"
 #include "discoverinputschemarequest.h"
 #include "discoverinputschemaresponse.h"
 #include "listapplicationsnapshotsrequest.h"
 #include "listapplicationsnapshotsresponse.h"
+#include "listapplicationversionsrequest.h"
+#include "listapplicationversionsresponse.h"
 #include "listapplicationsrequest.h"
 #include "listapplicationsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "rollbackapplicationrequest.h"
+#include "rollbackapplicationresponse.h"
 #include "startapplicationrequest.h"
 #include "startapplicationresponse.h"
 #include "stopapplicationrequest.h"
@@ -69,6 +81,8 @@
 #include "untagresourceresponse.h"
 #include "updateapplicationrequest.h"
 #include "updateapplicationresponse.h"
+#include "updateapplicationmaintenanceconfigurationrequest.h"
+#include "updateapplicationmaintenanceconfigurationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -93,8 +107,8 @@ namespace KinesisAnalyticsV2 {
  * \inmodule QtAwsKinesisAnalyticsV2
  *
  *  Amazon Kinesis Data Analytics is a fully managed service that you can use to process and analyze streaming data using
- *  SQL or Java. The service enables you to quickly author and run SQL or Java code against streaming sources to perform
- *  time series analytics, feed real-time dashboards, and create real-time
+ *  Java, SQL, or Scala. The service enables you to quickly author and run Java, SQL, or Scala code against streaming
+ *  sources to perform time series analytics, feed real-time dashboards, and create real-time
  */
 
 /*!
@@ -169,7 +183,7 @@ AddApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsV2Client::addApp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a streaming source to your SQL-based Amazon Kinesis Data Analytics application.
+ * Adds a streaming source to your SQL-based Kinesis Data Analytics application.
  *
  * </p
  *
@@ -192,9 +206,9 @@ AddApplicationInputResponse * KinesisAnalyticsV2Client::addApplicationInput(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds an <a>InputProcessingConfiguration</a> to an SQL-based Kinesis Data Analytics application. An input processor
+ * Adds an <a>InputProcessingConfiguration</a> to a SQL-based Kinesis Data Analytics application. An input processor
  * pre-processes records on the input stream before the application's SQL code executes. Currently, the only input
- * processor available is <a href="https://aws.amazon.com/documentation/lambda/">AWS
+ * processor available is <a href="https://docs.aws.amazon.com/lambda/">AWS
  */
 AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsV2Client::addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request)
 {
@@ -207,7 +221,7 @@ AddApplicationInputProcessingConfigurationResponse * KinesisAnalyticsV2Client::a
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds an external destination to your SQL-based Amazon Kinesis Data Analytics
+ * Adds an external destination to your SQL-based Kinesis Data Analytics
  *
  * application>
  *
@@ -237,7 +251,7 @@ AddApplicationOutputResponse * KinesisAnalyticsV2Client::addApplicationOutput(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a reference data source to an existing SQL-based Amazon Kinesis Data Analytics
+ * Adds a reference data source to an existing SQL-based Kinesis Data Analytics
  *
  * application>
  *
@@ -253,17 +267,73 @@ AddApplicationReferenceDataSourceResponse * KinesisAnalyticsV2Client::addApplica
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * AddApplicationVpcConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a Virtual Private Cloud (VPC) configuration to the application. Applications can use VPCs to store and access
+ * resources
+ *
+ * securely>
+ *
+ * Note the following about VPC configurations for Kinesis Data Analytics
+ *
+ * applications> <ul> <li>
+ *
+ * VPC configurations are not supported for SQL
+ *
+ * applications> </li> <li>
+ *
+ * When a VPC is added to a Kinesis Data Analytics application, the application can no longer be accessed from the Internet
+ * directly. To enable Internet access to the application, add an Internet gateway to your
+ */
+AddApplicationVpcConfigurationResponse * KinesisAnalyticsV2Client::addApplicationVpcConfiguration(const AddApplicationVpcConfigurationRequest &request)
+{
+    return qobject_cast<AddApplicationVpcConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * CreateApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Amazon Kinesis Data Analytics application. For information about creating a Kinesis Data Analytics
- * application, see <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/getting-started.html">Creating an
- * Application</a>.
+ * Creates a Kinesis Data Analytics application. For information about creating a Kinesis Data Analytics application, see
+ * <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/getting-started.html">Creating an
  */
 CreateApplicationResponse * KinesisAnalyticsV2Client::createApplication(const CreateApplicationRequest &request)
 {
     return qobject_cast<CreateApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * CreateApplicationPresignedUrlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates and returns a URL that you can use to connect to an application's extension. Currently, the only available
+ * extension is the Apache Flink
+ *
+ * dashboard>
+ *
+ * The IAM role or user used to call this API defines the permissions to access the extension. After the presigned URL is
+ * created, no additional permission is required to access this URL. IAM authorization policies for this API are also
+ * enforced for every HTTP request that attempts to connect to the extension.
+ *
+ * </p
+ *
+ * You control the amount of time that the URL will be valid using the <code>SessionExpirationDurationInSeconds</code>
+ * parameter. If you do not provide this parameter, the returned URL is valid for twelve
+ *
+ * hours> <note>
+ *
+ * The URL that you get from a call to CreateApplicationPresignedUrl must be used within 3 minutes to be valid. If you
+ * first try to use the URL after the 3-minute limit expires, the service returns an HTTP 403 Forbidden
+ */
+CreateApplicationPresignedUrlResponse * KinesisAnalyticsV2Client::createApplicationPresignedUrl(const CreateApplicationPresignedUrlRequest &request)
+{
+    return qobject_cast<CreateApplicationPresignedUrlResponse *>(send(request));
 }
 
 /*!
@@ -298,7 +368,7 @@ DeleteApplicationResponse * KinesisAnalyticsV2Client::deleteApplication(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an Amazon CloudWatch log stream from an Amazon Kinesis Data Analytics application.
+ * Deletes an Amazon CloudWatch log stream from an Kinesis Data Analytics application.
  */
 DeleteApplicationCloudWatchLoggingOptionResponse * KinesisAnalyticsV2Client::deleteApplicationCloudWatchLoggingOption(const DeleteApplicationCloudWatchLoggingOptionRequest &request)
 {
@@ -324,9 +394,8 @@ DeleteApplicationInputProcessingConfigurationResponse * KinesisAnalyticsV2Client
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the output destination configuration from your SQL-based Amazon Kinesis Data Analytics application's
- * configuration. Kinesis Data Analytics will no longer write data from the corresponding in-application stream to the
- * external output
+ * Deletes the output destination configuration from your SQL-based Kinesis Data Analytics application's configuration.
+ * Kinesis Data Analytics will no longer write data from the corresponding in-application stream to the external output
  */
 DeleteApplicationOutputResponse * KinesisAnalyticsV2Client::deleteApplicationOutput(const DeleteApplicationOutputRequest &request)
 {
@@ -339,7 +408,7 @@ DeleteApplicationOutputResponse * KinesisAnalyticsV2Client::deleteApplicationOut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a reference data source configuration from the specified SQL-based Amazon Kinesis Data Analytics application's
+ * Deletes a reference data source configuration from the specified SQL-based Kinesis Data Analytics application's
  *
  * configuration>
  *
@@ -366,11 +435,24 @@ DeleteApplicationSnapshotResponse * KinesisAnalyticsV2Client::deleteApplicationS
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * DeleteApplicationVpcConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a VPC configuration from a Kinesis Data Analytics
+ */
+DeleteApplicationVpcConfigurationResponse * KinesisAnalyticsV2Client::deleteApplicationVpcConfiguration(const DeleteApplicationVpcConfigurationRequest &request)
+{
+    return qobject_cast<DeleteApplicationVpcConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * DescribeApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a specific Amazon Kinesis Data Analytics
+ * Returns information about a specific Kinesis Data Analytics
  *
  * application>
  *
@@ -396,11 +478,29 @@ DescribeApplicationSnapshotResponse * KinesisAnalyticsV2Client::describeApplicat
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * DescribeApplicationVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a detailed description of a specified version of the application. To see a list of all the versions of an
+ * application, invoke the <a>ListApplicationVersions</a>
+ *
+ * operation> <note>
+ *
+ * This operation is supported only for Amazon Kinesis Data Analytics for Apache
+ */
+DescribeApplicationVersionResponse * KinesisAnalyticsV2Client::describeApplicationVersion(const DescribeApplicationVersionRequest &request)
+{
+    return qobject_cast<DescribeApplicationVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * DiscoverInputSchemaResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Infers a schema for an SQL-based Amazon Kinesis Data Analytics application by evaluating sample records on the specified
+ * Infers a schema for a SQL-based Kinesis Data Analytics application by evaluating sample records on the specified
  * streaming source (Kinesis data stream or Kinesis Data Firehose delivery stream) or Amazon S3 object. In the response,
  * the operation returns the inferred schema and also the sample records that the operation used to infer the
  *
@@ -430,12 +530,34 @@ ListApplicationSnapshotsResponse * KinesisAnalyticsV2Client::listApplicationSnap
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * ListApplicationVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the versions for the specified application, including versions that were rolled back. The response also
+ * includes a summary of the configuration associated with each
+ *
+ * version>
+ *
+ * To get the complete description of a specific application version, invoke the <a>DescribeApplicationVersion</a>
+ *
+ * operation> <note>
+ *
+ * This operation is supported only for Amazon Kinesis Data Analytics for Apache
+ */
+ListApplicationVersionsResponse * KinesisAnalyticsV2Client::listApplicationVersions(const ListApplicationVersionsRequest &request)
+{
+    return qobject_cast<ListApplicationVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * ListApplicationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of Amazon Kinesis Data Analytics applications in your account. For each application, the response
- * includes the application name, Amazon Resource Name (ARN), and status.
+ * Returns a list of Kinesis Data Analytics applications in your account. For each application, the response includes the
+ * application name, Amazon Resource Name (ARN), and status.
  *
  * </p
  *
@@ -452,7 +574,8 @@ ListApplicationsResponse * KinesisAnalyticsV2Client::listApplications(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the list of key-value tags assigned to the
+ * Retrieves the list of key-value tags assigned to the application. For more information, see <a
+ * href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/how-tagging.html">Using
  */
 ListTagsForResourceResponse * KinesisAnalyticsV2Client::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -461,12 +584,39 @@ ListTagsForResourceResponse * KinesisAnalyticsV2Client::listTagsForResource(cons
 
 /*!
  * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * RollbackApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Reverts the application to the previous running version. You can roll back an application if you suspect it is stuck in
+ * a transient status.
+ *
+ * </p
+ *
+ * You can roll back an application only if it is in the <code>UPDATING</code> or <code>AUTOSCALING</code>
+ *
+ * status>
+ *
+ * When you rollback an application, it loads state data from the last successful snapshot. If the application has no
+ * snapshots, Kinesis Data Analytics rejects the rollback
+ *
+ * request>
+ *
+ * This action is not supported for Kinesis Data Analytics for SQL
+ */
+RollbackApplicationResponse * KinesisAnalyticsV2Client::rollbackApplication(const RollbackApplicationRequest &request)
+{
+    return qobject_cast<RollbackApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
  * StartApplicationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts the specified Amazon Kinesis Data Analytics application. After creating an application, you must exclusively call
- * this operation to start your
+ * Starts the specified Kinesis Data Analytics application. After creating an application, you must exclusively call this
+ * operation to start your
  */
 StartApplicationResponse * KinesisAnalyticsV2Client::startApplication(const StartApplicationRequest &request)
 {
@@ -479,8 +629,16 @@ StartApplicationResponse * KinesisAnalyticsV2Client::startApplication(const Star
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stops the application from processing data. You can stop an application only if it is in the running state. You can use
- * the <a>DescribeApplication</a> operation to find the application state.
+ * Stops the application from processing data. You can stop an application only if it is in the running status, unless you
+ * set the <code>Force</code> parameter to
+ *
+ * <code>true</code>>
+ *
+ * You can use the <a>DescribeApplication</a> operation to find the application status.
+ *
+ * </p
+ *
+ * Kinesis Data Analytics takes a snapshot when the application is stopped, unless <code>Force</code> is set to
  */
 StopApplicationResponse * KinesisAnalyticsV2Client::stopApplication(const StopApplicationRequest &request)
 {
@@ -493,8 +651,9 @@ StopApplicationResponse * KinesisAnalyticsV2Client::stopApplication(const StopAp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more key-value tags to a Kinesis Analytics application. Note that the maximum number of application tags
- * includes system tags. The maximum number of user-defined application tags is
+ * Adds one or more key-value tags to a Kinesis Data Analytics application. Note that the maximum number of application
+ * tags includes system tags. The maximum number of user-defined application tags is 50. For more information, see <a
+ * href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/how-tagging.html">Using
  */
 TagResourceResponse * KinesisAnalyticsV2Client::tagResource(const TagResourceRequest &request)
 {
@@ -507,7 +666,8 @@ TagResourceResponse * KinesisAnalyticsV2Client::tagResource(const TagResourceReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags from a Kinesis Analytics
+ * Removes one or more tags from a Kinesis Data Analytics application. For more information, see <a
+ * href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/how-tagging.html">Using
  */
 UntagResourceResponse * KinesisAnalyticsV2Client::untagResource(const UntagResourceRequest &request)
 {
@@ -520,16 +680,57 @@ UntagResourceResponse * KinesisAnalyticsV2Client::untagResource(const UntagResou
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing Amazon Kinesis Data Analytics application. Using this operation, you can update application code,
- * input configuration, and output configuration.
+ * Updates an existing Kinesis Data Analytics application. Using this operation, you can update application code, input
+ * configuration, and output configuration.
  *
  * </p
  *
  * Kinesis Data Analytics updates the <code>ApplicationVersionId</code> each time you update your application.
+ *
+ * </p <note>
+ *
+ * You cannot update the <code>RuntimeEnvironment</code> of an existing application. If you need to update an application's
+ * <code>RuntimeEnvironment</code>, you must delete the application and create it
  */
 UpdateApplicationResponse * KinesisAnalyticsV2Client::updateApplication(const UpdateApplicationRequest &request)
 {
     return qobject_cast<UpdateApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisAnalyticsV2Client service, and returns a pointer to an
+ * UpdateApplicationMaintenanceConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the maintenance configuration of the Kinesis Data Analytics application.
+ *
+ * </p
+ *
+ * You can invoke this operation on an application that is in one of the two following states: <code>READY</code> or
+ * <code>RUNNING</code>. If you invoke it when the application is in a state other than these two states, it throws a
+ * <code>ResourceInUseException</code>. The service makes use of the updated configuration the next time it schedules
+ * maintenance for the application. If you invoke this operation after the service schedules maintenance, the service will
+ * apply the configuration update the next time it schedules maintenance for the application. This means that you might not
+ * see the maintenance configuration update applied to the maintenance process that follows a successful invocation of this
+ * operation, but to the following maintenance process
+ *
+ * instead>
+ *
+ * To see the current maintenance configuration of your application, invoke the <a>DescribeApplication</a>
+ *
+ * operation>
+ *
+ * For information about application maintenance, see <a
+ * href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/maintenance.html">Kinesis Data Analytics for Apache Flink
+ *
+ * Maintenance</a>> <note>
+ *
+ * This operation is supported only for Amazon Kinesis Data Analytics for Apache
+ */
+UpdateApplicationMaintenanceConfigurationResponse * KinesisAnalyticsV2Client::updateApplicationMaintenanceConfiguration(const UpdateApplicationMaintenanceConfigurationRequest &request)
+{
+    return qobject_cast<UpdateApplicationMaintenanceConfigurationResponse *>(send(request));
 }
 
 /*!

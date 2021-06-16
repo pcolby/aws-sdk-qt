@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsTimestreamWrite
+description = AWS TimestreamWrite SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawstimestreamwrite-index.html"
+navigation.landingtitle = "TimestreamWrite"
+navigation.cppclassespage = "TimestreamWrite C++ Classes"

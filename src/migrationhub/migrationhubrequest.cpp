@@ -45,6 +45,7 @@ namespace MigrationHub {
  * \value DisassociateCreatedArtifactAction MigrationHub DisassociateCreatedArtifact action.
  * \value DisassociateDiscoveredResourceAction MigrationHub DisassociateDiscoveredResource action.
  * \value ImportMigrationTaskAction MigrationHub ImportMigrationTask action.
+ * \value ListApplicationStatesAction MigrationHub ListApplicationStates action.
  * \value ListCreatedArtifactsAction MigrationHub ListCreatedArtifacts action.
  * \value ListDiscoveredResourcesAction MigrationHub ListDiscoveredResources action.
  * \value ListMigrationTasksAction MigrationHub ListMigrationTasks action.

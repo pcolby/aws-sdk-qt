@@ -38,6 +38,7 @@ public:
     /// Actions supported by EC2InstanceConnect.
     enum Action {
         SendSSHPublicKeyAction,
+        SendSerialConsoleSSHPublicKeyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

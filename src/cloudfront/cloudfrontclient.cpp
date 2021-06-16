@@ -21,6 +21,8 @@
 #include "cloudfrontclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createcachepolicyrequest.h"
+#include "createcachepolicyresponse.h"
 #include "createcloudfrontoriginaccessidentityrequest.h"
 #include "createcloudfrontoriginaccessidentityresponse.h"
 #include "createdistributionrequest.h"
@@ -31,14 +33,26 @@
 #include "createfieldlevelencryptionconfigresponse.h"
 #include "createfieldlevelencryptionprofilerequest.h"
 #include "createfieldlevelencryptionprofileresponse.h"
+#include "createfunctionrequest.h"
+#include "createfunctionresponse.h"
 #include "createinvalidationrequest.h"
 #include "createinvalidationresponse.h"
+#include "createkeygrouprequest.h"
+#include "createkeygroupresponse.h"
+#include "createmonitoringsubscriptionrequest.h"
+#include "createmonitoringsubscriptionresponse.h"
+#include "createoriginrequestpolicyrequest.h"
+#include "createoriginrequestpolicyresponse.h"
 #include "createpublickeyrequest.h"
 #include "createpublickeyresponse.h"
+#include "createrealtimelogconfigrequest.h"
+#include "createrealtimelogconfigresponse.h"
 #include "createstreamingdistributionrequest.h"
 #include "createstreamingdistributionresponse.h"
 #include "createstreamingdistributionwithtagsrequest.h"
 #include "createstreamingdistributionwithtagsresponse.h"
+#include "deletecachepolicyrequest.h"
+#include "deletecachepolicyresponse.h"
 #include "deletecloudfrontoriginaccessidentityrequest.h"
 #include "deletecloudfrontoriginaccessidentityresponse.h"
 #include "deletedistributionrequest.h"
@@ -47,10 +61,26 @@
 #include "deletefieldlevelencryptionconfigresponse.h"
 #include "deletefieldlevelencryptionprofilerequest.h"
 #include "deletefieldlevelencryptionprofileresponse.h"
+#include "deletefunctionrequest.h"
+#include "deletefunctionresponse.h"
+#include "deletekeygrouprequest.h"
+#include "deletekeygroupresponse.h"
+#include "deletemonitoringsubscriptionrequest.h"
+#include "deletemonitoringsubscriptionresponse.h"
+#include "deleteoriginrequestpolicyrequest.h"
+#include "deleteoriginrequestpolicyresponse.h"
 #include "deletepublickeyrequest.h"
 #include "deletepublickeyresponse.h"
+#include "deleterealtimelogconfigrequest.h"
+#include "deleterealtimelogconfigresponse.h"
 #include "deletestreamingdistributionrequest.h"
 #include "deletestreamingdistributionresponse.h"
+#include "describefunctionrequest.h"
+#include "describefunctionresponse.h"
+#include "getcachepolicyrequest.h"
+#include "getcachepolicyresponse.h"
+#include "getcachepolicyconfigrequest.h"
+#include "getcachepolicyconfigresponse.h"
 #include "getcloudfrontoriginaccessidentityrequest.h"
 #include "getcloudfrontoriginaccessidentityresponse.h"
 #include "getcloudfrontoriginaccessidentityconfigrequest.h"
@@ -67,38 +97,76 @@
 #include "getfieldlevelencryptionprofileresponse.h"
 #include "getfieldlevelencryptionprofileconfigrequest.h"
 #include "getfieldlevelencryptionprofileconfigresponse.h"
+#include "getfunctionrequest.h"
+#include "getfunctionresponse.h"
 #include "getinvalidationrequest.h"
 #include "getinvalidationresponse.h"
+#include "getkeygrouprequest.h"
+#include "getkeygroupresponse.h"
+#include "getkeygroupconfigrequest.h"
+#include "getkeygroupconfigresponse.h"
+#include "getmonitoringsubscriptionrequest.h"
+#include "getmonitoringsubscriptionresponse.h"
+#include "getoriginrequestpolicyrequest.h"
+#include "getoriginrequestpolicyresponse.h"
+#include "getoriginrequestpolicyconfigrequest.h"
+#include "getoriginrequestpolicyconfigresponse.h"
 #include "getpublickeyrequest.h"
 #include "getpublickeyresponse.h"
 #include "getpublickeyconfigrequest.h"
 #include "getpublickeyconfigresponse.h"
+#include "getrealtimelogconfigrequest.h"
+#include "getrealtimelogconfigresponse.h"
 #include "getstreamingdistributionrequest.h"
 #include "getstreamingdistributionresponse.h"
 #include "getstreamingdistributionconfigrequest.h"
 #include "getstreamingdistributionconfigresponse.h"
+#include "listcachepoliciesrequest.h"
+#include "listcachepoliciesresponse.h"
 #include "listcloudfrontoriginaccessidentitiesrequest.h"
 #include "listcloudfrontoriginaccessidentitiesresponse.h"
 #include "listdistributionsrequest.h"
 #include "listdistributionsresponse.h"
+#include "listdistributionsbycachepolicyidrequest.h"
+#include "listdistributionsbycachepolicyidresponse.h"
+#include "listdistributionsbykeygrouprequest.h"
+#include "listdistributionsbykeygroupresponse.h"
+#include "listdistributionsbyoriginrequestpolicyidrequest.h"
+#include "listdistributionsbyoriginrequestpolicyidresponse.h"
+#include "listdistributionsbyrealtimelogconfigrequest.h"
+#include "listdistributionsbyrealtimelogconfigresponse.h"
 #include "listdistributionsbywebaclidrequest.h"
 #include "listdistributionsbywebaclidresponse.h"
 #include "listfieldlevelencryptionconfigsrequest.h"
 #include "listfieldlevelencryptionconfigsresponse.h"
 #include "listfieldlevelencryptionprofilesrequest.h"
 #include "listfieldlevelencryptionprofilesresponse.h"
+#include "listfunctionsrequest.h"
+#include "listfunctionsresponse.h"
 #include "listinvalidationsrequest.h"
 #include "listinvalidationsresponse.h"
+#include "listkeygroupsrequest.h"
+#include "listkeygroupsresponse.h"
+#include "listoriginrequestpoliciesrequest.h"
+#include "listoriginrequestpoliciesresponse.h"
 #include "listpublickeysrequest.h"
 #include "listpublickeysresponse.h"
+#include "listrealtimelogconfigsrequest.h"
+#include "listrealtimelogconfigsresponse.h"
 #include "liststreamingdistributionsrequest.h"
 #include "liststreamingdistributionsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "publishfunctionrequest.h"
+#include "publishfunctionresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
+#include "testfunctionrequest.h"
+#include "testfunctionresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatecachepolicyrequest.h"
+#include "updatecachepolicyresponse.h"
 #include "updatecloudfrontoriginaccessidentityrequest.h"
 #include "updatecloudfrontoriginaccessidentityresponse.h"
 #include "updatedistributionrequest.h"
@@ -107,8 +175,16 @@
 #include "updatefieldlevelencryptionconfigresponse.h"
 #include "updatefieldlevelencryptionprofilerequest.h"
 #include "updatefieldlevelencryptionprofileresponse.h"
+#include "updatefunctionrequest.h"
+#include "updatefunctionresponse.h"
+#include "updatekeygrouprequest.h"
+#include "updatekeygroupresponse.h"
+#include "updateoriginrequestpolicyrequest.h"
+#include "updateoriginrequestpolicyresponse.h"
 #include "updatepublickeyrequest.h"
 #include "updatepublickeyresponse.h"
+#include "updaterealtimelogconfigrequest.h"
+#include "updaterealtimelogconfigresponse.h"
 #include "updatestreamingdistributionrequest.h"
 #include "updatestreamingdistributionresponse.h"
 
@@ -157,7 +233,7 @@ CloudFrontClient::CloudFrontClient(
 : QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->apiVersion = QStringLiteral("2019-03-26");
+    d->apiVersion = QStringLiteral("2020-05-31");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("cloudfront");
     d->networkAccessManager = manager;
@@ -185,13 +261,52 @@ CloudFrontClient::CloudFrontClient(
 : QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
     Q_D(CloudFrontClient);
-    d->apiVersion = QStringLiteral("2019-03-26");
+    d->apiVersion = QStringLiteral("2020-05-31");
     d->credentials = credentials;
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("cloudfront");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("Amazon CloudFront");
     d->serviceName = QStringLiteral("cloudfront");
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateCachePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a cache
+ *
+ * policy>
+ *
+ * After you create a cache policy, you can attach it to one or more cache behaviors. When it’s attached to a cache
+ * behavior, the cache policy determines the
+ *
+ * following> <ul> <li>
+ *
+ * The values that CloudFront includes in the <i>cache key</i>. These values can include HTTP headers, cookies, and URL
+ * query strings. CloudFront uses the cache key to find an object in its cache that it can return to the
+ *
+ * viewer> </li> <li>
+ *
+ * The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront
+ *
+ * cache> </li> </ul>
+ *
+ * The headers, cookies, and query strings that are included in the cache key are automatically included in requests that
+ * CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the
+ * request’s cache key. If you want to send values to the origin but <i>not</i> include them in the cache key, use
+ *
+ * <code>OriginRequestPolicy</code>>
+ *
+ * For more information about cache policies, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">Controlling the
+ * cache key</a> in the <i>Amazon CloudFront Developer
+ */
+CreateCachePolicyResponse * CloudFrontClient::createCachePolicy(const CreateCachePolicyRequest &request)
+{
+    return qobject_cast<CreateCachePolicyResponse *>(send(request));
 }
 
 /*!
@@ -277,6 +392,35 @@ CreateFieldLevelEncryptionProfileResponse * CloudFrontClient::createFieldLevelEn
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a CloudFront
+ *
+ * function>
+ *
+ * To create a function, you provide the function code and some configuration information about the function. The response
+ * contains an Amazon Resource Name (ARN) that uniquely identifies the
+ *
+ * function>
+ *
+ * When you create a function, it’s in the <code>DEVELOPMENT</code> stage. In this stage, you can test the function with
+ * <code>TestFunction</code>, and update it with
+ *
+ * <code>UpdateFunction</code>>
+ *
+ * When you’re ready to use your function with a CloudFront distribution, use <code>PublishFunction</code> to copy the
+ * function from the <code>DEVELOPMENT</code> stage to <code>LIVE</code>. When it’s live, you can attach the function to a
+ * distribution’s cache behavior, using the function’s
+ */
+CreateFunctionResponse * CloudFrontClient::createFunction(const CreateFunctionRequest &request)
+{
+    return qobject_cast<CreateFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * CreateInvalidationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -290,12 +434,103 @@ CreateInvalidationResponse * CloudFrontClient::createInvalidation(const CreateIn
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateKeyGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a key group that you can use with <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">CloudFront signed URLs and
+ * signed
+ *
+ * cookies</a>>
+ *
+ * To create a key group, you must specify at least one public key for the key group. After you create a key group, you can
+ * reference it from one or more cache behaviors. When you reference a key group in a cache behavior, CloudFront requires
+ * signed URLs or signed cookies for all requests that match the cache behavior. The URLs or cookies must be signed with a
+ * private key whose corresponding public key is in the key group. The signed URL or cookie contains information about
+ * which public key CloudFront should use to verify the signature. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">Serving private
+ * content</a> in the <i>Amazon CloudFront Developer
+ */
+CreateKeyGroupResponse * CloudFrontClient::createKeyGroup(const CreateKeyGroupRequest &request)
+{
+    return qobject_cast<CreateKeyGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateMonitoringSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an
+ * additional
+ *
+ * cost>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/viewing-cloudfront-metrics.html#monitoring-console.distributions-additional">Viewing
+ * additional CloudFront distribution metrics</a> in the <i>Amazon CloudFront Developer
+ */
+CreateMonitoringSubscriptionResponse * CloudFrontClient::createMonitoringSubscription(const CreateMonitoringSubscriptionRequest &request)
+{
+    return qobject_cast<CreateMonitoringSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateOriginRequestPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an origin request
+ *
+ * policy>
+ *
+ * After you create an origin request policy, you can attach it to one or more cache behaviors. When it’s attached to a
+ * cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to
+ * the origin. Each request that CloudFront sends to the origin includes the
+ *
+ * following> <ul> <li>
+ *
+ * The request body and the URL path (without the domain name) from the viewer
+ *
+ * request> </li> <li>
+ *
+ * The headers that CloudFront automatically includes in every origin request, including <code>Host</code>,
+ * <code>User-Agent</code>, and
+ *
+ * <code>X-Amz-Cf-Id</code>> </li> <li>
+ *
+ * All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy.
+ * These can include items from the viewer request and, in the case of headers, additional ones that are added by
+ *
+ * CloudFront> </li> </ul>
+ *
+ * CloudFront sends a request when it can’t find a valid object in its cache that matches the request. If you want to send
+ * values to the origin and also include them in the cache key, use
+ *
+ * <code>CachePolicy</code>>
+ *
+ * For more information about origin request policies, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">Controlling
+ * origin requests</a> in the <i>Amazon CloudFront Developer
+ */
+CreateOriginRequestPolicyResponse * CloudFrontClient::createOriginRequestPolicy(const CreateOriginRequestPolicyRequest &request)
+{
+    return qobject_cast<CreateOriginRequestPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * CreatePublicKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public
- * keys with one AWS
+ * Uploads a public key to CloudFront that you can use with <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">signed URLs and signed
+ * cookies</a>, or with <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html">field-level
  */
 CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKeyRequest &request)
 {
@@ -304,40 +539,37 @@ CreatePublicKeyResponse * CloudFrontClient::createPublicKey(const CreatePublicKe
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * CreateRealtimeLogConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a real-time log
+ *
+ * configuration>
+ *
+ * After you create a real-time log configuration, you can attach it to one or more cache behaviors to send real-time log
+ * data to the specified Amazon Kinesis data
+ *
+ * stream>
+ *
+ * For more information about real-time log configurations, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html">Real-time logs</a> in the
+ * <i>Amazon CloudFront Developer
+ */
+CreateRealtimeLogConfigResponse * CloudFrontClient::createRealtimeLogConfig(const CreateRealtimeLogConfigRequest &request)
+{
+    return qobject_cast<CreateRealtimeLogConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * CreateStreamingDistributionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new RTMP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams
- * media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.
- *
- * </p
- *
- * To create a new distribution, submit a <code>POST</code> request to the <i>CloudFront API version</i>/distribution
- * resource. The request body must include a document with a <i>StreamingDistributionConfig</i> element. The response
- * echoes the <code>StreamingDistributionConfig</code> element and returns other information about the RTMP
- *
- * distribution>
- *
- * To get the status of your request, use the <i>GET StreamingDistribution</i> API action. When the value of
- * <code>Enabled</code> is <code>true</code> and the value of <code>Status</code> is <code>Deployed</code>, your
- * distribution is ready. A distribution usually deploys in less than 15
- *
- * minutes>
- *
- * For more information about web distributions, see <a
- * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-rtmp.html">Working with RTMP
- * Distributions</a> in the <i>Amazon CloudFront Developer
- *
- * Guide</i>> <b>
- *
- * Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML
- * document that you include in the request body when you create or update a web distribution or an RTMP distribution, and
- * when you invalidate objects. With previous versions of the API, we discovered that it was too easy to accidentally
- * delete one or more values for an element that accepts multiple values, for example, CNAMEs and trusted signers. Our
- * changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a
- * mismatch between the number of values you say you're specifying in the <code>Quantity</code> element and the number of
- * values
+ * This API is deprecated. Amazon CloudFront is deprecating real-time messaging protocol (RTMP) distributions on December
+ * 31, 2020. For more information, <a href="http://forums.aws.amazon.com/ann.jspa?annID=7356">read the announcement</a> on
+ * the Amazon CloudFront discussion
  */
 CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribution(const CreateStreamingDistributionRequest &request)
 {
@@ -350,11 +582,36 @@ CreateStreamingDistributionResponse * CloudFrontClient::createStreamingDistribut
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a new streaming distribution with
+ * This API is deprecated. Amazon CloudFront is deprecating real-time messaging protocol (RTMP) distributions on December
+ * 31, 2020. For more information, <a href="http://forums.aws.amazon.com/ann.jspa?annID=7356">read the announcement</a> on
+ * the Amazon CloudFront discussion
  */
 CreateStreamingDistributionWithTagsResponse * CloudFrontClient::createStreamingDistributionWithTags(const CreateStreamingDistributionWithTagsRequest &request)
 {
     return qobject_cast<CreateStreamingDistributionWithTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteCachePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a cache
+ *
+ * policy>
+ *
+ * You cannot delete a cache policy if it’s attached to a cache behavior. First update your distributions to remove the
+ * cache policy from all cache behaviors, then delete the cache
+ *
+ * policy>
+ *
+ * To delete a cache policy, you must provide the policy’s identifier and version. To get these values, you can use
+ * <code>ListCachePolicies</code> or
+ */
+DeleteCachePolicyResponse * CloudFrontClient::deleteCachePolicy(const DeleteCachePolicyRequest &request)
+{
+    return qobject_cast<DeleteCachePolicyResponse *>(send(request));
 }
 
 /*!
@@ -411,6 +668,88 @@ DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEn
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a CloudFront
+ *
+ * function>
+ *
+ * You cannot delete a function if it’s associated with a cache behavior. First, update your distributions to remove the
+ * function association from all cache behaviors, then delete the
+ *
+ * function>
+ *
+ * To delete a function, you must provide the function’s name and version (<code>ETag</code> value). To get these values,
+ * you can use <code>ListFunctions</code> and
+ */
+DeleteFunctionResponse * CloudFrontClient::deleteFunction(const DeleteFunctionRequest &request)
+{
+    return qobject_cast<DeleteFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteKeyGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a key
+ *
+ * group>
+ *
+ * You cannot delete a key group that is referenced in a cache behavior. First update your distributions to remove the key
+ * group from all cache behaviors, then delete the key
+ *
+ * group>
+ *
+ * To delete a key group, you must provide the key group’s identifier and version. To get these values, use
+ * <code>ListKeyGroups</code> followed by <code>GetKeyGroup</code> or
+ */
+DeleteKeyGroupResponse * CloudFrontClient::deleteKeyGroup(const DeleteKeyGroupRequest &request)
+{
+    return qobject_cast<DeleteKeyGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteMonitoringSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables additional CloudWatch metrics for the specified CloudFront
+ */
+DeleteMonitoringSubscriptionResponse * CloudFrontClient::deleteMonitoringSubscription(const DeleteMonitoringSubscriptionRequest &request)
+{
+    return qobject_cast<DeleteMonitoringSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteOriginRequestPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an origin request
+ *
+ * policy>
+ *
+ * You cannot delete an origin request policy if it’s attached to any cache behaviors. First update your distributions to
+ * remove the origin request policy from all cache behaviors, then delete the origin request
+ *
+ * policy>
+ *
+ * To delete an origin request policy, you must provide the policy’s identifier and version. To get the identifier, you can
+ * use <code>ListOriginRequestPolicies</code> or
+ */
+DeleteOriginRequestPolicyResponse * CloudFrontClient::deleteOriginRequestPolicy(const DeleteOriginRequestPolicyRequest &request)
+{
+    return qobject_cast<DeleteOriginRequestPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * DeletePublicKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -420,6 +759,29 @@ DeleteFieldLevelEncryptionProfileResponse * CloudFrontClient::deleteFieldLevelEn
 DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKeyRequest &request)
 {
     return qobject_cast<DeletePublicKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DeleteRealtimeLogConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a real-time log
+ *
+ * configuration>
+ *
+ * You cannot delete a real-time log configuration if it’s attached to a cache behavior. First update your distributions to
+ * remove the real-time log configuration from all cache behaviors, then delete the real-time log
+ *
+ * configuration>
+ *
+ * To delete a real-time log configuration, you can provide the configuration’s name or its Amazon Resource Name (ARN). You
+ * must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to
+ */
+DeleteRealtimeLogConfigResponse * CloudFrontClient::deleteRealtimeLogConfig(const DeleteRealtimeLogConfigRequest &request)
+{
+    return qobject_cast<DeleteRealtimeLogConfigResponse *>(send(request));
 }
 
 /*!
@@ -485,6 +847,71 @@ DeletePublicKeyResponse * CloudFrontClient::deletePublicKey(const DeletePublicKe
 DeleteStreamingDistributionResponse * CloudFrontClient::deleteStreamingDistribution(const DeleteStreamingDistributionRequest &request)
 {
     return qobject_cast<DeleteStreamingDistributionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * DescribeFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets configuration information and metadata about a CloudFront function, but not the function’s code. To get a
+ * function’s code, use
+ *
+ * <code>GetFunction</code>>
+ *
+ * To get configuration information and metadata about a function, you must provide the function’s name and stage. To get
+ * these values, you can use
+ */
+DescribeFunctionResponse * CloudFrontClient::describeFunction(const DescribeFunctionRequest &request)
+{
+    return qobject_cast<DescribeFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetCachePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a cache policy, including the following
+ *
+ * metadata> <ul> <li>
+ *
+ * The policy’s
+ *
+ * identifier> </li> <li>
+ *
+ * The date and time when the policy was last
+ *
+ * modified> </li> </ul>
+ *
+ * To get a cache policy, you must provide the policy’s identifier. If the cache policy is attached to a distribution’s
+ * cache behavior, you can get the policy’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the cache policy is not attached to a cache behavior, you can get the identifier using
+ */
+GetCachePolicyResponse * CloudFrontClient::getCachePolicy(const GetCachePolicyRequest &request)
+{
+    return qobject_cast<GetCachePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetCachePolicyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a cache policy
+ *
+ * configuration>
+ *
+ * To get a cache policy configuration, you must provide the policy’s identifier. If the cache policy is attached to a
+ * distribution’s cache behavior, you can get the policy’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the cache policy is not attached to a cache behavior, you can get the identifier using
+ */
+GetCachePolicyConfigResponse * CloudFrontClient::getCachePolicyConfig(const GetCachePolicyConfigRequest &request)
+{
+    return qobject_cast<GetCachePolicyConfigResponse *>(send(request));
 }
 
 /*!
@@ -593,6 +1020,23 @@ GetFieldLevelEncryptionProfileConfigResponse * CloudFrontClient::getFieldLevelEn
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the code of a CloudFront function. To get configuration information and metadata about a function, use
+ *
+ * <code>DescribeFunction</code>>
+ *
+ * To get a function’s code, you must provide the function’s name and stage. To get these values, you can use
+ */
+GetFunctionResponse * CloudFrontClient::getFunction(const GetFunctionRequest &request)
+{
+    return qobject_cast<GetFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * GetInvalidationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -606,11 +1050,110 @@ GetInvalidationResponse * CloudFrontClient::getInvalidation(const GetInvalidatio
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetKeyGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a key group, including the date and time when the key group was last
+ *
+ * modified>
+ *
+ * To get a key group, you must provide the key group’s identifier. If the key group is referenced in a distribution’s
+ * cache behavior, you can get the key group’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the key group is not referenced in a cache behavior, you can get the identifier using
+ */
+GetKeyGroupResponse * CloudFrontClient::getKeyGroup(const GetKeyGroupRequest &request)
+{
+    return qobject_cast<GetKeyGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetKeyGroupConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a key group
+ *
+ * configuration>
+ *
+ * To get a key group configuration, you must provide the key group’s identifier. If the key group is referenced in a
+ * distribution’s cache behavior, you can get the key group’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the key group is not referenced in a cache behavior, you can get the identifier using
+ */
+GetKeyGroupConfigResponse * CloudFrontClient::getKeyGroupConfig(const GetKeyGroupConfigRequest &request)
+{
+    return qobject_cast<GetKeyGroupConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetMonitoringSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about whether additional CloudWatch metrics are enabled for the specified CloudFront
+ */
+GetMonitoringSubscriptionResponse * CloudFrontClient::getMonitoringSubscription(const GetMonitoringSubscriptionRequest &request)
+{
+    return qobject_cast<GetMonitoringSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetOriginRequestPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets an origin request policy, including the following
+ *
+ * metadata> <ul> <li>
+ *
+ * The policy’s
+ *
+ * identifier> </li> <li>
+ *
+ * The date and time when the policy was last
+ *
+ * modified> </li> </ul>
+ *
+ * To get an origin request policy, you must provide the policy’s identifier. If the origin request policy is attached to a
+ * distribution’s cache behavior, you can get the policy’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the origin request policy is not attached to a cache behavior, you can get the
+ * identifier using
+ */
+GetOriginRequestPolicyResponse * CloudFrontClient::getOriginRequestPolicy(const GetOriginRequestPolicyRequest &request)
+{
+    return qobject_cast<GetOriginRequestPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetOriginRequestPolicyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets an origin request policy
+ *
+ * configuration>
+ *
+ * To get an origin request policy configuration, you must provide the policy’s identifier. If the origin request policy is
+ * attached to a distribution’s cache behavior, you can get the policy’s identifier using <code>ListDistributions</code> or
+ * <code>GetDistribution</code>. If the origin request policy is not attached to a cache behavior, you can get the
+ * identifier using
+ */
+GetOriginRequestPolicyConfigResponse * CloudFrontClient::getOriginRequestPolicyConfig(const GetOriginRequestPolicyConfigRequest &request)
+{
+    return qobject_cast<GetOriginRequestPolicyConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * GetPublicKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get the public key
+ * Gets a public
  */
 GetPublicKeyResponse * CloudFrontClient::getPublicKey(const GetPublicKeyRequest &request)
 {
@@ -623,11 +1166,29 @@ GetPublicKeyResponse * CloudFrontClient::getPublicKey(const GetPublicKeyRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Return public key configuration
+ * Gets a public key
  */
 GetPublicKeyConfigResponse * CloudFrontClient::getPublicKeyConfig(const GetPublicKeyConfigRequest &request)
 {
     return qobject_cast<GetPublicKeyConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * GetRealtimeLogConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a real-time log
+ *
+ * configuration>
+ *
+ * To get a real-time log configuration, you can provide the configuration’s name or its Amazon Resource Name (ARN). You
+ * must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to
+ */
+GetRealtimeLogConfigResponse * CloudFrontClient::getRealtimeLogConfig(const GetRealtimeLogConfigRequest &request)
+{
+    return qobject_cast<GetRealtimeLogConfigResponse *>(send(request));
 }
 
 /*!
@@ -658,6 +1219,31 @@ GetStreamingDistributionConfigResponse * CloudFrontClient::getStreamingDistribut
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListCachePoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of cache
+ *
+ * policies>
+ *
+ * You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies
+ * created in your AWS
+ *
+ * account>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListCachePoliciesResponse * CloudFrontClient::listCachePolicies(const ListCachePoliciesRequest &request)
+{
+    return qobject_cast<ListCachePoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * ListCloudFrontOriginAccessIdentitiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -680,6 +1266,92 @@ ListCloudFrontOriginAccessIdentitiesResponse * CloudFrontClient::listCloudFrontO
 ListDistributionsResponse * CloudFrontClient::listDistributions(const ListDistributionsRequest &request)
 {
     return qobject_cast<ListDistributionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsByCachePolicyIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of distribution IDs for distributions that have a cache behavior that’s associated with the specified cache
+ *
+ * policy>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListDistributionsByCachePolicyIdResponse * CloudFrontClient::listDistributionsByCachePolicyId(const ListDistributionsByCachePolicyIdRequest &request)
+{
+    return qobject_cast<ListDistributionsByCachePolicyIdResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsByKeyGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of distribution IDs for distributions that have a cache behavior that references the specified key
+ *
+ * group>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListDistributionsByKeyGroupResponse * CloudFrontClient::listDistributionsByKeyGroup(const ListDistributionsByKeyGroupRequest &request)
+{
+    return qobject_cast<ListDistributionsByKeyGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsByOriginRequestPolicyIdResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of distribution IDs for distributions that have a cache behavior that’s associated with the specified origin
+ * request
+ *
+ * policy>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListDistributionsByOriginRequestPolicyIdResponse * CloudFrontClient::listDistributionsByOriginRequestPolicyId(const ListDistributionsByOriginRequestPolicyIdRequest &request)
+{
+    return qobject_cast<ListDistributionsByOriginRequestPolicyIdResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListDistributionsByRealtimeLogConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of distributions that have a cache behavior that’s associated with the specified real-time log
+ *
+ * configuration>
+ *
+ * You can specify the real-time log configuration by its name or its Amazon Resource Name (ARN). You must provide at least
+ * one. If you provide both, CloudFront uses the name to identify the real-time log configuration to list distributions
+ *
+ * for>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent request.
+ */
+ListDistributionsByRealtimeLogConfigResponse * CloudFrontClient::listDistributionsByRealtimeLogConfig(const ListDistributionsByRealtimeLogConfigRequest &request)
+{
+    return qobject_cast<ListDistributionsByRealtimeLogConfigResponse *>(send(request));
 }
 
 /*!
@@ -723,6 +1395,31 @@ ListFieldLevelEncryptionProfilesResponse * CloudFrontClient::listFieldLevelEncry
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListFunctionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of all CloudFront functions in your AWS
+ *
+ * account>
+ *
+ * You can optionally apply a filter to return only the functions that are in the specified stage, either
+ * <code>DEVELOPMENT</code> or
+ *
+ * <code>LIVE</code>>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListFunctionsResponse * CloudFrontClient::listFunctions(const ListFunctionsRequest &request)
+{
+    return qobject_cast<ListFunctionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * ListInvalidationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -736,6 +1433,51 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListKeyGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of key
+ *
+ * groups>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListKeyGroupsResponse * CloudFrontClient::listKeyGroups(const ListKeyGroupsRequest &request)
+{
+    return qobject_cast<ListKeyGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListOriginRequestPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of origin request
+ *
+ * policies>
+ *
+ * You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies
+ * created in your AWS
+ *
+ * account>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent
+ */
+ListOriginRequestPoliciesResponse * CloudFrontClient::listOriginRequestPolicies(const ListOriginRequestPoliciesRequest &request)
+{
+    return qobject_cast<ListOriginRequestPoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * ListPublicKeysResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -745,6 +1487,26 @@ ListInvalidationsResponse * CloudFrontClient::listInvalidations(const ListInvali
 ListPublicKeysResponse * CloudFrontClient::listPublicKeys(const ListPublicKeysRequest &request)
 {
     return qobject_cast<ListPublicKeysResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * ListRealtimeLogConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of real-time log
+ *
+ * configurations>
+ *
+ * You can optionally specify the maximum number of items to receive in the response. If the total number of items in the
+ * list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of
+ * items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the
+ * <code>Marker</code> value in the subsequent request.
+ */
+ListRealtimeLogConfigsResponse * CloudFrontClient::listRealtimeLogConfigs(const ListRealtimeLogConfigsRequest &request)
+{
+    return qobject_cast<ListRealtimeLogConfigsResponse *>(send(request));
 }
 
 /*!
@@ -775,6 +1537,31 @@ ListTagsForResourceResponse * CloudFrontClient::listTagsForResource(const ListTa
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * PublishFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Publishes a CloudFront function by copying the function code from the <code>DEVELOPMENT</code> stage to
+ * <code>LIVE</code>. This automatically updates all cache behaviors that are using this function to use the newly
+ * published copy in the <code>LIVE</code>
+ *
+ * stage>
+ *
+ * When a function is published to the <code>LIVE</code> stage, you can attach the function to a distribution’s cache
+ * behavior, using the function’s Amazon Resource Name
+ *
+ * (ARN)>
+ *
+ * To publish a function, you must provide the function’s name and version (<code>ETag</code> value). To get these values,
+ * you can use <code>ListFunctions</code> and
+ */
+PublishFunctionResponse * CloudFrontClient::publishFunction(const PublishFunctionRequest &request)
+{
+    return qobject_cast<PublishFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -788,6 +1575,33 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * TestFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Tests a CloudFront
+ *
+ * function>
+ *
+ * To test a function, you provide an <i>event object</i> that represents an HTTP request or response that your CloudFront
+ * distribution could receive in production. CloudFront runs the function, passing it the event object that you provided,
+ * and returns the function’s result (the modified event object) in the response. The response also contains function logs
+ * and error messages, if any exist. For more information about testing functions, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/managing-functions.html#test-function">Testing
+ * functions</a> in the <i>Amazon CloudFront Developer
+ *
+ * Guide</i>>
+ *
+ * To test a function, you provide the function’s name and version (<code>ETag</code> value) along with the event object.
+ * To get the function’s name and version, you can use <code>ListFunctions</code> and
+ */
+TestFunctionResponse * CloudFrontClient::testFunction(const TestFunctionRequest &request)
+{
+    return qobject_cast<TestFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * UntagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -797,6 +1611,37 @@ TagResourceResponse * CloudFrontClient::tagResource(const TagResourceRequest &re
 UntagResourceResponse * CloudFrontClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateCachePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a cache policy
+ *
+ * configuration>
+ *
+ * When you update a cache policy configuration, all the fields are updated with the values provided in the request. You
+ * cannot update some fields independent of others. To update a cache policy
+ *
+ * configuration> <ol> <li>
+ *
+ * Use <code>GetCachePolicyConfig</code> to get the current
+ *
+ * configuration> </li> <li>
+ *
+ * Locally modify the fields in the cache policy configuration that you want to
+ *
+ * update> </li> <li>
+ *
+ * Call <code>UpdateCachePolicy</code> by providing the entire cache policy configuration, including the fields that you
+ * modified and those that you
+ */
+UpdateCachePolicyResponse * CloudFrontClient::updateCachePolicy(const UpdateCachePolicyRequest &request)
+{
+    return qobject_cast<UpdateCachePolicyResponse *>(send(request));
 }
 
 /*!
@@ -941,6 +1786,90 @@ UpdateFieldLevelEncryptionProfileResponse * CloudFrontClient::updateFieldLevelEn
 
 /*!
  * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateFunctionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a CloudFront
+ *
+ * function>
+ *
+ * You can update a function’s code or the comment that describes the function. You cannot update a function’s
+ *
+ * name>
+ *
+ * To update a function, you provide the function’s name and version (<code>ETag</code> value) along with the updated
+ * function code. To get the name and version, you can use <code>ListFunctions</code> and
+ */
+UpdateFunctionResponse * CloudFrontClient::updateFunction(const UpdateFunctionRequest &request)
+{
+    return qobject_cast<UpdateFunctionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateKeyGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a key
+ *
+ * group>
+ *
+ * When you update a key group, all the fields are updated with the values provided in the request. You cannot update some
+ * fields independent of others. To update a key
+ *
+ * group> <ol> <li>
+ *
+ * Get the current key group with <code>GetKeyGroup</code> or
+ *
+ * <code>GetKeyGroupConfig</code>> </li> <li>
+ *
+ * Locally modify the fields in the key group that you want to update. For example, add or remove public key
+ *
+ * IDs> </li> <li>
+ *
+ * Call <code>UpdateKeyGroup</code> with the entire key group object, including the fields that you modified and those that
+ * you
+ */
+UpdateKeyGroupResponse * CloudFrontClient::updateKeyGroup(const UpdateKeyGroupRequest &request)
+{
+    return qobject_cast<UpdateKeyGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateOriginRequestPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an origin request policy
+ *
+ * configuration>
+ *
+ * When you update an origin request policy configuration, all the fields are updated with the values provided in the
+ * request. You cannot update some fields independent of others. To update an origin request policy
+ *
+ * configuration> <ol> <li>
+ *
+ * Use <code>GetOriginRequestPolicyConfig</code> to get the current
+ *
+ * configuration> </li> <li>
+ *
+ * Locally modify the fields in the origin request policy configuration that you want to
+ *
+ * update> </li> <li>
+ *
+ * Call <code>UpdateOriginRequestPolicy</code> by providing the entire origin request policy configuration, including the
+ * fields that you modified and those that you
+ */
+UpdateOriginRequestPolicyResponse * CloudFrontClient::updateOriginRequestPolicy(const UpdateOriginRequestPolicyRequest &request)
+{
+    return qobject_cast<UpdateOriginRequestPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
  * UpdatePublicKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -950,6 +1879,41 @@ UpdateFieldLevelEncryptionProfileResponse * CloudFrontClient::updateFieldLevelEn
 UpdatePublicKeyResponse * CloudFrontClient::updatePublicKey(const UpdatePublicKeyRequest &request)
 {
     return qobject_cast<UpdatePublicKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFrontClient service, and returns a pointer to an
+ * UpdateRealtimeLogConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a real-time log
+ *
+ * configuration>
+ *
+ * When you update a real-time log configuration, all the parameters are updated with the values provided in the request.
+ * You cannot update some parameters independent of others. To update a real-time log
+ *
+ * configuration> <ol> <li>
+ *
+ * Call <code>GetRealtimeLogConfig</code> to get the current real-time log
+ *
+ * configuration> </li> <li>
+ *
+ * Locally modify the parameters in the real-time log configuration that you want to
+ *
+ * update> </li> <li>
+ *
+ * Call this API (<code>UpdateRealtimeLogConfig</code>) by providing the entire real-time log configuration, including the
+ * parameters that you modified and those that you
+ *
+ * didn’t> </li> </ol>
+ *
+ * You cannot update a real-time log configuration’s <code>Name</code> or
+ */
+UpdateRealtimeLogConfigResponse * CloudFrontClient::updateRealtimeLogConfig(const UpdateRealtimeLogConfigRequest &request)
+{
+    return qobject_cast<UpdateRealtimeLogConfigResponse *>(send(request));
 }
 
 /*!

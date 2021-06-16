@@ -38,22 +38,37 @@ namespace Athena {
  *
  * \value BatchGetNamedQueryAction Athena BatchGetNamedQuery action.
  * \value BatchGetQueryExecutionAction Athena BatchGetQueryExecution action.
+ * \value CreateDataCatalogAction Athena CreateDataCatalog action.
  * \value CreateNamedQueryAction Athena CreateNamedQuery action.
+ * \value CreatePreparedStatementAction Athena CreatePreparedStatement action.
  * \value CreateWorkGroupAction Athena CreateWorkGroup action.
+ * \value DeleteDataCatalogAction Athena DeleteDataCatalog action.
  * \value DeleteNamedQueryAction Athena DeleteNamedQuery action.
+ * \value DeletePreparedStatementAction Athena DeletePreparedStatement action.
  * \value DeleteWorkGroupAction Athena DeleteWorkGroup action.
+ * \value GetDataCatalogAction Athena GetDataCatalog action.
+ * \value GetDatabaseAction Athena GetDatabase action.
  * \value GetNamedQueryAction Athena GetNamedQuery action.
+ * \value GetPreparedStatementAction Athena GetPreparedStatement action.
  * \value GetQueryExecutionAction Athena GetQueryExecution action.
  * \value GetQueryResultsAction Athena GetQueryResults action.
+ * \value GetTableMetadataAction Athena GetTableMetadata action.
  * \value GetWorkGroupAction Athena GetWorkGroup action.
+ * \value ListDataCatalogsAction Athena ListDataCatalogs action.
+ * \value ListDatabasesAction Athena ListDatabases action.
+ * \value ListEngineVersionsAction Athena ListEngineVersions action.
  * \value ListNamedQueriesAction Athena ListNamedQueries action.
+ * \value ListPreparedStatementsAction Athena ListPreparedStatements action.
  * \value ListQueryExecutionsAction Athena ListQueryExecutions action.
+ * \value ListTableMetadataAction Athena ListTableMetadata action.
  * \value ListTagsForResourceAction Athena ListTagsForResource action.
  * \value ListWorkGroupsAction Athena ListWorkGroups action.
  * \value StartQueryExecutionAction Athena StartQueryExecution action.
  * \value StopQueryExecutionAction Athena StopQueryExecution action.
  * \value TagResourceAction Athena TagResource action.
  * \value UntagResourceAction Athena UntagResource action.
+ * \value UpdateDataCatalogAction Athena UpdateDataCatalog action.
+ * \value UpdatePreparedStatementAction Athena UpdatePreparedStatement action.
  * \value UpdateWorkGroupAction Athena UpdateWorkGroup action.
  */
 

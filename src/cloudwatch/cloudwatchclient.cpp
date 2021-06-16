@@ -27,6 +27,10 @@
 #include "deleteanomalydetectorresponse.h"
 #include "deletedashboardsrequest.h"
 #include "deletedashboardsresponse.h"
+#include "deleteinsightrulesrequest.h"
+#include "deleteinsightrulesresponse.h"
+#include "deletemetricstreamrequest.h"
+#include "deletemetricstreamresponse.h"
 #include "describealarmhistoryrequest.h"
 #include "describealarmhistoryresponse.h"
 #include "describealarmsrequest.h"
@@ -35,34 +39,56 @@
 #include "describealarmsformetricresponse.h"
 #include "describeanomalydetectorsrequest.h"
 #include "describeanomalydetectorsresponse.h"
+#include "describeinsightrulesrequest.h"
+#include "describeinsightrulesresponse.h"
 #include "disablealarmactionsrequest.h"
 #include "disablealarmactionsresponse.h"
+#include "disableinsightrulesrequest.h"
+#include "disableinsightrulesresponse.h"
 #include "enablealarmactionsrequest.h"
 #include "enablealarmactionsresponse.h"
+#include "enableinsightrulesrequest.h"
+#include "enableinsightrulesresponse.h"
 #include "getdashboardrequest.h"
 #include "getdashboardresponse.h"
+#include "getinsightrulereportrequest.h"
+#include "getinsightrulereportresponse.h"
 #include "getmetricdatarequest.h"
 #include "getmetricdataresponse.h"
 #include "getmetricstatisticsrequest.h"
 #include "getmetricstatisticsresponse.h"
+#include "getmetricstreamrequest.h"
+#include "getmetricstreamresponse.h"
 #include "getmetricwidgetimagerequest.h"
 #include "getmetricwidgetimageresponse.h"
 #include "listdashboardsrequest.h"
 #include "listdashboardsresponse.h"
+#include "listmetricstreamsrequest.h"
+#include "listmetricstreamsresponse.h"
 #include "listmetricsrequest.h"
 #include "listmetricsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "putanomalydetectorrequest.h"
 #include "putanomalydetectorresponse.h"
+#include "putcompositealarmrequest.h"
+#include "putcompositealarmresponse.h"
 #include "putdashboardrequest.h"
 #include "putdashboardresponse.h"
+#include "putinsightrulerequest.h"
+#include "putinsightruleresponse.h"
 #include "putmetricalarmrequest.h"
 #include "putmetricalarmresponse.h"
 #include "putmetricdatarequest.h"
 #include "putmetricdataresponse.h"
+#include "putmetricstreamrequest.h"
+#include "putmetricstreamresponse.h"
 #include "setalarmstaterequest.h"
 #include "setalarmstateresponse.h"
+#include "startmetricstreamsrequest.h"
+#include "startmetricstreamsresponse.h"
+#include "stopmetricstreamsrequest.h"
+#include "stopmetricstreamsresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -165,7 +191,29 @@ CloudWatchClient::CloudWatchClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified alarms. In the event of an error, no alarms are
+ * Deletes the specified alarms. You can delete up to 100 alarms in one operation. However, this total can include no more
+ * than one composite alarm. For example, you could delete 99 metric alarms and one composite alarms with one operation,
+ * but you can't delete two composite alarms with one
+ *
+ * operation>
+ *
+ * In the event of an error, no alarms are
+ *
+ * deleted> <note>
+ *
+ * It is possible to create a loop or cycle of composite alarms, where composite alarm A depends on composite alarm B, and
+ * composite alarm B also depends on composite alarm A. In this scenario, you can't delete any composite alarm that is part
+ * of the cycle because there is always still a composite alarm that depends on that alarm that you want to
+ *
+ * delete>
+ *
+ * To get out of such a situation, you must break the cycle by changing the rule of one of the composite alarms in the
+ * cycle to remove a dependency that creates the cycle. The simplest change to make to break a cycle is to change the
+ * <code>AlarmRule</code> of one of the alarms to <code>False</code>.
+ *
+ * </p
+ *
+ * Additionally, the evaluation of composite alarms stops if CloudWatch detects a cycle in the evaluation path.
  */
 DeleteAlarmsResponse * CloudWatchClient::deleteAlarms(const DeleteAlarmsRequest &request)
 {
@@ -191,7 +239,7 @@ DeleteAnomalyDetectorResponse * CloudWatchClient::deleteAnomalyDetector(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes all dashboards that you specify. You may specify up to 100 dashboards to delete. If there is an error during
+ * Deletes all dashboards that you specify. You can specify up to 100 dashboards to delete. If there is an error during
  * this call, no dashboards are
  */
 DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashboardsRequest &request)
@@ -201,12 +249,43 @@ DeleteDashboardsResponse * CloudWatchClient::deleteDashboards(const DeleteDashbo
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DeleteInsightRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Permanently deletes the specified Contributor Insights
+ *
+ * rules>
+ *
+ * If you create a rule, delete it, and then re-create it with the same name, historical data from the first time the rule
+ * was created might not be
+ */
+DeleteInsightRulesResponse * CloudWatchClient::deleteInsightRules(const DeleteInsightRulesRequest &request)
+{
+    return qobject_cast<DeleteInsightRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DeleteMetricStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Permanently deletes the metric stream that you
+ */
+DeleteMetricStreamResponse * CloudWatchClient::deleteMetricStream(const DeleteMetricStreamRequest &request)
+{
+    return qobject_cast<DeleteMetricStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * DescribeAlarmHistoryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the history for the specified alarm. You can filter the results by date range or item type. If an alarm name
- * is not specified, the histories for all alarms are
+ * is not specified, the histories for either all metric alarms or all composite alarms are
  *
  * returned>
  *
@@ -223,8 +302,8 @@ DescribeAlarmHistoryResponse * CloudWatchClient::describeAlarmHistory(const Desc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the specified alarms. If no alarms are specified, all alarms are returned. Alarms can be retrieved by using
- * only a prefix for the alarm name, the alarm state, or a prefix for any
+ * Retrieves the specified alarms. You can filter the results by specifying a prefix for the alarm name, the alarm state,
+ * or a prefix for any
  */
 DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRequest &request)
 {
@@ -238,6 +317,11 @@ DescribeAlarmsResponse * CloudWatchClient::describeAlarms(const DescribeAlarmsRe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Retrieves the alarms for the specified metric. To filter the results, specify a statistic, period, or
+ *
+ * unit>
+ *
+ * This operation retrieves only standard alarms that are based on the specified metric. It does not return alarms based on
+ * math expressions that use the specified metric, or composite alarms that use the specified
  */
 DescribeAlarmsForMetricResponse * CloudWatchClient::describeAlarmsForMetric(const DescribeAlarmsForMetricRequest &request)
 {
@@ -260,6 +344,25 @@ DescribeAnomalyDetectorsResponse * CloudWatchClient::describeAnomalyDetectors(co
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DescribeInsightRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all the Contributor Insights rules in your
+ *
+ * account>
+ *
+ * For more information about Contributor Insights, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContributorInsights.html">Using Contributor
+ * Insights to Analyze High-Cardinality
+ */
+DescribeInsightRulesResponse * CloudWatchClient::describeInsightRules(const DescribeInsightRulesRequest &request)
+{
+    return qobject_cast<DescribeInsightRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * DisableAlarmActionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -274,6 +377,20 @@ DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const Disabl
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * DisableInsightRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables the specified Contributor Insights rules. When rules are disabled, they do not analyze log groups and do not
+ * incur
+ */
+DisableInsightRulesResponse * CloudWatchClient::disableInsightRules(const DisableInsightRulesRequest &request)
+{
+    return qobject_cast<DisableInsightRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * EnableAlarmActionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -283,6 +400,19 @@ DisableAlarmActionsResponse * CloudWatchClient::disableAlarmActions(const Disabl
 EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAlarmActionsRequest &request)
 {
     return qobject_cast<EnableAlarmActionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * EnableInsightRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables the specified Contributor Insights rules. When rules are enabled, they immediately begin analyzing log
+ */
+EnableInsightRulesResponse * CloudWatchClient::enableInsightRules(const EnableInsightRulesRequest &request)
+{
+    return qobject_cast<EnableInsightRulesResponse *>(send(request));
 }
 
 /*!
@@ -305,12 +435,66 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * GetInsightRuleReportResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * This operation returns the time series data collected by a Contributor Insights rule. The data includes the identity and
+ * number of contributors to the log
+ *
+ * group>
+ *
+ * You can also optionally return one or more statistics about each data point in the time series. These statistics can
+ * include the
+ *
+ * following> <ul> <li>
+ *
+ * <code>UniqueContributors</code> -- the number of unique contributors for each data
+ *
+ * point> </li> <li>
+ *
+ * <code>MaxContributorValue</code> -- the value of the top contributor for each data point. The identity of the
+ * contributor might change for each data point in the
+ *
+ * graph>
+ *
+ * If this rule aggregates by COUNT, the top contributor for each data point is the contributor with the most occurrences
+ * in that period. If the rule aggregates by SUM, the top contributor is the contributor with the highest sum in the log
+ * field specified by the rule's <code>Value</code>, during that
+ *
+ * period> </li> <li>
+ *
+ * <code>SampleCount</code> -- the number of data points matched by the
+ *
+ * rule> </li> <li>
+ *
+ * <code>Sum</code> -- the sum of the values from all contributors during the time period represented by that data
+ *
+ * point> </li> <li>
+ *
+ * <code>Minimum</code> -- the minimum value from a single observation during the time period represented by that data
+ *
+ * point> </li> <li>
+ *
+ * <code>Maximum</code> -- the maximum value from a single observation during the time period represented by that data
+ *
+ * point> </li> <li>
+ *
+ * <code>Average</code> -- the average value from all contributors during the time period represented by that data
+ */
+GetInsightRuleReportResponse * CloudWatchClient::getInsightRuleReport(const GetInsightRuleReportRequest &request)
+{
+    return qobject_cast<GetInsightRuleReportResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * GetMetricDataResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You can use the <code>GetMetricData</code> API to retrieve as many as 100 different metrics in a single request, with a
- * total of as many as 100,800 datapoints. You can also optionally perform math expressions on the values of the returned
+ * You can use the <code>GetMetricData</code> API to retrieve as many as 500 different metrics in a single request, with a
+ * total of as many as 100,800 data points. You can also optionally perform math expressions on the values of the returned
  * statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you
  * could divide the Errors metric by the Invocations metric to get an error rate time series. For more information about
  * metric math expressions, see <a
@@ -350,6 +534,13 @@ GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest 
  * example, if you collect data using a period of 1 minute, the data remains available for 15 days with 1-minute
  * resolution. After 15 days, this data is still available, but is aggregated and retrievable only with a resolution of 5
  * minutes. After 63 days, the data is further aggregated and is available with a resolution of 1
+ *
+ * hour>
+ *
+ * If you omit <code>Unit</code> in your request, all data that was collected with any unit is returned, along with the
+ * corresponding units that were specified when the data was reported to CloudWatch. If you specify a unit, the operation
+ * returns only data that was collected with that unit specified. If you specify a unit that does not match the data
+ * collected, the results of the operation are null. CloudWatch does not perform unit
  */
 GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataRequest &request)
 {
@@ -439,6 +630,19 @@ GetMetricStatisticsResponse * CloudWatchClient::getMetricStatistics(const GetMet
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * GetMetricStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the metric stream that you
+ */
+GetMetricStreamResponse * CloudWatchClient::getMetricStream(const GetMetricStreamRequest &request)
+{
+    return qobject_cast<GetMetricStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * GetMetricWidgetImageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -492,12 +696,27 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * ListMetricStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of metric streams in this
+ */
+ListMetricStreamsResponse * CloudWatchClient::listMetricStreams(const ListMetricStreamsRequest &request)
+{
+    return qobject_cast<ListMetricStreamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * ListMetricsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List the specified metrics. You can use the returned metrics with <a>GetMetricData</a> or <a>GetMetricStatistics</a> to
- * obtain statistical
+ * List the specified metrics. You can use the returned metrics with <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a> or <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>
+ * to obtain statistical
  *
  * data>
  *
@@ -505,8 +724,15 @@ ListDashboardsResponse * CloudWatchClient::listDashboards(const ListDashboardsRe
  *
  * calls>
  *
- * After you create a metric, allow up to fifteen minutes before the metric appears. Statistics about the metric, however,
- * are available sooner using <a>GetMetricData</a> or
+ * After you create a metric, allow up to 15 minutes before the metric appears. You can see statistics about the metric
+ * sooner by using <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a> or <a
+ *
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>>
+ *
+ * <code>ListMetrics</code> doesn't return information about metrics if those metrics haven't reported data in the past two
+ * weeks. To retrieve those metrics, use <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a> or <a
  */
 ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &request)
 {
@@ -519,7 +745,7 @@ ListMetricsResponse * CloudWatchClient::listMetrics(const ListMetricsRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Displays the tags associated with a CloudWatch resource. Alarms support
+ * Displays the tags associated with a CloudWatch resource. Currently, alarms and Contributor Insights rules support
  */
 ListTagsForResourceResponse * CloudWatchClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -544,6 +770,68 @@ ListTagsForResourceResponse * CloudWatchClient::listTagsForResource(const ListTa
 PutAnomalyDetectorResponse * CloudWatchClient::putAnomalyDetector(const PutAnomalyDetectorRequest &request)
 {
     return qobject_cast<PutAnomalyDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutCompositeAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a <i>composite alarm</i>. When you create a composite alarm, you specify a rule expression for the
+ * alarm that takes into account the alarm states of other alarms that you have created. The composite alarm goes into
+ * ALARM state only if all conditions of the rule are
+ *
+ * met>
+ *
+ * The alarms specified in a composite alarm's rule expression can include metric alarms and other composite
+ *
+ * alarms>
+ *
+ * Using composite alarms can reduce alarm noise. You can create multiple metric alarms, and also create a composite alarm
+ * and set up alerts only for the composite alarm. For example, you could create a composite alarm that goes into ALARM
+ * state only when more than one of the underlying metric alarms are in ALARM
+ *
+ * state>
+ *
+ * Currently, the only alarm actions that can be taken by composite alarms are notifying SNS
+ *
+ * topics> <note>
+ *
+ * It is possible to create a loop or cycle of composite alarms, where composite alarm A depends on composite alarm B, and
+ * composite alarm B also depends on composite alarm A. In this scenario, you can't delete any composite alarm that is part
+ * of the cycle because there is always still a composite alarm that depends on that alarm that you want to
+ *
+ * delete>
+ *
+ * To get out of such a situation, you must break the cycle by changing the rule of one of the composite alarms in the
+ * cycle to remove a dependency that creates the cycle. The simplest change to make to break a cycle is to change the
+ * <code>AlarmRule</code> of one of the alarms to <code>False</code>.
+ *
+ * </p
+ *
+ * Additionally, the evaluation of composite alarms stops if CloudWatch detects a cycle in the evaluation path.
+ *
+ * </p </note>
+ *
+ * When this operation creates an alarm, the alarm state is immediately set to <code>INSUFFICIENT_DATA</code>. The alarm is
+ * then evaluated and its state is set appropriately. Any actions associated with the new state are then executed. For a
+ * composite alarm, this initial time after creation is the only time that the alarm can be in
+ * <code>INSUFFICIENT_DATA</code>
+ *
+ * state>
+ *
+ * When you update an existing alarm, its state is left unchanged, but the update completely overwrites the previous
+ * configuration of the
+ *
+ * alarm>
+ *
+ * If you are an IAM user, you must have <code>iam:CreateServiceLinkedRole</code> to create a composite alarm that has
+ * Systems Manager OpsItem
+ */
+PutCompositeAlarmResponse * CloudWatchClient::putCompositeAlarm(const PutCompositeAlarmRequest &request)
+{
+    return qobject_cast<PutCompositeAlarmResponse *>(send(request));
 }
 
 /*!
@@ -580,6 +868,27 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutInsightRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Contributor Insights rule. Rules evaluate log events in a CloudWatch Logs log group, enabling you to find
+ * contributor data for the log events in that log group. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContributorInsights.html">Using Contributor
+ * Insights to Analyze High-Cardinality
+ *
+ * Data</a>>
+ *
+ * If you create a rule, delete it, and then re-create it with the same name, historical data from the first time the rule
+ * was created might not be
+ */
+PutInsightRuleResponse * CloudWatchClient::putInsightRule(const PutInsightRuleRequest &request)
+{
+    return qobject_cast<PutInsightRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * PutMetricAlarmResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -606,46 +915,18 @@ PutDashboardResponse * CloudWatchClient::putDashboard(const PutDashboardRequest 
  *
  * operations> <ul> <li>
  *
- * <code>iam:CreateServiceLinkedRole</code> for all alarms with EC2
+ * The <code>iam:CreateServiceLinkedRole</code> for all alarms with EC2
  *
  * action> </li> <li>
  *
- * <code>ec2:DescribeInstanceStatus</code> and <code>ec2:DescribeInstances</code> for all alarms on EC2 instance status
+ * The <code>iam:CreateServiceLinkedRole</code> to create an alarm with Systems Manager OpsItem
  *
- * metric> </li> <li>
- *
- * <code>ec2:StopInstances</code> for alarms with stop
- *
- * action> </li> <li>
- *
- * <code>ec2:TerminateInstances</code> for alarms with terminate
- *
- * action> </li> <li>
- *
- * No specific permissions are needed for alarms with recover
- *
- * action> </li> </ul>
- *
- * If you have read/write permissions for Amazon CloudWatch but not for Amazon EC2, you can still create an alarm, but the
- * stop or terminate actions are not performed. However, if you are later granted the required permissions, the alarm
- * actions that you created earlier are
- *
- * performed>
- *
- * If you are using an IAM role (for example, an EC2 instance profile), you cannot stop or terminate the instance using
- * alarm actions. However, you can still see the alarm state and perform any other actions such as Amazon SNS notifications
- * or Auto Scaling
- *
- * policies>
- *
- * If you are using temporary security credentials granted using AWS STS, you cannot stop or terminate an EC2 instance
- * using alarm
- *
- * actions>
+ * actions> </li> </ul>
  *
  * The first time you create an alarm in the AWS Management Console, the CLI, or by using the PutMetricAlarm API,
- * CloudWatch creates the necessary service-linked role for you. The service-linked role is called
- * <code>AWSServiceRoleForCloudWatchEvents</code>. For more information, see <a
+ * CloudWatch creates the necessary service-linked role for you. The service-linked roles are called
+ * <code>AWSServiceRoleForCloudWatchEvents</code> and <code>AWSServiceRoleForCloudWatchAlarms_ActionSSM</code>. For more
+ * information, see <a
  * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">AWS
  * service-linked
  */
@@ -662,9 +943,9 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified metric. If
  * the specified metric does not exist, CloudWatch creates the metric. When CloudWatch creates a metric, it can take up to
- * fifteen minutes for the metric to appear in calls to
+ * fifteen minutes for the metric to appear in calls to <a
  *
- * <a>ListMetrics</a>>
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html">ListMetrics</a>>
  *
  * You can publish either individual data points in the <code>Value</code> field, or arrays of values and the number of
  * times each value occurred during the period by using the <code>Values</code> and <code>Counts</code> fields in the
@@ -680,8 +961,8 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  * metrics>
  *
  * Although the <code>Value</code> parameter accepts numbers of type <code>Double</code>, CloudWatch rejects values that
- * are either too small or too large. Values must be in the range of 8.515920e-109 to 1.174271e+108 (Base 10) or 2e-360 to
- * 2e360 (Base 2). In addition, special values (for example, NaN, +Infinity, -Infinity) are not
+ * are either too small or too large. Values must be in the range of -2^360 to 2^360. In addition, special values (for
+ * example, NaN, +Infinity, -Infinity) are not
  *
  * supported>
  *
@@ -692,10 +973,19 @@ PutMetricAlarmResponse * CloudWatchClient::putMetricAlarm(const PutMetricAlarmRe
  *
  * Guide</i>>
  *
- * Data points with time stamps from 24 hours ago or longer can take at least 48 hours to become available for
- * <a>GetMetricData</a> or <a>GetMetricStatistics</a> from the time they are
+ * You specify the time stamp to be associated with each data point. You can specify time stamps that are as much as two
+ * weeks before the current date, and as much as 2 hours after the current day and
  *
- * submitted>
+ * time>
+ *
+ * Data points with time stamps from 24 hours ago or longer can take at least 48 hours to become available for <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a> or <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>
+ * from the time they are submitted. Data points with time stamps between 3 and 24 hours ago can take as much as 2 hours to
+ * become available for for <a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a> or <a
+ *
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>>
  *
  * CloudWatch needs raw data points to calculate percentile statistics. If you publish data using a statistic set instead,
  * you can only retrieve percentile statistics for this data if one of the following conditions is
@@ -716,15 +1006,74 @@ PutMetricDataResponse * CloudWatchClient::putMetricData(const PutMetricDataReque
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * PutMetricStreamResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a metric stream. Metric streams can automatically stream CloudWatch metrics to AWS destinations
+ * including Amazon S3 and to many third-party
+ *
+ * solutions>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Metric-Streams.html">
+ * Using Metric
+ *
+ * Streams</a>>
+ *
+ * To create a metric stream, you must be logged on to an account that has the <code>iam:PassRole</code> permission and
+ * either the <code>CloudWatchFullAccess</code> policy or the <code>cloudwatch:PutMetricStream</code>
+ *
+ * permission>
+ *
+ * When you create or update a metric stream, you choose one of the
+ *
+ * following> <ul> <li>
+ *
+ * Stream metrics from all metric namespaces in the
+ *
+ * account> </li> <li>
+ *
+ * Stream metrics from all metric namespaces in the account, except for the namespaces that you list in
+ *
+ * <code>ExcludeFilters</code>> </li> <li>
+ *
+ * Stream metrics from only the metric namespaces that you list in
+ *
+ * <code>IncludeFilters</code>> </li> </ul>
+ *
+ * When you use <code>PutMetricStream</code> to create a new metric stream, the stream is created in the
+ * <code>running</code> state. If you use it to update an existing stream, the state of the stream is not
+ */
+PutMetricStreamResponse * CloudWatchClient::putMetricStream(const PutMetricStreamRequest &request)
+{
+    return qobject_cast<PutMetricStreamResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * SetAlarmStateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Temporarily sets the state of an alarm for testing purposes. When the updated state differs from the previous value, the
  * action configured for the appropriate state is invoked. For example, if your alarm is configured to send an Amazon SNS
- * message when an alarm is triggered, temporarily changing the alarm state to <code>ALARM</code> sends an SNS message. The
- * alarm returns to its actual state (often within seconds). Because the alarm state change happens quickly, it is
- * typically only visible in the alarm's <b>History</b> tab in the Amazon CloudWatch console or through
+ * message when an alarm is triggered, temporarily changing the alarm state to <code>ALARM</code> sends an SNS
+ *
+ * message>
+ *
+ * Metric alarms returns to their actual state quickly, often within seconds. Because the metric alarm state change happens
+ * quickly, it is typically only visible in the alarm's <b>History</b> tab in the Amazon CloudWatch console or through <a
+ *
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeAlarmHistory.html">DescribeAlarmHistory</a>>
+ *
+ * If you use <code>SetAlarmState</code> on a composite alarm, the composite alarm is not guaranteed to return to its
+ * actual state. It returns to its actual state only once any of its children alarms change state. It is also reevaluated
+ * if you update its
+ *
+ * configuration>
+ *
+ * If an alarm triggers EC2 Auto Scaling policies or application Auto Scaling policies, you must include information in the
+ * <code>StateReasonData</code> parameter to enable the policy to take the correct
  */
 SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateRequest &request)
 {
@@ -733,27 +1082,57 @@ SetAlarmStateResponse * CloudWatchClient::setAlarmState(const SetAlarmStateReque
 
 /*!
  * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * StartMetricStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts the streaming of metrics for one or more of your metric
+ */
+StartMetricStreamsResponse * CloudWatchClient::startMetricStreams(const StartMetricStreamsRequest &request)
+{
+    return qobject_cast<StartMetricStreamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
+ * StopMetricStreamsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the streaming of metrics for one or more of your metric
+ */
+StopMetricStreamsResponse * CloudWatchClient::stopMetricStreams(const StopMetricStreamsRequest &request)
+{
+    return qobject_cast<StopMetricStreamsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudWatchClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Assigns one or more tags (key-value pairs) to the specified CloudWatch resource. Tags can help you organize and
- * categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or
- * change only resources with certain tag values. In CloudWatch, alarms can be
+ * Assigns one or more tags (key-value pairs) to the specified CloudWatch resource. Currently, the only CloudWatch
+ * resources that can be tagged are alarms and Contributor Insights
  *
- * tagged>
+ * rules>
+ *
+ * Tags can help you organize and categorize your resources. You can also use them to scope user permissions by granting a
+ * user permission to access or change only resources with certain tag
+ *
+ * values>
  *
  * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of
  *
  * characters>
  *
- * You can use the <code>TagResource</code> action with a resource that already has tags. If you specify a new tag key for
- * the resource, this tag is appended to the list of tags associated with the resource. If you specify a tag key that is
- * already associated with the resource, the new tag value that you specify replaces the previous value for that
+ * You can use the <code>TagResource</code> action with an alarm that already has tags. If you specify a new tag key for
+ * the alarm, this tag is appended to the list of tags associated with the alarm. If you specify a tag key that is already
+ * associated with the alarm, the new tag value that you specify replaces the previous value for that
  *
  * tag>
  *
- * You can associate as many as 50 tags with a
+ * You can associate as many as 50 tags with a CloudWatch
  */
 TagResourceResponse * CloudWatchClient::tagResource(const TagResourceRequest &request)
 {

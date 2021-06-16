@@ -36,21 +36,34 @@ namespace MediaConnect {
  * This enum describes the actions that can be performed as MediaConnect
  * requests.
  *
+ * \value AddFlowMediaStreamsAction MediaConnect AddFlowMediaStreams action.
  * \value AddFlowOutputsAction MediaConnect AddFlowOutputs action.
+ * \value AddFlowSourcesAction MediaConnect AddFlowSources action.
+ * \value AddFlowVpcInterfacesAction MediaConnect AddFlowVpcInterfaces action.
  * \value CreateFlowAction MediaConnect CreateFlow action.
  * \value DeleteFlowAction MediaConnect DeleteFlow action.
  * \value DescribeFlowAction MediaConnect DescribeFlow action.
+ * \value DescribeOfferingAction MediaConnect DescribeOffering action.
+ * \value DescribeReservationAction MediaConnect DescribeReservation action.
  * \value GrantFlowEntitlementsAction MediaConnect GrantFlowEntitlements action.
  * \value ListEntitlementsAction MediaConnect ListEntitlements action.
  * \value ListFlowsAction MediaConnect ListFlows action.
+ * \value ListOfferingsAction MediaConnect ListOfferings action.
+ * \value ListReservationsAction MediaConnect ListReservations action.
  * \value ListTagsForResourceAction MediaConnect ListTagsForResource action.
+ * \value PurchaseOfferingAction MediaConnect PurchaseOffering action.
+ * \value RemoveFlowMediaStreamAction MediaConnect RemoveFlowMediaStream action.
  * \value RemoveFlowOutputAction MediaConnect RemoveFlowOutput action.
+ * \value RemoveFlowSourceAction MediaConnect RemoveFlowSource action.
+ * \value RemoveFlowVpcInterfaceAction MediaConnect RemoveFlowVpcInterface action.
  * \value RevokeFlowEntitlementAction MediaConnect RevokeFlowEntitlement action.
  * \value StartFlowAction MediaConnect StartFlow action.
  * \value StopFlowAction MediaConnect StopFlow action.
  * \value TagResourceAction MediaConnect TagResource action.
  * \value UntagResourceAction MediaConnect UntagResource action.
+ * \value UpdateFlowAction MediaConnect UpdateFlow action.
  * \value UpdateFlowEntitlementAction MediaConnect UpdateFlowEntitlement action.
+ * \value UpdateFlowMediaStreamAction MediaConnect UpdateFlowMediaStream action.
  * \value UpdateFlowOutputAction MediaConnect UpdateFlowOutput action.
  * \value UpdateFlowSourceAction MediaConnect UpdateFlowSource action.
  */

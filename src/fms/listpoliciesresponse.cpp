@@ -39,6 +39,12 @@ namespace FMS {
  *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
  *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
  *  Developer
+ * 
+ *  Guide</a>>
+ * 
+ *  Some API actions require explicit resource permissions. For information, see the developer guide topic <a
+ *  href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager required
+ *  permissions for API actions</a>.
  *
  * \sa FmsClient::listPolicies
  */

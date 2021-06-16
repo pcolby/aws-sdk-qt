@@ -48,6 +48,8 @@ class CreateStackRequest;
 class CreateStackResponse;
 class CreateStreamingURLRequest;
 class CreateStreamingURLResponse;
+class CreateUpdatedImageRequest;
+class CreateUpdatedImageResponse;
 class CreateUsageReportSubscriptionRequest;
 class CreateUsageReportSubscriptionResponse;
 class CreateUserRequest;
@@ -149,6 +151,7 @@ public slots:
     CreateImageBuilderStreamingURLResponse * createImageBuilderStreamingURL(const CreateImageBuilderStreamingURLRequest &request);
     CreateStackResponse * createStack(const CreateStackRequest &request);
     CreateStreamingURLResponse * createStreamingURL(const CreateStreamingURLRequest &request);
+    CreateUpdatedImageResponse * createUpdatedImage(const CreateUpdatedImageRequest &request);
     CreateUsageReportSubscriptionResponse * createUsageReportSubscription(const CreateUsageReportSubscriptionRequest &request);
     CreateUserResponse * createUser(const CreateUserRequest &request);
     DeleteDirectoryConfigResponse * deleteDirectoryConfig(const DeleteDirectoryConfigRequest &request);

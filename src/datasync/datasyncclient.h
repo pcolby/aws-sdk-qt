@@ -34,10 +34,16 @@ class CreateAgentRequest;
 class CreateAgentResponse;
 class CreateLocationEfsRequest;
 class CreateLocationEfsResponse;
+class CreateLocationFsxWindowsRequest;
+class CreateLocationFsxWindowsResponse;
 class CreateLocationNfsRequest;
 class CreateLocationNfsResponse;
+class CreateLocationObjectStorageRequest;
+class CreateLocationObjectStorageResponse;
 class CreateLocationS3Request;
 class CreateLocationS3Response;
+class CreateLocationSmbRequest;
+class CreateLocationSmbResponse;
 class CreateTaskRequest;
 class CreateTaskResponse;
 class DeleteAgentRequest;
@@ -50,10 +56,16 @@ class DescribeAgentRequest;
 class DescribeAgentResponse;
 class DescribeLocationEfsRequest;
 class DescribeLocationEfsResponse;
+class DescribeLocationFsxWindowsRequest;
+class DescribeLocationFsxWindowsResponse;
 class DescribeLocationNfsRequest;
 class DescribeLocationNfsResponse;
+class DescribeLocationObjectStorageRequest;
+class DescribeLocationObjectStorageResponse;
 class DescribeLocationS3Request;
 class DescribeLocationS3Response;
+class DescribeLocationSmbRequest;
+class DescribeLocationSmbResponse;
 class DescribeTaskRequest;
 class DescribeTaskResponse;
 class DescribeTaskExecutionRequest;
@@ -76,8 +88,16 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateAgentRequest;
 class UpdateAgentResponse;
+class UpdateLocationNfsRequest;
+class UpdateLocationNfsResponse;
+class UpdateLocationObjectStorageRequest;
+class UpdateLocationObjectStorageResponse;
+class UpdateLocationSmbRequest;
+class UpdateLocationSmbResponse;
 class UpdateTaskRequest;
 class UpdateTaskResponse;
+class UpdateTaskExecutionRequest;
+class UpdateTaskExecutionResponse;
 
 class QTAWS_EXPORT DataSyncClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -98,16 +118,22 @@ public slots:
     CancelTaskExecutionResponse * cancelTaskExecution(const CancelTaskExecutionRequest &request);
     CreateAgentResponse * createAgent(const CreateAgentRequest &request);
     CreateLocationEfsResponse * createLocationEfs(const CreateLocationEfsRequest &request);
+    CreateLocationFsxWindowsResponse * createLocationFsxWindows(const CreateLocationFsxWindowsRequest &request);
     CreateLocationNfsResponse * createLocationNfs(const CreateLocationNfsRequest &request);
+    CreateLocationObjectStorageResponse * createLocationObjectStorage(const CreateLocationObjectStorageRequest &request);
     CreateLocationS3Response * createLocationS3(const CreateLocationS3Request &request);
+    CreateLocationSmbResponse * createLocationSmb(const CreateLocationSmbRequest &request);
     CreateTaskResponse * createTask(const CreateTaskRequest &request);
     DeleteAgentResponse * deleteAgent(const DeleteAgentRequest &request);
     DeleteLocationResponse * deleteLocation(const DeleteLocationRequest &request);
     DeleteTaskResponse * deleteTask(const DeleteTaskRequest &request);
     DescribeAgentResponse * describeAgent(const DescribeAgentRequest &request);
     DescribeLocationEfsResponse * describeLocationEfs(const DescribeLocationEfsRequest &request);
+    DescribeLocationFsxWindowsResponse * describeLocationFsxWindows(const DescribeLocationFsxWindowsRequest &request);
     DescribeLocationNfsResponse * describeLocationNfs(const DescribeLocationNfsRequest &request);
+    DescribeLocationObjectStorageResponse * describeLocationObjectStorage(const DescribeLocationObjectStorageRequest &request);
     DescribeLocationS3Response * describeLocationS3(const DescribeLocationS3Request &request);
+    DescribeLocationSmbResponse * describeLocationSmb(const DescribeLocationSmbRequest &request);
     DescribeTaskResponse * describeTask(const DescribeTaskRequest &request);
     DescribeTaskExecutionResponse * describeTaskExecution(const DescribeTaskExecutionRequest &request);
     ListAgentsResponse * listAgents(const ListAgentsRequest &request);
@@ -119,7 +145,11 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAgentResponse * updateAgent(const UpdateAgentRequest &request);
+    UpdateLocationNfsResponse * updateLocationNfs(const UpdateLocationNfsRequest &request);
+    UpdateLocationObjectStorageResponse * updateLocationObjectStorage(const UpdateLocationObjectStorageRequest &request);
+    UpdateLocationSmbResponse * updateLocationSmb(const UpdateLocationSmbRequest &request);
     UpdateTaskResponse * updateTask(const UpdateTaskRequest &request);
+    UpdateTaskExecutionResponse * updateTaskExecution(const UpdateTaskExecutionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DataSyncClient)

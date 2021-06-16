@@ -31,11 +31,14 @@ namespace Chime {
  *
  * \inmodule QtAwsChime
  *
- *  The Amazon Chime API (application programming interface) is designed for administrators to use to perform key tasks,
- *  such as creating and managing Amazon Chime accounts and users. This guide provides detailed information about the Amazon
- *  Chime API, including operations, types, inputs and outputs, and error
+ *  The Amazon Chime API (application programming interface) is designed for developers to perform key tasks, such as
+ *  creating and managing Amazon Chime accounts, users, and Voice Connectors. This guide provides detailed information about
+ *  the Amazon Chime API, including operations, types, inputs and outputs, and error codes. It also includes some
+ *  server-side API actions to use with the Amazon Chime SDK. For more information about the Amazon Chime SDK, see <a
+ *  href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html"> Using the Amazon Chime SDK </a> in the <i>Amazon
+ *  Chime Developer
  * 
- *  codes>
+ *  Guide</i>>
  * 
  *  You can use an AWS SDK, the AWS Command Line Interface (AWS CLI), or the REST API to make API calls. We recommend using
  *  an AWS SDK or the AWS CLI. Each API operation includes links to information about using it with a language-specific AWS
@@ -45,17 +48,17 @@ namespace Chime {
  * 
  *  You don't need to write code to calculate a signature for request authentication. The SDK clients authenticate your
  *  requests by using access keys that you provide. For more information about AWS SDKs, see the <a
- *  href="http://aws.amazon.com/developer/">AWS Developer
+ *  href="http://aws.amazon.com/developer/">AWS Developer Center</a>.
  * 
- *  Center</a>> </dd> <dt>Using the AWS CLI</dt> <dd>
+ *  </p </dd> <dt>Using the AWS CLI</dt> <dd>
  * 
  *  Use your access keys with the AWS CLI to make API calls. For information about setting up the AWS CLI, see <a
  *  href="https://docs.aws.amazon.com/cli/latest/userguide/installing.html">Installing the AWS Command Line Interface</a> in
  *  the <i>AWS Command Line Interface User Guide</i>. For a list of available Amazon Chime commands, see the <a
  *  href="https://docs.aws.amazon.com/cli/latest/reference/chime/index.html">Amazon Chime commands</a> in the <i>AWS CLI
- *  Command
+ *  Command Reference</i>.
  * 
- *  Reference</i>> </dd> <dt>Using REST API</dt> <dd>
+ *  </p </dd> <dt>Using REST APIs</dt> <dd>
  * 
  *  If you use REST to make API calls, you must authenticate your request by providing a signature. Amazon Chime supports
  *  signature version 4. For more information, see <a
@@ -69,8 +72,8 @@ namespace Chime {
  *  <code>https://service.chime.aws.amazon.com</code>> </dd> </dl>
  * 
  *  Administrative permissions are controlled using AWS Identity and Access Management (IAM). For more information, see <a
- *  href="https://docs.aws.amazon.com/chime/latest/ag/control-access.html">Control Access to the Amazon Chime Console</a> in
- *  the <i>Amazon Chime Administration
+ *  href="https://docs.aws.amazon.com/chime/latest/ag/security-iam.html">Identity and Access Management for Amazon Chime</a>
+ *  in the <i>Amazon Chime Administration
  *
  * \sa ChimeClient::deleteEventsConfiguration
  */

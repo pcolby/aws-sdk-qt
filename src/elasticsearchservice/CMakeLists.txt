@@ -1,10 +1,18 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsElasticsearchService
+  acceptinboundcrossclustersearchconnectionrequest.h
+  acceptinboundcrossclustersearchconnectionrequest_p.h
+  acceptinboundcrossclustersearchconnectionresponse.h
+  acceptinboundcrossclustersearchconnectionresponse_p.h
   addtagsrequest.h
   addtagsrequest_p.h
   addtagsresponse.h
   addtagsresponse_p.h
+  associatepackagerequest.h
+  associatepackagerequest_p.h
+  associatepackageresponse.h
+  associatepackageresponse_p.h
   cancelelasticsearchservicesoftwareupdaterequest.h
   cancelelasticsearchservicesoftwareupdaterequest_p.h
   cancelelasticsearchservicesoftwareupdateresponse.h
@@ -13,6 +21,14 @@ add_library(QtAwsElasticsearchService
   createelasticsearchdomainrequest_p.h
   createelasticsearchdomainresponse.h
   createelasticsearchdomainresponse_p.h
+  createoutboundcrossclustersearchconnectionrequest.h
+  createoutboundcrossclustersearchconnectionrequest_p.h
+  createoutboundcrossclustersearchconnectionresponse.h
+  createoutboundcrossclustersearchconnectionresponse_p.h
+  createpackagerequest.h
+  createpackagerequest_p.h
+  createpackageresponse.h
+  createpackageresponse_p.h
   deleteelasticsearchdomainrequest.h
   deleteelasticsearchdomainrequest_p.h
   deleteelasticsearchdomainresponse.h
@@ -21,6 +37,22 @@ add_library(QtAwsElasticsearchService
   deleteelasticsearchservicerolerequest_p.h
   deleteelasticsearchserviceroleresponse.h
   deleteelasticsearchserviceroleresponse_p.h
+  deleteinboundcrossclustersearchconnectionrequest.h
+  deleteinboundcrossclustersearchconnectionrequest_p.h
+  deleteinboundcrossclustersearchconnectionresponse.h
+  deleteinboundcrossclustersearchconnectionresponse_p.h
+  deleteoutboundcrossclustersearchconnectionrequest.h
+  deleteoutboundcrossclustersearchconnectionrequest_p.h
+  deleteoutboundcrossclustersearchconnectionresponse.h
+  deleteoutboundcrossclustersearchconnectionresponse_p.h
+  deletepackagerequest.h
+  deletepackagerequest_p.h
+  deletepackageresponse.h
+  deletepackageresponse_p.h
+  describedomainautotunesrequest.h
+  describedomainautotunesrequest_p.h
+  describedomainautotunesresponse.h
+  describedomainautotunesresponse_p.h
   describeelasticsearchdomainconfigrequest.h
   describeelasticsearchdomainconfigrequest_p.h
   describeelasticsearchdomainconfigresponse.h
@@ -37,6 +69,18 @@ add_library(QtAwsElasticsearchService
   describeelasticsearchinstancetypelimitsrequest_p.h
   describeelasticsearchinstancetypelimitsresponse.h
   describeelasticsearchinstancetypelimitsresponse_p.h
+  describeinboundcrossclustersearchconnectionsrequest.h
+  describeinboundcrossclustersearchconnectionsrequest_p.h
+  describeinboundcrossclustersearchconnectionsresponse.h
+  describeinboundcrossclustersearchconnectionsresponse_p.h
+  describeoutboundcrossclustersearchconnectionsrequest.h
+  describeoutboundcrossclustersearchconnectionsrequest_p.h
+  describeoutboundcrossclustersearchconnectionsresponse.h
+  describeoutboundcrossclustersearchconnectionsresponse_p.h
+  describepackagesrequest.h
+  describepackagesrequest_p.h
+  describepackagesresponse.h
+  describepackagesresponse_p.h
   describereservedelasticsearchinstanceofferingsrequest.h
   describereservedelasticsearchinstanceofferingsrequest_p.h
   describereservedelasticsearchinstanceofferingsresponse.h
@@ -45,6 +89,10 @@ add_library(QtAwsElasticsearchService
   describereservedelasticsearchinstancesrequest_p.h
   describereservedelasticsearchinstancesresponse.h
   describereservedelasticsearchinstancesresponse_p.h
+  dissociatepackagerequest.h
+  dissociatepackagerequest_p.h
+  dissociatepackageresponse.h
+  dissociatepackageresponse_p.h
   elasticsearchserviceclient.h
   elasticsearchserviceclient_p.h
   elasticsearchservicerequest.h
@@ -55,6 +103,10 @@ add_library(QtAwsElasticsearchService
   getcompatibleelasticsearchversionsrequest_p.h
   getcompatibleelasticsearchversionsresponse.h
   getcompatibleelasticsearchversionsresponse_p.h
+  getpackageversionhistoryrequest.h
+  getpackageversionhistoryrequest_p.h
+  getpackageversionhistoryresponse.h
+  getpackageversionhistoryresponse_p.h
   getupgradehistoryrequest.h
   getupgradehistoryrequest_p.h
   getupgradehistoryresponse.h
@@ -67,6 +119,10 @@ add_library(QtAwsElasticsearchService
   listdomainnamesrequest_p.h
   listdomainnamesresponse.h
   listdomainnamesresponse_p.h
+  listdomainsforpackagerequest.h
+  listdomainsforpackagerequest_p.h
+  listdomainsforpackageresponse.h
+  listdomainsforpackageresponse_p.h
   listelasticsearchinstancetypesrequest.h
   listelasticsearchinstancetypesrequest_p.h
   listelasticsearchinstancetypesresponse.h
@@ -75,6 +131,10 @@ add_library(QtAwsElasticsearchService
   listelasticsearchversionsrequest_p.h
   listelasticsearchversionsresponse.h
   listelasticsearchversionsresponse_p.h
+  listpackagesfordomainrequest.h
+  listpackagesfordomainrequest_p.h
+  listpackagesfordomainresponse.h
+  listpackagesfordomainresponse_p.h
   listtagsrequest.h
   listtagsrequest_p.h
   listtagsresponse.h
@@ -83,6 +143,10 @@ add_library(QtAwsElasticsearchService
   purchasereservedelasticsearchinstanceofferingrequest_p.h
   purchasereservedelasticsearchinstanceofferingresponse.h
   purchasereservedelasticsearchinstanceofferingresponse_p.h
+  rejectinboundcrossclustersearchconnectionrequest.h
+  rejectinboundcrossclustersearchconnectionrequest_p.h
+  rejectinboundcrossclustersearchconnectionresponse.h
+  rejectinboundcrossclustersearchconnectionresponse_p.h
   removetagsrequest.h
   removetagsrequest_p.h
   removetagsresponse.h
@@ -95,20 +159,40 @@ add_library(QtAwsElasticsearchService
   updateelasticsearchdomainconfigrequest_p.h
   updateelasticsearchdomainconfigresponse.h
   updateelasticsearchdomainconfigresponse_p.h
+  updatepackagerequest.h
+  updatepackagerequest_p.h
+  updatepackageresponse.h
+  updatepackageresponse_p.h
   upgradeelasticsearchdomainrequest.h
   upgradeelasticsearchdomainrequest_p.h
   upgradeelasticsearchdomainresponse.h
   upgradeelasticsearchdomainresponse_p.h
+  acceptinboundcrossclustersearchconnectionrequest.cpp
+  acceptinboundcrossclustersearchconnectionresponse.cpp
   addtagsrequest.cpp
   addtagsresponse.cpp
+  associatepackagerequest.cpp
+  associatepackageresponse.cpp
   cancelelasticsearchservicesoftwareupdaterequest.cpp
   cancelelasticsearchservicesoftwareupdateresponse.cpp
   createelasticsearchdomainrequest.cpp
   createelasticsearchdomainresponse.cpp
+  createoutboundcrossclustersearchconnectionrequest.cpp
+  createoutboundcrossclustersearchconnectionresponse.cpp
+  createpackagerequest.cpp
+  createpackageresponse.cpp
   deleteelasticsearchdomainrequest.cpp
   deleteelasticsearchdomainresponse.cpp
   deleteelasticsearchservicerolerequest.cpp
   deleteelasticsearchserviceroleresponse.cpp
+  deleteinboundcrossclustersearchconnectionrequest.cpp
+  deleteinboundcrossclustersearchconnectionresponse.cpp
+  deleteoutboundcrossclustersearchconnectionrequest.cpp
+  deleteoutboundcrossclustersearchconnectionresponse.cpp
+  deletepackagerequest.cpp
+  deletepackageresponse.cpp
+  describedomainautotunesrequest.cpp
+  describedomainautotunesresponse.cpp
   describeelasticsearchdomainconfigrequest.cpp
   describeelasticsearchdomainconfigresponse.cpp
   describeelasticsearchdomainrequest.cpp
@@ -117,35 +201,53 @@ add_library(QtAwsElasticsearchService
   describeelasticsearchdomainsresponse.cpp
   describeelasticsearchinstancetypelimitsrequest.cpp
   describeelasticsearchinstancetypelimitsresponse.cpp
+  describeinboundcrossclustersearchconnectionsrequest.cpp
+  describeinboundcrossclustersearchconnectionsresponse.cpp
+  describeoutboundcrossclustersearchconnectionsrequest.cpp
+  describeoutboundcrossclustersearchconnectionsresponse.cpp
+  describepackagesrequest.cpp
+  describepackagesresponse.cpp
   describereservedelasticsearchinstanceofferingsrequest.cpp
   describereservedelasticsearchinstanceofferingsresponse.cpp
   describereservedelasticsearchinstancesrequest.cpp
   describereservedelasticsearchinstancesresponse.cpp
+  dissociatepackagerequest.cpp
+  dissociatepackageresponse.cpp
   elasticsearchserviceclient.cpp
   elasticsearchservicerequest.cpp
   elasticsearchserviceresponse.cpp
   getcompatibleelasticsearchversionsrequest.cpp
   getcompatibleelasticsearchversionsresponse.cpp
+  getpackageversionhistoryrequest.cpp
+  getpackageversionhistoryresponse.cpp
   getupgradehistoryrequest.cpp
   getupgradehistoryresponse.cpp
   getupgradestatusrequest.cpp
   getupgradestatusresponse.cpp
   listdomainnamesrequest.cpp
   listdomainnamesresponse.cpp
+  listdomainsforpackagerequest.cpp
+  listdomainsforpackageresponse.cpp
   listelasticsearchinstancetypesrequest.cpp
   listelasticsearchinstancetypesresponse.cpp
   listelasticsearchversionsrequest.cpp
   listelasticsearchversionsresponse.cpp
+  listpackagesfordomainrequest.cpp
+  listpackagesfordomainresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
   purchasereservedelasticsearchinstanceofferingrequest.cpp
   purchasereservedelasticsearchinstanceofferingresponse.cpp
+  rejectinboundcrossclustersearchconnectionrequest.cpp
+  rejectinboundcrossclustersearchconnectionresponse.cpp
   removetagsrequest.cpp
   removetagsresponse.cpp
   startelasticsearchservicesoftwareupdaterequest.cpp
   startelasticsearchservicesoftwareupdateresponse.cpp
   updateelasticsearchdomainconfigrequest.cpp
   updateelasticsearchdomainconfigresponse.cpp
+  updatepackagerequest.cpp
+  updatepackageresponse.cpp
   upgradeelasticsearchdomainrequest.cpp
   upgradeelasticsearchdomainresponse.cpp)
 

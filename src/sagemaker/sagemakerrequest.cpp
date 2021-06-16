@@ -36,80 +36,240 @@ namespace SageMaker {
  * This enum describes the actions that can be performed as SageMaker
  * requests.
  *
+ * \value AddAssociationAction SageMaker AddAssociation action.
  * \value AddTagsAction SageMaker AddTags action.
+ * \value AssociateTrialComponentAction SageMaker AssociateTrialComponent action.
+ * \value CreateActionAction SageMaker CreateAction action.
  * \value CreateAlgorithmAction SageMaker CreateAlgorithm action.
+ * \value CreateAppAction SageMaker CreateApp action.
+ * \value CreateAppImageConfigAction SageMaker CreateAppImageConfig action.
+ * \value CreateArtifactAction SageMaker CreateArtifact action.
+ * \value CreateAutoMLJobAction SageMaker CreateAutoMLJob action.
  * \value CreateCodeRepositoryAction SageMaker CreateCodeRepository action.
  * \value CreateCompilationJobAction SageMaker CreateCompilationJob action.
+ * \value CreateContextAction SageMaker CreateContext action.
+ * \value CreateDataQualityJobDefinitionAction SageMaker CreateDataQualityJobDefinition action.
+ * \value CreateDeviceFleetAction SageMaker CreateDeviceFleet action.
+ * \value CreateDomainAction SageMaker CreateDomain action.
+ * \value CreateEdgePackagingJobAction SageMaker CreateEdgePackagingJob action.
  * \value CreateEndpointAction SageMaker CreateEndpoint action.
  * \value CreateEndpointConfigAction SageMaker CreateEndpointConfig action.
+ * \value CreateExperimentAction SageMaker CreateExperiment action.
+ * \value CreateFeatureGroupAction SageMaker CreateFeatureGroup action.
+ * \value CreateFlowDefinitionAction SageMaker CreateFlowDefinition action.
+ * \value CreateHumanTaskUiAction SageMaker CreateHumanTaskUi action.
  * \value CreateHyperParameterTuningJobAction SageMaker CreateHyperParameterTuningJob action.
+ * \value CreateImageAction SageMaker CreateImage action.
+ * \value CreateImageVersionAction SageMaker CreateImageVersion action.
  * \value CreateLabelingJobAction SageMaker CreateLabelingJob action.
  * \value CreateModelAction SageMaker CreateModel action.
+ * \value CreateModelBiasJobDefinitionAction SageMaker CreateModelBiasJobDefinition action.
+ * \value CreateModelExplainabilityJobDefinitionAction SageMaker CreateModelExplainabilityJobDefinition action.
  * \value CreateModelPackageAction SageMaker CreateModelPackage action.
+ * \value CreateModelPackageGroupAction SageMaker CreateModelPackageGroup action.
+ * \value CreateModelQualityJobDefinitionAction SageMaker CreateModelQualityJobDefinition action.
+ * \value CreateMonitoringScheduleAction SageMaker CreateMonitoringSchedule action.
  * \value CreateNotebookInstanceAction SageMaker CreateNotebookInstance action.
  * \value CreateNotebookInstanceLifecycleConfigAction SageMaker CreateNotebookInstanceLifecycleConfig action.
+ * \value CreatePipelineAction SageMaker CreatePipeline action.
+ * \value CreatePresignedDomainUrlAction SageMaker CreatePresignedDomainUrl action.
  * \value CreatePresignedNotebookInstanceUrlAction SageMaker CreatePresignedNotebookInstanceUrl action.
+ * \value CreateProcessingJobAction SageMaker CreateProcessingJob action.
+ * \value CreateProjectAction SageMaker CreateProject action.
  * \value CreateTrainingJobAction SageMaker CreateTrainingJob action.
  * \value CreateTransformJobAction SageMaker CreateTransformJob action.
+ * \value CreateTrialAction SageMaker CreateTrial action.
+ * \value CreateTrialComponentAction SageMaker CreateTrialComponent action.
+ * \value CreateUserProfileAction SageMaker CreateUserProfile action.
+ * \value CreateWorkforceAction SageMaker CreateWorkforce action.
  * \value CreateWorkteamAction SageMaker CreateWorkteam action.
+ * \value DeleteActionAction SageMaker DeleteAction action.
  * \value DeleteAlgorithmAction SageMaker DeleteAlgorithm action.
+ * \value DeleteAppAction SageMaker DeleteApp action.
+ * \value DeleteAppImageConfigAction SageMaker DeleteAppImageConfig action.
+ * \value DeleteArtifactAction SageMaker DeleteArtifact action.
+ * \value DeleteAssociationAction SageMaker DeleteAssociation action.
  * \value DeleteCodeRepositoryAction SageMaker DeleteCodeRepository action.
+ * \value DeleteContextAction SageMaker DeleteContext action.
+ * \value DeleteDataQualityJobDefinitionAction SageMaker DeleteDataQualityJobDefinition action.
+ * \value DeleteDeviceFleetAction SageMaker DeleteDeviceFleet action.
+ * \value DeleteDomainAction SageMaker DeleteDomain action.
  * \value DeleteEndpointAction SageMaker DeleteEndpoint action.
  * \value DeleteEndpointConfigAction SageMaker DeleteEndpointConfig action.
+ * \value DeleteExperimentAction SageMaker DeleteExperiment action.
+ * \value DeleteFeatureGroupAction SageMaker DeleteFeatureGroup action.
+ * \value DeleteFlowDefinitionAction SageMaker DeleteFlowDefinition action.
+ * \value DeleteHumanTaskUiAction SageMaker DeleteHumanTaskUi action.
+ * \value DeleteImageAction SageMaker DeleteImage action.
+ * \value DeleteImageVersionAction SageMaker DeleteImageVersion action.
  * \value DeleteModelAction SageMaker DeleteModel action.
+ * \value DeleteModelBiasJobDefinitionAction SageMaker DeleteModelBiasJobDefinition action.
+ * \value DeleteModelExplainabilityJobDefinitionAction SageMaker DeleteModelExplainabilityJobDefinition action.
  * \value DeleteModelPackageAction SageMaker DeleteModelPackage action.
+ * \value DeleteModelPackageGroupAction SageMaker DeleteModelPackageGroup action.
+ * \value DeleteModelPackageGroupPolicyAction SageMaker DeleteModelPackageGroupPolicy action.
+ * \value DeleteModelQualityJobDefinitionAction SageMaker DeleteModelQualityJobDefinition action.
+ * \value DeleteMonitoringScheduleAction SageMaker DeleteMonitoringSchedule action.
  * \value DeleteNotebookInstanceAction SageMaker DeleteNotebookInstance action.
  * \value DeleteNotebookInstanceLifecycleConfigAction SageMaker DeleteNotebookInstanceLifecycleConfig action.
+ * \value DeletePipelineAction SageMaker DeletePipeline action.
+ * \value DeleteProjectAction SageMaker DeleteProject action.
  * \value DeleteTagsAction SageMaker DeleteTags action.
+ * \value DeleteTrialAction SageMaker DeleteTrial action.
+ * \value DeleteTrialComponentAction SageMaker DeleteTrialComponent action.
+ * \value DeleteUserProfileAction SageMaker DeleteUserProfile action.
+ * \value DeleteWorkforceAction SageMaker DeleteWorkforce action.
  * \value DeleteWorkteamAction SageMaker DeleteWorkteam action.
+ * \value DeregisterDevicesAction SageMaker DeregisterDevices action.
+ * \value DescribeActionAction SageMaker DescribeAction action.
  * \value DescribeAlgorithmAction SageMaker DescribeAlgorithm action.
+ * \value DescribeAppAction SageMaker DescribeApp action.
+ * \value DescribeAppImageConfigAction SageMaker DescribeAppImageConfig action.
+ * \value DescribeArtifactAction SageMaker DescribeArtifact action.
+ * \value DescribeAutoMLJobAction SageMaker DescribeAutoMLJob action.
  * \value DescribeCodeRepositoryAction SageMaker DescribeCodeRepository action.
  * \value DescribeCompilationJobAction SageMaker DescribeCompilationJob action.
+ * \value DescribeContextAction SageMaker DescribeContext action.
+ * \value DescribeDataQualityJobDefinitionAction SageMaker DescribeDataQualityJobDefinition action.
+ * \value DescribeDeviceAction SageMaker DescribeDevice action.
+ * \value DescribeDeviceFleetAction SageMaker DescribeDeviceFleet action.
+ * \value DescribeDomainAction SageMaker DescribeDomain action.
+ * \value DescribeEdgePackagingJobAction SageMaker DescribeEdgePackagingJob action.
  * \value DescribeEndpointAction SageMaker DescribeEndpoint action.
  * \value DescribeEndpointConfigAction SageMaker DescribeEndpointConfig action.
+ * \value DescribeExperimentAction SageMaker DescribeExperiment action.
+ * \value DescribeFeatureGroupAction SageMaker DescribeFeatureGroup action.
+ * \value DescribeFlowDefinitionAction SageMaker DescribeFlowDefinition action.
+ * \value DescribeHumanTaskUiAction SageMaker DescribeHumanTaskUi action.
  * \value DescribeHyperParameterTuningJobAction SageMaker DescribeHyperParameterTuningJob action.
+ * \value DescribeImageAction SageMaker DescribeImage action.
+ * \value DescribeImageVersionAction SageMaker DescribeImageVersion action.
  * \value DescribeLabelingJobAction SageMaker DescribeLabelingJob action.
  * \value DescribeModelAction SageMaker DescribeModel action.
+ * \value DescribeModelBiasJobDefinitionAction SageMaker DescribeModelBiasJobDefinition action.
+ * \value DescribeModelExplainabilityJobDefinitionAction SageMaker DescribeModelExplainabilityJobDefinition action.
  * \value DescribeModelPackageAction SageMaker DescribeModelPackage action.
+ * \value DescribeModelPackageGroupAction SageMaker DescribeModelPackageGroup action.
+ * \value DescribeModelQualityJobDefinitionAction SageMaker DescribeModelQualityJobDefinition action.
+ * \value DescribeMonitoringScheduleAction SageMaker DescribeMonitoringSchedule action.
  * \value DescribeNotebookInstanceAction SageMaker DescribeNotebookInstance action.
  * \value DescribeNotebookInstanceLifecycleConfigAction SageMaker DescribeNotebookInstanceLifecycleConfig action.
+ * \value DescribePipelineAction SageMaker DescribePipeline action.
+ * \value DescribePipelineDefinitionForExecutionAction SageMaker DescribePipelineDefinitionForExecution action.
+ * \value DescribePipelineExecutionAction SageMaker DescribePipelineExecution action.
+ * \value DescribeProcessingJobAction SageMaker DescribeProcessingJob action.
+ * \value DescribeProjectAction SageMaker DescribeProject action.
  * \value DescribeSubscribedWorkteamAction SageMaker DescribeSubscribedWorkteam action.
  * \value DescribeTrainingJobAction SageMaker DescribeTrainingJob action.
  * \value DescribeTransformJobAction SageMaker DescribeTransformJob action.
+ * \value DescribeTrialAction SageMaker DescribeTrial action.
+ * \value DescribeTrialComponentAction SageMaker DescribeTrialComponent action.
+ * \value DescribeUserProfileAction SageMaker DescribeUserProfile action.
+ * \value DescribeWorkforceAction SageMaker DescribeWorkforce action.
  * \value DescribeWorkteamAction SageMaker DescribeWorkteam action.
+ * \value DisableSagemakerServicecatalogPortfolioAction SageMaker DisableSagemakerServicecatalogPortfolio action.
+ * \value DisassociateTrialComponentAction SageMaker DisassociateTrialComponent action.
+ * \value EnableSagemakerServicecatalogPortfolioAction SageMaker EnableSagemakerServicecatalogPortfolio action.
+ * \value GetDeviceFleetReportAction SageMaker GetDeviceFleetReport action.
+ * \value GetModelPackageGroupPolicyAction SageMaker GetModelPackageGroupPolicy action.
+ * \value GetSagemakerServicecatalogPortfolioStatusAction SageMaker GetSagemakerServicecatalogPortfolioStatus action.
  * \value GetSearchSuggestionsAction SageMaker GetSearchSuggestions action.
+ * \value ListActionsAction SageMaker ListActions action.
  * \value ListAlgorithmsAction SageMaker ListAlgorithms action.
+ * \value ListAppImageConfigsAction SageMaker ListAppImageConfigs action.
+ * \value ListAppsAction SageMaker ListApps action.
+ * \value ListArtifactsAction SageMaker ListArtifacts action.
+ * \value ListAssociationsAction SageMaker ListAssociations action.
+ * \value ListAutoMLJobsAction SageMaker ListAutoMLJobs action.
+ * \value ListCandidatesForAutoMLJobAction SageMaker ListCandidatesForAutoMLJob action.
  * \value ListCodeRepositoriesAction SageMaker ListCodeRepositories action.
  * \value ListCompilationJobsAction SageMaker ListCompilationJobs action.
+ * \value ListContextsAction SageMaker ListContexts action.
+ * \value ListDataQualityJobDefinitionsAction SageMaker ListDataQualityJobDefinitions action.
+ * \value ListDeviceFleetsAction SageMaker ListDeviceFleets action.
+ * \value ListDevicesAction SageMaker ListDevices action.
+ * \value ListDomainsAction SageMaker ListDomains action.
+ * \value ListEdgePackagingJobsAction SageMaker ListEdgePackagingJobs action.
  * \value ListEndpointConfigsAction SageMaker ListEndpointConfigs action.
  * \value ListEndpointsAction SageMaker ListEndpoints action.
+ * \value ListExperimentsAction SageMaker ListExperiments action.
+ * \value ListFeatureGroupsAction SageMaker ListFeatureGroups action.
+ * \value ListFlowDefinitionsAction SageMaker ListFlowDefinitions action.
+ * \value ListHumanTaskUisAction SageMaker ListHumanTaskUis action.
  * \value ListHyperParameterTuningJobsAction SageMaker ListHyperParameterTuningJobs action.
+ * \value ListImageVersionsAction SageMaker ListImageVersions action.
+ * \value ListImagesAction SageMaker ListImages action.
  * \value ListLabelingJobsAction SageMaker ListLabelingJobs action.
  * \value ListLabelingJobsForWorkteamAction SageMaker ListLabelingJobsForWorkteam action.
+ * \value ListModelBiasJobDefinitionsAction SageMaker ListModelBiasJobDefinitions action.
+ * \value ListModelExplainabilityJobDefinitionsAction SageMaker ListModelExplainabilityJobDefinitions action.
+ * \value ListModelPackageGroupsAction SageMaker ListModelPackageGroups action.
  * \value ListModelPackagesAction SageMaker ListModelPackages action.
+ * \value ListModelQualityJobDefinitionsAction SageMaker ListModelQualityJobDefinitions action.
  * \value ListModelsAction SageMaker ListModels action.
+ * \value ListMonitoringExecutionsAction SageMaker ListMonitoringExecutions action.
+ * \value ListMonitoringSchedulesAction SageMaker ListMonitoringSchedules action.
  * \value ListNotebookInstanceLifecycleConfigsAction SageMaker ListNotebookInstanceLifecycleConfigs action.
  * \value ListNotebookInstancesAction SageMaker ListNotebookInstances action.
+ * \value ListPipelineExecutionStepsAction SageMaker ListPipelineExecutionSteps action.
+ * \value ListPipelineExecutionsAction SageMaker ListPipelineExecutions action.
+ * \value ListPipelineParametersForExecutionAction SageMaker ListPipelineParametersForExecution action.
+ * \value ListPipelinesAction SageMaker ListPipelines action.
+ * \value ListProcessingJobsAction SageMaker ListProcessingJobs action.
+ * \value ListProjectsAction SageMaker ListProjects action.
  * \value ListSubscribedWorkteamsAction SageMaker ListSubscribedWorkteams action.
  * \value ListTagsAction SageMaker ListTags action.
  * \value ListTrainingJobsAction SageMaker ListTrainingJobs action.
  * \value ListTrainingJobsForHyperParameterTuningJobAction SageMaker ListTrainingJobsForHyperParameterTuningJob action.
  * \value ListTransformJobsAction SageMaker ListTransformJobs action.
+ * \value ListTrialComponentsAction SageMaker ListTrialComponents action.
+ * \value ListTrialsAction SageMaker ListTrials action.
+ * \value ListUserProfilesAction SageMaker ListUserProfiles action.
+ * \value ListWorkforcesAction SageMaker ListWorkforces action.
  * \value ListWorkteamsAction SageMaker ListWorkteams action.
+ * \value PutModelPackageGroupPolicyAction SageMaker PutModelPackageGroupPolicy action.
+ * \value RegisterDevicesAction SageMaker RegisterDevices action.
  * \value RenderUiTemplateAction SageMaker RenderUiTemplate action.
  * \value SearchAction SageMaker Search action.
+ * \value SendPipelineExecutionStepFailureAction SageMaker SendPipelineExecutionStepFailure action.
+ * \value SendPipelineExecutionStepSuccessAction SageMaker SendPipelineExecutionStepSuccess action.
+ * \value StartMonitoringScheduleAction SageMaker StartMonitoringSchedule action.
  * \value StartNotebookInstanceAction SageMaker StartNotebookInstance action.
+ * \value StartPipelineExecutionAction SageMaker StartPipelineExecution action.
+ * \value StopAutoMLJobAction SageMaker StopAutoMLJob action.
  * \value StopCompilationJobAction SageMaker StopCompilationJob action.
+ * \value StopEdgePackagingJobAction SageMaker StopEdgePackagingJob action.
  * \value StopHyperParameterTuningJobAction SageMaker StopHyperParameterTuningJob action.
  * \value StopLabelingJobAction SageMaker StopLabelingJob action.
+ * \value StopMonitoringScheduleAction SageMaker StopMonitoringSchedule action.
  * \value StopNotebookInstanceAction SageMaker StopNotebookInstance action.
+ * \value StopPipelineExecutionAction SageMaker StopPipelineExecution action.
+ * \value StopProcessingJobAction SageMaker StopProcessingJob action.
  * \value StopTrainingJobAction SageMaker StopTrainingJob action.
  * \value StopTransformJobAction SageMaker StopTransformJob action.
+ * \value UpdateActionAction SageMaker UpdateAction action.
+ * \value UpdateAppImageConfigAction SageMaker UpdateAppImageConfig action.
+ * \value UpdateArtifactAction SageMaker UpdateArtifact action.
  * \value UpdateCodeRepositoryAction SageMaker UpdateCodeRepository action.
+ * \value UpdateContextAction SageMaker UpdateContext action.
+ * \value UpdateDeviceFleetAction SageMaker UpdateDeviceFleet action.
+ * \value UpdateDevicesAction SageMaker UpdateDevices action.
+ * \value UpdateDomainAction SageMaker UpdateDomain action.
  * \value UpdateEndpointAction SageMaker UpdateEndpoint action.
  * \value UpdateEndpointWeightsAndCapacitiesAction SageMaker UpdateEndpointWeightsAndCapacities action.
+ * \value UpdateExperimentAction SageMaker UpdateExperiment action.
+ * \value UpdateImageAction SageMaker UpdateImage action.
+ * \value UpdateModelPackageAction SageMaker UpdateModelPackage action.
+ * \value UpdateMonitoringScheduleAction SageMaker UpdateMonitoringSchedule action.
  * \value UpdateNotebookInstanceAction SageMaker UpdateNotebookInstance action.
  * \value UpdateNotebookInstanceLifecycleConfigAction SageMaker UpdateNotebookInstanceLifecycleConfig action.
+ * \value UpdatePipelineAction SageMaker UpdatePipeline action.
+ * \value UpdatePipelineExecutionAction SageMaker UpdatePipelineExecution action.
+ * \value UpdateTrainingJobAction SageMaker UpdateTrainingJob action.
+ * \value UpdateTrialAction SageMaker UpdateTrial action.
+ * \value UpdateTrialComponentAction SageMaker UpdateTrialComponent action.
+ * \value UpdateUserProfileAction SageMaker UpdateUserProfile action.
+ * \value UpdateWorkforceAction SageMaker UpdateWorkforce action.
  * \value UpdateWorkteamAction SageMaker UpdateWorkteam action.
  */
 

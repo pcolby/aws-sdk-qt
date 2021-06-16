@@ -38,6 +38,8 @@ public:
     /// Actions supported by PersonalizeEvents.
     enum Action {
         PutEventsAction,
+        PutItemsAction,
+        PutUsersAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

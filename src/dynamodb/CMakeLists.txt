@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsDynamoDB
+  batchexecutestatementrequest.h
+  batchexecutestatementrequest_p.h
+  batchexecutestatementresponse.h
+  batchexecutestatementresponse_p.h
   batchgetitemrequest.h
   batchgetitemrequest_p.h
   batchgetitemresponse.h
@@ -41,10 +45,18 @@ add_library(QtAwsDynamoDB
   describecontinuousbackupsrequest_p.h
   describecontinuousbackupsresponse.h
   describecontinuousbackupsresponse_p.h
+  describecontributorinsightsrequest.h
+  describecontributorinsightsrequest_p.h
+  describecontributorinsightsresponse.h
+  describecontributorinsightsresponse_p.h
   describeendpointsrequest.h
   describeendpointsrequest_p.h
   describeendpointsresponse.h
   describeendpointsresponse_p.h
+  describeexportrequest.h
+  describeexportrequest_p.h
+  describeexportresponse.h
+  describeexportresponse_p.h
   describeglobaltablerequest.h
   describeglobaltablerequest_p.h
   describeglobaltableresponse.h
@@ -53,10 +65,18 @@ add_library(QtAwsDynamoDB
   describeglobaltablesettingsrequest_p.h
   describeglobaltablesettingsresponse.h
   describeglobaltablesettingsresponse_p.h
+  describekinesisstreamingdestinationrequest.h
+  describekinesisstreamingdestinationrequest_p.h
+  describekinesisstreamingdestinationresponse.h
+  describekinesisstreamingdestinationresponse_p.h
   describelimitsrequest.h
   describelimitsrequest_p.h
   describelimitsresponse.h
   describelimitsresponse_p.h
+  describetablereplicaautoscalingrequest.h
+  describetablereplicaautoscalingrequest_p.h
+  describetablereplicaautoscalingresponse.h
+  describetablereplicaautoscalingresponse_p.h
   describetablerequest.h
   describetablerequest_p.h
   describetableresponse.h
@@ -65,12 +85,32 @@ add_library(QtAwsDynamoDB
   describetimetoliverequest_p.h
   describetimetoliveresponse.h
   describetimetoliveresponse_p.h
+  disablekinesisstreamingdestinationrequest.h
+  disablekinesisstreamingdestinationrequest_p.h
+  disablekinesisstreamingdestinationresponse.h
+  disablekinesisstreamingdestinationresponse_p.h
   dynamodbclient.h
   dynamodbclient_p.h
   dynamodbrequest.h
   dynamodbrequest_p.h
   dynamodbresponse.h
   dynamodbresponse_p.h
+  enablekinesisstreamingdestinationrequest.h
+  enablekinesisstreamingdestinationrequest_p.h
+  enablekinesisstreamingdestinationresponse.h
+  enablekinesisstreamingdestinationresponse_p.h
+  executestatementrequest.h
+  executestatementrequest_p.h
+  executestatementresponse.h
+  executestatementresponse_p.h
+  executetransactionrequest.h
+  executetransactionrequest_p.h
+  executetransactionresponse.h
+  executetransactionresponse_p.h
+  exporttabletopointintimerequest.h
+  exporttabletopointintimerequest_p.h
+  exporttabletopointintimeresponse.h
+  exporttabletopointintimeresponse_p.h
   getitemrequest.h
   getitemrequest_p.h
   getitemresponse.h
@@ -79,6 +119,14 @@ add_library(QtAwsDynamoDB
   listbackupsrequest_p.h
   listbackupsresponse.h
   listbackupsresponse_p.h
+  listcontributorinsightsrequest.h
+  listcontributorinsightsrequest_p.h
+  listcontributorinsightsresponse.h
+  listcontributorinsightsresponse_p.h
+  listexportsrequest.h
+  listexportsrequest_p.h
+  listexportsresponse.h
+  listexportsresponse_p.h
   listglobaltablesrequest.h
   listglobaltablesrequest_p.h
   listglobaltablesresponse.h
@@ -131,6 +179,10 @@ add_library(QtAwsDynamoDB
   updatecontinuousbackupsrequest_p.h
   updatecontinuousbackupsresponse.h
   updatecontinuousbackupsresponse_p.h
+  updatecontributorinsightsrequest.h
+  updatecontributorinsightsrequest_p.h
+  updatecontributorinsightsresponse.h
+  updatecontributorinsightsresponse_p.h
   updateglobaltablerequest.h
   updateglobaltablerequest_p.h
   updateglobaltableresponse.h
@@ -143,6 +195,10 @@ add_library(QtAwsDynamoDB
   updateitemrequest_p.h
   updateitemresponse.h
   updateitemresponse_p.h
+  updatetablereplicaautoscalingrequest.h
+  updatetablereplicaautoscalingrequest_p.h
+  updatetablereplicaautoscalingresponse.h
+  updatetablereplicaautoscalingresponse_p.h
   updatetablerequest.h
   updatetablerequest_p.h
   updatetableresponse.h
@@ -151,6 +207,8 @@ add_library(QtAwsDynamoDB
   updatetimetoliverequest_p.h
   updatetimetoliveresponse.h
   updatetimetoliveresponse_p.h
+  batchexecutestatementrequest.cpp
+  batchexecutestatementresponse.cpp
   batchgetitemrequest.cpp
   batchgetitemresponse.cpp
   batchwriteitemrequest.cpp
@@ -171,25 +229,47 @@ add_library(QtAwsDynamoDB
   describebackupresponse.cpp
   describecontinuousbackupsrequest.cpp
   describecontinuousbackupsresponse.cpp
+  describecontributorinsightsrequest.cpp
+  describecontributorinsightsresponse.cpp
   describeendpointsrequest.cpp
   describeendpointsresponse.cpp
+  describeexportrequest.cpp
+  describeexportresponse.cpp
   describeglobaltablerequest.cpp
   describeglobaltableresponse.cpp
   describeglobaltablesettingsrequest.cpp
   describeglobaltablesettingsresponse.cpp
+  describekinesisstreamingdestinationrequest.cpp
+  describekinesisstreamingdestinationresponse.cpp
   describelimitsrequest.cpp
   describelimitsresponse.cpp
+  describetablereplicaautoscalingrequest.cpp
+  describetablereplicaautoscalingresponse.cpp
   describetablerequest.cpp
   describetableresponse.cpp
   describetimetoliverequest.cpp
   describetimetoliveresponse.cpp
+  disablekinesisstreamingdestinationrequest.cpp
+  disablekinesisstreamingdestinationresponse.cpp
   dynamodbclient.cpp
   dynamodbrequest.cpp
   dynamodbresponse.cpp
+  enablekinesisstreamingdestinationrequest.cpp
+  enablekinesisstreamingdestinationresponse.cpp
+  executestatementrequest.cpp
+  executestatementresponse.cpp
+  executetransactionrequest.cpp
+  executetransactionresponse.cpp
+  exporttabletopointintimerequest.cpp
+  exporttabletopointintimeresponse.cpp
   getitemrequest.cpp
   getitemresponse.cpp
   listbackupsrequest.cpp
   listbackupsresponse.cpp
+  listcontributorinsightsrequest.cpp
+  listcontributorinsightsresponse.cpp
+  listexportsrequest.cpp
+  listexportsresponse.cpp
   listglobaltablesrequest.cpp
   listglobaltablesresponse.cpp
   listtablesrequest.cpp
@@ -216,12 +296,16 @@ add_library(QtAwsDynamoDB
   untagresourceresponse.cpp
   updatecontinuousbackupsrequest.cpp
   updatecontinuousbackupsresponse.cpp
+  updatecontributorinsightsrequest.cpp
+  updatecontributorinsightsresponse.cpp
   updateglobaltablerequest.cpp
   updateglobaltableresponse.cpp
   updateglobaltablesettingsrequest.cpp
   updateglobaltablesettingsresponse.cpp
   updateitemrequest.cpp
   updateitemresponse.cpp
+  updatetablereplicaautoscalingrequest.cpp
+  updatetablereplicaautoscalingresponse.cpp
   updatetablerequest.cpp
   updatetableresponse.cpp
   updatetimetoliverequest.cpp

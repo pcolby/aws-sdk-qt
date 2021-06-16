@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsEcs
+  createcapacityproviderrequest.h
+  createcapacityproviderrequest_p.h
+  createcapacityproviderresponse.h
+  createcapacityproviderresponse_p.h
   createclusterrequest.h
   createclusterrequest_p.h
   createclusterresponse.h
@@ -21,6 +25,10 @@ add_library(QtAwsEcs
   deleteattributesrequest_p.h
   deleteattributesresponse.h
   deleteattributesresponse_p.h
+  deletecapacityproviderrequest.h
+  deletecapacityproviderrequest_p.h
+  deletecapacityproviderresponse.h
+  deletecapacityproviderresponse_p.h
   deleteclusterrequest.h
   deleteclusterrequest_p.h
   deleteclusterresponse.h
@@ -41,6 +49,10 @@ add_library(QtAwsEcs
   deregistertaskdefinitionrequest_p.h
   deregistertaskdefinitionresponse.h
   deregistertaskdefinitionresponse_p.h
+  describecapacityprovidersrequest.h
+  describecapacityprovidersrequest_p.h
+  describecapacityprovidersresponse.h
+  describecapacityprovidersresponse_p.h
   describeclustersrequest.h
   describeclustersrequest_p.h
   describeclustersresponse.h
@@ -75,6 +87,10 @@ add_library(QtAwsEcs
   ecsrequest_p.h
   ecsresponse.h
   ecsresponse_p.h
+  executecommandrequest.h
+  executecommandrequest_p.h
+  executecommandresponse.h
+  executecommandresponse_p.h
   listaccountsettingsrequest.h
   listaccountsettingsrequest_p.h
   listaccountsettingsresponse.h
@@ -123,6 +139,10 @@ add_library(QtAwsEcs
   putattributesrequest_p.h
   putattributesresponse.h
   putattributesresponse_p.h
+  putclustercapacityprovidersrequest.h
+  putclustercapacityprovidersrequest_p.h
+  putclustercapacityprovidersresponse.h
+  putclustercapacityprovidersresponse_p.h
   registercontainerinstancerequest.h
   registercontainerinstancerequest_p.h
   registercontainerinstanceresponse.h
@@ -163,6 +183,18 @@ add_library(QtAwsEcs
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatecapacityproviderrequest.h
+  updatecapacityproviderrequest_p.h
+  updatecapacityproviderresponse.h
+  updatecapacityproviderresponse_p.h
+  updateclusterrequest.h
+  updateclusterrequest_p.h
+  updateclusterresponse.h
+  updateclusterresponse_p.h
+  updateclustersettingsrequest.h
+  updateclustersettingsrequest_p.h
+  updateclustersettingsresponse.h
+  updateclustersettingsresponse_p.h
   updatecontaineragentrequest.h
   updatecontaineragentrequest_p.h
   updatecontaineragentresponse.h
@@ -183,6 +215,8 @@ add_library(QtAwsEcs
   updatetasksetrequest_p.h
   updatetasksetresponse.h
   updatetasksetresponse_p.h
+  createcapacityproviderrequest.cpp
+  createcapacityproviderresponse.cpp
   createclusterrequest.cpp
   createclusterresponse.cpp
   createservicerequest.cpp
@@ -193,6 +227,8 @@ add_library(QtAwsEcs
   deleteaccountsettingresponse.cpp
   deleteattributesrequest.cpp
   deleteattributesresponse.cpp
+  deletecapacityproviderrequest.cpp
+  deletecapacityproviderresponse.cpp
   deleteclusterrequest.cpp
   deleteclusterresponse.cpp
   deleteservicerequest.cpp
@@ -203,6 +239,8 @@ add_library(QtAwsEcs
   deregistercontainerinstanceresponse.cpp
   deregistertaskdefinitionrequest.cpp
   deregistertaskdefinitionresponse.cpp
+  describecapacityprovidersrequest.cpp
+  describecapacityprovidersresponse.cpp
   describeclustersrequest.cpp
   describeclustersresponse.cpp
   describecontainerinstancesrequest.cpp
@@ -220,6 +258,8 @@ add_library(QtAwsEcs
   ecsclient.cpp
   ecsrequest.cpp
   ecsresponse.cpp
+  executecommandrequest.cpp
+  executecommandresponse.cpp
   listaccountsettingsrequest.cpp
   listaccountsettingsresponse.cpp
   listattributesrequest.cpp
@@ -244,6 +284,8 @@ add_library(QtAwsEcs
   putaccountsettingresponse.cpp
   putattributesrequest.cpp
   putattributesresponse.cpp
+  putclustercapacityprovidersrequest.cpp
+  putclustercapacityprovidersresponse.cpp
   registercontainerinstancerequest.cpp
   registercontainerinstanceresponse.cpp
   registertaskdefinitionrequest.cpp
@@ -264,6 +306,12 @@ add_library(QtAwsEcs
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatecapacityproviderrequest.cpp
+  updatecapacityproviderresponse.cpp
+  updateclusterrequest.cpp
+  updateclusterresponse.cpp
+  updateclustersettingsrequest.cpp
+  updateclustersettingsresponse.cpp
   updatecontaineragentrequest.cpp
   updatecontaineragentresponse.cpp
   updatecontainerinstancesstaterequest.cpp

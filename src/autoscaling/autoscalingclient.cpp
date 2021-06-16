@@ -31,6 +31,8 @@
 #include "batchdeletescheduledactionresponse.h"
 #include "batchputscheduledupdategroupactionrequest.h"
 #include "batchputscheduledupdategroupactionresponse.h"
+#include "cancelinstancerefreshrequest.h"
+#include "cancelinstancerefreshresponse.h"
 #include "completelifecycleactionrequest.h"
 #include "completelifecycleactionresponse.h"
 #include "createautoscalinggrouprequest.h"
@@ -53,6 +55,8 @@
 #include "deletescheduledactionresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "deletewarmpoolrequest.h"
+#include "deletewarmpoolresponse.h"
 #include "describeaccountlimitsrequest.h"
 #include "describeaccountlimitsresponse.h"
 #include "describeadjustmenttypesrequest.h"
@@ -63,6 +67,8 @@
 #include "describeautoscalinginstancesresponse.h"
 #include "describeautoscalingnotificationtypesrequest.h"
 #include "describeautoscalingnotificationtypesresponse.h"
+#include "describeinstancerefreshesrequest.h"
+#include "describeinstancerefreshesresponse.h"
 #include "describelaunchconfigurationsrequest.h"
 #include "describelaunchconfigurationsresponse.h"
 #include "describelifecyclehooktypesrequest.h"
@@ -89,6 +95,8 @@
 #include "describetagsresponse.h"
 #include "describeterminationpolicytypesrequest.h"
 #include "describeterminationpolicytypesresponse.h"
+#include "describewarmpoolrequest.h"
+#include "describewarmpoolresponse.h"
 #include "detachinstancesrequest.h"
 #include "detachinstancesresponse.h"
 #include "detachloadbalancertargetgroupsrequest.h"
@@ -105,6 +113,8 @@
 #include "executepolicyresponse.h"
 #include "exitstandbyrequest.h"
 #include "exitstandbyresponse.h"
+#include "getpredictivescalingforecastrequest.h"
+#include "getpredictivescalingforecastresponse.h"
 #include "putlifecyclehookrequest.h"
 #include "putlifecyclehookresponse.h"
 #include "putnotificationconfigurationrequest.h"
@@ -113,6 +123,8 @@
 #include "putscalingpolicyresponse.h"
 #include "putscheduledupdategroupactionrequest.h"
 #include "putscheduledupdategroupactionresponse.h"
+#include "putwarmpoolrequest.h"
+#include "putwarmpoolresponse.h"
 #include "recordlifecycleactionheartbeatrequest.h"
 #include "recordlifecycleactionheartbeatresponse.h"
 #include "resumeprocessesrequest.h"
@@ -123,6 +135,8 @@
 #include "setinstancehealthresponse.h"
 #include "setinstanceprotectionrequest.h"
 #include "setinstanceprotectionresponse.h"
+#include "startinstancerefreshrequest.h"
+#include "startinstancerefreshresponse.h"
 #include "suspendprocessesrequest.h"
 #include "suspendprocessesresponse.h"
 #include "terminateinstanceinautoscalinggrouprequest.h"
@@ -154,15 +168,17 @@ namespace AutoScaling {
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
- *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined policies,
- *  schedules, and health checks. Use this service with AWS Auto Scaling, Amazon CloudWatch, and Elastic Load
+ *  Amazon EC2 Auto Scaling is designed to automatically launch or terminate EC2 instances based on user-defined scaling
+ *  policies, scheduled actions, and health
  * 
- *  Balancing>
+ *  checks>
  * 
- *  For more information, including information about granting IAM users required permissions for Amazon EC2 Auto Scaling
- *  actions, see the <a
+ *  For more information about Amazon EC2 Auto Scaling, see the <a
  *  href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">Amazon EC2 Auto
- *  Scaling User
+ *  Scaling User Guide</a>. For information about granting IAM users required permissions for calls to Amazon EC2 Auto
+ *  Scaling, see <a
+ *  href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/ec2-auto-scaling-api-permissions.html">Granting IAM users
+ *  required permissions for Amazon EC2 Auto Scaling resources</a> in the <i>Amazon EC2 Auto Scaling API
  */
 
 /*!
@@ -241,8 +257,8 @@ AutoScalingClient::AutoScalingClient(
  * groups>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-instance-asg.html">Attach EC2 Instances to Your Auto
- * Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-instance-asg.html">Attach EC2 instances to your Auto
+ * Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstancesRequest &request)
 {
@@ -255,19 +271,34 @@ AttachInstancesResponse * AutoScalingClient::attachInstances(const AttachInstanc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches one or more target groups to the specified Auto Scaling group.
+ * Attaches one or more target groups to the specified Auto Scaling
  *
- * </p
+ * group>
  *
- * To describe the target groups for an Auto Scaling group, use <a>DescribeLoadBalancerTargetGroups</a>. To detach the
- * target group from the Auto Scaling group, use
+ * This operation is used with the following load balancer types:
  *
- * <a>DetachLoadBalancerTargetGroups</a>>
+ * </p <ul> <li>
  *
- * With Application Load Balancers and Network Load Balancers, instances are registered as targets with a target group.
- * With Classic Load Balancers, instances are registered with the load balancer. For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html">Attaching a Load Balancer to
- * Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * Application Load Balancer - Operates at the application layer (layer 7) and supports HTTP and HTTPS.
+ *
+ * </p </li> <li>
+ *
+ * Network Load Balancer - Operates at the transport layer (layer 4) and supports TCP, TLS, and UDP.
+ *
+ * </p </li> <li>
+ *
+ * Gateway Load Balancer - Operates at the network layer (layer
+ *
+ * 3)> </li> </ul>
+ *
+ * To describe the target groups for an Auto Scaling group, call the <a>DescribeLoadBalancerTargetGroups</a> API. To detach
+ * the target group from the Auto Scaling group, call the <a>DetachLoadBalancerTargetGroups</a>
+ *
+ * API>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic Load Balancing and
+ * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
  */
 AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTargetGroups(const AttachLoadBalancerTargetGroupsRequest &request)
 {
@@ -280,22 +311,26 @@ AttachLoadBalancerTargetGroupsResponse * AutoScalingClient::attachLoadBalancerTa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches one or more Classic Load Balancers to the specified Auto Scaling
+ * <note>
  *
- * group>
+ * To attach an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer, use the
+ * <a>AttachLoadBalancerTargetGroups</a> API operation
  *
- * To attach an Application Load Balancer or a Network Load Balancer instead, see
+ * instead> </note>
  *
- * <a>AttachLoadBalancerTargetGroups</a>>
+ * Attaches one or more Classic Load Balancers to the specified Auto Scaling group. Amazon EC2 Auto Scaling registers the
+ * running instances with these Classic Load
  *
- * To describe the load balancers for an Auto Scaling group, use <a>DescribeLoadBalancers</a>. To detach the load balancer
- * from the Auto Scaling group, use
+ * Balancers>
  *
- * <a>DetachLoadBalancers</a>>
+ * To describe the load balancers for an Auto Scaling group, call the <a>DescribeLoadBalancers</a> API. To detach the load
+ * balancer from the Auto Scaling group, call the <a>DetachLoadBalancers</a>
+ *
+ * API>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/attach-load-balancer-asg.html">Attaching a Load Balancer to
- * Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic Load Balancing and
+ * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
  */
 AttachLoadBalancersResponse * AutoScalingClient::attachLoadBalancers(const AttachLoadBalancersRequest &request)
 {
@@ -321,12 +356,31 @@ BatchDeleteScheduledActionResponse * AutoScalingClient::batchDeleteScheduledActi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates one or more scheduled scaling actions for an Auto Scaling group. If you leave a parameter unspecified
- * when updating a scheduled scaling action, the corresponding value remains
+ * Creates or updates one or more scheduled scaling actions for an Auto Scaling
  */
 BatchPutScheduledUpdateGroupActionResponse * AutoScalingClient::batchPutScheduledUpdateGroupAction(const BatchPutScheduledUpdateGroupActionRequest &request)
 {
     return qobject_cast<BatchPutScheduledUpdateGroupActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * CancelInstanceRefreshResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels an instance refresh operation in progress. Cancellation does not roll back any replacements that have already
+ * been completed, but it prevents new replacements from being started.
+ *
+ * </p
+ *
+ * This operation is part of the <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance refresh feature</a> in
+ * Amazon EC2 Auto Scaling, which helps you update instances in your Auto Scaling group after you make configuration
+ */
+CancelInstanceRefreshResponse * AutoScalingClient::cancelInstanceRefresh(const CancelInstanceRefreshRequest &request)
+{
+    return qobject_cast<CancelInstanceRefreshResponse *>(send(request));
 }
 
 /*!
@@ -366,7 +420,7 @@ BatchPutScheduledUpdateGroupActionResponse * AutoScalingClient::batchPutSchedule
  * </p </li> </ol>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
- * EC2 Auto Scaling Lifecycle Hooks</a> in the <i>Amazon EC2 Auto Scaling User
+ * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
  */
 CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(const CompleteLifecycleActionRequest &request)
 {
@@ -379,14 +433,36 @@ CompleteLifecycleActionResponse * AutoScalingClient::completeLifecycleAction(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Auto Scaling group with the specified name and
+ * <b>We strongly recommend using a launch template when calling this operation to ensure full functionality for Amazon EC2
+ * Auto Scaling and Amazon EC2.</b>
  *
- * attributes>
+ * </p
  *
- * If you exceed your maximum limit of Auto Scaling groups, the call fails. For information about viewing this limit, see
- * <a>DescribeAccountLimits</a>. For information about updating this limit, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
- * in the <i>Amazon EC2 Auto Scaling User
+ * Creates an Auto Scaling group with the specified name and attributes.
+ *
+ * </p
+ *
+ * If you exceed your maximum limit of Auto Scaling groups, the call fails. To query this limit, call the
+ * <a>DescribeAccountLimits</a> API. For information about updating this limit, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling service
+ * quotas</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * For introductory exercises for creating an Auto Scaling group, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/GettingStartedTutorial.html">Getting started with Amazon EC2
+ * Auto Scaling</a> and <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-register-lbs-with-asg.html">Tutorial: Set up a scaled and
+ * load-balanced application</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html">Auto Scaling groups</a> in the
+ * <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * Every Auto Scaling group has three size parameters (<code>DesiredCapacity</code>, <code>MaxSize</code>, and
+ * <code>MinSize</code>). Usually, you set these sizes based on a specific number of instances. However, if you configure a
+ * mixed instances policy that defines weights for the instance types, you must specify these sizes with the same units
+ * that you use for weighting
  */
 CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const CreateAutoScalingGroupRequest &request)
 {
@@ -403,15 +479,15 @@ CreateAutoScalingGroupResponse * AutoScalingClient::createAutoScalingGroup(const
  *
  * configuration>
  *
- * If you exceed your maximum limit of launch configurations, the call fails. For information about viewing this limit, see
- * <a>DescribeAccountLimits</a>. For information about updating this limit, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
- * in the <i>Amazon EC2 Auto Scaling User
+ * If you exceed your maximum limit of launch configurations, the call fails. To query this limit, call the
+ * <a>DescribeAccountLimits</a> API. For information about updating this limit, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling service
+ * quotas</a> in the <i>Amazon EC2 Auto Scaling User
  *
  * Guide</i>>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html">Launch Configurations</a> in the
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html">Launch configurations</a> in the
  * <i>Amazon EC2 Auto Scaling User
  */
 CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration(const CreateLaunchConfigurationRequest &request)
@@ -435,8 +511,8 @@ CreateLaunchConfigurationResponse * AutoScalingClient::createLaunchConfiguration
  * message>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html">Tagging Auto Scaling Groups and
- * Instances</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html">Tagging Auto Scaling groups and
+ * instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateOrUpdateTagsRequest &request)
 {
@@ -463,14 +539,14 @@ CreateOrUpdateTagsResponse * AutoScalingClient::createOrUpdateTags(const CreateO
  *
  * action>
  *
- * To remove instances from the Auto Scaling group before deleting it, call <a>DetachInstances</a> with the list of
+ * To remove instances from the Auto Scaling group before deleting it, call the <a>DetachInstances</a> API with the list of
  * instances and the option to decrement the desired capacity. This ensures that Amazon EC2 Auto Scaling does not launch
  * replacement
  *
  * instances>
  *
- * To terminate all instances before deleting the Auto Scaling group, call <a>UpdateAutoScalingGroup</a> and set the
- * minimum size and desired capacity of the Auto Scaling group to
+ * To terminate all instances before deleting the Auto Scaling group, call the <a>UpdateAutoScalingGroup</a> API and set
+ * the minimum size and desired capacity of the Auto Scaling group to
  */
 DeleteAutoScalingGroupResponse * AutoScalingClient::deleteAutoScalingGroup(const DeleteAutoScalingGroupRequest &request)
 {
@@ -536,8 +612,14 @@ DeleteNotificationConfigurationResponse * AutoScalingClient::deleteNotificationC
  *
  * policy>
  *
- * Deleting a policy deletes the underlying alarm action, but does not delete the alarm, even if it no longer has an
- * associated
+ * Deleting either a step scaling policy or a simple scaling policy deletes the underlying alarm action, but does not
+ * delete the alarm, even if it no longer has an associated
+ *
+ * action>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/deleting-scaling-policy.html">Deleting a scaling policy</a>
+ * in the <i>Amazon EC2 Auto Scaling User
  */
 DeletePolicyResponse * AutoScalingClient::deletePolicy(const DeletePolicyRequest &request)
 {
@@ -572,17 +654,36 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
 
 /*!
  * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DeleteWarmPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the warm pool for the specified Auto Scaling
+ *
+ * group>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm pools for Amazon EC2
+ * Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ */
+DeleteWarmPoolResponse * AutoScalingClient::deleteWarmPool(const DeleteWarmPoolRequest &request)
+{
+    return qobject_cast<DeleteWarmPoolResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
  * DescribeAccountLimitsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the current Amazon EC2 Auto Scaling resource limits for your AWS
+ * Describes the current Amazon EC2 Auto Scaling resource quotas for your
  *
  * account>
  *
- * For information about requesting an increase in these limits, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
- * in the <i>Amazon EC2 Auto Scaling User
+ * For information about requesting an increase, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling service
+ * quotas</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits(const DescribeAccountLimitsRequest &request)
 {
@@ -595,13 +696,13 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the current Amazon EC2 Auto Scaling resource limits for your AWS
+ * Describes the current Amazon EC2 Auto Scaling resource quotas for your
  *
  * account>
  *
- * For information about requesting an increase in these limits, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling Limits</a>
- * in the <i>Amazon EC2 Auto Scaling User
+ * For information about requesting an increase, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-account-limits.html">Amazon EC2 Auto Scaling service
+ * quotas</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 {
@@ -614,7 +715,23 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the policy adjustment types for use with
+ * Describes the available adjustment types for step scaling and simple scaling
+ *
+ * policies>
+ *
+ * The following adjustment types are
+ *
+ * supported> <ul> <li>
+ *
+ * <code>ChangeInCapacity</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>ExactCapacity</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>PercentChangeInCapacity</code>
  */
 DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes(const DescribeAdjustmentTypesRequest &request)
 {
@@ -627,7 +744,23 @@ DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the policy adjustment types for use with
+ * Describes the available adjustment types for step scaling and simple scaling
+ *
+ * policies>
+ *
+ * The following adjustment types are
+ *
+ * supported> <ul> <li>
+ *
+ * <code>ChangeInCapacity</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>ExactCapacity</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>PercentChangeInCapacity</code>
  */
 DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
 {
@@ -640,7 +773,12 @@ DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more Auto Scaling
+ * Gets information about the Auto Scaling groups in the account and
+ *
+ * Region>
+ *
+ * This operation returns information about instances in Auto Scaling groups. To retrieve information about the instances
+ * in a warm pool, you must call the <a>DescribeWarmPool</a> API.
  */
 DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups(const DescribeAutoScalingGroupsRequest &request)
 {
@@ -653,7 +791,7 @@ DescribeAutoScalingGroupsResponse * AutoScalingClient::describeAutoScalingGroups
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more Auto Scaling
+ * Gets information about the Auto Scaling instances in the account and
  */
 DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingInstances(const DescribeAutoScalingInstancesRequest &request)
 {
@@ -688,11 +826,66 @@ DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoSc
 
 /*!
  * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeInstanceRefreshesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about the instance refreshes for the specified Auto Scaling
+ *
+ * group>
+ *
+ * This operation is part of the <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance refresh feature</a> in
+ * Amazon EC2 Auto Scaling, which helps you update instances in your Auto Scaling group after you make configuration
+ *
+ * changes>
+ *
+ * To help you determine the status of an instance refresh, this operation returns information about the instance refreshes
+ * you previously initiated, including their status, end time, the percentage of the instance refresh that is complete, and
+ * the number of instances remaining to update before the instance refresh is
+ *
+ * complete>
+ *
+ * The following are the possible statuses:
+ *
+ * </p <ul> <li>
+ *
+ * <code>Pending</code> - The request was created, but the operation has not
+ *
+ * started> </li> <li>
+ *
+ * <code>InProgress</code> - The operation is in
+ *
+ * progress> </li> <li>
+ *
+ * <code>Successful</code> - The operation completed
+ *
+ * successfully> </li> <li>
+ *
+ * <code>Failed</code> - The operation failed to complete. You can troubleshoot using the status reason and the scaling
+ * activities.
+ *
+ * </p </li> <li>
+ *
+ * <code>Cancelling</code> - An ongoing operation is being cancelled. Cancellation does not roll back any replacements that
+ * have already been completed, but it prevents new replacements from being started.
+ *
+ * </p </li> <li>
+ *
+ * <code>Cancelled</code> - The operation is cancelled.
+ */
+DescribeInstanceRefreshesResponse * AutoScalingClient::describeInstanceRefreshes(const DescribeInstanceRefreshesRequest &request)
+{
+    return qobject_cast<DescribeInstanceRefreshesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
  * DescribeLaunchConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more launch
+ * Gets information about the launch configurations in the account and
  */
 DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigurations(const DescribeLaunchConfigurationsRequest &request)
 {
@@ -713,7 +906,11 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
  *
  * supported> <ul> <li>
  *
- * autoscaling:EC2_INSTANCE_LAUNCHIN> </li> <li>
+ * <code>autoscaling:EC2_INSTANCE_LAUNCHING</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>autoscaling:EC2_INSTANCE_TERMINATING</code>
  */
 DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes(const DescribeLifecycleHookTypesRequest &request)
 {
@@ -734,7 +931,11 @@ DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTyp
  *
  * supported> <ul> <li>
  *
- * autoscaling:EC2_INSTANCE_LAUNCHIN> </li> <li>
+ * <code>autoscaling:EC2_INSTANCE_LAUNCHING</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>autoscaling:EC2_INSTANCE_TERMINATING</code>
  */
 DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes()
 {
@@ -747,7 +948,7 @@ DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTyp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the lifecycle hooks for the specified Auto Scaling
+ * Gets information about the lifecycle hooks for the specified Auto Scaling
  */
 DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const DescribeLifecycleHooksRequest &request)
 {
@@ -760,7 +961,31 @@ DescribeLifecycleHooksResponse * AutoScalingClient::describeLifecycleHooks(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the target groups for the specified Auto Scaling
+ * Gets information about the load balancer target groups for the specified Auto Scaling
+ *
+ * group>
+ *
+ * To determine the availability of registered instances, use the <code>State</code> element in the response. When you
+ * attach a target group to an Auto Scaling group, the initial <code>State</code> value is <code>Adding</code>. The state
+ * transitions to <code>Added</code> after all Auto Scaling instances are registered with the target group. If Elastic Load
+ * Balancing health checks are enabled for the Auto Scaling group, the state transitions to <code>InService</code> after at
+ * least one Auto Scaling instance passes the health check. When the target group is in the <code>InService</code> state,
+ * Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered
+ * instances pass the health checks, the target group doesn't enter the <code>InService</code> state.
+ *
+ * </p
+ *
+ * Target groups also have an <code>InService</code> state if you attach them in the <a>CreateAutoScalingGroup</a> API
+ * call. If your target group state is <code>InService</code>, but it is not working properly, check the scaling activities
+ * by calling <a>DescribeScalingActivities</a> and take any corrective actions
+ *
+ * necessary>
+ *
+ * For help with failed health checks, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting Amazon EC2 Auto
+ * Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic Load Balancing and
+ * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
  */
 DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalancerTargetGroups(const DescribeLoadBalancerTargetGroupsRequest &request)
 {
@@ -773,12 +998,37 @@ DescribeLoadBalancerTargetGroupsResponse * AutoScalingClient::describeLoadBalanc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the load balancers for the specified Auto Scaling
+ * Gets information about the load balancers for the specified Auto Scaling
  *
  * group>
  *
- * This operation describes only Classic Load Balancers. If you have Application Load Balancers or Network Load Balancers,
- * use <a>DescribeLoadBalancerTargetGroups</a>
+ * This operation describes only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or
+ * Gateway Load Balancers, use the <a>DescribeLoadBalancerTargetGroups</a> API
+ *
+ * instead>
+ *
+ * To determine the availability of registered instances, use the <code>State</code> element in the response. When you
+ * attach a load balancer to an Auto Scaling group, the initial <code>State</code> value is <code>Adding</code>. The state
+ * transitions to <code>Added</code> after all Auto Scaling instances are registered with the load balancer. If Elastic
+ * Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to <code>InService</code>
+ * after at least one Auto Scaling instance passes the health check. When the load balancer is in the
+ * <code>InService</code> state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as
+ * unhealthy. If no registered instances pass the health checks, the load balancer doesn't enter the <code>InService</code>
+ * state.
+ *
+ * </p
+ *
+ * Load balancers also have an <code>InService</code> state if you attach them in the <a>CreateAutoScalingGroup</a> API
+ * call. If your load balancer state is <code>InService</code>, but it is not working properly, check the scaling
+ * activities by calling <a>DescribeScalingActivities</a> and take any corrective actions
+ *
+ * necessary>
+ *
+ * For help with failed health checks, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html">Troubleshooting Amazon EC2 Auto
+ * Scaling: Health checks</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html">Elastic Load Balancing and
+ * Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
  */
 DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const DescribeLoadBalancersRequest &request)
 {
@@ -796,7 +1046,7 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
  * Scaling>
  *
  * The <code>GroupStandbyInstances</code> metric is not returned by default. You must explicitly request this metric when
- * calling
+ * calling the <a>EnableMetricsCollection</a>
  */
 DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes(const DescribeMetricCollectionTypesRequest &request)
 {
@@ -814,7 +1064,7 @@ DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollect
  * Scaling>
  *
  * The <code>GroupStandbyInstances</code> metric is not returned by default. You must explicitly request this metric when
- * calling
+ * calling the <a>EnableMetricsCollection</a>
  */
 DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes()
 {
@@ -827,7 +1077,7 @@ DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollect
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the notification actions associated with the specified Auto Scaling
+ * Gets information about the Amazon SNS notifications that are configured for one or more Auto Scaling
  */
 DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotificationConfigurations(const DescribeNotificationConfigurationsRequest &request)
 {
@@ -840,7 +1090,7 @@ DescribeNotificationConfigurationsResponse * AutoScalingClient::describeNotifica
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the policies for the specified Auto Scaling
+ * Gets information about the scaling policies in the account and
  */
 DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePoliciesRequest &request)
 {
@@ -853,7 +1103,22 @@ DescribePoliciesResponse * AutoScalingClient::describePolicies(const DescribePol
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes one or more scaling activities for the specified Auto Scaling
+ * Gets information about the scaling activities in the account and
+ *
+ * Region>
+ *
+ * When scaling events occur, you see a record of the scaling activity in the scaling activities. For more information, see
+ * <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-verify-scaling-activity.html">Verifying a scaling
+ * activity for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * If the scaling event succeeds, the value of the <code>StatusCode</code> element in the response is
+ * <code>Successful</code>. If an attempt to launch instances failed, the <code>StatusCode</code> value is
+ * <code>Failed</code> or <code>Cancelled</code> and the <code>StatusMessage</code> element in the response indicates the
+ * cause of the failure. For help interpreting the <code>StatusMessage</code>, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/CHAP_Troubleshooting.html">Troubleshooting Amazon EC2 Auto
+ * Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
  */
 DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities(const DescribeScalingActivitiesRequest &request)
 {
@@ -866,7 +1131,7 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the scaling process types for use with <a>ResumeProcesses</a> and
+ * Describes the scaling process types for use with the <a>ResumeProcesses</a> and <a>SuspendProcesses</a>
  */
 DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes(const DescribeScalingProcessTypesRequest &request)
 {
@@ -879,7 +1144,7 @@ DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the scaling process types for use with <a>ResumeProcesses</a> and
+ * Describes the scaling process types for use with the <a>ResumeProcesses</a> and <a>SuspendProcesses</a>
  */
 DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes()
 {
@@ -892,8 +1157,12 @@ DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the actions scheduled for your Auto Scaling group that haven't run. To describe the actions that have already
- * run, use
+ * Gets information about the scheduled actions that haven't run or that have not reached their end
+ *
+ * time>
+ *
+ * To describe the scaling activities for scheduled actions that have already run, call the
+ * <a>DescribeScalingActivities</a>
  */
 DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
 {
@@ -918,6 +1187,12 @@ DescribeScheduledActionsResponse * AutoScalingClient::describeScheduledActions(c
  *
  * You can also specify multiple filters. The result includes information for a particular tag only if it matches all the
  * filters. If there's no match, no special message is
+ *
+ * returned>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html">Tagging Auto Scaling groups and
+ * instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest &request)
 {
@@ -935,8 +1210,8 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
  * Scaling>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling Which Auto Scaling
- * Instances Terminate During Scale In</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling which Auto Scaling
+ * instances terminate during scale in</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes(const DescribeTerminationPolicyTypesRequest &request)
 {
@@ -954,12 +1229,31 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
  * Scaling>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling Which Auto Scaling
- * Instances Terminate During Scale In</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html">Controlling which Auto Scaling
+ * instances terminate during scale in</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes()
 {
     return describeTerminationPolicyTypes(DescribeTerminationPolicyTypesRequest());
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * DescribeWarmPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a warm pool and its
+ *
+ * instances>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm pools for Amazon EC2
+ * Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ */
+DescribeWarmPoolResponse * AutoScalingClient::describeWarmPool(const DescribeWarmPoolRequest &request)
+{
+    return qobject_cast<DescribeWarmPoolResponse *>(send(request));
 }
 
 /*!
@@ -987,8 +1281,8 @@ DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationP
  * groups>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/detach-instance-asg.html">Detach EC2 Instances from Your
- * Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/detach-instance-asg.html">Detach EC2 instances from your
+ * Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 DetachInstancesResponse * AutoScalingClient::detachInstances(const DetachInstancesRequest &request)
 {
@@ -1018,14 +1312,14 @@ DetachLoadBalancerTargetGroupsResponse * AutoScalingClient::detachLoadBalancerTa
  *
  * group>
  *
- * This operation detaches only Classic Load Balancers. If you have Application Load Balancers or Network Load Balancers,
- * use <a>DetachLoadBalancerTargetGroups</a>
+ * This operation detaches only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or
+ * Gateway Load Balancers, use the <a>DetachLoadBalancerTargetGroups</a> API
  *
  * instead>
  *
  * When you detach a load balancer, it enters the <code>Removing</code> state while deregistering the instances in the
- * group. When all instances are deregistered, then you can no longer describe the load balancer using
- * <a>DescribeLoadBalancers</a>. The instances remain
+ * group. When all instances are deregistered, then you can no longer describe the load balancer using the
+ * <a>DescribeLoadBalancers</a> API call. The instances remain
  */
 DetachLoadBalancersResponse * AutoScalingClient::detachLoadBalancers(const DetachLoadBalancersRequest &request)
 {
@@ -1052,8 +1346,8 @@ DisableMetricsCollectionResponse * AutoScalingClient::disableMetricsCollection(c
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Enables group metrics for the specified Auto Scaling group. For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html">Monitoring Your Auto Scaling
- * Groups and Instances</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html">Monitoring CloudWatch metrics
+ * for your Auto Scaling groups and instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(const EnableMetricsCollectionRequest &request)
 {
@@ -1070,9 +1364,20 @@ EnableMetricsCollectionResponse * AutoScalingClient::enableMetricsCollection(con
  *
  * state>
  *
+ * If you choose to decrement the desired capacity of the Auto Scaling group, the instances can enter standby as long as
+ * the desired capacity of the Auto Scaling group after the instances are placed into standby is equal to or greater than
+ * the minimum capacity of the
+ *
+ * group>
+ *
+ * If you choose not to decrement the desired capacity of the Auto Scaling group, the Auto Scaling group launches new
+ * instances to replace the instances on
+ *
+ * standby>
+ *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
- * from Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily removing instances
+ * from your Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest &request)
 {
@@ -1085,7 +1390,7 @@ EnterStandbyResponse * AutoScalingClient::enterStandby(const EnterStandbyRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Executes the specified
+ * Executes the specified policy. This can be useful for testing the design of your scaling
  */
 ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequest &request)
 {
@@ -1102,13 +1407,47 @@ ExecutePolicyResponse * AutoScalingClient::executePolicy(const ExecutePolicyRequ
  *
  * state>
  *
+ * After you put the instances back in service, the desired capacity is
+ *
+ * incremented>
+ *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily Removing Instances
- * from Your Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-enter-exit-standby.html">Temporarily removing instances
+ * from your Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
  */
 ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &request)
 {
     return qobject_cast<ExitStandbyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * GetPredictiveScalingForecastResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the forecast data for a predictive scaling
+ *
+ * policy>
+ *
+ * Load forecasts are predictions of the hourly load values using historical load data from CloudWatch and an analysis of
+ * historical trends. Capacity forecasts are represented as predicted values for the minimum capacity that is needed on an
+ * hourly basis, based on the hourly load
+ *
+ * forecast>
+ *
+ * A minimum of 24 hours of data is required to create the initial forecasts. However, having a full 14 days of historical
+ * data results in more accurate
+ *
+ * forecasts>
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive scaling
+ * for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ */
+GetPredictiveScalingForecastResponse * AutoScalingClient::getPredictiveScalingForecast(const GetPredictiveScalingForecastRequest &request)
+{
+    return qobject_cast<GetPredictiveScalingForecastResponse *>(send(request));
 }
 
 /*!
@@ -1144,16 +1483,17 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
  *
  * </p </li> <li>
  *
- * If you need more time, record the lifecycle action heartbeat to keep the instance in a pending state using using
+ * If you need more time, record the lifecycle action heartbeat to keep the instance in a pending state using the
+ * <a>RecordLifecycleActionHeartbeat</a> API
  *
- * <a>RecordLifecycleActionHeartbeat</a>> </li> <li>
+ * call> </li> <li>
  *
- * If you finish before the timeout period ends, complete the lifecycle action using
+ * If you finish before the timeout period ends, complete the lifecycle action using the <a>CompleteLifecycleAction</a> API
  *
- * <a>CompleteLifecycleAction</a>> </li> </ol>
+ * call> </li> </ol>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
- * EC2 Auto Scaling Lifecycle Hooks</a> in the <i>Amazon EC2 Auto Scaling User
+ * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
  *
  * Guide</i>>
  *
@@ -1161,8 +1501,8 @@ ExitStandbyResponse * AutoScalingClient::exitStandby(const ExitStandbyRequest &r
  *
  * fails>
  *
- * You can view the lifecycle hooks for an Auto Scaling group using <a>DescribeLifecycleHooks</a>. If you are no longer
- * using a lifecycle hook, you can delete it using
+ * You can view the lifecycle hooks for an Auto Scaling group using the <a>DescribeLifecycleHooks</a> API call. If you are
+ * no longer using a lifecycle hook, you can delete it by calling the <a>DeleteLifecycleHook</a>
  */
 PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycleHookRequest &request)
 {
@@ -1186,7 +1526,11 @@ PutLifecycleHookResponse * AutoScalingClient::putLifecycleHook(const PutLifecycl
  *
  * For more information, see <a
  * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html">Getting Amazon SNS
- * Notifications When Your Auto Scaling Group Scales</a> in the <i>Amazon EC2 Auto Scaling User
+ * notifications when your Auto Scaling group scales</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * If you exceed your maximum limit of SNS topics, which is 10 per Auto Scaling group, the call
  */
 PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfiguration(const PutNotificationConfigurationRequest &request)
 {
@@ -1199,9 +1543,27 @@ PutNotificationConfigurationResponse * AutoScalingClient::putNotificationConfigu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates a policy for an Auto Scaling group. To update an existing policy, use the existing policy name and
- * set the parameters to change. Any existing parameter not changed in an update to an existing policy is not changed in
- * this update
+ * Creates or updates a scaling policy for an Auto Scaling group. Scaling policies are used to scale an Auto Scaling group
+ * based on configurable metrics. If no policies are defined, the dynamic scaling and predictive scaling features are not
+ * used.
+ *
+ * </p
+ *
+ * For more information about using dynamic scaling, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html">Target tracking scaling
+ * policies</a> and <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html">Step and
+ * simple scaling policies</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * For more information about using predictive scaling, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html">Predictive scaling
+ * for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * You can view the scaling policies for an Auto Scaling group using the <a>DescribePolicies</a> API call. If you are no
+ * longer using a scaling policy, you can delete it by calling the <a>DeletePolicy</a>
  */
 PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingPolicyRequest &request)
 {
@@ -1214,17 +1576,49 @@ PutScalingPolicyResponse * AutoScalingClient::putScalingPolicy(const PutScalingP
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates or updates a scheduled scaling action for an Auto Scaling group. If you leave a parameter unspecified when
- * updating a scheduled scaling action, the corresponding value remains
+ * Creates or updates a scheduled scaling action for an Auto Scaling
  *
- * unchanged>
+ * group>
  *
  * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html">Scheduled
- * Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ * scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * You can view the scheduled actions for an Auto Scaling group using the <a>DescribeScheduledActions</a> API call. If you
+ * are no longer using a scheduled action, you can delete it by calling the <a>DeleteScheduledAction</a>
  */
 PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGroupAction(const PutScheduledUpdateGroupActionRequest &request)
 {
     return qobject_cast<PutScheduledUpdateGroupActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * PutWarmPoolResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a warm pool for the specified Auto Scaling group. A warm pool is a pool of pre-initialized EC2
+ * instances that sits alongside the Auto Scaling group. Whenever your application needs to scale out, the Auto Scaling
+ * group can draw on the warm pool to meet its new desired capacity. For more information and example configurations, see
+ * <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html">Warm pools for Amazon
+ * EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * This operation must be called from the Region in which the Auto Scaling group was created. This operation cannot be
+ * called on an Auto Scaling group that has a mixed instances policy or a launch template or launch configuration that
+ * requests Spot
+ *
+ * Instances>
+ *
+ * You can view the instances in the warm pool using the <a>DescribeWarmPool</a> API call. If you are no longer using a
+ * warm pool, you can delete it by calling the <a>DeleteWarmPool</a>
+ */
+PutWarmPoolResponse * AutoScalingClient::putWarmPool(const PutWarmPoolRequest &request)
+{
+    return qobject_cast<PutWarmPoolResponse *>(send(request));
 }
 
 /*!
@@ -1234,9 +1628,9 @@ PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGro
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Records a heartbeat for the lifecycle action associated with the specified token or instance. This extends the timeout
- * by the length of time defined using
+ * by the length of time defined using the <a>PutLifecycleHook</a> API
  *
- * <a>PutLifecycleHook</a>>
+ * call>
  *
  * This step is a part of the procedure for adding a lifecycle hook to an Auto Scaling
  *
@@ -1264,9 +1658,8 @@ PutScheduledUpdateGroupActionResponse * AutoScalingClient::putScheduledUpdateGro
  *
  * action> </li> </ol>
  *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroupLifecycle.html">Auto Scaling Lifecycle</a>
- * in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html">Amazon
+ * EC2 Auto Scaling lifecycle hooks</a> in the <i>Amazon EC2 Auto Scaling User
  */
 RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActionHeartbeat(const RecordLifecycleActionHeartbeatRequest &request)
 {
@@ -1279,13 +1672,13 @@ RecordLifecycleActionHeartbeatResponse * AutoScalingClient::recordLifecycleActio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resumes the specified suspended automatic scaling processes, or all suspended process, for the specified Auto Scaling
+ * Resumes the specified suspended auto scaling processes, or all suspended process, for the specified Auto Scaling
  *
  * group>
  *
  * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and Resuming
- * Scaling Processes</a> in the <i>Amazon EC2 Auto Scaling User
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and resuming
+ * scaling processes</a> in the <i>Amazon EC2 Auto Scaling User
  */
 ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcessesRequest &request)
 {
@@ -1302,9 +1695,13 @@ ResumeProcessesResponse * AutoScalingClient::resumeProcesses(const ResumeProcess
  *
  * group>
  *
- * For more information about desired capacity, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">What Is Amazon EC2
- * Auto Scaling?</a> in the <i>Amazon EC2 Auto Scaling User
+ * If a scale-in activity occurs as a result of a new <code>DesiredCapacity</code> value that is lower than the current
+ * size of the group, the Auto Scaling group uses its termination policy to determine which instances to terminate.
+ *
+ * </p
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-manual-scaling.html">Manual
+ * scaling</a> in the <i>Amazon EC2 Auto Scaling User
  */
 SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesiredCapacityRequest &request)
 {
@@ -1321,8 +1718,8 @@ SetDesiredCapacityResponse * AutoScalingClient::setDesiredCapacity(const SetDesi
  *
  * instance>
  *
- * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health Checks
- * for Auto Scaling Instances</a> in the <i>Amazon EC2 Auto Scaling User
+ * For more information, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html">Health checks
+ * for Auto Scaling instances</a> in the <i>Amazon EC2 Auto Scaling User
  */
 SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstanceHealthRequest &request)
 {
@@ -1335,14 +1732,19 @@ SetInstanceHealthResponse * AutoScalingClient::setInstanceHealth(const SetInstan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the instance protection settings of the specified
+ * Updates the instance protection settings of the specified instances. This operation cannot be called on instances in a
+ * warm
  *
- * instances>
+ * pool>
  *
  * For more information about preventing instances that are part of an Auto Scaling group from terminating on scale in, see
  * <a
  * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html#instance-protection">Instance
- * Protection</a> in the <i>Amazon EC2 Auto Scaling User
+ * scale-in protection</a> in the <i>Amazon EC2 Auto Scaling User
+ *
+ * Guide</i>>
+ *
+ * If you exceed your maximum limit of instance IDs, which is 50 per Auto Scaling group, the call
  */
 SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const SetInstanceProtectionRequest &request)
 {
@@ -1351,26 +1753,49 @@ SetInstanceProtectionResponse * AutoScalingClient::setInstanceProtection(const S
 
 /*!
  * Sends \a request to the AutoScalingClient service, and returns a pointer to an
+ * StartInstanceRefreshResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a new instance refresh operation, which triggers a rolling replacement of previously launched instances in the
+ * Auto Scaling group with a new group of
+ *
+ * instances>
+ *
+ * This operation is part of the <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html">instance refresh feature</a> in
+ * Amazon EC2 Auto Scaling, which helps you update instances in your Auto Scaling group after you make configuration
+ *
+ * changes>
+ *
+ * If the call succeeds, it creates a new instance refresh request with a unique ID that you can use to track its progress.
+ * To query its status, call the <a>DescribeInstanceRefreshes</a> API. To describe the instance refreshes that have already
+ * run, call the <a>DescribeInstanceRefreshes</a> API. To cancel an instance refresh operation in progress, use the
+ * <a>CancelInstanceRefresh</a> API.
+ */
+StartInstanceRefreshResponse * AutoScalingClient::startInstanceRefresh(const StartInstanceRefreshRequest &request)
+{
+    return qobject_cast<StartInstanceRefreshResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingClient service, and returns a pointer to an
  * SuspendProcessesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Suspends the specified automatic scaling processes, or all processes, for the specified Auto Scaling
+ * Suspends the specified auto scaling processes, or all processes, for the specified Auto Scaling
  *
  * group>
  *
  * If you suspend either the <code>Launch</code> or <code>Terminate</code> process types, it can prevent other process
- * types from functioning
+ * types from functioning properly. For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and resuming
+ * scaling processes</a> in the <i>Amazon EC2 Auto Scaling User
  *
- * properly>
+ * Guide</i>>
  *
- * To resume processes that have been suspended, use
- *
- * <a>ResumeProcesses</a>>
- *
- * For more information, see <a
- * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html">Suspending and Resuming
- * Scaling Processes</a> in the <i>Amazon EC2 Auto Scaling User
+ * To resume processes that have been suspended, call the <a>ResumeProcesses</a>
  */
 SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProcessesRequest &request)
 {
@@ -1383,11 +1808,27 @@ SuspendProcessesResponse * AutoScalingClient::suspendProcesses(const SuspendProc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Terminates the specified instance and optionally adjusts the desired group
+ * Terminates the specified instance and optionally adjusts the desired group size. This operation cannot be called on
+ * instances in a warm
  *
- * size>
+ * pool>
  *
- * This call simply makes a termination request. The instance is not terminated
+ * This call simply makes a termination request. The instance is not terminated immediately. When an instance is
+ * terminated, the instance status changes to <code>terminated</code>. You can't connect to or start an instance after
+ * you've terminated
+ *
+ * it>
+ *
+ * If you do not specify the option to decrement the desired capacity, Amazon EC2 Auto Scaling launches instances to
+ * replace the ones that are terminated.
+ *
+ * </p
+ *
+ * By default, Amazon EC2 Auto Scaling balances instances across all Availability Zones. If you decrement the desired
+ * capacity, your Auto Scaling group can become unbalanced between Availability Zones. Amazon EC2 Auto Scaling tries to
+ * rebalance the group, and rebalancing might terminate instances in other zones. For more information, see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-benefits.html#AutoScalingBehavior.InstanceUsage">Rebalancing
+ * activities</a> in the <i>Amazon EC2 Auto Scaling User
  */
 TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstanceInAutoScalingGroup(const TerminateInstanceInAutoScalingGroupRequest &request)
 {
@@ -1400,38 +1841,56 @@ TerminateInstanceInAutoScalingGroupResponse * AutoScalingClient::terminateInstan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <b>We strongly recommend that all Auto Scaling groups use launch templates to ensure full functionality for Amazon EC2
+ * Auto Scaling and Amazon EC2.</b>
+ *
+ * </p
+ *
  * Updates the configuration for the specified Auto Scaling
  *
  * group>
  *
- * The new settings take effect on any scaling activities after this call returns. Scaling activities that are currently in
- * progress aren't
+ * To update an Auto Scaling group, specify the name of the group and the parameter that you want to change. Any parameters
+ * that you don't specify are not changed by this update request. The new settings take effect on any scaling activities
+ * after this call returns.
  *
- * affected>
+ * </p
  *
- * To update an Auto Scaling group with a launch configuration with <code>InstanceMonitoring</code> set to
- * <code>false</code>, you must first disable the collection of group metrics. Otherwise, you get an error. If you have
- * previously enabled the collection of group metrics, you can disable it using
+ * If you associate a new launch configuration or template with an Auto Scaling group, all new instances will get the
+ * updated configuration. Existing instances continue to run with the configuration that they were originally launched
+ * with. When you update a group to specify a mixed instances policy instead of a launch configuration or template,
+ * existing instances may be replaced to match the new purchasing options that you specified in the policy. For example, if
+ * the group currently has 100% On-Demand capacity and the policy specifies 50% Spot capacity, this means that half of your
+ * instances will be gradually terminated and relaunched as Spot Instances. When replacing instances, Amazon EC2 Auto
+ * Scaling launches new instances before terminating the old ones, so that updating your group does not compromise the
+ * performance or availability of your
  *
- * <a>DisableMetricsCollection</a>>
+ * application>
  *
- * Note the
+ * Note the following about changing <code>DesiredCapacity</code>, <code>MaxSize</code>, or
  *
- * following> <ul> <li>
+ * <code>MinSize</code>> <ul> <li>
+ *
+ * If a scale-in activity occurs as a result of a new <code>DesiredCapacity</code> value that is lower than the current
+ * size of the group, the Auto Scaling group uses its termination policy to determine which instances to
+ *
+ * terminate> </li> <li>
  *
  * If you specify a new value for <code>MinSize</code> without specifying a value for <code>DesiredCapacity</code>, and the
- * new <code>MinSize</code> is larger than the current size of the group, we implicitly call <a>SetDesiredCapacity</a> to
- * set the size of the group to the new value of
+ * new <code>MinSize</code> is larger than the current size of the group, this sets the group's
+ * <code>DesiredCapacity</code> to the new <code>MinSize</code>
  *
- * <code>MinSize</code>> </li> <li>
+ * value> </li> <li>
  *
  * If you specify a new value for <code>MaxSize</code> without specifying a value for <code>DesiredCapacity</code>, and the
- * new <code>MaxSize</code> is smaller than the current size of the group, we implicitly call <a>SetDesiredCapacity</a> to
- * set the size of the group to the new value of
+ * new <code>MaxSize</code> is smaller than the current size of the group, this sets the group's
+ * <code>DesiredCapacity</code> to the new <code>MaxSize</code>
  *
- * <code>MaxSize</code>> </li> <li>
+ * value> </li> </ul>
  *
- * All other optional parameters are left unchanged if not
+ * To see which parameters have been set, call the <a>DescribeAutoScalingGroups</a> API. To view the scaling policies for
+ * an Auto Scaling group, call the <a>DescribePolicies</a> API. If the group has scaling policies, you can update them by
+ * calling the <a>PutScalingPolicy</a>
  */
 UpdateAutoScalingGroupResponse * AutoScalingClient::updateAutoScalingGroup(const UpdateAutoScalingGroupRequest &request)
 {

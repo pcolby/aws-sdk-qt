@@ -37,21 +37,28 @@ namespace Amplify {
  * requests.
  *
  * \value CreateAppAction Amplify CreateApp action.
+ * \value CreateBackendEnvironmentAction Amplify CreateBackendEnvironment action.
  * \value CreateBranchAction Amplify CreateBranch action.
  * \value CreateDeploymentAction Amplify CreateDeployment action.
  * \value CreateDomainAssociationAction Amplify CreateDomainAssociation action.
  * \value CreateWebhookAction Amplify CreateWebhook action.
  * \value DeleteAppAction Amplify DeleteApp action.
+ * \value DeleteBackendEnvironmentAction Amplify DeleteBackendEnvironment action.
  * \value DeleteBranchAction Amplify DeleteBranch action.
  * \value DeleteDomainAssociationAction Amplify DeleteDomainAssociation action.
  * \value DeleteJobAction Amplify DeleteJob action.
  * \value DeleteWebhookAction Amplify DeleteWebhook action.
+ * \value GenerateAccessLogsAction Amplify GenerateAccessLogs action.
  * \value GetAppAction Amplify GetApp action.
+ * \value GetArtifactUrlAction Amplify GetArtifactUrl action.
+ * \value GetBackendEnvironmentAction Amplify GetBackendEnvironment action.
  * \value GetBranchAction Amplify GetBranch action.
  * \value GetDomainAssociationAction Amplify GetDomainAssociation action.
  * \value GetJobAction Amplify GetJob action.
  * \value GetWebhookAction Amplify GetWebhook action.
  * \value ListAppsAction Amplify ListApps action.
+ * \value ListArtifactsAction Amplify ListArtifacts action.
+ * \value ListBackendEnvironmentsAction Amplify ListBackendEnvironments action.
  * \value ListBranchesAction Amplify ListBranches action.
  * \value ListDomainAssociationsAction Amplify ListDomainAssociations action.
  * \value ListJobsAction Amplify ListJobs action.

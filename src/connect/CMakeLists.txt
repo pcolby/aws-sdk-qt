@@ -1,20 +1,136 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsConnect
+  associateapprovedoriginrequest.h
+  associateapprovedoriginrequest_p.h
+  associateapprovedoriginresponse.h
+  associateapprovedoriginresponse_p.h
+  associatebotrequest.h
+  associatebotrequest_p.h
+  associatebotresponse.h
+  associatebotresponse_p.h
+  associateinstancestorageconfigrequest.h
+  associateinstancestorageconfigrequest_p.h
+  associateinstancestorageconfigresponse.h
+  associateinstancestorageconfigresponse_p.h
+  associatelambdafunctionrequest.h
+  associatelambdafunctionrequest_p.h
+  associatelambdafunctionresponse.h
+  associatelambdafunctionresponse_p.h
+  associatelexbotrequest.h
+  associatelexbotrequest_p.h
+  associatelexbotresponse.h
+  associatelexbotresponse_p.h
+  associatequeuequickconnectsrequest.h
+  associatequeuequickconnectsrequest_p.h
+  associatequeuequickconnectsresponse.h
+  associatequeuequickconnectsresponse_p.h
+  associateroutingprofilequeuesrequest.h
+  associateroutingprofilequeuesrequest_p.h
+  associateroutingprofilequeuesresponse.h
+  associateroutingprofilequeuesresponse_p.h
+  associatesecuritykeyrequest.h
+  associatesecuritykeyrequest_p.h
+  associatesecuritykeyresponse.h
+  associatesecuritykeyresponse_p.h
   connectclient.h
   connectclient_p.h
   connectrequest.h
   connectrequest_p.h
   connectresponse.h
   connectresponse_p.h
+  createcontactflowrequest.h
+  createcontactflowrequest_p.h
+  createcontactflowresponse.h
+  createcontactflowresponse_p.h
+  createinstancerequest.h
+  createinstancerequest_p.h
+  createinstanceresponse.h
+  createinstanceresponse_p.h
+  createintegrationassociationrequest.h
+  createintegrationassociationrequest_p.h
+  createintegrationassociationresponse.h
+  createintegrationassociationresponse_p.h
+  createqueuerequest.h
+  createqueuerequest_p.h
+  createqueueresponse.h
+  createqueueresponse_p.h
+  createquickconnectrequest.h
+  createquickconnectrequest_p.h
+  createquickconnectresponse.h
+  createquickconnectresponse_p.h
+  createroutingprofilerequest.h
+  createroutingprofilerequest_p.h
+  createroutingprofileresponse.h
+  createroutingprofileresponse_p.h
+  createusecaserequest.h
+  createusecaserequest_p.h
+  createusecaseresponse.h
+  createusecaseresponse_p.h
+  createuserhierarchygrouprequest.h
+  createuserhierarchygrouprequest_p.h
+  createuserhierarchygroupresponse.h
+  createuserhierarchygroupresponse_p.h
   createuserrequest.h
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  deleteinstancerequest.h
+  deleteinstancerequest_p.h
+  deleteinstanceresponse.h
+  deleteinstanceresponse_p.h
+  deleteintegrationassociationrequest.h
+  deleteintegrationassociationrequest_p.h
+  deleteintegrationassociationresponse.h
+  deleteintegrationassociationresponse_p.h
+  deletequickconnectrequest.h
+  deletequickconnectrequest_p.h
+  deletequickconnectresponse.h
+  deletequickconnectresponse_p.h
+  deleteusecaserequest.h
+  deleteusecaserequest_p.h
+  deleteusecaseresponse.h
+  deleteusecaseresponse_p.h
+  deleteuserhierarchygrouprequest.h
+  deleteuserhierarchygrouprequest_p.h
+  deleteuserhierarchygroupresponse.h
+  deleteuserhierarchygroupresponse_p.h
   deleteuserrequest.h
   deleteuserrequest_p.h
   deleteuserresponse.h
   deleteuserresponse_p.h
+  describecontactflowrequest.h
+  describecontactflowrequest_p.h
+  describecontactflowresponse.h
+  describecontactflowresponse_p.h
+  describehoursofoperationrequest.h
+  describehoursofoperationrequest_p.h
+  describehoursofoperationresponse.h
+  describehoursofoperationresponse_p.h
+  describeinstanceattributerequest.h
+  describeinstanceattributerequest_p.h
+  describeinstanceattributeresponse.h
+  describeinstanceattributeresponse_p.h
+  describeinstancerequest.h
+  describeinstancerequest_p.h
+  describeinstanceresponse.h
+  describeinstanceresponse_p.h
+  describeinstancestorageconfigrequest.h
+  describeinstancestorageconfigrequest_p.h
+  describeinstancestorageconfigresponse.h
+  describeinstancestorageconfigresponse_p.h
+  describequeuerequest.h
+  describequeuerequest_p.h
+  describequeueresponse.h
+  describequeueresponse_p.h
+  describequickconnectrequest.h
+  describequickconnectrequest_p.h
+  describequickconnectresponse.h
+  describequickconnectresponse_p.h
+  describeroutingprofilerequest.h
+  describeroutingprofilerequest_p.h
+  describeroutingprofileresponse.h
+  describeroutingprofileresponse_p.h
   describeuserhierarchygrouprequest.h
   describeuserhierarchygrouprequest_p.h
   describeuserhierarchygroupresponse.h
@@ -27,6 +143,38 @@ add_library(QtAwsConnect
   describeuserrequest_p.h
   describeuserresponse.h
   describeuserresponse_p.h
+  disassociateapprovedoriginrequest.h
+  disassociateapprovedoriginrequest_p.h
+  disassociateapprovedoriginresponse.h
+  disassociateapprovedoriginresponse_p.h
+  disassociatebotrequest.h
+  disassociatebotrequest_p.h
+  disassociatebotresponse.h
+  disassociatebotresponse_p.h
+  disassociateinstancestorageconfigrequest.h
+  disassociateinstancestorageconfigrequest_p.h
+  disassociateinstancestorageconfigresponse.h
+  disassociateinstancestorageconfigresponse_p.h
+  disassociatelambdafunctionrequest.h
+  disassociatelambdafunctionrequest_p.h
+  disassociatelambdafunctionresponse.h
+  disassociatelambdafunctionresponse_p.h
+  disassociatelexbotrequest.h
+  disassociatelexbotrequest_p.h
+  disassociatelexbotresponse.h
+  disassociatelexbotresponse_p.h
+  disassociatequeuequickconnectsrequest.h
+  disassociatequeuequickconnectsrequest_p.h
+  disassociatequeuequickconnectsresponse.h
+  disassociatequeuequickconnectsresponse_p.h
+  disassociateroutingprofilequeuesrequest.h
+  disassociateroutingprofilequeuesrequest_p.h
+  disassociateroutingprofilequeuesresponse.h
+  disassociateroutingprofilequeuesresponse_p.h
+  disassociatesecuritykeyrequest.h
+  disassociatesecuritykeyrequest_p.h
+  disassociatesecuritykeyresponse.h
+  disassociatesecuritykeyresponse_p.h
   getcontactattributesrequest.h
   getcontactattributesrequest_p.h
   getcontactattributesresponse.h
@@ -43,14 +191,90 @@ add_library(QtAwsConnect
   getmetricdatarequest_p.h
   getmetricdataresponse.h
   getmetricdataresponse_p.h
+  listapprovedoriginsrequest.h
+  listapprovedoriginsrequest_p.h
+  listapprovedoriginsresponse.h
+  listapprovedoriginsresponse_p.h
+  listbotsrequest.h
+  listbotsrequest_p.h
+  listbotsresponse.h
+  listbotsresponse_p.h
+  listcontactflowsrequest.h
+  listcontactflowsrequest_p.h
+  listcontactflowsresponse.h
+  listcontactflowsresponse_p.h
+  listhoursofoperationsrequest.h
+  listhoursofoperationsrequest_p.h
+  listhoursofoperationsresponse.h
+  listhoursofoperationsresponse_p.h
+  listinstanceattributesrequest.h
+  listinstanceattributesrequest_p.h
+  listinstanceattributesresponse.h
+  listinstanceattributesresponse_p.h
+  listinstancesrequest.h
+  listinstancesrequest_p.h
+  listinstancesresponse.h
+  listinstancesresponse_p.h
+  listinstancestorageconfigsrequest.h
+  listinstancestorageconfigsrequest_p.h
+  listinstancestorageconfigsresponse.h
+  listinstancestorageconfigsresponse_p.h
+  listintegrationassociationsrequest.h
+  listintegrationassociationsrequest_p.h
+  listintegrationassociationsresponse.h
+  listintegrationassociationsresponse_p.h
+  listlambdafunctionsrequest.h
+  listlambdafunctionsrequest_p.h
+  listlambdafunctionsresponse.h
+  listlambdafunctionsresponse_p.h
+  listlexbotsrequest.h
+  listlexbotsrequest_p.h
+  listlexbotsresponse.h
+  listlexbotsresponse_p.h
+  listphonenumbersrequest.h
+  listphonenumbersrequest_p.h
+  listphonenumbersresponse.h
+  listphonenumbersresponse_p.h
+  listpromptsrequest.h
+  listpromptsrequest_p.h
+  listpromptsresponse.h
+  listpromptsresponse_p.h
+  listqueuequickconnectsrequest.h
+  listqueuequickconnectsrequest_p.h
+  listqueuequickconnectsresponse.h
+  listqueuequickconnectsresponse_p.h
+  listqueuesrequest.h
+  listqueuesrequest_p.h
+  listqueuesresponse.h
+  listqueuesresponse_p.h
+  listquickconnectsrequest.h
+  listquickconnectsrequest_p.h
+  listquickconnectsresponse.h
+  listquickconnectsresponse_p.h
+  listroutingprofilequeuesrequest.h
+  listroutingprofilequeuesrequest_p.h
+  listroutingprofilequeuesresponse.h
+  listroutingprofilequeuesresponse_p.h
   listroutingprofilesrequest.h
   listroutingprofilesrequest_p.h
   listroutingprofilesresponse.h
   listroutingprofilesresponse_p.h
+  listsecuritykeysrequest.h
+  listsecuritykeysrequest_p.h
+  listsecuritykeysresponse.h
+  listsecuritykeysresponse_p.h
   listsecurityprofilesrequest.h
   listsecurityprofilesrequest_p.h
   listsecurityprofilesresponse.h
   listsecurityprofilesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  listusecasesrequest.h
+  listusecasesrequest_p.h
+  listusecasesresponse.h
+  listusecasesresponse_p.h
   listuserhierarchygroupsrequest.h
   listuserhierarchygroupsrequest_p.h
   listuserhierarchygroupsresponse.h
@@ -59,22 +283,122 @@ add_library(QtAwsConnect
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  resumecontactrecordingrequest.h
+  resumecontactrecordingrequest_p.h
+  resumecontactrecordingresponse.h
+  resumecontactrecordingresponse_p.h
+  startchatcontactrequest.h
+  startchatcontactrequest_p.h
+  startchatcontactresponse.h
+  startchatcontactresponse_p.h
+  startcontactrecordingrequest.h
+  startcontactrecordingrequest_p.h
+  startcontactrecordingresponse.h
+  startcontactrecordingresponse_p.h
   startoutboundvoicecontactrequest.h
   startoutboundvoicecontactrequest_p.h
   startoutboundvoicecontactresponse.h
   startoutboundvoicecontactresponse_p.h
+  starttaskcontactrequest.h
+  starttaskcontactrequest_p.h
+  starttaskcontactresponse.h
+  starttaskcontactresponse_p.h
+  stopcontactrecordingrequest.h
+  stopcontactrecordingrequest_p.h
+  stopcontactrecordingresponse.h
+  stopcontactrecordingresponse_p.h
   stopcontactrequest.h
   stopcontactrequest_p.h
   stopcontactresponse.h
   stopcontactresponse_p.h
+  suspendcontactrecordingrequest.h
+  suspendcontactrecordingrequest_p.h
+  suspendcontactrecordingresponse.h
+  suspendcontactrecordingresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatecontactattributesrequest.h
   updatecontactattributesrequest_p.h
   updatecontactattributesresponse.h
   updatecontactattributesresponse_p.h
+  updatecontactflowcontentrequest.h
+  updatecontactflowcontentrequest_p.h
+  updatecontactflowcontentresponse.h
+  updatecontactflowcontentresponse_p.h
+  updatecontactflownamerequest.h
+  updatecontactflownamerequest_p.h
+  updatecontactflownameresponse.h
+  updatecontactflownameresponse_p.h
+  updateinstanceattributerequest.h
+  updateinstanceattributerequest_p.h
+  updateinstanceattributeresponse.h
+  updateinstanceattributeresponse_p.h
+  updateinstancestorageconfigrequest.h
+  updateinstancestorageconfigrequest_p.h
+  updateinstancestorageconfigresponse.h
+  updateinstancestorageconfigresponse_p.h
+  updatequeuehoursofoperationrequest.h
+  updatequeuehoursofoperationrequest_p.h
+  updatequeuehoursofoperationresponse.h
+  updatequeuehoursofoperationresponse_p.h
+  updatequeuemaxcontactsrequest.h
+  updatequeuemaxcontactsrequest_p.h
+  updatequeuemaxcontactsresponse.h
+  updatequeuemaxcontactsresponse_p.h
+  updatequeuenamerequest.h
+  updatequeuenamerequest_p.h
+  updatequeuenameresponse.h
+  updatequeuenameresponse_p.h
+  updatequeueoutboundcallerconfigrequest.h
+  updatequeueoutboundcallerconfigrequest_p.h
+  updatequeueoutboundcallerconfigresponse.h
+  updatequeueoutboundcallerconfigresponse_p.h
+  updatequeuestatusrequest.h
+  updatequeuestatusrequest_p.h
+  updatequeuestatusresponse.h
+  updatequeuestatusresponse_p.h
+  updatequickconnectconfigrequest.h
+  updatequickconnectconfigrequest_p.h
+  updatequickconnectconfigresponse.h
+  updatequickconnectconfigresponse_p.h
+  updatequickconnectnamerequest.h
+  updatequickconnectnamerequest_p.h
+  updatequickconnectnameresponse.h
+  updatequickconnectnameresponse_p.h
+  updateroutingprofileconcurrencyrequest.h
+  updateroutingprofileconcurrencyrequest_p.h
+  updateroutingprofileconcurrencyresponse.h
+  updateroutingprofileconcurrencyresponse_p.h
+  updateroutingprofiledefaultoutboundqueuerequest.h
+  updateroutingprofiledefaultoutboundqueuerequest_p.h
+  updateroutingprofiledefaultoutboundqueueresponse.h
+  updateroutingprofiledefaultoutboundqueueresponse_p.h
+  updateroutingprofilenamerequest.h
+  updateroutingprofilenamerequest_p.h
+  updateroutingprofilenameresponse.h
+  updateroutingprofilenameresponse_p.h
+  updateroutingprofilequeuesrequest.h
+  updateroutingprofilequeuesrequest_p.h
+  updateroutingprofilequeuesresponse.h
+  updateroutingprofilequeuesresponse_p.h
+  updateuserhierarchygroupnamerequest.h
+  updateuserhierarchygroupnamerequest_p.h
+  updateuserhierarchygroupnameresponse.h
+  updateuserhierarchygroupnameresponse_p.h
   updateuserhierarchyrequest.h
   updateuserhierarchyrequest_p.h
   updateuserhierarchyresponse.h
   updateuserhierarchyresponse_p.h
+  updateuserhierarchystructurerequest.h
+  updateuserhierarchystructurerequest_p.h
+  updateuserhierarchystructureresponse.h
+  updateuserhierarchystructureresponse_p.h
   updateuseridentityinforequest.h
   updateuseridentityinforequest_p.h
   updateuseridentityinforesponse.h
@@ -91,19 +415,93 @@ add_library(QtAwsConnect
   updateusersecurityprofilesrequest_p.h
   updateusersecurityprofilesresponse.h
   updateusersecurityprofilesresponse_p.h
+  associateapprovedoriginrequest.cpp
+  associateapprovedoriginresponse.cpp
+  associatebotrequest.cpp
+  associatebotresponse.cpp
+  associateinstancestorageconfigrequest.cpp
+  associateinstancestorageconfigresponse.cpp
+  associatelambdafunctionrequest.cpp
+  associatelambdafunctionresponse.cpp
+  associatelexbotrequest.cpp
+  associatelexbotresponse.cpp
+  associatequeuequickconnectsrequest.cpp
+  associatequeuequickconnectsresponse.cpp
+  associateroutingprofilequeuesrequest.cpp
+  associateroutingprofilequeuesresponse.cpp
+  associatesecuritykeyrequest.cpp
+  associatesecuritykeyresponse.cpp
   connectclient.cpp
   connectrequest.cpp
   connectresponse.cpp
+  createcontactflowrequest.cpp
+  createcontactflowresponse.cpp
+  createinstancerequest.cpp
+  createinstanceresponse.cpp
+  createintegrationassociationrequest.cpp
+  createintegrationassociationresponse.cpp
+  createqueuerequest.cpp
+  createqueueresponse.cpp
+  createquickconnectrequest.cpp
+  createquickconnectresponse.cpp
+  createroutingprofilerequest.cpp
+  createroutingprofileresponse.cpp
+  createusecaserequest.cpp
+  createusecaseresponse.cpp
+  createuserhierarchygrouprequest.cpp
+  createuserhierarchygroupresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  deleteinstancerequest.cpp
+  deleteinstanceresponse.cpp
+  deleteintegrationassociationrequest.cpp
+  deleteintegrationassociationresponse.cpp
+  deletequickconnectrequest.cpp
+  deletequickconnectresponse.cpp
+  deleteusecaserequest.cpp
+  deleteusecaseresponse.cpp
+  deleteuserhierarchygrouprequest.cpp
+  deleteuserhierarchygroupresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
+  describecontactflowrequest.cpp
+  describecontactflowresponse.cpp
+  describehoursofoperationrequest.cpp
+  describehoursofoperationresponse.cpp
+  describeinstanceattributerequest.cpp
+  describeinstanceattributeresponse.cpp
+  describeinstancerequest.cpp
+  describeinstanceresponse.cpp
+  describeinstancestorageconfigrequest.cpp
+  describeinstancestorageconfigresponse.cpp
+  describequeuerequest.cpp
+  describequeueresponse.cpp
+  describequickconnectrequest.cpp
+  describequickconnectresponse.cpp
+  describeroutingprofilerequest.cpp
+  describeroutingprofileresponse.cpp
   describeuserhierarchygrouprequest.cpp
   describeuserhierarchygroupresponse.cpp
   describeuserhierarchystructurerequest.cpp
   describeuserhierarchystructureresponse.cpp
   describeuserrequest.cpp
   describeuserresponse.cpp
+  disassociateapprovedoriginrequest.cpp
+  disassociateapprovedoriginresponse.cpp
+  disassociatebotrequest.cpp
+  disassociatebotresponse.cpp
+  disassociateinstancestorageconfigrequest.cpp
+  disassociateinstancestorageconfigresponse.cpp
+  disassociatelambdafunctionrequest.cpp
+  disassociatelambdafunctionresponse.cpp
+  disassociatelexbotrequest.cpp
+  disassociatelexbotresponse.cpp
+  disassociatequeuequickconnectsrequest.cpp
+  disassociatequeuequickconnectsresponse.cpp
+  disassociateroutingprofilequeuesrequest.cpp
+  disassociateroutingprofilequeuesresponse.cpp
+  disassociatesecuritykeyrequest.cpp
+  disassociatesecuritykeyresponse.cpp
   getcontactattributesrequest.cpp
   getcontactattributesresponse.cpp
   getcurrentmetricdatarequest.cpp
@@ -112,22 +510,110 @@ add_library(QtAwsConnect
   getfederationtokenresponse.cpp
   getmetricdatarequest.cpp
   getmetricdataresponse.cpp
+  listapprovedoriginsrequest.cpp
+  listapprovedoriginsresponse.cpp
+  listbotsrequest.cpp
+  listbotsresponse.cpp
+  listcontactflowsrequest.cpp
+  listcontactflowsresponse.cpp
+  listhoursofoperationsrequest.cpp
+  listhoursofoperationsresponse.cpp
+  listinstanceattributesrequest.cpp
+  listinstanceattributesresponse.cpp
+  listinstancesrequest.cpp
+  listinstancesresponse.cpp
+  listinstancestorageconfigsrequest.cpp
+  listinstancestorageconfigsresponse.cpp
+  listintegrationassociationsrequest.cpp
+  listintegrationassociationsresponse.cpp
+  listlambdafunctionsrequest.cpp
+  listlambdafunctionsresponse.cpp
+  listlexbotsrequest.cpp
+  listlexbotsresponse.cpp
+  listphonenumbersrequest.cpp
+  listphonenumbersresponse.cpp
+  listpromptsrequest.cpp
+  listpromptsresponse.cpp
+  listqueuequickconnectsrequest.cpp
+  listqueuequickconnectsresponse.cpp
+  listqueuesrequest.cpp
+  listqueuesresponse.cpp
+  listquickconnectsrequest.cpp
+  listquickconnectsresponse.cpp
+  listroutingprofilequeuesrequest.cpp
+  listroutingprofilequeuesresponse.cpp
   listroutingprofilesrequest.cpp
   listroutingprofilesresponse.cpp
+  listsecuritykeysrequest.cpp
+  listsecuritykeysresponse.cpp
   listsecurityprofilesrequest.cpp
   listsecurityprofilesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  listusecasesrequest.cpp
+  listusecasesresponse.cpp
   listuserhierarchygroupsrequest.cpp
   listuserhierarchygroupsresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
+  resumecontactrecordingrequest.cpp
+  resumecontactrecordingresponse.cpp
+  startchatcontactrequest.cpp
+  startchatcontactresponse.cpp
+  startcontactrecordingrequest.cpp
+  startcontactrecordingresponse.cpp
   startoutboundvoicecontactrequest.cpp
   startoutboundvoicecontactresponse.cpp
+  starttaskcontactrequest.cpp
+  starttaskcontactresponse.cpp
+  stopcontactrecordingrequest.cpp
+  stopcontactrecordingresponse.cpp
   stopcontactrequest.cpp
   stopcontactresponse.cpp
+  suspendcontactrecordingrequest.cpp
+  suspendcontactrecordingresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatecontactattributesrequest.cpp
   updatecontactattributesresponse.cpp
+  updatecontactflowcontentrequest.cpp
+  updatecontactflowcontentresponse.cpp
+  updatecontactflownamerequest.cpp
+  updatecontactflownameresponse.cpp
+  updateinstanceattributerequest.cpp
+  updateinstanceattributeresponse.cpp
+  updateinstancestorageconfigrequest.cpp
+  updateinstancestorageconfigresponse.cpp
+  updatequeuehoursofoperationrequest.cpp
+  updatequeuehoursofoperationresponse.cpp
+  updatequeuemaxcontactsrequest.cpp
+  updatequeuemaxcontactsresponse.cpp
+  updatequeuenamerequest.cpp
+  updatequeuenameresponse.cpp
+  updatequeueoutboundcallerconfigrequest.cpp
+  updatequeueoutboundcallerconfigresponse.cpp
+  updatequeuestatusrequest.cpp
+  updatequeuestatusresponse.cpp
+  updatequickconnectconfigrequest.cpp
+  updatequickconnectconfigresponse.cpp
+  updatequickconnectnamerequest.cpp
+  updatequickconnectnameresponse.cpp
+  updateroutingprofileconcurrencyrequest.cpp
+  updateroutingprofileconcurrencyresponse.cpp
+  updateroutingprofiledefaultoutboundqueuerequest.cpp
+  updateroutingprofiledefaultoutboundqueueresponse.cpp
+  updateroutingprofilenamerequest.cpp
+  updateroutingprofilenameresponse.cpp
+  updateroutingprofilequeuesrequest.cpp
+  updateroutingprofilequeuesresponse.cpp
+  updateuserhierarchygroupnamerequest.cpp
+  updateuserhierarchygroupnameresponse.cpp
   updateuserhierarchyrequest.cpp
   updateuserhierarchyresponse.cpp
+  updateuserhierarchystructurerequest.cpp
+  updateuserhierarchystructureresponse.cpp
   updateuseridentityinforequest.cpp
   updateuseridentityinforesponse.cpp
   updateuserphoneconfigrequest.cpp

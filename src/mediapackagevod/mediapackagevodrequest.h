@@ -37,6 +37,7 @@ class QTAWS_EXPORT MediaPackageVodRequest : public QtAws::Core::AwsAbstractReque
 public:
     /// Actions supported by MediaPackageVod.
     enum Action {
+        ConfigureLogsAction,
         CreateAssetAction,
         CreatePackagingConfigurationAction,
         CreatePackagingGroupAction,
@@ -49,6 +50,10 @@ public:
         ListAssetsAction,
         ListPackagingConfigurationsAction,
         ListPackagingGroupsAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdatePackagingGroupAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

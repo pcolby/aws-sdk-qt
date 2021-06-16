@@ -21,8 +21,16 @@
 #include "fsxclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "associatefilesystemaliasesrequest.h"
+#include "associatefilesystemaliasesresponse.h"
+#include "canceldatarepositorytaskrequest.h"
+#include "canceldatarepositorytaskresponse.h"
+#include "copybackuprequest.h"
+#include "copybackupresponse.h"
 #include "createbackuprequest.h"
 #include "createbackupresponse.h"
+#include "createdatarepositorytaskrequest.h"
+#include "createdatarepositorytaskresponse.h"
 #include "createfilesystemrequest.h"
 #include "createfilesystemresponse.h"
 #include "createfilesystemfrombackuprequest.h"
@@ -33,8 +41,14 @@
 #include "deletefilesystemresponse.h"
 #include "describebackupsrequest.h"
 #include "describebackupsresponse.h"
+#include "describedatarepositorytasksrequest.h"
+#include "describedatarepositorytasksresponse.h"
+#include "describefilesystemaliasesrequest.h"
+#include "describefilesystemaliasesresponse.h"
 #include "describefilesystemsrequest.h"
 #include "describefilesystemsresponse.h"
+#include "disassociatefilesystemaliasesrequest.h"
+#include "disassociatefilesystemaliasesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "tagresourcerequest.h"
@@ -125,15 +139,127 @@ FSxClient::FSxClient(
 
 /*!
  * Sends \a request to the FSxClient service, and returns a pointer to an
+ * AssociateFileSystemAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this action to associate one or more Domain Name Server (DNS) aliases with an existing Amazon FSx for Windows File
+ * Server file system. A file systen can have a maximum of 50 DNS aliases associated with it at any one time. If you try to
+ * associate a DNS alias that is already associated with the file system, FSx takes no action on that alias in the request.
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">Working with DNS Aliases</a> and <a
+ * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html">Walkthrough 5:
+ * Using DNS aliases to access your file system</a>, including additional steps you must take to be able to access your
+ * file system using a DNS
+ *
+ * alias>
+ *
+ * The system response shows the DNS aliases that Amazon FSx is attempting to associate with the file system. Use the API
+ * operation to monitor the status of the aliases Amazon FSx is associating with the file
+ */
+AssociateFileSystemAliasesResponse * FSxClient::associateFileSystemAliases(const AssociateFileSystemAliasesRequest &request)
+{
+    return qobject_cast<AssociateFileSystemAliasesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
+ * CancelDataRepositoryTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels an existing Amazon FSx for Lustre data repository task if that task is in either the <code>PENDING</code> or
+ * <code>EXECUTING</code> state. When you cancel a task, Amazon FSx does the
+ *
+ * following> <ul> <li>
+ *
+ * Any files that FSx has already exported are not
+ *
+ * reverted> </li> <li>
+ *
+ * FSx continues to export any files that are "in-flight" when the cancel operation is
+ *
+ * received> </li> <li>
+ *
+ * FSx does not export any files that have not yet been
+ */
+CancelDataRepositoryTaskResponse * FSxClient::cancelDataRepositoryTask(const CancelDataRepositoryTaskRequest &request)
+{
+    return qobject_cast<CancelDataRepositoryTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
+ * CopyBackupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Copies an existing backup within the same AWS account to another Region (cross-Region copy) or within the same Region
+ * (in-Region copy). You can have up to five backup copy requests in progress to a single destination Region per
+ *
+ * account>
+ *
+ * You can use cross-Region backup copies for cross-region disaster recovery. You periodically take backups and copy them
+ * to another Region so that in the event of a disaster in the primary Region, you can restore from backup and recover
+ * availability quickly in the other Region. You can make cross-Region copies only within your AWS
+ *
+ * partition>
+ *
+ * You can also use backup copies to clone your file data set to another Region or within the same
+ *
+ * Region>
+ *
+ * You can use the <code>SourceRegion</code> parameter to specify the AWS Region from which the backup will be copied. For
+ * example, if you make the call from the <code>us-west-1</code> Region and want to copy a backup from the
+ * <code>us-east-2</code> Region, you specify <code>us-east-2</code> in the <code>SourceRegion</code> parameter to make a
+ * cross-Region copy. If you don't specify a Region, the backup copy is created in the same Region where the request is
+ * sent from (in-Region
+ *
+ * copy)>
+ *
+ * For more information on creating backup copies, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html#copy-backups"> Copying backups</a> in the
+ * <i>Amazon FSx for Windows User Guide</i> and <a
+ * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html#copy-backups">Copying backups</a> in the
+ * <i>Amazon FSx for Lustre User
+ */
+CopyBackupResponse * FSxClient::copyBackup(const CopyBackupRequest &request)
+{
+    return qobject_cast<CopyBackupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
  * CreateBackupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a backup of an existing Amazon FSx for Windows File Server file system. Creating regular backups for your file
- * system is a best practice that complements the replication that Amazon FSx for Windows File Server performs for your
- * file system. It also enables you to restore from user modification of
+ * Creates a backup of an existing Amazon FSx file system. Creating regular backups for your file system is a best
+ * practice, enabling you to restore a file system from a backup if an issue arises with the original file
  *
- * data>
+ * system>
+ *
+ * For Amazon FSx for Lustre file systems, you can create a backup only for file systems with the following
+ *
+ * configuration> <ul> <li>
+ *
+ * a Persistent deployment
+ *
+ * typ> </li> <li>
+ *
+ * is <i>not</i> linked to a data
+ *
+ * respository> </li> </ul>
+ *
+ * For more information about backing up Amazon FSx for Lustre file systems, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with FSx for Lustre
+ *
+ * backups</a>>
+ *
+ * For more information about backing up Amazon FSx for Windows file systems, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html">Working with FSx for Windows
+ *
+ * backups</a>>
  *
  * If a backup with the specified client request token exists, and the parameters match, this operation returns the
  * description of the existing backup. If a backup specified client request token exists, and the parameters don't match,
@@ -157,13 +283,34 @@ FSxClient::FSxClient(
  *
  * same>
  *
- * The <code>CreateFileSystem</code> operation returns while the backup's lifecycle state is still <code>CREATING</code>.
- * You can check the file system creation status by calling the <a>DescribeBackups</a> operation, which returns the backup
- * state along with other
+ * The <code>CreateBackup</code> operation returns while the backup's lifecycle state is still <code>CREATING</code>. You
+ * can check the backup creation status by calling the <a>DescribeBackups</a> operation, which returns the backup state
+ * along with other
  */
 CreateBackupResponse * FSxClient::createBackup(const CreateBackupRequest &request)
 {
     return qobject_cast<CreateBackupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
+ * CreateDataRepositoryTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon FSx for Lustre data repository task. You use data repository tasks to perform bulk operations between
+ * your Amazon FSx file system and its linked data repository. An example of a data repository task is exporting any data
+ * and metadata changes, including POSIX metadata, to files, directories, and symbolic links (symlinks) from your FSx file
+ * system to its linked data repository. A <code>CreateDataRepositoryTask</code> operation will fail if a data repository
+ * is not linked to the FSx file system. To learn more about data repository tasks, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Data Repository Tasks</a>. To learn
+ * more about linking a data repository to your file system, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-fs-linked-data-repo.html">Linking your file system to an
+ * S3
+ */
+CreateDataRepositoryTaskResponse * FSxClient::createDataRepositoryTask(const CreateDataRepositoryTaskRequest &request)
+{
+    return qobject_cast<CreateDataRepositoryTaskResponse *>(send(request));
 }
 
 /*!
@@ -215,7 +362,7 @@ CreateFileSystemResponse * FSxClient::createFileSystem(const CreateFileSystemReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Amazon FSx file system from an existing Amazon FSx for Windows File Server
+ * Creates a new Amazon FSx file system from an existing Amazon FSx
  *
  * backup>
  *
@@ -262,8 +409,7 @@ CreateFileSystemFromBackupResponse * FSxClient::createFileSystemFromBackup(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an Amazon FSx for Windows File Server backup, deleting its contents. After deletion, the backup no longer
- * exists, and its data is
+ * Deletes an Amazon FSx backup, deleting its contents. After deletion, the backup no longer exists, and its data is
  *
  * gone>
  *
@@ -299,7 +445,12 @@ DeleteBackupResponse * FSxClient::deleteBackup(const DeleteBackupRequest &reques
  * systems in your account. If you pass the file system ID for a deleted file system, the <a>DescribeFileSystems</a>
  * returns a <code>FileSystemNotFound</code>
  *
- * error> <b>
+ * error> <note>
+ *
+ * Deleting an Amazon FSx for Lustre file system will fail with a 400 BadRequest if a data repository task is in a
+ * <code>PENDING</code> or <code>EXECUTING</code>
+ *
+ * state> </note> <b>
  *
  * The data in a deleted file system is also deleted and can't be recovered by any
  */
@@ -314,9 +465,8 @@ DeleteFileSystemResponse * FSxClient::deleteFileSystem(const DeleteFileSystemReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the description of specific Amazon FSx for Windows File Server backups, if a <code>BackupIds</code> value is
- * provided for that backup. Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint
- * that you're
+ * Returns the description of specific Amazon FSx backups, if a <code>BackupIds</code> value is provided for that backup.
+ * Otherwise, it returns all backups owned by your AWS account in the AWS Region of the endpoint that you're
  *
  * calling>
  *
@@ -348,6 +498,44 @@ DeleteFileSystemResponse * FSxClient::deleteFileSystem(const DeleteFileSystemReq
 DescribeBackupsResponse * FSxClient::describeBackups(const DescribeBackupsRequest &request)
 {
     return qobject_cast<DescribeBackupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
+ * DescribeDataRepositoryTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the description of specific Amazon FSx for Lustre data repository tasks, if one or more <code>TaskIds</code>
+ * values are provided in the request, or if filters are used in the request. You can use filters to narrow the response to
+ * include just tasks for specific file systems, or tasks in a specific lifecycle state. Otherwise, it returns all data
+ * repository tasks owned by your AWS account in the AWS Region of the endpoint that you're
+ *
+ * calling>
+ *
+ * When retrieving all tasks, you can paginate the response by using the optional <code>MaxResults</code> parameter to
+ * limit the number of tasks returned in a response. If more tasks remain, Amazon FSx returns a <code>NextToken</code>
+ * value in the response. In this case, send a later request with the <code>NextToken</code> request parameter set to the
+ * value of <code>NextToken</code> from the last
+ */
+DescribeDataRepositoryTasksResponse * FSxClient::describeDataRepositoryTasks(const DescribeDataRepositoryTasksRequest &request)
+{
+    return qobject_cast<DescribeDataRepositoryTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
+ * DescribeFileSystemAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the DNS aliases that are associated with the specified Amazon FSx for Windows File Server file system. A history
+ * of all DNS aliases that have been associated with and disassociated from the file system is available in the list of
+ * <a>AdministrativeAction</a> provided in the <a>DescribeFileSystems</a> operation
+ */
+DescribeFileSystemAliasesResponse * FSxClient::describeFileSystemAliases(const DescribeFileSystemAliasesRequest &request)
+{
+    return qobject_cast<DescribeFileSystemAliasesResponse *>(send(request));
 }
 
 /*!
@@ -391,6 +579,27 @@ DescribeBackupsResponse * FSxClient::describeBackups(const DescribeBackupsReques
 DescribeFileSystemsResponse * FSxClient::describeFileSystems(const DescribeFileSystemsRequest &request)
 {
     return qobject_cast<DescribeFileSystemsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FSxClient service, and returns a pointer to an
+ * DisassociateFileSystemAliasesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this action to disassociate, or remove, one or more Domain Name Service (DNS) aliases from an Amazon FSx for Windows
+ * File Server file system. If you attempt to disassociate a DNS alias that is not associated with the file system, Amazon
+ * FSx responds with a 400 Bad Request. For more information, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html">Working with DNS
+ *
+ * Aliases</a>>
+ *
+ * The system generated response showing the DNS aliases that Amazon FSx is attempting to disassociate from the file
+ * system. Use the API operation to monitor the status of the aliases Amazon FSx is disassociating with the file
+ */
+DisassociateFileSystemAliasesResponse * FSxClient::disassociateFileSystemAliases(const DisassociateFileSystemAliasesRequest &request)
+{
+    return qobject_cast<DisassociateFileSystemAliasesResponse *>(send(request));
 }
 
 /*!
@@ -465,7 +674,42 @@ UntagResourceResponse * FSxClient::untagResource(const UntagResourceRequest &req
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a file system
+ * Use this operation to update the configuration of an existing Amazon FSx file system. You can update multiple properties
+ * in a single
+ *
+ * request>
+ *
+ * For Amazon FSx for Windows File Server file systems, you can update the following
+ *
+ * properties> <ul> <li>
+ *
+ * AuditLogConfiguratio> </li> <li>
+ *
+ * AutomaticBackupRetentionDay> </li> <li>
+ *
+ * DailyAutomaticBackupStartTim> </li> <li>
+ *
+ * SelfManagedActiveDirectoryConfiguratio> </li> <li>
+ *
+ * StorageCapacit> </li> <li>
+ *
+ * ThroughputCapacit> </li> <li>
+ *
+ * WeeklyMaintenanceStartTim> </li> </ul>
+ *
+ * For Amazon FSx for Lustre file systems, you can update the following
+ *
+ * properties> <ul> <li>
+ *
+ * AutoImportPolic> </li> <li>
+ *
+ * AutomaticBackupRetentionDay> </li> <li>
+ *
+ * DailyAutomaticBackupStartTim> </li> <li>
+ *
+ * DataCompressionTyp> </li> <li>
+ *
+ * StorageCapacit> </li> <li>
  */
 UpdateFileSystemResponse * FSxClient::updateFileSystem(const UpdateFileSystemRequest &request)
 {

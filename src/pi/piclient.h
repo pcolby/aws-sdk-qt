@@ -30,6 +30,8 @@ namespace PI {
 class PiClientPrivate;
 class DescribeDimensionKeysRequest;
 class DescribeDimensionKeysResponse;
+class GetDimensionKeyDetailsRequest;
+class GetDimensionKeyDetailsResponse;
 class GetResourceMetricsRequest;
 class GetResourceMetricsResponse;
 
@@ -50,6 +52,7 @@ public:
 
 public slots:
     DescribeDimensionKeysResponse * describeDimensionKeys(const DescribeDimensionKeysRequest &request);
+    GetDimensionKeyDetailsResponse * getDimensionKeyDetails(const GetDimensionKeyDetailsRequest &request);
     GetResourceMetricsResponse * getResourceMetrics(const GetResourceMetricsRequest &request);
 
 private:

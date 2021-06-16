@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoTWireless
+description = AWS IoTWireless SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiotwireless-index.html"
+navigation.landingtitle = "IoTWireless"
+navigation.cppclassespage = "IoTWireless C++ Classes"

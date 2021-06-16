@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsWellArchitected
+description = AWS WellArchitected SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawswellarchitected-index.html"
+navigation.landingtitle = "WellArchitected"
+navigation.cppclassespage = "WellArchitected C++ Classes"

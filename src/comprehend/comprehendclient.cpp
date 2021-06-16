@@ -31,12 +31,20 @@
 #include "batchdetectsentimentresponse.h"
 #include "batchdetectsyntaxrequest.h"
 #include "batchdetectsyntaxresponse.h"
+#include "classifydocumentrequest.h"
+#include "classifydocumentresponse.h"
+#include "containspiientitiesrequest.h"
+#include "containspiientitiesresponse.h"
 #include "createdocumentclassifierrequest.h"
 #include "createdocumentclassifierresponse.h"
+#include "createendpointrequest.h"
+#include "createendpointresponse.h"
 #include "createentityrecognizerrequest.h"
 #include "createentityrecognizerresponse.h"
 #include "deletedocumentclassifierrequest.h"
 #include "deletedocumentclassifierresponse.h"
+#include "deleteendpointrequest.h"
+#include "deleteendpointresponse.h"
 #include "deleteentityrecognizerrequest.h"
 #include "deleteentityrecognizerresponse.h"
 #include "describedocumentclassificationjobrequest.h"
@@ -45,12 +53,18 @@
 #include "describedocumentclassifierresponse.h"
 #include "describedominantlanguagedetectionjobrequest.h"
 #include "describedominantlanguagedetectionjobresponse.h"
+#include "describeendpointrequest.h"
+#include "describeendpointresponse.h"
 #include "describeentitiesdetectionjobrequest.h"
 #include "describeentitiesdetectionjobresponse.h"
 #include "describeentityrecognizerrequest.h"
 #include "describeentityrecognizerresponse.h"
+#include "describeeventsdetectionjobrequest.h"
+#include "describeeventsdetectionjobresponse.h"
 #include "describekeyphrasesdetectionjobrequest.h"
 #include "describekeyphrasesdetectionjobresponse.h"
+#include "describepiientitiesdetectionjobrequest.h"
+#include "describepiientitiesdetectionjobresponse.h"
 #include "describesentimentdetectionjobrequest.h"
 #include "describesentimentdetectionjobresponse.h"
 #include "describetopicsdetectionjobrequest.h"
@@ -61,6 +75,8 @@
 #include "detectentitiesresponse.h"
 #include "detectkeyphrasesrequest.h"
 #include "detectkeyphrasesresponse.h"
+#include "detectpiientitiesrequest.h"
+#include "detectpiientitiesresponse.h"
 #include "detectsentimentrequest.h"
 #include "detectsentimentresponse.h"
 #include "detectsyntaxrequest.h"
@@ -71,12 +87,18 @@
 #include "listdocumentclassifiersresponse.h"
 #include "listdominantlanguagedetectionjobsrequest.h"
 #include "listdominantlanguagedetectionjobsresponse.h"
+#include "listendpointsrequest.h"
+#include "listendpointsresponse.h"
 #include "listentitiesdetectionjobsrequest.h"
 #include "listentitiesdetectionjobsresponse.h"
 #include "listentityrecognizersrequest.h"
 #include "listentityrecognizersresponse.h"
+#include "listeventsdetectionjobsrequest.h"
+#include "listeventsdetectionjobsresponse.h"
 #include "listkeyphrasesdetectionjobsrequest.h"
 #include "listkeyphrasesdetectionjobsresponse.h"
+#include "listpiientitiesdetectionjobsrequest.h"
+#include "listpiientitiesdetectionjobsresponse.h"
 #include "listsentimentdetectionjobsrequest.h"
 #include "listsentimentdetectionjobsresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -89,8 +111,12 @@
 #include "startdominantlanguagedetectionjobresponse.h"
 #include "startentitiesdetectionjobrequest.h"
 #include "startentitiesdetectionjobresponse.h"
+#include "starteventsdetectionjobrequest.h"
+#include "starteventsdetectionjobresponse.h"
 #include "startkeyphrasesdetectionjobrequest.h"
 #include "startkeyphrasesdetectionjobresponse.h"
+#include "startpiientitiesdetectionjobrequest.h"
+#include "startpiientitiesdetectionjobresponse.h"
 #include "startsentimentdetectionjobrequest.h"
 #include "startsentimentdetectionjobresponse.h"
 #include "starttopicsdetectionjobrequest.h"
@@ -99,8 +125,12 @@
 #include "stopdominantlanguagedetectionjobresponse.h"
 #include "stopentitiesdetectionjobrequest.h"
 #include "stopentitiesdetectionjobresponse.h"
+#include "stopeventsdetectionjobrequest.h"
+#include "stopeventsdetectionjobresponse.h"
 #include "stopkeyphrasesdetectionjobrequest.h"
 #include "stopkeyphrasesdetectionjobresponse.h"
+#include "stoppiientitiesdetectionjobrequest.h"
+#include "stoppiientitiesdetectionjobresponse.h"
 #include "stopsentimentdetectionjobrequest.h"
 #include "stopsentimentdetectionjobresponse.h"
 #include "stoptrainingdocumentclassifierrequest.h"
@@ -111,6 +141,8 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateendpointrequest.h"
+#include "updateendpointresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -264,17 +296,58 @@ BatchDetectSyntaxResponse * ComprehendClient::batchDetectSyntax(const BatchDetec
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ClassifyDocumentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new document classification request to analyze a single document in real-time, using a previously created and
+ * trained custom model and an
+ */
+ClassifyDocumentResponse * ComprehendClient::classifyDocument(const ClassifyDocumentRequest &request)
+{
+    return qobject_cast<ClassifyDocumentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ContainsPiiEntitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Analyzes input text for the presence of personally identifiable information (PII) and returns the labels of identified
+ * PII entity types such as name, address, bank account number, or phone
+ */
+ContainsPiiEntitiesResponse * ComprehendClient::containsPiiEntities(const ContainsPiiEntitiesRequest &request)
+{
+    return qobject_cast<ContainsPiiEntitiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * CreateDocumentClassifierResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new document classifier that you can use to categorize documents. To create a classifier you provide a set of
+ * Creates a new document classifier that you can use to categorize documents. To create a classifier, you provide a set of
  * training documents that labeled with the categories that you want to use. After the classifier is trained you can use it
  * to categorize a set of labeled documents into the categories. For more information, see
  */
 CreateDocumentClassifierResponse * ComprehendClient::createDocumentClassifier(const CreateDocumentClassifierRequest &request)
 {
     return qobject_cast<CreateDocumentClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * CreateEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a model-specific endpoint for synchronous inference for a previously trained custom model
+ */
+CreateEndpointResponse * ComprehendClient::createEndpoint(const CreateEndpointRequest &request)
+{
+    return qobject_cast<CreateEndpointResponse *>(send(request));
 }
 
 /*!
@@ -312,6 +385,20 @@ CreateEntityRecognizerResponse * ComprehendClient::createEntityRecognizer(const 
 DeleteDocumentClassifierResponse * ComprehendClient::deleteDocumentClassifier(const DeleteDocumentClassifierRequest &request)
 {
     return qobject_cast<DeleteDocumentClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DeleteEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a model-specific endpoint for a previously-trained custom model. All endpoints must be deleted in order for the
+ * model to be
+ */
+DeleteEndpointResponse * ComprehendClient::deleteEndpoint(const DeleteEndpointRequest &request)
+{
+    return qobject_cast<DeleteEndpointResponse *>(send(request));
 }
 
 /*!
@@ -380,6 +467,19 @@ DescribeDominantLanguageDetectionJobResponse * ComprehendClient::describeDominan
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with a specific endpoint. Use this operation to get the status of an
+ */
+DescribeEndpointResponse * ComprehendClient::describeEndpoint(const DescribeEndpointRequest &request)
+{
+    return qobject_cast<DescribeEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * DescribeEntitiesDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -407,6 +507,19 @@ DescribeEntityRecognizerResponse * ComprehendClient::describeEntityRecognizer(co
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribeEventsDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the status and details of an events detection
+ */
+DescribeEventsDetectionJobResponse * ComprehendClient::describeEventsDetectionJob(const DescribeEventsDetectionJobRequest &request)
+{
+    return qobject_cast<DescribeEventsDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * DescribeKeyPhrasesDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -416,6 +529,19 @@ DescribeEntityRecognizerResponse * ComprehendClient::describeEntityRecognizer(co
 DescribeKeyPhrasesDetectionJobResponse * ComprehendClient::describeKeyPhrasesDetectionJob(const DescribeKeyPhrasesDetectionJobRequest &request)
 {
     return qobject_cast<DescribeKeyPhrasesDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DescribePiiEntitiesDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with a PII entities detection job. For example, you can use this operation to get the job
+ */
+DescribePiiEntitiesDetectionJobResponse * ComprehendClient::describePiiEntitiesDetectionJob(const DescribePiiEntitiesDetectionJobRequest &request)
+{
+    return qobject_cast<DescribePiiEntitiesDetectionJobResponse *>(send(request));
 }
 
 /*!
@@ -487,6 +613,20 @@ DetectKeyPhrasesResponse * ComprehendClient::detectKeyPhrases(const DetectKeyPhr
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * DetectPiiEntitiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Inspects the input text for entities that contain personally identifiable information (PII) and returns information
+ * about
+ */
+DetectPiiEntitiesResponse * ComprehendClient::detectPiiEntities(const DetectPiiEntitiesRequest &request)
+{
+    return qobject_cast<DetectPiiEntitiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * DetectSentimentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -553,6 +693,19 @@ ListDominantLanguageDetectionJobsResponse * ComprehendClient::listDominantLangua
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of all existing endpoints that you've
+ */
+ListEndpointsResponse * ComprehendClient::listEndpoints(const ListEndpointsRequest &request)
+{
+    return qobject_cast<ListEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * ListEntitiesDetectionJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -585,6 +738,19 @@ ListEntityRecognizersResponse * ComprehendClient::listEntityRecognizers(const Li
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListEventsDetectionJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the events detection jobs that you have
+ */
+ListEventsDetectionJobsResponse * ComprehendClient::listEventsDetectionJobs(const ListEventsDetectionJobsRequest &request)
+{
+    return qobject_cast<ListEventsDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * ListKeyPhrasesDetectionJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -594,6 +760,19 @@ ListEntityRecognizersResponse * ComprehendClient::listEntityRecognizers(const Li
 ListKeyPhrasesDetectionJobsResponse * ComprehendClient::listKeyPhrasesDetectionJobs(const ListKeyPhrasesDetectionJobsRequest &request)
 {
     return qobject_cast<ListKeyPhrasesDetectionJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * ListPiiEntitiesDetectionJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the PII entity detection jobs that you have
+ */
+ListPiiEntitiesDetectionJobsResponse * ComprehendClient::listPiiEntitiesDetectionJobs(const ListPiiEntitiesDetectionJobsRequest &request)
+{
+    return qobject_cast<ListPiiEntitiesDetectionJobsResponse *>(send(request));
 }
 
 /*!
@@ -683,6 +862,19 @@ StartEntitiesDetectionJobResponse * ComprehendClient::startEntitiesDetectionJob(
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StartEventsDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an asynchronous event detection job for a collection of
+ */
+StartEventsDetectionJobResponse * ComprehendClient::startEventsDetectionJob(const StartEventsDetectionJobRequest &request)
+{
+    return qobject_cast<StartEventsDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * StartKeyPhrasesDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -693,6 +885,19 @@ StartEntitiesDetectionJobResponse * ComprehendClient::startEntitiesDetectionJob(
 StartKeyPhrasesDetectionJobResponse * ComprehendClient::startKeyPhrasesDetectionJob(const StartKeyPhrasesDetectionJobRequest &request)
 {
     return qobject_cast<StartKeyPhrasesDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StartPiiEntitiesDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an asynchronous PII entity detection job for a collection of
+ */
+StartPiiEntitiesDetectionJobResponse * ComprehendClient::startPiiEntitiesDetectionJob(const StartPiiEntitiesDetectionJobRequest &request)
+{
+    return qobject_cast<StartPiiEntitiesDetectionJobResponse *>(send(request));
 }
 
 /*!
@@ -780,6 +985,19 @@ StopEntitiesDetectionJobResponse * ComprehendClient::stopEntitiesDetectionJob(co
 
 /*!
  * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StopEventsDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an events detection job in
+ */
+StopEventsDetectionJobResponse * ComprehendClient::stopEventsDetectionJob(const StopEventsDetectionJobRequest &request)
+{
+    return qobject_cast<StopEventsDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
  * StopKeyPhrasesDetectionJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -804,6 +1022,19 @@ StopEntitiesDetectionJobResponse * ComprehendClient::stopEntitiesDetectionJob(co
 StopKeyPhrasesDetectionJobResponse * ComprehendClient::stopKeyPhrasesDetectionJob(const StopKeyPhrasesDetectionJobRequest &request)
 {
     return qobject_cast<StopKeyPhrasesDetectionJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * StopPiiEntitiesDetectionJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a PII entities detection job in
+ */
+StopPiiEntitiesDetectionJobResponse * ComprehendClient::stopPiiEntitiesDetectionJob(const StopPiiEntitiesDetectionJobRequest &request)
+{
+    return qobject_cast<StopPiiEntitiesDetectionJobResponse *>(send(request));
 }
 
 /*!
@@ -900,6 +1131,19 @@ TagResourceResponse * ComprehendClient::tagResource(const TagResourceRequest &re
 UntagResourceResponse * ComprehendClient::untagResource(const UntagResourceRequest &request)
 {
     return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ComprehendClient service, and returns a pointer to an
+ * UpdateEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates information about the specified
+ */
+UpdateEndpointResponse * ComprehendClient::updateEndpoint(const UpdateEndpointRequest &request)
+{
+    return qobject_cast<UpdateEndpointResponse *>(send(request));
 }
 
 /*!

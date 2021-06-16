@@ -5,6 +5,10 @@ add_library(QtAwsPi
   describedimensionkeysrequest_p.h
   describedimensionkeysresponse.h
   describedimensionkeysresponse_p.h
+  getdimensionkeydetailsrequest.h
+  getdimensionkeydetailsrequest_p.h
+  getdimensionkeydetailsresponse.h
+  getdimensionkeydetailsresponse_p.h
   getresourcemetricsrequest.h
   getresourcemetricsrequest_p.h
   getresourcemetricsresponse.h
@@ -17,6 +21,8 @@ add_library(QtAwsPi
   piresponse_p.h
   describedimensionkeysrequest.cpp
   describedimensionkeysresponse.cpp
+  getdimensionkeydetailsrequest.cpp
+  getdimensionkeydetailsresponse.cpp
   getresourcemetricsrequest.cpp
   getresourcemetricsresponse.cpp
   piclient.cpp

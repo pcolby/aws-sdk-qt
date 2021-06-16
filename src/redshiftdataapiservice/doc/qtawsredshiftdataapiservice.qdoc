@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsRedshiftDataAPIService
+    \title RedshiftDataAPIService C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS RedshiftDataAPIService functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

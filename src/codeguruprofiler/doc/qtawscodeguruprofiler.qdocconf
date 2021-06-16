@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsCodeGuruProfiler
+description = AWS CodeGuruProfiler SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawscodeguruprofiler-index.html"
+navigation.landingtitle = "CodeGuruProfiler"
+navigation.cppclassespage = "CodeGuruProfiler C++ Classes"

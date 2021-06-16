@@ -36,11 +36,20 @@ namespace Translate {
  * This enum describes the actions that can be performed as Translate
  * requests.
  *
+ * \value CreateParallelDataAction Translate CreateParallelData action.
+ * \value DeleteParallelDataAction Translate DeleteParallelData action.
  * \value DeleteTerminologyAction Translate DeleteTerminology action.
+ * \value DescribeTextTranslationJobAction Translate DescribeTextTranslationJob action.
+ * \value GetParallelDataAction Translate GetParallelData action.
  * \value GetTerminologyAction Translate GetTerminology action.
  * \value ImportTerminologyAction Translate ImportTerminology action.
+ * \value ListParallelDataAction Translate ListParallelData action.
  * \value ListTerminologiesAction Translate ListTerminologies action.
+ * \value ListTextTranslationJobsAction Translate ListTextTranslationJobs action.
+ * \value StartTextTranslationJobAction Translate StartTextTranslationJob action.
+ * \value StopTextTranslationJobAction Translate StopTextTranslationJob action.
  * \value TranslateTextAction Translate TranslateText action.
+ * \value UpdateParallelDataAction Translate UpdateParallelData action.
  */
 
 /*!

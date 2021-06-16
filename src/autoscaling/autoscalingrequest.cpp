@@ -41,6 +41,7 @@ namespace AutoScaling {
  * \value AttachLoadBalancersAction AutoScaling AttachLoadBalancers action.
  * \value BatchDeleteScheduledActionAction AutoScaling BatchDeleteScheduledAction action.
  * \value BatchPutScheduledUpdateGroupActionAction AutoScaling BatchPutScheduledUpdateGroupAction action.
+ * \value CancelInstanceRefreshAction AutoScaling CancelInstanceRefresh action.
  * \value CompleteLifecycleActionAction AutoScaling CompleteLifecycleAction action.
  * \value CreateAutoScalingGroupAction AutoScaling CreateAutoScalingGroup action.
  * \value CreateLaunchConfigurationAction AutoScaling CreateLaunchConfiguration action.
@@ -52,11 +53,13 @@ namespace AutoScaling {
  * \value DeletePolicyAction AutoScaling DeletePolicy action.
  * \value DeleteScheduledActionAction AutoScaling DeleteScheduledAction action.
  * \value DeleteTagsAction AutoScaling DeleteTags action.
+ * \value DeleteWarmPoolAction AutoScaling DeleteWarmPool action.
  * \value DescribeAccountLimitsAction AutoScaling DescribeAccountLimits action.
  * \value DescribeAdjustmentTypesAction AutoScaling DescribeAdjustmentTypes action.
  * \value DescribeAutoScalingGroupsAction AutoScaling DescribeAutoScalingGroups action.
  * \value DescribeAutoScalingInstancesAction AutoScaling DescribeAutoScalingInstances action.
  * \value DescribeAutoScalingNotificationTypesAction AutoScaling DescribeAutoScalingNotificationTypes action.
+ * \value DescribeInstanceRefreshesAction AutoScaling DescribeInstanceRefreshes action.
  * \value DescribeLaunchConfigurationsAction AutoScaling DescribeLaunchConfigurations action.
  * \value DescribeLifecycleHookTypesAction AutoScaling DescribeLifecycleHookTypes action.
  * \value DescribeLifecycleHooksAction AutoScaling DescribeLifecycleHooks action.
@@ -70,6 +73,7 @@ namespace AutoScaling {
  * \value DescribeScheduledActionsAction AutoScaling DescribeScheduledActions action.
  * \value DescribeTagsAction AutoScaling DescribeTags action.
  * \value DescribeTerminationPolicyTypesAction AutoScaling DescribeTerminationPolicyTypes action.
+ * \value DescribeWarmPoolAction AutoScaling DescribeWarmPool action.
  * \value DetachInstancesAction AutoScaling DetachInstances action.
  * \value DetachLoadBalancerTargetGroupsAction AutoScaling DetachLoadBalancerTargetGroups action.
  * \value DetachLoadBalancersAction AutoScaling DetachLoadBalancers action.
@@ -78,15 +82,18 @@ namespace AutoScaling {
  * \value EnterStandbyAction AutoScaling EnterStandby action.
  * \value ExecutePolicyAction AutoScaling ExecutePolicy action.
  * \value ExitStandbyAction AutoScaling ExitStandby action.
+ * \value GetPredictiveScalingForecastAction AutoScaling GetPredictiveScalingForecast action.
  * \value PutLifecycleHookAction AutoScaling PutLifecycleHook action.
  * \value PutNotificationConfigurationAction AutoScaling PutNotificationConfiguration action.
  * \value PutScalingPolicyAction AutoScaling PutScalingPolicy action.
  * \value PutScheduledUpdateGroupActionAction AutoScaling PutScheduledUpdateGroupAction action.
+ * \value PutWarmPoolAction AutoScaling PutWarmPool action.
  * \value RecordLifecycleActionHeartbeatAction AutoScaling RecordLifecycleActionHeartbeat action.
  * \value ResumeProcessesAction AutoScaling ResumeProcesses action.
  * \value SetDesiredCapacityAction AutoScaling SetDesiredCapacity action.
  * \value SetInstanceHealthAction AutoScaling SetInstanceHealth action.
  * \value SetInstanceProtectionAction AutoScaling SetInstanceProtection action.
+ * \value StartInstanceRefreshAction AutoScaling StartInstanceRefresh action.
  * \value SuspendProcessesAction AutoScaling SuspendProcesses action.
  * \value TerminateInstanceInAutoScalingGroupAction AutoScaling TerminateInstanceInAutoScalingGroup action.
  * \value UpdateAutoScalingGroupAction AutoScaling UpdateAutoScalingGroup action.

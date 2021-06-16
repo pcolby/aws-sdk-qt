@@ -44,6 +44,9 @@ namespace Cloud9 {
  * \value DescribeEnvironmentStatusAction Cloud9 DescribeEnvironmentStatus action.
  * \value DescribeEnvironmentsAction Cloud9 DescribeEnvironments action.
  * \value ListEnvironmentsAction Cloud9 ListEnvironments action.
+ * \value ListTagsForResourceAction Cloud9 ListTagsForResource action.
+ * \value TagResourceAction Cloud9 TagResource action.
+ * \value UntagResourceAction Cloud9 UntagResource action.
  * \value UpdateEnvironmentAction Cloud9 UpdateEnvironment action.
  * \value UpdateEnvironmentMembershipAction Cloud9 UpdateEnvironmentMembership action.
  */

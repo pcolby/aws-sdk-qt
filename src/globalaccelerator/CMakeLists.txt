@@ -1,10 +1,34 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsGlobalAccelerator
+  addcustomroutingendpointsrequest.h
+  addcustomroutingendpointsrequest_p.h
+  addcustomroutingendpointsresponse.h
+  addcustomroutingendpointsresponse_p.h
+  advertisebyoipcidrrequest.h
+  advertisebyoipcidrrequest_p.h
+  advertisebyoipcidrresponse.h
+  advertisebyoipcidrresponse_p.h
+  allowcustomroutingtrafficrequest.h
+  allowcustomroutingtrafficrequest_p.h
+  allowcustomroutingtrafficresponse.h
+  allowcustomroutingtrafficresponse_p.h
   createacceleratorrequest.h
   createacceleratorrequest_p.h
   createacceleratorresponse.h
   createacceleratorresponse_p.h
+  createcustomroutingacceleratorrequest.h
+  createcustomroutingacceleratorrequest_p.h
+  createcustomroutingacceleratorresponse.h
+  createcustomroutingacceleratorresponse_p.h
+  createcustomroutingendpointgrouprequest.h
+  createcustomroutingendpointgrouprequest_p.h
+  createcustomroutingendpointgroupresponse.h
+  createcustomroutingendpointgroupresponse_p.h
+  createcustomroutinglistenerrequest.h
+  createcustomroutinglistenerrequest_p.h
+  createcustomroutinglistenerresponse.h
+  createcustomroutinglistenerresponse_p.h
   createendpointgrouprequest.h
   createendpointgrouprequest_p.h
   createendpointgroupresponse.h
@@ -17,6 +41,18 @@ add_library(QtAwsGlobalAccelerator
   deleteacceleratorrequest_p.h
   deleteacceleratorresponse.h
   deleteacceleratorresponse_p.h
+  deletecustomroutingacceleratorrequest.h
+  deletecustomroutingacceleratorrequest_p.h
+  deletecustomroutingacceleratorresponse.h
+  deletecustomroutingacceleratorresponse_p.h
+  deletecustomroutingendpointgrouprequest.h
+  deletecustomroutingendpointgrouprequest_p.h
+  deletecustomroutingendpointgroupresponse.h
+  deletecustomroutingendpointgroupresponse_p.h
+  deletecustomroutinglistenerrequest.h
+  deletecustomroutinglistenerrequest_p.h
+  deletecustomroutinglistenerresponse.h
+  deletecustomroutinglistenerresponse_p.h
   deleteendpointgrouprequest.h
   deleteendpointgrouprequest_p.h
   deleteendpointgroupresponse.h
@@ -25,6 +61,14 @@ add_library(QtAwsGlobalAccelerator
   deletelistenerrequest_p.h
   deletelistenerresponse.h
   deletelistenerresponse_p.h
+  denycustomroutingtrafficrequest.h
+  denycustomroutingtrafficrequest_p.h
+  denycustomroutingtrafficresponse.h
+  denycustomroutingtrafficresponse_p.h
+  deprovisionbyoipcidrrequest.h
+  deprovisionbyoipcidrrequest_p.h
+  deprovisionbyoipcidrresponse.h
+  deprovisionbyoipcidrresponse_p.h
   describeacceleratorattributesrequest.h
   describeacceleratorattributesrequest_p.h
   describeacceleratorattributesresponse.h
@@ -33,6 +77,22 @@ add_library(QtAwsGlobalAccelerator
   describeacceleratorrequest_p.h
   describeacceleratorresponse.h
   describeacceleratorresponse_p.h
+  describecustomroutingacceleratorattributesrequest.h
+  describecustomroutingacceleratorattributesrequest_p.h
+  describecustomroutingacceleratorattributesresponse.h
+  describecustomroutingacceleratorattributesresponse_p.h
+  describecustomroutingacceleratorrequest.h
+  describecustomroutingacceleratorrequest_p.h
+  describecustomroutingacceleratorresponse.h
+  describecustomroutingacceleratorresponse_p.h
+  describecustomroutingendpointgrouprequest.h
+  describecustomroutingendpointgrouprequest_p.h
+  describecustomroutingendpointgroupresponse.h
+  describecustomroutingendpointgroupresponse_p.h
+  describecustomroutinglistenerrequest.h
+  describecustomroutinglistenerrequest_p.h
+  describecustomroutinglistenerresponse.h
+  describecustomroutinglistenerresponse_p.h
   describeendpointgrouprequest.h
   describeendpointgrouprequest_p.h
   describeendpointgroupresponse.h
@@ -51,6 +111,30 @@ add_library(QtAwsGlobalAccelerator
   listacceleratorsrequest_p.h
   listacceleratorsresponse.h
   listacceleratorsresponse_p.h
+  listbyoipcidrsrequest.h
+  listbyoipcidrsrequest_p.h
+  listbyoipcidrsresponse.h
+  listbyoipcidrsresponse_p.h
+  listcustomroutingacceleratorsrequest.h
+  listcustomroutingacceleratorsrequest_p.h
+  listcustomroutingacceleratorsresponse.h
+  listcustomroutingacceleratorsresponse_p.h
+  listcustomroutingendpointgroupsrequest.h
+  listcustomroutingendpointgroupsrequest_p.h
+  listcustomroutingendpointgroupsresponse.h
+  listcustomroutingendpointgroupsresponse_p.h
+  listcustomroutinglistenersrequest.h
+  listcustomroutinglistenersrequest_p.h
+  listcustomroutinglistenersresponse.h
+  listcustomroutinglistenersresponse_p.h
+  listcustomroutingportmappingsbydestinationrequest.h
+  listcustomroutingportmappingsbydestinationrequest_p.h
+  listcustomroutingportmappingsbydestinationresponse.h
+  listcustomroutingportmappingsbydestinationresponse_p.h
+  listcustomroutingportmappingsrequest.h
+  listcustomroutingportmappingsrequest_p.h
+  listcustomroutingportmappingsresponse.h
+  listcustomroutingportmappingsresponse_p.h
   listendpointgroupsrequest.h
   listendpointgroupsrequest_p.h
   listendpointgroupsresponse.h
@@ -59,6 +143,26 @@ add_library(QtAwsGlobalAccelerator
   listlistenersrequest_p.h
   listlistenersresponse.h
   listlistenersresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  provisionbyoipcidrrequest.h
+  provisionbyoipcidrrequest_p.h
+  provisionbyoipcidrresponse.h
+  provisionbyoipcidrresponse_p.h
+  removecustomroutingendpointsrequest.h
+  removecustomroutingendpointsrequest_p.h
+  removecustomroutingendpointsresponse.h
+  removecustomroutingendpointsresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateacceleratorattributesrequest.h
   updateacceleratorattributesrequest_p.h
   updateacceleratorattributesresponse.h
@@ -67,6 +171,18 @@ add_library(QtAwsGlobalAccelerator
   updateacceleratorrequest_p.h
   updateacceleratorresponse.h
   updateacceleratorresponse_p.h
+  updatecustomroutingacceleratorattributesrequest.h
+  updatecustomroutingacceleratorattributesrequest_p.h
+  updatecustomroutingacceleratorattributesresponse.h
+  updatecustomroutingacceleratorattributesresponse_p.h
+  updatecustomroutingacceleratorrequest.h
+  updatecustomroutingacceleratorrequest_p.h
+  updatecustomroutingacceleratorresponse.h
+  updatecustomroutingacceleratorresponse_p.h
+  updatecustomroutinglistenerrequest.h
+  updatecustomroutinglistenerrequest_p.h
+  updatecustomroutinglistenerresponse.h
+  updatecustomroutinglistenerresponse_p.h
   updateendpointgrouprequest.h
   updateendpointgrouprequest_p.h
   updateendpointgroupresponse.h
@@ -75,22 +191,56 @@ add_library(QtAwsGlobalAccelerator
   updatelistenerrequest_p.h
   updatelistenerresponse.h
   updatelistenerresponse_p.h
+  withdrawbyoipcidrrequest.h
+  withdrawbyoipcidrrequest_p.h
+  withdrawbyoipcidrresponse.h
+  withdrawbyoipcidrresponse_p.h
+  addcustomroutingendpointsrequest.cpp
+  addcustomroutingendpointsresponse.cpp
+  advertisebyoipcidrrequest.cpp
+  advertisebyoipcidrresponse.cpp
+  allowcustomroutingtrafficrequest.cpp
+  allowcustomroutingtrafficresponse.cpp
   createacceleratorrequest.cpp
   createacceleratorresponse.cpp
+  createcustomroutingacceleratorrequest.cpp
+  createcustomroutingacceleratorresponse.cpp
+  createcustomroutingendpointgrouprequest.cpp
+  createcustomroutingendpointgroupresponse.cpp
+  createcustomroutinglistenerrequest.cpp
+  createcustomroutinglistenerresponse.cpp
   createendpointgrouprequest.cpp
   createendpointgroupresponse.cpp
   createlistenerrequest.cpp
   createlistenerresponse.cpp
   deleteacceleratorrequest.cpp
   deleteacceleratorresponse.cpp
+  deletecustomroutingacceleratorrequest.cpp
+  deletecustomroutingacceleratorresponse.cpp
+  deletecustomroutingendpointgrouprequest.cpp
+  deletecustomroutingendpointgroupresponse.cpp
+  deletecustomroutinglistenerrequest.cpp
+  deletecustomroutinglistenerresponse.cpp
   deleteendpointgrouprequest.cpp
   deleteendpointgroupresponse.cpp
   deletelistenerrequest.cpp
   deletelistenerresponse.cpp
+  denycustomroutingtrafficrequest.cpp
+  denycustomroutingtrafficresponse.cpp
+  deprovisionbyoipcidrrequest.cpp
+  deprovisionbyoipcidrresponse.cpp
   describeacceleratorattributesrequest.cpp
   describeacceleratorattributesresponse.cpp
   describeacceleratorrequest.cpp
   describeacceleratorresponse.cpp
+  describecustomroutingacceleratorattributesrequest.cpp
+  describecustomroutingacceleratorattributesresponse.cpp
+  describecustomroutingacceleratorrequest.cpp
+  describecustomroutingacceleratorresponse.cpp
+  describecustomroutingendpointgrouprequest.cpp
+  describecustomroutingendpointgroupresponse.cpp
+  describecustomroutinglistenerrequest.cpp
+  describecustomroutinglistenerresponse.cpp
   describeendpointgrouprequest.cpp
   describeendpointgroupresponse.cpp
   describelistenerrequest.cpp
@@ -100,18 +250,48 @@ add_library(QtAwsGlobalAccelerator
   globalacceleratorresponse.cpp
   listacceleratorsrequest.cpp
   listacceleratorsresponse.cpp
+  listbyoipcidrsrequest.cpp
+  listbyoipcidrsresponse.cpp
+  listcustomroutingacceleratorsrequest.cpp
+  listcustomroutingacceleratorsresponse.cpp
+  listcustomroutingendpointgroupsrequest.cpp
+  listcustomroutingendpointgroupsresponse.cpp
+  listcustomroutinglistenersrequest.cpp
+  listcustomroutinglistenersresponse.cpp
+  listcustomroutingportmappingsbydestinationrequest.cpp
+  listcustomroutingportmappingsbydestinationresponse.cpp
+  listcustomroutingportmappingsrequest.cpp
+  listcustomroutingportmappingsresponse.cpp
   listendpointgroupsrequest.cpp
   listendpointgroupsresponse.cpp
   listlistenersrequest.cpp
   listlistenersresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  provisionbyoipcidrrequest.cpp
+  provisionbyoipcidrresponse.cpp
+  removecustomroutingendpointsrequest.cpp
+  removecustomroutingendpointsresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateacceleratorattributesrequest.cpp
   updateacceleratorattributesresponse.cpp
   updateacceleratorrequest.cpp
   updateacceleratorresponse.cpp
+  updatecustomroutingacceleratorattributesrequest.cpp
+  updatecustomroutingacceleratorattributesresponse.cpp
+  updatecustomroutingacceleratorrequest.cpp
+  updatecustomroutingacceleratorresponse.cpp
+  updatecustomroutinglistenerrequest.cpp
+  updatecustomroutinglistenerresponse.cpp
   updateendpointgrouprequest.cpp
   updateendpointgroupresponse.cpp
   updatelistenerrequest.cpp
-  updatelistenerresponse.cpp)
+  updatelistenerresponse.cpp
+  withdrawbyoipcidrrequest.cpp
+  withdrawbyoipcidrresponse.cpp)
 
 add_dependencies(QtAwsGlobalAccelerator QtAwsCore)
 

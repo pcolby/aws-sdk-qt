@@ -50,7 +50,7 @@ namespace CostExplorer {
  *  </p </li> </ul>
  * 
  *  For information about costs associated with the Cost Explorer API, see <a
- *  href="https://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
+ *  href="http://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
  *
  * \sa CostExplorerClient::getTags
  */

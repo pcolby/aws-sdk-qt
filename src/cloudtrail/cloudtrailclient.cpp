@@ -31,16 +31,24 @@
 #include "describetrailsresponse.h"
 #include "geteventselectorsrequest.h"
 #include "geteventselectorsresponse.h"
+#include "getinsightselectorsrequest.h"
+#include "getinsightselectorsresponse.h"
+#include "gettrailrequest.h"
+#include "gettrailresponse.h"
 #include "gettrailstatusrequest.h"
 #include "gettrailstatusresponse.h"
 #include "listpublickeysrequest.h"
 #include "listpublickeysresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
+#include "listtrailsrequest.h"
+#include "listtrailsresponse.h"
 #include "lookupeventsrequest.h"
 #include "lookupeventsresponse.h"
 #include "puteventselectorsrequest.h"
 #include "puteventselectorsresponse.h"
+#include "putinsightselectorsrequest.h"
+#include "putinsightselectorsresponse.h"
 #include "removetagsrequest.h"
 #include "removetagsresponse.h"
 #include "startloggingrequest.h"
@@ -93,7 +101,7 @@ namespace CloudTrail {
  * 
  *  page</a>> </note>
  * 
- *  See the <a href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail
+ *  See the <a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html">AWS CloudTrail
  *  User Guide</a> for information about the data that is included with each AWS API call listed in the log
  */
 
@@ -156,10 +164,11 @@ CloudTrailClient::CloudTrailClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags to a trail, up to a limit of 50. Tags must be unique per trail. Overwrites an existing tag's value
- * when a new value is specified for an existing tag key. If you specify a key without a value, the tag will be created
- * with the specified key and a value of null. You can tag a trail that applies to all regions only from the region in
- * which the trail was created (that is, from its home
+ * Adds one or more tags to a trail, up to a limit of 50. Overwrites an existing tag's value when a new value is specified
+ * for an existing tag key. Tag key names must be unique for a trail; you cannot have two keys with the same name but
+ * different values. If you specify a key without a value, the tag will be created with the specified key and a value of
+ * null. You can tag a trail that applies to all AWS Regions only from the Region in which the trail was created (also
+ * known as its home
  */
 AddTagsResponse * CloudTrailClient::addTags(const AddTagsRequest &request)
 {
@@ -172,8 +181,7 @@ AddTagsResponse * CloudTrailClient::addTags(const AddTagsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket. A maximum of five trails
- * can exist in a region, irrespective of the region in which they were
+ * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.
  */
 CreateTrailResponse * CloudTrailClient::createTrail(const CreateTrailRequest &request)
 {
@@ -200,7 +208,7 @@ DeleteTrailResponse * CloudTrailClient::deleteTrail(const DeleteTrailRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves settings for the trail associated with the current region for your
+ * Retrieves settings for one or more trails associated with the current region for your
  */
 DescribeTrailsResponse * CloudTrailClient::describeTrails(const DescribeTrailsRequest &request)
 {
@@ -227,17 +235,52 @@ DescribeTrailsResponse * CloudTrailClient::describeTrails(const DescribeTrailsRe
  *
  * events> </li> <li>
  *
- * If your event selector includes data events, the Amazon S3 objects or AWS Lambda functions that you are logging for data
+ * If your event selector includes data events, the resources on which you are logging data
  *
  * events> </li> </ul>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html">Logging
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html">Logging
  * Data and Management Events for Trails </a> in the <i>AWS CloudTrail User
  */
 GetEventSelectorsResponse * CloudTrailClient::getEventSelectors(const GetEventSelectorsRequest &request)
 {
     return qobject_cast<GetEventSelectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudTrailClient service, and returns a pointer to an
+ * GetInsightSelectorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the settings for the Insights event selectors that you configured for your trail.
+ * <code>GetInsightSelectors</code> shows if CloudTrail Insights event logging is enabled on the trail, and if it is, which
+ * insight types are enabled. If you run <code>GetInsightSelectors</code> on a trail that does not have Insights events
+ * enabled, the operation throws the exception <code>InsightNotEnabledException</code>
+ *
+ * </p
+ *
+ * For more information, see <a
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html">Logging
+ * CloudTrail Insights Events for Trails </a> in the <i>AWS CloudTrail User
+ */
+GetInsightSelectorsResponse * CloudTrailClient::getInsightSelectors(const GetInsightSelectorsRequest &request)
+{
+    return qobject_cast<GetInsightSelectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudTrailClient service, and returns a pointer to an
+ * GetTrailResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns settings information for a specified
+ */
+GetTrailResponse * CloudTrailClient::getTrail(const GetTrailRequest &request)
+{
+    return qobject_cast<GetTrailResponse *>(send(request));
 }
 
 /*!
@@ -290,16 +333,31 @@ ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
 
 /*!
  * Sends \a request to the CloudTrailClient service, and returns a pointer to an
+ * ListTrailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists trails that are in the current
+ */
+ListTrailsResponse * CloudTrailClient::listTrails(const ListTrailsRequest &request)
+{
+    return qobject_cast<ListTrailsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudTrailClient service, and returns a pointer to an
  * LookupEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Looks up <a
  * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-management-events">management
- * events</a> captured by CloudTrail. Events for a region can be looked up in that region during the last 90 days. Lookup
- * supports the following
+ * events</a> or <a
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html#cloudtrail-concepts-insights-events">CloudTrail
+ * Insights events</a> that are captured by CloudTrail. You can look up events that occurred in a region within the last 90
+ * days. Lookup supports the following attributes for management
  *
- * attributes> <ul> <li>
+ * events> <ul> <li>
  *
  * AWS access
  *
@@ -333,17 +391,29 @@ ListTagsResponse * CloudTrailClient::listTags(const ListTagsRequest &request)
  *
  * nam> </li> </ul>
  *
+ * Lookup supports the following attributes for Insights
+ *
+ * events> <ul> <li>
+ *
+ * Event
+ *
+ * I> </li> <li>
+ *
+ * Event
+ *
+ * nam> </li> <li>
+ *
+ * Event
+ *
+ * sourc> </li> </ul>
+ *
  * All attributes are optional. The default number of results returned is 50, with a maximum of 50 possible. The response
  * includes a token that you can use to get the next page of
  *
  * results> <b>
  *
- * The rate of lookup requests is limited to one per second per account. If this limit is exceeded, a throttling error
- *
- * occurs> </b> <b>
- *
- * Events that occurred during the selected time range will not be available for lookup if CloudTrail logging was not
- * enabled when the events
+ * The rate of lookup requests is limited to two per second, per account, per region. If this limit is exceeded, a
+ * throttling error
  */
 LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest &request)
 {
@@ -356,15 +426,15 @@ LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Configures an event selector for your trail. Use event selectors to further specify the management and data event
- * settings for your trail. By default, trails created without specific event selectors will be configured to log all read
- * and write management events, and no data events.
+ * Configures an event selector or advanced event selectors for your trail. Use event selectors or advanced event selectors
+ * to specify management and data event settings for your trail. By default, trails created without specific event
+ * selectors are configured to log all read and write management events, and no data
  *
- * </p
+ * events>
  *
- * When an event occurs in your account, CloudTrail evaluates the event selectors in all trails. For each trail, if the
- * event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector,
- * the trail doesn't log the event.
+ * When an event occurs in your account, CloudTrail evaluates the event selectors or advanced event selectors in all
+ * trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event
+ * doesn't match any event selector, the trail doesn't log the event.
  *
  * </p
  *
@@ -386,25 +456,49 @@ LookupEventsResponse * CloudTrailClient::lookupEvents(const LookupEventsRequest 
  *
  * event> </li> <li>
  *
- * The <code>GetConsoleOutput</code> is a read-only event but it doesn't match your event selector. The trail doesn't log
- * the event.
+ * The <code>GetConsoleOutput</code> is a read-only event that doesn't match your event selector. The trail doesn't log the
+ * event.
  *
  * </p </li> </ol>
  *
  * The <code>PutEventSelectors</code> operation must be called from the region in which the trail was created; otherwise,
- * an <code>InvalidHomeRegionException</code> is
+ * an <code>InvalidHomeRegionException</code> exception is
  *
  * thrown>
  *
  * You can configure up to five event selectors for each trail. For more information, see <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html">Logging
- * Data and Management Events for Trails </a> and <a
- * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Limits in AWS
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html">Logging
+ * data and management events for trails </a> and <a
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">Quotas in AWS
  * CloudTrail</a> in the <i>AWS CloudTrail User
+ *
+ * Guide</i>>
+ *
+ * You can add advanced event selectors, and conditions for your advanced event selectors, up to a maximum of 500 values
+ * for all conditions and selectors on a trail. You can use either <code>AdvancedEventSelectors</code> or
+ * <code>EventSelectors</code>, but not both. If you apply <code>AdvancedEventSelectors</code> to a trail, any existing
+ * <code>EventSelectors</code> are overwritten. For more information about advanced event selectors, see <a
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html">Logging data
+ * events for trails</a> in the <i>AWS CloudTrail User
  */
 PutEventSelectorsResponse * CloudTrailClient::putEventSelectors(const PutEventSelectorsRequest &request)
 {
     return qobject_cast<PutEventSelectorsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudTrailClient service, and returns a pointer to an
+ * PutInsightSelectorsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an existing
+ * trail. You also use <code>PutInsightSelectors</code> to turn off Insights event logging, by passing an empty list of
+ * insight types. In this release, only <code>ApiCallRateInsight</code> is supported as an Insights
+ */
+PutInsightSelectorsResponse * CloudTrailClient::putInsightSelectors(const PutInsightSelectorsRequest &request)
+{
+    return qobject_cast<PutInsightSelectorsResponse *>(send(request));
 }
 
 /*!

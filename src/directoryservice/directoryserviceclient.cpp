@@ -25,6 +25,8 @@
 #include "acceptshareddirectoryresponse.h"
 #include "addiproutesrequest.h"
 #include "addiproutesresponse.h"
+#include "addregionrequest.h"
+#include "addregionresponse.h"
 #include "addtagstoresourcerequest.h"
 #include "addtagstoresourceresponse.h"
 #include "cancelschemaextensionrequest.h"
@@ -57,8 +59,12 @@
 #include "deletesnapshotresponse.h"
 #include "deletetrustrequest.h"
 #include "deletetrustresponse.h"
+#include "deregistercertificaterequest.h"
+#include "deregistercertificateresponse.h"
 #include "deregistereventtopicrequest.h"
 #include "deregistereventtopicresponse.h"
+#include "describecertificaterequest.h"
+#include "describecertificateresponse.h"
 #include "describeconditionalforwardersrequest.h"
 #include "describeconditionalforwardersresponse.h"
 #include "describedirectoriesrequest.h"
@@ -67,16 +73,28 @@
 #include "describedomaincontrollersresponse.h"
 #include "describeeventtopicsrequest.h"
 #include "describeeventtopicsresponse.h"
+#include "describeldapssettingsrequest.h"
+#include "describeldapssettingsresponse.h"
+#include "describeregionsrequest.h"
+#include "describeregionsresponse.h"
 #include "describeshareddirectoriesrequest.h"
 #include "describeshareddirectoriesresponse.h"
 #include "describesnapshotsrequest.h"
 #include "describesnapshotsresponse.h"
 #include "describetrustsrequest.h"
 #include "describetrustsresponse.h"
+#include "disableclientauthenticationrequest.h"
+#include "disableclientauthenticationresponse.h"
+#include "disableldapsrequest.h"
+#include "disableldapsresponse.h"
 #include "disableradiusrequest.h"
 #include "disableradiusresponse.h"
 #include "disablessorequest.h"
 #include "disablessoresponse.h"
+#include "enableclientauthenticationrequest.h"
+#include "enableclientauthenticationresponse.h"
+#include "enableldapsrequest.h"
+#include "enableldapsresponse.h"
 #include "enableradiusrequest.h"
 #include "enableradiusresponse.h"
 #include "enablessorequest.h"
@@ -85,6 +103,8 @@
 #include "getdirectorylimitsresponse.h"
 #include "getsnapshotlimitsrequest.h"
 #include "getsnapshotlimitsresponse.h"
+#include "listcertificatesrequest.h"
+#include "listcertificatesresponse.h"
 #include "listiproutesrequest.h"
 #include "listiproutesresponse.h"
 #include "listlogsubscriptionsrequest.h"
@@ -93,12 +113,16 @@
 #include "listschemaextensionsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "registercertificaterequest.h"
+#include "registercertificateresponse.h"
 #include "registereventtopicrequest.h"
 #include "registereventtopicresponse.h"
 #include "rejectshareddirectoryrequest.h"
 #include "rejectshareddirectoryresponse.h"
 #include "removeiproutesrequest.h"
 #include "removeiproutesresponse.h"
+#include "removeregionrequest.h"
+#include "removeregionresponse.h"
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourceresponse.h"
 #include "resetuserpasswordrequest.h"
@@ -251,6 +275,19 @@ AddIpRoutesResponse * DirectoryServiceClient::addIpRoutes(const AddIpRoutesReque
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * AddRegionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds two domain controllers in the specified Region for the specified
+ */
+AddRegionResponse * DirectoryServiceClient::addRegion(const AddRegionRequest &request)
+{
+    return qobject_cast<AddRegionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * AddTagsToResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -323,7 +360,7 @@ CreateAliasResponse * DirectoryServiceClient::createAlias(const CreateAliasReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a computer account in the specified directory, and joins the computer to the
+ * Creates an Active Directory computer object in the specified
  */
 CreateComputerResponse * DirectoryServiceClient::createComputer(const CreateComputerRequest &request)
 {
@@ -350,9 +387,11 @@ CreateConditionalForwarderResponse * DirectoryServiceClient::createConditionalFo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a Simple AD
+ * Creates a Simple AD directory. For more information, see <a
+ * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html">Simple Active
+ * Directory</a> in the <i>AWS Directory Service Admin
  *
- * directory>
+ * Guide</i>>
  *
  * Before you call <code>CreateDirectory</code>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <code>CreateDirectory</code> operation, see
@@ -370,7 +409,7 @@ CreateDirectoryResponse * DirectoryServiceClient::createDirectory(const CreateDi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a subscription to forward real time Directory Service domain controller security logs to the specified
+ * Creates a subscription to forward real-time Directory Service domain controller security logs to the specified Amazon
  * CloudWatch log group in your AWS
  */
 CreateLogSubscriptionResponse * DirectoryServiceClient::createLogSubscription(const CreateLogSubscriptionRequest &request)
@@ -384,9 +423,11 @@ CreateLogSubscriptionResponse * DirectoryServiceClient::createLogSubscription(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an AWS Managed Microsoft AD
+ * Creates a Microsoft AD directory in the AWS Cloud. For more information, see <a
+ * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Managed Microsoft
+ * AD</a> in the <i>AWS Directory Service Admin
  *
- * directory>
+ * Guide</i>>
  *
  * Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly granted
  * through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a
@@ -509,6 +550,19 @@ DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustReque
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DeregisterCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes from the system the certificate that was registered for secure LDAP or client certificate
+ */
+DeregisterCertificateResponse * DirectoryServiceClient::deregisterCertificate(const DeregisterCertificateRequest &request)
+{
+    return qobject_cast<DeregisterCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * DeregisterEventTopicResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -518,6 +572,19 @@ DeleteTrustResponse * DirectoryServiceClient::deleteTrust(const DeleteTrustReque
 DeregisterEventTopicResponse * DirectoryServiceClient::deregisterEventTopic(const DeregisterEventTopicRequest &request)
 {
     return qobject_cast<DeregisterEventTopicResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DescribeCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Displays information about the certificate registered for secure LDAP or client certificate
+ */
+DescribeCertificateResponse * DirectoryServiceClient::describeCertificate(const DescribeCertificateRequest &request)
+{
+    return qobject_cast<DescribeCertificateResponse *>(send(request));
 }
 
 /*!
@@ -599,6 +666,32 @@ DescribeEventTopicsResponse * DirectoryServiceClient::describeEventTopics(const 
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DescribeLDAPSSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the status of LDAP security for the specified
+ */
+DescribeLDAPSSettingsResponse * DirectoryServiceClient::describeLDAPSSettings(const DescribeLDAPSSettingsRequest &request)
+{
+    return qobject_cast<DescribeLDAPSSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DescribeRegionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides information about the Regions that are configured for multi-Region
+ */
+DescribeRegionsResponse * DirectoryServiceClient::describeRegions(const DescribeRegionsRequest &request)
+{
+    return qobject_cast<DescribeRegionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * DescribeSharedDirectoriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -653,6 +746,32 @@ DescribeTrustsResponse * DirectoryServiceClient::describeTrusts(const DescribeTr
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DisableClientAuthenticationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables alternative client authentication methods for the specified directory.
+ */
+DisableClientAuthenticationResponse * DirectoryServiceClient::disableClientAuthentication(const DisableClientAuthenticationRequest &request)
+{
+    return qobject_cast<DisableClientAuthenticationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * DisableLDAPSResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deactivates LDAP secure calls for the specified
+ */
+DisableLDAPSResponse * DirectoryServiceClient::disableLDAPS(const DisableLDAPSRequest &request)
+{
+    return qobject_cast<DisableLDAPSResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * DisableRadiusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -680,6 +799,32 @@ DisableSsoResponse * DirectoryServiceClient::disableSso(const DisableSsoRequest 
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * EnableClientAuthenticationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables alternative client authentication methods for the specified
+ */
+EnableClientAuthenticationResponse * DirectoryServiceClient::enableClientAuthentication(const EnableClientAuthenticationRequest &request)
+{
+    return qobject_cast<EnableClientAuthenticationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * EnableLDAPSResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Activates the switch for the specific directory to always use LDAP secure
+ */
+EnableLDAPSResponse * DirectoryServiceClient::enableLDAPS(const EnableLDAPSRequest &request)
+{
+    return qobject_cast<EnableLDAPSResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * EnableRadiusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -698,7 +843,8 @@ EnableRadiusResponse * DirectoryServiceClient::enableRadius(const EnableRadiusRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Enables single sign-on for a
+ * Enables single sign-on for a directory. Single sign-on allows users in your directory to access certain AWS services
+ * from a computer joined to the directory without having to enter their credentials
  */
 EnableSsoResponse * DirectoryServiceClient::enableSso(const EnableSsoRequest &request)
 {
@@ -729,6 +875,19 @@ GetDirectoryLimitsResponse * DirectoryServiceClient::getDirectoryLimits(const Ge
 GetSnapshotLimitsResponse * DirectoryServiceClient::getSnapshotLimits(const GetSnapshotLimitsRequest &request)
 {
     return qobject_cast<GetSnapshotLimitsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * ListCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * For the specified directory, lists all the certificates registered for a secure LDAP or client certificate
+ */
+ListCertificatesResponse * DirectoryServiceClient::listCertificates(const ListCertificatesRequest &request)
+{
+    return qobject_cast<ListCertificatesResponse *>(send(request));
 }
 
 /*!
@@ -785,6 +944,19 @@ ListTagsForResourceResponse * DirectoryServiceClient::listTagsForResource(const 
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * RegisterCertificateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Registers a certificate for a secure LDAP or client certificate
+ */
+RegisterCertificateResponse * DirectoryServiceClient::registerCertificate(const RegisterCertificateRequest &request)
+{
+    return qobject_cast<RegisterCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * RegisterEventTopicResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -827,6 +999,20 @@ RemoveIpRoutesResponse * DirectoryServiceClient::removeIpRoutes(const RemoveIpRo
 
 /*!
  * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
+ * RemoveRegionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops all replication and removes the domain controllers from the specified Region. You cannot remove the primary Region
+ * with this operation. Instead, use the <code>DeleteDirectory</code>
+ */
+RemoveRegionResponse * DirectoryServiceClient::removeRegion(const RemoveRegionRequest &request)
+{
+    return qobject_cast<RemoveRegionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DirectoryServiceClient service, and returns a pointer to an
  * RemoveTagsFromResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -845,6 +1031,23 @@ RemoveTagsFromResourceResponse * DirectoryServiceClient::removeTagsFromResource(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Resets the password for any user in your AWS Managed Microsoft AD or Simple AD
+ *
+ * directory>
+ *
+ * You can reset the password for any user in your directory with the following
+ *
+ * exceptions> <ul> <li>
+ *
+ * For Simple AD, you cannot reset the password for any user that is a member of either the <b>Domain Admins</b> or
+ * <b>Enterprise Admins</b> group except for the administrator
+ *
+ * user> </li> <li>
+ *
+ * For AWS Managed Microsoft AD, you can only reset the password for a user that is in an OU based off of the NetBIOS name
+ * that you typed when you created your directory. For example, you cannot reset the password for a user in the <b>AWS
+ * Reserved</b> OU. For more information about the OU structure for an AWS Managed Microsoft AD directory, see <a
+ * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started_what_gets_created.html">What
+ * Gets Created</a> in the <i>AWS Directory Service Administration
  */
 ResetUserPasswordResponse * DirectoryServiceClient::resetUserPassword(const ResetUserPasswordRequest &request)
 {

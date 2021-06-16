@@ -52,7 +52,12 @@ namespace ManagedBlockchain {
  * \value ListNodesAction ManagedBlockchain ListNodes action.
  * \value ListProposalVotesAction ManagedBlockchain ListProposalVotes action.
  * \value ListProposalsAction ManagedBlockchain ListProposals action.
+ * \value ListTagsForResourceAction ManagedBlockchain ListTagsForResource action.
  * \value RejectInvitationAction ManagedBlockchain RejectInvitation action.
+ * \value TagResourceAction ManagedBlockchain TagResource action.
+ * \value UntagResourceAction ManagedBlockchain UntagResource action.
+ * \value UpdateMemberAction ManagedBlockchain UpdateMember action.
+ * \value UpdateNodeAction ManagedBlockchain UpdateNode action.
  * \value VoteOnProposalAction ManagedBlockchain VoteOnProposal action.
  */
 

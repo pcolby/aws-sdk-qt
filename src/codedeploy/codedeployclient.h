@@ -62,6 +62,8 @@ class DeleteDeploymentGroupRequest;
 class DeleteDeploymentGroupResponse;
 class DeleteGitHubAccountTokenRequest;
 class DeleteGitHubAccountTokenResponse;
+class DeleteResourcesByExternalIdRequest;
+class DeleteResourcesByExternalIdResponse;
 class DeregisterOnPremisesInstanceRequest;
 class DeregisterOnPremisesInstanceResponse;
 class GetApplicationRequest;
@@ -154,6 +156,7 @@ public slots:
     DeleteDeploymentConfigResponse * deleteDeploymentConfig(const DeleteDeploymentConfigRequest &request);
     DeleteDeploymentGroupResponse * deleteDeploymentGroup(const DeleteDeploymentGroupRequest &request);
     DeleteGitHubAccountTokenResponse * deleteGitHubAccountToken(const DeleteGitHubAccountTokenRequest &request);
+    DeleteResourcesByExternalIdResponse * deleteResourcesByExternalId(const DeleteResourcesByExternalIdRequest &request);
     DeregisterOnPremisesInstanceResponse * deregisterOnPremisesInstance(const DeregisterOnPremisesInstanceRequest &request);
     GetApplicationResponse * getApplication(const GetApplicationRequest &request);
     GetApplicationRevisionResponse * getApplicationRevision(const GetApplicationRevisionRequest &request);

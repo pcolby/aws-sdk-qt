@@ -215,8 +215,8 @@ CreateDataflowEndpointGroupResponse * GroundStationClient::createDataflowEndpoin
  *
  * profile>
  *
- * <code>dataflowEdges</code> is a list of lists of strings. Each lower level list of strings has two elements: a <i>from
- * ARN</i> and a <i>to
+ * <code>dataflowEdges</code> is a list of lists of strings. Each lower level list of strings has two elements: a
+ * <i>from</i> ARN and a <i>to</i>
  */
 CreateMissionProfileResponse * GroundStationClient::createMissionProfile(const CreateMissionProfileRequest &request)
 {
@@ -367,7 +367,7 @@ ListConfigsResponse * GroundStationClient::listConfigs(const ListConfigsRequest 
  *
  * contacts>
  *
- * If <code>statusList</code> contains AVAILABLE, the request must include <code>groundstation</code>,
+ * If <code>statusList</code> contains AVAILABLE, the request must include <code>groundStation</code>,
  * <code>missionprofileArn</code>, and <code>satelliteArn</code>.
  */
 ListContactsResponse * GroundStationClient::listContacts(const ListContactsRequest &request)
@@ -433,7 +433,7 @@ ListSatellitesResponse * GroundStationClient::listSatellites(const ListSatellite
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of tags or a specified
+ * Returns a list of tags for a specified
  */
 ListTagsForResourceResponse * GroundStationClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {

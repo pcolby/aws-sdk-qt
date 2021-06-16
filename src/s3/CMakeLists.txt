@@ -33,6 +33,10 @@ add_library(QtAwsS3
   deletebucketencryptionrequest_p.h
   deletebucketencryptionresponse.h
   deletebucketencryptionresponse_p.h
+  deletebucketintelligenttieringconfigurationrequest.h
+  deletebucketintelligenttieringconfigurationrequest_p.h
+  deletebucketintelligenttieringconfigurationresponse.h
+  deletebucketintelligenttieringconfigurationresponse_p.h
   deletebucketinventoryconfigurationrequest.h
   deletebucketinventoryconfigurationrequest_p.h
   deletebucketinventoryconfigurationresponse.h
@@ -45,6 +49,10 @@ add_library(QtAwsS3
   deletebucketmetricsconfigurationrequest_p.h
   deletebucketmetricsconfigurationresponse.h
   deletebucketmetricsconfigurationresponse_p.h
+  deletebucketownershipcontrolsrequest.h
+  deletebucketownershipcontrolsrequest_p.h
+  deletebucketownershipcontrolsresponse.h
+  deletebucketownershipcontrolsresponse_p.h
   deletebucketpolicyrequest.h
   deletebucketpolicyrequest_p.h
   deletebucketpolicyresponse.h
@@ -101,6 +109,10 @@ add_library(QtAwsS3
   getbucketencryptionrequest_p.h
   getbucketencryptionresponse.h
   getbucketencryptionresponse_p.h
+  getbucketintelligenttieringconfigurationrequest.h
+  getbucketintelligenttieringconfigurationrequest_p.h
+  getbucketintelligenttieringconfigurationresponse.h
+  getbucketintelligenttieringconfigurationresponse_p.h
   getbucketinventoryconfigurationrequest.h
   getbucketinventoryconfigurationrequest_p.h
   getbucketinventoryconfigurationresponse.h
@@ -133,6 +145,10 @@ add_library(QtAwsS3
   getbucketnotificationrequest_p.h
   getbucketnotificationresponse.h
   getbucketnotificationresponse_p.h
+  getbucketownershipcontrolsrequest.h
+  getbucketownershipcontrolsrequest_p.h
+  getbucketownershipcontrolsresponse.h
+  getbucketownershipcontrolsresponse_p.h
   getbucketpolicyrequest.h
   getbucketpolicyrequest_p.h
   getbucketpolicyresponse.h
@@ -205,6 +221,10 @@ add_library(QtAwsS3
   listbucketanalyticsconfigurationsrequest_p.h
   listbucketanalyticsconfigurationsresponse.h
   listbucketanalyticsconfigurationsresponse_p.h
+  listbucketintelligenttieringconfigurationsrequest.h
+  listbucketintelligenttieringconfigurationsrequest_p.h
+  listbucketintelligenttieringconfigurationsresponse.h
+  listbucketintelligenttieringconfigurationsresponse_p.h
   listbucketinventoryconfigurationsrequest.h
   listbucketinventoryconfigurationsrequest_p.h
   listbucketinventoryconfigurationsresponse.h
@@ -257,6 +277,10 @@ add_library(QtAwsS3
   putbucketencryptionrequest_p.h
   putbucketencryptionresponse.h
   putbucketencryptionresponse_p.h
+  putbucketintelligenttieringconfigurationrequest.h
+  putbucketintelligenttieringconfigurationrequest_p.h
+  putbucketintelligenttieringconfigurationresponse.h
+  putbucketintelligenttieringconfigurationresponse_p.h
   putbucketinventoryconfigurationrequest.h
   putbucketinventoryconfigurationrequest_p.h
   putbucketinventoryconfigurationresponse.h
@@ -285,6 +309,10 @@ add_library(QtAwsS3
   putbucketnotificationrequest_p.h
   putbucketnotificationresponse.h
   putbucketnotificationresponse_p.h
+  putbucketownershipcontrolsrequest.h
+  putbucketownershipcontrolsrequest_p.h
+  putbucketownershipcontrolsresponse.h
+  putbucketownershipcontrolsresponse_p.h
   putbucketpolicyrequest.h
   putbucketpolicyrequest_p.h
   putbucketpolicyresponse.h
@@ -359,6 +387,10 @@ add_library(QtAwsS3
   uploadpartrequest_p.h
   uploadpartresponse.h
   uploadpartresponse_p.h
+  writegetobjectresponserequest.h
+  writegetobjectresponserequest_p.h
+  writegetobjectresponseresponse.h
+  writegetobjectresponseresponse_p.h
   abortmultipartuploadrequest.cpp
   abortmultipartuploadresponse.cpp
   completemultipartuploadrequest.cpp
@@ -375,12 +407,16 @@ add_library(QtAwsS3
   deletebucketcorsresponse.cpp
   deletebucketencryptionrequest.cpp
   deletebucketencryptionresponse.cpp
+  deletebucketintelligenttieringconfigurationrequest.cpp
+  deletebucketintelligenttieringconfigurationresponse.cpp
   deletebucketinventoryconfigurationrequest.cpp
   deletebucketinventoryconfigurationresponse.cpp
   deletebucketlifecyclerequest.cpp
   deletebucketlifecycleresponse.cpp
   deletebucketmetricsconfigurationrequest.cpp
   deletebucketmetricsconfigurationresponse.cpp
+  deletebucketownershipcontrolsrequest.cpp
+  deletebucketownershipcontrolsresponse.cpp
   deletebucketpolicyrequest.cpp
   deletebucketpolicyresponse.cpp
   deletebucketreplicationrequest.cpp
@@ -409,6 +445,8 @@ add_library(QtAwsS3
   getbucketcorsresponse.cpp
   getbucketencryptionrequest.cpp
   getbucketencryptionresponse.cpp
+  getbucketintelligenttieringconfigurationrequest.cpp
+  getbucketintelligenttieringconfigurationresponse.cpp
   getbucketinventoryconfigurationrequest.cpp
   getbucketinventoryconfigurationresponse.cpp
   getbucketlifecycleconfigurationrequest.cpp
@@ -425,6 +463,8 @@ add_library(QtAwsS3
   getbucketnotificationconfigurationresponse.cpp
   getbucketnotificationrequest.cpp
   getbucketnotificationresponse.cpp
+  getbucketownershipcontrolsrequest.cpp
+  getbucketownershipcontrolsresponse.cpp
   getbucketpolicyrequest.cpp
   getbucketpolicyresponse.cpp
   getbucketpolicystatusrequest.cpp
@@ -461,6 +501,8 @@ add_library(QtAwsS3
   headobjectresponse.cpp
   listbucketanalyticsconfigurationsrequest.cpp
   listbucketanalyticsconfigurationsresponse.cpp
+  listbucketintelligenttieringconfigurationsrequest.cpp
+  listbucketintelligenttieringconfigurationsresponse.cpp
   listbucketinventoryconfigurationsrequest.cpp
   listbucketinventoryconfigurationsresponse.cpp
   listbucketmetricsconfigurationsrequest.cpp
@@ -487,6 +529,8 @@ add_library(QtAwsS3
   putbucketcorsresponse.cpp
   putbucketencryptionrequest.cpp
   putbucketencryptionresponse.cpp
+  putbucketintelligenttieringconfigurationrequest.cpp
+  putbucketintelligenttieringconfigurationresponse.cpp
   putbucketinventoryconfigurationrequest.cpp
   putbucketinventoryconfigurationresponse.cpp
   putbucketlifecycleconfigurationrequest.cpp
@@ -501,6 +545,8 @@ add_library(QtAwsS3
   putbucketnotificationconfigurationresponse.cpp
   putbucketnotificationrequest.cpp
   putbucketnotificationresponse.cpp
+  putbucketownershipcontrolsrequest.cpp
+  putbucketownershipcontrolsresponse.cpp
   putbucketpolicyrequest.cpp
   putbucketpolicyresponse.cpp
   putbucketreplicationrequest.cpp
@@ -537,7 +583,9 @@ add_library(QtAwsS3
   uploadpartcopyrequest.cpp
   uploadpartcopyresponse.cpp
   uploadpartrequest.cpp
-  uploadpartresponse.cpp)
+  uploadpartresponse.cpp
+  writegetobjectresponserequest.cpp
+  writegetobjectresponseresponse.cpp)
 
 add_dependencies(QtAwsS3 QtAwsCore)
 

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSSOAdmin
+description = AWS SSOAdmin SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsssoadmin-index.html"
+navigation.landingtitle = "SSOAdmin"
+navigation.cppclassespage = "SSOAdmin C++ Classes"

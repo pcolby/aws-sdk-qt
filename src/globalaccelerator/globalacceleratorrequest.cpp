@@ -36,23 +36,53 @@ namespace GlobalAccelerator {
  * This enum describes the actions that can be performed as GlobalAccelerator
  * requests.
  *
+ * \value AddCustomRoutingEndpointsAction GlobalAccelerator AddCustomRoutingEndpoints action.
+ * \value AdvertiseByoipCidrAction GlobalAccelerator AdvertiseByoipCidr action.
+ * \value AllowCustomRoutingTrafficAction GlobalAccelerator AllowCustomRoutingTraffic action.
  * \value CreateAcceleratorAction GlobalAccelerator CreateAccelerator action.
+ * \value CreateCustomRoutingAcceleratorAction GlobalAccelerator CreateCustomRoutingAccelerator action.
+ * \value CreateCustomRoutingEndpointGroupAction GlobalAccelerator CreateCustomRoutingEndpointGroup action.
+ * \value CreateCustomRoutingListenerAction GlobalAccelerator CreateCustomRoutingListener action.
  * \value CreateEndpointGroupAction GlobalAccelerator CreateEndpointGroup action.
  * \value CreateListenerAction GlobalAccelerator CreateListener action.
  * \value DeleteAcceleratorAction GlobalAccelerator DeleteAccelerator action.
+ * \value DeleteCustomRoutingAcceleratorAction GlobalAccelerator DeleteCustomRoutingAccelerator action.
+ * \value DeleteCustomRoutingEndpointGroupAction GlobalAccelerator DeleteCustomRoutingEndpointGroup action.
+ * \value DeleteCustomRoutingListenerAction GlobalAccelerator DeleteCustomRoutingListener action.
  * \value DeleteEndpointGroupAction GlobalAccelerator DeleteEndpointGroup action.
  * \value DeleteListenerAction GlobalAccelerator DeleteListener action.
+ * \value DenyCustomRoutingTrafficAction GlobalAccelerator DenyCustomRoutingTraffic action.
+ * \value DeprovisionByoipCidrAction GlobalAccelerator DeprovisionByoipCidr action.
  * \value DescribeAcceleratorAction GlobalAccelerator DescribeAccelerator action.
  * \value DescribeAcceleratorAttributesAction GlobalAccelerator DescribeAcceleratorAttributes action.
+ * \value DescribeCustomRoutingAcceleratorAction GlobalAccelerator DescribeCustomRoutingAccelerator action.
+ * \value DescribeCustomRoutingAcceleratorAttributesAction GlobalAccelerator DescribeCustomRoutingAcceleratorAttributes action.
+ * \value DescribeCustomRoutingEndpointGroupAction GlobalAccelerator DescribeCustomRoutingEndpointGroup action.
+ * \value DescribeCustomRoutingListenerAction GlobalAccelerator DescribeCustomRoutingListener action.
  * \value DescribeEndpointGroupAction GlobalAccelerator DescribeEndpointGroup action.
  * \value DescribeListenerAction GlobalAccelerator DescribeListener action.
  * \value ListAcceleratorsAction GlobalAccelerator ListAccelerators action.
+ * \value ListByoipCidrsAction GlobalAccelerator ListByoipCidrs action.
+ * \value ListCustomRoutingAcceleratorsAction GlobalAccelerator ListCustomRoutingAccelerators action.
+ * \value ListCustomRoutingEndpointGroupsAction GlobalAccelerator ListCustomRoutingEndpointGroups action.
+ * \value ListCustomRoutingListenersAction GlobalAccelerator ListCustomRoutingListeners action.
+ * \value ListCustomRoutingPortMappingsAction GlobalAccelerator ListCustomRoutingPortMappings action.
+ * \value ListCustomRoutingPortMappingsByDestinationAction GlobalAccelerator ListCustomRoutingPortMappingsByDestination action.
  * \value ListEndpointGroupsAction GlobalAccelerator ListEndpointGroups action.
  * \value ListListenersAction GlobalAccelerator ListListeners action.
+ * \value ListTagsForResourceAction GlobalAccelerator ListTagsForResource action.
+ * \value ProvisionByoipCidrAction GlobalAccelerator ProvisionByoipCidr action.
+ * \value RemoveCustomRoutingEndpointsAction GlobalAccelerator RemoveCustomRoutingEndpoints action.
+ * \value TagResourceAction GlobalAccelerator TagResource action.
+ * \value UntagResourceAction GlobalAccelerator UntagResource action.
  * \value UpdateAcceleratorAction GlobalAccelerator UpdateAccelerator action.
  * \value UpdateAcceleratorAttributesAction GlobalAccelerator UpdateAcceleratorAttributes action.
+ * \value UpdateCustomRoutingAcceleratorAction GlobalAccelerator UpdateCustomRoutingAccelerator action.
+ * \value UpdateCustomRoutingAcceleratorAttributesAction GlobalAccelerator UpdateCustomRoutingAcceleratorAttributes action.
+ * \value UpdateCustomRoutingListenerAction GlobalAccelerator UpdateCustomRoutingListener action.
  * \value UpdateEndpointGroupAction GlobalAccelerator UpdateEndpointGroup action.
  * \value UpdateListenerAction GlobalAccelerator UpdateListener action.
+ * \value WithdrawByoipCidrAction GlobalAccelerator WithdrawByoipCidr action.
  */
 
 /*!

@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsNetworkFirewall
+    \title NetworkFirewall C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS NetworkFirewall functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

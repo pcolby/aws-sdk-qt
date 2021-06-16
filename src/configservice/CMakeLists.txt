@@ -31,6 +31,10 @@ add_library(QtAwsConfigService
   deleteconfigurationrecorderrequest_p.h
   deleteconfigurationrecorderresponse.h
   deleteconfigurationrecorderresponse_p.h
+  deleteconformancepackrequest.h
+  deleteconformancepackrequest_p.h
+  deleteconformancepackresponse.h
+  deleteconformancepackresponse_p.h
   deletedeliverychannelrequest.h
   deletedeliverychannelrequest_p.h
   deletedeliverychannelresponse.h
@@ -43,6 +47,10 @@ add_library(QtAwsConfigService
   deleteorganizationconfigrulerequest_p.h
   deleteorganizationconfigruleresponse.h
   deleteorganizationconfigruleresponse_p.h
+  deleteorganizationconformancepackrequest.h
+  deleteorganizationconformancepackrequest_p.h
+  deleteorganizationconformancepackresponse.h
+  deleteorganizationconformancepackresponse_p.h
   deletependingaggregationrequestrequest.h
   deletependingaggregationrequestrequest_p.h
   deletependingaggregationrequestresponse.h
@@ -51,10 +59,22 @@ add_library(QtAwsConfigService
   deleteremediationconfigurationrequest_p.h
   deleteremediationconfigurationresponse.h
   deleteremediationconfigurationresponse_p.h
+  deleteremediationexceptionsrequest.h
+  deleteremediationexceptionsrequest_p.h
+  deleteremediationexceptionsresponse.h
+  deleteremediationexceptionsresponse_p.h
+  deleteresourceconfigrequest.h
+  deleteresourceconfigrequest_p.h
+  deleteresourceconfigresponse.h
+  deleteresourceconfigresponse_p.h
   deleteretentionconfigurationrequest.h
   deleteretentionconfigurationrequest_p.h
   deleteretentionconfigurationresponse.h
   deleteretentionconfigurationresponse_p.h
+  deletestoredqueryrequest.h
+  deletestoredqueryrequest_p.h
+  deletestoredqueryresponse.h
+  deletestoredqueryresponse_p.h
   deliverconfigsnapshotrequest.h
   deliverconfigsnapshotrequest_p.h
   deliverconfigsnapshotresponse.h
@@ -63,6 +83,10 @@ add_library(QtAwsConfigService
   describeaggregatecompliancebyconfigrulesrequest_p.h
   describeaggregatecompliancebyconfigrulesresponse.h
   describeaggregatecompliancebyconfigrulesresponse_p.h
+  describeaggregatecompliancebyconformancepacksrequest.h
+  describeaggregatecompliancebyconformancepacksrequest_p.h
+  describeaggregatecompliancebyconformancepacksresponse.h
+  describeaggregatecompliancebyconformancepacksresponse_p.h
   describeaggregationauthorizationsrequest.h
   describeaggregationauthorizationsrequest_p.h
   describeaggregationauthorizationsresponse.h
@@ -99,6 +123,18 @@ add_library(QtAwsConfigService
   describeconfigurationrecorderstatusrequest_p.h
   describeconfigurationrecorderstatusresponse.h
   describeconfigurationrecorderstatusresponse_p.h
+  describeconformancepackcompliancerequest.h
+  describeconformancepackcompliancerequest_p.h
+  describeconformancepackcomplianceresponse.h
+  describeconformancepackcomplianceresponse_p.h
+  describeconformancepacksrequest.h
+  describeconformancepacksrequest_p.h
+  describeconformancepacksresponse.h
+  describeconformancepacksresponse_p.h
+  describeconformancepackstatusrequest.h
+  describeconformancepackstatusrequest_p.h
+  describeconformancepackstatusresponse.h
+  describeconformancepackstatusresponse_p.h
   describedeliverychannelsrequest.h
   describedeliverychannelsrequest_p.h
   describedeliverychannelsresponse.h
@@ -115,6 +151,14 @@ add_library(QtAwsConfigService
   describeorganizationconfigrulestatusesrequest_p.h
   describeorganizationconfigrulestatusesresponse.h
   describeorganizationconfigrulestatusesresponse_p.h
+  describeorganizationconformancepacksrequest.h
+  describeorganizationconformancepacksrequest_p.h
+  describeorganizationconformancepacksresponse.h
+  describeorganizationconformancepacksresponse_p.h
+  describeorganizationconformancepackstatusesrequest.h
+  describeorganizationconformancepackstatusesrequest_p.h
+  describeorganizationconformancepackstatusesresponse.h
+  describeorganizationconformancepackstatusesresponse_p.h
   describependingaggregationrequestsrequest.h
   describependingaggregationrequestsrequest_p.h
   describependingaggregationrequestsresponse.h
@@ -123,6 +167,10 @@ add_library(QtAwsConfigService
   describeremediationconfigurationsrequest_p.h
   describeremediationconfigurationsresponse.h
   describeremediationconfigurationsresponse_p.h
+  describeremediationexceptionsrequest.h
+  describeremediationexceptionsrequest_p.h
+  describeremediationexceptionsresponse.h
+  describeremediationexceptionsresponse_p.h
   describeremediationexecutionstatusrequest.h
   describeremediationexecutionstatusrequest_p.h
   describeremediationexecutionstatusresponse.h
@@ -139,6 +187,10 @@ add_library(QtAwsConfigService
   getaggregateconfigrulecompliancesummaryrequest_p.h
   getaggregateconfigrulecompliancesummaryresponse.h
   getaggregateconfigrulecompliancesummaryresponse_p.h
+  getaggregateconformancepackcompliancesummaryrequest.h
+  getaggregateconformancepackcompliancesummaryrequest_p.h
+  getaggregateconformancepackcompliancesummaryresponse.h
+  getaggregateconformancepackcompliancesummaryresponse_p.h
   getaggregatediscoveredresourcecountsrequest.h
   getaggregatediscoveredresourcecountsrequest_p.h
   getaggregatediscoveredresourcecountsresponse.h
@@ -163,6 +215,14 @@ add_library(QtAwsConfigService
   getcompliancesummarybyresourcetyperequest_p.h
   getcompliancesummarybyresourcetyperesponse.h
   getcompliancesummarybyresourcetyperesponse_p.h
+  getconformancepackcompliancedetailsrequest.h
+  getconformancepackcompliancedetailsrequest_p.h
+  getconformancepackcompliancedetailsresponse.h
+  getconformancepackcompliancedetailsresponse_p.h
+  getconformancepackcompliancesummaryrequest.h
+  getconformancepackcompliancesummaryrequest_p.h
+  getconformancepackcompliancesummaryresponse.h
+  getconformancepackcompliancesummaryresponse_p.h
   getdiscoveredresourcecountsrequest.h
   getdiscoveredresourcecountsrequest_p.h
   getdiscoveredresourcecountsresponse.h
@@ -171,10 +231,18 @@ add_library(QtAwsConfigService
   getorganizationconfigruledetailedstatusrequest_p.h
   getorganizationconfigruledetailedstatusresponse.h
   getorganizationconfigruledetailedstatusresponse_p.h
+  getorganizationconformancepackdetailedstatusrequest.h
+  getorganizationconformancepackdetailedstatusrequest_p.h
+  getorganizationconformancepackdetailedstatusresponse.h
+  getorganizationconformancepackdetailedstatusresponse_p.h
   getresourceconfighistoryrequest.h
   getresourceconfighistoryrequest_p.h
   getresourceconfighistoryresponse.h
   getresourceconfighistoryresponse_p.h
+  getstoredqueryrequest.h
+  getstoredqueryrequest_p.h
+  getstoredqueryresponse.h
+  getstoredqueryresponse_p.h
   listaggregatediscoveredresourcesrequest.h
   listaggregatediscoveredresourcesrequest_p.h
   listaggregatediscoveredresourcesresponse.h
@@ -183,6 +251,10 @@ add_library(QtAwsConfigService
   listdiscoveredresourcesrequest_p.h
   listdiscoveredresourcesresponse.h
   listdiscoveredresourcesresponse_p.h
+  liststoredqueriesrequest.h
+  liststoredqueriesrequest_p.h
+  liststoredqueriesresponse.h
+  liststoredqueriesresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -203,6 +275,10 @@ add_library(QtAwsConfigService
   putconfigurationrecorderrequest_p.h
   putconfigurationrecorderresponse.h
   putconfigurationrecorderresponse_p.h
+  putconformancepackrequest.h
+  putconformancepackrequest_p.h
+  putconformancepackresponse.h
+  putconformancepackresponse_p.h
   putdeliverychannelrequest.h
   putdeliverychannelrequest_p.h
   putdeliverychannelresponse.h
@@ -211,18 +287,42 @@ add_library(QtAwsConfigService
   putevaluationsrequest_p.h
   putevaluationsresponse.h
   putevaluationsresponse_p.h
+  putexternalevaluationrequest.h
+  putexternalevaluationrequest_p.h
+  putexternalevaluationresponse.h
+  putexternalevaluationresponse_p.h
   putorganizationconfigrulerequest.h
   putorganizationconfigrulerequest_p.h
   putorganizationconfigruleresponse.h
   putorganizationconfigruleresponse_p.h
+  putorganizationconformancepackrequest.h
+  putorganizationconformancepackrequest_p.h
+  putorganizationconformancepackresponse.h
+  putorganizationconformancepackresponse_p.h
   putremediationconfigurationsrequest.h
   putremediationconfigurationsrequest_p.h
   putremediationconfigurationsresponse.h
   putremediationconfigurationsresponse_p.h
+  putremediationexceptionsrequest.h
+  putremediationexceptionsrequest_p.h
+  putremediationexceptionsresponse.h
+  putremediationexceptionsresponse_p.h
+  putresourceconfigrequest.h
+  putresourceconfigrequest_p.h
+  putresourceconfigresponse.h
+  putresourceconfigresponse_p.h
   putretentionconfigurationrequest.h
   putretentionconfigurationrequest_p.h
   putretentionconfigurationresponse.h
   putretentionconfigurationresponse_p.h
+  putstoredqueryrequest.h
+  putstoredqueryrequest_p.h
+  putstoredqueryresponse.h
+  putstoredqueryresponse_p.h
+  selectaggregateresourceconfigrequest.h
+  selectaggregateresourceconfigrequest_p.h
+  selectaggregateresourceconfigresponse.h
+  selectaggregateresourceconfigresponse_p.h
   selectresourceconfigrequest.h
   selectresourceconfigrequest_p.h
   selectresourceconfigresponse.h
@@ -266,22 +366,34 @@ add_library(QtAwsConfigService
   deleteconfigurationaggregatorresponse.cpp
   deleteconfigurationrecorderrequest.cpp
   deleteconfigurationrecorderresponse.cpp
+  deleteconformancepackrequest.cpp
+  deleteconformancepackresponse.cpp
   deletedeliverychannelrequest.cpp
   deletedeliverychannelresponse.cpp
   deleteevaluationresultsrequest.cpp
   deleteevaluationresultsresponse.cpp
   deleteorganizationconfigrulerequest.cpp
   deleteorganizationconfigruleresponse.cpp
+  deleteorganizationconformancepackrequest.cpp
+  deleteorganizationconformancepackresponse.cpp
   deletependingaggregationrequestrequest.cpp
   deletependingaggregationrequestresponse.cpp
   deleteremediationconfigurationrequest.cpp
   deleteremediationconfigurationresponse.cpp
+  deleteremediationexceptionsrequest.cpp
+  deleteremediationexceptionsresponse.cpp
+  deleteresourceconfigrequest.cpp
+  deleteresourceconfigresponse.cpp
   deleteretentionconfigurationrequest.cpp
   deleteretentionconfigurationresponse.cpp
+  deletestoredqueryrequest.cpp
+  deletestoredqueryresponse.cpp
   deliverconfigsnapshotrequest.cpp
   deliverconfigsnapshotresponse.cpp
   describeaggregatecompliancebyconfigrulesrequest.cpp
   describeaggregatecompliancebyconfigrulesresponse.cpp
+  describeaggregatecompliancebyconformancepacksrequest.cpp
+  describeaggregatecompliancebyconformancepacksresponse.cpp
   describeaggregationauthorizationsrequest.cpp
   describeaggregationauthorizationsresponse.cpp
   describecompliancebyconfigrulerequest.cpp
@@ -300,6 +412,12 @@ add_library(QtAwsConfigService
   describeconfigurationrecordersresponse.cpp
   describeconfigurationrecorderstatusrequest.cpp
   describeconfigurationrecorderstatusresponse.cpp
+  describeconformancepackcompliancerequest.cpp
+  describeconformancepackcomplianceresponse.cpp
+  describeconformancepacksrequest.cpp
+  describeconformancepacksresponse.cpp
+  describeconformancepackstatusrequest.cpp
+  describeconformancepackstatusresponse.cpp
   describedeliverychannelsrequest.cpp
   describedeliverychannelsresponse.cpp
   describedeliverychannelstatusrequest.cpp
@@ -308,10 +426,16 @@ add_library(QtAwsConfigService
   describeorganizationconfigrulesresponse.cpp
   describeorganizationconfigrulestatusesrequest.cpp
   describeorganizationconfigrulestatusesresponse.cpp
+  describeorganizationconformancepacksrequest.cpp
+  describeorganizationconformancepacksresponse.cpp
+  describeorganizationconformancepackstatusesrequest.cpp
+  describeorganizationconformancepackstatusesresponse.cpp
   describependingaggregationrequestsrequest.cpp
   describependingaggregationrequestsresponse.cpp
   describeremediationconfigurationsrequest.cpp
   describeremediationconfigurationsresponse.cpp
+  describeremediationexceptionsrequest.cpp
+  describeremediationexceptionsresponse.cpp
   describeremediationexecutionstatusrequest.cpp
   describeremediationexecutionstatusresponse.cpp
   describeretentionconfigurationsrequest.cpp
@@ -320,6 +444,8 @@ add_library(QtAwsConfigService
   getaggregatecompliancedetailsbyconfigruleresponse.cpp
   getaggregateconfigrulecompliancesummaryrequest.cpp
   getaggregateconfigrulecompliancesummaryresponse.cpp
+  getaggregateconformancepackcompliancesummaryrequest.cpp
+  getaggregateconformancepackcompliancesummaryresponse.cpp
   getaggregatediscoveredresourcecountsrequest.cpp
   getaggregatediscoveredresourcecountsresponse.cpp
   getaggregateresourceconfigrequest.cpp
@@ -332,16 +458,26 @@ add_library(QtAwsConfigService
   getcompliancesummarybyconfigruleresponse.cpp
   getcompliancesummarybyresourcetyperequest.cpp
   getcompliancesummarybyresourcetyperesponse.cpp
+  getconformancepackcompliancedetailsrequest.cpp
+  getconformancepackcompliancedetailsresponse.cpp
+  getconformancepackcompliancesummaryrequest.cpp
+  getconformancepackcompliancesummaryresponse.cpp
   getdiscoveredresourcecountsrequest.cpp
   getdiscoveredresourcecountsresponse.cpp
   getorganizationconfigruledetailedstatusrequest.cpp
   getorganizationconfigruledetailedstatusresponse.cpp
+  getorganizationconformancepackdetailedstatusrequest.cpp
+  getorganizationconformancepackdetailedstatusresponse.cpp
   getresourceconfighistoryrequest.cpp
   getresourceconfighistoryresponse.cpp
+  getstoredqueryrequest.cpp
+  getstoredqueryresponse.cpp
   listaggregatediscoveredresourcesrequest.cpp
   listaggregatediscoveredresourcesresponse.cpp
   listdiscoveredresourcesrequest.cpp
   listdiscoveredresourcesresponse.cpp
+  liststoredqueriesrequest.cpp
+  liststoredqueriesresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putaggregationauthorizationrequest.cpp
@@ -352,16 +488,30 @@ add_library(QtAwsConfigService
   putconfigurationaggregatorresponse.cpp
   putconfigurationrecorderrequest.cpp
   putconfigurationrecorderresponse.cpp
+  putconformancepackrequest.cpp
+  putconformancepackresponse.cpp
   putdeliverychannelrequest.cpp
   putdeliverychannelresponse.cpp
   putevaluationsrequest.cpp
   putevaluationsresponse.cpp
+  putexternalevaluationrequest.cpp
+  putexternalevaluationresponse.cpp
   putorganizationconfigrulerequest.cpp
   putorganizationconfigruleresponse.cpp
+  putorganizationconformancepackrequest.cpp
+  putorganizationconformancepackresponse.cpp
   putremediationconfigurationsrequest.cpp
   putremediationconfigurationsresponse.cpp
+  putremediationexceptionsrequest.cpp
+  putremediationexceptionsresponse.cpp
+  putresourceconfigrequest.cpp
+  putresourceconfigresponse.cpp
   putretentionconfigurationrequest.cpp
   putretentionconfigurationresponse.cpp
+  putstoredqueryrequest.cpp
+  putstoredqueryresponse.cpp
+  selectaggregateresourceconfigrequest.cpp
+  selectaggregateresourceconfigresponse.cpp
   selectresourceconfigrequest.cpp
   selectresourceconfigresponse.cpp
   startconfigrulesevaluationrequest.cpp

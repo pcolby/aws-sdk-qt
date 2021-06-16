@@ -37,9 +37,16 @@ class QTAWS_EXPORT IoTEventsDataRequest : public QtAws::Core::AwsAbstractRequest
 public:
     /// Actions supported by IoTEventsData.
     enum Action {
+        BatchAcknowledgeAlarmAction,
+        BatchDisableAlarmAction,
+        BatchEnableAlarmAction,
         BatchPutMessageAction,
+        BatchResetAlarmAction,
+        BatchSnoozeAlarmAction,
         BatchUpdateDetectorAction,
+        DescribeAlarmAction,
         DescribeDetectorAction,
+        ListAlarmsAction,
         ListDetectorsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

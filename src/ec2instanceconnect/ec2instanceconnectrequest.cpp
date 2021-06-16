@@ -37,6 +37,7 @@ namespace EC2InstanceConnect {
  * requests.
  *
  * \value SendSSHPublicKeyAction EC2InstanceConnect SendSSHPublicKey action.
+ * \value SendSerialConsoleSSHPublicKeyAction EC2InstanceConnect SendSerialConsoleSSHPublicKey action.
  */
 
 /*!

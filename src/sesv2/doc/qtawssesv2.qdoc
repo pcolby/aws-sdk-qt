@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsSesv2
+    \title SESV2 C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS SESV2 functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

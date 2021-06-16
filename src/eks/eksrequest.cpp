@@ -36,14 +36,38 @@ namespace EKS {
  * This enum describes the actions that can be performed as EKS
  * requests.
  *
+ * \value AssociateEncryptionConfigAction EKS AssociateEncryptionConfig action.
+ * \value AssociateIdentityProviderConfigAction EKS AssociateIdentityProviderConfig action.
+ * \value CreateAddonAction EKS CreateAddon action.
  * \value CreateClusterAction EKS CreateCluster action.
+ * \value CreateFargateProfileAction EKS CreateFargateProfile action.
+ * \value CreateNodegroupAction EKS CreateNodegroup action.
+ * \value DeleteAddonAction EKS DeleteAddon action.
  * \value DeleteClusterAction EKS DeleteCluster action.
+ * \value DeleteFargateProfileAction EKS DeleteFargateProfile action.
+ * \value DeleteNodegroupAction EKS DeleteNodegroup action.
+ * \value DescribeAddonAction EKS DescribeAddon action.
+ * \value DescribeAddonVersionsAction EKS DescribeAddonVersions action.
  * \value DescribeClusterAction EKS DescribeCluster action.
+ * \value DescribeFargateProfileAction EKS DescribeFargateProfile action.
+ * \value DescribeIdentityProviderConfigAction EKS DescribeIdentityProviderConfig action.
+ * \value DescribeNodegroupAction EKS DescribeNodegroup action.
  * \value DescribeUpdateAction EKS DescribeUpdate action.
+ * \value DisassociateIdentityProviderConfigAction EKS DisassociateIdentityProviderConfig action.
+ * \value ListAddonsAction EKS ListAddons action.
  * \value ListClustersAction EKS ListClusters action.
+ * \value ListFargateProfilesAction EKS ListFargateProfiles action.
+ * \value ListIdentityProviderConfigsAction EKS ListIdentityProviderConfigs action.
+ * \value ListNodegroupsAction EKS ListNodegroups action.
+ * \value ListTagsForResourceAction EKS ListTagsForResource action.
  * \value ListUpdatesAction EKS ListUpdates action.
+ * \value TagResourceAction EKS TagResource action.
+ * \value UntagResourceAction EKS UntagResource action.
+ * \value UpdateAddonAction EKS UpdateAddon action.
  * \value UpdateClusterConfigAction EKS UpdateClusterConfig action.
  * \value UpdateClusterVersionAction EKS UpdateClusterVersion action.
+ * \value UpdateNodegroupConfigAction EKS UpdateNodegroupConfig action.
+ * \value UpdateNodegroupVersionAction EKS UpdateNodegroupVersion action.
  */
 
 /*!

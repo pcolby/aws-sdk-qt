@@ -36,16 +36,19 @@ namespace ECS {
  * This enum describes the actions that can be performed as ECS
  * requests.
  *
+ * \value CreateCapacityProviderAction ECS CreateCapacityProvider action.
  * \value CreateClusterAction ECS CreateCluster action.
  * \value CreateServiceAction ECS CreateService action.
  * \value CreateTaskSetAction ECS CreateTaskSet action.
  * \value DeleteAccountSettingAction ECS DeleteAccountSetting action.
  * \value DeleteAttributesAction ECS DeleteAttributes action.
+ * \value DeleteCapacityProviderAction ECS DeleteCapacityProvider action.
  * \value DeleteClusterAction ECS DeleteCluster action.
  * \value DeleteServiceAction ECS DeleteService action.
  * \value DeleteTaskSetAction ECS DeleteTaskSet action.
  * \value DeregisterContainerInstanceAction ECS DeregisterContainerInstance action.
  * \value DeregisterTaskDefinitionAction ECS DeregisterTaskDefinition action.
+ * \value DescribeCapacityProvidersAction ECS DescribeCapacityProviders action.
  * \value DescribeClustersAction ECS DescribeClusters action.
  * \value DescribeContainerInstancesAction ECS DescribeContainerInstances action.
  * \value DescribeServicesAction ECS DescribeServices action.
@@ -53,6 +56,7 @@ namespace ECS {
  * \value DescribeTaskSetsAction ECS DescribeTaskSets action.
  * \value DescribeTasksAction ECS DescribeTasks action.
  * \value DiscoverPollEndpointAction ECS DiscoverPollEndpoint action.
+ * \value ExecuteCommandAction ECS ExecuteCommand action.
  * \value ListAccountSettingsAction ECS ListAccountSettings action.
  * \value ListAttributesAction ECS ListAttributes action.
  * \value ListClustersAction ECS ListClusters action.
@@ -65,6 +69,7 @@ namespace ECS {
  * \value PutAccountSettingAction ECS PutAccountSetting action.
  * \value PutAccountSettingDefaultAction ECS PutAccountSettingDefault action.
  * \value PutAttributesAction ECS PutAttributes action.
+ * \value PutClusterCapacityProvidersAction ECS PutClusterCapacityProviders action.
  * \value RegisterContainerInstanceAction ECS RegisterContainerInstance action.
  * \value RegisterTaskDefinitionAction ECS RegisterTaskDefinition action.
  * \value RunTaskAction ECS RunTask action.
@@ -75,6 +80,9 @@ namespace ECS {
  * \value SubmitTaskStateChangeAction ECS SubmitTaskStateChange action.
  * \value TagResourceAction ECS TagResource action.
  * \value UntagResourceAction ECS UntagResource action.
+ * \value UpdateCapacityProviderAction ECS UpdateCapacityProvider action.
+ * \value UpdateClusterAction ECS UpdateCluster action.
+ * \value UpdateClusterSettingsAction ECS UpdateClusterSettings action.
  * \value UpdateContainerAgentAction ECS UpdateContainerAgent action.
  * \value UpdateContainerInstancesStateAction ECS UpdateContainerInstancesState action.
  * \value UpdateServiceAction ECS UpdateService action.

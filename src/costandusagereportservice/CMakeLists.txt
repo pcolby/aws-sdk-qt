@@ -15,6 +15,10 @@ add_library(QtAwsCostandUsageReportService
   describereportdefinitionsrequest_p.h
   describereportdefinitionsresponse.h
   describereportdefinitionsresponse_p.h
+  modifyreportdefinitionrequest.h
+  modifyreportdefinitionrequest_p.h
+  modifyreportdefinitionresponse.h
+  modifyreportdefinitionresponse_p.h
   putreportdefinitionrequest.h
   putreportdefinitionrequest_p.h
   putreportdefinitionresponse.h
@@ -26,6 +30,8 @@ add_library(QtAwsCostandUsageReportService
   deletereportdefinitionresponse.cpp
   describereportdefinitionsrequest.cpp
   describereportdefinitionsresponse.cpp
+  modifyreportdefinitionrequest.cpp
+  modifyreportdefinitionresponse.cpp
   putreportdefinitionrequest.cpp
   putreportdefinitionresponse.cpp)
 

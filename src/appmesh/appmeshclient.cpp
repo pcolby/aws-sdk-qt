@@ -21,42 +21,58 @@
 #include "appmeshclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "creategatewayrouterequest.h"
+#include "creategatewayrouteresponse.h"
 #include "createmeshrequest.h"
 #include "createmeshresponse.h"
 #include "createrouterequest.h"
 #include "createrouteresponse.h"
+#include "createvirtualgatewayrequest.h"
+#include "createvirtualgatewayresponse.h"
 #include "createvirtualnoderequest.h"
 #include "createvirtualnoderesponse.h"
 #include "createvirtualrouterrequest.h"
 #include "createvirtualrouterresponse.h"
 #include "createvirtualservicerequest.h"
 #include "createvirtualserviceresponse.h"
+#include "deletegatewayrouterequest.h"
+#include "deletegatewayrouteresponse.h"
 #include "deletemeshrequest.h"
 #include "deletemeshresponse.h"
 #include "deleterouterequest.h"
 #include "deleterouteresponse.h"
+#include "deletevirtualgatewayrequest.h"
+#include "deletevirtualgatewayresponse.h"
 #include "deletevirtualnoderequest.h"
 #include "deletevirtualnoderesponse.h"
 #include "deletevirtualrouterrequest.h"
 #include "deletevirtualrouterresponse.h"
 #include "deletevirtualservicerequest.h"
 #include "deletevirtualserviceresponse.h"
+#include "describegatewayrouterequest.h"
+#include "describegatewayrouteresponse.h"
 #include "describemeshrequest.h"
 #include "describemeshresponse.h"
 #include "describerouterequest.h"
 #include "describerouteresponse.h"
+#include "describevirtualgatewayrequest.h"
+#include "describevirtualgatewayresponse.h"
 #include "describevirtualnoderequest.h"
 #include "describevirtualnoderesponse.h"
 #include "describevirtualrouterrequest.h"
 #include "describevirtualrouterresponse.h"
 #include "describevirtualservicerequest.h"
 #include "describevirtualserviceresponse.h"
+#include "listgatewayroutesrequest.h"
+#include "listgatewayroutesresponse.h"
 #include "listmeshesrequest.h"
 #include "listmeshesresponse.h"
 #include "listroutesrequest.h"
 #include "listroutesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listvirtualgatewaysrequest.h"
+#include "listvirtualgatewaysresponse.h"
 #include "listvirtualnodesrequest.h"
 #include "listvirtualnodesresponse.h"
 #include "listvirtualroutersrequest.h"
@@ -67,10 +83,14 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updategatewayrouterequest.h"
+#include "updategatewayrouteresponse.h"
 #include "updatemeshrequest.h"
 #include "updatemeshresponse.h"
 #include "updaterouterequest.h"
 #include "updaterouteresponse.h"
+#include "updatevirtualgatewayrequest.h"
+#include "updatevirtualgatewayresponse.h"
 #include "updatevirtualnoderequest.h"
 #include "updatevirtualnoderesponse.h"
 #include "updatevirtualrouterrequest.h"
@@ -100,20 +120,20 @@ namespace AppMesh {
  * \ingroup aws-clients
  * \inmodule QtAwsAppMesh
  *
- *  AWS App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and control microservices. App
- *  Mesh standardizes how your microservices communicate, giving you end-to-end visibility and helping to ensure high
+ *  App Mesh is a service mesh based on the Envoy proxy that makes it easy to monitor and control microservices. App Mesh
+ *  standardizes how your microservices communicate, giving you end-to-end visibility and helping to ensure high
  *  availability for your
  * 
  *  applications>
  * 
  *  App Mesh gives you consistent visibility and network traffic controls for every microservice in an application. You can
- *  use App Mesh with AWS Fargate, Amazon ECS, Amazon EKS, Kubernetes on AWS, and Amazon
+ *  use App Mesh with Amazon Web Services Fargate, Amazon ECS, Amazon EKS, Kubernetes on Amazon Web Services, and Amazon
  * 
  *  EC2> <note>
  * 
  *  App Mesh supports microservice applications that use service discovery naming for their components. For more information
  *  about service discovery on Amazon ECS, see <a
- *  href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a> in the
+ *  href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service Discovery</a> in the
  *  <i>Amazon Elastic Container Service Developer Guide</i>. Kubernetes <code>kube-dns</code> and <code>coredns</code> are
  *  supported. For more information, see <a
  *  href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/">DNS for Services and Pods</a> in the
@@ -175,16 +195,45 @@ AppMeshClient::AppMeshClient(
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * CreateGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a gateway
+ *
+ * route>
+ *
+ * A gateway route is attached to a virtual gateway and routes traffic to an existing virtual service. If a route matches a
+ * request, it can distribute traffic to a target virtual
+ *
+ * service>
+ *
+ * For more information about gateway routes, see <a
+ * href="https://docs.aws.amazon.com/app-mesh/latest/userguide/gateway-routes.html">Gateway
+ */
+CreateGatewayRouteResponse * AppMeshClient::createGatewayRoute(const CreateGatewayRouteRequest &request)
+{
+    return qobject_cast<CreateGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * CreateMeshResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a service mesh. A service mesh is a logical boundary for network traffic between the services that reside within
+ * Creates a service
  *
- * it>
+ * mesh>
  *
- * After you create your service mesh, you can create virtual services, virtual nodes, virtual routers, and routes to
+ * A service mesh is a logical boundary for network traffic between services that are represented by resources within the
+ * mesh. After you create your service mesh, you can create virtual services, virtual nodes, virtual routers, and routes to
  * distribute traffic between the applications in your
+ *
+ * mesh>
+ *
+ * For more information about service meshes, see <a
+ * href="https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html">Service
  */
 CreateMeshResponse * AppMeshClient::createMesh(const CreateMeshRequest &request)
 {
@@ -201,17 +250,41 @@ CreateMeshResponse * AppMeshClient::createMesh(const CreateMeshRequest &request)
  *
  * router>
  *
- * You can use the <code>prefix</code> parameter in your route specification for path-based routing of requests. For
- * example, if your virtual service name is <code>my-service.local</code> and you want the route to match requests to
- * <code>my-service.local/metrics</code>, your prefix should be
+ * You can route several different protocols and define a retry policy for a route. Traffic can be routed to one or more
+ * virtual
  *
- * <code>/metrics</code>>
+ * nodes>
  *
- * If your route matches a request, you can distribute traffic to one or more target virtual nodes with relative
+ * For more information about routes, see <a
  */
 CreateRouteResponse * AppMeshClient::createRoute(const CreateRouteRequest &request)
 {
     return qobject_cast<CreateRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * CreateVirtualGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a virtual
+ *
+ * gateway>
+ *
+ * A virtual gateway allows resources outside your mesh to communicate to resources that are inside your mesh. The virtual
+ * gateway represents an Envoy proxy running in an Amazon ECS task, in a Kubernetes service, or on an Amazon EC2 instance.
+ * Unlike a virtual node, which represents an Envoy running with an application, a virtual gateway represents Envoy
+ * deployed by
+ *
+ * itself>
+ *
+ * For more information about virtual gateways, see <a
+ * href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">Virtual gateways</a>.
+ */
+CreateVirtualGatewayResponse * AppMeshClient::createVirtualGateway(const CreateVirtualGatewayRequest &request)
+{
+    return qobject_cast<CreateVirtualGatewayResponse *>(send(request));
 }
 
 /*!
@@ -225,25 +298,35 @@ CreateRouteResponse * AppMeshClient::createRoute(const CreateRouteRequest &reque
  * mesh>
  *
  * A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes
- * deployment. When you create a virtual node, you can specify the service discovery information for your task
+ * deployment. When you create a virtual node, you can specify the service discovery information for your task group, and
+ * whether the proxy running in a task group will communicate with other proxies using Transport Layer Security
  *
- * group>
+ * (TLS)>
  *
- * Any inbound traffic that your virtual node expects should be specified as a <code>listener</code>. Any outbound traffic
- * that your virtual node expects to reach should be specified as a
+ * You define a <code>listener</code> for any inbound traffic that your virtual node expects. Any virtual service that your
+ * virtual node expects to communicate to is specified as a
  *
  * <code>backend</code>>
  *
  * The response metadata for your new virtual node contains the <code>arn</code> that is associated with the virtual node.
- * Set this value (either the full ARN or the truncated resource name: for example,
- * <code>mesh/default/virtualNode/simpleapp</code>) as the <code>APPMESH_VIRTUAL_NODE_NAME</code> environment variable for
- * your task group's Envoy proxy container in your task definition or pod spec. This is then mapped to the
- * <code>node.id</code> and <code>node.cluster</code> Envoy
+ * Set this value to the full ARN; for example,
+ * <code>arn:aws:appmesh:us-west-2:123456789012:myMesh/default/virtualNode/myApp</code>) as the
+ * <code>APPMESH_RESOURCE_ARN</code> environment variable for your task group's Envoy proxy container in your task
+ * definition or pod spec. This is then mapped to the <code>node.id</code> and <code>node.cluster</code> Envoy
  *
  * parameters> <note>
  *
- * If you require your Envoy stats or tracing to use a different name, you can override the <code>node.cluster</code> value
- * that is set by <code>APPMESH_VIRTUAL_NODE_NAME</code> with the <code>APPMESH_VIRTUAL_NODE_CLUSTER</code> environment
+ * By default, App Mesh uses the name of the resource you specified in <code>APPMESH_RESOURCE_ARN</code> when Envoy is
+ * referring to itself in metrics and traces. You can override this behavior by setting the
+ * <code>APPMESH_RESOURCE_CLUSTER</code> environment variable with your own
+ *
+ * name> </note>
+ *
+ * For more information about virtual nodes, see <a
+ * href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html">Virtual nodes</a>. You must be using
+ * <code>1.15.0</code> or later of the Envoy image when setting these variables. For more information aboutApp Mesh Envoy
+ * variables, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html">Envoy image</a> in the AWS App
+ * Mesh User
  */
 CreateVirtualNodeResponse * AppMeshClient::createVirtualNode(const CreateVirtualNodeRequest &request)
 {
@@ -260,12 +343,15 @@ CreateVirtualNodeResponse * AppMeshClient::createVirtualNode(const CreateVirtual
  *
  * mesh>
  *
- * Any inbound traffic that your virtual router expects should be specified as a <code>listener</code>.
+ * Specify a <code>listener</code> for any inbound traffic that your virtual router receives. Create a virtual router for
+ * each protocol and port that you need to route. Virtual routers handle traffic for one or more virtual services within
+ * your mesh. After you create your virtual router, create and associate routes for your virtual router that direct
+ * incoming requests to different virtual
  *
- * </p
+ * nodes>
  *
- * Virtual routers handle traffic for one or more virtual services within your mesh. After you create your virtual router,
- * create and associate routes for your virtual router that direct incoming requests to different virtual
+ * For more information about virtual routers, see <a
+ * href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html">Virtual
  */
 CreateVirtualRouterResponse * AppMeshClient::createVirtualRouter(const CreateVirtualRouterRequest &request)
 {
@@ -285,10 +371,28 @@ CreateVirtualRouterResponse * AppMeshClient::createVirtualRouter(const CreateVir
  * A virtual service is an abstraction of a real service that is provided by a virtual node directly or indirectly by means
  * of a virtual router. Dependent services call your virtual service by its <code>virtualServiceName</code>, and those
  * requests are routed to the virtual node or virtual router that is specified as the provider for the virtual
+ *
+ * service>
+ *
+ * For more information about virtual services, see <a
+ * href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html">Virtual
  */
 CreateVirtualServiceResponse * AppMeshClient::createVirtualService(const CreateVirtualServiceRequest &request)
 {
     return qobject_cast<CreateVirtualServiceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * DeleteGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing gateway
+ */
+DeleteGatewayRouteResponse * AppMeshClient::deleteGatewayRoute(const DeleteGatewayRouteRequest &request)
+{
+    return qobject_cast<DeleteGatewayRouteResponse *>(send(request));
 }
 
 /*!
@@ -320,6 +424,19 @@ DeleteMeshResponse * AppMeshClient::deleteMesh(const DeleteMeshRequest &request)
 DeleteRouteResponse * AppMeshClient::deleteRoute(const DeleteRouteRequest &request)
 {
     return qobject_cast<DeleteRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * DeleteVirtualGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing virtual gateway. You cannot delete a virtual gateway if any gateway routes are associated to
+ */
+DeleteVirtualGatewayResponse * AppMeshClient::deleteVirtualGateway(const DeleteVirtualGatewayRequest &request)
+{
+    return qobject_cast<DeleteVirtualGatewayResponse *>(send(request));
 }
 
 /*!
@@ -372,6 +489,19 @@ DeleteVirtualServiceResponse * AppMeshClient::deleteVirtualService(const DeleteV
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * DescribeGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an existing gateway
+ */
+DescribeGatewayRouteResponse * AppMeshClient::describeGatewayRoute(const DescribeGatewayRouteRequest &request)
+{
+    return qobject_cast<DescribeGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * DescribeMeshResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -394,6 +524,19 @@ DescribeMeshResponse * AppMeshClient::describeMesh(const DescribeMeshRequest &re
 DescribeRouteResponse * AppMeshClient::describeRoute(const DescribeRouteRequest &request)
 {
     return qobject_cast<DescribeRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * DescribeVirtualGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an existing virtual
+ */
+DescribeVirtualGatewayResponse * AppMeshClient::describeVirtualGateway(const DescribeVirtualGatewayRequest &request)
+{
+    return qobject_cast<DescribeVirtualGatewayResponse *>(send(request));
 }
 
 /*!
@@ -437,6 +580,19 @@ DescribeVirtualServiceResponse * AppMeshClient::describeVirtualService(const Des
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * ListGatewayRoutesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of existing gateway routes that are associated to a virtual
+ */
+ListGatewayRoutesResponse * AppMeshClient::listGatewayRoutes(const ListGatewayRoutesRequest &request)
+{
+    return qobject_cast<ListGatewayRoutesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * ListMeshesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -472,6 +628,19 @@ ListRoutesResponse * AppMeshClient::listRoutes(const ListRoutesRequest &request)
 ListTagsForResourceResponse * AppMeshClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * ListVirtualGatewaysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of existing virtual gateways in a service
+ */
+ListVirtualGatewaysResponse * AppMeshClient::listVirtualGateways(const ListVirtualGatewaysRequest &request)
+{
+    return qobject_cast<ListVirtualGatewaysResponse *>(send(request));
 }
 
 /*!
@@ -543,6 +712,19 @@ UntagResourceResponse * AppMeshClient::untagResource(const UntagResourceRequest 
 
 /*!
  * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * UpdateGatewayRouteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing gateway route that is associated to a specified virtual gateway in a service
+ */
+UpdateGatewayRouteResponse * AppMeshClient::updateGatewayRoute(const UpdateGatewayRouteRequest &request)
+{
+    return qobject_cast<UpdateGatewayRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
  * UpdateMeshResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -565,6 +747,19 @@ UpdateMeshResponse * AppMeshClient::updateMesh(const UpdateMeshRequest &request)
 UpdateRouteResponse * AppMeshClient::updateRoute(const UpdateRouteRequest &request)
 {
     return qobject_cast<UpdateRouteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppMeshClient service, and returns a pointer to an
+ * UpdateVirtualGatewayResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing virtual gateway in a specified service
+ */
+UpdateVirtualGatewayResponse * AppMeshClient::updateVirtualGateway(const UpdateVirtualGatewayRequest &request)
+{
+    return qobject_cast<UpdateVirtualGatewayResponse *>(send(request));
 }
 
 /*!

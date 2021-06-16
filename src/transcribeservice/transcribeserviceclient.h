@@ -28,24 +28,60 @@ namespace QtAws {
 namespace TranscribeService {
 
 class TranscribeServiceClientPrivate;
+class CreateLanguageModelRequest;
+class CreateLanguageModelResponse;
+class CreateMedicalVocabularyRequest;
+class CreateMedicalVocabularyResponse;
 class CreateVocabularyRequest;
 class CreateVocabularyResponse;
+class CreateVocabularyFilterRequest;
+class CreateVocabularyFilterResponse;
+class DeleteLanguageModelRequest;
+class DeleteLanguageModelResponse;
+class DeleteMedicalTranscriptionJobRequest;
+class DeleteMedicalTranscriptionJobResponse;
+class DeleteMedicalVocabularyRequest;
+class DeleteMedicalVocabularyResponse;
 class DeleteTranscriptionJobRequest;
 class DeleteTranscriptionJobResponse;
 class DeleteVocabularyRequest;
 class DeleteVocabularyResponse;
+class DeleteVocabularyFilterRequest;
+class DeleteVocabularyFilterResponse;
+class DescribeLanguageModelRequest;
+class DescribeLanguageModelResponse;
+class GetMedicalTranscriptionJobRequest;
+class GetMedicalTranscriptionJobResponse;
+class GetMedicalVocabularyRequest;
+class GetMedicalVocabularyResponse;
 class GetTranscriptionJobRequest;
 class GetTranscriptionJobResponse;
 class GetVocabularyRequest;
 class GetVocabularyResponse;
+class GetVocabularyFilterRequest;
+class GetVocabularyFilterResponse;
+class ListLanguageModelsRequest;
+class ListLanguageModelsResponse;
+class ListMedicalTranscriptionJobsRequest;
+class ListMedicalTranscriptionJobsResponse;
+class ListMedicalVocabulariesRequest;
+class ListMedicalVocabulariesResponse;
 class ListTranscriptionJobsRequest;
 class ListTranscriptionJobsResponse;
 class ListVocabulariesRequest;
 class ListVocabulariesResponse;
+class ListVocabularyFiltersRequest;
+class ListVocabularyFiltersResponse;
+class StartMedicalTranscriptionJobRequest;
+class StartMedicalTranscriptionJobResponse;
 class StartTranscriptionJobRequest;
 class StartTranscriptionJobResponse;
+class UpdateMedicalVocabularyRequest;
+class UpdateMedicalVocabularyResponse;
 class UpdateVocabularyRequest;
 class UpdateVocabularyResponse;
+class UpdateVocabularyFilterRequest;
+class UpdateVocabularyFilterResponse;
 
 class QTAWS_EXPORT TranscribeServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -63,15 +99,33 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateLanguageModelResponse * createLanguageModel(const CreateLanguageModelRequest &request);
+    CreateMedicalVocabularyResponse * createMedicalVocabulary(const CreateMedicalVocabularyRequest &request);
     CreateVocabularyResponse * createVocabulary(const CreateVocabularyRequest &request);
+    CreateVocabularyFilterResponse * createVocabularyFilter(const CreateVocabularyFilterRequest &request);
+    DeleteLanguageModelResponse * deleteLanguageModel(const DeleteLanguageModelRequest &request);
+    DeleteMedicalTranscriptionJobResponse * deleteMedicalTranscriptionJob(const DeleteMedicalTranscriptionJobRequest &request);
+    DeleteMedicalVocabularyResponse * deleteMedicalVocabulary(const DeleteMedicalVocabularyRequest &request);
     DeleteTranscriptionJobResponse * deleteTranscriptionJob(const DeleteTranscriptionJobRequest &request);
     DeleteVocabularyResponse * deleteVocabulary(const DeleteVocabularyRequest &request);
+    DeleteVocabularyFilterResponse * deleteVocabularyFilter(const DeleteVocabularyFilterRequest &request);
+    DescribeLanguageModelResponse * describeLanguageModel(const DescribeLanguageModelRequest &request);
+    GetMedicalTranscriptionJobResponse * getMedicalTranscriptionJob(const GetMedicalTranscriptionJobRequest &request);
+    GetMedicalVocabularyResponse * getMedicalVocabulary(const GetMedicalVocabularyRequest &request);
     GetTranscriptionJobResponse * getTranscriptionJob(const GetTranscriptionJobRequest &request);
     GetVocabularyResponse * getVocabulary(const GetVocabularyRequest &request);
+    GetVocabularyFilterResponse * getVocabularyFilter(const GetVocabularyFilterRequest &request);
+    ListLanguageModelsResponse * listLanguageModels(const ListLanguageModelsRequest &request);
+    ListMedicalTranscriptionJobsResponse * listMedicalTranscriptionJobs(const ListMedicalTranscriptionJobsRequest &request);
+    ListMedicalVocabulariesResponse * listMedicalVocabularies(const ListMedicalVocabulariesRequest &request);
     ListTranscriptionJobsResponse * listTranscriptionJobs(const ListTranscriptionJobsRequest &request);
     ListVocabulariesResponse * listVocabularies(const ListVocabulariesRequest &request);
+    ListVocabularyFiltersResponse * listVocabularyFilters(const ListVocabularyFiltersRequest &request);
+    StartMedicalTranscriptionJobResponse * startMedicalTranscriptionJob(const StartMedicalTranscriptionJobRequest &request);
     StartTranscriptionJobResponse * startTranscriptionJob(const StartTranscriptionJobRequest &request);
+    UpdateMedicalVocabularyResponse * updateMedicalVocabulary(const UpdateMedicalVocabularyRequest &request);
     UpdateVocabularyResponse * updateVocabulary(const UpdateVocabularyRequest &request);
+    UpdateVocabularyFilterResponse * updateVocabularyFilter(const UpdateVocabularyFilterRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(TranscribeServiceClient)

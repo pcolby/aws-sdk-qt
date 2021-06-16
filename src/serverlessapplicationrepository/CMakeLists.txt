@@ -55,6 +55,10 @@ add_library(QtAwsServerlessApplicationRepository
   serverlessapplicationrepositoryrequest_p.h
   serverlessapplicationrepositoryresponse.h
   serverlessapplicationrepositoryresponse_p.h
+  unshareapplicationrequest.h
+  unshareapplicationrequest_p.h
+  unshareapplicationresponse.h
+  unshareapplicationresponse_p.h
   updateapplicationrequest.h
   updateapplicationrequest_p.h
   updateapplicationresponse.h
@@ -86,6 +90,8 @@ add_library(QtAwsServerlessApplicationRepository
   serverlessapplicationrepositoryclient.cpp
   serverlessapplicationrepositoryrequest.cpp
   serverlessapplicationrepositoryresponse.cpp
+  unshareapplicationrequest.cpp
+  unshareapplicationresponse.cpp
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 

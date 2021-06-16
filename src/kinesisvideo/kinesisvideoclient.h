@@ -28,24 +28,42 @@ namespace QtAws {
 namespace KinesisVideo {
 
 class KinesisVideoClientPrivate;
+class CreateSignalingChannelRequest;
+class CreateSignalingChannelResponse;
 class CreateStreamRequest;
 class CreateStreamResponse;
+class DeleteSignalingChannelRequest;
+class DeleteSignalingChannelResponse;
 class DeleteStreamRequest;
 class DeleteStreamResponse;
+class DescribeSignalingChannelRequest;
+class DescribeSignalingChannelResponse;
 class DescribeStreamRequest;
 class DescribeStreamResponse;
 class GetDataEndpointRequest;
 class GetDataEndpointResponse;
+class GetSignalingChannelEndpointRequest;
+class GetSignalingChannelEndpointResponse;
+class ListSignalingChannelsRequest;
+class ListSignalingChannelsResponse;
 class ListStreamsRequest;
 class ListStreamsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class ListTagsForStreamRequest;
 class ListTagsForStreamResponse;
+class TagResourceRequest;
+class TagResourceResponse;
 class TagStreamRequest;
 class TagStreamResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UntagStreamRequest;
 class UntagStreamResponse;
 class UpdateDataRetentionRequest;
 class UpdateDataRetentionResponse;
+class UpdateSignalingChannelRequest;
+class UpdateSignalingChannelResponse;
 class UpdateStreamRequest;
 class UpdateStreamResponse;
 
@@ -65,15 +83,24 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateSignalingChannelResponse * createSignalingChannel(const CreateSignalingChannelRequest &request);
     CreateStreamResponse * createStream(const CreateStreamRequest &request);
+    DeleteSignalingChannelResponse * deleteSignalingChannel(const DeleteSignalingChannelRequest &request);
     DeleteStreamResponse * deleteStream(const DeleteStreamRequest &request);
+    DescribeSignalingChannelResponse * describeSignalingChannel(const DescribeSignalingChannelRequest &request);
     DescribeStreamResponse * describeStream(const DescribeStreamRequest &request);
     GetDataEndpointResponse * getDataEndpoint(const GetDataEndpointRequest &request);
+    GetSignalingChannelEndpointResponse * getSignalingChannelEndpoint(const GetSignalingChannelEndpointRequest &request);
+    ListSignalingChannelsResponse * listSignalingChannels(const ListSignalingChannelsRequest &request);
     ListStreamsResponse * listStreams(const ListStreamsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListTagsForStreamResponse * listTagsForStream(const ListTagsForStreamRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
     TagStreamResponse * tagStream(const TagStreamRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UntagStreamResponse * untagStream(const UntagStreamRequest &request);
     UpdateDataRetentionResponse * updateDataRetention(const UpdateDataRetentionRequest &request);
+    UpdateSignalingChannelResponse * updateSignalingChannel(const UpdateSignalingChannelRequest &request);
     UpdateStreamResponse * updateStream(const UpdateStreamRequest &request);
 
 private:

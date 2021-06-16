@@ -37,34 +37,58 @@
 #include "attachsecurityprofileresponse.h"
 #include "attachthingprincipalrequest.h"
 #include "attachthingprincipalresponse.h"
+#include "cancelauditmitigationactionstaskrequest.h"
+#include "cancelauditmitigationactionstaskresponse.h"
 #include "cancelaudittaskrequest.h"
 #include "cancelaudittaskresponse.h"
 #include "cancelcertificatetransferrequest.h"
 #include "cancelcertificatetransferresponse.h"
+#include "canceldetectmitigationactionstaskrequest.h"
+#include "canceldetectmitigationactionstaskresponse.h"
 #include "canceljobrequest.h"
 #include "canceljobresponse.h"
 #include "canceljobexecutionrequest.h"
 #include "canceljobexecutionresponse.h"
 #include "cleardefaultauthorizerrequest.h"
 #include "cleardefaultauthorizerresponse.h"
+#include "confirmtopicruledestinationrequest.h"
+#include "confirmtopicruledestinationresponse.h"
+#include "createauditsuppressionrequest.h"
+#include "createauditsuppressionresponse.h"
 #include "createauthorizerrequest.h"
 #include "createauthorizerresponse.h"
 #include "createbillinggrouprequest.h"
 #include "createbillinggroupresponse.h"
 #include "createcertificatefromcsrrequest.h"
 #include "createcertificatefromcsrresponse.h"
+#include "createcustommetricrequest.h"
+#include "createcustommetricresponse.h"
+#include "createdimensionrequest.h"
+#include "createdimensionresponse.h"
+#include "createdomainconfigurationrequest.h"
+#include "createdomainconfigurationresponse.h"
 #include "createdynamicthinggrouprequest.h"
 #include "createdynamicthinggroupresponse.h"
 #include "createjobrequest.h"
 #include "createjobresponse.h"
+#include "createjobtemplaterequest.h"
+#include "createjobtemplateresponse.h"
 #include "createkeysandcertificaterequest.h"
 #include "createkeysandcertificateresponse.h"
+#include "createmitigationactionrequest.h"
+#include "createmitigationactionresponse.h"
 #include "createotaupdaterequest.h"
 #include "createotaupdateresponse.h"
 #include "createpolicyrequest.h"
 #include "createpolicyresponse.h"
 #include "createpolicyversionrequest.h"
 #include "createpolicyversionresponse.h"
+#include "createprovisioningclaimrequest.h"
+#include "createprovisioningclaimresponse.h"
+#include "createprovisioningtemplaterequest.h"
+#include "createprovisioningtemplateresponse.h"
+#include "createprovisioningtemplateversionrequest.h"
+#include "createprovisioningtemplateversionresponse.h"
 #include "createrolealiasrequest.h"
 #include "createrolealiasresponse.h"
 #include "createscheduledauditrequest.h"
@@ -81,8 +105,12 @@
 #include "createthingtyperesponse.h"
 #include "createtopicrulerequest.h"
 #include "createtopicruleresponse.h"
+#include "createtopicruledestinationrequest.h"
+#include "createtopicruledestinationresponse.h"
 #include "deleteaccountauditconfigurationrequest.h"
 #include "deleteaccountauditconfigurationresponse.h"
+#include "deleteauditsuppressionrequest.h"
+#include "deleteauditsuppressionresponse.h"
 #include "deleteauthorizerrequest.h"
 #include "deleteauthorizerresponse.h"
 #include "deletebillinggrouprequest.h"
@@ -91,18 +119,32 @@
 #include "deletecacertificateresponse.h"
 #include "deletecertificaterequest.h"
 #include "deletecertificateresponse.h"
+#include "deletecustommetricrequest.h"
+#include "deletecustommetricresponse.h"
+#include "deletedimensionrequest.h"
+#include "deletedimensionresponse.h"
+#include "deletedomainconfigurationrequest.h"
+#include "deletedomainconfigurationresponse.h"
 #include "deletedynamicthinggrouprequest.h"
 #include "deletedynamicthinggroupresponse.h"
 #include "deletejobrequest.h"
 #include "deletejobresponse.h"
 #include "deletejobexecutionrequest.h"
 #include "deletejobexecutionresponse.h"
+#include "deletejobtemplaterequest.h"
+#include "deletejobtemplateresponse.h"
+#include "deletemitigationactionrequest.h"
+#include "deletemitigationactionresponse.h"
 #include "deleteotaupdaterequest.h"
 #include "deleteotaupdateresponse.h"
 #include "deletepolicyrequest.h"
 #include "deletepolicyresponse.h"
 #include "deletepolicyversionrequest.h"
 #include "deletepolicyversionresponse.h"
+#include "deleteprovisioningtemplaterequest.h"
+#include "deleteprovisioningtemplateresponse.h"
+#include "deleteprovisioningtemplateversionrequest.h"
+#include "deleteprovisioningtemplateversionresponse.h"
 #include "deleteregistrationcoderequest.h"
 #include "deleteregistrationcoderesponse.h"
 #include "deleterolealiasrequest.h"
@@ -121,12 +163,20 @@
 #include "deletethingtyperesponse.h"
 #include "deletetopicrulerequest.h"
 #include "deletetopicruleresponse.h"
+#include "deletetopicruledestinationrequest.h"
+#include "deletetopicruledestinationresponse.h"
 #include "deletev2logginglevelrequest.h"
 #include "deletev2logginglevelresponse.h"
 #include "deprecatethingtyperequest.h"
 #include "deprecatethingtyperesponse.h"
 #include "describeaccountauditconfigurationrequest.h"
 #include "describeaccountauditconfigurationresponse.h"
+#include "describeauditfindingrequest.h"
+#include "describeauditfindingresponse.h"
+#include "describeauditmitigationactionstaskrequest.h"
+#include "describeauditmitigationactionstaskresponse.h"
+#include "describeauditsuppressionrequest.h"
+#include "describeauditsuppressionresponse.h"
 #include "describeaudittaskrequest.h"
 #include "describeaudittaskresponse.h"
 #include "describeauthorizerrequest.h"
@@ -137,8 +187,16 @@
 #include "describecacertificateresponse.h"
 #include "describecertificaterequest.h"
 #include "describecertificateresponse.h"
+#include "describecustommetricrequest.h"
+#include "describecustommetricresponse.h"
 #include "describedefaultauthorizerrequest.h"
 #include "describedefaultauthorizerresponse.h"
+#include "describedetectmitigationactionstaskrequest.h"
+#include "describedetectmitigationactionstaskresponse.h"
+#include "describedimensionrequest.h"
+#include "describedimensionresponse.h"
+#include "describedomainconfigurationrequest.h"
+#include "describedomainconfigurationresponse.h"
 #include "describeendpointrequest.h"
 #include "describeendpointresponse.h"
 #include "describeeventconfigurationsrequest.h"
@@ -149,6 +207,14 @@
 #include "describejobresponse.h"
 #include "describejobexecutionrequest.h"
 #include "describejobexecutionresponse.h"
+#include "describejobtemplaterequest.h"
+#include "describejobtemplateresponse.h"
+#include "describemitigationactionrequest.h"
+#include "describemitigationactionresponse.h"
+#include "describeprovisioningtemplaterequest.h"
+#include "describeprovisioningtemplateresponse.h"
+#include "describeprovisioningtemplateversionrequest.h"
+#include "describeprovisioningtemplateversionresponse.h"
 #include "describerolealiasrequest.h"
 #include "describerolealiasresponse.h"
 #include "describescheduledauditrequest.h"
@@ -177,6 +243,10 @@
 #include "disabletopicruleresponse.h"
 #include "enabletopicrulerequest.h"
 #include "enabletopicruleresponse.h"
+#include "getbehaviormodeltrainingsummariesrequest.h"
+#include "getbehaviormodeltrainingsummariesresponse.h"
+#include "getcardinalityrequest.h"
+#include "getcardinalityresponse.h"
 #include "geteffectivepoliciesrequest.h"
 #include "geteffectivepoliciesresponse.h"
 #include "getindexingconfigurationrequest.h"
@@ -187,6 +257,8 @@
 #include "getloggingoptionsresponse.h"
 #include "getotaupdaterequest.h"
 #include "getotaupdateresponse.h"
+#include "getpercentilesrequest.h"
+#include "getpercentilesresponse.h"
 #include "getpolicyrequest.h"
 #include "getpolicyresponse.h"
 #include "getpolicyversionrequest.h"
@@ -197,6 +269,8 @@
 #include "getstatisticsresponse.h"
 #include "gettopicrulerequest.h"
 #include "gettopicruleresponse.h"
+#include "gettopicruledestinationrequest.h"
+#include "gettopicruledestinationresponse.h"
 #include "getv2loggingoptionsrequest.h"
 #include "getv2loggingoptionsresponse.h"
 #include "listactiveviolationsrequest.h"
@@ -205,6 +279,12 @@
 #include "listattachedpoliciesresponse.h"
 #include "listauditfindingsrequest.h"
 #include "listauditfindingsresponse.h"
+#include "listauditmitigationactionsexecutionsrequest.h"
+#include "listauditmitigationactionsexecutionsresponse.h"
+#include "listauditmitigationactionstasksrequest.h"
+#include "listauditmitigationactionstasksresponse.h"
+#include "listauditsuppressionsrequest.h"
+#include "listauditsuppressionsresponse.h"
 #include "listaudittasksrequest.h"
 #include "listaudittasksresponse.h"
 #include "listauthorizersrequest.h"
@@ -217,14 +297,28 @@
 #include "listcertificatesresponse.h"
 #include "listcertificatesbycarequest.h"
 #include "listcertificatesbycaresponse.h"
+#include "listcustommetricsrequest.h"
+#include "listcustommetricsresponse.h"
+#include "listdetectmitigationactionsexecutionsrequest.h"
+#include "listdetectmitigationactionsexecutionsresponse.h"
+#include "listdetectmitigationactionstasksrequest.h"
+#include "listdetectmitigationactionstasksresponse.h"
+#include "listdimensionsrequest.h"
+#include "listdimensionsresponse.h"
+#include "listdomainconfigurationsrequest.h"
+#include "listdomainconfigurationsresponse.h"
 #include "listindicesrequest.h"
 #include "listindicesresponse.h"
 #include "listjobexecutionsforjobrequest.h"
 #include "listjobexecutionsforjobresponse.h"
 #include "listjobexecutionsforthingrequest.h"
 #include "listjobexecutionsforthingresponse.h"
+#include "listjobtemplatesrequest.h"
+#include "listjobtemplatesresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listmitigationactionsrequest.h"
+#include "listmitigationactionsresponse.h"
 #include "listotaupdatesrequest.h"
 #include "listotaupdatesresponse.h"
 #include "listoutgoingcertificatesrequest.h"
@@ -239,6 +333,10 @@
 #include "listprincipalpoliciesresponse.h"
 #include "listprincipalthingsrequest.h"
 #include "listprincipalthingsresponse.h"
+#include "listprovisioningtemplateversionsrequest.h"
+#include "listprovisioningtemplateversionsresponse.h"
+#include "listprovisioningtemplatesrequest.h"
+#include "listprovisioningtemplatesresponse.h"
 #include "listrolealiasesrequest.h"
 #include "listrolealiasesresponse.h"
 #include "listscheduledauditsrequest.h"
@@ -273,6 +371,8 @@
 #include "listthingsinbillinggroupresponse.h"
 #include "listthingsinthinggrouprequest.h"
 #include "listthingsinthinggroupresponse.h"
+#include "listtopicruledestinationsrequest.h"
+#include "listtopicruledestinationsresponse.h"
 #include "listtopicrulesrequest.h"
 #include "listtopicrulesresponse.h"
 #include "listv2logginglevelsrequest.h"
@@ -283,6 +383,8 @@
 #include "registercacertificateresponse.h"
 #include "registercertificaterequest.h"
 #include "registercertificateresponse.h"
+#include "registercertificatewithoutcarequest.h"
+#include "registercertificatewithoutcaresponse.h"
 #include "registerthingrequest.h"
 #include "registerthingresponse.h"
 #include "rejectcertificatetransferrequest.h"
@@ -305,6 +407,10 @@
 #include "setv2logginglevelresponse.h"
 #include "setv2loggingoptionsrequest.h"
 #include "setv2loggingoptionsresponse.h"
+#include "startauditmitigationactionstaskrequest.h"
+#include "startauditmitigationactionstaskresponse.h"
+#include "startdetectmitigationactionstaskrequest.h"
+#include "startdetectmitigationactionstaskresponse.h"
 #include "startondemandaudittaskrequest.h"
 #include "startondemandaudittaskresponse.h"
 #include "startthingregistrationtaskrequest.h"
@@ -323,6 +429,8 @@
 #include "untagresourceresponse.h"
 #include "updateaccountauditconfigurationrequest.h"
 #include "updateaccountauditconfigurationresponse.h"
+#include "updateauditsuppressionrequest.h"
+#include "updateauditsuppressionresponse.h"
 #include "updateauthorizerrequest.h"
 #include "updateauthorizerresponse.h"
 #include "updatebillinggrouprequest.h"
@@ -331,6 +439,12 @@
 #include "updatecacertificateresponse.h"
 #include "updatecertificaterequest.h"
 #include "updatecertificateresponse.h"
+#include "updatecustommetricrequest.h"
+#include "updatecustommetricresponse.h"
+#include "updatedimensionrequest.h"
+#include "updatedimensionresponse.h"
+#include "updatedomainconfigurationrequest.h"
+#include "updatedomainconfigurationresponse.h"
 #include "updatedynamicthinggrouprequest.h"
 #include "updatedynamicthinggroupresponse.h"
 #include "updateeventconfigurationsrequest.h"
@@ -339,6 +453,10 @@
 #include "updateindexingconfigurationresponse.h"
 #include "updatejobrequest.h"
 #include "updatejobresponse.h"
+#include "updatemitigationactionrequest.h"
+#include "updatemitigationactionresponse.h"
+#include "updateprovisioningtemplaterequest.h"
+#include "updateprovisioningtemplateresponse.h"
 #include "updaterolealiasrequest.h"
 #include "updaterolealiasresponse.h"
 #include "updatescheduledauditrequest.h"
@@ -353,6 +471,8 @@
 #include "updatethinggroupresponse.h"
 #include "updatethinggroupsforthingrequest.h"
 #include "updatethinggroupsforthingresponse.h"
+#include "updatetopicruledestinationrequest.h"
+#include "updatetopicruledestinationresponse.h"
 #include "validatesecurityprofilebehaviorsrequest.h"
 #include "validatesecurityprofilebehaviorsresponse.h"
 
@@ -386,6 +506,17 @@ namespace IoT {
  *  device (Registry), configure logging, and create and manage policies and credentials to authenticate
  * 
  *  devices>
+ * 
+ *  The service endpoints that expose this API are listed in <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/iot-core.html">AWS IoT Core Endpoints and Quotas</a>. You must use
+ *  the endpoint for the region that has the resources you want to
+ * 
+ *  access>
+ * 
+ *  The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS Signature
+ *  Version 4</a> to sign the request is:
+ * 
+ *  <i>execute-api</i>>
  * 
  *  For more information about how AWS IoT works, see the <a
  *  href="https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html">Developer
@@ -553,8 +684,8 @@ AttachPrincipalPolicyResponse * IoTClient::attachPrincipalPolicy(const AttachPri
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates a Device Defender security profile with a thing group or with this account. Each thing group or account can
- * have up to five security profiles associated with
+ * Associates a Device Defender security profile with a thing group or this account. Each thing group or account can have
+ * up to five security profiles associated with
  */
 AttachSecurityProfileResponse * IoTClient::attachSecurityProfile(const AttachSecurityProfileRequest &request)
 {
@@ -577,12 +708,25 @@ AttachThingPrincipalResponse * IoTClient::attachThingPrincipal(const AttachThing
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CancelAuditMitigationActionsTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels a mitigation action task that is in progress. If the task is not in progress, an InvalidRequestException
+ */
+CancelAuditMitigationActionsTaskResponse * IoTClient::cancelAuditMitigationActionsTask(const CancelAuditMitigationActionsTaskRequest &request)
+{
+    return qobject_cast<CancelAuditMitigationActionsTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * CancelAuditTaskResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels an audit that is in progress. The audit can be either scheduled or on-demand. If the audit is not in progress,
- * an "InvalidRequestException"
+ * Cancels an audit that is in progress. The audit can be either scheduled or on demand. If the audit isn't in progress, an
+ * "InvalidRequestException"
  */
 CancelAuditTaskResponse * IoTClient::cancelAuditTask(const CancelAuditTaskRequest &request)
 {
@@ -610,6 +754,19 @@ CancelAuditTaskResponse * IoTClient::cancelAuditTask(const CancelAuditTaskReques
 CancelCertificateTransferResponse * IoTClient::cancelCertificateTransfer(const CancelCertificateTransferRequest &request)
 {
     return qobject_cast<CancelCertificateTransferResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CancelDetectMitigationActionsTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels a Device Defender ML Detect mitigation action.
+ */
+CancelDetectMitigationActionsTaskResponse * IoTClient::cancelDetectMitigationActionsTask(const CancelDetectMitigationActionsTaskRequest &request)
+{
+    return qobject_cast<CancelDetectMitigationActionsTaskResponse *>(send(request));
 }
 
 /*!
@@ -649,6 +806,34 @@ CancelJobExecutionResponse * IoTClient::cancelJobExecution(const CancelJobExecut
 ClearDefaultAuthorizerResponse * IoTClient::clearDefaultAuthorizer(const ClearDefaultAuthorizerRequest &request)
 {
     return qobject_cast<ClearDefaultAuthorizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ConfirmTopicRuleDestinationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Confirms a topic rule destination. When you create a rule requiring a destination, AWS IoT sends a confirmation message
+ * to the endpoint or base address you specify. The message includes a token which you pass back when calling
+ * <code>ConfirmTopicRuleDestination</code> to confirm that you own or have access to the
+ */
+ConfirmTopicRuleDestinationResponse * IoTClient::confirmTopicRuleDestination(const ConfirmTopicRuleDestinationRequest &request)
+{
+    return qobject_cast<ConfirmTopicRuleDestinationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateAuditSuppressionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Device Defender audit suppression.
+ */
+CreateAuditSuppressionResponse * IoTClient::createAuditSuppression(const CreateAuditSuppressionRequest &request)
+{
+    return qobject_cast<CreateAuditSuppressionResponse *>(send(request));
 }
 
 /*!
@@ -749,6 +934,47 @@ CreateCertificateFromCsrResponse * IoTClient::createCertificateFromCsr(const Cre
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateCustomMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use this API to define a Custom Metric published by your devices to Device Defender.
+ */
+CreateCustomMetricResponse * IoTClient::createCustomMetric(const CreateCustomMetricRequest &request)
+{
+    return qobject_cast<CreateCustomMetricResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateDimensionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Create a dimension that you can use to limit the scope of a metric used in a security profile for AWS IoT Device
+ * Defender. For example, using a <code>TOPIC_FILTER</code> dimension, you can narrow down the scope of the metric only to
+ * MQTT topics whose name match the pattern specified in the
+ */
+CreateDimensionResponse * IoTClient::createDimension(const CreateDimensionRequest &request)
+{
+    return qobject_cast<CreateDimensionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateDomainConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a domain
+ */
+CreateDomainConfigurationResponse * IoTClient::createDomainConfiguration(const CreateDomainConfigurationRequest &request)
+{
+    return qobject_cast<CreateDomainConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * CreateDynamicThingGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -775,13 +1001,28 @@ CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateJobTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a job
+ */
+CreateJobTemplateResponse * IoTClient::createJobTemplate(const CreateJobTemplateRequest &request)
+{
+    return qobject_cast<CreateJobTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * CreateKeysAndCertificateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a 2048-bit RSA key pair and issues an X.509 certificate using the issued public
+ * Creates a 2048-bit RSA key pair and issues an X.509 certificate using the issued public key. You can also call
+ * <code>CreateKeysAndCertificate</code> over MQTT from a device, for more information, see <a
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/provision-wo-cert.html#provision-mqtt-api">Provisioning MQTT
  *
- * key>
+ * API</a>>
  *
  * <b>Note</b> This is the only time AWS IoT issues the private key for this certificate, so it is important to keep it in
  * a secure
@@ -789,6 +1030,22 @@ CreateJobResponse * IoTClient::createJob(const CreateJobRequest &request)
 CreateKeysAndCertificateResponse * IoTClient::createKeysAndCertificate(const CreateKeysAndCertificateRequest &request)
 {
     return qobject_cast<CreateKeysAndCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateMitigationActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Only certain types of
+ * mitigation actions can be applied to specific check names. For more information, see <a
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-mitigation-actions.html">Mitigation
+ * actions</a>. Each mitigation action can apply only one type of
+ */
+CreateMitigationActionResponse * IoTClient::createMitigationAction(const CreateMitigationActionRequest &request)
+{
+    return qobject_cast<CreateMitigationActionResponse *>(send(request));
 }
 
 /*!
@@ -844,6 +1101,45 @@ CreatePolicyVersionResponse * IoTClient::createPolicyVersion(const CreatePolicyV
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateProvisioningClaimResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a provisioning
+ */
+CreateProvisioningClaimResponse * IoTClient::createProvisioningClaim(const CreateProvisioningClaimRequest &request)
+{
+    return qobject_cast<CreateProvisioningClaimResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateProvisioningTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a fleet provisioning
+ */
+CreateProvisioningTemplateResponse * IoTClient::createProvisioningTemplate(const CreateProvisioningTemplateRequest &request)
+{
+    return qobject_cast<CreateProvisioningTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateProvisioningTemplateVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new version of a fleet provisioning
+ */
+CreateProvisioningTemplateVersionResponse * IoTClient::createProvisioningTemplateVersion(const CreateProvisioningTemplateVersionRequest &request)
+{
+    return qobject_cast<CreateProvisioningTemplateVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * CreateRoleAliasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -888,10 +1184,7 @@ CreateSecurityProfileResponse * IoTClient::createSecurityProfile(const CreateSec
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a stream for delivering one or more large files in chunks over MQTT. A stream transports data bytes in chunks or
- * blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a stream. The
- * total size of a file associated with the stream cannot exceed more than 2 MB. The stream will be created with version 0.
- * If a stream is created with the same streamID as a stream that existed and was deleted within last 90 days, we will
- * resurrect that old stream by incrementing the version by
+ * blocks packaged as MQTT messages from a source like S3. You can have one or more files associated with a
  */
 CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &request)
 {
@@ -911,8 +1204,8 @@ CreateStreamResponse * IoTClient::createStream(const CreateStreamRequest &reques
  * thrown> <note>
  *
  * This is a control plane operation. See <a
- * href="https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">Authorization</a> for information about
- * authorizing control plane
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for information
+ * about authorizing control plane
  */
 CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
 {
@@ -930,8 +1223,8 @@ CreateThingResponse * IoTClient::createThing(const CreateThingRequest &request)
  * group> <note>
  *
  * This is a control plane operation. See <a
- * href="https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html">Authorization</a> for information about
- * authorizing control plane
+ * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-authorization.html">Authorization</a> for information
+ * about authorizing control plane
  */
 CreateThingGroupResponse * IoTClient::createThingGroup(const CreateThingGroupRequest &request)
 {
@@ -967,6 +1260,19 @@ CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleReques
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * CreateTopicRuleDestinationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a topic rule destination. The destination must be confirmed prior to
+ */
+CreateTopicRuleDestinationResponse * IoTClient::createTopicRuleDestination(const CreateTopicRuleDestinationRequest &request)
+{
+    return qobject_cast<CreateTopicRuleDestinationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * DeleteAccountAuditConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -977,6 +1283,19 @@ CreateTopicRuleResponse * IoTClient::createTopicRule(const CreateTopicRuleReques
 DeleteAccountAuditConfigurationResponse * IoTClient::deleteAccountAuditConfiguration(const DeleteAccountAuditConfigurationRequest &request)
 {
     return qobject_cast<DeleteAccountAuditConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteAuditSuppressionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a Device Defender audit suppression.
+ */
+DeleteAuditSuppressionResponse * IoTClient::deleteAuditSuppression(const DeleteAuditSuppressionRequest &request)
+{
+    return qobject_cast<DeleteAuditSuppressionResponse *>(send(request));
 }
 
 /*!
@@ -1028,13 +1347,61 @@ DeleteCACertificateResponse * IoTClient::deleteCACertificate(const DeleteCACerti
  *
  * certificate>
  *
- * A certificate cannot be deleted if it has a policy attached to it or if its status is set to ACTIVE. To delete a
- * certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the
+ * A certificate cannot be deleted if it has a policy or IoT thing attached to it or if its status is set to ACTIVE. To
+ * delete a certificate, first use the <a>DetachPrincipalPolicy</a> API to detach all policies. Next, use the
  * <a>UpdateCertificate</a> API to set the certificate to the INACTIVE
  */
 DeleteCertificateResponse * IoTClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
     return qobject_cast<DeleteCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteCustomMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * Before you can delete a custom metric, you must first remove the custom metric from all security profiles it's a part
+ * of. The security profile associated with the custom metric can be found using the <a
+ * href="https://docs.aws.amazon.com/iot/latest/apireference/API_ListSecurityProfiles.html">ListSecurityProfiles</a> API
+ * with <code>metricName</code> set to your custom metric
+ *
+ * name> </note>
+ *
+ * Deletes a Device Defender detect custom metric.
+ */
+DeleteCustomMetricResponse * IoTClient::deleteCustomMetric(const DeleteCustomMetricRequest &request)
+{
+    return qobject_cast<DeleteCustomMetricResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteDimensionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified dimension from your AWS
+ */
+DeleteDimensionResponse * IoTClient::deleteDimension(const DeleteDimensionRequest &request)
+{
+    return qobject_cast<DeleteDimensionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteDomainConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified domain
+ */
+DeleteDomainConfigurationResponse * IoTClient::deleteDomainConfiguration(const DeleteDomainConfigurationRequest &request)
+{
+    return qobject_cast<DeleteDomainConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -1084,6 +1451,32 @@ DeleteJobResponse * IoTClient::deleteJob(const DeleteJobRequest &request)
 DeleteJobExecutionResponse * IoTClient::deleteJobExecution(const DeleteJobExecutionRequest &request)
 {
     return qobject_cast<DeleteJobExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteJobTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified job
+ */
+DeleteJobTemplateResponse * IoTClient::deleteJobTemplate(const DeleteJobTemplateRequest &request)
+{
+    return qobject_cast<DeleteJobTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteMitigationActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a defined mitigation action from your AWS
+ */
+DeleteMitigationActionResponse * IoTClient::deleteMitigationAction(const DeleteMitigationActionRequest &request)
+{
+    return qobject_cast<DeleteMitigationActionResponse *>(send(request));
 }
 
 /*!
@@ -1138,6 +1531,32 @@ DeletePolicyResponse * IoTClient::deletePolicy(const DeletePolicyRequest &reques
 DeletePolicyVersionResponse * IoTClient::deletePolicyVersion(const DeletePolicyVersionRequest &request)
 {
     return qobject_cast<DeletePolicyVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteProvisioningTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a fleet provisioning
+ */
+DeleteProvisioningTemplateResponse * IoTClient::deleteProvisioningTemplate(const DeleteProvisioningTemplateRequest &request)
+{
+    return qobject_cast<DeleteProvisioningTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteProvisioningTemplateVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a fleet provisioning template
+ */
+DeleteProvisioningTemplateVersionResponse * IoTClient::deleteProvisioningTemplateVersion(const DeleteProvisioningTemplateVersionRequest &request)
+{
+    return qobject_cast<DeleteProvisioningTemplateVersionResponse *>(send(request));
 }
 
 /*!
@@ -1263,6 +1682,19 @@ DeleteTopicRuleResponse * IoTClient::deleteTopicRule(const DeleteTopicRuleReques
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DeleteTopicRuleDestinationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a topic rule
+ */
+DeleteTopicRuleDestinationResponse * IoTClient::deleteTopicRuleDestination(const DeleteTopicRuleDestinationRequest &request)
+{
+    return qobject_cast<DeleteTopicRuleDestinationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * DeleteV2LoggingLevelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1299,6 +1731,48 @@ DeprecateThingTypeResponse * IoTClient::deprecateThingType(const DeprecateThingT
 DescribeAccountAuditConfigurationResponse * IoTClient::describeAccountAuditConfiguration(const DescribeAccountAuditConfigurationRequest &request)
 {
     return qobject_cast<DescribeAccountAuditConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeAuditFindingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a single audit finding. Properties include the reason for noncompliance, the severity of the
+ * issue, and the start time when the audit that returned the
+ */
+DescribeAuditFindingResponse * IoTClient::describeAuditFinding(const DescribeAuditFindingRequest &request)
+{
+    return qobject_cast<DescribeAuditFindingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeAuditMitigationActionsTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about an audit mitigation task that is used to apply mitigation actions to a set of audit findings.
+ * Properties include the actions being applied, the audit checks to which they're being applied, the task status, and
+ * aggregated task
+ */
+DescribeAuditMitigationActionsTaskResponse * IoTClient::describeAuditMitigationActionsTask(const DescribeAuditMitigationActionsTaskRequest &request)
+{
+    return qobject_cast<DescribeAuditMitigationActionsTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeAuditSuppressionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a Device Defender audit suppression.
+ */
+DescribeAuditSuppressionResponse * IoTClient::describeAuditSuppression(const DescribeAuditSuppressionRequest &request)
+{
+    return qobject_cast<DescribeAuditSuppressionResponse *>(send(request));
 }
 
 /*!
@@ -1368,6 +1842,19 @@ DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCerti
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeCustomMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a Device Defender detect custom metric.
+ */
+DescribeCustomMetricResponse * IoTClient::describeCustomMetric(const DescribeCustomMetricRequest &request)
+{
+    return qobject_cast<DescribeCustomMetricResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * DescribeDefaultAuthorizerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1377,6 +1864,45 @@ DescribeCertificateResponse * IoTClient::describeCertificate(const DescribeCerti
 DescribeDefaultAuthorizerResponse * IoTClient::describeDefaultAuthorizer(const DescribeDefaultAuthorizerRequest &request)
 {
     return qobject_cast<DescribeDefaultAuthorizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeDetectMitigationActionsTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a Device Defender ML Detect mitigation action.
+ */
+DescribeDetectMitigationActionsTaskResponse * IoTClient::describeDetectMitigationActionsTask(const DescribeDetectMitigationActionsTaskRequest &request)
+{
+    return qobject_cast<DescribeDetectMitigationActionsTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeDimensionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides details about a dimension that is defined in your AWS
+ */
+DescribeDimensionResponse * IoTClient::describeDimension(const DescribeDimensionRequest &request)
+{
+    return qobject_cast<DescribeDimensionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeDomainConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets summary information about a domain
+ */
+DescribeDomainConfigurationResponse * IoTClient::describeDomainConfiguration(const DescribeDomainConfigurationRequest &request)
+{
+    return qobject_cast<DescribeDomainConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -1442,6 +1968,58 @@ DescribeJobResponse * IoTClient::describeJob(const DescribeJobRequest &request)
 DescribeJobExecutionResponse * IoTClient::describeJobExecution(const DescribeJobExecutionRequest &request)
 {
     return qobject_cast<DescribeJobExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeJobTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a job
+ */
+DescribeJobTemplateResponse * IoTClient::describeJobTemplate(const DescribeJobTemplateRequest &request)
+{
+    return qobject_cast<DescribeJobTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeMitigationActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a mitigation
+ */
+DescribeMitigationActionResponse * IoTClient::describeMitigationAction(const DescribeMitigationActionRequest &request)
+{
+    return qobject_cast<DescribeMitigationActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeProvisioningTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a fleet provisioning
+ */
+DescribeProvisioningTemplateResponse * IoTClient::describeProvisioningTemplate(const DescribeProvisioningTemplateRequest &request)
+{
+    return qobject_cast<DescribeProvisioningTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * DescribeProvisioningTemplateVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a fleet provisioning template
+ */
+DescribeProvisioningTemplateVersionResponse * IoTClient::describeProvisioningTemplateVersion(const DescribeProvisioningTemplateVersionRequest &request)
+{
+    return qobject_cast<DescribeProvisioningTemplateVersionResponse *>(send(request));
 }
 
 /*!
@@ -1637,6 +2215,32 @@ EnableTopicRuleResponse * IoTClient::enableTopicRule(const EnableTopicRuleReques
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetBehaviorModelTrainingSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a Device Defender's ML Detect Security Profile training model's status.
+ */
+GetBehaviorModelTrainingSummariesResponse * IoTClient::getBehaviorModelTrainingSummaries(const GetBehaviorModelTrainingSummariesRequest &request)
+{
+    return qobject_cast<GetBehaviorModelTrainingSummariesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetCardinalityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the approximate count of unique values that match the
+ */
+GetCardinalityResponse * IoTClient::getCardinality(const GetCardinalityRequest &request)
+{
+    return qobject_cast<GetCardinalityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * GetEffectivePoliciesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1655,7 +2259,7 @@ GetEffectivePoliciesResponse * IoTClient::getEffectivePolicies(const GetEffectiv
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the search
+ * Gets the indexing
  */
 GetIndexingConfigurationResponse * IoTClient::getIndexingConfiguration(const GetIndexingConfigurationRequest &request)
 {
@@ -1707,6 +2311,24 @@ GetOTAUpdateResponse * IoTClient::getOTAUpdate(const GetOTAUpdateRequest &reques
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetPercentilesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Groups the aggregated values that match the query into percentile groupings. The default percentile groupings are:
+ * 1,5,25,50,75,95,99, although you can specify your own when you call <code>GetPercentiles</code>. This function returns a
+ * value for each percentile group specified (or the default percentile groupings). The percentile group "1" contains the
+ * aggregated field value that occurs in approximately one percent of the values that match the query. The percentile group
+ * "5" contains the aggregated field value that occurs in approximately five percent of the values that match the query,
+ * and so on. The result is an approximation, the more values that match the query, the more accurate the percentile
+ */
+GetPercentilesResponse * IoTClient::getPercentiles(const GetPercentilesRequest &request)
+{
+    return qobject_cast<GetPercentilesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * GetPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1750,7 +2372,8 @@ GetRegistrationCodeResponse * IoTClient::getRegistrationCode(const GetRegistrati
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets statistics about things that match the specified
+ * Returns the count, average, sum, minimum, maximum, sum of squares, variance, and standard deviation for the specified
+ * aggregated field. If the aggregation field is of type <code>String</code>, only the count statistic is
  */
 GetStatisticsResponse * IoTClient::getStatistics(const GetStatisticsRequest &request)
 {
@@ -1768,6 +2391,19 @@ GetStatisticsResponse * IoTClient::getStatistics(const GetStatisticsRequest &req
 GetTopicRuleResponse * IoTClient::getTopicRule(const GetTopicRuleRequest &request)
 {
     return qobject_cast<GetTopicRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * GetTopicRuleDestinationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets information about a topic rule
+ */
+GetTopicRuleDestinationResponse * IoTClient::getTopicRuleDestination(const GetTopicRuleDestinationRequest &request)
+{
+    return qobject_cast<GetTopicRuleDestinationResponse *>(send(request));
 }
 
 /*!
@@ -1816,11 +2452,50 @@ ListAttachedPoliciesResponse * IoTClient::listAttachedPolicies(const ListAttache
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period.
- * (Findings are retained for 180
+ * (Findings are retained for 90
  */
 ListAuditFindingsResponse * IoTClient::listAuditFindings(const ListAuditFindingsRequest &request)
 {
     return qobject_cast<ListAuditFindingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListAuditMitigationActionsExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the status of audit mitigation action tasks that were
+ */
+ListAuditMitigationActionsExecutionsResponse * IoTClient::listAuditMitigationActionsExecutions(const ListAuditMitigationActionsExecutionsRequest &request)
+{
+    return qobject_cast<ListAuditMitigationActionsExecutionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListAuditMitigationActionsTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of audit mitigation action tasks that match the specified
+ */
+ListAuditMitigationActionsTasksResponse * IoTClient::listAuditMitigationActionsTasks(const ListAuditMitigationActionsTasksRequest &request)
+{
+    return qobject_cast<ListAuditMitigationActionsTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListAuditSuppressionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists your Device Defender audit listings.
+ */
+ListAuditSuppressionsResponse * IoTClient::listAuditSuppressions(const ListAuditSuppressionsRequest &request)
+{
+    return qobject_cast<ListAuditSuppressionsResponse *>(send(request));
 }
 
 /*!
@@ -1911,6 +2586,71 @@ ListCertificatesByCAResponse * IoTClient::listCertificatesByCA(const ListCertifi
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListCustomMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists your Device Defender detect custom metrics.
+ */
+ListCustomMetricsResponse * IoTClient::listCustomMetrics(const ListCustomMetricsRequest &request)
+{
+    return qobject_cast<ListCustomMetricsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListDetectMitigationActionsExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists mitigation actions executions for a Device Defender ML Detect Security Profile.
+ */
+ListDetectMitigationActionsExecutionsResponse * IoTClient::listDetectMitigationActionsExecutions(const ListDetectMitigationActionsExecutionsRequest &request)
+{
+    return qobject_cast<ListDetectMitigationActionsExecutionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListDetectMitigationActionsTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List of Device Defender ML Detect mitigation actions tasks.
+ */
+ListDetectMitigationActionsTasksResponse * IoTClient::listDetectMitigationActionsTasks(const ListDetectMitigationActionsTasksRequest &request)
+{
+    return qobject_cast<ListDetectMitigationActionsTasksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListDimensionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the set of dimensions that are defined for your AWS
+ */
+ListDimensionsResponse * IoTClient::listDimensions(const ListDimensionsRequest &request)
+{
+    return qobject_cast<ListDimensionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListDomainConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of domain configurations for the user. This list is sorted alphabetically by domain configuration
+ */
+ListDomainConfigurationsResponse * IoTClient::listDomainConfigurations(const ListDomainConfigurationsRequest &request)
+{
+    return qobject_cast<ListDomainConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * ListIndicesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1950,6 +2690,19 @@ ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const L
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListJobTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of job
+ */
+ListJobTemplatesResponse * IoTClient::listJobTemplates(const ListJobTemplatesRequest &request)
+{
+    return qobject_cast<ListJobTemplatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * ListJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1959,6 +2712,19 @@ ListJobExecutionsForThingResponse * IoTClient::listJobExecutionsForThing(const L
 ListJobsResponse * IoTClient::listJobs(const ListJobsRequest &request)
 {
     return qobject_cast<ListJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListMitigationActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of all mitigation actions that match the specified filter
+ */
+ListMitigationActionsResponse * IoTClient::listMitigationActions(const ListMitigationActionsRequest &request)
+{
+    return qobject_cast<ListMitigationActionsResponse *>(send(request));
 }
 
 /*!
@@ -2065,6 +2831,32 @@ ListPrincipalThingsResponse * IoTClient::listPrincipalThings(const ListPrincipal
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListProvisioningTemplateVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A list of fleet provisioning template
+ */
+ListProvisioningTemplateVersionsResponse * IoTClient::listProvisioningTemplateVersions(const ListProvisioningTemplateVersionsRequest &request)
+{
+    return qobject_cast<ListProvisioningTemplateVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListProvisioningTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the fleet provisioning templates in your AWS
+ */
+ListProvisioningTemplatesResponse * IoTClient::listProvisioningTemplates(const ListProvisioningTemplatesRequest &request)
+{
+    return qobject_cast<ListProvisioningTemplatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * ListRoleAliasesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2095,8 +2887,11 @@ ListScheduledAuditsResponse * IoTClient::listScheduledAudits(const ListScheduled
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the Device Defender security profiles you have created. You can use filters to list only those security profiles
- * associated with a thing group or only those associated with your
+ * Lists the Device Defender security profiles you've created. You can filter security profiles by dimension or custom
+ *
+ * metric> <note>
+ *
+ * <code>dimensionName</code> and <code>metricName</code> cannot be used in the same
  */
 ListSecurityProfilesResponse * IoTClient::listSecurityProfiles(const ListSecurityProfilesRequest &request)
 {
@@ -2256,6 +3051,11 @@ ListThingTypesResponse * IoTClient::listThingTypes(const ListThingTypesRequest &
  * Lists your things. Use the <b>attributeName</b> and <b>attributeValue</b> parameters to filter your things. For example,
  * calling <code>ListThings</code> with attributeName=Color and attributeValue=Red retrieves all things in the registry
  * that contain an attribute <b>Color</b> with the value <b>Red</b>.
+ *
+ * </p <note>
+ *
+ * You will not be charged for calling this API if an <code>Access denied</code> error is returned. You will also not be
+ * charged if no attributes or pagination token was provided in request and no pagination token and no results were
  */
 ListThingsResponse * IoTClient::listThings(const ListThingsRequest &request)
 {
@@ -2286,6 +3086,19 @@ ListThingsInBillingGroupResponse * IoTClient::listThingsInBillingGroup(const Lis
 ListThingsInThingGroupResponse * IoTClient::listThingsInThingGroup(const ListThingsInThingGroupRequest &request)
 {
     return qobject_cast<ListThingsInThingGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * ListTopicRuleDestinationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the topic rule destinations in your AWS
+ */
+ListTopicRuleDestinationsResponse * IoTClient::listTopicRuleDestinations(const ListTopicRuleDestinationsRequest &request)
+{
+    return qobject_cast<ListTopicRuleDestinationsResponse *>(send(request));
 }
 
 /*!
@@ -2321,7 +3134,7 @@ ListV2LoggingLevelsResponse * IoTClient::listV2LoggingLevels(const ListV2Logging
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists the Device Defender security profile violations discovered during the given time period. You can use filters to
- * limit the results to those alerts issued for a particular security profile, behavior or thing
+ * limit the results to those alerts issued for a particular security profile, behavior, or thing
  */
 ListViolationEventsResponse * IoTClient::listViolationEvents(const ListViolationEventsRequest &request)
 {
@@ -2361,11 +3174,27 @@ RegisterCertificateResponse * IoTClient::registerCertificate(const RegisterCerti
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * RegisterCertificateWithoutCAResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Register a certificate that does not have a certificate authority
+ */
+RegisterCertificateWithoutCAResponse * IoTClient::registerCertificateWithoutCA(const RegisterCertificateWithoutCARequest &request)
+{
+    return qobject_cast<RegisterCertificateWithoutCAResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * RegisterThingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provisions a
+ * Provisions a thing in the device registry. RegisterThing calls other AWS IoT control plane APIs. These calls might
+ * exceed your account level <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_iot">
+ * AWS IoT Throttling Limits</a> and cause throttle errors. Please contact <a
+ * href="https://console.aws.amazon.com/support/home">AWS Customer Support</a> to raise your throttling limits if
  */
 RegisterThingResponse * IoTClient::registerThing(const RegisterThingRequest &request)
 {
@@ -2415,6 +3244,11 @@ RemoveThingFromBillingGroupResponse * IoTClient::removeThingFromBillingGroup(con
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Remove the specified thing from the specified
+ *
+ * group>
+ *
+ * You must specify either a <code>thingGroupArn</code> or a <code>thingGroupName</code> to identify the thing group and
+ * either a <code>thingArn</code> or a <code>thingName</code> to identify the thing to remove from the thing group.
  */
 RemoveThingFromThingGroupResponse * IoTClient::removeThingFromThingGroup(const RemoveThingFromThingGroupRequest &request)
 {
@@ -2517,6 +3351,32 @@ SetV2LoggingLevelResponse * IoTClient::setV2LoggingLevel(const SetV2LoggingLevel
 SetV2LoggingOptionsResponse * IoTClient::setV2LoggingOptions(const SetV2LoggingOptionsRequest &request)
 {
     return qobject_cast<SetV2LoggingOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * StartAuditMitigationActionsTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a task that applies a set of mitigation actions to the specified
+ */
+StartAuditMitigationActionsTaskResponse * IoTClient::startAuditMitigationActionsTask(const StartAuditMitigationActionsTaskRequest &request)
+{
+    return qobject_cast<StartAuditMitigationActionsTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * StartDetectMitigationActionsTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a Device Defender ML Detect mitigation actions task.
+ */
+StartDetectMitigationActionsTaskResponse * IoTClient::startDetectMitigationActionsTask(const StartDetectMitigationActionsTaskRequest &request)
+{
+    return qobject_cast<StartDetectMitigationActionsTaskResponse *>(send(request));
 }
 
 /*!
@@ -2657,6 +3517,19 @@ UpdateAccountAuditConfigurationResponse * IoTClient::updateAccountAuditConfigura
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateAuditSuppressionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a Device Defender audit suppression.
+ */
+UpdateAuditSuppressionResponse * IoTClient::updateAuditSuppression(const UpdateAuditSuppressionRequest &request)
+{
+    return qobject_cast<UpdateAuditSuppressionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * UpdateAuthorizerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2704,16 +3577,56 @@ UpdateCACertificateResponse * IoTClient::updateCACertificate(const UpdateCACerti
  *
  * idempotent>
  *
- * Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but
- * these devices will be unable to
+ * Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to AWS
  *
- * reconnect>
+ * IoT>
  *
- * The ACTIVE state is required to authenticate devices connecting to AWS IoT using a
+ * Within a few minutes of updating a certificate from the ACTIVE state to any other state, AWS IoT disconnects all devices
+ * that used that certificate to connect. Devices cannot use a certificate that is not in the ACTIVE state to
  */
 UpdateCertificateResponse * IoTClient::updateCertificate(const UpdateCertificateRequest &request)
 {
     return qobject_cast<UpdateCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateCustomMetricResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a Device Defender detect custom metric.
+ */
+UpdateCustomMetricResponse * IoTClient::updateCustomMetric(const UpdateCustomMetricRequest &request)
+{
+    return qobject_cast<UpdateCustomMetricResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateDimensionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the definition for a dimension. You cannot change the type of a dimension after it is created (you can delete it
+ * and recreate
+ */
+UpdateDimensionResponse * IoTClient::updateDimension(const UpdateDimensionRequest &request)
+{
+    return qobject_cast<UpdateDimensionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateDomainConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates values stored in the domain configuration. Domain configurations for default endpoints can't be
+ */
+UpdateDomainConfigurationResponse * IoTClient::updateDomainConfiguration(const UpdateDomainConfigurationRequest &request)
+{
+    return qobject_cast<UpdateDomainConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -2770,6 +3683,32 @@ UpdateJobResponse * IoTClient::updateJob(const UpdateJobRequest &request)
 
 /*!
  * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateMitigationActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the definition for the specified mitigation
+ */
+UpdateMitigationActionResponse * IoTClient::updateMitigationAction(const UpdateMitigationActionRequest &request)
+{
+    return qobject_cast<UpdateMitigationActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateProvisioningTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a fleet provisioning
+ */
+UpdateProvisioningTemplateResponse * IoTClient::updateProvisioningTemplate(const UpdateProvisioningTemplateRequest &request)
+{
+    return qobject_cast<UpdateProvisioningTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
  * UpdateRoleAliasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2787,7 +3726,7 @@ UpdateRoleAliasResponse * IoTClient::updateRoleAlias(const UpdateRoleAliasReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a scheduled audit, including what checks are performed and how often the audit takes
+ * Updates a scheduled audit, including which checks are performed and how often the audit takes
  */
 UpdateScheduledAuditResponse * IoTClient::updateScheduledAudit(const UpdateScheduledAuditRequest &request)
 {
@@ -2857,6 +3796,19 @@ UpdateThingGroupResponse * IoTClient::updateThingGroup(const UpdateThingGroupReq
 UpdateThingGroupsForThingResponse * IoTClient::updateThingGroupsForThing(const UpdateThingGroupsForThingRequest &request)
 {
     return qobject_cast<UpdateThingGroupsForThingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTClient service, and returns a pointer to an
+ * UpdateTopicRuleDestinationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a topic rule destination. You use this to change the status, endpoint URL, or confirmation URL of the
+ */
+UpdateTopicRuleDestinationResponse * IoTClient::updateTopicRuleDestination(const UpdateTopicRuleDestinationRequest &request)
+{
+    return qobject_cast<UpdateTopicRuleDestinationResponse *>(send(request));
 }
 
 /*!

@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwssigner
+  addprofilepermissionrequest.h
+  addprofilepermissionrequest_p.h
+  addprofilepermissionresponse.h
+  addprofilepermissionresponse_p.h
   cancelsigningprofilerequest.h
   cancelsigningprofilerequest_p.h
   cancelsigningprofileresponse.h
@@ -17,6 +21,10 @@ add_library(QtAwssigner
   getsigningprofilerequest_p.h
   getsigningprofileresponse.h
   getsigningprofileresponse_p.h
+  listprofilepermissionsrequest.h
+  listprofilepermissionsrequest_p.h
+  listprofilepermissionsresponse.h
+  listprofilepermissionsresponse_p.h
   listsigningjobsrequest.h
   listsigningjobsrequest_p.h
   listsigningjobsresponse.h
@@ -29,10 +37,26 @@ add_library(QtAwssigner
   listsigningprofilesrequest_p.h
   listsigningprofilesresponse.h
   listsigningprofilesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   putsigningprofilerequest.h
   putsigningprofilerequest_p.h
   putsigningprofileresponse.h
   putsigningprofileresponse_p.h
+  removeprofilepermissionrequest.h
+  removeprofilepermissionrequest_p.h
+  removeprofilepermissionresponse.h
+  removeprofilepermissionresponse_p.h
+  revokesignaturerequest.h
+  revokesignaturerequest_p.h
+  revokesignatureresponse.h
+  revokesignatureresponse_p.h
+  revokesigningprofilerequest.h
+  revokesigningprofilerequest_p.h
+  revokesigningprofileresponse.h
+  revokesigningprofileresponse_p.h
   signerclient.h
   signerclient_p.h
   signerrequest.h
@@ -43,6 +67,16 @@ add_library(QtAwssigner
   startsigningjobrequest_p.h
   startsigningjobresponse.h
   startsigningjobresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  addprofilepermissionrequest.cpp
+  addprofilepermissionresponse.cpp
   cancelsigningprofilerequest.cpp
   cancelsigningprofileresponse.cpp
   describesigningjobrequest.cpp
@@ -51,19 +85,33 @@ add_library(QtAwssigner
   getsigningplatformresponse.cpp
   getsigningprofilerequest.cpp
   getsigningprofileresponse.cpp
+  listprofilepermissionsrequest.cpp
+  listprofilepermissionsresponse.cpp
   listsigningjobsrequest.cpp
   listsigningjobsresponse.cpp
   listsigningplatformsrequest.cpp
   listsigningplatformsresponse.cpp
   listsigningprofilesrequest.cpp
   listsigningprofilesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   putsigningprofilerequest.cpp
   putsigningprofileresponse.cpp
+  removeprofilepermissionrequest.cpp
+  removeprofilepermissionresponse.cpp
+  revokesignaturerequest.cpp
+  revokesignatureresponse.cpp
+  revokesigningprofilerequest.cpp
+  revokesigningprofileresponse.cpp
   signerclient.cpp
   signerrequest.cpp
   signerresponse.cpp
   startsigningjobrequest.cpp
-  startsigningjobresponse.cpp)
+  startsigningjobresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 add_dependencies(QtAwssigner QtAwsCore)
 

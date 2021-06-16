@@ -54,6 +54,8 @@ class DescribeAnalysisSchemesRequest;
 class DescribeAnalysisSchemesResponse;
 class DescribeAvailabilityOptionsRequest;
 class DescribeAvailabilityOptionsResponse;
+class DescribeDomainEndpointOptionsRequest;
+class DescribeDomainEndpointOptionsResponse;
 class DescribeDomainsRequest;
 class DescribeDomainsResponse;
 class DescribeExpressionsRequest;
@@ -72,6 +74,8 @@ class ListDomainNamesRequest;
 class ListDomainNamesResponse;
 class UpdateAvailabilityOptionsRequest;
 class UpdateAvailabilityOptionsResponse;
+class UpdateDomainEndpointOptionsRequest;
+class UpdateDomainEndpointOptionsResponse;
 class UpdateScalingParametersRequest;
 class UpdateScalingParametersResponse;
 class UpdateServiceAccessPoliciesRequest;
@@ -106,6 +110,7 @@ public slots:
     DeleteSuggesterResponse * deleteSuggester(const DeleteSuggesterRequest &request);
     DescribeAnalysisSchemesResponse * describeAnalysisSchemes(const DescribeAnalysisSchemesRequest &request);
     DescribeAvailabilityOptionsResponse * describeAvailabilityOptions(const DescribeAvailabilityOptionsRequest &request);
+    DescribeDomainEndpointOptionsResponse * describeDomainEndpointOptions(const DescribeDomainEndpointOptionsRequest &request);
     DescribeDomainsResponse * describeDomains(const DescribeDomainsRequest &request);
     DescribeExpressionsResponse * describeExpressions(const DescribeExpressionsRequest &request);
     DescribeIndexFieldsResponse * describeIndexFields(const DescribeIndexFieldsRequest &request);
@@ -116,6 +121,7 @@ public slots:
     ListDomainNamesResponse * listDomainNames(const ListDomainNamesRequest &request);
     ListDomainNamesResponse * listDomainNames();
     UpdateAvailabilityOptionsResponse * updateAvailabilityOptions(const UpdateAvailabilityOptionsRequest &request);
+    UpdateDomainEndpointOptionsResponse * updateDomainEndpointOptions(const UpdateDomainEndpointOptionsRequest &request);
     UpdateScalingParametersResponse * updateScalingParameters(const UpdateScalingParametersRequest &request);
     UpdateServiceAccessPoliciesResponse * updateServiceAccessPolicies(const UpdateServiceAccessPoliciesRequest &request);
 

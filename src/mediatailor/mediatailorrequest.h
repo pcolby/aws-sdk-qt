@@ -37,13 +37,37 @@ class QTAWS_EXPORT MediaTailorRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by MediaTailor.
     enum Action {
+        CreateChannelAction,
+        CreateProgramAction,
+        CreateSourceLocationAction,
+        CreateVodSourceAction,
+        DeleteChannelAction,
+        DeleteChannelPolicyAction,
         DeletePlaybackConfigurationAction,
+        DeleteProgramAction,
+        DeleteSourceLocationAction,
+        DeleteVodSourceAction,
+        DescribeChannelAction,
+        DescribeProgramAction,
+        DescribeSourceLocationAction,
+        DescribeVodSourceAction,
+        GetChannelPolicyAction,
+        GetChannelScheduleAction,
         GetPlaybackConfigurationAction,
+        ListChannelsAction,
         ListPlaybackConfigurationsAction,
+        ListSourceLocationsAction,
         ListTagsForResourceAction,
+        ListVodSourcesAction,
+        PutChannelPolicyAction,
         PutPlaybackConfigurationAction,
+        StartChannelAction,
+        StopChannelAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateChannelAction,
+        UpdateSourceLocationAction,
+        UpdateVodSourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

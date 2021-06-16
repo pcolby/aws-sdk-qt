@@ -21,22 +21,34 @@
 #include "transferclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createaccessrequest.h"
+#include "createaccessresponse.h"
 #include "createserverrequest.h"
 #include "createserverresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
+#include "deleteaccessrequest.h"
+#include "deleteaccessresponse.h"
 #include "deleteserverrequest.h"
 #include "deleteserverresponse.h"
 #include "deletesshpublickeyrequest.h"
 #include "deletesshpublickeyresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
+#include "describeaccessrequest.h"
+#include "describeaccessresponse.h"
+#include "describesecuritypolicyrequest.h"
+#include "describesecuritypolicyresponse.h"
 #include "describeserverrequest.h"
 #include "describeserverresponse.h"
 #include "describeuserrequest.h"
 #include "describeuserresponse.h"
 #include "importsshpublickeyrequest.h"
 #include "importsshpublickeyresponse.h"
+#include "listaccessesrequest.h"
+#include "listaccessesresponse.h"
+#include "listsecuritypoliciesrequest.h"
+#include "listsecuritypoliciesresponse.h"
 #include "listserversrequest.h"
 #include "listserversresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -53,6 +65,8 @@
 #include "testidentityproviderresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateaccessrequest.h"
+#include "updateaccessresponse.h"
 #include "updateserverrequest.h"
 #include "updateserverresponse.h"
 #include "updateuserrequest.h"
@@ -63,7 +77,7 @@
 
 /*!
  * \namespace QtAws::Transfer
- * \brief Contains classess for accessing AWS Transfer for SFTP.
+ * \brief Contains classess for accessing AWS Transfer Family.
  *
  * \inmodule QtAwsTransfer
  *
@@ -75,17 +89,18 @@ namespace Transfer {
 
 /*!
  * \class QtAws::Transfer::TransferClient
- * \brief The TransferClient class provides access to the AWS Transfer for SFTP service.
+ * \brief The TransferClient class provides access to the AWS Transfer Family service.
  *
  * \ingroup aws-clients
  * \inmodule QtAwsTransfer
  *
- *  AWS Transfer for SFTP is a fully managed service that enables the transfer of files directly into and out of Amazon S3
- *  using the Secure File Transfer Protocol (SFTP)—also known as Secure Shell (SSH) File Transfer Protocol. AWS helps you
- *  seamlessly migrate your file transfer workflows to AWS Transfer for SFTP—by integrating with existing authentication
- *  systems, and providing DNS routing with Amazon Route 53—so nothing changes for your customers and partners, or their
- *  applications. With your data in S3, you can use it with AWS services for processing, analytics, machine learning, and
- *  archiving. Getting started with AWS Transfer for SFTP (AWS SFTP) is easy; there is no infrastructure to buy and setup.
+ *  AWS Transfer Family is a fully managed service that enables the transfer of files over the File Transfer Protocol (FTP),
+ *  File Transfer Protocol over SSL (FTPS), or Secure Shell (SSH) File Transfer Protocol (SFTP) directly into and out of
+ *  Amazon Simple Storage Service (Amazon S3). AWS helps you seamlessly migrate your file transfer workflows to AWS Transfer
+ *  Family by integrating with existing authentication systems, and providing DNS routing with Amazon Route 53 so nothing
+ *  changes for your customers and partners, or their applications. With your data in Amazon S3, you can use it with AWS
+ *  services for processing, analytics, machine learning, and archiving. Getting started with AWS Transfer Family is easy
+ *  since there is no infrastructure to buy and set
  */
 
 /*!
@@ -109,7 +124,7 @@ TransferClient::TransferClient(
     d->endpointPrefix = QStringLiteral("transfer");
     d->networkAccessManager = manager;
     d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Transfer for SFTP");
+    d->serviceFullName = QStringLiteral("AWS Transfer Family");
     d->serviceName = QStringLiteral("transfer");
 }
 
@@ -137,8 +152,24 @@ TransferClient::TransferClient(
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("transfer");
     d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Transfer for SFTP");
+    d->serviceFullName = QStringLiteral("AWS Transfer Family");
     d->serviceName = QStringLiteral("transfer");
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
+ * CreateAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Used by administrators to choose which groups in the directory should have access to upload and download files over the
+ * enabled protocols using AWS Transfer Family. For example, a Microsoft Active Directory might contain 50,000 users, but
+ * only a small fraction might need the ability to transfer files to the server. An administrator can use
+ * <code>CreateAccess</code> to limit the access to the correct set of users who need this
+ */
+CreateAccessResponse * TransferClient::createAccess(const CreateAccessRequest &request)
+{
+    return qobject_cast<CreateAccessResponse *>(send(request));
 }
 
 /*!
@@ -147,13 +178,9 @@ TransferClient::TransferClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Instantiates an autoscaling virtual server based on Secure File Transfer Protocol (SFTP) in AWS. The call returns the
- * <code>ServerId</code> property assigned by the service to the newly created server. Reference this <code>ServerId</code>
- * property when you make updates to your server, or work with
- *
- * users>
- *
- * The response returns the <code>ServerId</code> value for the newly created
+ * Instantiates an auto-scaling virtual server based on the selected file transfer protocol in AWS. When you make updates
+ * to your file transfer protocol-enabled server or when you work with users, use the service-generated
+ * <code>ServerId</code> property that is assigned to the newly created
  */
 CreateServerResponse * TransferClient::createServer(const CreateServerRequest &request)
 {
@@ -166,14 +193,11 @@ CreateServerResponse * TransferClient::createServer(const CreateServerRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a user and associate them with an existing Secure File Transfer Protocol (SFTP) server. Using parameters for
- * <code>CreateUser</code>, you can specify the user name, set the home directory, store the user's public key, and assign
- * the user's AWS Identity and Access Management (IAM) role. You can also optionally add a scope-down policy, and assign
- * metadata with tags that can be used to group and search for
- *
- * users>
- *
- * The response returns the <code>UserName</code> and <code>ServerId</code> values of the new user for that
+ * Creates a user and associates them with an existing file transfer protocol-enabled server. You can only create and
+ * associate users with servers that have the <code>IdentityProviderType</code> set to <code>SERVICE_MANAGED</code>. Using
+ * parameters for <code>CreateUser</code>, you can specify the user name, set the home directory, store the user's public
+ * key, and assign the user's AWS Identity and Access Management (IAM) role. You can also optionally add a scope-down
+ * policy, and assign metadata with tags that can be used to group and search for
  */
 CreateUserResponse * TransferClient::createUser(const CreateUserRequest &request)
 {
@@ -182,15 +206,26 @@ CreateUserResponse * TransferClient::createUser(const CreateUserRequest &request
 
 /*!
  * Sends \a request to the TransferClient service, and returns a pointer to an
+ * DeleteAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows you to delete the access specified in the <code>ServerID</code> and <code>ExternalID</code>
+ */
+DeleteAccessResponse * TransferClient::deleteAccess(const DeleteAccessRequest &request)
+{
+    return qobject_cast<DeleteAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
  * DeleteServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the Secure File Transfer Protocol (SFTP) server that you specify. If you used <code>SERVICE_MANAGED</code> as
- * your <code>IdentityProviderType</code>, you need to delete all users associated with this server before deleting the
- * server
+ * Deletes the file transfer protocol-enabled server that you
  *
- * itsel>
+ * specify>
  *
  * No response returns from this
  */
@@ -222,13 +257,13 @@ DeleteSshPublicKeyResponse * TransferClient::deleteSshPublicKey(const DeleteSshP
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the user belonging to the server you
+ * Deletes the user belonging to a file transfer protocol-enabled server you
  *
  * specify>
  *
  * No response returns from this
  *
- * call> <note>
+ * operation> <note>
  *
  * When you delete a user from a server, the user's information is
  */
@@ -239,15 +274,50 @@ DeleteUserResponse * TransferClient::deleteUser(const DeleteUserRequest &request
 
 /*!
  * Sends \a request to the TransferClient service, and returns a pointer to an
+ * DescribeAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the access that is assigned to the specific file transfer protocol-enabled server, as identified by its
+ * <code>ServerId</code> property and its
+ *
+ * <code>ExternalID</code>>
+ *
+ * The response from this call returns the properties of the access that is associated with the <code>ServerId</code> value
+ * that was
+ */
+DescribeAccessResponse * TransferClient::describeAccess(const DescribeAccessRequest &request)
+{
+    return qobject_cast<DescribeAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
+ * DescribeSecurityPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the security policy that is attached to your file transfer protocol-enabled server. The response contains a
+ * description of the security policy's properties. For more information about security policies, see <a
+ * href="https://docs.aws.amazon.com/transfer/latest/userguide/security-policies.html">Working with security
+ */
+DescribeSecurityPolicyResponse * TransferClient::describeSecurityPolicy(const DescribeSecurityPolicyRequest &request)
+{
+    return qobject_cast<DescribeSecurityPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
  * DescribeServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the server that you specify by passing the <code>ServerId</code>
+ * Describes a file transfer protocol-enabled server that you specify by passing the <code>ServerId</code>
  *
  * parameter>
  *
- * The response contains a description of the server's
+ * The response contains a description of a server's properties. When you set <code>EndpointType</code> to VPC, the
+ * response will contain the
  */
 DescribeServerResponse * TransferClient::describeServer(const DescribeServerRequest &request)
 {
@@ -260,7 +330,8 @@ DescribeServerResponse * TransferClient::describeServer(const DescribeServerRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the user assigned to a specific server, as identified by its <code>ServerId</code>
+ * Describes the user assigned to the specific file transfer protocol-enabled server, as identified by its
+ * <code>ServerId</code>
  *
  * property>
  *
@@ -277,8 +348,8 @@ DescribeUserResponse * TransferClient::describeUser(const DescribeUserRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to a
- * specific server, identified by
+ * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to the
+ * specific file transfer protocol-enabled server, identified by
  *
  * <code>ServerId</code>>
  *
@@ -291,11 +362,37 @@ ImportSshPublicKeyResponse * TransferClient::importSshPublicKey(const ImportSshP
 
 /*!
  * Sends \a request to the TransferClient service, and returns a pointer to an
+ * ListAccessesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the details for all the accesses you have on your
+ */
+ListAccessesResponse * TransferClient::listAccesses(const ListAccessesRequest &request)
+{
+    return qobject_cast<ListAccessesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
+ * ListSecurityPoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the security policies that are attached to your file transfer protocol-enabled
+ */
+ListSecurityPoliciesResponse * TransferClient::listSecurityPolicies(const ListSecurityPoliciesRequest &request)
+{
+    return qobject_cast<ListSecurityPoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
  * ListServersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the Secure File Transfer Protocol (SFTP) servers that are associated with your AWS
+ * Lists the file transfer protocol-enabled servers that are associated with your AWS
  */
 ListServersResponse * TransferClient::listServers(const ListServersRequest &request)
 {
@@ -308,8 +405,8 @@ ListServersResponse * TransferClient::listServers(const ListServersRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the tags associated with the Amazon Resource Number (ARN) you specify. The resource can be a user, server,
- * or
+ * Lists all of the tags associated with the Amazon Resource Name (ARN) that you specify. The resource can be a user,
+ * server, or
  */
 ListTagsForResourceResponse * TransferClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -322,7 +419,7 @@ ListTagsForResourceResponse * TransferClient::listTagsForResource(const ListTags
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the users for the server that you specify by passing the <code>ServerId</code>
+ * Lists the users for a file transfer protocol-enabled server that you specify by passing the <code>ServerId</code>
  */
 ListUsersResponse * TransferClient::listUsers(const ListUsersRequest &request)
 {
@@ -335,16 +432,16 @@ ListUsersResponse * TransferClient::listUsers(const ListUsersRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Changes the state of a Secure File Transfer Protocol (SFTP) server from <code>OFFLINE</code> to <code>ONLINE</code>. It
- * has no impact on an SFTP server that is already <code>ONLINE</code>. An <code>ONLINE</code> server can accept and
- * process file transfer
+ * Changes the state of a file transfer protocol-enabled server from <code>OFFLINE</code> to <code>ONLINE</code>. It has no
+ * impact on a server that is already <code>ONLINE</code>. An <code>ONLINE</code> server can accept and process file
+ * transfer
  *
  * jobs>
  *
  * The state of <code>STARTING</code> indicates that the server is in an intermediate state, either not fully able to
- * respond, or not fully online. The values of <code>START_FAILED</code> can indicate an error condition.
+ * respond, or not fully online. The values of <code>START_FAILED</code> can indicate an error
  *
- * </p
+ * condition>
  *
  * No response is returned from this
  */
@@ -359,14 +456,18 @@ StartServerResponse * TransferClient::startServer(const StartServerRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Changes the state of an SFTP server from <code>ONLINE</code> to <code>OFFLINE</code>. An <code>OFFLINE</code> server
- * cannot accept and process file transfer jobs. Information tied to your server such as server and user properties are not
- * affected by stopping your server. Stopping a server will not reduce or impact your Secure File Transfer Protocol (SFTP)
- * endpoint
+ * Changes the state of a file transfer protocol-enabled server from <code>ONLINE</code> to <code>OFFLINE</code>. An
+ * <code>OFFLINE</code> server cannot accept and process file transfer jobs. Information tied to your server, such as
+ * server and user properties, are not affected by stopping your
  *
- * billing>
+ * server> <note>
  *
- * The states of <code>STOPPING</code> indicates that the server is in an intermediate state, either not fully able to
+ * Stopping the server will not reduce or impact your file transfer protocol endpoint billing; you must delete the server
+ * to stop being
+ *
+ * billed> </note>
+ *
+ * The state of <code>STOPPING</code> indicates that the server is in an intermediate state, either not fully able to
  * respond, or not fully offline. The values of <code>STOP_FAILED</code> can indicate an error
  *
  * condition>
@@ -402,9 +503,10 @@ TagResourceResponse * TransferClient::tagResource(const TagResourceRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * If the <code>IdentityProviderType</code> of the server is <code>API_Gateway</code>, tests whether your API Gateway is
- * set up successfully. We highly recommend that you call this method to test your authentication method as soon as you
- * create your server. By doing so, you can troubleshoot issues with the API Gateway integration to ensure that your users
+ * If the <code>IdentityProviderType</code> of a file transfer protocol-enabled server is
+ * <code>AWS_DIRECTORY_SERVICE</code> or <code>API_Gateway</code>, tests whether your identity provider is set up
+ * successfully. We highly recommend that you call this operation to test your authentication method as soon as you create
+ * your server. By doing so, you can troubleshoot issues with the identity provider integration to ensure that your users
  * can successfully use the
  */
 TestIdentityProviderResponse * TransferClient::testIdentityProvider(const TestIdentityProviderRequest &request)
@@ -432,16 +534,28 @@ UntagResourceResponse * TransferClient::untagResource(const UntagResourceRequest
 
 /*!
  * Sends \a request to the TransferClient service, and returns a pointer to an
+ * UpdateAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Allows you to update parameters for the access specified in the <code>ServerID</code> and <code>ExternalID</code>
+ */
+UpdateAccessResponse * TransferClient::updateAccess(const UpdateAccessRequest &request)
+{
+    return qobject_cast<UpdateAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TransferClient service, and returns a pointer to an
  * UpdateServerResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the server properties after that server has been
+ * Updates the file transfer protocol-enabled server's properties after that server has been
  *
  * created>
  *
- * The <code>UpdateServer</code> call returns the <code>ServerId</code> of the Secure File Transfer Protocol (SFTP) server
- * you
+ * The <code>UpdateServer</code> call returns the <code>ServerId</code> of the server you
  */
 UpdateServerResponse * TransferClient::updateServer(const UpdateServerRequest &request)
 {

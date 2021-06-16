@@ -38,8 +38,12 @@ class AddApplicationOutputRequest;
 class AddApplicationOutputResponse;
 class AddApplicationReferenceDataSourceRequest;
 class AddApplicationReferenceDataSourceResponse;
+class AddApplicationVpcConfigurationRequest;
+class AddApplicationVpcConfigurationResponse;
 class CreateApplicationRequest;
 class CreateApplicationResponse;
+class CreateApplicationPresignedUrlRequest;
+class CreateApplicationPresignedUrlResponse;
 class CreateApplicationSnapshotRequest;
 class CreateApplicationSnapshotResponse;
 class DeleteApplicationRequest;
@@ -54,18 +58,26 @@ class DeleteApplicationReferenceDataSourceRequest;
 class DeleteApplicationReferenceDataSourceResponse;
 class DeleteApplicationSnapshotRequest;
 class DeleteApplicationSnapshotResponse;
+class DeleteApplicationVpcConfigurationRequest;
+class DeleteApplicationVpcConfigurationResponse;
 class DescribeApplicationRequest;
 class DescribeApplicationResponse;
 class DescribeApplicationSnapshotRequest;
 class DescribeApplicationSnapshotResponse;
+class DescribeApplicationVersionRequest;
+class DescribeApplicationVersionResponse;
 class DiscoverInputSchemaRequest;
 class DiscoverInputSchemaResponse;
 class ListApplicationSnapshotsRequest;
 class ListApplicationSnapshotsResponse;
+class ListApplicationVersionsRequest;
+class ListApplicationVersionsResponse;
 class ListApplicationsRequest;
 class ListApplicationsResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class RollbackApplicationRequest;
+class RollbackApplicationResponse;
 class StartApplicationRequest;
 class StartApplicationResponse;
 class StopApplicationRequest;
@@ -76,6 +88,8 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
+class UpdateApplicationMaintenanceConfigurationRequest;
+class UpdateApplicationMaintenanceConfigurationResponse;
 
 class QTAWS_EXPORT KinesisAnalyticsV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -98,7 +112,9 @@ public slots:
     AddApplicationInputProcessingConfigurationResponse * addApplicationInputProcessingConfiguration(const AddApplicationInputProcessingConfigurationRequest &request);
     AddApplicationOutputResponse * addApplicationOutput(const AddApplicationOutputRequest &request);
     AddApplicationReferenceDataSourceResponse * addApplicationReferenceDataSource(const AddApplicationReferenceDataSourceRequest &request);
+    AddApplicationVpcConfigurationResponse * addApplicationVpcConfiguration(const AddApplicationVpcConfigurationRequest &request);
     CreateApplicationResponse * createApplication(const CreateApplicationRequest &request);
+    CreateApplicationPresignedUrlResponse * createApplicationPresignedUrl(const CreateApplicationPresignedUrlRequest &request);
     CreateApplicationSnapshotResponse * createApplicationSnapshot(const CreateApplicationSnapshotRequest &request);
     DeleteApplicationResponse * deleteApplication(const DeleteApplicationRequest &request);
     DeleteApplicationCloudWatchLoggingOptionResponse * deleteApplicationCloudWatchLoggingOption(const DeleteApplicationCloudWatchLoggingOptionRequest &request);
@@ -106,17 +122,22 @@ public slots:
     DeleteApplicationOutputResponse * deleteApplicationOutput(const DeleteApplicationOutputRequest &request);
     DeleteApplicationReferenceDataSourceResponse * deleteApplicationReferenceDataSource(const DeleteApplicationReferenceDataSourceRequest &request);
     DeleteApplicationSnapshotResponse * deleteApplicationSnapshot(const DeleteApplicationSnapshotRequest &request);
+    DeleteApplicationVpcConfigurationResponse * deleteApplicationVpcConfiguration(const DeleteApplicationVpcConfigurationRequest &request);
     DescribeApplicationResponse * describeApplication(const DescribeApplicationRequest &request);
     DescribeApplicationSnapshotResponse * describeApplicationSnapshot(const DescribeApplicationSnapshotRequest &request);
+    DescribeApplicationVersionResponse * describeApplicationVersion(const DescribeApplicationVersionRequest &request);
     DiscoverInputSchemaResponse * discoverInputSchema(const DiscoverInputSchemaRequest &request);
     ListApplicationSnapshotsResponse * listApplicationSnapshots(const ListApplicationSnapshotsRequest &request);
+    ListApplicationVersionsResponse * listApplicationVersions(const ListApplicationVersionsRequest &request);
     ListApplicationsResponse * listApplications(const ListApplicationsRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    RollbackApplicationResponse * rollbackApplication(const RollbackApplicationRequest &request);
     StartApplicationResponse * startApplication(const StartApplicationRequest &request);
     StopApplicationResponse * stopApplication(const StopApplicationRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
+    UpdateApplicationMaintenanceConfigurationResponse * updateApplicationMaintenanceConfiguration(const UpdateApplicationMaintenanceConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KinesisAnalyticsV2Client)

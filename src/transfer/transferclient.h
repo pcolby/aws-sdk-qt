@@ -28,22 +28,34 @@ namespace QtAws {
 namespace Transfer {
 
 class TransferClientPrivate;
+class CreateAccessRequest;
+class CreateAccessResponse;
 class CreateServerRequest;
 class CreateServerResponse;
 class CreateUserRequest;
 class CreateUserResponse;
+class DeleteAccessRequest;
+class DeleteAccessResponse;
 class DeleteServerRequest;
 class DeleteServerResponse;
 class DeleteSshPublicKeyRequest;
 class DeleteSshPublicKeyResponse;
 class DeleteUserRequest;
 class DeleteUserResponse;
+class DescribeAccessRequest;
+class DescribeAccessResponse;
+class DescribeSecurityPolicyRequest;
+class DescribeSecurityPolicyResponse;
 class DescribeServerRequest;
 class DescribeServerResponse;
 class DescribeUserRequest;
 class DescribeUserResponse;
 class ImportSshPublicKeyRequest;
 class ImportSshPublicKeyResponse;
+class ListAccessesRequest;
+class ListAccessesResponse;
+class ListSecurityPoliciesRequest;
+class ListSecurityPoliciesResponse;
 class ListServersRequest;
 class ListServersResponse;
 class ListTagsForResourceRequest;
@@ -60,6 +72,8 @@ class TestIdentityProviderRequest;
 class TestIdentityProviderResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateAccessRequest;
+class UpdateAccessResponse;
 class UpdateServerRequest;
 class UpdateServerResponse;
 class UpdateUserRequest;
@@ -81,14 +95,20 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateAccessResponse * createAccess(const CreateAccessRequest &request);
     CreateServerResponse * createServer(const CreateServerRequest &request);
     CreateUserResponse * createUser(const CreateUserRequest &request);
+    DeleteAccessResponse * deleteAccess(const DeleteAccessRequest &request);
     DeleteServerResponse * deleteServer(const DeleteServerRequest &request);
     DeleteSshPublicKeyResponse * deleteSshPublicKey(const DeleteSshPublicKeyRequest &request);
     DeleteUserResponse * deleteUser(const DeleteUserRequest &request);
+    DescribeAccessResponse * describeAccess(const DescribeAccessRequest &request);
+    DescribeSecurityPolicyResponse * describeSecurityPolicy(const DescribeSecurityPolicyRequest &request);
     DescribeServerResponse * describeServer(const DescribeServerRequest &request);
     DescribeUserResponse * describeUser(const DescribeUserRequest &request);
     ImportSshPublicKeyResponse * importSshPublicKey(const ImportSshPublicKeyRequest &request);
+    ListAccessesResponse * listAccesses(const ListAccessesRequest &request);
+    ListSecurityPoliciesResponse * listSecurityPolicies(const ListSecurityPoliciesRequest &request);
     ListServersResponse * listServers(const ListServersRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     ListUsersResponse * listUsers(const ListUsersRequest &request);
@@ -97,6 +117,7 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     TestIdentityProviderResponse * testIdentityProvider(const TestIdentityProviderRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
+    UpdateAccessResponse * updateAccess(const UpdateAccessRequest &request);
     UpdateServerResponse * updateServer(const UpdateServerRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
 

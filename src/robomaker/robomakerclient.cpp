@@ -21,12 +21,20 @@
 #include "robomakerclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchdeleteworldsrequest.h"
+#include "batchdeleteworldsresponse.h"
 #include "batchdescribesimulationjobrequest.h"
 #include "batchdescribesimulationjobresponse.h"
 #include "canceldeploymentjobrequest.h"
 #include "canceldeploymentjobresponse.h"
 #include "cancelsimulationjobrequest.h"
 #include "cancelsimulationjobresponse.h"
+#include "cancelsimulationjobbatchrequest.h"
+#include "cancelsimulationjobbatchresponse.h"
+#include "cancelworldexportjobrequest.h"
+#include "cancelworldexportjobresponse.h"
+#include "cancelworldgenerationjobrequest.h"
+#include "cancelworldgenerationjobresponse.h"
 #include "createdeploymentjobrequest.h"
 #include "createdeploymentjobresponse.h"
 #include "createfleetrequest.h"
@@ -43,6 +51,12 @@
 #include "createsimulationapplicationversionresponse.h"
 #include "createsimulationjobrequest.h"
 #include "createsimulationjobresponse.h"
+#include "createworldexportjobrequest.h"
+#include "createworldexportjobresponse.h"
+#include "createworldgenerationjobrequest.h"
+#include "createworldgenerationjobresponse.h"
+#include "createworldtemplaterequest.h"
+#include "createworldtemplateresponse.h"
 #include "deletefleetrequest.h"
 #include "deletefleetresponse.h"
 #include "deleterobotrequest.h"
@@ -51,6 +65,8 @@
 #include "deleterobotapplicationresponse.h"
 #include "deletesimulationapplicationrequest.h"
 #include "deletesimulationapplicationresponse.h"
+#include "deleteworldtemplaterequest.h"
+#include "deleteworldtemplateresponse.h"
 #include "deregisterrobotrequest.h"
 #include "deregisterrobotresponse.h"
 #include "describedeploymentjobrequest.h"
@@ -65,6 +81,18 @@
 #include "describesimulationapplicationresponse.h"
 #include "describesimulationjobrequest.h"
 #include "describesimulationjobresponse.h"
+#include "describesimulationjobbatchrequest.h"
+#include "describesimulationjobbatchresponse.h"
+#include "describeworldrequest.h"
+#include "describeworldresponse.h"
+#include "describeworldexportjobrequest.h"
+#include "describeworldexportjobresponse.h"
+#include "describeworldgenerationjobrequest.h"
+#include "describeworldgenerationjobresponse.h"
+#include "describeworldtemplaterequest.h"
+#include "describeworldtemplateresponse.h"
+#include "getworldtemplatebodyrequest.h"
+#include "getworldtemplatebodyresponse.h"
 #include "listdeploymentjobsrequest.h"
 #include "listdeploymentjobsresponse.h"
 #include "listfleetsrequest.h"
@@ -75,14 +103,26 @@
 #include "listrobotsresponse.h"
 #include "listsimulationapplicationsrequest.h"
 #include "listsimulationapplicationsresponse.h"
+#include "listsimulationjobbatchesrequest.h"
+#include "listsimulationjobbatchesresponse.h"
 #include "listsimulationjobsrequest.h"
 #include "listsimulationjobsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listworldexportjobsrequest.h"
+#include "listworldexportjobsresponse.h"
+#include "listworldgenerationjobsrequest.h"
+#include "listworldgenerationjobsresponse.h"
+#include "listworldtemplatesrequest.h"
+#include "listworldtemplatesresponse.h"
+#include "listworldsrequest.h"
+#include "listworldsresponse.h"
 #include "registerrobotrequest.h"
 #include "registerrobotresponse.h"
 #include "restartsimulationjobrequest.h"
 #include "restartsimulationjobresponse.h"
+#include "startsimulationjobbatchrequest.h"
+#include "startsimulationjobbatchresponse.h"
 #include "syncdeploymentjobrequest.h"
 #include "syncdeploymentjobresponse.h"
 #include "tagresourcerequest.h"
@@ -93,6 +133,8 @@
 #include "updaterobotapplicationresponse.h"
 #include "updatesimulationapplicationrequest.h"
 #include "updatesimulationapplicationresponse.h"
+#include "updateworldtemplaterequest.h"
+#include "updateworldtemplateresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -174,6 +216,19 @@ RoboMakerClient::RoboMakerClient(
 
 /*!
  * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * BatchDeleteWorldsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes one or more worlds in a batch
+ */
+BatchDeleteWorldsResponse * RoboMakerClient::batchDeleteWorlds(const BatchDeleteWorldsRequest &request)
+{
+    return qobject_cast<BatchDeleteWorldsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
  * BatchDescribeSimulationJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -209,6 +264,46 @@ CancelDeploymentJobResponse * RoboMakerClient::cancelDeploymentJob(const CancelD
 CancelSimulationJobResponse * RoboMakerClient::cancelSimulationJob(const CancelSimulationJobRequest &request)
 {
     return qobject_cast<CancelSimulationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CancelSimulationJobBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels a simulation job batch. When you cancel a simulation job batch, you are also cancelling all of the active
+ * simulation jobs created as part of the batch.
+ */
+CancelSimulationJobBatchResponse * RoboMakerClient::cancelSimulationJobBatch(const CancelSimulationJobBatchRequest &request)
+{
+    return qobject_cast<CancelSimulationJobBatchResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CancelWorldExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels the specified export
+ */
+CancelWorldExportJobResponse * RoboMakerClient::cancelWorldExportJob(const CancelWorldExportJobRequest &request)
+{
+    return qobject_cast<CancelWorldExportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CancelWorldGenerationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels the specified world generator
+ */
+CancelWorldGenerationJobResponse * RoboMakerClient::cancelWorldGenerationJob(const CancelWorldGenerationJobRequest &request)
+{
+    return qobject_cast<CancelWorldGenerationJobResponse *>(send(request));
 }
 
 /*!
@@ -332,6 +427,45 @@ CreateSimulationJobResponse * RoboMakerClient::createSimulationJob(const CreateS
 
 /*!
  * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CreateWorldExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a world export
+ */
+CreateWorldExportJobResponse * RoboMakerClient::createWorldExportJob(const CreateWorldExportJobRequest &request)
+{
+    return qobject_cast<CreateWorldExportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CreateWorldGenerationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates worlds using the specified
+ */
+CreateWorldGenerationJobResponse * RoboMakerClient::createWorldGenerationJob(const CreateWorldGenerationJobRequest &request)
+{
+    return qobject_cast<CreateWorldGenerationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * CreateWorldTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a world
+ */
+CreateWorldTemplateResponse * RoboMakerClient::createWorldTemplate(const CreateWorldTemplateRequest &request)
+{
+    return qobject_cast<CreateWorldTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
  * DeleteFleetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -380,6 +514,19 @@ DeleteRobotApplicationResponse * RoboMakerClient::deleteRobotApplication(const D
 DeleteSimulationApplicationResponse * RoboMakerClient::deleteSimulationApplication(const DeleteSimulationApplicationRequest &request)
 {
     return qobject_cast<DeleteSimulationApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * DeleteWorldTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a world
+ */
+DeleteWorldTemplateResponse * RoboMakerClient::deleteWorldTemplate(const DeleteWorldTemplateRequest &request)
+{
+    return qobject_cast<DeleteWorldTemplateResponse *>(send(request));
 }
 
 /*!
@@ -475,13 +622,89 @@ DescribeSimulationJobResponse * RoboMakerClient::describeSimulationJob(const Des
 
 /*!
  * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * DescribeSimulationJobBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a simulation job
+ */
+DescribeSimulationJobBatchResponse * RoboMakerClient::describeSimulationJobBatch(const DescribeSimulationJobBatchRequest &request)
+{
+    return qobject_cast<DescribeSimulationJobBatchResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * DescribeWorldResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a
+ */
+DescribeWorldResponse * RoboMakerClient::describeWorld(const DescribeWorldRequest &request)
+{
+    return qobject_cast<DescribeWorldResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * DescribeWorldExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a world export
+ */
+DescribeWorldExportJobResponse * RoboMakerClient::describeWorldExportJob(const DescribeWorldExportJobRequest &request)
+{
+    return qobject_cast<DescribeWorldExportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * DescribeWorldGenerationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a world generation
+ */
+DescribeWorldGenerationJobResponse * RoboMakerClient::describeWorldGenerationJob(const DescribeWorldGenerationJobRequest &request)
+{
+    return qobject_cast<DescribeWorldGenerationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * DescribeWorldTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a world
+ */
+DescribeWorldTemplateResponse * RoboMakerClient::describeWorldTemplate(const DescribeWorldTemplateRequest &request)
+{
+    return qobject_cast<DescribeWorldTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * GetWorldTemplateBodyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the world template
+ */
+GetWorldTemplateBodyResponse * RoboMakerClient::getWorldTemplateBody(const GetWorldTemplateBodyRequest &request)
+{
+    return qobject_cast<GetWorldTemplateBodyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
  * ListDeploymentJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.
- *
- * </p <note>
  */
 ListDeploymentJobsResponse * RoboMakerClient::listDeploymentJobs(const ListDeploymentJobsRequest &request)
 {
@@ -543,6 +766,19 @@ ListSimulationApplicationsResponse * RoboMakerClient::listSimulationApplications
 
 /*!
  * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * ListSimulationJobBatchesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list simulation job batches. You can optionally provide filters to retrieve specific simulation batch jobs.
+ */
+ListSimulationJobBatchesResponse * RoboMakerClient::listSimulationJobBatches(const ListSimulationJobBatchesRequest &request)
+{
+    return qobject_cast<ListSimulationJobBatchesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
  * ListSimulationJobsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -569,6 +805,58 @@ ListTagsForResourceResponse * RoboMakerClient::listTagsForResource(const ListTag
 
 /*!
  * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * ListWorldExportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists world export
+ */
+ListWorldExportJobsResponse * RoboMakerClient::listWorldExportJobs(const ListWorldExportJobsRequest &request)
+{
+    return qobject_cast<ListWorldExportJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * ListWorldGenerationJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists world generator
+ */
+ListWorldGenerationJobsResponse * RoboMakerClient::listWorldGenerationJobs(const ListWorldGenerationJobsRequest &request)
+{
+    return qobject_cast<ListWorldGenerationJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * ListWorldTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists world
+ */
+ListWorldTemplatesResponse * RoboMakerClient::listWorldTemplates(const ListWorldTemplatesRequest &request)
+{
+    return qobject_cast<ListWorldTemplatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * ListWorldsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists
+ */
+ListWorldsResponse * RoboMakerClient::listWorlds(const ListWorldsRequest &request)
+{
+    return qobject_cast<ListWorldsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
  * RegisterRobotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -591,6 +879,19 @@ RegisterRobotResponse * RoboMakerClient::registerRobot(const RegisterRobotReques
 RestartSimulationJobResponse * RoboMakerClient::restartSimulationJob(const RestartSimulationJobRequest &request)
 {
     return qobject_cast<RestartSimulationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * StartSimulationJobBatchResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a new simulation job batch. The batch is defined using one or more <code>SimulationJobRequest</code> objects.
+ */
+StartSimulationJobBatchResponse * RoboMakerClient::startSimulationJobBatch(const StartSimulationJobBatchRequest &request)
+{
+    return qobject_cast<StartSimulationJobBatchResponse *>(send(request));
 }
 
 /*!
@@ -672,6 +973,19 @@ UpdateRobotApplicationResponse * RoboMakerClient::updateRobotApplication(const U
 UpdateSimulationApplicationResponse * RoboMakerClient::updateSimulationApplication(const UpdateSimulationApplicationRequest &request)
 {
     return qobject_cast<UpdateSimulationApplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RoboMakerClient service, and returns a pointer to an
+ * UpdateWorldTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a world
+ */
+UpdateWorldTemplateResponse * RoboMakerClient::updateWorldTemplate(const UpdateWorldTemplateRequest &request)
+{
+    return qobject_cast<UpdateWorldTemplateResponse *>(send(request));
 }
 
 /*!

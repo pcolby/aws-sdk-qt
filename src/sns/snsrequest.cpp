@@ -41,18 +41,23 @@ namespace SNS {
  * \value ConfirmSubscriptionAction SNS ConfirmSubscription action.
  * \value CreatePlatformApplicationAction SNS CreatePlatformApplication action.
  * \value CreatePlatformEndpointAction SNS CreatePlatformEndpoint action.
+ * \value CreateSMSSandboxPhoneNumberAction SNS CreateSMSSandboxPhoneNumber action.
  * \value CreateTopicAction SNS CreateTopic action.
  * \value DeleteEndpointAction SNS DeleteEndpoint action.
  * \value DeletePlatformApplicationAction SNS DeletePlatformApplication action.
+ * \value DeleteSMSSandboxPhoneNumberAction SNS DeleteSMSSandboxPhoneNumber action.
  * \value DeleteTopicAction SNS DeleteTopic action.
  * \value GetEndpointAttributesAction SNS GetEndpointAttributes action.
  * \value GetPlatformApplicationAttributesAction SNS GetPlatformApplicationAttributes action.
  * \value GetSMSAttributesAction SNS GetSMSAttributes action.
+ * \value GetSMSSandboxAccountStatusAction SNS GetSMSSandboxAccountStatus action.
  * \value GetSubscriptionAttributesAction SNS GetSubscriptionAttributes action.
  * \value GetTopicAttributesAction SNS GetTopicAttributes action.
  * \value ListEndpointsByPlatformApplicationAction SNS ListEndpointsByPlatformApplication action.
+ * \value ListOriginationNumbersAction SNS ListOriginationNumbers action.
  * \value ListPhoneNumbersOptedOutAction SNS ListPhoneNumbersOptedOut action.
  * \value ListPlatformApplicationsAction SNS ListPlatformApplications action.
+ * \value ListSMSSandboxPhoneNumbersAction SNS ListSMSSandboxPhoneNumbers action.
  * \value ListSubscriptionsAction SNS ListSubscriptions action.
  * \value ListSubscriptionsByTopicAction SNS ListSubscriptionsByTopic action.
  * \value ListTagsForResourceAction SNS ListTagsForResource action.
@@ -69,6 +74,7 @@ namespace SNS {
  * \value TagResourceAction SNS TagResource action.
  * \value UnsubscribeAction SNS Unsubscribe action.
  * \value UntagResourceAction SNS UntagResource action.
+ * \value VerifySMSSandboxPhoneNumberAction SNS VerifySMSSandboxPhoneNumber action.
  */
 
 /*!

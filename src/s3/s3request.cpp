@@ -45,9 +45,11 @@ namespace S3 {
  * \value DeleteBucketAnalyticsConfigurationAction S3 DeleteBucketAnalyticsConfiguration action.
  * \value DeleteBucketCorsAction S3 DeleteBucketCors action.
  * \value DeleteBucketEncryptionAction S3 DeleteBucketEncryption action.
+ * \value DeleteBucketIntelligentTieringConfigurationAction S3 DeleteBucketIntelligentTieringConfiguration action.
  * \value DeleteBucketInventoryConfigurationAction S3 DeleteBucketInventoryConfiguration action.
  * \value DeleteBucketLifecycleAction S3 DeleteBucketLifecycle action.
  * \value DeleteBucketMetricsConfigurationAction S3 DeleteBucketMetricsConfiguration action.
+ * \value DeleteBucketOwnershipControlsAction S3 DeleteBucketOwnershipControls action.
  * \value DeleteBucketPolicyAction S3 DeleteBucketPolicy action.
  * \value DeleteBucketReplicationAction S3 DeleteBucketReplication action.
  * \value DeleteBucketTaggingAction S3 DeleteBucketTagging action.
@@ -61,6 +63,7 @@ namespace S3 {
  * \value GetBucketAnalyticsConfigurationAction S3 GetBucketAnalyticsConfiguration action.
  * \value GetBucketCorsAction S3 GetBucketCors action.
  * \value GetBucketEncryptionAction S3 GetBucketEncryption action.
+ * \value GetBucketIntelligentTieringConfigurationAction S3 GetBucketIntelligentTieringConfiguration action.
  * \value GetBucketInventoryConfigurationAction S3 GetBucketInventoryConfiguration action.
  * \value GetBucketLifecycleAction S3 GetBucketLifecycle action.
  * \value GetBucketLifecycleConfigurationAction S3 GetBucketLifecycleConfiguration action.
@@ -69,6 +72,7 @@ namespace S3 {
  * \value GetBucketMetricsConfigurationAction S3 GetBucketMetricsConfiguration action.
  * \value GetBucketNotificationAction S3 GetBucketNotification action.
  * \value GetBucketNotificationConfigurationAction S3 GetBucketNotificationConfiguration action.
+ * \value GetBucketOwnershipControlsAction S3 GetBucketOwnershipControls action.
  * \value GetBucketPolicyAction S3 GetBucketPolicy action.
  * \value GetBucketPolicyStatusAction S3 GetBucketPolicyStatus action.
  * \value GetBucketReplicationAction S3 GetBucketReplication action.
@@ -87,6 +91,7 @@ namespace S3 {
  * \value HeadBucketAction S3 HeadBucket action.
  * \value HeadObjectAction S3 HeadObject action.
  * \value ListBucketAnalyticsConfigurationsAction S3 ListBucketAnalyticsConfigurations action.
+ * \value ListBucketIntelligentTieringConfigurationsAction S3 ListBucketIntelligentTieringConfigurations action.
  * \value ListBucketInventoryConfigurationsAction S3 ListBucketInventoryConfigurations action.
  * \value ListBucketMetricsConfigurationsAction S3 ListBucketMetricsConfigurations action.
  * \value ListBucketsAction S3 ListBuckets action.
@@ -100,6 +105,7 @@ namespace S3 {
  * \value PutBucketAnalyticsConfigurationAction S3 PutBucketAnalyticsConfiguration action.
  * \value PutBucketCorsAction S3 PutBucketCors action.
  * \value PutBucketEncryptionAction S3 PutBucketEncryption action.
+ * \value PutBucketIntelligentTieringConfigurationAction S3 PutBucketIntelligentTieringConfiguration action.
  * \value PutBucketInventoryConfigurationAction S3 PutBucketInventoryConfiguration action.
  * \value PutBucketLifecycleAction S3 PutBucketLifecycle action.
  * \value PutBucketLifecycleConfigurationAction S3 PutBucketLifecycleConfiguration action.
@@ -107,6 +113,7 @@ namespace S3 {
  * \value PutBucketMetricsConfigurationAction S3 PutBucketMetricsConfiguration action.
  * \value PutBucketNotificationAction S3 PutBucketNotification action.
  * \value PutBucketNotificationConfigurationAction S3 PutBucketNotificationConfiguration action.
+ * \value PutBucketOwnershipControlsAction S3 PutBucketOwnershipControls action.
  * \value PutBucketPolicyAction S3 PutBucketPolicy action.
  * \value PutBucketReplicationAction S3 PutBucketReplication action.
  * \value PutBucketRequestPaymentAction S3 PutBucketRequestPayment action.
@@ -124,6 +131,7 @@ namespace S3 {
  * \value SelectObjectContentAction S3 SelectObjectContent action.
  * \value UploadPartAction S3 UploadPart action.
  * \value UploadPartCopyAction S3 UploadPartCopy action.
+ * \value WriteGetObjectResponseAction S3 WriteGetObjectResponse action.
  */
 
 /*!

@@ -55,11 +55,14 @@ namespace WorkLink {
  * \value ListDevicesAction WorkLink ListDevices action.
  * \value ListDomainsAction WorkLink ListDomains action.
  * \value ListFleetsAction WorkLink ListFleets action.
+ * \value ListTagsForResourceAction WorkLink ListTagsForResource action.
  * \value ListWebsiteAuthorizationProvidersAction WorkLink ListWebsiteAuthorizationProviders action.
  * \value ListWebsiteCertificateAuthoritiesAction WorkLink ListWebsiteCertificateAuthorities action.
  * \value RestoreDomainAccessAction WorkLink RestoreDomainAccess action.
  * \value RevokeDomainAccessAction WorkLink RevokeDomainAccess action.
  * \value SignOutUserAction WorkLink SignOutUser action.
+ * \value TagResourceAction WorkLink TagResource action.
+ * \value UntagResourceAction WorkLink UntagResource action.
  * \value UpdateAuditStreamConfigurationAction WorkLink UpdateAuditStreamConfiguration action.
  * \value UpdateCompanyNetworkConfigurationAction WorkLink UpdateCompanyNetworkConfiguration action.
  * \value UpdateDevicePolicyConfigurationAction WorkLink UpdateDevicePolicyConfiguration action.

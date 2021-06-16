@@ -1,0 +1,64 @@
+find_package(Qt5 COMPONENTS Core Network REQUIRED)
+
+add_library(QtAwsfinspace
+  createenvironmentrequest.h
+  createenvironmentrequest_p.h
+  createenvironmentresponse.h
+  createenvironmentresponse_p.h
+  deleteenvironmentrequest.h
+  deleteenvironmentrequest_p.h
+  deleteenvironmentresponse.h
+  deleteenvironmentresponse_p.h
+  finspaceclient.h
+  finspaceclient_p.h
+  finspacerequest.h
+  finspacerequest_p.h
+  finspaceresponse.h
+  finspaceresponse_p.h
+  getenvironmentrequest.h
+  getenvironmentrequest_p.h
+  getenvironmentresponse.h
+  getenvironmentresponse_p.h
+  listenvironmentsrequest.h
+  listenvironmentsrequest_p.h
+  listenvironmentsresponse.h
+  listenvironmentsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updateenvironmentrequest.h
+  updateenvironmentrequest_p.h
+  updateenvironmentresponse.h
+  updateenvironmentresponse_p.h
+  createenvironmentrequest.cpp
+  createenvironmentresponse.cpp
+  deleteenvironmentrequest.cpp
+  deleteenvironmentresponse.cpp
+  finspaceclient.cpp
+  finspacerequest.cpp
+  finspaceresponse.cpp
+  getenvironmentrequest.cpp
+  getenvironmentresponse.cpp
+  listenvironmentsrequest.cpp
+  listenvironmentsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updateenvironmentrequest.cpp
+  updateenvironmentresponse.cpp)
+
+add_dependencies(QtAwsfinspace QtAwsCore)
+
+target_link_libraries(QtAwsfinspace Qt5::Core Qt5::Network)

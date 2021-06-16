@@ -39,16 +39,22 @@ namespace DataSync {
  * \value CancelTaskExecutionAction DataSync CancelTaskExecution action.
  * \value CreateAgentAction DataSync CreateAgent action.
  * \value CreateLocationEfsAction DataSync CreateLocationEfs action.
+ * \value CreateLocationFsxWindowsAction DataSync CreateLocationFsxWindows action.
  * \value CreateLocationNfsAction DataSync CreateLocationNfs action.
+ * \value CreateLocationObjectStorageAction DataSync CreateLocationObjectStorage action.
  * \value CreateLocationS3Action DataSync CreateLocationS3 action.
+ * \value CreateLocationSmbAction DataSync CreateLocationSmb action.
  * \value CreateTaskAction DataSync CreateTask action.
  * \value DeleteAgentAction DataSync DeleteAgent action.
  * \value DeleteLocationAction DataSync DeleteLocation action.
  * \value DeleteTaskAction DataSync DeleteTask action.
  * \value DescribeAgentAction DataSync DescribeAgent action.
  * \value DescribeLocationEfsAction DataSync DescribeLocationEfs action.
+ * \value DescribeLocationFsxWindowsAction DataSync DescribeLocationFsxWindows action.
  * \value DescribeLocationNfsAction DataSync DescribeLocationNfs action.
+ * \value DescribeLocationObjectStorageAction DataSync DescribeLocationObjectStorage action.
  * \value DescribeLocationS3Action DataSync DescribeLocationS3 action.
+ * \value DescribeLocationSmbAction DataSync DescribeLocationSmb action.
  * \value DescribeTaskAction DataSync DescribeTask action.
  * \value DescribeTaskExecutionAction DataSync DescribeTaskExecution action.
  * \value ListAgentsAction DataSync ListAgents action.
@@ -60,7 +66,11 @@ namespace DataSync {
  * \value TagResourceAction DataSync TagResource action.
  * \value UntagResourceAction DataSync UntagResource action.
  * \value UpdateAgentAction DataSync UpdateAgent action.
+ * \value UpdateLocationNfsAction DataSync UpdateLocationNfs action.
+ * \value UpdateLocationObjectStorageAction DataSync UpdateLocationObjectStorage action.
+ * \value UpdateLocationSmbAction DataSync UpdateLocationSmb action.
  * \value UpdateTaskAction DataSync UpdateTask action.
+ * \value UpdateTaskExecutionAction DataSync UpdateTaskExecution action.
  */
 
 /*!

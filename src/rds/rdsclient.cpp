@@ -35,6 +35,8 @@
 #include "authorizedbsecuritygroupingressresponse.h"
 #include "backtrackdbclusterrequest.h"
 #include "backtrackdbclusterresponse.h"
+#include "cancelexporttaskrequest.h"
+#include "cancelexporttaskresponse.h"
 #include "copydbclusterparametergrouprequest.h"
 #include "copydbclusterparametergroupresponse.h"
 #include "copydbclustersnapshotrequest.h"
@@ -45,6 +47,8 @@
 #include "copydbsnapshotresponse.h"
 #include "copyoptiongrouprequest.h"
 #include "copyoptiongroupresponse.h"
+#include "createcustomavailabilityzonerequest.h"
+#include "createcustomavailabilityzoneresponse.h"
 #include "createdbclusterrequest.h"
 #include "createdbclusterresponse.h"
 #include "createdbclusterendpointrequest.h"
@@ -59,6 +63,10 @@
 #include "createdbinstancereadreplicaresponse.h"
 #include "createdbparametergrouprequest.h"
 #include "createdbparametergroupresponse.h"
+#include "createdbproxyrequest.h"
+#include "createdbproxyresponse.h"
+#include "createdbproxyendpointrequest.h"
+#include "createdbproxyendpointresponse.h"
 #include "createdbsecuritygrouprequest.h"
 #include "createdbsecuritygroupresponse.h"
 #include "createdbsnapshotrequest.h"
@@ -71,6 +79,8 @@
 #include "createglobalclusterresponse.h"
 #include "createoptiongrouprequest.h"
 #include "createoptiongroupresponse.h"
+#include "deletecustomavailabilityzonerequest.h"
+#include "deletecustomavailabilityzoneresponse.h"
 #include "deletedbclusterrequest.h"
 #include "deletedbclusterresponse.h"
 #include "deletedbclusterendpointrequest.h"
@@ -85,6 +95,10 @@
 #include "deletedbinstanceautomatedbackupresponse.h"
 #include "deletedbparametergrouprequest.h"
 #include "deletedbparametergroupresponse.h"
+#include "deletedbproxyrequest.h"
+#include "deletedbproxyresponse.h"
+#include "deletedbproxyendpointrequest.h"
+#include "deletedbproxyendpointresponse.h"
 #include "deletedbsecuritygrouprequest.h"
 #include "deletedbsecuritygroupresponse.h"
 #include "deletedbsnapshotrequest.h"
@@ -95,12 +109,18 @@
 #include "deleteeventsubscriptionresponse.h"
 #include "deleteglobalclusterrequest.h"
 #include "deleteglobalclusterresponse.h"
+#include "deleteinstallationmediarequest.h"
+#include "deleteinstallationmediaresponse.h"
 #include "deleteoptiongrouprequest.h"
 #include "deleteoptiongroupresponse.h"
+#include "deregisterdbproxytargetsrequest.h"
+#include "deregisterdbproxytargetsresponse.h"
 #include "describeaccountattributesrequest.h"
 #include "describeaccountattributesresponse.h"
 #include "describecertificatesrequest.h"
 #include "describecertificatesresponse.h"
+#include "describecustomavailabilityzonesrequest.h"
+#include "describecustomavailabilityzonesresponse.h"
 #include "describedbclusterbacktracksrequest.h"
 #include "describedbclusterbacktracksresponse.h"
 #include "describedbclusterendpointsrequest.h"
@@ -127,6 +147,14 @@
 #include "describedbparametergroupsresponse.h"
 #include "describedbparametersrequest.h"
 #include "describedbparametersresponse.h"
+#include "describedbproxiesrequest.h"
+#include "describedbproxiesresponse.h"
+#include "describedbproxyendpointsrequest.h"
+#include "describedbproxyendpointsresponse.h"
+#include "describedbproxytargetgroupsrequest.h"
+#include "describedbproxytargetgroupsresponse.h"
+#include "describedbproxytargetsrequest.h"
+#include "describedbproxytargetsresponse.h"
 #include "describedbsecuritygroupsrequest.h"
 #include "describedbsecuritygroupsresponse.h"
 #include "describedbsnapshotattributesrequest.h"
@@ -145,8 +173,12 @@
 #include "describeeventsubscriptionsresponse.h"
 #include "describeeventsrequest.h"
 #include "describeeventsresponse.h"
+#include "describeexporttasksrequest.h"
+#include "describeexporttasksresponse.h"
 #include "describeglobalclustersrequest.h"
 #include "describeglobalclustersresponse.h"
+#include "describeinstallationmediarequest.h"
+#include "describeinstallationmediaresponse.h"
 #include "describeoptiongroupoptionsrequest.h"
 #include "describeoptiongroupoptionsresponse.h"
 #include "describeoptiongroupsrequest.h"
@@ -167,8 +199,14 @@
 #include "downloaddblogfileportionresponse.h"
 #include "failoverdbclusterrequest.h"
 #include "failoverdbclusterresponse.h"
+#include "failoverglobalclusterrequest.h"
+#include "failoverglobalclusterresponse.h"
+#include "importinstallationmediarequest.h"
+#include "importinstallationmediaresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "modifycertificatesrequest.h"
+#include "modifycertificatesresponse.h"
 #include "modifycurrentdbclustercapacityrequest.h"
 #include "modifycurrentdbclustercapacityresponse.h"
 #include "modifydbclusterrequest.h"
@@ -183,6 +221,12 @@
 #include "modifydbinstanceresponse.h"
 #include "modifydbparametergrouprequest.h"
 #include "modifydbparametergroupresponse.h"
+#include "modifydbproxyrequest.h"
+#include "modifydbproxyresponse.h"
+#include "modifydbproxyendpointrequest.h"
+#include "modifydbproxyendpointresponse.h"
+#include "modifydbproxytargetgrouprequest.h"
+#include "modifydbproxytargetgroupresponse.h"
 #include "modifydbsnapshotrequest.h"
 #include "modifydbsnapshotresponse.h"
 #include "modifydbsnapshotattributerequest.h"
@@ -203,6 +247,8 @@
 #include "purchasereserveddbinstancesofferingresponse.h"
 #include "rebootdbinstancerequest.h"
 #include "rebootdbinstanceresponse.h"
+#include "registerdbproxytargetsrequest.h"
+#include "registerdbproxytargetsresponse.h"
 #include "removefromglobalclusterrequest.h"
 #include "removefromglobalclusterresponse.h"
 #include "removerolefromdbclusterrequest.h"
@@ -237,12 +283,18 @@
 #include "startdbclusterresponse.h"
 #include "startdbinstancerequest.h"
 #include "startdbinstanceresponse.h"
+#include "startdbinstanceautomatedbackupsreplicationrequest.h"
+#include "startdbinstanceautomatedbackupsreplicationresponse.h"
+#include "startexporttaskrequest.h"
+#include "startexporttaskresponse.h"
 #include "stopactivitystreamrequest.h"
 #include "stopactivitystreamresponse.h"
 #include "stopdbclusterrequest.h"
 #include "stopdbclusterresponse.h"
 #include "stopdbinstancerequest.h"
 #include "stopdbinstanceresponse.h"
+#include "stopdbinstanceautomatedbackupsreplicationrequest.h"
+#include "stopdbinstanceautomatedbackupsreplicationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -272,7 +324,7 @@ namespace RDS {
  *  </p
  * 
  *  Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a
- *  relational database in the cloud. It provides cost-efficient, resizable capacity for an industry-standard relational
+ *  relational database in the cloud. It provides cost-efficient, resizeable capacity for an industry-standard relational
  *  database and manages common database administration tasks, freeing up developers to focus on what makes their
  *  applications and businesses
  * 
@@ -288,8 +340,8 @@ namespace RDS {
  *  use>
  * 
  *  This interface reference for Amazon RDS contains documentation for a programming or command line interface you can use
- *  to manage Amazon RDS. Note that Amazon RDS is asynchronous, which means that some interfaces might require techniques
- *  such as polling or callback functions to determine when a command has been applied. In this reference, the parameter
+ *  to manage Amazon RDS. Amazon RDS is asynchronous, which means that some interfaces might require techniques such as
+ *  polling or callback functions to determine when a command has been applied. In this reference, the parameter
  *  descriptions indicate whether a command is applied immediately, on the next instance reboot, or during the maintenance
  *  window. The reference structure is as follows, and we list following some related topics from the user
  * 
@@ -509,11 +561,25 @@ AuthorizeDBSecurityGroupIngressResponse * RdsClient::authorizeDBSecurityGroupIng
  *
  * </p <note>
  *
- * This action only applies to Aurora DB
+ * This action only applies to Aurora MySQL DB
  */
 BacktrackDBClusterResponse * RdsClient::backtrackDBCluster(const BacktrackDBClusterRequest &request)
 {
     return qobject_cast<BacktrackDBClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * CancelExportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels an export task in progress that is exporting a snapshot to Amazon S3. Any data that has already been written to
+ * the S3 bucket isn't removed.
+ */
+CancelExportTaskResponse * RdsClient::cancelExportTask(const CancelExportTaskRequest &request)
+{
+    return qobject_cast<CancelExportTaskResponse *>(send(request));
 }
 
 /*!
@@ -570,13 +636,14 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  *
  * values> <ul> <li>
  *
- * <code>KmsKeyId</code> - The KMS key identifier for the key to use to encrypt the copy of the DB cluster snapshot in the
- * destination AWS Region. This is the same identifier for both the <code>CopyDBClusterSnapshot</code> action that is
- * called in the destination AWS Region, and the action contained in the pre-signed
+ * <code>KmsKeyId</code> - The AWS KMS key identifier for the customer master key (CMK) to use to encrypt the copy of the
+ * DB cluster snapshot in the destination AWS Region. This is the same identifier for both the
+ * <code>CopyDBClusterSnapshot</code> action that is called in the destination AWS Region, and the action contained in the
+ * pre-signed
  *
  * URL> </li> <li>
  *
- * <code>DestinationRegion</code> - The name of the AWS Region that the DB cluster snapshot will be created
+ * <code>DestinationRegion</code> - The name of the AWS Region that the DB cluster snapshot is to be created
  *
  * in> </li> <li>
  *
@@ -592,7 +659,14 @@ CopyDBClusterParameterGroupResponse * RdsClient::copyDBClusterParameterGroup(con
  * Query Parameters (AWS Signature Version 4)</a> and <a
  * href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"> Signature Version 4 Signing
  *
- * Process</a>> </li> <li>
+ * Process</a>> <note>
+ *
+ * If you are using an AWS SDK tool or the AWS CLI, you can specify <code>SourceRegion</code> (or
+ * <code>--source-region</code> for the AWS CLI) instead of specifying <code>PreSignedUrl</code> manually. Specifying
+ * <code>SourceRegion</code> autogenerates a pre-signed URL that is a valid request for the operation that can be executed
+ * in the source AWS
+ *
+ * Region> </note> </li> <li>
  *
  * <code>TargetDBClusterSnapshotIdentifier</code> - The identifier for the new copy of the DB cluster snapshot in the
  * destination AWS
@@ -648,7 +722,7 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Copies the specified DB snapshot. The source DB snapshot must be in the "available"
+ * Copies the specified DB snapshot. The source DB snapshot must be in the <code>available</code>
  *
  * state>
  *
@@ -658,8 +732,8 @@ CopyDBParameterGroupResponse * RdsClient::copyDBParameterGroup(const CopyDBParam
  * </p
  *
  * For more information about copying snapshots, see <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopyDBSnapshot.html">Copying a DB Snapshot</a> in the
- * <i>Amazon RDS User Guide.</i>
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBSnapshot">Copying a DB
+ * Snapshot</a> in the <i>Amazon RDS User Guide.</i>
  */
 CopyDBSnapshotResponse * RdsClient::copyDBSnapshot(const CopyDBSnapshotRequest &request)
 {
@@ -681,6 +755,29 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * CreateCustomAvailabilityZoneResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a custom Availability Zone
+ *
+ * (AZ)>
+ *
+ * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere
+ *
+ * cluster>
+ *
+ * For more information about RDS on VMware, see the <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
+ * Guide.</a>
+ */
+CreateCustomAvailabilityZoneResponse * RdsClient::createCustomAvailabilityZone(const CreateCustomAvailabilityZoneRequest &request)
+{
+    return qobject_cast<CreateCustomAvailabilityZoneResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * CreateDBClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -689,7 +786,7 @@ CopyOptionGroupResponse * RdsClient::copyOptionGroup(const CopyOptionGroupReques
  *
  * cluster>
  *
- * You can use the <code>ReplicationSourceIdentifier</code> parameter to create the DB cluster as a Read Replica of another
+ * You can use the <code>ReplicationSourceIdentifier</code> parameter to create the DB cluster as a read replica of another
  * DB cluster or Amazon RDS MySQL DB instance. For cross-region replication where the DB cluster identified by
  * <code>ReplicationSourceIdentifier</code> is encrypted, you must also specify the <code>PreSignedUrl</code>
  *
@@ -809,22 +906,22 @@ CreateDBInstanceResponse * RdsClient::createDBInstance(const CreateDBInstanceReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB instance that acts as a Read Replica for an existing source DB instance. You can create a Read Replica
- * for a DB instance running MySQL, MariaDB, Oracle, or PostgreSQL. For more information, see <a
+ * Creates a new DB instance that acts as a read replica for an existing source DB instance. You can create a read replica
+ * for a DB instance running MySQL, MariaDB, Oracle, PostgreSQL, or SQL Server. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with Read Replicas</a> in the
  * <i>Amazon RDS User Guide</i>.
  *
  * </p
  *
- * Amazon Aurora doesn't support this action. You must call the <code>CreateDBInstance</code> action to create a DB
- * instance for an Aurora DB cluster.
+ * Amazon Aurora doesn't support this action. Call the <code>CreateDBInstance</code> action to create a DB instance for an
+ * Aurora DB
  *
- * </p
+ * cluster>
  *
- * All Read Replica DB instances are created with backups disabled. All other DB instance attributes (including DB security
- * groups and DB parameter groups) are inherited from the source DB instance, except as specified following.
+ * All read replica DB instances are created with backups disabled. All other DB instance attributes (including DB security
+ * groups and DB parameter groups) are inherited from the source DB instance, except as
  *
- * </p <b>
+ * specified> <b>
  *
  * Your source DB instance must have backup retention enabled.
  */
@@ -866,6 +963,34 @@ CreateDBParameterGroupResponse * RdsClient::createDBParameterGroup(const CreateD
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * CreateDBProxyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new DB
+ */
+CreateDBProxyResponse * RdsClient::createDBProxy(const CreateDBProxyRequest &request)
+{
+    return qobject_cast<CreateDBProxyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * CreateDBProxyEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a <code>DBProxyEndpoint</code>. Only applies to proxies that are associated with Aurora DB clusters. You can use
+ * DB proxy endpoints to specify read/write or read-only access to the DB cluster. You can also use DB proxy endpoints to
+ * access a DB proxy through a different VPC than the proxy's default VPC.
+ */
+CreateDBProxyEndpointResponse * RdsClient::createDBProxyEndpoint(const CreateDBProxyEndpointRequest &request)
+{
+    return qobject_cast<CreateDBProxyEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * CreateDBSecurityGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -887,7 +1012,8 @@ CreateDBSecurityGroupResponse * RdsClient::createDBSecurityGroup(const CreateDBS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a DBSnapshot. The source DBInstance must be in "available"
+ * Creates a snapshot of a DB instance. The source DB instance must be in the <code>available</code> or
+ * <code>storage-optimization</code>
  */
 CreateDBSnapshotResponse * RdsClient::createDBSnapshot(const CreateDBSnapshotRequest &request)
 {
@@ -913,24 +1039,31 @@ CreateDBSubnetGroupResponse * RdsClient::createDBSubnetGroup(const CreateDBSubne
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an RDS event notification subscription. This action requires a topic ARN (Amazon Resource Name) created by
+ * Creates an RDS event notification subscription. This action requires a topic Amazon Resource Name (ARN) created by
  * either the RDS console, the SNS console, or the SNS API. To obtain an ARN with SNS, you must create a topic in Amazon
  * SNS and subscribe to the topic. The ARN is displayed in the SNS
  *
  * console>
  *
- * You can specify the type of source (SourceType) you want to be notified of, provide a list of RDS sources (SourceIds)
- * that triggers the events, and provide a list of event categories (EventCategories) for events you want to be notified
- * of. For example, you can specify SourceType = db-instance, SourceIds = mydbinstance1, mydbinstance2 and EventCategories
- * = Availability,
+ * You can specify the type of source (<code>SourceType</code>) that you want to be notified of and provide a list of RDS
+ * sources (<code>SourceIds</code>) that triggers the events. You can also provide a list of event categories
+ * (<code>EventCategories</code>) for events that you want to be notified of. For example, you can specify
+ * <code>SourceType</code> = <code>db-instance</code>, <code>SourceIds</code> = <code>mydbinstance1</code>,
+ * <code>mydbinstance2</code> and <code>EventCategories</code> = <code>Availability</code>,
  *
- * Backup>
+ * <code>Backup</code>>
  *
- * If you specify both the SourceType and SourceIds, such as SourceType = db-instance and SourceIdentifier = myDBInstance1,
- * you are notified of all the db-instance events for the specified source. If you specify a SourceType but do not specify
- * a SourceIdentifier, you receive notice of the events for that source type for all your RDS sources. If you do not
- * specify either the SourceType nor the SourceIdentifier, you are notified of events generated from all RDS sources
- * belonging to your customer
+ * If you specify both the <code>SourceType</code> and <code>SourceIds</code>, such as <code>SourceType</code> =
+ * <code>db-instance</code> and <code>SourceIdentifier</code> = <code>myDBInstance1</code>, you are notified of all the
+ * <code>db-instance</code> events for the specified source. If you specify a <code>SourceType</code> but do not specify a
+ * <code>SourceIdentifier</code>, you receive notice of the events for that source type for all your RDS sources. If you
+ * don't specify either the SourceType or the <code>SourceIdentifier</code>, you are notified of events generated from all
+ * RDS sources belonging to your customer
+ *
+ * account> <note>
+ *
+ * RDS event notification is only available for unencrypted SNS topics. If you specify an encrypted SNS topic, event
+ * notifications aren't sent for the
  */
 CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
 {
@@ -943,11 +1076,9 @@ CreateEventSubscriptionResponse * RdsClient::createEventSubscription(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * </p
- *
- * Creates an Aurora global database spread across multiple regions. The global database contains a single primary cluster
- * with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through
- * high-speed replication performed by the Aurora storage subsystem.
+ * Creates an Aurora global database spread across multiple AWS Regions. The global database contains a single primary
+ * cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster
+ * through high-speed replication performed by the Aurora storage subsystem.
  *
  * </p
  *
@@ -975,6 +1106,29 @@ CreateGlobalClusterResponse * RdsClient::createGlobalCluster(const CreateGlobalC
 CreateOptionGroupResponse * RdsClient::createOptionGroup(const CreateOptionGroupRequest &request)
 {
     return qobject_cast<CreateOptionGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteCustomAvailabilityZoneResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a custom Availability Zone
+ *
+ * (AZ)>
+ *
+ * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere
+ *
+ * cluster>
+ *
+ * For more information about RDS on VMware, see the <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
+ * Guide.</a>
+ */
+DeleteCustomAvailabilityZoneResponse * RdsClient::deleteCustomAvailabilityZone(const DeleteCustomAvailabilityZoneRequest &request)
+{
+    return qobject_cast<DeleteCustomAvailabilityZoneResponse *>(send(request));
 }
 
 /*!
@@ -1088,9 +1242,9 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  *
  * </p
  *
- * Note that when a DB instance is in a failure state and has a status of <code>failed</code>,
- * <code>incompatible-restore</code>, or <code>incompatible-network</code>, you can only delete it when you skip creation
- * of the final snapshot with the <code>SkipFinalSnapshot</code>
+ * When a DB instance is in a failure state and has a status of <code>failed</code>, <code>incompatible-restore</code>, or
+ * <code>incompatible-network</code>, you can only delete it when you skip creation of the final snapshot with the
+ * <code>SkipFinalSnapshot</code>
  *
  * parameter>
  *
@@ -1099,7 +1253,7 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  *
  * true> <ul> <li>
  *
- * The DB cluster is a Read Replica of another Amazon Aurora DB
+ * The DB cluster is a read replica of another Amazon Aurora DB
  *
  * cluster> </li> <li>
  *
@@ -1108,7 +1262,7 @@ DeleteDBClusterSnapshotResponse * RdsClient::deleteDBClusterSnapshot(const Delet
  * cluster> </li> </ul>
  *
  * To delete a DB instance in this case, first call the <code>PromoteReadReplicaDBCluster</code> API action to promote the
- * DB cluster so it's no longer a Read Replica. After the promotion completes, then call the <code>DeleteDBInstance</code>
+ * DB cluster so it's no longer a read replica. After the promotion completes, then call the <code>DeleteDBInstance</code>
  * API action to delete the final instance in the DB
  */
 DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
@@ -1122,8 +1276,8 @@ DeleteDBInstanceResponse * RdsClient::deleteDBInstance(const DeleteDBInstanceReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes automated backups based on the source instance's <code>DbiResourceId</code> value or the restorable instance's
- * resource
+ * Deletes automated backups using the <code>DbiResourceId</code> value of the source DB instance or the Amazon Resource
+ * Name (ARN) of the automated
  */
 DeleteDBInstanceAutomatedBackupResponse * RdsClient::deleteDBInstanceAutomatedBackup(const DeleteDBInstanceAutomatedBackupRequest &request)
 {
@@ -1141,6 +1295,34 @@ DeleteDBInstanceAutomatedBackupResponse * RdsClient::deleteDBInstanceAutomatedBa
 DeleteDBParameterGroupResponse * RdsClient::deleteDBParameterGroup(const DeleteDBParameterGroupRequest &request)
 {
     return qobject_cast<DeleteDBParameterGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteDBProxyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an existing DB
+ */
+DeleteDBProxyResponse * RdsClient::deleteDBProxy(const DeleteDBProxyRequest &request)
+{
+    return qobject_cast<DeleteDBProxyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteDBProxyEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a <code>DBProxyEndpoint</code>. Doing so removes the ability to access the DB proxy using the endpoint that you
+ * defined. The endpoint that you delete might have provided capabilities such as read/write or read-only operations, or
+ * using a different VPC than the DB proxy's default
+ */
+DeleteDBProxyEndpointResponse * RdsClient::deleteDBProxyEndpoint(const DeleteDBProxyEndpointRequest &request)
+{
+    return qobject_cast<DeleteDBProxyEndpointResponse *>(send(request));
 }
 
 /*!
@@ -1226,6 +1408,20 @@ DeleteGlobalClusterResponse * RdsClient::deleteGlobalCluster(const DeleteGlobalC
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeleteInstallationMediaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the installation medium for a DB engine that requires an on-premises customer provided license, such as
+ * Microsoft SQL
+ */
+DeleteInstallationMediaResponse * RdsClient::deleteInstallationMedia(const DeleteInstallationMediaRequest &request)
+{
+    return qobject_cast<DeleteInstallationMediaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * DeleteOptionGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1235,6 +1431,19 @@ DeleteGlobalClusterResponse * RdsClient::deleteGlobalCluster(const DeleteGlobalC
 DeleteOptionGroupResponse * RdsClient::deleteOptionGroup(const DeleteOptionGroupRequest &request)
 {
     return qobject_cast<DeleteOptionGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DeregisterDBProxyTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove the association between one or more <code>DBProxyTarget</code> data structures and a
+ */
+DeregisterDBProxyTargetsResponse * RdsClient::deregisterDBProxyTargets(const DeregisterDBProxyTargetsRequest &request)
+{
+    return qobject_cast<DeregisterDBProxyTargetsResponse *>(send(request));
 }
 
 /*!
@@ -1271,6 +1480,29 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeCustomAvailabilityZonesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about custom Availability Zones
+ *
+ * (AZs)>
+ *
+ * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere
+ *
+ * cluster>
+ *
+ * For more information about RDS on VMware, see the <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
+ * Guide.</a>
+ */
+DescribeCustomAvailabilityZonesResponse * RdsClient::describeCustomAvailabilityZones(const DescribeCustomAvailabilityZonesRequest &request)
+{
+    return qobject_cast<DescribeCustomAvailabilityZonesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * DescribeDBClusterBacktracksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1285,7 +1517,7 @@ DescribeCertificatesResponse * RdsClient::describeCertificates(const DescribeCer
  *
  * </p <note>
  *
- * This action only applies to Aurora DB
+ * This action only applies to Aurora MySQL DB
  */
 DescribeDBClusterBacktracksResponse * RdsClient::describeDBClusterBacktracks(const DescribeDBClusterBacktracksRequest &request)
 {
@@ -1424,7 +1656,7 @@ DescribeDBClusterSnapshotsResponse * RdsClient::describeDBClusterSnapshots(const
  *
  * </p <note>
  *
- * This action only applies to Aurora DB
+ * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB
  */
 DescribeDBClustersResponse * RdsClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
@@ -1470,6 +1702,10 @@ DescribeDBInstanceAutomatedBackupsResponse * RdsClient::describeDBInstanceAutoma
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about provisioned RDS instances. This API supports
+ *
+ * pagination> <note>
+ *
+ * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB
  */
 DescribeDBInstancesResponse * RdsClient::describeDBInstances(const DescribeDBInstancesRequest &request)
 {
@@ -1514,6 +1750,58 @@ DescribeDBParameterGroupsResponse * RdsClient::describeDBParameterGroups(const D
 DescribeDBParametersResponse * RdsClient::describeDBParameters(const DescribeDBParametersRequest &request)
 {
     return qobject_cast<DescribeDBParametersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBProxiesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about DB
+ */
+DescribeDBProxiesResponse * RdsClient::describeDBProxies(const DescribeDBProxiesRequest &request)
+{
+    return qobject_cast<DescribeDBProxiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBProxyEndpointsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about DB proxy
+ */
+DescribeDBProxyEndpointsResponse * RdsClient::describeDBProxyEndpoints(const DescribeDBProxyEndpointsRequest &request)
+{
+    return qobject_cast<DescribeDBProxyEndpointsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBProxyTargetGroupsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about DB proxy target groups, represented by <code>DBProxyTargetGroup</code> data
+ */
+DescribeDBProxyTargetGroupsResponse * RdsClient::describeDBProxyTargetGroups(const DescribeDBProxyTargetGroupsRequest &request)
+{
+    return qobject_cast<DescribeDBProxyTargetGroupsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeDBProxyTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about <code>DBProxyTarget</code> objects. This API supports
+ */
+DescribeDBProxyTargetsResponse * RdsClient::describeDBProxyTargets(const DescribeDBProxyTargetsRequest &request)
+{
+    return qobject_cast<DescribeDBProxyTargetsResponse *>(send(request));
 }
 
 /*!
@@ -1626,9 +1914,9 @@ DescribeEngineDefaultParametersResponse * RdsClient::describeEngineDefaultParame
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Displays a list of categories for all event source types, or, if specified, for a specified source type. You can see a
- * list of the event categories and source types in the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html"> Events</a> topic in the <i>Amazon RDS
- * User Guide.</i>
+ * list of the event categories and source types in <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html"> Events</a> in the <i>Amazon RDS User
+ * Guide.</i>
  */
 DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const DescribeEventCategoriesRequest &request)
 {
@@ -1642,11 +1930,12 @@ DescribeEventCategoriesResponse * RdsClient::describeEventCategories(const Descr
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Lists all the subscription descriptions for a customer account. The description for a subscription includes
- * SubscriptionName, SNSTopicARN, CustomerID, SourceType, SourceID, CreationTime, and
+ * <code>SubscriptionName</code>, <code>SNSTopicARN</code>, <code>CustomerID</code>, <code>SourceType</code>,
+ * <code>SourceID</code>, <code>CreationTime</code>, and
  *
- * Status>
+ * <code>Status</code>>
  *
- * If you specify a SubscriptionName, lists the description for that
+ * If you specify a <code>SubscriptionName</code>, lists the description for that
  */
 DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
 {
@@ -1659,13 +1948,30 @@ DescribeEventSubscriptionsResponse * RdsClient::describeEventSubscriptions(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days.
- * Events specific to a particular DB instance, DB security group, database snapshot, or DB parameter group can be obtained
- * by providing the name as a parameter. By default, the past hour of events are
+ * Returns events related to DB instances, DB clusters, DB parameter groups, DB security groups, DB snapshots, and DB
+ * cluster snapshots for the past 14 days. Events specific to a particular DB instances, DB clusters, DB parameter groups,
+ * DB security groups, DB snapshots, and DB cluster snapshots group can be obtained by providing the name as a
+ *
+ * parameter> <note>
+ *
+ * By default, the past hour of events are
  */
 DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &request)
 {
     return qobject_cast<DescribeEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeExportTasksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about a snapshot export to Amazon S3. This API operation supports pagination.
+ */
+DescribeExportTasksResponse * RdsClient::describeExportTasks(const DescribeExportTasksRequest &request)
+{
+    return qobject_cast<DescribeExportTasksResponse *>(send(request));
 }
 
 /*!
@@ -1689,6 +1995,20 @@ DescribeEventsResponse * RdsClient::describeEvents(const DescribeEventsRequest &
 DescribeGlobalClustersResponse * RdsClient::describeGlobalClusters(const DescribeGlobalClustersRequest &request)
 {
     return qobject_cast<DescribeGlobalClustersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * DescribeInstallationMediaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the available installation media for a DB engine that requires an on-premises customer provided license, such
+ * as Microsoft SQL
+ */
+DescribeInstallationMediaResponse * RdsClient::describeInstallationMedia(const DescribeInstallationMediaRequest &request)
+{
+    return qobject_cast<DescribeInstallationMediaResponse *>(send(request));
 }
 
 /*!
@@ -1775,8 +2095,8 @@ DescribeReservedDBInstancesOfferingsResponse * RdsClient::describeReservedDBInst
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the source AWS Regions where the current AWS Region can create a Read Replica or copy a DB snapshot
- * from. This API action supports
+ * Returns a list of the source AWS Regions where the current AWS Region can create a read replica, copy a DB snapshot
+ * from, or replicate automated backups from. This API action supports
  */
 DescribeSourceRegionsResponse * RdsClient::describeSourceRegions(const DescribeSourceRegionsRequest &request)
 {
@@ -1847,6 +2167,51 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * FailoverGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Initiates the failover process for an Aurora global database
+ *
+ * (<a>GlobalCluster</a>)>
+ *
+ * A failover for an Aurora global database promotes one of secondary read-only DB clusters to be the primary DB cluster
+ * and demotes the primary DB cluster to being a secondary (read-only) DB cluster. In other words, the role of the current
+ * primary DB cluster and the selected (target) DB cluster are switched. The selected secondary DB cluster assumes full
+ * read/write capabilities for the Aurora global
+ *
+ * database>
+ *
+ * For more information about failing over an Amazon Aurora global database, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-disaster-recovery.html#aurora-global-database-disaster-recovery.managed-failover">Managed
+ * planned failover for Amazon Aurora global databases</a> in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action applies to <a>GlobalCluster</a> (Aurora global databases) only. Use this action only on healthy Aurora
+ * global databases with running Aurora DB clusters and no Region-wide outages, to test disaster recovery scenarios or to
+ * reconfigure your Aurora global database topology.
+ */
+FailoverGlobalClusterResponse * RdsClient::failoverGlobalCluster(const FailoverGlobalClusterRequest &request)
+{
+    return qobject_cast<FailoverGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ImportInstallationMediaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports the installation media for a DB engine that requires an on-premises customer provided license, such as SQL
+ */
+ImportInstallationMediaResponse * RdsClient::importInstallationMedia(const ImportInstallationMediaRequest &request)
+{
+    return qobject_cast<ImportInstallationMediaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1862,6 +2227,52 @@ FailoverDBClusterResponse * RdsClient::failoverDBCluster(const FailoverDBCluster
 ListTagsForResourceResponse * RdsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Override the system-default Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for Amazon RDS for new
+ * DB instances temporarily, or remove the
+ *
+ * override>
+ *
+ * By using this operation, you can specify an RDS-approved SSL/TLS certificate for new DB instances that is different from
+ * the default certificate provided by RDS. You can also use this operation to remove the override, so that new DB
+ * instances use the default certificate provided by
+ *
+ * RDS>
+ *
+ * You might need to override the default certificate in the following
+ *
+ * situations> <ul> <li>
+ *
+ * You already migrated your applications to support the latest certificate authority (CA) certificate, but the new CA
+ * certificate is not yet the RDS default CA certificate for the specified AWS
+ *
+ * Region> </li> <li>
+ *
+ * RDS has already moved to a new default CA certificate for the specified AWS Region, but you are still in the process of
+ * supporting the new CA certificate. In this case, you temporarily need additional time to finish your application
+ *
+ * changes> </li> </ul>
+ *
+ * For more information about rotating your SSL/TLS certificate for RDS DB engines, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL-certificate-rotation.html"> Rotating Your
+ * SSL/TLS Certificate</a> in the <i>Amazon RDS User
+ *
+ * Guide</i>>
+ *
+ * For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html"> Rotating
+ * Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User
+ */
+ModifyCertificatesResponse * RdsClient::modifyCertificates(const ModifyCertificatesRequest &request)
+{
+    return qobject_cast<ModifyCertificatesResponse *>(send(request));
 }
 
 /*!
@@ -1959,12 +2370,7 @@ ModifyDBClusterEndpointResponse * RdsClient::modifyDBClusterEndpoint(const Modif
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
  * in the <i>Amazon Aurora User Guide.</i>
  *
- * </p <note>
- *
- * Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to
- * the DB cluster associated with the parameter group before the change can take
- *
- * effect> </note> <b>
+ * </p <b>
  *
  * After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster
  * that uses that DB cluster parameter group as the default parameter group. This allows Amazon RDS to fully complete the
@@ -1974,7 +2380,13 @@ ModifyDBClusterEndpointResponse * RdsClient::modifyDBClusterEndpoint(const Modif
  * option of the <a href="https://console.aws.amazon.com/rds/">Amazon RDS console</a> or the
  * <code>DescribeDBClusterParameters</code> action to verify that your DB cluster parameter group has been created or
  *
- * modified> </b> <note>
+ * modified>
+ *
+ * If the modified DB cluster parameter group is used by an Aurora Serverless cluster, Aurora applies the update
+ * immediately. The cluster restart might interrupt your workload. In that case, your application must reopen any
+ * connections and retry any transactions that were active when the parameter changes took
+ *
+ * effect> </b> <note>
  *
  * This action only applies to Aurora DB
  */
@@ -1996,18 +2408,25 @@ ModifyDBClusterParameterGroupResponse * RdsClient::modifyDBClusterParameterGroup
  * To share a manual DB cluster snapshot with other AWS accounts, specify <code>restore</code> as the
  * <code>AttributeName</code> and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the AWS accounts that
  * are authorized to restore the manual DB cluster snapshot. Use the value <code>all</code> to make the manual DB cluster
- * snapshot public, which means that it can be copied or restored by all AWS accounts. Do not add the <code>all</code>
- * value for any manual DB cluster snapshots that contain private information that you don't want available to all AWS
- * accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized
- * AWS account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter
- * in this
+ * snapshot public, which means that it can be copied or restored by all AWS
+ *
+ * accounts> <note>
+ *
+ * Don't add the <code>all</code> value for any manual DB cluster snapshots that contain private information that you don't
+ * want available to all AWS
+ *
+ * accounts> </note>
+ *
+ * If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized AWS account
+ * IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in this
  *
  * case>
  *
  * To view which AWS accounts have access to copy or restore a manual DB cluster snapshot, or whether a manual DB cluster
- * snapshot public or private, use the <code>DescribeDBClusterSnapshotAttributes</code> API
+ * snapshot is public or private, use the <a>DescribeDBClusterSnapshotAttributes</a> API action. The accounts are returned
+ * as values for the <code>restore</code>
  *
- * action> <note>
+ * attribute> <note>
  *
  * This action only applies to Aurora DB
  */
@@ -2041,12 +2460,7 @@ ModifyDBInstanceResponse * RdsClient::modifyDBInstance(const ModifyDBInstanceReq
  * <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20 parameters can be
  * modified in a single request.
  *
- * </p <note>
- *
- * Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to
- * the DB instance associated with the parameter group before the change can take
- *
- * effect> </note> <b>
+ * </p <b>
  *
  * After you modify a DB parameter group, you should wait at least 5 minutes before creating your first DB instance that
  * uses that DB parameter group as the default parameter group. This allows Amazon RDS to fully complete the modify action
@@ -2063,15 +2477,55 @@ ModifyDBParameterGroupResponse * RdsClient::modifyDBParameterGroup(const ModifyD
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyDBProxyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the settings for an existing DB
+ */
+ModifyDBProxyResponse * RdsClient::modifyDBProxy(const ModifyDBProxyRequest &request)
+{
+    return qobject_cast<ModifyDBProxyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyDBProxyEndpointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the settings for an existing DB proxy
+ */
+ModifyDBProxyEndpointResponse * RdsClient::modifyDBProxyEndpoint(const ModifyDBProxyEndpointRequest &request)
+{
+    return qobject_cast<ModifyDBProxyEndpointResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * ModifyDBProxyTargetGroupResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the properties of a
+ */
+ModifyDBProxyTargetGroupResponse * RdsClient::modifyDBProxyTargetGroup(const ModifyDBProxyTargetGroupRequest &request)
+{
+    return qobject_cast<ModifyDBProxyTargetGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * ModifyDBSnapshotResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a manual DB snapshot, which can be encrypted or not encrypted, with a new engine version.
+ * Updates a manual DB snapshot with a new engine version. The snapshot can be encrypted or unencrypted, but not shared or
+ * public.
  *
  * </p
  *
- * Amazon RDS supports upgrading DB snapshots for MySQL and Oracle.
+ * Amazon RDS supports upgrading DB snapshots for MySQL, Oracle, and PostgreSQL.
  */
 ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotRequest &request)
 {
@@ -2091,15 +2545,23 @@ ModifyDBSnapshotResponse * RdsClient::modifyDBSnapshot(const ModifyDBSnapshotReq
  * To share a manual DB snapshot with other AWS accounts, specify <code>restore</code> as the <code>AttributeName</code>
  * and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the AWS accounts that are authorized to restore
  * the manual DB snapshot. Uses the value <code>all</code> to make the manual DB snapshot public, which means it can be
- * copied or restored by all AWS accounts. Do not add the <code>all</code> value for any manual DB snapshots that contain
- * private information that you don't want available to all AWS accounts. If the manual DB snapshot is encrypted, it can be
- * shared, but only by specifying a list of authorized AWS account IDs for the <code>ValuesToAdd</code> parameter. You
- * can't use <code>all</code> as a value for that parameter in this
+ * copied or restored by all AWS
+ *
+ * accounts> <note>
+ *
+ * Don't add the <code>all</code> value for any manual DB snapshots that contain private information that you don't want
+ * available to all AWS
+ *
+ * accounts> </note>
+ *
+ * If the manual DB snapshot is encrypted, it can be shared, but only by specifying a list of authorized AWS account IDs
+ * for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in this
  *
  * case>
  *
  * To view which AWS accounts have access to copy or restore a manual DB snapshot, or whether a manual DB snapshot public
- * or private, use the <code>DescribeDBSnapshotAttributes</code> API
+ * or private, use the <a>DescribeDBSnapshotAttributes</a> API action. The accounts are returned as values for the
+ * <code>restore</code>
  */
 ModifyDBSnapshotAttributeResponse * RdsClient::modifyDBSnapshotAttribute(const ModifyDBSnapshotAttributeRequest &request)
 {
@@ -2125,15 +2587,15 @@ ModifyDBSubnetGroupResponse * RdsClient::modifyDBSubnetGroup(const ModifyDBSubne
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an existing RDS event notification subscription. Note that you can't modify the source identifiers using this
- * call; to change source identifiers for a subscription, use the <code>AddSourceIdentifierToSubscription</code> and
+ * Modifies an existing RDS event notification subscription. You can't modify the source identifiers using this call. To
+ * change source identifiers for a subscription, use the <code>AddSourceIdentifierToSubscription</code> and
  * <code>RemoveSourceIdentifierFromSubscription</code>
  *
  * calls>
  *
- * You can see a list of the event categories for a given SourceType in the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> topic in the <i>Amazon RDS
- * User Guide</i> or by using the <b>DescribeEventCategories</b>
+ * You can see a list of the event categories for a given source type (<code>SourceType</code>) in <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">Events</a> in the <i>Amazon RDS User
+ * Guide</i> or by using the <code>DescribeEventCategories</code>
  */
 ModifyEventSubscriptionResponse * RdsClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
@@ -2179,15 +2641,15 @@ ModifyOptionGroupResponse * RdsClient::modifyOptionGroup(const ModifyOptionGroup
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Promotes a Read Replica DB instance to a standalone DB
+ * Promotes a read replica DB instance to a standalone DB
  *
  * instance> <note> <ul> <li>
  *
  * Backup duration is a function of the amount of changes to the database since the previous backup. If you plan to promote
- * a Read Replica to a standalone instance, we recommend that you enable backups and complete at least one backup prior to
- * promotion. In addition, a Read Replica cannot be promoted to a standalone instance when it is in the
- * <code>backing-up</code> status. If you have enabled backups on your Read Replica, configure the automated backup window
- * so that daily backups do not interfere with Read Replica
+ * a read replica to a standalone instance, we recommend that you enable backups and complete at least one backup prior to
+ * promotion. In addition, a read replica cannot be promoted to a standalone instance when it is in the
+ * <code>backing-up</code> status. If you have enabled backups on your read replica, configure the automated backup window
+ * so that daily backups do not interfere with read replica
  *
  * promotion> </li> <li>
  *
@@ -2204,7 +2666,7 @@ PromoteReadReplicaResponse * RdsClient::promoteReadReplica(const PromoteReadRepl
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Promotes a Read Replica DB cluster to a standalone DB
+ * Promotes a read replica DB cluster to a standalone DB
  *
  * cluster> <note>
  *
@@ -2252,6 +2714,19 @@ PurchaseReservedDBInstancesOfferingResponse * RdsClient::purchaseReservedDBInsta
 RebootDBInstanceResponse * RdsClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
     return qobject_cast<RebootDBInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * RegisterDBProxyTargetsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associate one or more <code>DBProxyTarget</code> data structures with a
+ */
+RegisterDBProxyTargetsResponse * RdsClient::registerDBProxyTargets(const RegisterDBProxyTargetsRequest &request)
+{
+    return qobject_cast<RegisterDBProxyTargetsResponse *>(send(request));
 }
 
 /*!
@@ -2392,14 +2867,27 @@ ResetDBParameterGroupResponse * RdsClient::resetDBParameterGroup(const ResetDBPa
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an Amazon Aurora DB cluster from data stored in an Amazon S3 bucket. Amazon RDS must be authorized to access the
- * Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.html"> Migrating Data to an
- * Amazon Aurora MySQL DB Cluster</a> in the <i>Amazon Aurora User
+ * Creates an Amazon Aurora DB cluster from MySQL data stored in an Amazon S3 bucket. Amazon RDS must be authorized to
+ * access the Amazon S3 bucket and the data must be created using the Percona XtraBackup utility as described in <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.ExtMySQL.html#AuroraMySQL.Migrating.ExtMySQL.S3">
+ * Migrating Data from MySQL by Using an Amazon S3 Bucket</a> in the <i>Amazon Aurora User
  *
  * Guide</i>> <note>
  *
- * This action only applies to Aurora DB
+ * This action only restores the DB cluster, not the DB instances for that DB cluster. You must invoke the
+ * <code>CreateDBInstance</code> action to create DB instances for the restored DB cluster, specifying the identifier of
+ * the restored DB cluster in <code>DBClusterIdentifier</code>. You can create DB instances only after the
+ * <code>RestoreDBClusterFromS3</code> action has completed and the DB cluster is
+ *
+ * available> </note>
+ *
+ * For more information on Amazon Aurora, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
+ * in the <i>Amazon Aurora User Guide.</i>
+ *
+ * </p <note>
+ *
+ * This action only applies to Aurora DB clusters. The source DB engine must be
  */
 RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const RestoreDBClusterFromS3Request &request)
 {
@@ -2412,20 +2900,21 @@ RestoreDBClusterFromS3Response * RdsClient::restoreDBClusterFromS3(const Restore
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB cluster from a DB snapshot or DB cluster
+ * Creates a new DB cluster from a DB snapshot or DB cluster snapshot. This action only applies to Aurora DB
  *
- * snapshot>
+ * clusters>
  *
- * If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration
- * and default security
+ * The target DB cluster is created from the source snapshot with a default configuration. If you don't specify a security
+ * group, the new DB cluster is associated with the default security
  *
- * group>
+ * group> <note>
  *
- * If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with
- * the same configuration as the original source DB cluster, except that the new DB cluster is created with the default
- * security
+ * This action only restores the DB cluster, not the DB instances for that DB cluster. You must invoke the
+ * <code>CreateDBInstance</code> action to create DB instances for the restored DB cluster, specifying the identifier of
+ * the restored DB cluster in <code>DBClusterIdentifier</code>. You can create DB instances only after the
+ * <code>RestoreDBClusterFromSnapshot</code> action has completed and the DB cluster is
  *
- * group>
+ * available> </note>
  *
  * For more information on Amazon Aurora, see <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What Is Amazon Aurora?</a>
@@ -2480,18 +2969,17 @@ RestoreDBClusterToPointInTimeResponse * RdsClient::restoreDBClusterToPointInTime
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new DB instance from a DB snapshot. The target database is created from the source database restore point with
- * the most of original configuration with the default security group and the default DB parameter group. By default, the
- * new DB instance is created as a single-AZ deployment except when the instance is a SQL Server instance that has an
- * option group that is associated with mirroring; in this case, the instance becomes a mirrored AZ deployment and not a
- * single-AZ
+ * most of the source's original configuration, including the default security group and DB parameter group. By default,
+ * the new DB instance is created as a Single-AZ deployment, except when the instance is a SQL Server instance that has an
+ * option group associated with mirroring. In this case, the instance becomes a Multi-AZ deployment, not a Single-AZ
  *
  * deployment>
  *
- * If your intent is to replace your original DB instance with the new, restored DB instance, then rename your original DB
+ * If you want to replace your original DB instance with the new, restored DB instance, then rename your original DB
  * instance before you call the RestoreDBInstanceFromDBSnapshot action. RDS doesn't allow two DB instances with the same
- * name. Once you have renamed your original DB instance with a different identifier, then you can pass the original name
+ * name. After you have renamed your original DB instance with a different identifier, then you can pass the original name
  * of the DB instance as the DBInstanceIdentifier in the call to the RestoreDBInstanceFromDBSnapshot action. The result is
- * that you will replace the original DB instance with the DB instance created from the
+ * that you replace the original DB instance with the DB instance created from the
  *
  * snapshot>
  *
@@ -2556,7 +3044,7 @@ RestoreDBInstanceToPointInTimeResponse * RdsClient::restoreDBInstanceToPointInTi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC Security Groups. Required
+ * Revokes ingress from a DBSecurityGroup for previously authorized IP ranges or EC2 or VPC security groups. Required
  * parameters for this API are one of CIDRIP, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and either
  * EC2SecurityGroupName or
  */
@@ -2630,6 +3118,37 @@ StartDBInstanceResponse * RdsClient::startDBInstance(const StartDBInstanceReques
 
 /*!
  * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StartDBInstanceAutomatedBackupsReplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables replication of automated backups to a different AWS
+ *
+ * Region>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html">
+ * Replicating Automated Backups to Another AWS Region</a> in the <i>Amazon RDS User Guide.</i>
+ */
+StartDBInstanceAutomatedBackupsReplicationResponse * RdsClient::startDBInstanceAutomatedBackupsReplication(const StartDBInstanceAutomatedBackupsReplicationRequest &request)
+{
+    return qobject_cast<StartDBInstanceAutomatedBackupsReplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StartExportTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an export of a snapshot to Amazon S3. The provided IAM role must have access to the S3 bucket.
+ */
+StartExportTaskResponse * RdsClient::startExportTask(const StartExportTaskRequest &request)
+{
+    return qobject_cast<StartExportTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
  * StopActivityStreamResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -2696,6 +3215,24 @@ StopDBClusterResponse * RdsClient::stopDBCluster(const StopDBClusterRequest &req
 StopDBInstanceResponse * RdsClient::stopDBInstance(const StopDBInstanceRequest &request)
 {
     return qobject_cast<StopDBInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RdsClient service, and returns a pointer to an
+ * StopDBInstanceAutomatedBackupsReplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops automated backup replication for a DB
+ *
+ * instance>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html">
+ * Replicating Automated Backups to Another AWS Region</a> in the <i>Amazon RDS User Guide.</i>
+ */
+StopDBInstanceAutomatedBackupsReplicationResponse * RdsClient::stopDBInstanceAutomatedBackupsReplication(const StopDBInstanceAutomatedBackupsReplicationRequest &request)
+{
+    return qobject_cast<StopDBInstanceAutomatedBackupsReplicationResponse *>(send(request));
 }
 
 /*!

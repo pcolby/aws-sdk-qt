@@ -41,6 +41,8 @@
 #include "deletestackinstancesresponse.h"
 #include "deletestacksetrequest.h"
 #include "deletestacksetresponse.h"
+#include "deregistertyperequest.h"
+#include "deregistertyperesponse.h"
 #include "describeaccountlimitsrequest.h"
 #include "describeaccountlimitsresponse.h"
 #include "describechangesetrequest.h"
@@ -63,10 +65,16 @@
 #include "describestacksetoperationresponse.h"
 #include "describestacksrequest.h"
 #include "describestacksresponse.h"
+#include "describetyperequest.h"
+#include "describetyperesponse.h"
+#include "describetyperegistrationrequest.h"
+#include "describetyperegistrationresponse.h"
 #include "detectstackdriftrequest.h"
 #include "detectstackdriftresponse.h"
 #include "detectstackresourcedriftrequest.h"
 #include "detectstackresourcedriftresponse.h"
+#include "detectstacksetdriftrequest.h"
+#include "detectstacksetdriftresponse.h"
 #include "estimatetemplatecostrequest.h"
 #include "estimatetemplatecostresponse.h"
 #include "executechangesetrequest.h"
@@ -95,8 +103,20 @@
 #include "liststacksetsresponse.h"
 #include "liststacksrequest.h"
 #include "liststacksresponse.h"
+#include "listtyperegistrationsrequest.h"
+#include "listtyperegistrationsresponse.h"
+#include "listtypeversionsrequest.h"
+#include "listtypeversionsresponse.h"
+#include "listtypesrequest.h"
+#include "listtypesresponse.h"
+#include "recordhandlerprogressrequest.h"
+#include "recordhandlerprogressresponse.h"
+#include "registertyperequest.h"
+#include "registertyperesponse.h"
 #include "setstackpolicyrequest.h"
 #include "setstackpolicyresponse.h"
+#include "settypedefaultversionrequest.h"
+#include "settypedefaultversionresponse.h"
 #include "signalresourcerequest.h"
 #include "signalresourceresponse.h"
 #include "stopstacksetoperationrequest.h"
@@ -270,7 +290,8 @@ ContinueUpdateRollbackResponse * CloudFormationClient::continueUpdateRollback(co
  *
  * To create a change set for a stack that doesn't exist, for the <code>ChangeSetType</code> parameter, specify
  * <code>CREATE</code>. To create a change set for an existing stack, specify <code>UPDATE</code> for the
- * <code>ChangeSetType</code> parameter. After the <code>CreateChangeSet</code> call successfully completes, AWS
+ * <code>ChangeSetType</code> parameter. To create a change set for an import operation, specify <code>IMPORT</code> for
+ * the <code>ChangeSetType</code> parameter. After the <code>CreateChangeSet</code> call successfully completes, AWS
  * CloudFormation starts creating the change set. To check the status of the change set or to review it, use the
  * <a>DescribeChangeSet</a>
  *
@@ -278,6 +299,10 @@ ContinueUpdateRollbackResponse * CloudFormationClient::continueUpdateRollback(co
  *
  * When you are satisfied with the changes the change set will make, execute the change set by using the
  * <a>ExecuteChangeSet</a> action. AWS CloudFormation doesn't make changes until you execute the change
+ *
+ * set>
+ *
+ * To create a change set for the entire stack hierachy, set <code>IncludeNestedStacks</code> to
  */
 CreateChangeSetResponse * CloudFormationClient::createChangeSet(const CreateChangeSetRequest &request)
 {
@@ -304,9 +329,9 @@ CreateStackResponse * CloudFormationClient::createStack(const CreateStackRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates stack instances for the specified accounts, within the specified regions. A stack instance refers to a stack in
- * a specific account and region. <code>Accounts</code> and <code>Regions</code> are required parameters—you must specify
- * at least one account and one region.
+ * Creates stack instances for the specified accounts, within the specified Regions. A stack instance refers to a stack in
+ * a specific account and Region. You must specify at least one value for either <code>Accounts</code> or
+ * <code>DeploymentTargets</code>, and you must specify at least one value for
  */
 CreateStackInstancesResponse * CloudFormationClient::createStackInstances(const CreateStackInstancesRequest &request)
 {
@@ -337,6 +362,12 @@ CreateStackSetResponse * CloudFormationClient::createStackSet(const CreateStackS
  * set>
  *
  * If the call successfully completes, AWS CloudFormation successfully deleted the change
+ *
+ * set>
+ *
+ * If <code>IncludeNestedStacks</code> specifies <code>True</code> during the creation of the nested change set, then
+ * <code>DeleteChangeSet</code> will delete all change sets that belong to the stacks hierarchy and will also delete all
+ * change sets for nested stacks with the status of
  */
 DeleteChangeSetResponse * CloudFormationClient::deleteChangeSet(const DeleteChangeSetRequest &request)
 {
@@ -363,7 +394,7 @@ DeleteStackResponse * CloudFormationClient::deleteStack(const DeleteStackRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes stack instances for the specified accounts, in the specified regions.
+ * Deletes stack instances for the specified accounts, in the specified Regions.
  */
 DeleteStackInstancesResponse * CloudFormationClient::deleteStackInstances(const DeleteStackInstancesRequest &request)
 {
@@ -382,6 +413,36 @@ DeleteStackInstancesResponse * CloudFormationClient::deleteStackInstances(const 
 DeleteStackSetResponse * CloudFormationClient::deleteStackSet(const DeleteStackSetRequest &request)
 {
     return qobject_cast<DeleteStackSetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * DeregisterTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Marks an extension or extension version as <code>DEPRECATED</code> in the CloudFormation registry, removing it from
+ * active use. Deprecated extensions or extension versions cannot be used in CloudFormation
+ *
+ * operations>
+ *
+ * To deregister an entire extension, you must individually deregister all active versions of that extension. If an
+ * extension has only a single active version, deregistering that version results in the extension itself being
+ * deregistered and marked as deprecated in the registry.
+ *
+ * </p
+ *
+ * You cannot deregister the default version of an extension if there are other active version of that extension. If you do
+ * deregister the default version of an extension, the textensionype itself is deregistered as well and marked as
+ * deprecated.
+ *
+ * </p
+ *
+ * To view the deprecation status of an extension or extension version, use <a
+ */
+DeregisterTypeResponse * CloudFormationClient::deregisterType(const DeregisterTypeRequest &request)
+{
+    return qobject_cast<DeregisterTypeResponse *>(send(request));
 }
 
 /*!
@@ -470,7 +531,7 @@ DescribeStackEventsResponse * CloudFormationClient::describeStackEvents(const De
  *
  * Returns the stack instance that's associated with the specified stack set, AWS account, and
  *
- * region>
+ * Region>
  *
  * For a list of stack instances that are associated with a specific stack set, use
  */
@@ -606,6 +667,47 @@ DescribeStacksResponse * CloudFormationClient::describeStacks(const DescribeStac
 
 /*!
  * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * DescribeTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns detailed information about an extension that has been
+ *
+ * registered>
+ *
+ * If you specify a <code>VersionId</code>, <code>DescribeType</code> returns information about that specific extension
+ * version. Otherwise, it returns information about the default extension
+ */
+DescribeTypeResponse * CloudFormationClient::describeType(const DescribeTypeRequest &request)
+{
+    return qobject_cast<DescribeTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * DescribeTypeRegistrationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about an extension's registration, including its current status and type and version
+ *
+ * identifiers>
+ *
+ * When you initiate a registration request using <code> <a>RegisterType</a> </code>, you can then use <code>
+ * <a>DescribeTypeRegistration</a> </code> to monitor the progress of that registration
+ *
+ * request>
+ *
+ * Once the registration request has completed, use <code> <a>DescribeType</a> </code> to return detailed information about
+ * an
+ */
+DescribeTypeRegistrationResponse * CloudFormationClient::describeTypeRegistration(const DescribeTypeRegistrationRequest &request)
+{
+    return qobject_cast<DescribeTypeRegistrationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
  * DetectStackDriftResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -679,6 +781,63 @@ DetectStackResourceDriftResponse * CloudFormationClient::detectStackResourceDrif
 
 /*!
  * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * DetectStackSetDriftResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detect drift on a stack set. When CloudFormation performs drift detection on a stack set, it performs drift detection on
+ * the stack associated with each stack instance in the stack set. For more information, see <a
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">How CloudFormation Performs
+ * Drift Detection on a Stack
+ *
+ * Set</a>>
+ *
+ * <code>DetectStackSetDrift</code> returns the <code>OperationId</code> of the stack set drift detection operation. Use
+ * this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the drift detection
+ * operation. The drift detection operation may take some time, depending on the number of stack instances included in the
+ * stack set, as well as the number of resources included in each
+ *
+ * stack>
+ *
+ * Once the operation has completed, use the following actions to return drift
+ *
+ * information> <ul> <li>
+ *
+ * Use <code> <a>DescribeStackSet</a> </code> to return detailed information about the stack set, including detailed
+ * information about the last <i>completed</i> drift operation performed on the stack set. (Information about drift
+ * operations that are in progress is not
+ *
+ * included.> </li> <li>
+ *
+ * Use <code> <a>ListStackInstances</a> </code> to return a list of stack instances belonging to the stack set, including
+ * the drift status and last drift time checked of each
+ *
+ * instance> </li> <li>
+ *
+ * Use <code> <a>DescribeStackInstance</a> </code> to return detailed information about a specific stack instance,
+ * including its drift status and last drift time
+ *
+ * checked> </li> </ul>
+ *
+ * For more information on performing a drift detection operation on a stack set, see <a
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged Changes
+ * in Stack Sets</a>.
+ *
+ * </p
+ *
+ * You can only run a single drift detection operation on a given stack set at one time.
+ *
+ * </p
+ *
+ * To stop a drift detection stack set operation, use <code> <a>StopStackSetOperation</a>
+ */
+DetectStackSetDriftResponse * CloudFormationClient::detectStackSetDrift(const DetectStackSetDriftRequest &request)
+{
+    return qobject_cast<DetectStackSetDriftResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
  * EstimateTemplateCostResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -710,6 +869,10 @@ EstimateTemplateCostResponse * CloudFormationClient::estimateTemplateCost(const 
  *
  * If a stack policy is associated with the stack, AWS CloudFormation enforces the policy during the update. You can't
  * specify a temporary stack policy that overrides the current
+ *
+ * policy>
+ *
+ * To create a change set for the entire stack hierachy, <code>IncludeNestedStacks</code> must have been set to
  */
 ExecuteChangeSetResponse * CloudFormationClient::executeChangeSet(const ExecuteChangeSetRequest &request)
 {
@@ -795,7 +958,7 @@ ListChangeSetsResponse * CloudFormationClient::listChangeSets(const ListChangeSe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all exported output values in the account and region in which you call this action. Use this action to see the
+ * Lists all exported output values in the account and Region in which you call this action. Use this action to see the
  * exported output values that you can import into other stacks. To import values, use the <a
  * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html">
  * <code>Fn::ImportValue</code> </a> function.
@@ -838,7 +1001,7 @@ ListImportsResponse * CloudFormationClient::listImports(const ListImportsRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns summary information about stack instances that are associated with the specified stack set. You can filter for
- * stack instances that are associated with a specific AWS account name or
+ * stack instances that are associated with a specific AWS account name or Region, or that have a specific
  */
 ListStackInstancesResponse * CloudFormationClient::listStackInstances(const ListStackInstancesRequest &request)
 {
@@ -895,6 +1058,22 @@ ListStackSetOperationsResponse * CloudFormationClient::listStackSetOperations(co
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns summary information about stack sets that are associated with the
+ *
+ * user> <ul> <li>
+ *
+ * [Self-managed permissions] If you set the <code>CallAs</code> parameter to <code>SELF</code> while signed in to your AWS
+ * account, <code>ListStackSets</code> returns all self-managed stack sets in your AWS
+ *
+ * account> </li> <li>
+ *
+ * [Service-managed permissions] If you set the <code>CallAs</code> parameter to <code>SELF</code> while signed in to the
+ * organization's management account, <code>ListStackSets</code> returns all stack sets in the management
+ *
+ * account> </li> <li>
+ *
+ * [Service-managed permissions] If you set the <code>CallAs</code> parameter to <code>DELEGATED_ADMIN</code> while signed
+ * in to your member account, <code>ListStackSets</code> returns all stack sets with service-managed permissions in the
+ * management
  */
 ListStackSetsResponse * CloudFormationClient::listStackSets(const ListStackSetsRequest &request)
 {
@@ -918,6 +1097,107 @@ ListStacksResponse * CloudFormationClient::listStacks(const ListStacksRequest &r
 
 /*!
  * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * ListTypeRegistrationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of registration tokens for the specified
+ */
+ListTypeRegistrationsResponse * CloudFormationClient::listTypeRegistrations(const ListTypeRegistrationsRequest &request)
+{
+    return qobject_cast<ListTypeRegistrationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * ListTypeVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns summary information about the versions of an
+ */
+ListTypeVersionsResponse * CloudFormationClient::listTypeVersions(const ListTypeVersionsRequest &request)
+{
+    return qobject_cast<ListTypeVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * ListTypesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns summary information about extension that have been registered with
+ */
+ListTypesResponse * CloudFormationClient::listTypes(const ListTypesRequest &request)
+{
+    return qobject_cast<ListTypesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * RecordHandlerProgressResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Reports progress of a resource handler to
+ *
+ * CloudFormation>
+ *
+ * Reserved for use by the <a
+ * href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html">CloudFormation
+ * CLI</a>. Do not use this API in your
+ */
+RecordHandlerProgressResponse * CloudFormationClient::recordHandlerProgress(const RecordHandlerProgressRequest &request)
+{
+    return qobject_cast<RecordHandlerProgressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * RegisterTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Registers an extension with the CloudFormation service. Registering an extension makes it available for use in
+ * CloudFormation templates in your AWS account, and
+ *
+ * includes> <ul> <li>
+ *
+ * Validating the extension
+ *
+ * schem> </li> <li>
+ *
+ * Determining which handlers, if any, have been specified for the
+ *
+ * extensio> </li> <li>
+ *
+ * Making the extension available for use in your
+ *
+ * accoun> </li> </ul>
+ *
+ * For more information on how to develop extensions and ready them for registeration, see <a
+ * href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html">Creating Resource
+ * Providers</a> in the <i>CloudFormation CLI User
+ *
+ * Guide</i>>
+ *
+ * You can have a maximum of 50 resource extension versions registered at a time. This maximum is per account and per
+ * region. Use <a href="AWSCloudFormation/latest/APIReference/API_DeregisterType.html">DeregisterType</a> to deregister
+ * specific extension versions if
+ *
+ * necessary>
+ *
+ * Once you have initiated a registration request using <code> <a>RegisterType</a> </code>, you can use <code>
+ * <a>DescribeTypeRegistration</a> </code> to monitor the progress of the registration
+ */
+RegisterTypeResponse * CloudFormationClient::registerType(const RegisterTypeRequest &request)
+{
+    return qobject_cast<RegisterTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
  * SetStackPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -927,6 +1207,19 @@ ListStacksResponse * CloudFormationClient::listStacks(const ListStacksRequest &r
 SetStackPolicyResponse * CloudFormationClient::setStackPolicy(const SetStackPolicyRequest &request)
 {
     return qobject_cast<SetStackPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudFormationClient service, and returns a pointer to an
+ * SetTypeDefaultVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Specify the default version of an extension. The default version of an extension will be used in CloudFormation
+ */
+SetTypeDefaultVersionResponse * CloudFormationClient::setTypeDefaultVersion(const SetTypeDefaultVersionRequest &request)
+{
+    return qobject_cast<SetTypeDefaultVersionResponse *>(send(request));
 }
 
 /*!
@@ -987,12 +1280,12 @@ UpdateStackResponse * CloudFormationClient::updateStack(const UpdateStackRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the parameter values for stack instances for the specified accounts, within the specified regions. A stack
- * instance refers to a stack in a specific account and region.
+ * Updates the parameter values for stack instances for the specified accounts, within the specified Regions. A stack
+ * instance refers to a stack in a specific account and Region.
  *
  * </p
  *
- * You can only update stack instances in regions and accounts where they already exist; to create additional stack
+ * You can only update stack instances in Regions and accounts where they already exist; to create additional stack
  * instances, use <a
  * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackInstances.html">CreateStackInstances</a>.
  *
@@ -1024,7 +1317,7 @@ UpdateStackInstancesResponse * CloudFormationClient::updateStackInstances(const 
  *
  * Updates the stack set, and associated stack instances in the specified accounts and
  *
- * regions>
+ * Regions>
  *
  * Even if the stack set operation created by updating the stack set fails (completely or partially, below or above a
  * specified failure tolerance), the stack set is updated with your changes. Subsequent <a>CreateStackInstances</a> calls
@@ -1043,13 +1336,13 @@ UpdateStackSetResponse * CloudFormationClient::updateStackSet(const UpdateStackS
  *
  * Updates termination protection for the specified stack. If a user attempts to delete a stack with termination protection
  * enabled, the operation fails and the stack remains unchanged. For more information, see <a
- * href="AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the
- * <i>AWS CloudFormation User
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack
+ * From Being Deleted</a> in the <i>AWS CloudFormation User
  *
  * Guide</i>>
  *
- * For <a href="AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection
- * is set on the root stack and cannot be changed directly on the nested
+ * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
+ * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested
  */
 UpdateTerminationProtectionResponse * CloudFormationClient::updateTerminationProtection(const UpdateTerminationProtectionRequest &request)
 {

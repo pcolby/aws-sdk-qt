@@ -36,22 +36,34 @@ namespace CodeCommit {
  * This enum describes the actions that can be performed as CodeCommit
  * requests.
  *
+ * \value AssociateApprovalRuleTemplateWithRepositoryAction CodeCommit AssociateApprovalRuleTemplateWithRepository action.
+ * \value BatchAssociateApprovalRuleTemplateWithRepositoriesAction CodeCommit BatchAssociateApprovalRuleTemplateWithRepositories action.
  * \value BatchDescribeMergeConflictsAction CodeCommit BatchDescribeMergeConflicts action.
+ * \value BatchDisassociateApprovalRuleTemplateFromRepositoriesAction CodeCommit BatchDisassociateApprovalRuleTemplateFromRepositories action.
+ * \value BatchGetCommitsAction CodeCommit BatchGetCommits action.
  * \value BatchGetRepositoriesAction CodeCommit BatchGetRepositories action.
+ * \value CreateApprovalRuleTemplateAction CodeCommit CreateApprovalRuleTemplate action.
  * \value CreateBranchAction CodeCommit CreateBranch action.
  * \value CreateCommitAction CodeCommit CreateCommit action.
  * \value CreatePullRequestAction CodeCommit CreatePullRequest action.
+ * \value CreatePullRequestApprovalRuleAction CodeCommit CreatePullRequestApprovalRule action.
  * \value CreateRepositoryAction CodeCommit CreateRepository action.
  * \value CreateUnreferencedMergeCommitAction CodeCommit CreateUnreferencedMergeCommit action.
+ * \value DeleteApprovalRuleTemplateAction CodeCommit DeleteApprovalRuleTemplate action.
  * \value DeleteBranchAction CodeCommit DeleteBranch action.
  * \value DeleteCommentContentAction CodeCommit DeleteCommentContent action.
  * \value DeleteFileAction CodeCommit DeleteFile action.
+ * \value DeletePullRequestApprovalRuleAction CodeCommit DeletePullRequestApprovalRule action.
  * \value DeleteRepositoryAction CodeCommit DeleteRepository action.
  * \value DescribeMergeConflictsAction CodeCommit DescribeMergeConflicts action.
  * \value DescribePullRequestEventsAction CodeCommit DescribePullRequestEvents action.
+ * \value DisassociateApprovalRuleTemplateFromRepositoryAction CodeCommit DisassociateApprovalRuleTemplateFromRepository action.
+ * \value EvaluatePullRequestApprovalRulesAction CodeCommit EvaluatePullRequestApprovalRules action.
+ * \value GetApprovalRuleTemplateAction CodeCommit GetApprovalRuleTemplate action.
  * \value GetBlobAction CodeCommit GetBlob action.
  * \value GetBranchAction CodeCommit GetBranch action.
  * \value GetCommentAction CodeCommit GetComment action.
+ * \value GetCommentReactionsAction CodeCommit GetCommentReactions action.
  * \value GetCommentsForComparedCommitAction CodeCommit GetCommentsForComparedCommit action.
  * \value GetCommentsForPullRequestAction CodeCommit GetCommentsForPullRequest action.
  * \value GetCommitAction CodeCommit GetCommit action.
@@ -62,11 +74,16 @@ namespace CodeCommit {
  * \value GetMergeConflictsAction CodeCommit GetMergeConflicts action.
  * \value GetMergeOptionsAction CodeCommit GetMergeOptions action.
  * \value GetPullRequestAction CodeCommit GetPullRequest action.
+ * \value GetPullRequestApprovalStatesAction CodeCommit GetPullRequestApprovalStates action.
+ * \value GetPullRequestOverrideStateAction CodeCommit GetPullRequestOverrideState action.
  * \value GetRepositoryAction CodeCommit GetRepository action.
  * \value GetRepositoryTriggersAction CodeCommit GetRepositoryTriggers action.
+ * \value ListApprovalRuleTemplatesAction CodeCommit ListApprovalRuleTemplates action.
+ * \value ListAssociatedApprovalRuleTemplatesForRepositoryAction CodeCommit ListAssociatedApprovalRuleTemplatesForRepository action.
  * \value ListBranchesAction CodeCommit ListBranches action.
  * \value ListPullRequestsAction CodeCommit ListPullRequests action.
  * \value ListRepositoriesAction CodeCommit ListRepositories action.
+ * \value ListRepositoriesForApprovalRuleTemplateAction CodeCommit ListRepositoriesForApprovalRuleTemplate action.
  * \value ListTagsForResourceAction CodeCommit ListTagsForResource action.
  * \value MergeBranchesByFastForwardAction CodeCommit MergeBranchesByFastForward action.
  * \value MergeBranchesBySquashAction CodeCommit MergeBranchesBySquash action.
@@ -74,16 +91,23 @@ namespace CodeCommit {
  * \value MergePullRequestByFastForwardAction CodeCommit MergePullRequestByFastForward action.
  * \value MergePullRequestBySquashAction CodeCommit MergePullRequestBySquash action.
  * \value MergePullRequestByThreeWayAction CodeCommit MergePullRequestByThreeWay action.
+ * \value OverridePullRequestApprovalRulesAction CodeCommit OverridePullRequestApprovalRules action.
  * \value PostCommentForComparedCommitAction CodeCommit PostCommentForComparedCommit action.
  * \value PostCommentForPullRequestAction CodeCommit PostCommentForPullRequest action.
  * \value PostCommentReplyAction CodeCommit PostCommentReply action.
+ * \value PutCommentReactionAction CodeCommit PutCommentReaction action.
  * \value PutFileAction CodeCommit PutFile action.
  * \value PutRepositoryTriggersAction CodeCommit PutRepositoryTriggers action.
  * \value TagResourceAction CodeCommit TagResource action.
  * \value TestRepositoryTriggersAction CodeCommit TestRepositoryTriggers action.
  * \value UntagResourceAction CodeCommit UntagResource action.
+ * \value UpdateApprovalRuleTemplateContentAction CodeCommit UpdateApprovalRuleTemplateContent action.
+ * \value UpdateApprovalRuleTemplateDescriptionAction CodeCommit UpdateApprovalRuleTemplateDescription action.
+ * \value UpdateApprovalRuleTemplateNameAction CodeCommit UpdateApprovalRuleTemplateName action.
  * \value UpdateCommentAction CodeCommit UpdateComment action.
  * \value UpdateDefaultBranchAction CodeCommit UpdateDefaultBranch action.
+ * \value UpdatePullRequestApprovalRuleContentAction CodeCommit UpdatePullRequestApprovalRuleContent action.
+ * \value UpdatePullRequestApprovalStateAction CodeCommit UpdatePullRequestApprovalState action.
  * \value UpdatePullRequestDescriptionAction CodeCommit UpdatePullRequestDescription action.
  * \value UpdatePullRequestStatusAction CodeCommit UpdatePullRequestStatus action.
  * \value UpdatePullRequestTitleAction CodeCommit UpdatePullRequestTitle action.

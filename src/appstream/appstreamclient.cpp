@@ -41,6 +41,8 @@
 #include "createstackresponse.h"
 #include "createstreamingurlrequest.h"
 #include "createstreamingurlresponse.h"
+#include "createupdatedimagerequest.h"
+#include "createupdatedimageresponse.h"
 #include "createusagereportsubscriptionrequest.h"
 #include "createusagereportsubscriptionresponse.h"
 #include "createuserrequest.h"
@@ -143,9 +145,17 @@ namespace AppStream {
  *  This is the <i>Amazon AppStream 2.0 API Reference</i>. This documentation provides descriptions and syntax for each of
  *  the actions and data types in AppStream 2.0. AppStream 2.0 is a fully managed, secure application streaming service that
  *  lets you stream desktop applications to users without rewriting applications. AppStream 2.0 manages the AWS resources
- *  that are required to host and run your applications, scales automatically, and provides access to your users on
+ *  that are required to host and run your applications, scales automatically, and provides access to your users on demand.
  * 
- *  demand>
+ *  </p <note>
+ * 
+ *  You can call the AppStream 2.0 API operations by using an interface VPC endpoint (interface endpoint). For more
+ *  information, see <a
+ *  href="https://docs.aws.amazon.com/appstream2/latest/developerguide/access-api-cli-through-interface-vpc-endpoint.html">Access
+ *  AppStream 2.0 API Operations and CLI Commands Through an Interface VPC Endpoint</a> in the <i>Amazon AppStream 2.0
+ *  Administration
+ * 
+ *  Guide</i>> </note>
  * 
  *  To learn more about AppStream 2.0, see the following
  * 
@@ -348,6 +358,25 @@ CreateStackResponse * AppStreamClient::createStack(const CreateStackRequest &req
 CreateStreamingURLResponse * AppStreamClient::createStreamingURL(const CreateStreamingURLRequest &request)
 {
     return qobject_cast<CreateStreamingURLResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppStreamClient service, and returns a pointer to an
+ * CreateUpdatedImageResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new image with the latest Windows operating system updates, driver updates, and AppStream 2.0 agent
+ *
+ * software>
+ *
+ * For more information, see the "Update an Image by Using Managed AppStream 2.0 Image Updates" section in <a
+ * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/administer-images.html">Administer Your AppStream 2.0
+ * Images</a>, in the <i>Amazon AppStream 2.0 Administration
+ */
+CreateUpdatedImageResponse * AppStreamClient::createUpdatedImage(const CreateUpdatedImageRequest &request)
+{
+    return qobject_cast<CreateUpdatedImageResponse *>(send(request));
 }
 
 /*!
@@ -727,7 +756,7 @@ ListAssociatedStacksResponse * AppStreamClient::listAssociatedStacks(const ListA
  *
  * For more information about tags, see <a
  * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
- * <i>Amazon AppStream 2.0 Developer
+ * <i>Amazon AppStream 2.0 Administration
  */
 ListTagsForResourceResponse * AppStreamClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -809,7 +838,7 @@ StopImageBuilderResponse * AppStreamClient::stopImageBuilder(const StopImageBuil
  *
  * For more information about tags, see <a
  * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
- * <i>Amazon AppStream 2.0 Developer
+ * <i>Amazon AppStream 2.0 Administration
  */
 TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &request)
 {
@@ -832,7 +861,7 @@ TagResourceResponse * AppStreamClient::tagResource(const TagResourceRequest &req
  *
  * For more information about tags, see <a
  * href="https://docs.aws.amazon.com/appstream2/latest/developerguide/tagging-basic.html">Tagging Your Resources</a> in the
- * <i>Amazon AppStream 2.0 Developer
+ * <i>Amazon AppStream 2.0 Administration
  */
 UntagResourceResponse * AppStreamClient::untagResource(const UntagResourceRequest &request)
 {
@@ -865,8 +894,9 @@ UpdateDirectoryConfigResponse * AppStreamClient::updateDirectoryConfig(const Upd
  *
  * If the fleet is in the <code>STOPPED</code> state, you can update any attribute except the fleet name. If the fleet is
  * in the <code>RUNNING</code> state, you can update the <code>DisplayName</code>, <code>ComputeCapacity</code>,
- * <code>ImageARN</code>, <code>ImageName</code>, and <code>DisconnectTimeoutInSeconds</code> attributes. If the fleet is
- * in the <code>STARTING</code> or <code>STOPPING</code> state, you can't update
+ * <code>ImageARN</code>, <code>ImageName</code>, <code>IdleDisconnectTimeoutInSeconds</code>, and
+ * <code>DisconnectTimeoutInSeconds</code> attributes. If the fleet is in the <code>STARTING</code> or
+ * <code>STOPPING</code> state, you can't update
  */
 UpdateFleetResponse * AppStreamClient::updateFleet(const UpdateFleetRequest &request)
 {

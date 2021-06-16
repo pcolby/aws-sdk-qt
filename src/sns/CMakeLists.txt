@@ -21,6 +21,10 @@ add_library(QtAwsSns
   createplatformendpointrequest_p.h
   createplatformendpointresponse.h
   createplatformendpointresponse_p.h
+  createsmssandboxphonenumberrequest.h
+  createsmssandboxphonenumberrequest_p.h
+  createsmssandboxphonenumberresponse.h
+  createsmssandboxphonenumberresponse_p.h
   createtopicrequest.h
   createtopicrequest_p.h
   createtopicresponse.h
@@ -33,6 +37,10 @@ add_library(QtAwsSns
   deleteplatformapplicationrequest_p.h
   deleteplatformapplicationresponse.h
   deleteplatformapplicationresponse_p.h
+  deletesmssandboxphonenumberrequest.h
+  deletesmssandboxphonenumberrequest_p.h
+  deletesmssandboxphonenumberresponse.h
+  deletesmssandboxphonenumberresponse_p.h
   deletetopicrequest.h
   deletetopicrequest_p.h
   deletetopicresponse.h
@@ -49,6 +57,10 @@ add_library(QtAwsSns
   getsmsattributesrequest_p.h
   getsmsattributesresponse.h
   getsmsattributesresponse_p.h
+  getsmssandboxaccountstatusrequest.h
+  getsmssandboxaccountstatusrequest_p.h
+  getsmssandboxaccountstatusresponse.h
+  getsmssandboxaccountstatusresponse_p.h
   getsubscriptionattributesrequest.h
   getsubscriptionattributesrequest_p.h
   getsubscriptionattributesresponse.h
@@ -61,6 +73,10 @@ add_library(QtAwsSns
   listendpointsbyplatformapplicationrequest_p.h
   listendpointsbyplatformapplicationresponse.h
   listendpointsbyplatformapplicationresponse_p.h
+  listoriginationnumbersrequest.h
+  listoriginationnumbersrequest_p.h
+  listoriginationnumbersresponse.h
+  listoriginationnumbersresponse_p.h
   listphonenumbersoptedoutrequest.h
   listphonenumbersoptedoutrequest_p.h
   listphonenumbersoptedoutresponse.h
@@ -69,6 +85,10 @@ add_library(QtAwsSns
   listplatformapplicationsrequest_p.h
   listplatformapplicationsresponse.h
   listplatformapplicationsresponse_p.h
+  listsmssandboxphonenumbersrequest.h
+  listsmssandboxphonenumbersrequest_p.h
+  listsmssandboxphonenumbersresponse.h
+  listsmssandboxphonenumbersresponse_p.h
   listsubscriptionsbytopicrequest.h
   listsubscriptionsbytopicrequest_p.h
   listsubscriptionsbytopicresponse.h
@@ -139,6 +159,10 @@ add_library(QtAwsSns
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  verifysmssandboxphonenumberrequest.h
+  verifysmssandboxphonenumberrequest_p.h
+  verifysmssandboxphonenumberresponse.h
+  verifysmssandboxphonenumberresponse_p.h
   addpermissionrequest.cpp
   addpermissionresponse.cpp
   checkifphonenumberisoptedoutrequest.cpp
@@ -149,12 +173,16 @@ add_library(QtAwsSns
   createplatformapplicationresponse.cpp
   createplatformendpointrequest.cpp
   createplatformendpointresponse.cpp
+  createsmssandboxphonenumberrequest.cpp
+  createsmssandboxphonenumberresponse.cpp
   createtopicrequest.cpp
   createtopicresponse.cpp
   deleteendpointrequest.cpp
   deleteendpointresponse.cpp
   deleteplatformapplicationrequest.cpp
   deleteplatformapplicationresponse.cpp
+  deletesmssandboxphonenumberrequest.cpp
+  deletesmssandboxphonenumberresponse.cpp
   deletetopicrequest.cpp
   deletetopicresponse.cpp
   getendpointattributesrequest.cpp
@@ -163,16 +191,22 @@ add_library(QtAwsSns
   getplatformapplicationattributesresponse.cpp
   getsmsattributesrequest.cpp
   getsmsattributesresponse.cpp
+  getsmssandboxaccountstatusrequest.cpp
+  getsmssandboxaccountstatusresponse.cpp
   getsubscriptionattributesrequest.cpp
   getsubscriptionattributesresponse.cpp
   gettopicattributesrequest.cpp
   gettopicattributesresponse.cpp
   listendpointsbyplatformapplicationrequest.cpp
   listendpointsbyplatformapplicationresponse.cpp
+  listoriginationnumbersrequest.cpp
+  listoriginationnumbersresponse.cpp
   listphonenumbersoptedoutrequest.cpp
   listphonenumbersoptedoutresponse.cpp
   listplatformapplicationsrequest.cpp
   listplatformapplicationsresponse.cpp
+  listsmssandboxphonenumbersrequest.cpp
+  listsmssandboxphonenumbersresponse.cpp
   listsubscriptionsbytopicrequest.cpp
   listsubscriptionsbytopicresponse.cpp
   listsubscriptionsrequest.cpp
@@ -207,7 +241,9 @@ add_library(QtAwsSns
   unsubscriberequest.cpp
   unsubscriberesponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  verifysmssandboxphonenumberrequest.cpp
+  verifysmssandboxphonenumberresponse.cpp)
 
 add_dependencies(QtAwsSns QtAwsCore)
 

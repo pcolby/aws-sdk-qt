@@ -19,6 +19,14 @@ add_library(QtAwsCloudWatch
   deletedashboardsrequest_p.h
   deletedashboardsresponse.h
   deletedashboardsresponse_p.h
+  deleteinsightrulesrequest.h
+  deleteinsightrulesrequest_p.h
+  deleteinsightrulesresponse.h
+  deleteinsightrulesresponse_p.h
+  deletemetricstreamrequest.h
+  deletemetricstreamrequest_p.h
+  deletemetricstreamresponse.h
+  deletemetricstreamresponse_p.h
   describealarmhistoryrequest.h
   describealarmhistoryrequest_p.h
   describealarmhistoryresponse.h
@@ -35,18 +43,34 @@ add_library(QtAwsCloudWatch
   describeanomalydetectorsrequest_p.h
   describeanomalydetectorsresponse.h
   describeanomalydetectorsresponse_p.h
+  describeinsightrulesrequest.h
+  describeinsightrulesrequest_p.h
+  describeinsightrulesresponse.h
+  describeinsightrulesresponse_p.h
   disablealarmactionsrequest.h
   disablealarmactionsrequest_p.h
   disablealarmactionsresponse.h
   disablealarmactionsresponse_p.h
+  disableinsightrulesrequest.h
+  disableinsightrulesrequest_p.h
+  disableinsightrulesresponse.h
+  disableinsightrulesresponse_p.h
   enablealarmactionsrequest.h
   enablealarmactionsrequest_p.h
   enablealarmactionsresponse.h
   enablealarmactionsresponse_p.h
+  enableinsightrulesrequest.h
+  enableinsightrulesrequest_p.h
+  enableinsightrulesresponse.h
+  enableinsightrulesresponse_p.h
   getdashboardrequest.h
   getdashboardrequest_p.h
   getdashboardresponse.h
   getdashboardresponse_p.h
+  getinsightrulereportrequest.h
+  getinsightrulereportrequest_p.h
+  getinsightrulereportresponse.h
+  getinsightrulereportresponse_p.h
   getmetricdatarequest.h
   getmetricdatarequest_p.h
   getmetricdataresponse.h
@@ -55,6 +79,10 @@ add_library(QtAwsCloudWatch
   getmetricstatisticsrequest_p.h
   getmetricstatisticsresponse.h
   getmetricstatisticsresponse_p.h
+  getmetricstreamrequest.h
+  getmetricstreamrequest_p.h
+  getmetricstreamresponse.h
+  getmetricstreamresponse_p.h
   getmetricwidgetimagerequest.h
   getmetricwidgetimagerequest_p.h
   getmetricwidgetimageresponse.h
@@ -67,6 +95,10 @@ add_library(QtAwsCloudWatch
   listmetricsrequest_p.h
   listmetricsresponse.h
   listmetricsresponse_p.h
+  listmetricstreamsrequest.h
+  listmetricstreamsrequest_p.h
+  listmetricstreamsresponse.h
+  listmetricstreamsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
@@ -75,10 +107,18 @@ add_library(QtAwsCloudWatch
   putanomalydetectorrequest_p.h
   putanomalydetectorresponse.h
   putanomalydetectorresponse_p.h
+  putcompositealarmrequest.h
+  putcompositealarmrequest_p.h
+  putcompositealarmresponse.h
+  putcompositealarmresponse_p.h
   putdashboardrequest.h
   putdashboardrequest_p.h
   putdashboardresponse.h
   putdashboardresponse_p.h
+  putinsightrulerequest.h
+  putinsightrulerequest_p.h
+  putinsightruleresponse.h
+  putinsightruleresponse_p.h
   putmetricalarmrequest.h
   putmetricalarmrequest_p.h
   putmetricalarmresponse.h
@@ -87,10 +127,22 @@ add_library(QtAwsCloudWatch
   putmetricdatarequest_p.h
   putmetricdataresponse.h
   putmetricdataresponse_p.h
+  putmetricstreamrequest.h
+  putmetricstreamrequest_p.h
+  putmetricstreamresponse.h
+  putmetricstreamresponse_p.h
   setalarmstaterequest.h
   setalarmstaterequest_p.h
   setalarmstateresponse.h
   setalarmstateresponse_p.h
+  startmetricstreamsrequest.h
+  startmetricstreamsrequest_p.h
+  startmetricstreamsresponse.h
+  startmetricstreamsresponse_p.h
+  stopmetricstreamsrequest.h
+  stopmetricstreamsrequest_p.h
+  stopmetricstreamsresponse.h
+  stopmetricstreamsresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -108,6 +160,10 @@ add_library(QtAwsCloudWatch
   deleteanomalydetectorresponse.cpp
   deletedashboardsrequest.cpp
   deletedashboardsresponse.cpp
+  deleteinsightrulesrequest.cpp
+  deleteinsightrulesresponse.cpp
+  deletemetricstreamrequest.cpp
+  deletemetricstreamresponse.cpp
   describealarmhistoryrequest.cpp
   describealarmhistoryresponse.cpp
   describealarmsformetricrequest.cpp
@@ -116,34 +172,56 @@ add_library(QtAwsCloudWatch
   describealarmsresponse.cpp
   describeanomalydetectorsrequest.cpp
   describeanomalydetectorsresponse.cpp
+  describeinsightrulesrequest.cpp
+  describeinsightrulesresponse.cpp
   disablealarmactionsrequest.cpp
   disablealarmactionsresponse.cpp
+  disableinsightrulesrequest.cpp
+  disableinsightrulesresponse.cpp
   enablealarmactionsrequest.cpp
   enablealarmactionsresponse.cpp
+  enableinsightrulesrequest.cpp
+  enableinsightrulesresponse.cpp
   getdashboardrequest.cpp
   getdashboardresponse.cpp
+  getinsightrulereportrequest.cpp
+  getinsightrulereportresponse.cpp
   getmetricdatarequest.cpp
   getmetricdataresponse.cpp
   getmetricstatisticsrequest.cpp
   getmetricstatisticsresponse.cpp
+  getmetricstreamrequest.cpp
+  getmetricstreamresponse.cpp
   getmetricwidgetimagerequest.cpp
   getmetricwidgetimageresponse.cpp
   listdashboardsrequest.cpp
   listdashboardsresponse.cpp
   listmetricsrequest.cpp
   listmetricsresponse.cpp
+  listmetricstreamsrequest.cpp
+  listmetricstreamsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
   putanomalydetectorrequest.cpp
   putanomalydetectorresponse.cpp
+  putcompositealarmrequest.cpp
+  putcompositealarmresponse.cpp
   putdashboardrequest.cpp
   putdashboardresponse.cpp
+  putinsightrulerequest.cpp
+  putinsightruleresponse.cpp
   putmetricalarmrequest.cpp
   putmetricalarmresponse.cpp
   putmetricdatarequest.cpp
   putmetricdataresponse.cpp
+  putmetricstreamrequest.cpp
+  putmetricstreamresponse.cpp
   setalarmstaterequest.cpp
   setalarmstateresponse.cpp
+  startmetricstreamsrequest.cpp
+  startmetricstreamsresponse.cpp
+  stopmetricstreamsrequest.cpp
+  stopmetricstreamsresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp

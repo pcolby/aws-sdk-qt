@@ -32,6 +32,8 @@ class DeleteThingShadowRequest;
 class DeleteThingShadowResponse;
 class GetThingShadowRequest;
 class GetThingShadowResponse;
+class ListNamedShadowsForThingRequest;
+class ListNamedShadowsForThingResponse;
 class PublishRequest;
 class PublishResponse;
 class UpdateThingShadowRequest;
@@ -55,6 +57,7 @@ public:
 public slots:
     DeleteThingShadowResponse * deleteThingShadow(const DeleteThingShadowRequest &request);
     GetThingShadowResponse * getThingShadow(const GetThingShadowRequest &request);
+    ListNamedShadowsForThingResponse * listNamedShadowsForThing(const ListNamedShadowsForThingRequest &request);
     PublishResponse * publish(const PublishRequest &request);
     UpdateThingShadowResponse * updateThingShadow(const UpdateThingShadowRequest &request);
 

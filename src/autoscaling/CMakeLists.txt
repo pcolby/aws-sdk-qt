@@ -27,6 +27,10 @@ add_library(QtAwsAutoScaling
   batchputscheduledupdategroupactionrequest_p.h
   batchputscheduledupdategroupactionresponse.h
   batchputscheduledupdategroupactionresponse_p.h
+  cancelinstancerefreshrequest.h
+  cancelinstancerefreshrequest_p.h
+  cancelinstancerefreshresponse.h
+  cancelinstancerefreshresponse_p.h
   completelifecycleactionrequest.h
   completelifecycleactionrequest_p.h
   completelifecycleactionresponse.h
@@ -71,6 +75,10 @@ add_library(QtAwsAutoScaling
   deletetagsrequest_p.h
   deletetagsresponse.h
   deletetagsresponse_p.h
+  deletewarmpoolrequest.h
+  deletewarmpoolrequest_p.h
+  deletewarmpoolresponse.h
+  deletewarmpoolresponse_p.h
   describeaccountlimitsrequest.h
   describeaccountlimitsrequest_p.h
   describeaccountlimitsresponse.h
@@ -91,6 +99,10 @@ add_library(QtAwsAutoScaling
   describeautoscalingnotificationtypesrequest_p.h
   describeautoscalingnotificationtypesresponse.h
   describeautoscalingnotificationtypesresponse_p.h
+  describeinstancerefreshesrequest.h
+  describeinstancerefreshesrequest_p.h
+  describeinstancerefreshesresponse.h
+  describeinstancerefreshesresponse_p.h
   describelaunchconfigurationsrequest.h
   describelaunchconfigurationsrequest_p.h
   describelaunchconfigurationsresponse.h
@@ -143,6 +155,10 @@ add_library(QtAwsAutoScaling
   describeterminationpolicytypesrequest_p.h
   describeterminationpolicytypesresponse.h
   describeterminationpolicytypesresponse_p.h
+  describewarmpoolrequest.h
+  describewarmpoolrequest_p.h
+  describewarmpoolresponse.h
+  describewarmpoolresponse_p.h
   detachinstancesrequest.h
   detachinstancesrequest_p.h
   detachinstancesresponse.h
@@ -175,6 +191,10 @@ add_library(QtAwsAutoScaling
   exitstandbyrequest_p.h
   exitstandbyresponse.h
   exitstandbyresponse_p.h
+  getpredictivescalingforecastrequest.h
+  getpredictivescalingforecastrequest_p.h
+  getpredictivescalingforecastresponse.h
+  getpredictivescalingforecastresponse_p.h
   putlifecyclehookrequest.h
   putlifecyclehookrequest_p.h
   putlifecyclehookresponse.h
@@ -191,6 +211,10 @@ add_library(QtAwsAutoScaling
   putscheduledupdategroupactionrequest_p.h
   putscheduledupdategroupactionresponse.h
   putscheduledupdategroupactionresponse_p.h
+  putwarmpoolrequest.h
+  putwarmpoolrequest_p.h
+  putwarmpoolresponse.h
+  putwarmpoolresponse_p.h
   recordlifecycleactionheartbeatrequest.h
   recordlifecycleactionheartbeatrequest_p.h
   recordlifecycleactionheartbeatresponse.h
@@ -211,6 +235,10 @@ add_library(QtAwsAutoScaling
   setinstanceprotectionrequest_p.h
   setinstanceprotectionresponse.h
   setinstanceprotectionresponse_p.h
+  startinstancerefreshrequest.h
+  startinstancerefreshrequest_p.h
+  startinstancerefreshresponse.h
+  startinstancerefreshresponse_p.h
   suspendprocessesrequest.h
   suspendprocessesrequest_p.h
   suspendprocessesresponse.h
@@ -236,6 +264,8 @@ add_library(QtAwsAutoScaling
   batchdeletescheduledactionresponse.cpp
   batchputscheduledupdategroupactionrequest.cpp
   batchputscheduledupdategroupactionresponse.cpp
+  cancelinstancerefreshrequest.cpp
+  cancelinstancerefreshresponse.cpp
   completelifecycleactionrequest.cpp
   completelifecycleactionresponse.cpp
   createautoscalinggrouprequest.cpp
@@ -258,6 +288,8 @@ add_library(QtAwsAutoScaling
   deletescheduledactionresponse.cpp
   deletetagsrequest.cpp
   deletetagsresponse.cpp
+  deletewarmpoolrequest.cpp
+  deletewarmpoolresponse.cpp
   describeaccountlimitsrequest.cpp
   describeaccountlimitsresponse.cpp
   describeadjustmenttypesrequest.cpp
@@ -268,6 +300,8 @@ add_library(QtAwsAutoScaling
   describeautoscalinginstancesresponse.cpp
   describeautoscalingnotificationtypesrequest.cpp
   describeautoscalingnotificationtypesresponse.cpp
+  describeinstancerefreshesrequest.cpp
+  describeinstancerefreshesresponse.cpp
   describelaunchconfigurationsrequest.cpp
   describelaunchconfigurationsresponse.cpp
   describelifecyclehooksrequest.cpp
@@ -294,6 +328,8 @@ add_library(QtAwsAutoScaling
   describetagsresponse.cpp
   describeterminationpolicytypesrequest.cpp
   describeterminationpolicytypesresponse.cpp
+  describewarmpoolrequest.cpp
+  describewarmpoolresponse.cpp
   detachinstancesrequest.cpp
   detachinstancesresponse.cpp
   detachloadbalancersrequest.cpp
@@ -310,6 +346,8 @@ add_library(QtAwsAutoScaling
   executepolicyresponse.cpp
   exitstandbyrequest.cpp
   exitstandbyresponse.cpp
+  getpredictivescalingforecastrequest.cpp
+  getpredictivescalingforecastresponse.cpp
   putlifecyclehookrequest.cpp
   putlifecyclehookresponse.cpp
   putnotificationconfigurationrequest.cpp
@@ -318,6 +356,8 @@ add_library(QtAwsAutoScaling
   putscalingpolicyresponse.cpp
   putscheduledupdategroupactionrequest.cpp
   putscheduledupdategroupactionresponse.cpp
+  putwarmpoolrequest.cpp
+  putwarmpoolresponse.cpp
   recordlifecycleactionheartbeatrequest.cpp
   recordlifecycleactionheartbeatresponse.cpp
   resumeprocessesrequest.cpp
@@ -328,6 +368,8 @@ add_library(QtAwsAutoScaling
   setinstancehealthresponse.cpp
   setinstanceprotectionrequest.cpp
   setinstanceprotectionresponse.cpp
+  startinstancerefreshrequest.cpp
+  startinstancerefreshresponse.cpp
   suspendprocessesrequest.cpp
   suspendprocessesresponse.cpp
   terminateinstanceinautoscalinggrouprequest.cpp

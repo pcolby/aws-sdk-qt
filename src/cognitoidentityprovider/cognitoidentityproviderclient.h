@@ -186,6 +186,8 @@ class ResendConfirmationCodeRequest;
 class ResendConfirmationCodeResponse;
 class RespondToAuthChallengeRequest;
 class RespondToAuthChallengeResponse;
+class RevokeTokenRequest;
+class RevokeTokenResponse;
 class SetRiskConfigurationRequest;
 class SetRiskConfigurationResponse;
 class SetUICustomizationRequest;
@@ -324,6 +326,7 @@ public slots:
     ListUsersInGroupResponse * listUsersInGroup(const ListUsersInGroupRequest &request);
     ResendConfirmationCodeResponse * resendConfirmationCode(const ResendConfirmationCodeRequest &request);
     RespondToAuthChallengeResponse * respondToAuthChallenge(const RespondToAuthChallengeRequest &request);
+    RevokeTokenResponse * revokeToken(const RevokeTokenRequest &request);
     SetRiskConfigurationResponse * setRiskConfiguration(const SetRiskConfigurationRequest &request);
     SetUICustomizationResponse * setUICustomization(const SetUICustomizationRequest &request);
     SetUserMFAPreferenceResponse * setUserMFAPreference(const SetUserMFAPreferenceRequest &request);

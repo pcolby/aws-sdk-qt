@@ -40,20 +40,28 @@ namespace ElastiCache {
  * \value AuthorizeCacheSecurityGroupIngressAction ElastiCache AuthorizeCacheSecurityGroupIngress action.
  * \value BatchApplyUpdateActionAction ElastiCache BatchApplyUpdateAction action.
  * \value BatchStopUpdateActionAction ElastiCache BatchStopUpdateAction action.
+ * \value CompleteMigrationAction ElastiCache CompleteMigration action.
  * \value CopySnapshotAction ElastiCache CopySnapshot action.
  * \value CreateCacheClusterAction ElastiCache CreateCacheCluster action.
  * \value CreateCacheParameterGroupAction ElastiCache CreateCacheParameterGroup action.
  * \value CreateCacheSecurityGroupAction ElastiCache CreateCacheSecurityGroup action.
  * \value CreateCacheSubnetGroupAction ElastiCache CreateCacheSubnetGroup action.
+ * \value CreateGlobalReplicationGroupAction ElastiCache CreateGlobalReplicationGroup action.
  * \value CreateReplicationGroupAction ElastiCache CreateReplicationGroup action.
  * \value CreateSnapshotAction ElastiCache CreateSnapshot action.
+ * \value CreateUserAction ElastiCache CreateUser action.
+ * \value CreateUserGroupAction ElastiCache CreateUserGroup action.
+ * \value DecreaseNodeGroupsInGlobalReplicationGroupAction ElastiCache DecreaseNodeGroupsInGlobalReplicationGroup action.
  * \value DecreaseReplicaCountAction ElastiCache DecreaseReplicaCount action.
  * \value DeleteCacheClusterAction ElastiCache DeleteCacheCluster action.
  * \value DeleteCacheParameterGroupAction ElastiCache DeleteCacheParameterGroup action.
  * \value DeleteCacheSecurityGroupAction ElastiCache DeleteCacheSecurityGroup action.
  * \value DeleteCacheSubnetGroupAction ElastiCache DeleteCacheSubnetGroup action.
+ * \value DeleteGlobalReplicationGroupAction ElastiCache DeleteGlobalReplicationGroup action.
  * \value DeleteReplicationGroupAction ElastiCache DeleteReplicationGroup action.
  * \value DeleteSnapshotAction ElastiCache DeleteSnapshot action.
+ * \value DeleteUserAction ElastiCache DeleteUser action.
+ * \value DeleteUserGroupAction ElastiCache DeleteUserGroup action.
  * \value DescribeCacheClustersAction ElastiCache DescribeCacheClusters action.
  * \value DescribeCacheEngineVersionsAction ElastiCache DescribeCacheEngineVersions action.
  * \value DescribeCacheParameterGroupsAction ElastiCache DescribeCacheParameterGroups action.
@@ -62,25 +70,36 @@ namespace ElastiCache {
  * \value DescribeCacheSubnetGroupsAction ElastiCache DescribeCacheSubnetGroups action.
  * \value DescribeEngineDefaultParametersAction ElastiCache DescribeEngineDefaultParameters action.
  * \value DescribeEventsAction ElastiCache DescribeEvents action.
+ * \value DescribeGlobalReplicationGroupsAction ElastiCache DescribeGlobalReplicationGroups action.
  * \value DescribeReplicationGroupsAction ElastiCache DescribeReplicationGroups action.
  * \value DescribeReservedCacheNodesAction ElastiCache DescribeReservedCacheNodes action.
  * \value DescribeReservedCacheNodesOfferingsAction ElastiCache DescribeReservedCacheNodesOfferings action.
  * \value DescribeServiceUpdatesAction ElastiCache DescribeServiceUpdates action.
  * \value DescribeSnapshotsAction ElastiCache DescribeSnapshots action.
  * \value DescribeUpdateActionsAction ElastiCache DescribeUpdateActions action.
+ * \value DescribeUserGroupsAction ElastiCache DescribeUserGroups action.
+ * \value DescribeUsersAction ElastiCache DescribeUsers action.
+ * \value DisassociateGlobalReplicationGroupAction ElastiCache DisassociateGlobalReplicationGroup action.
+ * \value FailoverGlobalReplicationGroupAction ElastiCache FailoverGlobalReplicationGroup action.
+ * \value IncreaseNodeGroupsInGlobalReplicationGroupAction ElastiCache IncreaseNodeGroupsInGlobalReplicationGroup action.
  * \value IncreaseReplicaCountAction ElastiCache IncreaseReplicaCount action.
  * \value ListAllowedNodeTypeModificationsAction ElastiCache ListAllowedNodeTypeModifications action.
  * \value ListTagsForResourceAction ElastiCache ListTagsForResource action.
  * \value ModifyCacheClusterAction ElastiCache ModifyCacheCluster action.
  * \value ModifyCacheParameterGroupAction ElastiCache ModifyCacheParameterGroup action.
  * \value ModifyCacheSubnetGroupAction ElastiCache ModifyCacheSubnetGroup action.
+ * \value ModifyGlobalReplicationGroupAction ElastiCache ModifyGlobalReplicationGroup action.
  * \value ModifyReplicationGroupAction ElastiCache ModifyReplicationGroup action.
  * \value ModifyReplicationGroupShardConfigurationAction ElastiCache ModifyReplicationGroupShardConfiguration action.
+ * \value ModifyUserAction ElastiCache ModifyUser action.
+ * \value ModifyUserGroupAction ElastiCache ModifyUserGroup action.
  * \value PurchaseReservedCacheNodesOfferingAction ElastiCache PurchaseReservedCacheNodesOffering action.
+ * \value RebalanceSlotsInGlobalReplicationGroupAction ElastiCache RebalanceSlotsInGlobalReplicationGroup action.
  * \value RebootCacheClusterAction ElastiCache RebootCacheCluster action.
  * \value RemoveTagsFromResourceAction ElastiCache RemoveTagsFromResource action.
  * \value ResetCacheParameterGroupAction ElastiCache ResetCacheParameterGroup action.
  * \value RevokeCacheSecurityGroupIngressAction ElastiCache RevokeCacheSecurityGroupIngress action.
+ * \value StartMigrationAction ElastiCache StartMigration action.
  * \value TestFailoverAction ElastiCache TestFailover action.
  */
 

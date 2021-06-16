@@ -39,6 +39,7 @@ public:
     enum Action {
         AbortEnvironmentUpdateAction,
         ApplyEnvironmentManagedActionAction,
+        AssociateEnvironmentOperationsRoleAction,
         CheckDNSAvailabilityAction,
         ComposeEnvironmentsAction,
         CreateApplicationAction,
@@ -65,7 +66,9 @@ public:
         DescribeEventsAction,
         DescribeInstancesHealthAction,
         DescribePlatformVersionAction,
+        DisassociateEnvironmentOperationsRoleAction,
         ListAvailableSolutionStacksAction,
+        ListPlatformBranchesAction,
         ListPlatformVersionsAction,
         ListTagsForResourceAction,
         RebuildEnvironmentAction,

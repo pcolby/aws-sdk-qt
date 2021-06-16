@@ -47,6 +47,7 @@ public:
         CreateImageBuilderStreamingURLAction,
         CreateStackAction,
         CreateStreamingURLAction,
+        CreateUpdatedImageAction,
         CreateUsageReportSubscriptionAction,
         CreateUserAction,
         DeleteDirectoryConfigAction,

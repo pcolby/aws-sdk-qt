@@ -31,76 +31,83 @@ namespace ApplicationAutoScaling {
  *
  * \inmodule QtAwsApplicationAutoScaling
  *
- *  With Application Auto Scaling, you can configure automatic scaling for your scalable resources. You can use Application
- *  Auto Scaling to accomplish the following
- * 
- *  tasks> <ul> <li>
- * 
- *  Define scaling policies to automatically scale your AWS or custom
- * 
- *  resource> </li> <li>
- * 
- *  Scale your resources in response to CloudWatch
- * 
- *  alarm> </li> <li>
- * 
- *  Schedule one-time or recurring scaling
- * 
- *  action> </li> <li>
- * 
- *  View the history of your scaling
- * 
- *  event> </li> </ul>
- * 
- *  Application Auto Scaling can scale the following
+ *  With Application Auto Scaling, you can configure automatic scaling for the following
  * 
  *  resources> <ul> <li>
  * 
- *  Amazon ECS services. For more information, see <a
- *  href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html">Service Auto Scaling</a> in
- *  the <i>Amazon Elastic Container Service Developer
+ *  Amazon ECS
  * 
- *  Guide</i>> </li> <li>
+ *  service> </li> <li>
  * 
- *  Amazon EC2 Spot fleets. For more information, see <a
- *  href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/fleet-auto-scaling.html">Automatic Scaling for Spot Fleet</a>
- *  in the <i>Amazon EC2 User
+ *  Amazon EC2 Spot Fleet
  * 
- *  Guide</i>> </li> <li>
+ *  request> </li> <li>
  * 
- *  Amazon EMR clusters. For more information, see <a
- *  href="https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-automatic-scaling.html">Using Automatic
- *  Scaling in Amazon EMR</a> in the <i>Amazon EMR Management
+ *  Amazon EMR
  * 
- *  Guide</i>> </li> <li>
+ *  cluster> </li> <li>
  * 
- *  AppStream 2.0 fleets. For more information, see <a
- *  href="https://docs.aws.amazon.com/appstream2/latest/developerguide/autoscaling.html">Fleet Auto Scaling for Amazon
- *  AppStream 2.0</a> in the <i>Amazon AppStream 2.0 Developer
+ *  Amazon AppStream 2.0
  * 
- *  Guide</i>> </li> <li>
+ *  fleet> </li> <li>
  * 
- *  Provisioned read and write capacity for Amazon DynamoDB tables and global secondary indexes. For more information, see
- *  <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AutoScaling.html">Managing Throughput Capacity
- *  Automatically with DynamoDB Auto Scaling</a> in the <i>Amazon DynamoDB Developer
+ *  Amazon DynamoDB tables and global secondary indexes throughput
  * 
- *  Guide</i>> </li> <li>
+ *  capacit> </li> <li>
  * 
- *  Amazon Aurora Replicas. For more information, see <a
- *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Integrating.AutoScaling.html">Using Amazon
- *  Aurora Auto Scaling with Aurora
+ *  Amazon Aurora
  * 
- *  Replicas</a>> </li> <li>
+ *  Replica> </li> <li>
  * 
- *  Amazon SageMaker endpoint variants. For more information, see <a
- *  href="https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html">Automatically Scaling Amazon SageMaker
+ *  Amazon SageMaker endpoint
  * 
- *  Models</a>> </li> <li>
+ *  variant> </li> <li>
  * 
- *  Custom resources provided by your own applications or services. More information is available in our <a
- *  href="https://github.com/aws/aws-auto-scaling-custom-resource">GitHub repository</a>.
+ *  Custom resources provided by your own applications or
  * 
- *  </p </li> </ul>
+ *  service> </li> <li>
+ * 
+ *  Amazon Comprehend document classification and entity recognizer
+ * 
+ *  endpoint> </li> <li>
+ * 
+ *  AWS Lambda function provisioned
+ * 
+ *  concurrenc> </li> <li>
+ * 
+ *  Amazon Keyspaces (for Apache Cassandra)
+ * 
+ *  table> </li> <li>
+ * 
+ *  Amazon Managed Streaming for Apache Kafka broker
+ * 
+ *  storag> </li> </ul>
+ * 
+ *  <b>API Summary</b>
+ * 
+ *  </p
+ * 
+ *  The Application Auto Scaling service API includes three key sets of actions:
+ * 
+ *  </p <ul> <li>
+ * 
+ *  Register and manage scalable targets - Register AWS or custom resources as scalable targets (a resource that Application
+ *  Auto Scaling can scale), set minimum and maximum capacity limits, and retrieve information on existing scalable
+ * 
+ *  targets> </li> <li>
+ * 
+ *  Configure and manage automatic scaling - Define scaling policies to dynamically scale your resources in response to
+ *  CloudWatch alarms, schedule one-time or recurring scaling actions, and retrieve your recent scaling activity
+ * 
+ *  history> </li> <li>
+ * 
+ *  Suspend and resume scaling - Temporarily suspend and later resume automatic scaling by calling the <a
+ *  href="https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html">RegisterScalableTarget</a>
+ *  API action for any Application Auto Scaling scalable target. You can suspend and resume (individually or in combination)
+ *  scale-out activities that are triggered by a scaling policy, scale-in activities that are triggered by a scaling policy,
+ *  and scheduled
+ * 
+ *  scaling> </li> </ul>
  * 
  *  To learn more about Application Auto Scaling, including information about granting IAM users required permissions for
  *  Application Auto Scaling actions, see the <a

@@ -41,6 +41,8 @@
 #include "getopenidtokenresponse.h"
 #include "getopenidtokenfordeveloperidentityrequest.h"
 #include "getopenidtokenfordeveloperidentityresponse.h"
+#include "getprincipaltagattributemaprequest.h"
+#include "getprincipaltagattributemapresponse.h"
 #include "listidentitiesrequest.h"
 #include "listidentitiesresponse.h"
 #include "listidentitypoolsrequest.h"
@@ -53,6 +55,8 @@
 #include "mergedeveloperidentitiesresponse.h"
 #include "setidentitypoolrolesrequest.h"
 #include "setidentitypoolrolesresponse.h"
+#include "setprincipaltagattributemaprequest.h"
+#include "setprincipaltagattributemapresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "unlinkdeveloperidentityrequest.h"
@@ -170,7 +174,7 @@ CognitoIdentityClient::CognitoIdentityClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new identity pool. The identity pool is a store of user identity information that is specific to your AWS
- * account. The limit on identity pools is 60 per account. The keys for <code>SupportedLoginProviders</code> are as
+ * account. The keys for <code>SupportedLoginProviders</code> are as
  *
  * follows> <ul> <li>
  *
@@ -334,7 +338,7 @@ GetIdentityPoolRolesResponse * CognitoIdentityClient::getIdentityPoolRoles(const
  *
  * link>
  *
- * The OpenId token is valid for 10
+ * The OpenID token is valid for 10
  *
  * minutes>
  *
@@ -371,6 +375,19 @@ GetOpenIdTokenResponse * CognitoIdentityClient::getOpenIdToken(const GetOpenIdTo
 GetOpenIdTokenForDeveloperIdentityResponse * CognitoIdentityClient::getOpenIdTokenForDeveloperIdentity(const GetOpenIdTokenForDeveloperIdentityRequest &request)
 {
     return qobject_cast<GetOpenIdTokenForDeveloperIdentityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * GetPrincipalTagAttributeMapResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Use <code>GetPrincipalTagAttributeMap</code> to list all mappings between <code>PrincipalTags</code> and user
+ */
+GetPrincipalTagAttributeMapResponse * CognitoIdentityClient::getPrincipalTagAttributeMap(const GetPrincipalTagAttributeMapRequest &request)
+{
+    return qobject_cast<GetPrincipalTagAttributeMapResponse *>(send(request));
 }
 
 /*!
@@ -505,12 +522,25 @@ SetIdentityPoolRolesResponse * CognitoIdentityClient::setIdentityPoolRoles(const
 
 /*!
  * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
+ * SetPrincipalTagAttributeMapResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * You can use this operation to use default (username and clientID) attribute or custom attribute
+ */
+SetPrincipalTagAttributeMapResponse * CognitoIdentityClient::setPrincipalTagAttributeMap(const SetPrincipalTagAttributeMapRequest &request)
+{
+    return qobject_cast<SetPrincipalTagAttributeMapResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CognitoIdentityClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Assigns a set of tags to an Amazon Cognito identity pool. A tag is a label that you can use to categorize and manage
- * identity pools in different ways, such as by purpose, owner, environment, or other
+ * Assigns a set of tags to the specified Amazon Cognito identity pool. A tag is a label that you can use to categorize and
+ * manage identity pools in different ways, such as by purpose, owner, environment, or other
  *
  * criteria>
  *
@@ -577,7 +607,8 @@ UnlinkIdentityResponse * CognitoIdentityClient::unlinkIdentity(const UnlinkIdent
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes the specified tags from an Amazon Cognito identity pool. You can use this action up to 5 times per second, per
+ * Removes the specified tags from the specified Amazon Cognito identity pool. You can use this action up to 5 times per
+ * second, per
  */
 UntagResourceResponse * CognitoIdentityClient::untagResource(const UntagResourceRequest &request)
 {

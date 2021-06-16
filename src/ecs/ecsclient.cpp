@@ -21,6 +21,8 @@
 #include "ecsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createcapacityproviderrequest.h"
+#include "createcapacityproviderresponse.h"
 #include "createclusterrequest.h"
 #include "createclusterresponse.h"
 #include "createservicerequest.h"
@@ -31,6 +33,8 @@
 #include "deleteaccountsettingresponse.h"
 #include "deleteattributesrequest.h"
 #include "deleteattributesresponse.h"
+#include "deletecapacityproviderrequest.h"
+#include "deletecapacityproviderresponse.h"
 #include "deleteclusterrequest.h"
 #include "deleteclusterresponse.h"
 #include "deleteservicerequest.h"
@@ -41,6 +45,8 @@
 #include "deregistercontainerinstanceresponse.h"
 #include "deregistertaskdefinitionrequest.h"
 #include "deregistertaskdefinitionresponse.h"
+#include "describecapacityprovidersrequest.h"
+#include "describecapacityprovidersresponse.h"
 #include "describeclustersrequest.h"
 #include "describeclustersresponse.h"
 #include "describecontainerinstancesrequest.h"
@@ -55,6 +61,8 @@
 #include "describetasksresponse.h"
 #include "discoverpollendpointrequest.h"
 #include "discoverpollendpointresponse.h"
+#include "executecommandrequest.h"
+#include "executecommandresponse.h"
 #include "listaccountsettingsrequest.h"
 #include "listaccountsettingsresponse.h"
 #include "listattributesrequest.h"
@@ -79,6 +87,8 @@
 #include "putaccountsettingdefaultresponse.h"
 #include "putattributesrequest.h"
 #include "putattributesresponse.h"
+#include "putclustercapacityprovidersrequest.h"
+#include "putclustercapacityprovidersresponse.h"
 #include "registercontainerinstancerequest.h"
 #include "registercontainerinstanceresponse.h"
 #include "registertaskdefinitionrequest.h"
@@ -99,6 +109,12 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatecapacityproviderrequest.h"
+#include "updatecapacityproviderresponse.h"
+#include "updateclusterrequest.h"
+#include "updateclusterresponse.h"
+#include "updateclustersettingsrequest.h"
+#include "updateclustersettingsresponse.h"
 #include "updatecontaineragentrequest.h"
 #include "updatecontaineragentresponse.h"
 #include "updatecontainerinstancesstaterequest.h"
@@ -136,15 +152,13 @@ namespace ECS {
  * 
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
- *  that is managed by Amazon ECS by launching your services or tasks using the Fargate launch type. For more control, you
- *  can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage by using the EC2
- *  launch type. For more information about launch types, see <a
- *  href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS Launch
+ *  that is managed by Amazon ECS by launching your services or tasks on AWS Fargate. For more control, you can host your
+ *  tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you
  * 
- *  Types</a>>
+ *  manage>
  * 
- *  Amazon ECS lets you launch and stop container-based applications with simple API calls, allows you to get the state of
- *  your cluster from a centralized service, and gives you access to many familiar Amazon EC2
+ *  Amazon ECS makes it easy to launch and stop container-based applications with simple API calls, allows you to get the
+ *  state of your cluster from a centralized service, and gives you access to many familiar Amazon EC2
  * 
  *  features>
  * 
@@ -208,6 +222,26 @@ EcsClient::EcsClient(
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * CreateCapacityProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new capacity provider. Capacity providers are associated with an Amazon ECS cluster and are used in capacity
+ * provider strategies to facilitate cluster auto
+ *
+ * scaling>
+ *
+ * Only capacity providers using an Auto Scaling group can be created. Amazon ECS tasks on AWS Fargate use the
+ * <code>FARGATE</code> and <code>FARGATE_SPOT</code> capacity providers which are already created and available to all
+ * accounts in Regions supported by AWS
+ */
+CreateCapacityProviderResponse * EcsClient::createCapacityProvider(const CreateCapacityProviderRequest &request)
+{
+    return qobject_cast<CreateCapacityProviderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * CreateClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -218,11 +252,12 @@ EcsClient::EcsClient(
  *
  * action> <note>
  *
- * When you call the <a>CreateCluster</a> API operation, Amazon ECS attempts to create the service-linked role for your
- * account so that required resources in other AWS services can be managed on your behalf. However, if the IAM user that
- * makes the call does not have permissions to create the service-linked role, it is not created. For more information, see
- * <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
- * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer
+ * When you call the <a>CreateCluster</a> API operation, Amazon ECS attempts to create the Amazon ECS service-linked role
+ * for your account so that required resources in other AWS services can be managed on your behalf. However, if the IAM
+ * user that makes the call does not have permissions to create the service-linked role, it is not created. For more
+ * information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using Service-Linked
+ * Roles for Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer
  */
 CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &request)
 {
@@ -236,14 +271,14 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Runs and maintains a desired number of tasks from a specified task definition. If the number of tasks running in a
- * service drops below the <code>desiredCount</code>, Amazon ECS spawns another copy of the task in the specified cluster.
- * To update an existing service, see
+ * service drops below the <code>desiredCount</code>, Amazon ECS runs another copy of the task in the specified cluster. To
+ * update an existing service, see the UpdateService
  *
- * <a>UpdateService</a>>
+ * action>
  *
- * In addition to maintaining the desired count of tasks in your service, you can optionally run your service behind a load
- * balancer. The load balancer distributes traffic across the tasks that are associated with the service. For more
- * information, see <a
+ * In addition to maintaining the desired count of tasks in your service, you can optionally run your service behind one or
+ * more load balancers. The load balancers distribute traffic across the tasks that are associated with the service. For
+ * more information, see <a
  * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html">Service Load
  * Balancing</a> in the <i>Amazon Elastic Container Service Developer
  *
@@ -268,10 +303,12 @@ CreateClusterResponse * EcsClient::createCluster(const CreateClusterRequest &req
  * Guide</i>> </li> <li>
  *
  * <code>DAEMON</code> - The daemon scheduling strategy deploys exactly one task on each active container instance that
- * meets all of the task placement constraints that you specify in your cluster. When using this strategy, you don't need
- * to specify a desired number of tasks, a task placement strategy, or use Service Auto Scaling policies. For more
- * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Service
- * Scheduler Concepts</a> in the <i>Amazon Elastic Container Service Developer
+ * meets all of the task placement constraints that you specify in your cluster. The service scheduler also evaluates the
+ * task placement constraints for running tasks and will stop tasks that do not meet the placement constraints. When using
+ * this strategy, you don't need to specify a desired number of tasks, a task placement strategy, or use Service Auto
+ * Scaling policies. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Service Scheduler Concepts</a> in
+ * the <i>Amazon Elastic Container Service Developer
  *
  * Guide</i>> </li> </ul>
  *
@@ -394,12 +431,45 @@ DeleteAttributesResponse * EcsClient::deleteAttributes(const DeleteAttributesReq
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * DeleteCapacityProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified capacity
+ *
+ * provider> <note>
+ *
+ * The <code>FARGATE</code> and <code>FARGATE_SPOT</code> capacity providers are reserved and cannot be deleted. You can
+ * disassociate them from a cluster using either the <a>PutClusterCapacityProviders</a> API or by deleting the
+ *
+ * cluster> </note>
+ *
+ * Prior to a capacity provider being deleted, the capacity provider must be removed from the capacity provider strategy
+ * from all services. The <a>UpdateService</a> API can be used to remove a capacity provider from a service's capacity
+ * provider strategy. When updating a service, the <code>forceNewDeployment</code> option can be used to ensure that any
+ * tasks using the Amazon EC2 instance capacity provided by the capacity provider are transitioned to use the capacity from
+ * the remaining capacity providers. Only capacity providers that are not associated with a cluster can be deleted. To
+ * remove a capacity provider from a cluster, you can either use <a>PutClusterCapacityProviders</a> or delete the
+ */
+DeleteCapacityProviderResponse * EcsClient::deleteCapacityProvider(const DeleteCapacityProviderRequest &request)
+{
+    return qobject_cast<DeleteCapacityProviderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * DeleteClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified cluster. You must deregister all container instances from this cluster before you may delete it.
- * You can list the container instances in a cluster with <a>ListContainerInstances</a> and deregister them with
+ * Deletes the specified cluster. The cluster will transition to the <code>INACTIVE</code> state. Clusters with an
+ * <code>INACTIVE</code> status may remain discoverable in your account for a period of time. However, this behavior is
+ * subject to change in the future, so you should not rely on <code>INACTIVE</code> clusters
+ *
+ * persisting>
+ *
+ * You must deregister all container instances from this cluster before you may delete it. You can list the container
+ * instances in a cluster with <a>ListContainerInstances</a> and deregister them with
  */
 DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &request)
 {
@@ -420,11 +490,11 @@ DeleteClusterResponse * EcsClient::deleteCluster(const DeleteClusterRequest &req
  *
  * When you delete a service, if there are still running tasks that require cleanup, the service status moves from
  * <code>ACTIVE</code> to <code>DRAINING</code>, and the service is no longer visible in the console or in the
- * <a>ListServices</a> API operation. After the tasks have stopped, then the service status moves from
- * <code>DRAINING</code> to <code>INACTIVE</code>. Services in the <code>DRAINING</code> or <code>INACTIVE</code> status
- * can still be viewed with the <a>DescribeServices</a> API operation. However, in the future, <code>INACTIVE</code>
- * services may be cleaned up and purged from Amazon ECS record keeping, and <a>DescribeServices</a> calls on those
- * services return a <code>ServiceNotFoundException</code>
+ * <a>ListServices</a> API operation. After all tasks have transitioned to either <code>STOPPING</code> or
+ * <code>STOPPED</code> status, the service status moves from <code>DRAINING</code> to <code>INACTIVE</code>. Services in
+ * the <code>DRAINING</code> or <code>INACTIVE</code> status can still be viewed with the <a>DescribeServices</a> API
+ * operation. However, in the future, <code>INACTIVE</code> services may be cleaned up and purged from Amazon ECS record
+ * keeping, and <a>DescribeServices</a> calls on those services return a <code>ServiceNotFoundException</code>
  *
  * error> </note> <b>
  *
@@ -510,6 +580,19 @@ DeregisterTaskDefinitionResponse * EcsClient::deregisterTaskDefinition(const Der
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * DescribeCapacityProvidersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes one or more of your capacity
+ */
+DescribeCapacityProvidersResponse * EcsClient::describeCapacityProviders(const DescribeCapacityProvidersRequest &request)
+{
+    return qobject_cast<DescribeCapacityProvidersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * DescribeClustersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -527,8 +610,7 @@ DescribeClustersResponse * EcsClient::describeClusters(const DescribeClustersReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes Amazon Elastic Container Service container instances. Returns metadata about registered and remaining
- * resources on each container instance
+ * Describes one or more container instances. Returns metadata about each container instance
  */
 DescribeContainerInstancesResponse * EcsClient::describeContainerInstances(const DescribeContainerInstancesRequest &request)
 {
@@ -616,6 +698,19 @@ DiscoverPollEndpointResponse * EcsClient::discoverPollEndpoint(const DiscoverPol
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * ExecuteCommandResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Runs a command remotely on a container within a
+ */
+ExecuteCommandResponse * EcsClient::executeCommand(const ExecuteCommandRequest &request)
+{
+    return qobject_cast<ExecuteCommandResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * ListAccountSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -680,7 +775,7 @@ ListContainerInstancesResponse * EcsClient::listContainerInstances(const ListCon
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the services that are running in a specified
+ * Returns a list of services. You can filter the results by cluster, launch type, and scheduling
  */
 ListServicesResponse * EcsClient::listServices(const ListServicesRequest &request)
 {
@@ -740,14 +835,13 @@ ListTaskDefinitionsResponse * EcsClient::listTaskDefinitions(const ListTaskDefin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of tasks for a specified cluster. You can filter the results by family name, by a particular container
- * instance, or by the desired status of the task with the <code>family</code>, <code>containerInstance</code>, and
- * <code>desiredStatus</code>
+ * Returns a list of tasks. You can filter the results by cluster, task definition family, container instance, launch type,
+ * what IAM principal started the task, or by the desired status of the
  *
- * parameters>
+ * task>
  *
  * Recently stopped tasks might appear in the returned results. Currently, stopped tasks appear in the returned results for
- * at least one hour.
+ * at least one
  */
 ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
 {
@@ -760,19 +854,22 @@ ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an account setting. For more information, see <a
+ * Modifies an account setting. Account settings are set on a per-Region
+ *
+ * basis>
+ *
+ * If you change the account setting for the root user, the default settings for all of the IAM users and roles for which
+ * no individual account setting has been specified are reset. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html">Account Settings</a> in the
  * <i>Amazon Elastic Container Service Developer
  *
  * Guide</i>>
  *
  * When <code>serviceLongArnFormat</code>, <code>taskLongArnFormat</code>, or <code>containerInstanceLongArnFormat</code>
- * are specified, the ARN and resource ID format of the resource type for a specified IAM user, IAM role, or the root user
- * for an account is changed. If you change the account setting for the root user, the default settings for all of the IAM
- * users and roles for which no individual account setting has been specified are reset. The opt-in and opt-out account
- * setting can be specified for each Amazon ECS resource separately. The ARN and resource ID format of a resource will be
- * defined by the opt-in status of the IAM user or role that created the resource. You must enable this setting to use
- * Amazon ECS features such as resource
+ * are specified, the Amazon Resource Name (ARN) and resource ID format of the resource type for a specified IAM user, IAM
+ * role, or the root user for an account is affected. The opt-in and opt-out account setting must be set for each Amazon
+ * ECS resource separately. The ARN and resource ID format of a resource will be defined by the opt-in status of the IAM
+ * user or role that created the resource. You must enable this setting to use Amazon ECS features such as resource
  *
  * tagging>
  *
@@ -781,6 +878,14 @@ ListTasksResponse * EcsClient::listTasks(const ListTasksRequest &request)
  * the feature are launched have the increased ENI limits available to them. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html">Elastic Network Interface
  * Trunking</a> in the <i>Amazon Elastic Container Service Developer
+ *
+ * Guide</i>>
+ *
+ * When <code>containerInsights</code> is specified, the default setting indicating whether CloudWatch Container Insights
+ * is enabled for your clusters is changed. If <code>containerInsights</code> is enabled, any new clusters that are created
+ * will have Container Insights enabled unless you disable it during cluster creation. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-container-insights.html">CloudWatch
+ * Container Insights</a> in the <i>Amazon Elastic Container Service Developer
  */
 PutAccountSettingResponse * EcsClient::putAccountSetting(const PutAccountSettingRequest &request)
 {
@@ -793,7 +898,8 @@ PutAccountSettingResponse * EcsClient::putAccountSetting(const PutAccountSetting
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an account setting for all IAM users on an account for whom no individual account setting has been
+ * Modifies an account setting for all IAM users on an account for whom no individual account setting has been specified.
+ * Account settings are set on a per-Region
  */
 PutAccountSettingDefaultResponse * EcsClient::putAccountSettingDefault(const PutAccountSettingDefaultRequest &request)
 {
@@ -815,6 +921,33 @@ PutAccountSettingDefaultResponse * EcsClient::putAccountSettingDefault(const Put
 PutAttributesResponse * EcsClient::putAttributes(const PutAttributesRequest &request)
 {
     return qobject_cast<PutAttributesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * PutClusterCapacityProvidersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the available capacity providers and the default capacity provider strategy for a
+ *
+ * cluster>
+ *
+ * You must specify both the available capacity providers and a default capacity provider strategy for the cluster. If the
+ * specified cluster has existing capacity providers associated with it, you must specify all existing capacity providers
+ * in addition to any new ones you want to add. Any existing capacity providers associated with a cluster that are omitted
+ * from a <a>PutClusterCapacityProviders</a> API call will be disassociated with the cluster. You can only disassociate an
+ * existing capacity provider from a cluster if it's not being used by any existing
+ *
+ * tasks>
+ *
+ * When creating a service or running a task on a cluster, if no capacity provider or launch type is specified, then the
+ * cluster's default capacity provider strategy is used. It is recommended to define a default capacity provider strategy
+ * for your cluster, however you may specify an empty array (<code>[]</code>) to bypass defining a default
+ */
+PutClusterCapacityProvidersResponse * EcsClient::putClusterCapacityProviders(const PutClusterCapacityProvidersRequest &request)
+{
+    return qobject_cast<PutClusterCapacityProvidersResponse *>(send(request));
 }
 
 /*!
@@ -1052,6 +1185,45 @@ UntagResourceResponse * EcsClient::untagResource(const UntagResourceRequest &req
 
 /*!
  * Sends \a request to the EcsClient service, and returns a pointer to an
+ * UpdateCapacityProviderResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the parameters for a capacity
+ */
+UpdateCapacityProviderResponse * EcsClient::updateCapacityProvider(const UpdateCapacityProviderRequest &request)
+{
+    return qobject_cast<UpdateCapacityProviderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * UpdateClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the
+ */
+UpdateClusterResponse * EcsClient::updateCluster(const UpdateClusterRequest &request)
+{
+    return qobject_cast<UpdateClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
+ * UpdateClusterSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the settings to use for a
+ */
+UpdateClusterSettingsResponse * EcsClient::updateClusterSettings(const UpdateClusterSettingsRequest &request)
+{
+    return qobject_cast<UpdateClusterSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EcsClient service, and returns a pointer to an
  * UpdateContainerAgentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1060,12 +1232,21 @@ UntagResourceResponse * EcsClient::untagResource(const UntagResourceRequest &req
  * not interrupt running tasks or services on the container instance. The process for updating the agent differs depending
  * on whether your container instance was launched with the Amazon ECS-optimized AMI or another operating
  *
- * system>
+ * system> <note>
  *
- * <code>UpdateContainerAgent</code> requires the Amazon ECS-optimized AMI or Amazon Linux with the <code>ecs-init</code>
- * service installed and running. For help updating the Amazon ECS container agent on other operating systems, see <a
+ * The <code>UpdateContainerAgent</code> API isn't supported for container instances using the Amazon ECS-optimized Amazon
+ * Linux 2 (arm64) AMI. To update the container agent, you can update the <code>ecs-init</code> package which will update
+ * the agent. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/agent-update-ecs-ami.html">Updating the Amazon ECS
+ * container agent</a> in the <i>Amazon Elastic Container Service Developer
+ *
+ * Guide</i>> </note>
+ *
+ * The <code>UpdateContainerAgent</code> API requires an Amazon ECS-optimized AMI or Amazon Linux AMI with the
+ * <code>ecs-init</code> service installed and running. For help updating the Amazon ECS container agent on other operating
+ * systems, see <a
  * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html#manually_update_agent">Manually
- * Updating the Amazon ECS Container Agent</a> in the <i>Amazon Elastic Container Service Developer
+ * updating the Amazon ECS container agent</a> in the <i>Amazon Elastic Container Service Developer
  */
 UpdateContainerAgentResponse * EcsClient::updateContainerAgent(const UpdateContainerAgentRequest &request)
 {
@@ -1147,26 +1328,36 @@ UpdateContainerInstancesStateResponse * EcsClient::updateContainerInstancesState
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <b>
+ *
+ * Updating the task placement strategies and constraints on an Amazon ECS service remains in preview and is a Beta Service
+ * as defined by and subject to the Beta Service Participation Service Terms located at <a
+ * href="https://aws.amazon.com/service-terms">https://aws.amazon.com/service-terms</a> ("Beta Terms"). These Beta Terms
+ * apply to your participation in this
+ *
+ * preview> </b>
+ *
  * Modifies the parameters of a
  *
  * service>
  *
  * For services using the rolling update (<code>ECS</code>) deployment controller, the desired count, deployment
- * configuration, network configuration, or task definition used can be
+ * configuration, network configuration, task placement constraints and strategies, or task definition used can be
  *
  * updated>
  *
  * For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller, only the desired count, deployment
- * configuration, and health check grace period can be updated using this API. If the network configuration, platform
- * version, or task definition need to be updated, a new AWS CodeDeploy deployment should be created. For more information,
- * see <a href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html">CreateDeployment</a>
- * in the <i>AWS CodeDeploy API
+ * configuration, task placement constraints and strategies, and health check grace period can be updated using this API.
+ * If the network configuration, platform version, or task definition need to be updated, a new AWS CodeDeploy deployment
+ * should be created. For more information, see <a
+ * href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html">CreateDeployment</a> in the
+ * <i>AWS CodeDeploy API
  *
  * Reference</i>>
  *
- * For services using an external deployment controller, you can update only the desired count and health check grace
- * period using this API. If the launch type, load balancer, network configuration, platform version, or task definition
- * need to be updated, you should create a new task set. For more information, see
+ * For services using an external deployment controller, you can update only the desired count, task placement constraints
+ * and strategies, and health check grace period using this API. If the launch type, load balancer, network configuration,
+ * platform version, or task definition need to be updated, you should create a new task set. For more information, see
  *
  * <a>CreateTaskSet</a>>
  *

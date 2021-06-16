@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoTFleetHub
+description = AWS IoTFleetHub SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiotfleethub-index.html"
+navigation.landingtitle = "IoTFleetHub"
+navigation.cppclassespage = "IoTFleetHub C++ Classes"

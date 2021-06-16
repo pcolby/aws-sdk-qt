@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsMacie2
+    \title Macie2 C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Macie2 functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

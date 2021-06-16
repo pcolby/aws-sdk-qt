@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsNetworkFirewall
+description = AWS NetworkFirewall SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsnetworkfirewall-index.html"
+navigation.landingtitle = "NetworkFirewall"
+navigation.cppclassespage = "NetworkFirewall C++ Classes"

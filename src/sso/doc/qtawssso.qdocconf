@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSso
+description = AWS SSO SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawssso-index.html"
+navigation.landingtitle = "SSO"
+navigation.cppclassespage = "SSO C++ Classes"

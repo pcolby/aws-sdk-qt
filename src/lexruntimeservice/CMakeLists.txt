@@ -1,6 +1,14 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsLexRuntimeService
+  deletesessionrequest.h
+  deletesessionrequest_p.h
+  deletesessionresponse.h
+  deletesessionresponse_p.h
+  getsessionrequest.h
+  getsessionrequest_p.h
+  getsessionresponse.h
+  getsessionresponse_p.h
   lexruntimeserviceclient.h
   lexruntimeserviceclient_p.h
   lexruntimeservicerequest.h
@@ -15,13 +23,23 @@ add_library(QtAwsLexRuntimeService
   posttextrequest_p.h
   posttextresponse.h
   posttextresponse_p.h
+  putsessionrequest.h
+  putsessionrequest_p.h
+  putsessionresponse.h
+  putsessionresponse_p.h
+  deletesessionrequest.cpp
+  deletesessionresponse.cpp
+  getsessionrequest.cpp
+  getsessionresponse.cpp
   lexruntimeserviceclient.cpp
   lexruntimeservicerequest.cpp
   lexruntimeserviceresponse.cpp
   postcontentrequest.cpp
   postcontentresponse.cpp
   posttextrequest.cpp
-  posttextresponse.cpp)
+  posttextresponse.cpp
+  putsessionrequest.cpp
+  putsessionresponse.cpp)
 
 add_dependencies(QtAwsLexRuntimeService QtAwsCore)
 

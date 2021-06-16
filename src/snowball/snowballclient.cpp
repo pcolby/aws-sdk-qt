@@ -31,6 +31,10 @@
 #include "createclusterresponse.h"
 #include "createjobrequest.h"
 #include "createjobresponse.h"
+#include "createlongtermpricingrequest.h"
+#include "createlongtermpricingresponse.h"
+#include "createreturnshippinglabelrequest.h"
+#include "createreturnshippinglabelresponse.h"
 #include "describeaddressrequest.h"
 #include "describeaddressresponse.h"
 #include "describeaddressesrequest.h"
@@ -39,12 +43,16 @@
 #include "describeclusterresponse.h"
 #include "describejobrequest.h"
 #include "describejobresponse.h"
+#include "describereturnshippinglabelrequest.h"
+#include "describereturnshippinglabelresponse.h"
 #include "getjobmanifestrequest.h"
 #include "getjobmanifestresponse.h"
 #include "getjobunlockcoderequest.h"
 #include "getjobunlockcoderesponse.h"
 #include "getsnowballusagerequest.h"
 #include "getsnowballusageresponse.h"
+#include "getsoftwareupdatesrequest.h"
+#include "getsoftwareupdatesresponse.h"
 #include "listclusterjobsrequest.h"
 #include "listclusterjobsresponse.h"
 #include "listclustersrequest.h"
@@ -53,10 +61,16 @@
 #include "listcompatibleimagesresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listlongtermpricingrequest.h"
+#include "listlongtermpricingresponse.h"
 #include "updateclusterrequest.h"
 #include "updateclusterresponse.h"
 #include "updatejobrequest.h"
 #include "updatejobresponse.h"
+#include "updatejobshipmentstaterequest.h"
+#include "updatejobshipmentstateresponse.h"
+#include "updatelongtermpricingrequest.h"
+#include "updatelongtermpricingresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -80,11 +94,12 @@ namespace Snowball {
  * \ingroup aws-clients
  * \inmodule QtAwsSnowball
  *
- *  AWS Snowball is a petabyte-scale data transport solution that uses secure devices to transfer large amounts of data
- *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The commands described here provide
- *  access to the same functionality that is available in the AWS Snowball Management Console, which enables you to create
- *  and manage jobs for Snowball and Snowball Edge devices. To transfer data locally with a device, you'll need to use the
- *  Snowball client or the Amazon S3 API adapter for
+ *  AWS Snow Family is a petabyte-scale data transport solution that uses secure devices to transfer large amounts of data
+ *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snow commands described here
+ *  provide access to the same functionality that is available in the AWS Snow Family Management Console, which enables you
+ *  to create and manage jobs for a Snow device. To transfer data locally with a Snow device, you'll need to use the
+ *  Snowball Edge client or the Amazon S3 API Interface for Snowball or AWS OpsHub for Snow Family. For more information,
+ *  see the <a href="https://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
  */
 
 /*!
@@ -175,7 +190,7 @@ CancelJobResponse * SnowballClient::cancelJob(const CancelJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an address for a Snowball to be shipped to. In most regions, addresses are validated at the time of creation.
+ * Creates an address for a Snow device to be shipped to. In most regions, addresses are validated at the time of creation.
  * The address you provide must be located within the serviceable area of your region. If the address is invalid or
  * unsupported, then an exception is
  */
@@ -205,13 +220,160 @@ CreateClusterResponse * SnowballClient::createCluster(const CreateClusterRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your AWS account must have
- * the right trust policies and permissions in place to create a job for Snowball. If you're creating a job for a node in a
- * cluster, you only need to provide the <code>clusterId</code> value; the other job attributes are inherited from the
+ * the right trust policies and permissions in place to create a job for a Snow device. If you're creating a job for a node
+ * in a cluster, you only need to provide the <code>clusterId</code> value; the other job attributes are inherited from the
  * cluster.
+ *
+ * </p <note>
+ *
+ * Only the Snowball; Edge device type is supported when ordering clustered
+ *
+ * jobs>
+ *
+ * The device capacity is
+ *
+ * optional>
+ *
+ * Availability of device types differ by AWS Region. For more information about region availability, see <a
+ * href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&amp;loc=4">AWS Regional
+ *
+ * Services</a>> </note> <p/> <p class="title"> <b>AWS Snow Family device types and their capacities.</b>
+ *
+ * </p <ul> <li>
+ *
+ * Snow Family device type: <b>SNC1_SSD</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T1> </li> <li>
+ *
+ * Description: Snowcone
+ *
+ * </p </li> </ul> <p/> </li> <li>
+ *
+ * Snow Family device type: <b>SNC1_HDD</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T> </li> <li>
+ *
+ * Description: Snowcone
+ *
+ * </p </li> </ul> <p/> </li> <li>
+ *
+ * Device type: <b>EDGE_S</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T9> </li> <li>
+ *
+ * Description: Snowball Edge Storage Optimized for data transfer only
+ *
+ * </p </li> </ul> <p/> </li> <li>
+ *
+ * Device type: <b>EDGE_CG</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T4> </li> <li>
+ *
+ * Description: Snowball Edge Compute Optimized with
+ *
+ * GP> </li> </ul> <p/> </li> <li>
+ *
+ * Device type: <b>EDGE_C</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T4> </li> <li>
+ *
+ * Description: Snowball Edge Compute Optimized without
+ *
+ * GP> </li> </ul> <p/> </li> <li>
+ *
+ * Device type: <b>EDGE</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T10> </li> <li>
+ *
+ * Description: Snowball Edge Storage Optimized with EC2
+ *
+ * Comput> </li> </ul> <p/> </li> <li>
+ *
+ * Device type: <b>STANDARD</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T5> </li> <li>
+ *
+ * Description: Original Snowball
+ *
+ * devic> <note>
+ *
+ * This device is only available in the Ningxia, Beijing, and Singapore AWS Regions.
+ *
+ * </p </note> </li> </ul> <p/> </li> <li>
+ *
+ * Device type: <b>STANDARD</b>
+ *
+ * </p <ul> <li>
+ *
+ * Capacity:
+ *
+ * T8> </li> <li>
+ *
+ * Description: Original Snowball
+ *
+ * devic> <note>
+ *
+ * This device is only available in the Ningxia, Beijing, and Singapore AWS Regions.
  */
 CreateJobResponse * SnowballClient::createJob(const CreateJobRequest &request)
 {
     return qobject_cast<CreateJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * CreateLongTermPricingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a job with long term usage option for a device. The long term usage is a one year or three year long term
+ * pricing type for the device. You are billed upfront and AWS give discounts for long term pricing. For detailed
+ * information see
+ */
+CreateLongTermPricingResponse * SnowballClient::createLongTermPricing(const CreateLongTermPricingRequest &request)
+{
+    return qobject_cast<CreateLongTermPricingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * CreateReturnShippingLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a shipping label that will be used to return the Snow device to
+ */
+CreateReturnShippingLabelResponse * SnowballClient::createReturnShippingLabel(const CreateReturnShippingLabelRequest &request)
+{
+    return qobject_cast<CreateReturnShippingLabelResponse *>(send(request));
 }
 
 /*!
@@ -269,6 +431,19 @@ DescribeJobResponse * SnowballClient::describeJob(const DescribeJobRequest &requ
 
 /*!
  * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * DescribeReturnShippingLabelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Information on the shipping label of a Snow device that is being returned to
+ */
+DescribeReturnShippingLabelResponse * SnowballClient::describeReturnShippingLabel(const DescribeReturnShippingLabelRequest &request)
+{
+    return qobject_cast<DescribeReturnShippingLabelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
  * GetJobManifestResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -280,18 +455,18 @@ DescribeJobResponse * SnowballClient::describeJob(const DescribeJobRequest &requ
  * action>
  *
  * The manifest is an encrypted file that you can download after your job enters the <code>WithCustomer</code> status. The
- * manifest is decrypted by using the <code>UnlockCode</code> code value, when you pass both values to the Snowball through
- * the Snowball client when the client is started for the first
+ * manifest is decrypted by using the <code>UnlockCode</code> code value, when you pass both values to the Snow device
+ * through the Snowball client when the client is started for the first
  *
  * time>
  *
  * As a best practice, we recommend that you don't save a copy of an <code>UnlockCode</code> value in the same location as
  * the manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the
- * Snowball associated with that
+ * Snow device associated with that
  *
  * job>
  *
- * The credentials of a given job, including its manifest file and unlock code, expire 90 days after the job is
+ * The credentials of a given job, including its manifest file and unlock code, expire 360 days after the job is
  */
 GetJobManifestResponse * SnowballClient::getJobManifest(const GetJobManifestRequest &request)
 {
@@ -305,19 +480,19 @@ GetJobManifestResponse * SnowballClient::getJobManifest(const GetJobManifestRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns the <code>UnlockCode</code> code value for the specified job. A particular <code>UnlockCode</code> value can be
- * accessed for up to 90 days after the associated job has been
+ * accessed for up to 360 days after the associated job has been
  *
  * created>
  *
  * The <code>UnlockCode</code> value is a 29-character code with 25 alphanumeric characters and 4 hyphens. This code is
- * used to decrypt the manifest file when it is passed along with the manifest to the Snowball through the Snowball client
- * when the client is started for the first
+ * used to decrypt the manifest file when it is passed along with the manifest to the Snow device through the Snowball
+ * client when the client is started for the first
  *
  * time>
  *
  * As a best practice, we recommend that you don't save a copy of the <code>UnlockCode</code> in the same location as the
- * manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the
- * Snowball associated with that
+ * manifest file for that job. Saving these separately helps prevent unauthorized parties from gaining access to the Snow
+ * device associated with that
  */
 GetJobUnlockCodeResponse * SnowballClient::getJobUnlockCode(const GetJobUnlockCodeRequest &request)
 {
@@ -330,17 +505,30 @@ GetJobUnlockCodeResponse * SnowballClient::getJobUnlockCode(const GetJobUnlockCo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the Snowball service limit for your account, and also the number of Snowballs your account has
- * in
+ * Returns information about the Snow Family service limit for your account, and also the number of Snow devices your
+ * account has in
  *
  * use>
  *
- * The default service limit for the number of Snowballs that you can have at one time is 1. If you want to increase your
- * service limit, contact AWS
+ * The default service limit for the number of Snow devices that you can have at one time is 1. If you want to increase
+ * your service limit, contact AWS
  */
 GetSnowballUsageResponse * SnowballClient::getSnowballUsage(const GetSnowballUsageRequest &request)
 {
     return qobject_cast<GetSnowballUsageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * GetSoftwareUpdatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an Amazon S3 presigned URL for an update file associated with a specified
+ */
+GetSoftwareUpdatesResponse * SnowballClient::getSoftwareUpdates(const GetSoftwareUpdatesRequest &request)
+{
+    return qobject_cast<GetSoftwareUpdatesResponse *>(send(request));
 }
 
 /*!
@@ -378,10 +566,8 @@ ListClustersResponse * SnowballClient::listClusters(const ListClustersRequest &r
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your AWS account
- * that would be supported for use on <code>EDGE</code>, <code>EDGE_C</code>, and <code>EDGE_CG</code> devices. For more
- * information on compatible AMIs, see <a
- * href="http://docs.aws.amazon.com/snowball/latest/developer-guide/using-ec2.html">Using Amazon EC2 Compute Instances</a>
- * in the <i>AWS Snowball Developer
+ * that would be supported for use on a Snow device. Currently, supported AMIs are based on the CentOS 7 (x86_64) - with
+ * Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images, available on the AWS
  */
 ListCompatibleImagesResponse * SnowballClient::listCompatibleImages(const ListCompatibleImagesRequest &request)
 {
@@ -402,6 +588,19 @@ ListCompatibleImagesResponse * SnowballClient::listCompatibleImages(const ListCo
 ListJobsResponse * SnowballClient::listJobs(const ListJobsRequest &request)
 {
     return qobject_cast<ListJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * ListLongTermPricingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all long term pricing
+ */
+ListLongTermPricingResponse * SnowballClient::listLongTermPricing(const ListLongTermPricingRequest &request)
+{
+    return qobject_cast<ListLongTermPricingResponse *>(send(request));
 }
 
 /*!
@@ -432,6 +631,32 @@ UpdateClusterResponse * SnowballClient::updateCluster(const UpdateClusterRequest
 UpdateJobResponse * SnowballClient::updateJob(const UpdateJobRequest &request)
 {
     return qobject_cast<UpdateJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * UpdateJobShipmentStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the state when a the shipment states changes to a different
+ */
+UpdateJobShipmentStateResponse * SnowballClient::updateJobShipmentState(const UpdateJobShipmentStateRequest &request)
+{
+    return qobject_cast<UpdateJobShipmentStateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SnowballClient service, and returns a pointer to an
+ * UpdateLongTermPricingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the long term pricing
+ */
+UpdateLongTermPricingResponse * SnowballClient::updateLongTermPricing(const UpdateLongTermPricingRequest &request)
+{
+    return qobject_cast<UpdateLongTermPricingResponse *>(send(request));
 }
 
 /*!

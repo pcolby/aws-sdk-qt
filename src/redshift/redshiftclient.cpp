@@ -23,8 +23,12 @@
 #include "core/awssignaturev4.h"
 #include "acceptreservednodeexchangerequest.h"
 #include "acceptreservednodeexchangeresponse.h"
+#include "addpartnerrequest.h"
+#include "addpartnerresponse.h"
 #include "authorizeclustersecuritygroupingressrequest.h"
 #include "authorizeclustersecuritygroupingressresponse.h"
+#include "authorizeendpointaccessrequest.h"
+#include "authorizeendpointaccessresponse.h"
 #include "authorizesnapshotaccessrequest.h"
 #include "authorizesnapshotaccessresponse.h"
 #include "batchdeleteclustersnapshotsrequest.h"
@@ -45,18 +49,24 @@
 #include "createclustersnapshotresponse.h"
 #include "createclustersubnetgrouprequest.h"
 #include "createclustersubnetgroupresponse.h"
+#include "createendpointaccessrequest.h"
+#include "createendpointaccessresponse.h"
 #include "createeventsubscriptionrequest.h"
 #include "createeventsubscriptionresponse.h"
 #include "createhsmclientcertificaterequest.h"
 #include "createhsmclientcertificateresponse.h"
 #include "createhsmconfigurationrequest.h"
 #include "createhsmconfigurationresponse.h"
+#include "createscheduledactionrequest.h"
+#include "createscheduledactionresponse.h"
 #include "createsnapshotcopygrantrequest.h"
 #include "createsnapshotcopygrantresponse.h"
 #include "createsnapshotschedulerequest.h"
 #include "createsnapshotscheduleresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
+#include "createusagelimitrequest.h"
+#include "createusagelimitresponse.h"
 #include "deleteclusterrequest.h"
 #include "deleteclusterresponse.h"
 #include "deleteclusterparametergrouprequest.h"
@@ -67,18 +77,26 @@
 #include "deleteclustersnapshotresponse.h"
 #include "deleteclustersubnetgrouprequest.h"
 #include "deleteclustersubnetgroupresponse.h"
+#include "deleteendpointaccessrequest.h"
+#include "deleteendpointaccessresponse.h"
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionresponse.h"
 #include "deletehsmclientcertificaterequest.h"
 #include "deletehsmclientcertificateresponse.h"
 #include "deletehsmconfigurationrequest.h"
 #include "deletehsmconfigurationresponse.h"
+#include "deletepartnerrequest.h"
+#include "deletepartnerresponse.h"
+#include "deletescheduledactionrequest.h"
+#include "deletescheduledactionresponse.h"
 #include "deletesnapshotcopygrantrequest.h"
 #include "deletesnapshotcopygrantresponse.h"
 #include "deletesnapshotschedulerequest.h"
 #include "deletesnapshotscheduleresponse.h"
 #include "deletetagsrequest.h"
 #include "deletetagsresponse.h"
+#include "deleteusagelimitrequest.h"
+#include "deleteusagelimitresponse.h"
 #include "describeaccountattributesrequest.h"
 #include "describeaccountattributesresponse.h"
 #include "describeclusterdbrevisionsrequest.h"
@@ -101,6 +119,10 @@
 #include "describeclustersresponse.h"
 #include "describedefaultclusterparametersrequest.h"
 #include "describedefaultclusterparametersresponse.h"
+#include "describeendpointaccessrequest.h"
+#include "describeendpointaccessresponse.h"
+#include "describeendpointauthorizationrequest.h"
+#include "describeendpointauthorizationresponse.h"
 #include "describeeventcategoriesrequest.h"
 #include "describeeventcategoriesresponse.h"
 #include "describeeventsubscriptionsrequest.h"
@@ -113,14 +135,20 @@
 #include "describehsmconfigurationsresponse.h"
 #include "describeloggingstatusrequest.h"
 #include "describeloggingstatusresponse.h"
+#include "describenodeconfigurationoptionsrequest.h"
+#include "describenodeconfigurationoptionsresponse.h"
 #include "describeorderableclusteroptionsrequest.h"
 #include "describeorderableclusteroptionsresponse.h"
+#include "describepartnersrequest.h"
+#include "describepartnersresponse.h"
 #include "describereservednodeofferingsrequest.h"
 #include "describereservednodeofferingsresponse.h"
 #include "describereservednodesrequest.h"
 #include "describereservednodesresponse.h"
 #include "describeresizerequest.h"
 #include "describeresizeresponse.h"
+#include "describescheduledactionsrequest.h"
+#include "describescheduledactionsresponse.h"
 #include "describesnapshotcopygrantsrequest.h"
 #include "describesnapshotcopygrantsresponse.h"
 #include "describesnapshotschedulesrequest.h"
@@ -131,6 +159,8 @@
 #include "describetablerestorestatusresponse.h"
 #include "describetagsrequest.h"
 #include "describetagsresponse.h"
+#include "describeusagelimitsrequest.h"
+#include "describeusagelimitsresponse.h"
 #include "disableloggingrequest.h"
 #include "disableloggingresponse.h"
 #include "disablesnapshotcopyrequest.h"
@@ -143,6 +173,8 @@
 #include "getclustercredentialsresponse.h"
 #include "getreservednodeexchangeofferingsrequest.h"
 #include "getreservednodeexchangeofferingsresponse.h"
+#include "modifyaquaconfigurationrequest.h"
+#include "modifyaquaconfigurationresponse.h"
 #include "modifyclusterrequest.h"
 #include "modifyclusterresponse.h"
 #include "modifyclusterdbrevisionrequest.h"
@@ -159,12 +191,20 @@
 #include "modifyclustersnapshotscheduleresponse.h"
 #include "modifyclustersubnetgrouprequest.h"
 #include "modifyclustersubnetgroupresponse.h"
+#include "modifyendpointaccessrequest.h"
+#include "modifyendpointaccessresponse.h"
 #include "modifyeventsubscriptionrequest.h"
 #include "modifyeventsubscriptionresponse.h"
+#include "modifyscheduledactionrequest.h"
+#include "modifyscheduledactionresponse.h"
 #include "modifysnapshotcopyretentionperiodrequest.h"
 #include "modifysnapshotcopyretentionperiodresponse.h"
 #include "modifysnapshotschedulerequest.h"
 #include "modifysnapshotscheduleresponse.h"
+#include "modifyusagelimitrequest.h"
+#include "modifyusagelimitresponse.h"
+#include "pauseclusterrequest.h"
+#include "pauseclusterresponse.h"
 #include "purchasereservednodeofferingrequest.h"
 #include "purchasereservednodeofferingresponse.h"
 #include "rebootclusterrequest.h"
@@ -177,12 +217,18 @@
 #include "restorefromclustersnapshotresponse.h"
 #include "restoretablefromclustersnapshotrequest.h"
 #include "restoretablefromclustersnapshotresponse.h"
+#include "resumeclusterrequest.h"
+#include "resumeclusterresponse.h"
 #include "revokeclustersecuritygroupingressrequest.h"
 #include "revokeclustersecuritygroupingressresponse.h"
+#include "revokeendpointaccessrequest.h"
+#include "revokeendpointaccessresponse.h"
 #include "revokesnapshotaccessrequest.h"
 #include "revokesnapshotaccessresponse.h"
 #include "rotateencryptionkeyrequest.h"
 #include "rotateencryptionkeyresponse.h"
+#include "updatepartnerstatusrequest.h"
+#include "updatepartnerstatusresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -307,6 +353,20 @@ AcceptReservedNodeExchangeResponse * RedshiftClient::acceptReservedNodeExchange(
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * AddPartnerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a partner integration to a cluster. This operation authorizes a partner to push status updates for the specified
+ * database. To complete the integration, you also set up the integration on the partner
+ */
+AddPartnerResponse * RedshiftClient::addPartner(const AddPartnerRequest &request)
+{
+    return qobject_cast<AddPartnerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * AuthorizeClusterSecurityGroupIngressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -338,6 +398,19 @@ AcceptReservedNodeExchangeResponse * RedshiftClient::acceptReservedNodeExchange(
 AuthorizeClusterSecurityGroupIngressResponse * RedshiftClient::authorizeClusterSecurityGroupIngress(const AuthorizeClusterSecurityGroupIngressRequest &request)
 {
     return qobject_cast<AuthorizeClusterSecurityGroupIngressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * AuthorizeEndpointAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Grants access to a
+ */
+AuthorizeEndpointAccessResponse * RedshiftClient::authorizeEndpointAccess(const AuthorizeEndpointAccessRequest &request)
+{
+    return qobject_cast<AuthorizeEndpointAccessResponse *>(send(request));
 }
 
 /*!
@@ -378,7 +451,7 @@ BatchDeleteClusterSnapshotsResponse * RedshiftClient::batchDeleteClusterSnapshot
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the settings for a list of
+ * Modifies the settings for a set of cluster
  */
 BatchModifyClusterSnapshotsResponse * RedshiftClient::batchModifyClusterSnapshots(const BatchModifyClusterSnapshotsRequest &request)
 {
@@ -391,7 +464,7 @@ BatchModifyClusterSnapshotsResponse * RedshiftClient::batchModifyClusterSnapshot
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Cancels a resize
+ * Cancels a resize operation for a
  */
 CancelResizeResponse * RedshiftClient::cancelResize(const CancelResizeRequest &request)
 {
@@ -430,9 +503,9 @@ CopyClusterSnapshotResponse * RedshiftClient::copyClusterSnapshot(const CopyClus
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new
+ * Creates a new cluster with the specified
  *
- * cluster>
+ * parameters>
  *
  * To create a cluster in Virtual Private Cloud (VPC), you must provide a cluster subnet group name. The cluster subnet
  * group identifies the subnets of your VPC that Amazon Redshift uses when creating the cluster. For more information about
@@ -530,6 +603,19 @@ CreateClusterSubnetGroupResponse * RedshiftClient::createClusterSubnetGroup(cons
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * CreateEndpointAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Redshift-managed VPC
+ */
+CreateEndpointAccessResponse * RedshiftClient::createEndpointAccess(const CreateEndpointAccessRequest &request)
+{
+    return qobject_cast<CreateEndpointAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * CreateEventSubscriptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -574,8 +660,8 @@ CreateEventSubscriptionResponse * RedshiftClient::createEventSubscription(const 
  * The command returns a public key, which you must store in the HSM. In addition to creating the HSM certificate, you must
  * create an Amazon Redshift HSM configuration that provides a cluster the information needed to store and use encryption
  * keys in the HSM. For more information, go to <a
- * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-HSM.html">Hardware Security Modules</a> in the
- * Amazon Redshift Cluster Management
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html#working-with-HSM">Hardware
+ * Security Modules</a> in the <i>Amazon Redshift Cluster Management
  */
 CreateHsmClientCertificateResponse * RedshiftClient::createHsmClientCertificate(const CreateHsmClientCertificateRequest &request)
 {
@@ -605,6 +691,20 @@ CreateHsmConfigurationResponse * RedshiftClient::createHsmConfiguration(const Cr
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * CreateScheduledActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a scheduled action. A scheduled action contains a schedule and an Amazon Redshift API action. For example, you
+ * can create a schedule of when to run the <code>ResizeCluster</code> API operation.
+ */
+CreateScheduledActionResponse * RedshiftClient::createScheduledAction(const CreateScheduledActionRequest &request)
+{
+    return qobject_cast<CreateScheduledActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * CreateSnapshotCopyGrantResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -629,7 +729,7 @@ CreateSnapshotCopyGrantResponse * RedshiftClient::createSnapshotCopyGrant(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new snapshot
+ * Create a snapshot schedule that can be associated to a cluster and which overrides the default system backup schedule.
  */
 CreateSnapshotScheduleResponse * RedshiftClient::createSnapshotSchedule(const CreateSnapshotScheduleRequest &request)
 {
@@ -642,9 +742,9 @@ CreateSnapshotScheduleResponse * RedshiftClient::createSnapshotSchedule(const Cr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags to a specified
+ * Adds tags to a
  *
- * resource>
+ * cluster>
  *
  * A resource can have up to 50 tags. If you try to create more than 50 tags for a resource, you will receive an error and
  * the attempt will
@@ -660,15 +760,29 @@ CreateTagsResponse * RedshiftClient::createTags(const CreateTagsRequest &request
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * CreateUsageLimitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a usage limit for a specified Amazon Redshift feature on a cluster. The usage limit is identified by the
+ * returned usage limit
+ */
+CreateUsageLimitResponse * RedshiftClient::createUsageLimit(const CreateUsageLimitRequest &request)
+{
+    return qobject_cast<CreateUsageLimitResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DeleteClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a previously provisioned cluster. A successful response from the web service indicates that the request was
- * received correctly. Use <a>DescribeClusters</a> to monitor the status of the deletion. The delete operation cannot be
- * canceled or reverted once submitted. For more information about managing clusters, go to <a
- * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
- * <i>Amazon Redshift Cluster Management
+ * Deletes a previously provisioned cluster without its final snapshot being created. A successful response from the web
+ * service indicates that the request was received correctly. Use <a>DescribeClusters</a> to monitor the status of the
+ * deletion. The delete operation cannot be canceled or reverted once submitted. For more information about managing
+ * clusters, go to <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift
+ * Clusters</a> in the <i>Amazon Redshift Cluster Management
  *
  * Guide</i>>
  *
@@ -763,6 +877,19 @@ DeleteClusterSubnetGroupResponse * RedshiftClient::deleteClusterSubnetGroup(cons
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DeleteEndpointAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a Redshift-managed VPC
+ */
+DeleteEndpointAccessResponse * RedshiftClient::deleteEndpointAccess(const DeleteEndpointAccessRequest &request)
+{
+    return qobject_cast<DeleteEndpointAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DeleteEventSubscriptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -802,6 +929,33 @@ DeleteHsmConfigurationResponse * RedshiftClient::deleteHsmConfiguration(const De
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DeletePartnerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a partner integration from a cluster. Data can still flow to the cluster until the integration is deleted at the
+ * partner's
+ */
+DeletePartnerResponse * RedshiftClient::deletePartner(const DeletePartnerRequest &request)
+{
+    return qobject_cast<DeletePartnerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DeleteScheduledActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a scheduled action.
+ */
+DeleteScheduledActionResponse * RedshiftClient::deleteScheduledAction(const DeleteScheduledActionRequest &request)
+{
+    return qobject_cast<DeleteScheduledActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DeleteSnapshotCopyGrantResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -832,11 +986,24 @@ DeleteSnapshotScheduleResponse * RedshiftClient::deleteSnapshotSchedule(const De
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a tag or tags from a resource. You must provide the ARN of the resource from which you want to delete the tag or
+ * Deletes tags from a resource. You must provide the ARN of the resource from which you want to delete the tag or
  */
 DeleteTagsResponse * RedshiftClient::deleteTags(const DeleteTagsRequest &request)
 {
     return qobject_cast<DeleteTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DeleteUsageLimitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a usage limit from a
+ */
+DeleteUsageLimitResponse * RedshiftClient::deleteUsageLimit(const DeleteUsageLimitRequest &request)
+{
+    return qobject_cast<DeleteUsageLimitResponse *>(send(request));
 }
 
 /*!
@@ -1090,6 +1257,32 @@ DescribeDefaultClusterParametersResponse * RedshiftClient::describeDefaultCluste
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeEndpointAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a Redshift-managed VPC
+ */
+DescribeEndpointAccessResponse * RedshiftClient::describeEndpointAccess(const DescribeEndpointAccessRequest &request)
+{
+    return qobject_cast<DescribeEndpointAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeEndpointAuthorizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes an endpoint
+ */
+DescribeEndpointAuthorizationResponse * RedshiftClient::describeEndpointAuthorization(const DescribeEndpointAuthorizationRequest &request)
+{
+    return qobject_cast<DescribeEndpointAuthorizationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DescribeEventCategoriesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1212,6 +1405,20 @@ DescribeLoggingStatusResponse * RedshiftClient::describeLoggingStatus(const Desc
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeNodeConfigurationOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns properties of possible node configurations such as node type, number of nodes, and disk usage for the specified
+ * action
+ */
+DescribeNodeConfigurationOptionsResponse * RedshiftClient::describeNodeConfigurationOptions(const DescribeNodeConfigurationOptionsRequest &request)
+{
+    return qobject_cast<DescribeNodeConfigurationOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DescribeOrderableClusterOptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1227,6 +1434,19 @@ DescribeLoggingStatusResponse * RedshiftClient::describeLoggingStatus(const Desc
 DescribeOrderableClusterOptionsResponse * RedshiftClient::describeOrderableClusterOptions(const DescribeOrderableClusterOptionsRequest &request)
 {
     return qobject_cast<DescribeOrderableClusterOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribePartnersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the partner integrations defined for a
+ */
+DescribePartnersResponse * RedshiftClient::describePartners(const DescribePartnersRequest &request)
+{
+    return qobject_cast<DescribePartnersResponse *>(send(request));
 }
 
 /*!
@@ -1286,6 +1506,19 @@ DescribeResizeResponse * RedshiftClient::describeResize(const DescribeResizeRequ
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeScheduledActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes properties of scheduled actions.
+ */
+DescribeScheduledActionsResponse * RedshiftClient::describeScheduledActions(const DescribeScheduledActionsRequest &request)
+{
+    return qobject_cast<DescribeScheduledActionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * DescribeSnapshotCopyGrantsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1322,7 +1555,7 @@ DescribeSnapshotSchedulesResponse * RedshiftClient::describeSnapshotSchedules(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the total amount of snapshot usage and provisioned storage for a user in
+ * Returns account level backups storage size and provisional
  */
 DescribeStorageResponse * RedshiftClient::describeStorage(const DescribeStorageRequest &request)
 {
@@ -1335,7 +1568,7 @@ DescribeStorageResponse * RedshiftClient::describeStorage(const DescribeStorageR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the total amount of snapshot usage and provisioned storage for a user in
+ * Returns account level backups storage size and provisional
  */
 DescribeStorageResponse * RedshiftClient::describeStorage()
 {
@@ -1399,6 +1632,38 @@ DescribeTableRestoreStatusResponse * RedshiftClient::describeTableRestoreStatus(
 DescribeTagsResponse * RedshiftClient::describeTags(const DescribeTagsRequest &request)
 {
     return qobject_cast<DescribeTagsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * DescribeUsageLimitsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Shows usage limits on a cluster. Results are filtered based on the combination of input usage limit identifier, cluster
+ * identifier, and feature type
+ *
+ * parameters> <ul> <li>
+ *
+ * If usage limit identifier, cluster identifier, and feature type are not provided, then all usage limit objects for the
+ * current account in the current region are
+ *
+ * returned> </li> <li>
+ *
+ * If usage limit identifier is provided, then the corresponding usage limit object is
+ *
+ * returned> </li> <li>
+ *
+ * If cluster identifier is provided, then all usage limit objects for the specified cluster are
+ *
+ * returned> </li> <li>
+ *
+ * If cluster identifier and feature type are provided, then all usage limit objects for the combination of cluster and
+ * feature are
+ */
+DescribeUsageLimitsResponse * RedshiftClient::describeUsageLimits(const DescribeUsageLimitsRequest &request)
+{
+    return qobject_cast<DescribeUsageLimitsResponse *>(send(request));
 }
 
 /*!
@@ -1516,21 +1781,37 @@ GetReservedNodeExchangeOfferingsResponse * RedshiftClient::getReservedNodeExchan
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ModifyAquaConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies whether a cluster can use AQUA (Advanced Query Accelerator).
+ */
+ModifyAquaConfigurationResponse * RedshiftClient::modifyAquaConfiguration(const ModifyAquaConfigurationRequest &request)
+{
+    return qobject_cast<ModifyAquaConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * ModifyClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the settings for a cluster. For example, you can add another security or parameter group, update the preferred
- * maintenance window, or change the master user password. Resetting a cluster password or modifying the security groups
- * associated with a cluster do not need a reboot. However, modifying a parameter group requires a reboot for parameters to
- * take effect. For more information about managing clusters, go to <a
- * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
- * <i>Amazon Redshift Cluster Management
+ * Modifies the settings for a
  *
- * Guide</i>>
+ * cluster>
  *
  * You can also change node type and the number of nodes to scale up or down the cluster. When resizing a cluster, you must
  * specify both the number of nodes and the node type even if one of the parameters does not
+ *
+ * change>
+ *
+ * You can add another security or parameter group, or change the master user password. Resetting a cluster password or
+ * modifying the security groups associated with a cluster do not need a reboot. However, modifying a parameter group
+ * requires a reboot for parameters to take effect. For more information about managing clusters, go to <a
+ * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a> in the
+ * <i>Amazon Redshift Cluster Management
  */
 ModifyClusterResponse * RedshiftClient::modifyCluster(const ModifyClusterRequest &request)
 {
@@ -1573,8 +1854,7 @@ ModifyClusterIamRolesResponse * RedshiftClient::modifyClusterIamRoles(const Modi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the maintenance settings of a cluster. For example, you can defer a maintenance window. You can also update or
- * cancel a deferment.
+ * Modifies the maintenance settings of a
  */
 ModifyClusterMaintenanceResponse * RedshiftClient::modifyClusterMaintenance(const ModifyClusterMaintenanceRequest &request)
 {
@@ -1607,6 +1887,10 @@ ModifyClusterParameterGroupResponse * RedshiftClient::modifyClusterParameterGrou
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Modifies the settings for a
+ *
+ * snapshot>
+ *
+ * This exanmple modifies the manual retention period setting for a cluster
  */
 ModifyClusterSnapshotResponse * RedshiftClient::modifyClusterSnapshot(const ModifyClusterSnapshotRequest &request)
 {
@@ -1642,6 +1926,19 @@ ModifyClusterSubnetGroupResponse * RedshiftClient::modifyClusterSubnetGroup(cons
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ModifyEndpointAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies a Redshift-managed VPC
+ */
+ModifyEndpointAccessResponse * RedshiftClient::modifyEndpointAccess(const ModifyEndpointAccessRequest &request)
+{
+    return qobject_cast<ModifyEndpointAccessResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * ModifyEventSubscriptionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1651,6 +1948,19 @@ ModifyClusterSubnetGroupResponse * RedshiftClient::modifyClusterSubnetGroup(cons
 ModifyEventSubscriptionResponse * RedshiftClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
 {
     return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ModifyScheduledActionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies a scheduled action.
+ */
+ModifyScheduledActionResponse * RedshiftClient::modifyScheduledAction(const ModifyScheduledActionRequest &request)
+{
+    return qobject_cast<ModifyScheduledActionResponse *>(send(request));
 }
 
 /*!
@@ -1681,6 +1991,32 @@ ModifySnapshotCopyRetentionPeriodResponse * RedshiftClient::modifySnapshotCopyRe
 ModifySnapshotScheduleResponse * RedshiftClient::modifySnapshotSchedule(const ModifySnapshotScheduleRequest &request)
 {
     return qobject_cast<ModifySnapshotScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ModifyUsageLimitResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies a usage limit in a cluster. You can't modify the feature type or period of a usage
+ */
+ModifyUsageLimitResponse * RedshiftClient::modifyUsageLimit(const ModifyUsageLimitRequest &request)
+{
+    return qobject_cast<ModifyUsageLimitResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * PauseClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Pauses a
+ */
+PauseClusterResponse * RedshiftClient::pauseCluster(const PauseClusterRequest &request)
+{
+    return qobject_cast<PauseClusterResponse *>(send(request));
 }
 
 /*!
@@ -1757,13 +2093,27 @@ ResetClusterParameterGroupResponse * RedshiftClient::resetClusterParameterGroup(
  *
  * types> <ul> <li>
  *
+ * dc1.large (if your cluster is in a
+ *
+ * VPC> </li> <li>
+ *
+ * dc1.8xlarge (if your cluster is in a
+ *
+ * VPC> </li> <li>
+ *
  * dc2.larg> </li> <li>
  *
  * dc2.8xlarg> </li> <li>
  *
  * ds2.xlarg> </li> <li>
  *
- * ds2.8xlarg> </li> </ul> </li> <li>
+ * ds2.8xlarg> </li> <li>
+ *
+ * ra3.xlplu> </li> <li>
+ *
+ * ra3.4xlarg> </li> <li>
+ *
+ * ra3.16xlarg> </li> </ul> </li> <li>
  *
  * The type of nodes that you add must match the node type for the
  */
@@ -1825,6 +2175,19 @@ RestoreTableFromClusterSnapshotResponse * RedshiftClient::restoreTableFromCluste
 
 /*!
  * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * ResumeClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Resumes a paused
+ */
+ResumeClusterResponse * RedshiftClient::resumeCluster(const ResumeClusterRequest &request)
+{
+    return qobject_cast<ResumeClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
  * RevokeClusterSecurityGroupIngressResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1837,6 +2200,19 @@ RestoreTableFromClusterSnapshotResponse * RedshiftClient::restoreTableFromCluste
 RevokeClusterSecurityGroupIngressResponse * RedshiftClient::revokeClusterSecurityGroupIngress(const RevokeClusterSecurityGroupIngressRequest &request)
 {
     return qobject_cast<RevokeClusterSecurityGroupIngressResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * RevokeEndpointAccessResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Revokes access to a
+ */
+RevokeEndpointAccessResponse * RedshiftClient::revokeEndpointAccess(const RevokeEndpointAccessRequest &request)
+{
+    return qobject_cast<RevokeEndpointAccessResponse *>(send(request));
 }
 
 /*!
@@ -1870,6 +2246,19 @@ RevokeSnapshotAccessResponse * RedshiftClient::revokeSnapshotAccess(const Revoke
 RotateEncryptionKeyResponse * RedshiftClient::rotateEncryptionKey(const RotateEncryptionKeyRequest &request)
 {
     return qobject_cast<RotateEncryptionKeyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RedshiftClient service, and returns a pointer to an
+ * UpdatePartnerStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the status of a partner
+ */
+UpdatePartnerStatusResponse * RedshiftClient::updatePartnerStatus(const UpdatePartnerStatusRequest &request)
+{
+    return qobject_cast<UpdatePartnerStatusResponse *>(send(request));
 }
 
 /*!

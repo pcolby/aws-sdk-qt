@@ -37,15 +37,23 @@ class QTAWS_EXPORT signerRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by signer.
     enum Action {
+        AddProfilePermissionAction,
         CancelSigningProfileAction,
         DescribeSigningJobAction,
         GetSigningPlatformAction,
         GetSigningProfileAction,
+        ListProfilePermissionsAction,
         ListSigningJobsAction,
         ListSigningPlatformsAction,
         ListSigningProfilesAction,
+        ListTagsForResourceAction,
         PutSigningProfileAction,
+        RemoveProfilePermissionAction,
+        RevokeSignatureAction,
+        RevokeSigningProfileAction,
         StartSigningJobAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

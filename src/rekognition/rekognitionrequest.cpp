@@ -38,15 +38,23 @@ namespace Rekognition {
  *
  * \value CompareFacesAction Rekognition CompareFaces action.
  * \value CreateCollectionAction Rekognition CreateCollection action.
+ * \value CreateProjectAction Rekognition CreateProject action.
+ * \value CreateProjectVersionAction Rekognition CreateProjectVersion action.
  * \value CreateStreamProcessorAction Rekognition CreateStreamProcessor action.
  * \value DeleteCollectionAction Rekognition DeleteCollection action.
  * \value DeleteFacesAction Rekognition DeleteFaces action.
+ * \value DeleteProjectAction Rekognition DeleteProject action.
+ * \value DeleteProjectVersionAction Rekognition DeleteProjectVersion action.
  * \value DeleteStreamProcessorAction Rekognition DeleteStreamProcessor action.
  * \value DescribeCollectionAction Rekognition DescribeCollection action.
+ * \value DescribeProjectVersionsAction Rekognition DescribeProjectVersions action.
+ * \value DescribeProjectsAction Rekognition DescribeProjects action.
  * \value DescribeStreamProcessorAction Rekognition DescribeStreamProcessor action.
+ * \value DetectCustomLabelsAction Rekognition DetectCustomLabels action.
  * \value DetectFacesAction Rekognition DetectFaces action.
  * \value DetectLabelsAction Rekognition DetectLabels action.
  * \value DetectModerationLabelsAction Rekognition DetectModerationLabels action.
+ * \value DetectProtectiveEquipmentAction Rekognition DetectProtectiveEquipment action.
  * \value DetectTextAction Rekognition DetectText action.
  * \value GetCelebrityInfoAction Rekognition GetCelebrityInfo action.
  * \value GetCelebrityRecognitionAction Rekognition GetCelebrityRecognition action.
@@ -55,10 +63,13 @@ namespace Rekognition {
  * \value GetFaceSearchAction Rekognition GetFaceSearch action.
  * \value GetLabelDetectionAction Rekognition GetLabelDetection action.
  * \value GetPersonTrackingAction Rekognition GetPersonTracking action.
+ * \value GetSegmentDetectionAction Rekognition GetSegmentDetection action.
+ * \value GetTextDetectionAction Rekognition GetTextDetection action.
  * \value IndexFacesAction Rekognition IndexFaces action.
  * \value ListCollectionsAction Rekognition ListCollections action.
  * \value ListFacesAction Rekognition ListFaces action.
  * \value ListStreamProcessorsAction Rekognition ListStreamProcessors action.
+ * \value ListTagsForResourceAction Rekognition ListTagsForResource action.
  * \value RecognizeCelebritiesAction Rekognition RecognizeCelebrities action.
  * \value SearchFacesAction Rekognition SearchFaces action.
  * \value SearchFacesByImageAction Rekognition SearchFacesByImage action.
@@ -68,8 +79,14 @@ namespace Rekognition {
  * \value StartFaceSearchAction Rekognition StartFaceSearch action.
  * \value StartLabelDetectionAction Rekognition StartLabelDetection action.
  * \value StartPersonTrackingAction Rekognition StartPersonTracking action.
+ * \value StartProjectVersionAction Rekognition StartProjectVersion action.
+ * \value StartSegmentDetectionAction Rekognition StartSegmentDetection action.
  * \value StartStreamProcessorAction Rekognition StartStreamProcessor action.
+ * \value StartTextDetectionAction Rekognition StartTextDetection action.
+ * \value StopProjectVersionAction Rekognition StopProjectVersion action.
  * \value StopStreamProcessorAction Rekognition StopStreamProcessor action.
+ * \value TagResourceAction Rekognition TagResource action.
+ * \value UntagResourceAction Rekognition UntagResource action.
  */
 
 /*!

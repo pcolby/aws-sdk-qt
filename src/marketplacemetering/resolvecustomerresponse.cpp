@@ -43,13 +43,20 @@ namespace MarketplaceMetering {
  * 
  *  dimensions>
  * 
+ *  For information on the permissions you need to use this API, see <a
+ *  href="https://docs.aws.amazon.com/marketplace/latest/userguide/iam-user-policy-for-aws-marketplace-actions.html">AWS
+ *  Marketing metering and entitlement API permissions</a> in the <i>AWS Marketplace Seller Guide.</i>
+ * 
+ *  </p
+ * 
  *  <b>Submitting Metering Records</b>
  * 
  *  </p <ul> <li>
  * 
- *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2
+ *  <i>MeterUsage</i>- Submits the metering record for a Marketplace product. MeterUsage is called from an EC2 instance or a
+ *  container running on EKS or
  * 
- *  instance> </li> <li>
+ *  ECS> </li> <li>
  * 
  *  <i>BatchMeterUsage</i>- Submits the metering record for a set of customers. BatchMeterUsage is called from a
  *  software-as-a-service (SaaS)
@@ -71,10 +78,9 @@ namespace MarketplaceMetering {
  *  </p <ul> <li>
  * 
  *  Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service
- *  and call the RegisterUsage operation for software entitlement and metering. Calling RegisterUsage from containers
- *  running outside of Amazon Elastic Container Service (Amazon ECR) isn't supported. Free and BYOL products for ECS aren't
- *  required to call RegisterUsage, but you can do so if you want to receive usage data in your seller reports. For more
- *  information on using the RegisterUsage operation, see <a
+ *  and call the RegisterUsage operation for software entitlement and metering. Free and BYOL products for Amazon ECS or
+ *  Amazon EKS aren't required to call RegisterUsage, but you can do so if you want to receive usage data in your seller
+ *  reports. For more information on using the RegisterUsage operation, see <a
  *  href="https://docs.aws.amazon.com/marketplace/latest/userguide/container-based-products.html">Container-Based
  *  Products</a>.
  * 

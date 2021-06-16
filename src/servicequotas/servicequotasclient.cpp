@@ -49,10 +49,16 @@
 #include "listservicequotasresponse.h"
 #include "listservicesrequest.h"
 #include "listservicesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putservicequotaincreaserequestintotemplaterequest.h"
 #include "putservicequotaincreaserequestintotemplateresponse.h"
 #include "requestservicequotaincreaserequest.h"
 #include "requestservicequotaincreaseresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -76,18 +82,9 @@ namespace ServiceQuotas {
  * \ingroup aws-clients
  * \inmodule QtAwsServiceQuotas
  *
- *  Service Quotas is a web service that you can use to manage many of your AWS service quotas. Quotas, also referred to as
- *  limits, are the maximum values for a resource, item, or operation. This guide provide descriptions of the Service Quotas
- *  actions that you can call from an API. For the Service Quotas user guide, which explains how to use Service Quotas from
- *  the console, see <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">What is Service
- *  Quotas</a>.
- * 
- *  </p <note>
- * 
- *  AWS provides SDKs that consist of libraries and sample code for programming languages and platforms (Java, Ruby, .NET,
- *  iOS, Android, etc...,). The SDKs provide a convenient way to create programmatic access to Service Quotas and AWS. For
- *  information about the AWS SDKs, including how to download and install them, see the <a
- *  href="https://docs.aws.amazon.com/aws.amazon.com/tools">Tools for Amazon Web Services</a>
+ *  With Service Quotas, you can view and manage your quotas easily as your AWS workloads grow. Quotas, also referred to as
+ *  limits, are the maximum number of resources that you can create in your AWS account. For more information, see the <a
+ *  href="https://docs.aws.amazon.com/servicequotas/latest/userguide/">Service Quotas User
  */
 
 /*!
@@ -149,10 +146,9 @@ ServiceQuotasClient::ServiceQuotasClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Associates the Service Quotas template with your organization so that when new accounts are created in your
- * organization, the template submits increase requests for the specified service quotas. Use the Service Quotas template
- * to request an increase for any adjustable quota value. After you define the Service Quotas template, use this operation
- * to associate, or enable, the template.
+ * Associates your quota request template with your organization. When a new account is created in your organization, the
+ * quota increase requests in the template are automatically applied to the account. You can add a quota increase request
+ * for any adjustable quota to your
  */
 AssociateServiceQuotaTemplateResponse * ServiceQuotasClient::associateServiceQuotaTemplate(const AssociateServiceQuotaTemplateRequest &request)
 {
@@ -165,7 +161,7 @@ AssociateServiceQuotaTemplateResponse * ServiceQuotasClient::associateServiceQuo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a service quota increase request from the Service Quotas template.
+ * Deletes the quota increase request for the specified quota from your quota request
  */
 DeleteServiceQuotaIncreaseRequestFromTemplateResponse * ServiceQuotasClient::deleteServiceQuotaIncreaseRequestFromTemplate(const DeleteServiceQuotaIncreaseRequestFromTemplateRequest &request)
 {
@@ -178,21 +174,8 @@ DeleteServiceQuotaIncreaseRequestFromTemplateResponse * ServiceQuotasClient::del
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables the Service Quotas template. Once the template is disabled, it does not request quota increases for new
- * accounts in your organization. Disabling the quota template does not apply the quota increase requests from the
- * template.
- *
- * </p
- *
- * <b>Related operations</b>
- *
- * </p <ul> <li>
- *
- * To enable the quota template, call <a>AssociateServiceQuotaTemplate</a>.
- *
- * </p </li> <li>
- *
- * To delete a specific service quota from the template, use
+ * Disables your quota request template. After a template is disabled, the quota increase requests in the template are not
+ * applied to new accounts in your organization. Disabling a quota request template does not apply its quota increase
  */
 DisassociateServiceQuotaTemplateResponse * ServiceQuotasClient::disassociateServiceQuotaTemplate(const DisassociateServiceQuotaTemplateRequest &request)
 {
@@ -205,8 +188,7 @@ DisassociateServiceQuotaTemplateResponse * ServiceQuotasClient::disassociateServ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the default service quotas values. The Value returned for each quota is the AWS default value, even if the
- * quotas have been increased..
+ * Retrieves the default value for the specified quota. The default value does not reflect any quota
  */
 GetAWSDefaultServiceQuotaResponse * ServiceQuotasClient::getAWSDefaultServiceQuota(const GetAWSDefaultServiceQuotaRequest &request)
 {
@@ -219,8 +201,7 @@ GetAWSDefaultServiceQuotaResponse * ServiceQuotasClient::getAWSDefaultServiceQuo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the <code>ServiceQuotaTemplateAssociationStatus</code> value from the service. Use this action to determine if
- * the Service Quota template is associated, or enabled.
+ * Retrieves the status of the association for the quota request
  */
 GetAssociationForServiceQuotaTemplateResponse * ServiceQuotasClient::getAssociationForServiceQuotaTemplate(const GetAssociationForServiceQuotaTemplateRequest &request)
 {
@@ -233,7 +214,7 @@ GetAssociationForServiceQuotaTemplateResponse * ServiceQuotasClient::getAssociat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the details for a particular increase request.
+ * Retrieves information about the specified quota increase
  */
 GetRequestedServiceQuotaChangeResponse * ServiceQuotasClient::getRequestedServiceQuotaChange(const GetRequestedServiceQuotaChangeRequest &request)
 {
@@ -246,9 +227,8 @@ GetRequestedServiceQuotaChangeResponse * ServiceQuotasClient::getRequestedServic
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the details for the specified service quota. This operation provides a different Value than the
- * <code>GetAWSDefaultServiceQuota</code> operation. This operation returns the applied value for each quota.
- * <code>GetAWSDefaultServiceQuota</code> returns the default AWS value for each quota.
+ * Retrieves the applied quota value for the specified quota. For some quotas, only the default values are available. If
+ * the applied quota value is not available for a quota, the quota is not
  */
 GetServiceQuotaResponse * ServiceQuotasClient::getServiceQuota(const GetServiceQuotaRequest &request)
 {
@@ -261,7 +241,7 @@ GetServiceQuotaResponse * ServiceQuotasClient::getServiceQuota(const GetServiceQ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the details of the service quota increase request in your
+ * Retrieves information about the specified quota increase request in your quota request
  */
 GetServiceQuotaIncreaseRequestFromTemplateResponse * ServiceQuotasClient::getServiceQuotaIncreaseRequestFromTemplate(const GetServiceQuotaIncreaseRequestFromTemplateRequest &request)
 {
@@ -274,18 +254,7 @@ GetServiceQuotaIncreaseRequestFromTemplateResponse * ServiceQuotasClient::getSer
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all default service quotas for the specified AWS service or all AWS services. ListAWSDefaultServiceQuotas is
- * similar to <a>ListServiceQuotas</a> except for the Value object. The Value object returned by
- * <code>ListAWSDefaultServiceQuotas</code> is the default value assigned by AWS. This request returns a list of all
- * service quotas for the specified service. The listing of each you'll see the default values are the values that AWS
- * provides for the quotas.
- *
- * </p <note>
- *
- * Always check the <code>NextToken</code> response parameter when calling any of the <code>List*</code> operations. These
- * operations can return an unexpected list of results, even when there are more results available. When this happens, the
- * <code>NextToken</code> response parameter contains a value to pass the next call to the same API to request the next
- * part of the
+ * Lists the default values for the quotas for the specified AWS service. A default value does not reflect any quota
  */
 ListAWSDefaultServiceQuotasResponse * ServiceQuotasClient::listAWSDefaultServiceQuotas(const ListAWSDefaultServiceQuotasRequest &request)
 {
@@ -298,7 +267,7 @@ ListAWSDefaultServiceQuotasResponse * ServiceQuotasClient::listAWSDefaultService
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Requests a list of the changes to quotas for a
+ * Retrieves the quota increase requests for the specified
  */
 ListRequestedServiceQuotaChangeHistoryResponse * ServiceQuotasClient::listRequestedServiceQuotaChangeHistory(const ListRequestedServiceQuotaChangeHistoryRequest &request)
 {
@@ -311,9 +280,7 @@ ListRequestedServiceQuotaChangeHistoryResponse * ServiceQuotasClient::listReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Requests a list of the changes to specific service quotas. This command provides additional granularity over the
- * <code>ListRequestedServiceQuotaChangeHistory</code> command. Once a quota change request has reached <code>CASE_CLOSED,
- * APPROVED,</code> or <code>DENIED</code>, the history has been kept for 90
+ * Retrieves the quota increase requests for the specified
  */
 ListRequestedServiceQuotaChangeHistoryByQuotaResponse * ServiceQuotasClient::listRequestedServiceQuotaChangeHistoryByQuota(const ListRequestedServiceQuotaChangeHistoryByQuotaRequest &request)
 {
@@ -326,7 +293,7 @@ ListRequestedServiceQuotaChangeHistoryByQuotaResponse * ServiceQuotasClient::lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the quota increase requests in the template.
+ * Lists the quota increase requests in the specified quota request
  */
 ListServiceQuotaIncreaseRequestsInTemplateResponse * ServiceQuotasClient::listServiceQuotaIncreaseRequestsInTemplate(const ListServiceQuotaIncreaseRequestsInTemplateRequest &request)
 {
@@ -339,15 +306,8 @@ ListServiceQuotaIncreaseRequestsInTemplateResponse * ServiceQuotasClient::listSe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all service quotas for the specified AWS service. This request returns a list of the service quotas for the
- * specified service. you'll see the default values are the values that AWS provides for the quotas.
- *
- * </p <note>
- *
- * Always check the <code>NextToken</code> response parameter when calling any of the <code>List*</code> operations. These
- * operations can return an unexpected list of results, even when there are more results available. When this happens, the
- * <code>NextToken</code> response parameter contains a value to pass the next call to the same API to request the next
- * part of the
+ * Lists the applied quota values for the specified AWS service. For some quotas, only the default values are available. If
+ * the applied quota value is not available for a quota, the quota is not
  */
 ListServiceQuotasResponse * ServiceQuotasClient::listServiceQuotas(const ListServiceQuotasRequest &request)
 {
@@ -360,8 +320,7 @@ ListServiceQuotasResponse * ServiceQuotasClient::listServiceQuotas(const ListSer
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the AWS services available in Service Quotas. Not all AWS services are available in Service Quotas. To list the
- * see the list of the service quotas for a specific service, use
+ * Lists the names and codes for the services integrated with Service
  */
 ListServicesResponse * ServiceQuotasClient::listServices(const ListServicesRequest &request)
 {
@@ -370,13 +329,24 @@ ListServicesResponse * ServiceQuotasClient::listServices(const ListServicesReque
 
 /*!
  * Sends \a request to the ServiceQuotasClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the tags assigned to the specified applied
+ */
+ListTagsForResourceResponse * ServiceQuotasClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceQuotasClient service, and returns a pointer to an
  * PutServiceQuotaIncreaseRequestIntoTemplateResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Defines and adds a quota to the service quota template. To add a quota to the template, you must provide the
- * <code>ServiceCode</code>, <code>QuotaCode</code>, <code>AwsRegion</code>, and <code>DesiredValue</code>. Once you add a
- * quota to the template, use <a>ListServiceQuotaIncreaseRequestsInTemplate</a> to see the list of quotas in the
+ * Adds a quota increase request to your quota request
  */
 PutServiceQuotaIncreaseRequestIntoTemplateResponse * ServiceQuotasClient::putServiceQuotaIncreaseRequestIntoTemplate(const PutServiceQuotaIncreaseRequestIntoTemplateRequest &request)
 {
@@ -389,12 +359,37 @@ PutServiceQuotaIncreaseRequestIntoTemplateResponse * ServiceQuotasClient::putSer
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the details of a service quota increase request. The response to this command provides the details in the
- * <a>RequestedServiceQuotaChange</a> object.
+ * Submits a quota increase request for the specified
  */
 RequestServiceQuotaIncreaseResponse * ServiceQuotasClient::requestServiceQuotaIncrease(const RequestServiceQuotaIncreaseRequest &request)
 {
     return qobject_cast<RequestServiceQuotaIncreaseResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceQuotasClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds tags to the specified applied quota. You can include one or more tags to add to the
+ */
+TagResourceResponse * ServiceQuotasClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServiceQuotasClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from the specified applied quota. You can specify one or more tags to
+ */
+UntagResourceResponse * ServiceQuotasClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -28,10 +28,16 @@ namespace QtAws {
 namespace LexRuntimeService {
 
 class LexRuntimeServiceClientPrivate;
+class DeleteSessionRequest;
+class DeleteSessionResponse;
+class GetSessionRequest;
+class GetSessionResponse;
 class PostContentRequest;
 class PostContentResponse;
 class PostTextRequest;
 class PostTextResponse;
+class PutSessionRequest;
+class PutSessionResponse;
 
 class QTAWS_EXPORT LexRuntimeServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -49,8 +55,11 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    DeleteSessionResponse * deleteSession(const DeleteSessionRequest &request);
+    GetSessionResponse * getSession(const GetSessionRequest &request);
     PostContentResponse * postContent(const PostContentRequest &request);
     PostTextResponse * postText(const PostTextRequest &request);
+    PutSessionResponse * putSession(const PutSessionRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(LexRuntimeServiceClient)

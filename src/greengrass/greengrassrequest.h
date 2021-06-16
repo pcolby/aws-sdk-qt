@@ -91,6 +91,7 @@ public:
         GetServiceRoleForAccountAction,
         GetSubscriptionDefinitionAction,
         GetSubscriptionDefinitionVersionAction,
+        GetThingRuntimeConfigurationAction,
         ListBulkDeploymentDetailedReportsAction,
         ListBulkDeploymentsAction,
         ListConnectorDefinitionVersionsAction,
@@ -127,6 +128,7 @@ public:
         UpdateLoggerDefinitionAction,
         UpdateResourceDefinitionAction,
         UpdateSubscriptionDefinitionAction,
+        UpdateThingRuntimeConfigurationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

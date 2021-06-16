@@ -46,12 +46,16 @@ class DeleteBucketCorsRequest;
 class DeleteBucketCorsResponse;
 class DeleteBucketEncryptionRequest;
 class DeleteBucketEncryptionResponse;
+class DeleteBucketIntelligentTieringConfigurationRequest;
+class DeleteBucketIntelligentTieringConfigurationResponse;
 class DeleteBucketInventoryConfigurationRequest;
 class DeleteBucketInventoryConfigurationResponse;
 class DeleteBucketLifecycleRequest;
 class DeleteBucketLifecycleResponse;
 class DeleteBucketMetricsConfigurationRequest;
 class DeleteBucketMetricsConfigurationResponse;
+class DeleteBucketOwnershipControlsRequest;
+class DeleteBucketOwnershipControlsResponse;
 class DeleteBucketPolicyRequest;
 class DeleteBucketPolicyResponse;
 class DeleteBucketReplicationRequest;
@@ -78,6 +82,8 @@ class GetBucketCorsRequest;
 class GetBucketCorsResponse;
 class GetBucketEncryptionRequest;
 class GetBucketEncryptionResponse;
+class GetBucketIntelligentTieringConfigurationRequest;
+class GetBucketIntelligentTieringConfigurationResponse;
 class GetBucketInventoryConfigurationRequest;
 class GetBucketInventoryConfigurationResponse;
 class GetBucketLifecycleRequest;
@@ -94,6 +100,8 @@ class GetBucketNotificationRequest;
 class GetBucketNotificationResponse;
 class GetBucketNotificationConfigurationRequest;
 class GetBucketNotificationConfigurationResponse;
+class GetBucketOwnershipControlsRequest;
+class GetBucketOwnershipControlsResponse;
 class GetBucketPolicyRequest;
 class GetBucketPolicyResponse;
 class GetBucketPolicyStatusRequest;
@@ -130,6 +138,8 @@ class HeadObjectRequest;
 class HeadObjectResponse;
 class ListBucketAnalyticsConfigurationsRequest;
 class ListBucketAnalyticsConfigurationsResponse;
+class ListBucketIntelligentTieringConfigurationsRequest;
+class ListBucketIntelligentTieringConfigurationsResponse;
 class ListBucketInventoryConfigurationsRequest;
 class ListBucketInventoryConfigurationsResponse;
 class ListBucketMetricsConfigurationsRequest;
@@ -156,6 +166,8 @@ class PutBucketCorsRequest;
 class PutBucketCorsResponse;
 class PutBucketEncryptionRequest;
 class PutBucketEncryptionResponse;
+class PutBucketIntelligentTieringConfigurationRequest;
+class PutBucketIntelligentTieringConfigurationResponse;
 class PutBucketInventoryConfigurationRequest;
 class PutBucketInventoryConfigurationResponse;
 class PutBucketLifecycleRequest;
@@ -170,6 +182,8 @@ class PutBucketNotificationRequest;
 class PutBucketNotificationResponse;
 class PutBucketNotificationConfigurationRequest;
 class PutBucketNotificationConfigurationResponse;
+class PutBucketOwnershipControlsRequest;
+class PutBucketOwnershipControlsResponse;
 class PutBucketPolicyRequest;
 class PutBucketPolicyResponse;
 class PutBucketReplicationRequest;
@@ -204,6 +218,8 @@ class UploadPartRequest;
 class UploadPartResponse;
 class UploadPartCopyRequest;
 class UploadPartCopyResponse;
+class WriteGetObjectResponseRequest;
+class WriteGetObjectResponseResponse;
 
 class QTAWS_EXPORT S3Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -230,9 +246,11 @@ public slots:
     DeleteBucketAnalyticsConfigurationResponse * deleteBucketAnalyticsConfiguration(const DeleteBucketAnalyticsConfigurationRequest &request);
     DeleteBucketCorsResponse * deleteBucketCors(const DeleteBucketCorsRequest &request);
     DeleteBucketEncryptionResponse * deleteBucketEncryption(const DeleteBucketEncryptionRequest &request);
+    DeleteBucketIntelligentTieringConfigurationResponse * deleteBucketIntelligentTieringConfiguration(const DeleteBucketIntelligentTieringConfigurationRequest &request);
     DeleteBucketInventoryConfigurationResponse * deleteBucketInventoryConfiguration(const DeleteBucketInventoryConfigurationRequest &request);
     DeleteBucketLifecycleResponse * deleteBucketLifecycle(const DeleteBucketLifecycleRequest &request);
     DeleteBucketMetricsConfigurationResponse * deleteBucketMetricsConfiguration(const DeleteBucketMetricsConfigurationRequest &request);
+    DeleteBucketOwnershipControlsResponse * deleteBucketOwnershipControls(const DeleteBucketOwnershipControlsRequest &request);
     DeleteBucketPolicyResponse * deleteBucketPolicy(const DeleteBucketPolicyRequest &request);
     DeleteBucketReplicationResponse * deleteBucketReplication(const DeleteBucketReplicationRequest &request);
     DeleteBucketTaggingResponse * deleteBucketTagging(const DeleteBucketTaggingRequest &request);
@@ -246,6 +264,7 @@ public slots:
     GetBucketAnalyticsConfigurationResponse * getBucketAnalyticsConfiguration(const GetBucketAnalyticsConfigurationRequest &request);
     GetBucketCorsResponse * getBucketCors(const GetBucketCorsRequest &request);
     GetBucketEncryptionResponse * getBucketEncryption(const GetBucketEncryptionRequest &request);
+    GetBucketIntelligentTieringConfigurationResponse * getBucketIntelligentTieringConfiguration(const GetBucketIntelligentTieringConfigurationRequest &request);
     GetBucketInventoryConfigurationResponse * getBucketInventoryConfiguration(const GetBucketInventoryConfigurationRequest &request);
     GetBucketLifecycleResponse * getBucketLifecycle(const GetBucketLifecycleRequest &request);
     GetBucketLifecycleConfigurationResponse * getBucketLifecycleConfiguration(const GetBucketLifecycleConfigurationRequest &request);
@@ -254,6 +273,7 @@ public slots:
     GetBucketMetricsConfigurationResponse * getBucketMetricsConfiguration(const GetBucketMetricsConfigurationRequest &request);
     GetBucketNotificationResponse * getBucketNotification(const GetBucketNotificationRequest &request);
     GetBucketNotificationConfigurationResponse * getBucketNotificationConfiguration(const GetBucketNotificationConfigurationRequest &request);
+    GetBucketOwnershipControlsResponse * getBucketOwnershipControls(const GetBucketOwnershipControlsRequest &request);
     GetBucketPolicyResponse * getBucketPolicy(const GetBucketPolicyRequest &request);
     GetBucketPolicyStatusResponse * getBucketPolicyStatus(const GetBucketPolicyStatusRequest &request);
     GetBucketReplicationResponse * getBucketReplication(const GetBucketReplicationRequest &request);
@@ -272,6 +292,7 @@ public slots:
     HeadBucketResponse * headBucket(const HeadBucketRequest &request);
     HeadObjectResponse * headObject(const HeadObjectRequest &request);
     ListBucketAnalyticsConfigurationsResponse * listBucketAnalyticsConfigurations(const ListBucketAnalyticsConfigurationsRequest &request);
+    ListBucketIntelligentTieringConfigurationsResponse * listBucketIntelligentTieringConfigurations(const ListBucketIntelligentTieringConfigurationsRequest &request);
     ListBucketInventoryConfigurationsResponse * listBucketInventoryConfigurations(const ListBucketInventoryConfigurationsRequest &request);
     ListBucketMetricsConfigurationsResponse * listBucketMetricsConfigurations(const ListBucketMetricsConfigurationsRequest &request);
     ListBucketsResponse * listBuckets(const ListBucketsRequest &request);
@@ -286,6 +307,7 @@ public slots:
     PutBucketAnalyticsConfigurationResponse * putBucketAnalyticsConfiguration(const PutBucketAnalyticsConfigurationRequest &request);
     PutBucketCorsResponse * putBucketCors(const PutBucketCorsRequest &request);
     PutBucketEncryptionResponse * putBucketEncryption(const PutBucketEncryptionRequest &request);
+    PutBucketIntelligentTieringConfigurationResponse * putBucketIntelligentTieringConfiguration(const PutBucketIntelligentTieringConfigurationRequest &request);
     PutBucketInventoryConfigurationResponse * putBucketInventoryConfiguration(const PutBucketInventoryConfigurationRequest &request);
     PutBucketLifecycleResponse * putBucketLifecycle(const PutBucketLifecycleRequest &request);
     PutBucketLifecycleConfigurationResponse * putBucketLifecycleConfiguration(const PutBucketLifecycleConfigurationRequest &request);
@@ -293,6 +315,7 @@ public slots:
     PutBucketMetricsConfigurationResponse * putBucketMetricsConfiguration(const PutBucketMetricsConfigurationRequest &request);
     PutBucketNotificationResponse * putBucketNotification(const PutBucketNotificationRequest &request);
     PutBucketNotificationConfigurationResponse * putBucketNotificationConfiguration(const PutBucketNotificationConfigurationRequest &request);
+    PutBucketOwnershipControlsResponse * putBucketOwnershipControls(const PutBucketOwnershipControlsRequest &request);
     PutBucketPolicyResponse * putBucketPolicy(const PutBucketPolicyRequest &request);
     PutBucketReplicationResponse * putBucketReplication(const PutBucketReplicationRequest &request);
     PutBucketRequestPaymentResponse * putBucketRequestPayment(const PutBucketRequestPaymentRequest &request);
@@ -310,6 +333,7 @@ public slots:
     SelectObjectContentResponse * selectObjectContent(const SelectObjectContentRequest &request);
     UploadPartResponse * uploadPart(const UploadPartRequest &request);
     UploadPartCopyResponse * uploadPartCopy(const UploadPartCopyRequest &request);
+    WriteGetObjectResponseResponse * writeGetObjectResponse(const WriteGetObjectResponseRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(S3Client)

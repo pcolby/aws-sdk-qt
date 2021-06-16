@@ -45,6 +45,8 @@
 #include "createsqlinjectionmatchsetresponse.h"
 #include "createwebaclrequest.h"
 #include "createwebaclresponse.h"
+#include "createwebaclmigrationstackrequest.h"
+#include "createwebaclmigrationstackresponse.h"
 #include "createxssmatchsetrequest.h"
 #include "createxssmatchsetresponse.h"
 #include "deletebytematchsetrequest.h"
@@ -204,13 +206,29 @@ namespace WAFRegional {
  * \ingroup aws-clients
  * \inmodule QtAwsWAFRegional
  *
- *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
- *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
- *  Balancers. You can use these actions and data types by means of the endpoints listed in <a
+ *  <note>
+ * 
+ *  This is <b>AWS WAF Classic Regional</b> documentation. For more information, see <a
+ *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ *  developer
+ * 
+ *  guide>
+ * 
+ *  <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ *  href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ *  latest version, AWS WAF has a single set of endpoints for regional and global use.
+ * 
+ *  </p </note>
+ * 
+ *  This is the <i>AWS WAF Regional Classic API Reference</i> for using AWS WAF Classic with the AWS resources, Elastic Load
+ *  Balancing (ELB) Application Load Balancers and API Gateway APIs. The AWS WAF Classic actions and data types listed in
+ *  the reference are available for protecting Elastic Load Balancing (ELB) Application Load Balancers and API Gateway APIs.
+ *  You can use these actions and data types by means of the endpoints listed in <a
  *  href="https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">AWS Regions and Endpoints</a>. This guide is
- *  for developers who need detailed information about the AWS WAF API actions, data types, and errors. For detailed
- *  information about AWS WAF features and an overview of how to use the AWS WAF API, see the <a
- *  href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS WAF Developer
+ *  for developers who need detailed information about the AWS WAF Classic API actions, data types, and errors. For detailed
+ *  information about AWS WAF Classic features and an overview of how to use the AWS WAF Classic API, see the <a
+ *  href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ *  developer
  */
 
 /*!
@@ -272,6 +290,20 @@ WAFRegionalClient::WAFRegionalClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic Regional</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Associates a web ACL with a resource, either an application load balancer or Amazon API Gateway
  */
 AssociateWebACLResponse * WAFRegionalClient::associateWebACL(const AssociateWebACLRequest &request)
@@ -284,6 +316,20 @@ AssociateWebACLResponse * WAFRegionalClient::associateWebACL(const AssociateWebA
  * CreateByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Creates a <code>ByteMatchSet</code>. You then use <a>UpdateByteMatchSet</a> to identify the part of a web request that
  * you want AWS WAF to inspect, such as the values of the <code>User-Agent</code> header or the query string. For example,
@@ -329,6 +375,20 @@ CreateByteMatchSetResponse * WAFRegionalClient::createByteMatchSet(const CreateB
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Creates an <a>GeoMatchSet</a>, which you use to specify which web requests you want to allow or block based on the
  * country that the requests originate from. For example, if you're receiving a lot of requests from one or more countries
  * and you want to block the requests, you can create an <code>GeoMatchSet</code> that contains those countries and then
@@ -371,6 +431,20 @@ CreateGeoMatchSetResponse * WAFRegionalClient::createGeoMatchSet(const CreateGeo
  * CreateIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Creates an <a>IPSet</a>, which you use to specify which web requests that you want to allow or block based on the IP
  * addresses that the requests originate from. For example, if you're receiving a lot of requests from one or more
@@ -415,6 +489,20 @@ CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Creates a <a>RateBasedRule</a>. The <code>RateBasedRule</code> contains a <code>RateLimit</code>, which specifies the
  * maximum number of requests that AWS WAF allows from a specified IP address in a five-minute period. The
  * <code>RateBasedRule</code> also contains the <code>IPSet</code> objects, <code>ByteMatchSet</code> objects, and other
@@ -423,8 +511,8 @@ CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &r
  * <code>RateLimit</code>>
  *
  * If you add more than one predicate to a <code>RateBasedRule</code>, a request not only must exceed the
- * <code>RateLimit</code>, but it also must match all the specifications to be counted or blocked. For example, suppose you
- * add the following to a
+ * <code>RateLimit</code>, but it also must match all the conditions to be counted or blocked. For example, suppose you add
+ * the following to a
  *
  * <code>RateBasedRule</code>> <ul> <li>
  *
@@ -438,13 +526,13 @@ CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &r
  *
  * Further, you specify a <code>RateLimit</code> of
  *
- * 15,000>
+ * 1,000>
  *
  * You then add the <code>RateBasedRule</code> to a <code>WebACL</code> and specify that you want to block requests that
  * meet the conditions in the rule. For a request to be blocked, it must come from the IP address 192.0.2.44 <i>and</i> the
  * <code>User-Agent</code> header in the request must contain the value <code>BadBot</code>. Further, requests that match
- * these two conditions must be received at a rate of more than 15,000 requests every five minutes. If both conditions are
- * met and the rate is exceeded, AWS WAF blocks the requests. If the rate drops below 15,000 for a five-minute period, AWS
+ * these two conditions must be received at a rate of more than 1,000 requests every five minutes. If both conditions are
+ * met and the rate is exceeded, AWS WAF blocks the requests. If the rate drops below 1,000 for a five-minute period, AWS
  * WAF no longer blocks the
  *
  * requests>
@@ -468,7 +556,7 @@ CreateIPSetResponse * WAFRegionalClient::createIPSet(const CreateIPSetRequest &r
  *
  * Further, you specify a <code>RateLimit</code> of
  *
- * 15,000>
+ * 1,000>
  *
  * By adding this <code>RateBasedRule</code> to a <code>WebACL</code>, you could limit requests to your login page without
  * affecting the rest of your
@@ -520,6 +608,20 @@ CreateRateBasedRuleResponse * WAFRegionalClient::createRateBasedRule(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Creates a <a>RegexMatchSet</a>. You then use <a>UpdateRegexMatchSet</a> to identify the part of a web request that you
  * want AWS WAF to inspect, such as the values of the <code>User-Agent</code> header or the query string. For example, you
  * can create a <code>RegexMatchSet</code> that contains a <code>RegexMatchTuple</code> that looks for any requests with
@@ -565,6 +667,20 @@ CreateRegexMatchSetResponse * WAFRegionalClient::createRegexMatchSet(const Creat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Creates a <code>RegexPatternSet</code>. You then use <a>UpdateRegexPatternSet</a> to specify the regular expression
  * (regex) pattern that you want AWS WAF to search for, such as <code>B[a@]dB[o0]t</code>. You can then configure AWS WAF
  * to reject those
@@ -606,6 +722,20 @@ CreateRegexPatternSetResponse * WAFRegionalClient::createRegexPatternSet(const C
  * CreateRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Creates a <code>Rule</code>, which contains the <code>IPSet</code> objects, <code>ByteMatchSet</code> objects, and other
  * predicates that identify the requests that you want to block. If you add more than one predicate to a <code>Rule</code>,
@@ -673,6 +803,20 @@ CreateRuleResponse * WAFRegionalClient::createRule(const CreateRuleRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Creates a <code>RuleGroup</code>. A rule group is a collection of predefined rules that you add to a web ACL. You use
  * <a>UpdateRuleGroup</a> to add rules to the rule
  *
@@ -707,6 +851,20 @@ CreateRuleGroupResponse * WAFRegionalClient::createRuleGroup(const CreateRuleGro
  * CreateSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Creates a <code>SizeConstraintSet</code>. You then use <a>UpdateSizeConstraintSet</a> to identify the part of a web
  * request that you want AWS WAF to check for length, such as the length of the <code>User-Agent</code> header or the
@@ -752,6 +910,20 @@ CreateSizeConstraintSetResponse * WAFRegionalClient::createSizeConstraintSet(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Creates a <a>SqlInjectionMatchSet</a>, which you use to allow, block, or count requests that contain snippets of SQL
  * code in a specified part of web requests. AWS WAF searches for character sequences that are likely to be malicious
  *
@@ -793,6 +965,20 @@ CreateSqlInjectionMatchSetResponse * WAFRegionalClient::createSqlInjectionMatchS
  * CreateWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Creates a <code>WebACL</code>, which contains the <code>Rules</code> that identify the CloudFront web requests that you
  * want to allow, block, or count. AWS WAF evaluates <code>Rules</code> in order based on the value of
@@ -849,9 +1035,46 @@ CreateWebACLResponse * WAFRegionalClient::createWebACL(const CreateWebACLRequest
 
 /*!
  * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
+ * CreateWebACLMigrationStackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an AWS CloudFormation WAFV2 template for the specified web ACL in the specified Amazon S3 bucket. Then, in
+ * CloudFormation, you create a stack from the template, to create the web ACL and its resources in AWS WAFV2. Use this to
+ * migrate your AWS WAF Classic web ACL to the latest version of AWS
+ *
+ * WAF>
+ *
+ * This is part of a larger migration procedure for web ACLs from AWS WAF Classic to the latest version of AWS WAF. For the
+ * full procedure, including caveats and manual steps to complete the migration and switch over to the new web ACL, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-migrating-from-classic.html">Migrating your AWS WAF
+ * Classic resources to AWS WAF</a> in the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>.
+ */
+CreateWebACLMigrationStackResponse * WAFRegionalClient::createWebACLMigrationStack(const CreateWebACLMigrationStackRequest &request)
+{
+    return qobject_cast<CreateWebACLMigrationStackResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WAFRegionalClient service, and returns a pointer to an
  * CreateXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Creates an <a>XssMatchSet</a>, which you use to allow, block, or count requests that contain cross-site scripting
  * attacks in the specified part of web requests. AWS WAF searches for character sequences that are likely to be malicious
@@ -895,6 +1118,20 @@ CreateXssMatchSetResponse * WAFRegionalClient::createXssMatchSet(const CreateXss
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes a <a>ByteMatchSet</a>. You can't delete a <code>ByteMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still includes any <a>ByteMatchTuple</a> objects (any
  *
@@ -929,6 +1166,20 @@ DeleteByteMatchSetResponse * WAFRegionalClient::deleteByteMatchSet(const DeleteB
  * DeleteGeoMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Permanently deletes a <a>GeoMatchSet</a>. You can't delete a <code>GeoMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still includes any
@@ -965,6 +1216,20 @@ DeleteGeoMatchSetResponse * WAFRegionalClient::deleteGeoMatchSet(const DeleteGeo
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes an <a>IPSet</a>. You can't delete an <code>IPSet</code> if it's still used in any <code>Rules</code>
  * or if it still includes any IP
  *
@@ -1000,6 +1265,20 @@ DeleteIPSetResponse * WAFRegionalClient::deleteIPSet(const DeleteIPSetRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes the <a>LoggingConfiguration</a> from the specified web
  */
 DeleteLoggingConfigurationResponse * WAFRegionalClient::deleteLoggingConfiguration(const DeleteLoggingConfigurationRequest &request)
@@ -1012,6 +1291,20 @@ DeleteLoggingConfigurationResponse * WAFRegionalClient::deleteLoggingConfigurati
  * DeletePermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Permanently deletes an IAM policy from the specified
  *
@@ -1029,6 +1322,20 @@ DeletePermissionPolicyResponse * WAFRegionalClient::deletePermissionPolicy(const
  * DeleteRateBasedRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Permanently deletes a <a>RateBasedRule</a>. You can't delete a rule if it's still used in any <code>WebACL</code>
  * objects or if it still includes any predicates, such as <code>ByteMatchSet</code>
@@ -1065,6 +1372,20 @@ DeleteRateBasedRuleResponse * WAFRegionalClient::deleteRateBasedRule(const Delet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes a <a>RegexMatchSet</a>. You can't delete a <code>RegexMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still includes any <code>RegexMatchTuples</code> objects (any
  *
@@ -1100,6 +1421,20 @@ DeleteRegexMatchSetResponse * WAFRegionalClient::deleteRegexMatchSet(const Delet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes a <a>RegexPatternSet</a>. You can't delete a <code>RegexPatternSet</code> if it's still used in any
  * <code>RegexMatchSet</code> or if the <code>RegexPatternSet</code> is not empty.
  */
@@ -1113,6 +1448,20 @@ DeleteRegexPatternSetResponse * WAFRegionalClient::deleteRegexPatternSet(const D
  * DeleteRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Permanently deletes a <a>Rule</a>. You can't delete a <code>Rule</code> if it's still used in any <code>WebACL</code>
  * objects or if it still includes any predicates, such as <code>ByteMatchSet</code>
@@ -1149,6 +1498,20 @@ DeleteRuleResponse * WAFRegionalClient::deleteRule(const DeleteRuleRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes a <a>RuleGroup</a>. You can't delete a <code>RuleGroup</code> if it's still used in any
  * <code>WebACL</code> objects or if it still includes any
  *
@@ -1183,6 +1546,20 @@ DeleteRuleGroupResponse * WAFRegionalClient::deleteRuleGroup(const DeleteRuleGro
  * DeleteSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Permanently deletes a <a>SizeConstraintSet</a>. You can't delete a <code>SizeConstraintSet</code> if it's still used in
  * any <code>Rules</code> or if it still includes any <a>SizeConstraint</a> objects (any
@@ -1219,6 +1596,20 @@ DeleteSizeConstraintSetResponse * WAFRegionalClient::deleteSizeConstraintSet(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes a <a>SqlInjectionMatchSet</a>. You can't delete a <code>SqlInjectionMatchSet</code> if it's still
  * used in any <code>Rules</code> or if it still contains any <a>SqlInjectionMatchTuple</a>
  *
@@ -1254,6 +1645,20 @@ DeleteSqlInjectionMatchSetResponse * WAFRegionalClient::deleteSqlInjectionMatchS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Permanently deletes a <a>WebACL</a>. You can't delete a <code>WebACL</code> if it still contains any
  *
  * <code>Rules</code>>
@@ -1283,6 +1688,20 @@ DeleteWebACLResponse * WAFRegionalClient::deleteWebACL(const DeleteWebACLRequest
  * DeleteXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Permanently deletes an <a>XssMatchSet</a>. You can't delete an <code>XssMatchSet</code> if it's still used in any
  * <code>Rules</code> or if it still contains any <a>XssMatchTuple</a>
@@ -1319,6 +1738,20 @@ DeleteXssMatchSetResponse * WAFRegionalClient::deleteXssMatchSet(const DeleteXss
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic Regional</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Removes a web ACL from the specified resource, either an application load balancer or Amazon API Gateway
  */
 DisassociateWebACLResponse * WAFRegionalClient::disassociateWebACL(const DisassociateWebACLRequest &request)
@@ -1332,6 +1765,20 @@ DisassociateWebACLResponse * WAFRegionalClient::disassociateWebACL(const Disasso
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>ByteMatchSet</a> specified by
  */
 GetByteMatchSetResponse * WAFRegionalClient::getByteMatchSet(const GetByteMatchSetRequest &request)
@@ -1344,6 +1791,20 @@ GetByteMatchSetResponse * WAFRegionalClient::getByteMatchSet(const GetByteMatchS
  * GetChangeTokenResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * When you want to create, update, or delete AWS WAF objects, get a change token and include the change token in the
  * create, update, or delete request. Change tokens ensure that your application doesn't submit conflicting requests to AWS
@@ -1372,6 +1833,20 @@ GetChangeTokenResponse * WAFRegionalClient::getChangeToken(const GetChangeTokenR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the status of a <code>ChangeToken</code> that you got by calling <a>GetChangeToken</a>.
  * <code>ChangeTokenStatus</code> is one of the following
  *
@@ -1399,6 +1874,20 @@ GetChangeTokenStatusResponse * WAFRegionalClient::getChangeTokenStatus(const Get
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>GeoMatchSet</a> that is specified by
  */
 GetGeoMatchSetResponse * WAFRegionalClient::getGeoMatchSet(const GetGeoMatchSetRequest &request)
@@ -1411,6 +1900,20 @@ GetGeoMatchSetResponse * WAFRegionalClient::getGeoMatchSet(const GetGeoMatchSetR
  * GetIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns the <a>IPSet</a> that is specified by
  */
@@ -1425,6 +1928,20 @@ GetIPSetResponse * WAFRegionalClient::getIPSet(const GetIPSetRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>LoggingConfiguration</a> for the specified web
  */
 GetLoggingConfigurationResponse * WAFRegionalClient::getLoggingConfiguration(const GetLoggingConfigurationRequest &request)
@@ -1437,6 +1954,20 @@ GetLoggingConfigurationResponse * WAFRegionalClient::getLoggingConfiguration(con
  * GetPermissionPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns the IAM policy attached to the
  */
@@ -1451,6 +1982,20 @@ GetPermissionPolicyResponse * WAFRegionalClient::getPermissionPolicy(const GetPe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>RateBasedRule</a> that is specified by the <code>RuleId</code> that you included in the
  * <code>GetRateBasedRule</code>
  */
@@ -1464,6 +2009,20 @@ GetRateBasedRuleResponse * WAFRegionalClient::getRateBasedRule(const GetRateBase
  * GetRateBasedRuleManagedKeysResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of IP addresses currently being blocked by the <a>RateBasedRule</a> that is specified by the
  * <code>RuleId</code>. The maximum number of managed keys that will be blocked is 10,000. If more than 10,000 addresses
@@ -1480,6 +2039,20 @@ GetRateBasedRuleManagedKeysResponse * WAFRegionalClient::getRateBasedRuleManaged
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>RegexMatchSet</a> specified by
  */
 GetRegexMatchSetResponse * WAFRegionalClient::getRegexMatchSet(const GetRegexMatchSetRequest &request)
@@ -1492,6 +2065,20 @@ GetRegexMatchSetResponse * WAFRegionalClient::getRegexMatchSet(const GetRegexMat
  * GetRegexPatternSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns the <a>RegexPatternSet</a> specified by
  */
@@ -1506,6 +2093,20 @@ GetRegexPatternSetResponse * WAFRegionalClient::getRegexPatternSet(const GetRege
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>Rule</a> that is specified by the <code>RuleId</code> that you included in the <code>GetRule</code>
  */
 GetRuleResponse * WAFRegionalClient::getRule(const GetRuleRequest &request)
@@ -1518,6 +2119,20 @@ GetRuleResponse * WAFRegionalClient::getRule(const GetRuleRequest &request)
  * GetRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns the <a>RuleGroup</a> that is specified by the <code>RuleGroupId</code> that you included in the
  * <code>GetRuleGroup</code>
@@ -1536,6 +2151,20 @@ GetRuleGroupResponse * WAFRegionalClient::getRuleGroup(const GetRuleGroupRequest
  * GetSampledRequestsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Gets detailed information about a specified number of requests--a sample--that AWS WAF randomly selects from among the
  * first 5,000 requests that your AWS resource received during a time range that you choose. You can specify a sample size
@@ -1559,6 +2188,20 @@ GetSampledRequestsResponse * WAFRegionalClient::getSampledRequests(const GetSamp
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>SizeConstraintSet</a> specified by
  */
 GetSizeConstraintSetResponse * WAFRegionalClient::getSizeConstraintSet(const GetSizeConstraintSetRequest &request)
@@ -1571,6 +2214,20 @@ GetSizeConstraintSetResponse * WAFRegionalClient::getSizeConstraintSet(const Get
  * GetSqlInjectionMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns the <a>SqlInjectionMatchSet</a> that is specified by
  */
@@ -1585,6 +2242,20 @@ GetSqlInjectionMatchSetResponse * WAFRegionalClient::getSqlInjectionMatchSet(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>WebACL</a> that is specified by
  */
 GetWebACLResponse * WAFRegionalClient::getWebACL(const GetWebACLRequest &request)
@@ -1597,6 +2268,20 @@ GetWebACLResponse * WAFRegionalClient::getWebACL(const GetWebACLRequest &request
  * GetWebACLForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic Regional</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns the web ACL for the specified resource, either an application load balancer or Amazon API Gateway
  */
@@ -1611,6 +2296,20 @@ GetWebACLForResourceResponse * WAFRegionalClient::getWebACLForResource(const Get
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns the <a>XssMatchSet</a> that is specified by
  */
 GetXssMatchSetResponse * WAFRegionalClient::getXssMatchSet(const GetXssMatchSetRequest &request)
@@ -1623,6 +2322,20 @@ GetXssMatchSetResponse * WAFRegionalClient::getXssMatchSet(const GetXssMatchSetR
  * ListActivatedRulesInRuleGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>ActivatedRule</a>
  */
@@ -1637,6 +2350,20 @@ ListActivatedRulesInRuleGroupResponse * WAFRegionalClient::listActivatedRulesInR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>ByteMatchSetSummary</a>
  */
 ListByteMatchSetsResponse * WAFRegionalClient::listByteMatchSets(const ListByteMatchSetsRequest &request)
@@ -1649,6 +2376,20 @@ ListByteMatchSetsResponse * WAFRegionalClient::listByteMatchSets(const ListByteM
  * ListGeoMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>GeoMatchSetSummary</a> objects in the
  */
@@ -1663,6 +2404,20 @@ ListGeoMatchSetsResponse * WAFRegionalClient::listGeoMatchSets(const ListGeoMatc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>IPSetSummary</a> objects in the
  */
 ListIPSetsResponse * WAFRegionalClient::listIPSets(const ListIPSetsRequest &request)
@@ -1675,6 +2430,20 @@ ListIPSetsResponse * WAFRegionalClient::listIPSets(const ListIPSetsRequest &requ
  * ListLoggingConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>LoggingConfiguration</a>
  */
@@ -1689,6 +2458,20 @@ ListLoggingConfigurationsResponse * WAFRegionalClient::listLoggingConfigurations
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>RuleSummary</a>
  */
 ListRateBasedRulesResponse * WAFRegionalClient::listRateBasedRules(const ListRateBasedRulesRequest &request)
@@ -1701,6 +2484,20 @@ ListRateBasedRulesResponse * WAFRegionalClient::listRateBasedRules(const ListRat
  * ListRegexMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>RegexMatchSetSummary</a>
  */
@@ -1715,6 +2512,20 @@ ListRegexMatchSetsResponse * WAFRegionalClient::listRegexMatchSets(const ListReg
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>RegexPatternSetSummary</a>
  */
 ListRegexPatternSetsResponse * WAFRegionalClient::listRegexPatternSets(const ListRegexPatternSetsRequest &request)
@@ -1727,6 +2538,20 @@ ListRegexPatternSetsResponse * WAFRegionalClient::listRegexPatternSets(const Lis
  * ListResourcesForWebACLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic Regional</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of resources associated with the specified web
  */
@@ -1741,6 +2566,20 @@ ListResourcesForWebACLResponse * WAFRegionalClient::listResourcesForWebACL(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>RuleGroup</a>
  */
 ListRuleGroupsResponse * WAFRegionalClient::listRuleGroups(const ListRuleGroupsRequest &request)
@@ -1753,6 +2592,20 @@ ListRuleGroupsResponse * WAFRegionalClient::listRuleGroups(const ListRuleGroupsR
  * ListRulesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>RuleSummary</a>
  */
@@ -1767,6 +2620,20 @@ ListRulesResponse * WAFRegionalClient::listRules(const ListRulesRequest &request
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>SizeConstraintSetSummary</a>
  */
 ListSizeConstraintSetsResponse * WAFRegionalClient::listSizeConstraintSets(const ListSizeConstraintSetsRequest &request)
@@ -1779,6 +2646,20 @@ ListSizeConstraintSetsResponse * WAFRegionalClient::listSizeConstraintSets(const
  * ListSqlInjectionMatchSetsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>SqlInjectionMatchSet</a>
  */
@@ -1793,6 +2674,20 @@ ListSqlInjectionMatchSetsResponse * WAFRegionalClient::listSqlInjectionMatchSets
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>RuleGroup</a> objects that you are subscribed
  */
 ListSubscribedRuleGroupsResponse * WAFRegionalClient::listSubscribedRuleGroups(const ListSubscribedRuleGroupsRequest &request)
@@ -1806,6 +2701,28 @@ ListSubscribedRuleGroupsResponse * WAFRegionalClient::listSubscribedRuleGroups(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
+ * Retrieves the tags associated with the specified AWS resource. Tags are key:value pairs that you can use to categorize
+ * and manage your resources, for purposes like billing. For example, you might set the tag key to "customer" and the value
+ * to the customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for a
+ *
+ * resource>
+ *
+ * Tagging is only available through the API, SDKs, and CLI. You can't manage or view tags through the AWS WAF Classic
+ * console. You can tag the AWS resources that you manage through AWS WAF Classic: web ACLs, rule groups, and rules.
  */
 ListTagsForResourceResponse * WAFRegionalClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -1817,6 +2734,20 @@ ListTagsForResourceResponse * WAFRegionalClient::listTagsForResource(const ListT
  * ListWebACLsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Returns an array of <a>WebACLSummary</a> objects in the
  */
@@ -1831,6 +2762,20 @@ ListWebACLsResponse * WAFRegionalClient::listWebACLs(const ListWebACLsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Returns an array of <a>XssMatchSet</a>
  */
 ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatchSetsRequest &request)
@@ -1844,6 +2789,20 @@ ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Associates a <a>LoggingConfiguration</a> with a specified web
  *
  * ACL>
@@ -1852,7 +2811,7 @@ ListXssMatchSetsResponse * WAFRegionalClient::listXssMatchSets(const ListXssMatc
  *
  * steps> <ol> <li>
  *
- * Create an Amazon Kinesis Data Firehose .
+ * Create an Amazon Kinesis Data Firehose.
  *
  * </p
  *
@@ -1885,7 +2844,21 @@ PutLoggingConfigurationResponse * WAFRegionalClient::putLoggingConfiguration(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Attaches a IAM policy to the specified resource. The only supported use for this action is to share a RuleGroup across
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
+ * Attaches an IAM policy to the specified resource. The only supported use for this action is to share a RuleGroup across
  *
  * accounts>
  *
@@ -1945,6 +2918,29 @@ PutPermissionPolicyResponse * WAFRegionalClient::putPermissionPolicy(const PutPe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
+ * Associates tags with the specified AWS resource. Tags are key:value pairs that you can use to categorize and manage your
+ * resources, for purposes like billing. For example, you might set the tag key to "customer" and the value to the customer
+ * name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for a
+ *
+ * resource>
+ *
+ * Tagging is only available through the API, SDKs, and CLI. You can't manage or view tags through the AWS WAF Classic
+ * console. You can use this action to tag the AWS resources that you manage through AWS WAF Classic: web ACLs, rule
+ * groups, and rules.
  */
 TagResourceResponse * WAFRegionalClient::tagResource(const TagResourceRequest &request)
 {
@@ -1957,6 +2953,17 @@ TagResourceResponse * WAFRegionalClient::tagResource(const TagResourceRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
  */
 UntagResourceResponse * WAFRegionalClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1968,6 +2975,20 @@ UntagResourceResponse * WAFRegionalClient::untagResource(const UntagResourceRequ
  * UpdateByteMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Inserts or deletes <a>ByteMatchTuple</a> objects (filters) in a <a>ByteMatchSet</a>. For each
  * <code>ByteMatchTuple</code> object, you specify the following values:
@@ -2036,6 +3057,20 @@ UpdateByteMatchSetResponse * WAFRegionalClient::updateByteMatchSet(const UpdateB
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Inserts or deletes <a>GeoMatchConstraint</a> objects in an <code>GeoMatchSet</code>. For each
  * <code>GeoMatchConstraint</code> object, you specify the following values:
  *
@@ -2090,6 +3125,20 @@ UpdateGeoMatchSetResponse * WAFRegionalClient::updateGeoMatchSet(const UpdateGeo
  * UpdateIPSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Inserts or deletes <a>IPSetDescriptor</a> objects in an <code>IPSet</code>. For each <code>IPSetDescriptor</code>
  * object, you specify the following values:
@@ -2176,6 +3225,20 @@ UpdateIPSetResponse * WAFRegionalClient::updateIPSet(const UpdateIPSetRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Inserts or deletes <a>Predicate</a> objects in a rule and updates the <code>RateLimit</code> in the rule.
  *
  * </p
@@ -2201,12 +3264,12 @@ UpdateIPSetResponse * WAFRegionalClient::updateIPSet(const UpdateIPSetRequest &r
  *
  * Further, you specify a <code>RateLimit</code> of
  *
- * 15,000>
+ * 1,000>
  *
  * You then add the <code>RateBasedRule</code> to a <code>WebACL</code> and specify that you want to block requests that
  * satisfy the rule. For a request to be blocked, it must come from the IP address 192.0.2.44 <i>and</i> the
  * <code>User-Agent</code> header in the request must contain the value <code>BadBot</code>. Further, requests that match
- * these two conditions much be received at a rate of more than 15,000 every five minutes. If the rate drops below this
+ * these two conditions much be received at a rate of more than 1,000 every five minutes. If the rate drops below this
  * limit, AWS WAF no longer blocks the
  *
  * requests>
@@ -2230,7 +3293,7 @@ UpdateIPSetResponse * WAFRegionalClient::updateIPSet(const UpdateIPSetRequest &r
  *
  * Further, you specify a <code>RateLimit</code> of
  *
- * 15,000>
+ * 1,000>
  *
  * By adding this <code>RateBasedRule</code> to a <code>WebACL</code>, you could limit requests to your login page without
  * affecting the rest of your
@@ -2245,6 +3308,20 @@ UpdateRateBasedRuleResponse * WAFRegionalClient::updateRateBasedRule(const Updat
  * UpdateRegexMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Inserts or deletes <a>RegexMatchTuple</a> objects (filters) in a <a>RegexMatchSet</a>. For each
  * <code>RegexMatchSetUpdate</code> object, you specify the following values:
@@ -2309,6 +3386,20 @@ UpdateRegexMatchSetResponse * WAFRegionalClient::updateRegexMatchSet(const Updat
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Inserts or deletes <code>RegexPatternString</code> objects in a <a>RegexPatternSet</a>. For each
  * <code>RegexPatternString</code> object, you specify the following values:
  *
@@ -2366,6 +3457,20 @@ UpdateRegexPatternSetResponse * WAFRegionalClient::updateRegexPatternSet(const U
  * UpdateRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Inserts or deletes <a>Predicate</a> objects in a <code>Rule</code>. Each <code>Predicate</code> object identifies a
  * predicate, such as a <a>ByteMatchSet</a> or an <a>IPSet</a>, that specifies the web requests that you want to allow,
@@ -2433,6 +3538,20 @@ UpdateRuleResponse * WAFRegionalClient::updateRule(const UpdateRuleRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Inserts or deletes <a>ActivatedRule</a> objects in a
  *
  * <code>RuleGroup</code>>
@@ -2483,6 +3602,20 @@ UpdateRuleGroupResponse * WAFRegionalClient::updateRuleGroup(const UpdateRuleGro
  * UpdateSizeConstraintSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Inserts or deletes <a>SizeConstraint</a> objects (filters) in a <a>SizeConstraintSet</a>. For each
  * <code>SizeConstraint</code> object, you specify the following values:
@@ -2556,6 +3689,20 @@ UpdateSizeConstraintSetResponse * WAFRegionalClient::updateSizeConstraintSet(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Inserts or deletes <a>SqlInjectionMatchTuple</a> objects (filters) in a <a>SqlInjectionMatchSet</a>. For each
  * <code>SqlInjectionMatchTuple</code> object, you specify the following
  *
@@ -2619,6 +3766,20 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
+ *
  * Inserts or deletes <a>ActivatedRule</a> objects in a <code>WebACL</code>. Each <code>Rule</code> identifies web requests
  * that you want to allow, block, or count. When you update a <code>WebACL</code>, you specify the following
  *
@@ -2678,14 +3839,14 @@ UpdateSqlInjectionMatchSetResponse * WAFRegionalClient::updateSqlInjectionMatchS
  *
  * </p
  *
- * The <code>ActivatedRule</code> can be a rule group. If you specify a rule group as your <code>ActivatedRule</code>, you
+ * The <code>ActivatedRule</code> can be a rule group. If you specify a rule group as your <code>ActivatedRule</code> , you
  * can exclude specific rules from that rule
  *
  * group>
  *
  * If you already have a rule group associated with a web ACL and want to submit an <code>UpdateWebACL</code> request to
  * exclude certain rules from that rule group, you must first remove the rule group from the web ACL, the re-insert it
- * again, specifying the excluded rules. For details, see <a>ActivatedRule$ExcludedRules</a>.
+ * again, specifying the excluded rules. For details, see <a>ActivatedRule$ExcludedRules</a> .
  *
  * </p </li> </ol>
  *
@@ -2708,6 +3869,20 @@ UpdateWebACLResponse * WAFRegionalClient::updateWebACL(const UpdateWebACLRequest
  * UpdateXssMatchSetResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * <note>
+ *
+ * This is <b>AWS WAF Classic</b> documentation. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html">AWS WAF Classic</a> in the
+ * developer
+ *
+ * guide>
+ *
+ * <b>For the latest version of AWS WAF</b>, use the AWS WAFV2 API and see the <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">AWS WAF Developer Guide</a>. With the
+ * latest version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ * </p </note>
  *
  * Inserts or deletes <a>XssMatchTuple</a> objects (filters) in an <a>XssMatchSet</a>. For each <code>XssMatchTuple</code>
  * object, you specify the following

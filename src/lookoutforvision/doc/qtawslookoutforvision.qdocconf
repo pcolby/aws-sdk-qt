@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsLookoutforVision
+description = AWS LookoutforVision SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawslookoutforvision-index.html"
+navigation.landingtitle = "LookoutforVision"
+navigation.cppclassespage = "LookoutforVision C++ Classes"

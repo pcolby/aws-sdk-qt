@@ -37,6 +37,8 @@ class QTAWS_EXPORT ApiGatewayManagementApiRequest : public QtAws::Core::AwsAbstr
 public:
     /// Actions supported by ApiGatewayManagementApi.
     enum Action {
+        DeleteConnectionAction,
+        GetConnectionAction,
         PostToConnectionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

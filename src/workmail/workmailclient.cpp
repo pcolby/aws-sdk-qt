@@ -25,28 +25,44 @@
 #include "associatedelegatetoresourceresponse.h"
 #include "associatemembertogrouprequest.h"
 #include "associatemembertogroupresponse.h"
+#include "cancelmailboxexportjobrequest.h"
+#include "cancelmailboxexportjobresponse.h"
 #include "createaliasrequest.h"
 #include "createaliasresponse.h"
 #include "creategrouprequest.h"
 #include "creategroupresponse.h"
+#include "createmobiledeviceaccessrulerequest.h"
+#include "createmobiledeviceaccessruleresponse.h"
+#include "createorganizationrequest.h"
+#include "createorganizationresponse.h"
 #include "createresourcerequest.h"
 #include "createresourceresponse.h"
 #include "createuserrequest.h"
 #include "createuserresponse.h"
+#include "deleteaccesscontrolrulerequest.h"
+#include "deleteaccesscontrolruleresponse.h"
 #include "deletealiasrequest.h"
 #include "deletealiasresponse.h"
 #include "deletegrouprequest.h"
 #include "deletegroupresponse.h"
 #include "deletemailboxpermissionsrequest.h"
 #include "deletemailboxpermissionsresponse.h"
+#include "deletemobiledeviceaccessrulerequest.h"
+#include "deletemobiledeviceaccessruleresponse.h"
+#include "deleteorganizationrequest.h"
+#include "deleteorganizationresponse.h"
 #include "deleteresourcerequest.h"
 #include "deleteresourceresponse.h"
+#include "deleteretentionpolicyrequest.h"
+#include "deleteretentionpolicyresponse.h"
 #include "deleteuserrequest.h"
 #include "deleteuserresponse.h"
 #include "deregisterfromworkmailrequest.h"
 #include "deregisterfromworkmailresponse.h"
 #include "describegrouprequest.h"
 #include "describegroupresponse.h"
+#include "describemailboxexportjobrequest.h"
+#include "describemailboxexportjobresponse.h"
 #include "describeorganizationrequest.h"
 #include "describeorganizationresponse.h"
 #include "describeresourcerequest.h"
@@ -57,32 +73,58 @@
 #include "disassociatedelegatefromresourceresponse.h"
 #include "disassociatememberfromgrouprequest.h"
 #include "disassociatememberfromgroupresponse.h"
+#include "getaccesscontroleffectrequest.h"
+#include "getaccesscontroleffectresponse.h"
+#include "getdefaultretentionpolicyrequest.h"
+#include "getdefaultretentionpolicyresponse.h"
 #include "getmailboxdetailsrequest.h"
 #include "getmailboxdetailsresponse.h"
+#include "getmobiledeviceaccesseffectrequest.h"
+#include "getmobiledeviceaccesseffectresponse.h"
+#include "listaccesscontrolrulesrequest.h"
+#include "listaccesscontrolrulesresponse.h"
 #include "listaliasesrequest.h"
 #include "listaliasesresponse.h"
 #include "listgroupmembersrequest.h"
 #include "listgroupmembersresponse.h"
 #include "listgroupsrequest.h"
 #include "listgroupsresponse.h"
+#include "listmailboxexportjobsrequest.h"
+#include "listmailboxexportjobsresponse.h"
 #include "listmailboxpermissionsrequest.h"
 #include "listmailboxpermissionsresponse.h"
+#include "listmobiledeviceaccessrulesrequest.h"
+#include "listmobiledeviceaccessrulesresponse.h"
 #include "listorganizationsrequest.h"
 #include "listorganizationsresponse.h"
 #include "listresourcedelegatesrequest.h"
 #include "listresourcedelegatesresponse.h"
 #include "listresourcesrequest.h"
 #include "listresourcesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "listusersrequest.h"
 #include "listusersresponse.h"
+#include "putaccesscontrolrulerequest.h"
+#include "putaccesscontrolruleresponse.h"
 #include "putmailboxpermissionsrequest.h"
 #include "putmailboxpermissionsresponse.h"
+#include "putretentionpolicyrequest.h"
+#include "putretentionpolicyresponse.h"
 #include "registertoworkmailrequest.h"
 #include "registertoworkmailresponse.h"
 #include "resetpasswordrequest.h"
 #include "resetpasswordresponse.h"
+#include "startmailboxexportjobrequest.h"
+#include "startmailboxexportjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatemailboxquotarequest.h"
 #include "updatemailboxquotaresponse.h"
+#include "updatemobiledeviceaccessrulerequest.h"
+#include "updatemobiledeviceaccessruleresponse.h"
 #include "updateprimaryemailaddressrequest.h"
 #include "updateprimaryemailaddressresponse.h"
 #include "updateresourcerequest.h"
@@ -227,6 +269,23 @@ AssociateMemberToGroupResponse * WorkMailClient::associateMemberToGroup(const As
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CancelMailboxExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels a mailbox export
+ *
+ * job> <note>
+ *
+ * If the mailbox export job is near completion, it might not be possible to cancel
+ */
+CancelMailboxExportJobResponse * WorkMailClient::cancelMailboxExportJob(const CancelMailboxExportJobRequest &request)
+{
+    return qobject_cast<CancelMailboxExportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * CreateAliasResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -253,6 +312,50 @@ CreateGroupResponse * WorkMailClient::createGroup(const CreateGroupRequest &requ
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateMobileDeviceAccessRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new mobile device access rule for the specified Amazon WorkMail
+ */
+CreateMobileDeviceAccessRuleResponse * WorkMailClient::createMobileDeviceAccessRule(const CreateMobileDeviceAccessRuleRequest &request)
+{
+    return qobject_cast<CreateMobileDeviceAccessRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * CreateOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new Amazon WorkMail organization. Optionally, you can choose to associate an existing AWS Directory Service
+ * directory with your organization. If an AWS Directory Service directory ID is specified, the organization alias must
+ * match the directory alias. If you choose not to associate an existing directory with your organization, then we create a
+ * new Amazon WorkMail directory for you. For more information, see <a
+ * href="https://docs.aws.amazon.com/workmail/latest/adminguide/add_new_organization.html">Adding an organization</a> in
+ * the <i>Amazon WorkMail Administrator
+ *
+ * Guide</i>>
+ *
+ * You can associate multiple email domains with an organization, then set your default email domain from the Amazon
+ * WorkMail console. You can also associate a domain that is managed in an Amazon Route 53 public hosted zone. For more
+ * information, see <a href="https://docs.aws.amazon.com/workmail/latest/adminguide/add_domain.html">Adding a domain</a>
+ * and <a href="https://docs.aws.amazon.com/workmail/latest/adminguide/default_domain.html">Choosing the default domain</a>
+ * in the <i>Amazon WorkMail Administrator
+ *
+ * Guide</i>>
+ *
+ * Optionally, you can use a customer managed master key from AWS Key Management Service (AWS KMS) to encrypt email for
+ * your organization. If you don't associate an AWS KMS key, Amazon WorkMail creates a default AWS managed master key for
+ */
+CreateOrganizationResponse * WorkMailClient::createOrganization(const CreateOrganizationRequest &request)
+{
+    return qobject_cast<CreateOrganizationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * CreateResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -275,6 +378,19 @@ CreateResourceResponse * WorkMailClient::createResource(const CreateResourceRequ
 CreateUserResponse * WorkMailClient::createUser(const CreateUserRequest &request)
 {
     return qobject_cast<CreateUserResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteAccessControlRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an access control rule for the specified WorkMail
+ */
+DeleteAccessControlRuleResponse * WorkMailClient::deleteAccessControlRule(const DeleteAccessControlRuleRequest &request)
+{
+    return qobject_cast<DeleteAccessControlRuleResponse *>(send(request));
 }
 
 /*!
@@ -318,6 +434,35 @@ DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(cons
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteMobileDeviceAccessRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a mobile device access rule for the specified Amazon WorkMail
+ */
+DeleteMobileDeviceAccessRuleResponse * WorkMailClient::deleteMobileDeviceAccessRule(const DeleteMobileDeviceAccessRuleRequest &request)
+{
+    return qobject_cast<DeleteMobileDeviceAccessRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteOrganizationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an Amazon WorkMail organization and all underlying AWS resources managed by Amazon WorkMail as part of the
+ * organization. You can choose whether to delete the associated directory. For more information, see <a
+ * href="https://docs.aws.amazon.com/workmail/latest/adminguide/remove_organization.html">Removing an organization</a> in
+ * the <i>Amazon WorkMail Administrator
+ */
+DeleteOrganizationResponse * WorkMailClient::deleteOrganization(const DeleteOrganizationRequest &request)
+{
+    return qobject_cast<DeleteOrganizationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * DeleteResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -327,6 +472,19 @@ DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(cons
 DeleteResourceResponse * WorkMailClient::deleteResource(const DeleteResourceRequest &request)
 {
     return qobject_cast<DeleteResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DeleteRetentionPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified retention policy from the specified
+ */
+DeleteRetentionPolicyResponse * WorkMailClient::deleteRetentionPolicy(const DeleteRetentionPolicyRequest &request)
+{
+    return qobject_cast<DeleteRetentionPolicyResponse *>(send(request));
 }
 
 /*!
@@ -374,6 +532,19 @@ DeregisterFromWorkMailResponse * WorkMailClient::deregisterFromWorkMail(const De
 DescribeGroupResponse * WorkMailClient::describeGroup(const DescribeGroupRequest &request)
 {
     return qobject_cast<DescribeGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * DescribeMailboxExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the current status of a mailbox export
+ */
+DescribeMailboxExportJobResponse * WorkMailClient::describeMailboxExportJob(const DescribeMailboxExportJobRequest &request)
+{
+    return qobject_cast<DescribeMailboxExportJobResponse *>(send(request));
 }
 
 /*!
@@ -443,6 +614,33 @@ DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGrou
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * GetAccessControlEffectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the effects of an organization's access control rules as they apply to a specified IPv4 address, access protocol
+ * action, or user ID.
+ */
+GetAccessControlEffectResponse * WorkMailClient::getAccessControlEffect(const GetAccessControlEffectRequest &request)
+{
+    return qobject_cast<GetAccessControlEffectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * GetDefaultRetentionPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the default retention policy details for the specified
+ */
+GetDefaultRetentionPolicyResponse * WorkMailClient::getDefaultRetentionPolicy(const GetDefaultRetentionPolicyRequest &request)
+{
+    return qobject_cast<GetDefaultRetentionPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * GetMailboxDetailsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -452,6 +650,34 @@ DisassociateMemberFromGroupResponse * WorkMailClient::disassociateMemberFromGrou
 GetMailboxDetailsResponse * WorkMailClient::getMailboxDetails(const GetMailboxDetailsRequest &request)
 {
     return qobject_cast<GetMailboxDetailsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * GetMobileDeviceAccessEffectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Simulates the effect of the mobile device access rules for the given attributes of a sample access event. Use this
+ * method to test the effects of the current set of mobile device access rules for the Amazon WorkMail organization for a
+ * particular user's
+ */
+GetMobileDeviceAccessEffectResponse * WorkMailClient::getMobileDeviceAccessEffect(const GetMobileDeviceAccessEffectRequest &request)
+{
+    return qobject_cast<GetMobileDeviceAccessEffectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListAccessControlRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the access control rules for the specified
+ */
+ListAccessControlRulesResponse * WorkMailClient::listAccessControlRules(const ListAccessControlRulesRequest &request)
+{
+    return qobject_cast<ListAccessControlRulesResponse *>(send(request));
 }
 
 /*!
@@ -495,6 +721,19 @@ ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListMailboxExportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the mailbox export jobs started for the specified organization within the last seven
+ */
+ListMailboxExportJobsResponse * WorkMailClient::listMailboxExportJobs(const ListMailboxExportJobsRequest &request)
+{
+    return qobject_cast<ListMailboxExportJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * ListMailboxPermissionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -508,11 +747,24 @@ ListMailboxPermissionsResponse * WorkMailClient::listMailboxPermissions(const Li
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListMobileDeviceAccessRulesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the mobile device access rules for the specified Amazon WorkMail
+ */
+ListMobileDeviceAccessRulesResponse * WorkMailClient::listMobileDeviceAccessRules(const ListMobileDeviceAccessRulesRequest &request)
+{
+    return qobject_cast<ListMobileDeviceAccessRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * ListOrganizationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns summaries of the customer's non-deleted
+ * Returns summaries of the customer's
  */
 ListOrganizationsResponse * WorkMailClient::listOrganizations(const ListOrganizationsRequest &request)
 {
@@ -548,6 +800,19 @@ ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags applied to an Amazon WorkMail organization
+ */
+ListTagsForResourceResponse * WorkMailClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * ListUsersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -557,6 +822,21 @@ ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest
 ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
 {
     return qobject_cast<ListUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * PutAccessControlRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a new access control rule for the specified organization. The rule allows or denies access to the organization for
+ * the specified IPv4 addresses, access protocol actions, and user IDs. Adding a new rule with the same name as an existing
+ * rule replaces the older
+ */
+PutAccessControlRuleResponse * WorkMailClient::putAccessControlRule(const PutAccessControlRuleRequest &request)
+{
+    return qobject_cast<PutAccessControlRuleResponse *>(send(request));
 }
 
 /*!
@@ -574,6 +854,19 @@ PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutM
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * PutRetentionPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Puts a retention policy to the specified
+ */
+PutRetentionPolicyResponse * WorkMailClient::putRetentionPolicy(const PutRetentionPolicyRequest &request)
+{
+    return qobject_cast<PutRetentionPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * RegisterToWorkMailResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -581,7 +874,7 @@ PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutM
  * Registers an existing and disabled user, group, or resource for Amazon WorkMail use by associating a mailbox and
  * calendaring capabilities. It performs no change if the user, group, or resource is enabled and fails if the user, group,
  * or resource is deleted. This operation results in the accumulation of costs. For more information, see <a
- * href="https://aws.amazon.com//workmail/pricing">Pricing</a>. The equivalent console functionality for this operation is
+ * href="https://aws.amazon.com/workmail/pricing">Pricing</a>. The equivalent console functionality for this operation is
  * <i>Enable</i>.
  *
  * </p
@@ -609,6 +902,48 @@ ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest
 
 /*!
  * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * StartMailboxExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a mailbox export job to export MIME-format email messages and calendar items from the specified mailbox to the
+ * specified Amazon Simple Storage Service (Amazon S3) bucket. For more information, see <a
+ * href="https://docs.aws.amazon.com/workmail/latest/adminguide/mail-export.html">Exporting mailbox content</a> in the
+ * <i>Amazon WorkMail Administrator
+ */
+StartMailboxExportJobResponse * WorkMailClient::startMailboxExportJob(const StartMailboxExportJobRequest &request)
+{
+    return qobject_cast<StartMailboxExportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies the specified tags to the specified Amazon WorkMail organization
+ */
+TagResourceResponse * WorkMailClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Untags the specified tags from the specified Amazon WorkMail organization
+ */
+UntagResourceResponse * WorkMailClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
  * UpdateMailboxQuotaResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -618,6 +953,19 @@ ResetPasswordResponse * WorkMailClient::resetPassword(const ResetPasswordRequest
 UpdateMailboxQuotaResponse * WorkMailClient::updateMailboxQuota(const UpdateMailboxQuotaRequest &request)
 {
     return qobject_cast<UpdateMailboxQuotaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the WorkMailClient service, and returns a pointer to an
+ * UpdateMobileDeviceAccessRuleResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a mobile device access rule for the specified Amazon WorkMail
+ */
+UpdateMobileDeviceAccessRuleResponse * WorkMailClient::updateMobileDeviceAccessRule(const UpdateMobileDeviceAccessRuleRequest &request)
+{
+    return qobject_cast<UpdateMobileDeviceAccessRuleResponse *>(send(request));
 }
 
 /*!

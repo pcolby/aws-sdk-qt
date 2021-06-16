@@ -21,6 +21,8 @@
 #include "docdbclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "addsourceidentifiertosubscriptionrequest.h"
+#include "addsourceidentifiertosubscriptionresponse.h"
 #include "addtagstoresourcerequest.h"
 #include "addtagstoresourceresponse.h"
 #include "applypendingmaintenanceactionrequest.h"
@@ -39,6 +41,10 @@
 #include "createdbinstanceresponse.h"
 #include "createdbsubnetgrouprequest.h"
 #include "createdbsubnetgroupresponse.h"
+#include "createeventsubscriptionrequest.h"
+#include "createeventsubscriptionresponse.h"
+#include "createglobalclusterrequest.h"
+#include "createglobalclusterresponse.h"
 #include "deletedbclusterrequest.h"
 #include "deletedbclusterresponse.h"
 #include "deletedbclusterparametergrouprequest.h"
@@ -49,6 +55,12 @@
 #include "deletedbinstanceresponse.h"
 #include "deletedbsubnetgrouprequest.h"
 #include "deletedbsubnetgroupresponse.h"
+#include "deleteeventsubscriptionrequest.h"
+#include "deleteeventsubscriptionresponse.h"
+#include "deleteglobalclusterrequest.h"
+#include "deleteglobalclusterresponse.h"
+#include "describecertificatesrequest.h"
+#include "describecertificatesresponse.h"
 #include "describedbclusterparametergroupsrequest.h"
 #include "describedbclusterparametergroupsresponse.h"
 #include "describedbclusterparametersrequest.h"
@@ -69,8 +81,12 @@
 #include "describeenginedefaultclusterparametersresponse.h"
 #include "describeeventcategoriesrequest.h"
 #include "describeeventcategoriesresponse.h"
+#include "describeeventsubscriptionsrequest.h"
+#include "describeeventsubscriptionsresponse.h"
 #include "describeeventsrequest.h"
 #include "describeeventsresponse.h"
+#include "describeglobalclustersrequest.h"
+#include "describeglobalclustersresponse.h"
 #include "describeorderabledbinstanceoptionsrequest.h"
 #include "describeorderabledbinstanceoptionsresponse.h"
 #include "describependingmaintenanceactionsrequest.h"
@@ -89,8 +105,16 @@
 #include "modifydbinstanceresponse.h"
 #include "modifydbsubnetgrouprequest.h"
 #include "modifydbsubnetgroupresponse.h"
+#include "modifyeventsubscriptionrequest.h"
+#include "modifyeventsubscriptionresponse.h"
+#include "modifyglobalclusterrequest.h"
+#include "modifyglobalclusterresponse.h"
 #include "rebootdbinstancerequest.h"
 #include "rebootdbinstanceresponse.h"
+#include "removefromglobalclusterrequest.h"
+#include "removefromglobalclusterresponse.h"
+#include "removesourceidentifierfromsubscriptionrequest.h"
+#include "removesourceidentifierfromsubscriptionresponse.h"
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourceresponse.h"
 #include "resetdbclusterparametergrouprequest.h"
@@ -184,6 +208,19 @@ DocDBClient::DocDBClient(
 
 /*!
  * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * AddSourceIdentifierToSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a source identifier to an existing event notification
+ */
+AddSourceIdentifierToSubscriptionResponse * DocDBClient::addSourceIdentifierToSubscription(const AddSourceIdentifierToSubscriptionRequest &request)
+{
+    return qobject_cast<AddSourceIdentifierToSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
  * AddTagsToResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -203,7 +240,7 @@ AddTagsToResourceResponse * DocDBClient::addTagsToResource(const AddTagsToResour
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Applies a pending maintenance action to a resource (for example, to a DB
+ * Applies a pending maintenance action to a resource (for example, to an Amazon DocumentDB
  */
 ApplyPendingMaintenanceActionResponse * DocDBClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
 {
@@ -216,7 +253,7 @@ ApplyPendingMaintenanceActionResponse * DocDBClient::applyPendingMaintenanceActi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Copies the specified DB cluster parameter
+ * Copies the specified cluster parameter
  */
 CopyDBClusterParameterGroupResponse * DocDBClient::copyDBClusterParameterGroup(const CopyDBClusterParameterGroupRequest &request)
 {
@@ -229,17 +266,18 @@ CopyDBClusterParameterGroupResponse * DocDBClient::copyDBClusterParameterGroup(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Copies a snapshot of a DB
+ * Copies a snapshot of a
  *
  * cluster>
  *
- * To copy a DB cluster snapshot from a shared manual DB cluster snapshot, <code>SourceDBClusterSnapshotIdentifier</code>
- * must be the Amazon Resource Name (ARN) of the shared DB cluster
+ * To copy a cluster snapshot from a shared manual cluster snapshot, <code>SourceDBClusterSnapshotIdentifier</code> must be
+ * the Amazon Resource Name (ARN) of the shared cluster snapshot. You can only copy a shared DB cluster snapshot, whether
+ * encrypted or not, in the same AWS
  *
- * snapshot>
+ * Region>
  *
- * To cancel the copy operation after it is in progress, delete the target DB cluster snapshot identified by
- * <code>TargetDBClusterSnapshotIdentifier</code> while that DB cluster snapshot is in the <i>copying</i>
+ * To cancel the copy operation after it is in progress, delete the target cluster snapshot identified by
+ * <code>TargetDBClusterSnapshotIdentifier</code> while that cluster snapshot is in the <i>copying</i>
  */
 CopyDBClusterSnapshotResponse * DocDBClient::copyDBClusterSnapshot(const CopyDBClusterSnapshotRequest &request)
 {
@@ -252,7 +290,7 @@ CopyDBClusterSnapshotResponse * DocDBClient::copyDBClusterSnapshot(const CopyDBC
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Amazon DocumentDB DB
+ * Creates a new Amazon DocumentDB
  */
 CreateDBClusterResponse * DocDBClient::createDBCluster(const CreateDBClusterRequest &request)
 {
@@ -265,26 +303,26 @@ CreateDBClusterResponse * DocDBClient::createDBCluster(const CreateDBClusterRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB cluster parameter
+ * Creates a new cluster parameter
  *
  * group>
  *
- * Parameters in a DB cluster parameter group apply to all of the instances in a DB
+ * Parameters in a cluster parameter group apply to all of the instances in a
  *
  * cluster>
  *
- * A DB cluster parameter group is initially created with the default parameters for the database engine used by instances
- * in the DB cluster. To provide custom values for any of the parameters, you must modify the group after you create it.
- * After you create a DB cluster parameter group, you must associate it with your DB cluster. For the new DB cluster
- * parameter group and associated settings to take effect, you must then reboot the DB instances in the DB cluster without
- *
- * failover> <b>
- *
- * After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster
- * that uses that DB cluster parameter group as the default parameter group. This allows Amazon DocumentDB to fully
- * complete the create action before the DB cluster parameter group is used as the default for a new DB cluster. This step
- * is especially important for parameters that are critical when creating the default database for a DB cluster, such as
- * the character set for the default database defined by the <code>character_set_database</code>
+ * A cluster parameter group is initially created with the default parameters for the database engine used by instances in
+ * the cluster. In Amazon DocumentDB, you cannot make modifications directly to the <code>default.docdb3.6</code> cluster
+ * parameter group. If your Amazon DocumentDB cluster is using the default cluster parameter group and you want to modify a
+ * value in it, you must first <a
+ * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/cluster_parameter_group-create.html"> create a new
+ * parameter group</a> or <a
+ * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/cluster_parameter_group-copy.html"> copy an existing
+ * parameter group</a>, modify it, and then apply the modified parameter group to your cluster. For the new cluster
+ * parameter group and associated settings to take effect, you must then reboot the instances in the cluster without
+ * failover. For more information, see <a
+ * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/cluster_parameter_group-modify.html"> Modifying
+ * Amazon DocumentDB Cluster Parameter Groups</a>.
  */
 CreateDBClusterParameterGroupResponse * DocDBClient::createDBClusterParameterGroup(const CreateDBClusterParameterGroupRequest &request)
 {
@@ -297,7 +335,7 @@ CreateDBClusterParameterGroupResponse * DocDBClient::createDBClusterParameterGro
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a snapshot of a DB cluster.
+ * Creates a snapshot of a cluster.
  */
 CreateDBClusterSnapshotResponse * DocDBClient::createDBClusterSnapshot(const CreateDBClusterSnapshotRequest &request)
 {
@@ -310,7 +348,7 @@ CreateDBClusterSnapshotResponse * DocDBClient::createDBClusterSnapshot(const Cre
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB
+ * Creates a new
  */
 CreateDBInstanceResponse * DocDBClient::createDBInstance(const CreateDBInstanceRequest &request)
 {
@@ -323,8 +361,7 @@ CreateDBInstanceResponse * DocDBClient::createDBInstance(const CreateDBInstanceR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB subnet group. DB subnet groups must contain at least one subnet in at least two Availability Zones in
- * the AWS
+ * Creates a new subnet group. subnet groups must contain at least one subnet in at least two Availability Zones in the AWS
  */
 CreateDBSubnetGroupResponse * DocDBClient::createDBSubnetGroup(const CreateDBSubnetGroupRequest &request)
 {
@@ -333,12 +370,69 @@ CreateDBSubnetGroupResponse * DocDBClient::createDBSubnetGroup(const CreateDBSub
 
 /*!
  * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * CreateEventSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon DocumentDB event notification subscription. This action requires a topic Amazon Resource Name (ARN)
+ * created by using the Amazon DocumentDB console, the Amazon SNS console, or the Amazon SNS API. To obtain an ARN with
+ * Amazon SNS, you must create a topic in Amazon SNS and subscribe to the topic. The ARN is displayed in the Amazon SNS
+ *
+ * console>
+ *
+ * You can specify the type of source (<code>SourceType</code>) that you want to be notified of. You can also provide a
+ * list of Amazon DocumentDB sources (<code>SourceIds</code>) that trigger the events, and you can provide a list of event
+ * categories (<code>EventCategories</code>) for events that you want to be notified of. For example, you can specify
+ * <code>SourceType = db-instance</code>, <code>SourceIds = mydbinstance1, mydbinstance2</code> and <code>EventCategories =
+ * Availability,
+ *
+ * Backup</code>>
+ *
+ * If you specify both the <code>SourceType</code> and <code>SourceIds</code> (such as <code>SourceType =
+ * db-instance</code> and <code>SourceIdentifier = myDBInstance1</code>), you are notified of all the
+ * <code>db-instance</code> events for the specified source. If you specify a <code>SourceType</code> but do not specify a
+ * <code>SourceIdentifier</code>, you receive notice of the events for that source type for all your Amazon DocumentDB
+ * sources. If you do not specify either the <code>SourceType</code> or the <code>SourceIdentifier</code>, you are notified
+ * of events generated from all Amazon DocumentDB sources belonging to your customer
+ */
+CreateEventSubscriptionResponse * DocDBClient::createEventSubscription(const CreateEventSubscriptionRequest &request)
+{
+    return qobject_cast<CreateEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * CreateGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon DocumentDB global cluster that can span multiple multiple AWS Regions. The global cluster contains one
+ * primary cluster with read-write capability, and up-to give read-only secondary clusters. Global clusters uses
+ * storage-based fast replication across regions with latencies less than one second, using dedicated infrastructure with
+ * no impact to your workload’s
+ *
+ * performance> <p/>
+ *
+ * You can create a global cluster that is initially empty, and then add a primary and a secondary to it. Or you can
+ * specify an existing cluster during the create operation, and this cluster becomes the primary of the global cluster.
+ *
+ * </p <note>
+ *
+ * This action only applies to Amazon DocumentDB
+ */
+CreateGlobalClusterResponse * DocDBClient::createGlobalCluster(const CreateGlobalClusterRequest &request)
+{
+    return qobject_cast<CreateGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
  * DeleteDBClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a previously provisioned DB cluster. When you delete a DB cluster, all automated backups for that DB cluster are
- * deleted and can't be recovered. Manual DB cluster snapshots of the specified DB cluster are not
+ * Deletes a previously provisioned cluster. When you delete a cluster, all automated backups for that cluster are deleted
+ * and can't be recovered. Manual DB cluster snapshots of the specified cluster are not
  */
 DeleteDBClusterResponse * DocDBClient::deleteDBCluster(const DeleteDBClusterRequest &request)
 {
@@ -351,8 +445,7 @@ DeleteDBClusterResponse * DocDBClient::deleteDBCluster(const DeleteDBClusterRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a specified DB cluster parameter group. The DB cluster parameter group to be deleted can't be associated with
- * any DB
+ * Deletes a specified cluster parameter group. The cluster parameter group to be deleted can't be associated with any
  */
 DeleteDBClusterParameterGroupResponse * DocDBClient::deleteDBClusterParameterGroup(const DeleteDBClusterParameterGroupRequest &request)
 {
@@ -365,11 +458,11 @@ DeleteDBClusterParameterGroupResponse * DocDBClient::deleteDBClusterParameterGro
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a DB cluster snapshot. If the snapshot is being copied, the copy operation is
+ * Deletes a cluster snapshot. If the snapshot is being copied, the copy operation is
  *
  * terminated> <note>
  *
- * The DB cluster snapshot must be in the <code>available</code> state to be
+ * The cluster snapshot must be in the <code>available</code> state to be
  */
 DeleteDBClusterSnapshotResponse * DocDBClient::deleteDBClusterSnapshot(const DeleteDBClusterSnapshotRequest &request)
 {
@@ -382,7 +475,7 @@ DeleteDBClusterSnapshotResponse * DocDBClient::deleteDBClusterSnapshot(const Del
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a previously provisioned DB instance.
+ * Deletes a previously provisioned instance.
  */
 DeleteDBInstanceResponse * DocDBClient::deleteDBInstance(const DeleteDBInstanceRequest &request)
 {
@@ -395,7 +488,7 @@ DeleteDBInstanceResponse * DocDBClient::deleteDBInstance(const DeleteDBInstanceR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a DB subnet
+ * Deletes a subnet
  *
  * group> <note>
  *
@@ -408,12 +501,56 @@ DeleteDBSubnetGroupResponse * DocDBClient::deleteDBSubnetGroup(const DeleteDBSub
 
 /*!
  * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * DeleteEventSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an Amazon DocumentDB event notification
+ */
+DeleteEventSubscriptionResponse * DocDBClient::deleteEventSubscription(const DeleteEventSubscriptionRequest &request)
+{
+    return qobject_cast<DeleteEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * DeleteGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a global cluster. The primary and secondary clusters must already be detached or deleted before attempting to
+ * delete a global
+ *
+ * cluster> <note>
+ *
+ * This action only applies to Amazon DocumentDB
+ */
+DeleteGlobalClusterResponse * DocDBClient::deleteGlobalCluster(const DeleteGlobalClusterRequest &request)
+{
+    return qobject_cast<DeleteGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * DescribeCertificatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of certificate authority (CA) certificates provided by Amazon DocumentDB for this AWS
+ */
+DescribeCertificatesResponse * DocDBClient::describeCertificates(const DescribeCertificatesRequest &request)
+{
+    return qobject_cast<DescribeCertificatesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
  * DescribeDBClusterParameterGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of <code>DBClusterParameterGroup</code> descriptions. If a <code>DBClusterParameterGroupName</code>
- * parameter is specified, the list contains only the description of the specified DB cluster parameter group.
+ * parameter is specified, the list contains only the description of the specified cluster parameter group.
  */
 DescribeDBClusterParameterGroupsResponse * DocDBClient::describeDBClusterParameterGroups(const DescribeDBClusterParameterGroupsRequest &request)
 {
@@ -426,7 +563,7 @@ DescribeDBClusterParameterGroupsResponse * DocDBClient::describeDBClusterParamet
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the detailed parameter list for a particular DB cluster parameter
+ * Returns the detailed parameter list for a particular cluster parameter
  */
 DescribeDBClusterParametersResponse * DocDBClient::describeDBClusterParameters(const DescribeDBClusterParametersRequest &request)
 {
@@ -439,14 +576,14 @@ DescribeDBClusterParametersResponse * DocDBClient::describeDBClusterParameters(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of DB cluster snapshot attribute names and values for a manual DB cluster
+ * Returns a list of cluster snapshot attribute names and values for a manual DB cluster
  *
  * snapshot>
  *
  * When you share snapshots with other AWS accounts, <code>DescribeDBClusterSnapshotAttributes</code> returns the
  * <code>restore</code> attribute and a list of IDs for the AWS accounts that are authorized to copy or restore the manual
- * DB cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code> attribute, then
- * the manual DB cluster snapshot is public and can be copied or restored by all AWS
+ * cluster snapshot. If <code>all</code> is included in the list of values for the <code>restore</code> attribute, then the
+ * manual cluster snapshot is public and can be copied or restored by all AWS
  */
 DescribeDBClusterSnapshotAttributesResponse * DocDBClient::describeDBClusterSnapshotAttributes(const DescribeDBClusterSnapshotAttributesRequest &request)
 {
@@ -459,7 +596,7 @@ DescribeDBClusterSnapshotAttributesResponse * DocDBClient::describeDBClusterSnap
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about DB cluster snapshots. This API operation supports
+ * Returns information about cluster snapshots. This API operation supports
  */
 DescribeDBClusterSnapshotsResponse * DocDBClient::describeDBClusterSnapshots(const DescribeDBClusterSnapshotsRequest &request)
 {
@@ -472,7 +609,10 @@ DescribeDBClusterSnapshotsResponse * DocDBClient::describeDBClusterSnapshots(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about provisioned Amazon DocumentDB DB clusters. This API operation supports
+ * Returns information about provisioned Amazon DocumentDB clusters. This API operation supports pagination. For certain
+ * management features such as cluster and instance lifecycle management, Amazon DocumentDB leverages operational
+ * technology that is shared with Amazon RDS and Amazon Neptune. Use the <code>filterName=engine,Values=docdb</code> filter
+ * parameter to return only Amazon DocumentDB
  */
 DescribeDBClustersResponse * DocDBClient::describeDBClusters(const DescribeDBClustersRequest &request)
 {
@@ -485,7 +625,7 @@ DescribeDBClustersResponse * DocDBClient::describeDBClusters(const DescribeDBClu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of the available DB
+ * Returns a list of the available
  */
 DescribeDBEngineVersionsResponse * DocDBClient::describeDBEngineVersions(const DescribeDBEngineVersionsRequest &request)
 {
@@ -547,13 +687,32 @@ DescribeEventCategoriesResponse * DocDBClient::describeEventCategories(const Des
 
 /*!
  * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * DescribeEventSubscriptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the subscription descriptions for a customer account. The description for a subscription includes
+ * <code>SubscriptionName</code>, <code>SNSTopicARN</code>, <code>CustomerID</code>, <code>SourceType</code>,
+ * <code>SourceID</code>, <code>CreationTime</code>, and
+ *
+ * <code>Status</code>>
+ *
+ * If you specify a <code>SubscriptionName</code>, lists the description for that
+ */
+DescribeEventSubscriptionsResponse * DocDBClient::describeEventSubscriptions(const DescribeEventSubscriptionsRequest &request)
+{
+    return qobject_cast<DescribeEventSubscriptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
  * DescribeEventsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns events related to DB instances, DB security groups, DB snapshots, and DB parameter groups for the past 14 days.
- * You can obtain events specific to a particular DB instance, DB security group, DB snapshot, or DB parameter group by
- * providing the name as a parameter. By default, the events of the past hour are
+ * Returns events related to instances, security groups, snapshots, and DB parameter groups for the past 14 days. You can
+ * obtain events specific to a particular DB instance, security group, snapshot, or parameter group by providing the name
+ * as a parameter. By default, the events of the past hour are
  */
 DescribeEventsResponse * DocDBClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -562,11 +721,28 @@ DescribeEventsResponse * DocDBClient::describeEvents(const DescribeEventsRequest
 
 /*!
  * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * DescribeGlobalClustersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about Amazon DocumentDB global clusters. This API supports
+ *
+ * pagination> <note>
+ *
+ * This action only applies to Amazon DocumentDB
+ */
+DescribeGlobalClustersResponse * DocDBClient::describeGlobalClusters(const DescribeGlobalClustersRequest &request)
+{
+    return qobject_cast<DescribeGlobalClustersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
  * DescribeOrderableDBInstanceOptionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of orderable DB instance options for the specified
+ * Returns a list of orderable instance options for the specified
  */
 DescribeOrderableDBInstanceOptionsResponse * DocDBClient::describeOrderableDBInstanceOptions(const DescribeOrderableDBInstanceOptionsRequest &request)
 {
@@ -579,7 +755,7 @@ DescribeOrderableDBInstanceOptionsResponse * DocDBClient::describeOrderableDBIns
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of resources (for example, DB instances) that have at least one pending maintenance
+ * Returns a list of resources (for example, instances) that have at least one pending maintenance
  */
 DescribePendingMaintenanceActionsResponse * DocDBClient::describePendingMaintenanceActions(const DescribePendingMaintenanceActionsRequest &request)
 {
@@ -592,12 +768,12 @@ DescribePendingMaintenanceActionsResponse * DocDBClient::describePendingMaintena
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Forces a failover for a DB
+ * Forces a failover for a
  *
  * cluster>
  *
- * A failover for a DB cluster promotes one of the Amazon DocumentDB replicas (read-only instances) in the DB cluster to be
- * the primary instance (the cluster
+ * A failover for a cluster promotes one of the Amazon DocumentDB replicas (read-only instances) in the cluster to be the
+ * primary instance (the cluster
  *
  * writer)>
  *
@@ -628,7 +804,7 @@ ListTagsForResourceResponse * DocDBClient::listTagsForResource(const ListTagsFor
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies a setting for an Amazon DocumentDB DB cluster. You can change one or more database configuration parameters by
+ * Modifies a setting for an Amazon DocumentDB cluster. You can change one or more database configuration parameters by
  * specifying these parameters and the new values in the request.
  */
 ModifyDBClusterResponse * DocDBClient::modifyDBCluster(const ModifyDBClusterRequest &request)
@@ -642,9 +818,9 @@ ModifyDBClusterResponse * DocDBClient::modifyDBCluster(const ModifyDBClusterRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the parameters of a DB cluster parameter group. To modify more than one parameter, submit a list of the
- * following: <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20
- * parameters can be modified in a single request.
+ * Modifies the parameters of a cluster parameter group. To modify more than one parameter, submit a list of the following:
+ * <code>ParameterName</code>, <code>ParameterValue</code>, and <code>ApplyMethod</code>. A maximum of 20 parameters can be
+ * modified in a single request.
  *
  * </p <note>
  *
@@ -653,11 +829,11 @@ ModifyDBClusterResponse * DocDBClient::modifyDBCluster(const ModifyDBClusterRequ
  *
  * effect> </note> <b>
  *
- * After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster
- * that uses that DB cluster parameter group as the default parameter group. This allows Amazon DocumentDB to fully
- * complete the create action before the parameter group is used as the default for a new DB cluster. This step is
- * especially important for parameters that are critical when creating the default database for a DB cluster, such as the
- * character set for the default database defined by the <code>character_set_database</code>
+ * After you create a cluster parameter group, you should wait at least 5 minutes before creating your first cluster that
+ * uses that cluster parameter group as the default parameter group. This allows Amazon DocumentDB to fully complete the
+ * create action before the parameter group is used as the default for a new cluster. This step is especially important for
+ * parameters that are critical when creating the default database for a cluster, such as the character set for the default
+ * database defined by the <code>character_set_database</code>
  */
 ModifyDBClusterParameterGroupResponse * DocDBClient::modifyDBClusterParameterGroup(const ModifyDBClusterParameterGroupRequest &request)
 {
@@ -674,14 +850,14 @@ ModifyDBClusterParameterGroupResponse * DocDBClient::modifyDBClusterParameterGro
  *
  * snapshot>
  *
- * To share a manual DB cluster snapshot with other AWS accounts, specify <code>restore</code> as the
+ * To share a manual cluster snapshot with other AWS accounts, specify <code>restore</code> as the
  * <code>AttributeName</code>, and use the <code>ValuesToAdd</code> parameter to add a list of IDs of the AWS accounts that
- * are authorized to restore the manual DB cluster snapshot. Use the value <code>all</code> to make the manual DB cluster
+ * are authorized to restore the manual cluster snapshot. Use the value <code>all</code> to make the manual cluster
  * snapshot public, which means that it can be copied or restored by all AWS accounts. Do not add the <code>all</code>
  * value for any manual DB cluster snapshots that contain private information that you don't want available to all AWS
- * accounts. If a manual DB cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized
- * AWS account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter
- * in this
+ * accounts. If a manual cluster snapshot is encrypted, it can be shared, but only by specifying a list of authorized AWS
+ * account IDs for the <code>ValuesToAdd</code> parameter. You can't use <code>all</code> as a value for that parameter in
+ * this
  */
 ModifyDBClusterSnapshotAttributeResponse * DocDBClient::modifyDBClusterSnapshotAttribute(const ModifyDBClusterSnapshotAttributeRequest &request)
 {
@@ -694,7 +870,7 @@ ModifyDBClusterSnapshotAttributeResponse * DocDBClient::modifyDBClusterSnapshotA
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies settings for a DB instance. You can change one or more database configuration parameters by specifying these
+ * Modifies settings for an instance. You can change one or more database configuration parameters by specifying these
  * parameters and the new values in the
  */
 ModifyDBInstanceResponse * DocDBClient::modifyDBInstance(const ModifyDBInstanceRequest &request)
@@ -708,8 +884,8 @@ ModifyDBInstanceResponse * DocDBClient::modifyDBInstance(const ModifyDBInstanceR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies an existing DB subnet group. DB subnet groups must contain at least one subnet in at least two Availability
- * Zones in the AWS
+ * Modifies an existing subnet group. subnet groups must contain at least one subnet in at least two Availability Zones in
+ * the AWS
  */
 ModifyDBSubnetGroupResponse * DocDBClient::modifyDBSubnetGroup(const ModifyDBSubnetGroupRequest &request)
 {
@@ -718,22 +894,84 @@ ModifyDBSubnetGroupResponse * DocDBClient::modifyDBSubnetGroup(const ModifyDBSub
 
 /*!
  * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * ModifyEventSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies an existing Amazon DocumentDB event notification
+ */
+ModifyEventSubscriptionResponse * DocDBClient::modifyEventSubscription(const ModifyEventSubscriptionRequest &request)
+{
+    return qobject_cast<ModifyEventSubscriptionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * ModifyGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modify a setting for an Amazon DocumentDB global cluster. You can change one or more configuration parameters (for
+ * example: deletion protection), or the global cluster identifier by specifying these parameters and the new values in the
+ *
+ * request> <note>
+ *
+ * This action only applies to Amazon DocumentDB
+ */
+ModifyGlobalClusterResponse * DocDBClient::modifyGlobalCluster(const ModifyGlobalClusterRequest &request)
+{
+    return qobject_cast<ModifyGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
  * RebootDBInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You might need to reboot your DB instance, usually for maintenance reasons. For example, if you make certain changes, or
- * if you change the DB cluster parameter group that is associated with the DB instance, you must reboot the instance for
- * the changes to take effect.
+ * You might need to reboot your instance, usually for maintenance reasons. For example, if you make certain changes, or if
+ * you change the cluster parameter group that is associated with the instance, you must reboot the instance for the
+ * changes to take effect.
  *
  * </p
  *
- * Rebooting a DB instance restarts the database engine service. Rebooting a DB instance results in a momentary outage,
- * during which the DB instance status is set to <i>rebooting</i>.
+ * Rebooting an instance restarts the database engine service. Rebooting an instance results in a momentary outage, during
+ * which the instance status is set to <i>rebooting</i>.
  */
 RebootDBInstanceResponse * DocDBClient::rebootDBInstance(const RebootDBInstanceRequest &request)
 {
     return qobject_cast<RebootDBInstanceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * RemoveFromGlobalClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detaches an Amazon DocumentDB secondary cluster from a global cluster. The cluster becomes a standalone cluster with
+ * read-write capability instead of being read-only and receiving data from a primary in a different region.
+ *
+ * </p <note>
+ *
+ * This action only applies to Amazon DocumentDB
+ */
+RemoveFromGlobalClusterResponse * DocDBClient::removeFromGlobalCluster(const RemoveFromGlobalClusterRequest &request)
+{
+    return qobject_cast<RemoveFromGlobalClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DocDBClient service, and returns a pointer to an
+ * RemoveSourceIdentifierFromSubscriptionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a source identifier from an existing Amazon DocumentDB event notification
+ */
+RemoveSourceIdentifierFromSubscriptionResponse * DocDBClient::removeSourceIdentifierFromSubscription(const RemoveSourceIdentifierFromSubscriptionRequest &request)
+{
+    return qobject_cast<RemoveSourceIdentifierFromSubscriptionResponse *>(send(request));
 }
 
 /*!
@@ -755,9 +993,9 @@ RemoveTagsFromResourceResponse * DocDBClient::removeTagsFromResource(const Remov
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Modifies the parameters of a DB cluster parameter group to the default value. To reset specific parameters, submit a
- * list of the following: <code>ParameterName</code> and <code>ApplyMethod</code>. To reset the entire DB cluster parameter
- * group, specify the <code>DBClusterParameterGroupName</code> and <code>ResetAllParameters</code> parameters.
+ * Modifies the parameters of a cluster parameter group to the default value. To reset specific parameters, submit a list
+ * of the following: <code>ParameterName</code> and <code>ApplyMethod</code>. To reset the entire cluster parameter group,
+ * specify the <code>DBClusterParameterGroupName</code> and <code>ResetAllParameters</code> parameters.
  *
  * </p
  *
@@ -775,18 +1013,17 @@ ResetDBClusterParameterGroupResponse * DocDBClient::resetDBClusterParameterGroup
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new DB cluster from a DB snapshot or DB cluster
+ * Creates a new cluster from a snapshot or cluster
  *
  * snapshot>
  *
- * If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration
- * and default security
+ * If a snapshot is specified, the target cluster is created from the source DB snapshot with a default configuration and
+ * default security
  *
  * group>
  *
- * If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with
- * the same configuration as the original source DB cluster, except that the new DB cluster is created with the default
- * security
+ * If a cluster snapshot is specified, the target cluster is created from the source cluster restore point with the same
+ * configuration as the original source DB cluster, except that the new cluster is created with the default security
  */
 RestoreDBClusterFromSnapshotResponse * DocDBClient::restoreDBClusterFromSnapshot(const RestoreDBClusterFromSnapshotRequest &request)
 {
@@ -799,10 +1036,10 @@ RestoreDBClusterFromSnapshotResponse * DocDBClient::restoreDBClusterFromSnapshot
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Restores a DB cluster to an arbitrary point in time. Users can restore to any point in time before
- * <code>LatestRestorableTime</code> for up to <code>BackupRetentionPeriod</code> days. The target DB cluster is created
- * from the source DB cluster with the same configuration as the original DB cluster, except that the new DB cluster is
- * created with the default DB security group.
+ * Restores a cluster to an arbitrary point in time. Users can restore to any point in time before
+ * <code>LatestRestorableTime</code> for up to <code>BackupRetentionPeriod</code> days. The target cluster is created from
+ * the source cluster with the same configuration as the original cluster, except that the new cluster is created with the
+ * default security group.
  */
 RestoreDBClusterToPointInTimeResponse * DocDBClient::restoreDBClusterToPointInTime(const RestoreDBClusterToPointInTimeRequest &request)
 {

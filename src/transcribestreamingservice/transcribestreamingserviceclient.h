@@ -28,6 +28,8 @@ namespace QtAws {
 namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceClientPrivate;
+class StartMedicalStreamTranscriptionRequest;
+class StartMedicalStreamTranscriptionResponse;
 class StartStreamTranscriptionRequest;
 class StartStreamTranscriptionResponse;
 
@@ -47,6 +49,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    StartMedicalStreamTranscriptionResponse * startMedicalStreamTranscription(const StartMedicalStreamTranscriptionRequest &request);
     StartStreamTranscriptionResponse * startStreamTranscription(const StartStreamTranscriptionRequest &request);
 
 private:

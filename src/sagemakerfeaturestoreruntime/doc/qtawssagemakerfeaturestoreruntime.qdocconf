@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSageMakerFeatureStoreRuntime
+description = AWS SageMakerFeatureStoreRuntime SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawssagemakerfeaturestoreruntime-index.html"
+navigation.landingtitle = "SageMakerFeatureStoreRuntime"
+navigation.cppclassespage = "SageMakerFeatureStoreRuntime C++ Classes"

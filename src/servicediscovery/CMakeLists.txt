@@ -69,6 +69,10 @@ add_library(QtAwsServiceDiscovery
   listservicesrequest_p.h
   listservicesresponse.h
   listservicesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   registerinstancerequest.h
   registerinstancerequest_p.h
   registerinstanceresponse.h
@@ -79,6 +83,14 @@ add_library(QtAwsServiceDiscovery
   servicediscoveryrequest_p.h
   servicediscoveryresponse.h
   servicediscoveryresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateinstancecustomhealthstatusrequest.h
   updateinstancecustomhealthstatusrequest_p.h
   updateinstancecustomhealthstatusresponse.h
@@ -121,11 +133,17 @@ add_library(QtAwsServiceDiscovery
   listoperationsresponse.cpp
   listservicesrequest.cpp
   listservicesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   registerinstancerequest.cpp
   registerinstanceresponse.cpp
   servicediscoveryclient.cpp
   servicediscoveryrequest.cpp
   servicediscoveryresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateinstancecustomhealthstatusrequest.cpp
   updateinstancecustomhealthstatusresponse.cpp
   updateservicerequest.cpp

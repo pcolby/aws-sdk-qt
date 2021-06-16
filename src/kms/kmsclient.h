@@ -66,6 +66,10 @@ class EncryptRequest;
 class EncryptResponse;
 class GenerateDataKeyRequest;
 class GenerateDataKeyResponse;
+class GenerateDataKeyPairRequest;
+class GenerateDataKeyPairResponse;
+class GenerateDataKeyPairWithoutPlaintextRequest;
+class GenerateDataKeyPairWithoutPlaintextResponse;
 class GenerateDataKeyWithoutPlaintextRequest;
 class GenerateDataKeyWithoutPlaintextResponse;
 class GenerateRandomRequest;
@@ -76,6 +80,8 @@ class GetKeyRotationStatusRequest;
 class GetKeyRotationStatusResponse;
 class GetParametersForImportRequest;
 class GetParametersForImportResponse;
+class GetPublicKeyRequest;
+class GetPublicKeyResponse;
 class ImportKeyMaterialRequest;
 class ImportKeyMaterialResponse;
 class ListAliasesRequest;
@@ -100,6 +106,8 @@ class RevokeGrantRequest;
 class RevokeGrantResponse;
 class ScheduleKeyDeletionRequest;
 class ScheduleKeyDeletionResponse;
+class SignRequest;
+class SignResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
@@ -110,6 +118,8 @@ class UpdateCustomKeyStoreRequest;
 class UpdateCustomKeyStoreResponse;
 class UpdateKeyDescriptionRequest;
 class UpdateKeyDescriptionResponse;
+class VerifyRequest;
+class VerifyResponse;
 
 class QTAWS_EXPORT KmsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -146,11 +156,14 @@ public slots:
     EnableKeyRotationResponse * enableKeyRotation(const EnableKeyRotationRequest &request);
     EncryptResponse * encrypt(const EncryptRequest &request);
     GenerateDataKeyResponse * generateDataKey(const GenerateDataKeyRequest &request);
+    GenerateDataKeyPairResponse * generateDataKeyPair(const GenerateDataKeyPairRequest &request);
+    GenerateDataKeyPairWithoutPlaintextResponse * generateDataKeyPairWithoutPlaintext(const GenerateDataKeyPairWithoutPlaintextRequest &request);
     GenerateDataKeyWithoutPlaintextResponse * generateDataKeyWithoutPlaintext(const GenerateDataKeyWithoutPlaintextRequest &request);
     GenerateRandomResponse * generateRandom(const GenerateRandomRequest &request);
     GetKeyPolicyResponse * getKeyPolicy(const GetKeyPolicyRequest &request);
     GetKeyRotationStatusResponse * getKeyRotationStatus(const GetKeyRotationStatusRequest &request);
     GetParametersForImportResponse * getParametersForImport(const GetParametersForImportRequest &request);
+    GetPublicKeyResponse * getPublicKey(const GetPublicKeyRequest &request);
     ImportKeyMaterialResponse * importKeyMaterial(const ImportKeyMaterialRequest &request);
     ListAliasesResponse * listAliases(const ListAliasesRequest &request);
     ListGrantsResponse * listGrants(const ListGrantsRequest &request);
@@ -163,11 +176,13 @@ public slots:
     RetireGrantResponse * retireGrant(const RetireGrantRequest &request);
     RevokeGrantResponse * revokeGrant(const RevokeGrantRequest &request);
     ScheduleKeyDeletionResponse * scheduleKeyDeletion(const ScheduleKeyDeletionRequest &request);
+    SignResponse * sign(const SignRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateAliasResponse * updateAlias(const UpdateAliasRequest &request);
     UpdateCustomKeyStoreResponse * updateCustomKeyStore(const UpdateCustomKeyStoreRequest &request);
     UpdateKeyDescriptionResponse * updateKeyDescription(const UpdateKeyDescriptionRequest &request);
+    VerifyResponse * verify(const VerifyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(KmsClient)

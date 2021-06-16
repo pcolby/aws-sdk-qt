@@ -67,11 +67,14 @@ namespace LexModelBuildingService {
  * \value GetSlotTypeVersionsAction LexModelBuildingService GetSlotTypeVersions action.
  * \value GetSlotTypesAction LexModelBuildingService GetSlotTypes action.
  * \value GetUtterancesViewAction LexModelBuildingService GetUtterancesView action.
+ * \value ListTagsForResourceAction LexModelBuildingService ListTagsForResource action.
  * \value PutBotAction LexModelBuildingService PutBot action.
  * \value PutBotAliasAction LexModelBuildingService PutBotAlias action.
  * \value PutIntentAction LexModelBuildingService PutIntent action.
  * \value PutSlotTypeAction LexModelBuildingService PutSlotType action.
  * \value StartImportAction LexModelBuildingService StartImport action.
+ * \value TagResourceAction LexModelBuildingService TagResource action.
+ * \value UntagResourceAction LexModelBuildingService UntagResource action.
  */
 
 /*!

@@ -38,19 +38,31 @@ public:
     /// Actions supported by FMS.
     enum Action {
         AssociateAdminAccountAction,
+        DeleteAppsListAction,
         DeleteNotificationChannelAction,
         DeletePolicyAction,
+        DeleteProtocolsListAction,
         DisassociateAdminAccountAction,
         GetAdminAccountAction,
+        GetAppsListAction,
         GetComplianceDetailAction,
         GetNotificationChannelAction,
         GetPolicyAction,
         GetProtectionStatusAction,
+        GetProtocolsListAction,
+        GetViolationDetailsAction,
+        ListAppsListsAction,
         ListComplianceStatusAction,
         ListMemberAccountsAction,
         ListPoliciesAction,
+        ListProtocolsListsAction,
+        ListTagsForResourceAction,
+        PutAppsListAction,
         PutNotificationChannelAction,
         PutPolicyAction,
+        PutProtocolsListAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

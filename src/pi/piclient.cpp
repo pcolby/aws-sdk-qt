@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "describedimensionkeysrequest.h"
 #include "describedimensionkeysresponse.h"
+#include "getdimensionkeydetailsrequest.h"
+#include "getdimensionkeydetailsresponse.h"
 #include "getresourcemetricsrequest.h"
 #include "getresourcemetricsresponse.h"
 
@@ -48,20 +50,34 @@ namespace PI {
  * \ingroup aws-clients
  * \inmodule QtAwsPI
  *
- *  AWS Performance Insights enables you to monitor and explore different dimensions of database load based on data captured
- *  from a running RDS instance. The guide provides detailed information about Performance Insights data types, parameters
- *  and errors. For more information about Performance Insights capabilities see <a
- *  href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon RDS Performance
- *  Insights </a> in the <i>Amazon RDS User
+ *  <fullname>Amazon RDS Performance Insights</fullname>
  * 
- *  Guide</i>>
+ *  Amazon RDS Performance Insights enables you to monitor and explore different dimensions of database load based on data
+ *  captured from a running DB instance. The guide provides detailed information about Performance Insights data types,
+ *  parameters and
  * 
- *  The AWS Performance Insights API provides visibility into the performance of your RDS instance, when Performance
- *  Insights is enabled for supported engine types. While Amazon CloudWatch provides the authoritative source for AWS
- *  service vended monitoring metrics, AWS Performance Insights offers a domain-specific view of database load measured as
- *  Average Active Sessions and provided to API consumers as a 2-dimensional time-series dataset. The time dimension of the
- *  data provides DB load data for each time point in the queried time range, and each time point decomposes overall load in
- *  relation to the requested dimensions, such as SQL, Wait-event, User or Host, measured at that time
+ *  errors>
+ * 
+ *  When Performance Insights is enabled, the Amazon RDS Performance Insights API provides visibility into the performance
+ *  of your DB instance. Amazon CloudWatch provides the authoritative source for AWS service-vended monitoring metrics.
+ *  Performance Insights offers a domain-specific view of DB load.
+ * 
+ *  </p
+ * 
+ *  DB load is measured as Average Active Sessions. Performance Insights provides the data to API consumers as a
+ *  two-dimensional time-series dataset. The time dimension provides DB load data for each time point in the queried time
+ *  range. Each time point decomposes overall load in relation to the requested dimensions, measured at that time point.
+ *  Examples include SQL, Wait event, User, and
+ * 
+ *  Host> <ul> <li>
+ * 
+ *  To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html">Amazon Aurora User
+ * 
+ *  Guide</a>> </li> <li>
+ * 
+ *  To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
+ *  href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Amazon RDS User
  */
 
 /*!
@@ -124,10 +140,31 @@ PiClient::PiClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * For a specific time period, retrieve the top <code>N</code> dimension keys for a
+ *
+ * metric> <note>
+ *
+ * Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500
+ * bytes are
  */
 DescribeDimensionKeysResponse * PiClient::describeDimensionKeys(const DescribeDimensionKeysRequest &request)
 {
     return qobject_cast<DescribeDimensionKeysResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PiClient service, and returns a pointer to an
+ * GetDimensionKeyDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the attributes of the specified dimension group for a DB instance or data source. For example, if you specify a SQL
+ * ID, <code>GetDimensionKeyDetails</code> retrieves the full text of the dimension <code>db.sql.statement</code>
+ * associated with this ID. This operation is useful because <code>GetResourceMetrics</code> and
+ * <code>DescribeDimensionKeys</code> don't support retrieval of large SQL statement
+ */
+GetDimensionKeyDetailsResponse * PiClient::getDimensionKeyDetails(const GetDimensionKeyDetailsRequest &request)
+{
+    return qobject_cast<GetDimensionKeyDetailsResponse *>(send(request));
 }
 
 /*!
@@ -138,6 +175,11 @@ DescribeDimensionKeysResponse * PiClient::describeDimensionKeys(const DescribeDi
  *
  * Retrieve Performance Insights metrics for a set of data sources, over a time period. You can provide specific dimension
  * groups and dimensions, and provide aggregation and filtering criteria for each
+ *
+ * group> <note>
+ *
+ * Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500
+ * bytes are
  */
 GetResourceMetricsResponse * PiClient::getResourceMetrics(const GetResourceMetricsRequest &request)
 {

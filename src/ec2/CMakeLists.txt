@@ -5,6 +5,14 @@ add_library(QtAwsEc2
   acceptreservedinstancesexchangequoterequest_p.h
   acceptreservedinstancesexchangequoteresponse.h
   acceptreservedinstancesexchangequoteresponse_p.h
+  accepttransitgatewaymulticastdomainassociationsrequest.h
+  accepttransitgatewaymulticastdomainassociationsrequest_p.h
+  accepttransitgatewaymulticastdomainassociationsresponse.h
+  accepttransitgatewaymulticastdomainassociationsresponse_p.h
+  accepttransitgatewaypeeringattachmentrequest.h
+  accepttransitgatewaypeeringattachmentrequest_p.h
+  accepttransitgatewaypeeringattachmentresponse.h
+  accepttransitgatewaypeeringattachmentresponse_p.h
   accepttransitgatewayvpcattachmentrequest.h
   accepttransitgatewayvpcattachmentrequest_p.h
   accepttransitgatewayvpcattachmentresponse.h
@@ -53,6 +61,10 @@ add_library(QtAwsEc2
   associatedhcpoptionsrequest_p.h
   associatedhcpoptionsresponse.h
   associatedhcpoptionsresponse_p.h
+  associateenclavecertificateiamrolerequest.h
+  associateenclavecertificateiamrolerequest_p.h
+  associateenclavecertificateiamroleresponse.h
+  associateenclavecertificateiamroleresponse_p.h
   associateiaminstanceprofilerequest.h
   associateiaminstanceprofilerequest_p.h
   associateiaminstanceprofileresponse.h
@@ -65,6 +77,10 @@ add_library(QtAwsEc2
   associatesubnetcidrblockrequest_p.h
   associatesubnetcidrblockresponse.h
   associatesubnetcidrblockresponse_p.h
+  associatetransitgatewaymulticastdomainrequest.h
+  associatetransitgatewaymulticastdomainrequest_p.h
+  associatetransitgatewaymulticastdomainresponse.h
+  associatetransitgatewaymulticastdomainresponse_p.h
   associatetransitgatewayroutetablerequest.h
   associatetransitgatewayroutetablerequest_p.h
   associatetransitgatewayroutetableresponse.h
@@ -161,6 +177,10 @@ add_library(QtAwsEc2
   createcapacityreservationrequest_p.h
   createcapacityreservationresponse.h
   createcapacityreservationresponse_p.h
+  createcarriergatewayrequest.h
+  createcarriergatewayrequest_p.h
+  createcarriergatewayresponse.h
+  createcarriergatewayresponse_p.h
   createclientvpnendpointrequest.h
   createclientvpnendpointrequest_p.h
   createclientvpnendpointresponse.h
@@ -225,6 +245,18 @@ add_library(QtAwsEc2
   createlaunchtemplateversionrequest_p.h
   createlaunchtemplateversionresponse.h
   createlaunchtemplateversionresponse_p.h
+  createlocalgatewayrouterequest.h
+  createlocalgatewayrouterequest_p.h
+  createlocalgatewayrouteresponse.h
+  createlocalgatewayrouteresponse_p.h
+  createlocalgatewayroutetablevpcassociationrequest.h
+  createlocalgatewayroutetablevpcassociationrequest_p.h
+  createlocalgatewayroutetablevpcassociationresponse.h
+  createlocalgatewayroutetablevpcassociationresponse_p.h
+  createmanagedprefixlistrequest.h
+  createmanagedprefixlistrequest_p.h
+  createmanagedprefixlistresponse.h
+  createmanagedprefixlistresponse_p.h
   createnatgatewayrequest.h
   createnatgatewayrequest_p.h
   createnatgatewayresponse.h
@@ -237,6 +269,10 @@ add_library(QtAwsEc2
   createnetworkaclrequest_p.h
   createnetworkaclresponse.h
   createnetworkaclresponse_p.h
+  createnetworkinsightspathrequest.h
+  createnetworkinsightspathrequest_p.h
+  createnetworkinsightspathresponse.h
+  createnetworkinsightspathresponse_p.h
   createnetworkinterfacepermissionrequest.h
   createnetworkinterfacepermissionrequest_p.h
   createnetworkinterfacepermissionresponse.h
@@ -249,10 +285,18 @@ add_library(QtAwsEc2
   createplacementgrouprequest_p.h
   createplacementgroupresponse.h
   createplacementgroupresponse_p.h
+  createreplacerootvolumetaskrequest.h
+  createreplacerootvolumetaskrequest_p.h
+  createreplacerootvolumetaskresponse.h
+  createreplacerootvolumetaskresponse_p.h
   createreservedinstanceslistingrequest.h
   createreservedinstanceslistingrequest_p.h
   createreservedinstanceslistingresponse.h
   createreservedinstanceslistingresponse_p.h
+  createrestoreimagetaskrequest.h
+  createrestoreimagetaskrequest_p.h
+  createrestoreimagetaskresponse.h
+  createrestoreimagetaskresponse_p.h
   createrouterequest.h
   createrouterequest_p.h
   createrouteresponse.h
@@ -277,6 +321,10 @@ add_library(QtAwsEc2
   createspotdatafeedsubscriptionrequest_p.h
   createspotdatafeedsubscriptionresponse.h
   createspotdatafeedsubscriptionresponse_p.h
+  createstoreimagetaskrequest.h
+  createstoreimagetaskrequest_p.h
+  createstoreimagetaskresponse.h
+  createstoreimagetaskresponse_p.h
   createsubnetrequest.h
   createsubnetrequest_p.h
   createsubnetresponse.h
@@ -301,6 +349,26 @@ add_library(QtAwsEc2
   createtrafficmirrortargetrequest_p.h
   createtrafficmirrortargetresponse.h
   createtrafficmirrortargetresponse_p.h
+  createtransitgatewayconnectpeerrequest.h
+  createtransitgatewayconnectpeerrequest_p.h
+  createtransitgatewayconnectpeerresponse.h
+  createtransitgatewayconnectpeerresponse_p.h
+  createtransitgatewayconnectrequest.h
+  createtransitgatewayconnectrequest_p.h
+  createtransitgatewayconnectresponse.h
+  createtransitgatewayconnectresponse_p.h
+  createtransitgatewaymulticastdomainrequest.h
+  createtransitgatewaymulticastdomainrequest_p.h
+  createtransitgatewaymulticastdomainresponse.h
+  createtransitgatewaymulticastdomainresponse_p.h
+  createtransitgatewaypeeringattachmentrequest.h
+  createtransitgatewaypeeringattachmentrequest_p.h
+  createtransitgatewaypeeringattachmentresponse.h
+  createtransitgatewaypeeringattachmentresponse_p.h
+  createtransitgatewayprefixlistreferencerequest.h
+  createtransitgatewayprefixlistreferencerequest_p.h
+  createtransitgatewayprefixlistreferenceresponse.h
+  createtransitgatewayprefixlistreferenceresponse_p.h
   createtransitgatewayrequest.h
   createtransitgatewayrequest_p.h
   createtransitgatewayresponse.h
@@ -353,6 +421,10 @@ add_library(QtAwsEc2
   createvpngatewayrequest_p.h
   createvpngatewayresponse.h
   createvpngatewayresponse_p.h
+  deletecarriergatewayrequest.h
+  deletecarriergatewayrequest_p.h
+  deletecarriergatewayresponse.h
+  deletecarriergatewayresponse_p.h
   deleteclientvpnendpointrequest.h
   deleteclientvpnendpointrequest_p.h
   deleteclientvpnendpointresponse.h
@@ -401,6 +473,18 @@ add_library(QtAwsEc2
   deletelaunchtemplateversionsrequest_p.h
   deletelaunchtemplateversionsresponse.h
   deletelaunchtemplateversionsresponse_p.h
+  deletelocalgatewayrouterequest.h
+  deletelocalgatewayrouterequest_p.h
+  deletelocalgatewayrouteresponse.h
+  deletelocalgatewayrouteresponse_p.h
+  deletelocalgatewayroutetablevpcassociationrequest.h
+  deletelocalgatewayroutetablevpcassociationrequest_p.h
+  deletelocalgatewayroutetablevpcassociationresponse.h
+  deletelocalgatewayroutetablevpcassociationresponse_p.h
+  deletemanagedprefixlistrequest.h
+  deletemanagedprefixlistrequest_p.h
+  deletemanagedprefixlistresponse.h
+  deletemanagedprefixlistresponse_p.h
   deletenatgatewayrequest.h
   deletenatgatewayrequest_p.h
   deletenatgatewayresponse.h
@@ -413,6 +497,14 @@ add_library(QtAwsEc2
   deletenetworkaclrequest_p.h
   deletenetworkaclresponse.h
   deletenetworkaclresponse_p.h
+  deletenetworkinsightsanalysisrequest.h
+  deletenetworkinsightsanalysisrequest_p.h
+  deletenetworkinsightsanalysisresponse.h
+  deletenetworkinsightsanalysisresponse_p.h
+  deletenetworkinsightspathrequest.h
+  deletenetworkinsightspathrequest_p.h
+  deletenetworkinsightspathresponse.h
+  deletenetworkinsightspathresponse_p.h
   deletenetworkinterfacepermissionrequest.h
   deletenetworkinterfacepermissionrequest_p.h
   deletenetworkinterfacepermissionresponse.h
@@ -425,6 +517,10 @@ add_library(QtAwsEc2
   deleteplacementgrouprequest_p.h
   deleteplacementgroupresponse.h
   deleteplacementgroupresponse_p.h
+  deletequeuedreservedinstancesrequest.h
+  deletequeuedreservedinstancesrequest_p.h
+  deletequeuedreservedinstancesresponse.h
+  deletequeuedreservedinstancesresponse_p.h
   deleterouterequest.h
   deleterouterequest_p.h
   deleterouteresponse.h
@@ -469,6 +565,26 @@ add_library(QtAwsEc2
   deletetrafficmirrortargetrequest_p.h
   deletetrafficmirrortargetresponse.h
   deletetrafficmirrortargetresponse_p.h
+  deletetransitgatewayconnectpeerrequest.h
+  deletetransitgatewayconnectpeerrequest_p.h
+  deletetransitgatewayconnectpeerresponse.h
+  deletetransitgatewayconnectpeerresponse_p.h
+  deletetransitgatewayconnectrequest.h
+  deletetransitgatewayconnectrequest_p.h
+  deletetransitgatewayconnectresponse.h
+  deletetransitgatewayconnectresponse_p.h
+  deletetransitgatewaymulticastdomainrequest.h
+  deletetransitgatewaymulticastdomainrequest_p.h
+  deletetransitgatewaymulticastdomainresponse.h
+  deletetransitgatewaymulticastdomainresponse_p.h
+  deletetransitgatewaypeeringattachmentrequest.h
+  deletetransitgatewaypeeringattachmentrequest_p.h
+  deletetransitgatewaypeeringattachmentresponse.h
+  deletetransitgatewaypeeringattachmentresponse_p.h
+  deletetransitgatewayprefixlistreferencerequest.h
+  deletetransitgatewayprefixlistreferencerequest_p.h
+  deletetransitgatewayprefixlistreferenceresponse.h
+  deletetransitgatewayprefixlistreferenceresponse_p.h
   deletetransitgatewayrequest.h
   deletetransitgatewayrequest_p.h
   deletetransitgatewayresponse.h
@@ -529,10 +645,26 @@ add_library(QtAwsEc2
   deregisterimagerequest_p.h
   deregisterimageresponse.h
   deregisterimageresponse_p.h
+  deregisterinstanceeventnotificationattributesrequest.h
+  deregisterinstanceeventnotificationattributesrequest_p.h
+  deregisterinstanceeventnotificationattributesresponse.h
+  deregisterinstanceeventnotificationattributesresponse_p.h
+  deregistertransitgatewaymulticastgroupmembersrequest.h
+  deregistertransitgatewaymulticastgroupmembersrequest_p.h
+  deregistertransitgatewaymulticastgroupmembersresponse.h
+  deregistertransitgatewaymulticastgroupmembersresponse_p.h
+  deregistertransitgatewaymulticastgroupsourcesrequest.h
+  deregistertransitgatewaymulticastgroupsourcesrequest_p.h
+  deregistertransitgatewaymulticastgroupsourcesresponse.h
+  deregistertransitgatewaymulticastgroupsourcesresponse_p.h
   describeaccountattributesrequest.h
   describeaccountattributesrequest_p.h
   describeaccountattributesresponse.h
   describeaccountattributesresponse_p.h
+  describeaddressesattributerequest.h
+  describeaddressesattributerequest_p.h
+  describeaddressesattributeresponse.h
+  describeaddressesattributeresponse_p.h
   describeaddressesrequest.h
   describeaddressesrequest_p.h
   describeaddressesresponse.h
@@ -557,6 +689,10 @@ add_library(QtAwsEc2
   describecapacityreservationsrequest_p.h
   describecapacityreservationsresponse.h
   describecapacityreservationsresponse_p.h
+  describecarriergatewaysrequest.h
+  describecarriergatewaysrequest_p.h
+  describecarriergatewaysresponse.h
+  describecarriergatewaysresponse_p.h
   describeclassiclinkinstancesrequest.h
   describeclassiclinkinstancesrequest_p.h
   describeclassiclinkinstancesresponse.h
@@ -581,6 +717,10 @@ add_library(QtAwsEc2
   describeclientvpntargetnetworksrequest_p.h
   describeclientvpntargetnetworksresponse.h
   describeclientvpntargetnetworksresponse_p.h
+  describecoippoolsrequest.h
+  describecoippoolsrequest_p.h
+  describecoippoolsresponse.h
+  describecoippoolsresponse_p.h
   describeconversiontasksrequest.h
   describeconversiontasksrequest_p.h
   describeconversiontasksresponse.h
@@ -601,10 +741,18 @@ add_library(QtAwsEc2
   describeelasticgpusrequest_p.h
   describeelasticgpusresponse.h
   describeelasticgpusresponse_p.h
+  describeexportimagetasksrequest.h
+  describeexportimagetasksrequest_p.h
+  describeexportimagetasksresponse.h
+  describeexportimagetasksresponse_p.h
   describeexporttasksrequest.h
   describeexporttasksrequest_p.h
   describeexporttasksresponse.h
   describeexporttasksresponse_p.h
+  describefastsnapshotrestoresrequest.h
+  describefastsnapshotrestoresrequest_p.h
+  describefastsnapshotrestoresresponse.h
+  describefastsnapshotrestoresresponse_p.h
   describefleethistoryrequest.h
   describefleethistoryrequest_p.h
   describefleethistoryresponse.h
@@ -677,6 +825,10 @@ add_library(QtAwsEc2
   describeinstancecreditspecificationsrequest_p.h
   describeinstancecreditspecificationsresponse.h
   describeinstancecreditspecificationsresponse_p.h
+  describeinstanceeventnotificationattributesrequest.h
+  describeinstanceeventnotificationattributesrequest_p.h
+  describeinstanceeventnotificationattributesresponse.h
+  describeinstanceeventnotificationattributesresponse_p.h
   describeinstancesrequest.h
   describeinstancesrequest_p.h
   describeinstancesresponse.h
@@ -685,10 +837,22 @@ add_library(QtAwsEc2
   describeinstancestatusrequest_p.h
   describeinstancestatusresponse.h
   describeinstancestatusresponse_p.h
+  describeinstancetypeofferingsrequest.h
+  describeinstancetypeofferingsrequest_p.h
+  describeinstancetypeofferingsresponse.h
+  describeinstancetypeofferingsresponse_p.h
+  describeinstancetypesrequest.h
+  describeinstancetypesrequest_p.h
+  describeinstancetypesresponse.h
+  describeinstancetypesresponse_p.h
   describeinternetgatewaysrequest.h
   describeinternetgatewaysrequest_p.h
   describeinternetgatewaysresponse.h
   describeinternetgatewaysresponse_p.h
+  describeipv6poolsrequest.h
+  describeipv6poolsrequest_p.h
+  describeipv6poolsresponse.h
+  describeipv6poolsresponse_p.h
   describekeypairsrequest.h
   describekeypairsrequest_p.h
   describekeypairsresponse.h
@@ -701,6 +865,34 @@ add_library(QtAwsEc2
   describelaunchtemplateversionsrequest_p.h
   describelaunchtemplateversionsresponse.h
   describelaunchtemplateversionsresponse_p.h
+  describelocalgatewayroutetablesrequest.h
+  describelocalgatewayroutetablesrequest_p.h
+  describelocalgatewayroutetablesresponse.h
+  describelocalgatewayroutetablesresponse_p.h
+  describelocalgatewayroutetablevirtualinterfacegroupassociationsrequest.h
+  describelocalgatewayroutetablevirtualinterfacegroupassociationsrequest_p.h
+  describelocalgatewayroutetablevirtualinterfacegroupassociationsresponse.h
+  describelocalgatewayroutetablevirtualinterfacegroupassociationsresponse_p.h
+  describelocalgatewayroutetablevpcassociationsrequest.h
+  describelocalgatewayroutetablevpcassociationsrequest_p.h
+  describelocalgatewayroutetablevpcassociationsresponse.h
+  describelocalgatewayroutetablevpcassociationsresponse_p.h
+  describelocalgatewaysrequest.h
+  describelocalgatewaysrequest_p.h
+  describelocalgatewaysresponse.h
+  describelocalgatewaysresponse_p.h
+  describelocalgatewayvirtualinterfacegroupsrequest.h
+  describelocalgatewayvirtualinterfacegroupsrequest_p.h
+  describelocalgatewayvirtualinterfacegroupsresponse.h
+  describelocalgatewayvirtualinterfacegroupsresponse_p.h
+  describelocalgatewayvirtualinterfacesrequest.h
+  describelocalgatewayvirtualinterfacesrequest_p.h
+  describelocalgatewayvirtualinterfacesresponse.h
+  describelocalgatewayvirtualinterfacesresponse_p.h
+  describemanagedprefixlistsrequest.h
+  describemanagedprefixlistsrequest_p.h
+  describemanagedprefixlistsresponse.h
+  describemanagedprefixlistsresponse_p.h
   describemovingaddressesrequest.h
   describemovingaddressesrequest_p.h
   describemovingaddressesresponse.h
@@ -713,6 +905,14 @@ add_library(QtAwsEc2
   describenetworkaclsrequest_p.h
   describenetworkaclsresponse.h
   describenetworkaclsresponse_p.h
+  describenetworkinsightsanalysesrequest.h
+  describenetworkinsightsanalysesrequest_p.h
+  describenetworkinsightsanalysesresponse.h
+  describenetworkinsightsanalysesresponse_p.h
+  describenetworkinsightspathsrequest.h
+  describenetworkinsightspathsrequest_p.h
+  describenetworkinsightspathsresponse.h
+  describenetworkinsightspathsresponse_p.h
   describenetworkinterfaceattributerequest.h
   describenetworkinterfaceattributerequest_p.h
   describenetworkinterfaceattributeresponse.h
@@ -745,6 +945,10 @@ add_library(QtAwsEc2
   describeregionsrequest_p.h
   describeregionsresponse.h
   describeregionsresponse_p.h
+  describereplacerootvolumetasksrequest.h
+  describereplacerootvolumetasksrequest_p.h
+  describereplacerootvolumetasksresponse.h
+  describereplacerootvolumetasksresponse_p.h
   describereservedinstanceslistingsrequest.h
   describereservedinstanceslistingsrequest_p.h
   describereservedinstanceslistingsresponse.h
@@ -817,6 +1021,10 @@ add_library(QtAwsEc2
   describestalesecuritygroupsrequest_p.h
   describestalesecuritygroupsresponse.h
   describestalesecuritygroupsresponse_p.h
+  describestoreimagetasksrequest.h
+  describestoreimagetasksrequest_p.h
+  describestoreimagetasksresponse.h
+  describestoreimagetasksresponse_p.h
   describesubnetsrequest.h
   describesubnetsrequest_p.h
   describesubnetsresponse.h
@@ -841,6 +1049,22 @@ add_library(QtAwsEc2
   describetransitgatewayattachmentsrequest_p.h
   describetransitgatewayattachmentsresponse.h
   describetransitgatewayattachmentsresponse_p.h
+  describetransitgatewayconnectpeersrequest.h
+  describetransitgatewayconnectpeersrequest_p.h
+  describetransitgatewayconnectpeersresponse.h
+  describetransitgatewayconnectpeersresponse_p.h
+  describetransitgatewayconnectsrequest.h
+  describetransitgatewayconnectsrequest_p.h
+  describetransitgatewayconnectsresponse.h
+  describetransitgatewayconnectsresponse_p.h
+  describetransitgatewaymulticastdomainsrequest.h
+  describetransitgatewaymulticastdomainsrequest_p.h
+  describetransitgatewaymulticastdomainsresponse.h
+  describetransitgatewaymulticastdomainsresponse_p.h
+  describetransitgatewaypeeringattachmentsrequest.h
+  describetransitgatewaypeeringattachmentsrequest_p.h
+  describetransitgatewaypeeringattachmentsresponse.h
+  describetransitgatewaypeeringattachmentsresponse_p.h
   describetransitgatewayroutetablesrequest.h
   describetransitgatewayroutetablesrequest_p.h
   describetransitgatewayroutetablesresponse.h
@@ -945,6 +1169,18 @@ add_library(QtAwsEc2
   disableebsencryptionbydefaultrequest_p.h
   disableebsencryptionbydefaultresponse.h
   disableebsencryptionbydefaultresponse_p.h
+  disablefastsnapshotrestoresrequest.h
+  disablefastsnapshotrestoresrequest_p.h
+  disablefastsnapshotrestoresresponse.h
+  disablefastsnapshotrestoresresponse_p.h
+  disableimagedeprecationrequest.h
+  disableimagedeprecationrequest_p.h
+  disableimagedeprecationresponse.h
+  disableimagedeprecationresponse_p.h
+  disableserialconsoleaccessrequest.h
+  disableserialconsoleaccessrequest_p.h
+  disableserialconsoleaccessresponse.h
+  disableserialconsoleaccessresponse_p.h
   disabletransitgatewayroutetablepropagationrequest.h
   disabletransitgatewayroutetablepropagationrequest_p.h
   disabletransitgatewayroutetablepropagationresponse.h
@@ -969,6 +1205,10 @@ add_library(QtAwsEc2
   disassociateclientvpntargetnetworkrequest_p.h
   disassociateclientvpntargetnetworkresponse.h
   disassociateclientvpntargetnetworkresponse_p.h
+  disassociateenclavecertificateiamrolerequest.h
+  disassociateenclavecertificateiamrolerequest_p.h
+  disassociateenclavecertificateiamroleresponse.h
+  disassociateenclavecertificateiamroleresponse_p.h
   disassociateiaminstanceprofilerequest.h
   disassociateiaminstanceprofilerequest_p.h
   disassociateiaminstanceprofileresponse.h
@@ -981,6 +1221,10 @@ add_library(QtAwsEc2
   disassociatesubnetcidrblockrequest_p.h
   disassociatesubnetcidrblockresponse.h
   disassociatesubnetcidrblockresponse_p.h
+  disassociatetransitgatewaymulticastdomainrequest.h
+  disassociatetransitgatewaymulticastdomainrequest_p.h
+  disassociatetransitgatewaymulticastdomainresponse.h
+  disassociatetransitgatewaymulticastdomainresponse_p.h
   disassociatetransitgatewayroutetablerequest.h
   disassociatetransitgatewayroutetablerequest_p.h
   disassociatetransitgatewayroutetableresponse.h
@@ -999,6 +1243,18 @@ add_library(QtAwsEc2
   enableebsencryptionbydefaultrequest_p.h
   enableebsencryptionbydefaultresponse.h
   enableebsencryptionbydefaultresponse_p.h
+  enablefastsnapshotrestoresrequest.h
+  enablefastsnapshotrestoresrequest_p.h
+  enablefastsnapshotrestoresresponse.h
+  enablefastsnapshotrestoresresponse_p.h
+  enableimagedeprecationrequest.h
+  enableimagedeprecationrequest_p.h
+  enableimagedeprecationresponse.h
+  enableimagedeprecationresponse_p.h
+  enableserialconsoleaccessrequest.h
+  enableserialconsoleaccessrequest_p.h
+  enableserialconsoleaccessresponse.h
+  enableserialconsoleaccessresponse_p.h
   enabletransitgatewayroutetablepropagationrequest.h
   enabletransitgatewayroutetablepropagationrequest_p.h
   enabletransitgatewayroutetablepropagationresponse.h
@@ -1027,10 +1283,30 @@ add_library(QtAwsEc2
   exportclientvpnclientconfigurationrequest_p.h
   exportclientvpnclientconfigurationresponse.h
   exportclientvpnclientconfigurationresponse_p.h
+  exportimagerequest.h
+  exportimagerequest_p.h
+  exportimageresponse.h
+  exportimageresponse_p.h
   exporttransitgatewayroutesrequest.h
   exporttransitgatewayroutesrequest_p.h
   exporttransitgatewayroutesresponse.h
   exporttransitgatewayroutesresponse_p.h
+  getassociatedenclavecertificateiamrolesrequest.h
+  getassociatedenclavecertificateiamrolesrequest_p.h
+  getassociatedenclavecertificateiamrolesresponse.h
+  getassociatedenclavecertificateiamrolesresponse_p.h
+  getassociatedipv6poolcidrsrequest.h
+  getassociatedipv6poolcidrsrequest_p.h
+  getassociatedipv6poolcidrsresponse.h
+  getassociatedipv6poolcidrsresponse_p.h
+  getcapacityreservationusagerequest.h
+  getcapacityreservationusagerequest_p.h
+  getcapacityreservationusageresponse.h
+  getcapacityreservationusageresponse_p.h
+  getcoippoolusagerequest.h
+  getcoippoolusagerequest_p.h
+  getcoippoolusageresponse.h
+  getcoippoolusageresponse_p.h
   getconsoleoutputrequest.h
   getconsoleoutputrequest_p.h
   getconsoleoutputresponse.h
@@ -1039,6 +1315,10 @@ add_library(QtAwsEc2
   getconsolescreenshotrequest_p.h
   getconsolescreenshotresponse.h
   getconsolescreenshotresponse_p.h
+  getdefaultcreditspecificationrequest.h
+  getdefaultcreditspecificationrequest_p.h
+  getdefaultcreditspecificationresponse.h
+  getdefaultcreditspecificationresponse_p.h
   getebsdefaultkmskeyidrequest.h
   getebsdefaultkmskeyidrequest_p.h
   getebsdefaultkmskeyidresponse.h
@@ -1047,6 +1327,14 @@ add_library(QtAwsEc2
   getebsencryptionbydefaultrequest_p.h
   getebsencryptionbydefaultresponse.h
   getebsencryptionbydefaultresponse_p.h
+  getflowlogsintegrationtemplaterequest.h
+  getflowlogsintegrationtemplaterequest_p.h
+  getflowlogsintegrationtemplateresponse.h
+  getflowlogsintegrationtemplateresponse_p.h
+  getgroupsforcapacityreservationrequest.h
+  getgroupsforcapacityreservationrequest_p.h
+  getgroupsforcapacityreservationresponse.h
+  getgroupsforcapacityreservationresponse_p.h
   gethostreservationpurchasepreviewrequest.h
   gethostreservationpurchasepreviewrequest_p.h
   gethostreservationpurchasepreviewresponse.h
@@ -1055,6 +1343,14 @@ add_library(QtAwsEc2
   getlaunchtemplatedatarequest_p.h
   getlaunchtemplatedataresponse.h
   getlaunchtemplatedataresponse_p.h
+  getmanagedprefixlistassociationsrequest.h
+  getmanagedprefixlistassociationsrequest_p.h
+  getmanagedprefixlistassociationsresponse.h
+  getmanagedprefixlistassociationsresponse_p.h
+  getmanagedprefixlistentriesrequest.h
+  getmanagedprefixlistentriesrequest_p.h
+  getmanagedprefixlistentriesresponse.h
+  getmanagedprefixlistentriesresponse_p.h
   getpassworddatarequest.h
   getpassworddatarequest_p.h
   getpassworddataresponse.h
@@ -1063,10 +1359,22 @@ add_library(QtAwsEc2
   getreservedinstancesexchangequoterequest_p.h
   getreservedinstancesexchangequoteresponse.h
   getreservedinstancesexchangequoteresponse_p.h
+  getserialconsoleaccessstatusrequest.h
+  getserialconsoleaccessstatusrequest_p.h
+  getserialconsoleaccessstatusresponse.h
+  getserialconsoleaccessstatusresponse_p.h
   gettransitgatewayattachmentpropagationsrequest.h
   gettransitgatewayattachmentpropagationsrequest_p.h
   gettransitgatewayattachmentpropagationsresponse.h
   gettransitgatewayattachmentpropagationsresponse_p.h
+  gettransitgatewaymulticastdomainassociationsrequest.h
+  gettransitgatewaymulticastdomainassociationsrequest_p.h
+  gettransitgatewaymulticastdomainassociationsresponse.h
+  gettransitgatewaymulticastdomainassociationsresponse_p.h
+  gettransitgatewayprefixlistreferencesrequest.h
+  gettransitgatewayprefixlistreferencesrequest_p.h
+  gettransitgatewayprefixlistreferencesresponse.h
+  gettransitgatewayprefixlistreferencesresponse_p.h
   gettransitgatewayroutetableassociationsrequest.h
   gettransitgatewayroutetableassociationsrequest_p.h
   gettransitgatewayroutetableassociationsresponse.h
@@ -1099,6 +1407,14 @@ add_library(QtAwsEc2
   importvolumerequest_p.h
   importvolumeresponse.h
   importvolumeresponse_p.h
+  modifyaddressattributerequest.h
+  modifyaddressattributerequest_p.h
+  modifyaddressattributeresponse.h
+  modifyaddressattributeresponse_p.h
+  modifyavailabilityzonegrouprequest.h
+  modifyavailabilityzonegrouprequest_p.h
+  modifyavailabilityzonegroupresponse.h
+  modifyavailabilityzonegroupresponse_p.h
   modifycapacityreservationrequest.h
   modifycapacityreservationrequest_p.h
   modifycapacityreservationresponse.h
@@ -1107,6 +1423,10 @@ add_library(QtAwsEc2
   modifyclientvpnendpointrequest_p.h
   modifyclientvpnendpointresponse.h
   modifyclientvpnendpointresponse_p.h
+  modifydefaultcreditspecificationrequest.h
+  modifydefaultcreditspecificationrequest_p.h
+  modifydefaultcreditspecificationresponse.h
+  modifydefaultcreditspecificationresponse_p.h
   modifyebsdefaultkmskeyidrequest.h
   modifyebsdefaultkmskeyidrequest_p.h
   modifyebsdefaultkmskeyidresponse.h
@@ -1151,6 +1471,10 @@ add_library(QtAwsEc2
   modifyinstanceeventstarttimerequest_p.h
   modifyinstanceeventstarttimeresponse.h
   modifyinstanceeventstarttimeresponse_p.h
+  modifyinstancemetadataoptionsrequest.h
+  modifyinstancemetadataoptionsrequest_p.h
+  modifyinstancemetadataoptionsresponse.h
+  modifyinstancemetadataoptionsresponse_p.h
   modifyinstanceplacementrequest.h
   modifyinstanceplacementrequest_p.h
   modifyinstanceplacementresponse.h
@@ -1159,6 +1483,10 @@ add_library(QtAwsEc2
   modifylaunchtemplaterequest_p.h
   modifylaunchtemplateresponse.h
   modifylaunchtemplateresponse_p.h
+  modifymanagedprefixlistrequest.h
+  modifymanagedprefixlistrequest_p.h
+  modifymanagedprefixlistresponse.h
+  modifymanagedprefixlistresponse_p.h
   modifynetworkinterfaceattributerequest.h
   modifynetworkinterfaceattributerequest_p.h
   modifynetworkinterfaceattributeresponse.h
@@ -1191,6 +1519,14 @@ add_library(QtAwsEc2
   modifytrafficmirrorsessionrequest_p.h
   modifytrafficmirrorsessionresponse.h
   modifytrafficmirrorsessionresponse_p.h
+  modifytransitgatewayprefixlistreferencerequest.h
+  modifytransitgatewayprefixlistreferencerequest_p.h
+  modifytransitgatewayprefixlistreferenceresponse.h
+  modifytransitgatewayprefixlistreferenceresponse_p.h
+  modifytransitgatewayrequest.h
+  modifytransitgatewayrequest_p.h
+  modifytransitgatewayresponse.h
+  modifytransitgatewayresponse_p.h
   modifytransitgatewayvpcattachmentrequest.h
   modifytransitgatewayvpcattachmentrequest_p.h
   modifytransitgatewayvpcattachmentresponse.h
@@ -1231,10 +1567,22 @@ add_library(QtAwsEc2
   modifyvpctenancyrequest_p.h
   modifyvpctenancyresponse.h
   modifyvpctenancyresponse_p.h
+  modifyvpnconnectionoptionsrequest.h
+  modifyvpnconnectionoptionsrequest_p.h
+  modifyvpnconnectionoptionsresponse.h
+  modifyvpnconnectionoptionsresponse_p.h
   modifyvpnconnectionrequest.h
   modifyvpnconnectionrequest_p.h
   modifyvpnconnectionresponse.h
   modifyvpnconnectionresponse_p.h
+  modifyvpntunnelcertificaterequest.h
+  modifyvpntunnelcertificaterequest_p.h
+  modifyvpntunnelcertificateresponse.h
+  modifyvpntunnelcertificateresponse_p.h
+  modifyvpntunneloptionsrequest.h
+  modifyvpntunneloptionsrequest_p.h
+  modifyvpntunneloptionsresponse.h
+  modifyvpntunneloptionsresponse_p.h
   monitorinstancesrequest.h
   monitorinstancesrequest_p.h
   monitorinstancesresponse.h
@@ -1267,6 +1615,26 @@ add_library(QtAwsEc2
   registerimagerequest_p.h
   registerimageresponse.h
   registerimageresponse_p.h
+  registerinstanceeventnotificationattributesrequest.h
+  registerinstanceeventnotificationattributesrequest_p.h
+  registerinstanceeventnotificationattributesresponse.h
+  registerinstanceeventnotificationattributesresponse_p.h
+  registertransitgatewaymulticastgroupmembersrequest.h
+  registertransitgatewaymulticastgroupmembersrequest_p.h
+  registertransitgatewaymulticastgroupmembersresponse.h
+  registertransitgatewaymulticastgroupmembersresponse_p.h
+  registertransitgatewaymulticastgroupsourcesrequest.h
+  registertransitgatewaymulticastgroupsourcesrequest_p.h
+  registertransitgatewaymulticastgroupsourcesresponse.h
+  registertransitgatewaymulticastgroupsourcesresponse_p.h
+  rejecttransitgatewaymulticastdomainassociationsrequest.h
+  rejecttransitgatewaymulticastdomainassociationsrequest_p.h
+  rejecttransitgatewaymulticastdomainassociationsresponse.h
+  rejecttransitgatewaymulticastdomainassociationsresponse_p.h
+  rejecttransitgatewaypeeringattachmentrequest.h
+  rejecttransitgatewaypeeringattachmentrequest_p.h
+  rejecttransitgatewaypeeringattachmentresponse.h
+  rejecttransitgatewaypeeringattachmentresponse_p.h
   rejecttransitgatewayvpcattachmentrequest.h
   rejecttransitgatewayvpcattachmentrequest_p.h
   rejecttransitgatewayvpcattachmentresponse.h
@@ -1323,6 +1691,10 @@ add_library(QtAwsEc2
   requestspotinstancesrequest_p.h
   requestspotinstancesresponse.h
   requestspotinstancesresponse_p.h
+  resetaddressattributerequest.h
+  resetaddressattributerequest_p.h
+  resetaddressattributeresponse.h
+  resetaddressattributeresponse_p.h
   resetebsdefaultkmskeyidrequest.h
   resetebsdefaultkmskeyidrequest_p.h
   resetebsdefaultkmskeyidresponse.h
@@ -1351,6 +1723,10 @@ add_library(QtAwsEc2
   restoreaddresstoclassicrequest_p.h
   restoreaddresstoclassicresponse.h
   restoreaddresstoclassicresponse_p.h
+  restoremanagedprefixlistversionrequest.h
+  restoremanagedprefixlistversionrequest_p.h
+  restoremanagedprefixlistversionresponse.h
+  restoremanagedprefixlistversionresponse_p.h
   revokeclientvpningressrequest.h
   revokeclientvpningressrequest_p.h
   revokeclientvpningressresponse.h
@@ -1371,14 +1747,34 @@ add_library(QtAwsEc2
   runscheduledinstancesrequest_p.h
   runscheduledinstancesresponse.h
   runscheduledinstancesresponse_p.h
+  searchlocalgatewayroutesrequest.h
+  searchlocalgatewayroutesrequest_p.h
+  searchlocalgatewayroutesresponse.h
+  searchlocalgatewayroutesresponse_p.h
+  searchtransitgatewaymulticastgroupsrequest.h
+  searchtransitgatewaymulticastgroupsrequest_p.h
+  searchtransitgatewaymulticastgroupsresponse.h
+  searchtransitgatewaymulticastgroupsresponse_p.h
   searchtransitgatewayroutesrequest.h
   searchtransitgatewayroutesrequest_p.h
   searchtransitgatewayroutesresponse.h
   searchtransitgatewayroutesresponse_p.h
+  senddiagnosticinterruptrequest.h
+  senddiagnosticinterruptrequest_p.h
+  senddiagnosticinterruptresponse.h
+  senddiagnosticinterruptresponse_p.h
   startinstancesrequest.h
   startinstancesrequest_p.h
   startinstancesresponse.h
   startinstancesresponse_p.h
+  startnetworkinsightsanalysisrequest.h
+  startnetworkinsightsanalysisrequest_p.h
+  startnetworkinsightsanalysisresponse.h
+  startnetworkinsightsanalysisresponse_p.h
+  startvpcendpointserviceprivatednsverificationrequest.h
+  startvpcendpointserviceprivatednsverificationrequest_p.h
+  startvpcendpointserviceprivatednsverificationresponse.h
+  startvpcendpointserviceprivatednsverificationresponse_p.h
   stopinstancesrequest.h
   stopinstancesrequest_p.h
   stopinstancesresponse.h
@@ -1417,6 +1813,10 @@ add_library(QtAwsEc2
   withdrawbyoipcidrresponse_p.h
   acceptreservedinstancesexchangequoterequest.cpp
   acceptreservedinstancesexchangequoteresponse.cpp
+  accepttransitgatewaymulticastdomainassociationsrequest.cpp
+  accepttransitgatewaymulticastdomainassociationsresponse.cpp
+  accepttransitgatewaypeeringattachmentrequest.cpp
+  accepttransitgatewaypeeringattachmentresponse.cpp
   accepttransitgatewayvpcattachmentrequest.cpp
   accepttransitgatewayvpcattachmentresponse.cpp
   acceptvpcendpointconnectionsrequest.cpp
@@ -1441,12 +1841,16 @@ add_library(QtAwsEc2
   associateclientvpntargetnetworkresponse.cpp
   associatedhcpoptionsrequest.cpp
   associatedhcpoptionsresponse.cpp
+  associateenclavecertificateiamrolerequest.cpp
+  associateenclavecertificateiamroleresponse.cpp
   associateiaminstanceprofilerequest.cpp
   associateiaminstanceprofileresponse.cpp
   associateroutetablerequest.cpp
   associateroutetableresponse.cpp
   associatesubnetcidrblockrequest.cpp
   associatesubnetcidrblockresponse.cpp
+  associatetransitgatewaymulticastdomainrequest.cpp
+  associatetransitgatewaymulticastdomainresponse.cpp
   associatetransitgatewayroutetablerequest.cpp
   associatetransitgatewayroutetableresponse.cpp
   associatevpccidrblockrequest.cpp
@@ -1495,6 +1899,8 @@ add_library(QtAwsEc2
   copysnapshotresponse.cpp
   createcapacityreservationrequest.cpp
   createcapacityreservationresponse.cpp
+  createcarriergatewayrequest.cpp
+  createcarriergatewayresponse.cpp
   createclientvpnendpointrequest.cpp
   createclientvpnendpointresponse.cpp
   createclientvpnrouterequest.cpp
@@ -1527,20 +1933,32 @@ add_library(QtAwsEc2
   createlaunchtemplateresponse.cpp
   createlaunchtemplateversionrequest.cpp
   createlaunchtemplateversionresponse.cpp
+  createlocalgatewayrouterequest.cpp
+  createlocalgatewayrouteresponse.cpp
+  createlocalgatewayroutetablevpcassociationrequest.cpp
+  createlocalgatewayroutetablevpcassociationresponse.cpp
+  createmanagedprefixlistrequest.cpp
+  createmanagedprefixlistresponse.cpp
   createnatgatewayrequest.cpp
   createnatgatewayresponse.cpp
   createnetworkaclentryrequest.cpp
   createnetworkaclentryresponse.cpp
   createnetworkaclrequest.cpp
   createnetworkaclresponse.cpp
+  createnetworkinsightspathrequest.cpp
+  createnetworkinsightspathresponse.cpp
   createnetworkinterfacepermissionrequest.cpp
   createnetworkinterfacepermissionresponse.cpp
   createnetworkinterfacerequest.cpp
   createnetworkinterfaceresponse.cpp
   createplacementgrouprequest.cpp
   createplacementgroupresponse.cpp
+  createreplacerootvolumetaskrequest.cpp
+  createreplacerootvolumetaskresponse.cpp
   createreservedinstanceslistingrequest.cpp
   createreservedinstanceslistingresponse.cpp
+  createrestoreimagetaskrequest.cpp
+  createrestoreimagetaskresponse.cpp
   createrouterequest.cpp
   createrouteresponse.cpp
   createroutetablerequest.cpp
@@ -1553,6 +1971,8 @@ add_library(QtAwsEc2
   createsnapshotsresponse.cpp
   createspotdatafeedsubscriptionrequest.cpp
   createspotdatafeedsubscriptionresponse.cpp
+  createstoreimagetaskrequest.cpp
+  createstoreimagetaskresponse.cpp
   createsubnetrequest.cpp
   createsubnetresponse.cpp
   createtagsrequest.cpp
@@ -1565,6 +1985,16 @@ add_library(QtAwsEc2
   createtrafficmirrorsessionresponse.cpp
   createtrafficmirrortargetrequest.cpp
   createtrafficmirrortargetresponse.cpp
+  createtransitgatewayconnectpeerrequest.cpp
+  createtransitgatewayconnectpeerresponse.cpp
+  createtransitgatewayconnectrequest.cpp
+  createtransitgatewayconnectresponse.cpp
+  createtransitgatewaymulticastdomainrequest.cpp
+  createtransitgatewaymulticastdomainresponse.cpp
+  createtransitgatewaypeeringattachmentrequest.cpp
+  createtransitgatewaypeeringattachmentresponse.cpp
+  createtransitgatewayprefixlistreferencerequest.cpp
+  createtransitgatewayprefixlistreferenceresponse.cpp
   createtransitgatewayrequest.cpp
   createtransitgatewayresponse.cpp
   createtransitgatewayrouterequest.cpp
@@ -1591,6 +2021,8 @@ add_library(QtAwsEc2
   createvpnconnectionrouteresponse.cpp
   createvpngatewayrequest.cpp
   createvpngatewayresponse.cpp
+  deletecarriergatewayrequest.cpp
+  deletecarriergatewayresponse.cpp
   deleteclientvpnendpointrequest.cpp
   deleteclientvpnendpointresponse.cpp
   deleteclientvpnrouterequest.cpp
@@ -1615,18 +2047,30 @@ add_library(QtAwsEc2
   deletelaunchtemplateresponse.cpp
   deletelaunchtemplateversionsrequest.cpp
   deletelaunchtemplateversionsresponse.cpp
+  deletelocalgatewayrouterequest.cpp
+  deletelocalgatewayrouteresponse.cpp
+  deletelocalgatewayroutetablevpcassociationrequest.cpp
+  deletelocalgatewayroutetablevpcassociationresponse.cpp
+  deletemanagedprefixlistrequest.cpp
+  deletemanagedprefixlistresponse.cpp
   deletenatgatewayrequest.cpp
   deletenatgatewayresponse.cpp
   deletenetworkaclentryrequest.cpp
   deletenetworkaclentryresponse.cpp
   deletenetworkaclrequest.cpp
   deletenetworkaclresponse.cpp
+  deletenetworkinsightsanalysisrequest.cpp
+  deletenetworkinsightsanalysisresponse.cpp
+  deletenetworkinsightspathrequest.cpp
+  deletenetworkinsightspathresponse.cpp
   deletenetworkinterfacepermissionrequest.cpp
   deletenetworkinterfacepermissionresponse.cpp
   deletenetworkinterfacerequest.cpp
   deletenetworkinterfaceresponse.cpp
   deleteplacementgrouprequest.cpp
   deleteplacementgroupresponse.cpp
+  deletequeuedreservedinstancesrequest.cpp
+  deletequeuedreservedinstancesresponse.cpp
   deleterouterequest.cpp
   deleterouteresponse.cpp
   deleteroutetablerequest.cpp
@@ -1649,6 +2093,16 @@ add_library(QtAwsEc2
   deletetrafficmirrorsessionresponse.cpp
   deletetrafficmirrortargetrequest.cpp
   deletetrafficmirrortargetresponse.cpp
+  deletetransitgatewayconnectpeerrequest.cpp
+  deletetransitgatewayconnectpeerresponse.cpp
+  deletetransitgatewayconnectrequest.cpp
+  deletetransitgatewayconnectresponse.cpp
+  deletetransitgatewaymulticastdomainrequest.cpp
+  deletetransitgatewaymulticastdomainresponse.cpp
+  deletetransitgatewaypeeringattachmentrequest.cpp
+  deletetransitgatewaypeeringattachmentresponse.cpp
+  deletetransitgatewayprefixlistreferencerequest.cpp
+  deletetransitgatewayprefixlistreferenceresponse.cpp
   deletetransitgatewayrequest.cpp
   deletetransitgatewayresponse.cpp
   deletetransitgatewayrouterequest.cpp
@@ -1679,8 +2133,16 @@ add_library(QtAwsEc2
   deprovisionbyoipcidrresponse.cpp
   deregisterimagerequest.cpp
   deregisterimageresponse.cpp
+  deregisterinstanceeventnotificationattributesrequest.cpp
+  deregisterinstanceeventnotificationattributesresponse.cpp
+  deregistertransitgatewaymulticastgroupmembersrequest.cpp
+  deregistertransitgatewaymulticastgroupmembersresponse.cpp
+  deregistertransitgatewaymulticastgroupsourcesrequest.cpp
+  deregistertransitgatewaymulticastgroupsourcesresponse.cpp
   describeaccountattributesrequest.cpp
   describeaccountattributesresponse.cpp
+  describeaddressesattributerequest.cpp
+  describeaddressesattributeresponse.cpp
   describeaddressesrequest.cpp
   describeaddressesresponse.cpp
   describeaggregateidformatrequest.cpp
@@ -1693,6 +2155,8 @@ add_library(QtAwsEc2
   describebyoipcidrsresponse.cpp
   describecapacityreservationsrequest.cpp
   describecapacityreservationsresponse.cpp
+  describecarriergatewaysrequest.cpp
+  describecarriergatewaysresponse.cpp
   describeclassiclinkinstancesrequest.cpp
   describeclassiclinkinstancesresponse.cpp
   describeclientvpnauthorizationrulesrequest.cpp
@@ -1705,6 +2169,8 @@ add_library(QtAwsEc2
   describeclientvpnroutesresponse.cpp
   describeclientvpntargetnetworksrequest.cpp
   describeclientvpntargetnetworksresponse.cpp
+  describecoippoolsrequest.cpp
+  describecoippoolsresponse.cpp
   describeconversiontasksrequest.cpp
   describeconversiontasksresponse.cpp
   describecustomergatewaysrequest.cpp
@@ -1715,8 +2181,12 @@ add_library(QtAwsEc2
   describeegressonlyinternetgatewaysresponse.cpp
   describeelasticgpusrequest.cpp
   describeelasticgpusresponse.cpp
+  describeexportimagetasksrequest.cpp
+  describeexportimagetasksresponse.cpp
   describeexporttasksrequest.cpp
   describeexporttasksresponse.cpp
+  describefastsnapshotrestoresrequest.cpp
+  describefastsnapshotrestoresresponse.cpp
   describefleethistoryrequest.cpp
   describefleethistoryresponse.cpp
   describefleetinstancesrequest.cpp
@@ -1753,24 +2223,50 @@ add_library(QtAwsEc2
   describeinstanceattributeresponse.cpp
   describeinstancecreditspecificationsrequest.cpp
   describeinstancecreditspecificationsresponse.cpp
+  describeinstanceeventnotificationattributesrequest.cpp
+  describeinstanceeventnotificationattributesresponse.cpp
   describeinstancesrequest.cpp
   describeinstancesresponse.cpp
   describeinstancestatusrequest.cpp
   describeinstancestatusresponse.cpp
+  describeinstancetypeofferingsrequest.cpp
+  describeinstancetypeofferingsresponse.cpp
+  describeinstancetypesrequest.cpp
+  describeinstancetypesresponse.cpp
   describeinternetgatewaysrequest.cpp
   describeinternetgatewaysresponse.cpp
+  describeipv6poolsrequest.cpp
+  describeipv6poolsresponse.cpp
   describekeypairsrequest.cpp
   describekeypairsresponse.cpp
   describelaunchtemplatesrequest.cpp
   describelaunchtemplatesresponse.cpp
   describelaunchtemplateversionsrequest.cpp
   describelaunchtemplateversionsresponse.cpp
+  describelocalgatewayroutetablesrequest.cpp
+  describelocalgatewayroutetablesresponse.cpp
+  describelocalgatewayroutetablevirtualinterfacegroupassociationsrequest.cpp
+  describelocalgatewayroutetablevirtualinterfacegroupassociationsresponse.cpp
+  describelocalgatewayroutetablevpcassociationsrequest.cpp
+  describelocalgatewayroutetablevpcassociationsresponse.cpp
+  describelocalgatewaysrequest.cpp
+  describelocalgatewaysresponse.cpp
+  describelocalgatewayvirtualinterfacegroupsrequest.cpp
+  describelocalgatewayvirtualinterfacegroupsresponse.cpp
+  describelocalgatewayvirtualinterfacesrequest.cpp
+  describelocalgatewayvirtualinterfacesresponse.cpp
+  describemanagedprefixlistsrequest.cpp
+  describemanagedprefixlistsresponse.cpp
   describemovingaddressesrequest.cpp
   describemovingaddressesresponse.cpp
   describenatgatewaysrequest.cpp
   describenatgatewaysresponse.cpp
   describenetworkaclsrequest.cpp
   describenetworkaclsresponse.cpp
+  describenetworkinsightsanalysesrequest.cpp
+  describenetworkinsightsanalysesresponse.cpp
+  describenetworkinsightspathsrequest.cpp
+  describenetworkinsightspathsresponse.cpp
   describenetworkinterfaceattributerequest.cpp
   describenetworkinterfaceattributeresponse.cpp
   describenetworkinterfacepermissionsrequest.cpp
@@ -1787,6 +2283,8 @@ add_library(QtAwsEc2
   describepublicipv4poolsresponse.cpp
   describeregionsrequest.cpp
   describeregionsresponse.cpp
+  describereplacerootvolumetasksrequest.cpp
+  describereplacerootvolumetasksresponse.cpp
   describereservedinstanceslistingsrequest.cpp
   describereservedinstanceslistingsresponse.cpp
   describereservedinstancesmodificationsrequest.cpp
@@ -1823,6 +2321,8 @@ add_library(QtAwsEc2
   describespotpricehistoryresponse.cpp
   describestalesecuritygroupsrequest.cpp
   describestalesecuritygroupsresponse.cpp
+  describestoreimagetasksrequest.cpp
+  describestoreimagetasksresponse.cpp
   describesubnetsrequest.cpp
   describesubnetsresponse.cpp
   describetagsrequest.cpp
@@ -1835,6 +2335,14 @@ add_library(QtAwsEc2
   describetrafficmirrortargetsresponse.cpp
   describetransitgatewayattachmentsrequest.cpp
   describetransitgatewayattachmentsresponse.cpp
+  describetransitgatewayconnectpeersrequest.cpp
+  describetransitgatewayconnectpeersresponse.cpp
+  describetransitgatewayconnectsrequest.cpp
+  describetransitgatewayconnectsresponse.cpp
+  describetransitgatewaymulticastdomainsrequest.cpp
+  describetransitgatewaymulticastdomainsresponse.cpp
+  describetransitgatewaypeeringattachmentsrequest.cpp
+  describetransitgatewaypeeringattachmentsresponse.cpp
   describetransitgatewayroutetablesrequest.cpp
   describetransitgatewayroutetablesresponse.cpp
   describetransitgatewaysrequest.cpp
@@ -1887,6 +2395,12 @@ add_library(QtAwsEc2
   detachvpngatewayresponse.cpp
   disableebsencryptionbydefaultrequest.cpp
   disableebsencryptionbydefaultresponse.cpp
+  disablefastsnapshotrestoresrequest.cpp
+  disablefastsnapshotrestoresresponse.cpp
+  disableimagedeprecationrequest.cpp
+  disableimagedeprecationresponse.cpp
+  disableserialconsoleaccessrequest.cpp
+  disableserialconsoleaccessresponse.cpp
   disabletransitgatewayroutetablepropagationrequest.cpp
   disabletransitgatewayroutetablepropagationresponse.cpp
   disablevgwroutepropagationrequest.cpp
@@ -1899,12 +2413,16 @@ add_library(QtAwsEc2
   disassociateaddressresponse.cpp
   disassociateclientvpntargetnetworkrequest.cpp
   disassociateclientvpntargetnetworkresponse.cpp
+  disassociateenclavecertificateiamrolerequest.cpp
+  disassociateenclavecertificateiamroleresponse.cpp
   disassociateiaminstanceprofilerequest.cpp
   disassociateiaminstanceprofileresponse.cpp
   disassociateroutetablerequest.cpp
   disassociateroutetableresponse.cpp
   disassociatesubnetcidrblockrequest.cpp
   disassociatesubnetcidrblockresponse.cpp
+  disassociatetransitgatewaymulticastdomainrequest.cpp
+  disassociatetransitgatewaymulticastdomainresponse.cpp
   disassociatetransitgatewayroutetablerequest.cpp
   disassociatetransitgatewayroutetableresponse.cpp
   disassociatevpccidrblockrequest.cpp
@@ -1914,6 +2432,12 @@ add_library(QtAwsEc2
   ec2response.cpp
   enableebsencryptionbydefaultrequest.cpp
   enableebsencryptionbydefaultresponse.cpp
+  enablefastsnapshotrestoresrequest.cpp
+  enablefastsnapshotrestoresresponse.cpp
+  enableimagedeprecationrequest.cpp
+  enableimagedeprecationresponse.cpp
+  enableserialconsoleaccessrequest.cpp
+  enableserialconsoleaccessresponse.cpp
   enabletransitgatewayroutetablepropagationrequest.cpp
   enabletransitgatewayroutetablepropagationresponse.cpp
   enablevgwroutepropagationrequest.cpp
@@ -1928,26 +2452,52 @@ add_library(QtAwsEc2
   exportclientvpnclientcertificaterevocationlistresponse.cpp
   exportclientvpnclientconfigurationrequest.cpp
   exportclientvpnclientconfigurationresponse.cpp
+  exportimagerequest.cpp
+  exportimageresponse.cpp
   exporttransitgatewayroutesrequest.cpp
   exporttransitgatewayroutesresponse.cpp
+  getassociatedenclavecertificateiamrolesrequest.cpp
+  getassociatedenclavecertificateiamrolesresponse.cpp
+  getassociatedipv6poolcidrsrequest.cpp
+  getassociatedipv6poolcidrsresponse.cpp
+  getcapacityreservationusagerequest.cpp
+  getcapacityreservationusageresponse.cpp
+  getcoippoolusagerequest.cpp
+  getcoippoolusageresponse.cpp
   getconsoleoutputrequest.cpp
   getconsoleoutputresponse.cpp
   getconsolescreenshotrequest.cpp
   getconsolescreenshotresponse.cpp
+  getdefaultcreditspecificationrequest.cpp
+  getdefaultcreditspecificationresponse.cpp
   getebsdefaultkmskeyidrequest.cpp
   getebsdefaultkmskeyidresponse.cpp
   getebsencryptionbydefaultrequest.cpp
   getebsencryptionbydefaultresponse.cpp
+  getflowlogsintegrationtemplaterequest.cpp
+  getflowlogsintegrationtemplateresponse.cpp
+  getgroupsforcapacityreservationrequest.cpp
+  getgroupsforcapacityreservationresponse.cpp
   gethostreservationpurchasepreviewrequest.cpp
   gethostreservationpurchasepreviewresponse.cpp
   getlaunchtemplatedatarequest.cpp
   getlaunchtemplatedataresponse.cpp
+  getmanagedprefixlistassociationsrequest.cpp
+  getmanagedprefixlistassociationsresponse.cpp
+  getmanagedprefixlistentriesrequest.cpp
+  getmanagedprefixlistentriesresponse.cpp
   getpassworddatarequest.cpp
   getpassworddataresponse.cpp
   getreservedinstancesexchangequoterequest.cpp
   getreservedinstancesexchangequoteresponse.cpp
+  getserialconsoleaccessstatusrequest.cpp
+  getserialconsoleaccessstatusresponse.cpp
   gettransitgatewayattachmentpropagationsrequest.cpp
   gettransitgatewayattachmentpropagationsresponse.cpp
+  gettransitgatewaymulticastdomainassociationsrequest.cpp
+  gettransitgatewaymulticastdomainassociationsresponse.cpp
+  gettransitgatewayprefixlistreferencesrequest.cpp
+  gettransitgatewayprefixlistreferencesresponse.cpp
   gettransitgatewayroutetableassociationsrequest.cpp
   gettransitgatewayroutetableassociationsresponse.cpp
   gettransitgatewayroutetablepropagationsrequest.cpp
@@ -1964,10 +2514,16 @@ add_library(QtAwsEc2
   importsnapshotresponse.cpp
   importvolumerequest.cpp
   importvolumeresponse.cpp
+  modifyaddressattributerequest.cpp
+  modifyaddressattributeresponse.cpp
+  modifyavailabilityzonegrouprequest.cpp
+  modifyavailabilityzonegroupresponse.cpp
   modifycapacityreservationrequest.cpp
   modifycapacityreservationresponse.cpp
   modifyclientvpnendpointrequest.cpp
   modifyclientvpnendpointresponse.cpp
+  modifydefaultcreditspecificationrequest.cpp
+  modifydefaultcreditspecificationresponse.cpp
   modifyebsdefaultkmskeyidrequest.cpp
   modifyebsdefaultkmskeyidresponse.cpp
   modifyfleetrequest.cpp
@@ -1990,10 +2546,14 @@ add_library(QtAwsEc2
   modifyinstancecreditspecificationresponse.cpp
   modifyinstanceeventstarttimerequest.cpp
   modifyinstanceeventstarttimeresponse.cpp
+  modifyinstancemetadataoptionsrequest.cpp
+  modifyinstancemetadataoptionsresponse.cpp
   modifyinstanceplacementrequest.cpp
   modifyinstanceplacementresponse.cpp
   modifylaunchtemplaterequest.cpp
   modifylaunchtemplateresponse.cpp
+  modifymanagedprefixlistrequest.cpp
+  modifymanagedprefixlistresponse.cpp
   modifynetworkinterfaceattributerequest.cpp
   modifynetworkinterfaceattributeresponse.cpp
   modifyreservedinstancesrequest.cpp
@@ -2010,6 +2570,10 @@ add_library(QtAwsEc2
   modifytrafficmirrorfilterruleresponse.cpp
   modifytrafficmirrorsessionrequest.cpp
   modifytrafficmirrorsessionresponse.cpp
+  modifytransitgatewayprefixlistreferencerequest.cpp
+  modifytransitgatewayprefixlistreferenceresponse.cpp
+  modifytransitgatewayrequest.cpp
+  modifytransitgatewayresponse.cpp
   modifytransitgatewayvpcattachmentrequest.cpp
   modifytransitgatewayvpcattachmentresponse.cpp
   modifyvolumeattributerequest.cpp
@@ -2030,8 +2594,14 @@ add_library(QtAwsEc2
   modifyvpcpeeringconnectionoptionsresponse.cpp
   modifyvpctenancyrequest.cpp
   modifyvpctenancyresponse.cpp
+  modifyvpnconnectionoptionsrequest.cpp
+  modifyvpnconnectionoptionsresponse.cpp
   modifyvpnconnectionrequest.cpp
   modifyvpnconnectionresponse.cpp
+  modifyvpntunnelcertificaterequest.cpp
+  modifyvpntunnelcertificateresponse.cpp
+  modifyvpntunneloptionsrequest.cpp
+  modifyvpntunneloptionsresponse.cpp
   monitorinstancesrequest.cpp
   monitorinstancesresponse.cpp
   moveaddresstovpcrequest.cpp
@@ -2048,6 +2618,16 @@ add_library(QtAwsEc2
   rebootinstancesresponse.cpp
   registerimagerequest.cpp
   registerimageresponse.cpp
+  registerinstanceeventnotificationattributesrequest.cpp
+  registerinstanceeventnotificationattributesresponse.cpp
+  registertransitgatewaymulticastgroupmembersrequest.cpp
+  registertransitgatewaymulticastgroupmembersresponse.cpp
+  registertransitgatewaymulticastgroupsourcesrequest.cpp
+  registertransitgatewaymulticastgroupsourcesresponse.cpp
+  rejecttransitgatewaymulticastdomainassociationsrequest.cpp
+  rejecttransitgatewaymulticastdomainassociationsresponse.cpp
+  rejecttransitgatewaypeeringattachmentrequest.cpp
+  rejecttransitgatewaypeeringattachmentresponse.cpp
   rejecttransitgatewayvpcattachmentrequest.cpp
   rejecttransitgatewayvpcattachmentresponse.cpp
   rejectvpcendpointconnectionsrequest.cpp
@@ -2076,6 +2656,8 @@ add_library(QtAwsEc2
   requestspotfleetresponse.cpp
   requestspotinstancesrequest.cpp
   requestspotinstancesresponse.cpp
+  resetaddressattributerequest.cpp
+  resetaddressattributeresponse.cpp
   resetebsdefaultkmskeyidrequest.cpp
   resetebsdefaultkmskeyidresponse.cpp
   resetfpgaimageattributerequest.cpp
@@ -2090,6 +2672,8 @@ add_library(QtAwsEc2
   resetsnapshotattributeresponse.cpp
   restoreaddresstoclassicrequest.cpp
   restoreaddresstoclassicresponse.cpp
+  restoremanagedprefixlistversionrequest.cpp
+  restoremanagedprefixlistversionresponse.cpp
   revokeclientvpningressrequest.cpp
   revokeclientvpningressresponse.cpp
   revokesecuritygroupegressrequest.cpp
@@ -2100,10 +2684,20 @@ add_library(QtAwsEc2
   runinstancesresponse.cpp
   runscheduledinstancesrequest.cpp
   runscheduledinstancesresponse.cpp
+  searchlocalgatewayroutesrequest.cpp
+  searchlocalgatewayroutesresponse.cpp
+  searchtransitgatewaymulticastgroupsrequest.cpp
+  searchtransitgatewaymulticastgroupsresponse.cpp
   searchtransitgatewayroutesrequest.cpp
   searchtransitgatewayroutesresponse.cpp
+  senddiagnosticinterruptrequest.cpp
+  senddiagnosticinterruptresponse.cpp
   startinstancesrequest.cpp
   startinstancesresponse.cpp
+  startnetworkinsightsanalysisrequest.cpp
+  startnetworkinsightsanalysisresponse.cpp
+  startvpcendpointserviceprivatednsverificationrequest.cpp
+  startvpcendpointserviceprivatednsverificationresponse.cpp
   stopinstancesrequest.cpp
   stopinstancesresponse.cpp
   terminateclientvpnconnectionsrequest.cpp

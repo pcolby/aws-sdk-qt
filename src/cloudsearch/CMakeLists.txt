@@ -59,6 +59,10 @@ add_library(QtAwsCloudSearch
   describeavailabilityoptionsrequest_p.h
   describeavailabilityoptionsresponse.h
   describeavailabilityoptionsresponse_p.h
+  describedomainendpointoptionsrequest.h
+  describedomainendpointoptionsrequest_p.h
+  describedomainendpointoptionsresponse.h
+  describedomainendpointoptionsresponse_p.h
   describedomainsrequest.h
   describedomainsrequest_p.h
   describedomainsresponse.h
@@ -95,6 +99,10 @@ add_library(QtAwsCloudSearch
   updateavailabilityoptionsrequest_p.h
   updateavailabilityoptionsresponse.h
   updateavailabilityoptionsresponse_p.h
+  updatedomainendpointoptionsrequest.h
+  updatedomainendpointoptionsrequest_p.h
+  updatedomainendpointoptionsresponse.h
+  updatedomainendpointoptionsresponse_p.h
   updatescalingparametersrequest.h
   updatescalingparametersrequest_p.h
   updatescalingparametersresponse.h
@@ -132,6 +140,8 @@ add_library(QtAwsCloudSearch
   describeanalysisschemesresponse.cpp
   describeavailabilityoptionsrequest.cpp
   describeavailabilityoptionsresponse.cpp
+  describedomainendpointoptionsrequest.cpp
+  describedomainendpointoptionsresponse.cpp
   describedomainsrequest.cpp
   describedomainsresponse.cpp
   describeexpressionsrequest.cpp
@@ -150,6 +160,8 @@ add_library(QtAwsCloudSearch
   listdomainnamesresponse.cpp
   updateavailabilityoptionsrequest.cpp
   updateavailabilityoptionsresponse.cpp
+  updatedomainendpointoptionsrequest.cpp
+  updatedomainendpointoptionsresponse.cpp
   updatescalingparametersrequest.cpp
   updatescalingparametersresponse.cpp
   updateserviceaccesspoliciesrequest.cpp

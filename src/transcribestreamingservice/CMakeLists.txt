@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsTranscribeStreamingService
+  startmedicalstreamtranscriptionrequest.h
+  startmedicalstreamtranscriptionrequest_p.h
+  startmedicalstreamtranscriptionresponse.h
+  startmedicalstreamtranscriptionresponse_p.h
   startstreamtranscriptionrequest.h
   startstreamtranscriptionrequest_p.h
   startstreamtranscriptionresponse.h
@@ -11,6 +15,8 @@ add_library(QtAwsTranscribeStreamingService
   transcribestreamingservicerequest_p.h
   transcribestreamingserviceresponse.h
   transcribestreamingserviceresponse_p.h
+  startmedicalstreamtranscriptionrequest.cpp
+  startmedicalstreamtranscriptionresponse.cpp
   startstreamtranscriptionrequest.cpp
   startstreamtranscriptionresponse.cpp
   transcribestreamingserviceclient.cpp

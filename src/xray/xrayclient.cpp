@@ -37,6 +37,14 @@
 #include "getgroupresponse.h"
 #include "getgroupsrequest.h"
 #include "getgroupsresponse.h"
+#include "getinsightrequest.h"
+#include "getinsightresponse.h"
+#include "getinsighteventsrequest.h"
+#include "getinsighteventsresponse.h"
+#include "getinsightimpactgraphrequest.h"
+#include "getinsightimpactgraphresponse.h"
+#include "getinsightsummariesrequest.h"
+#include "getinsightsummariesresponse.h"
 #include "getsamplingrulesrequest.h"
 #include "getsamplingrulesresponse.h"
 #include "getsamplingstatisticsummariesrequest.h"
@@ -51,12 +59,18 @@
 #include "gettracegraphresponse.h"
 #include "gettracesummariesrequest.h"
 #include "gettracesummariesresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "putencryptionconfigrequest.h"
 #include "putencryptionconfigresponse.h"
 #include "puttelemetryrecordsrequest.h"
 #include "puttelemetryrecordsresponse.h"
 #include "puttracesegmentsrequest.h"
 #include "puttracesegmentsresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updategrouprequest.h"
 #include "updategroupresponse.h"
 #include "updatesamplingrulerequest.h"
@@ -251,6 +265,61 @@ GetGroupsResponse * XRayClient::getGroups(const GetGroupsRequest &request)
 
 /*!
  * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetInsightResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the summary information of an insight. This includes impact to clients and root cause services, the top
+ * anomalous services, the category, the state of the insight, and the start and end time of the
+ */
+GetInsightResponse * XRayClient::getInsight(const GetInsightRequest &request)
+{
+    return qobject_cast<GetInsightResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetInsightEventsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * X-Ray reevaluates insights periodically until they're resolved, and records each intermediate state as an event. You can
+ * review an insight's events in the Impact Timeline on the Inspect page in the X-Ray
+ */
+GetInsightEventsResponse * XRayClient::getInsightEvents(const GetInsightEventsRequest &request)
+{
+    return qobject_cast<GetInsightEventsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetInsightImpactGraphResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a service graph structure filtered by the specified insight. The service graph is limited to only structural
+ * information. For a complete service graph, use this API with the GetServiceGraph
+ */
+GetInsightImpactGraphResponse * XRayClient::getInsightImpactGraph(const GetInsightImpactGraphRequest &request)
+{
+    return qobject_cast<GetInsightImpactGraphResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * GetInsightSummariesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the summaries of all insights in the specified group matching the provided filter
+ */
+GetInsightSummariesResponse * XRayClient::getInsightSummaries(const GetInsightSummariesRequest &request)
+{
+    return qobject_cast<GetInsightSummariesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
  * GetSamplingRulesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -296,7 +365,8 @@ GetSamplingTargetsResponse * XRayClient::getSamplingTargets(const GetSamplingTar
  *
  * Retrieves a document that describes services that process incoming requests, and downstream services that they call as a
  * result. Root services process incoming requests and make calls to downstream services. Root services are applications
- * that use the AWS X-Ray SDK. Downstream services can be other applications, AWS resources, HTTP web APIs, or SQL
+ * that use the <a href="https://docs.aws.amazon.com/xray/index.html">AWS X-Ray SDK</a>. Downstream services can be other
+ * applications, AWS resources, HTTP web APIs, or SQL
  */
 GetServiceGraphResponse * XRayClient::getServiceGraph(const GetServiceGraphRequest &request)
 {
@@ -335,7 +405,7 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves IDs and metadata for traces available for a specified time frame using an optional filter. To get the full
+ * Retrieves IDs and annotations for traces available for a specified time frame using an optional filter. To get the full
  * traces, pass the trace IDs to
  *
  * <code>BatchGetTraces</code>>
@@ -364,6 +434,19 @@ GetTraceGraphResponse * XRayClient::getTraceGraph(const GetTraceGraphRequest &re
 GetTraceSummariesResponse * XRayClient::getTraceSummaries(const GetTraceSummariesRequest &request)
 {
     return qobject_cast<GetTraceSummariesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of tags that are applied to the specified AWS X-Ray group or sampling
+ */
+ListTagsForResourceResponse * XRayClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
 }
 
 /*!
@@ -398,8 +481,9 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon,
- * which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of
+ * Uploads segment documents to AWS X-Ray. The <a href="https://docs.aws.amazon.com/xray/index.html">X-Ray SDK</a>
+ * generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be
+ * a completed segment, an in-progress segment, or an array of
  *
  * subsegments>
  *
@@ -407,7 +491,7 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-api-segmentdocuments.html">AWS X-Ray Segment Documents</a>
  * in the <i>AWS X-Ray Developer
  *
- * Guide</i>> <p class="title"> <b>Required Segment Document Fields</b>
+ * Guide</i>> <p class="title"> <b>Required segment document fields</b>
  *
  * </p <ul> <li>
  *
@@ -434,9 +518,9 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  * <code>in_progress</code>> </li> <li>
  *
  * <code>in_progress</code> - Set to <code>true</code> instead of specifying an <code>end_time</code> to record that a
- * segment has been started, but is not complete. Send an in progress segment when your application receives a request that
- * will take a long time to serve, to trace the fact that the request was received. When the response is sent, send the
- * complete segment to overwrite the in-progress
+ * segment has been started, but is not complete. Send an in-progress segment when your application receives a request that
+ * will take a long time to serve, to trace that the request was received. When the response is sent, send the complete
+ * segment to overwrite the in-progress
  *
  * segment> </li> </ul>
  *
@@ -447,7 +531,7 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
  *
  * </p <ul> <li>
  *
- * The version number, i.e.
+ * The version number, for instance,
  *
  * <code>1</code>> </li> <li>
  *
@@ -461,6 +545,33 @@ PutTelemetryRecordsResponse * XRayClient::putTelemetryRecords(const PutTelemetry
 PutTraceSegmentsResponse * XRayClient::putTraceSegments(const PutTraceSegmentsRequest &request)
 {
     return qobject_cast<PutTraceSegmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Applies tags to an existing AWS X-Ray group or sampling
+ */
+TagResourceResponse * XRayClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the XRayClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from an AWS X-Ray group or sampling rule. You cannot edit or delete system tags (those with an
+ * <code>aws:</code>
+ */
+UntagResourceResponse * XRayClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

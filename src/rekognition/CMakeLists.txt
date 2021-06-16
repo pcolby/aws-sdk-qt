@@ -9,6 +9,14 @@ add_library(QtAwsRekognition
   createcollectionrequest_p.h
   createcollectionresponse.h
   createcollectionresponse_p.h
+  createprojectrequest.h
+  createprojectrequest_p.h
+  createprojectresponse.h
+  createprojectresponse_p.h
+  createprojectversionrequest.h
+  createprojectversionrequest_p.h
+  createprojectversionresponse.h
+  createprojectversionresponse_p.h
   createstreamprocessorrequest.h
   createstreamprocessorrequest_p.h
   createstreamprocessorresponse.h
@@ -21,6 +29,14 @@ add_library(QtAwsRekognition
   deletefacesrequest_p.h
   deletefacesresponse.h
   deletefacesresponse_p.h
+  deleteprojectrequest.h
+  deleteprojectrequest_p.h
+  deleteprojectresponse.h
+  deleteprojectresponse_p.h
+  deleteprojectversionrequest.h
+  deleteprojectversionrequest_p.h
+  deleteprojectversionresponse.h
+  deleteprojectversionresponse_p.h
   deletestreamprocessorrequest.h
   deletestreamprocessorrequest_p.h
   deletestreamprocessorresponse.h
@@ -29,10 +45,22 @@ add_library(QtAwsRekognition
   describecollectionrequest_p.h
   describecollectionresponse.h
   describecollectionresponse_p.h
+  describeprojectsrequest.h
+  describeprojectsrequest_p.h
+  describeprojectsresponse.h
+  describeprojectsresponse_p.h
+  describeprojectversionsrequest.h
+  describeprojectversionsrequest_p.h
+  describeprojectversionsresponse.h
+  describeprojectversionsresponse_p.h
   describestreamprocessorrequest.h
   describestreamprocessorrequest_p.h
   describestreamprocessorresponse.h
   describestreamprocessorresponse_p.h
+  detectcustomlabelsrequest.h
+  detectcustomlabelsrequest_p.h
+  detectcustomlabelsresponse.h
+  detectcustomlabelsresponse_p.h
   detectfacesrequest.h
   detectfacesrequest_p.h
   detectfacesresponse.h
@@ -45,6 +73,10 @@ add_library(QtAwsRekognition
   detectmoderationlabelsrequest_p.h
   detectmoderationlabelsresponse.h
   detectmoderationlabelsresponse_p.h
+  detectprotectiveequipmentrequest.h
+  detectprotectiveequipmentrequest_p.h
+  detectprotectiveequipmentresponse.h
+  detectprotectiveequipmentresponse_p.h
   detecttextrequest.h
   detecttextrequest_p.h
   detecttextresponse.h
@@ -77,6 +109,14 @@ add_library(QtAwsRekognition
   getpersontrackingrequest_p.h
   getpersontrackingresponse.h
   getpersontrackingresponse_p.h
+  getsegmentdetectionrequest.h
+  getsegmentdetectionrequest_p.h
+  getsegmentdetectionresponse.h
+  getsegmentdetectionresponse_p.h
+  gettextdetectionrequest.h
+  gettextdetectionrequest_p.h
+  gettextdetectionresponse.h
+  gettextdetectionresponse_p.h
   indexfacesrequest.h
   indexfacesrequest_p.h
   indexfacesresponse.h
@@ -93,6 +133,10 @@ add_library(QtAwsRekognition
   liststreamprocessorsrequest_p.h
   liststreamprocessorsresponse.h
   liststreamprocessorsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   recognizecelebritiesrequest.h
   recognizecelebritiesrequest_p.h
   recognizecelebritiesresponse.h
@@ -135,36 +179,76 @@ add_library(QtAwsRekognition
   startpersontrackingrequest_p.h
   startpersontrackingresponse.h
   startpersontrackingresponse_p.h
+  startprojectversionrequest.h
+  startprojectversionrequest_p.h
+  startprojectversionresponse.h
+  startprojectversionresponse_p.h
+  startsegmentdetectionrequest.h
+  startsegmentdetectionrequest_p.h
+  startsegmentdetectionresponse.h
+  startsegmentdetectionresponse_p.h
   startstreamprocessorrequest.h
   startstreamprocessorrequest_p.h
   startstreamprocessorresponse.h
   startstreamprocessorresponse_p.h
+  starttextdetectionrequest.h
+  starttextdetectionrequest_p.h
+  starttextdetectionresponse.h
+  starttextdetectionresponse_p.h
+  stopprojectversionrequest.h
+  stopprojectversionrequest_p.h
+  stopprojectversionresponse.h
+  stopprojectversionresponse_p.h
   stopstreamprocessorrequest.h
   stopstreamprocessorrequest_p.h
   stopstreamprocessorresponse.h
   stopstreamprocessorresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   comparefacesrequest.cpp
   comparefacesresponse.cpp
   createcollectionrequest.cpp
   createcollectionresponse.cpp
+  createprojectrequest.cpp
+  createprojectresponse.cpp
+  createprojectversionrequest.cpp
+  createprojectversionresponse.cpp
   createstreamprocessorrequest.cpp
   createstreamprocessorresponse.cpp
   deletecollectionrequest.cpp
   deletecollectionresponse.cpp
   deletefacesrequest.cpp
   deletefacesresponse.cpp
+  deleteprojectrequest.cpp
+  deleteprojectresponse.cpp
+  deleteprojectversionrequest.cpp
+  deleteprojectversionresponse.cpp
   deletestreamprocessorrequest.cpp
   deletestreamprocessorresponse.cpp
   describecollectionrequest.cpp
   describecollectionresponse.cpp
+  describeprojectsrequest.cpp
+  describeprojectsresponse.cpp
+  describeprojectversionsrequest.cpp
+  describeprojectversionsresponse.cpp
   describestreamprocessorrequest.cpp
   describestreamprocessorresponse.cpp
+  detectcustomlabelsrequest.cpp
+  detectcustomlabelsresponse.cpp
   detectfacesrequest.cpp
   detectfacesresponse.cpp
   detectlabelsrequest.cpp
   detectlabelsresponse.cpp
   detectmoderationlabelsrequest.cpp
   detectmoderationlabelsresponse.cpp
+  detectprotectiveequipmentrequest.cpp
+  detectprotectiveequipmentresponse.cpp
   detecttextrequest.cpp
   detecttextresponse.cpp
   getcelebrityinforequest.cpp
@@ -181,6 +265,10 @@ add_library(QtAwsRekognition
   getlabeldetectionresponse.cpp
   getpersontrackingrequest.cpp
   getpersontrackingresponse.cpp
+  getsegmentdetectionrequest.cpp
+  getsegmentdetectionresponse.cpp
+  gettextdetectionrequest.cpp
+  gettextdetectionresponse.cpp
   indexfacesrequest.cpp
   indexfacesresponse.cpp
   listcollectionsrequest.cpp
@@ -189,6 +277,8 @@ add_library(QtAwsRekognition
   listfacesresponse.cpp
   liststreamprocessorsrequest.cpp
   liststreamprocessorsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   recognizecelebritiesrequest.cpp
   recognizecelebritiesresponse.cpp
   rekognitionclient.cpp
@@ -210,10 +300,22 @@ add_library(QtAwsRekognition
   startlabeldetectionresponse.cpp
   startpersontrackingrequest.cpp
   startpersontrackingresponse.cpp
+  startprojectversionrequest.cpp
+  startprojectversionresponse.cpp
+  startsegmentdetectionrequest.cpp
+  startsegmentdetectionresponse.cpp
   startstreamprocessorrequest.cpp
   startstreamprocessorresponse.cpp
+  starttextdetectionrequest.cpp
+  starttextdetectionresponse.cpp
+  stopprojectversionrequest.cpp
+  stopprojectversionresponse.cpp
   stopstreamprocessorrequest.cpp
-  stopstreamprocessorresponse.cpp)
+  stopstreamprocessorresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 add_dependencies(QtAwsRekognition QtAwsCore)
 

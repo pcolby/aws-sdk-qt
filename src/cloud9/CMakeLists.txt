@@ -39,6 +39,18 @@ add_library(QtAwsCloud9
   listenvironmentsrequest_p.h
   listenvironmentsresponse.h
   listenvironmentsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateenvironmentmembershiprequest.h
   updateenvironmentmembershiprequest_p.h
   updateenvironmentmembershipresponse.h
@@ -66,6 +78,12 @@ add_library(QtAwsCloud9
   describeenvironmentstatusresponse.cpp
   listenvironmentsrequest.cpp
   listenvironmentsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateenvironmentmembershiprequest.cpp
   updateenvironmentmembershipresponse.cpp
   updateenvironmentrequest.cpp

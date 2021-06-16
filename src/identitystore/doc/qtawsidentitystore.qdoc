@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsIdentityStore
+    \title IdentityStore C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS IdentityStore functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

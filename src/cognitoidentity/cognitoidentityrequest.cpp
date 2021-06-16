@@ -46,12 +46,14 @@ namespace CognitoIdentity {
  * \value GetIdentityPoolRolesAction CognitoIdentity GetIdentityPoolRoles action.
  * \value GetOpenIdTokenAction CognitoIdentity GetOpenIdToken action.
  * \value GetOpenIdTokenForDeveloperIdentityAction CognitoIdentity GetOpenIdTokenForDeveloperIdentity action.
+ * \value GetPrincipalTagAttributeMapAction CognitoIdentity GetPrincipalTagAttributeMap action.
  * \value ListIdentitiesAction CognitoIdentity ListIdentities action.
  * \value ListIdentityPoolsAction CognitoIdentity ListIdentityPools action.
  * \value ListTagsForResourceAction CognitoIdentity ListTagsForResource action.
  * \value LookupDeveloperIdentityAction CognitoIdentity LookupDeveloperIdentity action.
  * \value MergeDeveloperIdentitiesAction CognitoIdentity MergeDeveloperIdentities action.
  * \value SetIdentityPoolRolesAction CognitoIdentity SetIdentityPoolRoles action.
+ * \value SetPrincipalTagAttributeMapAction CognitoIdentity SetPrincipalTagAttributeMap action.
  * \value TagResourceAction CognitoIdentity TagResource action.
  * \value UnlinkDeveloperIdentityAction CognitoIdentity UnlinkDeveloperIdentity action.
  * \value UnlinkIdentityAction CognitoIdentity UnlinkIdentity action.

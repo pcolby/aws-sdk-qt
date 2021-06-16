@@ -21,6 +21,8 @@
 #include "appsyncclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createapicacherequest.h"
+#include "createapicacheresponse.h"
 #include "createapikeyrequest.h"
 #include "createapikeyresponse.h"
 #include "createdatasourcerequest.h"
@@ -33,6 +35,8 @@
 #include "createresolverresponse.h"
 #include "createtyperequest.h"
 #include "createtyperesponse.h"
+#include "deleteapicacherequest.h"
+#include "deleteapicacheresponse.h"
 #include "deleteapikeyrequest.h"
 #include "deleteapikeyresponse.h"
 #include "deletedatasourcerequest.h"
@@ -45,6 +49,10 @@
 #include "deleteresolverresponse.h"
 #include "deletetyperequest.h"
 #include "deletetyperesponse.h"
+#include "flushapicacherequest.h"
+#include "flushapicacheresponse.h"
+#include "getapicacherequest.h"
+#include "getapicacheresponse.h"
 #include "getdatasourcerequest.h"
 #include "getdatasourceresponse.h"
 #include "getfunctionrequest.h"
@@ -81,6 +89,8 @@
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateapicacherequest.h"
+#include "updateapicacheresponse.h"
 #include "updateapikeyrequest.h"
 #include "updateapikeyresponse.h"
 #include "updatedatasourcerequest.h"
@@ -174,6 +184,19 @@ AppSyncClient::AppSyncClient(
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * CreateApiCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a cache for the GraphQL
+ */
+CreateApiCacheResponse * AppSyncClient::createApiCache(const CreateApiCacheRequest &request)
+{
+    return qobject_cast<CreateApiCacheResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * CreateApiKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -261,6 +284,19 @@ CreateTypeResponse * AppSyncClient::createType(const CreateTypeRequest &request)
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * DeleteApiCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an <code>ApiCache</code>
+ */
+DeleteApiCacheResponse * AppSyncClient::deleteApiCache(const DeleteApiCacheRequest &request)
+{
+    return qobject_cast<DeleteApiCacheResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * DeleteApiKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -335,6 +371,32 @@ DeleteResolverResponse * AppSyncClient::deleteResolver(const DeleteResolverReque
 DeleteTypeResponse * AppSyncClient::deleteType(const DeleteTypeRequest &request)
 {
     return qobject_cast<DeleteTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * FlushApiCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Flushes an <code>ApiCache</code>
+ */
+FlushApiCacheResponse * AppSyncClient::flushApiCache(const FlushApiCacheRequest &request)
+{
+    return qobject_cast<FlushApiCacheResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * GetApiCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves an <code>ApiCache</code>
+ */
+GetApiCacheResponse * AppSyncClient::getApiCache(const GetApiCacheRequest &request)
+{
+    return qobject_cast<GetApiCacheResponse *>(send(request));
 }
 
 /*!
@@ -438,7 +500,7 @@ GetTypeResponse * AppSyncClient::getType(const GetTypeRequest &request)
  *
  * API> <note>
  *
- * API keys are deleted automatically sometime after they expire. However, they may still be included in the response until
+ * API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until
  * they have actually been deleted. You can safely call <code>DeleteApiKey</code> to manually delete a key before it's
  * automatically
  */
@@ -583,11 +645,24 @@ UntagResourceResponse * AppSyncClient::untagResource(const UntagResourceRequest 
 
 /*!
  * Sends \a request to the AppSyncClient service, and returns a pointer to an
+ * UpdateApiCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the cache for the GraphQL
+ */
+UpdateApiCacheResponse * AppSyncClient::updateApiCache(const UpdateApiCacheRequest &request)
+{
+    return qobject_cast<UpdateApiCacheResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AppSyncClient service, and returns a pointer to an
  * UpdateApiKeyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an API
+ * Updates an API key. The key can be updated while it is not
  */
 UpdateApiKeyResponse * AppSyncClient::updateApiKey(const UpdateApiKeyRequest &request)
 {

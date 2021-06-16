@@ -58,19 +58,46 @@ namespace AutoScalingPlans {
  *
  *  <fullname>AWS Auto Scaling</fullname>
  * 
- *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
- *  scaling and predictive scaling for your resources using scaling plans. Use this service in conjunction with the Amazon
- *  EC2 Auto Scaling, Application Auto Scaling, Amazon CloudWatch, and AWS CloudFormation services.
+ *  Use AWS Auto Scaling to create scaling plans for your applications to automatically scale your scalable AWS resources.
  * 
  *  </p
  * 
- *  Currently, predictive scaling is only available for Amazon EC2 Auto Scaling
+ *  <b>API Summary</b>
  * 
- *  groups>
+ *  </p
  * 
- *  For more information about AWS Auto Scaling, including information about granting IAM users required permissions for AWS
- *  Auto Scaling actions, see the <a
+ *  You can use the AWS Auto Scaling service API to accomplish the following
+ * 
+ *  tasks> <ul> <li>
+ * 
+ *  Create and manage scaling
+ * 
+ *  plan> </li> <li>
+ * 
+ *  Define target tracking scaling policies to dynamically scale your resources based on
+ * 
+ *  utilizatio> </li> <li>
+ * 
+ *  Scale Amazon EC2 Auto Scaling groups using predictive scaling and dynamic scaling to scale your Amazon EC2 capacity
+ * 
+ *  faste> </li> <li>
+ * 
+ *  Set minimum and maximum capacity
+ * 
+ *  limit> </li> <li>
+ * 
+ *  Retrieve information on existing scaling
+ * 
+ *  plan> </li> <li>
+ * 
+ *  Access current forecast data and historical forecast data for up to 56 days
+ * 
+ *  previou> </li> </ul>
+ * 
+ *  To learn more about AWS Auto Scaling, including information about granting IAM users required permissions for AWS Auto
+ *  Scaling actions, see the <a
  *  href="https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html">AWS Auto Scaling User
+ *  Guide</a>.
  */
 
 /*!
@@ -91,7 +118,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     Q_D(AutoScalingPlansClient);
     d->apiVersion = QStringLiteral("2018-01-06");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("autoscaling");
+    d->endpointPrefix = QStringLiteral("autoscaling-plans");
     d->networkAccessManager = manager;
     d->region = region;
     d->serviceFullName = QStringLiteral("AWS Auto Scaling Plans");
@@ -120,7 +147,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     d->apiVersion = QStringLiteral("2018-01-06");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("autoscaling");
+    d->endpointPrefix = QStringLiteral("autoscaling-plans");
     d->networkAccessManager = manager;
     d->serviceFullName = QStringLiteral("AWS Auto Scaling Plans");
     d->serviceName = QStringLiteral("autoscaling-plans");
@@ -132,7 +159,7 @@ AutoScalingPlansClient::AutoScalingPlansClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a scaling
+ * Creates a scaling plan.
  */
 CreateScalingPlanResponse * AutoScalingPlansClient::createScalingPlan(const CreateScalingPlanRequest &request)
 {

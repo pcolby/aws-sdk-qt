@@ -47,6 +47,7 @@ public:
         DeregisterWebhookWithThirdPartyAction,
         DisableStageTransitionAction,
         EnableStageTransitionAction,
+        GetActionTypeAction,
         GetJobDetailsAction,
         GetPipelineAction,
         GetPipelineExecutionAction,
@@ -70,8 +71,10 @@ public:
         RegisterWebhookWithThirdPartyAction,
         RetryStageExecutionAction,
         StartPipelineExecutionAction,
+        StopPipelineExecutionAction,
         TagResourceAction,
         UntagResourceAction,
+        UpdateActionTypeAction,
         UpdatePipelineAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

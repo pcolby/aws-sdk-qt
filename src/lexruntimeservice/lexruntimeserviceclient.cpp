@@ -21,10 +21,16 @@
 #include "lexruntimeserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "deletesessionrequest.h"
+#include "deletesessionresponse.h"
+#include "getsessionrequest.h"
+#include "getsessionresponse.h"
 #include "postcontentrequest.h"
 #include "postcontentresponse.h"
 #include "posttextrequest.h"
 #include "posttextresponse.h"
+#include "putsessionrequest.h"
+#include "putsessionresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -112,6 +118,32 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
 
 /*!
  * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * DeleteSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes session information for a specified bot, alias, and user ID.
+ */
+DeleteSessionResponse * LexRuntimeServiceClient::deleteSession(const DeleteSessionRequest &request)
+{
+    return qobject_cast<DeleteSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * GetSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns session information for a specified bot, alias, and user
+ */
+GetSessionResponse * LexRuntimeServiceClient::getSession(const GetSessionRequest &request)
+{
+    return qobject_cast<GetSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
  * PostContentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -185,7 +217,7 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
  * </p </li> </ul>
  *
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
- * <a href="http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
+ * <a href="https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
  */
 PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequest &request)
 {
@@ -198,8 +230,8 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sends user input (text-only) to Amazon Lex. Client applications can use this API to send requests to Amazon Lex at
- * runtime. Amazon Lex then interprets the user input using the machine learning model it built for the bot.
+ * Sends user input to Amazon Lex. Client applications can use this API to send requests to Amazon Lex at runtime. Amazon
+ * Lex then interprets the user input using the machine learning model it built for the bot.
  *
  * </p
  *
@@ -262,11 +294,29 @@ PostContentResponse * LexRuntimeServiceClient::postContent(const PostContentRequ
  * </p </li> </ul>
  *
  * In addition, Amazon Lex also returns your application-specific <code>sessionAttributes</code>. For more information, see
- * <a href="http://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
+ * <a href="https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing Conversation Context</a>.
  */
 PostTextResponse * LexRuntimeServiceClient::postText(const PostTextRequest &request)
 {
     return qobject_cast<PostTextResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LexRuntimeServiceClient service, and returns a pointer to an
+ * PutSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new session or modifies an existing session with an Amazon Lex bot. Use this operation to enable your
+ * application to set the state of the
+ *
+ * bot>
+ *
+ * For more information, see <a href="https://docs.aws.amazon.com/lex/latest/dg/how-session-api.html">Managing
+ */
+PutSessionResponse * LexRuntimeServiceClient::putSession(const PutSessionRequest &request)
+{
+    return qobject_cast<PutSessionResponse *>(send(request));
 }
 
 /*!

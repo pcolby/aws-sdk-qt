@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIoTSiteWise
+description = AWS IoTSiteWise SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsiotsitewise-index.html"
+navigation.landingtitle = "IoTSiteWise"
+navigation.cppclassespage = "IoTSiteWise C++ Classes"

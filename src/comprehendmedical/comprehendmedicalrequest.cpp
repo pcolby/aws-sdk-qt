@@ -36,8 +36,27 @@ namespace ComprehendMedical {
  * This enum describes the actions that can be performed as ComprehendMedical
  * requests.
  *
+ * \value DescribeEntitiesDetectionV2JobAction ComprehendMedical DescribeEntitiesDetectionV2Job action.
+ * \value DescribeICD10CMInferenceJobAction ComprehendMedical DescribeICD10CMInferenceJob action.
+ * \value DescribePHIDetectionJobAction ComprehendMedical DescribePHIDetectionJob action.
+ * \value DescribeRxNormInferenceJobAction ComprehendMedical DescribeRxNormInferenceJob action.
  * \value DetectEntitiesAction ComprehendMedical DetectEntities action.
+ * \value DetectEntitiesV2Action ComprehendMedical DetectEntitiesV2 action.
  * \value DetectPHIAction ComprehendMedical DetectPHI action.
+ * \value InferICD10CMAction ComprehendMedical InferICD10CM action.
+ * \value InferRxNormAction ComprehendMedical InferRxNorm action.
+ * \value ListEntitiesDetectionV2JobsAction ComprehendMedical ListEntitiesDetectionV2Jobs action.
+ * \value ListICD10CMInferenceJobsAction ComprehendMedical ListICD10CMInferenceJobs action.
+ * \value ListPHIDetectionJobsAction ComprehendMedical ListPHIDetectionJobs action.
+ * \value ListRxNormInferenceJobsAction ComprehendMedical ListRxNormInferenceJobs action.
+ * \value StartEntitiesDetectionV2JobAction ComprehendMedical StartEntitiesDetectionV2Job action.
+ * \value StartICD10CMInferenceJobAction ComprehendMedical StartICD10CMInferenceJob action.
+ * \value StartPHIDetectionJobAction ComprehendMedical StartPHIDetectionJob action.
+ * \value StartRxNormInferenceJobAction ComprehendMedical StartRxNormInferenceJob action.
+ * \value StopEntitiesDetectionV2JobAction ComprehendMedical StopEntitiesDetectionV2Job action.
+ * \value StopICD10CMInferenceJobAction ComprehendMedical StopICD10CMInferenceJob action.
+ * \value StopPHIDetectionJobAction ComprehendMedical StopPHIDetectionJob action.
+ * \value StopRxNormInferenceJobAction ComprehendMedical StopRxNormInferenceJob action.
  */
 
 /*!

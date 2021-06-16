@@ -39,6 +39,7 @@ public:
     enum Action {
         DeleteReportDefinitionAction,
         DescribeReportDefinitionsAction,
+        ModifyReportDefinitionAction,
         PutReportDefinitionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

@@ -33,22 +33,34 @@
 #include "deleteconfigurationaggregatorresponse.h"
 #include "deleteconfigurationrecorderrequest.h"
 #include "deleteconfigurationrecorderresponse.h"
+#include "deleteconformancepackrequest.h"
+#include "deleteconformancepackresponse.h"
 #include "deletedeliverychannelrequest.h"
 #include "deletedeliverychannelresponse.h"
 #include "deleteevaluationresultsrequest.h"
 #include "deleteevaluationresultsresponse.h"
 #include "deleteorganizationconfigrulerequest.h"
 #include "deleteorganizationconfigruleresponse.h"
+#include "deleteorganizationconformancepackrequest.h"
+#include "deleteorganizationconformancepackresponse.h"
 #include "deletependingaggregationrequestrequest.h"
 #include "deletependingaggregationrequestresponse.h"
 #include "deleteremediationconfigurationrequest.h"
 #include "deleteremediationconfigurationresponse.h"
+#include "deleteremediationexceptionsrequest.h"
+#include "deleteremediationexceptionsresponse.h"
+#include "deleteresourceconfigrequest.h"
+#include "deleteresourceconfigresponse.h"
 #include "deleteretentionconfigurationrequest.h"
 #include "deleteretentionconfigurationresponse.h"
+#include "deletestoredqueryrequest.h"
+#include "deletestoredqueryresponse.h"
 #include "deliverconfigsnapshotrequest.h"
 #include "deliverconfigsnapshotresponse.h"
 #include "describeaggregatecompliancebyconfigrulesrequest.h"
 #include "describeaggregatecompliancebyconfigrulesresponse.h"
+#include "describeaggregatecompliancebyconformancepacksrequest.h"
+#include "describeaggregatecompliancebyconformancepacksresponse.h"
 #include "describeaggregationauthorizationsrequest.h"
 #include "describeaggregationauthorizationsresponse.h"
 #include "describecompliancebyconfigrulerequest.h"
@@ -67,6 +79,12 @@
 #include "describeconfigurationrecorderstatusresponse.h"
 #include "describeconfigurationrecordersrequest.h"
 #include "describeconfigurationrecordersresponse.h"
+#include "describeconformancepackcompliancerequest.h"
+#include "describeconformancepackcomplianceresponse.h"
+#include "describeconformancepackstatusrequest.h"
+#include "describeconformancepackstatusresponse.h"
+#include "describeconformancepacksrequest.h"
+#include "describeconformancepacksresponse.h"
 #include "describedeliverychannelstatusrequest.h"
 #include "describedeliverychannelstatusresponse.h"
 #include "describedeliverychannelsrequest.h"
@@ -75,10 +93,16 @@
 #include "describeorganizationconfigrulestatusesresponse.h"
 #include "describeorganizationconfigrulesrequest.h"
 #include "describeorganizationconfigrulesresponse.h"
+#include "describeorganizationconformancepackstatusesrequest.h"
+#include "describeorganizationconformancepackstatusesresponse.h"
+#include "describeorganizationconformancepacksrequest.h"
+#include "describeorganizationconformancepacksresponse.h"
 #include "describependingaggregationrequestsrequest.h"
 #include "describependingaggregationrequestsresponse.h"
 #include "describeremediationconfigurationsrequest.h"
 #include "describeremediationconfigurationsresponse.h"
+#include "describeremediationexceptionsrequest.h"
+#include "describeremediationexceptionsresponse.h"
 #include "describeremediationexecutionstatusrequest.h"
 #include "describeremediationexecutionstatusresponse.h"
 #include "describeretentionconfigurationsrequest.h"
@@ -87,6 +111,8 @@
 #include "getaggregatecompliancedetailsbyconfigruleresponse.h"
 #include "getaggregateconfigrulecompliancesummaryrequest.h"
 #include "getaggregateconfigrulecompliancesummaryresponse.h"
+#include "getaggregateconformancepackcompliancesummaryrequest.h"
+#include "getaggregateconformancepackcompliancesummaryresponse.h"
 #include "getaggregatediscoveredresourcecountsrequest.h"
 #include "getaggregatediscoveredresourcecountsresponse.h"
 #include "getaggregateresourceconfigrequest.h"
@@ -99,16 +125,26 @@
 #include "getcompliancesummarybyconfigruleresponse.h"
 #include "getcompliancesummarybyresourcetyperequest.h"
 #include "getcompliancesummarybyresourcetyperesponse.h"
+#include "getconformancepackcompliancedetailsrequest.h"
+#include "getconformancepackcompliancedetailsresponse.h"
+#include "getconformancepackcompliancesummaryrequest.h"
+#include "getconformancepackcompliancesummaryresponse.h"
 #include "getdiscoveredresourcecountsrequest.h"
 #include "getdiscoveredresourcecountsresponse.h"
 #include "getorganizationconfigruledetailedstatusrequest.h"
 #include "getorganizationconfigruledetailedstatusresponse.h"
+#include "getorganizationconformancepackdetailedstatusrequest.h"
+#include "getorganizationconformancepackdetailedstatusresponse.h"
 #include "getresourceconfighistoryrequest.h"
 #include "getresourceconfighistoryresponse.h"
+#include "getstoredqueryrequest.h"
+#include "getstoredqueryresponse.h"
 #include "listaggregatediscoveredresourcesrequest.h"
 #include "listaggregatediscoveredresourcesresponse.h"
 #include "listdiscoveredresourcesrequest.h"
 #include "listdiscoveredresourcesresponse.h"
+#include "liststoredqueriesrequest.h"
+#include "liststoredqueriesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "putaggregationauthorizationrequest.h"
@@ -119,16 +155,30 @@
 #include "putconfigurationaggregatorresponse.h"
 #include "putconfigurationrecorderrequest.h"
 #include "putconfigurationrecorderresponse.h"
+#include "putconformancepackrequest.h"
+#include "putconformancepackresponse.h"
 #include "putdeliverychannelrequest.h"
 #include "putdeliverychannelresponse.h"
 #include "putevaluationsrequest.h"
 #include "putevaluationsresponse.h"
+#include "putexternalevaluationrequest.h"
+#include "putexternalevaluationresponse.h"
 #include "putorganizationconfigrulerequest.h"
 #include "putorganizationconfigruleresponse.h"
+#include "putorganizationconformancepackrequest.h"
+#include "putorganizationconformancepackresponse.h"
 #include "putremediationconfigurationsrequest.h"
 #include "putremediationconfigurationsresponse.h"
+#include "putremediationexceptionsrequest.h"
+#include "putremediationexceptionsresponse.h"
+#include "putresourceconfigrequest.h"
+#include "putresourceconfigresponse.h"
 #include "putretentionconfigurationrequest.h"
 #include "putretentionconfigurationresponse.h"
+#include "putstoredqueryrequest.h"
+#include "putstoredqueryresponse.h"
+#include "selectaggregateresourceconfigrequest.h"
+#include "selectaggregateresourceconfigresponse.h"
 #include "selectresourceconfigrequest.h"
 #include "selectresourceconfigresponse.h"
 #include "startconfigrulesevaluationrequest.h"
@@ -363,6 +413,25 @@ DeleteConfigurationRecorderResponse * ConfigServiceClient::deleteConfigurationRe
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteConformancePackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified conformance pack and all the AWS Config rules, remediation actions, and all evaluation results
+ * within that conformance
+ *
+ * pack>
+ *
+ * AWS Config sets the conformance pack to <code>DELETE_IN_PROGRESS</code> until the deletion is complete. You cannot
+ * update a conformance pack while it is in this
+ */
+DeleteConformancePackResponse * ConfigServiceClient::deleteConformancePack(const DeleteConformancePackRequest &request)
+{
+    return qobject_cast<DeleteConformancePackResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * DeleteDeliveryChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -400,10 +469,48 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Deletes the specified organization config rule and all of its evaluation results from all member accounts in that
+ * organization.
+ *
+ * </p
+ *
+ * Only a master account and a delegated administrator account can delete an organization config rule. When calling this
+ * API with a delegated administrator, you must ensure AWS Organizations <code>ListDelegatedAdministrator</code>
+ * permissions are
+ *
+ * added>
+ *
+ * AWS Config sets the state of a rule to DELETE_IN_PROGRESS until the deletion is complete. You cannot update a rule while
+ * it is in this
  */
 DeleteOrganizationConfigRuleResponse * ConfigServiceClient::deleteOrganizationConfigRule(const DeleteOrganizationConfigRuleRequest &request)
 {
     return qobject_cast<DeleteOrganizationConfigRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteOrganizationConformancePackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified organization conformance pack and all of the config rules and remediation actions from all member
+ * accounts in that organization.
+ *
+ * </p
+ *
+ * Only a master account or a delegated administrator account can delete an organization conformance pack. When calling
+ * this API with a delegated administrator, you must ensure AWS Organizations <code>ListDelegatedAdministrator</code>
+ * permissions are
+ *
+ * added>
+ *
+ * AWS Config sets the state of a conformance pack to DELETE_IN_PROGRESS until the deletion is complete. You cannot update
+ * a conformance pack while it is in this state.
+ */
+DeleteOrganizationConformancePackResponse * ConfigServiceClient::deleteOrganizationConformancePack(const DeleteOrganizationConformancePackRequest &request)
+{
+    return qobject_cast<DeleteOrganizationConformancePackResponse *>(send(request));
 }
 
 /*!
@@ -434,6 +541,39 @@ DeleteRemediationConfigurationResponse * ConfigServiceClient::deleteRemediationC
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteRemediationExceptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes one or more remediation exceptions mentioned in the resource
+ *
+ * keys> <note>
+ *
+ * AWS Config generates a remediation exception when a problem occurs executing a remediation action to a specific
+ * resource. Remediation exceptions blocks auto-remediation until the exception is
+ */
+DeleteRemediationExceptionsResponse * ConfigServiceClient::deleteRemediationExceptions(const DeleteRemediationExceptionsRequest &request)
+{
+    return qobject_cast<DeleteRemediationExceptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteResourceConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Records the configuration state for a custom resource that has been deleted. This API records a new ConfigurationItem
+ * with a ResourceDeleted status. You can retrieve the ConfigurationItems recorded for this resource in your AWS Config
+ * History.
+ */
+DeleteResourceConfigResponse * ConfigServiceClient::deleteResourceConfig(const DeleteResourceConfigRequest &request)
+{
+    return qobject_cast<DeleteResourceConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * DeleteRetentionConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -443,6 +583,19 @@ DeleteRemediationConfigurationResponse * ConfigServiceClient::deleteRemediationC
 DeleteRetentionConfigurationResponse * ConfigServiceClient::deleteRetentionConfiguration(const DeleteRetentionConfigurationRequest &request)
 {
     return qobject_cast<DeleteRetentionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DeleteStoredQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the stored query for a single AWS account and a single AWS
+ */
+DeleteStoredQueryResponse * ConfigServiceClient::deleteStoredQuery(const DeleteStoredQueryRequest &request)
+{
+    return qobject_cast<DeleteStoredQueryResponse *>(send(request));
 }
 
 /*!
@@ -481,11 +634,32 @@ DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const
  *
  * </p <note>
  *
- * The results can return an empty result page, but if you have a nextToken, the results are displayed on the next
+ * The results can return an empty result page, but if you have a <code>nextToken</code>, the results are displayed on the
+ * next
  */
 DescribeAggregateComplianceByConfigRulesResponse * ConfigServiceClient::describeAggregateComplianceByConfigRules(const DescribeAggregateComplianceByConfigRulesRequest &request)
 {
     return qobject_cast<DescribeAggregateComplianceByConfigRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeAggregateComplianceByConformancePacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the conformance packs and their associated compliance status with the count of compliant and
+ * noncompliant AWS Config rules within each conformance pack. Also returns the total rule count which includes compliant
+ * rules, noncompliant rules, and rules that cannot be evaluated due to insufficient
+ *
+ * data> <note>
+ *
+ * The results can return an empty result page, but if you have a <code>nextToken</code>, the results are displayed on the
+ * next
+ */
+DescribeAggregateComplianceByConformancePacksResponse * ConfigServiceClient::describeAggregateComplianceByConformancePacks(const DescribeAggregateComplianceByConformancePacksRequest &request)
+{
+    return qobject_cast<DescribeAggregateComplianceByConformancePacksResponse *>(send(request));
 }
 
 /*!
@@ -675,6 +849,53 @@ DescribeConfigurationRecordersResponse * ConfigServiceClient::describeConfigurat
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeConformancePackComplianceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns compliance details for each rule in that conformance
+ *
+ * pack> <note>
+ *
+ * You must provide exact rule
+ */
+DescribeConformancePackComplianceResponse * ConfigServiceClient::describeConformancePackCompliance(const DescribeConformancePackComplianceRequest &request)
+{
+    return qobject_cast<DescribeConformancePackComplianceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeConformancePackStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides one or more conformance packs deployment
+ *
+ * status> <note>
+ *
+ * If there are no conformance packs then you will see an empty
+ */
+DescribeConformancePackStatusResponse * ConfigServiceClient::describeConformancePackStatus(const DescribeConformancePackStatusRequest &request)
+{
+    return qobject_cast<DescribeConformancePackStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeConformancePacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of one or more conformance
+ */
+DescribeConformancePacksResponse * ConfigServiceClient::describeConformancePacks(const DescribeConformancePacksRequest &request)
+{
+    return qobject_cast<DescribeConformancePacksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * DescribeDeliveryChannelStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -715,6 +936,17 @@ DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Provides organization config rule deployment status for an
+ *
+ * organization> <note>
+ *
+ * The status is not considered successful until organization config rule is successfully deployed in all the member
+ * accounts with an exception of excluded
+ *
+ * accounts>
+ *
+ * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not applicable
+ * if you specify organization config rule names. It is only applicable, when you request all the organization config
  */
 DescribeOrganizationConfigRuleStatusesResponse * ConfigServiceClient::describeOrganizationConfigRuleStatuses(const DescribeOrganizationConfigRuleStatusesRequest &request)
 {
@@ -727,10 +959,62 @@ DescribeOrganizationConfigRuleStatusesResponse * ConfigServiceClient::describeOr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns a list of organization config rules.
+ *
+ * </p <note>
+ *
+ * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not applicable
+ * if you specify organization config rule names. It is only applicable, when you request all the organization config
  */
 DescribeOrganizationConfigRulesResponse * ConfigServiceClient::describeOrganizationConfigRules(const DescribeOrganizationConfigRulesRequest &request)
 {
     return qobject_cast<DescribeOrganizationConfigRulesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeOrganizationConformancePackStatusesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides organization conformance pack deployment status for an organization.
+ *
+ * </p <note>
+ *
+ * The status is not considered successful until organization conformance pack is successfully deployed in all the member
+ * accounts with an exception of excluded
+ *
+ * accounts>
+ *
+ * When you specify the limit and the next token, you receive a paginated response. Limit and next token are not applicable
+ * if you specify organization conformance pack names. They are only applicable, when you request all the organization
+ * conformance
+ */
+DescribeOrganizationConformancePackStatusesResponse * ConfigServiceClient::describeOrganizationConformancePackStatuses(const DescribeOrganizationConformancePackStatusesRequest &request)
+{
+    return qobject_cast<DescribeOrganizationConformancePackStatusesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeOrganizationConformancePacksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of organization conformance packs.
+ *
+ * </p <note>
+ *
+ * When you specify the limit and the next token, you receive a paginated response.
+ *
+ * </p
+ *
+ * Limit and next token are not applicable if you specify organization conformance packs names. They are only applicable,
+ * when you request all the organization conformance packs.
+ */
+DescribeOrganizationConformancePacksResponse * ConfigServiceClient::describeOrganizationConformancePacks(const DescribeOrganizationConformancePacksRequest &request)
+{
+    return qobject_cast<DescribeOrganizationConformancePacksResponse *>(send(request));
 }
 
 /*!
@@ -757,6 +1041,34 @@ DescribePendingAggregationRequestsResponse * ConfigServiceClient::describePendin
 DescribeRemediationConfigurationsResponse * ConfigServiceClient::describeRemediationConfigurations(const DescribeRemediationConfigurationsRequest &request)
 {
     return qobject_cast<DescribeRemediationConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * DescribeRemediationExceptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the details of one or more remediation exceptions. A detailed view of a remediation exception for a set of
+ * resources that includes an explanation of an exception and the time when the exception will be deleted. When you specify
+ * the limit and the next token, you receive a paginated response.
+ *
+ * </p <note>
+ *
+ * AWS Config generates a remediation exception when a problem occurs executing a remediation action to a specific
+ * resource. Remediation exceptions blocks auto-remediation until the exception is
+ *
+ * cleared>
+ *
+ * When you specify the limit and the next token, you receive a paginated response.
+ *
+ * </p
+ *
+ * Limit and next token are not applicable if you request resources in batch. It is only applicable, when you request all
+ */
+DescribeRemediationExceptionsResponse * ConfigServiceClient::describeRemediationExceptions(const DescribeRemediationExceptionsRequest &request)
+{
+    return qobject_cast<DescribeRemediationExceptionsResponse *>(send(request));
 }
 
 /*!
@@ -804,7 +1116,8 @@ DescribeRetentionConfigurationsResponse * ConfigServiceClient::describeRetention
  *
  * </p <note>
  *
- * The results can return an empty result page. But if you have a nextToken, the results are displayed on the next
+ * The results can return an empty result page. But if you have a <code>nextToken</code>, the results are displayed on the
+ * next
  */
 GetAggregateComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getAggregateComplianceDetailsByConfigRule(const GetAggregateComplianceDetailsByConfigRuleRequest &request)
 {
@@ -826,6 +1139,24 @@ GetAggregateComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getAggr
 GetAggregateConfigRuleComplianceSummaryResponse * ConfigServiceClient::getAggregateConfigRuleComplianceSummary(const GetAggregateConfigRuleComplianceSummaryRequest &request)
 {
     return qobject_cast<GetAggregateConfigRuleComplianceSummaryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetAggregateConformancePackComplianceSummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the count of compliant and noncompliant conformance packs across all AWS Accounts and AWS Regions in an
+ * aggregator. You can filter based on AWS Account ID or AWS
+ *
+ * Region> <note>
+ *
+ * The results can return an empty result page, but if you have a nextToken, the results are displayed on the next
+ */
+GetAggregateConformancePackComplianceSummaryResponse * ConfigServiceClient::getAggregateConformancePackComplianceSummary(const GetAggregateConformancePackComplianceSummaryRequest &request)
+{
+    return qobject_cast<GetAggregateConformancePackComplianceSummaryResponse *>(send(request));
 }
 
 /*!
@@ -931,6 +1262,33 @@ GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceS
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetConformancePackComplianceDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns compliance details of a conformance pack for all AWS resources that are monitered by conformance
+ */
+GetConformancePackComplianceDetailsResponse * ConfigServiceClient::getConformancePackComplianceDetails(const GetConformancePackComplianceDetailsRequest &request)
+{
+    return qobject_cast<GetConformancePackComplianceDetailsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetConformancePackComplianceSummaryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns compliance details for the conformance pack based on the cumulative compliance results of all the rules in that
+ * conformance
+ */
+GetConformancePackComplianceSummaryResponse * ConfigServiceClient::getConformancePackComplianceSummary(const GetConformancePackComplianceSummaryRequest &request)
+{
+    return qobject_cast<GetConformancePackComplianceSummaryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * GetDiscoveredResourceCountsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1000,10 +1358,24 @@ GetDiscoveredResourceCountsResponse * ConfigServiceClient::getDiscoveredResource
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Returns detailed status for each member account within an organization for a given organization config
  */
 GetOrganizationConfigRuleDetailedStatusResponse * ConfigServiceClient::getOrganizationConfigRuleDetailedStatus(const GetOrganizationConfigRuleDetailedStatusRequest &request)
 {
     return qobject_cast<GetOrganizationConfigRuleDetailedStatusResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetOrganizationConformancePackDetailedStatusResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns detailed status for each member account within an organization for a given organization conformance
+ */
+GetOrganizationConformancePackDetailedStatusResponse * ConfigServiceClient::getOrganizationConformancePackDetailedStatus(const GetOrganizationConformancePackDetailedStatusRequest &request)
+{
+    return qobject_cast<GetOrganizationConformancePackDetailedStatusResponse *>(send(request));
 }
 
 /*!
@@ -1031,6 +1403,19 @@ GetOrganizationConfigRuleDetailedStatusResponse * ConfigServiceClient::getOrgani
 GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory(const GetResourceConfigHistoryRequest &request)
 {
     return qobject_cast<GetResourceConfigHistoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * GetStoredQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the details of a specific stored
+ */
+GetStoredQueryResponse * ConfigServiceClient::getStoredQuery(const GetStoredQueryRequest &request)
+{
+    return qobject_cast<GetStoredQueryResponse *>(send(request));
 }
 
 /*!
@@ -1079,6 +1464,19 @@ ListAggregateDiscoveredResourcesResponse * ConfigServiceClient::listAggregateDis
 ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(const ListDiscoveredResourcesRequest &request)
 {
     return qobject_cast<ListDiscoveredResourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * ListStoredQueriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the stored queries for a single AWS account and a single AWS Region. The default is 100.
+ */
+ListStoredQueriesResponse * ConfigServiceClient::listStoredQueries(const ListStoredQueriesRequest &request)
+{
+    return qobject_cast<ListStoredQueriesResponse *>(send(request));
 }
 
 /*!
@@ -1176,15 +1574,28 @@ PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRe
  * Creates and updates the configuration aggregator with the selected source accounts and regions. The source account can
  * be individual account(s) or an
  *
- * organization> <note>
+ * organization>
+ *
+ * <code>accountIds</code> that are passed will be replaced with existing accounts. If you want to add additional accounts
+ * into the aggregator, call <code>DescribeAggregator</code> to get the previous accounts and then append new
+ *
+ * ones> <note>
  *
  * AWS Config should be enabled in source accounts and regions you want to
  *
  * aggregate>
  *
- * If your source type is an organization, you must be signed in to the master account and all features must be enabled in
- * your organization. AWS Config calls <code>EnableAwsServiceAccess</code> API to enable integration between AWS Config and
- * AWS Organizations.
+ * If your source type is an organization, you must be signed in to the management account or a registered delegated
+ * administrator and all the features must be enabled in your organization. If the caller is a management account, AWS
+ * Config calls <code>EnableAwsServiceAccess</code> API to enable integration between AWS Config and AWS Organizations. If
+ * the caller is a registered delegated administrator, AWS Config calls <code>ListDelegatedAdministrators</code> API to
+ * verify whether the caller is a valid delegated
+ *
+ * administrator>
+ *
+ * To register a delegated administrator, see <a
+ * href="https://docs.aws.amazon.com/config/latest/developerguide/set-up-aggregator-cli.html#register-a-delegated-administrator-cli">Register
+ * a Delegated Administrator</a> in the AWS Config developer guide.
  */
 PutConfigurationAggregatorResponse * ConfigServiceClient::putConfigurationAggregator(const PutConfigurationAggregatorRequest &request)
 {
@@ -1216,6 +1627,30 @@ PutConfigurationAggregatorResponse * ConfigServiceClient::putConfigurationAggreg
 PutConfigurationRecorderResponse * ConfigServiceClient::putConfigurationRecorder(const PutConfigurationRecorderRequest &request)
 {
     return qobject_cast<PutConfigurationRecorderResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutConformancePackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a conformance pack. A conformance pack is a collection of AWS Config rules that can be easily
+ * deployed in an account and a region and across AWS
+ *
+ * Organization>
+ *
+ * This API creates a service linked role <code>AWSServiceRoleForConfigConforms</code> in your account. The service linked
+ * role is created only when the role does not exist in your account.
+ *
+ * </p <note>
+ *
+ * You must specify either the <code>TemplateS3Uri</code> or the <code>TemplateBody</code> parameter, but not both. If you
+ * provide both AWS Config uses the <code>TemplateS3Uri</code> parameter and ignores the <code>TemplateBody</code>
+ */
+PutConformancePackResponse * ConfigServiceClient::putConformancePack(const PutConformancePackRequest &request)
+{
+    return qobject_cast<PutConformancePackResponse *>(send(request));
 }
 
 /*!
@@ -1262,14 +1697,115 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
 
 /*!
  * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutExternalEvaluationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Add or updates the evaluations for process checks. This API checks if the rule is a process check when the name of the
+ * AWS Config rule is
+ */
+PutExternalEvaluationResponse * ConfigServiceClient::putExternalEvaluation(const PutExternalEvaluationRequest &request)
+{
+    return qobject_cast<PutExternalEvaluationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
  * PutOrganizationConfigRuleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Adds or updates organization config rule for your entire organization evaluating whether your AWS resources comply with
+ * your desired
+ *
+ * configurations>
+ *
+ * Only a master account and a delegated administrator can create or update an organization config rule. When calling this
+ * API with a delegated administrator, you must ensure AWS Organizations <code>ListDelegatedAdministrator</code>
+ * permissions are added.
+ *
+ * </p
+ *
+ * This API enables organization service access through the <code>EnableAWSServiceAccess</code> action and creates a
+ * service linked role <code>AWSServiceRoleForConfigMultiAccountSetup</code> in the master or delegated administrator
+ * account of your organization. The service linked role is created only when the role does not exist in the caller
+ * account. AWS Config verifies the existence of role with <code>GetRole</code>
+ *
+ * action>
+ *
+ * To use this API with delegated administrator, register a delegated administrator by calling AWS Organization
+ * <code>register-delegated-administrator</code> for <code>config-multiaccountsetup.amazonaws.com</code>.
+ *
+ * </p
+ *
+ * You can use this action to create both custom AWS Config rules and AWS managed Config rules. If you are adding a new
+ * custom AWS Config rule, you must first create AWS Lambda function in the master account or a delegated administrator
+ * that the rule invokes to evaluate your resources. When you use the <code>PutOrganizationConfigRule</code> action to add
+ * the rule to AWS Config, you must specify the Amazon Resource Name (ARN) that AWS Lambda assigns to the function. If you
+ * are adding an AWS managed Config rule, specify the rule's identifier for the <code>RuleIdentifier</code>
+ *
+ * key>
+ *
+ * The maximum number of organization config rules that AWS Config supports is 150 and 3 delegated administrator per
+ * organization.
+ *
+ * </p <note>
+ *
+ * Prerequisite: Ensure you call <code>EnableAllFeatures</code> API to enable all features in an
+ *
+ * organization>
+ *
+ * Specify either <code>OrganizationCustomRuleMetadata</code> or
  */
 PutOrganizationConfigRuleResponse * ConfigServiceClient::putOrganizationConfigRule(const PutOrganizationConfigRuleRequest &request)
 {
     return qobject_cast<PutOrganizationConfigRuleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutOrganizationConformancePackResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deploys conformance packs across member accounts in an AWS
+ *
+ * Organization>
+ *
+ * Only a master account and a delegated administrator can call this API. When calling this API with a delegated
+ * administrator, you must ensure AWS Organizations <code>ListDelegatedAdministrator</code> permissions are
+ *
+ * added>
+ *
+ * This API enables organization service access for <code>config-multiaccountsetup.amazonaws.com</code> through the
+ * <code>EnableAWSServiceAccess</code> action and creates a service linked role
+ * <code>AWSServiceRoleForConfigMultiAccountSetup</code> in the master or delegated administrator account of your
+ * organization. The service linked role is created only when the role does not exist in the caller account. To use this
+ * API with delegated administrator, register a delegated administrator by calling AWS Organization
+ * <code>register-delegate-admin</code> for
+ *
+ * <code>config-multiaccountsetup.amazonaws.com</code>> <note>
+ *
+ * Prerequisite: Ensure you call <code>EnableAllFeatures</code> API to enable all features in an
+ *
+ * organization>
+ *
+ * You must specify either the <code>TemplateS3Uri</code> or the <code>TemplateBody</code> parameter, but not both. If you
+ * provide both AWS Config uses the <code>TemplateS3Uri</code> parameter and ignores the <code>TemplateBody</code>
+ *
+ * parameter>
+ *
+ * AWS Config sets the state of a conformance pack to CREATE_IN_PROGRESS and UPDATE_IN_PROGRESS until the conformance pack
+ * is created or updated. You cannot update a conformance pack while it is in this
+ *
+ * state>
+ *
+ * You can create 50 conformance packs with 25 AWS Config rules in each pack and 3 delegated administrator per
+ * organization.
+ */
+PutOrganizationConformancePackResponse * ConfigServiceClient::putOrganizationConformancePack(const PutOrganizationConformancePackRequest &request)
+{
+    return qobject_cast<PutOrganizationConformancePackResponse *>(send(request));
 }
 
 /*!
@@ -1282,10 +1818,67 @@ PutOrganizationConfigRuleResponse * ConfigServiceClient::putOrganizationConfigRu
  * API creates the <code>RemediationConfiguration</code> object for the AWS Config rule. The AWS Config rule must already
  * exist for you to add a remediation configuration. The target (SSM document) must exist and have permissions to use the
  * target.
+ *
+ * </p <note>
+ *
+ * If you make backward incompatible changes to the SSM document, you must call this again to ensure the remediations can
+ *
+ * run>
+ *
+ * This API does not support adding remediation configurations for service-linked AWS Config Rules such as Organization
+ * Config rules, the rules deployed by conformance packs, and rules deployed by AWS Security
  */
 PutRemediationConfigurationsResponse * ConfigServiceClient::putRemediationConfigurations(const PutRemediationConfigurationsRequest &request)
 {
     return qobject_cast<PutRemediationConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutRemediationExceptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A remediation exception is when a specific resource is no longer considered for auto-remediation. This API adds a new
+ * exception or updates an existing exception for a specific resource with a specific AWS Config rule.
+ *
+ * </p <note>
+ *
+ * AWS Config generates a remediation exception when a problem occurs executing a remediation action to a specific
+ * resource. Remediation exceptions blocks auto-remediation until the exception is
+ */
+PutRemediationExceptionsResponse * ConfigServiceClient::putRemediationExceptions(const PutRemediationExceptionsRequest &request)
+{
+    return qobject_cast<PutRemediationExceptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutResourceConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Records the configuration state for the resource provided in the request. The configuration state of a resource is
+ * represented in AWS Config as Configuration Items. Once this API records the configuration item, you can retrieve the
+ * list of configuration items for the custom resource type using existing AWS Config APIs.
+ *
+ * </p <note>
+ *
+ * The custom resource type must be registered with AWS CloudFormation. This API accepts the configuration item registered
+ * with AWS
+ *
+ * CloudFormation>
+ *
+ * When you call this API, AWS Config only stores configuration state of the resource provided in the request. This API
+ * does not change or remediate the configuration of the resource.
+ *
+ * </p
+ *
+ * Write-only schema properites are not recorded as part of the published configuration
+ */
+PutResourceConfigResponse * ConfigServiceClient::putResourceConfig(const PutResourceConfigRequest &request)
+{
+    return qobject_cast<PutResourceConfigResponse *>(send(request));
 }
 
 /*!
@@ -1306,6 +1899,41 @@ PutRemediationConfigurationsResponse * ConfigServiceClient::putRemediationConfig
 PutRetentionConfigurationResponse * ConfigServiceClient::putRetentionConfiguration(const PutRetentionConfigurationRequest &request)
 {
     return qobject_cast<PutRetentionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * PutStoredQueryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Saves a new query or updates an existing saved query. The <code>QueryName</code> must be unique for a single AWS account
+ * and a single AWS Region. You can create upto 300 queries in a single AWS account and a single AWS
+ */
+PutStoredQueryResponse * ConfigServiceClient::putStoredQuery(const PutStoredQueryRequest &request)
+{
+    return qobject_cast<PutStoredQueryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ConfigServiceClient service, and returns a pointer to an
+ * SelectAggregateResourceConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Accepts a structured query language (SQL) SELECT command and an aggregator to query configuration state of AWS resources
+ * across multiple accounts and regions, performs the corresponding search, and returns resource configurations matching
+ * the
+ *
+ * properties>
+ *
+ * For more information about query components, see the <a
+ * href="https://docs.aws.amazon.com/config/latest/developerguide/query-components.html"> <b>Query Components</b> </a>
+ * section in the AWS Config Developer
+ */
+SelectAggregateResourceConfigResponse * ConfigServiceClient::selectAggregateResourceConfig(const SelectAggregateResourceConfigRequest &request)
+{
+    return qobject_cast<SelectAggregateResourceConfigResponse *>(send(request));
 }
 
 /*!

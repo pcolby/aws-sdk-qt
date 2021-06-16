@@ -23,14 +23,20 @@
 #include "core/awssignaturev4.h"
 #include "associateadminaccountrequest.h"
 #include "associateadminaccountresponse.h"
+#include "deleteappslistrequest.h"
+#include "deleteappslistresponse.h"
 #include "deletenotificationchannelrequest.h"
 #include "deletenotificationchannelresponse.h"
 #include "deletepolicyrequest.h"
 #include "deletepolicyresponse.h"
+#include "deleteprotocolslistrequest.h"
+#include "deleteprotocolslistresponse.h"
 #include "disassociateadminaccountrequest.h"
 #include "disassociateadminaccountresponse.h"
 #include "getadminaccountrequest.h"
 #include "getadminaccountresponse.h"
+#include "getappslistrequest.h"
+#include "getappslistresponse.h"
 #include "getcompliancedetailrequest.h"
 #include "getcompliancedetailresponse.h"
 #include "getnotificationchannelrequest.h"
@@ -39,16 +45,34 @@
 #include "getpolicyresponse.h"
 #include "getprotectionstatusrequest.h"
 #include "getprotectionstatusresponse.h"
+#include "getprotocolslistrequest.h"
+#include "getprotocolslistresponse.h"
+#include "getviolationdetailsrequest.h"
+#include "getviolationdetailsresponse.h"
+#include "listappslistsrequest.h"
+#include "listappslistsresponse.h"
 #include "listcompliancestatusrequest.h"
 #include "listcompliancestatusresponse.h"
 #include "listmemberaccountsrequest.h"
 #include "listmemberaccountsresponse.h"
 #include "listpoliciesrequest.h"
 #include "listpoliciesresponse.h"
+#include "listprotocolslistsrequest.h"
+#include "listprotocolslistsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "putappslistrequest.h"
+#include "putappslistresponse.h"
 #include "putnotificationchannelrequest.h"
 #include "putnotificationchannelresponse.h"
 #include "putpolicyrequest.h"
 #include "putpolicyresponse.h"
+#include "putprotocolslistrequest.h"
+#include "putprotocolslistresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -78,6 +102,12 @@ namespace FMS {
  *  the AWS Firewall Manager API actions, data types, and errors. For detailed information about AWS Firewall Manager
  *  features, see the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-chapter.html">AWS Firewall Manager
  *  Developer
+ * 
+ *  Guide</a>>
+ * 
+ *  Some API actions require explicit resource permissions. For information, see the developer guide topic <a
+ *  href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager required
+ *  permissions for API actions</a>.
  */
 
 /*!
@@ -139,7 +169,7 @@ FmsClient::FmsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with the master account
+ * Sets the AWS Firewall Manager administrator account. AWS Firewall Manager must be associated with the master account of
  * your AWS organization or associated with a member account that has the appropriate permissions. If the account ID that
  * you submit is not an AWS Organizations master account, AWS Firewall Manager will set the appropriate permissions for the
  * given member
@@ -151,6 +181,19 @@ FmsClient::FmsClient(
 AssociateAdminAccountResponse * FmsClient::associateAdminAccount(const AssociateAdminAccountRequest &request)
 {
     return qobject_cast<AssociateAdminAccountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * DeleteAppsListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Permanently deletes an AWS Firewall Manager applications
+ */
+DeleteAppsListResponse * FmsClient::deleteAppsList(const DeleteAppsListRequest &request)
+{
+    return qobject_cast<DeleteAppsListResponse *>(send(request));
 }
 
 /*!
@@ -182,12 +225,25 @@ DeletePolicyResponse * FmsClient::deletePolicy(const DeletePolicyRequest &reques
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * DeleteProtocolsListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Permanently deletes an AWS Firewall Manager protocols
+ */
+DeleteProtocolsListResponse * FmsClient::deleteProtocolsList(const DeleteProtocolsListRequest &request)
+{
+    return qobject_cast<DeleteProtocolsListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * DisassociateAdminAccountResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Disassociates the account that has been set as the AWS Firewall Manager administrator account. To set a different
- * account as the administrator account, you must submit an <code>AssociateAdminAccount</code> request
+ * account as the administrator account, you must submit an <code>AssociateAdminAccount</code>
  */
 DisassociateAdminAccountResponse * FmsClient::disassociateAdminAccount(const DisassociateAdminAccountRequest &request)
 {
@@ -209,13 +265,31 @@ GetAdminAccountResponse * FmsClient::getAdminAccount(const GetAdminAccountReques
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetAppsListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the specified AWS Firewall Manager applications
+ */
+GetAppsListResponse * FmsClient::getAppsList(const GetAppsListRequest &request)
+{
+    return qobject_cast<GetAppsListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * GetComplianceDetailResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns detailed compliance information about the specified member account. Details include resources that are in and
- * out of compliance with the specified policy. Resources are considered non-compliant if the specified policy has not been
- * applied to
+ * out of compliance with the specified policy. Resources are considered noncompliant for AWS WAF and Shield Advanced
+ * policies if the specified policy has not been applied to them. Resources are considered noncompliant for security group
+ * policies if they are in scope of the policy, they violate one or more of the policy rules, and remediation is disabled
+ * or not possible. Resources are considered noncompliant for Network Firewall policies if a firewall is missing in the
+ * VPC, if the firewall endpoint isn't set up in an expected Availability Zone and subnet, if a subnet created by the
+ * Firewall Manager doesn't have the expected route table, and for modifications to a firewall policy that violate the
+ * Firewall Manager policy's rules.
  */
 GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetComplianceDetailRequest &request)
 {
@@ -228,8 +302,7 @@ GetComplianceDetailResponse * FmsClient::getComplianceDetail(const GetCompliance
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about the Amazon Simple Notification Service (SNS) topic that is used to record AWS Firewall Manager
- * SNS
+ * Information about the Amazon Simple Notification Service (SNS) topic that is used to record AWS Firewall Manager SNS
  */
 GetNotificationChannelResponse * FmsClient::getNotificationChannel(const GetNotificationChannelRequest &request)
 {
@@ -256,7 +329,7 @@ GetPolicyResponse * FmsClient::getPolicy(const GetPolicyRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * If you created a Shield Advanced policy, returns policy-level attack summary information in the event of a potential
- * DDoS
+ * DDoS attack. Other policy types are currently
  */
 GetProtectionStatusResponse * FmsClient::getProtectionStatus(const GetProtectionStatusRequest &request)
 {
@@ -265,12 +338,51 @@ GetProtectionStatusResponse * FmsClient::getProtectionStatus(const GetProtection
 
 /*!
  * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetProtocolsListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the specified AWS Firewall Manager protocols
+ */
+GetProtocolsListResponse * FmsClient::getProtocolsList(const GetProtocolsListRequest &request)
+{
+    return qobject_cast<GetProtocolsListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * GetViolationDetailsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves violations for a resource based on the specified AWS Firewall Manager policy and AWS
+ */
+GetViolationDetailsResponse * FmsClient::getViolationDetails(const GetViolationDetailsRequest &request)
+{
+    return qobject_cast<GetViolationDetailsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListAppsListsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of <code>AppsListDataSummary</code>
+ */
+ListAppsListsResponse * FmsClient::listAppsLists(const ListAppsListsRequest &request)
+{
+    return qobject_cast<ListAppsListsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
  * ListComplianceStatusResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of <code>PolicyComplianceStatus</code> objects in the response. Use <code>PolicyComplianceStatus</code>
- * to get a summary of which member accounts are protected by the specified policy.
+ * Returns an array of <code>PolicyComplianceStatus</code> objects. Use <code>PolicyComplianceStatus</code> to get a
+ * summary of which member accounts are protected by the specified policy.
  */
 ListComplianceStatusResponse * FmsClient::listComplianceStatus(const ListComplianceStatusRequest &request)
 {
@@ -300,11 +412,50 @@ ListMemberAccountsResponse * FmsClient::listMemberAccounts(const ListMemberAccou
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns an array of <code>PolicySummary</code> objects in the
+ * Returns an array of <code>PolicySummary</code>
  */
 ListPoliciesResponse * FmsClient::listPolicies(const ListPoliciesRequest &request)
 {
     return qobject_cast<ListPoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListProtocolsListsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns an array of <code>ProtocolsListDataSummary</code>
+ */
+ListProtocolsListsResponse * FmsClient::listProtocolsLists(const ListProtocolsListsRequest &request)
+{
+    return qobject_cast<ListProtocolsListsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the list of tags for the specified AWS resource.
+ */
+ListTagsForResourceResponse * FmsClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * PutAppsListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an AWS Firewall Manager applications
+ */
+PutAppsListResponse * FmsClient::putAppsList(const PutAppsListRequest &request)
+{
+    return qobject_cast<PutAppsListResponse *>(send(request));
 }
 
 /*!
@@ -314,6 +465,13 @@ ListPoliciesResponse * FmsClient::listPolicies(const ListPoliciesRequest &reques
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Designates the IAM role and Amazon Simple Notification Service (SNS) topic that AWS Firewall Manager uses to record SNS
+ *
+ * logs>
+ *
+ * To perform this action outside of the console, you must configure the SNS topic to allow the Firewall Manager role
+ * <code>AWSServiceRoleForFMS</code> to publish SNS logs. For more information, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html">Firewall Manager required
+ * permissions for API actions</a> in the <i>AWS Firewall Manager Developer
  */
 PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNotificationChannelRequest &request)
 {
@@ -330,20 +488,81 @@ PutNotificationChannelResponse * FmsClient::putNotificationChannel(const PutNoti
  *
  * policy>
  *
- * Firewall Manager provides two types of policies: A Shield Advanced policy, which applies Shield Advanced protection to
- * specified accounts and resources, or a WAF policy, which contains a rule group and defines which resources are to be
- * protected by that rule group. A policy is specific to either WAF or Shield Advanced. If you want to enforce both WAF
- * rules and Shield Advanced protection across accounts, you can create multiple policies. You can create one or more
- * policies for WAF rules, and one or more policies for Shield
+ * Firewall Manager provides the following types of policies:
  *
- * Advanced>
+ * </p <ul> <li>
  *
- * You must be subscribed to Shield Advanced to create a Shield Advanced policy. For more information on subscribing to
+ * An AWS WAF policy (type WAFV2), which defines rule groups to run first in the corresponding AWS WAF web ACL and rule
+ * groups to run last in the web
+ *
+ * ACL> </li> <li>
+ *
+ * An AWS WAF Classic policy (type WAF), which defines a rule group.
+ *
+ * </p </li> <li>
+ *
+ * A Shield Advanced policy, which applies Shield Advanced protection to specified accounts and
+ *
+ * resources> </li> <li>
+ *
+ * A security group policy, which manages VPC security groups across your AWS organization.
+ *
+ * </p </li> <li>
+ *
+ * An AWS Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon
+ *
+ * VPCs> </li> </ul>
+ *
+ * Each policy is specific to one of the types. If you want to enforce more than one policy type across accounts, create
+ * multiple policies. You can create multiple policies for each
+ *
+ * type>
+ *
+ * You must be subscribed to Shield Advanced to create a Shield Advanced policy. For more information about subscribing to
  * Shield Advanced, see <a
  */
 PutPolicyResponse * FmsClient::putPolicy(const PutPolicyRequest &request)
 {
     return qobject_cast<PutPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * PutProtocolsListResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an AWS Firewall Manager protocols
+ */
+PutProtocolsListResponse * FmsClient::putProtocolsList(const PutProtocolsListRequest &request)
+{
+    return qobject_cast<PutProtocolsListResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more tags to an AWS
+ */
+TagResourceResponse * FmsClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the FmsClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from an AWS
+ */
+UntagResourceResponse * FmsClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

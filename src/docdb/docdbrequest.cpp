@@ -36,6 +36,7 @@ namespace DocDB {
  * This enum describes the actions that can be performed as DocDB
  * requests.
  *
+ * \value AddSourceIdentifierToSubscriptionAction DocDB AddSourceIdentifierToSubscription action.
  * \value AddTagsToResourceAction DocDB AddTagsToResource action.
  * \value ApplyPendingMaintenanceActionAction DocDB ApplyPendingMaintenanceAction action.
  * \value CopyDBClusterParameterGroupAction DocDB CopyDBClusterParameterGroup action.
@@ -45,11 +46,16 @@ namespace DocDB {
  * \value CreateDBClusterSnapshotAction DocDB CreateDBClusterSnapshot action.
  * \value CreateDBInstanceAction DocDB CreateDBInstance action.
  * \value CreateDBSubnetGroupAction DocDB CreateDBSubnetGroup action.
+ * \value CreateEventSubscriptionAction DocDB CreateEventSubscription action.
+ * \value CreateGlobalClusterAction DocDB CreateGlobalCluster action.
  * \value DeleteDBClusterAction DocDB DeleteDBCluster action.
  * \value DeleteDBClusterParameterGroupAction DocDB DeleteDBClusterParameterGroup action.
  * \value DeleteDBClusterSnapshotAction DocDB DeleteDBClusterSnapshot action.
  * \value DeleteDBInstanceAction DocDB DeleteDBInstance action.
  * \value DeleteDBSubnetGroupAction DocDB DeleteDBSubnetGroup action.
+ * \value DeleteEventSubscriptionAction DocDB DeleteEventSubscription action.
+ * \value DeleteGlobalClusterAction DocDB DeleteGlobalCluster action.
+ * \value DescribeCertificatesAction DocDB DescribeCertificates action.
  * \value DescribeDBClusterParameterGroupsAction DocDB DescribeDBClusterParameterGroups action.
  * \value DescribeDBClusterParametersAction DocDB DescribeDBClusterParameters action.
  * \value DescribeDBClusterSnapshotAttributesAction DocDB DescribeDBClusterSnapshotAttributes action.
@@ -60,7 +66,9 @@ namespace DocDB {
  * \value DescribeDBSubnetGroupsAction DocDB DescribeDBSubnetGroups action.
  * \value DescribeEngineDefaultClusterParametersAction DocDB DescribeEngineDefaultClusterParameters action.
  * \value DescribeEventCategoriesAction DocDB DescribeEventCategories action.
+ * \value DescribeEventSubscriptionsAction DocDB DescribeEventSubscriptions action.
  * \value DescribeEventsAction DocDB DescribeEvents action.
+ * \value DescribeGlobalClustersAction DocDB DescribeGlobalClusters action.
  * \value DescribeOrderableDBInstanceOptionsAction DocDB DescribeOrderableDBInstanceOptions action.
  * \value DescribePendingMaintenanceActionsAction DocDB DescribePendingMaintenanceActions action.
  * \value FailoverDBClusterAction DocDB FailoverDBCluster action.
@@ -70,7 +78,11 @@ namespace DocDB {
  * \value ModifyDBClusterSnapshotAttributeAction DocDB ModifyDBClusterSnapshotAttribute action.
  * \value ModifyDBInstanceAction DocDB ModifyDBInstance action.
  * \value ModifyDBSubnetGroupAction DocDB ModifyDBSubnetGroup action.
+ * \value ModifyEventSubscriptionAction DocDB ModifyEventSubscription action.
+ * \value ModifyGlobalClusterAction DocDB ModifyGlobalCluster action.
  * \value RebootDBInstanceAction DocDB RebootDBInstance action.
+ * \value RemoveFromGlobalClusterAction DocDB RemoveFromGlobalCluster action.
+ * \value RemoveSourceIdentifierFromSubscriptionAction DocDB RemoveSourceIdentifierFromSubscription action.
  * \value RemoveTagsFromResourceAction DocDB RemoveTagsFromResource action.
  * \value ResetDBClusterParameterGroupAction DocDB ResetDBClusterParameterGroup action.
  * \value RestoreDBClusterFromSnapshotAction DocDB RestoreDBClusterFromSnapshot action.

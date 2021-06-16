@@ -68,11 +68,14 @@ public:
         GetSlotTypeVersionsAction,
         GetSlotTypesAction,
         GetUtterancesViewAction,
+        ListTagsForResourceAction,
         PutBotAction,
         PutBotAliasAction,
         PutIntentAction,
         PutSlotTypeAction,
         StartImportAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

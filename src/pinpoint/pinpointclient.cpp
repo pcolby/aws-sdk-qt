@@ -25,12 +25,24 @@
 #include "createappresponse.h"
 #include "createcampaignrequest.h"
 #include "createcampaignresponse.h"
+#include "createemailtemplaterequest.h"
+#include "createemailtemplateresponse.h"
 #include "createexportjobrequest.h"
 #include "createexportjobresponse.h"
 #include "createimportjobrequest.h"
 #include "createimportjobresponse.h"
+#include "createjourneyrequest.h"
+#include "createjourneyresponse.h"
+#include "createpushtemplaterequest.h"
+#include "createpushtemplateresponse.h"
+#include "createrecommenderconfigurationrequest.h"
+#include "createrecommenderconfigurationresponse.h"
 #include "createsegmentrequest.h"
 #include "createsegmentresponse.h"
+#include "createsmstemplaterequest.h"
+#include "createsmstemplateresponse.h"
+#include "createvoicetemplaterequest.h"
+#include "createvoicetemplateresponse.h"
 #include "deleteadmchannelrequest.h"
 #include "deleteadmchannelresponse.h"
 #include "deleteapnschannelrequest.h"
@@ -49,20 +61,32 @@
 #include "deletecampaignresponse.h"
 #include "deleteemailchannelrequest.h"
 #include "deleteemailchannelresponse.h"
+#include "deleteemailtemplaterequest.h"
+#include "deleteemailtemplateresponse.h"
 #include "deleteendpointrequest.h"
 #include "deleteendpointresponse.h"
 #include "deleteeventstreamrequest.h"
 #include "deleteeventstreamresponse.h"
 #include "deletegcmchannelrequest.h"
 #include "deletegcmchannelresponse.h"
+#include "deletejourneyrequest.h"
+#include "deletejourneyresponse.h"
+#include "deletepushtemplaterequest.h"
+#include "deletepushtemplateresponse.h"
+#include "deleterecommenderconfigurationrequest.h"
+#include "deleterecommenderconfigurationresponse.h"
 #include "deletesegmentrequest.h"
 #include "deletesegmentresponse.h"
 #include "deletesmschannelrequest.h"
 #include "deletesmschannelresponse.h"
+#include "deletesmstemplaterequest.h"
+#include "deletesmstemplateresponse.h"
 #include "deleteuserendpointsrequest.h"
 #include "deleteuserendpointsresponse.h"
 #include "deletevoicechannelrequest.h"
 #include "deletevoicechannelresponse.h"
+#include "deletevoicetemplaterequest.h"
+#include "deletevoicetemplateresponse.h"
 #include "getadmchannelrequest.h"
 #include "getadmchannelresponse.h"
 #include "getapnschannelrequest.h"
@@ -75,6 +99,8 @@
 #include "getapnsvoipsandboxchannelresponse.h"
 #include "getapprequest.h"
 #include "getappresponse.h"
+#include "getapplicationdaterangekpirequest.h"
+#include "getapplicationdaterangekpiresponse.h"
 #include "getapplicationsettingsrequest.h"
 #include "getapplicationsettingsresponse.h"
 #include "getappsrequest.h"
@@ -85,6 +111,8 @@
 #include "getcampaignresponse.h"
 #include "getcampaignactivitiesrequest.h"
 #include "getcampaignactivitiesresponse.h"
+#include "getcampaigndaterangekpirequest.h"
+#include "getcampaigndaterangekpiresponse.h"
 #include "getcampaignversionrequest.h"
 #include "getcampaignversionresponse.h"
 #include "getcampaignversionsrequest.h"
@@ -95,6 +123,8 @@
 #include "getchannelsresponse.h"
 #include "getemailchannelrequest.h"
 #include "getemailchannelresponse.h"
+#include "getemailtemplaterequest.h"
+#include "getemailtemplateresponse.h"
 #include "getendpointrequest.h"
 #include "getendpointresponse.h"
 #include "geteventstreamrequest.h"
@@ -109,6 +139,20 @@
 #include "getimportjobresponse.h"
 #include "getimportjobsrequest.h"
 #include "getimportjobsresponse.h"
+#include "getjourneyrequest.h"
+#include "getjourneyresponse.h"
+#include "getjourneydaterangekpirequest.h"
+#include "getjourneydaterangekpiresponse.h"
+#include "getjourneyexecutionactivitymetricsrequest.h"
+#include "getjourneyexecutionactivitymetricsresponse.h"
+#include "getjourneyexecutionmetricsrequest.h"
+#include "getjourneyexecutionmetricsresponse.h"
+#include "getpushtemplaterequest.h"
+#include "getpushtemplateresponse.h"
+#include "getrecommenderconfigurationrequest.h"
+#include "getrecommenderconfigurationresponse.h"
+#include "getrecommenderconfigurationsrequest.h"
+#include "getrecommenderconfigurationsresponse.h"
 #include "getsegmentrequest.h"
 #include "getsegmentresponse.h"
 #include "getsegmentexportjobsrequest.h"
@@ -123,12 +167,22 @@
 #include "getsegmentsresponse.h"
 #include "getsmschannelrequest.h"
 #include "getsmschannelresponse.h"
+#include "getsmstemplaterequest.h"
+#include "getsmstemplateresponse.h"
 #include "getuserendpointsrequest.h"
 #include "getuserendpointsresponse.h"
 #include "getvoicechannelrequest.h"
 #include "getvoicechannelresponse.h"
+#include "getvoicetemplaterequest.h"
+#include "getvoicetemplateresponse.h"
+#include "listjourneysrequest.h"
+#include "listjourneysresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtemplateversionsrequest.h"
+#include "listtemplateversionsresponse.h"
+#include "listtemplatesrequest.h"
+#include "listtemplatesresponse.h"
 #include "phonenumbervalidaterequest.h"
 #include "phonenumbervalidateresponse.h"
 #include "puteventstreamrequest.h"
@@ -163,18 +217,34 @@
 #include "updatecampaignresponse.h"
 #include "updateemailchannelrequest.h"
 #include "updateemailchannelresponse.h"
+#include "updateemailtemplaterequest.h"
+#include "updateemailtemplateresponse.h"
 #include "updateendpointrequest.h"
 #include "updateendpointresponse.h"
 #include "updateendpointsbatchrequest.h"
 #include "updateendpointsbatchresponse.h"
 #include "updategcmchannelrequest.h"
 #include "updategcmchannelresponse.h"
+#include "updatejourneyrequest.h"
+#include "updatejourneyresponse.h"
+#include "updatejourneystaterequest.h"
+#include "updatejourneystateresponse.h"
+#include "updatepushtemplaterequest.h"
+#include "updatepushtemplateresponse.h"
+#include "updaterecommenderconfigurationrequest.h"
+#include "updaterecommenderconfigurationresponse.h"
 #include "updatesegmentrequest.h"
 #include "updatesegmentresponse.h"
 #include "updatesmschannelrequest.h"
 #include "updatesmschannelresponse.h"
+#include "updatesmstemplaterequest.h"
+#include "updatesmstemplateresponse.h"
+#include "updatetemplateactiveversionrequest.h"
+#include "updatetemplateactiveversionresponse.h"
 #include "updatevoicechannelrequest.h"
 #include "updatevoicechannelresponse.h"
+#include "updatevoicetemplaterequest.h"
+#include "updatevoicetemplateresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -282,11 +352,24 @@ CreateCampaignResponse * PinpointClient::createCampaign(const CreateCampaignRequ
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateEmailTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a message template for messages that are sent through the email
+ */
+CreateEmailTemplateResponse * PinpointClient::createEmailTemplate(const CreateEmailTemplateRequest &request)
+{
+    return qobject_cast<CreateEmailTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * CreateExportJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new export job for an
+ * Creates an export job for an
  */
 CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobRequest &request)
 {
@@ -299,11 +382,50 @@ CreateExportJobResponse * PinpointClient::createExportJob(const CreateExportJobR
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new import job for an
+ * Creates an import job for an
  */
 CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobRequest &request)
 {
     return qobject_cast<CreateImportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateJourneyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a journey for an
+ */
+CreateJourneyResponse * PinpointClient::createJourney(const CreateJourneyRequest &request)
+{
+    return qobject_cast<CreateJourneyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreatePushTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a message template for messages that are sent through a push notification
+ */
+CreatePushTemplateResponse * PinpointClient::createPushTemplate(const CreatePushTemplateRequest &request)
+{
+    return qobject_cast<CreatePushTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateRecommenderConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an Amazon Pinpoint configuration for a recommender
+ */
+CreateRecommenderConfigurationResponse * PinpointClient::createRecommenderConfiguration(const CreateRecommenderConfigurationRequest &request)
+{
+    return qobject_cast<CreateRecommenderConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -318,6 +440,32 @@ CreateImportJobResponse * PinpointClient::createImportJob(const CreateImportJobR
 CreateSegmentResponse * PinpointClient::createSegment(const CreateSegmentRequest &request)
 {
     return qobject_cast<CreateSegmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateSmsTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a message template for messages that are sent through the SMS
+ */
+CreateSmsTemplateResponse * PinpointClient::createSmsTemplate(const CreateSmsTemplateRequest &request)
+{
+    return qobject_cast<CreateSmsTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * CreateVoiceTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a message template for messages that are sent through the voice
+ */
+CreateVoiceTemplateResponse * PinpointClient::createVoiceTemplate(const CreateVoiceTemplateRequest &request)
+{
+    return qobject_cast<CreateVoiceTemplateResponse *>(send(request));
 }
 
 /*!
@@ -439,6 +587,19 @@ DeleteEmailChannelResponse * PinpointClient::deleteEmailChannel(const DeleteEmai
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteEmailTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a message template for messages that were sent through the email
+ */
+DeleteEmailTemplateResponse * PinpointClient::deleteEmailTemplate(const DeleteEmailTemplateRequest &request)
+{
+    return qobject_cast<DeleteEmailTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * DeleteEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -478,6 +639,45 @@ DeleteGcmChannelResponse * PinpointClient::deleteGcmChannel(const DeleteGcmChann
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteJourneyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a journey from an
+ */
+DeleteJourneyResponse * PinpointClient::deleteJourney(const DeleteJourneyRequest &request)
+{
+    return qobject_cast<DeleteJourneyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeletePushTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a message template for messages that were sent through a push notification
+ */
+DeletePushTemplateResponse * PinpointClient::deletePushTemplate(const DeletePushTemplateRequest &request)
+{
+    return qobject_cast<DeletePushTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteRecommenderConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an Amazon Pinpoint configuration for a recommender
+ */
+DeleteRecommenderConfigurationResponse * PinpointClient::deleteRecommenderConfiguration(const DeleteRecommenderConfigurationRequest &request)
+{
+    return qobject_cast<DeleteRecommenderConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * DeleteSegmentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -504,6 +704,19 @@ DeleteSmsChannelResponse * PinpointClient::deleteSmsChannel(const DeleteSmsChann
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteSmsTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a message template for messages that were sent through the SMS
+ */
+DeleteSmsTemplateResponse * PinpointClient::deleteSmsTemplate(const DeleteSmsTemplateRequest &request)
+{
+    return qobject_cast<DeleteSmsTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * DeleteUserEndpointsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -526,6 +739,19 @@ DeleteUserEndpointsResponse * PinpointClient::deleteUserEndpoints(const DeleteUs
 DeleteVoiceChannelResponse * PinpointClient::deleteVoiceChannel(const DeleteVoiceChannelRequest &request)
 {
     return qobject_cast<DeleteVoiceChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * DeleteVoiceTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a message template for messages that were sent through the voice
+ */
+DeleteVoiceTemplateResponse * PinpointClient::deleteVoiceTemplate(const DeleteVoiceTemplateRequest &request)
+{
+    return qobject_cast<DeleteVoiceTemplateResponse *>(send(request));
 }
 
 /*!
@@ -608,6 +834,19 @@ GetAppResponse * PinpointClient::getApp(const GetAppRequest &request)
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetApplicationDateRangeKpiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves (queries) pre-aggregated data for a standard metric that applies to an
+ */
+GetApplicationDateRangeKpiResponse * PinpointClient::getApplicationDateRangeKpi(const GetApplicationDateRangeKpiRequest &request)
+{
+    return qobject_cast<GetApplicationDateRangeKpiResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * GetApplicationSettingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -625,7 +864,7 @@ GetApplicationSettingsResponse * PinpointClient::getApplicationSettings(const Ge
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about all of your
+ * Retrieves information about all the applications that are associated with your Amazon Pinpoint
  */
 GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
 {
@@ -638,7 +877,7 @@ GetAppsResponse * PinpointClient::getApps(const GetAppsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the status and settings of the Baidu Cloud Push channel for an
+ * Retrieves information about the status and settings of the Baidu channel for an
  */
 GetBaiduChannelResponse * PinpointClient::getBaiduChannel(const GetBaiduChannelRequest &request)
 {
@@ -664,11 +903,24 @@ GetCampaignResponse * PinpointClient::getCampaign(const GetCampaignRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the activity performed by a
+ * Retrieves information about all the activities for a
  */
 GetCampaignActivitiesResponse * PinpointClient::getCampaignActivities(const GetCampaignActivitiesRequest &request)
 {
     return qobject_cast<GetCampaignActivitiesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetCampaignDateRangeKpiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves (queries) pre-aggregated data for a standard metric that applies to a
+ */
+GetCampaignDateRangeKpiResponse * PinpointClient::getCampaignDateRangeKpi(const GetCampaignDateRangeKpiRequest &request)
+{
+    return qobject_cast<GetCampaignDateRangeKpiResponse *>(send(request));
 }
 
 /*!
@@ -690,7 +942,7 @@ GetCampaignVersionResponse * PinpointClient::getCampaignVersion(const GetCampaig
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the status, configuration, and other settings for all versions of a specific
+ * Retrieves information about the status, configuration, and other settings for all versions of a
  */
 GetCampaignVersionsResponse * PinpointClient::getCampaignVersions(const GetCampaignVersionsRequest &request)
 {
@@ -735,6 +987,19 @@ GetChannelsResponse * PinpointClient::getChannels(const GetChannelsRequest &requ
 GetEmailChannelResponse * PinpointClient::getEmailChannel(const GetEmailChannelRequest &request)
 {
     return qobject_cast<GetEmailChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetEmailTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the content and settings of a message template for messages that are sent through the email
+ */
+GetEmailTemplateResponse * PinpointClient::getEmailTemplate(const GetEmailTemplateRequest &request)
+{
+    return qobject_cast<GetEmailTemplateResponse *>(send(request));
 }
 
 /*!
@@ -830,6 +1095,97 @@ GetImportJobsResponse * PinpointClient::getImportJobs(const GetImportJobsRequest
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetJourneyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the status, configuration, and other settings for a
+ */
+GetJourneyResponse * PinpointClient::getJourney(const GetJourneyRequest &request)
+{
+    return qobject_cast<GetJourneyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetJourneyDateRangeKpiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves (queries) pre-aggregated data for a standard engagement metric that applies to a
+ */
+GetJourneyDateRangeKpiResponse * PinpointClient::getJourneyDateRangeKpi(const GetJourneyDateRangeKpiRequest &request)
+{
+    return qobject_cast<GetJourneyDateRangeKpiResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetJourneyExecutionActivityMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves (queries) pre-aggregated data for a standard execution metric that applies to a journey
+ */
+GetJourneyExecutionActivityMetricsResponse * PinpointClient::getJourneyExecutionActivityMetrics(const GetJourneyExecutionActivityMetricsRequest &request)
+{
+    return qobject_cast<GetJourneyExecutionActivityMetricsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetJourneyExecutionMetricsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves (queries) pre-aggregated data for a standard execution metric that applies to a
+ */
+GetJourneyExecutionMetricsResponse * PinpointClient::getJourneyExecutionMetrics(const GetJourneyExecutionMetricsRequest &request)
+{
+    return qobject_cast<GetJourneyExecutionMetricsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetPushTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the content and settings of a message template for messages that are sent through a push notification
+ */
+GetPushTemplateResponse * PinpointClient::getPushTemplate(const GetPushTemplateRequest &request)
+{
+    return qobject_cast<GetPushTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetRecommenderConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about an Amazon Pinpoint configuration for a recommender
+ */
+GetRecommenderConfigurationResponse * PinpointClient::getRecommenderConfiguration(const GetRecommenderConfigurationRequest &request)
+{
+    return qobject_cast<GetRecommenderConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetRecommenderConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about all the recommender model configurations that are associated with your Amazon Pinpoint
+ */
+GetRecommenderConfigurationsResponse * PinpointClient::getRecommenderConfigurations(const GetRecommenderConfigurationsRequest &request)
+{
+    return qobject_cast<GetRecommenderConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * GetSegmentResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -888,7 +1244,7 @@ GetSegmentVersionResponse * PinpointClient::getSegmentVersion(const GetSegmentVe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about the configuration, dimension, and other settings for all versions of a specific segment
+ * Retrieves information about the configuration, dimension, and other settings for all the versions of a specific segment
  * that's associated with an
  */
 GetSegmentVersionsResponse * PinpointClient::getSegmentVersions(const GetSegmentVersionsRequest &request)
@@ -925,6 +1281,19 @@ GetSmsChannelResponse * PinpointClient::getSmsChannel(const GetSmsChannelRequest
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetSmsTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the content and settings of a message template for messages that are sent through the SMS
+ */
+GetSmsTemplateResponse * PinpointClient::getSmsTemplate(const GetSmsTemplateRequest &request)
+{
+    return qobject_cast<GetSmsTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * GetUserEndpointsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -951,15 +1320,68 @@ GetVoiceChannelResponse * PinpointClient::getVoiceChannel(const GetVoiceChannelR
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * GetVoiceTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the content and settings of a message template for messages that are sent through the voice
+ */
+GetVoiceTemplateResponse * PinpointClient::getVoiceTemplate(const GetVoiceTemplateRequest &request)
+{
+    return qobject_cast<GetVoiceTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * ListJourneysResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about the status, configuration, and other settings for all the journeys that are associated with
+ * an
+ */
+ListJourneysResponse * PinpointClient::listJourneys(const ListJourneysRequest &request)
+{
+    return qobject_cast<ListJourneysResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves all the tags (keys and values) that are associated with an application, campaign, or
+ * Retrieves all the tags (keys and values) that are associated with an application, campaign, message template, or
  */
 ListTagsForResourceResponse * PinpointClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * ListTemplateVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about all the versions of a specific message
+ */
+ListTemplateVersionsResponse * PinpointClient::listTemplateVersions(const ListTemplateVersionsRequest &request)
+{
+    return qobject_cast<ListTemplateVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * ListTemplatesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about all the message templates that are associated with your Amazon Pinpoint
+ */
+ListTemplatesResponse * PinpointClient::listTemplates(const ListTemplatesRequest &request)
+{
+    return qobject_cast<ListTemplatesResponse *>(send(request));
 }
 
 /*!
@@ -1046,7 +1468,7 @@ SendUsersMessagesResponse * PinpointClient::sendUsersMessages(const SendUsersMes
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds one or more tags (keys and values) to an application, campaign, or
+ * Adds one or more tags (keys and values) to an application, campaign, message template, or
  */
 TagResourceResponse * PinpointClient::tagResource(const TagResourceRequest &request)
 {
@@ -1059,7 +1481,7 @@ TagResourceResponse * PinpointClient::tagResource(const TagResourceRequest &requ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes one or more tags (keys and values) from an application, campaign, or
+ * Removes one or more tags (keys and values) from an application, campaign, message template, or
  */
 UntagResourceResponse * PinpointClient::untagResource(const UntagResourceRequest &request)
 {
@@ -1072,7 +1494,7 @@ UntagResourceResponse * PinpointClient::untagResource(const UntagResourceRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the ADM channel settings for an
+ * Enables the ADM channel for an application or updates the status and settings of the ADM channel for an
  */
 UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChannelRequest &request)
 {
@@ -1085,7 +1507,7 @@ UpdateAdmChannelResponse * PinpointClient::updateAdmChannel(const UpdateAdmChann
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the APNs channel settings for an
+ * Enables the APNs channel for an application or updates the status and settings of the APNs channel for an
  */
 UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsChannelRequest &request)
 {
@@ -1098,7 +1520,8 @@ UpdateApnsChannelResponse * PinpointClient::updateApnsChannel(const UpdateApnsCh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the APNs sandbox channel settings for an
+ * Enables the APNs sandbox channel for an application or updates the status and settings of the APNs sandbox channel for
+ * an
  */
 UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(const UpdateApnsSandboxChannelRequest &request)
 {
@@ -1111,7 +1534,7 @@ UpdateApnsSandboxChannelResponse * PinpointClient::updateApnsSandboxChannel(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the APNs VoIP channel settings for an
+ * Enables the APNs VoIP channel for an application or updates the status and settings of the APNs VoIP channel for an
  */
 UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const UpdateApnsVoipChannelRequest &request)
 {
@@ -1124,7 +1547,8 @@ UpdateApnsVoipChannelResponse * PinpointClient::updateApnsVoipChannel(const Upda
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings for the APNs VoIP sandbox channel for an
+ * Enables the APNs VoIP sandbox channel for an application or updates the status and settings of the APNs VoIP sandbox
+ * channel for an
  */
 UpdateApnsVoipSandboxChannelResponse * PinpointClient::updateApnsVoipSandboxChannel(const UpdateApnsVoipSandboxChannelRequest &request)
 {
@@ -1150,7 +1574,7 @@ UpdateApplicationSettingsResponse * PinpointClient::updateApplicationSettings(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings of the Baidu channel for an
+ * Enables the Baidu channel for an application or updates the status and settings of the Baidu channel for an
  */
 UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaiduChannelRequest &request)
 {
@@ -1163,7 +1587,7 @@ UpdateBaiduChannelResponse * PinpointClient::updateBaiduChannel(const UpdateBaid
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the settings for a
+ * Updates the configuration and other settings for a
  */
 UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequest &request)
 {
@@ -1176,11 +1600,24 @@ UpdateCampaignResponse * PinpointClient::updateCampaign(const UpdateCampaignRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the status and settings of the email channel for an
+ * Enables the email channel for an application or updates the status and settings of the email channel for an
  */
 UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmailChannelRequest &request)
 {
     return qobject_cast<UpdateEmailChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateEmailTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing message template for messages that are sent through the email
+ */
+UpdateEmailTemplateResponse * PinpointClient::updateEmailTemplate(const UpdateEmailTemplateRequest &request)
+{
+    return qobject_cast<UpdateEmailTemplateResponse *>(send(request));
 }
 
 /*!
@@ -1190,8 +1627,8 @@ UpdateEmailChannelResponse * PinpointClient::updateEmailChannel(const UpdateEmai
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new endpoint for an application or updates the settings and attributes of an existing endpoint for an
- * application. You can also use this operation to define custom attributes (Attributes, Metrics, and UserAttributes
- * properties) for an
+ * application. You can also use this operation to define custom attributes for an endpoint. If an update includes one or
+ * more values for a custom attribute, Amazon Pinpoint replaces (overwrites) any existing values with the new
  */
 UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequest &request)
 {
@@ -1205,8 +1642,9 @@ UpdateEndpointResponse * PinpointClient::updateEndpoint(const UpdateEndpointRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a new batch of endpoints for an application or updates the settings and attributes of a batch of existing
- * endpoints for an application. You can also use this operation to define custom attributes (Attributes, Metrics, and
- * UserAttributes properties) for a batch of
+ * endpoints for an application. You can also use this operation to define custom attributes for a batch of endpoints. If
+ * an update includes one or more values for a custom attribute, Amazon Pinpoint replaces (overwrites) any existing values
+ * with the new
  */
 UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const UpdateEndpointsBatchRequest &request)
 {
@@ -1219,11 +1657,63 @@ UpdateEndpointsBatchResponse * PinpointClient::updateEndpointsBatch(const Update
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the status and settings of the GCM channel for an
+ * Enables the GCM channel for an application or updates the status and settings of the GCM channel for an
  */
 UpdateGcmChannelResponse * PinpointClient::updateGcmChannel(const UpdateGcmChannelRequest &request)
 {
     return qobject_cast<UpdateGcmChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateJourneyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the configuration and other settings for a
+ */
+UpdateJourneyResponse * PinpointClient::updateJourney(const UpdateJourneyRequest &request)
+{
+    return qobject_cast<UpdateJourneyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateJourneyStateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels (stops) an active
+ */
+UpdateJourneyStateResponse * PinpointClient::updateJourneyState(const UpdateJourneyStateRequest &request)
+{
+    return qobject_cast<UpdateJourneyStateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdatePushTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing message template for messages that are sent through a push notification
+ */
+UpdatePushTemplateResponse * PinpointClient::updatePushTemplate(const UpdatePushTemplateRequest &request)
+{
+    return qobject_cast<UpdatePushTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateRecommenderConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an Amazon Pinpoint configuration for a recommender
+ */
+UpdateRecommenderConfigurationResponse * PinpointClient::updateRecommenderConfiguration(const UpdateRecommenderConfigurationRequest &request)
+{
+    return qobject_cast<UpdateRecommenderConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -1246,7 +1736,7 @@ UpdateSegmentResponse * PinpointClient::updateSegment(const UpdateSegmentRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the status and settings of the SMS channel for an
+ * Enables the SMS channel for an application or updates the status and settings of the SMS channel for an
  */
 UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChannelRequest &request)
 {
@@ -1255,15 +1745,54 @@ UpdateSmsChannelResponse * PinpointClient::updateSmsChannel(const UpdateSmsChann
 
 /*!
  * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateSmsTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing message template for messages that are sent through the SMS
+ */
+UpdateSmsTemplateResponse * PinpointClient::updateSmsTemplate(const UpdateSmsTemplateRequest &request)
+{
+    return qobject_cast<UpdateSmsTemplateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateTemplateActiveVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes the status of a specific version of a message template to
+ */
+UpdateTemplateActiveVersionResponse * PinpointClient::updateTemplateActiveVersion(const UpdateTemplateActiveVersionRequest &request)
+{
+    return qobject_cast<UpdateTemplateActiveVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
  * UpdateVoiceChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the status and settings of the voice channel for an
+ * Enables the voice channel for an application or updates the status and settings of the voice channel for an
  */
 UpdateVoiceChannelResponse * PinpointClient::updateVoiceChannel(const UpdateVoiceChannelRequest &request)
 {
     return qobject_cast<UpdateVoiceChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PinpointClient service, and returns a pointer to an
+ * UpdateVoiceTemplateResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing message template for messages that are sent through the voice
+ */
+UpdateVoiceTemplateResponse * PinpointClient::updateVoiceTemplate(const UpdateVoiceTemplateRequest &request)
+{
+    return qobject_cast<UpdateVoiceTemplateResponse *>(send(request));
 }
 
 /*!

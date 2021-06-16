@@ -38,6 +38,7 @@ namespace CostandUsageReportService {
  *
  * \value DeleteReportDefinitionAction CostandUsageReportService DeleteReportDefinition action.
  * \value DescribeReportDefinitionsAction CostandUsageReportService DescribeReportDefinitions action.
+ * \value ModifyReportDefinitionAction CostandUsageReportService ModifyReportDefinition action.
  * \value PutReportDefinitionAction CostandUsageReportService PutReportDefinition action.
  */
 

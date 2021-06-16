@@ -36,31 +36,41 @@ namespace AppMesh {
  * This enum describes the actions that can be performed as AppMesh
  * requests.
  *
+ * \value CreateGatewayRouteAction AppMesh CreateGatewayRoute action.
  * \value CreateMeshAction AppMesh CreateMesh action.
  * \value CreateRouteAction AppMesh CreateRoute action.
+ * \value CreateVirtualGatewayAction AppMesh CreateVirtualGateway action.
  * \value CreateVirtualNodeAction AppMesh CreateVirtualNode action.
  * \value CreateVirtualRouterAction AppMesh CreateVirtualRouter action.
  * \value CreateVirtualServiceAction AppMesh CreateVirtualService action.
+ * \value DeleteGatewayRouteAction AppMesh DeleteGatewayRoute action.
  * \value DeleteMeshAction AppMesh DeleteMesh action.
  * \value DeleteRouteAction AppMesh DeleteRoute action.
+ * \value DeleteVirtualGatewayAction AppMesh DeleteVirtualGateway action.
  * \value DeleteVirtualNodeAction AppMesh DeleteVirtualNode action.
  * \value DeleteVirtualRouterAction AppMesh DeleteVirtualRouter action.
  * \value DeleteVirtualServiceAction AppMesh DeleteVirtualService action.
+ * \value DescribeGatewayRouteAction AppMesh DescribeGatewayRoute action.
  * \value DescribeMeshAction AppMesh DescribeMesh action.
  * \value DescribeRouteAction AppMesh DescribeRoute action.
+ * \value DescribeVirtualGatewayAction AppMesh DescribeVirtualGateway action.
  * \value DescribeVirtualNodeAction AppMesh DescribeVirtualNode action.
  * \value DescribeVirtualRouterAction AppMesh DescribeVirtualRouter action.
  * \value DescribeVirtualServiceAction AppMesh DescribeVirtualService action.
+ * \value ListGatewayRoutesAction AppMesh ListGatewayRoutes action.
  * \value ListMeshesAction AppMesh ListMeshes action.
  * \value ListRoutesAction AppMesh ListRoutes action.
  * \value ListTagsForResourceAction AppMesh ListTagsForResource action.
+ * \value ListVirtualGatewaysAction AppMesh ListVirtualGateways action.
  * \value ListVirtualNodesAction AppMesh ListVirtualNodes action.
  * \value ListVirtualRoutersAction AppMesh ListVirtualRouters action.
  * \value ListVirtualServicesAction AppMesh ListVirtualServices action.
  * \value TagResourceAction AppMesh TagResource action.
  * \value UntagResourceAction AppMesh UntagResource action.
+ * \value UpdateGatewayRouteAction AppMesh UpdateGatewayRoute action.
  * \value UpdateMeshAction AppMesh UpdateMesh action.
  * \value UpdateRouteAction AppMesh UpdateRoute action.
+ * \value UpdateVirtualGatewayAction AppMesh UpdateVirtualGateway action.
  * \value UpdateVirtualNodeAction AppMesh UpdateVirtualNode action.
  * \value UpdateVirtualRouterAction AppMesh UpdateVirtualRouter action.
  * \value UpdateVirtualServiceAction AppMesh UpdateVirtualService action.

@@ -41,46 +41,62 @@ namespace Comprehend {
  * \value BatchDetectKeyPhrasesAction Comprehend BatchDetectKeyPhrases action.
  * \value BatchDetectSentimentAction Comprehend BatchDetectSentiment action.
  * \value BatchDetectSyntaxAction Comprehend BatchDetectSyntax action.
+ * \value ClassifyDocumentAction Comprehend ClassifyDocument action.
+ * \value ContainsPiiEntitiesAction Comprehend ContainsPiiEntities action.
  * \value CreateDocumentClassifierAction Comprehend CreateDocumentClassifier action.
+ * \value CreateEndpointAction Comprehend CreateEndpoint action.
  * \value CreateEntityRecognizerAction Comprehend CreateEntityRecognizer action.
  * \value DeleteDocumentClassifierAction Comprehend DeleteDocumentClassifier action.
+ * \value DeleteEndpointAction Comprehend DeleteEndpoint action.
  * \value DeleteEntityRecognizerAction Comprehend DeleteEntityRecognizer action.
  * \value DescribeDocumentClassificationJobAction Comprehend DescribeDocumentClassificationJob action.
  * \value DescribeDocumentClassifierAction Comprehend DescribeDocumentClassifier action.
  * \value DescribeDominantLanguageDetectionJobAction Comprehend DescribeDominantLanguageDetectionJob action.
+ * \value DescribeEndpointAction Comprehend DescribeEndpoint action.
  * \value DescribeEntitiesDetectionJobAction Comprehend DescribeEntitiesDetectionJob action.
  * \value DescribeEntityRecognizerAction Comprehend DescribeEntityRecognizer action.
+ * \value DescribeEventsDetectionJobAction Comprehend DescribeEventsDetectionJob action.
  * \value DescribeKeyPhrasesDetectionJobAction Comprehend DescribeKeyPhrasesDetectionJob action.
+ * \value DescribePiiEntitiesDetectionJobAction Comprehend DescribePiiEntitiesDetectionJob action.
  * \value DescribeSentimentDetectionJobAction Comprehend DescribeSentimentDetectionJob action.
  * \value DescribeTopicsDetectionJobAction Comprehend DescribeTopicsDetectionJob action.
  * \value DetectDominantLanguageAction Comprehend DetectDominantLanguage action.
  * \value DetectEntitiesAction Comprehend DetectEntities action.
  * \value DetectKeyPhrasesAction Comprehend DetectKeyPhrases action.
+ * \value DetectPiiEntitiesAction Comprehend DetectPiiEntities action.
  * \value DetectSentimentAction Comprehend DetectSentiment action.
  * \value DetectSyntaxAction Comprehend DetectSyntax action.
  * \value ListDocumentClassificationJobsAction Comprehend ListDocumentClassificationJobs action.
  * \value ListDocumentClassifiersAction Comprehend ListDocumentClassifiers action.
  * \value ListDominantLanguageDetectionJobsAction Comprehend ListDominantLanguageDetectionJobs action.
+ * \value ListEndpointsAction Comprehend ListEndpoints action.
  * \value ListEntitiesDetectionJobsAction Comprehend ListEntitiesDetectionJobs action.
  * \value ListEntityRecognizersAction Comprehend ListEntityRecognizers action.
+ * \value ListEventsDetectionJobsAction Comprehend ListEventsDetectionJobs action.
  * \value ListKeyPhrasesDetectionJobsAction Comprehend ListKeyPhrasesDetectionJobs action.
+ * \value ListPiiEntitiesDetectionJobsAction Comprehend ListPiiEntitiesDetectionJobs action.
  * \value ListSentimentDetectionJobsAction Comprehend ListSentimentDetectionJobs action.
  * \value ListTagsForResourceAction Comprehend ListTagsForResource action.
  * \value ListTopicsDetectionJobsAction Comprehend ListTopicsDetectionJobs action.
  * \value StartDocumentClassificationJobAction Comprehend StartDocumentClassificationJob action.
  * \value StartDominantLanguageDetectionJobAction Comprehend StartDominantLanguageDetectionJob action.
  * \value StartEntitiesDetectionJobAction Comprehend StartEntitiesDetectionJob action.
+ * \value StartEventsDetectionJobAction Comprehend StartEventsDetectionJob action.
  * \value StartKeyPhrasesDetectionJobAction Comprehend StartKeyPhrasesDetectionJob action.
+ * \value StartPiiEntitiesDetectionJobAction Comprehend StartPiiEntitiesDetectionJob action.
  * \value StartSentimentDetectionJobAction Comprehend StartSentimentDetectionJob action.
  * \value StartTopicsDetectionJobAction Comprehend StartTopicsDetectionJob action.
  * \value StopDominantLanguageDetectionJobAction Comprehend StopDominantLanguageDetectionJob action.
  * \value StopEntitiesDetectionJobAction Comprehend StopEntitiesDetectionJob action.
+ * \value StopEventsDetectionJobAction Comprehend StopEventsDetectionJob action.
  * \value StopKeyPhrasesDetectionJobAction Comprehend StopKeyPhrasesDetectionJob action.
+ * \value StopPiiEntitiesDetectionJobAction Comprehend StopPiiEntitiesDetectionJob action.
  * \value StopSentimentDetectionJobAction Comprehend StopSentimentDetectionJob action.
  * \value StopTrainingDocumentClassifierAction Comprehend StopTrainingDocumentClassifier action.
  * \value StopTrainingEntityRecognizerAction Comprehend StopTrainingEntityRecognizer action.
  * \value TagResourceAction Comprehend TagResource action.
  * \value UntagResourceAction Comprehend UntagResource action.
+ * \value UpdateEndpointAction Comprehend UpdateEndpoint action.
  */
 
 /*!

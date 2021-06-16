@@ -43,12 +43,18 @@
 #include "describejobsresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "registerjobdefinitionrequest.h"
 #include "registerjobdefinitionresponse.h"
 #include "submitjobrequest.h"
 #include "submitjobresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
 #include "terminatejobrequest.h"
 #include "terminatejobresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatecomputeenvironmentrequest.h"
 #include "updatecomputeenvironmentresponse.h"
 #include "updatejobqueuerequest.h"
@@ -76,20 +82,19 @@ namespace Batch {
  * \ingroup aws-clients
  * \inmodule QtAwsBatch
  *
- *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
- *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
- *  lifting of configuring and managing the required infrastructure. AWS Batch will be familiar to users of traditional
- *  batch computing software. This service can efficiently provision resources in response to jobs submitted in order to
- *  eliminate capacity constraints, reduce compute costs, and deliver results
+ *  Using AWS Batch, you can run batch computing workloads on the AWS Cloud. Batch computing is a common means for
+ *  developers, scientists, and engineers to access large amounts of compute resources. AWS Batch uses the advantages of
+ *  this computing workload to remove the undifferentiated heavy lifting of configuring and managing required
+ *  infrastructure. At the same time, it also adopts a familiar batch computing software approach. Given these advantages,
+ *  AWS Batch can help you to efficiently provision resources in response to jobs submitted, thus effectively helping you to
+ *  eliminate capacity constraints, reduce compute costs, and deliver your results more
  * 
  *  quickly>
  * 
- *  As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of
- *  any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the
- *  quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software,
- *  which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves
- *  time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the
- *  AWS
+ *  As a fully managed service, AWS Batch can run batch computing workloads of any scale. AWS Batch automatically provisions
+ *  compute resources and optimizes workload distribution based on the quantity and scale of your specific workloads. With
+ *  AWS Batch, there's no need to install or manage batch computing software. This means that you can focus your time and
+ *  energy on analyzing results and solving your specific
  */
 
 /*!
@@ -152,9 +157,9 @@ BatchClient::BatchClient(
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Cancels a job in an AWS Batch job queue. Jobs that are in the <code>SUBMITTED</code>, <code>PENDING</code>, or
- * <code>RUNNABLE</code> state are cancelled. Jobs that have progressed to <code>STARTING</code> or <code>RUNNING</code>
- * are not cancelled (but the API operation still succeeds, even if no job is cancelled); these jobs must be terminated
- * with the <a>TerminateJob</a>
+ * <code>RUNNABLE</code> state are canceled. Jobs that have progressed to <code>STARTING</code> or <code>RUNNING</code>
+ * aren't canceled, but the API operation still succeeds, even if no job is canceled. These jobs must be terminated with
+ * the <a>TerminateJob</a>
  */
 CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
 {
@@ -168,40 +173,43 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an AWS Batch compute environment. You can create <code>MANAGED</code> or <code>UNMANAGED</code> compute
+ * environments. <code>MANAGED</code> compute environments can use Amazon EC2 or AWS Fargate resources.
+ * <code>UNMANAGED</code> compute environments can only use EC2
  *
- * environments>
+ * resources>
  *
  * In a managed compute environment, AWS Batch manages the capacity and instance types of the compute resources within the
  * environment. This is based on the compute resource specification that you define or the <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">launch template</a> that you
- * specify when you create the compute environment. You can choose to use Amazon EC2 On-Demand Instances or Spot Instances
- * in your managed compute environment. You can optionally set a maximum price so that Spot Instances only launch when the
- * Spot Instance price is below a specified percentage of the On-Demand
+ * specify when you create the compute environment. Either, you can choose to use EC2 On-Demand Instances and EC2 Spot
+ * Instances. Or, you can use Fargate and Fargate Spot capacity in your managed compute environment. You can optionally set
+ * a maximum price so that Spot Instances only launch when the Spot Instance price is less than a specified percentage of
+ * the On-Demand
  *
  * price> <note>
  *
- * Multi-node parallel jobs are not supported on Spot
+ * Multi-node parallel jobs aren't supported on Spot
  *
  * Instances> </note>
  *
- * In an unmanaged compute environment, you can manage your own compute resources. This provides more compute resource
- * configuration options, such as using a custom AMI, but you must ensure that your AMI meets the Amazon ECS container
- * instance AMI specification. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container_instance_AMIs.html">Container Instance
- * AMIs</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. After you have created your unmanaged compute
- * environment, you can use the <a>DescribeComputeEnvironments</a> operation to find the Amazon ECS cluster that is
- * associated with it. Then, manually launch your container instances into that Amazon ECS cluster. For more information,
- * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html">Launching an
- * Amazon ECS Container Instance</a> in the <i>Amazon Elastic Container Service Developer
+ * In an unmanaged compute environment, you can manage your own EC2 compute resources and have a lot of flexibility with
+ * how you configure your compute resources. For example, you can use custom AMIs. However, you must verify that each of
+ * your AMIs meet the Amazon ECS container instance AMI specification. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container_instance_AMIs.html">container instance
+ * AMIs</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. After you created your unmanaged compute
+ * environment, you can use the <a>DescribeComputeEnvironments</a> operation to find the Amazon ECS cluster that's
+ * associated with it. Then, launch your container instances into that Amazon ECS cluster. For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html">Launching an Amazon
+ * ECS container instance</a> in the <i>Amazon Elastic Container Service Developer
  *
  * Guide</i>> <note>
  *
- * AWS Batch does not upgrade the AMIs in a compute environment after it is created (for example, when a newer version of
- * the Amazon ECS-optimized AMI is available). You are responsible for the management of the guest operating system
- * (including updates and security patches) and any additional application software or utilities that you install on the
- * compute resources. To use a new AMI for your AWS Batch
+ * AWS Batch doesn't upgrade the AMIs in a compute environment after the environment is created. For example, it doesn't
+ * update the AMIs when a newer version of the Amazon ECS optimized AMI is available. Therefore, you're responsible for
+ * managing the guest operating system (including its updates and security patches) and any additional application software
+ * or utilities that you install on the compute resources. To use a new AMI for your AWS Batch jobs, complete these
  *
- * jobs> <ol> <li>
+ * steps> <ol> <li>
  *
  * Create a new compute environment with the new
  *
@@ -211,11 +219,11 @@ CancelJobResponse * BatchClient::cancelJob(const CancelJobRequest &request)
  *
  * queue> </li> <li>
  *
- * Remove the old compute environment from your job
+ * Remove the earlier compute environment from your job
  *
  * queue> </li> <li>
  *
- * Delete the old compute
+ * Delete the earlier compute
  */
 CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const CreateComputeEnvironmentRequest &request)
 {
@@ -233,7 +241,7 @@ CreateComputeEnvironmentResponse * BatchClient::createComputeEnvironment(const C
  *
  * environments>
  *
- * You also set a priority to the job queue that determines the order in which the AWS Batch scheduler places jobs onto its
+ * You also set a priority to the job queue that determines the order that the AWS Batch scheduler places jobs onto its
  * associated compute environments. For example, if a compute environment is associated with more than one job queue, the
  * job queue with a higher priority is given preference for scheduling jobs to that compute
  */
@@ -254,6 +262,8 @@ CreateJobQueueResponse * BatchClient::createJobQueue(const CreateJobQueueRequest
  *
  * Before you can delete a compute environment, you must set its state to <code>DISABLED</code> with the
  * <a>UpdateComputeEnvironment</a> API operation and disassociate it from any job queues with the <a>UpdateJobQueue</a> API
+ * operation. Compute environments that use AWS Fargate resources must terminate all active jobs on that compute
+ * environment before deleting the compute environment. If this isn't done, the compute environment enters an invalid
  */
 DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const DeleteComputeEnvironmentRequest &request)
 {
@@ -267,12 +277,12 @@ DeleteComputeEnvironmentResponse * BatchClient::deleteComputeEnvironment(const D
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the specified job queue. You must first disable submissions for a queue with the <a>UpdateJobQueue</a>
- * operation. All jobs in the queue are terminated when you delete a job
+ * operation. All jobs in the queue are eventually terminated when you delete a job queue. The jobs are terminated at a
+ * rate of about 16 jobs each
  *
- * queue>
+ * second>
  *
- * It is not necessary to disassociate compute environments from a queue before submitting a <code>DeleteJobQueue</code>
- * request.
+ * It's not necessary to disassociate compute environments from a queue before submitting a <code>DeleteJobQueue</code>
  */
 DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest &request)
 {
@@ -285,7 +295,7 @@ DeleteJobQueueResponse * BatchClient::deleteJobQueue(const DeleteJobQueueRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deregisters an AWS Batch job
+ * Deregisters an AWS Batch job definition. Job definitions are permanently deleted after 180
  */
 DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const DeregisterJobDefinitionRequest &request)
 {
@@ -302,7 +312,7 @@ DeregisterJobDefinitionResponse * BatchClient::deregisterJobDefinition(const Der
  *
  * environments>
  *
- * If you are using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code> operation to
+ * If you're using an unmanaged compute environment, you can use the <code>DescribeComputeEnvironment</code> operation to
  * determine the <code>ecsClusterArn</code> that you should launch your Amazon ECS container instances
  */
 DescribeComputeEnvironmentsResponse * BatchClient::describeComputeEnvironments(const DescribeComputeEnvironmentsRequest &request)
@@ -360,23 +370,23 @@ DescribeJobsResponse * BatchClient::describeJobs(const DescribeJobsRequest &requ
  *
  * jobs>
  *
- * You must specify only one of the
+ * You must specify only one of the following
  *
- * following> <ul> <li>
+ * items> <ul> <li>
  *
- * a job queue ID to return a list of jobs in that job
+ * A job queue ID to return a list of jobs in that job
  *
  * queu> </li> <li>
  *
- * a multi-node parallel job ID to return a list of that job's
+ * A multi-node parallel job ID to return a list of nodes for that
  *
- * node> </li> <li>
+ * jo> </li> <li>
  *
- * an array job ID to return a list of that job's
+ * An array job ID to return a list of the children for that
  *
- * childre> </li> </ul>
+ * jo> </li> </ul>
  *
- * You can filter the results by job status with the <code>jobStatus</code> parameter. If you do not specify a status, only
+ * You can filter the results by job status with the <code>jobStatus</code> parameter. If you don't specify a status, only
  * <code>RUNNING</code> jobs are
  */
 ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
@@ -386,11 +396,25 @@ ListJobsResponse * BatchClient::listJobs(const ListJobsRequest &request)
 
 /*!
  * Sends \a request to the BatchClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags for an AWS Batch resource. AWS Batch resources that support tags are compute environments, jobs, job
+ * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not
+ */
+ListTagsForResourceResponse * BatchClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
  * RegisterJobDefinitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers an AWS Batch job definition.
+ * Registers an AWS Batch job
  */
 RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const RegisterJobDefinitionRequest &request)
 {
@@ -403,12 +427,36 @@ RegisterJobDefinitionResponse * BatchClient::registerJobDefinition(const Registe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Submits an AWS Batch job from a job definition. Parameters specified during <a>SubmitJob</a> override parameters defined
- * in the job definition.
+ * Submits an AWS Batch job from a job definition. Parameters that are specified during <a>SubmitJob</a> override
+ * parameters defined in the job definition. vCPU and memory requirements that are specified in the
+ * <code>ResourceRequirements</code> objects in the job definition are the exception. They can't be overridden this way
+ * using the <code>memory</code> and <code>vcpus</code> parameters. Rather, you must specify updates to job definition
+ * parameters in a <code>ResourceRequirements</code> object that's included in the <code>containerOverrides</code>
+ *
+ * parameter> <b>
+ *
+ * Jobs that run on Fargate resources can't be guaranteed to run for more than 14 days. This is because, after 14 days,
+ * Fargate resources might become unavailable and job might be
  */
 SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
 {
     return qobject_cast<SubmitJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource
+ * aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags associated with
+ * that resource are deleted as well. AWS Batch resources that support tags are compute environments, jobs, job
+ * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not
+ */
+TagResourceResponse * BatchClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
 }
 
 /*!
@@ -424,6 +472,19 @@ SubmitJobResponse * BatchClient::submitJob(const SubmitJobRequest &request)
 TerminateJobResponse * BatchClient::terminateJob(const TerminateJobRequest &request)
 {
     return qobject_cast<TerminateJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BatchClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes specified tags from an AWS Batch
+ */
+UntagResourceResponse * BatchClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -36,39 +36,59 @@ namespace WorkSpaces {
  * This enum describes the actions that can be performed as WorkSpaces
  * requests.
  *
+ * \value AssociateConnectionAliasAction WorkSpaces AssociateConnectionAlias action.
  * \value AssociateIpGroupsAction WorkSpaces AssociateIpGroups action.
  * \value AuthorizeIpRulesAction WorkSpaces AuthorizeIpRules action.
  * \value CopyWorkspaceImageAction WorkSpaces CopyWorkspaceImage action.
+ * \value CreateConnectionAliasAction WorkSpaces CreateConnectionAlias action.
  * \value CreateIpGroupAction WorkSpaces CreateIpGroup action.
  * \value CreateTagsAction WorkSpaces CreateTags action.
+ * \value CreateWorkspaceBundleAction WorkSpaces CreateWorkspaceBundle action.
  * \value CreateWorkspacesAction WorkSpaces CreateWorkspaces action.
+ * \value DeleteConnectionAliasAction WorkSpaces DeleteConnectionAlias action.
  * \value DeleteIpGroupAction WorkSpaces DeleteIpGroup action.
  * \value DeleteTagsAction WorkSpaces DeleteTags action.
+ * \value DeleteWorkspaceBundleAction WorkSpaces DeleteWorkspaceBundle action.
  * \value DeleteWorkspaceImageAction WorkSpaces DeleteWorkspaceImage action.
+ * \value DeregisterWorkspaceDirectoryAction WorkSpaces DeregisterWorkspaceDirectory action.
  * \value DescribeAccountAction WorkSpaces DescribeAccount action.
  * \value DescribeAccountModificationsAction WorkSpaces DescribeAccountModifications action.
  * \value DescribeClientPropertiesAction WorkSpaces DescribeClientProperties action.
+ * \value DescribeConnectionAliasPermissionsAction WorkSpaces DescribeConnectionAliasPermissions action.
+ * \value DescribeConnectionAliasesAction WorkSpaces DescribeConnectionAliases action.
  * \value DescribeIpGroupsAction WorkSpaces DescribeIpGroups action.
  * \value DescribeTagsAction WorkSpaces DescribeTags action.
  * \value DescribeWorkspaceBundlesAction WorkSpaces DescribeWorkspaceBundles action.
  * \value DescribeWorkspaceDirectoriesAction WorkSpaces DescribeWorkspaceDirectories action.
+ * \value DescribeWorkspaceImagePermissionsAction WorkSpaces DescribeWorkspaceImagePermissions action.
  * \value DescribeWorkspaceImagesAction WorkSpaces DescribeWorkspaceImages action.
+ * \value DescribeWorkspaceSnapshotsAction WorkSpaces DescribeWorkspaceSnapshots action.
  * \value DescribeWorkspacesAction WorkSpaces DescribeWorkspaces action.
  * \value DescribeWorkspacesConnectionStatusAction WorkSpaces DescribeWorkspacesConnectionStatus action.
+ * \value DisassociateConnectionAliasAction WorkSpaces DisassociateConnectionAlias action.
  * \value DisassociateIpGroupsAction WorkSpaces DisassociateIpGroups action.
  * \value ImportWorkspaceImageAction WorkSpaces ImportWorkspaceImage action.
  * \value ListAvailableManagementCidrRangesAction WorkSpaces ListAvailableManagementCidrRanges action.
+ * \value MigrateWorkspaceAction WorkSpaces MigrateWorkspace action.
  * \value ModifyAccountAction WorkSpaces ModifyAccount action.
  * \value ModifyClientPropertiesAction WorkSpaces ModifyClientProperties action.
+ * \value ModifySelfservicePermissionsAction WorkSpaces ModifySelfservicePermissions action.
+ * \value ModifyWorkspaceAccessPropertiesAction WorkSpaces ModifyWorkspaceAccessProperties action.
+ * \value ModifyWorkspaceCreationPropertiesAction WorkSpaces ModifyWorkspaceCreationProperties action.
  * \value ModifyWorkspacePropertiesAction WorkSpaces ModifyWorkspaceProperties action.
  * \value ModifyWorkspaceStateAction WorkSpaces ModifyWorkspaceState action.
  * \value RebootWorkspacesAction WorkSpaces RebootWorkspaces action.
  * \value RebuildWorkspacesAction WorkSpaces RebuildWorkspaces action.
+ * \value RegisterWorkspaceDirectoryAction WorkSpaces RegisterWorkspaceDirectory action.
+ * \value RestoreWorkspaceAction WorkSpaces RestoreWorkspace action.
  * \value RevokeIpRulesAction WorkSpaces RevokeIpRules action.
  * \value StartWorkspacesAction WorkSpaces StartWorkspaces action.
  * \value StopWorkspacesAction WorkSpaces StopWorkspaces action.
  * \value TerminateWorkspacesAction WorkSpaces TerminateWorkspaces action.
+ * \value UpdateConnectionAliasPermissionAction WorkSpaces UpdateConnectionAliasPermission action.
  * \value UpdateRulesOfIpGroupAction WorkSpaces UpdateRulesOfIpGroup action.
+ * \value UpdateWorkspaceBundleAction WorkSpaces UpdateWorkspaceBundle action.
+ * \value UpdateWorkspaceImagePermissionAction WorkSpaces UpdateWorkspaceImagePermission action.
  */
 
 /*!

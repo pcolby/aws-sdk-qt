@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsAppRegistry
+description = AWS AppRegistry SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsappregistry-index.html"
+navigation.landingtitle = "AppRegistry"
+navigation.cppclassespage = "AppRegistry C++ Classes"

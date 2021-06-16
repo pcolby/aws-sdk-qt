@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSynthetics
+description = AWS Synthetics SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawssynthetics-index.html"
+navigation.landingtitle = "Synthetics"
+navigation.cppclassespage = "Synthetics C++ Classes"

@@ -33,9 +33,9 @@ namespace EMR {
  *
  * \inmodule QtAwsEMR
  *
- *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data
+ *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data warehouse
  *
  * \sa EmrClient::listSteps
  */

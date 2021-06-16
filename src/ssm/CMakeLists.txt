@@ -5,6 +5,10 @@ add_library(QtAwsSsm
   addtagstoresourcerequest_p.h
   addtagstoresourceresponse.h
   addtagstoresourceresponse_p.h
+  associateopsitemrelateditemrequest.h
+  associateopsitemrelateditemrequest_p.h
+  associateopsitemrelateditemresponse.h
+  associateopsitemrelateditemresponse_p.h
   cancelcommandrequest.h
   cancelcommandrequest_p.h
   cancelcommandresponse.h
@@ -37,6 +41,10 @@ add_library(QtAwsSsm
   createopsitemrequest_p.h
   createopsitemresponse.h
   createopsitemresponse_p.h
+  createopsmetadatarequest.h
+  createopsmetadatarequest_p.h
+  createopsmetadataresponse.h
+  createopsmetadataresponse_p.h
   createpatchbaselinerequest.h
   createpatchbaselinerequest_p.h
   createpatchbaselineresponse.h
@@ -65,6 +73,10 @@ add_library(QtAwsSsm
   deletemaintenancewindowrequest_p.h
   deletemaintenancewindowresponse.h
   deletemaintenancewindowresponse_p.h
+  deleteopsmetadatarequest.h
+  deleteopsmetadatarequest_p.h
+  deleteopsmetadataresponse.h
+  deleteopsmetadataresponse_p.h
   deleteparameterrequest.h
   deleteparameterrequest_p.h
   deleteparameterresponse.h
@@ -225,10 +237,18 @@ add_library(QtAwsSsm
   describesessionsrequest_p.h
   describesessionsresponse.h
   describesessionsresponse_p.h
+  disassociateopsitemrelateditemrequest.h
+  disassociateopsitemrelateditemrequest_p.h
+  disassociateopsitemrelateditemresponse.h
+  disassociateopsitemrelateditemresponse_p.h
   getautomationexecutionrequest.h
   getautomationexecutionrequest_p.h
   getautomationexecutionresponse.h
   getautomationexecutionresponse_p.h
+  getcalendarstaterequest.h
+  getcalendarstaterequest_p.h
+  getcalendarstateresponse.h
+  getcalendarstateresponse_p.h
   getcommandinvocationrequest.h
   getcommandinvocationrequest_p.h
   getcommandinvocationresponse.h
@@ -281,6 +301,10 @@ add_library(QtAwsSsm
   getopsitemrequest_p.h
   getopsitemresponse.h
   getopsitemresponse_p.h
+  getopsmetadatarequest.h
+  getopsmetadatarequest_p.h
+  getopsmetadataresponse.h
+  getopsmetadataresponse_p.h
   getopssummaryrequest.h
   getopssummaryrequest_p.h
   getopssummaryresponse.h
@@ -341,6 +365,10 @@ add_library(QtAwsSsm
   listcompliancesummariesrequest_p.h
   listcompliancesummariesresponse.h
   listcompliancesummariesresponse_p.h
+  listdocumentmetadatahistoryrequest.h
+  listdocumentmetadatahistoryrequest_p.h
+  listdocumentmetadatahistoryresponse.h
+  listdocumentmetadatahistoryresponse_p.h
   listdocumentsrequest.h
   listdocumentsrequest_p.h
   listdocumentsresponse.h
@@ -353,6 +381,18 @@ add_library(QtAwsSsm
   listinventoryentriesrequest_p.h
   listinventoryentriesresponse.h
   listinventoryentriesresponse_p.h
+  listopsitemeventsrequest.h
+  listopsitemeventsrequest_p.h
+  listopsitemeventsresponse.h
+  listopsitemeventsresponse_p.h
+  listopsitemrelateditemsrequest.h
+  listopsitemrelateditemsrequest_p.h
+  listopsitemrelateditemsresponse.h
+  listopsitemrelateditemsresponse_p.h
+  listopsmetadatarequest.h
+  listopsmetadatarequest_p.h
+  listopsmetadataresponse.h
+  listopsmetadataresponse_p.h
   listresourcecompliancesummariesrequest.h
   listresourcecompliancesummariesrequest_p.h
   listresourcecompliancesummariesresponse.h
@@ -431,6 +471,10 @@ add_library(QtAwsSsm
   startautomationexecutionrequest_p.h
   startautomationexecutionresponse.h
   startautomationexecutionresponse_p.h
+  startchangerequestexecutionrequest.h
+  startchangerequestexecutionrequest_p.h
+  startchangerequestexecutionresponse.h
+  startchangerequestexecutionresponse_p.h
   startsessionrequest.h
   startsessionrequest_p.h
   startsessionresponse.h
@@ -443,6 +487,10 @@ add_library(QtAwsSsm
   terminatesessionrequest_p.h
   terminatesessionresponse.h
   terminatesessionresponse_p.h
+  unlabelparameterversionrequest.h
+  unlabelparameterversionrequest_p.h
+  unlabelparameterversionresponse.h
+  unlabelparameterversionresponse_p.h
   updateassociationrequest.h
   updateassociationrequest_p.h
   updateassociationresponse.h
@@ -455,6 +503,10 @@ add_library(QtAwsSsm
   updatedocumentdefaultversionrequest_p.h
   updatedocumentdefaultversionresponse.h
   updatedocumentdefaultversionresponse_p.h
+  updatedocumentmetadatarequest.h
+  updatedocumentmetadatarequest_p.h
+  updatedocumentmetadataresponse.h
+  updatedocumentmetadataresponse_p.h
   updatedocumentrequest.h
   updatedocumentrequest_p.h
   updatedocumentresponse.h
@@ -479,16 +531,26 @@ add_library(QtAwsSsm
   updateopsitemrequest_p.h
   updateopsitemresponse.h
   updateopsitemresponse_p.h
+  updateopsmetadatarequest.h
+  updateopsmetadatarequest_p.h
+  updateopsmetadataresponse.h
+  updateopsmetadataresponse_p.h
   updatepatchbaselinerequest.h
   updatepatchbaselinerequest_p.h
   updatepatchbaselineresponse.h
   updatepatchbaselineresponse_p.h
+  updateresourcedatasyncrequest.h
+  updateresourcedatasyncrequest_p.h
+  updateresourcedatasyncresponse.h
+  updateresourcedatasyncresponse_p.h
   updateservicesettingrequest.h
   updateservicesettingrequest_p.h
   updateservicesettingresponse.h
   updateservicesettingresponse_p.h
   addtagstoresourcerequest.cpp
   addtagstoresourceresponse.cpp
+  associateopsitemrelateditemrequest.cpp
+  associateopsitemrelateditemresponse.cpp
   cancelcommandrequest.cpp
   cancelcommandresponse.cpp
   cancelmaintenancewindowexecutionrequest.cpp
@@ -505,6 +567,8 @@ add_library(QtAwsSsm
   createmaintenancewindowresponse.cpp
   createopsitemrequest.cpp
   createopsitemresponse.cpp
+  createopsmetadatarequest.cpp
+  createopsmetadataresponse.cpp
   createpatchbaselinerequest.cpp
   createpatchbaselineresponse.cpp
   createresourcedatasyncrequest.cpp
@@ -519,6 +583,8 @@ add_library(QtAwsSsm
   deleteinventoryresponse.cpp
   deletemaintenancewindowrequest.cpp
   deletemaintenancewindowresponse.cpp
+  deleteopsmetadatarequest.cpp
+  deleteopsmetadataresponse.cpp
   deleteparameterrequest.cpp
   deleteparameterresponse.cpp
   deleteparametersrequest.cpp
@@ -599,8 +665,12 @@ add_library(QtAwsSsm
   describepatchpropertiesresponse.cpp
   describesessionsrequest.cpp
   describesessionsresponse.cpp
+  disassociateopsitemrelateditemrequest.cpp
+  disassociateopsitemrelateditemresponse.cpp
   getautomationexecutionrequest.cpp
   getautomationexecutionresponse.cpp
+  getcalendarstaterequest.cpp
+  getcalendarstateresponse.cpp
   getcommandinvocationrequest.cpp
   getcommandinvocationresponse.cpp
   getconnectionstatusrequest.cpp
@@ -627,6 +697,8 @@ add_library(QtAwsSsm
   getmaintenancewindowtaskresponse.cpp
   getopsitemrequest.cpp
   getopsitemresponse.cpp
+  getopsmetadatarequest.cpp
+  getopsmetadataresponse.cpp
   getopssummaryrequest.cpp
   getopssummaryresponse.cpp
   getparameterhistoryrequest.cpp
@@ -657,12 +729,20 @@ add_library(QtAwsSsm
   listcomplianceitemsresponse.cpp
   listcompliancesummariesrequest.cpp
   listcompliancesummariesresponse.cpp
+  listdocumentmetadatahistoryrequest.cpp
+  listdocumentmetadatahistoryresponse.cpp
   listdocumentsrequest.cpp
   listdocumentsresponse.cpp
   listdocumentversionsrequest.cpp
   listdocumentversionsresponse.cpp
   listinventoryentriesrequest.cpp
   listinventoryentriesresponse.cpp
+  listopsitemeventsrequest.cpp
+  listopsitemeventsresponse.cpp
+  listopsitemrelateditemsrequest.cpp
+  listopsitemrelateditemsresponse.cpp
+  listopsmetadatarequest.cpp
+  listopsmetadataresponse.cpp
   listresourcecompliancesummariesrequest.cpp
   listresourcecompliancesummariesresponse.cpp
   listresourcedatasyncrequest.cpp
@@ -702,18 +782,24 @@ add_library(QtAwsSsm
   startassociationsonceresponse.cpp
   startautomationexecutionrequest.cpp
   startautomationexecutionresponse.cpp
+  startchangerequestexecutionrequest.cpp
+  startchangerequestexecutionresponse.cpp
   startsessionrequest.cpp
   startsessionresponse.cpp
   stopautomationexecutionrequest.cpp
   stopautomationexecutionresponse.cpp
   terminatesessionrequest.cpp
   terminatesessionresponse.cpp
+  unlabelparameterversionrequest.cpp
+  unlabelparameterversionresponse.cpp
   updateassociationrequest.cpp
   updateassociationresponse.cpp
   updateassociationstatusrequest.cpp
   updateassociationstatusresponse.cpp
   updatedocumentdefaultversionrequest.cpp
   updatedocumentdefaultversionresponse.cpp
+  updatedocumentmetadatarequest.cpp
+  updatedocumentmetadataresponse.cpp
   updatedocumentrequest.cpp
   updatedocumentresponse.cpp
   updatemaintenancewindowrequest.cpp
@@ -726,8 +812,12 @@ add_library(QtAwsSsm
   updatemanagedinstanceroleresponse.cpp
   updateopsitemrequest.cpp
   updateopsitemresponse.cpp
+  updateopsmetadatarequest.cpp
+  updateopsmetadataresponse.cpp
   updatepatchbaselinerequest.cpp
   updatepatchbaselineresponse.cpp
+  updateresourcedatasyncrequest.cpp
+  updateresourcedatasyncresponse.cpp
   updateservicesettingrequest.cpp
   updateservicesettingresponse.cpp)
 

@@ -50,6 +50,8 @@ class CreateSqlInjectionMatchSetRequest;
 class CreateSqlInjectionMatchSetResponse;
 class CreateWebACLRequest;
 class CreateWebACLResponse;
+class CreateWebACLMigrationStackRequest;
+class CreateWebACLMigrationStackResponse;
 class CreateXssMatchSetRequest;
 class CreateXssMatchSetResponse;
 class DeleteByteMatchSetRequest;
@@ -208,6 +210,7 @@ public slots:
     CreateSizeConstraintSetResponse * createSizeConstraintSet(const CreateSizeConstraintSetRequest &request);
     CreateSqlInjectionMatchSetResponse * createSqlInjectionMatchSet(const CreateSqlInjectionMatchSetRequest &request);
     CreateWebACLResponse * createWebACL(const CreateWebACLRequest &request);
+    CreateWebACLMigrationStackResponse * createWebACLMigrationStack(const CreateWebACLMigrationStackRequest &request);
     CreateXssMatchSetResponse * createXssMatchSet(const CreateXssMatchSetRequest &request);
     DeleteByteMatchSetResponse * deleteByteMatchSet(const DeleteByteMatchSetRequest &request);
     DeleteGeoMatchSetResponse * deleteGeoMatchSet(const DeleteGeoMatchSetRequest &request);

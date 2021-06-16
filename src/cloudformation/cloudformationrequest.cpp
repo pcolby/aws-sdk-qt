@@ -46,6 +46,7 @@ namespace CloudFormation {
  * \value DeleteStackAction CloudFormation DeleteStack action.
  * \value DeleteStackInstancesAction CloudFormation DeleteStackInstances action.
  * \value DeleteStackSetAction CloudFormation DeleteStackSet action.
+ * \value DeregisterTypeAction CloudFormation DeregisterType action.
  * \value DescribeAccountLimitsAction CloudFormation DescribeAccountLimits action.
  * \value DescribeChangeSetAction CloudFormation DescribeChangeSet action.
  * \value DescribeStackDriftDetectionStatusAction CloudFormation DescribeStackDriftDetectionStatus action.
@@ -57,8 +58,11 @@ namespace CloudFormation {
  * \value DescribeStackSetAction CloudFormation DescribeStackSet action.
  * \value DescribeStackSetOperationAction CloudFormation DescribeStackSetOperation action.
  * \value DescribeStacksAction CloudFormation DescribeStacks action.
+ * \value DescribeTypeAction CloudFormation DescribeType action.
+ * \value DescribeTypeRegistrationAction CloudFormation DescribeTypeRegistration action.
  * \value DetectStackDriftAction CloudFormation DetectStackDrift action.
  * \value DetectStackResourceDriftAction CloudFormation DetectStackResourceDrift action.
+ * \value DetectStackSetDriftAction CloudFormation DetectStackSetDrift action.
  * \value EstimateTemplateCostAction CloudFormation EstimateTemplateCost action.
  * \value ExecuteChangeSetAction CloudFormation ExecuteChangeSet action.
  * \value GetStackPolicyAction CloudFormation GetStackPolicy action.
@@ -73,7 +77,13 @@ namespace CloudFormation {
  * \value ListStackSetOperationsAction CloudFormation ListStackSetOperations action.
  * \value ListStackSetsAction CloudFormation ListStackSets action.
  * \value ListStacksAction CloudFormation ListStacks action.
+ * \value ListTypeRegistrationsAction CloudFormation ListTypeRegistrations action.
+ * \value ListTypeVersionsAction CloudFormation ListTypeVersions action.
+ * \value ListTypesAction CloudFormation ListTypes action.
+ * \value RecordHandlerProgressAction CloudFormation RecordHandlerProgress action.
+ * \value RegisterTypeAction CloudFormation RegisterType action.
  * \value SetStackPolicyAction CloudFormation SetStackPolicy action.
+ * \value SetTypeDefaultVersionAction CloudFormation SetTypeDefaultVersion action.
  * \value SignalResourceAction CloudFormation SignalResource action.
  * \value StopStackSetOperationAction CloudFormation StopStackSetOperation action.
  * \value UpdateStackAction CloudFormation UpdateStack action.

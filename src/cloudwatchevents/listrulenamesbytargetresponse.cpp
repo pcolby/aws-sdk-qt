@@ -43,19 +43,19 @@ namespace CloudWatchEvents {
  *  Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
  *  enters the running
  * 
- *  stat> </li> <li>
+ *  state> </li> <li>
  * 
  *  Direct specific API records from AWS CloudTrail to an Amazon Kinesis data stream for detailed analysis of potential
  *  security or availability
  * 
- *  risk> </li> <li>
+ *  risks> </li> <li>
  * 
  *  Periodically invoke a built-in target to create a snapshot of an Amazon EBS
  * 
- *  volum> </li> </ul>
+ *  volume> </li> </ul>
  * 
  *  For more information about the features of Amazon EventBridge, see the <a
- *  href="https://docs.aws.amazon.com/eventbridge/latest/userguide/">Amazon EventBridge User
+ *  href="https://docs.aws.amazon.com/eventbridge/latest/userguide">Amazon EventBridge User
  *
  * \sa CloudWatchEventsClient::listRuleNamesByTarget
  */

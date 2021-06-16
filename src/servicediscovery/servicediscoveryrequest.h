@@ -54,7 +54,10 @@ public:
         ListNamespacesAction,
         ListOperationsAction,
         ListServicesAction,
+        ListTagsForResourceAction,
         RegisterInstanceAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateInstanceCustomHealthStatusAction,
         UpdateServiceAction,
     };

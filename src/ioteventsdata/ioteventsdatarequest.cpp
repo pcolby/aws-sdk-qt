@@ -36,9 +36,16 @@ namespace IoTEventsData {
  * This enum describes the actions that can be performed as IoTEventsData
  * requests.
  *
+ * \value BatchAcknowledgeAlarmAction IoTEventsData BatchAcknowledgeAlarm action.
+ * \value BatchDisableAlarmAction IoTEventsData BatchDisableAlarm action.
+ * \value BatchEnableAlarmAction IoTEventsData BatchEnableAlarm action.
  * \value BatchPutMessageAction IoTEventsData BatchPutMessage action.
+ * \value BatchResetAlarmAction IoTEventsData BatchResetAlarm action.
+ * \value BatchSnoozeAlarmAction IoTEventsData BatchSnoozeAlarm action.
  * \value BatchUpdateDetectorAction IoTEventsData BatchUpdateDetector action.
+ * \value DescribeAlarmAction IoTEventsData DescribeAlarm action.
  * \value DescribeDetectorAction IoTEventsData DescribeDetector action.
+ * \value ListAlarmsAction IoTEventsData ListAlarms action.
  * \value ListDetectorsAction IoTEventsData ListDetectors action.
  */
 

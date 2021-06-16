@@ -31,6 +31,10 @@
 #include "createprojectresponse.h"
 #include "createremoteaccesssessionrequest.h"
 #include "createremoteaccesssessionresponse.h"
+#include "createtestgridprojectrequest.h"
+#include "createtestgridprojectresponse.h"
+#include "createtestgridurlrequest.h"
+#include "createtestgridurlresponse.h"
 #include "createuploadrequest.h"
 #include "createuploadresponse.h"
 #include "createvpceconfigurationrequest.h"
@@ -47,6 +51,8 @@
 #include "deleteremoteaccesssessionresponse.h"
 #include "deleterunrequest.h"
 #include "deleterunresponse.h"
+#include "deletetestgridprojectrequest.h"
+#include "deletetestgridprojectresponse.h"
 #include "deleteuploadrequest.h"
 #include "deleteuploadresponse.h"
 #include "deletevpceconfigurationrequest.h"
@@ -79,6 +85,10 @@
 #include "getsuiteresponse.h"
 #include "gettestrequest.h"
 #include "gettestresponse.h"
+#include "gettestgridprojectrequest.h"
+#include "gettestgridprojectresponse.h"
+#include "gettestgridsessionrequest.h"
+#include "gettestgridsessionresponse.h"
 #include "getuploadrequest.h"
 #include "getuploadresponse.h"
 #include "getvpceconfigurationrequest.h"
@@ -117,6 +127,14 @@
 #include "listsuitesresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "listtestgridprojectsrequest.h"
+#include "listtestgridprojectsresponse.h"
+#include "listtestgridsessionactionsrequest.h"
+#include "listtestgridsessionactionsresponse.h"
+#include "listtestgridsessionartifactsrequest.h"
+#include "listtestgridsessionartifactsresponse.h"
+#include "listtestgridsessionsrequest.h"
+#include "listtestgridsessionsresponse.h"
 #include "listtestsrequest.h"
 #include "listtestsresponse.h"
 #include "listuniqueproblemsrequest.h"
@@ -151,6 +169,8 @@
 #include "updatenetworkprofileresponse.h"
 #include "updateprojectrequest.h"
 #include "updateprojectresponse.h"
+#include "updatetestgridprojectrequest.h"
+#include "updatetestgridprojectresponse.h"
 #include "updateuploadrequest.h"
 #include "updateuploadresponse.h"
 #include "updatevpceconfigurationrequest.h"
@@ -178,8 +198,26 @@ namespace DeviceFarm {
  * \ingroup aws-clients
  * \inmodule QtAwsDeviceFarm
  *
- *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
- *  phones, tablets, and other devices in the
+ *  Welcome to the AWS Device Farm API documentation, which contains APIs
+ * 
+ *  for> <ul> <li>
+ * 
+ *  Testing on desktop
+ * 
+ *  browser>
+ * 
+ *  Device Farm makes it possible for you to test your web applications on desktop browsers using Selenium. The APIs for
+ *  desktop browser testing contain <code>TestGrid</code> in their names. For more information, see <a
+ *  href="https://docs.aws.amazon.com/devicefarm/latest/testgrid/">Testing Web Applications on Selenium with Device
+ * 
+ *  Farm</a>> </li> <li>
+ * 
+ *  Testing on real mobile
+ * 
+ *  device>
+ * 
+ *  Device Farm makes it possible for you to test apps on physical phones, tablets, and other devices in the cloud. For more
+ *  information, see the <a href="https://docs.aws.amazon.com/devicefarm/latest/developerguide/">Device Farm Developer
  */
 
 /*!
@@ -280,7 +318,7 @@ CreateNetworkProfileResponse * DeviceFarmClient::createNetworkProfile(const Crea
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new
+ * Creates a
  */
 CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectRequest &request)
 {
@@ -298,6 +336,32 @@ CreateProjectResponse * DeviceFarmClient::createProject(const CreateProjectReque
 CreateRemoteAccessSessionResponse * DeviceFarmClient::createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request)
 {
     return qobject_cast<CreateRemoteAccessSessionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateTestGridProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a Selenium testing project. Projects are used to track <a>TestGridSession</a>
+ */
+CreateTestGridProjectResponse * DeviceFarmClient::createTestGridProject(const CreateTestGridProjectRequest &request)
+{
+    return qobject_cast<CreateTestGridProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateTestGridUrlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a signed, short-term URL that can be passed to a Selenium <code>RemoteWebDriver</code>
+ */
+CreateTestGridUrlResponse * DeviceFarmClient::createTestGridUrl(const CreateTestGridUrlRequest &request)
+{
+    return qobject_cast<CreateTestGridUrlResponse *>(send(request));
 }
 
 /*!
@@ -375,7 +439,7 @@ DeleteNetworkProfileResponse * DeviceFarmClient::deleteNetworkProfile(const Dele
  *
  * ARN>
  *
- * <b>Note</b> Deleting this resource does not stop an in-progress
+ * Deleting this resource does not stop an in-progress
  */
 DeleteProjectResponse * DeviceFarmClient::deleteProject(const DeleteProjectRequest &request)
 {
@@ -405,11 +469,32 @@ DeleteRemoteAccessSessionResponse * DeviceFarmClient::deleteRemoteAccessSession(
  *
  * ARN>
  *
- * <b>Note</b> Deleting this resource does not stop an in-progress
+ * Deleting this resource does not stop an in-progress
  */
 DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 {
     return qobject_cast<DeleteRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteTestGridProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a Selenium testing project and all content generated under it.
+ *
+ * </p <b>
+ *
+ * You cannot undo this
+ *
+ * operation> </b> <note>
+ *
+ * You cannot delete a project if it has active
+ */
+DeleteTestGridProjectResponse * DeviceFarmClient::deleteTestGridProject(const DeleteTestGridProjectRequest &request)
+{
+    return qobject_cast<DeleteTestGridProjectResponse *>(send(request));
 }
 
 /*!
@@ -444,7 +529,7 @@ DeleteVPCEConfigurationResponse * DeviceFarmClient::deleteVPCEConfiguration(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the
+ * Returns the number of unmetered iOS or unmetered Android devices that have been purchased by the
  */
 GetAccountSettingsResponse * DeviceFarmClient::getAccountSettings(const GetAccountSettingsRequest &request)
 {
@@ -470,7 +555,7 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a device instance belonging to a private device
+ * Returns information about a device instance that belongs to a private device
  */
 GetDeviceInstanceResponse * DeviceFarmClient::getDeviceInstance(const GetDeviceInstanceRequest &request)
 {
@@ -550,9 +635,8 @@ GetNetworkProfileResponse * DeviceFarmClient::getNetworkProfile(const GetNetwork
  *
  * Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many
  * offerings are currently available and the offerings that will be available in the next period. The API returns a
- * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
- * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
- * able to invoke this
+ * <code>NotEligible</code> error if the user is not permitted to invoke the operation. If you must be able to invoke this
+ * operation, contact <a
  */
 GetOfferingStatusResponse * DeviceFarmClient::getOfferingStatus(const GetOfferingStatusRequest &request)
 {
@@ -622,6 +706,41 @@ GetSuiteResponse * DeviceFarmClient::getSuite(const GetSuiteRequest &request)
 GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 {
     return qobject_cast<GetTestResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetTestGridProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about a Selenium testing
+ */
+GetTestGridProjectResponse * DeviceFarmClient::getTestGridProject(const GetTestGridProjectRequest &request)
+{
+    return qobject_cast<GetTestGridProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetTestGridSessionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * A session is an instance of a browser created through a <code>RemoteWebDriver</code> with the URL from
+ * <a>CreateTestGridUrlResult$url</a>. You can use the following to look up
+ *
+ * sessions> <ul> <li>
+ *
+ * The session ARN
+ *
+ * (<a>GetTestGridSessionRequest$sessionArn</a>)> </li> <li>
+ *
+ * The project ARN and a session ID (<a>GetTestGridSessionRequest$projectArn</a> and
+ */
+GetTestGridSessionResponse * DeviceFarmClient::getTestGridSession(const GetTestGridSessionRequest &request)
+{
+    return qobject_cast<GetTestGridSessionResponse *>(send(request));
 }
 
 /*!
@@ -763,8 +882,7 @@ ListNetworkProfilesResponse * DeviceFarmClient::listNetworkProfiles(const ListNe
  *
  * Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion.
  * The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a
- * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
- * able to invoke this
+ * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you must be able to invoke this
  */
 ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const ListOfferingPromotionsRequest &request)
 {
@@ -779,9 +897,8 @@ ListOfferingPromotionsResponse * DeviceFarmClient::listOfferingPromotions(const 
  *
  * Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is
  * paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a
- * <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a
- * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
- * able to invoke this
+ * <code>NotEligible</code> error if the user is not permitted to invoke the operation. If you must be able to invoke this
+ * operation, contact <a
  */
 ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(const ListOfferingTransactionsRequest &request)
 {
@@ -796,9 +913,7 @@ ListOfferingTransactionsResponse * DeviceFarmClient::listOfferingTransactions(co
  *
  * Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the
  * recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the
- * user is not permitted to invoke the operation. Please contact <a
- * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
- * able to invoke this
+ * user is not permitted to invoke the operation. If you must be able to invoke this operation, contact <a
  */
 ListOfferingsResponse * DeviceFarmClient::listOfferings(const ListOfferingsRequest &request)
 {
@@ -885,6 +1000,58 @@ ListTagsForResourceResponse * DeviceFarmClient::listTagsForResource(const ListTa
 
 /*!
  * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListTestGridProjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of all Selenium testing projects in your
+ */
+ListTestGridProjectsResponse * DeviceFarmClient::listTestGridProjects(const ListTestGridProjectsRequest &request)
+{
+    return qobject_cast<ListTestGridProjectsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListTestGridSessionActionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the actions taken in a
+ */
+ListTestGridSessionActionsResponse * DeviceFarmClient::listTestGridSessionActions(const ListTestGridSessionActionsRequest &request)
+{
+    return qobject_cast<ListTestGridSessionActionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListTestGridSessionArtifactsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of artifacts created during the
+ */
+ListTestGridSessionArtifactsResponse * DeviceFarmClient::listTestGridSessionArtifacts(const ListTestGridSessionArtifactsRequest &request)
+{
+    return qobject_cast<ListTestGridSessionArtifactsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListTestGridSessionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of sessions for a
+ */
+ListTestGridSessionsResponse * DeviceFarmClient::listTestGridSessions(const ListTestGridSessionsRequest &request)
+{
+    return qobject_cast<ListTestGridSessionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
  * ListTestsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -902,7 +1069,13 @@ ListTestsResponse * DeviceFarmClient::listTests(const ListTestsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets information about unique
+ * Gets information about unique problems, such as exceptions or
+ *
+ * crashes>
+ *
+ * Unique problems are defined as a single instance of an error across a run, job, or suite. For example, if a call in your
+ * application consistently raises an exception (<code>OutOfBoundsException in MyActivity.java:386</code>),
+ * <code>ListUniqueProblems</code> returns a single entry instead of many individual entries for that
  */
 ListUniqueProblemsResponse * DeviceFarmClient::listUniqueProblems(const ListUniqueProblemsRequest &request)
 {
@@ -943,9 +1116,7 @@ ListVPCEConfigurationsResponse * DeviceFarmClient::listVPCEConfigurations(const 
  *
  * Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an
  * offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not
- * permitted to invoke the operation. Please contact <a
- * href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe that you should be
- * able to invoke this
+ * permitted to invoke the operation. If you must be able to invoke this operation, contact <a
  */
 PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOfferingRequest &request)
 {
@@ -959,9 +1130,8 @@ PurchaseOfferingResponse * DeviceFarmClient::purchaseOffering(const PurchaseOffe
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the
- * next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation.
- * Please contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a> if you believe
- * that you should be able to invoke this
+ * next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. If
+ * you must be able to invoke this operation, contact <a
  */
 RenewOfferingResponse * DeviceFarmClient::renewOffering(const RenewOfferingRequest &request)
 {
@@ -987,10 +1157,10 @@ ScheduleRunResponse * DeviceFarmClient::scheduleRun(const ScheduleRunRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates a stop request for the current job. AWS Device Farm will immediately stop the job on the device where tests
- * have not started executing, and you will not be billed for this device. On the device where tests have started
- * executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on the device. You will
- * be billed for Setup, Teardown, and any tests that were in progress or already
+ * Initiates a stop request for the current job. AWS Device Farm immediately stops the job on the device where tests have
+ * not started. You are not billed for this device. On the device where tests have started, setup suite and teardown suite
+ * tests run to completion on the device. You are billed for setup, teardown, and any tests that were in progress or
+ * already
  */
 StopJobResponse * DeviceFarmClient::stopJob(const StopJobRequest &request)
 {
@@ -1016,10 +1186,10 @@ StopRemoteAccessSessionResponse * DeviceFarmClient::stopRemoteAccessSession(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests
- * have not started executing, and you will not be billed for these devices. On devices where tests have started executing,
- * Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be
- * billed for Setup, Teardown, and any tests that were in progress or already
+ * Initiates a stop request for the current test run. AWS Device Farm immediately stops the run on devices where tests have
+ * not started. You are not billed for these devices. On devices where tests have started executing, setup suite and
+ * teardown suite tests run to completion on those devices. You are billed for setup, teardown, and any tests that were in
+ * progress or already
  */
 StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 {
@@ -1034,7 +1204,7 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
  *
  * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource
  * are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with
- * that resource are deleted as
+ * that resource are also
  */
 TagResourceResponse * DeviceFarmClient::tagResource(const TagResourceRequest &request)
 {
@@ -1060,7 +1230,7 @@ UntagResourceResponse * DeviceFarmClient::untagResource(const UntagResourceReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates information about an existing private device
+ * Updates information about a private device
  */
 UpdateDeviceInstanceResponse * DeviceFarmClient::updateDeviceInstance(const UpdateDeviceInstanceRequest &request)
 {
@@ -1100,7 +1270,7 @@ UpdateInstanceProfileResponse * DeviceFarmClient::updateInstanceProfile(const Up
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the network profile with specific
+ * Updates the network
  */
 UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const UpdateNetworkProfileRequest &request)
 {
@@ -1122,11 +1292,24 @@ UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectReque
 
 /*!
  * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateTestGridProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Change details of a
+ */
+UpdateTestGridProjectResponse * DeviceFarmClient::updateTestGridProject(const UpdateTestGridProjectRequest &request)
+{
+    return qobject_cast<UpdateTestGridProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
  * UpdateUploadResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Update an uploaded test specification (test
+ * Updates an uploaded test
  */
 UpdateUploadResponse * DeviceFarmClient::updateUpload(const UpdateUploadRequest &request)
 {
@@ -1139,7 +1322,7 @@ UpdateUploadResponse * DeviceFarmClient::updateUpload(const UpdateUploadRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint
+ * Updates information about an Amazon Virtual Private Cloud (VPC) endpoint
  */
 UpdateVPCEConfigurationResponse * DeviceFarmClient::updateVPCEConfiguration(const UpdateVPCEConfigurationRequest &request)
 {

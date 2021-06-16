@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsEfs
+  createaccesspointrequest.h
+  createaccesspointrequest_p.h
+  createaccesspointresponse.h
+  createaccesspointresponse_p.h
   createfilesystemrequest.h
   createfilesystemrequest_p.h
   createfilesystemresponse.h
@@ -13,6 +17,14 @@ add_library(QtAwsEfs
   createtagsrequest_p.h
   createtagsresponse.h
   createtagsresponse_p.h
+  deleteaccesspointrequest.h
+  deleteaccesspointrequest_p.h
+  deleteaccesspointresponse.h
+  deleteaccesspointresponse_p.h
+  deletefilesystempolicyrequest.h
+  deletefilesystempolicyrequest_p.h
+  deletefilesystempolicyresponse.h
+  deletefilesystempolicyresponse_p.h
   deletefilesystemrequest.h
   deletefilesystemrequest_p.h
   deletefilesystemresponse.h
@@ -25,6 +37,22 @@ add_library(QtAwsEfs
   deletetagsrequest_p.h
   deletetagsresponse.h
   deletetagsresponse_p.h
+  describeaccesspointsrequest.h
+  describeaccesspointsrequest_p.h
+  describeaccesspointsresponse.h
+  describeaccesspointsresponse_p.h
+  describeaccountpreferencesrequest.h
+  describeaccountpreferencesrequest_p.h
+  describeaccountpreferencesresponse.h
+  describeaccountpreferencesresponse_p.h
+  describebackuppolicyrequest.h
+  describebackuppolicyrequest_p.h
+  describebackuppolicyresponse.h
+  describebackuppolicyresponse_p.h
+  describefilesystempolicyrequest.h
+  describefilesystempolicyrequest_p.h
+  describefilesystempolicyresponse.h
+  describefilesystempolicyresponse_p.h
   describefilesystemsrequest.h
   describefilesystemsrequest_p.h
   describefilesystemsresponse.h
@@ -51,30 +79,68 @@ add_library(QtAwsEfs
   efsrequest_p.h
   efsresponse.h
   efsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   modifymounttargetsecuritygroupsrequest.h
   modifymounttargetsecuritygroupsrequest_p.h
   modifymounttargetsecuritygroupsresponse.h
   modifymounttargetsecuritygroupsresponse_p.h
+  putaccountpreferencesrequest.h
+  putaccountpreferencesrequest_p.h
+  putaccountpreferencesresponse.h
+  putaccountpreferencesresponse_p.h
+  putbackuppolicyrequest.h
+  putbackuppolicyrequest_p.h
+  putbackuppolicyresponse.h
+  putbackuppolicyresponse_p.h
+  putfilesystempolicyrequest.h
+  putfilesystempolicyrequest_p.h
+  putfilesystempolicyresponse.h
+  putfilesystempolicyresponse_p.h
   putlifecycleconfigurationrequest.h
   putlifecycleconfigurationrequest_p.h
   putlifecycleconfigurationresponse.h
   putlifecycleconfigurationresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatefilesystemrequest.h
   updatefilesystemrequest_p.h
   updatefilesystemresponse.h
   updatefilesystemresponse_p.h
+  createaccesspointrequest.cpp
+  createaccesspointresponse.cpp
   createfilesystemrequest.cpp
   createfilesystemresponse.cpp
   createmounttargetrequest.cpp
   createmounttargetresponse.cpp
   createtagsrequest.cpp
   createtagsresponse.cpp
+  deleteaccesspointrequest.cpp
+  deleteaccesspointresponse.cpp
+  deletefilesystempolicyrequest.cpp
+  deletefilesystempolicyresponse.cpp
   deletefilesystemrequest.cpp
   deletefilesystemresponse.cpp
   deletemounttargetrequest.cpp
   deletemounttargetresponse.cpp
   deletetagsrequest.cpp
   deletetagsresponse.cpp
+  describeaccesspointsrequest.cpp
+  describeaccesspointsresponse.cpp
+  describeaccountpreferencesrequest.cpp
+  describeaccountpreferencesresponse.cpp
+  describebackuppolicyrequest.cpp
+  describebackuppolicyresponse.cpp
+  describefilesystempolicyrequest.cpp
+  describefilesystempolicyresponse.cpp
   describefilesystemsrequest.cpp
   describefilesystemsresponse.cpp
   describelifecycleconfigurationrequest.cpp
@@ -88,10 +154,22 @@ add_library(QtAwsEfs
   efsclient.cpp
   efsrequest.cpp
   efsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   modifymounttargetsecuritygroupsrequest.cpp
   modifymounttargetsecuritygroupsresponse.cpp
+  putaccountpreferencesrequest.cpp
+  putaccountpreferencesresponse.cpp
+  putbackuppolicyrequest.cpp
+  putbackuppolicyresponse.cpp
+  putfilesystempolicyrequest.cpp
+  putfilesystempolicyresponse.cpp
   putlifecycleconfigurationrequest.cpp
   putlifecycleconfigurationresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatefilesystemrequest.cpp
   updatefilesystemresponse.cpp)
 

@@ -44,6 +44,12 @@ class DescribeEnvironmentsRequest;
 class DescribeEnvironmentsResponse;
 class ListEnvironmentsRequest;
 class ListEnvironmentsResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateEnvironmentRequest;
 class UpdateEnvironmentResponse;
 class UpdateEnvironmentMembershipRequest;
@@ -73,6 +79,9 @@ public slots:
     DescribeEnvironmentStatusResponse * describeEnvironmentStatus(const DescribeEnvironmentStatusRequest &request);
     DescribeEnvironmentsResponse * describeEnvironments(const DescribeEnvironmentsRequest &request);
     ListEnvironmentsResponse * listEnvironments(const ListEnvironmentsRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
     UpdateEnvironmentMembershipResponse * updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request);
 

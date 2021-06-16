@@ -49,6 +49,10 @@ add_library(QtAwsOpsWorksCM
   exportserverengineattributerequest_p.h
   exportserverengineattributeresponse.h
   exportserverengineattributeresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   opsworkscmclient.h
   opsworkscmclient_p.h
   opsworkscmrequest.h
@@ -63,6 +67,14 @@ add_library(QtAwsOpsWorksCM
   startmaintenancerequest_p.h
   startmaintenanceresponse.h
   startmaintenanceresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updateserverengineattributesrequest.h
   updateserverengineattributesrequest_p.h
   updateserverengineattributesresponse.h
@@ -95,6 +107,8 @@ add_library(QtAwsOpsWorksCM
   disassociatenoderesponse.cpp
   exportserverengineattributerequest.cpp
   exportserverengineattributeresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   opsworkscmclient.cpp
   opsworkscmrequest.cpp
   opsworkscmresponse.cpp
@@ -102,6 +116,10 @@ add_library(QtAwsOpsWorksCM
   restoreserverresponse.cpp
   startmaintenancerequest.cpp
   startmaintenanceresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updateserverengineattributesrequest.cpp
   updateserverengineattributesresponse.cpp
   updateserverrequest.cpp

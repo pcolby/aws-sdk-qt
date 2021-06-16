@@ -44,6 +44,7 @@ namespace DirectConnect {
  * \value AllocateTransitVirtualInterfaceAction DirectConnect AllocateTransitVirtualInterface action.
  * \value AssociateConnectionWithLagAction DirectConnect AssociateConnectionWithLag action.
  * \value AssociateHostedConnectionAction DirectConnect AssociateHostedConnection action.
+ * \value AssociateMacSecKeyAction DirectConnect AssociateMacSecKey action.
  * \value AssociateVirtualInterfaceAction DirectConnect AssociateVirtualInterface action.
  * \value ConfirmConnectionAction DirectConnect ConfirmConnection action.
  * \value ConfirmPrivateVirtualInterfaceAction DirectConnect ConfirmPrivateVirtualInterface action.
@@ -84,8 +85,13 @@ namespace DirectConnect {
  * \value DescribeVirtualGatewaysAction DirectConnect DescribeVirtualGateways action.
  * \value DescribeVirtualInterfacesAction DirectConnect DescribeVirtualInterfaces action.
  * \value DisassociateConnectionFromLagAction DirectConnect DisassociateConnectionFromLag action.
+ * \value DisassociateMacSecKeyAction DirectConnect DisassociateMacSecKey action.
+ * \value ListVirtualInterfaceTestHistoryAction DirectConnect ListVirtualInterfaceTestHistory action.
+ * \value StartBgpFailoverTestAction DirectConnect StartBgpFailoverTest action.
+ * \value StopBgpFailoverTestAction DirectConnect StopBgpFailoverTest action.
  * \value TagResourceAction DirectConnect TagResource action.
  * \value UntagResourceAction DirectConnect UntagResource action.
+ * \value UpdateConnectionAction DirectConnect UpdateConnection action.
  * \value UpdateDirectConnectGatewayAssociationAction DirectConnect UpdateDirectConnectGatewayAssociation action.
  * \value UpdateLagAction DirectConnect UpdateLag action.
  * \value UpdateVirtualInterfaceAttributesAction DirectConnect UpdateVirtualInterfaceAttributes action.

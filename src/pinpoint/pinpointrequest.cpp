@@ -38,9 +38,15 @@ namespace Pinpoint {
  *
  * \value CreateAppAction Pinpoint CreateApp action.
  * \value CreateCampaignAction Pinpoint CreateCampaign action.
+ * \value CreateEmailTemplateAction Pinpoint CreateEmailTemplate action.
  * \value CreateExportJobAction Pinpoint CreateExportJob action.
  * \value CreateImportJobAction Pinpoint CreateImportJob action.
+ * \value CreateJourneyAction Pinpoint CreateJourney action.
+ * \value CreatePushTemplateAction Pinpoint CreatePushTemplate action.
+ * \value CreateRecommenderConfigurationAction Pinpoint CreateRecommenderConfiguration action.
  * \value CreateSegmentAction Pinpoint CreateSegment action.
+ * \value CreateSmsTemplateAction Pinpoint CreateSmsTemplate action.
+ * \value CreateVoiceTemplateAction Pinpoint CreateVoiceTemplate action.
  * \value DeleteAdmChannelAction Pinpoint DeleteAdmChannel action.
  * \value DeleteApnsChannelAction Pinpoint DeleteApnsChannel action.
  * \value DeleteApnsSandboxChannelAction Pinpoint DeleteApnsSandboxChannel action.
@@ -50,29 +56,38 @@ namespace Pinpoint {
  * \value DeleteBaiduChannelAction Pinpoint DeleteBaiduChannel action.
  * \value DeleteCampaignAction Pinpoint DeleteCampaign action.
  * \value DeleteEmailChannelAction Pinpoint DeleteEmailChannel action.
+ * \value DeleteEmailTemplateAction Pinpoint DeleteEmailTemplate action.
  * \value DeleteEndpointAction Pinpoint DeleteEndpoint action.
  * \value DeleteEventStreamAction Pinpoint DeleteEventStream action.
  * \value DeleteGcmChannelAction Pinpoint DeleteGcmChannel action.
+ * \value DeleteJourneyAction Pinpoint DeleteJourney action.
+ * \value DeletePushTemplateAction Pinpoint DeletePushTemplate action.
+ * \value DeleteRecommenderConfigurationAction Pinpoint DeleteRecommenderConfiguration action.
  * \value DeleteSegmentAction Pinpoint DeleteSegment action.
  * \value DeleteSmsChannelAction Pinpoint DeleteSmsChannel action.
+ * \value DeleteSmsTemplateAction Pinpoint DeleteSmsTemplate action.
  * \value DeleteUserEndpointsAction Pinpoint DeleteUserEndpoints action.
  * \value DeleteVoiceChannelAction Pinpoint DeleteVoiceChannel action.
+ * \value DeleteVoiceTemplateAction Pinpoint DeleteVoiceTemplate action.
  * \value GetAdmChannelAction Pinpoint GetAdmChannel action.
  * \value GetApnsChannelAction Pinpoint GetApnsChannel action.
  * \value GetApnsSandboxChannelAction Pinpoint GetApnsSandboxChannel action.
  * \value GetApnsVoipChannelAction Pinpoint GetApnsVoipChannel action.
  * \value GetApnsVoipSandboxChannelAction Pinpoint GetApnsVoipSandboxChannel action.
  * \value GetAppAction Pinpoint GetApp action.
+ * \value GetApplicationDateRangeKpiAction Pinpoint GetApplicationDateRangeKpi action.
  * \value GetApplicationSettingsAction Pinpoint GetApplicationSettings action.
  * \value GetAppsAction Pinpoint GetApps action.
  * \value GetBaiduChannelAction Pinpoint GetBaiduChannel action.
  * \value GetCampaignAction Pinpoint GetCampaign action.
  * \value GetCampaignActivitiesAction Pinpoint GetCampaignActivities action.
+ * \value GetCampaignDateRangeKpiAction Pinpoint GetCampaignDateRangeKpi action.
  * \value GetCampaignVersionAction Pinpoint GetCampaignVersion action.
  * \value GetCampaignVersionsAction Pinpoint GetCampaignVersions action.
  * \value GetCampaignsAction Pinpoint GetCampaigns action.
  * \value GetChannelsAction Pinpoint GetChannels action.
  * \value GetEmailChannelAction Pinpoint GetEmailChannel action.
+ * \value GetEmailTemplateAction Pinpoint GetEmailTemplate action.
  * \value GetEndpointAction Pinpoint GetEndpoint action.
  * \value GetEventStreamAction Pinpoint GetEventStream action.
  * \value GetExportJobAction Pinpoint GetExportJob action.
@@ -80,6 +95,13 @@ namespace Pinpoint {
  * \value GetGcmChannelAction Pinpoint GetGcmChannel action.
  * \value GetImportJobAction Pinpoint GetImportJob action.
  * \value GetImportJobsAction Pinpoint GetImportJobs action.
+ * \value GetJourneyAction Pinpoint GetJourney action.
+ * \value GetJourneyDateRangeKpiAction Pinpoint GetJourneyDateRangeKpi action.
+ * \value GetJourneyExecutionActivityMetricsAction Pinpoint GetJourneyExecutionActivityMetrics action.
+ * \value GetJourneyExecutionMetricsAction Pinpoint GetJourneyExecutionMetrics action.
+ * \value GetPushTemplateAction Pinpoint GetPushTemplate action.
+ * \value GetRecommenderConfigurationAction Pinpoint GetRecommenderConfiguration action.
+ * \value GetRecommenderConfigurationsAction Pinpoint GetRecommenderConfigurations action.
  * \value GetSegmentAction Pinpoint GetSegment action.
  * \value GetSegmentExportJobsAction Pinpoint GetSegmentExportJobs action.
  * \value GetSegmentImportJobsAction Pinpoint GetSegmentImportJobs action.
@@ -87,9 +109,14 @@ namespace Pinpoint {
  * \value GetSegmentVersionsAction Pinpoint GetSegmentVersions action.
  * \value GetSegmentsAction Pinpoint GetSegments action.
  * \value GetSmsChannelAction Pinpoint GetSmsChannel action.
+ * \value GetSmsTemplateAction Pinpoint GetSmsTemplate action.
  * \value GetUserEndpointsAction Pinpoint GetUserEndpoints action.
  * \value GetVoiceChannelAction Pinpoint GetVoiceChannel action.
+ * \value GetVoiceTemplateAction Pinpoint GetVoiceTemplate action.
+ * \value ListJourneysAction Pinpoint ListJourneys action.
  * \value ListTagsForResourceAction Pinpoint ListTagsForResource action.
+ * \value ListTemplateVersionsAction Pinpoint ListTemplateVersions action.
+ * \value ListTemplatesAction Pinpoint ListTemplates action.
  * \value PhoneNumberValidateAction Pinpoint PhoneNumberValidate action.
  * \value PutEventStreamAction Pinpoint PutEventStream action.
  * \value PutEventsAction Pinpoint PutEvents action.
@@ -107,12 +134,20 @@ namespace Pinpoint {
  * \value UpdateBaiduChannelAction Pinpoint UpdateBaiduChannel action.
  * \value UpdateCampaignAction Pinpoint UpdateCampaign action.
  * \value UpdateEmailChannelAction Pinpoint UpdateEmailChannel action.
+ * \value UpdateEmailTemplateAction Pinpoint UpdateEmailTemplate action.
  * \value UpdateEndpointAction Pinpoint UpdateEndpoint action.
  * \value UpdateEndpointsBatchAction Pinpoint UpdateEndpointsBatch action.
  * \value UpdateGcmChannelAction Pinpoint UpdateGcmChannel action.
+ * \value UpdateJourneyAction Pinpoint UpdateJourney action.
+ * \value UpdateJourneyStateAction Pinpoint UpdateJourneyState action.
+ * \value UpdatePushTemplateAction Pinpoint UpdatePushTemplate action.
+ * \value UpdateRecommenderConfigurationAction Pinpoint UpdateRecommenderConfiguration action.
  * \value UpdateSegmentAction Pinpoint UpdateSegment action.
  * \value UpdateSmsChannelAction Pinpoint UpdateSmsChannel action.
+ * \value UpdateSmsTemplateAction Pinpoint UpdateSmsTemplate action.
+ * \value UpdateTemplateActiveVersionAction Pinpoint UpdateTemplateActiveVersion action.
  * \value UpdateVoiceChannelAction Pinpoint UpdateVoiceChannel action.
+ * \value UpdateVoiceTemplateAction Pinpoint UpdateVoiceTemplate action.
  */
 
 /*!

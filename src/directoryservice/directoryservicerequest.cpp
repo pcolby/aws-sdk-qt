@@ -38,6 +38,7 @@ namespace DirectoryService {
  *
  * \value AcceptSharedDirectoryAction DirectoryService AcceptSharedDirectory action.
  * \value AddIpRoutesAction DirectoryService AddIpRoutes action.
+ * \value AddRegionAction DirectoryService AddRegion action.
  * \value AddTagsToResourceAction DirectoryService AddTagsToResource action.
  * \value CancelSchemaExtensionAction DirectoryService CancelSchemaExtension action.
  * \value ConnectDirectoryAction DirectoryService ConnectDirectory action.
@@ -54,27 +55,38 @@ namespace DirectoryService {
  * \value DeleteLogSubscriptionAction DirectoryService DeleteLogSubscription action.
  * \value DeleteSnapshotAction DirectoryService DeleteSnapshot action.
  * \value DeleteTrustAction DirectoryService DeleteTrust action.
+ * \value DeregisterCertificateAction DirectoryService DeregisterCertificate action.
  * \value DeregisterEventTopicAction DirectoryService DeregisterEventTopic action.
+ * \value DescribeCertificateAction DirectoryService DescribeCertificate action.
  * \value DescribeConditionalForwardersAction DirectoryService DescribeConditionalForwarders action.
  * \value DescribeDirectoriesAction DirectoryService DescribeDirectories action.
  * \value DescribeDomainControllersAction DirectoryService DescribeDomainControllers action.
  * \value DescribeEventTopicsAction DirectoryService DescribeEventTopics action.
+ * \value DescribeLDAPSSettingsAction DirectoryService DescribeLDAPSSettings action.
+ * \value DescribeRegionsAction DirectoryService DescribeRegions action.
  * \value DescribeSharedDirectoriesAction DirectoryService DescribeSharedDirectories action.
  * \value DescribeSnapshotsAction DirectoryService DescribeSnapshots action.
  * \value DescribeTrustsAction DirectoryService DescribeTrusts action.
+ * \value DisableClientAuthenticationAction DirectoryService DisableClientAuthentication action.
+ * \value DisableLDAPSAction DirectoryService DisableLDAPS action.
  * \value DisableRadiusAction DirectoryService DisableRadius action.
  * \value DisableSsoAction DirectoryService DisableSso action.
+ * \value EnableClientAuthenticationAction DirectoryService EnableClientAuthentication action.
+ * \value EnableLDAPSAction DirectoryService EnableLDAPS action.
  * \value EnableRadiusAction DirectoryService EnableRadius action.
  * \value EnableSsoAction DirectoryService EnableSso action.
  * \value GetDirectoryLimitsAction DirectoryService GetDirectoryLimits action.
  * \value GetSnapshotLimitsAction DirectoryService GetSnapshotLimits action.
+ * \value ListCertificatesAction DirectoryService ListCertificates action.
  * \value ListIpRoutesAction DirectoryService ListIpRoutes action.
  * \value ListLogSubscriptionsAction DirectoryService ListLogSubscriptions action.
  * \value ListSchemaExtensionsAction DirectoryService ListSchemaExtensions action.
  * \value ListTagsForResourceAction DirectoryService ListTagsForResource action.
+ * \value RegisterCertificateAction DirectoryService RegisterCertificate action.
  * \value RegisterEventTopicAction DirectoryService RegisterEventTopic action.
  * \value RejectSharedDirectoryAction DirectoryService RejectSharedDirectory action.
  * \value RemoveIpRoutesAction DirectoryService RemoveIpRoutes action.
+ * \value RemoveRegionAction DirectoryService RemoveRegion action.
  * \value RemoveTagsFromResourceAction DirectoryService RemoveTagsFromResource action.
  * \value ResetUserPasswordAction DirectoryService ResetUserPassword action.
  * \value RestoreFromSnapshotAction DirectoryService RestoreFromSnapshot action.

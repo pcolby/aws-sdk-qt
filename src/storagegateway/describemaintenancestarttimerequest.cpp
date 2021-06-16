@@ -35,7 +35,7 @@ namespace StorageGateway {
  * 
  *  AWS Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
  *  seamless and secure integration between an organization's on-premises IT environment and the AWS storage infrastructure.
- *  The service enables you to securely upload data to the AWS cloud for cost effective backup and rapid disaster
+ *  The service enables you to securely upload data to the AWS Cloud for cost effective backup and rapid disaster
  * 
  *  recovery>
  * 
@@ -45,20 +45,20 @@ namespace StorageGateway {
  * 
  *  <a
  *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders">AWS
- *  Storage Gateway Required Request Headers</a>: Describes the required headers that you must send with every POST request
+ *  Storage Gateway required request headers</a>: Describes the required headers that you must send with every POST request
  *  to AWS Storage
  * 
  *  Gateway> </li> <li>
  * 
  *  <a
  *  href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests">Signing
- *  Requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
+ *  requests</a>: AWS Storage Gateway requires that you authenticate every request you send; this topic describes how sign
  *  such a
  * 
  *  request> </li> <li>
  * 
  *  <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses">Error
- *  Responses</a>: Provides reference information about AWS Storage Gateway
+ *  responses</a>: Provides reference information about AWS Storage Gateway
  * 
  *  errors> </li> <li>
  * 
@@ -68,10 +68,10 @@ namespace StorageGateway {
  * 
  *  responses> </li> <li>
  * 
- *  <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#sg_region">AWS Storage Gateway Regions and
- *  Endpoints:</a> Provides a list of each AWS region and endpoints available for use with AWS Storage Gateway.
+ *  <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">AWS Storage Gateway endpoints and quotas</a>: Provides a
+ *  list of each AWS Region and the endpoints available for use with AWS Storage
  * 
- *  </p </li> </ul> <note>
+ *  Gateway> </li> </ul> <note>
  * 
  *  AWS Storage Gateway resource IDs are in uppercase. When you use these resource IDs with the Amazon EC2 API, EC2 expects
  *  resource IDs in lowercase. You must change your resource ID to lowercase to use it with the EC2 API. For example, in
@@ -83,9 +83,9 @@ namespace StorageGateway {
  *  IDs for Storage Gateway volumes and Amazon EBS snapshots created from gateway volumes are changing to a longer format.
  *  Starting in December 2016, all new volumes and snapshots will be created with a 17-character string. Starting in April
  *  2016, you will be able to use these longer IDs so you can test your systems with the new format. For more information,
- *  see <a href="https://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS Resource IDs</a>.
+ *  see <a href="http://aws.amazon.com/ec2/faqs/#longer-ids">Longer EC2 and EBS resource
  * 
- *  </p
+ *  IDs</a>>
  * 
  *  For example, a volume Amazon Resource Name (ARN) with the longer volume ID format looks like the
  * 
@@ -98,8 +98,8 @@ namespace StorageGateway {
  * 
  *  <code>snap-78e226633445566ee</code>>
  * 
- *  For more information, see <a href="https://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer
- *  AWS Storage Gateway volume and snapshot IDs coming in
+ *  For more information, see <a href="http://forums.aws.amazon.com/ann.jspa?annID=3557">Announcement: Heads-up – Longer AWS
+ *  Storage Gateway volume and snapshot IDs coming in
  *
  * \sa StorageGatewayClient::describeMaintenanceStartTime
  */

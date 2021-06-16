@@ -33,13 +33,9 @@ namespace ACM {
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
- *  Welcome to the AWS Certificate Manager (ACM) API
- * 
- *  documentation>
- * 
- *  You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
- *  about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/"> <i>AWS Certificate Manager User
- *  Guide</i>
+ *  You can use AWS Certificate Manager (ACM) to manage SSL/TLS certificates for your AWS-based websites and applications.
+ *  For more information about using ACM, see the <a href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS
+ *  Certificate Manager User
  *
  * \sa AcmClient::deleteCertificate
  */

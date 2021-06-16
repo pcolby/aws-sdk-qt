@@ -11,6 +11,10 @@ add_library(QtAwsAmplify
   createapprequest_p.h
   createappresponse.h
   createappresponse_p.h
+  createbackendenvironmentrequest.h
+  createbackendenvironmentrequest_p.h
+  createbackendenvironmentresponse.h
+  createbackendenvironmentresponse_p.h
   createbranchrequest.h
   createbranchrequest_p.h
   createbranchresponse.h
@@ -31,6 +35,10 @@ add_library(QtAwsAmplify
   deleteapprequest_p.h
   deleteappresponse.h
   deleteappresponse_p.h
+  deletebackendenvironmentrequest.h
+  deletebackendenvironmentrequest_p.h
+  deletebackendenvironmentresponse.h
+  deletebackendenvironmentresponse_p.h
   deletebranchrequest.h
   deletebranchrequest_p.h
   deletebranchresponse.h
@@ -47,10 +55,22 @@ add_library(QtAwsAmplify
   deletewebhookrequest_p.h
   deletewebhookresponse.h
   deletewebhookresponse_p.h
+  generateaccesslogsrequest.h
+  generateaccesslogsrequest_p.h
+  generateaccesslogsresponse.h
+  generateaccesslogsresponse_p.h
   getapprequest.h
   getapprequest_p.h
   getappresponse.h
   getappresponse_p.h
+  getartifacturlrequest.h
+  getartifacturlrequest_p.h
+  getartifacturlresponse.h
+  getartifacturlresponse_p.h
+  getbackendenvironmentrequest.h
+  getbackendenvironmentrequest_p.h
+  getbackendenvironmentresponse.h
+  getbackendenvironmentresponse_p.h
   getbranchrequest.h
   getbranchrequest_p.h
   getbranchresponse.h
@@ -71,6 +91,14 @@ add_library(QtAwsAmplify
   listappsrequest_p.h
   listappsresponse.h
   listappsresponse_p.h
+  listartifactsrequest.h
+  listartifactsrequest_p.h
+  listartifactsresponse.h
+  listartifactsresponse_p.h
+  listbackendenvironmentsrequest.h
+  listbackendenvironmentsrequest_p.h
+  listbackendenvironmentsresponse.h
+  listbackendenvironmentsresponse_p.h
   listbranchesrequest.h
   listbranchesrequest_p.h
   listbranchesresponse.h
@@ -132,6 +160,8 @@ add_library(QtAwsAmplify
   amplifyresponse.cpp
   createapprequest.cpp
   createappresponse.cpp
+  createbackendenvironmentrequest.cpp
+  createbackendenvironmentresponse.cpp
   createbranchrequest.cpp
   createbranchresponse.cpp
   createdeploymentrequest.cpp
@@ -142,6 +172,8 @@ add_library(QtAwsAmplify
   createwebhookresponse.cpp
   deleteapprequest.cpp
   deleteappresponse.cpp
+  deletebackendenvironmentrequest.cpp
+  deletebackendenvironmentresponse.cpp
   deletebranchrequest.cpp
   deletebranchresponse.cpp
   deletedomainassociationrequest.cpp
@@ -150,8 +182,14 @@ add_library(QtAwsAmplify
   deletejobresponse.cpp
   deletewebhookrequest.cpp
   deletewebhookresponse.cpp
+  generateaccesslogsrequest.cpp
+  generateaccesslogsresponse.cpp
   getapprequest.cpp
   getappresponse.cpp
+  getartifacturlrequest.cpp
+  getartifacturlresponse.cpp
+  getbackendenvironmentrequest.cpp
+  getbackendenvironmentresponse.cpp
   getbranchrequest.cpp
   getbranchresponse.cpp
   getdomainassociationrequest.cpp
@@ -162,6 +200,10 @@ add_library(QtAwsAmplify
   getwebhookresponse.cpp
   listappsrequest.cpp
   listappsresponse.cpp
+  listartifactsrequest.cpp
+  listartifactsresponse.cpp
+  listbackendenvironmentsrequest.cpp
+  listbackendenvironmentsresponse.cpp
   listbranchesrequest.cpp
   listbranchesresponse.cpp
   listdomainassociationsrequest.cpp

@@ -41,6 +41,8 @@
 #include "disablestagetransitionresponse.h"
 #include "enablestagetransitionrequest.h"
 #include "enablestagetransitionresponse.h"
+#include "getactiontyperequest.h"
+#include "getactiontyperesponse.h"
 #include "getjobdetailsrequest.h"
 #include "getjobdetailsresponse.h"
 #include "getpipelinerequest.h"
@@ -87,10 +89,14 @@
 #include "retrystageexecutionresponse.h"
 #include "startpipelineexecutionrequest.h"
 #include "startpipelineexecutionresponse.h"
+#include "stoppipelineexecutionrequest.h"
+#include "stoppipelineexecutionresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updateactiontyperequest.h"
+#include "updateactiontyperesponse.h"
 #include "updatepipelinerequest.h"
 #include "updatepipelineresponse.h"
 
@@ -123,14 +129,14 @@ namespace CodePipeline {
  *  </p
  * 
  *  This is the AWS CodePipeline API Reference. This guide provides descriptions of the actions and data types for AWS
- *  CodePipeline. Some functionality for your pipeline is only configurable through the API. For additional information, see
- *  the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
+ *  CodePipeline. Some functionality for your pipeline can only be configured through the API. For more information, see the
+ *  <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html">AWS CodePipeline User
  * 
  *  Guide</a>>
  * 
- *  You can use the AWS CodePipeline API to work with pipelines, stages, actions, and transitions, as described
+ *  You can use the AWS CodePipeline API to work with pipelines, stages, actions, and
  * 
- *  below>
+ *  transitions>
  * 
  *  <i>Pipelines</i> are models of automated release processes. Each pipeline is uniquely named, and consists of stages,
  *  actions, and transitions.
@@ -141,7 +147,7 @@ namespace CodePipeline {
  * 
  *  calling> <ul> <li>
  * 
- *  <a>CreatePipeline</a>, which creates a uniquely-named
+ *  <a>CreatePipeline</a>, which creates a uniquely named
  * 
  *  pipeline> </li> <li>
  * 
@@ -163,7 +169,7 @@ namespace CodePipeline {
  *  pipeline> </li> <li>
  * 
  *  <a>ListActionExecutions</a>, which returns action-level details for past executions. The details include full stage and
- *  action-level details, including individual action duration, status, any errors which occurred during the execution, and
+ *  action-level details, including individual action duration, status, any errors that occurred during the execution, and
  *  input and output artifact location
  * 
  *  details> </li> <li>
@@ -176,7 +182,11 @@ namespace CodePipeline {
  * 
  *  pipeline> </li> <li>
  * 
- *  <a>StartPipelineExecution</a>, which runs the the most recent revision of an artifact through the
+ *  <a>StartPipelineExecution</a>, which runs the most recent revision of an artifact through the
+ * 
+ *  pipeline> </li> <li>
+ * 
+ *  <a>StopPipelineExecution</a>, which stops the specified pipeline execution from continuing through the
  * 
  *  pipeline> </li> <li>
  * 
@@ -185,19 +195,19 @@ namespace CodePipeline {
  *  pipeline> </li> </ul>
  * 
  *  Pipelines include <i>stages</i>. Each stage contains one or more actions that must complete before the next stage
- *  begins. A stage will result in success or failure. If a stage fails, then the pipeline stops at that stage and will
- *  remain stopped until either a new version of an artifact appears in the source location, or a user takes action to
- *  re-run the most recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of
- *  a pipeline, including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of
- *  the pipeline, including the stages of that pipeline. For more information about the structure of stages and actions,
- *  also refer to the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS
- *  CodePipeline Pipeline Structure
+ *  begins. A stage results in success or failure. If a stage fails, the pipeline stops at that stage and remains stopped
+ *  until either a new version of an artifact appears in the source location, or a user takes action to rerun the most
+ *  recent artifact through the pipeline. You can call <a>GetPipelineState</a>, which displays the status of a pipeline,
+ *  including the status of stages in the pipeline, or <a>GetPipeline</a>, which returns the entire structure of the
+ *  pipeline, including the stages of that pipeline. For more information about the structure of stages and actions, see <a
+ *  href="https://docs.aws.amazon.com/codepipeline/latest/userguide/pipeline-structure.html">AWS CodePipeline Pipeline
+ *  Structure
  * 
  *  Reference</a>>
  * 
- *  Pipeline stages include <i>actions</i>, which are categorized into categories such as source or build actions performed
- *  within a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source
- *  such as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with
+ *  Pipeline stages include <i>actions</i> that are categorized into categories such as source or build actions performed in
+ *  a stage of a pipeline. For example, you can use a source action to import artifacts into a pipeline from a source such
+ *  as Amazon S3. Like stages, you do not work with actions directly in most cases, but you do define and interact with
  *  actions when working with pipeline operations such as <a>CreatePipeline</a> and <a>GetPipelineState</a>. Valid action
  *  categories
  * 
@@ -237,8 +247,8 @@ namespace CodePipeline {
  *  </p
  * 
  *  For third-party integrators or developers who want to create their own integrations with AWS CodePipeline, the expected
- *  sequence varies from the standard API user. In order to integrate with AWS CodePipeline, developers will need to work
- *  with the following
+ *  sequence varies from the standard API user. To integrate with AWS CodePipeline, developers need to work with the
+ *  following
  * 
  *  items>
  * 
@@ -259,13 +269,13 @@ namespace CodePipeline {
  * 
  *  job> </li> <li>
  * 
- *  <a>PollForJobs</a>, which determines whether there are any jobs to act upon,
+ *  <a>PollForJobs</a>, which determines whether there are any jobs to act
+ * 
+ *  on> </li> <li>
+ * 
+ *  <a>PutJobFailureResult</a>, which provides details of a job failure.
  * 
  *  </p </li> <li>
- * 
- *  <a>PutJobFailureResult</a>, which provides details of a job failure,
- * 
- *  an> </li> <li>
  * 
  *  <a>PutJobSuccessResult</a>, which provides details of a job
  * 
@@ -288,13 +298,13 @@ namespace CodePipeline {
  * 
  *  action> </li> <li>
  * 
- *  <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act upon,
+ *  <a>PollForThirdPartyJobs</a>, which determines whether there are any jobs to act on.
  * 
  *  </p </li> <li>
  * 
- *  <a>PutThirdPartyJobFailureResult</a>, which provides details of a job failure,
+ *  <a>PutThirdPartyJobFailureResult</a>, which provides details of a job
  * 
- *  an> </li> <li>
+ *  failure> </li> <li>
  * 
  *  <a>PutThirdPartyJobSuccessResult</a>, which provides details of a job
  */
@@ -358,7 +368,8 @@ CodePipelineClient::CodePipelineClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a specified job and whether that job has been received by the job worker. Only used for custom
+ * Returns information about a specified job and whether that job has been received by the job worker. Used for custom
+ * actions
  */
 AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJobRequest &request)
 {
@@ -371,7 +382,7 @@ AcknowledgeJobResponse * CodePipelineClient::acknowledgeJob(const AcknowledgeJob
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Confirms a job worker has received the specified job. Only used for partner
+ * Confirms a job worker has received the specified job. Used for partner actions
  */
 AcknowledgeThirdPartyJobResponse * CodePipelineClient::acknowledgeThirdPartyJob(const AcknowledgeThirdPartyJobRequest &request)
 {
@@ -398,6 +409,11 @@ CreateCustomActionTypeResponse * CodePipelineClient::createCustomActionType(cons
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a
+ *
+ * pipeline> <note>
+ *
+ * In the pipeline structure, you must include either <code>artifactStore</code> or <code>artifactStores</code> in your
+ * pipeline, but you cannot use both. If you create a cross-region action in your pipeline, you must use
  */
 CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipelineRequest &request)
 {
@@ -410,10 +426,10 @@ CreatePipelineResponse * CodePipelineClient::createPipeline(const CreatePipeline
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Marks a custom action as deleted. <code>PollForJobs</code> for the custom action will fail after the action is marked
- * for deletion. Only used for custom
+ * Marks a custom action as deleted. <code>PollForJobs</code> for the custom action fails after the action is marked for
+ * deletion. Used for custom actions
  *
- * actions> <b>
+ * only> <b>
  *
  * To re-create a custom action after it has been deleted you must use a string in the version field that has never been
  * used before. This string can be an incremented version number, for example. To restore a deleted custom action, use a
@@ -444,8 +460,8 @@ DeletePipelineResponse * CodePipelineClient::deletePipeline(const DeletePipeline
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes a previously created webhook by name. Deleting the webhook stops AWS CodePipeline from starting a pipeline every
- * time an external event occurs. The API will return successfully when trying to delete a webhook that is already deleted.
- * If a deleted webhook is re-created by calling PutWebhook with the same name, it will have a different
+ * time an external event occurs. The API returns successfully when trying to delete a webhook that is already deleted. If
+ * a deleted webhook is re-created by calling PutWebhook with the same name, it will have a different
  */
 DeleteWebhookResponse * CodePipelineClient::deleteWebhook(const DeleteWebhookRequest &request)
 {
@@ -459,7 +475,7 @@ DeleteWebhookResponse * CodePipelineClient::deleteWebhook(const DeleteWebhookReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Removes the connection between the webhook that was created by CodePipeline and the external tool with events to be
- * detected. Currently only supported for webhooks that target an action type of
+ * detected. Currently supported only for webhooks that target an action type of
  */
 DeregisterWebhookWithThirdPartyResponse * CodePipelineClient::deregisterWebhookWithThirdParty(const DeregisterWebhookWithThirdPartyRequest &request)
 {
@@ -494,17 +510,31 @@ EnableStageTransitionResponse * CodePipelineClient::enableStageTransition(const 
 
 /*!
  * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * GetActionTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about an action type created for an external provider, where the action is to be used by customers
+ * of the external provider. The action can be created with any supported integration
+ */
+GetActionTypeResponse * CodePipelineClient::getActionType(const GetActionTypeRequest &request)
+{
+    return qobject_cast<GetActionTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
  * GetJobDetailsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a job. Only used for custom
+ * Returns information about a job. Used for custom actions
  *
- * actions> <b>
+ * only> <b>
  *
- * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
- * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
- * this API returns any secret values defined for the
+ * When this API is called, AWS CodePipeline returns temporary credentials for the S3 bucket used to store artifacts for
+ * the pipeline, if the action requires access to that S3 bucket for input or output artifacts. This API also returns any
+ * secret values defined for the
  */
 GetJobDetailsResponse * CodePipelineClient::getJobDetails(const GetJobDetailsRequest &request)
 {
@@ -563,13 +593,13 @@ GetPipelineStateResponse * CodePipelineClient::getPipelineState(const GetPipelin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Requests the details of a job for a third party action. Only used for partner
+ * Requests the details of a job for a third party action. Used for partner actions
  *
- * actions> <b>
+ * only> <b>
  *
- * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
- * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
- * this API returns any secret values defined for the
+ * When this API is called, AWS CodePipeline returns temporary credentials for the S3 bucket used to store artifacts for
+ * the pipeline, if the action requires access to that S3 bucket for input or output artifacts. This API also returns any
+ * secret values defined for the
  */
 GetThirdPartyJobDetailsResponse * CodePipelineClient::getThirdPartyJobDetails(const GetThirdPartyJobDetailsRequest &request)
 {
@@ -634,7 +664,7 @@ ListPipelinesResponse * CodePipelineClient::listPipelines(const ListPipelinesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the set of key/value pairs (metadata) that are used to manage the
+ * Gets the set of key-value pairs (metadata) that are used to manage the
  */
 ListTagsForResourceResponse * CodePipelineClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -647,8 +677,8 @@ ListTagsForResourceResponse * CodePipelineClient::listTagsForResource(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets a listing of all the webhooks in this region for this account. The output lists all webhooks and includes the
- * webhook URL and ARN, as well the configuration for each
+ * Gets a listing of all the webhooks in this AWS Region for this account. The output lists all webhooks and includes the
+ * webhook URL and ARN and the configuration for each
  */
 ListWebhooksResponse * CodePipelineClient::listWebhooks(const ListWebhooksRequest &request)
 {
@@ -661,15 +691,15 @@ ListWebhooksResponse * CodePipelineClient::listWebhooks(const ListWebhooksReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about any jobs for AWS CodePipeline to act upon. <code>PollForJobs</code> is only valid for action
+ * Returns information about any jobs for AWS CodePipeline to act on. <code>PollForJobs</code> is valid only for action
  * types with "Custom" in the owner field. If the action type contains "AWS" or "ThirdParty" in the owner field, the
  * <code>PollForJobs</code> action returns an
  *
  * error> <b>
  *
- * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
- * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output artifacts. Additionally,
- * this API returns any secret values defined for the
+ * When this API is called, AWS CodePipeline returns temporary credentials for the S3 bucket used to store artifacts for
+ * the pipeline, if the action requires access to that S3 bucket for input or output artifacts. This API also returns any
+ * secret values defined for the
  */
 PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &request)
 {
@@ -682,12 +712,12 @@ PollForJobsResponse * CodePipelineClient::pollForJobs(const PollForJobsRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Determines whether there are any third party jobs for a job worker to act on. Only used for partner
+ * Determines whether there are any third party jobs for a job worker to act on. Used for partner actions
  *
- * actions> <b>
+ * only> <b>
  *
- * When this API is called, AWS CodePipeline returns temporary credentials for the Amazon S3 bucket used to store artifacts
- * for the pipeline, if the action requires access to that Amazon S3 bucket for input or output
+ * When this API is called, AWS CodePipeline returns temporary credentials for the S3 bucket used to store artifacts for
+ * the pipeline, if the action requires access to that S3 bucket for input or output
  */
 PollForThirdPartyJobsResponse * CodePipelineClient::pollForThirdPartyJobs(const PollForThirdPartyJobsRequest &request)
 {
@@ -726,7 +756,7 @@ PutApprovalResultResponse * CodePipelineClient::putApprovalResult(const PutAppro
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Represents the failure of a job as returned to the pipeline by a job worker. Only used for custom
+ * Represents the failure of a job as returned to the pipeline by a job worker. Used for custom actions
  */
 PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJobFailureResultRequest &request)
 {
@@ -739,7 +769,7 @@ PutJobFailureResultResponse * CodePipelineClient::putJobFailureResult(const PutJ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Represents the success of a job as returned to the pipeline by a job worker. Only used for custom
+ * Represents the success of a job as returned to the pipeline by a job worker. Used for custom actions
  */
 PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJobSuccessResultRequest &request)
 {
@@ -752,7 +782,7 @@ PutJobSuccessResultResponse * CodePipelineClient::putJobSuccessResult(const PutJ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Represents the failure of a third party job as returned to the pipeline by a job worker. Only used for partner
+ * Represents the failure of a third party job as returned to the pipeline by a job worker. Used for partner actions
  */
 PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFailureResult(const PutThirdPartyJobFailureResultRequest &request)
 {
@@ -765,7 +795,7 @@ PutThirdPartyJobFailureResultResponse * CodePipelineClient::putThirdPartyJobFail
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Represents the success of a third party job as returned to the pipeline by a job worker. Only used for partner
+ * Represents the success of a third party job as returned to the pipeline by a job worker. Used for partner actions
  */
 PutThirdPartyJobSuccessResultResponse * CodePipelineClient::putThirdPartyJobSuccessResult(const PutThirdPartyJobSuccessResultRequest &request)
 {
@@ -809,7 +839,9 @@ RegisterWebhookWithThirdPartyResponse * CodePipelineClient::registerWebhookWithT
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Resumes the pipeline execution by retrying the last failed actions in a
+ * Resumes the pipeline execution by retrying the last failed actions in a stage. You can retry a stage immediately if any
+ * of the actions in the stage fail. When you retry, all actions that are still in progress continue working, and failed
+ * actions are triggered
  */
 RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const RetryStageExecutionRequest &request)
 {
@@ -828,6 +860,22 @@ RetryStageExecutionResponse * CodePipelineClient::retryStageExecution(const Retr
 StartPipelineExecutionResponse * CodePipelineClient::startPipelineExecution(const StartPipelineExecutionRequest &request)
 {
     return qobject_cast<StartPipelineExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * StopPipelineExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the specified pipeline execution. You choose to either stop the pipeline execution by completing in-progress
+ * actions without starting subsequent actions, or by abandoning in-progress actions. While completing or abandoning
+ * in-progress actions, the pipeline execution is in a <code>Stopping</code> state. After all in-progress actions are
+ * completed or abandoned, the pipeline execution is in a <code>Stopped</code>
+ */
+StopPipelineExecutionResponse * CodePipelineClient::stopPipelineExecution(const StopPipelineExecutionRequest &request)
+{
+    return qobject_cast<StopPipelineExecutionResponse *>(send(request));
 }
 
 /*!
@@ -858,13 +906,28 @@ UntagResourceResponse * CodePipelineClient::untagResource(const UntagResourceReq
 
 /*!
  * Sends \a request to the CodePipelineClient service, and returns a pointer to an
+ * UpdateActionTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an action type that was created with any supported integration model, where the action type is to be used by
+ * customers of the action type provider. Use a JSON file with the action definition and <code>UpdateActionType</code> to
+ * provide the full
+ */
+UpdateActionTypeResponse * CodePipelineClient::updateActionType(const UpdateActionTypeRequest &request)
+{
+    return qobject_cast<UpdateActionTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CodePipelineClient service, and returns a pointer to an
  * UpdatePipelineResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure in
- * conjunction with <code>UpdatePipeline</code> to provide the full structure of the pipeline. Updating the pipeline
- * increases the version number of the pipeline by
+ * Updates a specified pipeline with edits or changes to its structure. Use a JSON file with the pipeline structure and
+ * <code>UpdatePipeline</code> to provide the full structure of the pipeline. Updating the pipeline increases the version
+ * number of the pipeline by
  */
 UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipelineRequest &request)
 {

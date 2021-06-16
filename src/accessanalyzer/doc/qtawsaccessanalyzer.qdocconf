@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsAccessAnalyzer
+description = AWS AccessAnalyzer SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsaccessanalyzer-index.html"
+navigation.landingtitle = "AccessAnalyzer"
+navigation.cppclassespage = "AccessAnalyzer C++ Classes"

@@ -44,6 +44,7 @@ namespace Neptune {
  * \value CopyDBClusterSnapshotAction Neptune CopyDBClusterSnapshot action.
  * \value CopyDBParameterGroupAction Neptune CopyDBParameterGroup action.
  * \value CreateDBClusterAction Neptune CreateDBCluster action.
+ * \value CreateDBClusterEndpointAction Neptune CreateDBClusterEndpoint action.
  * \value CreateDBClusterParameterGroupAction Neptune CreateDBClusterParameterGroup action.
  * \value CreateDBClusterSnapshotAction Neptune CreateDBClusterSnapshot action.
  * \value CreateDBInstanceAction Neptune CreateDBInstance action.
@@ -51,12 +52,14 @@ namespace Neptune {
  * \value CreateDBSubnetGroupAction Neptune CreateDBSubnetGroup action.
  * \value CreateEventSubscriptionAction Neptune CreateEventSubscription action.
  * \value DeleteDBClusterAction Neptune DeleteDBCluster action.
+ * \value DeleteDBClusterEndpointAction Neptune DeleteDBClusterEndpoint action.
  * \value DeleteDBClusterParameterGroupAction Neptune DeleteDBClusterParameterGroup action.
  * \value DeleteDBClusterSnapshotAction Neptune DeleteDBClusterSnapshot action.
  * \value DeleteDBInstanceAction Neptune DeleteDBInstance action.
  * \value DeleteDBParameterGroupAction Neptune DeleteDBParameterGroup action.
  * \value DeleteDBSubnetGroupAction Neptune DeleteDBSubnetGroup action.
  * \value DeleteEventSubscriptionAction Neptune DeleteEventSubscription action.
+ * \value DescribeDBClusterEndpointsAction Neptune DescribeDBClusterEndpoints action.
  * \value DescribeDBClusterParameterGroupsAction Neptune DescribeDBClusterParameterGroups action.
  * \value DescribeDBClusterParametersAction Neptune DescribeDBClusterParameters action.
  * \value DescribeDBClusterSnapshotAttributesAction Neptune DescribeDBClusterSnapshotAttributes action.
@@ -78,6 +81,7 @@ namespace Neptune {
  * \value FailoverDBClusterAction Neptune FailoverDBCluster action.
  * \value ListTagsForResourceAction Neptune ListTagsForResource action.
  * \value ModifyDBClusterAction Neptune ModifyDBCluster action.
+ * \value ModifyDBClusterEndpointAction Neptune ModifyDBClusterEndpoint action.
  * \value ModifyDBClusterParameterGroupAction Neptune ModifyDBClusterParameterGroup action.
  * \value ModifyDBClusterSnapshotAttributeAction Neptune ModifyDBClusterSnapshotAttribute action.
  * \value ModifyDBInstanceAction Neptune ModifyDBInstance action.
@@ -93,6 +97,8 @@ namespace Neptune {
  * \value ResetDBParameterGroupAction Neptune ResetDBParameterGroup action.
  * \value RestoreDBClusterFromSnapshotAction Neptune RestoreDBClusterFromSnapshot action.
  * \value RestoreDBClusterToPointInTimeAction Neptune RestoreDBClusterToPointInTime action.
+ * \value StartDBClusterAction Neptune StartDBCluster action.
+ * \value StopDBClusterAction Neptune StopDBCluster action.
  */
 
 /*!

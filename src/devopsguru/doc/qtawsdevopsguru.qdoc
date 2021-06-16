@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsDevOpsGuru
+    \title DevOpsGuru C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS DevOpsGuru functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

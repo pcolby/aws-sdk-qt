@@ -53,7 +53,12 @@ public:
         ListNodesAction,
         ListProposalVotesAction,
         ListProposalsAction,
+        ListTagsForResourceAction,
         RejectInvitationAction,
+        TagResourceAction,
+        UntagResourceAction,
+        UpdateMemberAction,
+        UpdateNodeAction,
         VoteOnProposalAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

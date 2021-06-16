@@ -25,6 +25,8 @@
 #include "deletethingshadowresponse.h"
 #include "getthingshadowrequest.h"
 #include "getthingshadowresponse.h"
+#include "listnamedshadowsforthingrequest.h"
+#include "listnamedshadowsforthingresponse.h"
 #include "publishrequest.h"
 #include "publishresponse.h"
 #include "updatethingshadowrequest.h"
@@ -56,8 +58,21 @@ namespace IoTDataPlane {
  * 
  *  AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
  *  embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and things to publish
- *  messages over HTTP (Publish) and retrieve, update, and delete thing shadows. A thing shadow is a persistent
- *  representation of your things and their state in the AWS
+ *  messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is a persistent representation of your
+ *  things and their state in the AWS
+ * 
+ *  cloud>
+ * 
+ *  Find the endpoint address for actions in the AWS IoT data plane by running this CLI
+ * 
+ *  command>
+ * 
+ *  <code>aws iot describe-endpoint --endpoint-type iot:Data-ATS</code>
+ * 
+ *  </p
+ * 
+ *  The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS Signature
+ *  Version 4</a> to sign requests is:
  */
 
 /*!
@@ -119,13 +134,13 @@ IoTDataPlaneClient::IoTDataPlaneClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the thing shadow for the specified
+ * Deletes the shadow for the specified
  *
  * thing>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the
- * <i>AWS IoT Developer
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in the AWS
+ * IoT Developer
  */
 DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteThingShadowRequest &request)
 {
@@ -138,17 +153,30 @@ DeleteThingShadowResponse * IoTDataPlaneClient::deleteThingShadow(const DeleteTh
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the thing shadow for the specified
+ * Gets the shadow for the specified
  *
  * thing>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the <i>AWS IoT
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the AWS IoT
  * Developer
  */
 GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadowRequest &request)
 {
     return qobject_cast<GetThingShadowResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTDataPlaneClient service, and returns a pointer to an
+ * ListNamedShadowsForThingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the shadows for the specified
+ */
+ListNamedShadowsForThingResponse * IoTDataPlaneClient::listNamedShadowsForThing(const ListNamedShadowsForThingRequest &request)
+{
+    return qobject_cast<ListNamedShadowsForThingResponse *>(send(request));
 }
 
 /*!
@@ -162,7 +190,7 @@ GetThingShadowResponse * IoTDataPlaneClient::getThingShadow(const GetThingShadow
  * information>
  *
  * For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http">HTTP
- * Protocol</a> in the <i>AWS IoT Developer
+ * Protocol</a> in the AWS IoT Developer
  */
 PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
 {
@@ -175,13 +203,13 @@ PublishResponse * IoTDataPlaneClient::publish(const PublishRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the thing shadow for the specified
+ * Updates the shadow for the specified
  *
  * thing>
  *
  * For more information, see <a
- * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the
- * <i>AWS IoT Developer
+ * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in the AWS
+ * IoT Developer
  */
 UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateThingShadowRequest &request)
 {

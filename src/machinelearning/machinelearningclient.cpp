@@ -264,11 +264,12 @@ CreateDataSourceFromRDSResponse * MachineLearningClient::createDataSourceFromRDS
  * included or excluded from training? Will the variable be manipulated; for example, will it be combined with another
  * variable or will it be split apart into word combinations? The recipe provides answers to these
  *
- * questions> <?oxy_insert_start author="laurama" timestamp="20160406T153842-0700"><p>You can't change an existing
- * datasource, but you can copy and modify the settings from an existing Amazon Redshift datasource to create a new
- * datasource. To do so, call <code>GetDataSource</code> for an existing datasource and copy the values to a
- * <code>CreateDataSource</code> call. Change the settings that you want to change and make sure that all required fields
- * have the appropriate
+ * questions>
+ *
+ * You can't change an existing datasource, but you can copy and modify the settings from an existing Amazon Redshift
+ * datasource to create a new datasource. To do so, call <code>GetDataSource</code> for an existing datasource and copy the
+ * values to a <code>CreateDataSource</code> call. Change the settings that you want to change and make sure that all
+ * required fields have the appropriate
  */
 CreateDataSourceFromRedshiftResponse * MachineLearningClient::createDataSourceFromRedshift(const CreateDataSourceFromRedshiftRequest &request)
 {
@@ -452,7 +453,9 @@ DeleteDataSourceResponse * MachineLearningClient::deleteDataSource(const DeleteD
  * After invoking the <code>DeleteEvaluation</code> operation, you can use the <code>GetEvaluation</code> operation to
  * verify that the status of the <code>Evaluation</code> changed to
  *
- * <code>DELETED</code>> <caution><title>Caution</title>
+ * <code>DELETED</code>>
+ *
+ * <b>Caution:</b> The results of the <code>DeleteEvaluation</code> operation are
  */
 DeleteEvaluationResponse * MachineLearningClient::deleteEvaluation(const DeleteEvaluationRequest &request)
 {
@@ -646,9 +649,10 @@ GetMLModelResponse * MachineLearningClient::getMLModel(const GetMLModelRequest &
  *
  * Generates a prediction for the observation using the specified <code>ML
  *
- * Model</code>> <note><title>Note</title>
+ * Model</code>>
  *
- * Not all response parameters will be populated. Whether a response parameter is populated depends on the type of model
+ * <b>Note:</b> Not all response parameters will be populated. Whether a response parameter is populated depends on the
+ * type of model
  */
 PredictResponse * MachineLearningClient::predict(const PredictRequest &request)
 {

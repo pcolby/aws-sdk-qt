@@ -323,6 +323,10 @@ add_library(QtAwsCognitoIdentityProvider
   respondtoauthchallengerequest_p.h
   respondtoauthchallengeresponse.h
   respondtoauthchallengeresponse_p.h
+  revoketokenrequest.h
+  revoketokenrequest_p.h
+  revoketokenresponse.h
+  revoketokenresponse_p.h
   setriskconfigurationrequest.h
   setriskconfigurationrequest_p.h
   setriskconfigurationresponse.h
@@ -568,6 +572,8 @@ add_library(QtAwsCognitoIdentityProvider
   resendconfirmationcoderesponse.cpp
   respondtoauthchallengerequest.cpp
   respondtoauthchallengeresponse.cpp
+  revoketokenrequest.cpp
+  revoketokenresponse.cpp
   setriskconfigurationrequest.cpp
   setriskconfigurationresponse.cpp
   setuicustomizationrequest.cpp

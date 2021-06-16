@@ -1,14 +1,38 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsIoTEventsData
+  batchacknowledgealarmrequest.h
+  batchacknowledgealarmrequest_p.h
+  batchacknowledgealarmresponse.h
+  batchacknowledgealarmresponse_p.h
+  batchdisablealarmrequest.h
+  batchdisablealarmrequest_p.h
+  batchdisablealarmresponse.h
+  batchdisablealarmresponse_p.h
+  batchenablealarmrequest.h
+  batchenablealarmrequest_p.h
+  batchenablealarmresponse.h
+  batchenablealarmresponse_p.h
   batchputmessagerequest.h
   batchputmessagerequest_p.h
   batchputmessageresponse.h
   batchputmessageresponse_p.h
+  batchresetalarmrequest.h
+  batchresetalarmrequest_p.h
+  batchresetalarmresponse.h
+  batchresetalarmresponse_p.h
+  batchsnoozealarmrequest.h
+  batchsnoozealarmrequest_p.h
+  batchsnoozealarmresponse.h
+  batchsnoozealarmresponse_p.h
   batchupdatedetectorrequest.h
   batchupdatedetectorrequest_p.h
   batchupdatedetectorresponse.h
   batchupdatedetectorresponse_p.h
+  describealarmrequest.h
+  describealarmrequest_p.h
+  describealarmresponse.h
+  describealarmresponse_p.h
   describedetectorrequest.h
   describedetectorrequest_p.h
   describedetectorresponse.h
@@ -19,19 +43,37 @@ add_library(QtAwsIoTEventsData
   ioteventsdatarequest_p.h
   ioteventsdataresponse.h
   ioteventsdataresponse_p.h
+  listalarmsrequest.h
+  listalarmsrequest_p.h
+  listalarmsresponse.h
+  listalarmsresponse_p.h
   listdetectorsrequest.h
   listdetectorsrequest_p.h
   listdetectorsresponse.h
   listdetectorsresponse_p.h
+  batchacknowledgealarmrequest.cpp
+  batchacknowledgealarmresponse.cpp
+  batchdisablealarmrequest.cpp
+  batchdisablealarmresponse.cpp
+  batchenablealarmrequest.cpp
+  batchenablealarmresponse.cpp
   batchputmessagerequest.cpp
   batchputmessageresponse.cpp
+  batchresetalarmrequest.cpp
+  batchresetalarmresponse.cpp
+  batchsnoozealarmrequest.cpp
+  batchsnoozealarmresponse.cpp
   batchupdatedetectorrequest.cpp
   batchupdatedetectorresponse.cpp
+  describealarmrequest.cpp
+  describealarmresponse.cpp
   describedetectorrequest.cpp
   describedetectorresponse.cpp
   ioteventsdataclient.cpp
   ioteventsdatarequest.cpp
   ioteventsdataresponse.cpp
+  listalarmsrequest.cpp
+  listalarmsresponse.cpp
   listdetectorsrequest.cpp
   listdetectorsresponse.cpp)
 

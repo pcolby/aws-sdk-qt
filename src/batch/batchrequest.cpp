@@ -47,9 +47,12 @@ namespace Batch {
  * \value DescribeJobQueuesAction Batch DescribeJobQueues action.
  * \value DescribeJobsAction Batch DescribeJobs action.
  * \value ListJobsAction Batch ListJobs action.
+ * \value ListTagsForResourceAction Batch ListTagsForResource action.
  * \value RegisterJobDefinitionAction Batch RegisterJobDefinition action.
  * \value SubmitJobAction Batch SubmitJob action.
+ * \value TagResourceAction Batch TagResource action.
  * \value TerminateJobAction Batch TerminateJob action.
+ * \value UntagResourceAction Batch UntagResource action.
  * \value UpdateComputeEnvironmentAction Batch UpdateComputeEnvironment action.
  * \value UpdateJobQueueAction Batch UpdateJobQueue action.
  */

@@ -23,6 +23,18 @@ add_library(QtAwsDlm
   getlifecyclepolicyrequest_p.h
   getlifecyclepolicyresponse.h
   getlifecyclepolicyresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatelifecyclepolicyrequest.h
   updatelifecyclepolicyrequest_p.h
   updatelifecyclepolicyresponse.h
@@ -38,6 +50,12 @@ add_library(QtAwsDlm
   getlifecyclepoliciesresponse.cpp
   getlifecyclepolicyrequest.cpp
   getlifecyclepolicyresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatelifecyclepolicyrequest.cpp
   updatelifecyclepolicyresponse.cpp)
 

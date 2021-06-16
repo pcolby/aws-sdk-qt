@@ -21,12 +21,18 @@
 #include "kafkaclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchassociatescramsecretrequest.h"
+#include "batchassociatescramsecretresponse.h"
+#include "batchdisassociatescramsecretrequest.h"
+#include "batchdisassociatescramsecretresponse.h"
 #include "createclusterrequest.h"
 #include "createclusterresponse.h"
 #include "createconfigurationrequest.h"
 #include "createconfigurationresponse.h"
 #include "deleteclusterrequest.h"
 #include "deleteclusterresponse.h"
+#include "deleteconfigurationrequest.h"
+#include "deleteconfigurationresponse.h"
 #include "describeclusterrequest.h"
 #include "describeclusterresponse.h"
 #include "describeclusteroperationrequest.h"
@@ -37,6 +43,8 @@
 #include "describeconfigurationrevisionresponse.h"
 #include "getbootstrapbrokersrequest.h"
 #include "getbootstrapbrokersresponse.h"
+#include "getcompatiblekafkaversionsrequest.h"
+#include "getcompatiblekafkaversionsresponse.h"
 #include "listclusteroperationsrequest.h"
 #include "listclusteroperationsresponse.h"
 #include "listclustersrequest.h"
@@ -45,18 +53,34 @@
 #include "listconfigurationrevisionsresponse.h"
 #include "listconfigurationsrequest.h"
 #include "listconfigurationsresponse.h"
+#include "listkafkaversionsrequest.h"
+#include "listkafkaversionsresponse.h"
 #include "listnodesrequest.h"
 #include "listnodesresponse.h"
+#include "listscramsecretsrequest.h"
+#include "listscramsecretsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
+#include "rebootbrokerrequest.h"
+#include "rebootbrokerresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatebrokercountrequest.h"
+#include "updatebrokercountresponse.h"
 #include "updatebrokerstoragerequest.h"
 #include "updatebrokerstorageresponse.h"
+#include "updatebrokertyperequest.h"
+#include "updatebrokertyperesponse.h"
 #include "updateclusterconfigurationrequest.h"
 #include "updateclusterconfigurationresponse.h"
+#include "updateclusterkafkaversionrequest.h"
+#include "updateclusterkafkaversionresponse.h"
+#include "updateconfigurationrequest.h"
+#include "updateconfigurationresponse.h"
+#include "updatemonitoringrequest.h"
+#include "updatemonitoringresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -138,6 +162,32 @@ KafkaClient::KafkaClient(
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * BatchAssociateScramSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Associates one or more Scram Secrets with an Amazon MSK
+ */
+BatchAssociateScramSecretResponse * KafkaClient::batchAssociateScramSecret(const BatchAssociateScramSecretRequest &request)
+{
+    return qobject_cast<BatchAssociateScramSecretResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * BatchDisassociateScramSecretResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disassociates one or more Scram Secrets from an Amazon MSK
+ */
+BatchDisassociateScramSecretResponse * KafkaClient::batchDisassociateScramSecret(const BatchDisassociateScramSecretRequest &request)
+{
+    return qobject_cast<BatchDisassociateScramSecretResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * CreateClusterResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -173,6 +223,19 @@ CreateConfigurationResponse * KafkaClient::createConfiguration(const CreateConfi
 DeleteClusterResponse * KafkaClient::deleteCluster(const DeleteClusterRequest &request)
 {
     return qobject_cast<DeleteClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * DeleteConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an MSK
+ */
+DeleteConfigurationResponse * KafkaClient::deleteConfiguration(const DeleteConfigurationRequest &request)
+{
+    return qobject_cast<DeleteConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -242,6 +305,19 @@ GetBootstrapBrokersResponse * KafkaClient::getBootstrapBrokers(const GetBootstra
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * GetCompatibleKafkaVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the Apache Kafka versions to which you can update the MSK
+ */
+GetCompatibleKafkaVersionsResponse * KafkaClient::getCompatibleKafkaVersions(const GetCompatibleKafkaVersionsRequest &request)
+{
+    return qobject_cast<GetCompatibleKafkaVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * ListClusterOperationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -294,6 +370,19 @@ ListConfigurationsResponse * KafkaClient::listConfigurations(const ListConfigura
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * ListKafkaVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of Kafka
+ */
+ListKafkaVersionsResponse * KafkaClient::listKafkaVersions(const ListKafkaVersionsRequest &request)
+{
+    return qobject_cast<ListKafkaVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * ListNodesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -307,6 +396,19 @@ ListNodesResponse * KafkaClient::listNodes(const ListNodesRequest &request)
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * ListScramSecretsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of the Scram Secrets associated with an Amazon MSK
+ */
+ListScramSecretsResponse * KafkaClient::listScramSecrets(const ListScramSecretsRequest &request)
+{
+    return qobject_cast<ListScramSecretsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * ListTagsForResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -316,6 +418,18 @@ ListNodesResponse * KafkaClient::listNodes(const ListNodesRequest &request)
 ListTagsForResourceResponse * KafkaClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
     return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * RebootBrokerResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+RebootBrokerResponse * KafkaClient::rebootBroker(const RebootBrokerRequest &request)
+{
+    return qobject_cast<RebootBrokerResponse *>(send(request));
 }
 
 /*!
@@ -346,6 +460,19 @@ UntagResourceResponse * KafkaClient::untagResource(const UntagResourceRequest &r
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateBrokerCountResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the number of broker nodes in the
+ */
+UpdateBrokerCountResponse * KafkaClient::updateBrokerCount(const UpdateBrokerCountRequest &request)
+{
+    return qobject_cast<UpdateBrokerCountResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * UpdateBrokerStorageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -359,6 +486,19 @@ UpdateBrokerStorageResponse * KafkaClient::updateBrokerStorage(const UpdateBroke
 
 /*!
  * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateBrokerTypeResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates EC2 instance
+ */
+UpdateBrokerTypeResponse * KafkaClient::updateBrokerType(const UpdateBrokerTypeRequest &request)
+{
+    return qobject_cast<UpdateBrokerTypeResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
  * UpdateClusterConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -368,6 +508,46 @@ UpdateBrokerStorageResponse * KafkaClient::updateBrokerStorage(const UpdateBroke
 UpdateClusterConfigurationResponse * KafkaClient::updateClusterConfiguration(const UpdateClusterConfigurationRequest &request)
 {
     return qobject_cast<UpdateClusterConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateClusterKafkaVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the Apache Kafka version for the
+ */
+UpdateClusterKafkaVersionResponse * KafkaClient::updateClusterKafkaVersion(const UpdateClusterKafkaVersionRequest &request)
+{
+    return qobject_cast<UpdateClusterKafkaVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an MSK
+ */
+UpdateConfigurationResponse * KafkaClient::updateConfiguration(const UpdateConfigurationRequest &request)
+{
+    return qobject_cast<UpdateConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KafkaClient service, and returns a pointer to an
+ * UpdateMonitoringResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the monitoring settings for the cluster. You can use this operation to specify which Apache Kafka metrics you
+ * want Amazon MSK to send to Amazon CloudWatch. You can also specify settings for open monitoring with
+ */
+UpdateMonitoringResponse * KafkaClient::updateMonitoring(const UpdateMonitoringRequest &request)
+{
+    return qobject_cast<UpdateMonitoringResponse *>(send(request));
 }
 
 /*!

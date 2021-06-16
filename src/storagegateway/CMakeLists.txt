@@ -25,6 +25,10 @@ add_library(QtAwsStorageGateway
   assigntapepoolrequest_p.h
   assigntapepoolresponse.h
   assigntapepoolresponse_p.h
+  associatefilesystemrequest.h
+  associatefilesystemrequest_p.h
+  associatefilesystemresponse.h
+  associatefilesystemresponse_p.h
   attachvolumerequest.h
   attachvolumerequest_p.h
   attachvolumeresponse.h
@@ -61,6 +65,10 @@ add_library(QtAwsStorageGateway
   createstorediscsivolumerequest_p.h
   createstorediscsivolumeresponse.h
   createstorediscsivolumeresponse_p.h
+  createtapepoolrequest.h
+  createtapepoolrequest_p.h
+  createtapepoolresponse.h
+  createtapepoolresponse_p.h
   createtapesrequest.h
   createtapesrequest_p.h
   createtapesresponse.h
@@ -69,6 +77,10 @@ add_library(QtAwsStorageGateway
   createtapewithbarcoderequest_p.h
   createtapewithbarcoderesponse.h
   createtapewithbarcoderesponse_p.h
+  deleteautomatictapecreationpolicyrequest.h
+  deleteautomatictapecreationpolicyrequest_p.h
+  deleteautomatictapecreationpolicyresponse.h
+  deleteautomatictapecreationpolicyresponse_p.h
   deletebandwidthratelimitrequest.h
   deletebandwidthratelimitrequest_p.h
   deletebandwidthratelimitresponse.h
@@ -93,6 +105,10 @@ add_library(QtAwsStorageGateway
   deletetapearchiverequest_p.h
   deletetapearchiveresponse.h
   deletetapearchiveresponse_p.h
+  deletetapepoolrequest.h
+  deletetapepoolrequest_p.h
+  deletetapepoolresponse.h
+  deletetapepoolresponse_p.h
   deletetaperequest.h
   deletetaperequest_p.h
   deletetaperesponse.h
@@ -101,10 +117,18 @@ add_library(QtAwsStorageGateway
   deletevolumerequest_p.h
   deletevolumeresponse.h
   deletevolumeresponse_p.h
+  describeavailabilitymonitortestrequest.h
+  describeavailabilitymonitortestrequest_p.h
+  describeavailabilitymonitortestresponse.h
+  describeavailabilitymonitortestresponse_p.h
   describebandwidthratelimitrequest.h
   describebandwidthratelimitrequest_p.h
   describebandwidthratelimitresponse.h
   describebandwidthratelimitresponse_p.h
+  describebandwidthratelimitschedulerequest.h
+  describebandwidthratelimitschedulerequest_p.h
+  describebandwidthratelimitscheduleresponse.h
+  describebandwidthratelimitscheduleresponse_p.h
   describecachediscsivolumesrequest.h
   describecachediscsivolumesrequest_p.h
   describecachediscsivolumesresponse.h
@@ -117,6 +141,10 @@ add_library(QtAwsStorageGateway
   describechapcredentialsrequest_p.h
   describechapcredentialsresponse.h
   describechapcredentialsresponse_p.h
+  describefilesystemassociationsrequest.h
+  describefilesystemassociationsrequest_p.h
+  describefilesystemassociationsresponse.h
+  describefilesystemassociationsresponse_p.h
   describegatewayinformationrequest.h
   describegatewayinformationrequest_p.h
   describegatewayinformationresponse.h
@@ -177,14 +205,26 @@ add_library(QtAwsStorageGateway
   disablegatewayrequest_p.h
   disablegatewayresponse.h
   disablegatewayresponse_p.h
+  disassociatefilesystemrequest.h
+  disassociatefilesystemrequest_p.h
+  disassociatefilesystemresponse.h
+  disassociatefilesystemresponse_p.h
   joindomainrequest.h
   joindomainrequest_p.h
   joindomainresponse.h
   joindomainresponse_p.h
+  listautomatictapecreationpoliciesrequest.h
+  listautomatictapecreationpoliciesrequest_p.h
+  listautomatictapecreationpoliciesresponse.h
+  listautomatictapecreationpoliciesresponse_p.h
   listfilesharesrequest.h
   listfilesharesrequest_p.h
   listfilesharesresponse.h
   listfilesharesresponse_p.h
+  listfilesystemassociationsrequest.h
+  listfilesystemassociationsrequest_p.h
+  listfilesystemassociationsresponse.h
+  listfilesystemassociationsresponse_p.h
   listgatewaysrequest.h
   listgatewaysrequest_p.h
   listgatewaysresponse.h
@@ -197,6 +237,10 @@ add_library(QtAwsStorageGateway
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listtapepoolsrequest.h
+  listtapepoolsrequest_p.h
+  listtapepoolsresponse.h
+  listtapepoolsresponse_p.h
   listtapesrequest.h
   listtapesrequest_p.h
   listtapesresponse.h
@@ -249,6 +293,10 @@ add_library(QtAwsStorageGateway
   shutdowngatewayrequest_p.h
   shutdowngatewayresponse.h
   shutdowngatewayresponse_p.h
+  startavailabilitymonitortestrequest.h
+  startavailabilitymonitortestrequest_p.h
+  startavailabilitymonitortestresponse.h
+  startavailabilitymonitortestresponse_p.h
   startgatewayrequest.h
   startgatewayrequest_p.h
   startgatewayresponse.h
@@ -259,14 +307,26 @@ add_library(QtAwsStorageGateway
   storagegatewayrequest_p.h
   storagegatewayresponse.h
   storagegatewayresponse_p.h
+  updateautomatictapecreationpolicyrequest.h
+  updateautomatictapecreationpolicyrequest_p.h
+  updateautomatictapecreationpolicyresponse.h
+  updateautomatictapecreationpolicyresponse_p.h
   updatebandwidthratelimitrequest.h
   updatebandwidthratelimitrequest_p.h
   updatebandwidthratelimitresponse.h
   updatebandwidthratelimitresponse_p.h
+  updatebandwidthratelimitschedulerequest.h
+  updatebandwidthratelimitschedulerequest_p.h
+  updatebandwidthratelimitscheduleresponse.h
+  updatebandwidthratelimitscheduleresponse_p.h
   updatechapcredentialsrequest.h
   updatechapcredentialsrequest_p.h
   updatechapcredentialsresponse.h
   updatechapcredentialsresponse_p.h
+  updatefilesystemassociationrequest.h
+  updatefilesystemassociationrequest_p.h
+  updatefilesystemassociationresponse.h
+  updatefilesystemassociationresponse_p.h
   updategatewayinformationrequest.h
   updategatewayinformationrequest_p.h
   updategatewayinformationresponse.h
@@ -287,6 +347,10 @@ add_library(QtAwsStorageGateway
   updatesmbfilesharerequest_p.h
   updatesmbfileshareresponse.h
   updatesmbfileshareresponse_p.h
+  updatesmbfilesharevisibilityrequest.h
+  updatesmbfilesharevisibilityrequest_p.h
+  updatesmbfilesharevisibilityresponse.h
+  updatesmbfilesharevisibilityresponse_p.h
   updatesmbsecuritystrategyrequest.h
   updatesmbsecuritystrategyrequest_p.h
   updatesmbsecuritystrategyresponse.h
@@ -311,6 +375,8 @@ add_library(QtAwsStorageGateway
   addworkingstorageresponse.cpp
   assigntapepoolrequest.cpp
   assigntapepoolresponse.cpp
+  associatefilesystemrequest.cpp
+  associatefilesystemresponse.cpp
   attachvolumerequest.cpp
   attachvolumeresponse.cpp
   cancelarchivalrequest.cpp
@@ -329,10 +395,14 @@ add_library(QtAwsStorageGateway
   createsnapshotresponse.cpp
   createstorediscsivolumerequest.cpp
   createstorediscsivolumeresponse.cpp
+  createtapepoolrequest.cpp
+  createtapepoolresponse.cpp
   createtapesrequest.cpp
   createtapesresponse.cpp
   createtapewithbarcoderequest.cpp
   createtapewithbarcoderesponse.cpp
+  deleteautomatictapecreationpolicyrequest.cpp
+  deleteautomatictapecreationpolicyresponse.cpp
   deletebandwidthratelimitrequest.cpp
   deletebandwidthratelimitresponse.cpp
   deletechapcredentialsrequest.cpp
@@ -345,18 +415,26 @@ add_library(QtAwsStorageGateway
   deletesnapshotscheduleresponse.cpp
   deletetapearchiverequest.cpp
   deletetapearchiveresponse.cpp
+  deletetapepoolrequest.cpp
+  deletetapepoolresponse.cpp
   deletetaperequest.cpp
   deletetaperesponse.cpp
   deletevolumerequest.cpp
   deletevolumeresponse.cpp
+  describeavailabilitymonitortestrequest.cpp
+  describeavailabilitymonitortestresponse.cpp
   describebandwidthratelimitrequest.cpp
   describebandwidthratelimitresponse.cpp
+  describebandwidthratelimitschedulerequest.cpp
+  describebandwidthratelimitscheduleresponse.cpp
   describecachediscsivolumesrequest.cpp
   describecachediscsivolumesresponse.cpp
   describecacherequest.cpp
   describecacheresponse.cpp
   describechapcredentialsrequest.cpp
   describechapcredentialsresponse.cpp
+  describefilesystemassociationsrequest.cpp
+  describefilesystemassociationsresponse.cpp
   describegatewayinformationrequest.cpp
   describegatewayinformationresponse.cpp
   describemaintenancestarttimerequest.cpp
@@ -387,16 +465,24 @@ add_library(QtAwsStorageGateway
   detachvolumeresponse.cpp
   disablegatewayrequest.cpp
   disablegatewayresponse.cpp
+  disassociatefilesystemrequest.cpp
+  disassociatefilesystemresponse.cpp
   joindomainrequest.cpp
   joindomainresponse.cpp
+  listautomatictapecreationpoliciesrequest.cpp
+  listautomatictapecreationpoliciesresponse.cpp
   listfilesharesrequest.cpp
   listfilesharesresponse.cpp
+  listfilesystemassociationsrequest.cpp
+  listfilesystemassociationsresponse.cpp
   listgatewaysrequest.cpp
   listgatewaysresponse.cpp
   listlocaldisksrequest.cpp
   listlocaldisksresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listtapepoolsrequest.cpp
+  listtapepoolsresponse.cpp
   listtapesrequest.cpp
   listtapesresponse.cpp
   listvolumeinitiatorsrequest.cpp
@@ -423,15 +509,23 @@ add_library(QtAwsStorageGateway
   setsmbguestpasswordresponse.cpp
   shutdowngatewayrequest.cpp
   shutdowngatewayresponse.cpp
+  startavailabilitymonitortestrequest.cpp
+  startavailabilitymonitortestresponse.cpp
   startgatewayrequest.cpp
   startgatewayresponse.cpp
   storagegatewayclient.cpp
   storagegatewayrequest.cpp
   storagegatewayresponse.cpp
+  updateautomatictapecreationpolicyrequest.cpp
+  updateautomatictapecreationpolicyresponse.cpp
   updatebandwidthratelimitrequest.cpp
   updatebandwidthratelimitresponse.cpp
+  updatebandwidthratelimitschedulerequest.cpp
+  updatebandwidthratelimitscheduleresponse.cpp
   updatechapcredentialsrequest.cpp
   updatechapcredentialsresponse.cpp
+  updatefilesystemassociationrequest.cpp
+  updatefilesystemassociationresponse.cpp
   updategatewayinformationrequest.cpp
   updategatewayinformationresponse.cpp
   updategatewaysoftwarenowrequest.cpp
@@ -442,6 +536,8 @@ add_library(QtAwsStorageGateway
   updatenfsfileshareresponse.cpp
   updatesmbfilesharerequest.cpp
   updatesmbfileshareresponse.cpp
+  updatesmbfilesharevisibilityrequest.cpp
+  updatesmbfilesharevisibilityresponse.cpp
   updatesmbsecuritystrategyrequest.cpp
   updatesmbsecuritystrategyresponse.cpp
   updatesnapshotschedulerequest.cpp

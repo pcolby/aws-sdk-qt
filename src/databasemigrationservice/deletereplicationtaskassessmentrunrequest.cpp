@@ -1,0 +1,119 @@
+/*
+    Copyright 2013-2021 Paul Colby
+
+    This file is part of QtAws.
+
+    QtAws is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    QtAws is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "deletereplicationtaskassessmentrunrequest.h"
+#include "deletereplicationtaskassessmentrunrequest_p.h"
+#include "deletereplicationtaskassessmentrunresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace QtAws {
+namespace DatabaseMigrationService {
+
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskAssessmentRunRequest
+ * \brief The DeleteReplicationTaskAssessmentRunRequest class provides an interface for DatabaseMigrationService DeleteReplicationTaskAssessmentRun requests.
+ *
+ * \inmodule QtAwsDatabaseMigrationService
+ *
+ *  <fullname>AWS Database Migration Service</fullname>
+ * 
+ *  AWS Database Migration Service (AWS DMS) can migrate your data to and from the most widely used commercial and
+ *  open-source databases such as Oracle, PostgreSQL, Microsoft SQL Server, Amazon Redshift, MariaDB, Amazon Aurora, MySQL,
+ *  and SAP Adaptive Server Enterprise (ASE). The service supports homogeneous migrations such as Oracle to Oracle, as well
+ *  as heterogeneous migrations between different database platforms, such as Oracle to MySQL or SQL Server to
+ * 
+ *  PostgreSQL>
+ * 
+ *  For more information about AWS DMS, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html">What Is
+ *  AWS Database Migration Service?</a> in the <i>AWS Database Migration User Guide.</i>
+ *
+ * \sa DatabaseMigrationServiceClient::deleteReplicationTaskAssessmentRun
+ */
+
+/*!
+ * Constructs a copy of \a other.
+ */
+DeleteReplicationTaskAssessmentRunRequest::DeleteReplicationTaskAssessmentRunRequest(const DeleteReplicationTaskAssessmentRunRequest &other)
+    : DatabaseMigrationServiceRequest(new DeleteReplicationTaskAssessmentRunRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/*!
+ * Constructs a DeleteReplicationTaskAssessmentRunRequest object.
+ */
+DeleteReplicationTaskAssessmentRunRequest::DeleteReplicationTaskAssessmentRunRequest()
+    : DatabaseMigrationServiceRequest(new DeleteReplicationTaskAssessmentRunRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationTaskAssessmentRunAction, this))
+{
+
+}
+
+/*!
+ * \reimp
+ */
+bool DeleteReplicationTaskAssessmentRunRequest::isValid() const
+{
+    return false;
+}
+
+
+/*!
+ * Returns a DeleteReplicationTaskAssessmentRunResponse object to process \a reply.
+ *
+ * \sa QtAws::Core::AwsAbstractClient::send
+ */
+QtAws::Core::AwsAbstractResponse * DeleteReplicationTaskAssessmentRunRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReplicationTaskAssessmentRunResponse(*this, reply);
+}
+
+/*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskAssessmentRunRequestPrivate
+ * \brief The DeleteReplicationTaskAssessmentRunRequestPrivate class provides private implementation for DeleteReplicationTaskAssessmentRunRequest.
+ * \internal
+ *
+ * \inmodule QtAwsDatabaseMigrationService
+ */
+
+/*!
+ * Constructs a DeleteReplicationTaskAssessmentRunRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
+ */
+DeleteReplicationTaskAssessmentRunRequestPrivate::DeleteReplicationTaskAssessmentRunRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DeleteReplicationTaskAssessmentRunRequest * const q)
+    : DatabaseMigrationServiceRequestPrivate(action, q)
+{
+
+}
+
+/*!
+ * Constructs a copy of \a other, with public implementation \a q.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReplicationTaskAssessmentRunRequest
+ * class' copy constructor.
+ */
+DeleteReplicationTaskAssessmentRunRequestPrivate::DeleteReplicationTaskAssessmentRunRequestPrivate(
+    const DeleteReplicationTaskAssessmentRunRequestPrivate &other, DeleteReplicationTaskAssessmentRunRequest * const q)
+    : DatabaseMigrationServiceRequestPrivate(other, q)
+{
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace QtAws

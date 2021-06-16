@@ -233,9 +233,10 @@ CreateChannelResponse * IoTAnalyticsClient::createChannel(const CreateChannelReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a data set. A data set stores data retrieved from a data store by applying a "queryAction" (a SQL query) or a
- * "containerAction" (executing a containerized application). This operation creates the skeleton of a data set. The data
- * set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you
+ * Creates a dataset. A dataset stores data retrieved from a data store by applying a <code>queryAction</code> (a SQL
+ * query) or a <code>containerAction</code> (executing a containerized application). This operation creates the skeleton of
+ * a dataset. The dataset can be populated manually by calling <code>CreateDatasetContent</code> or automatically according
+ * to a trigger you
  */
 CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetRequest &request)
 {
@@ -248,8 +249,8 @@ CreateDatasetResponse * IoTAnalyticsClient::createDataset(const CreateDatasetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates the content of a data set by applying a "queryAction" (a SQL query) or a "containerAction" (executing a
- * containerized
+ * Creates the content of a data set by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code>
+ * (executing a containerized
  */
 CreateDatasetContentResponse * IoTAnalyticsClient::createDatasetContent(const CreateDatasetContentRequest &request)
 {
@@ -262,7 +263,8 @@ CreateDatasetContentResponse * IoTAnalyticsClient::createDatasetContent(const Cr
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a data store, which is a repository for
+ * Creates a data store, which is a repository for messages. Only data stores that are used to save pipeline data can be
+ * configured with
  */
 CreateDatastoreResponse * IoTAnalyticsClient::createDatastore(const CreateDatastoreRequest &request)
 {
@@ -275,8 +277,8 @@ CreateDatastoreResponse * IoTAnalyticsClient::createDatastore(const CreateDatast
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a pipeline. A pipeline consumes messages from one or more channels and allows you to process the messages before
- * storing them in a data store. You must specify both a <code>channel</code> and a <code>datastore</code> activity and,
+ * Creates a pipeline. A pipeline consumes messages from a channel and allows you to process the messages before storing
+ * them in a data store. You must specify both a <code>channel</code> and a <code>datastore</code> activity and,
  * optionally, as many as 23 additional activities in the <code>pipelineActivities</code>
  */
 CreatePipelineResponse * IoTAnalyticsClient::createPipeline(const CreatePipelineRequest &request)
@@ -303,11 +305,11 @@ DeleteChannelResponse * IoTAnalyticsClient::deleteChannel(const DeleteChannelReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the specified data
+ * Deletes the specified
  *
- * set>
+ * dataset>
  *
- * You do not have to delete the content of the data set before you perform this
+ * You do not have to delete the content of the dataset before you perform this
  */
 DeleteDatasetResponse * IoTAnalyticsClient::deleteDataset(const DeleteDatasetRequest &request)
 {
@@ -320,7 +322,7 @@ DeleteDatasetResponse * IoTAnalyticsClient::deleteDataset(const DeleteDatasetReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the content of the specified data
+ * Deletes the content of the specified
  */
 DeleteDatasetContentResponse * IoTAnalyticsClient::deleteDatasetContent(const DeleteDatasetContentRequest &request)
 {
@@ -372,7 +374,7 @@ DescribeChannelResponse * IoTAnalyticsClient::describeChannel(const DescribeChan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about a data
+ * Retrieves information about a
  */
 DescribeDatasetResponse * IoTAnalyticsClient::describeDataset(const DescribeDatasetRequest &request)
 {
@@ -424,7 +426,7 @@ DescribePipelineResponse * IoTAnalyticsClient::describePipeline(const DescribePi
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the contents of a data set as pre-signed
+ * Retrieves the contents of a data set as presigned
  */
 GetDatasetContentResponse * IoTAnalyticsClient::getDatasetContent(const GetDatasetContentRequest &request)
 {
@@ -502,7 +504,7 @@ ListPipelinesResponse * IoTAnalyticsClient::listPipelines(const ListPipelinesReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists the tags (metadata) which you have assigned to the
+ * Lists the tags (metadata) that you have assigned to the
  */
 ListTagsForResourceResponse * IoTAnalyticsClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -519,9 +521,9 @@ ListTagsForResourceResponse * IoTAnalyticsClient::listTagsForResource(const List
  *
  * options>
  *
- * Note that if you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to
- * take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to
- * correct an invalid policy) it takes up to 5 minutes for that change to take effect.
+ * If you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to take
+ * effect. Also, if you change the policy attached to the role you specified in the <code>roleArn</code> field (for
+ * example, to correct an invalid policy), it takes up to five minutes for that change to take effect.
  */
 PutLoggingOptionsResponse * IoTAnalyticsClient::putLoggingOptions(const PutLoggingOptionsRequest &request)
 {
@@ -574,7 +576,7 @@ StartPipelineReprocessingResponse * IoTAnalyticsClient::startPipelineReprocessin
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a
+ * Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a
  */
 TagResourceResponse * IoTAnalyticsClient::tagResource(const TagResourceRequest &request)
 {

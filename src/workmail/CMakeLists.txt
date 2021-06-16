@@ -9,6 +9,10 @@ add_library(QtAwsWorkMail
   associatemembertogrouprequest_p.h
   associatemembertogroupresponse.h
   associatemembertogroupresponse_p.h
+  cancelmailboxexportjobrequest.h
+  cancelmailboxexportjobrequest_p.h
+  cancelmailboxexportjobresponse.h
+  cancelmailboxexportjobresponse_p.h
   createaliasrequest.h
   createaliasrequest_p.h
   createaliasresponse.h
@@ -17,6 +21,14 @@ add_library(QtAwsWorkMail
   creategrouprequest_p.h
   creategroupresponse.h
   creategroupresponse_p.h
+  createmobiledeviceaccessrulerequest.h
+  createmobiledeviceaccessrulerequest_p.h
+  createmobiledeviceaccessruleresponse.h
+  createmobiledeviceaccessruleresponse_p.h
+  createorganizationrequest.h
+  createorganizationrequest_p.h
+  createorganizationresponse.h
+  createorganizationresponse_p.h
   createresourcerequest.h
   createresourcerequest_p.h
   createresourceresponse.h
@@ -25,6 +37,10 @@ add_library(QtAwsWorkMail
   createuserrequest_p.h
   createuserresponse.h
   createuserresponse_p.h
+  deleteaccesscontrolrulerequest.h
+  deleteaccesscontrolrulerequest_p.h
+  deleteaccesscontrolruleresponse.h
+  deleteaccesscontrolruleresponse_p.h
   deletealiasrequest.h
   deletealiasrequest_p.h
   deletealiasresponse.h
@@ -37,10 +53,22 @@ add_library(QtAwsWorkMail
   deletemailboxpermissionsrequest_p.h
   deletemailboxpermissionsresponse.h
   deletemailboxpermissionsresponse_p.h
+  deletemobiledeviceaccessrulerequest.h
+  deletemobiledeviceaccessrulerequest_p.h
+  deletemobiledeviceaccessruleresponse.h
+  deletemobiledeviceaccessruleresponse_p.h
+  deleteorganizationrequest.h
+  deleteorganizationrequest_p.h
+  deleteorganizationresponse.h
+  deleteorganizationresponse_p.h
   deleteresourcerequest.h
   deleteresourcerequest_p.h
   deleteresourceresponse.h
   deleteresourceresponse_p.h
+  deleteretentionpolicyrequest.h
+  deleteretentionpolicyrequest_p.h
+  deleteretentionpolicyresponse.h
+  deleteretentionpolicyresponse_p.h
   deleteuserrequest.h
   deleteuserrequest_p.h
   deleteuserresponse.h
@@ -53,6 +81,10 @@ add_library(QtAwsWorkMail
   describegrouprequest_p.h
   describegroupresponse.h
   describegroupresponse_p.h
+  describemailboxexportjobrequest.h
+  describemailboxexportjobrequest_p.h
+  describemailboxexportjobresponse.h
+  describemailboxexportjobresponse_p.h
   describeorganizationrequest.h
   describeorganizationrequest_p.h
   describeorganizationresponse.h
@@ -73,10 +105,26 @@ add_library(QtAwsWorkMail
   disassociatememberfromgrouprequest_p.h
   disassociatememberfromgroupresponse.h
   disassociatememberfromgroupresponse_p.h
+  getaccesscontroleffectrequest.h
+  getaccesscontroleffectrequest_p.h
+  getaccesscontroleffectresponse.h
+  getaccesscontroleffectresponse_p.h
+  getdefaultretentionpolicyrequest.h
+  getdefaultretentionpolicyrequest_p.h
+  getdefaultretentionpolicyresponse.h
+  getdefaultretentionpolicyresponse_p.h
   getmailboxdetailsrequest.h
   getmailboxdetailsrequest_p.h
   getmailboxdetailsresponse.h
   getmailboxdetailsresponse_p.h
+  getmobiledeviceaccesseffectrequest.h
+  getmobiledeviceaccesseffectrequest_p.h
+  getmobiledeviceaccesseffectresponse.h
+  getmobiledeviceaccesseffectresponse_p.h
+  listaccesscontrolrulesrequest.h
+  listaccesscontrolrulesrequest_p.h
+  listaccesscontrolrulesresponse.h
+  listaccesscontrolrulesresponse_p.h
   listaliasesrequest.h
   listaliasesrequest_p.h
   listaliasesresponse.h
@@ -89,10 +137,18 @@ add_library(QtAwsWorkMail
   listgroupsrequest_p.h
   listgroupsresponse.h
   listgroupsresponse_p.h
+  listmailboxexportjobsrequest.h
+  listmailboxexportjobsrequest_p.h
+  listmailboxexportjobsresponse.h
+  listmailboxexportjobsresponse_p.h
   listmailboxpermissionsrequest.h
   listmailboxpermissionsrequest_p.h
   listmailboxpermissionsresponse.h
   listmailboxpermissionsresponse_p.h
+  listmobiledeviceaccessrulesrequest.h
+  listmobiledeviceaccessrulesrequest_p.h
+  listmobiledeviceaccessrulesresponse.h
+  listmobiledeviceaccessrulesresponse_p.h
   listorganizationsrequest.h
   listorganizationsrequest_p.h
   listorganizationsresponse.h
@@ -105,14 +161,26 @@ add_library(QtAwsWorkMail
   listresourcesrequest_p.h
   listresourcesresponse.h
   listresourcesresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   listusersrequest.h
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  putaccesscontrolrulerequest.h
+  putaccesscontrolrulerequest_p.h
+  putaccesscontrolruleresponse.h
+  putaccesscontrolruleresponse_p.h
   putmailboxpermissionsrequest.h
   putmailboxpermissionsrequest_p.h
   putmailboxpermissionsresponse.h
   putmailboxpermissionsresponse_p.h
+  putretentionpolicyrequest.h
+  putretentionpolicyrequest_p.h
+  putretentionpolicyresponse.h
+  putretentionpolicyresponse_p.h
   registertoworkmailrequest.h
   registertoworkmailrequest_p.h
   registertoworkmailresponse.h
@@ -121,10 +189,26 @@ add_library(QtAwsWorkMail
   resetpasswordrequest_p.h
   resetpasswordresponse.h
   resetpasswordresponse_p.h
+  startmailboxexportjobrequest.h
+  startmailboxexportjobrequest_p.h
+  startmailboxexportjobresponse.h
+  startmailboxexportjobresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   updatemailboxquotarequest.h
   updatemailboxquotarequest_p.h
   updatemailboxquotaresponse.h
   updatemailboxquotaresponse_p.h
+  updatemobiledeviceaccessrulerequest.h
+  updatemobiledeviceaccessrulerequest_p.h
+  updatemobiledeviceaccessruleresponse.h
+  updatemobiledeviceaccessruleresponse_p.h
   updateprimaryemailaddressrequest.h
   updateprimaryemailaddressrequest_p.h
   updateprimaryemailaddressresponse.h
@@ -143,28 +227,44 @@ add_library(QtAwsWorkMail
   associatedelegatetoresourceresponse.cpp
   associatemembertogrouprequest.cpp
   associatemembertogroupresponse.cpp
+  cancelmailboxexportjobrequest.cpp
+  cancelmailboxexportjobresponse.cpp
   createaliasrequest.cpp
   createaliasresponse.cpp
   creategrouprequest.cpp
   creategroupresponse.cpp
+  createmobiledeviceaccessrulerequest.cpp
+  createmobiledeviceaccessruleresponse.cpp
+  createorganizationrequest.cpp
+  createorganizationresponse.cpp
   createresourcerequest.cpp
   createresourceresponse.cpp
   createuserrequest.cpp
   createuserresponse.cpp
+  deleteaccesscontrolrulerequest.cpp
+  deleteaccesscontrolruleresponse.cpp
   deletealiasrequest.cpp
   deletealiasresponse.cpp
   deletegrouprequest.cpp
   deletegroupresponse.cpp
   deletemailboxpermissionsrequest.cpp
   deletemailboxpermissionsresponse.cpp
+  deletemobiledeviceaccessrulerequest.cpp
+  deletemobiledeviceaccessruleresponse.cpp
+  deleteorganizationrequest.cpp
+  deleteorganizationresponse.cpp
   deleteresourcerequest.cpp
   deleteresourceresponse.cpp
+  deleteretentionpolicyrequest.cpp
+  deleteretentionpolicyresponse.cpp
   deleteuserrequest.cpp
   deleteuserresponse.cpp
   deregisterfromworkmailrequest.cpp
   deregisterfromworkmailresponse.cpp
   describegrouprequest.cpp
   describegroupresponse.cpp
+  describemailboxexportjobrequest.cpp
+  describemailboxexportjobresponse.cpp
   describeorganizationrequest.cpp
   describeorganizationresponse.cpp
   describeresourcerequest.cpp
@@ -175,32 +275,58 @@ add_library(QtAwsWorkMail
   disassociatedelegatefromresourceresponse.cpp
   disassociatememberfromgrouprequest.cpp
   disassociatememberfromgroupresponse.cpp
+  getaccesscontroleffectrequest.cpp
+  getaccesscontroleffectresponse.cpp
+  getdefaultretentionpolicyrequest.cpp
+  getdefaultretentionpolicyresponse.cpp
   getmailboxdetailsrequest.cpp
   getmailboxdetailsresponse.cpp
+  getmobiledeviceaccesseffectrequest.cpp
+  getmobiledeviceaccesseffectresponse.cpp
+  listaccesscontrolrulesrequest.cpp
+  listaccesscontrolrulesresponse.cpp
   listaliasesrequest.cpp
   listaliasesresponse.cpp
   listgroupmembersrequest.cpp
   listgroupmembersresponse.cpp
   listgroupsrequest.cpp
   listgroupsresponse.cpp
+  listmailboxexportjobsrequest.cpp
+  listmailboxexportjobsresponse.cpp
   listmailboxpermissionsrequest.cpp
   listmailboxpermissionsresponse.cpp
+  listmobiledeviceaccessrulesrequest.cpp
+  listmobiledeviceaccessrulesresponse.cpp
   listorganizationsrequest.cpp
   listorganizationsresponse.cpp
   listresourcedelegatesrequest.cpp
   listresourcedelegatesresponse.cpp
   listresourcesrequest.cpp
   listresourcesresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   listusersrequest.cpp
   listusersresponse.cpp
+  putaccesscontrolrulerequest.cpp
+  putaccesscontrolruleresponse.cpp
   putmailboxpermissionsrequest.cpp
   putmailboxpermissionsresponse.cpp
+  putretentionpolicyrequest.cpp
+  putretentionpolicyresponse.cpp
   registertoworkmailrequest.cpp
   registertoworkmailresponse.cpp
   resetpasswordrequest.cpp
   resetpasswordresponse.cpp
+  startmailboxexportjobrequest.cpp
+  startmailboxexportjobresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   updatemailboxquotarequest.cpp
   updatemailboxquotaresponse.cpp
+  updatemobiledeviceaccessrulerequest.cpp
+  updatemobiledeviceaccessruleresponse.cpp
   updateprimaryemailaddressrequest.cpp
   updateprimaryemailaddressresponse.cpp
   updateresourcerequest.cpp

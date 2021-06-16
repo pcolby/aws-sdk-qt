@@ -37,19 +37,32 @@ class QTAWS_EXPORT EfsRequest : public QtAws::Core::AwsAbstractRequest {
 public:
     /// Actions supported by EFS.
     enum Action {
+        CreateAccessPointAction,
         CreateFileSystemAction,
         CreateMountTargetAction,
         CreateTagsAction,
+        DeleteAccessPointAction,
         DeleteFileSystemAction,
+        DeleteFileSystemPolicyAction,
         DeleteMountTargetAction,
         DeleteTagsAction,
+        DescribeAccessPointsAction,
+        DescribeAccountPreferencesAction,
+        DescribeBackupPolicyAction,
+        DescribeFileSystemPolicyAction,
         DescribeFileSystemsAction,
         DescribeLifecycleConfigurationAction,
         DescribeMountTargetSecurityGroupsAction,
         DescribeMountTargetsAction,
         DescribeTagsAction,
+        ListTagsForResourceAction,
         ModifyMountTargetSecurityGroupsAction,
+        PutAccountPreferencesAction,
+        PutBackupPolicyAction,
+        PutFileSystemPolicyAction,
         PutLifecycleConfigurationAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateFileSystemAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

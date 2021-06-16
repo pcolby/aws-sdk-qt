@@ -1,32 +1,116 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsMediaTailor
+  createchannelrequest.h
+  createchannelrequest_p.h
+  createchannelresponse.h
+  createchannelresponse_p.h
+  createprogramrequest.h
+  createprogramrequest_p.h
+  createprogramresponse.h
+  createprogramresponse_p.h
+  createsourcelocationrequest.h
+  createsourcelocationrequest_p.h
+  createsourcelocationresponse.h
+  createsourcelocationresponse_p.h
+  createvodsourcerequest.h
+  createvodsourcerequest_p.h
+  createvodsourceresponse.h
+  createvodsourceresponse_p.h
+  deletechannelpolicyrequest.h
+  deletechannelpolicyrequest_p.h
+  deletechannelpolicyresponse.h
+  deletechannelpolicyresponse_p.h
+  deletechannelrequest.h
+  deletechannelrequest_p.h
+  deletechannelresponse.h
+  deletechannelresponse_p.h
   deleteplaybackconfigurationrequest.h
   deleteplaybackconfigurationrequest_p.h
   deleteplaybackconfigurationresponse.h
   deleteplaybackconfigurationresponse_p.h
+  deleteprogramrequest.h
+  deleteprogramrequest_p.h
+  deleteprogramresponse.h
+  deleteprogramresponse_p.h
+  deletesourcelocationrequest.h
+  deletesourcelocationrequest_p.h
+  deletesourcelocationresponse.h
+  deletesourcelocationresponse_p.h
+  deletevodsourcerequest.h
+  deletevodsourcerequest_p.h
+  deletevodsourceresponse.h
+  deletevodsourceresponse_p.h
+  describechannelrequest.h
+  describechannelrequest_p.h
+  describechannelresponse.h
+  describechannelresponse_p.h
+  describeprogramrequest.h
+  describeprogramrequest_p.h
+  describeprogramresponse.h
+  describeprogramresponse_p.h
+  describesourcelocationrequest.h
+  describesourcelocationrequest_p.h
+  describesourcelocationresponse.h
+  describesourcelocationresponse_p.h
+  describevodsourcerequest.h
+  describevodsourcerequest_p.h
+  describevodsourceresponse.h
+  describevodsourceresponse_p.h
+  getchannelpolicyrequest.h
+  getchannelpolicyrequest_p.h
+  getchannelpolicyresponse.h
+  getchannelpolicyresponse_p.h
+  getchannelschedulerequest.h
+  getchannelschedulerequest_p.h
+  getchannelscheduleresponse.h
+  getchannelscheduleresponse_p.h
   getplaybackconfigurationrequest.h
   getplaybackconfigurationrequest_p.h
   getplaybackconfigurationresponse.h
   getplaybackconfigurationresponse_p.h
+  listchannelsrequest.h
+  listchannelsrequest_p.h
+  listchannelsresponse.h
+  listchannelsresponse_p.h
   listplaybackconfigurationsrequest.h
   listplaybackconfigurationsrequest_p.h
   listplaybackconfigurationsresponse.h
   listplaybackconfigurationsresponse_p.h
+  listsourcelocationsrequest.h
+  listsourcelocationsrequest_p.h
+  listsourcelocationsresponse.h
+  listsourcelocationsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  listvodsourcesrequest.h
+  listvodsourcesrequest_p.h
+  listvodsourcesresponse.h
+  listvodsourcesresponse_p.h
   mediatailorclient.h
   mediatailorclient_p.h
   mediatailorrequest.h
   mediatailorrequest_p.h
   mediatailorresponse.h
   mediatailorresponse_p.h
+  putchannelpolicyrequest.h
+  putchannelpolicyrequest_p.h
+  putchannelpolicyresponse.h
+  putchannelpolicyresponse_p.h
   putplaybackconfigurationrequest.h
   putplaybackconfigurationrequest_p.h
   putplaybackconfigurationresponse.h
   putplaybackconfigurationresponse_p.h
+  startchannelrequest.h
+  startchannelrequest_p.h
+  startchannelresponse.h
+  startchannelresponse_p.h
+  stopchannelrequest.h
+  stopchannelrequest_p.h
+  stopchannelresponse.h
+  stopchannelresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -35,23 +119,83 @@ add_library(QtAwsMediaTailor
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatechannelrequest.h
+  updatechannelrequest_p.h
+  updatechannelresponse.h
+  updatechannelresponse_p.h
+  updatesourcelocationrequest.h
+  updatesourcelocationrequest_p.h
+  updatesourcelocationresponse.h
+  updatesourcelocationresponse_p.h
+  updatevodsourcerequest.h
+  updatevodsourcerequest_p.h
+  updatevodsourceresponse.h
+  updatevodsourceresponse_p.h
+  createchannelrequest.cpp
+  createchannelresponse.cpp
+  createprogramrequest.cpp
+  createprogramresponse.cpp
+  createsourcelocationrequest.cpp
+  createsourcelocationresponse.cpp
+  createvodsourcerequest.cpp
+  createvodsourceresponse.cpp
+  deletechannelpolicyrequest.cpp
+  deletechannelpolicyresponse.cpp
+  deletechannelrequest.cpp
+  deletechannelresponse.cpp
   deleteplaybackconfigurationrequest.cpp
   deleteplaybackconfigurationresponse.cpp
+  deleteprogramrequest.cpp
+  deleteprogramresponse.cpp
+  deletesourcelocationrequest.cpp
+  deletesourcelocationresponse.cpp
+  deletevodsourcerequest.cpp
+  deletevodsourceresponse.cpp
+  describechannelrequest.cpp
+  describechannelresponse.cpp
+  describeprogramrequest.cpp
+  describeprogramresponse.cpp
+  describesourcelocationrequest.cpp
+  describesourcelocationresponse.cpp
+  describevodsourcerequest.cpp
+  describevodsourceresponse.cpp
+  getchannelpolicyrequest.cpp
+  getchannelpolicyresponse.cpp
+  getchannelschedulerequest.cpp
+  getchannelscheduleresponse.cpp
   getplaybackconfigurationrequest.cpp
   getplaybackconfigurationresponse.cpp
+  listchannelsrequest.cpp
+  listchannelsresponse.cpp
   listplaybackconfigurationsrequest.cpp
   listplaybackconfigurationsresponse.cpp
+  listsourcelocationsrequest.cpp
+  listsourcelocationsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  listvodsourcesrequest.cpp
+  listvodsourcesresponse.cpp
   mediatailorclient.cpp
   mediatailorrequest.cpp
   mediatailorresponse.cpp
+  putchannelpolicyrequest.cpp
+  putchannelpolicyresponse.cpp
   putplaybackconfigurationrequest.cpp
   putplaybackconfigurationresponse.cpp
+  startchannelrequest.cpp
+  startchannelresponse.cpp
+  stopchannelrequest.cpp
+  stopchannelresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
-  untagresourceresponse.cpp)
+  untagresourceresponse.cpp
+  updatechannelrequest.cpp
+  updatechannelresponse.cpp
+  updatesourcelocationrequest.cpp
+  updatesourcelocationresponse.cpp
+  updatevodsourcerequest.cpp
+  updatevodsourceresponse.cpp)
 
 add_dependencies(QtAwsMediaTailor QtAwsCore)
 

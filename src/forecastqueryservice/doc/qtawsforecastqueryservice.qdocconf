@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsForecastQueryService
+description = AWS ForecastQueryService SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsforecastqueryservice-index.html"
+navigation.landingtitle = "ForecastQueryService"
+navigation.cppclassespage = "ForecastQueryService C++ Classes"

@@ -49,6 +49,7 @@ namespace CloudSearch {
  * \value DeleteSuggesterAction CloudSearch DeleteSuggester action.
  * \value DescribeAnalysisSchemesAction CloudSearch DescribeAnalysisSchemes action.
  * \value DescribeAvailabilityOptionsAction CloudSearch DescribeAvailabilityOptions action.
+ * \value DescribeDomainEndpointOptionsAction CloudSearch DescribeDomainEndpointOptions action.
  * \value DescribeDomainsAction CloudSearch DescribeDomains action.
  * \value DescribeExpressionsAction CloudSearch DescribeExpressions action.
  * \value DescribeIndexFieldsAction CloudSearch DescribeIndexFields action.
@@ -58,6 +59,7 @@ namespace CloudSearch {
  * \value IndexDocumentsAction CloudSearch IndexDocuments action.
  * \value ListDomainNamesAction CloudSearch ListDomainNames action.
  * \value UpdateAvailabilityOptionsAction CloudSearch UpdateAvailabilityOptions action.
+ * \value UpdateDomainEndpointOptionsAction CloudSearch UpdateDomainEndpointOptions action.
  * \value UpdateScalingParametersAction CloudSearch UpdateScalingParameters action.
  * \value UpdateServiceAccessPoliciesAction CloudSearch UpdateServiceAccessPolicies action.
  */

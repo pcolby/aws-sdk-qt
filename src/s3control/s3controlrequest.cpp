@@ -36,12 +36,53 @@ namespace S3Control {
  * This enum describes the actions that can be performed as S3Control
  * requests.
  *
+ * \value CreateAccessPointAction S3Control CreateAccessPoint action.
+ * \value CreateAccessPointForObjectLambdaAction S3Control CreateAccessPointForObjectLambda action.
+ * \value CreateBucketAction S3Control CreateBucket action.
  * \value CreateJobAction S3Control CreateJob action.
+ * \value DeleteAccessPointAction S3Control DeleteAccessPoint action.
+ * \value DeleteAccessPointForObjectLambdaAction S3Control DeleteAccessPointForObjectLambda action.
+ * \value DeleteAccessPointPolicyAction S3Control DeleteAccessPointPolicy action.
+ * \value DeleteAccessPointPolicyForObjectLambdaAction S3Control DeleteAccessPointPolicyForObjectLambda action.
+ * \value DeleteBucketAction S3Control DeleteBucket action.
+ * \value DeleteBucketLifecycleConfigurationAction S3Control DeleteBucketLifecycleConfiguration action.
+ * \value DeleteBucketPolicyAction S3Control DeleteBucketPolicy action.
+ * \value DeleteBucketTaggingAction S3Control DeleteBucketTagging action.
+ * \value DeleteJobTaggingAction S3Control DeleteJobTagging action.
  * \value DeletePublicAccessBlockAction S3Control DeletePublicAccessBlock action.
+ * \value DeleteStorageLensConfigurationAction S3Control DeleteStorageLensConfiguration action.
+ * \value DeleteStorageLensConfigurationTaggingAction S3Control DeleteStorageLensConfigurationTagging action.
  * \value DescribeJobAction S3Control DescribeJob action.
+ * \value GetAccessPointAction S3Control GetAccessPoint action.
+ * \value GetAccessPointConfigurationForObjectLambdaAction S3Control GetAccessPointConfigurationForObjectLambda action.
+ * \value GetAccessPointForObjectLambdaAction S3Control GetAccessPointForObjectLambda action.
+ * \value GetAccessPointPolicyAction S3Control GetAccessPointPolicy action.
+ * \value GetAccessPointPolicyForObjectLambdaAction S3Control GetAccessPointPolicyForObjectLambda action.
+ * \value GetAccessPointPolicyStatusAction S3Control GetAccessPointPolicyStatus action.
+ * \value GetAccessPointPolicyStatusForObjectLambdaAction S3Control GetAccessPointPolicyStatusForObjectLambda action.
+ * \value GetBucketAction S3Control GetBucket action.
+ * \value GetBucketLifecycleConfigurationAction S3Control GetBucketLifecycleConfiguration action.
+ * \value GetBucketPolicyAction S3Control GetBucketPolicy action.
+ * \value GetBucketTaggingAction S3Control GetBucketTagging action.
+ * \value GetJobTaggingAction S3Control GetJobTagging action.
  * \value GetPublicAccessBlockAction S3Control GetPublicAccessBlock action.
+ * \value GetStorageLensConfigurationAction S3Control GetStorageLensConfiguration action.
+ * \value GetStorageLensConfigurationTaggingAction S3Control GetStorageLensConfigurationTagging action.
+ * \value ListAccessPointsAction S3Control ListAccessPoints action.
+ * \value ListAccessPointsForObjectLambdaAction S3Control ListAccessPointsForObjectLambda action.
  * \value ListJobsAction S3Control ListJobs action.
+ * \value ListRegionalBucketsAction S3Control ListRegionalBuckets action.
+ * \value ListStorageLensConfigurationsAction S3Control ListStorageLensConfigurations action.
+ * \value PutAccessPointConfigurationForObjectLambdaAction S3Control PutAccessPointConfigurationForObjectLambda action.
+ * \value PutAccessPointPolicyAction S3Control PutAccessPointPolicy action.
+ * \value PutAccessPointPolicyForObjectLambdaAction S3Control PutAccessPointPolicyForObjectLambda action.
+ * \value PutBucketLifecycleConfigurationAction S3Control PutBucketLifecycleConfiguration action.
+ * \value PutBucketPolicyAction S3Control PutBucketPolicy action.
+ * \value PutBucketTaggingAction S3Control PutBucketTagging action.
+ * \value PutJobTaggingAction S3Control PutJobTagging action.
  * \value PutPublicAccessBlockAction S3Control PutPublicAccessBlock action.
+ * \value PutStorageLensConfigurationAction S3Control PutStorageLensConfiguration action.
+ * \value PutStorageLensConfigurationTaggingAction S3Control PutStorageLensConfigurationTagging action.
  * \value UpdateJobPriorityAction S3Control UpdateJobPriority action.
  * \value UpdateJobStatusAction S3Control UpdateJobStatus action.
  */

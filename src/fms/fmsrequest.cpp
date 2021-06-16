@@ -37,19 +37,31 @@ namespace FMS {
  * requests.
  *
  * \value AssociateAdminAccountAction FMS AssociateAdminAccount action.
+ * \value DeleteAppsListAction FMS DeleteAppsList action.
  * \value DeleteNotificationChannelAction FMS DeleteNotificationChannel action.
  * \value DeletePolicyAction FMS DeletePolicy action.
+ * \value DeleteProtocolsListAction FMS DeleteProtocolsList action.
  * \value DisassociateAdminAccountAction FMS DisassociateAdminAccount action.
  * \value GetAdminAccountAction FMS GetAdminAccount action.
+ * \value GetAppsListAction FMS GetAppsList action.
  * \value GetComplianceDetailAction FMS GetComplianceDetail action.
  * \value GetNotificationChannelAction FMS GetNotificationChannel action.
  * \value GetPolicyAction FMS GetPolicy action.
  * \value GetProtectionStatusAction FMS GetProtectionStatus action.
+ * \value GetProtocolsListAction FMS GetProtocolsList action.
+ * \value GetViolationDetailsAction FMS GetViolationDetails action.
+ * \value ListAppsListsAction FMS ListAppsLists action.
  * \value ListComplianceStatusAction FMS ListComplianceStatus action.
  * \value ListMemberAccountsAction FMS ListMemberAccounts action.
  * \value ListPoliciesAction FMS ListPolicies action.
+ * \value ListProtocolsListsAction FMS ListProtocolsLists action.
+ * \value ListTagsForResourceAction FMS ListTagsForResource action.
+ * \value PutAppsListAction FMS PutAppsList action.
  * \value PutNotificationChannelAction FMS PutNotificationChannel action.
  * \value PutPolicyAction FMS PutPolicy action.
+ * \value PutProtocolsListAction FMS PutProtocolsList action.
+ * \value TagResourceAction FMS TagResource action.
+ * \value UntagResourceAction FMS UntagResource action.
  */
 
 /*!

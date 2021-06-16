@@ -45,10 +45,16 @@
 #include "putresourcepolicyresponse.h"
 #include "putsecretvaluerequest.h"
 #include "putsecretvalueresponse.h"
+#include "removeregionsfromreplicationrequest.h"
+#include "removeregionsfromreplicationresponse.h"
+#include "replicatesecrettoregionsrequest.h"
+#include "replicatesecrettoregionsresponse.h"
 #include "restoresecretrequest.h"
 #include "restoresecretresponse.h"
 #include "rotatesecretrequest.h"
 #include "rotatesecretresponse.h"
+#include "stopreplicationtoreplicarequest.h"
+#include "stopreplicationtoreplicaresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -57,6 +63,8 @@
 #include "updatesecretresponse.h"
 #include "updatesecretversionstagerequest.h"
 #include "updatesecretversionstageresponse.h"
+#include "validateresourcepolicyrequest.h"
+#include "validateresourcepolicyresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -82,7 +90,7 @@ namespace SecretsManager {
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
- *  AWS Secrets Manager is a web service that enables you to store, manage, and retrieve,
+ *  AWS Secrets Manager provides a service to enable you to store, manage, and retrieve,
  * 
  *  secrets>
  * 
@@ -99,15 +107,15 @@ namespace SecretsManager {
  * 
  *  2017-10-17> <note>
  * 
- *  As an alternative to using the API directly, you can use one of the AWS SDKs, which consist of libraries and sample code
- *  for various programming languages and platforms (such as Java, Ruby, .NET, iOS, and Android). The SDKs provide a
- *  convenient way to create programmatic access to AWS Secrets Manager. For example, the SDKs take care of
- *  cryptographically signing requests, managing errors, and retrying requests automatically. For more information about the
- *  AWS SDKs, including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ *  As an alternative to using the API, you can use one of the AWS SDKs, which consist of libraries and sample code for
+ *  various programming languages and platforms such as Java, Ruby, .NET, iOS, and Android. The SDKs provide a convenient
+ *  way to create programmatic access to AWS Secrets Manager. For example, the SDKs provide cryptographically signing
+ *  requests, managing errors, and retrying requests automatically. For more information about the AWS SDKs, including
+ *  downloading and installing them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
  * 
  *  Services</a>> </note>
  * 
- *  We recommend that you use the AWS SDKs to make programmatic API calls to Secrets Manager. However, you also can use the
+ *  We recommend you use the AWS SDKs to make programmatic API calls to Secrets Manager. However, you also can use the
  *  Secrets Manager HTTP Query API to make direct calls to the Secrets Manager web service. To learn more about the Secrets
  *  Manager HTTP Query API, see <a
  *  href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/query-requests.html">Making Query Requests</a> in the
@@ -115,9 +123,9 @@ namespace SecretsManager {
  * 
  *  </p
  * 
- *  Secrets Manager supports GET and POST requests for all actions. That is, the API doesn't require you to use GET for some
- *  actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
- *  operations that require larger sizes, use a POST
+ *  Secrets Manager API supports GET and POST requests for all actions, and doesn't require you to use GET for some actions
+ *  and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for operations that
+ *  require larger sizes, use a POST
  * 
  *  request>
  * 
@@ -136,11 +144,11 @@ namespace SecretsManager {
  * 
  *  </p
  * 
- *  The JSON that AWS Secrets Manager expects as your request parameters and that the service returns as a response to HTTP
- *  query requests are single, long strings without line breaks or white space formatting. The JSON shown in the examples is
- *  formatted with both line breaks and white space to improve readability. When example input parameters would also result
- *  in long strings that extend beyond the screen, we insert line breaks to enhance readability. You should always submit
- *  the input as a single JSON text
+ *  The JSON that AWS Secrets Manager expects as your request parameters and the service returns as a response to HTTP query
+ *  requests contain single, long strings without line breaks or white space formatting. The JSON shown in the examples
+ *  displays the code formatted with both line breaks and white space to improve readability. When example input parameters
+ *  can also cause long strings extending beyond the screen, you can insert line breaks to enhance readability. You should
+ *  always submit the input as a single JSON text
  * 
  *  string>
  * 
@@ -149,12 +157,12 @@ namespace SecretsManager {
  *  </p
  * 
  *  AWS Secrets Manager supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
- *  files to an Amazon S3 bucket. By using information that's collected by AWS CloudTrail, you can determine which requests
- *  were successfully made to Secrets Manager, who made the request, when it was made, and so on. For more about AWS Secrets
- *  Manager and its support for AWS CloudTrail, see <a
+ *  files to an Amazon S3 bucket. By using information that's collected by AWS CloudTrail, you can determine the requests
+ *  successfully made to Secrets Manager, who made the request, when it was made, and so on. For more about AWS Secrets
+ *  Manager and support for AWS CloudTrail, see <a
  *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/monitoring.html#monitoring_cloudtrail">Logging AWS
  *  Secrets Manager Events with AWS CloudTrail</a> in the <i>AWS Secrets Manager User Guide</i>. To learn more about
- *  CloudTrail, including how to turn it on and find your log files, see the <a
+ *  CloudTrail, including enabling it and find your log files, see the <a
  *  href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  */
 
@@ -217,20 +225,20 @@ SecretsManagerClient::SecretsManagerClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Disables automatic scheduled rotation and cancels the rotation of a secret if one is currently in
+ * Disables automatic scheduled rotation and cancels the rotation of a secret if currently in
  *
  * progress>
  *
  * To re-enable scheduled rotation, call <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value
- * greater than 0. This will immediately rotate your secret and then enable the automatic
+ * greater than 0. This immediately rotates your secret and then enables the automatic
  *
  * schedule> <note>
  *
- * If you cancel a rotation that is in progress, it can leave the <code>VersionStage</code> labels in an unexpected state.
- * Depending on what step of the rotation was in progress, you might need to remove the staging label
- * <code>AWSPENDING</code> from the partially created version, specified by the <code>VersionId</code> response value. You
- * should also evaluate the partially rotated new version to see if it should be deleted, which you can do by removing all
- * staging labels from the new version's <code>VersionStage</code>
+ * If you cancel a rotation while in progress, it can leave the <code>VersionStage</code> labels in an unexpected state.
+ * Depending on the step of the rotation in progress, you might need to remove the staging label <code>AWSPENDING</code>
+ * from the partially created version, specified by the <code>VersionId</code> response value. You should also evaluate the
+ * partially rotated new version to see if it should be deleted, which you can do by removing all staging labels from the
+ * new version <code>VersionStage</code>
  *
  * field> </note>
  *
@@ -238,7 +246,7 @@ SecretsManagerClient::SecretsManagerClient(
  *
  * states> <ul> <li>
  *
- * Not be attached to any version at
+ * Not attached to any version at
  *
  * al> </li> <li>
  *
@@ -246,7 +254,7 @@ SecretsManagerClient::SecretsManagerClient(
  *
  * </p </li> </ul>
  *
- * If the staging label <code>AWSPENDING</code> is attached to a different version than the version with
+ * If the staging label <code>AWSPENDING</code> attached to a different version than the version with
  * <code>AWSCURRENT</code> then the attempt to rotate
  *
  * fails>
@@ -299,7 +307,7 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  * version contains a copy of the encrypted secret data. Each version is associated with one or more "staging labels" that
  * identify where the version is in the rotation cycle. The <code>SecretVersionsToStages</code> field of the secret
  * contains the mapping of staging labels to the active versions of the secret. Versions without a staging label are
- * considered deprecated and are not included in the
+ * considered deprecated and not included in the
  *
  * list>
  *
@@ -310,23 +318,22 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  *
  * version> <note> <ul> <li>
  *
- * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
- * a secret in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets
- * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and
- * roles in the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call
- * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
- * returning the
+ * If you call an operation to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for a secret
+ * in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets Manager uses
+ * the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this key
+ * doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and roles in the
+ * same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in
+ * AWS creating the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
- * If the secret is in a different AWS account from the credentials calling an API that requires encryption or decryption
- * of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default CMK for the
- * account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you create the
- * secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must encrypt or
- * decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account then the AWS
- * KMS key policy must grant cross-account access to that other account's user or role for both the kms:GenerateDataKey and
- * kms:Decrypt
+ * If the secret resides in a different AWS account from the credentials calling an API that requires encryption or
+ * decryption of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default
+ * CMK for the account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you
+ * create the secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must
+ * encrypt or decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account
+ * then the AWS KMS key policy must grant cross-account access to that other account's user or role for both the
+ * kms:GenerateDataKey and kms:Decrypt
  *
  * operations> </li> </ul> </note>
  *
@@ -344,12 +351,12 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  * secretsmanager:CreateSecre> </li> <li>
  *
  * kms:GenerateDataKey - needed only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
- * permission to use the account's default AWS managed CMK for Secrets
+ * permission to use the account default AWS managed CMK for Secrets
  *
  * Manager> </li> <li>
  *
  * kms:Decrypt - needed only if you use a customer-managed AWS KMS key to encrypt the secret. You do not need this
- * permission to use the account's default AWS managed CMK for Secrets
+ * permission to use the account default AWS managed CMK for Secrets
  *
  * Manager> </li> <li>
  *
@@ -396,7 +403,7 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes the resource-based permission policy that's attached to the
+ * Deletes the resource-based permission policy attached to the
  *
  * secret>
  *
@@ -418,7 +425,7 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
  *
  * <a>PutResourcePolicy</a>> </li> <li>
  *
- * To retrieve the current resource-based policy that's attached to a secret, use
+ * To retrieve the current resource-based policy attached to a secret, use
  *
  * <a>GetResourcePolicy</a>> </li> <li>
  *
@@ -435,7 +442,7 @@ DeleteResourcePolicyResponse * SecretsManagerClient::deleteResourcePolicy(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes an entire secret and all of its versions. You can optionally include a recovery window during which you can
+ * Deletes an entire secret and all of the versions. You can optionally include a recovery window during which you can
  * restore the secret. If you don't specify a recovery window value, the operation defaults to 30 days. Secrets Manager
  * attaches a <code>DeletionDate</code> stamp to the secret that specifies the end of the recovery window. At the end of
  * the recovery window, Secrets Manager deletes the secret
@@ -447,15 +454,14 @@ DeleteResourcePolicyResponse * SecretsManagerClient::deleteResourcePolicy(const 
  *
  * secret>
  *
- * You cannot access the encrypted secret information in any secret that is scheduled for deletion. If you need to access
- * that information, you must cancel the deletion with <a>RestoreSecret</a> and then retrieve the
+ * You cannot access the encrypted secret information in any secret scheduled for deletion. If you need to access that
+ * information, you must cancel the deletion with <a>RestoreSecret</a> and then retrieve the
  *
  * information> <note> <ul> <li>
  *
  * There is no explicit operation to delete a version of a secret. Instead, remove all staging labels from the
  * <code>VersionStage</code> field of a version. That marks the version as deprecated and allows Secrets Manager to delete
- * it as needed. Versions that do not have any staging labels do not show up in <a>ListSecretVersionIds</a> unless you
- * specify
+ * it as needed. Versions without any staging labels do not show up in <a>ListSecretVersionIds</a> unless you specify
  *
  * <code>IncludeDeprecated</code>> </li> <li>
  *
@@ -495,8 +501,8 @@ DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequ
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the details of a secret. It does not include the encrypted fields. Only those fields that are populated with a
- * value are returned in the response.
+ * Retrieves the details of a secret. It does not include the encrypted fields. Secrets Manager only returns fields
+ * populated with a value in the response.
  *
  * </p
  *
@@ -564,9 +570,9 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves the JSON text of the resource-based policy document that's attached to the specified secret. The JSON request
- * string input and response output are shown formatted with white space and line breaks for better readability. Submit
- * your input as a single line JSON
+ * Retrieves the JSON text of the resource-based policy document attached to the specified secret. The JSON request string
+ * input and response output displays formatted code with white space and line breaks for better readability. Submit your
+ * input as a single line JSON
  *
  * string>
  *
@@ -588,7 +594,7 @@ GetRandomPasswordResponse * SecretsManagerClient::getRandomPassword(const GetRan
  *
  * <a>PutResourcePolicy</a>> </li> <li>
  *
- * To delete the resource-based policy that's attached to a secret, use
+ * To delete the resource-based policy attached to a secret, use
  *
  * <a>DeleteResourcePolicy</a>> </li> <li>
  *
@@ -653,7 +659,7 @@ GetSecretValueResponse * SecretsManagerClient::getSecretValue(const GetSecretVal
  * attached> <note>
  *
  * Always check the <code>NextToken</code> response parameter when calling any of the <code>List*</code> operations. These
- * operations can occasionally return an empty or shorter than expected list of results even when there are more results
+ * operations can occasionally return an empty or shorter than expected list of results even when there more results become
  * available. When this happens, the <code>NextToken</code> response parameter contains a value to pass to the next call to
  * the same API to request the next part of the
  *
@@ -693,7 +699,7 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
  * operation> <note>
  *
  * Always check the <code>NextToken</code> response parameter when calling any of the <code>List*</code> operations. These
- * operations can occasionally return an empty or shorter than expected list of results even when there are more results
+ * operations can occasionally return an empty or shorter than expected list of results even when there more results become
  * available. When this happens, the <code>NextToken</code> response parameter contains a value to pass to the next call to
  * the same API to request the next part of the
  *
@@ -752,11 +758,11 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  *
  * </p <ul> <li>
  *
- * To retrieve the resource policy that's attached to a secret, use
+ * To retrieve the resource policy attached to a secret, use
  *
  * <a>GetResourcePolicy</a>> </li> <li>
  *
- * To delete the resource-based policy that's attached to a secret, use
+ * To delete the resource-based policy attached to a secret, use
  *
  * <a>DeleteResourcePolicy</a>> </li> <li>
  *
@@ -789,14 +795,14 @@ PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutRes
  *
  * version> </li> <li>
  *
- * If another version of this secret already exists, then this operation does not automatically move any staging labels
- * other than those that you explicitly specify in the <code>VersionStages</code>
+ * If you do not specify a value for VersionStages then Secrets Manager automatically moves the staging label
+ * <code>AWSCURRENT</code> to this new
  *
- * parameter> </li> <li>
+ * version> </li> <li>
  *
- * If this operation moves the staging label <code>AWSCURRENT</code> from another version to this version (because you
- * included it in the <code>StagingLabels</code> parameter) then Secrets Manager also automatically moves the staging label
- * <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed
+ * If this operation moves the staging label <code>AWSCURRENT</code> from another version to this version, then Secrets
+ * Manager also automatically moves the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code>
+ * was removed
  *
  * from> </li> <li>
  *
@@ -807,23 +813,22 @@ PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutRes
  *
  * ones> </li> </ul> <note> <ul> <li>
  *
- * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
- * a secret in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets
- * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and
- * roles in the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call
- * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
- * returning the
+ * If you call an operation to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for a secret
+ * in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets Manager uses
+ * the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this key
+ * doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and roles in the
+ * same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in
+ * AWS creating the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
- * If the secret is in a different AWS account from the credentials calling an API that requires encryption or decryption
- * of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default CMK for the
- * account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you create the
- * secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must encrypt or
- * decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account then the AWS
- * KMS key policy must grant cross-account access to that other account's user or role for both the kms:GenerateDataKey and
- * kms:Decrypt
+ * If the secret resides in a different AWS account from the credentials calling an API that requires encryption or
+ * decryption of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default
+ * CMK for the account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you
+ * create the secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must
+ * encrypt or decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account
+ * then the AWS KMS key policy must grant cross-account access to that other account's user or role for both the
+ * kms:GenerateDataKey and kms:Decrypt
  *
  * operations> </li> </ul> </note>
  *
@@ -863,6 +868,32 @@ PutResourcePolicyResponse * SecretsManagerClient::putResourcePolicy(const PutRes
 PutSecretValueResponse * SecretsManagerClient::putSecretValue(const PutSecretValueRequest &request)
 {
     return qobject_cast<PutSecretValueResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * RemoveRegionsFromReplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove regions from
+ */
+RemoveRegionsFromReplicationResponse * SecretsManagerClient::removeRegionsFromReplication(const RemoveRegionsFromReplicationRequest &request)
+{
+    return qobject_cast<RemoveRegionsFromReplicationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * ReplicateSecretToRegionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Converts an existing secret to a multi-Region secret and begins replication the secret to a list of new regions.
+ */
+ReplicateSecretToRegionsResponse * SecretsManagerClient::replicateSecretToRegions(const ReplicateSecretToRegionsRequest &request)
+{
+    return qobject_cast<ReplicateSecretToRegionsResponse *>(send(request));
 }
 
 /*!
@@ -920,7 +951,7 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
  *
  * Guide</i>>
  *
- * Secrets Manager schedules the next rotation when the previous one is complete. Secrets Manager schedules the date by
+ * Secrets Manager schedules the next rotation when the previous one completes. Secrets Manager schedules the date by
  * adding the rotation interval (number of days) to the actual date of the last rotation. The service chooses the hour
  * within that 24-hour date window randomly. The minute is also chosen somewhat randomly, but weighted towards the top of
  * the hour and influenced by a variety of factors that help distribute
@@ -939,9 +970,9 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
  *
  * secret> </li> </ul>
  *
- * If instead the <code>AWSPENDING</code> staging label is present but is not attached to the same version as
- * <code>AWSCURRENT</code> then any later invocation of <code>RotateSecret</code> assumes that a previous rotation request
- * is still in progress and returns an
+ * If the <code>AWSPENDING</code> staging label is present but not attached to the same version as <code>AWSCURRENT</code>
+ * then any later invocation of <code>RotateSecret</code> assumes that a previous rotation request is still in progress and
+ * returns an
  *
  * error>
  *
@@ -984,6 +1015,19 @@ RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequ
 
 /*!
  * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * StopReplicationToReplicaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the secret from replication and promotes the secret to a regional secret in the replica
+ */
+StopReplicationToReplicaResponse * SecretsManagerClient::stopReplicationToReplica(const StopReplicationToReplicaRequest &request)
+{
+    return qobject_cast<StopReplicationToReplicaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1014,14 +1058,14 @@ RotateSecretResponse * SecretsManagerClient::rotateSecret(const RotateSecretRequ
  *
  * sensitive> </li> <li>
  *
- * Do not use the <code>aws:</code> prefix in your tag names or values because it is reserved for AWS use. You can't edit
+ * Do not use the <code>aws:</code> prefix in your tag names or values because AWS reserves it for AWS use. You can't edit
  * or delete tag names or values with this prefix. Tags with this prefix do not count against your tags per secret
  *
  * limit> </li> <li>
  *
- * If your tagging schema will be used across multiple services and resources, remember that other services might have
- * restrictions on allowed characters. Generally allowed characters are: letters, spaces, and numbers representable in
- * UTF-8, plus the following special characters: + - = . _ : /
+ * If you use your tagging schema across multiple services and resources, remember other services might have restrictions
+ * on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
+ * following special characters: + - = . _ : /
  *
  * @> </li> </ul> <b>
  *
@@ -1133,23 +1177,22 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * </p </li> </ul> <note> <ul> <li>
  *
- * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for
- * a secret in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets
- * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and
- * roles in the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call
- * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
- * returning the
+ * If you call an operation to encrypt or decrypt the <code>SecretString</code> or <code>SecretBinary</code> for a secret
+ * in the same account as the calling user and that secret doesn't specify a AWS KMS encryption key, Secrets Manager uses
+ * the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>. If this key
+ * doesn't already exist in your account then Secrets Manager creates it for you automatically. All users and roles in the
+ * same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results in
+ * AWS creating the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
- * If the secret is in a different AWS account from the credentials calling an API that requires encryption or decryption
- * of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default CMK for the
- * account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you create the
- * secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must encrypt or
- * decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account then the AWS
- * KMS key policy must grant cross-account access to that other account's user or role for both the kms:GenerateDataKey and
- * kms:Decrypt
+ * If the secret resides in a different AWS account from the credentials calling an API that requires encryption or
+ * decryption of the secret value then you must create and use a custom AWS KMS CMK because you can't access the default
+ * CMK for the account using credentials from a different AWS account. Store the ARN of the CMK in the secret when you
+ * create the secret or when you update it by including it in the <code>KMSKeyId</code>. If you call an API that must
+ * encrypt or decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account
+ * then the AWS KMS key policy must grant cross-account access to that other account's user or role for both the
+ * kms:GenerateDataKey and kms:Decrypt
  *
  * operations> </li> </ul> </note>
  *
@@ -1250,6 +1293,55 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
 UpdateSecretVersionStageResponse * SecretsManagerClient::updateSecretVersionStage(const UpdateSecretVersionStageRequest &request)
 {
     return qobject_cast<UpdateSecretVersionStageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SecretsManagerClient service, and returns a pointer to an
+ * ValidateResourcePolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Validates that the resource policy does not grant a wide range of IAM principals access to your secret. The JSON request
+ * string input and response output displays formatted code with white space and line breaks for better readability. Submit
+ * your input as a single line JSON string. A resource-based policy is optional for
+ *
+ * secrets>
+ *
+ * The API performs three checks when validating the
+ *
+ * secret> <ul> <li>
+ *
+ * Sends a call to <a
+ * href="https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/">Zelkova</a>,
+ * an automated reasoning engine, to ensure your Resource Policy does not allow broad access to your
+ *
+ * secret> </li> <li>
+ *
+ * Checks for correct syntax in a
+ *
+ * policy> </li> <li>
+ *
+ * Verifies the policy does not lock out a
+ *
+ * caller> </li> </ul>
+ *
+ * <b>Minimum Permissions</b>
+ *
+ * </p
+ *
+ * You must have the permissions required to access the following
+ *
+ * APIs> <ul> <li>
+ *
+ * <code>secretsmanager:PutResourcePolicy</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>secretsmanager:ValidateResourcePolicy</code>
+ */
+ValidateResourcePolicyResponse * SecretsManagerClient::validateResourcePolicy(const ValidateResourcePolicyRequest &request)
+{
+    return qobject_cast<ValidateResourcePolicyResponse *>(send(request));
 }
 
 /*!

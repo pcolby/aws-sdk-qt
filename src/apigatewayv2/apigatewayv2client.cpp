@@ -43,12 +43,18 @@
 #include "createrouteresponseresponse.h"
 #include "createstagerequest.h"
 #include "createstageresponse.h"
+#include "createvpclinkrequest.h"
+#include "createvpclinkresponse.h"
+#include "deleteaccesslogsettingsrequest.h"
+#include "deleteaccesslogsettingsresponse.h"
 #include "deleteapirequest.h"
 #include "deleteapiresponse.h"
 #include "deleteapimappingrequest.h"
 #include "deleteapimappingresponse.h"
 #include "deleteauthorizerrequest.h"
 #include "deleteauthorizerresponse.h"
+#include "deletecorsconfigurationrequest.h"
+#include "deletecorsconfigurationresponse.h"
 #include "deletedeploymentrequest.h"
 #include "deletedeploymentresponse.h"
 #include "deletedomainnamerequest.h"
@@ -61,10 +67,18 @@
 #include "deletemodelresponse.h"
 #include "deleterouterequest.h"
 #include "deleterouteresponse.h"
+#include "deleterouterequestparameterrequest.h"
+#include "deleterouterequestparameterresponse.h"
 #include "deleterouteresponserequest.h"
 #include "deleterouteresponseresponse.h"
+#include "deleteroutesettingsrequest.h"
+#include "deleteroutesettingsresponse.h"
 #include "deletestagerequest.h"
 #include "deletestageresponse.h"
+#include "deletevpclinkrequest.h"
+#include "deletevpclinkresponse.h"
+#include "exportapirequest.h"
+#include "exportapiresponse.h"
 #include "getapirequest.h"
 #include "getapiresponse.h"
 #include "getapimappingrequest.h"
@@ -113,6 +127,16 @@
 #include "getstagesresponse.h"
 #include "gettagsrequest.h"
 #include "gettagsresponse.h"
+#include "getvpclinkrequest.h"
+#include "getvpclinkresponse.h"
+#include "getvpclinksrequest.h"
+#include "getvpclinksresponse.h"
+#include "importapirequest.h"
+#include "importapiresponse.h"
+#include "reimportapirequest.h"
+#include "reimportapiresponse.h"
+#include "resetauthorizerscacherequest.h"
+#include "resetauthorizerscacheresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
@@ -139,6 +163,8 @@
 #include "updaterouteresponseresponse.h"
 #include "updatestagerequest.h"
 #include "updatestageresponse.h"
+#include "updatevpclinkrequest.h"
+#include "updatevpclinkresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -363,6 +389,32 @@ CreateStageResponse * ApiGatewayV2Client::createStage(const CreateStageRequest &
 
 /*!
  * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * CreateVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a VPC
+ */
+CreateVpcLinkResponse * ApiGatewayV2Client::createVpcLink(const CreateVpcLinkRequest &request)
+{
+    return qobject_cast<CreateVpcLinkResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * DeleteAccessLogSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the AccessLogSettings for a Stage. To disable access logging for a Stage, delete its
+ */
+DeleteAccessLogSettingsResponse * ApiGatewayV2Client::deleteAccessLogSettings(const DeleteAccessLogSettingsRequest &request)
+{
+    return qobject_cast<DeleteAccessLogSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
  * DeleteApiResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -398,6 +450,19 @@ DeleteApiMappingResponse * ApiGatewayV2Client::deleteApiMapping(const DeleteApiM
 DeleteAuthorizerResponse * ApiGatewayV2Client::deleteAuthorizer(const DeleteAuthorizerRequest &request)
 {
     return qobject_cast<DeleteAuthorizerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * DeleteCorsConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a CORS
+ */
+DeleteCorsConfigurationResponse * ApiGatewayV2Client::deleteCorsConfiguration(const DeleteCorsConfigurationRequest &request)
+{
+    return qobject_cast<DeleteCorsConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -480,6 +545,19 @@ DeleteRouteResponse * ApiGatewayV2Client::deleteRoute(const DeleteRouteRequest &
 
 /*!
  * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * DeleteRouteRequestParameterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a route request
+ */
+DeleteRouteRequestParameterResponse * ApiGatewayV2Client::deleteRouteRequestParameter(const DeleteRouteRequestParameterRequest &request)
+{
+    return qobject_cast<DeleteRouteRequestParameterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
  * DeleteRouteResponseResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -493,6 +571,19 @@ DeleteRouteResponseResponse * ApiGatewayV2Client::deleteRouteResponse(const Dele
 
 /*!
  * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * DeleteRouteSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the RouteSettings for a
+ */
+DeleteRouteSettingsResponse * ApiGatewayV2Client::deleteRouteSettings(const DeleteRouteSettingsRequest &request)
+{
+    return qobject_cast<DeleteRouteSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
  * DeleteStageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -502,6 +593,31 @@ DeleteRouteResponseResponse * ApiGatewayV2Client::deleteRouteResponse(const Dele
 DeleteStageResponse * ApiGatewayV2Client::deleteStage(const DeleteStageRequest &request)
 {
     return qobject_cast<DeleteStageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * DeleteVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a VPC
+ */
+DeleteVpcLinkResponse * ApiGatewayV2Client::deleteVpcLink(const DeleteVpcLinkRequest &request)
+{
+    return qobject_cast<DeleteVpcLinkResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * ExportApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ExportApiResponse * ApiGatewayV2Client::exportApi(const ExportApiRequest &request)
+{
+    return qobject_cast<ExportApiResponse *>(send(request));
 }
 
 /*!
@@ -523,7 +639,7 @@ GetApiResponse * ApiGatewayV2Client::getApi(const GetApiRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The API
+ * Gets an API
  */
 GetApiMappingResponse * ApiGatewayV2Client::getApiMapping(const GetApiMappingRequest &request)
 {
@@ -536,7 +652,7 @@ GetApiMappingResponse * ApiGatewayV2Client::getApiMapping(const GetApiMappingReq
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * The API
+ * Gets API
  */
 GetApiMappingsResponse * ApiGatewayV2Client::getApiMappings(const GetApiMappingsRequest &request)
 {
@@ -809,7 +925,7 @@ GetStagesResponse * ApiGatewayV2Client::getStages(const GetStagesRequest &reques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the Tags for an
+ * Gets a collection of Tag
  */
 GetTagsResponse * ApiGatewayV2Client::getTags(const GetTagsRequest &request)
 {
@@ -818,11 +934,76 @@ GetTagsResponse * ApiGatewayV2Client::getTags(const GetTagsRequest &request)
 
 /*!
  * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * GetVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a VPC
+ */
+GetVpcLinkResponse * ApiGatewayV2Client::getVpcLink(const GetVpcLinkRequest &request)
+{
+    return qobject_cast<GetVpcLinkResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * GetVpcLinksResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a collection of VPC
+ */
+GetVpcLinksResponse * ApiGatewayV2Client::getVpcLinks(const GetVpcLinksRequest &request)
+{
+    return qobject_cast<GetVpcLinksResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * ImportApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Imports an
+ */
+ImportApiResponse * ApiGatewayV2Client::importApi(const ImportApiRequest &request)
+{
+    return qobject_cast<ImportApiResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * ReimportApiResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Puts an Api
+ */
+ReimportApiResponse * ApiGatewayV2Client::reimportApi(const ReimportApiRequest &request)
+{
+    return qobject_cast<ReimportApiResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * ResetAuthorizersCacheResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Resets all authorizer cache entries on a stage. Supported only for HTTP
+ */
+ResetAuthorizersCacheResponse * ApiGatewayV2Client::resetAuthorizersCache(const ResetAuthorizersCacheRequest &request)
+{
+    return qobject_cast<ResetAuthorizersCacheResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Tag an APIGW
+ * Creates a new Tag resource to represent a
  */
 TagResourceResponse * ApiGatewayV2Client::tagResource(const TagResourceRequest &request)
 {
@@ -835,7 +1016,7 @@ TagResourceResponse * ApiGatewayV2Client::tagResource(const TagResourceRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Untag an APIGW
+ * Deletes a
  */
 UntagResourceResponse * ApiGatewayV2Client::untagResource(const UntagResourceRequest &request)
 {
@@ -983,6 +1164,19 @@ UpdateRouteResponseResponse * ApiGatewayV2Client::updateRouteResponse(const Upda
 UpdateStageResponse * ApiGatewayV2Client::updateStage(const UpdateStageRequest &request)
 {
     return qobject_cast<UpdateStageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ApiGatewayV2Client service, and returns a pointer to an
+ * UpdateVpcLinkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a VPC
+ */
+UpdateVpcLinkResponse * ApiGatewayV2Client::updateVpcLink(const UpdateVpcLinkRequest &request)
+{
+    return qobject_cast<UpdateVpcLinkResponse *>(send(request));
 }
 
 /*!

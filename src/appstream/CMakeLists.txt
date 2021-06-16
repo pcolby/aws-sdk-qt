@@ -47,6 +47,10 @@ add_library(QtAwsAppStream
   createstreamingurlrequest_p.h
   createstreamingurlresponse.h
   createstreamingurlresponse_p.h
+  createupdatedimagerequest.h
+  createupdatedimagerequest_p.h
+  createupdatedimageresponse.h
+  createupdatedimageresponse_p.h
   createusagereportsubscriptionrequest.h
   createusagereportsubscriptionrequest_p.h
   createusagereportsubscriptionresponse.h
@@ -218,6 +222,8 @@ add_library(QtAwsAppStream
   createstackresponse.cpp
   createstreamingurlrequest.cpp
   createstreamingurlresponse.cpp
+  createupdatedimagerequest.cpp
+  createupdatedimageresponse.cpp
   createusagereportsubscriptionrequest.cpp
   createusagereportsubscriptionresponse.cpp
   createuserrequest.cpp

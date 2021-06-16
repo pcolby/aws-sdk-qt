@@ -28,12 +28,18 @@ namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIClientPrivate;
+class DescribeReportCreationRequest;
+class DescribeReportCreationResponse;
+class GetComplianceSummaryRequest;
+class GetComplianceSummaryResponse;
 class GetResourcesRequest;
 class GetResourcesResponse;
 class GetTagKeysRequest;
 class GetTagKeysResponse;
 class GetTagValuesRequest;
 class GetTagValuesResponse;
+class StartReportCreationRequest;
+class StartReportCreationResponse;
 class TagResourcesRequest;
 class TagResourcesResponse;
 class UntagResourcesRequest;
@@ -55,9 +61,12 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    DescribeReportCreationResponse * describeReportCreation(const DescribeReportCreationRequest &request);
+    GetComplianceSummaryResponse * getComplianceSummary(const GetComplianceSummaryRequest &request);
     GetResourcesResponse * getResources(const GetResourcesRequest &request);
     GetTagKeysResponse * getTagKeys(const GetTagKeysRequest &request);
     GetTagValuesResponse * getTagValues(const GetTagValuesRequest &request);
+    StartReportCreationResponse * startReportCreation(const StartReportCreationRequest &request);
     TagResourcesResponse * tagResources(const TagResourcesRequest &request);
     UntagResourcesResponse * untagResources(const UntagResourcesRequest &request);
 

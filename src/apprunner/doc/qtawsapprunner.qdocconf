@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsAppRunner
+description = AWS AppRunner SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsapprunner-index.html"
+navigation.landingtitle = "AppRunner"
+navigation.cppclassespage = "AppRunner C++ Classes"

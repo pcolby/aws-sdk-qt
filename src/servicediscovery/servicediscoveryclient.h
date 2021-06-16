@@ -62,8 +62,14 @@ class ListOperationsRequest;
 class ListOperationsResponse;
 class ListServicesRequest;
 class ListServicesResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class RegisterInstanceRequest;
 class RegisterInstanceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateInstanceCustomHealthStatusRequest;
 class UpdateInstanceCustomHealthStatusResponse;
 class UpdateServiceRequest;
@@ -102,7 +108,10 @@ public slots:
     ListNamespacesResponse * listNamespaces(const ListNamespacesRequest &request);
     ListOperationsResponse * listOperations(const ListOperationsRequest &request);
     ListServicesResponse * listServices(const ListServicesRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RegisterInstanceResponse * registerInstance(const RegisterInstanceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateInstanceCustomHealthStatusResponse * updateInstanceCustomHealthStatus(const UpdateInstanceCustomHealthStatusRequest &request);
     UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
 

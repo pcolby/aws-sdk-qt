@@ -1,14 +1,26 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsKinesisVideo
+  createsignalingchannelrequest.h
+  createsignalingchannelrequest_p.h
+  createsignalingchannelresponse.h
+  createsignalingchannelresponse_p.h
   createstreamrequest.h
   createstreamrequest_p.h
   createstreamresponse.h
   createstreamresponse_p.h
+  deletesignalingchannelrequest.h
+  deletesignalingchannelrequest_p.h
+  deletesignalingchannelresponse.h
+  deletesignalingchannelresponse_p.h
   deletestreamrequest.h
   deletestreamrequest_p.h
   deletestreamresponse.h
   deletestreamresponse_p.h
+  describesignalingchannelrequest.h
+  describesignalingchannelrequest_p.h
+  describesignalingchannelresponse.h
+  describesignalingchannelresponse_p.h
   describestreamrequest.h
   describestreamrequest_p.h
   describestreamresponse.h
@@ -17,24 +29,44 @@ add_library(QtAwsKinesisVideo
   getdataendpointrequest_p.h
   getdataendpointresponse.h
   getdataendpointresponse_p.h
+  getsignalingchannelendpointrequest.h
+  getsignalingchannelendpointrequest_p.h
+  getsignalingchannelendpointresponse.h
+  getsignalingchannelendpointresponse_p.h
   kinesisvideoclient.h
   kinesisvideoclient_p.h
   kinesisvideorequest.h
   kinesisvideorequest_p.h
   kinesisvideoresponse.h
   kinesisvideoresponse_p.h
+  listsignalingchannelsrequest.h
+  listsignalingchannelsrequest_p.h
+  listsignalingchannelsresponse.h
+  listsignalingchannelsresponse_p.h
   liststreamsrequest.h
   liststreamsrequest_p.h
   liststreamsresponse.h
   liststreamsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   listtagsforstreamrequest.h
   listtagsforstreamrequest_p.h
   listtagsforstreamresponse.h
   listtagsforstreamresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
   tagstreamrequest.h
   tagstreamrequest_p.h
   tagstreamresponse.h
   tagstreamresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   untagstreamrequest.h
   untagstreamrequest_p.h
   untagstreamresponse.h
@@ -43,31 +75,53 @@ add_library(QtAwsKinesisVideo
   updatedataretentionrequest_p.h
   updatedataretentionresponse.h
   updatedataretentionresponse_p.h
+  updatesignalingchannelrequest.h
+  updatesignalingchannelrequest_p.h
+  updatesignalingchannelresponse.h
+  updatesignalingchannelresponse_p.h
   updatestreamrequest.h
   updatestreamrequest_p.h
   updatestreamresponse.h
   updatestreamresponse_p.h
+  createsignalingchannelrequest.cpp
+  createsignalingchannelresponse.cpp
   createstreamrequest.cpp
   createstreamresponse.cpp
+  deletesignalingchannelrequest.cpp
+  deletesignalingchannelresponse.cpp
   deletestreamrequest.cpp
   deletestreamresponse.cpp
+  describesignalingchannelrequest.cpp
+  describesignalingchannelresponse.cpp
   describestreamrequest.cpp
   describestreamresponse.cpp
   getdataendpointrequest.cpp
   getdataendpointresponse.cpp
+  getsignalingchannelendpointrequest.cpp
+  getsignalingchannelendpointresponse.cpp
   kinesisvideoclient.cpp
   kinesisvideorequest.cpp
   kinesisvideoresponse.cpp
+  listsignalingchannelsrequest.cpp
+  listsignalingchannelsresponse.cpp
   liststreamsrequest.cpp
   liststreamsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   listtagsforstreamrequest.cpp
   listtagsforstreamresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
   tagstreamrequest.cpp
   tagstreamresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
   untagstreamrequest.cpp
   untagstreamresponse.cpp
   updatedataretentionrequest.cpp
   updatedataretentionresponse.cpp
+  updatesignalingchannelrequest.cpp
+  updatesignalingchannelresponse.cpp
   updatestreamrequest.cpp
   updatestreamresponse.cpp)
 

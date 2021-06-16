@@ -55,6 +55,7 @@ public:
         SendTaskHeartbeatAction,
         SendTaskSuccessAction,
         StartExecutionAction,
+        StartSyncExecutionAction,
         StopExecutionAction,
         TagResourceAction,
         UntagResourceAction,

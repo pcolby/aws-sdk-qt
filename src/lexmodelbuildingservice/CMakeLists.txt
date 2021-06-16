@@ -131,6 +131,10 @@ add_library(QtAwsLexModelBuildingService
   lexmodelbuildingservicerequest_p.h
   lexmodelbuildingserviceresponse.h
   lexmodelbuildingserviceresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   putbotaliasrequest.h
   putbotaliasrequest_p.h
   putbotaliasresponse.h
@@ -151,6 +155,14 @@ add_library(QtAwsLexModelBuildingService
   startimportrequest_p.h
   startimportresponse.h
   startimportresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   createbotversionrequest.cpp
   createbotversionresponse.cpp
   createintentversionrequest.cpp
@@ -216,6 +228,8 @@ add_library(QtAwsLexModelBuildingService
   lexmodelbuildingserviceclient.cpp
   lexmodelbuildingservicerequest.cpp
   lexmodelbuildingserviceresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   putbotaliasrequest.cpp
   putbotaliasresponse.cpp
   putbotrequest.cpp
@@ -225,7 +239,11 @@ add_library(QtAwsLexModelBuildingService
   putslottyperequest.cpp
   putslottyperesponse.cpp
   startimportrequest.cpp
-  startimportresponse.cpp)
+  startimportresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 add_dependencies(QtAwsLexModelBuildingService QtAwsCore)
 

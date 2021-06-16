@@ -52,39 +52,12 @@ namespace DynamoDBStreams {
  * \ingroup aws-clients
  * \inmodule QtAwsDynamoDBStreams
  *
- *  <fullname>Amazon DynamoDB Streams</fullname>
+ *  <fullname>Amazon DynamoDB</fullname>
  * 
- *  This is the Amazon DynamoDB Streams API Reference. This guide describes the low-level API actions for accessing streams
- *  and processing stream records. For information about application development with DynamoDB Streams, see the <a
- *  href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide//Streams.html">Amazon DynamoDB Developer
- * 
- *  Guide</a>>
- * 
- *  Note that this document is intended for use with the following DynamoDB
- * 
- *  documentation> <ul> <li>
- * 
- *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/">Amazon DynamoDB Developer Guide</a>
- * 
- *  </p </li> <li>
- * 
- *  <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/">Amazon DynamoDB API Reference</a>
- * 
- *  </p </li> </ul>
- * 
- *  The following are short descriptions of each low-level DynamoDB Streams API action, organized by
- * 
- *  function> <ul> <li><p><i>DescribeStream</i> - Returns detailed information about a particular stream.</p></li> <li>
- * 
- *  <i>GetRecords</i> - Retrieves the stream records from within a
- * 
- *  shard> </li> <li>
- * 
- *  <i>GetShardIterator</i> - Returns information on how to retrieve the streams record from a shard with a given shard
- * 
- *  ID> </li> <li>
- * 
- *  <i>ListStreams</i> - Returns a list of all the streams associated with the current AWS account and
+ *  Amazon DynamoDB Streams provides API actions for accessing streams and processing stream records. To learn more about
+ *  application development with Streams, see <a
+ *  href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">Capturing Table Activity with
+ *  DynamoDB Streams</a> in the Amazon DynamoDB Developer
  */
 
 /*!
@@ -149,12 +122,16 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
  * Returns information about a stream, including the current status of the stream, its Amazon Resource Name (ARN), the
  * composition of its shards, and its corresponding DynamoDB
  *
- * table> <note><p>You can call <i>DescribeStream</i> at a maximum rate of 10 times per second.</p></note>
+ * table> <note>
+ *
+ * You can call <code>DescribeStream</code> at a maximum rate of 10 times per
+ *
+ * second> </note>
  *
  * Each shard in the stream has a <code>SequenceNumberRange</code> associated with it. If the
  * <code>SequenceNumberRange</code> has a <code>StartingSequenceNumber</code> but no <code>EndingSequenceNumber</code>,
  * then the shard is still open (able to receive more stream records). If both <code>StartingSequenceNumber</code> and
- * <code>EndingSequenceNumber</code> are present, the that shared is closed and can no longer receive more
+ * <code>EndingSequenceNumber</code> are present, then that shard is closed and can no longer receive more
  */
 DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStreamRequest &request)
 {
@@ -176,7 +153,9 @@ DescribeStreamResponse * DynamoDBStreamsClient::describeStream(const DescribeStr
  * the portion of the shard that the iterator points to, <code>GetRecords</code> returns an empty list. Note that it might
  * take multiple calls to get to a portion of the shard that contains stream
  *
- * records> <note><p><code>GetRecords</code> can retrieve a maximum of 1 MB of data or 2000 stream records, whichever comes
+ * records> <note>
+ *
+ * <code>GetRecords</code> can retrieve a maximum of 1 MB of data or 1000 stream records, whichever comes
  */
 GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &request)
 {
@@ -191,6 +170,10 @@ GetRecordsResponse * DynamoDBStreamsClient::getRecords(const GetRecordsRequest &
  *
  * Returns a shard iterator. A shard iterator provides information about how to retrieve the stream records from within a
  * shard. Use the shard iterator in a subsequent <code>GetRecords</code> request to read the stream records from the
+ *
+ * shard> <note>
+ *
+ * A shard iterator expires 15 minutes after it is returned to the
  */
 GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShardIteratorRequest &request)
 {
@@ -204,7 +187,11 @@ GetShardIteratorResponse * DynamoDBStreamsClient::getShardIterator(const GetShar
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns an array of stream ARNs associated with the current account and endpoint. If the <code>TableName</code>
- * parameter is present, then <i>ListStreams</i> will return only the streams ARNs for that
+ * parameter is present, then <code>ListStreams</code> will return only the streams ARNs for that
+ *
+ * table> <note>
+ *
+ * You can call <code>ListStreams</code> at a maximum rate of 5 times per
  */
 ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsRequest &request)
 {

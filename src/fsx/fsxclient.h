@@ -28,8 +28,16 @@ namespace QtAws {
 namespace FSx {
 
 class FSxClientPrivate;
+class AssociateFileSystemAliasesRequest;
+class AssociateFileSystemAliasesResponse;
+class CancelDataRepositoryTaskRequest;
+class CancelDataRepositoryTaskResponse;
+class CopyBackupRequest;
+class CopyBackupResponse;
 class CreateBackupRequest;
 class CreateBackupResponse;
+class CreateDataRepositoryTaskRequest;
+class CreateDataRepositoryTaskResponse;
 class CreateFileSystemRequest;
 class CreateFileSystemResponse;
 class CreateFileSystemFromBackupRequest;
@@ -40,8 +48,14 @@ class DeleteFileSystemRequest;
 class DeleteFileSystemResponse;
 class DescribeBackupsRequest;
 class DescribeBackupsResponse;
+class DescribeDataRepositoryTasksRequest;
+class DescribeDataRepositoryTasksResponse;
+class DescribeFileSystemAliasesRequest;
+class DescribeFileSystemAliasesResponse;
 class DescribeFileSystemsRequest;
 class DescribeFileSystemsResponse;
+class DisassociateFileSystemAliasesRequest;
+class DisassociateFileSystemAliasesResponse;
 class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
 class TagResourceRequest;
@@ -67,13 +81,20 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AssociateFileSystemAliasesResponse * associateFileSystemAliases(const AssociateFileSystemAliasesRequest &request);
+    CancelDataRepositoryTaskResponse * cancelDataRepositoryTask(const CancelDataRepositoryTaskRequest &request);
+    CopyBackupResponse * copyBackup(const CopyBackupRequest &request);
     CreateBackupResponse * createBackup(const CreateBackupRequest &request);
+    CreateDataRepositoryTaskResponse * createDataRepositoryTask(const CreateDataRepositoryTaskRequest &request);
     CreateFileSystemResponse * createFileSystem(const CreateFileSystemRequest &request);
     CreateFileSystemFromBackupResponse * createFileSystemFromBackup(const CreateFileSystemFromBackupRequest &request);
     DeleteBackupResponse * deleteBackup(const DeleteBackupRequest &request);
     DeleteFileSystemResponse * deleteFileSystem(const DeleteFileSystemRequest &request);
     DescribeBackupsResponse * describeBackups(const DescribeBackupsRequest &request);
+    DescribeDataRepositoryTasksResponse * describeDataRepositoryTasks(const DescribeDataRepositoryTasksRequest &request);
+    DescribeFileSystemAliasesResponse * describeFileSystemAliases(const DescribeFileSystemAliasesRequest &request);
     DescribeFileSystemsResponse * describeFileSystems(const DescribeFileSystemsRequest &request);
+    DisassociateFileSystemAliasesResponse * disassociateFileSystemAliases(const DisassociateFileSystemAliasesRequest &request);
     ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);

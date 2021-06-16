@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "createapprequest.h"
 #include "createappresponse.h"
+#include "createbackendenvironmentrequest.h"
+#include "createbackendenvironmentresponse.h"
 #include "createbranchrequest.h"
 #include "createbranchresponse.h"
 #include "createdeploymentrequest.h"
@@ -33,6 +35,8 @@
 #include "createwebhookresponse.h"
 #include "deleteapprequest.h"
 #include "deleteappresponse.h"
+#include "deletebackendenvironmentrequest.h"
+#include "deletebackendenvironmentresponse.h"
 #include "deletebranchrequest.h"
 #include "deletebranchresponse.h"
 #include "deletedomainassociationrequest.h"
@@ -41,8 +45,14 @@
 #include "deletejobresponse.h"
 #include "deletewebhookrequest.h"
 #include "deletewebhookresponse.h"
+#include "generateaccesslogsrequest.h"
+#include "generateaccesslogsresponse.h"
 #include "getapprequest.h"
 #include "getappresponse.h"
+#include "getartifacturlrequest.h"
+#include "getartifacturlresponse.h"
+#include "getbackendenvironmentrequest.h"
+#include "getbackendenvironmentresponse.h"
 #include "getbranchrequest.h"
 #include "getbranchresponse.h"
 #include "getdomainassociationrequest.h"
@@ -53,6 +63,10 @@
 #include "getwebhookresponse.h"
 #include "listappsrequest.h"
 #include "listappsresponse.h"
+#include "listartifactsrequest.h"
+#include "listartifactsresponse.h"
+#include "listbackendenvironmentsrequest.h"
+#include "listbackendenvironmentsresponse.h"
 #include "listbranchesrequest.h"
 #include "listbranchesresponse.h"
 #include "listdomainassociationsrequest.h"
@@ -104,7 +118,11 @@ namespace Amplify {
  * \ingroup aws-clients
  * \inmodule QtAwsAmplify
  *
- *  Amplify is a fully managed continuous deployment and hosting service for modern web apps.
+ *  Amplify enables developers to develop and deploy cloud-powered mobile and web apps. The Amplify Console provides a
+ *  continuous delivery and hosting service for web applications. For more information, see the <a
+ *  href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">Amplify Console User Guide</a>. The Amplify
+ *  Framework is a comprehensive set of SDKs, libraries, tools, and documentation for client app development. For more
+ *  information, see the <a href="https://docs.amplify.aws/">Amplify Framework.</a>
  */
 
 /*!
@@ -166,7 +184,7 @@ AmplifyClient::AmplifyClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Amplify App.
+ * Creates a new Amplify app.
  */
 CreateAppResponse * AmplifyClient::createApp(const CreateAppRequest &request)
 {
@@ -175,11 +193,24 @@ CreateAppResponse * AmplifyClient::createApp(const CreateAppRequest &request)
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * CreateBackendEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new backend environment for an Amplify app.
+ */
+CreateBackendEnvironmentResponse * AmplifyClient::createBackendEnvironment(const CreateBackendEnvironmentRequest &request)
+{
+    return qobject_cast<CreateBackendEnvironmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * CreateBranchResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new Branch for an Amplify App.
+ * Creates a new branch for an Amplify app.
  */
 CreateBranchResponse * AmplifyClient::createBranch(const CreateBranchRequest &request)
 {
@@ -192,7 +223,7 @@ CreateBranchResponse * AmplifyClient::createBranch(const CreateBranchRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a deployment for manual deploy apps. (Apps are not connected to repository)
+ * Creates a deployment for a manually deployed Amplify app. Manually deployed apps are not connected to a repository.
  */
 CreateDeploymentResponse * AmplifyClient::createDeployment(const CreateDeploymentRequest &request)
 {
@@ -205,7 +236,7 @@ CreateDeploymentResponse * AmplifyClient::createDeployment(const CreateDeploymen
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a new DomainAssociation on an App
+ * Creates a new domain association for an Amplify app. This action associates a custom domain with the Amplify app
  */
 CreateDomainAssociationResponse * AmplifyClient::createDomainAssociation(const CreateDomainAssociationRequest &request)
 {
@@ -218,7 +249,7 @@ CreateDomainAssociationResponse * AmplifyClient::createDomainAssociation(const C
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a new webhook on an App.
+ * Creates a new webhook on an Amplify app.
  */
 CreateWebhookResponse * AmplifyClient::createWebhook(const CreateWebhookRequest &request)
 {
@@ -231,7 +262,7 @@ CreateWebhookResponse * AmplifyClient::createWebhook(const CreateWebhookRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete an existing Amplify App by appId.
+ * Deletes an existing Amplify app specified by an app ID.
  */
 DeleteAppResponse * AmplifyClient::deleteApp(const DeleteAppRequest &request)
 {
@@ -240,11 +271,24 @@ DeleteAppResponse * AmplifyClient::deleteApp(const DeleteAppRequest &request)
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * DeleteBackendEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a backend environment for an Amplify app.
+ */
+DeleteBackendEnvironmentResponse * AmplifyClient::deleteBackendEnvironment(const DeleteBackendEnvironmentRequest &request)
+{
+    return qobject_cast<DeleteBackendEnvironmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * DeleteBranchResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a branch for an Amplify App.
+ * Deletes a branch for an Amplify app.
  */
 DeleteBranchResponse * AmplifyClient::deleteBranch(const DeleteBranchRequest &request)
 {
@@ -257,7 +301,7 @@ DeleteBranchResponse * AmplifyClient::deleteBranch(const DeleteBranchRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a DomainAssociation.
+ * Deletes a domain association for an Amplify app.
  */
 DeleteDomainAssociationResponse * AmplifyClient::deleteDomainAssociation(const DeleteDomainAssociationRequest &request)
 {
@@ -270,7 +314,7 @@ DeleteDomainAssociationResponse * AmplifyClient::deleteDomainAssociation(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Delete a job, for an Amplify branch, part of Amplify App.
+ * Deletes a job for a branch of an Amplify app.
  */
 DeleteJobResponse * AmplifyClient::deleteJob(const DeleteJobRequest &request)
 {
@@ -292,11 +336,24 @@ DeleteWebhookResponse * AmplifyClient::deleteWebhook(const DeleteWebhookRequest 
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * GenerateAccessLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the website access logs for a specific time range using a presigned URL.
+ */
+GenerateAccessLogsResponse * AmplifyClient::generateAccessLogs(const GenerateAccessLogsRequest &request)
+{
+    return qobject_cast<GenerateAccessLogsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * GetAppResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves an existing Amplify App by appId.
+ * Returns an existing Amplify app by appID.
  */
 GetAppResponse * AmplifyClient::getApp(const GetAppRequest &request)
 {
@@ -305,11 +362,37 @@ GetAppResponse * AmplifyClient::getApp(const GetAppRequest &request)
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * GetArtifactUrlResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the artifact info that corresponds to an artifact id.
+ */
+GetArtifactUrlResponse * AmplifyClient::getArtifactUrl(const GetArtifactUrlRequest &request)
+{
+    return qobject_cast<GetArtifactUrlResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * GetBackendEnvironmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a backend environment for an Amplify app.
+ */
+GetBackendEnvironmentResponse * AmplifyClient::getBackendEnvironment(const GetBackendEnvironmentRequest &request)
+{
+    return qobject_cast<GetBackendEnvironmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * GetBranchResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a branch for an Amplify App.
+ * Returns a branch for an Amplify app.
  */
 GetBranchResponse * AmplifyClient::getBranch(const GetBranchRequest &request)
 {
@@ -322,7 +405,7 @@ GetBranchResponse * AmplifyClient::getBranch(const GetBranchRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves domain info that corresponds to an appId and domainName.
+ * Returns the domain information for an Amplify app.
  */
 GetDomainAssociationResponse * AmplifyClient::getDomainAssociation(const GetDomainAssociationRequest &request)
 {
@@ -335,7 +418,7 @@ GetDomainAssociationResponse * AmplifyClient::getDomainAssociation(const GetDoma
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get a job for a branch, part of an Amplify App.
+ * Returns a job for a branch of an Amplify app.
  */
 GetJobResponse * AmplifyClient::getJob(const GetJobRequest &request)
 {
@@ -348,7 +431,7 @@ GetJobResponse * AmplifyClient::getJob(const GetJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves webhook info that corresponds to a webhookId.
+ * Returns the webhook information that corresponds to a specified webhook ID.
  */
 GetWebhookResponse * AmplifyClient::getWebhook(const GetWebhookRequest &request)
 {
@@ -361,7 +444,7 @@ GetWebhookResponse * AmplifyClient::getWebhook(const GetWebhookRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists existing Amplify Apps.
+ * Returns a list of the existing Amplify apps.
  */
 ListAppsResponse * AmplifyClient::listApps(const ListAppsRequest &request)
 {
@@ -370,11 +453,37 @@ ListAppsResponse * AmplifyClient::listApps(const ListAppsRequest &request)
 
 /*!
  * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * ListArtifactsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of artifacts for a specified app, branch, and job.
+ */
+ListArtifactsResponse * AmplifyClient::listArtifacts(const ListArtifactsRequest &request)
+{
+    return qobject_cast<ListArtifactsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
+ * ListBackendEnvironmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the backend environments for an Amplify app.
+ */
+ListBackendEnvironmentsResponse * AmplifyClient::listBackendEnvironments(const ListBackendEnvironmentsRequest &request)
+{
+    return qobject_cast<ListBackendEnvironmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AmplifyClient service, and returns a pointer to an
  * ListBranchesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists branches for an Amplify App.
+ * Lists the branches of an Amplify app.
  */
 ListBranchesResponse * AmplifyClient::listBranches(const ListBranchesRequest &request)
 {
@@ -387,7 +496,7 @@ ListBranchesResponse * AmplifyClient::listBranches(const ListBranchesRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List domains with an app
+ * Returns the domain associations for an Amplify app.
  */
 ListDomainAssociationsResponse * AmplifyClient::listDomainAssociations(const ListDomainAssociationsRequest &request)
 {
@@ -400,7 +509,7 @@ ListDomainAssociationsResponse * AmplifyClient::listDomainAssociations(const Lis
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List Jobs for a branch, part of an Amplify App.
+ * Lists the jobs for a branch of an Amplify app.
  */
 ListJobsResponse * AmplifyClient::listJobs(const ListJobsRequest &request)
 {
@@ -413,7 +522,7 @@ ListJobsResponse * AmplifyClient::listJobs(const ListJobsRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List tags for resource.
+ * Returns a list of tags for a specified Amazon Resource Name (ARN).
  */
 ListTagsForResourceResponse * AmplifyClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -426,7 +535,7 @@ ListTagsForResourceResponse * AmplifyClient::listTagsForResource(const ListTagsF
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * List webhooks with an app.
+ * Returns a list of webhooks for an Amplify app.
  */
 ListWebhooksResponse * AmplifyClient::listWebhooks(const ListWebhooksRequest &request)
 {
@@ -439,7 +548,7 @@ ListWebhooksResponse * AmplifyClient::listWebhooks(const ListWebhooksRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Start a deployment for manual deploy apps. (Apps are not connected to repository)
+ * Starts a deployment for a manually deployed app. Manually deployed apps are not connected to a repository.
  */
 StartDeploymentResponse * AmplifyClient::startDeployment(const StartDeploymentRequest &request)
 {
@@ -452,7 +561,7 @@ StartDeploymentResponse * AmplifyClient::startDeployment(const StartDeploymentRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a new job for a branch, part of an Amplify App.
+ * Starts a new job for a branch of an Amplify app.
  */
 StartJobResponse * AmplifyClient::startJob(const StartJobRequest &request)
 {
@@ -465,7 +574,7 @@ StartJobResponse * AmplifyClient::startJob(const StartJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Stop a job that is in progress, for an Amplify branch, part of Amplify App.
+ * Stops a job that is in progress for a branch of an Amplify app.
  */
 StopJobResponse * AmplifyClient::stopJob(const StopJobRequest &request)
 {
@@ -478,7 +587,7 @@ StopJobResponse * AmplifyClient::stopJob(const StopJobRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Tag resource with tag key and value.
+ * Tags the resource with a tag key and value.
  */
 TagResourceResponse * AmplifyClient::tagResource(const TagResourceRequest &request)
 {
@@ -491,7 +600,7 @@ TagResourceResponse * AmplifyClient::tagResource(const TagResourceRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Untag resource with resourceArn.
+ * Untags a resource with a specified Amazon Resource Name (ARN).
  */
 UntagResourceResponse * AmplifyClient::untagResource(const UntagResourceRequest &request)
 {
@@ -504,7 +613,7 @@ UntagResourceResponse * AmplifyClient::untagResource(const UntagResourceRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing Amplify App.
+ * Updates an existing Amplify app.
  */
 UpdateAppResponse * AmplifyClient::updateApp(const UpdateAppRequest &request)
 {
@@ -517,7 +626,7 @@ UpdateAppResponse * AmplifyClient::updateApp(const UpdateAppRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a branch for an Amplify App.
+ * Updates a branch for an Amplify app.
  */
 UpdateBranchResponse * AmplifyClient::updateBranch(const UpdateBranchRequest &request)
 {
@@ -530,7 +639,7 @@ UpdateBranchResponse * AmplifyClient::updateBranch(const UpdateBranchRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Create a new DomainAssociation on an App
+ * Creates a new domain association for an Amplify
  */
 UpdateDomainAssociationResponse * AmplifyClient::updateDomainAssociation(const UpdateDomainAssociationRequest &request)
 {
@@ -543,7 +652,7 @@ UpdateDomainAssociationResponse * AmplifyClient::updateDomainAssociation(const U
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Update a webhook.
+ * Updates a webhook.
  */
 UpdateWebhookResponse * AmplifyClient::updateWebhook(const UpdateWebhookRequest &request)
 {

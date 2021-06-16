@@ -41,11 +41,15 @@ namespace CloudTrail {
  * \value DeleteTrailAction CloudTrail DeleteTrail action.
  * \value DescribeTrailsAction CloudTrail DescribeTrails action.
  * \value GetEventSelectorsAction CloudTrail GetEventSelectors action.
+ * \value GetInsightSelectorsAction CloudTrail GetInsightSelectors action.
+ * \value GetTrailAction CloudTrail GetTrail action.
  * \value GetTrailStatusAction CloudTrail GetTrailStatus action.
  * \value ListPublicKeysAction CloudTrail ListPublicKeys action.
  * \value ListTagsAction CloudTrail ListTags action.
+ * \value ListTrailsAction CloudTrail ListTrails action.
  * \value LookupEventsAction CloudTrail LookupEvents action.
  * \value PutEventSelectorsAction CloudTrail PutEventSelectors action.
+ * \value PutInsightSelectorsAction CloudTrail PutInsightSelectors action.
  * \value RemoveTagsAction CloudTrail RemoveTags action.
  * \value StartLoggingAction CloudTrail StartLogging action.
  * \value StopLoggingAction CloudTrail StopLogging action.

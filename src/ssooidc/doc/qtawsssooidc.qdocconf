@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSsooidc
+description = AWS SSOOIDC SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsssooidc-index.html"
+navigation.landingtitle = "SSOOIDC"
+navigation.cppclassespage = "SSOOIDC C++ Classes"

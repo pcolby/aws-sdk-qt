@@ -13,14 +13,26 @@ add_library(QtAwsDataSync
   createlocationefsrequest_p.h
   createlocationefsresponse.h
   createlocationefsresponse_p.h
+  createlocationfsxwindowsrequest.h
+  createlocationfsxwindowsrequest_p.h
+  createlocationfsxwindowsresponse.h
+  createlocationfsxwindowsresponse_p.h
   createlocationnfsrequest.h
   createlocationnfsrequest_p.h
   createlocationnfsresponse.h
   createlocationnfsresponse_p.h
+  createlocationobjectstoragerequest.h
+  createlocationobjectstoragerequest_p.h
+  createlocationobjectstorageresponse.h
+  createlocationobjectstorageresponse_p.h
   createlocations3request.h
   createlocations3request_p.h
   createlocations3response.h
   createlocations3response_p.h
+  createlocationsmbrequest.h
+  createlocationsmbrequest_p.h
+  createlocationsmbresponse.h
+  createlocationsmbresponse_p.h
   createtaskrequest.h
   createtaskrequest_p.h
   createtaskresponse.h
@@ -51,14 +63,26 @@ add_library(QtAwsDataSync
   describelocationefsrequest_p.h
   describelocationefsresponse.h
   describelocationefsresponse_p.h
+  describelocationfsxwindowsrequest.h
+  describelocationfsxwindowsrequest_p.h
+  describelocationfsxwindowsresponse.h
+  describelocationfsxwindowsresponse_p.h
   describelocationnfsrequest.h
   describelocationnfsrequest_p.h
   describelocationnfsresponse.h
   describelocationnfsresponse_p.h
+  describelocationobjectstoragerequest.h
+  describelocationobjectstoragerequest_p.h
+  describelocationobjectstorageresponse.h
+  describelocationobjectstorageresponse_p.h
   describelocations3request.h
   describelocations3request_p.h
   describelocations3response.h
   describelocations3response_p.h
+  describelocationsmbrequest.h
+  describelocationsmbrequest_p.h
+  describelocationsmbresponse.h
+  describelocationsmbresponse_p.h
   describetaskexecutionrequest.h
   describetaskexecutionrequest_p.h
   describetaskexecutionresponse.h
@@ -103,6 +127,22 @@ add_library(QtAwsDataSync
   updateagentrequest_p.h
   updateagentresponse.h
   updateagentresponse_p.h
+  updatelocationnfsrequest.h
+  updatelocationnfsrequest_p.h
+  updatelocationnfsresponse.h
+  updatelocationnfsresponse_p.h
+  updatelocationobjectstoragerequest.h
+  updatelocationobjectstoragerequest_p.h
+  updatelocationobjectstorageresponse.h
+  updatelocationobjectstorageresponse_p.h
+  updatelocationsmbrequest.h
+  updatelocationsmbrequest_p.h
+  updatelocationsmbresponse.h
+  updatelocationsmbresponse_p.h
+  updatetaskexecutionrequest.h
+  updatetaskexecutionrequest_p.h
+  updatetaskexecutionresponse.h
+  updatetaskexecutionresponse_p.h
   updatetaskrequest.h
   updatetaskrequest_p.h
   updatetaskresponse.h
@@ -113,10 +153,16 @@ add_library(QtAwsDataSync
   createagentresponse.cpp
   createlocationefsrequest.cpp
   createlocationefsresponse.cpp
+  createlocationfsxwindowsrequest.cpp
+  createlocationfsxwindowsresponse.cpp
   createlocationnfsrequest.cpp
   createlocationnfsresponse.cpp
+  createlocationobjectstoragerequest.cpp
+  createlocationobjectstorageresponse.cpp
   createlocations3request.cpp
   createlocations3response.cpp
+  createlocationsmbrequest.cpp
+  createlocationsmbresponse.cpp
   createtaskrequest.cpp
   createtaskresponse.cpp
   datasyncclient.cpp
@@ -132,10 +178,16 @@ add_library(QtAwsDataSync
   describeagentresponse.cpp
   describelocationefsrequest.cpp
   describelocationefsresponse.cpp
+  describelocationfsxwindowsrequest.cpp
+  describelocationfsxwindowsresponse.cpp
   describelocationnfsrequest.cpp
   describelocationnfsresponse.cpp
+  describelocationobjectstoragerequest.cpp
+  describelocationobjectstorageresponse.cpp
   describelocations3request.cpp
   describelocations3response.cpp
+  describelocationsmbrequest.cpp
+  describelocationsmbresponse.cpp
   describetaskexecutionrequest.cpp
   describetaskexecutionresponse.cpp
   describetaskrequest.cpp
@@ -158,6 +210,14 @@ add_library(QtAwsDataSync
   untagresourceresponse.cpp
   updateagentrequest.cpp
   updateagentresponse.cpp
+  updatelocationnfsrequest.cpp
+  updatelocationnfsresponse.cpp
+  updatelocationobjectstoragerequest.cpp
+  updatelocationobjectstorageresponse.cpp
+  updatelocationsmbrequest.cpp
+  updatelocationsmbresponse.cpp
+  updatetaskexecutionrequest.cpp
+  updatetaskexecutionresponse.cpp
   updatetaskrequest.cpp
   updatetaskresponse.cpp)
 

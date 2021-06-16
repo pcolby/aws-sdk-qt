@@ -1,10 +1,26 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsTranslate
+  createparalleldatarequest.h
+  createparalleldatarequest_p.h
+  createparalleldataresponse.h
+  createparalleldataresponse_p.h
+  deleteparalleldatarequest.h
+  deleteparalleldatarequest_p.h
+  deleteparalleldataresponse.h
+  deleteparalleldataresponse_p.h
   deleteterminologyrequest.h
   deleteterminologyrequest_p.h
   deleteterminologyresponse.h
   deleteterminologyresponse_p.h
+  describetexttranslationjobrequest.h
+  describetexttranslationjobrequest_p.h
+  describetexttranslationjobresponse.h
+  describetexttranslationjobresponse_p.h
+  getparalleldatarequest.h
+  getparalleldatarequest_p.h
+  getparalleldataresponse.h
+  getparalleldataresponse_p.h
   getterminologyrequest.h
   getterminologyrequest_p.h
   getterminologyresponse.h
@@ -13,10 +29,26 @@ add_library(QtAwsTranslate
   importterminologyrequest_p.h
   importterminologyresponse.h
   importterminologyresponse_p.h
+  listparalleldatarequest.h
+  listparalleldatarequest_p.h
+  listparalleldataresponse.h
+  listparalleldataresponse_p.h
   listterminologiesrequest.h
   listterminologiesrequest_p.h
   listterminologiesresponse.h
   listterminologiesresponse_p.h
+  listtexttranslationjobsrequest.h
+  listtexttranslationjobsrequest_p.h
+  listtexttranslationjobsresponse.h
+  listtexttranslationjobsresponse_p.h
+  starttexttranslationjobrequest.h
+  starttexttranslationjobrequest_p.h
+  starttexttranslationjobresponse.h
+  starttexttranslationjobresponse_p.h
+  stoptexttranslationjobrequest.h
+  stoptexttranslationjobrequest_p.h
+  stoptexttranslationjobresponse.h
+  stoptexttranslationjobresponse_p.h
   translateclient.h
   translateclient_p.h
   translaterequest.h
@@ -27,19 +59,41 @@ add_library(QtAwsTranslate
   translatetextrequest_p.h
   translatetextresponse.h
   translatetextresponse_p.h
+  updateparalleldatarequest.h
+  updateparalleldatarequest_p.h
+  updateparalleldataresponse.h
+  updateparalleldataresponse_p.h
+  createparalleldatarequest.cpp
+  createparalleldataresponse.cpp
+  deleteparalleldatarequest.cpp
+  deleteparalleldataresponse.cpp
   deleteterminologyrequest.cpp
   deleteterminologyresponse.cpp
+  describetexttranslationjobrequest.cpp
+  describetexttranslationjobresponse.cpp
+  getparalleldatarequest.cpp
+  getparalleldataresponse.cpp
   getterminologyrequest.cpp
   getterminologyresponse.cpp
   importterminologyrequest.cpp
   importterminologyresponse.cpp
+  listparalleldatarequest.cpp
+  listparalleldataresponse.cpp
   listterminologiesrequest.cpp
   listterminologiesresponse.cpp
+  listtexttranslationjobsrequest.cpp
+  listtexttranslationjobsresponse.cpp
+  starttexttranslationjobrequest.cpp
+  starttexttranslationjobresponse.cpp
+  stoptexttranslationjobrequest.cpp
+  stoptexttranslationjobresponse.cpp
   translateclient.cpp
   translaterequest.cpp
   translateresponse.cpp
   translatetextrequest.cpp
-  translatetextresponse.cpp)
+  translatetextresponse.cpp
+  updateparalleldatarequest.cpp
+  updateparalleldataresponse.cpp)
 
 add_dependencies(QtAwsTranslate QtAwsCore)
 

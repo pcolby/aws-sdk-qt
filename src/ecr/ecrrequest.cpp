@@ -42,21 +42,30 @@ namespace ECR {
  * \value CompleteLayerUploadAction ECR CompleteLayerUpload action.
  * \value CreateRepositoryAction ECR CreateRepository action.
  * \value DeleteLifecyclePolicyAction ECR DeleteLifecyclePolicy action.
+ * \value DeleteRegistryPolicyAction ECR DeleteRegistryPolicy action.
  * \value DeleteRepositoryAction ECR DeleteRepository action.
  * \value DeleteRepositoryPolicyAction ECR DeleteRepositoryPolicy action.
+ * \value DescribeImageScanFindingsAction ECR DescribeImageScanFindings action.
  * \value DescribeImagesAction ECR DescribeImages action.
+ * \value DescribeRegistryAction ECR DescribeRegistry action.
  * \value DescribeRepositoriesAction ECR DescribeRepositories action.
  * \value GetAuthorizationTokenAction ECR GetAuthorizationToken action.
  * \value GetDownloadUrlForLayerAction ECR GetDownloadUrlForLayer action.
  * \value GetLifecyclePolicyAction ECR GetLifecyclePolicy action.
  * \value GetLifecyclePolicyPreviewAction ECR GetLifecyclePolicyPreview action.
+ * \value GetRegistryPolicyAction ECR GetRegistryPolicy action.
  * \value GetRepositoryPolicyAction ECR GetRepositoryPolicy action.
  * \value InitiateLayerUploadAction ECR InitiateLayerUpload action.
  * \value ListImagesAction ECR ListImages action.
  * \value ListTagsForResourceAction ECR ListTagsForResource action.
  * \value PutImageAction ECR PutImage action.
+ * \value PutImageScanningConfigurationAction ECR PutImageScanningConfiguration action.
+ * \value PutImageTagMutabilityAction ECR PutImageTagMutability action.
  * \value PutLifecyclePolicyAction ECR PutLifecyclePolicy action.
+ * \value PutRegistryPolicyAction ECR PutRegistryPolicy action.
+ * \value PutReplicationConfigurationAction ECR PutReplicationConfiguration action.
  * \value SetRepositoryPolicyAction ECR SetRepositoryPolicy action.
+ * \value StartImageScanAction ECR StartImageScan action.
  * \value StartLifecyclePolicyPreviewAction ECR StartLifecyclePolicyPreview action.
  * \value TagResourceAction ECR TagResource action.
  * \value UntagResourceAction ECR UntagResource action.

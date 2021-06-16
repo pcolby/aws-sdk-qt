@@ -102,6 +102,11 @@ namespace OpsWorksCM {
  * 
  *  opsworks-cm.eu-west-1.amazonaws.co> </li> </ul>
  * 
+ *  For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/opsworks-service.html">AWS OpsWorks
+ *  endpoints and quotas</a> in the AWS General
+ * 
+ *  Reference>
+ * 
  *  <b>Throttling limits</b>
  * 
  *  </p

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsEMRContainers
+description = AWS EMRContainers SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsemrcontainers-index.html"
+navigation.landingtitle = "EMRContainers"
+navigation.cppclassespage = "EMRContainers C++ Classes"

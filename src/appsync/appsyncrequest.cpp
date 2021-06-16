@@ -36,18 +36,22 @@ namespace AppSync {
  * This enum describes the actions that can be performed as AppSync
  * requests.
  *
+ * \value CreateApiCacheAction AppSync CreateApiCache action.
  * \value CreateApiKeyAction AppSync CreateApiKey action.
  * \value CreateDataSourceAction AppSync CreateDataSource action.
  * \value CreateFunctionAction AppSync CreateFunction action.
  * \value CreateGraphqlApiAction AppSync CreateGraphqlApi action.
  * \value CreateResolverAction AppSync CreateResolver action.
  * \value CreateTypeAction AppSync CreateType action.
+ * \value DeleteApiCacheAction AppSync DeleteApiCache action.
  * \value DeleteApiKeyAction AppSync DeleteApiKey action.
  * \value DeleteDataSourceAction AppSync DeleteDataSource action.
  * \value DeleteFunctionAction AppSync DeleteFunction action.
  * \value DeleteGraphqlApiAction AppSync DeleteGraphqlApi action.
  * \value DeleteResolverAction AppSync DeleteResolver action.
  * \value DeleteTypeAction AppSync DeleteType action.
+ * \value FlushApiCacheAction AppSync FlushApiCache action.
+ * \value GetApiCacheAction AppSync GetApiCache action.
  * \value GetDataSourceAction AppSync GetDataSource action.
  * \value GetFunctionAction AppSync GetFunction action.
  * \value GetGraphqlApiAction AppSync GetGraphqlApi action.
@@ -66,6 +70,7 @@ namespace AppSync {
  * \value StartSchemaCreationAction AppSync StartSchemaCreation action.
  * \value TagResourceAction AppSync TagResource action.
  * \value UntagResourceAction AppSync UntagResource action.
+ * \value UpdateApiCacheAction AppSync UpdateApiCache action.
  * \value UpdateApiKeyAction AppSync UpdateApiKey action.
  * \value UpdateDataSourceAction AppSync UpdateDataSource action.
  * \value UpdateFunctionAction AppSync UpdateFunction action.

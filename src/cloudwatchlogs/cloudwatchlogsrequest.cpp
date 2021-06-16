@@ -45,6 +45,7 @@ namespace CloudWatchLogs {
  * \value DeleteLogGroupAction CloudWatchLogs DeleteLogGroup action.
  * \value DeleteLogStreamAction CloudWatchLogs DeleteLogStream action.
  * \value DeleteMetricFilterAction CloudWatchLogs DeleteMetricFilter action.
+ * \value DeleteQueryDefinitionAction CloudWatchLogs DeleteQueryDefinition action.
  * \value DeleteResourcePolicyAction CloudWatchLogs DeleteResourcePolicy action.
  * \value DeleteRetentionPolicyAction CloudWatchLogs DeleteRetentionPolicy action.
  * \value DeleteSubscriptionFilterAction CloudWatchLogs DeleteSubscriptionFilter action.
@@ -54,6 +55,7 @@ namespace CloudWatchLogs {
  * \value DescribeLogStreamsAction CloudWatchLogs DescribeLogStreams action.
  * \value DescribeMetricFiltersAction CloudWatchLogs DescribeMetricFilters action.
  * \value DescribeQueriesAction CloudWatchLogs DescribeQueries action.
+ * \value DescribeQueryDefinitionsAction CloudWatchLogs DescribeQueryDefinitions action.
  * \value DescribeResourcePoliciesAction CloudWatchLogs DescribeResourcePolicies action.
  * \value DescribeSubscriptionFiltersAction CloudWatchLogs DescribeSubscriptionFilters action.
  * \value DisassociateKmsKeyAction CloudWatchLogs DisassociateKmsKey action.
@@ -67,6 +69,7 @@ namespace CloudWatchLogs {
  * \value PutDestinationPolicyAction CloudWatchLogs PutDestinationPolicy action.
  * \value PutLogEventsAction CloudWatchLogs PutLogEvents action.
  * \value PutMetricFilterAction CloudWatchLogs PutMetricFilter action.
+ * \value PutQueryDefinitionAction CloudWatchLogs PutQueryDefinition action.
  * \value PutResourcePolicyAction CloudWatchLogs PutResourcePolicy action.
  * \value PutRetentionPolicyAction CloudWatchLogs PutRetentionPolicy action.
  * \value PutSubscriptionFilterAction CloudWatchLogs PutSubscriptionFilter action.

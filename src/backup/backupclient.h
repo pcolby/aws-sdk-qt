@@ -50,12 +50,20 @@ class DescribeBackupJobRequest;
 class DescribeBackupJobResponse;
 class DescribeBackupVaultRequest;
 class DescribeBackupVaultResponse;
+class DescribeCopyJobRequest;
+class DescribeCopyJobResponse;
+class DescribeGlobalSettingsRequest;
+class DescribeGlobalSettingsResponse;
 class DescribeProtectedResourceRequest;
 class DescribeProtectedResourceResponse;
 class DescribeRecoveryPointRequest;
 class DescribeRecoveryPointResponse;
+class DescribeRegionSettingsRequest;
+class DescribeRegionSettingsResponse;
 class DescribeRestoreJobRequest;
 class DescribeRestoreJobResponse;
+class DisassociateRecoveryPointRequest;
+class DisassociateRecoveryPointResponse;
 class ExportBackupPlanTemplateRequest;
 class ExportBackupPlanTemplateResponse;
 class GetBackupPlanRequest;
@@ -86,6 +94,8 @@ class ListBackupSelectionsRequest;
 class ListBackupSelectionsResponse;
 class ListBackupVaultsRequest;
 class ListBackupVaultsResponse;
+class ListCopyJobsRequest;
+class ListCopyJobsResponse;
 class ListProtectedResourcesRequest;
 class ListProtectedResourcesResponse;
 class ListRecoveryPointsByBackupVaultRequest;
@@ -102,6 +112,8 @@ class PutBackupVaultNotificationsRequest;
 class PutBackupVaultNotificationsResponse;
 class StartBackupJobRequest;
 class StartBackupJobResponse;
+class StartCopyJobRequest;
+class StartCopyJobResponse;
 class StartRestoreJobRequest;
 class StartRestoreJobResponse;
 class StopBackupJobRequest;
@@ -112,8 +124,12 @@ class UntagResourceRequest;
 class UntagResourceResponse;
 class UpdateBackupPlanRequest;
 class UpdateBackupPlanResponse;
+class UpdateGlobalSettingsRequest;
+class UpdateGlobalSettingsResponse;
 class UpdateRecoveryPointLifecycleRequest;
 class UpdateRecoveryPointLifecycleResponse;
+class UpdateRegionSettingsRequest;
+class UpdateRegionSettingsResponse;
 
 class QTAWS_EXPORT BackupClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -142,9 +158,13 @@ public slots:
     DeleteRecoveryPointResponse * deleteRecoveryPoint(const DeleteRecoveryPointRequest &request);
     DescribeBackupJobResponse * describeBackupJob(const DescribeBackupJobRequest &request);
     DescribeBackupVaultResponse * describeBackupVault(const DescribeBackupVaultRequest &request);
+    DescribeCopyJobResponse * describeCopyJob(const DescribeCopyJobRequest &request);
+    DescribeGlobalSettingsResponse * describeGlobalSettings(const DescribeGlobalSettingsRequest &request);
     DescribeProtectedResourceResponse * describeProtectedResource(const DescribeProtectedResourceRequest &request);
     DescribeRecoveryPointResponse * describeRecoveryPoint(const DescribeRecoveryPointRequest &request);
+    DescribeRegionSettingsResponse * describeRegionSettings(const DescribeRegionSettingsRequest &request);
     DescribeRestoreJobResponse * describeRestoreJob(const DescribeRestoreJobRequest &request);
+    DisassociateRecoveryPointResponse * disassociateRecoveryPoint(const DisassociateRecoveryPointRequest &request);
     ExportBackupPlanTemplateResponse * exportBackupPlanTemplate(const ExportBackupPlanTemplateRequest &request);
     GetBackupPlanResponse * getBackupPlan(const GetBackupPlanRequest &request);
     GetBackupPlanFromJSONResponse * getBackupPlanFromJSON(const GetBackupPlanFromJSONRequest &request);
@@ -161,6 +181,7 @@ public slots:
     ListBackupPlansResponse * listBackupPlans(const ListBackupPlansRequest &request);
     ListBackupSelectionsResponse * listBackupSelections(const ListBackupSelectionsRequest &request);
     ListBackupVaultsResponse * listBackupVaults(const ListBackupVaultsRequest &request);
+    ListCopyJobsResponse * listCopyJobs(const ListCopyJobsRequest &request);
     ListProtectedResourcesResponse * listProtectedResources(const ListProtectedResourcesRequest &request);
     ListRecoveryPointsByBackupVaultResponse * listRecoveryPointsByBackupVault(const ListRecoveryPointsByBackupVaultRequest &request);
     ListRecoveryPointsByResourceResponse * listRecoveryPointsByResource(const ListRecoveryPointsByResourceRequest &request);
@@ -169,12 +190,15 @@ public slots:
     PutBackupVaultAccessPolicyResponse * putBackupVaultAccessPolicy(const PutBackupVaultAccessPolicyRequest &request);
     PutBackupVaultNotificationsResponse * putBackupVaultNotifications(const PutBackupVaultNotificationsRequest &request);
     StartBackupJobResponse * startBackupJob(const StartBackupJobRequest &request);
+    StartCopyJobResponse * startCopyJob(const StartCopyJobRequest &request);
     StartRestoreJobResponse * startRestoreJob(const StartRestoreJobRequest &request);
     StopBackupJobResponse * stopBackupJob(const StopBackupJobRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateBackupPlanResponse * updateBackupPlan(const UpdateBackupPlanRequest &request);
+    UpdateGlobalSettingsResponse * updateGlobalSettings(const UpdateGlobalSettingsRequest &request);
     UpdateRecoveryPointLifecycleResponse * updateRecoveryPointLifecycle(const UpdateRecoveryPointLifecycleRequest &request);
+    UpdateRegionSettingsResponse * updateRegionSettings(const UpdateRegionSettingsRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(BackupClient)

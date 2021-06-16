@@ -49,8 +49,11 @@ public:
         DescribeServersAction,
         DisassociateNodeAction,
         ExportServerEngineAttributeAction,
+        ListTagsForResourceAction,
         RestoreServerAction,
         StartMaintenanceAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateServerAction,
         UpdateServerEngineAttributesAction,
     };

@@ -37,7 +37,9 @@ namespace Redshift {
  * requests.
  *
  * \value AcceptReservedNodeExchangeAction Redshift AcceptReservedNodeExchange action.
+ * \value AddPartnerAction Redshift AddPartner action.
  * \value AuthorizeClusterSecurityGroupIngressAction Redshift AuthorizeClusterSecurityGroupIngress action.
+ * \value AuthorizeEndpointAccessAction Redshift AuthorizeEndpointAccess action.
  * \value AuthorizeSnapshotAccessAction Redshift AuthorizeSnapshotAccess action.
  * \value BatchDeleteClusterSnapshotsAction Redshift BatchDeleteClusterSnapshots action.
  * \value BatchModifyClusterSnapshotsAction Redshift BatchModifyClusterSnapshots action.
@@ -48,23 +50,30 @@ namespace Redshift {
  * \value CreateClusterSecurityGroupAction Redshift CreateClusterSecurityGroup action.
  * \value CreateClusterSnapshotAction Redshift CreateClusterSnapshot action.
  * \value CreateClusterSubnetGroupAction Redshift CreateClusterSubnetGroup action.
+ * \value CreateEndpointAccessAction Redshift CreateEndpointAccess action.
  * \value CreateEventSubscriptionAction Redshift CreateEventSubscription action.
  * \value CreateHsmClientCertificateAction Redshift CreateHsmClientCertificate action.
  * \value CreateHsmConfigurationAction Redshift CreateHsmConfiguration action.
+ * \value CreateScheduledActionAction Redshift CreateScheduledAction action.
  * \value CreateSnapshotCopyGrantAction Redshift CreateSnapshotCopyGrant action.
  * \value CreateSnapshotScheduleAction Redshift CreateSnapshotSchedule action.
  * \value CreateTagsAction Redshift CreateTags action.
+ * \value CreateUsageLimitAction Redshift CreateUsageLimit action.
  * \value DeleteClusterAction Redshift DeleteCluster action.
  * \value DeleteClusterParameterGroupAction Redshift DeleteClusterParameterGroup action.
  * \value DeleteClusterSecurityGroupAction Redshift DeleteClusterSecurityGroup action.
  * \value DeleteClusterSnapshotAction Redshift DeleteClusterSnapshot action.
  * \value DeleteClusterSubnetGroupAction Redshift DeleteClusterSubnetGroup action.
+ * \value DeleteEndpointAccessAction Redshift DeleteEndpointAccess action.
  * \value DeleteEventSubscriptionAction Redshift DeleteEventSubscription action.
  * \value DeleteHsmClientCertificateAction Redshift DeleteHsmClientCertificate action.
  * \value DeleteHsmConfigurationAction Redshift DeleteHsmConfiguration action.
+ * \value DeletePartnerAction Redshift DeletePartner action.
+ * \value DeleteScheduledActionAction Redshift DeleteScheduledAction action.
  * \value DeleteSnapshotCopyGrantAction Redshift DeleteSnapshotCopyGrant action.
  * \value DeleteSnapshotScheduleAction Redshift DeleteSnapshotSchedule action.
  * \value DeleteTagsAction Redshift DeleteTags action.
+ * \value DeleteUsageLimitAction Redshift DeleteUsageLimit action.
  * \value DescribeAccountAttributesAction Redshift DescribeAccountAttributes action.
  * \value DescribeClusterDbRevisionsAction Redshift DescribeClusterDbRevisions action.
  * \value DescribeClusterParameterGroupsAction Redshift DescribeClusterParameterGroups action.
@@ -76,27 +85,34 @@ namespace Redshift {
  * \value DescribeClusterVersionsAction Redshift DescribeClusterVersions action.
  * \value DescribeClustersAction Redshift DescribeClusters action.
  * \value DescribeDefaultClusterParametersAction Redshift DescribeDefaultClusterParameters action.
+ * \value DescribeEndpointAccessAction Redshift DescribeEndpointAccess action.
+ * \value DescribeEndpointAuthorizationAction Redshift DescribeEndpointAuthorization action.
  * \value DescribeEventCategoriesAction Redshift DescribeEventCategories action.
  * \value DescribeEventSubscriptionsAction Redshift DescribeEventSubscriptions action.
  * \value DescribeEventsAction Redshift DescribeEvents action.
  * \value DescribeHsmClientCertificatesAction Redshift DescribeHsmClientCertificates action.
  * \value DescribeHsmConfigurationsAction Redshift DescribeHsmConfigurations action.
  * \value DescribeLoggingStatusAction Redshift DescribeLoggingStatus action.
+ * \value DescribeNodeConfigurationOptionsAction Redshift DescribeNodeConfigurationOptions action.
  * \value DescribeOrderableClusterOptionsAction Redshift DescribeOrderableClusterOptions action.
+ * \value DescribePartnersAction Redshift DescribePartners action.
  * \value DescribeReservedNodeOfferingsAction Redshift DescribeReservedNodeOfferings action.
  * \value DescribeReservedNodesAction Redshift DescribeReservedNodes action.
  * \value DescribeResizeAction Redshift DescribeResize action.
+ * \value DescribeScheduledActionsAction Redshift DescribeScheduledActions action.
  * \value DescribeSnapshotCopyGrantsAction Redshift DescribeSnapshotCopyGrants action.
  * \value DescribeSnapshotSchedulesAction Redshift DescribeSnapshotSchedules action.
  * \value DescribeStorageAction Redshift DescribeStorage action.
  * \value DescribeTableRestoreStatusAction Redshift DescribeTableRestoreStatus action.
  * \value DescribeTagsAction Redshift DescribeTags action.
+ * \value DescribeUsageLimitsAction Redshift DescribeUsageLimits action.
  * \value DisableLoggingAction Redshift DisableLogging action.
  * \value DisableSnapshotCopyAction Redshift DisableSnapshotCopy action.
  * \value EnableLoggingAction Redshift EnableLogging action.
  * \value EnableSnapshotCopyAction Redshift EnableSnapshotCopy action.
  * \value GetClusterCredentialsAction Redshift GetClusterCredentials action.
  * \value GetReservedNodeExchangeOfferingsAction Redshift GetReservedNodeExchangeOfferings action.
+ * \value ModifyAquaConfigurationAction Redshift ModifyAquaConfiguration action.
  * \value ModifyClusterAction Redshift ModifyCluster action.
  * \value ModifyClusterDbRevisionAction Redshift ModifyClusterDbRevision action.
  * \value ModifyClusterIamRolesAction Redshift ModifyClusterIamRoles action.
@@ -105,18 +121,25 @@ namespace Redshift {
  * \value ModifyClusterSnapshotAction Redshift ModifyClusterSnapshot action.
  * \value ModifyClusterSnapshotScheduleAction Redshift ModifyClusterSnapshotSchedule action.
  * \value ModifyClusterSubnetGroupAction Redshift ModifyClusterSubnetGroup action.
+ * \value ModifyEndpointAccessAction Redshift ModifyEndpointAccess action.
  * \value ModifyEventSubscriptionAction Redshift ModifyEventSubscription action.
+ * \value ModifyScheduledActionAction Redshift ModifyScheduledAction action.
  * \value ModifySnapshotCopyRetentionPeriodAction Redshift ModifySnapshotCopyRetentionPeriod action.
  * \value ModifySnapshotScheduleAction Redshift ModifySnapshotSchedule action.
+ * \value ModifyUsageLimitAction Redshift ModifyUsageLimit action.
+ * \value PauseClusterAction Redshift PauseCluster action.
  * \value PurchaseReservedNodeOfferingAction Redshift PurchaseReservedNodeOffering action.
  * \value RebootClusterAction Redshift RebootCluster action.
  * \value ResetClusterParameterGroupAction Redshift ResetClusterParameterGroup action.
  * \value ResizeClusterAction Redshift ResizeCluster action.
  * \value RestoreFromClusterSnapshotAction Redshift RestoreFromClusterSnapshot action.
  * \value RestoreTableFromClusterSnapshotAction Redshift RestoreTableFromClusterSnapshot action.
+ * \value ResumeClusterAction Redshift ResumeCluster action.
  * \value RevokeClusterSecurityGroupIngressAction Redshift RevokeClusterSecurityGroupIngress action.
+ * \value RevokeEndpointAccessAction Redshift RevokeEndpointAccess action.
  * \value RevokeSnapshotAccessAction Redshift RevokeSnapshotAccess action.
  * \value RotateEncryptionKeyAction Redshift RotateEncryptionKey action.
+ * \value UpdatePartnerStatusAction Redshift UpdatePartnerStatus action.
  */
 
 /*!

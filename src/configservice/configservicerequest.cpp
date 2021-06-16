@@ -42,14 +42,20 @@ namespace ConfigService {
  * \value DeleteConfigRuleAction ConfigService DeleteConfigRule action.
  * \value DeleteConfigurationAggregatorAction ConfigService DeleteConfigurationAggregator action.
  * \value DeleteConfigurationRecorderAction ConfigService DeleteConfigurationRecorder action.
+ * \value DeleteConformancePackAction ConfigService DeleteConformancePack action.
  * \value DeleteDeliveryChannelAction ConfigService DeleteDeliveryChannel action.
  * \value DeleteEvaluationResultsAction ConfigService DeleteEvaluationResults action.
  * \value DeleteOrganizationConfigRuleAction ConfigService DeleteOrganizationConfigRule action.
+ * \value DeleteOrganizationConformancePackAction ConfigService DeleteOrganizationConformancePack action.
  * \value DeletePendingAggregationRequestAction ConfigService DeletePendingAggregationRequest action.
  * \value DeleteRemediationConfigurationAction ConfigService DeleteRemediationConfiguration action.
+ * \value DeleteRemediationExceptionsAction ConfigService DeleteRemediationExceptions action.
+ * \value DeleteResourceConfigAction ConfigService DeleteResourceConfig action.
  * \value DeleteRetentionConfigurationAction ConfigService DeleteRetentionConfiguration action.
+ * \value DeleteStoredQueryAction ConfigService DeleteStoredQuery action.
  * \value DeliverConfigSnapshotAction ConfigService DeliverConfigSnapshot action.
  * \value DescribeAggregateComplianceByConfigRulesAction ConfigService DescribeAggregateComplianceByConfigRules action.
+ * \value DescribeAggregateComplianceByConformancePacksAction ConfigService DescribeAggregateComplianceByConformancePacks action.
  * \value DescribeAggregationAuthorizationsAction ConfigService DescribeAggregationAuthorizations action.
  * \value DescribeComplianceByConfigRuleAction ConfigService DescribeComplianceByConfigRule action.
  * \value DescribeComplianceByResourceAction ConfigService DescribeComplianceByResource action.
@@ -59,37 +65,56 @@ namespace ConfigService {
  * \value DescribeConfigurationAggregatorsAction ConfigService DescribeConfigurationAggregators action.
  * \value DescribeConfigurationRecorderStatusAction ConfigService DescribeConfigurationRecorderStatus action.
  * \value DescribeConfigurationRecordersAction ConfigService DescribeConfigurationRecorders action.
+ * \value DescribeConformancePackComplianceAction ConfigService DescribeConformancePackCompliance action.
+ * \value DescribeConformancePackStatusAction ConfigService DescribeConformancePackStatus action.
+ * \value DescribeConformancePacksAction ConfigService DescribeConformancePacks action.
  * \value DescribeDeliveryChannelStatusAction ConfigService DescribeDeliveryChannelStatus action.
  * \value DescribeDeliveryChannelsAction ConfigService DescribeDeliveryChannels action.
  * \value DescribeOrganizationConfigRuleStatusesAction ConfigService DescribeOrganizationConfigRuleStatuses action.
  * \value DescribeOrganizationConfigRulesAction ConfigService DescribeOrganizationConfigRules action.
+ * \value DescribeOrganizationConformancePackStatusesAction ConfigService DescribeOrganizationConformancePackStatuses action.
+ * \value DescribeOrganizationConformancePacksAction ConfigService DescribeOrganizationConformancePacks action.
  * \value DescribePendingAggregationRequestsAction ConfigService DescribePendingAggregationRequests action.
  * \value DescribeRemediationConfigurationsAction ConfigService DescribeRemediationConfigurations action.
+ * \value DescribeRemediationExceptionsAction ConfigService DescribeRemediationExceptions action.
  * \value DescribeRemediationExecutionStatusAction ConfigService DescribeRemediationExecutionStatus action.
  * \value DescribeRetentionConfigurationsAction ConfigService DescribeRetentionConfigurations action.
  * \value GetAggregateComplianceDetailsByConfigRuleAction ConfigService GetAggregateComplianceDetailsByConfigRule action.
  * \value GetAggregateConfigRuleComplianceSummaryAction ConfigService GetAggregateConfigRuleComplianceSummary action.
+ * \value GetAggregateConformancePackComplianceSummaryAction ConfigService GetAggregateConformancePackComplianceSummary action.
  * \value GetAggregateDiscoveredResourceCountsAction ConfigService GetAggregateDiscoveredResourceCounts action.
  * \value GetAggregateResourceConfigAction ConfigService GetAggregateResourceConfig action.
  * \value GetComplianceDetailsByConfigRuleAction ConfigService GetComplianceDetailsByConfigRule action.
  * \value GetComplianceDetailsByResourceAction ConfigService GetComplianceDetailsByResource action.
  * \value GetComplianceSummaryByConfigRuleAction ConfigService GetComplianceSummaryByConfigRule action.
  * \value GetComplianceSummaryByResourceTypeAction ConfigService GetComplianceSummaryByResourceType action.
+ * \value GetConformancePackComplianceDetailsAction ConfigService GetConformancePackComplianceDetails action.
+ * \value GetConformancePackComplianceSummaryAction ConfigService GetConformancePackComplianceSummary action.
  * \value GetDiscoveredResourceCountsAction ConfigService GetDiscoveredResourceCounts action.
  * \value GetOrganizationConfigRuleDetailedStatusAction ConfigService GetOrganizationConfigRuleDetailedStatus action.
+ * \value GetOrganizationConformancePackDetailedStatusAction ConfigService GetOrganizationConformancePackDetailedStatus action.
  * \value GetResourceConfigHistoryAction ConfigService GetResourceConfigHistory action.
+ * \value GetStoredQueryAction ConfigService GetStoredQuery action.
  * \value ListAggregateDiscoveredResourcesAction ConfigService ListAggregateDiscoveredResources action.
  * \value ListDiscoveredResourcesAction ConfigService ListDiscoveredResources action.
+ * \value ListStoredQueriesAction ConfigService ListStoredQueries action.
  * \value ListTagsForResourceAction ConfigService ListTagsForResource action.
  * \value PutAggregationAuthorizationAction ConfigService PutAggregationAuthorization action.
  * \value PutConfigRuleAction ConfigService PutConfigRule action.
  * \value PutConfigurationAggregatorAction ConfigService PutConfigurationAggregator action.
  * \value PutConfigurationRecorderAction ConfigService PutConfigurationRecorder action.
+ * \value PutConformancePackAction ConfigService PutConformancePack action.
  * \value PutDeliveryChannelAction ConfigService PutDeliveryChannel action.
  * \value PutEvaluationsAction ConfigService PutEvaluations action.
+ * \value PutExternalEvaluationAction ConfigService PutExternalEvaluation action.
  * \value PutOrganizationConfigRuleAction ConfigService PutOrganizationConfigRule action.
+ * \value PutOrganizationConformancePackAction ConfigService PutOrganizationConformancePack action.
  * \value PutRemediationConfigurationsAction ConfigService PutRemediationConfigurations action.
+ * \value PutRemediationExceptionsAction ConfigService PutRemediationExceptions action.
+ * \value PutResourceConfigAction ConfigService PutResourceConfig action.
  * \value PutRetentionConfigurationAction ConfigService PutRetentionConfiguration action.
+ * \value PutStoredQueryAction ConfigService PutStoredQuery action.
+ * \value SelectAggregateResourceConfigAction ConfigService SelectAggregateResourceConfig action.
  * \value SelectResourceConfigAction ConfigService SelectResourceConfig action.
  * \value StartConfigRulesEvaluationAction ConfigService StartConfigRulesEvaluation action.
  * \value StartConfigurationRecorderAction ConfigService StartConfigurationRecorder action.

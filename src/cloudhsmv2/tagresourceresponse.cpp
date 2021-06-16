@@ -34,7 +34,7 @@ namespace CloudHSMV2 {
  * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
- *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  *
  * \sa CloudHSMV2Client::tagResource
  */

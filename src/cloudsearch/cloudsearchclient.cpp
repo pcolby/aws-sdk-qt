@@ -47,6 +47,8 @@
 #include "describeanalysisschemesresponse.h"
 #include "describeavailabilityoptionsrequest.h"
 #include "describeavailabilityoptionsresponse.h"
+#include "describedomainendpointoptionsrequest.h"
+#include "describedomainendpointoptionsresponse.h"
 #include "describedomainsrequest.h"
 #include "describedomainsresponse.h"
 #include "describeexpressionsrequest.h"
@@ -65,6 +67,8 @@
 #include "listdomainnamesresponse.h"
 #include "updateavailabilityoptionsrequest.h"
 #include "updateavailabilityoptionsresponse.h"
+#include "updatedomainendpointoptionsrequest.h"
+#include "updatedomainendpointoptionsresponse.h"
 #include "updatescalingparametersrequest.h"
 #include "updatescalingparametersresponse.h"
 #include "updateserviceaccesspoliciesrequest.h"
@@ -368,6 +372,22 @@ DescribeAvailabilityOptionsResponse * CloudSearchClient::describeAvailabilityOpt
 
 /*!
  * Sends \a request to the CloudSearchClient service, and returns a pointer to an
+ * DescribeDomainEndpointOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the domain's endpoint options, specifically whether all requests to the domain must arrive over HTTPS. For more
+ * information, see <a
+ * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-domain-endpoint-options.html"
+ * target="_blank">Configuring Domain Endpoint Options</a> in the <i>Amazon CloudSearch Developer
+ */
+DescribeDomainEndpointOptionsResponse * CloudSearchClient::describeDomainEndpointOptions(const DescribeDomainEndpointOptionsRequest &request)
+{
+    return qobject_cast<DescribeDomainEndpointOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudSearchClient service, and returns a pointer to an
  * DescribeDomainsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -523,6 +543,22 @@ ListDomainNamesResponse * CloudSearchClient::listDomainNames()
 UpdateAvailabilityOptionsResponse * CloudSearchClient::updateAvailabilityOptions(const UpdateAvailabilityOptionsRequest &request)
 {
     return qobject_cast<UpdateAvailabilityOptionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudSearchClient service, and returns a pointer to an
+ * UpdateDomainEndpointOptionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the domain's endpoint options, specifically whether all requests to the domain must arrive over HTTPS. For more
+ * information, see <a
+ * href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-domain-endpoint-options.html"
+ * target="_blank">Configuring Domain Endpoint Options</a> in the <i>Amazon CloudSearch Developer
+ */
+UpdateDomainEndpointOptionsResponse * CloudSearchClient::updateDomainEndpointOptions(const UpdateDomainEndpointOptionsRequest &request)
+{
+    return qobject_cast<UpdateDomainEndpointOptionsResponse *>(send(request));
 }
 
 /*!

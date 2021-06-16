@@ -47,6 +47,7 @@ namespace WAF {
  * \value CreateSizeConstraintSetAction WAF CreateSizeConstraintSet action.
  * \value CreateSqlInjectionMatchSetAction WAF CreateSqlInjectionMatchSet action.
  * \value CreateWebACLAction WAF CreateWebACL action.
+ * \value CreateWebACLMigrationStackAction WAF CreateWebACLMigrationStack action.
  * \value CreateXssMatchSetAction WAF CreateXssMatchSet action.
  * \value DeleteByteMatchSetAction WAF DeleteByteMatchSet action.
  * \value DeleteGeoMatchSetAction WAF DeleteGeoMatchSet action.

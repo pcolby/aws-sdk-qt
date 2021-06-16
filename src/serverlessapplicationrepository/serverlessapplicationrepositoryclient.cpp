@@ -45,6 +45,8 @@
 #include "listapplicationsresponse.h"
 #include "putapplicationpolicyrequest.h"
 #include "putapplicationpolicyresponse.h"
+#include "unshareapplicationrequest.h"
+#include "unshareapplicationresponse.h"
 #include "updateapplicationrequest.h"
 #include "updateapplicationresponse.h"
 
@@ -302,6 +304,19 @@ ListApplicationsResponse * ServerlessApplicationRepositoryClient::listApplicatio
 PutApplicationPolicyResponse * ServerlessApplicationRepositoryClient::putApplicationPolicy(const PutApplicationPolicyRequest &request)
 {
     return qobject_cast<PutApplicationPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ServerlessApplicationRepositoryClient service, and returns a pointer to an
+ * UnshareApplicationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Unshares an application from an AWS Organization.</p><p>This operation can be called only from the organization's master
+ */
+UnshareApplicationResponse * ServerlessApplicationRepositoryClient::unshareApplication(const UnshareApplicationRequest &request)
+{
+    return qobject_cast<UnshareApplicationResponse *>(send(request));
 }
 
 /*!

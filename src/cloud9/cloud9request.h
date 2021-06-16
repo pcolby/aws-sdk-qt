@@ -45,6 +45,9 @@ public:
         DescribeEnvironmentStatusAction,
         DescribeEnvironmentsAction,
         ListEnvironmentsAction,
+        ListTagsForResourceAction,
+        TagResourceAction,
+        UntagResourceAction,
         UpdateEnvironmentAction,
         UpdateEnvironmentMembershipAction,
     };

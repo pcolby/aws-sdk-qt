@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsLookoutMetrics
+description = AWS LookoutMetrics SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawslookoutmetrics-index.html"
+navigation.landingtitle = "LookoutMetrics"
+navigation.cppclassespage = "LookoutMetrics C++ Classes"

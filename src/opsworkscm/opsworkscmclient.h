@@ -52,10 +52,16 @@ class DisassociateNodeRequest;
 class DisassociateNodeResponse;
 class ExportServerEngineAttributeRequest;
 class ExportServerEngineAttributeResponse;
+class ListTagsForResourceRequest;
+class ListTagsForResourceResponse;
 class RestoreServerRequest;
 class RestoreServerResponse;
 class StartMaintenanceRequest;
 class StartMaintenanceResponse;
+class TagResourceRequest;
+class TagResourceResponse;
+class UntagResourceRequest;
+class UntagResourceResponse;
 class UpdateServerRequest;
 class UpdateServerResponse;
 class UpdateServerEngineAttributesRequest;
@@ -89,8 +95,11 @@ public slots:
     DescribeServersResponse * describeServers(const DescribeServersRequest &request);
     DisassociateNodeResponse * disassociateNode(const DisassociateNodeRequest &request);
     ExportServerEngineAttributeResponse * exportServerEngineAttribute(const ExportServerEngineAttributeRequest &request);
+    ListTagsForResourceResponse * listTagsForResource(const ListTagsForResourceRequest &request);
     RestoreServerResponse * restoreServer(const RestoreServerRequest &request);
     StartMaintenanceResponse * startMaintenance(const StartMaintenanceRequest &request);
+    TagResourceResponse * tagResource(const TagResourceRequest &request);
+    UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateServerResponse * updateServer(const UpdateServerRequest &request);
     UpdateServerEngineAttributesResponse * updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request);
 

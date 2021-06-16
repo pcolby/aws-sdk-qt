@@ -28,6 +28,8 @@ namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
 class KinesisVideoArchivedMediaClientPrivate;
+class GetClipRequest;
+class GetClipResponse;
 class GetDASHStreamingSessionURLRequest;
 class GetDASHStreamingSessionURLResponse;
 class GetHLSStreamingSessionURLRequest;
@@ -53,6 +55,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    GetClipResponse * getClip(const GetClipRequest &request);
     GetDASHStreamingSessionURLResponse * getDASHStreamingSessionURL(const GetDASHStreamingSessionURLRequest &request);
     GetHLSStreamingSessionURLResponse * getHLSStreamingSessionURL(const GetHLSStreamingSessionURLRequest &request);
     GetMediaForFragmentListResponse * getMediaForFragmentList(const GetMediaForFragmentListRequest &request);

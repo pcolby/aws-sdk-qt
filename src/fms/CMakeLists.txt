@@ -5,6 +5,10 @@ add_library(QtAwsFms
   associateadminaccountrequest_p.h
   associateadminaccountresponse.h
   associateadminaccountresponse_p.h
+  deleteappslistrequest.h
+  deleteappslistrequest_p.h
+  deleteappslistresponse.h
+  deleteappslistresponse_p.h
   deletenotificationchannelrequest.h
   deletenotificationchannelrequest_p.h
   deletenotificationchannelresponse.h
@@ -13,6 +17,10 @@ add_library(QtAwsFms
   deletepolicyrequest_p.h
   deletepolicyresponse.h
   deletepolicyresponse_p.h
+  deleteprotocolslistrequest.h
+  deleteprotocolslistrequest_p.h
+  deleteprotocolslistresponse.h
+  deleteprotocolslistresponse_p.h
   disassociateadminaccountrequest.h
   disassociateadminaccountrequest_p.h
   disassociateadminaccountresponse.h
@@ -27,6 +35,10 @@ add_library(QtAwsFms
   getadminaccountrequest_p.h
   getadminaccountresponse.h
   getadminaccountresponse_p.h
+  getappslistrequest.h
+  getappslistrequest_p.h
+  getappslistresponse.h
+  getappslistresponse_p.h
   getcompliancedetailrequest.h
   getcompliancedetailrequest_p.h
   getcompliancedetailresponse.h
@@ -43,6 +55,18 @@ add_library(QtAwsFms
   getprotectionstatusrequest_p.h
   getprotectionstatusresponse.h
   getprotectionstatusresponse_p.h
+  getprotocolslistrequest.h
+  getprotocolslistrequest_p.h
+  getprotocolslistresponse.h
+  getprotocolslistresponse_p.h
+  getviolationdetailsrequest.h
+  getviolationdetailsrequest_p.h
+  getviolationdetailsresponse.h
+  getviolationdetailsresponse_p.h
+  listappslistsrequest.h
+  listappslistsrequest_p.h
+  listappslistsresponse.h
+  listappslistsresponse_p.h
   listcompliancestatusrequest.h
   listcompliancestatusrequest_p.h
   listcompliancestatusresponse.h
@@ -55,6 +79,18 @@ add_library(QtAwsFms
   listpoliciesrequest_p.h
   listpoliciesresponse.h
   listpoliciesresponse_p.h
+  listprotocolslistsrequest.h
+  listprotocolslistsrequest_p.h
+  listprotocolslistsresponse.h
+  listprotocolslistsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
+  putappslistrequest.h
+  putappslistrequest_p.h
+  putappslistresponse.h
+  putappslistresponse_p.h
   putnotificationchannelrequest.h
   putnotificationchannelrequest_p.h
   putnotificationchannelresponse.h
@@ -63,12 +99,28 @@ add_library(QtAwsFms
   putpolicyrequest_p.h
   putpolicyresponse.h
   putpolicyresponse_p.h
+  putprotocolslistrequest.h
+  putprotocolslistrequest_p.h
+  putprotocolslistresponse.h
+  putprotocolslistresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
   associateadminaccountrequest.cpp
   associateadminaccountresponse.cpp
+  deleteappslistrequest.cpp
+  deleteappslistresponse.cpp
   deletenotificationchannelrequest.cpp
   deletenotificationchannelresponse.cpp
   deletepolicyrequest.cpp
   deletepolicyresponse.cpp
+  deleteprotocolslistrequest.cpp
+  deleteprotocolslistresponse.cpp
   disassociateadminaccountrequest.cpp
   disassociateadminaccountresponse.cpp
   fmsclient.cpp
@@ -76,6 +128,8 @@ add_library(QtAwsFms
   fmsresponse.cpp
   getadminaccountrequest.cpp
   getadminaccountresponse.cpp
+  getappslistrequest.cpp
+  getappslistresponse.cpp
   getcompliancedetailrequest.cpp
   getcompliancedetailresponse.cpp
   getnotificationchannelrequest.cpp
@@ -84,16 +138,34 @@ add_library(QtAwsFms
   getpolicyresponse.cpp
   getprotectionstatusrequest.cpp
   getprotectionstatusresponse.cpp
+  getprotocolslistrequest.cpp
+  getprotocolslistresponse.cpp
+  getviolationdetailsrequest.cpp
+  getviolationdetailsresponse.cpp
+  listappslistsrequest.cpp
+  listappslistsresponse.cpp
   listcompliancestatusrequest.cpp
   listcompliancestatusresponse.cpp
   listmemberaccountsrequest.cpp
   listmemberaccountsresponse.cpp
   listpoliciesrequest.cpp
   listpoliciesresponse.cpp
+  listprotocolslistsrequest.cpp
+  listprotocolslistsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
+  putappslistrequest.cpp
+  putappslistresponse.cpp
   putnotificationchannelrequest.cpp
   putnotificationchannelresponse.cpp
   putpolicyrequest.cpp
-  putpolicyresponse.cpp)
+  putpolicyresponse.cpp
+  putprotocolslistrequest.cpp
+  putprotocolslistresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp)
 
 add_dependencies(QtAwsFms QtAwsCore)
 

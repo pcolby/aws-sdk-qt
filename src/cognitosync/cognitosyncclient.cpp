@@ -161,12 +161,8 @@ CognitoSyncClient::CognitoSyncClient(
  *
  * Initiates a bulk publish of all existing datasets for an Identity Pool to the configured stream. Customers are limited
  * to one successful bulk publish per 24 hours. Bulk publish is an asynchronous request, customers can see the status of
- * the request via the GetBulkPublishDetails
- *
- * operation>
- *
- * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
- * provided by Cognito
+ * the request via the GetBulkPublishDetails operation.</p><p>This API can only be called with developer credentials. You
+ * cannot call this API with the temporary user credentials provided by Cognito
  */
 BulkPublishResponse * CognitoSyncClient::bulkPublish(const BulkPublishRequest &request)
 {
@@ -251,12 +247,8 @@ DescribeIdentityUsageResponse * CognitoSyncClient::describeIdentityUsage(const D
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Get the status of the last BulkPublish operation for an identity
- *
- * pool>
- *
- * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
- * provided by Cognito
+ * Get the status of the last BulkPublish operation for an identity pool.</p><p>This API can only be called with developer
+ * credentials. You cannot call this API with the temporary user credentials provided by Cognito
  */
 GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const GetBulkPublishDetailsRequest &request)
 {
@@ -269,12 +261,8 @@ GetBulkPublishDetailsResponse * CognitoSyncClient::getBulkPublishDetails(const G
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the events and the corresponding Lambda functions associated with an identity
- *
- * pool>
- *
- * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
- * provided by Cognito
+ * Gets the events and the corresponding Lambda functions associated with an identity pool.</p><p>This API can only be
+ * called with developer credentials. You cannot call this API with the temporary user credentials provided by Cognito
  */
 GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoEventsRequest &request)
 {
@@ -287,12 +275,8 @@ GetCognitoEventsResponse * CognitoSyncClient::getCognitoEvents(const GetCognitoE
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the configuration settings of an identity
- *
- * pool>
- *
- * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
- * provided by Cognito
+ * Gets the configuration settings of an identity pool.</p><p>This API can only be called with developer credentials. You
+ * cannot call this API with the temporary user credentials provided by Cognito
  */
 GetIdentityPoolConfigurationResponse * CognitoSyncClient::getIdentityPoolConfiguration(const GetIdentityPoolConfigurationRequest &request)
 {
@@ -362,12 +346,8 @@ ListRecordsResponse * CognitoSyncClient::listRecords(const ListRecordsRequest &r
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Registers a device to receive push sync
- *
- * notifications>
- *
- * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
- * developer
+ * Registers a device to receive push sync notifications.</p><p>This API can only be called with temporary credentials
+ * provided by Cognito Identity. You cannot call this API with developer
  */
 RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceRequest &request)
 {
@@ -382,11 +362,8 @@ RegisterDeviceResponse * CognitoSyncClient::registerDevice(const RegisterDeviceR
  *
  * Sets the AWS Lambda function for a given event type for an identity pool. This request only updates the key/value pair
  * specified. Other key/values pairs are not updated. To remove a key value pair, pass a empty value for the particular
- *
- * key>
- *
- * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
- * provided by Cognito
+ * key.</p><p>This API can only be called with developer credentials. You cannot call this API with the temporary user
+ * credentials provided by Cognito
  */
 SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoEventsRequest &request)
 {
@@ -399,12 +376,8 @@ SetCognitoEventsResponse * CognitoSyncClient::setCognitoEvents(const SetCognitoE
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets the necessary configuration for push
- *
- * sync>
- *
- * This API can only be called with developer credentials. You cannot call this API with the temporary user credentials
- * provided by Cognito
+ * Sets the necessary configuration for push sync.</p><p>This API can only be called with developer credentials. You cannot
+ * call this API with the temporary user credentials provided by Cognito
  */
 SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfiguration(const SetIdentityPoolConfigurationRequest &request)
 {
@@ -417,12 +390,8 @@ SetIdentityPoolConfigurationResponse * CognitoSyncClient::setIdentityPoolConfigu
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Subscribes to receive notifications when a dataset is modified by another
- *
- * device>
- *
- * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
- * developer
+ * Subscribes to receive notifications when a dataset is modified by another device.</p><p>This API can only be called with
+ * temporary credentials provided by Cognito Identity. You cannot call this API with developer
  */
 SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const SubscribeToDatasetRequest &request)
 {
@@ -435,12 +404,8 @@ SubscribeToDatasetResponse * CognitoSyncClient::subscribeToDataset(const Subscri
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Unsubscribes from receiving notifications when a dataset is modified by another
- *
- * device>
- *
- * This API can only be called with temporary credentials provided by Cognito Identity. You cannot call this API with
- * developer
+ * Unsubscribes from receiving notifications when a dataset is modified by another device.</p><p>This API can only be
+ * called with temporary credentials provided by Cognito Identity. You cannot call this API with developer
  */
 UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const UnsubscribeFromDatasetRequest &request)
 {
@@ -459,13 +424,11 @@ UnsubscribeFromDatasetResponse * CognitoSyncClient::unsubscribeFromDataset(const
  *
  * The sync count in the record patch is your last known sync count for that record. The server will reject an
  * UpdateRecords request with a ResourceConflictException if you try to patch a record with a new value but a stale sync
- *
- * count>
- *
- * For example, if the sync count on the server is 5 for a key called highScore and you try and submit a new highScore with
- * sync count of 4, the request will be rejected. To obtain the current sync count for a record, call ListRecords. On a
- * successful update of the record, the response returns the new sync count for that record. You should present that sync
- * count the next time you try to update that same record. When the record does not exist, specify the sync count as
+ * count.</p><p>For example, if the sync count on the server is 5 for a key called highScore and you try and submit a new
+ * highScore with sync count of 4, the request will be rejected. To obtain the current sync count for a record, call
+ * ListRecords. On a successful update of the record, the response returns the new sync count for that record. You should
+ * present that sync count the next time you try to update that same record. When the record does not exist, specify the
+ * sync count as
  *
  * 0>
  *

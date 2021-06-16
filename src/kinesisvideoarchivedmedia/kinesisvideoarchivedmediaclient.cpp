@@ -21,6 +21,8 @@
 #include "kinesisvideoarchivedmediaclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "getcliprequest.h"
+#include "getclipresponse.h"
 #include "getdashstreamingsessionurlrequest.h"
 #include "getdashstreamingsessionurlresponse.h"
 #include "gethlsstreamingsessionurlrequest.h"
@@ -109,6 +111,65 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
 
 /*!
  * Sends \a request to the KinesisVideoArchivedMediaClient service, and returns a pointer to an
+ * GetClipResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Downloads an MP4 file (clip) containing the archived, on-demand media from the specified video stream over the specified
+ * time range.
+ *
+ * </p
+ *
+ * Both the StreamName and the StreamARN parameters are optional, but you must specify either the StreamName or the
+ * StreamARN when invoking this API operation.
+ *
+ * </p
+ *
+ * As a prerequisite to using GetCLip API, you must obtain an endpoint using <code>GetDataEndpoint</code>, specifying
+ * GET_CLIP for<code/> the <code>APIName</code> parameter.
+ *
+ * </p
+ *
+ * An Amazon Kinesis video stream has the following requirements for providing data through
+ *
+ * MP4> <ul> <li>
+ *
+ * The media must contain h.264 or h.265 encoded video and, optionally, AAC or G.711 encoded audio. Specifically, the codec
+ * ID of track 1 should be <code>V_MPEG/ISO/AVC</code> (for h.264) or V_MPEGH/ISO/HEVC (for H.265). Optionally, the codec
+ * ID of track 2 should be <code>A_AAC</code> (for AAC) or A_MS/ACM (for
+ *
+ * G.711)> </li> <li>
+ *
+ * Data retention must be greater than
+ *
+ * 0> </li> <li>
+ *
+ * The video track of each fragment must contain codec private data in the Advanced Video Coding (AVC) for H.264 format and
+ * HEVC for H.265 format. For more information, see <a href="https://www.iso.org/standard/55980.html">MPEG-4 specification
+ * ISO/IEC 14496-15</a>. For information about adapting stream data to a given format, see <a
+ * href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html">NAL Adaptation
+ *
+ * Flags</a>> </li> <li>
+ *
+ * The audio track (if present) of each fragment must contain codec private data in the AAC format (<a
+ * href="https://www.iso.org/standard/43345.html">AAC specification ISO/IEC 13818-7</a>) or the <a
+ * href="http://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html">MS Wave
+ *
+ * format</a>> </li> </ul>
+ *
+ * You can monitor the amount of outgoing data by monitoring the <code>GetClip.OutgoingBytes</code> Amazon CloudWatch
+ * metric. For information about using CloudWatch to monitor Kinesis Video Streams, see <a
+ * href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/monitoring.html">Monitoring Kinesis Video Streams</a>.
+ * For pricing information, see <a href="https://aws.amazon.com/kinesis/video-streams/pricing/">Amazon Kinesis Video
+ * Streams Pricing</a> and <a href="https://aws.amazon.com/pricing/">AWS Pricing</a>. Charges for outgoing AWS data
+ */
+GetClipResponse * KinesisVideoArchivedMediaClient::getClip(const GetClipRequest &request)
+{
+    return qobject_cast<GetClipResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the KinesisVideoArchivedMediaClient service, and returns a pointer to an
  * GetDASHStreamingSessionURLResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -128,8 +189,8 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  * MPEG-DASH> <ul> <li>
  *
  * The media must contain h.264 or h.265 encoded video and, optionally, AAC or G.711 encoded audio. Specifically, the codec
- * id of track 1 should be <code>V_MPEG/ISO/AVC</code> (for h.264) or V_MPEGH/ISO/HEVC (for H.265). Optionally, the codec
- * id of track 2 should be <code>A_AAC</code> (for AAC) or A_MS/ACM (for
+ * ID of track 1 should be <code>V_MPEG/ISO/AVC</code> (for h.264) or V_MPEGH/ISO/HEVC (for H.265). Optionally, the codec
+ * ID of track 2 should be <code>A_AAC</code> (for AAC) or A_MS/ACM (for
  *
  * G.711)> </li> <li>
  *
@@ -167,8 +228,8 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  *
  * MPEG-DASH)> <note>
  *
- * Don't share or store this token where an unauthorized entity could access it. The token provides access to the content
- * of the stream. Safeguard the token with the same measures that you would use with your AWS
+ * Don't share or store this token where an unauthorized entity can access it. The token provides access to the content of
+ * the stream. Safeguard the token with the same measures that you use with your AWS
  *
  * credentials> </note>
  *
@@ -178,7 +239,7 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  * available> </li> <li>
  *
  * Provide the URL (containing the encrypted session token) for the MPEG-DASH manifest to a media player that supports the
- * MPEG-DASH protocol. Kinesis Video Streams makes the initialization fragment, and media fragments available through the
+ * MPEG-DASH protocol. Kinesis Video Streams makes the initialization fragment and media fragments available through the
  * manifest URL. The initialization fragment contains the codec private data for the stream, and other data needed to set
  * up the video or audio decoder and renderer. The media fragments contain encoded video frames or encoded audio
  *
@@ -222,26 +283,10 @@ KinesisVideoArchivedMediaClient::KinesisVideoArchivedMediaClient(
  *
  * details> </li> </ul> </li> </ol> <note>
  *
- * The following restrictions apply to MPEG-DASH
- *
- * sessions> <ul> <li>
- *
- * A streaming session URL should not be shared between players. The service might throttle a session if multiple media
- * players are sharing it. For connection limits, see <a
+ * For restrictions that apply to MPEG-DASH sessions, see <a
  * href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams
  *
- * Limits</a>> </li> <li>
- *
- * A Kinesis video stream can have a maximum of ten active MPEG-DASH streaming sessions. If a new session is created when
- * the maximum number of sessions is already active, the oldest (earliest created) session is closed. The number of active
- * <code>GetMedia</code> connections on a Kinesis video stream does not count against this limit, and the number of active
- * MPEG-DASH sessions does not count against the active <code>GetMedia</code> connection
- *
- * limit> <note>
- *
- * The maximum limits for active HLS and MPEG-DASH streaming sessions are independent of each other.
- *
- * </p </note> </li> </ul> </note>
+ * Limits</a>> </note>
  *
  * You can monitor the amount of data that the media player consumes by monitoring the
  * <code>GetMP4MediaFragment.OutgoingBytes</code> Amazon CloudWatch metric. For information about using CloudWatch to
@@ -307,9 +352,9 @@ GetDASHStreamingSessionURLResponse * KinesisVideoArchivedMediaClient::getDASHStr
  *
  * HLS> <ul> <li>
  *
- * The media must contain h.264 or h.265 encoded video and, optionally, AAC encoded audio. Specifically, the codec id of
+ * The media must contain h.264 or h.265 encoded video and, optionally, AAC encoded audio. Specifically, the codec ID of
  * track 1 should be <code>V_MPEG/ISO/AVC</code> (for h.264) or <code>V_MPEG/ISO/HEVC</code> (for h.265). Optionally, the
- * codec id of track 2 should be
+ * codec ID of track 2 should be
  *
  * <code>A_AAC</code>> </li> <li>
  *
@@ -433,28 +478,13 @@ GetDASHStreamingSessionURLResponse * KinesisVideoArchivedMediaClient::getDASHStr
  * Data retrieved with this action is billable. For more information, see <a
  * href="https://aws.amazon.com/kinesis/video-streams/pricing/">Kinesis Video Streams
  *
- * pricing</a>> </li> </ul> </li> </ol> <note>
+ * pricing</a>> </li> </ul> </li> </ol>
  *
- * The following restrictions apply to HLS
- *
- * sessions> <ul> <li>
- *
- * A streaming session URL should not be shared between players. The service might throttle a session if multiple media
+ * A streaming session URL must not be shared between players. The service might throttle a session if multiple media
  * players are sharing it. For connection limits, see <a
  * href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams
  *
- * Limits</a>> </li> <li>
- *
- * A Kinesis video stream can have a maximum of ten active HLS streaming sessions. If a new session is created when the
- * maximum number of sessions is already active, the oldest (earliest created) session is closed. The number of active
- * <code>GetMedia</code> connections on a Kinesis video stream does not count against this limit, and the number of active
- * HLS sessions does not count against the active <code>GetMedia</code> connection
- *
- * limit> <note>
- *
- * The maximum limits for active HLS and MPEG-DASH streaming sessions are independent of each
- *
- * other> </note> </li> </ul> </note>
+ * Limits</a>>
  *
  * You can monitor the amount of data that the media player consumes by monitoring the
  * <code>GetMP4MediaFragment.OutgoingBytes</code> Amazon CloudWatch metric. For information about using CloudWatch to
@@ -516,18 +546,9 @@ GetHLSStreamingSessionURLResponse * KinesisVideoArchivedMediaClient::getHLSStrea
  *
  * </p </note>
  *
- * The following limits apply when using the <code>GetMediaForFragmentList</code>
+ * For limits, see <a href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams
  *
- * API> <ul> <li>
- *
- * A client can call <code>GetMediaForFragmentList</code> up to five times per second per stream.
- *
- * </p </li> <li>
- *
- * Kinesis Video Streams sends media data at a rate of up to 25 megabytes per second (or 200 megabits per second) during a
- * <code>GetMediaForFragmentList</code> session.
- *
- * </p </li> </ul> <b>
+ * Limits</a>> <b>
  *
  * If an error is thrown after invoking a Kinesis Video Streams archived media API, in addition to the HTTP status code and
  * the response body, it includes the following pieces of information:

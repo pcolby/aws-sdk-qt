@@ -36,28 +36,45 @@ namespace ElasticsearchService {
  * This enum describes the actions that can be performed as ElasticsearchService
  * requests.
  *
+ * \value AcceptInboundCrossClusterSearchConnectionAction ElasticsearchService AcceptInboundCrossClusterSearchConnection action.
  * \value AddTagsAction ElasticsearchService AddTags action.
+ * \value AssociatePackageAction ElasticsearchService AssociatePackage action.
  * \value CancelElasticsearchServiceSoftwareUpdateAction ElasticsearchService CancelElasticsearchServiceSoftwareUpdate action.
  * \value CreateElasticsearchDomainAction ElasticsearchService CreateElasticsearchDomain action.
+ * \value CreateOutboundCrossClusterSearchConnectionAction ElasticsearchService CreateOutboundCrossClusterSearchConnection action.
+ * \value CreatePackageAction ElasticsearchService CreatePackage action.
  * \value DeleteElasticsearchDomainAction ElasticsearchService DeleteElasticsearchDomain action.
  * \value DeleteElasticsearchServiceRoleAction ElasticsearchService DeleteElasticsearchServiceRole action.
+ * \value DeleteInboundCrossClusterSearchConnectionAction ElasticsearchService DeleteInboundCrossClusterSearchConnection action.
+ * \value DeleteOutboundCrossClusterSearchConnectionAction ElasticsearchService DeleteOutboundCrossClusterSearchConnection action.
+ * \value DeletePackageAction ElasticsearchService DeletePackage action.
+ * \value DescribeDomainAutoTunesAction ElasticsearchService DescribeDomainAutoTunes action.
  * \value DescribeElasticsearchDomainAction ElasticsearchService DescribeElasticsearchDomain action.
  * \value DescribeElasticsearchDomainConfigAction ElasticsearchService DescribeElasticsearchDomainConfig action.
  * \value DescribeElasticsearchDomainsAction ElasticsearchService DescribeElasticsearchDomains action.
  * \value DescribeElasticsearchInstanceTypeLimitsAction ElasticsearchService DescribeElasticsearchInstanceTypeLimits action.
+ * \value DescribeInboundCrossClusterSearchConnectionsAction ElasticsearchService DescribeInboundCrossClusterSearchConnections action.
+ * \value DescribeOutboundCrossClusterSearchConnectionsAction ElasticsearchService DescribeOutboundCrossClusterSearchConnections action.
+ * \value DescribePackagesAction ElasticsearchService DescribePackages action.
  * \value DescribeReservedElasticsearchInstanceOfferingsAction ElasticsearchService DescribeReservedElasticsearchInstanceOfferings action.
  * \value DescribeReservedElasticsearchInstancesAction ElasticsearchService DescribeReservedElasticsearchInstances action.
+ * \value DissociatePackageAction ElasticsearchService DissociatePackage action.
  * \value GetCompatibleElasticsearchVersionsAction ElasticsearchService GetCompatibleElasticsearchVersions action.
+ * \value GetPackageVersionHistoryAction ElasticsearchService GetPackageVersionHistory action.
  * \value GetUpgradeHistoryAction ElasticsearchService GetUpgradeHistory action.
  * \value GetUpgradeStatusAction ElasticsearchService GetUpgradeStatus action.
  * \value ListDomainNamesAction ElasticsearchService ListDomainNames action.
+ * \value ListDomainsForPackageAction ElasticsearchService ListDomainsForPackage action.
  * \value ListElasticsearchInstanceTypesAction ElasticsearchService ListElasticsearchInstanceTypes action.
  * \value ListElasticsearchVersionsAction ElasticsearchService ListElasticsearchVersions action.
+ * \value ListPackagesForDomainAction ElasticsearchService ListPackagesForDomain action.
  * \value ListTagsAction ElasticsearchService ListTags action.
  * \value PurchaseReservedElasticsearchInstanceOfferingAction ElasticsearchService PurchaseReservedElasticsearchInstanceOffering action.
+ * \value RejectInboundCrossClusterSearchConnectionAction ElasticsearchService RejectInboundCrossClusterSearchConnection action.
  * \value RemoveTagsAction ElasticsearchService RemoveTags action.
  * \value StartElasticsearchServiceSoftwareUpdateAction ElasticsearchService StartElasticsearchServiceSoftwareUpdate action.
  * \value UpdateElasticsearchDomainConfigAction ElasticsearchService UpdateElasticsearchDomainConfig action.
+ * \value UpdatePackageAction ElasticsearchService UpdatePackage action.
  * \value UpgradeElasticsearchDomainAction ElasticsearchService UpgradeElasticsearchDomain action.
  */
 

@@ -1,0 +1,70 @@
+find_package(Qt5 COMPONENTS Core Network REQUIRED)
+
+add_library(QtAwsRedshiftDataAPIService
+  cancelstatementrequest.h
+  cancelstatementrequest_p.h
+  cancelstatementresponse.h
+  cancelstatementresponse_p.h
+  describestatementrequest.h
+  describestatementrequest_p.h
+  describestatementresponse.h
+  describestatementresponse_p.h
+  describetablerequest.h
+  describetablerequest_p.h
+  describetableresponse.h
+  describetableresponse_p.h
+  executestatementrequest.h
+  executestatementrequest_p.h
+  executestatementresponse.h
+  executestatementresponse_p.h
+  getstatementresultrequest.h
+  getstatementresultrequest_p.h
+  getstatementresultresponse.h
+  getstatementresultresponse_p.h
+  listdatabasesrequest.h
+  listdatabasesrequest_p.h
+  listdatabasesresponse.h
+  listdatabasesresponse_p.h
+  listschemasrequest.h
+  listschemasrequest_p.h
+  listschemasresponse.h
+  listschemasresponse_p.h
+  liststatementsrequest.h
+  liststatementsrequest_p.h
+  liststatementsresponse.h
+  liststatementsresponse_p.h
+  listtablesrequest.h
+  listtablesrequest_p.h
+  listtablesresponse.h
+  listtablesresponse_p.h
+  redshiftdataapiserviceclient.h
+  redshiftdataapiserviceclient_p.h
+  redshiftdataapiservicerequest.h
+  redshiftdataapiservicerequest_p.h
+  redshiftdataapiserviceresponse.h
+  redshiftdataapiserviceresponse_p.h
+  cancelstatementrequest.cpp
+  cancelstatementresponse.cpp
+  describestatementrequest.cpp
+  describestatementresponse.cpp
+  describetablerequest.cpp
+  describetableresponse.cpp
+  executestatementrequest.cpp
+  executestatementresponse.cpp
+  getstatementresultrequest.cpp
+  getstatementresultresponse.cpp
+  listdatabasesrequest.cpp
+  listdatabasesresponse.cpp
+  listschemasrequest.cpp
+  listschemasresponse.cpp
+  liststatementsrequest.cpp
+  liststatementsresponse.cpp
+  listtablesrequest.cpp
+  listtablesresponse.cpp
+  redshiftdataapiserviceclient.cpp
+  redshiftdataapiservicerequest.cpp
+  redshiftdataapiserviceresponse.cpp)
+
+add_dependencies(QtAwsRedshiftDataAPIService QtAwsCore)
+
+target_link_libraries(QtAwsRedshiftDataAPIService Qt5::Core Qt5::Network)

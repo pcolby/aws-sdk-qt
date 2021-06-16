@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsIoTWireless
+    \title IoTWireless C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS IoTWireless functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

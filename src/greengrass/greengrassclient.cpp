@@ -129,6 +129,8 @@
 #include "getsubscriptiondefinitionresponse.h"
 #include "getsubscriptiondefinitionversionrequest.h"
 #include "getsubscriptiondefinitionversionresponse.h"
+#include "getthingruntimeconfigurationrequest.h"
+#include "getthingruntimeconfigurationresponse.h"
 #include "listbulkdeploymentdetailedreportsrequest.h"
 #include "listbulkdeploymentdetailedreportsresponse.h"
 #include "listbulkdeploymentsrequest.h"
@@ -201,6 +203,8 @@
 #include "updateresourcedefinitionresponse.h"
 #include "updatesubscriptiondefinitionrequest.h"
 #include "updatesubscriptiondefinitionresponse.h"
+#include "updatethingruntimeconfigurationrequest.h"
+#include "updatethingruntimeconfigurationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -952,6 +956,18 @@ GetSubscriptionDefinitionVersionResponse * GreengrassClient::getSubscriptionDefi
 
 /*!
  * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * GetThingRuntimeConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+GetThingRuntimeConfigurationResponse * GreengrassClient::getThingRuntimeConfiguration(const GetThingRuntimeConfigurationRequest &request)
+{
+    return qobject_cast<GetThingRuntimeConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
  * ListBulkDeploymentDetailedReportsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1251,6 +1267,8 @@ StopBulkDeploymentResponse * GreengrassClient::stopBulkDeployment(const StopBulk
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
+ * Adds tags to a Greengrass resource. Valid resources are 'Group', 'ConnectorDefinition', 'CoreDefinition',
+ * 'DeviceDefinition', 'FunctionDefinition', 'LoggerDefinition', 'SubscriptionDefinition', 'ResourceDefinition', and
  */
 TagResourceResponse * GreengrassClient::tagResource(const TagResourceRequest &request)
 {
@@ -1388,6 +1406,18 @@ UpdateResourceDefinitionResponse * GreengrassClient::updateResourceDefinition(co
 UpdateSubscriptionDefinitionResponse * GreengrassClient::updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request)
 {
     return qobject_cast<UpdateSubscriptionDefinitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GreengrassClient service, and returns a pointer to an
+ * UpdateThingRuntimeConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateThingRuntimeConfigurationResponse * GreengrassClient::updateThingRuntimeConfiguration(const UpdateThingRuntimeConfigurationRequest &request)
+{
+    return qobject_cast<UpdateThingRuntimeConfigurationResponse *>(send(request));
 }
 
 /*!

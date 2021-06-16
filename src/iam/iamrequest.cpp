@@ -122,18 +122,24 @@ namespace IAM {
  * \value ListGroupPoliciesAction IAM ListGroupPolicies action.
  * \value ListGroupsAction IAM ListGroups action.
  * \value ListGroupsForUserAction IAM ListGroupsForUser action.
+ * \value ListInstanceProfileTagsAction IAM ListInstanceProfileTags action.
  * \value ListInstanceProfilesAction IAM ListInstanceProfiles action.
  * \value ListInstanceProfilesForRoleAction IAM ListInstanceProfilesForRole action.
+ * \value ListMFADeviceTagsAction IAM ListMFADeviceTags action.
  * \value ListMFADevicesAction IAM ListMFADevices action.
+ * \value ListOpenIDConnectProviderTagsAction IAM ListOpenIDConnectProviderTags action.
  * \value ListOpenIDConnectProvidersAction IAM ListOpenIDConnectProviders action.
  * \value ListPoliciesAction IAM ListPolicies action.
  * \value ListPoliciesGrantingServiceAccessAction IAM ListPoliciesGrantingServiceAccess action.
+ * \value ListPolicyTagsAction IAM ListPolicyTags action.
  * \value ListPolicyVersionsAction IAM ListPolicyVersions action.
  * \value ListRolePoliciesAction IAM ListRolePolicies action.
  * \value ListRoleTagsAction IAM ListRoleTags action.
  * \value ListRolesAction IAM ListRoles action.
+ * \value ListSAMLProviderTagsAction IAM ListSAMLProviderTags action.
  * \value ListSAMLProvidersAction IAM ListSAMLProviders action.
  * \value ListSSHPublicKeysAction IAM ListSSHPublicKeys action.
+ * \value ListServerCertificateTagsAction IAM ListServerCertificateTags action.
  * \value ListServerCertificatesAction IAM ListServerCertificates action.
  * \value ListServiceSpecificCredentialsAction IAM ListServiceSpecificCredentials action.
  * \value ListSigningCertificatesAction IAM ListSigningCertificates action.
@@ -155,9 +161,21 @@ namespace IAM {
  * \value SetSecurityTokenServicePreferencesAction IAM SetSecurityTokenServicePreferences action.
  * \value SimulateCustomPolicyAction IAM SimulateCustomPolicy action.
  * \value SimulatePrincipalPolicyAction IAM SimulatePrincipalPolicy action.
+ * \value TagInstanceProfileAction IAM TagInstanceProfile action.
+ * \value TagMFADeviceAction IAM TagMFADevice action.
+ * \value TagOpenIDConnectProviderAction IAM TagOpenIDConnectProvider action.
+ * \value TagPolicyAction IAM TagPolicy action.
  * \value TagRoleAction IAM TagRole action.
+ * \value TagSAMLProviderAction IAM TagSAMLProvider action.
+ * \value TagServerCertificateAction IAM TagServerCertificate action.
  * \value TagUserAction IAM TagUser action.
+ * \value UntagInstanceProfileAction IAM UntagInstanceProfile action.
+ * \value UntagMFADeviceAction IAM UntagMFADevice action.
+ * \value UntagOpenIDConnectProviderAction IAM UntagOpenIDConnectProvider action.
+ * \value UntagPolicyAction IAM UntagPolicy action.
  * \value UntagRoleAction IAM UntagRole action.
+ * \value UntagSAMLProviderAction IAM UntagSAMLProvider action.
+ * \value UntagServerCertificateAction IAM UntagServerCertificate action.
  * \value UntagUserAction IAM UntagUser action.
  * \value UpdateAccessKeyAction IAM UpdateAccessKey action.
  * \value UpdateAccountPasswordPolicyAction IAM UpdateAccountPasswordPolicy action.

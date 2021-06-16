@@ -1,10 +1,26 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsCodeCommit
+  associateapprovalruletemplatewithrepositoryrequest.h
+  associateapprovalruletemplatewithrepositoryrequest_p.h
+  associateapprovalruletemplatewithrepositoryresponse.h
+  associateapprovalruletemplatewithrepositoryresponse_p.h
+  batchassociateapprovalruletemplatewithrepositoriesrequest.h
+  batchassociateapprovalruletemplatewithrepositoriesrequest_p.h
+  batchassociateapprovalruletemplatewithrepositoriesresponse.h
+  batchassociateapprovalruletemplatewithrepositoriesresponse_p.h
   batchdescribemergeconflictsrequest.h
   batchdescribemergeconflictsrequest_p.h
   batchdescribemergeconflictsresponse.h
   batchdescribemergeconflictsresponse_p.h
+  batchdisassociateapprovalruletemplatefromrepositoriesrequest.h
+  batchdisassociateapprovalruletemplatefromrepositoriesrequest_p.h
+  batchdisassociateapprovalruletemplatefromrepositoriesresponse.h
+  batchdisassociateapprovalruletemplatefromrepositoriesresponse_p.h
+  batchgetcommitsrequest.h
+  batchgetcommitsrequest_p.h
+  batchgetcommitsresponse.h
+  batchgetcommitsresponse_p.h
   batchgetrepositoriesrequest.h
   batchgetrepositoriesrequest_p.h
   batchgetrepositoriesresponse.h
@@ -15,6 +31,10 @@ add_library(QtAwsCodeCommit
   codecommitrequest_p.h
   codecommitresponse.h
   codecommitresponse_p.h
+  createapprovalruletemplaterequest.h
+  createapprovalruletemplaterequest_p.h
+  createapprovalruletemplateresponse.h
+  createapprovalruletemplateresponse_p.h
   createbranchrequest.h
   createbranchrequest_p.h
   createbranchresponse.h
@@ -23,6 +43,10 @@ add_library(QtAwsCodeCommit
   createcommitrequest_p.h
   createcommitresponse.h
   createcommitresponse_p.h
+  createpullrequestapprovalrulerequest.h
+  createpullrequestapprovalrulerequest_p.h
+  createpullrequestapprovalruleresponse.h
+  createpullrequestapprovalruleresponse_p.h
   createpullrequestrequest.h
   createpullrequestrequest_p.h
   createpullrequestresponse.h
@@ -35,6 +59,10 @@ add_library(QtAwsCodeCommit
   createunreferencedmergecommitrequest_p.h
   createunreferencedmergecommitresponse.h
   createunreferencedmergecommitresponse_p.h
+  deleteapprovalruletemplaterequest.h
+  deleteapprovalruletemplaterequest_p.h
+  deleteapprovalruletemplateresponse.h
+  deleteapprovalruletemplateresponse_p.h
   deletebranchrequest.h
   deletebranchrequest_p.h
   deletebranchresponse.h
@@ -47,6 +75,10 @@ add_library(QtAwsCodeCommit
   deletefilerequest_p.h
   deletefileresponse.h
   deletefileresponse_p.h
+  deletepullrequestapprovalrulerequest.h
+  deletepullrequestapprovalrulerequest_p.h
+  deletepullrequestapprovalruleresponse.h
+  deletepullrequestapprovalruleresponse_p.h
   deleterepositoryrequest.h
   deleterepositoryrequest_p.h
   deleterepositoryresponse.h
@@ -59,6 +91,18 @@ add_library(QtAwsCodeCommit
   describepullrequesteventsrequest_p.h
   describepullrequesteventsresponse.h
   describepullrequesteventsresponse_p.h
+  disassociateapprovalruletemplatefromrepositoryrequest.h
+  disassociateapprovalruletemplatefromrepositoryrequest_p.h
+  disassociateapprovalruletemplatefromrepositoryresponse.h
+  disassociateapprovalruletemplatefromrepositoryresponse_p.h
+  evaluatepullrequestapprovalrulesrequest.h
+  evaluatepullrequestapprovalrulesrequest_p.h
+  evaluatepullrequestapprovalrulesresponse.h
+  evaluatepullrequestapprovalrulesresponse_p.h
+  getapprovalruletemplaterequest.h
+  getapprovalruletemplaterequest_p.h
+  getapprovalruletemplateresponse.h
+  getapprovalruletemplateresponse_p.h
   getblobrequest.h
   getblobrequest_p.h
   getblobresponse.h
@@ -67,6 +111,10 @@ add_library(QtAwsCodeCommit
   getbranchrequest_p.h
   getbranchresponse.h
   getbranchresponse_p.h
+  getcommentreactionsrequest.h
+  getcommentreactionsrequest_p.h
+  getcommentreactionsresponse.h
+  getcommentreactionsresponse_p.h
   getcommentrequest.h
   getcommentrequest_p.h
   getcommentresponse.h
@@ -107,6 +155,14 @@ add_library(QtAwsCodeCommit
   getmergeoptionsrequest_p.h
   getmergeoptionsresponse.h
   getmergeoptionsresponse_p.h
+  getpullrequestapprovalstatesrequest.h
+  getpullrequestapprovalstatesrequest_p.h
+  getpullrequestapprovalstatesresponse.h
+  getpullrequestapprovalstatesresponse_p.h
+  getpullrequestoverridestaterequest.h
+  getpullrequestoverridestaterequest_p.h
+  getpullrequestoverridestateresponse.h
+  getpullrequestoverridestateresponse_p.h
   getpullrequestrequest.h
   getpullrequestrequest_p.h
   getpullrequestresponse.h
@@ -119,6 +175,14 @@ add_library(QtAwsCodeCommit
   getrepositorytriggersrequest_p.h
   getrepositorytriggersresponse.h
   getrepositorytriggersresponse_p.h
+  listapprovalruletemplatesrequest.h
+  listapprovalruletemplatesrequest_p.h
+  listapprovalruletemplatesresponse.h
+  listapprovalruletemplatesresponse_p.h
+  listassociatedapprovalruletemplatesforrepositoryrequest.h
+  listassociatedapprovalruletemplatesforrepositoryrequest_p.h
+  listassociatedapprovalruletemplatesforrepositoryresponse.h
+  listassociatedapprovalruletemplatesforrepositoryresponse_p.h
   listbranchesrequest.h
   listbranchesrequest_p.h
   listbranchesresponse.h
@@ -127,6 +191,10 @@ add_library(QtAwsCodeCommit
   listpullrequestsrequest_p.h
   listpullrequestsresponse.h
   listpullrequestsresponse_p.h
+  listrepositoriesforapprovalruletemplaterequest.h
+  listrepositoriesforapprovalruletemplaterequest_p.h
+  listrepositoriesforapprovalruletemplateresponse.h
+  listrepositoriesforapprovalruletemplateresponse_p.h
   listrepositoriesrequest.h
   listrepositoriesrequest_p.h
   listrepositoriesresponse.h
@@ -159,6 +227,10 @@ add_library(QtAwsCodeCommit
   mergepullrequestbythreewayrequest_p.h
   mergepullrequestbythreewayresponse.h
   mergepullrequestbythreewayresponse_p.h
+  overridepullrequestapprovalrulesrequest.h
+  overridepullrequestapprovalrulesrequest_p.h
+  overridepullrequestapprovalrulesresponse.h
+  overridepullrequestapprovalrulesresponse_p.h
   postcommentforcomparedcommitrequest.h
   postcommentforcomparedcommitrequest_p.h
   postcommentforcomparedcommitresponse.h
@@ -171,6 +243,10 @@ add_library(QtAwsCodeCommit
   postcommentreplyrequest_p.h
   postcommentreplyresponse.h
   postcommentreplyresponse_p.h
+  putcommentreactionrequest.h
+  putcommentreactionrequest_p.h
+  putcommentreactionresponse.h
+  putcommentreactionresponse_p.h
   putfilerequest.h
   putfilerequest_p.h
   putfileresponse.h
@@ -191,6 +267,18 @@ add_library(QtAwsCodeCommit
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateapprovalruletemplatecontentrequest.h
+  updateapprovalruletemplatecontentrequest_p.h
+  updateapprovalruletemplatecontentresponse.h
+  updateapprovalruletemplatecontentresponse_p.h
+  updateapprovalruletemplatedescriptionrequest.h
+  updateapprovalruletemplatedescriptionrequest_p.h
+  updateapprovalruletemplatedescriptionresponse.h
+  updateapprovalruletemplatedescriptionresponse_p.h
+  updateapprovalruletemplatenamerequest.h
+  updateapprovalruletemplatenamerequest_p.h
+  updateapprovalruletemplatenameresponse.h
+  updateapprovalruletemplatenameresponse_p.h
   updatecommentrequest.h
   updatecommentrequest_p.h
   updatecommentresponse.h
@@ -199,6 +287,14 @@ add_library(QtAwsCodeCommit
   updatedefaultbranchrequest_p.h
   updatedefaultbranchresponse.h
   updatedefaultbranchresponse_p.h
+  updatepullrequestapprovalrulecontentrequest.h
+  updatepullrequestapprovalrulecontentrequest_p.h
+  updatepullrequestapprovalrulecontentresponse.h
+  updatepullrequestapprovalrulecontentresponse_p.h
+  updatepullrequestapprovalstaterequest.h
+  updatepullrequestapprovalstaterequest_p.h
+  updatepullrequestapprovalstateresponse.h
+  updatepullrequestapprovalstateresponse_p.h
   updatepullrequestdescriptionrequest.h
   updatepullrequestdescriptionrequest_p.h
   updatepullrequestdescriptionresponse.h
@@ -219,39 +315,63 @@ add_library(QtAwsCodeCommit
   updaterepositorynamerequest_p.h
   updaterepositorynameresponse.h
   updaterepositorynameresponse_p.h
+  associateapprovalruletemplatewithrepositoryrequest.cpp
+  associateapprovalruletemplatewithrepositoryresponse.cpp
+  batchassociateapprovalruletemplatewithrepositoriesrequest.cpp
+  batchassociateapprovalruletemplatewithrepositoriesresponse.cpp
   batchdescribemergeconflictsrequest.cpp
   batchdescribemergeconflictsresponse.cpp
+  batchdisassociateapprovalruletemplatefromrepositoriesrequest.cpp
+  batchdisassociateapprovalruletemplatefromrepositoriesresponse.cpp
+  batchgetcommitsrequest.cpp
+  batchgetcommitsresponse.cpp
   batchgetrepositoriesrequest.cpp
   batchgetrepositoriesresponse.cpp
   codecommitclient.cpp
   codecommitrequest.cpp
   codecommitresponse.cpp
+  createapprovalruletemplaterequest.cpp
+  createapprovalruletemplateresponse.cpp
   createbranchrequest.cpp
   createbranchresponse.cpp
   createcommitrequest.cpp
   createcommitresponse.cpp
+  createpullrequestapprovalrulerequest.cpp
+  createpullrequestapprovalruleresponse.cpp
   createpullrequestrequest.cpp
   createpullrequestresponse.cpp
   createrepositoryrequest.cpp
   createrepositoryresponse.cpp
   createunreferencedmergecommitrequest.cpp
   createunreferencedmergecommitresponse.cpp
+  deleteapprovalruletemplaterequest.cpp
+  deleteapprovalruletemplateresponse.cpp
   deletebranchrequest.cpp
   deletebranchresponse.cpp
   deletecommentcontentrequest.cpp
   deletecommentcontentresponse.cpp
   deletefilerequest.cpp
   deletefileresponse.cpp
+  deletepullrequestapprovalrulerequest.cpp
+  deletepullrequestapprovalruleresponse.cpp
   deleterepositoryrequest.cpp
   deleterepositoryresponse.cpp
   describemergeconflictsrequest.cpp
   describemergeconflictsresponse.cpp
   describepullrequesteventsrequest.cpp
   describepullrequesteventsresponse.cpp
+  disassociateapprovalruletemplatefromrepositoryrequest.cpp
+  disassociateapprovalruletemplatefromrepositoryresponse.cpp
+  evaluatepullrequestapprovalrulesrequest.cpp
+  evaluatepullrequestapprovalrulesresponse.cpp
+  getapprovalruletemplaterequest.cpp
+  getapprovalruletemplateresponse.cpp
   getblobrequest.cpp
   getblobresponse.cpp
   getbranchrequest.cpp
   getbranchresponse.cpp
+  getcommentreactionsrequest.cpp
+  getcommentreactionsresponse.cpp
   getcommentrequest.cpp
   getcommentresponse.cpp
   getcommentsforcomparedcommitrequest.cpp
@@ -272,16 +392,26 @@ add_library(QtAwsCodeCommit
   getmergeconflictsresponse.cpp
   getmergeoptionsrequest.cpp
   getmergeoptionsresponse.cpp
+  getpullrequestapprovalstatesrequest.cpp
+  getpullrequestapprovalstatesresponse.cpp
+  getpullrequestoverridestaterequest.cpp
+  getpullrequestoverridestateresponse.cpp
   getpullrequestrequest.cpp
   getpullrequestresponse.cpp
   getrepositoryrequest.cpp
   getrepositoryresponse.cpp
   getrepositorytriggersrequest.cpp
   getrepositorytriggersresponse.cpp
+  listapprovalruletemplatesrequest.cpp
+  listapprovalruletemplatesresponse.cpp
+  listassociatedapprovalruletemplatesforrepositoryrequest.cpp
+  listassociatedapprovalruletemplatesforrepositoryresponse.cpp
   listbranchesrequest.cpp
   listbranchesresponse.cpp
   listpullrequestsrequest.cpp
   listpullrequestsresponse.cpp
+  listrepositoriesforapprovalruletemplaterequest.cpp
+  listrepositoriesforapprovalruletemplateresponse.cpp
   listrepositoriesrequest.cpp
   listrepositoriesresponse.cpp
   listtagsforresourcerequest.cpp
@@ -298,12 +428,16 @@ add_library(QtAwsCodeCommit
   mergepullrequestbysquashresponse.cpp
   mergepullrequestbythreewayrequest.cpp
   mergepullrequestbythreewayresponse.cpp
+  overridepullrequestapprovalrulesrequest.cpp
+  overridepullrequestapprovalrulesresponse.cpp
   postcommentforcomparedcommitrequest.cpp
   postcommentforcomparedcommitresponse.cpp
   postcommentforpullrequestrequest.cpp
   postcommentforpullrequestresponse.cpp
   postcommentreplyrequest.cpp
   postcommentreplyresponse.cpp
+  putcommentreactionrequest.cpp
+  putcommentreactionresponse.cpp
   putfilerequest.cpp
   putfileresponse.cpp
   putrepositorytriggersrequest.cpp
@@ -314,10 +448,20 @@ add_library(QtAwsCodeCommit
   testrepositorytriggersresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateapprovalruletemplatecontentrequest.cpp
+  updateapprovalruletemplatecontentresponse.cpp
+  updateapprovalruletemplatedescriptionrequest.cpp
+  updateapprovalruletemplatedescriptionresponse.cpp
+  updateapprovalruletemplatenamerequest.cpp
+  updateapprovalruletemplatenameresponse.cpp
   updatecommentrequest.cpp
   updatecommentresponse.cpp
   updatedefaultbranchrequest.cpp
   updatedefaultbranchresponse.cpp
+  updatepullrequestapprovalrulecontentrequest.cpp
+  updatepullrequestapprovalrulecontentresponse.cpp
+  updatepullrequestapprovalstaterequest.cpp
+  updatepullrequestapprovalstateresponse.cpp
   updatepullrequestdescriptionrequest.cpp
   updatepullrequestdescriptionresponse.cpp
   updatepullrequeststatusrequest.cpp

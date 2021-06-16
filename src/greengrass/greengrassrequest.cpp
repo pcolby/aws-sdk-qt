@@ -90,6 +90,7 @@ namespace Greengrass {
  * \value GetServiceRoleForAccountAction Greengrass GetServiceRoleForAccount action.
  * \value GetSubscriptionDefinitionAction Greengrass GetSubscriptionDefinition action.
  * \value GetSubscriptionDefinitionVersionAction Greengrass GetSubscriptionDefinitionVersion action.
+ * \value GetThingRuntimeConfigurationAction Greengrass GetThingRuntimeConfiguration action.
  * \value ListBulkDeploymentDetailedReportsAction Greengrass ListBulkDeploymentDetailedReports action.
  * \value ListBulkDeploymentsAction Greengrass ListBulkDeployments action.
  * \value ListConnectorDefinitionVersionsAction Greengrass ListConnectorDefinitionVersions action.
@@ -126,6 +127,7 @@ namespace Greengrass {
  * \value UpdateLoggerDefinitionAction Greengrass UpdateLoggerDefinition action.
  * \value UpdateResourceDefinitionAction Greengrass UpdateResourceDefinition action.
  * \value UpdateSubscriptionDefinitionAction Greengrass UpdateSubscriptionDefinition action.
+ * \value UpdateThingRuntimeConfigurationAction Greengrass UpdateThingRuntimeConfiguration action.
  */
 
 /*!

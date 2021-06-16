@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsEbs
+description = AWS EBS SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsebs-index.html"
+navigation.landingtitle = "EBS"
+navigation.cppclassespage = "EBS C++ Classes"

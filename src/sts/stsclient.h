@@ -36,6 +36,8 @@ class AssumeRoleWithWebIdentityRequest;
 class AssumeRoleWithWebIdentityResponse;
 class DecodeAuthorizationMessageRequest;
 class DecodeAuthorizationMessageResponse;
+class GetAccessKeyInfoRequest;
+class GetAccessKeyInfoResponse;
 class GetCallerIdentityRequest;
 class GetCallerIdentityResponse;
 class GetFederationTokenRequest;
@@ -63,6 +65,7 @@ public slots:
     AssumeRoleWithSAMLResponse * assumeRoleWithSAML(const AssumeRoleWithSAMLRequest &request);
     AssumeRoleWithWebIdentityResponse * assumeRoleWithWebIdentity(const AssumeRoleWithWebIdentityRequest &request);
     DecodeAuthorizationMessageResponse * decodeAuthorizationMessage(const DecodeAuthorizationMessageRequest &request);
+    GetAccessKeyInfoResponse * getAccessKeyInfo(const GetAccessKeyInfoRequest &request);
     GetCallerIdentityResponse * getCallerIdentity(const GetCallerIdentityRequest &request);
     GetFederationTokenResponse * getFederationToken(const GetFederationTokenRequest &request);
     GetSessionTokenResponse * getSessionToken(const GetSessionTokenRequest &request);

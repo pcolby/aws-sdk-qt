@@ -36,8 +36,11 @@ namespace LexRuntimeService {
  * This enum describes the actions that can be performed as LexRuntimeService
  * requests.
  *
+ * \value DeleteSessionAction LexRuntimeService DeleteSession action.
+ * \value GetSessionAction LexRuntimeService GetSession action.
  * \value PostContentAction LexRuntimeService PostContent action.
  * \value PostTextAction LexRuntimeService PostText action.
+ * \value PutSessionAction LexRuntimeService PutSession action.
  */
 
 /*!

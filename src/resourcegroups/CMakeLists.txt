@@ -9,6 +9,10 @@ add_library(QtAwsResourceGroups
   deletegrouprequest_p.h
   deletegroupresponse.h
   deletegroupresponse_p.h
+  getgroupconfigurationrequest.h
+  getgroupconfigurationrequest_p.h
+  getgroupconfigurationresponse.h
+  getgroupconfigurationresponse_p.h
   getgroupqueryrequest.h
   getgroupqueryrequest_p.h
   getgroupqueryresponse.h
@@ -21,6 +25,10 @@ add_library(QtAwsResourceGroups
   gettagsrequest_p.h
   gettagsresponse.h
   gettagsresponse_p.h
+  groupresourcesrequest.h
+  groupresourcesrequest_p.h
+  groupresourcesresponse.h
+  groupresourcesresponse_p.h
   listgroupresourcesrequest.h
   listgroupresourcesrequest_p.h
   listgroupresourcesresponse.h
@@ -29,6 +37,10 @@ add_library(QtAwsResourceGroups
   listgroupsrequest_p.h
   listgroupsresponse.h
   listgroupsresponse_p.h
+  putgroupconfigurationrequest.h
+  putgroupconfigurationrequest_p.h
+  putgroupconfigurationresponse.h
+  putgroupconfigurationresponse_p.h
   resourcegroupsclient.h
   resourcegroupsclient_p.h
   resourcegroupsrequest.h
@@ -43,6 +55,10 @@ add_library(QtAwsResourceGroups
   tagrequest_p.h
   tagresponse.h
   tagresponse_p.h
+  ungroupresourcesrequest.h
+  ungroupresourcesrequest_p.h
+  ungroupresourcesresponse.h
+  ungroupresourcesresponse_p.h
   untagrequest.h
   untagrequest_p.h
   untagresponse.h
@@ -59,16 +75,22 @@ add_library(QtAwsResourceGroups
   creategroupresponse.cpp
   deletegrouprequest.cpp
   deletegroupresponse.cpp
+  getgroupconfigurationrequest.cpp
+  getgroupconfigurationresponse.cpp
   getgroupqueryrequest.cpp
   getgroupqueryresponse.cpp
   getgrouprequest.cpp
   getgroupresponse.cpp
   gettagsrequest.cpp
   gettagsresponse.cpp
+  groupresourcesrequest.cpp
+  groupresourcesresponse.cpp
   listgroupresourcesrequest.cpp
   listgroupresourcesresponse.cpp
   listgroupsrequest.cpp
   listgroupsresponse.cpp
+  putgroupconfigurationrequest.cpp
+  putgroupconfigurationresponse.cpp
   resourcegroupsclient.cpp
   resourcegroupsrequest.cpp
   resourcegroupsresponse.cpp
@@ -76,6 +98,8 @@ add_library(QtAwsResourceGroups
   searchresourcesresponse.cpp
   tagrequest.cpp
   tagresponse.cpp
+  ungroupresourcesrequest.cpp
+  ungroupresourcesresponse.cpp
   untagrequest.cpp
   untagresponse.cpp
   updategroupqueryrequest.cpp

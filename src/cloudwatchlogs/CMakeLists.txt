@@ -43,6 +43,10 @@ add_library(QtAwsCloudWatchLogs
   deletemetricfilterrequest_p.h
   deletemetricfilterresponse.h
   deletemetricfilterresponse_p.h
+  deletequerydefinitionrequest.h
+  deletequerydefinitionrequest_p.h
+  deletequerydefinitionresponse.h
+  deletequerydefinitionresponse_p.h
   deleteresourcepolicyrequest.h
   deleteresourcepolicyrequest_p.h
   deleteresourcepolicyresponse.h
@@ -79,6 +83,10 @@ add_library(QtAwsCloudWatchLogs
   describequeriesrequest_p.h
   describequeriesresponse.h
   describequeriesresponse_p.h
+  describequerydefinitionsrequest.h
+  describequerydefinitionsrequest_p.h
+  describequerydefinitionsresponse.h
+  describequerydefinitionsresponse_p.h
   describeresourcepoliciesrequest.h
   describeresourcepoliciesrequest_p.h
   describeresourcepoliciesresponse.h
@@ -131,6 +139,10 @@ add_library(QtAwsCloudWatchLogs
   putmetricfilterrequest_p.h
   putmetricfilterresponse.h
   putmetricfilterresponse_p.h
+  putquerydefinitionrequest.h
+  putquerydefinitionrequest_p.h
+  putquerydefinitionresponse.h
+  putquerydefinitionresponse_p.h
   putresourcepolicyrequest.h
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
@@ -184,6 +196,8 @@ add_library(QtAwsCloudWatchLogs
   deletelogstreamresponse.cpp
   deletemetricfilterrequest.cpp
   deletemetricfilterresponse.cpp
+  deletequerydefinitionrequest.cpp
+  deletequerydefinitionresponse.cpp
   deleteresourcepolicyrequest.cpp
   deleteresourcepolicyresponse.cpp
   deleteretentionpolicyrequest.cpp
@@ -202,6 +216,8 @@ add_library(QtAwsCloudWatchLogs
   describemetricfiltersresponse.cpp
   describequeriesrequest.cpp
   describequeriesresponse.cpp
+  describequerydefinitionsrequest.cpp
+  describequerydefinitionsresponse.cpp
   describeresourcepoliciesrequest.cpp
   describeresourcepoliciesresponse.cpp
   describesubscriptionfiltersrequest.cpp
@@ -228,6 +244,8 @@ add_library(QtAwsCloudWatchLogs
   putlogeventsresponse.cpp
   putmetricfilterrequest.cpp
   putmetricfilterresponse.cpp
+  putquerydefinitionrequest.cpp
+  putquerydefinitionresponse.cpp
   putresourcepolicyrequest.cpp
   putresourcepolicyresponse.cpp
   putretentionpolicyrequest.cpp

@@ -47,17 +47,24 @@ namespace ApiGatewayV2 {
  * \value CreateRouteAction ApiGatewayV2 CreateRoute action.
  * \value CreateRouteResponseAction ApiGatewayV2 CreateRouteResponse action.
  * \value CreateStageAction ApiGatewayV2 CreateStage action.
+ * \value CreateVpcLinkAction ApiGatewayV2 CreateVpcLink action.
+ * \value DeleteAccessLogSettingsAction ApiGatewayV2 DeleteAccessLogSettings action.
  * \value DeleteApiAction ApiGatewayV2 DeleteApi action.
  * \value DeleteApiMappingAction ApiGatewayV2 DeleteApiMapping action.
  * \value DeleteAuthorizerAction ApiGatewayV2 DeleteAuthorizer action.
+ * \value DeleteCorsConfigurationAction ApiGatewayV2 DeleteCorsConfiguration action.
  * \value DeleteDeploymentAction ApiGatewayV2 DeleteDeployment action.
  * \value DeleteDomainNameAction ApiGatewayV2 DeleteDomainName action.
  * \value DeleteIntegrationAction ApiGatewayV2 DeleteIntegration action.
  * \value DeleteIntegrationResponseAction ApiGatewayV2 DeleteIntegrationResponse action.
  * \value DeleteModelAction ApiGatewayV2 DeleteModel action.
  * \value DeleteRouteAction ApiGatewayV2 DeleteRoute action.
+ * \value DeleteRouteRequestParameterAction ApiGatewayV2 DeleteRouteRequestParameter action.
  * \value DeleteRouteResponseAction ApiGatewayV2 DeleteRouteResponse action.
+ * \value DeleteRouteSettingsAction ApiGatewayV2 DeleteRouteSettings action.
  * \value DeleteStageAction ApiGatewayV2 DeleteStage action.
+ * \value DeleteVpcLinkAction ApiGatewayV2 DeleteVpcLink action.
+ * \value ExportApiAction ApiGatewayV2 ExportApi action.
  * \value GetApiAction ApiGatewayV2 GetApi action.
  * \value GetApiMappingAction ApiGatewayV2 GetApiMapping action.
  * \value GetApiMappingsAction ApiGatewayV2 GetApiMappings action.
@@ -82,6 +89,11 @@ namespace ApiGatewayV2 {
  * \value GetStageAction ApiGatewayV2 GetStage action.
  * \value GetStagesAction ApiGatewayV2 GetStages action.
  * \value GetTagsAction ApiGatewayV2 GetTags action.
+ * \value GetVpcLinkAction ApiGatewayV2 GetVpcLink action.
+ * \value GetVpcLinksAction ApiGatewayV2 GetVpcLinks action.
+ * \value ImportApiAction ApiGatewayV2 ImportApi action.
+ * \value ReimportApiAction ApiGatewayV2 ReimportApi action.
+ * \value ResetAuthorizersCacheAction ApiGatewayV2 ResetAuthorizersCache action.
  * \value TagResourceAction ApiGatewayV2 TagResource action.
  * \value UntagResourceAction ApiGatewayV2 UntagResource action.
  * \value UpdateApiAction ApiGatewayV2 UpdateApi action.
@@ -95,6 +107,7 @@ namespace ApiGatewayV2 {
  * \value UpdateRouteAction ApiGatewayV2 UpdateRoute action.
  * \value UpdateRouteResponseAction ApiGatewayV2 UpdateRouteResponse action.
  * \value UpdateStageAction ApiGatewayV2 UpdateStage action.
+ * \value UpdateVpcLinkAction ApiGatewayV2 UpdateVpcLink action.
  */
 
 /*!

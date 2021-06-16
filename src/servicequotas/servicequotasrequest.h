@@ -51,8 +51,11 @@ public:
         ListServiceQuotaIncreaseRequestsInTemplateAction,
         ListServiceQuotasAction,
         ListServicesAction,
+        ListTagsForResourceAction,
         PutServiceQuotaIncreaseRequestIntoTemplateAction,
         RequestServiceQuotaIncreaseAction,
+        TagResourceAction,
+        UntagResourceAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

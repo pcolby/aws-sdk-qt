@@ -47,6 +47,10 @@ add_library(QtAwsCognitoIdentity
   getopenidtokenrequest_p.h
   getopenidtokenresponse.h
   getopenidtokenresponse_p.h
+  getprincipaltagattributemaprequest.h
+  getprincipaltagattributemaprequest_p.h
+  getprincipaltagattributemapresponse.h
+  getprincipaltagattributemapresponse_p.h
   listidentitiesrequest.h
   listidentitiesrequest_p.h
   listidentitiesresponse.h
@@ -71,6 +75,10 @@ add_library(QtAwsCognitoIdentity
   setidentitypoolrolesrequest_p.h
   setidentitypoolrolesresponse.h
   setidentitypoolrolesresponse_p.h
+  setprincipaltagattributemaprequest.h
+  setprincipaltagattributemaprequest_p.h
+  setprincipaltagattributemapresponse.h
+  setprincipaltagattributemapresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -114,6 +122,8 @@ add_library(QtAwsCognitoIdentity
   getopenidtokenfordeveloperidentityresponse.cpp
   getopenidtokenrequest.cpp
   getopenidtokenresponse.cpp
+  getprincipaltagattributemaprequest.cpp
+  getprincipaltagattributemapresponse.cpp
   listidentitiesrequest.cpp
   listidentitiesresponse.cpp
   listidentitypoolsrequest.cpp
@@ -126,6 +136,8 @@ add_library(QtAwsCognitoIdentity
   mergedeveloperidentitiesresponse.cpp
   setidentitypoolrolesrequest.cpp
   setidentitypoolrolesresponse.cpp
+  setprincipaltagattributemaprequest.cpp
+  setprincipaltagattributemapresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   unlinkdeveloperidentityrequest.cpp

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsFis
+description = AWS FIS SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsfis-index.html"
+navigation.landingtitle = "FIS"
+navigation.cppclassespage = "FIS C++ Classes"

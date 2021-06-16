@@ -21,16 +21,22 @@
 #include "personalizeclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createbatchinferencejobrequest.h"
+#include "createbatchinferencejobresponse.h"
 #include "createcampaignrequest.h"
 #include "createcampaignresponse.h"
 #include "createdatasetrequest.h"
 #include "createdatasetresponse.h"
+#include "createdatasetexportjobrequest.h"
+#include "createdatasetexportjobresponse.h"
 #include "createdatasetgrouprequest.h"
 #include "createdatasetgroupresponse.h"
 #include "createdatasetimportjobrequest.h"
 #include "createdatasetimportjobresponse.h"
 #include "createeventtrackerrequest.h"
 #include "createeventtrackerresponse.h"
+#include "createfilterrequest.h"
+#include "createfilterresponse.h"
 #include "createschemarequest.h"
 #include "createschemaresponse.h"
 #include "createsolutionrequest.h"
@@ -45,16 +51,22 @@
 #include "deletedatasetgroupresponse.h"
 #include "deleteeventtrackerrequest.h"
 #include "deleteeventtrackerresponse.h"
+#include "deletefilterrequest.h"
+#include "deletefilterresponse.h"
 #include "deleteschemarequest.h"
 #include "deleteschemaresponse.h"
 #include "deletesolutionrequest.h"
 #include "deletesolutionresponse.h"
 #include "describealgorithmrequest.h"
 #include "describealgorithmresponse.h"
+#include "describebatchinferencejobrequest.h"
+#include "describebatchinferencejobresponse.h"
 #include "describecampaignrequest.h"
 #include "describecampaignresponse.h"
 #include "describedatasetrequest.h"
 #include "describedatasetresponse.h"
+#include "describedatasetexportjobrequest.h"
+#include "describedatasetexportjobresponse.h"
 #include "describedatasetgrouprequest.h"
 #include "describedatasetgroupresponse.h"
 #include "describedatasetimportjobrequest.h"
@@ -63,6 +75,8 @@
 #include "describeeventtrackerresponse.h"
 #include "describefeaturetransformationrequest.h"
 #include "describefeaturetransformationresponse.h"
+#include "describefilterrequest.h"
+#include "describefilterresponse.h"
 #include "describereciperequest.h"
 #include "describereciperesponse.h"
 #include "describeschemarequest.h"
@@ -73,8 +87,12 @@
 #include "describesolutionversionresponse.h"
 #include "getsolutionmetricsrequest.h"
 #include "getsolutionmetricsresponse.h"
+#include "listbatchinferencejobsrequest.h"
+#include "listbatchinferencejobsresponse.h"
 #include "listcampaignsrequest.h"
 #include "listcampaignsresponse.h"
+#include "listdatasetexportjobsrequest.h"
+#include "listdatasetexportjobsresponse.h"
 #include "listdatasetgroupsrequest.h"
 #include "listdatasetgroupsresponse.h"
 #include "listdatasetimportjobsrequest.h"
@@ -83,6 +101,8 @@
 #include "listdatasetsresponse.h"
 #include "listeventtrackersrequest.h"
 #include "listeventtrackersresponse.h"
+#include "listfiltersrequest.h"
+#include "listfiltersresponse.h"
 #include "listrecipesrequest.h"
 #include "listrecipesresponse.h"
 #include "listschemasrequest.h"
@@ -91,6 +111,8 @@
 #include "listsolutionversionsresponse.h"
 #include "listsolutionsrequest.h"
 #include "listsolutionsresponse.h"
+#include "stopsolutionversioncreationrequest.h"
+#include "stopsolutionversioncreationresponse.h"
 #include "updatecampaignrequest.h"
 #include "updatecampaignresponse.h"
 
@@ -174,6 +196,20 @@ PersonalizeClient::PersonalizeClient(
 
 /*!
  * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * CreateBatchInferenceJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a batch inference job. The operation can handle up to 50 million records and the input file must be in JSON
+ * format. For more information, see
+ */
+CreateBatchInferenceJobResponse * PersonalizeClient::createBatchInferenceJob(const CreateBatchInferenceJobRequest &request)
+{
+    return qobject_cast<CreateBatchInferenceJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
  * CreateCampaignResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -192,11 +228,19 @@ PersonalizeClient::PersonalizeClient(
  * A transaction is a single <code>GetRecommendations</code> or <code>GetPersonalizedRanking</code> call. Transactions per
  * second (TPS) is the throughput and unit of billing for Amazon Personalize. The minimum provisioned TPS
  * (<code>minProvisionedTPS</code>) specifies the baseline throughput provisioned by Amazon Personalize, and thus, the
- * minimum billing charge. If your TPS increases beyond <code>minProvisionedTPS</code>, Amazon Personalize auto-scales the
- * provisioned capacity up and down, but never below <code>minProvisionedTPS</code>, to maintain a 70% utilization. There's
- * a short time delay while the capacity is increased that might cause loss of transactions. It's recommended to start with
- * a low <code>minProvisionedTPS</code>, track your usage using Amazon CloudWatch metrics, and then increase the
- * <code>minProvisionedTPS</code> as
+ * minimum billing charge.
+ *
+ * </p
+ *
+ * If your TPS increases beyond <code>minProvisionedTPS</code>, Amazon Personalize auto-scales the provisioned capacity up
+ * and down, but never below <code>minProvisionedTPS</code>. There's a short time delay while the capacity is increased
+ * that might cause loss of
+ *
+ * transactions>
+ *
+ * The actual TPS used is calculated as the average requests/second within a 5-minute window. You pay for maximum of either
+ * the minimum provisioned TPS or the actual TPS. We recommend starting with a low <code>minProvisionedTPS</code>, track
+ * your usage using Amazon CloudWatch metrics, and then increase the <code>minProvisionedTPS</code> as
  *
  * necessary>
  *
@@ -310,6 +354,41 @@ CreateDatasetResponse * PersonalizeClient::createDataset(const CreateDatasetRequ
 
 /*!
  * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * CreateDatasetExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a job that exports data from your dataset to an Amazon S3 bucket. To allow Amazon Personalize to export the
+ * training data, you must specify an service-linked AWS Identity and Access Management (IAM) role that gives Amazon
+ * Personalize <code>PutObject</code> permissions for your Amazon S3 bucket. For information, see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/export-data.html">Exporting a dataset</a> in the Amazon
+ * Personalize developer guide.
+ *
+ * </p
+ *
+ * <b>Status</b>
+ *
+ * </p
+ *
+ * A dataset export job can be in one of the following
+ *
+ * states> <ul> <li>
+ *
+ * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
+ *
+ * FAILE> </li> </ul>
+ *
+ * To get the status of the export job, call <a>DescribeDatasetExportJob</a>, and specify the Amazon Resource Name (ARN) of
+ * the dataset export job. The dataset export is complete when the status shows as ACTIVE. If the status shows as CREATE
+ * FAILED, the response includes a <code>failureReason</code> key, which describes why the job failed.
+ */
+CreateDatasetExportJobResponse * PersonalizeClient::createDatasetExportJob(const CreateDatasetExportJobRequest &request)
+{
+    return qobject_cast<CreateDatasetExportJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
  * CreateDatasetGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -395,13 +474,16 @@ CreateDatasetGroupResponse * PersonalizeClient::createDatasetGroup(const CreateD
  *
  * Creates a job that imports training data from your data source (an Amazon S3 bucket) to an Amazon Personalize dataset.
  * To allow Amazon Personalize to import the training data, you must specify an AWS Identity and Access Management (IAM)
- * role that has permission to read from the data
+ * service role that has permission to read from the data source, as Amazon Personalize makes a copy of your data and
+ * processes it in an internal AWS system. For information on granting access to your Amazon S3 bucket, see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/granting-personalize-s3-access.html">Giving Amazon Personalize
+ * Access to Amazon S3 Resources</a>.
  *
- * source> <b>
+ * </p <b>
  *
- * The dataset import job replaces any previous data in the
+ * The dataset import job replaces any existing data in the dataset that you imported in
  *
- * dataset> </b>
+ * bulk> </b>
  *
  * <b>Status</b>
  *
@@ -444,26 +526,22 @@ CreateDatasetImportJobResponse * PersonalizeClient::createDatasetImportJob(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates an event tracker that you use when sending event data to the specified dataset group using the <a
+ * Creates an event tracker that you use when adding event data to a specified dataset group using the <a
  * href="https://docs.aws.amazon.com/personalize/latest/dg/API_UBS_PutEvents.html">PutEvents</a>
  *
- * API>
- *
- * When Amazon Personalize creates an event tracker, it also creates an <i>event-interactions</i> dataset in the dataset
- * group associated with the event tracker. The event-interactions dataset stores the event data from the
- * <code>PutEvents</code> call. The contents of this dataset are not available to the
- *
- * user> <note>
+ * API> <note>
  *
  * Only one event tracker can be associated with a dataset group. You will get an error if you call
  * <code>CreateEventTracker</code> using the same dataset group as an existing event
  *
  * tracker> </note>
  *
- * When you send event data you include your tracking ID. The tracking ID identifies the customer and authorizes the
- * customer to send the
+ * When you create an event tracker, the response includes a tracking ID, which you pass as a parameter when you use the <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/API_UBS_PutEvents.html">PutEvents</a> operation. Amazon
+ * Personalize then appends the event data to the Interactions dataset of the dataset group you specify in your event
+ * tracker.
  *
- * data>
+ * </p
  *
  * The event tracker can be in one of the following
  *
@@ -500,6 +578,19 @@ CreateDatasetImportJobResponse * PersonalizeClient::createDatasetImportJob(const
 CreateEventTrackerResponse * PersonalizeClient::createEventTracker(const CreateEventTrackerRequest &request)
 {
     return qobject_cast<CreateEventTrackerResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * CreateFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a recommendation filter. For more information, see
+ */
+CreateFilterResponse * PersonalizeClient::createFilter(const CreateFilterRequest &request)
+{
+    return qobject_cast<CreateFilterResponse *>(send(request));
 }
 
 /*!
@@ -557,7 +648,12 @@ CreateSchemaResponse * PersonalizeClient::createSchema(const CreateSchemaRequest
  * one of the predefined recipes provided by Amazon Personalize. Alternatively, you can specify <code>performAutoML</code>
  * and Amazon Personalize will analyze your data and select the optimum USER_PERSONALIZATION recipe for
  *
- * you>
+ * you> <note>
+ *
+ * Amazon Personalize doesn't support configuring the <code>hpoObjective</code> for solution hyperparameter optimization at
+ * this
+ *
+ * time> </note>
  *
  * <b>Status</b>
  *
@@ -628,9 +724,27 @@ CreateSolutionResponse * PersonalizeClient::createSolution(const CreateSolutionR
  *
  * states> <ul> <li>
  *
- * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
+ * CREATE
  *
- * FAILE> </li> </ul>
+ * PENDIN> </li> <li>
+ *
+ * CREATE
+ *
+ * IN_PROGRES> </li> <li>
+ *
+ * ACTIV> </li> <li>
+ *
+ * CREATE
+ *
+ * FAILE> </li> <li>
+ *
+ * CREATE
+ *
+ * STOPPIN> </li> <li>
+ *
+ * CREATE
+ *
+ * STOPPE> </li> </ul>
  *
  * To get the status of the version, call <a>DescribeSolutionVersion</a>. Wait until the status shows as ACTIVE before
  * calling
@@ -742,6 +856,19 @@ DeleteEventTrackerResponse * PersonalizeClient::deleteEventTracker(const DeleteE
 
 /*!
  * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * DeleteFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a
+ */
+DeleteFilterResponse * PersonalizeClient::deleteFilter(const DeleteFilterRequest &request)
+{
+    return qobject_cast<DeleteFilterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
  * DeleteSchemaResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -782,6 +909,20 @@ DeleteSolutionResponse * PersonalizeClient::deleteSolution(const DeleteSolutionR
 DescribeAlgorithmResponse * PersonalizeClient::describeAlgorithm(const DescribeAlgorithmRequest &request)
 {
     return qobject_cast<DescribeAlgorithmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * DescribeBatchInferenceJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties of a batch inference job including name, Amazon Resource Name (ARN), status, input and output
+ * configurations, and the ARN of the solution version used to generate the
+ */
+DescribeBatchInferenceJobResponse * PersonalizeClient::describeBatchInferenceJob(const DescribeBatchInferenceJobRequest &request)
+{
+    return qobject_cast<DescribeBatchInferenceJobResponse *>(send(request));
 }
 
 /*!
@@ -829,6 +970,19 @@ DescribeCampaignResponse * PersonalizeClient::describeCampaign(const DescribeCam
 DescribeDatasetResponse * PersonalizeClient::describeDataset(const DescribeDatasetRequest &request)
 {
     return qobject_cast<DescribeDatasetResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * DescribeDatasetExportJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the dataset export job created by <a>CreateDatasetExportJob</a>, including the export job
+ */
+DescribeDatasetExportJobResponse * PersonalizeClient::describeDatasetExportJob(const DescribeDatasetExportJobRequest &request)
+{
+    return qobject_cast<DescribeDatasetExportJobResponse *>(send(request));
 }
 
 /*!
@@ -882,6 +1036,19 @@ DescribeEventTrackerResponse * PersonalizeClient::describeEventTracker(const Des
 DescribeFeatureTransformationResponse * PersonalizeClient::describeFeatureTransformation(const DescribeFeatureTransformationRequest &request)
 {
     return qobject_cast<DescribeFeatureTransformationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * DescribeFilterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a filter's
+ */
+DescribeFilterResponse * PersonalizeClient::describeFilter(const DescribeFilterRequest &request)
+{
+    return qobject_cast<DescribeFilterResponse *>(send(request));
 }
 
 /*!
@@ -974,6 +1141,19 @@ GetSolutionMetricsResponse * PersonalizeClient::getSolutionMetrics(const GetSolu
 
 /*!
  * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * ListBatchInferenceJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the batch inference jobs that have been performed off of a solution
+ */
+ListBatchInferenceJobsResponse * PersonalizeClient::listBatchInferenceJobs(const ListBatchInferenceJobsRequest &request)
+{
+    return qobject_cast<ListBatchInferenceJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
  * ListCampaignsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -985,6 +1165,22 @@ GetSolutionMetricsResponse * PersonalizeClient::getSolutionMetrics(const GetSolu
 ListCampaignsResponse * PersonalizeClient::listCampaigns(const ListCampaignsRequest &request)
 {
     return qobject_cast<ListCampaignsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * ListDatasetExportJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of dataset export jobs that use the given dataset. When a dataset is not specified, all the dataset
+ * export jobs associated with the account are listed. The response provides the properties for each dataset export job,
+ * including the Amazon Resource Name (ARN). For more information on dataset export jobs, see
+ * <a>CreateDatasetExportJob</a>. For more information on datasets, see
+ */
+ListDatasetExportJobsResponse * PersonalizeClient::listDatasetExportJobs(const ListDatasetExportJobsRequest &request)
+{
+    return qobject_cast<ListDatasetExportJobsResponse *>(send(request));
 }
 
 /*!
@@ -1047,6 +1243,19 @@ ListEventTrackersResponse * PersonalizeClient::listEventTrackers(const ListEvent
 
 /*!
  * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * ListFiltersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all filters that belong to a given dataset
+ */
+ListFiltersResponse * PersonalizeClient::listFilters(const ListFiltersRequest &request)
+{
+    return qobject_cast<ListFiltersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
  * ListRecipesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1101,6 +1310,38 @@ ListSolutionVersionsResponse * PersonalizeClient::listSolutionVersions(const Lis
 ListSolutionsResponse * PersonalizeClient::listSolutions(const ListSolutionsRequest &request)
 {
     return qobject_cast<ListSolutionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the PersonalizeClient service, and returns a pointer to an
+ * StopSolutionVersionCreationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops creating a solution version that is in a state of CREATE_PENDING or CREATE IN_PROGRESS.
+ *
+ * </p
+ *
+ * Depending on the current state of the solution version, the solution version state changes as
+ *
+ * follows> <ul> <li>
+ *
+ * CREATE_PENDING &gt;
+ *
+ * CREATE_STOPPE>
+ *
+ * o> </li> <li>
+ *
+ * CREATE_IN_PROGRESS &gt; CREATE_STOPPING &gt;
+ *
+ * CREATE_STOPPE> </li> </ul>
+ *
+ * You are billed for all of the training completed up until you stop the solution version creation. You cannot resume
+ * creating a solution version once it has been
+ */
+StopSolutionVersionCreationResponse * PersonalizeClient::stopSolutionVersionCreation(const StopSolutionVersionCreationRequest &request)
+{
+    return qobject_cast<StopSolutionVersionCreationResponse *>(send(request));
 }
 
 /*!

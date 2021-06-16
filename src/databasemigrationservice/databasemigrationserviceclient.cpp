@@ -25,6 +25,8 @@
 #include "addtagstoresourceresponse.h"
 #include "applypendingmaintenanceactionrequest.h"
 #include "applypendingmaintenanceactionresponse.h"
+#include "cancelreplicationtaskassessmentrunrequest.h"
+#include "cancelreplicationtaskassessmentrunresponse.h"
 #include "createendpointrequest.h"
 #include "createendpointresponse.h"
 #include "createeventsubscriptionrequest.h"
@@ -37,6 +39,8 @@
 #include "createreplicationtaskresponse.h"
 #include "deletecertificaterequest.h"
 #include "deletecertificateresponse.h"
+#include "deleteconnectionrequest.h"
+#include "deleteconnectionresponse.h"
 #include "deleteendpointrequest.h"
 #include "deleteendpointresponse.h"
 #include "deleteeventsubscriptionrequest.h"
@@ -47,12 +51,18 @@
 #include "deletereplicationsubnetgroupresponse.h"
 #include "deletereplicationtaskrequest.h"
 #include "deletereplicationtaskresponse.h"
+#include "deletereplicationtaskassessmentrunrequest.h"
+#include "deletereplicationtaskassessmentrunresponse.h"
 #include "describeaccountattributesrequest.h"
 #include "describeaccountattributesresponse.h"
+#include "describeapplicableindividualassessmentsrequest.h"
+#include "describeapplicableindividualassessmentsresponse.h"
 #include "describecertificatesrequest.h"
 #include "describecertificatesresponse.h"
 #include "describeconnectionsrequest.h"
 #include "describeconnectionsresponse.h"
+#include "describeendpointsettingsrequest.h"
+#include "describeendpointsettingsresponse.h"
 #include "describeendpointtypesrequest.h"
 #include "describeendpointtypesresponse.h"
 #include "describeendpointsrequest.h"
@@ -77,6 +87,10 @@
 #include "describereplicationsubnetgroupsresponse.h"
 #include "describereplicationtaskassessmentresultsrequest.h"
 #include "describereplicationtaskassessmentresultsresponse.h"
+#include "describereplicationtaskassessmentrunsrequest.h"
+#include "describereplicationtaskassessmentrunsresponse.h"
+#include "describereplicationtaskindividualassessmentsrequest.h"
+#include "describereplicationtaskindividualassessmentsresponse.h"
 #include "describereplicationtasksrequest.h"
 #include "describereplicationtasksresponse.h"
 #include "describeschemasrequest.h"
@@ -97,6 +111,8 @@
 #include "modifyreplicationsubnetgroupresponse.h"
 #include "modifyreplicationtaskrequest.h"
 #include "modifyreplicationtaskresponse.h"
+#include "movereplicationtaskrequest.h"
+#include "movereplicationtaskresponse.h"
 #include "rebootreplicationinstancerequest.h"
 #include "rebootreplicationinstanceresponse.h"
 #include "refreshschemasrequest.h"
@@ -109,6 +125,8 @@
 #include "startreplicationtaskresponse.h"
 #include "startreplicationtaskassessmentrequest.h"
 #include "startreplicationtaskassessmentresponse.h"
+#include "startreplicationtaskassessmentrunrequest.h"
+#include "startreplicationtaskassessmentrunresponse.h"
 #include "stopreplicationtaskrequest.h"
 #include "stopreplicationtaskresponse.h"
 #include "testconnectionrequest.h"
@@ -210,7 +228,8 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
  *
  * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task.
  * These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a
- * Condition statement in an IAM policy for
+ * Condition statement in an IAM policy for DMS. For more information, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type
  */
 AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(const AddTagsToResourceRequest &request)
 {
@@ -228,6 +247,24 @@ AddTagsToResourceResponse * DatabaseMigrationServiceClient::addTagsToResource(co
 ApplyPendingMaintenanceActionResponse * DatabaseMigrationServiceClient::applyPendingMaintenanceAction(const ApplyPendingMaintenanceActionRequest &request)
 {
     return qobject_cast<ApplyPendingMaintenanceActionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * CancelReplicationTaskAssessmentRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels a single premigration assessment
+ *
+ * run>
+ *
+ * This operation prevents any individual assessments from running if they haven't started running. It also attempts to
+ * cancel any individual assessments that are currently
+ */
+CancelReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::cancelReplicationTaskAssessmentRun(const CancelReplicationTaskAssessmentRunRequest &request)
+{
+    return qobject_cast<CancelReplicationTaskAssessmentRunResponse *>(send(request));
 }
 
 /*!
@@ -281,6 +318,15 @@ CreateEventSubscriptionResponse * DatabaseMigrationServiceClient::createEventSub
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates the replication instance using the specified
+ *
+ * parameters>
+ *
+ * AWS DMS requires that your account have certain roles with appropriate permissions before you can create a replication
+ * instance. For information on the required roles, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.APIRole">Creating the IAM Roles
+ * to Use With the AWS CLI and AWS DMS API</a>. For information on the required permissions, see <a
+ * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM Permissions
+ * Needed to Use AWS
  */
 CreateReplicationInstanceResponse * DatabaseMigrationServiceClient::createReplicationInstance(const CreateReplicationInstanceRequest &request)
 {
@@ -324,6 +370,19 @@ CreateReplicationTaskResponse * DatabaseMigrationServiceClient::createReplicatio
 DeleteCertificateResponse * DatabaseMigrationServiceClient::deleteCertificate(const DeleteCertificateRequest &request)
 {
     return qobject_cast<DeleteCertificateResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteConnectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the connection between a replication instance and an
+ */
+DeleteConnectionResponse * DatabaseMigrationServiceClient::deleteConnection(const DeleteConnectionRequest &request)
+{
+    return qobject_cast<DeleteConnectionResponse *>(send(request));
 }
 
 /*!
@@ -401,21 +460,74 @@ DeleteReplicationTaskResponse * DatabaseMigrationServiceClient::deleteReplicatio
 
 /*!
  * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DeleteReplicationTaskAssessmentRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the record of a single premigration assessment
+ *
+ * run>
+ *
+ * This operation removes all metadata that AWS DMS maintains about this assessment run. However, the operation leaves
+ * untouched all information about this assessment run that is stored in your Amazon S3
+ */
+DeleteReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::deleteReplicationTaskAssessmentRun(const DeleteReplicationTaskAssessmentRunRequest &request)
+{
+    return qobject_cast<DeleteReplicationTaskAssessmentRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
  * DescribeAccountAttributesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the AWS DMS attributes for a customer account. The attributes include AWS DMS quotas for the account, such
- * as the number of replication instances allowed. The description for a quota includes the quota name, current usage
- * toward that quota, and the quota's maximum
+ * Lists all of the AWS DMS attributes for a customer account. These attributes include AWS DMS quotas for the account and
+ * a unique account identifier in a particular DMS region. DMS quotas include a list of resource quotas supported by the
+ * account, such as the number of replication instances allowed. The description for each resource quota, includes the
+ * quota name, current usage toward that quota, and the quota's maximum value. DMS uses the unique account identifier to
+ * name each artifact used by DMS in the given
  *
- * value>
+ * region>
  *
  * This command does not take any
  */
 DescribeAccountAttributesResponse * DatabaseMigrationServiceClient::describeAccountAttributes(const DescribeAccountAttributesRequest &request)
 {
     return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeApplicableIndividualAssessmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a list of individual assessments that you can specify for a new premigration assessment run, given one or more
+ *
+ * parameters>
+ *
+ * If you specify an existing migration task, this operation provides the default individual assessments you can specify
+ * for that task. Otherwise, the specified parameters model elements of a possible migration task on which to base a
+ * premigration assessment
+ *
+ * run>
+ *
+ * To use these migration task modeling parameters, you must specify an existing replication instance, a source database
+ * engine, a target database engine, and a migration type. This combination of parameters potentially limits the default
+ * individual assessments available for an assessment run created for a corresponding migration
+ *
+ * task>
+ *
+ * If you specify no parameters, this operation provides a list of all possible individual assessments that you can specify
+ * for an assessment run. If you specify any one of the task modeling parameters, you must specify all of them or the
+ * operation cannot provide a list of individual assessments. The only parameter that you can specify alone is for an
+ * existing migration task. The specified task definition then determines the default list of individual assessments that
+ * you can specify in an assessment run for the
+ */
+DescribeApplicableIndividualAssessmentsResponse * DatabaseMigrationServiceClient::describeApplicableIndividualAssessments(const DescribeApplicableIndividualAssessmentsRequest &request)
+{
+    return qobject_cast<DescribeApplicableIndividualAssessmentsResponse *>(send(request));
 }
 
 /*!
@@ -443,6 +555,19 @@ DescribeCertificatesResponse * DatabaseMigrationServiceClient::describeCertifica
 DescribeConnectionsResponse * DatabaseMigrationServiceClient::describeConnections(const DescribeConnectionsRequest &request)
 {
     return qobject_cast<DescribeConnectionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeEndpointSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the possible endpoint settings available when you create an endpoint for a specific database
+ */
+DescribeEndpointSettingsResponse * DatabaseMigrationServiceClient::describeEndpointSettings(const DescribeEndpointSettingsRequest &request)
+{
+    return qobject_cast<DescribeEndpointSettingsResponse *>(send(request));
 }
 
 /*!
@@ -613,6 +738,46 @@ DescribeReplicationTaskAssessmentResultsResponse * DatabaseMigrationServiceClien
 
 /*!
  * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationTaskAssessmentRunsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a paginated list of premigration assessment runs based on filter
+ *
+ * settings>
+ *
+ * These filter settings can specify a combination of premigration assessment runs, migration tasks, replication instances,
+ * and assessment run status
+ *
+ * values> <note>
+ *
+ * This operation doesn't return information about individual assessments. For this information, see the
+ * <code>DescribeReplicationTaskIndividualAssessments</code> operation.
+ */
+DescribeReplicationTaskAssessmentRunsResponse * DatabaseMigrationServiceClient::describeReplicationTaskAssessmentRuns(const DescribeReplicationTaskAssessmentRunsRequest &request)
+{
+    return qobject_cast<DescribeReplicationTaskAssessmentRunsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * DescribeReplicationTaskIndividualAssessmentsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a paginated list of individual assessments based on filter
+ *
+ * settings>
+ *
+ * These filter settings can specify a combination of premigration assessment runs, migration tasks, and assessment status
+ */
+DescribeReplicationTaskIndividualAssessmentsResponse * DatabaseMigrationServiceClient::describeReplicationTaskIndividualAssessments(const DescribeReplicationTaskIndividualAssessmentsRequest &request)
+{
+    return qobject_cast<DescribeReplicationTaskIndividualAssessmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
  * DescribeReplicationTasksResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -674,7 +839,9 @@ ImportCertificateResponse * DatabaseMigrationServiceClient::importCertificate(co
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all tags for an AWS DMS
+ * Lists all metadata tags attached to an AWS DMS resource, including replication instance, endpoint, security group, and
+ * migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+ * <code>Tag</code> </a> data type
  */
 ListTagsForResourceResponse * DatabaseMigrationServiceClient::listTagsForResource(const ListTagsForResourceRequest &request)
 {
@@ -763,6 +930,21 @@ ModifyReplicationTaskResponse * DatabaseMigrationServiceClient::modifyReplicatio
 
 /*!
  * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * MoveReplicationTaskResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Moves a replication task from its current replication instance to a different target replication instance using the
+ * specified parameters. The target replication instance must be created with the same or later AWS DMS version as the
+ * current replication
+ */
+MoveReplicationTaskResponse * DatabaseMigrationServiceClient::moveReplicationTask(const MoveReplicationTaskRequest &request)
+{
+    return qobject_cast<MoveReplicationTaskResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
  * RebootReplicationInstanceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -808,7 +990,9 @@ ReloadTablesResponse * DatabaseMigrationServiceClient::reloadTables(const Reload
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes metadata tags from a DMS
+ * Removes metadata tags from an AWS DMS resource, including replication instance, endpoint, security group, and migration
+ * task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html">
+ * <code>Tag</code> </a> data type
  */
 RemoveTagsFromResourceResponse * DatabaseMigrationServiceClient::removeTagsFromResource(const RemoveTagsFromResourceRequest &request)
 {
@@ -845,6 +1029,26 @@ StartReplicationTaskResponse * DatabaseMigrationServiceClient::startReplicationT
 StartReplicationTaskAssessmentResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessment(const StartReplicationTaskAssessmentRequest &request)
 {
     return qobject_cast<StartReplicationTaskAssessmentResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DatabaseMigrationServiceClient service, and returns a pointer to an
+ * StartReplicationTaskAssessmentRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a new premigration assessment run for one or more individual assessments of a migration
+ *
+ * task>
+ *
+ * The assessments that you can specify depend on the source and target database engine and the migration type defined for
+ * the given task. To run this operation, your migration task must already be created. After you run this operation, you
+ * can review the status of each individual assessment. You can also run the migration task manually after the assessment
+ * run and its individual assessments
+ */
+StartReplicationTaskAssessmentRunResponse * DatabaseMigrationServiceClient::startReplicationTaskAssessmentRun(const StartReplicationTaskAssessmentRunRequest &request)
+{
+    return qobject_cast<StartReplicationTaskAssessmentRunResponse *>(send(request));
 }
 
 /*!

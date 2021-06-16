@@ -21,8 +21,12 @@
 #include "mediapackageclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "configurelogsrequest.h"
+#include "configurelogsresponse.h"
 #include "createchannelrequest.h"
 #include "createchannelresponse.h"
+#include "createharvestjobrequest.h"
+#include "createharvestjobresponse.h"
 #include "createoriginendpointrequest.h"
 #include "createoriginendpointresponse.h"
 #include "deletechannelrequest.h"
@@ -31,10 +35,14 @@
 #include "deleteoriginendpointresponse.h"
 #include "describechannelrequest.h"
 #include "describechannelresponse.h"
+#include "describeharvestjobrequest.h"
+#include "describeharvestjobresponse.h"
 #include "describeoriginendpointrequest.h"
 #include "describeoriginendpointresponse.h"
 #include "listchannelsrequest.h"
 #include "listchannelsresponse.h"
+#include "listharvestjobsrequest.h"
+#include "listharvestjobsresponse.h"
 #include "listoriginendpointsrequest.h"
 #include "listoriginendpointsresponse.h"
 #include "listtagsforresourcerequest.h"
@@ -131,6 +139,18 @@ MediaPackageClient::MediaPackageClient(
 
 /*!
  * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * ConfigureLogsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ConfigureLogsResponse * MediaPackageClient::configureLogs(const ConfigureLogsRequest &request)
+{
+    return qobject_cast<ConfigureLogsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
  * CreateChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -139,6 +159,18 @@ MediaPackageClient::MediaPackageClient(
 CreateChannelResponse * MediaPackageClient::createChannel(const CreateChannelRequest &request)
 {
     return qobject_cast<CreateChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * CreateHarvestJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateHarvestJobResponse * MediaPackageClient::createHarvestJob(const CreateHarvestJobRequest &request)
+{
+    return qobject_cast<CreateHarvestJobResponse *>(send(request));
 }
 
 /*!
@@ -191,6 +223,18 @@ DescribeChannelResponse * MediaPackageClient::describeChannel(const DescribeChan
 
 /*!
  * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * DescribeHarvestJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeHarvestJobResponse * MediaPackageClient::describeHarvestJob(const DescribeHarvestJobRequest &request)
+{
+    return qobject_cast<DescribeHarvestJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
  * DescribeOriginEndpointResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -211,6 +255,18 @@ DescribeOriginEndpointResponse * MediaPackageClient::describeOriginEndpoint(cons
 ListChannelsResponse * MediaPackageClient::listChannels(const ListChannelsRequest &request)
 {
     return qobject_cast<ListChannelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaPackageClient service, and returns a pointer to an
+ * ListHarvestJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListHarvestJobsResponse * MediaPackageClient::listHarvestJobs(const ListHarvestJobsRequest &request)
+{
+    return qobject_cast<ListHarvestJobsResponse *>(send(request));
 }
 
 /*!

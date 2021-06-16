@@ -37,8 +37,11 @@ class QTAWS_EXPORT LexRuntimeServiceRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by LexRuntimeService.
     enum Action {
+        DeleteSessionAction,
+        GetSessionAction,
         PostContentAction,
         PostTextAction,
+        PutSessionAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

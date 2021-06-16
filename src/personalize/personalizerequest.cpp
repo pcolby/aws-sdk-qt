@@ -36,11 +36,14 @@ namespace Personalize {
  * This enum describes the actions that can be performed as Personalize
  * requests.
  *
+ * \value CreateBatchInferenceJobAction Personalize CreateBatchInferenceJob action.
  * \value CreateCampaignAction Personalize CreateCampaign action.
  * \value CreateDatasetAction Personalize CreateDataset action.
+ * \value CreateDatasetExportJobAction Personalize CreateDatasetExportJob action.
  * \value CreateDatasetGroupAction Personalize CreateDatasetGroup action.
  * \value CreateDatasetImportJobAction Personalize CreateDatasetImportJob action.
  * \value CreateEventTrackerAction Personalize CreateEventTracker action.
+ * \value CreateFilterAction Personalize CreateFilter action.
  * \value CreateSchemaAction Personalize CreateSchema action.
  * \value CreateSolutionAction Personalize CreateSolution action.
  * \value CreateSolutionVersionAction Personalize CreateSolutionVersion action.
@@ -48,29 +51,37 @@ namespace Personalize {
  * \value DeleteDatasetAction Personalize DeleteDataset action.
  * \value DeleteDatasetGroupAction Personalize DeleteDatasetGroup action.
  * \value DeleteEventTrackerAction Personalize DeleteEventTracker action.
+ * \value DeleteFilterAction Personalize DeleteFilter action.
  * \value DeleteSchemaAction Personalize DeleteSchema action.
  * \value DeleteSolutionAction Personalize DeleteSolution action.
  * \value DescribeAlgorithmAction Personalize DescribeAlgorithm action.
+ * \value DescribeBatchInferenceJobAction Personalize DescribeBatchInferenceJob action.
  * \value DescribeCampaignAction Personalize DescribeCampaign action.
  * \value DescribeDatasetAction Personalize DescribeDataset action.
+ * \value DescribeDatasetExportJobAction Personalize DescribeDatasetExportJob action.
  * \value DescribeDatasetGroupAction Personalize DescribeDatasetGroup action.
  * \value DescribeDatasetImportJobAction Personalize DescribeDatasetImportJob action.
  * \value DescribeEventTrackerAction Personalize DescribeEventTracker action.
  * \value DescribeFeatureTransformationAction Personalize DescribeFeatureTransformation action.
+ * \value DescribeFilterAction Personalize DescribeFilter action.
  * \value DescribeRecipeAction Personalize DescribeRecipe action.
  * \value DescribeSchemaAction Personalize DescribeSchema action.
  * \value DescribeSolutionAction Personalize DescribeSolution action.
  * \value DescribeSolutionVersionAction Personalize DescribeSolutionVersion action.
  * \value GetSolutionMetricsAction Personalize GetSolutionMetrics action.
+ * \value ListBatchInferenceJobsAction Personalize ListBatchInferenceJobs action.
  * \value ListCampaignsAction Personalize ListCampaigns action.
+ * \value ListDatasetExportJobsAction Personalize ListDatasetExportJobs action.
  * \value ListDatasetGroupsAction Personalize ListDatasetGroups action.
  * \value ListDatasetImportJobsAction Personalize ListDatasetImportJobs action.
  * \value ListDatasetsAction Personalize ListDatasets action.
  * \value ListEventTrackersAction Personalize ListEventTrackers action.
+ * \value ListFiltersAction Personalize ListFilters action.
  * \value ListRecipesAction Personalize ListRecipes action.
  * \value ListSchemasAction Personalize ListSchemas action.
  * \value ListSolutionVersionsAction Personalize ListSolutionVersions action.
  * \value ListSolutionsAction Personalize ListSolutions action.
+ * \value StopSolutionVersionCreationAction Personalize StopSolutionVersionCreation action.
  * \value UpdateCampaignAction Personalize UpdateCampaign action.
  */
 

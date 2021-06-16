@@ -50,6 +50,7 @@ public:
         DeleteSuggesterAction,
         DescribeAnalysisSchemesAction,
         DescribeAvailabilityOptionsAction,
+        DescribeDomainEndpointOptionsAction,
         DescribeDomainsAction,
         DescribeExpressionsAction,
         DescribeIndexFieldsAction,
@@ -59,6 +60,7 @@ public:
         IndexDocumentsAction,
         ListDomainNamesAction,
         UpdateAvailabilityOptionsAction,
+        UpdateDomainEndpointOptionsAction,
         UpdateScalingParametersAction,
         UpdateServiceAccessPoliciesAction,
     };

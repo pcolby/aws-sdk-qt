@@ -38,6 +38,10 @@ class CreateClusterRequest;
 class CreateClusterResponse;
 class CreateJobRequest;
 class CreateJobResponse;
+class CreateLongTermPricingRequest;
+class CreateLongTermPricingResponse;
+class CreateReturnShippingLabelRequest;
+class CreateReturnShippingLabelResponse;
 class DescribeAddressRequest;
 class DescribeAddressResponse;
 class DescribeAddressesRequest;
@@ -46,12 +50,16 @@ class DescribeClusterRequest;
 class DescribeClusterResponse;
 class DescribeJobRequest;
 class DescribeJobResponse;
+class DescribeReturnShippingLabelRequest;
+class DescribeReturnShippingLabelResponse;
 class GetJobManifestRequest;
 class GetJobManifestResponse;
 class GetJobUnlockCodeRequest;
 class GetJobUnlockCodeResponse;
 class GetSnowballUsageRequest;
 class GetSnowballUsageResponse;
+class GetSoftwareUpdatesRequest;
+class GetSoftwareUpdatesResponse;
 class ListClusterJobsRequest;
 class ListClusterJobsResponse;
 class ListClustersRequest;
@@ -60,10 +68,16 @@ class ListCompatibleImagesRequest;
 class ListCompatibleImagesResponse;
 class ListJobsRequest;
 class ListJobsResponse;
+class ListLongTermPricingRequest;
+class ListLongTermPricingResponse;
 class UpdateClusterRequest;
 class UpdateClusterResponse;
 class UpdateJobRequest;
 class UpdateJobResponse;
+class UpdateJobShipmentStateRequest;
+class UpdateJobShipmentStateResponse;
+class UpdateLongTermPricingRequest;
+class UpdateLongTermPricingResponse;
 
 class QTAWS_EXPORT SnowballClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -86,19 +100,26 @@ public slots:
     CreateAddressResponse * createAddress(const CreateAddressRequest &request);
     CreateClusterResponse * createCluster(const CreateClusterRequest &request);
     CreateJobResponse * createJob(const CreateJobRequest &request);
+    CreateLongTermPricingResponse * createLongTermPricing(const CreateLongTermPricingRequest &request);
+    CreateReturnShippingLabelResponse * createReturnShippingLabel(const CreateReturnShippingLabelRequest &request);
     DescribeAddressResponse * describeAddress(const DescribeAddressRequest &request);
     DescribeAddressesResponse * describeAddresses(const DescribeAddressesRequest &request);
     DescribeClusterResponse * describeCluster(const DescribeClusterRequest &request);
     DescribeJobResponse * describeJob(const DescribeJobRequest &request);
+    DescribeReturnShippingLabelResponse * describeReturnShippingLabel(const DescribeReturnShippingLabelRequest &request);
     GetJobManifestResponse * getJobManifest(const GetJobManifestRequest &request);
     GetJobUnlockCodeResponse * getJobUnlockCode(const GetJobUnlockCodeRequest &request);
     GetSnowballUsageResponse * getSnowballUsage(const GetSnowballUsageRequest &request);
+    GetSoftwareUpdatesResponse * getSoftwareUpdates(const GetSoftwareUpdatesRequest &request);
     ListClusterJobsResponse * listClusterJobs(const ListClusterJobsRequest &request);
     ListClustersResponse * listClusters(const ListClustersRequest &request);
     ListCompatibleImagesResponse * listCompatibleImages(const ListCompatibleImagesRequest &request);
     ListJobsResponse * listJobs(const ListJobsRequest &request);
+    ListLongTermPricingResponse * listLongTermPricing(const ListLongTermPricingRequest &request);
     UpdateClusterResponse * updateCluster(const UpdateClusterRequest &request);
     UpdateJobResponse * updateJob(const UpdateJobRequest &request);
+    UpdateJobShipmentStateResponse * updateJobShipmentState(const UpdateJobShipmentStateRequest &request);
+    UpdateLongTermPricingResponse * updateLongTermPricing(const UpdateLongTermPricingRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SnowballClient)

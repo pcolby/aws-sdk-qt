@@ -36,15 +36,24 @@ namespace KinesisVideo {
  * This enum describes the actions that can be performed as KinesisVideo
  * requests.
  *
+ * \value CreateSignalingChannelAction KinesisVideo CreateSignalingChannel action.
  * \value CreateStreamAction KinesisVideo CreateStream action.
+ * \value DeleteSignalingChannelAction KinesisVideo DeleteSignalingChannel action.
  * \value DeleteStreamAction KinesisVideo DeleteStream action.
+ * \value DescribeSignalingChannelAction KinesisVideo DescribeSignalingChannel action.
  * \value DescribeStreamAction KinesisVideo DescribeStream action.
  * \value GetDataEndpointAction KinesisVideo GetDataEndpoint action.
+ * \value GetSignalingChannelEndpointAction KinesisVideo GetSignalingChannelEndpoint action.
+ * \value ListSignalingChannelsAction KinesisVideo ListSignalingChannels action.
  * \value ListStreamsAction KinesisVideo ListStreams action.
+ * \value ListTagsForResourceAction KinesisVideo ListTagsForResource action.
  * \value ListTagsForStreamAction KinesisVideo ListTagsForStream action.
+ * \value TagResourceAction KinesisVideo TagResource action.
  * \value TagStreamAction KinesisVideo TagStream action.
+ * \value UntagResourceAction KinesisVideo UntagResource action.
  * \value UntagStreamAction KinesisVideo UntagStream action.
  * \value UpdateDataRetentionAction KinesisVideo UpdateDataRetention action.
+ * \value UpdateSignalingChannelAction KinesisVideo UpdateSignalingChannel action.
  * \value UpdateStreamAction KinesisVideo UpdateStream action.
  */
 

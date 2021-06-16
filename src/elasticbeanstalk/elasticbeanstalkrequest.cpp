@@ -38,6 +38,7 @@ namespace ElasticBeanstalk {
  *
  * \value AbortEnvironmentUpdateAction ElasticBeanstalk AbortEnvironmentUpdate action.
  * \value ApplyEnvironmentManagedActionAction ElasticBeanstalk ApplyEnvironmentManagedAction action.
+ * \value AssociateEnvironmentOperationsRoleAction ElasticBeanstalk AssociateEnvironmentOperationsRole action.
  * \value CheckDNSAvailabilityAction ElasticBeanstalk CheckDNSAvailability action.
  * \value ComposeEnvironmentsAction ElasticBeanstalk ComposeEnvironments action.
  * \value CreateApplicationAction ElasticBeanstalk CreateApplication action.
@@ -64,7 +65,9 @@ namespace ElasticBeanstalk {
  * \value DescribeEventsAction ElasticBeanstalk DescribeEvents action.
  * \value DescribeInstancesHealthAction ElasticBeanstalk DescribeInstancesHealth action.
  * \value DescribePlatformVersionAction ElasticBeanstalk DescribePlatformVersion action.
+ * \value DisassociateEnvironmentOperationsRoleAction ElasticBeanstalk DisassociateEnvironmentOperationsRole action.
  * \value ListAvailableSolutionStacksAction ElasticBeanstalk ListAvailableSolutionStacks action.
+ * \value ListPlatformBranchesAction ElasticBeanstalk ListPlatformBranches action.
  * \value ListPlatformVersionsAction ElasticBeanstalk ListPlatformVersions action.
  * \value ListTagsForResourceAction ElasticBeanstalk ListTagsForResource action.
  * \value RebuildEnvironmentAction ElasticBeanstalk RebuildEnvironment action.

@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsIvs
+description = AWS IVS SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsivs-index.html"
+navigation.landingtitle = "IVS"
+navigation.cppclassespage = "IVS C++ Classes"

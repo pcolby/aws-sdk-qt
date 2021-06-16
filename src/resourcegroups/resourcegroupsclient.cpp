@@ -27,18 +27,26 @@
 #include "deletegroupresponse.h"
 #include "getgrouprequest.h"
 #include "getgroupresponse.h"
+#include "getgroupconfigurationrequest.h"
+#include "getgroupconfigurationresponse.h"
 #include "getgroupqueryrequest.h"
 #include "getgroupqueryresponse.h"
 #include "gettagsrequest.h"
 #include "gettagsresponse.h"
+#include "groupresourcesrequest.h"
+#include "groupresourcesresponse.h"
 #include "listgroupresourcesrequest.h"
 #include "listgroupresourcesresponse.h"
 #include "listgroupsrequest.h"
 #include "listgroupsresponse.h"
+#include "putgroupconfigurationrequest.h"
+#include "putgroupconfigurationresponse.h"
 #include "searchresourcesrequest.h"
 #include "searchresourcesresponse.h"
 #include "tagrequest.h"
 #include "tagresponse.h"
+#include "ungroupresourcesrequest.h"
+#include "ungroupresourcesresponse.h"
 #include "untagrequest.h"
 #include "untagresponse.h"
 #include "updategrouprequest.h"
@@ -74,7 +82,7 @@ namespace ResourceGroups {
  *  databases, and Amazon S3 buckets into groups using criteria that you define as tags. A resource group is a collection of
  *  resources that match the resource types specified in a query, and share one or more tags or portions of tags. You can
  *  create a group of resources based on their roles in your cloud infrastructure, lifecycle stages, regions, application
- *  layers, or virtually any criteria. Resource groups enable you to automate management tasks, such as those in AWS Systems
+ *  layers, or virtually any criteria. Resource Groups enable you to automate management tasks, such as those in AWS Systems
  *  Manager Automation documents, on tag-related resources in AWS Systems Manager. Groups of tagged resources also let you
  *  quickly view a custom console in AWS Systems Manager that shows AWS Config compliance and other monitoring data about
  *  member
@@ -173,7 +181,23 @@ ResourceGroupsClient::ResourceGroupsClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a group with a specified name, description, and resource
+ * Creates a resource group with the specified name and description. You can optionally include a resource query, or a
+ * service configuration. For more information about constructing a resource query, see <a
+ * href="https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag">Create a
+ * tag-based group in Resource Groups</a>. For more information about service configurations, see <a
+ * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource
+ *
+ * groups</a>>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:CreateGroup</code>
  */
 CreateGroupResponse * ResourceGroupsClient::createGroup(const CreateGroupRequest &request)
 {
@@ -186,8 +210,20 @@ CreateGroupResponse * ResourceGroupsClient::createGroup(const CreateGroupRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a specified resource group. Deleting a resource group does not delete resources that are members of the group;
- * it only deletes the group
+ * Deletes the specified resource group. Deleting a resource group does not delete any resources that are members of the
+ * group; it only deletes the group
+ *
+ * structure>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:DeleteGroup</code>
  */
 DeleteGroupResponse * ResourceGroupsClient::deleteGroup(const DeleteGroupRequest &request)
 {
@@ -201,6 +237,18 @@ DeleteGroupResponse * ResourceGroupsClient::deleteGroup(const DeleteGroupRequest
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns information about a specified resource
+ *
+ * group>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:GetGroup</code>
  */
 GetGroupResponse * ResourceGroupsClient::getGroup(const GetGroupRequest &request)
 {
@@ -209,11 +257,53 @@ GetGroupResponse * ResourceGroupsClient::getGroup(const GetGroupRequest &request
 
 /*!
  * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
+ * GetGroupConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the service configuration associated with the specified resource group. For details about the service
+ * configuration syntax, see <a href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service
+ * configurations for resource
+ *
+ * groups</a>>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:GetGroupConfiguration</code>
+ */
+GetGroupConfigurationResponse * ResourceGroupsClient::getGroupConfiguration(const GetGroupConfigurationRequest &request)
+{
+    return qobject_cast<GetGroupConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
  * GetGroupQueryResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the resource query associated with the specified resource
+ * Retrieves the resource query associated with the specified resource group. For more information about resource queries,
+ * see <a
+ * href="https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag">Create a
+ * tag-based group in Resource
+ *
+ * Groups</a>>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:GetGroupQuery</code>
  */
 GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryRequest &request)
 {
@@ -227,6 +317,18 @@ GetGroupQueryResponse * ResourceGroupsClient::getGroupQuery(const GetGroupQueryR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of tags that are associated with a resource group, specified by an
+ *
+ * ARN>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:GetTags</code>
  */
 GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
 {
@@ -235,11 +337,60 @@ GetTagsResponse * ResourceGroupsClient::getTags(const GetTagsRequest &request)
 
 /*!
  * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
+ * GroupResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds the specified resources to the specified
+ *
+ * group>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:GroupResources</code>
+ */
+GroupResourcesResponse * ResourceGroupsClient::groupResources(const GroupResourcesRequest &request)
+{
+    return qobject_cast<GroupResourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
  * ListGroupResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of ARNs of resources that are members of a specified resource
+ * Returns a list of ARNs of the resources that are members of a specified resource
+ *
+ * group>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:ListGroupResources</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>cloudformation:DescribeStacks</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>cloudformation:ListStackResources</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>tag:GetResources</code>
  */
 ListGroupResourcesResponse * ResourceGroupsClient::listGroupResources(const ListGroupResourcesRequest &request)
 {
@@ -253,6 +404,18 @@ ListGroupResourcesResponse * ResourceGroupsClient::listGroupResources(const List
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of existing resource groups in your
+ *
+ * account>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:ListGroups</code>
  */
 ListGroupsResponse * ResourceGroupsClient::listGroups(const ListGroupsRequest &request)
 {
@@ -261,12 +424,62 @@ ListGroupsResponse * ResourceGroupsClient::listGroups(const ListGroupsRequest &r
 
 /*!
  * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
+ * PutGroupConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Attaches a service configuration to the specified group. This occurs asynchronously, and can take time to complete. You
+ * can use <a>GetGroupConfiguration</a> to check the status of the
+ *
+ * update>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:PutGroupConfiguration</code>
+ */
+PutGroupConfigurationResponse * ResourceGroupsClient::putGroupConfiguration(const PutGroupConfigurationRequest &request)
+{
+    return qobject_cast<PutGroupConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
  * SearchResourcesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of AWS resource identifiers that matches a specified query. The query uses the same format as a resource
- * query in a CreateGroup or UpdateGroupQuery
+ * Returns a list of AWS resource identifiers that matches the specified query. The query uses the same format as a
+ * resource query in a CreateGroup or UpdateGroupQuery
+ *
+ * operation>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:SearchResources</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>cloudformation:DescribeStacks</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>cloudformation:ListStackResources</code>
+ *
+ * </p </li> <li>
+ *
+ * <code>tag:GetResources</code>
  */
 SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchResourcesRequest &request)
 {
@@ -281,6 +494,23 @@ SearchResourcesResponse * ResourceGroupsClient::searchResources(const SearchReso
  *
  * Adds tags to a resource group with the specified ARN. Existing tags on a resource group are not changed if they are not
  * specified in the request
+ *
+ * parameters> <b>
+ *
+ * Do not store personally identifiable information (PII) or other confidential or sensitive information in tags. We use
+ * tags to provide you with billing and administration services. Tags are not intended to be used for private or sensitive
+ *
+ * data> </b>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:Tag</code>
  */
 TagResponse * ResourceGroupsClient::tag(const TagRequest &request)
 {
@@ -289,11 +519,48 @@ TagResponse * ResourceGroupsClient::tag(const TagRequest &request)
 
 /*!
  * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
+ * UngroupResourcesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified resources from the specified
+ *
+ * group>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:UngroupResources</code>
+ */
+UngroupResourcesResponse * ResourceGroupsClient::ungroupResources(const UngroupResourcesRequest &request)
+{
+    return qobject_cast<UngroupResourcesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the ResourceGroupsClient service, and returns a pointer to an
  * UntagResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes specified tags from a specified
+ * Deletes tags from a specified resource
+ *
+ * group>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:Untag</code>
  */
 UntagResponse * ResourceGroupsClient::untag(const UntagRequest &request)
 {
@@ -306,7 +573,19 @@ UntagResponse * ResourceGroupsClient::untag(const UntagRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates an existing group with a new or changed description. You cannot update the name of a resource
+ * Updates the description for an existing group. You cannot update the name of a resource
+ *
+ * group>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:UpdateGroup</code>
  */
 UpdateGroupResponse * ResourceGroupsClient::updateGroup(const UpdateGroupRequest &request)
 {
@@ -319,7 +598,21 @@ UpdateGroupResponse * ResourceGroupsClient::updateGroup(const UpdateGroupRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates the resource query of a
+ * Updates the resource query of a group. For more information about resource queries, see <a
+ * href="https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag">Create a
+ * tag-based group in Resource
+ *
+ * Groups</a>>
+ *
+ * <b>Minimum permissions</b>
+ *
+ * </p
+ *
+ * To run this command, you must have the following
+ *
+ * permissions> <ul> <li>
+ *
+ * <code>resource-groups:UpdateGroupQuery</code>
  */
 UpdateGroupQueryResponse * ResourceGroupsClient::updateGroupQuery(const UpdateGroupQueryRequest &request)
 {

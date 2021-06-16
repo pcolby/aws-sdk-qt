@@ -37,6 +37,7 @@ namespace SSM {
  * requests.
  *
  * \value AddTagsToResourceAction SSM AddTagsToResource action.
+ * \value AssociateOpsItemRelatedItemAction SSM AssociateOpsItemRelatedItem action.
  * \value CancelCommandAction SSM CancelCommand action.
  * \value CancelMaintenanceWindowExecutionAction SSM CancelMaintenanceWindowExecution action.
  * \value CreateActivationAction SSM CreateActivation action.
@@ -45,6 +46,7 @@ namespace SSM {
  * \value CreateDocumentAction SSM CreateDocument action.
  * \value CreateMaintenanceWindowAction SSM CreateMaintenanceWindow action.
  * \value CreateOpsItemAction SSM CreateOpsItem action.
+ * \value CreateOpsMetadataAction SSM CreateOpsMetadata action.
  * \value CreatePatchBaselineAction SSM CreatePatchBaseline action.
  * \value CreateResourceDataSyncAction SSM CreateResourceDataSync action.
  * \value DeleteActivationAction SSM DeleteActivation action.
@@ -52,6 +54,7 @@ namespace SSM {
  * \value DeleteDocumentAction SSM DeleteDocument action.
  * \value DeleteInventoryAction SSM DeleteInventory action.
  * \value DeleteMaintenanceWindowAction SSM DeleteMaintenanceWindow action.
+ * \value DeleteOpsMetadataAction SSM DeleteOpsMetadata action.
  * \value DeleteParameterAction SSM DeleteParameter action.
  * \value DeleteParametersAction SSM DeleteParameters action.
  * \value DeletePatchBaselineAction SSM DeletePatchBaseline action.
@@ -92,7 +95,9 @@ namespace SSM {
  * \value DescribePatchGroupsAction SSM DescribePatchGroups action.
  * \value DescribePatchPropertiesAction SSM DescribePatchProperties action.
  * \value DescribeSessionsAction SSM DescribeSessions action.
+ * \value DisassociateOpsItemRelatedItemAction SSM DisassociateOpsItemRelatedItem action.
  * \value GetAutomationExecutionAction SSM GetAutomationExecution action.
+ * \value GetCalendarStateAction SSM GetCalendarState action.
  * \value GetCommandInvocationAction SSM GetCommandInvocation action.
  * \value GetConnectionStatusAction SSM GetConnectionStatus action.
  * \value GetDefaultPatchBaselineAction SSM GetDefaultPatchBaseline action.
@@ -106,6 +111,7 @@ namespace SSM {
  * \value GetMaintenanceWindowExecutionTaskInvocationAction SSM GetMaintenanceWindowExecutionTaskInvocation action.
  * \value GetMaintenanceWindowTaskAction SSM GetMaintenanceWindowTask action.
  * \value GetOpsItemAction SSM GetOpsItem action.
+ * \value GetOpsMetadataAction SSM GetOpsMetadata action.
  * \value GetOpsSummaryAction SSM GetOpsSummary action.
  * \value GetParameterAction SSM GetParameter action.
  * \value GetParameterHistoryAction SSM GetParameterHistory action.
@@ -121,9 +127,13 @@ namespace SSM {
  * \value ListCommandsAction SSM ListCommands action.
  * \value ListComplianceItemsAction SSM ListComplianceItems action.
  * \value ListComplianceSummariesAction SSM ListComplianceSummaries action.
+ * \value ListDocumentMetadataHistoryAction SSM ListDocumentMetadataHistory action.
  * \value ListDocumentVersionsAction SSM ListDocumentVersions action.
  * \value ListDocumentsAction SSM ListDocuments action.
  * \value ListInventoryEntriesAction SSM ListInventoryEntries action.
+ * \value ListOpsItemEventsAction SSM ListOpsItemEvents action.
+ * \value ListOpsItemRelatedItemsAction SSM ListOpsItemRelatedItems action.
+ * \value ListOpsMetadataAction SSM ListOpsMetadata action.
  * \value ListResourceComplianceSummariesAction SSM ListResourceComplianceSummaries action.
  * \value ListResourceDataSyncAction SSM ListResourceDataSync action.
  * \value ListTagsForResourceAction SSM ListTagsForResource action.
@@ -142,19 +152,24 @@ namespace SSM {
  * \value SendCommandAction SSM SendCommand action.
  * \value StartAssociationsOnceAction SSM StartAssociationsOnce action.
  * \value StartAutomationExecutionAction SSM StartAutomationExecution action.
+ * \value StartChangeRequestExecutionAction SSM StartChangeRequestExecution action.
  * \value StartSessionAction SSM StartSession action.
  * \value StopAutomationExecutionAction SSM StopAutomationExecution action.
  * \value TerminateSessionAction SSM TerminateSession action.
+ * \value UnlabelParameterVersionAction SSM UnlabelParameterVersion action.
  * \value UpdateAssociationAction SSM UpdateAssociation action.
  * \value UpdateAssociationStatusAction SSM UpdateAssociationStatus action.
  * \value UpdateDocumentAction SSM UpdateDocument action.
  * \value UpdateDocumentDefaultVersionAction SSM UpdateDocumentDefaultVersion action.
+ * \value UpdateDocumentMetadataAction SSM UpdateDocumentMetadata action.
  * \value UpdateMaintenanceWindowAction SSM UpdateMaintenanceWindow action.
  * \value UpdateMaintenanceWindowTargetAction SSM UpdateMaintenanceWindowTarget action.
  * \value UpdateMaintenanceWindowTaskAction SSM UpdateMaintenanceWindowTask action.
  * \value UpdateManagedInstanceRoleAction SSM UpdateManagedInstanceRole action.
  * \value UpdateOpsItemAction SSM UpdateOpsItem action.
+ * \value UpdateOpsMetadataAction SSM UpdateOpsMetadata action.
  * \value UpdatePatchBaselineAction SSM UpdatePatchBaseline action.
+ * \value UpdateResourceDataSyncAction SSM UpdateResourceDataSync action.
  * \value UpdateServiceSettingAction SSM UpdateServiceSetting action.
  */
 

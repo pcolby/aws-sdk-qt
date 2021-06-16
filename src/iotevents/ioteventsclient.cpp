@@ -21,34 +21,54 @@
 #include "ioteventsclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createalarmmodelrequest.h"
+#include "createalarmmodelresponse.h"
 #include "createdetectormodelrequest.h"
 #include "createdetectormodelresponse.h"
 #include "createinputrequest.h"
 #include "createinputresponse.h"
+#include "deletealarmmodelrequest.h"
+#include "deletealarmmodelresponse.h"
 #include "deletedetectormodelrequest.h"
 #include "deletedetectormodelresponse.h"
 #include "deleteinputrequest.h"
 #include "deleteinputresponse.h"
+#include "describealarmmodelrequest.h"
+#include "describealarmmodelresponse.h"
 #include "describedetectormodelrequest.h"
 #include "describedetectormodelresponse.h"
+#include "describedetectormodelanalysisrequest.h"
+#include "describedetectormodelanalysisresponse.h"
 #include "describeinputrequest.h"
 #include "describeinputresponse.h"
 #include "describeloggingoptionsrequest.h"
 #include "describeloggingoptionsresponse.h"
+#include "getdetectormodelanalysisresultsrequest.h"
+#include "getdetectormodelanalysisresultsresponse.h"
+#include "listalarmmodelversionsrequest.h"
+#include "listalarmmodelversionsresponse.h"
+#include "listalarmmodelsrequest.h"
+#include "listalarmmodelsresponse.h"
 #include "listdetectormodelversionsrequest.h"
 #include "listdetectormodelversionsresponse.h"
 #include "listdetectormodelsrequest.h"
 #include "listdetectormodelsresponse.h"
+#include "listinputroutingsrequest.h"
+#include "listinputroutingsresponse.h"
 #include "listinputsrequest.h"
 #include "listinputsresponse.h"
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourceresponse.h"
 #include "putloggingoptionsrequest.h"
 #include "putloggingoptionsresponse.h"
+#include "startdetectormodelanalysisrequest.h"
+#include "startdetectormodelanalysisresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
+#include "updatealarmmodelrequest.h"
+#include "updatealarmmodelresponse.h"
 #include "updatedetectormodelrequest.h"
 #include "updatedetectormodelresponse.h"
 #include "updateinputrequest.h"
@@ -77,7 +97,8 @@ namespace IoTEvents {
  * \inmodule QtAwsIoTEvents
  *
  *  AWS IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when
- *  such events
+ *  such events occur. You can use AWS IoT Events API operations to create, read, update, and delete inputs and detector
+ *  models, and to list their
  */
 
 /*!
@@ -135,6 +156,22 @@ IoTEventsClient::IoTEventsClient(
 
 /*!
  * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * CreateAlarmModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an alarm model to monitor an AWS IoT Events input attribute. You can use the alarm to get notified when the
+ * value is outside a specified range. For more information, see <a
+ * href="https://docs.aws.amazon.com/iotevents/latest/developerguide/create-alarms.html">Create an alarm model</a> in the
+ * <i>AWS IoT Events Developer
+ */
+CreateAlarmModelResponse * IoTEventsClient::createAlarmModel(const CreateAlarmModelRequest &request)
+{
+    return qobject_cast<CreateAlarmModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
  * CreateDetectorModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -157,6 +194,20 @@ CreateDetectorModelResponse * IoTEventsClient::createDetectorModel(const CreateD
 CreateInputResponse * IoTEventsClient::createInput(const CreateInputRequest &request)
 {
     return qobject_cast<CreateInputResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * DeleteAlarmModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an alarm model. Any alarm instances that were created based on this alarm model are also deleted. This action
+ * can't be
+ */
+DeleteAlarmModelResponse * IoTEventsClient::deleteAlarmModel(const DeleteAlarmModelRequest &request)
+{
+    return qobject_cast<DeleteAlarmModelResponse *>(send(request));
 }
 
 /*!
@@ -187,6 +238,20 @@ DeleteInputResponse * IoTEventsClient::deleteInput(const DeleteInputRequest &req
 
 /*!
  * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * DescribeAlarmModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about an alarm model. If you don't specify a value for the <code>alarmModelVersion</code>
+ * parameter, the latest version is
+ */
+DescribeAlarmModelResponse * IoTEventsClient::describeAlarmModel(const DescribeAlarmModelRequest &request)
+{
+    return qobject_cast<DescribeAlarmModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
  * DescribeDetectorModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -197,6 +262,23 @@ DeleteInputResponse * IoTEventsClient::deleteInput(const DeleteInputRequest &req
 DescribeDetectorModelResponse * IoTEventsClient::describeDetectorModel(const DescribeDetectorModelRequest &request)
 {
     return qobject_cast<DescribeDetectorModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * DescribeDetectorModelAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves runtime information about a detector model
+ *
+ * analysis> <note>
+ *
+ * After AWS IoT Events starts analyzing your detector model, you have up to 24 hours to retrieve the analysis
+ */
+DescribeDetectorModelAnalysisResponse * IoTEventsClient::describeDetectorModelAnalysis(const DescribeDetectorModelAnalysisRequest &request)
+{
+    return qobject_cast<DescribeDetectorModelAnalysisResponse *>(send(request));
 }
 
 /*!
@@ -227,6 +309,49 @@ DescribeLoggingOptionsResponse * IoTEventsClient::describeLoggingOptions(const D
 
 /*!
  * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * GetDetectorModelAnalysisResultsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves one or more analysis results of the detector
+ *
+ * model> <note>
+ *
+ * After AWS IoT Events starts analyzing your detector model, you have up to 24 hours to retrieve the analysis
+ */
+GetDetectorModelAnalysisResultsResponse * IoTEventsClient::getDetectorModelAnalysisResults(const GetDetectorModelAnalysisResultsRequest &request)
+{
+    return qobject_cast<GetDetectorModelAnalysisResultsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * ListAlarmModelVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists all the versions of an alarm model. The operation returns only the metadata associated with each alarm model
+ */
+ListAlarmModelVersionsResponse * IoTEventsClient::listAlarmModelVersions(const ListAlarmModelVersionsRequest &request)
+{
+    return qobject_cast<ListAlarmModelVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * ListAlarmModelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the alarm models that you created. The operation returns only the metadata associated with each alarm
+ */
+ListAlarmModelsResponse * IoTEventsClient::listAlarmModels(const ListAlarmModelsRequest &request)
+{
+    return qobject_cast<ListAlarmModelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
  * ListDetectorModelVersionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -249,6 +374,19 @@ ListDetectorModelVersionsResponse * IoTEventsClient::listDetectorModelVersions(c
 ListDetectorModelsResponse * IoTEventsClient::listDetectorModels(const ListDetectorModelsRequest &request)
 {
     return qobject_cast<ListDetectorModelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * ListInputRoutingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists one or more input routings.
+ */
+ListInputRoutingsResponse * IoTEventsClient::listInputRoutings(const ListInputRoutingsRequest &request)
+{
+    return qobject_cast<ListInputRoutingsResponse *>(send(request));
 }
 
 /*!
@@ -287,9 +425,9 @@ ListTagsForResourceResponse * IoTEventsClient::listTagsForResource(const ListTag
  *
  * options>
  *
- * Note that if you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to
- * take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to
- * correct an invalid policy) it takes up to five minutes for that change to take
+ * If you update the value of any <code>loggingOptions</code> field, it takes up to one minute for the change to take
+ * effect. If you change the policy attached to the role you specified in the <code>roleArn</code> field (for example, to
+ * correct an invalid policy), it takes up to five minutes for that change to take
  */
 PutLoggingOptionsResponse * IoTEventsClient::putLoggingOptions(const PutLoggingOptionsRequest &request)
 {
@@ -298,11 +436,26 @@ PutLoggingOptionsResponse * IoTEventsClient::putLoggingOptions(const PutLoggingO
 
 /*!
  * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * StartDetectorModelAnalysisResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Performs an analysis of your detector model. For more information, see <a
+ * href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-analyze-api.html">Troubleshooting a detector
+ * model</a> in the <i>AWS IoT Events Developer
+ */
+StartDetectorModelAnalysisResponse * IoTEventsClient::startDetectorModelAnalysis(const StartDetectorModelAnalysisRequest &request)
+{
+    return qobject_cast<StartDetectorModelAnalysisResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Add to or modifies the tags of the given resource. Tags are metadata which can be used to manage a
+ * Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a
  */
 TagResourceResponse * IoTEventsClient::tagResource(const TagResourceRequest &request)
 {
@@ -324,11 +477,25 @@ UntagResourceResponse * IoTEventsClient::untagResource(const UntagResourceReques
 
 /*!
  * Sends \a request to the IoTEventsClient service, and returns a pointer to an
+ * UpdateAlarmModelResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an alarm model. Any alarms that were created based on the previous version are deleted and then created again as
+ * new data
+ */
+UpdateAlarmModelResponse * IoTEventsClient::updateAlarmModel(const UpdateAlarmModelRequest &request)
+{
+    return qobject_cast<UpdateAlarmModelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsClient service, and returns a pointer to an
  * UpdateDetectorModelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a detector model. Detectors (instances) spawned by the previous version will be deleted and re-created as new
+ * Updates a detector model. Detectors (instances) spawned by the previous version are deleted and then re-created as new
  * inputs
  */
 UpdateDetectorModelResponse * IoTEventsClient::updateDetectorModel(const UpdateDetectorModelRequest &request)

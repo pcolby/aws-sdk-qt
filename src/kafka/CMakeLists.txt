@@ -1,6 +1,14 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsKafka
+  batchassociatescramsecretrequest.h
+  batchassociatescramsecretrequest_p.h
+  batchassociatescramsecretresponse.h
+  batchassociatescramsecretresponse_p.h
+  batchdisassociatescramsecretrequest.h
+  batchdisassociatescramsecretrequest_p.h
+  batchdisassociatescramsecretresponse.h
+  batchdisassociatescramsecretresponse_p.h
   createclusterrequest.h
   createclusterrequest_p.h
   createclusterresponse.h
@@ -13,6 +21,10 @@ add_library(QtAwsKafka
   deleteclusterrequest_p.h
   deleteclusterresponse.h
   deleteclusterresponse_p.h
+  deleteconfigurationrequest.h
+  deleteconfigurationrequest_p.h
+  deleteconfigurationresponse.h
+  deleteconfigurationresponse_p.h
   describeclusteroperationrequest.h
   describeclusteroperationrequest_p.h
   describeclusteroperationresponse.h
@@ -33,6 +45,10 @@ add_library(QtAwsKafka
   getbootstrapbrokersrequest_p.h
   getbootstrapbrokersresponse.h
   getbootstrapbrokersresponse_p.h
+  getcompatiblekafkaversionsrequest.h
+  getcompatiblekafkaversionsrequest_p.h
+  getcompatiblekafkaversionsresponse.h
+  getcompatiblekafkaversionsresponse_p.h
   kafkaclient.h
   kafkaclient_p.h
   kafkarequest.h
@@ -55,14 +71,26 @@ add_library(QtAwsKafka
   listconfigurationsrequest_p.h
   listconfigurationsresponse.h
   listconfigurationsresponse_p.h
+  listkafkaversionsrequest.h
+  listkafkaversionsrequest_p.h
+  listkafkaversionsresponse.h
+  listkafkaversionsresponse_p.h
   listnodesrequest.h
   listnodesrequest_p.h
   listnodesresponse.h
   listnodesresponse_p.h
+  listscramsecretsrequest.h
+  listscramsecretsrequest_p.h
+  listscramsecretsresponse.h
+  listscramsecretsresponse_p.h
   listtagsforresourcerequest.h
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  rebootbrokerrequest.h
+  rebootbrokerrequest_p.h
+  rebootbrokerresponse.h
+  rebootbrokerresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
@@ -71,20 +99,46 @@ add_library(QtAwsKafka
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatebrokercountrequest.h
+  updatebrokercountrequest_p.h
+  updatebrokercountresponse.h
+  updatebrokercountresponse_p.h
   updatebrokerstoragerequest.h
   updatebrokerstoragerequest_p.h
   updatebrokerstorageresponse.h
   updatebrokerstorageresponse_p.h
+  updatebrokertyperequest.h
+  updatebrokertyperequest_p.h
+  updatebrokertyperesponse.h
+  updatebrokertyperesponse_p.h
   updateclusterconfigurationrequest.h
   updateclusterconfigurationrequest_p.h
   updateclusterconfigurationresponse.h
   updateclusterconfigurationresponse_p.h
+  updateclusterkafkaversionrequest.h
+  updateclusterkafkaversionrequest_p.h
+  updateclusterkafkaversionresponse.h
+  updateclusterkafkaversionresponse_p.h
+  updateconfigurationrequest.h
+  updateconfigurationrequest_p.h
+  updateconfigurationresponse.h
+  updateconfigurationresponse_p.h
+  updatemonitoringrequest.h
+  updatemonitoringrequest_p.h
+  updatemonitoringresponse.h
+  updatemonitoringresponse_p.h
+  batchassociatescramsecretrequest.cpp
+  batchassociatescramsecretresponse.cpp
+  batchdisassociatescramsecretrequest.cpp
+  batchdisassociatescramsecretresponse.cpp
   createclusterrequest.cpp
   createclusterresponse.cpp
   createconfigurationrequest.cpp
   createconfigurationresponse.cpp
   deleteclusterrequest.cpp
   deleteclusterresponse.cpp
+  deleteconfigurationrequest.cpp
+  deleteconfigurationresponse.cpp
   describeclusteroperationrequest.cpp
   describeclusteroperationresponse.cpp
   describeclusterrequest.cpp
@@ -95,6 +149,8 @@ add_library(QtAwsKafka
   describeconfigurationrevisionresponse.cpp
   getbootstrapbrokersrequest.cpp
   getbootstrapbrokersresponse.cpp
+  getcompatiblekafkaversionsrequest.cpp
+  getcompatiblekafkaversionsresponse.cpp
   kafkaclient.cpp
   kafkarequest.cpp
   kafkaresponse.cpp
@@ -106,18 +162,34 @@ add_library(QtAwsKafka
   listconfigurationrevisionsresponse.cpp
   listconfigurationsrequest.cpp
   listconfigurationsresponse.cpp
+  listkafkaversionsrequest.cpp
+  listkafkaversionsresponse.cpp
   listnodesrequest.cpp
   listnodesresponse.cpp
+  listscramsecretsrequest.cpp
+  listscramsecretsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  rebootbrokerrequest.cpp
+  rebootbrokerresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatebrokercountrequest.cpp
+  updatebrokercountresponse.cpp
   updatebrokerstoragerequest.cpp
   updatebrokerstorageresponse.cpp
+  updatebrokertyperequest.cpp
+  updatebrokertyperesponse.cpp
   updateclusterconfigurationrequest.cpp
-  updateclusterconfigurationresponse.cpp)
+  updateclusterconfigurationresponse.cpp
+  updateclusterkafkaversionrequest.cpp
+  updateclusterkafkaversionresponse.cpp
+  updateconfigurationrequest.cpp
+  updateconfigurationresponse.cpp
+  updatemonitoringrequest.cpp
+  updatemonitoringresponse.cpp)
 
 add_dependencies(QtAwsKafka QtAwsCore)
 

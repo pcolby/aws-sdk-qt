@@ -48,13 +48,20 @@ namespace Glue {
  * \value BatchGetTriggersAction Glue BatchGetTriggers action.
  * \value BatchGetWorkflowsAction Glue BatchGetWorkflows action.
  * \value BatchStopJobRunAction Glue BatchStopJobRun action.
+ * \value BatchUpdatePartitionAction Glue BatchUpdatePartition action.
+ * \value CancelMLTaskRunAction Glue CancelMLTaskRun action.
+ * \value CheckSchemaVersionValidityAction Glue CheckSchemaVersionValidity action.
  * \value CreateClassifierAction Glue CreateClassifier action.
  * \value CreateConnectionAction Glue CreateConnection action.
  * \value CreateCrawlerAction Glue CreateCrawler action.
  * \value CreateDatabaseAction Glue CreateDatabase action.
  * \value CreateDevEndpointAction Glue CreateDevEndpoint action.
  * \value CreateJobAction Glue CreateJob action.
+ * \value CreateMLTransformAction Glue CreateMLTransform action.
  * \value CreatePartitionAction Glue CreatePartition action.
+ * \value CreatePartitionIndexAction Glue CreatePartitionIndex action.
+ * \value CreateRegistryAction Glue CreateRegistry action.
+ * \value CreateSchemaAction Glue CreateSchema action.
  * \value CreateScriptAction Glue CreateScript action.
  * \value CreateSecurityConfigurationAction Glue CreateSecurityConfiguration action.
  * \value CreateTableAction Glue CreateTable action.
@@ -62,13 +69,20 @@ namespace Glue {
  * \value CreateUserDefinedFunctionAction Glue CreateUserDefinedFunction action.
  * \value CreateWorkflowAction Glue CreateWorkflow action.
  * \value DeleteClassifierAction Glue DeleteClassifier action.
+ * \value DeleteColumnStatisticsForPartitionAction Glue DeleteColumnStatisticsForPartition action.
+ * \value DeleteColumnStatisticsForTableAction Glue DeleteColumnStatisticsForTable action.
  * \value DeleteConnectionAction Glue DeleteConnection action.
  * \value DeleteCrawlerAction Glue DeleteCrawler action.
  * \value DeleteDatabaseAction Glue DeleteDatabase action.
  * \value DeleteDevEndpointAction Glue DeleteDevEndpoint action.
  * \value DeleteJobAction Glue DeleteJob action.
+ * \value DeleteMLTransformAction Glue DeleteMLTransform action.
  * \value DeletePartitionAction Glue DeletePartition action.
+ * \value DeletePartitionIndexAction Glue DeletePartitionIndex action.
+ * \value DeleteRegistryAction Glue DeleteRegistry action.
  * \value DeleteResourcePolicyAction Glue DeleteResourcePolicy action.
+ * \value DeleteSchemaAction Glue DeleteSchema action.
+ * \value DeleteSchemaVersionsAction Glue DeleteSchemaVersions action.
  * \value DeleteSecurityConfigurationAction Glue DeleteSecurityConfiguration action.
  * \value DeleteTableAction Glue DeleteTable action.
  * \value DeleteTableVersionAction Glue DeleteTableVersion action.
@@ -78,6 +92,8 @@ namespace Glue {
  * \value GetCatalogImportStatusAction Glue GetCatalogImportStatus action.
  * \value GetClassifierAction Glue GetClassifier action.
  * \value GetClassifiersAction Glue GetClassifiers action.
+ * \value GetColumnStatisticsForPartitionAction Glue GetColumnStatisticsForPartition action.
+ * \value GetColumnStatisticsForTableAction Glue GetColumnStatisticsForTable action.
  * \value GetConnectionAction Glue GetConnection action.
  * \value GetConnectionsAction Glue GetConnections action.
  * \value GetCrawlerAction Glue GetCrawler action.
@@ -90,14 +106,26 @@ namespace Glue {
  * \value GetDevEndpointAction Glue GetDevEndpoint action.
  * \value GetDevEndpointsAction Glue GetDevEndpoints action.
  * \value GetJobAction Glue GetJob action.
+ * \value GetJobBookmarkAction Glue GetJobBookmark action.
  * \value GetJobRunAction Glue GetJobRun action.
  * \value GetJobRunsAction Glue GetJobRuns action.
  * \value GetJobsAction Glue GetJobs action.
+ * \value GetMLTaskRunAction Glue GetMLTaskRun action.
+ * \value GetMLTaskRunsAction Glue GetMLTaskRuns action.
+ * \value GetMLTransformAction Glue GetMLTransform action.
+ * \value GetMLTransformsAction Glue GetMLTransforms action.
  * \value GetMappingAction Glue GetMapping action.
  * \value GetPartitionAction Glue GetPartition action.
+ * \value GetPartitionIndexesAction Glue GetPartitionIndexes action.
  * \value GetPartitionsAction Glue GetPartitions action.
  * \value GetPlanAction Glue GetPlan action.
+ * \value GetRegistryAction Glue GetRegistry action.
+ * \value GetResourcePoliciesAction Glue GetResourcePolicies action.
  * \value GetResourcePolicyAction Glue GetResourcePolicy action.
+ * \value GetSchemaAction Glue GetSchema action.
+ * \value GetSchemaByDefinitionAction Glue GetSchemaByDefinition action.
+ * \value GetSchemaVersionAction Glue GetSchemaVersion action.
+ * \value GetSchemaVersionsDiffAction Glue GetSchemaVersionsDiff action.
  * \value GetSecurityConfigurationAction Glue GetSecurityConfiguration action.
  * \value GetSecurityConfigurationsAction Glue GetSecurityConfigurations action.
  * \value GetTableAction Glue GetTable action.
@@ -117,30 +145,50 @@ namespace Glue {
  * \value ListCrawlersAction Glue ListCrawlers action.
  * \value ListDevEndpointsAction Glue ListDevEndpoints action.
  * \value ListJobsAction Glue ListJobs action.
+ * \value ListMLTransformsAction Glue ListMLTransforms action.
+ * \value ListRegistriesAction Glue ListRegistries action.
+ * \value ListSchemaVersionsAction Glue ListSchemaVersions action.
+ * \value ListSchemasAction Glue ListSchemas action.
  * \value ListTriggersAction Glue ListTriggers action.
  * \value ListWorkflowsAction Glue ListWorkflows action.
  * \value PutDataCatalogEncryptionSettingsAction Glue PutDataCatalogEncryptionSettings action.
  * \value PutResourcePolicyAction Glue PutResourcePolicy action.
+ * \value PutSchemaVersionMetadataAction Glue PutSchemaVersionMetadata action.
  * \value PutWorkflowRunPropertiesAction Glue PutWorkflowRunProperties action.
+ * \value QuerySchemaVersionMetadataAction Glue QuerySchemaVersionMetadata action.
+ * \value RegisterSchemaVersionAction Glue RegisterSchemaVersion action.
+ * \value RemoveSchemaVersionMetadataAction Glue RemoveSchemaVersionMetadata action.
  * \value ResetJobBookmarkAction Glue ResetJobBookmark action.
+ * \value ResumeWorkflowRunAction Glue ResumeWorkflowRun action.
+ * \value SearchTablesAction Glue SearchTables action.
  * \value StartCrawlerAction Glue StartCrawler action.
  * \value StartCrawlerScheduleAction Glue StartCrawlerSchedule action.
+ * \value StartExportLabelsTaskRunAction Glue StartExportLabelsTaskRun action.
+ * \value StartImportLabelsTaskRunAction Glue StartImportLabelsTaskRun action.
  * \value StartJobRunAction Glue StartJobRun action.
+ * \value StartMLEvaluationTaskRunAction Glue StartMLEvaluationTaskRun action.
+ * \value StartMLLabelingSetGenerationTaskRunAction Glue StartMLLabelingSetGenerationTaskRun action.
  * \value StartTriggerAction Glue StartTrigger action.
  * \value StartWorkflowRunAction Glue StartWorkflowRun action.
  * \value StopCrawlerAction Glue StopCrawler action.
  * \value StopCrawlerScheduleAction Glue StopCrawlerSchedule action.
  * \value StopTriggerAction Glue StopTrigger action.
+ * \value StopWorkflowRunAction Glue StopWorkflowRun action.
  * \value TagResourceAction Glue TagResource action.
  * \value UntagResourceAction Glue UntagResource action.
  * \value UpdateClassifierAction Glue UpdateClassifier action.
+ * \value UpdateColumnStatisticsForPartitionAction Glue UpdateColumnStatisticsForPartition action.
+ * \value UpdateColumnStatisticsForTableAction Glue UpdateColumnStatisticsForTable action.
  * \value UpdateConnectionAction Glue UpdateConnection action.
  * \value UpdateCrawlerAction Glue UpdateCrawler action.
  * \value UpdateCrawlerScheduleAction Glue UpdateCrawlerSchedule action.
  * \value UpdateDatabaseAction Glue UpdateDatabase action.
  * \value UpdateDevEndpointAction Glue UpdateDevEndpoint action.
  * \value UpdateJobAction Glue UpdateJob action.
+ * \value UpdateMLTransformAction Glue UpdateMLTransform action.
  * \value UpdatePartitionAction Glue UpdatePartition action.
+ * \value UpdateRegistryAction Glue UpdateRegistry action.
+ * \value UpdateSchemaAction Glue UpdateSchema action.
  * \value UpdateTableAction Glue UpdateTable action.
  * \value UpdateTriggerAction Glue UpdateTrigger action.
  * \value UpdateUserDefinedFunctionAction Glue UpdateUserDefinedFunction action.

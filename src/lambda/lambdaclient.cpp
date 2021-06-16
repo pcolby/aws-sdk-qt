@@ -27,30 +27,48 @@
 #include "addpermissionresponse.h"
 #include "createaliasrequest.h"
 #include "createaliasresponse.h"
+#include "createcodesigningconfigrequest.h"
+#include "createcodesigningconfigresponse.h"
 #include "createeventsourcemappingrequest.h"
 #include "createeventsourcemappingresponse.h"
 #include "createfunctionrequest.h"
 #include "createfunctionresponse.h"
 #include "deletealiasrequest.h"
 #include "deletealiasresponse.h"
+#include "deletecodesigningconfigrequest.h"
+#include "deletecodesigningconfigresponse.h"
 #include "deleteeventsourcemappingrequest.h"
 #include "deleteeventsourcemappingresponse.h"
 #include "deletefunctionrequest.h"
 #include "deletefunctionresponse.h"
+#include "deletefunctioncodesigningconfigrequest.h"
+#include "deletefunctioncodesigningconfigresponse.h"
 #include "deletefunctionconcurrencyrequest.h"
 #include "deletefunctionconcurrencyresponse.h"
+#include "deletefunctioneventinvokeconfigrequest.h"
+#include "deletefunctioneventinvokeconfigresponse.h"
 #include "deletelayerversionrequest.h"
 #include "deletelayerversionresponse.h"
+#include "deleteprovisionedconcurrencyconfigrequest.h"
+#include "deleteprovisionedconcurrencyconfigresponse.h"
 #include "getaccountsettingsrequest.h"
 #include "getaccountsettingsresponse.h"
 #include "getaliasrequest.h"
 #include "getaliasresponse.h"
+#include "getcodesigningconfigrequest.h"
+#include "getcodesigningconfigresponse.h"
 #include "geteventsourcemappingrequest.h"
 #include "geteventsourcemappingresponse.h"
 #include "getfunctionrequest.h"
 #include "getfunctionresponse.h"
+#include "getfunctioncodesigningconfigrequest.h"
+#include "getfunctioncodesigningconfigresponse.h"
+#include "getfunctionconcurrencyrequest.h"
+#include "getfunctionconcurrencyresponse.h"
 #include "getfunctionconfigurationrequest.h"
 #include "getfunctionconfigurationresponse.h"
+#include "getfunctioneventinvokeconfigrequest.h"
+#include "getfunctioneventinvokeconfigresponse.h"
 #include "getlayerversionrequest.h"
 #include "getlayerversionresponse.h"
 #include "getlayerversionbyarnrequest.h"
@@ -59,20 +77,30 @@
 #include "getlayerversionpolicyresponse.h"
 #include "getpolicyrequest.h"
 #include "getpolicyresponse.h"
+#include "getprovisionedconcurrencyconfigrequest.h"
+#include "getprovisionedconcurrencyconfigresponse.h"
 #include "invokerequest.h"
 #include "invokeresponse.h"
 #include "invokeasyncrequest.h"
 #include "invokeasyncresponse.h"
 #include "listaliasesrequest.h"
 #include "listaliasesresponse.h"
+#include "listcodesigningconfigsrequest.h"
+#include "listcodesigningconfigsresponse.h"
 #include "listeventsourcemappingsrequest.h"
 #include "listeventsourcemappingsresponse.h"
+#include "listfunctioneventinvokeconfigsrequest.h"
+#include "listfunctioneventinvokeconfigsresponse.h"
 #include "listfunctionsrequest.h"
 #include "listfunctionsresponse.h"
+#include "listfunctionsbycodesigningconfigrequest.h"
+#include "listfunctionsbycodesigningconfigresponse.h"
 #include "listlayerversionsrequest.h"
 #include "listlayerversionsresponse.h"
 #include "listlayersrequest.h"
 #include "listlayersresponse.h"
+#include "listprovisionedconcurrencyconfigsrequest.h"
+#include "listprovisionedconcurrencyconfigsresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
 #include "listversionsbyfunctionrequest.h"
@@ -81,8 +109,14 @@
 #include "publishlayerversionresponse.h"
 #include "publishversionrequest.h"
 #include "publishversionresponse.h"
+#include "putfunctioncodesigningconfigrequest.h"
+#include "putfunctioncodesigningconfigresponse.h"
 #include "putfunctionconcurrencyrequest.h"
 #include "putfunctionconcurrencyresponse.h"
+#include "putfunctioneventinvokeconfigrequest.h"
+#include "putfunctioneventinvokeconfigresponse.h"
+#include "putprovisionedconcurrencyconfigrequest.h"
+#include "putprovisionedconcurrencyconfigresponse.h"
 #include "removelayerversionpermissionrequest.h"
 #include "removelayerversionpermissionresponse.h"
 #include "removepermissionrequest.h"
@@ -93,12 +127,16 @@
 #include "untagresourceresponse.h"
 #include "updatealiasrequest.h"
 #include "updatealiasresponse.h"
+#include "updatecodesigningconfigrequest.h"
+#include "updatecodesigningconfigresponse.h"
 #include "updateeventsourcemappingrequest.h"
 #include "updateeventsourcemappingresponse.h"
 #include "updatefunctioncoderequest.h"
 #include "updatefunctioncoderesponse.h"
 #include "updatefunctionconfigurationrequest.h"
 #include "updatefunctionconfigurationresponse.h"
+#include "updatefunctioneventinvokeconfigrequest.h"
+#include "updatefunctioneventinvokeconfigresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -222,16 +260,15 @@ AddLayerVersionPermissionResponse * LambdaClient::addLayerVersionPermission(cons
  *
  * To grant permission to another account, specify the account ID as the <code>Principal</code>. For AWS services, the
  * principal is a domain-style identifier defined by the service, like <code>s3.amazonaws.com</code> or
- * <code>sns.amazonaws.com</code>. For AWS services, you can also specify the ARN or owning account of the associated
- * resource as the <code>SourceArn</code> or <code>SourceAccount</code>. If you grant permission to a service principal
- * without specifying the source, other accounts could potentially configure resources in their account to invoke your
- * Lambda
+ * <code>sns.amazonaws.com</code>. For AWS services, you can also specify the ARN of the associated resource as the
+ * <code>SourceArn</code>. If you grant permission to a service principal without specifying the source, other accounts
+ * could potentially configure resources in their account to invoke your Lambda
  *
  * function>
  *
- * This action adds a statement to a resource-based permission policy for the function. For more information about function
- * policies, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html">Lambda Function
- * Policies</a>.
+ * This action adds a statement to a resource-based permissions policy for the function. For more information about
+ * function policies, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html">Lambda
+ * Function Policies</a>.
  */
 AddPermissionResponse * LambdaClient::addPermission(const AddPermissionRequest &request)
 {
@@ -259,6 +296,22 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * CreateCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a code signing configuration. A <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-trustedcode.html">code signing configuration</a>
+ * defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if
+ * deployment validation checks fail).
+ */
+CreateCodeSigningConfigResponse * LambdaClient::createCodeSigningConfig(const CreateCodeSigningConfigRequest &request)
+{
+    return qobject_cast<CreateCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * CreateEventSourceMappingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -272,6 +325,10 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
  *
  * topics> <ul> <li>
  *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html">Using AWS Lambda with Amazon DynamoDB</a>
+ *
+ * </p </li> <li>
+ *
  * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html">Using AWS Lambda with Amazon Kinesis</a>
  *
  * </p </li> <li>
@@ -280,7 +337,42 @@ CreateAliasResponse * LambdaClient::createAlias(const CreateAliasRequest &reques
  *
  * </p </li> <li>
  *
- * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html">Using AWS Lambda with Amazon DynamoDB</a>
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html">Using AWS Lambda with Amazon MQ</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html">Using AWS Lambda with Amazon MSK</a>
+ *
+ * </p </li> <li>
+ *
+ * <a href="https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html">Using AWS Lambda with Self-Managed Apache
+ * Kafka</a>
+ *
+ * </p </li> </ul>
+ *
+ * The following error handling options are only available for stream sources (DynamoDB and
+ *
+ * Kinesis)> <ul> <li>
+ *
+ * <code>BisectBatchOnFunctionError</code> - If the function returns an error, split the batch in two and
+ *
+ * retry> </li> <li>
+ *
+ * <code>DestinationConfig</code> - Send discarded records to an Amazon SQS queue or Amazon SNS
+ *
+ * topic> </li> <li>
+ *
+ * <code>MaximumRecordAgeInSeconds</code> - Discard records older than the specified age. The default value is infinite
+ * (-1). When set to infinite (-1), failed records are retried until the record
+ *
+ * expire> </li> <li>
+ *
+ * <code>MaximumRetryAttempts</code> - Discard records after the specified number of retries. The default value is infinite
+ * (-1). When set to infinite (-1), failed records are retried until the record
+ *
+ * expires> </li> <li>
+ *
+ * <code>ParallelizationFactor</code> - Process multiple batches from each shard
  */
 CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const CreateEventSourceMappingRequest &request)
 {
@@ -294,12 +386,21 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates a Lambda function. To create a function, you need a <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html">deployment package</a> and an <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html">deployment package</a> and an <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role">execution
- * role</a>. The deployment package contains your function code. The execution role grants the function permission to use
- * AWS services, such as Amazon CloudWatch Logs for log streaming and AWS X-Ray for request
+ * role</a>. The deployment package is a .zip file archive or container image that contains your function code. The
+ * execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and
+ * AWS X-Ray for request
  *
  * tracing>
+ *
+ * When you create a function, Lambda provisions an instance of the function and its supporting resources. If your function
+ * connects to a VPC, this process can take a minute or so. During this time, you can't invoke or modify the function. The
+ * <code>State</code>, <code>StateReason</code>, and <code>StateReasonCode</code> fields in the response from
+ * <a>GetFunctionConfiguration</a> indicate when the function is ready to invoke. For more information, see <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html">Function
+ *
+ * States</a>>
  *
  * A function has an unpublished version, and can have published versions and aliases. The unpublished version changes when
  * you update your function's code and configuration. A published version is a snapshot of your function code and
@@ -315,6 +416,13 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  *
  * (<a>PutFunctionConcurrency</a>)>
  *
+ * You can use code signing if your deployment package is a .zip file archive. To enable code signing for this function,
+ * specify the ARN of a code-signing configuration. When a user attempts to deploy a code package with
+ * <a>UpdateFunctionCode</a>, Lambda checks that the code package has a valid signature from a trusted publisher. The
+ * code-signing configuration includes set set of signing profiles, which define the trusted publishers for this
+ *
+ * function>
+ *
  * If another account or an AWS service invokes your function, use <a>AddPermission</a> to grant permission by creating a
  * resource-based IAM policy. You can grant permissions at the function level, on a version, or on an
  *
@@ -323,7 +431,7 @@ CreateEventSourceMappingResponse * LambdaClient::createEventSourceMapping(const 
  * To invoke your function directly, use <a>Invoke</a>. To invoke your function in response to events in other AWS
  * services, create an event source mapping (<a>CreateEventSourceMapping</a>), or configure a function trigger in the other
  * service. For more information, see <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/invoking-lambda-functions.html">Invoking
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html">Invoking
  */
 CreateFunctionResponse * LambdaClient::createFunction(const CreateFunctionRequest &request)
 {
@@ -345,12 +453,30 @@ DeleteAliasResponse * LambdaClient::deleteAlias(const DeleteAliasRequest &reques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the code signing configuration. You can delete the code signing configuration only if no function is using it.
+ */
+DeleteCodeSigningConfigResponse * LambdaClient::deleteCodeSigningConfig(const DeleteCodeSigningConfigRequest &request)
+{
+    return qobject_cast<DeleteCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * DeleteEventSourceMappingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an <a href="https://docs.aws.amazon.com/lambda/latest/dg/intro-invocation-modes.html">event source mapping</a>.
  * You can get the identifier of a mapping from the output of
+ *
+ * <a>ListEventSourceMappings</a>>
+ *
+ * When you delete an event source mapping, it enters a <code>Deleting</code> state and might not be completely deleted for
+ * several
  */
 DeleteEventSourceMappingResponse * LambdaClient::deleteEventSourceMapping(const DeleteEventSourceMappingRequest &request)
 {
@@ -378,6 +504,19 @@ DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionReques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteFunctionCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the code signing configuration from the
+ */
+DeleteFunctionCodeSigningConfigResponse * LambdaClient::deleteFunctionCodeSigningConfig(const DeleteFunctionCodeSigningConfigRequest &request)
+{
+    return qobject_cast<DeleteFunctionCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * DeleteFunctionConcurrencyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -387,6 +526,23 @@ DeleteFunctionResponse * LambdaClient::deleteFunction(const DeleteFunctionReques
 DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(const DeleteFunctionConcurrencyRequest &request)
 {
     return qobject_cast<DeleteFunctionConcurrencyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteFunctionEventInvokeConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the configuration for asynchronous invocation for a function, version, or
+ *
+ * alias>
+ *
+ * To configure options for asynchronous invocation, use
+ */
+DeleteFunctionEventInvokeConfigResponse * LambdaClient::deleteFunctionEventInvokeConfig(const DeleteFunctionEventInvokeConfigRequest &request)
+{
+    return qobject_cast<DeleteFunctionEventInvokeConfigResponse *>(send(request));
 }
 
 /*!
@@ -402,6 +558,19 @@ DeleteFunctionConcurrencyResponse * LambdaClient::deleteFunctionConcurrency(cons
 DeleteLayerVersionResponse * LambdaClient::deleteLayerVersion(const DeleteLayerVersionRequest &request)
 {
     return qobject_cast<DeleteLayerVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * DeleteProvisionedConcurrencyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the provisioned concurrency configuration for a
+ */
+DeleteProvisionedConcurrencyConfigResponse * LambdaClient::deleteProvisionedConcurrencyConfig(const DeleteProvisionedConcurrencyConfigRequest &request)
+{
+    return qobject_cast<DeleteProvisionedConcurrencyConfigResponse *>(send(request));
 }
 
 /*!
@@ -433,6 +602,19 @@ GetAliasResponse * LambdaClient::getAlias(const GetAliasRequest &request)
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the specified code signing
+ */
+GetCodeSigningConfigResponse * LambdaClient::getCodeSigningConfig(const GetCodeSigningConfigRequest &request)
+{
+    return qobject_cast<GetCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * GetEventSourceMappingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -460,6 +642,33 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetFunctionCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the code signing configuration for the specified
+ */
+GetFunctionCodeSigningConfigResponse * LambdaClient::getFunctionCodeSigningConfig(const GetFunctionCodeSigningConfigRequest &request)
+{
+    return qobject_cast<GetFunctionCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetFunctionConcurrencyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details about the reserved concurrency configuration for a function. To set a concurrency limit for a function,
+ * use
+ */
+GetFunctionConcurrencyResponse * LambdaClient::getFunctionConcurrency(const GetFunctionConcurrencyRequest &request)
+{
+    return qobject_cast<GetFunctionConcurrencyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * GetFunctionConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -474,6 +683,23 @@ GetFunctionResponse * LambdaClient::getFunction(const GetFunctionRequest &reques
 GetFunctionConfigurationResponse * LambdaClient::getFunctionConfiguration(const GetFunctionConfigurationRequest &request)
 {
     return qobject_cast<GetFunctionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetFunctionEventInvokeConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the configuration for asynchronous invocation for a function, version, or
+ *
+ * alias>
+ *
+ * To configure options for asynchronous invocation, use
+ */
+GetFunctionEventInvokeConfigResponse * LambdaClient::getFunctionEventInvokeConfig(const GetFunctionEventInvokeConfigRequest &request)
+{
+    return qobject_cast<GetFunctionEventInvokeConfigResponse *>(send(request));
 }
 
 /*!
@@ -537,6 +763,19 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * GetProvisionedConcurrencyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the provisioned concurrency configuration for a function's alias or
+ */
+GetProvisionedConcurrencyConfigResponse * LambdaClient::getProvisionedConcurrencyConfig(const GetProvisionedConcurrencyConfigRequest &request)
+{
+    return qobject_cast<GetProvisionedConcurrencyConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * InvokeResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -546,13 +785,12 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
  *
  * <code>Event</code>>
  *
- * For synchronous invocation, details about the function response, including errors, are included in the response body and
- * headers. For either invocation type, you can find more information in the <a
+ * For <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-sync.html">synchronous invocation</a>, details
+ * about the function response, including errors, are included in the response body and headers. For either invocation
+ * type, you can find more information in the <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions.html">execution log</a> and <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/dlq.html">trace</a>. To record function errors for asynchronous
- * invocations, configure your function with a <a href="https://docs.aws.amazon.com/lambda/latest/dg/dlq.html">dead letter
  *
- * queue</a>>
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html">trace</a>>
  *
  * When an error occurs, your function may be invoked multiple times. Retry behavior varies by error type, client, event
  * source, and invocation type. For example, if you invoke a function asynchronously and it returns an error, Lambda
@@ -560,6 +798,14 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
  * href="https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html">Retry
  *
  * Behavior</a>>
+ *
+ * For <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">asynchronous invocation</a>, Lambda
+ * adds events to a queue before sending them to your function. If your function does not have enough capacity to keep up
+ * with the queue, events may be lost. Occasionally, your function may receive the same event multiple times, even if no
+ * error occurs. To retain events that were not processed, configure your function with a <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq">dead-letter
+ *
+ * queue</a>>
  *
  * The status code in the API response doesn't reflect function errors. Error codes are reserved for errors that prevent
  * your function from executing, such as permissions errors, <a
@@ -576,7 +822,8 @@ GetPolicyResponse * LambdaClient::getPolicy(const GetPolicyRequest &request)
  *
  * settings>
  *
- * This operation requires permission for the <code>lambda:InvokeFunction</code>
+ * This operation requires permission for the <a
+ * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awslambda.html">lambda:InvokeFunction</a>
  */
 InvokeResponse * LambdaClient::invoke(const InvokeRequest &request)
 {
@@ -618,6 +865,21 @@ ListAliasesResponse * LambdaClient::listAliases(const ListAliasesRequest &reques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListCodeSigningConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuring-codesigning.html">code signing
+ * configurations</a>. A request returns up to 10,000 configurations per call. You can use the <code>MaxItems</code>
+ * parameter to return fewer configurations per call.
+ */
+ListCodeSigningConfigsResponse * LambdaClient::listCodeSigningConfigs(const ListCodeSigningConfigsRequest &request)
+{
+    return qobject_cast<ListCodeSigningConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * ListEventSourceMappingsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -632,20 +894,58 @@ ListEventSourceMappingsResponse * LambdaClient::listEventSourceMappings(const Li
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListFunctionEventInvokeConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of configurations for asynchronous invocation for a
+ *
+ * function>
+ *
+ * To configure options for asynchronous invocation, use
+ */
+ListFunctionEventInvokeConfigsResponse * LambdaClient::listFunctionEventInvokeConfigs(const ListFunctionEventInvokeConfigsRequest &request)
+{
+    return qobject_cast<ListFunctionEventInvokeConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * ListFunctionsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of Lambda functions, with the version-specific configuration of
+ * Returns a list of Lambda functions, with the version-specific configuration of each. Lambda returns up to 50 functions
+ * per
  *
- * each>
+ * call>
  *
  * Set <code>FunctionVersion</code> to <code>ALL</code> to include all published versions of each function in addition to
- * the unpublished version. To get more information about a function or version, use
+ * the unpublished version.
+ *
+ * </p <note>
+ *
+ * The <code>ListFunctions</code> action returns a subset of the <a>FunctionConfiguration</a> fields. To get the additional
+ * fields (State, StateReasonCode, StateReason, LastUpdateStatus, LastUpdateStatusReason, LastUpdateStatusReasonCode) for a
+ * function or version, use
  */
 ListFunctionsResponse * LambdaClient::listFunctions(const ListFunctionsRequest &request)
 {
     return qobject_cast<ListFunctionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListFunctionsByCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List the functions that use the specified code signing configuration. You can use this method prior to deleting a code
+ * signing configuration, to verify that no functions are using
+ */
+ListFunctionsByCodeSigningConfigResponse * LambdaClient::listFunctionsByCodeSigningConfig(const ListFunctionsByCodeSigningConfigRequest &request)
+{
+    return qobject_cast<ListFunctionsByCodeSigningConfigResponse *>(send(request));
 }
 
 /*!
@@ -682,6 +982,19 @@ ListLayersResponse * LambdaClient::listLayers(const ListLayersRequest &request)
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * ListProvisionedConcurrencyConfigsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a list of provisioned concurrency configurations for a
+ */
+ListProvisionedConcurrencyConfigsResponse * LambdaClient::listProvisionedConcurrencyConfigs(const ListProvisionedConcurrencyConfigsRequest &request)
+{
+    return qobject_cast<ListProvisionedConcurrencyConfigsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * ListTagsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -701,7 +1014,7 @@ ListTagsResponse * LambdaClient::listTags(const ListTagsRequest &request)
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of <a href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">versions</a>, with the
- * version-specific configuration of each.
+ * version-specific configuration of each. Lambda returns up to 50 versions per
  */
 ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const ListVersionsByFunctionRequest &request)
 {
@@ -715,7 +1028,7 @@ ListVersionsByFunctionResponse * LambdaClient::listVersionsByFunction(const List
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">AWS Lambda layer</a> from a
- * ZIP archive. Each time you call <code>PublishLayerVersion</code> with the same version name, a new version is
+ * ZIP archive. Each time you call <code>PublishLayerVersion</code> with the same layer name, a new version is
  *
  * created>
  *
@@ -752,6 +1065,20 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * PutFunctionCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update the code signing configuration for the function. Changes to the code signing configuration take effect the next
+ * time a user tries to deploy a code package to the function.
+ */
+PutFunctionCodeSigningConfigResponse * LambdaClient::putFunctionCodeSigningConfig(const PutFunctionCodeSigningConfigRequest &request)
+{
+    return qobject_cast<PutFunctionCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * PutFunctionConcurrencyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -766,7 +1093,7 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
  *
  * function>
  *
- * Use <a>GetAccountSettings</a> to see your regional concurrency limit. You can reserve concurrency for as many functions
+ * Use <a>GetAccountSettings</a> to see your Regional concurrency limit. You can reserve concurrency for as many functions
  * as you like, as long as you leave at least 100 simultaneous executions unreserved for functions that aren't configured
  * with a per-function limit. For more information, see <a
  * href="https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html">Managing
@@ -774,6 +1101,48 @@ PublishVersionResponse * LambdaClient::publishVersion(const PublishVersionReques
 PutFunctionConcurrencyResponse * LambdaClient::putFunctionConcurrency(const PutFunctionConcurrencyRequest &request)
 {
     return qobject_cast<PutFunctionConcurrencyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * PutFunctionEventInvokeConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Configures options for <a href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html">asynchronous
+ * invocation</a> on a function, version, or alias. If a configuration already exists for a function, version, or alias,
+ * this operation overwrites it. If you exclude any settings, they are removed. To set one option without affecting
+ * existing settings for other options, use
+ *
+ * <a>UpdateFunctionEventInvokeConfig</a>>
+ *
+ * By default, Lambda retries an asynchronous invocation twice if the function returns an error. It retains events in a
+ * queue for up to six hours. When an event fails all processing attempts or stays in the asynchronous invocation queue for
+ * too long, Lambda discards it. To retain discarded events, configure a dead-letter queue with
+ *
+ * <a>UpdateFunctionConfiguration</a>>
+ *
+ * To send an invocation record to a queue, topic, function, or event bus, specify a <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations">destination</a>.
+ * You can configure separate destinations for successful invocations (on-success) and events that fail all processing
+ * attempts (on-failure). You can configure destinations in addition to or instead of a dead-letter
+ */
+PutFunctionEventInvokeConfigResponse * LambdaClient::putFunctionEventInvokeConfig(const PutFunctionEventInvokeConfigRequest &request)
+{
+    return qobject_cast<PutFunctionEventInvokeConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * PutProvisionedConcurrencyConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a provisioned concurrency configuration to a function's alias or
+ */
+PutProvisionedConcurrencyConfigResponse * LambdaClient::putProvisionedConcurrencyConfig(const PutProvisionedConcurrencyConfigRequest &request)
+{
+    return qobject_cast<PutProvisionedConcurrencyConfigResponse *>(send(request));
 }
 
 /*!
@@ -846,12 +1215,52 @@ UpdateAliasResponse * LambdaClient::updateAlias(const UpdateAliasRequest &reques
 
 /*!
  * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateCodeSigningConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Update the code signing configuration. Changes to the code signing configuration take effect the next time a user tries
+ * to deploy a code package to the function.
+ */
+UpdateCodeSigningConfigResponse * LambdaClient::updateCodeSigningConfig(const UpdateCodeSigningConfigRequest &request)
+{
+    return qobject_cast<UpdateCodeSigningConfigResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
  * UpdateEventSourceMappingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Updates an event source mapping. You can change the function that AWS Lambda invokes, or pause invocation and resume
  * later from the same
+ *
+ * location>
+ *
+ * The following error handling options are only available for stream sources (DynamoDB and
+ *
+ * Kinesis)> <ul> <li>
+ *
+ * <code>BisectBatchOnFunctionError</code> - If the function returns an error, split the batch in two and
+ *
+ * retry> </li> <li>
+ *
+ * <code>DestinationConfig</code> - Send discarded records to an Amazon SQS queue or Amazon SNS
+ *
+ * topic> </li> <li>
+ *
+ * <code>MaximumRecordAgeInSeconds</code> - Discard records older than the specified age. The default value is infinite
+ * (-1). When set to infinite (-1), failed records are retried until the record
+ *
+ * expire> </li> <li>
+ *
+ * <code>MaximumRetryAttempts</code> - Discard records after the specified number of retries. The default value is infinite
+ * (-1). When set to infinite (-1), failed records are retried until the record
+ *
+ * expires> </li> <li>
+ *
+ * <code>ParallelizationFactor</code> - Process multiple batches from each shard
  */
 UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const UpdateEventSourceMappingRequest &request)
 {
@@ -864,12 +1273,19 @@ UpdateEventSourceMappingResponse * LambdaClient::updateEventSourceMapping(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a Lambda function's
+ * Updates a Lambda function's code. If code signing is enabled for the function, the code package must be signed by a
+ * trusted publisher. For more information, see <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-trustedcode.html">Configuring code
  *
- * code>
+ * signing</a>>
  *
  * The function's code is locked when you publish a version. You can't modify the code of a published version, only the
  * unpublished
+ *
+ * version> <note>
+ *
+ * For a function defined as a container image, Lambda resolves the image tag to an image digest. In Amazon ECR, if you
+ * update the image tag to a new image, Lambda does not automatically update the
  */
 UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFunctionCodeRequest &request)
 {
@@ -886,6 +1302,15 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
  *
  * function>
  *
+ * When you update a function, Lambda provisions an instance of the function and its supporting resources. If your function
+ * connects to a VPC, this process can take a minute. During this time, you can't modify the function, but you can still
+ * invoke it. The <code>LastUpdateStatus</code>, <code>LastUpdateStatusReason</code>, and
+ * <code>LastUpdateStatusReasonCode</code> fields in the response from <a>GetFunctionConfiguration</a> indicate when the
+ * update is complete and the function is processing events with the new configuration. For more information, see <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html">Function
+ *
+ * States</a>>
+ *
  * These settings can vary between versions of a function and are locked when you publish a version. You can't modify the
  * configuration of a published version, only the unpublished
  *
@@ -897,6 +1322,23 @@ UpdateFunctionCodeResponse * LambdaClient::updateFunctionCode(const UpdateFuncti
 UpdateFunctionConfigurationResponse * LambdaClient::updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
 {
     return qobject_cast<UpdateFunctionConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the LambdaClient service, and returns a pointer to an
+ * UpdateFunctionEventInvokeConfigResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the configuration for asynchronous invocation for a function, version, or
+ *
+ * alias>
+ *
+ * To configure options for asynchronous invocation, use
+ */
+UpdateFunctionEventInvokeConfigResponse * LambdaClient::updateFunctionEventInvokeConfig(const UpdateFunctionEventInvokeConfigRequest &request)
+{
+    return qobject_cast<UpdateFunctionEventInvokeConfigResponse *>(send(request));
 }
 
 /*!

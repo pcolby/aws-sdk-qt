@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsDocDB
+  addsourceidentifiertosubscriptionrequest.h
+  addsourceidentifiertosubscriptionrequest_p.h
+  addsourceidentifiertosubscriptionresponse.h
+  addsourceidentifiertosubscriptionresponse_p.h
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
   addtagstoresourceresponse.h
@@ -37,6 +41,14 @@ add_library(QtAwsDocDB
   createdbsubnetgrouprequest_p.h
   createdbsubnetgroupresponse.h
   createdbsubnetgroupresponse_p.h
+  createeventsubscriptionrequest.h
+  createeventsubscriptionrequest_p.h
+  createeventsubscriptionresponse.h
+  createeventsubscriptionresponse_p.h
+  createglobalclusterrequest.h
+  createglobalclusterrequest_p.h
+  createglobalclusterresponse.h
+  createglobalclusterresponse_p.h
   deletedbclusterparametergrouprequest.h
   deletedbclusterparametergrouprequest_p.h
   deletedbclusterparametergroupresponse.h
@@ -57,6 +69,18 @@ add_library(QtAwsDocDB
   deletedbsubnetgrouprequest_p.h
   deletedbsubnetgroupresponse.h
   deletedbsubnetgroupresponse_p.h
+  deleteeventsubscriptionrequest.h
+  deleteeventsubscriptionrequest_p.h
+  deleteeventsubscriptionresponse.h
+  deleteeventsubscriptionresponse_p.h
+  deleteglobalclusterrequest.h
+  deleteglobalclusterrequest_p.h
+  deleteglobalclusterresponse.h
+  deleteglobalclusterresponse_p.h
+  describecertificatesrequest.h
+  describecertificatesrequest_p.h
+  describecertificatesresponse.h
+  describecertificatesresponse_p.h
   describedbclusterparametergroupsrequest.h
   describedbclusterparametergroupsrequest_p.h
   describedbclusterparametergroupsresponse.h
@@ -101,6 +125,14 @@ add_library(QtAwsDocDB
   describeeventsrequest_p.h
   describeeventsresponse.h
   describeeventsresponse_p.h
+  describeeventsubscriptionsrequest.h
+  describeeventsubscriptionsrequest_p.h
+  describeeventsubscriptionsresponse.h
+  describeeventsubscriptionsresponse_p.h
+  describeglobalclustersrequest.h
+  describeglobalclustersrequest_p.h
+  describeglobalclustersresponse.h
+  describeglobalclustersresponse_p.h
   describeorderabledbinstanceoptionsrequest.h
   describeorderabledbinstanceoptionsrequest_p.h
   describeorderabledbinstanceoptionsresponse.h
@@ -143,10 +175,26 @@ add_library(QtAwsDocDB
   modifydbsubnetgrouprequest_p.h
   modifydbsubnetgroupresponse.h
   modifydbsubnetgroupresponse_p.h
+  modifyeventsubscriptionrequest.h
+  modifyeventsubscriptionrequest_p.h
+  modifyeventsubscriptionresponse.h
+  modifyeventsubscriptionresponse_p.h
+  modifyglobalclusterrequest.h
+  modifyglobalclusterrequest_p.h
+  modifyglobalclusterresponse.h
+  modifyglobalclusterresponse_p.h
   rebootdbinstancerequest.h
   rebootdbinstancerequest_p.h
   rebootdbinstanceresponse.h
   rebootdbinstanceresponse_p.h
+  removefromglobalclusterrequest.h
+  removefromglobalclusterrequest_p.h
+  removefromglobalclusterresponse.h
+  removefromglobalclusterresponse_p.h
+  removesourceidentifierfromsubscriptionrequest.h
+  removesourceidentifierfromsubscriptionrequest_p.h
+  removesourceidentifierfromsubscriptionresponse.h
+  removesourceidentifierfromsubscriptionresponse_p.h
   removetagsfromresourcerequest.h
   removetagsfromresourcerequest_p.h
   removetagsfromresourceresponse.h
@@ -171,6 +219,8 @@ add_library(QtAwsDocDB
   stopdbclusterrequest_p.h
   stopdbclusterresponse.h
   stopdbclusterresponse_p.h
+  addsourceidentifiertosubscriptionrequest.cpp
+  addsourceidentifiertosubscriptionresponse.cpp
   addtagstoresourcerequest.cpp
   addtagstoresourceresponse.cpp
   applypendingmaintenanceactionrequest.cpp
@@ -189,6 +239,10 @@ add_library(QtAwsDocDB
   createdbinstanceresponse.cpp
   createdbsubnetgrouprequest.cpp
   createdbsubnetgroupresponse.cpp
+  createeventsubscriptionrequest.cpp
+  createeventsubscriptionresponse.cpp
+  createglobalclusterrequest.cpp
+  createglobalclusterresponse.cpp
   deletedbclusterparametergrouprequest.cpp
   deletedbclusterparametergroupresponse.cpp
   deletedbclusterrequest.cpp
@@ -199,6 +253,12 @@ add_library(QtAwsDocDB
   deletedbinstanceresponse.cpp
   deletedbsubnetgrouprequest.cpp
   deletedbsubnetgroupresponse.cpp
+  deleteeventsubscriptionrequest.cpp
+  deleteeventsubscriptionresponse.cpp
+  deleteglobalclusterrequest.cpp
+  deleteglobalclusterresponse.cpp
+  describecertificatesrequest.cpp
+  describecertificatesresponse.cpp
   describedbclusterparametergroupsrequest.cpp
   describedbclusterparametergroupsresponse.cpp
   describedbclusterparametersrequest.cpp
@@ -221,6 +281,10 @@ add_library(QtAwsDocDB
   describeeventcategoriesresponse.cpp
   describeeventsrequest.cpp
   describeeventsresponse.cpp
+  describeeventsubscriptionsrequest.cpp
+  describeeventsubscriptionsresponse.cpp
+  describeglobalclustersrequest.cpp
+  describeglobalclustersresponse.cpp
   describeorderabledbinstanceoptionsrequest.cpp
   describeorderabledbinstanceoptionsresponse.cpp
   describependingmaintenanceactionsrequest.cpp
@@ -242,8 +306,16 @@ add_library(QtAwsDocDB
   modifydbinstanceresponse.cpp
   modifydbsubnetgrouprequest.cpp
   modifydbsubnetgroupresponse.cpp
+  modifyeventsubscriptionrequest.cpp
+  modifyeventsubscriptionresponse.cpp
+  modifyglobalclusterrequest.cpp
+  modifyglobalclusterresponse.cpp
   rebootdbinstancerequest.cpp
   rebootdbinstanceresponse.cpp
+  removefromglobalclusterrequest.cpp
+  removefromglobalclusterresponse.cpp
+  removesourceidentifierfromsubscriptionrequest.cpp
+  removesourceidentifierfromsubscriptionresponse.cpp
   removetagsfromresourcerequest.cpp
   removetagsfromresourceresponse.cpp
   resetdbclusterparametergrouprequest.cpp

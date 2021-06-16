@@ -37,22 +37,38 @@ namespace CloudWatchEvents {
  * requests.
  *
  * \value ActivateEventSourceAction CloudWatchEvents ActivateEventSource action.
+ * \value CancelReplayAction CloudWatchEvents CancelReplay action.
+ * \value CreateApiDestinationAction CloudWatchEvents CreateApiDestination action.
+ * \value CreateArchiveAction CloudWatchEvents CreateArchive action.
+ * \value CreateConnectionAction CloudWatchEvents CreateConnection action.
  * \value CreateEventBusAction CloudWatchEvents CreateEventBus action.
  * \value CreatePartnerEventSourceAction CloudWatchEvents CreatePartnerEventSource action.
  * \value DeactivateEventSourceAction CloudWatchEvents DeactivateEventSource action.
+ * \value DeauthorizeConnectionAction CloudWatchEvents DeauthorizeConnection action.
+ * \value DeleteApiDestinationAction CloudWatchEvents DeleteApiDestination action.
+ * \value DeleteArchiveAction CloudWatchEvents DeleteArchive action.
+ * \value DeleteConnectionAction CloudWatchEvents DeleteConnection action.
  * \value DeleteEventBusAction CloudWatchEvents DeleteEventBus action.
  * \value DeletePartnerEventSourceAction CloudWatchEvents DeletePartnerEventSource action.
  * \value DeleteRuleAction CloudWatchEvents DeleteRule action.
+ * \value DescribeApiDestinationAction CloudWatchEvents DescribeApiDestination action.
+ * \value DescribeArchiveAction CloudWatchEvents DescribeArchive action.
+ * \value DescribeConnectionAction CloudWatchEvents DescribeConnection action.
  * \value DescribeEventBusAction CloudWatchEvents DescribeEventBus action.
  * \value DescribeEventSourceAction CloudWatchEvents DescribeEventSource action.
  * \value DescribePartnerEventSourceAction CloudWatchEvents DescribePartnerEventSource action.
+ * \value DescribeReplayAction CloudWatchEvents DescribeReplay action.
  * \value DescribeRuleAction CloudWatchEvents DescribeRule action.
  * \value DisableRuleAction CloudWatchEvents DisableRule action.
  * \value EnableRuleAction CloudWatchEvents EnableRule action.
+ * \value ListApiDestinationsAction CloudWatchEvents ListApiDestinations action.
+ * \value ListArchivesAction CloudWatchEvents ListArchives action.
+ * \value ListConnectionsAction CloudWatchEvents ListConnections action.
  * \value ListEventBusesAction CloudWatchEvents ListEventBuses action.
  * \value ListEventSourcesAction CloudWatchEvents ListEventSources action.
  * \value ListPartnerEventSourceAccountsAction CloudWatchEvents ListPartnerEventSourceAccounts action.
  * \value ListPartnerEventSourcesAction CloudWatchEvents ListPartnerEventSources action.
+ * \value ListReplaysAction CloudWatchEvents ListReplays action.
  * \value ListRuleNamesByTargetAction CloudWatchEvents ListRuleNamesByTarget action.
  * \value ListRulesAction CloudWatchEvents ListRules action.
  * \value ListTagsForResourceAction CloudWatchEvents ListTagsForResource action.
@@ -64,9 +80,13 @@ namespace CloudWatchEvents {
  * \value PutTargetsAction CloudWatchEvents PutTargets action.
  * \value RemovePermissionAction CloudWatchEvents RemovePermission action.
  * \value RemoveTargetsAction CloudWatchEvents RemoveTargets action.
+ * \value StartReplayAction CloudWatchEvents StartReplay action.
  * \value TagResourceAction CloudWatchEvents TagResource action.
  * \value TestEventPatternAction CloudWatchEvents TestEventPattern action.
  * \value UntagResourceAction CloudWatchEvents UntagResource action.
+ * \value UpdateApiDestinationAction CloudWatchEvents UpdateApiDestination action.
+ * \value UpdateArchiveAction CloudWatchEvents UpdateArchive action.
+ * \value UpdateConnectionAction CloudWatchEvents UpdateConnection action.
  */
 
 /*!

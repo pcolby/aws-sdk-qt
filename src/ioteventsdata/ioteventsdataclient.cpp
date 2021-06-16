@@ -21,12 +21,26 @@
 #include "ioteventsdataclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "batchacknowledgealarmrequest.h"
+#include "batchacknowledgealarmresponse.h"
+#include "batchdisablealarmrequest.h"
+#include "batchdisablealarmresponse.h"
+#include "batchenablealarmrequest.h"
+#include "batchenablealarmresponse.h"
 #include "batchputmessagerequest.h"
 #include "batchputmessageresponse.h"
+#include "batchresetalarmrequest.h"
+#include "batchresetalarmresponse.h"
+#include "batchsnoozealarmrequest.h"
+#include "batchsnoozealarmresponse.h"
 #include "batchupdatedetectorrequest.h"
 #include "batchupdatedetectorresponse.h"
+#include "describealarmrequest.h"
+#include "describealarmresponse.h"
 #include "describedetectorrequest.h"
 #include "describedetectorresponse.h"
+#include "listalarmsrequest.h"
+#include "listalarmsresponse.h"
 #include "listdetectorsrequest.h"
 #include "listdetectorsresponse.h"
 
@@ -53,8 +67,14 @@ namespace IoTEventsData {
  * \inmodule QtAwsIoTEventsData
  *
  *  AWS IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when
- *  such events occur. AWS IoT Events Data API commands enable you to send inputs to detectors, list detectors, and view or
+ *  such events occur. You can use AWS IoT Events Data API commands to send inputs to detectors, list detectors, and view or
  *  update a detector's
+ * 
+ *  status>
+ * 
+ *  For more information, see <a
+ *  href="https://docs.aws.amazon.com/iotevents/latest/developerguide/what-is-iotevents.html">What is AWS IoT Events?</a> in
+ *  the <i>AWS IoT Events Developer
  */
 
 /*!
@@ -112,6 +132,45 @@ IoTEventsDataClient::IoTEventsDataClient(
 
 /*!
  * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * BatchAcknowledgeAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Acknowledges one or more alarms. The alarms change to the <code>ACKNOWLEDGED</code> state after you acknowledge
+ */
+BatchAcknowledgeAlarmResponse * IoTEventsDataClient::batchAcknowledgeAlarm(const BatchAcknowledgeAlarmRequest &request)
+{
+    return qobject_cast<BatchAcknowledgeAlarmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * BatchDisableAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Disables one or more alarms. The alarms change to the <code>DISABLED</code> state after you disable
+ */
+BatchDisableAlarmResponse * IoTEventsDataClient::batchDisableAlarm(const BatchDisableAlarmRequest &request)
+{
+    return qobject_cast<BatchDisableAlarmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * BatchEnableAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables one or more alarms. The alarms change to the <code>NORMAL</code> state after you enable
+ */
+BatchEnableAlarmResponse * IoTEventsDataClient::batchEnableAlarm(const BatchEnableAlarmRequest &request)
+{
+    return qobject_cast<BatchEnableAlarmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
  * BatchPutMessageResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -124,6 +183,33 @@ IoTEventsDataClient::IoTEventsDataClient(
 BatchPutMessageResponse * IoTEventsDataClient::batchPutMessage(const BatchPutMessageRequest &request)
 {
     return qobject_cast<BatchPutMessageResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * BatchResetAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Resets one or more alarms. The alarms return to the <code>NORMAL</code> state after you reset
+ */
+BatchResetAlarmResponse * IoTEventsDataClient::batchResetAlarm(const BatchResetAlarmRequest &request)
+{
+    return qobject_cast<BatchResetAlarmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * BatchSnoozeAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Changes one or more alarms to the snooze mode. The alarms change to the <code>SNOOZE_DISABLED</code> state after you set
+ * them to the snooze
+ */
+BatchSnoozeAlarmResponse * IoTEventsDataClient::batchSnoozeAlarm(const BatchSnoozeAlarmRequest &request)
+{
+    return qobject_cast<BatchSnoozeAlarmResponse *>(send(request));
 }
 
 /*!
@@ -141,6 +227,19 @@ BatchUpdateDetectorResponse * IoTEventsDataClient::batchUpdateDetector(const Bat
 
 /*!
  * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * DescribeAlarmResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves information about an
+ */
+DescribeAlarmResponse * IoTEventsDataClient::describeAlarm(const DescribeAlarmRequest &request)
+{
+    return qobject_cast<DescribeAlarmResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
  * DescribeDetectorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -150,6 +249,19 @@ BatchUpdateDetectorResponse * IoTEventsDataClient::batchUpdateDetector(const Bat
 DescribeDetectorResponse * IoTEventsDataClient::describeDetector(const DescribeDetectorRequest &request)
 {
     return qobject_cast<DescribeDetectorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the IoTEventsDataClient service, and returns a pointer to an
+ * ListAlarmsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists one or more alarms. The operation returns only the metadata associated with each
+ */
+ListAlarmsResponse * IoTEventsDataClient::listAlarms(const ListAlarmsRequest &request)
+{
+    return qobject_cast<ListAlarmsResponse *>(send(request));
 }
 
 /*!

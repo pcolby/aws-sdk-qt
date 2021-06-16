@@ -41,6 +41,10 @@
 #include "initializeclusterresponse.h"
 #include "listtagsrequest.h"
 #include "listtagsresponse.h"
+#include "modifybackupattributesrequest.h"
+#include "modifybackupattributesresponse.h"
+#include "modifyclusterrequest.h"
+#include "modifyclusterresponse.h"
 #include "restorebackuprequest.h"
 #include "restorebackupresponse.h"
 #include "tagresourcerequest.h"
@@ -71,7 +75,7 @@ namespace CloudHSMV2 {
  * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
- *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
+ *  href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
  */
 
 /*!
@@ -172,8 +176,8 @@ CreateHsmResponse * CloudHSMV2Client::createHsm(const CreateHsmRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a specified AWS CloudHSM backup. A backup can be restored up to 7 days after the DeleteBackup request. For more
- * information on restoring a backup, see <a>RestoreBackup</a>
+ * Deletes a specified AWS CloudHSM backup. A backup can be restored up to 7 days after the DeleteBackup request is made.
+ * For more information on restoring a backup, see
  */
 DeleteBackupResponse * CloudHSMV2Client::deleteBackup(const DeleteBackupRequest &request)
 {
@@ -286,11 +290,37 @@ ListTagsResponse * CloudHSMV2Client::listTags(const ListTagsRequest &request)
 
 /*!
  * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * ModifyBackupAttributesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies attributes for AWS CloudHSM
+ */
+ModifyBackupAttributesResponse * CloudHSMV2Client::modifyBackupAttributes(const ModifyBackupAttributesRequest &request)
+{
+    return qobject_cast<ModifyBackupAttributesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
+ * ModifyClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies AWS CloudHSM
+ */
+ModifyClusterResponse * CloudHSMV2Client::modifyCluster(const ModifyClusterRequest &request)
+{
+    return qobject_cast<ModifyClusterResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the CloudHSMV2Client service, and returns a pointer to an
  * RestoreBackupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Restores a specified AWS CloudHSM backup that is in the <code>PENDING_DELETION</code> state. For more information on
+ * Restores a specified AWS CloudHSM backup that is in the <code>PENDING_DELETION</code> state. For mor information on
  * deleting a backup, see
  */
 RestoreBackupResponse * CloudHSMV2Client::restoreBackup(const RestoreBackupRequest &request)

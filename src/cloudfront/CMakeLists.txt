@@ -7,6 +7,10 @@ add_library(QtAwsCloudFront
   cloudfrontrequest_p.h
   cloudfrontresponse.h
   cloudfrontresponse_p.h
+  createcachepolicyrequest.h
+  createcachepolicyrequest_p.h
+  createcachepolicyresponse.h
+  createcachepolicyresponse_p.h
   createcloudfrontoriginaccessidentityrequest.h
   createcloudfrontoriginaccessidentityrequest_p.h
   createcloudfrontoriginaccessidentityresponse.h
@@ -27,14 +31,34 @@ add_library(QtAwsCloudFront
   createfieldlevelencryptionprofilerequest_p.h
   createfieldlevelencryptionprofileresponse.h
   createfieldlevelencryptionprofileresponse_p.h
+  createfunctionrequest.h
+  createfunctionrequest_p.h
+  createfunctionresponse.h
+  createfunctionresponse_p.h
   createinvalidationrequest.h
   createinvalidationrequest_p.h
   createinvalidationresponse.h
   createinvalidationresponse_p.h
+  createkeygrouprequest.h
+  createkeygrouprequest_p.h
+  createkeygroupresponse.h
+  createkeygroupresponse_p.h
+  createmonitoringsubscriptionrequest.h
+  createmonitoringsubscriptionrequest_p.h
+  createmonitoringsubscriptionresponse.h
+  createmonitoringsubscriptionresponse_p.h
+  createoriginrequestpolicyrequest.h
+  createoriginrequestpolicyrequest_p.h
+  createoriginrequestpolicyresponse.h
+  createoriginrequestpolicyresponse_p.h
   createpublickeyrequest.h
   createpublickeyrequest_p.h
   createpublickeyresponse.h
   createpublickeyresponse_p.h
+  createrealtimelogconfigrequest.h
+  createrealtimelogconfigrequest_p.h
+  createrealtimelogconfigresponse.h
+  createrealtimelogconfigresponse_p.h
   createstreamingdistributionrequest.h
   createstreamingdistributionrequest_p.h
   createstreamingdistributionresponse.h
@@ -43,6 +67,10 @@ add_library(QtAwsCloudFront
   createstreamingdistributionwithtagsrequest_p.h
   createstreamingdistributionwithtagsresponse.h
   createstreamingdistributionwithtagsresponse_p.h
+  deletecachepolicyrequest.h
+  deletecachepolicyrequest_p.h
+  deletecachepolicyresponse.h
+  deletecachepolicyresponse_p.h
   deletecloudfrontoriginaccessidentityrequest.h
   deletecloudfrontoriginaccessidentityrequest_p.h
   deletecloudfrontoriginaccessidentityresponse.h
@@ -59,14 +87,46 @@ add_library(QtAwsCloudFront
   deletefieldlevelencryptionprofilerequest_p.h
   deletefieldlevelencryptionprofileresponse.h
   deletefieldlevelencryptionprofileresponse_p.h
+  deletefunctionrequest.h
+  deletefunctionrequest_p.h
+  deletefunctionresponse.h
+  deletefunctionresponse_p.h
+  deletekeygrouprequest.h
+  deletekeygrouprequest_p.h
+  deletekeygroupresponse.h
+  deletekeygroupresponse_p.h
+  deletemonitoringsubscriptionrequest.h
+  deletemonitoringsubscriptionrequest_p.h
+  deletemonitoringsubscriptionresponse.h
+  deletemonitoringsubscriptionresponse_p.h
+  deleteoriginrequestpolicyrequest.h
+  deleteoriginrequestpolicyrequest_p.h
+  deleteoriginrequestpolicyresponse.h
+  deleteoriginrequestpolicyresponse_p.h
   deletepublickeyrequest.h
   deletepublickeyrequest_p.h
   deletepublickeyresponse.h
   deletepublickeyresponse_p.h
+  deleterealtimelogconfigrequest.h
+  deleterealtimelogconfigrequest_p.h
+  deleterealtimelogconfigresponse.h
+  deleterealtimelogconfigresponse_p.h
   deletestreamingdistributionrequest.h
   deletestreamingdistributionrequest_p.h
   deletestreamingdistributionresponse.h
   deletestreamingdistributionresponse_p.h
+  describefunctionrequest.h
+  describefunctionrequest_p.h
+  describefunctionresponse.h
+  describefunctionresponse_p.h
+  getcachepolicyconfigrequest.h
+  getcachepolicyconfigrequest_p.h
+  getcachepolicyconfigresponse.h
+  getcachepolicyconfigresponse_p.h
+  getcachepolicyrequest.h
+  getcachepolicyrequest_p.h
+  getcachepolicyresponse.h
+  getcachepolicyresponse_p.h
   getcloudfrontoriginaccessidentityconfigrequest.h
   getcloudfrontoriginaccessidentityconfigrequest_p.h
   getcloudfrontoriginaccessidentityconfigresponse.h
@@ -99,10 +159,34 @@ add_library(QtAwsCloudFront
   getfieldlevelencryptionrequest_p.h
   getfieldlevelencryptionresponse.h
   getfieldlevelencryptionresponse_p.h
+  getfunctionrequest.h
+  getfunctionrequest_p.h
+  getfunctionresponse.h
+  getfunctionresponse_p.h
   getinvalidationrequest.h
   getinvalidationrequest_p.h
   getinvalidationresponse.h
   getinvalidationresponse_p.h
+  getkeygroupconfigrequest.h
+  getkeygroupconfigrequest_p.h
+  getkeygroupconfigresponse.h
+  getkeygroupconfigresponse_p.h
+  getkeygrouprequest.h
+  getkeygrouprequest_p.h
+  getkeygroupresponse.h
+  getkeygroupresponse_p.h
+  getmonitoringsubscriptionrequest.h
+  getmonitoringsubscriptionrequest_p.h
+  getmonitoringsubscriptionresponse.h
+  getmonitoringsubscriptionresponse_p.h
+  getoriginrequestpolicyconfigrequest.h
+  getoriginrequestpolicyconfigrequest_p.h
+  getoriginrequestpolicyconfigresponse.h
+  getoriginrequestpolicyconfigresponse_p.h
+  getoriginrequestpolicyrequest.h
+  getoriginrequestpolicyrequest_p.h
+  getoriginrequestpolicyresponse.h
+  getoriginrequestpolicyresponse_p.h
   getpublickeyconfigrequest.h
   getpublickeyconfigrequest_p.h
   getpublickeyconfigresponse.h
@@ -111,6 +195,10 @@ add_library(QtAwsCloudFront
   getpublickeyrequest_p.h
   getpublickeyresponse.h
   getpublickeyresponse_p.h
+  getrealtimelogconfigrequest.h
+  getrealtimelogconfigrequest_p.h
+  getrealtimelogconfigresponse.h
+  getrealtimelogconfigresponse_p.h
   getstreamingdistributionconfigrequest.h
   getstreamingdistributionconfigrequest_p.h
   getstreamingdistributionconfigresponse.h
@@ -119,10 +207,30 @@ add_library(QtAwsCloudFront
   getstreamingdistributionrequest_p.h
   getstreamingdistributionresponse.h
   getstreamingdistributionresponse_p.h
+  listcachepoliciesrequest.h
+  listcachepoliciesrequest_p.h
+  listcachepoliciesresponse.h
+  listcachepoliciesresponse_p.h
   listcloudfrontoriginaccessidentitiesrequest.h
   listcloudfrontoriginaccessidentitiesrequest_p.h
   listcloudfrontoriginaccessidentitiesresponse.h
   listcloudfrontoriginaccessidentitiesresponse_p.h
+  listdistributionsbycachepolicyidrequest.h
+  listdistributionsbycachepolicyidrequest_p.h
+  listdistributionsbycachepolicyidresponse.h
+  listdistributionsbycachepolicyidresponse_p.h
+  listdistributionsbykeygrouprequest.h
+  listdistributionsbykeygrouprequest_p.h
+  listdistributionsbykeygroupresponse.h
+  listdistributionsbykeygroupresponse_p.h
+  listdistributionsbyoriginrequestpolicyidrequest.h
+  listdistributionsbyoriginrequestpolicyidrequest_p.h
+  listdistributionsbyoriginrequestpolicyidresponse.h
+  listdistributionsbyoriginrequestpolicyidresponse_p.h
+  listdistributionsbyrealtimelogconfigrequest.h
+  listdistributionsbyrealtimelogconfigrequest_p.h
+  listdistributionsbyrealtimelogconfigresponse.h
+  listdistributionsbyrealtimelogconfigresponse_p.h
   listdistributionsbywebaclidrequest.h
   listdistributionsbywebaclidrequest_p.h
   listdistributionsbywebaclidresponse.h
@@ -139,14 +247,30 @@ add_library(QtAwsCloudFront
   listfieldlevelencryptionprofilesrequest_p.h
   listfieldlevelencryptionprofilesresponse.h
   listfieldlevelencryptionprofilesresponse_p.h
+  listfunctionsrequest.h
+  listfunctionsrequest_p.h
+  listfunctionsresponse.h
+  listfunctionsresponse_p.h
   listinvalidationsrequest.h
   listinvalidationsrequest_p.h
   listinvalidationsresponse.h
   listinvalidationsresponse_p.h
+  listkeygroupsrequest.h
+  listkeygroupsrequest_p.h
+  listkeygroupsresponse.h
+  listkeygroupsresponse_p.h
+  listoriginrequestpoliciesrequest.h
+  listoriginrequestpoliciesrequest_p.h
+  listoriginrequestpoliciesresponse.h
+  listoriginrequestpoliciesresponse_p.h
   listpublickeysrequest.h
   listpublickeysrequest_p.h
   listpublickeysresponse.h
   listpublickeysresponse_p.h
+  listrealtimelogconfigsrequest.h
+  listrealtimelogconfigsrequest_p.h
+  listrealtimelogconfigsresponse.h
+  listrealtimelogconfigsresponse_p.h
   liststreamingdistributionsrequest.h
   liststreamingdistributionsrequest_p.h
   liststreamingdistributionsresponse.h
@@ -155,14 +279,26 @@ add_library(QtAwsCloudFront
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  publishfunctionrequest.h
+  publishfunctionrequest_p.h
+  publishfunctionresponse.h
+  publishfunctionresponse_p.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h
   tagresourceresponse_p.h
+  testfunctionrequest.h
+  testfunctionrequest_p.h
+  testfunctionresponse.h
+  testfunctionresponse_p.h
   untagresourcerequest.h
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updatecachepolicyrequest.h
+  updatecachepolicyrequest_p.h
+  updatecachepolicyresponse.h
+  updatecachepolicyresponse_p.h
   updatecloudfrontoriginaccessidentityrequest.h
   updatecloudfrontoriginaccessidentityrequest_p.h
   updatecloudfrontoriginaccessidentityresponse.h
@@ -179,10 +315,26 @@ add_library(QtAwsCloudFront
   updatefieldlevelencryptionprofilerequest_p.h
   updatefieldlevelencryptionprofileresponse.h
   updatefieldlevelencryptionprofileresponse_p.h
+  updatefunctionrequest.h
+  updatefunctionrequest_p.h
+  updatefunctionresponse.h
+  updatefunctionresponse_p.h
+  updatekeygrouprequest.h
+  updatekeygrouprequest_p.h
+  updatekeygroupresponse.h
+  updatekeygroupresponse_p.h
+  updateoriginrequestpolicyrequest.h
+  updateoriginrequestpolicyrequest_p.h
+  updateoriginrequestpolicyresponse.h
+  updateoriginrequestpolicyresponse_p.h
   updatepublickeyrequest.h
   updatepublickeyrequest_p.h
   updatepublickeyresponse.h
   updatepublickeyresponse_p.h
+  updaterealtimelogconfigrequest.h
+  updaterealtimelogconfigrequest_p.h
+  updaterealtimelogconfigresponse.h
+  updaterealtimelogconfigresponse_p.h
   updatestreamingdistributionrequest.h
   updatestreamingdistributionrequest_p.h
   updatestreamingdistributionresponse.h
@@ -190,6 +342,8 @@ add_library(QtAwsCloudFront
   cloudfrontclient.cpp
   cloudfrontrequest.cpp
   cloudfrontresponse.cpp
+  createcachepolicyrequest.cpp
+  createcachepolicyresponse.cpp
   createcloudfrontoriginaccessidentityrequest.cpp
   createcloudfrontoriginaccessidentityresponse.cpp
   createdistributionrequest.cpp
@@ -200,14 +354,26 @@ add_library(QtAwsCloudFront
   createfieldlevelencryptionconfigresponse.cpp
   createfieldlevelencryptionprofilerequest.cpp
   createfieldlevelencryptionprofileresponse.cpp
+  createfunctionrequest.cpp
+  createfunctionresponse.cpp
   createinvalidationrequest.cpp
   createinvalidationresponse.cpp
+  createkeygrouprequest.cpp
+  createkeygroupresponse.cpp
+  createmonitoringsubscriptionrequest.cpp
+  createmonitoringsubscriptionresponse.cpp
+  createoriginrequestpolicyrequest.cpp
+  createoriginrequestpolicyresponse.cpp
   createpublickeyrequest.cpp
   createpublickeyresponse.cpp
+  createrealtimelogconfigrequest.cpp
+  createrealtimelogconfigresponse.cpp
   createstreamingdistributionrequest.cpp
   createstreamingdistributionresponse.cpp
   createstreamingdistributionwithtagsrequest.cpp
   createstreamingdistributionwithtagsresponse.cpp
+  deletecachepolicyrequest.cpp
+  deletecachepolicyresponse.cpp
   deletecloudfrontoriginaccessidentityrequest.cpp
   deletecloudfrontoriginaccessidentityresponse.cpp
   deletedistributionrequest.cpp
@@ -216,10 +382,26 @@ add_library(QtAwsCloudFront
   deletefieldlevelencryptionconfigresponse.cpp
   deletefieldlevelencryptionprofilerequest.cpp
   deletefieldlevelencryptionprofileresponse.cpp
+  deletefunctionrequest.cpp
+  deletefunctionresponse.cpp
+  deletekeygrouprequest.cpp
+  deletekeygroupresponse.cpp
+  deletemonitoringsubscriptionrequest.cpp
+  deletemonitoringsubscriptionresponse.cpp
+  deleteoriginrequestpolicyrequest.cpp
+  deleteoriginrequestpolicyresponse.cpp
   deletepublickeyrequest.cpp
   deletepublickeyresponse.cpp
+  deleterealtimelogconfigrequest.cpp
+  deleterealtimelogconfigresponse.cpp
   deletestreamingdistributionrequest.cpp
   deletestreamingdistributionresponse.cpp
+  describefunctionrequest.cpp
+  describefunctionresponse.cpp
+  getcachepolicyconfigrequest.cpp
+  getcachepolicyconfigresponse.cpp
+  getcachepolicyrequest.cpp
+  getcachepolicyresponse.cpp
   getcloudfrontoriginaccessidentityconfigrequest.cpp
   getcloudfrontoriginaccessidentityconfigresponse.cpp
   getcloudfrontoriginaccessidentityrequest.cpp
@@ -236,18 +418,42 @@ add_library(QtAwsCloudFront
   getfieldlevelencryptionprofileresponse.cpp
   getfieldlevelencryptionrequest.cpp
   getfieldlevelencryptionresponse.cpp
+  getfunctionrequest.cpp
+  getfunctionresponse.cpp
   getinvalidationrequest.cpp
   getinvalidationresponse.cpp
+  getkeygroupconfigrequest.cpp
+  getkeygroupconfigresponse.cpp
+  getkeygrouprequest.cpp
+  getkeygroupresponse.cpp
+  getmonitoringsubscriptionrequest.cpp
+  getmonitoringsubscriptionresponse.cpp
+  getoriginrequestpolicyconfigrequest.cpp
+  getoriginrequestpolicyconfigresponse.cpp
+  getoriginrequestpolicyrequest.cpp
+  getoriginrequestpolicyresponse.cpp
   getpublickeyconfigrequest.cpp
   getpublickeyconfigresponse.cpp
   getpublickeyrequest.cpp
   getpublickeyresponse.cpp
+  getrealtimelogconfigrequest.cpp
+  getrealtimelogconfigresponse.cpp
   getstreamingdistributionconfigrequest.cpp
   getstreamingdistributionconfigresponse.cpp
   getstreamingdistributionrequest.cpp
   getstreamingdistributionresponse.cpp
+  listcachepoliciesrequest.cpp
+  listcachepoliciesresponse.cpp
   listcloudfrontoriginaccessidentitiesrequest.cpp
   listcloudfrontoriginaccessidentitiesresponse.cpp
+  listdistributionsbycachepolicyidrequest.cpp
+  listdistributionsbycachepolicyidresponse.cpp
+  listdistributionsbykeygrouprequest.cpp
+  listdistributionsbykeygroupresponse.cpp
+  listdistributionsbyoriginrequestpolicyidrequest.cpp
+  listdistributionsbyoriginrequestpolicyidresponse.cpp
+  listdistributionsbyrealtimelogconfigrequest.cpp
+  listdistributionsbyrealtimelogconfigresponse.cpp
   listdistributionsbywebaclidrequest.cpp
   listdistributionsbywebaclidresponse.cpp
   listdistributionsrequest.cpp
@@ -256,18 +462,32 @@ add_library(QtAwsCloudFront
   listfieldlevelencryptionconfigsresponse.cpp
   listfieldlevelencryptionprofilesrequest.cpp
   listfieldlevelencryptionprofilesresponse.cpp
+  listfunctionsrequest.cpp
+  listfunctionsresponse.cpp
   listinvalidationsrequest.cpp
   listinvalidationsresponse.cpp
+  listkeygroupsrequest.cpp
+  listkeygroupsresponse.cpp
+  listoriginrequestpoliciesrequest.cpp
+  listoriginrequestpoliciesresponse.cpp
   listpublickeysrequest.cpp
   listpublickeysresponse.cpp
+  listrealtimelogconfigsrequest.cpp
+  listrealtimelogconfigsresponse.cpp
   liststreamingdistributionsrequest.cpp
   liststreamingdistributionsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  publishfunctionrequest.cpp
+  publishfunctionresponse.cpp
   tagresourcerequest.cpp
   tagresourceresponse.cpp
+  testfunctionrequest.cpp
+  testfunctionresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updatecachepolicyrequest.cpp
+  updatecachepolicyresponse.cpp
   updatecloudfrontoriginaccessidentityrequest.cpp
   updatecloudfrontoriginaccessidentityresponse.cpp
   updatedistributionrequest.cpp
@@ -276,8 +496,16 @@ add_library(QtAwsCloudFront
   updatefieldlevelencryptionconfigresponse.cpp
   updatefieldlevelencryptionprofilerequest.cpp
   updatefieldlevelencryptionprofileresponse.cpp
+  updatefunctionrequest.cpp
+  updatefunctionresponse.cpp
+  updatekeygrouprequest.cpp
+  updatekeygroupresponse.cpp
+  updateoriginrequestpolicyrequest.cpp
+  updateoriginrequestpolicyresponse.cpp
   updatepublickeyrequest.cpp
   updatepublickeyresponse.cpp
+  updaterealtimelogconfigrequest.cpp
+  updaterealtimelogconfigresponse.cpp
   updatestreamingdistributionrequest.cpp
   updatestreamingdistributionresponse.cpp)
 

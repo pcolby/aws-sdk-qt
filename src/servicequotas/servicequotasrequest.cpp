@@ -50,8 +50,11 @@ namespace ServiceQuotas {
  * \value ListServiceQuotaIncreaseRequestsInTemplateAction ServiceQuotas ListServiceQuotaIncreaseRequestsInTemplate action.
  * \value ListServiceQuotasAction ServiceQuotas ListServiceQuotas action.
  * \value ListServicesAction ServiceQuotas ListServices action.
+ * \value ListTagsForResourceAction ServiceQuotas ListTagsForResource action.
  * \value PutServiceQuotaIncreaseRequestIntoTemplateAction ServiceQuotas PutServiceQuotaIncreaseRequestIntoTemplate action.
  * \value RequestServiceQuotaIncreaseAction ServiceQuotas RequestServiceQuotaIncrease action.
+ * \value TagResourceAction ServiceQuotas TagResource action.
+ * \value UntagResourceAction ServiceQuotas UntagResource action.
  */
 
 /*!

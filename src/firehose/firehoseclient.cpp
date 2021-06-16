@@ -143,10 +143,17 @@ FirehoseClient::FirehoseClient(
  *
  * This is an asynchronous operation that immediately returns. The initial status of the delivery stream is
  * <code>CREATING</code>. After the delivery stream is created, its status is <code>ACTIVE</code> and it now accepts data.
- * Attempts to send data to a delivery stream that is not in the <code>ACTIVE</code> state cause an exception. To check the
- * state of a delivery stream, use
+ * If the delivery stream creation fails, the status transitions to <code>CREATING_FAILED</code>. Attempts to send data to
+ * a delivery stream that is not in the <code>ACTIVE</code> state cause an exception. To check the state of a delivery
+ * stream, use
  *
  * <a>DescribeDeliveryStream</a>>
+ *
+ * If the status of a delivery stream is <code>CREATING_FAILED</code>, this status doesn't change, and you can't invoke
+ * <code>CreateDeliveryStream</code> again on it. However, you can invoke the <a>DeleteDeliveryStream</a> operation to
+ * delete
+ *
+ * it>
  *
  * A Kinesis Data Firehose delivery stream can be configured to receive records directly from providers using
  * <a>PutRecord</a> or <a>PutRecordBatch</a>, or it can be configured to use an existing Kinesis stream as its source. To
@@ -155,6 +162,12 @@ FirehoseClient::FirehoseClient(
  * <code>KinesisStreamSourceConfiguration</code>
  *
  * parameter>
+ *
+ * To create a delivery stream with server-side encryption (SSE) enabled, include
+ * <a>DeliveryStreamEncryptionConfigurationInput</a> in your request. This is optional. You can also invoke
+ * <a>StartDeliveryStreamEncryption</a> to turn on SSE for an existing delivery stream that doesn't have SSE
+ *
+ * enabled>
  *
  * A delivery stream is configured with a single destination: Amazon S3, Amazon ES, Amazon Redshift, or Splunk. You must
  * specify only one of the following destination configuration parameters: <code>ExtendedS3DestinationConfiguration</code>,
@@ -197,7 +210,7 @@ FirehoseClient::FirehoseClient(
  * Kinesis Data Firehose assumes the IAM role that is configured as part of the destination. The role should allow the
  * Kinesis Data Firehose principal to assume the role, and the role should have permissions that allow the service to
  * deliver the data. For more information, see <a
- * href="http://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3">Grant Kinesis Data Firehose
+ * href="https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3">Grant Kinesis Data Firehose
  * Access to an Amazon S3 Destination</a> in the <i>Amazon Kinesis Data Firehose Developer
  */
 CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const CreateDeliveryStreamRequest &request)
@@ -215,19 +228,16 @@ CreateDeliveryStreamResponse * FirehoseClient::createDeliveryStream(const Create
  *
  * data>
  *
- * You can delete a delivery stream only if it is in <code>ACTIVE</code> or <code>DELETING</code> state, and not in the
- * <code>CREATING</code> state. While the deletion request is in process, the delivery stream is in the
- * <code>DELETING</code>
+ * To check the state of a delivery stream, use <a>DescribeDeliveryStream</a>. You can delete a delivery stream only if it
+ * is in one of the following states: <code>ACTIVE</code>, <code>DELETING</code>, <code>CREATING_FAILED</code>, or
+ * <code>DELETING_FAILED</code>. You can't delete a delivery stream that is in the <code>CREATING</code> state. While the
+ * deletion request is in process, the delivery stream is in the <code>DELETING</code>
  *
  * state>
  *
- * To check the state of a delivery stream, use
- *
- * <a>DescribeDeliveryStream</a>>
- *
- * While the delivery stream is <code>DELETING</code> state, the service might continue to accept the records, but it
- * doesn't make any guarantees with respect to delivering the data. Therefore, as a best practice, you should first stop
- * any applications that are sending records before deleting a delivery
+ * While the delivery stream is in the <code>DELETING</code> state, the service might continue to accept records, but it
+ * doesn't make any guarantees with respect to delivering the data. Therefore, as a best practice, first stop any
+ * applications that are sending records before you delete a delivery
  */
 DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const DeleteDeliveryStreamRequest &request)
 {
@@ -240,9 +250,16 @@ DeleteDeliveryStreamResponse * FirehoseClient::deleteDeliveryStream(const Delete
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Describes the specified delivery stream and gets the status. For example, after your delivery stream is created, call
+ * Describes the specified delivery stream and its status. For example, after your delivery stream is created, call
  * <code>DescribeDeliveryStream</code> to see whether the delivery stream is <code>ACTIVE</code> and therefore ready for
- * data to be sent to
+ * data to be sent to it.
+ *
+ * </p
+ *
+ * If the status of a delivery stream is <code>CREATING_FAILED</code>, this status doesn't change, and you can't invoke
+ * <a>CreateDeliveryStream</a> again on it. However, you can invoke the <a>DeleteDeliveryStream</a> operation to delete it.
+ * If the status is <code>DELETING_FAILED</code>, you can force deletion by invoking <a>DeleteDeliveryStream</a> again but
+ * with <a>DeleteDeliveryStreamInput$AllowForceDelete</a> set to
  */
 DescribeDeliveryStreamResponse * FirehoseClient::describeDeliveryStream(const DescribeDeliveryStreamRequest &request)
 {
@@ -298,7 +315,7 @@ ListTagsForDeliveryStreamResponse * FirehoseClient::listTagsForDeliveryStream(co
  * By default, each delivery stream can take in up to 2,000 transactions per second, 5,000 records per second, or 5 MB per
  * second. If you use <a>PutRecord</a> and <a>PutRecordBatch</a>, the limits are an aggregate across these two operations
  * for each delivery stream. For more information about limits and how to request an increase, see <a
- * href="http://docs.aws.amazon.com/firehose/latest/dev/limits.html">Amazon Kinesis Data Firehose Limits</a>.
+ * href="https://docs.aws.amazon.com/firehose/latest/dev/limits.html">Amazon Kinesis Data Firehose Limits</a>.
  *
  * </p
  *
@@ -351,12 +368,10 @@ PutRecordResponse * FirehoseClient::putRecord(const PutRecordRequest &request)
  *
  * producers>
  *
- * By default, each delivery stream can take in up to 2,000 transactions per second, 5,000 records per second, or 5 MB per
- * second. If you use <a>PutRecord</a> and <a>PutRecordBatch</a>, the limits are an aggregate across these two operations
- * for each delivery stream. For more information about limits, see <a
- * href="http://docs.aws.amazon.com/firehose/latest/dev/limits.html">Amazon Kinesis Data Firehose
+ * For information about service quota, see <a href="https://docs.aws.amazon.com/firehose/latest/dev/limits.html">Amazon
+ * Kinesis Data Firehose
  *
- * Limits</a>>
+ * Quota</a>>
  *
  * Each <a>PutRecordBatch</a> request supports up to 500 records. Each record in the request can be as large as 1,000 KB
  * (before 64-bit encoding), up to a limit of 4 MB for the entire request. These limits cannot be
@@ -431,20 +446,42 @@ PutRecordBatchResponse * FirehoseClient::putRecordBatch(const PutRecordBatchRequ
  *
  * </p
  *
- * This operation is asynchronous. It returns immediately. When you invoke it, Kinesis Data Firehose first sets the status
- * of the stream to <code>ENABLING</code>, and then to <code>ENABLED</code>. You can continue to read and write data to
- * your stream while its status is <code>ENABLING</code>, but the data is not encrypted. It can take up to 5 seconds after
- * the encryption status changes to <code>ENABLED</code> before all records written to the delivery stream are encrypted.
- * To find out whether a record or a batch of records was encrypted, check the response elements
+ * This operation is asynchronous. It returns immediately. When you invoke it, Kinesis Data Firehose first sets the
+ * encryption status of the stream to <code>ENABLING</code>, and then to <code>ENABLED</code>. The encryption status of a
+ * delivery stream is the <code>Status</code> property in <a>DeliveryStreamEncryptionConfiguration</a>. If the operation
+ * fails, the encryption status changes to <code>ENABLING_FAILED</code>. You can continue to read and write data to your
+ * delivery stream while the encryption status is <code>ENABLING</code>, but the data is not encrypted. It can take up to 5
+ * seconds after the encryption status changes to <code>ENABLED</code> before all records written to the delivery stream
+ * are encrypted. To find out whether a record or a batch of records was encrypted, check the response elements
  * <a>PutRecordOutput$Encrypted</a> and <a>PutRecordBatchOutput$Encrypted</a>,
  *
  * respectively>
  *
- * To check the encryption state of a delivery stream, use
+ * To check the encryption status of a delivery stream, use
  *
  * <a>DescribeDeliveryStream</a>>
  *
- * You can only enable SSE for a delivery stream that uses <code>DirectPut</code> as its source.
+ * Even if encryption is currently enabled for a delivery stream, you can still invoke this operation on it to change the
+ * ARN of the CMK or both its type and ARN. If you invoke this method to change the CMK, and the old CMK is of type
+ * <code>CUSTOMER_MANAGED_CMK</code>, Kinesis Data Firehose schedules the grant it had on the old CMK for retirement. If
+ * the new CMK is of type <code>CUSTOMER_MANAGED_CMK</code>, Kinesis Data Firehose creates a grant that enables it to use
+ * the new CMK to encrypt and decrypt data and to manage the
+ *
+ * grant>
+ *
+ * If a delivery stream already has encryption enabled and then you invoke this operation to change the ARN of the CMK or
+ * both its type and ARN and you get <code>ENABLING_FAILED</code>, this only means that the attempt to change the CMK
+ * failed. In this case, encryption remains enabled with the old
+ *
+ * CMK>
+ *
+ * If the encryption status of your delivery stream is <code>ENABLING_FAILED</code>, you can invoke this operation again
+ * with a valid CMK. The CMK must be enabled and the key policy mustn't explicitly deny the permission for Kinesis Data
+ * Firehose to invoke KMS encrypt and decrypt
+ *
+ * operations>
+ *
+ * You can enable SSE for a delivery stream only if it's a delivery stream that uses <code>DirectPut</code> as its source.
  *
  * </p
  *
@@ -468,18 +505,24 @@ StartDeliveryStreamEncryptionResponse * FirehoseClient::startDeliveryStreamEncry
  *
  * </p
  *
- * This operation is asynchronous. It returns immediately. When you invoke it, Kinesis Data Firehose first sets the status
- * of the stream to <code>DISABLING</code>, and then to <code>DISABLED</code>. You can continue to read and write data to
- * your stream while its status is <code>DISABLING</code>. It can take up to 5 seconds after the encryption status changes
- * to <code>DISABLED</code> before all records written to the delivery stream are no longer subject to encryption. To find
- * out whether a record or a batch of records was encrypted, check the response elements <a>PutRecordOutput$Encrypted</a>
- * and <a>PutRecordBatchOutput$Encrypted</a>,
+ * This operation is asynchronous. It returns immediately. When you invoke it, Kinesis Data Firehose first sets the
+ * encryption status of the stream to <code>DISABLING</code>, and then to <code>DISABLED</code>. You can continue to read
+ * and write data to your stream while its status is <code>DISABLING</code>. It can take up to 5 seconds after the
+ * encryption status changes to <code>DISABLED</code> before all records written to the delivery stream are no longer
+ * subject to encryption. To find out whether a record or a batch of records was encrypted, check the response elements
+ * <a>PutRecordOutput$Encrypted</a> and <a>PutRecordBatchOutput$Encrypted</a>,
  *
  * respectively>
  *
  * To check the encryption state of a delivery stream, use <a>DescribeDeliveryStream</a>.
  *
  * </p
+ *
+ * If SSE is enabled using a customer managed CMK and then you invoke <code>StopDeliveryStreamEncryption</code>, Kinesis
+ * Data Firehose schedules the related KMS grant for retirement and then retires it after it ensures that it is finished
+ * delivering records to the
+ *
+ * destination>
  *
  * The <code>StartDeliveryStreamEncryption</code> and <code>StopDeliveryStreamEncryption</code> operations have a combined
  * limit of 25 calls per delivery stream per 24 hours. For example, you reach the limit if you call

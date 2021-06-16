@@ -38,6 +38,7 @@ public:
     /// Actions supported by PI.
     enum Action {
         DescribeDimensionKeysAction,
+        GetDimensionKeyDetailsAction,
         GetResourceMetricsAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsAppConfig
+    \title AppConfig C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS AppConfig functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

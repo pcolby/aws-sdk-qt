@@ -80,6 +80,18 @@ namespace Cloud9 {
  * 
  *  identifiers> </li> <li>
  * 
+ *  <code>ListTagsForResource</code>: Gets the tags for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>TagResource</code>: Adds tags to an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>UntagResource</code>: Removes tags from an
+ * 
+ *  environment> </li> <li>
+ * 
  *  <code>UpdateEnvironment</code>: Changes the settings of an existing
  * 
  *  environment> </li> <li>

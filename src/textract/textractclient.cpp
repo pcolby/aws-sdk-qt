@@ -127,31 +127,33 @@ TextractClient::TextractClient(
  *
  * </p <ul> <li>
  *
- * Words and lines that are related to nearby lines and words. The related information is returned in two <a>Block</a>
- * objects each of type <code>KEY_VALUE_SET</code>: a KEY Block object and a VALUE Block object. For example, <i>Name: Ana
- * Silva Carolina</i> contains a key and value. <i>Name:</i> is the key. <i>Ana Silva Carolina</i> is the
+ * Form data (key-value pairs). The related information is returned in two <a>Block</a> objects, each of type
+ * <code>KEY_VALUE_SET</code>: a KEY <code>Block</code> object and a VALUE <code>Block</code> object. For example, <i>Name:
+ * Ana Silva Carolina</i> contains a key and value. <i>Name:</i> is the key. <i>Ana Silva Carolina</i> is the
  *
  * value> </li> <li>
  *
- * Table and table cell data. A TABLE Block object contains information about a detected table. A CELL Block object is
- * returned for each cell in a
+ * Table and table cell data. A TABLE <code>Block</code> object contains information about a detected table. A CELL
+ * <code>Block</code> object is returned for each cell in a
  *
  * table> </li> <li>
  *
- * Selectable elements such as checkboxes and radio buttons. A SELECTION_ELEMENT Block object contains information about a
- * selectable
+ * Lines and words of text. A LINE <code>Block</code> object contains one or more WORD <code>Block</code> objects. All
+ * lines and words that are detected in the document are returned (including text that doesn't have a relationship with the
+ * value of <code>FeatureTypes</code>).
  *
- * element> </li> <li>
+ * </p </li> </ul>
  *
- * Lines and words of text. A LINE Block object contains one or more WORD Block
+ * Selection elements such as check boxes and option buttons (radio buttons) can be detected in form data and in tables. A
+ * SELECTION_ELEMENT <code>Block</code> object contains information about a selection element, including the selection
  *
- * objects> </li> </ul>
+ * status>
  *
  * You can choose which type of analysis to perform by specifying the <code>FeatureTypes</code> list.
  *
  * </p
  *
- * The output is returned in a list of <code>BLOCK</code>
+ * The output is returned in a list of <code>Block</code>
  *
  * objects>
  *
@@ -174,7 +176,7 @@ AnalyzeDocumentResponse * TextractClient::analyzeDocument(const AnalyzeDocumentR
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Detects text in the input document. Amazon Textract can detect lines of text and the words that make up a line of text.
- * The input document must be an image in JPG or PNG format. <code>DetectDocumentText</code> returns the detected text in
+ * The input document must be an image in JPEG or PNG format. <code>DetectDocumentText</code> returns the detected text in
  * an array of <a>Block</a> objects.
  *
  * </p
@@ -221,28 +223,30 @@ DetectDocumentTextResponse * TextractClient::detectDocumentText(const DetectDocu
  *
  * </p <ul> <li>
  *
- * Words and lines that are related to nearby lines and words. The related information is returned in two <a>Block</a>
- * objects each of type <code>KEY_VALUE_SET</code>: a KEY Block object and a VALUE Block object. For example, <i>Name: Ana
- * Silva Carolina</i> contains a key and value. <i>Name:</i> is the key. <i>Ana Silva Carolina</i> is the
+ * Form data (key-value pairs). The related information is returned in two <a>Block</a> objects, each of type
+ * <code>KEY_VALUE_SET</code>: a KEY <code>Block</code> object and a VALUE <code>Block</code> object. For example, <i>Name:
+ * Ana Silva Carolina</i> contains a key and value. <i>Name:</i> is the key. <i>Ana Silva Carolina</i> is the
  *
  * value> </li> <li>
  *
- * Table and table cell data. A TABLE Block object contains information about a detected table. A CELL Block object is
- * returned for each cell in a
+ * Table and table cell data. A TABLE <code>Block</code> object contains information about a detected table. A CELL
+ * <code>Block</code> object is returned for each cell in a
  *
  * table> </li> <li>
  *
- * Selectable elements such as checkboxes and radio buttons. A SELECTION_ELEMENT Block object contains information about a
- * selectable
+ * Lines and words of text. A LINE <code>Block</code> object contains one or more WORD <code>Block</code> objects. All
+ * lines and words that are detected in the document are returned (including text that doesn't have a relationship with the
+ * value of the <code>StartDocumentAnalysis</code> <code>FeatureTypes</code> input parameter).
  *
- * element> </li> <li>
+ * </p </li> </ul>
  *
- * Lines and words of text. A LINE Block object contains one or more WORD Block
+ * Selection elements such as check boxes and option buttons (radio buttons) can be detected in form data and in tables. A
+ * SELECTION_ELEMENT <code>Block</code> object contains information about a selection element, including the selection
  *
- * objects> </li> </ul>
+ * status>
  *
- * Use the <code>MaxResults</code> parameter to limit the number of blocks returned. If there are more results than
- * specified in <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a
+ * Use the <code>MaxResults</code> parameter to limit the number of blocks that are returned. If there are more results
+ * than specified in <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a
  * pagination token for getting the next set of results. To get the next page of results, call
  * <code>GetDocumentAnalysis</code>, and populate the <code>NextToken</code> request parameter with the token value that's
  * returned from the previous call to
@@ -308,13 +312,13 @@ GetDocumentTextDetectionResponse * TextractClient::getDocumentTextDetection(cons
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts asynchronous analysis of an input document for relationships between detected items such as key and value pairs,
+ * Starts the asynchronous analysis of an input document for relationships between detected items such as key-value pairs,
  * tables, and selection
  *
  * elements>
  *
- * <code>StartDocumentAnalysis</code> can analyze text in documents that are in JPG, PNG, and PDF format. The documents are
- * stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name of the document.
+ * <code>StartDocumentAnalysis</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The documents
+ * are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name of the document.
  *
  * </p
  *
@@ -345,7 +349,7 @@ StartDocumentAnalysisResponse * TextractClient::startDocumentAnalysis(const Star
  *
  * text>
  *
- * <code>StartDocumentTextDetection</code> can analyze text in documents that are in JPG, PNG, and PDF format. The
+ * <code>StartDocumentTextDetection</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The
  * documents are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name of the
  * document.
  *

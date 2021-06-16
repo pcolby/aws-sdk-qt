@@ -33,16 +33,34 @@
 #include "cancelstepsresponse.h"
 #include "createsecurityconfigurationrequest.h"
 #include "createsecurityconfigurationresponse.h"
+#include "createstudiorequest.h"
+#include "createstudioresponse.h"
+#include "createstudiosessionmappingrequest.h"
+#include "createstudiosessionmappingresponse.h"
 #include "deletesecurityconfigurationrequest.h"
 #include "deletesecurityconfigurationresponse.h"
+#include "deletestudiorequest.h"
+#include "deletestudioresponse.h"
+#include "deletestudiosessionmappingrequest.h"
+#include "deletestudiosessionmappingresponse.h"
 #include "describeclusterrequest.h"
 #include "describeclusterresponse.h"
 #include "describejobflowsrequest.h"
 #include "describejobflowsresponse.h"
+#include "describenotebookexecutionrequest.h"
+#include "describenotebookexecutionresponse.h"
 #include "describesecurityconfigurationrequest.h"
 #include "describesecurityconfigurationresponse.h"
 #include "describesteprequest.h"
 #include "describestepresponse.h"
+#include "describestudiorequest.h"
+#include "describestudioresponse.h"
+#include "getblockpublicaccessconfigurationrequest.h"
+#include "getblockpublicaccessconfigurationresponse.h"
+#include "getmanagedscalingpolicyrequest.h"
+#include "getmanagedscalingpolicyresponse.h"
+#include "getstudiosessionmappingrequest.h"
+#include "getstudiosessionmappingresponse.h"
 #include "listbootstrapactionsrequest.h"
 #include "listbootstrapactionsresponse.h"
 #include "listclustersrequest.h"
@@ -53,18 +71,32 @@
 #include "listinstancegroupsresponse.h"
 #include "listinstancesrequest.h"
 #include "listinstancesresponse.h"
+#include "listnotebookexecutionsrequest.h"
+#include "listnotebookexecutionsresponse.h"
 #include "listsecurityconfigurationsrequest.h"
 #include "listsecurityconfigurationsresponse.h"
 #include "liststepsrequest.h"
 #include "liststepsresponse.h"
+#include "liststudiosessionmappingsrequest.h"
+#include "liststudiosessionmappingsresponse.h"
+#include "liststudiosrequest.h"
+#include "liststudiosresponse.h"
+#include "modifyclusterrequest.h"
+#include "modifyclusterresponse.h"
 #include "modifyinstancefleetrequest.h"
 #include "modifyinstancefleetresponse.h"
 #include "modifyinstancegroupsrequest.h"
 #include "modifyinstancegroupsresponse.h"
 #include "putautoscalingpolicyrequest.h"
 #include "putautoscalingpolicyresponse.h"
+#include "putblockpublicaccessconfigurationrequest.h"
+#include "putblockpublicaccessconfigurationresponse.h"
+#include "putmanagedscalingpolicyrequest.h"
+#include "putmanagedscalingpolicyresponse.h"
 #include "removeautoscalingpolicyrequest.h"
 #include "removeautoscalingpolicyresponse.h"
+#include "removemanagedscalingpolicyrequest.h"
+#include "removemanagedscalingpolicyresponse.h"
 #include "removetagsrequest.h"
 #include "removetagsresponse.h"
 #include "runjobflowrequest.h"
@@ -73,8 +105,16 @@
 #include "setterminationprotectionresponse.h"
 #include "setvisibletoallusersrequest.h"
 #include "setvisibletoallusersresponse.h"
+#include "startnotebookexecutionrequest.h"
+#include "startnotebookexecutionresponse.h"
+#include "stopnotebookexecutionrequest.h"
+#include "stopnotebookexecutionresponse.h"
 #include "terminatejobflowsrequest.h"
 #include "terminatejobflowsresponse.h"
+#include "updatestudiorequest.h"
+#include "updatestudioresponse.h"
+#include "updatestudiosessionmappingrequest.h"
+#include "updatestudiosessionmappingresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -98,9 +138,9 @@ namespace EMR {
  * \ingroup aws-clients
  * \inmodule QtAwsEMR
  *
- *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
- *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
- *  learning, scientific simulation, and data
+ *  Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
+ *  processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis, machine
+ *  learning, scientific simulation, and data warehouse
  */
 
 /*!
@@ -246,8 +286,8 @@ AddTagsResponse * EmrClient::addTags(const AddTagsRequest &request)
  *
  * Cancels a pending step or steps in a running cluster. Available only in Amazon EMR versions 4.8.0 and later, excluding
  * version 5.0.0. A maximum of 256 steps are allowed in each CancelSteps request. CancelSteps is idempotent but
- * asynchronous; it does not guarantee a step will be canceled, even if the request is successfully submitted. You can only
- * cancel steps that are in a <code>PENDING</code>
+ * asynchronous; it does not guarantee that a step will be canceled, even if the request is successfully submitted. You can
+ * only cancel steps that are in a <code>PENDING</code>
  */
 CancelStepsResponse * EmrClient::cancelSteps(const CancelStepsRequest &request)
 {
@@ -269,6 +309,33 @@ CreateSecurityConfigurationResponse * EmrClient::createSecurityConfiguration(con
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * CreateStudioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new Amazon EMR
+ */
+CreateStudioResponse * EmrClient::createStudio(const CreateStudioRequest &request)
+{
+    return qobject_cast<CreateStudioResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * CreateStudioSessionMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Maps a user or group to the Amazon EMR Studio specified by <code>StudioId</code>, and applies a session policy to refine
+ * Studio permissions for that user or
+ */
+CreateStudioSessionMappingResponse * EmrClient::createStudioSessionMapping(const CreateStudioSessionMappingRequest &request)
+{
+    return qobject_cast<CreateStudioSessionMappingResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * DeleteSecurityConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -278,6 +345,32 @@ CreateSecurityConfigurationResponse * EmrClient::createSecurityConfiguration(con
 DeleteSecurityConfigurationResponse * EmrClient::deleteSecurityConfiguration(const DeleteSecurityConfigurationRequest &request)
 {
     return qobject_cast<DeleteSecurityConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * DeleteStudioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes an Amazon EMR Studio from the Studio metadata
+ */
+DeleteStudioResponse * EmrClient::deleteStudio(const DeleteStudioRequest &request)
+{
+    return qobject_cast<DeleteStudioResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * DeleteStudioSessionMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a user or group from an Amazon EMR
+ */
+DeleteStudioSessionMappingResponse * EmrClient::deleteStudioSessionMapping(const DeleteStudioSessionMappingRequest &request)
+{
+    return qobject_cast<DeleteStudioSessionMappingResponse *>(send(request));
 }
 
 /*!
@@ -299,8 +392,8 @@ DescribeClusterResponse * EmrClient::describeCluster(const DescribeClusterReques
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * This API is deprecated and will eventually be removed. We recommend you use <a>ListClusters</a>, <a>DescribeCluster</a>,
- * <a>ListSteps</a>, <a>ListInstanceGroups</a> and <a>ListBootstrapActions</a>
+ * This API is no longer supported and will eventually be removed. We recommend you use <a>ListClusters</a>,
+ * <a>DescribeCluster</a>, <a>ListSteps</a>, <a>ListInstanceGroups</a> and <a>ListBootstrapActions</a>
  *
  * instead>
  *
@@ -335,6 +428,19 @@ DescribeJobFlowsResponse * EmrClient::describeJobFlows(const DescribeJobFlowsReq
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * DescribeNotebookExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides details of a notebook
+ */
+DescribeNotebookExecutionResponse * EmrClient::describeNotebookExecution(const DescribeNotebookExecutionRequest &request)
+{
+    return qobject_cast<DescribeNotebookExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * DescribeSecurityConfigurationResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -357,6 +463,61 @@ DescribeSecurityConfigurationResponse * EmrClient::describeSecurityConfiguration
 DescribeStepResponse * EmrClient::describeStep(const DescribeStepRequest &request)
 {
     return qobject_cast<DescribeStepResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * DescribeStudioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns details for the specified Amazon EMR Studio including ID, Name, VPC, Studio access URL, and so
+ */
+DescribeStudioResponse * EmrClient::describeStudio(const DescribeStudioRequest &request)
+{
+    return qobject_cast<DescribeStudioResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * GetBlockPublicAccessConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the Amazon EMR block public access configuration for your AWS account in the current Region. For more
+ * information see <a
+ * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block Public
+ * Access for Amazon EMR</a> in the <i>Amazon EMR Management
+ */
+GetBlockPublicAccessConfigurationResponse * EmrClient::getBlockPublicAccessConfiguration(const GetBlockPublicAccessConfigurationRequest &request)
+{
+    return qobject_cast<GetBlockPublicAccessConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * GetManagedScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Fetches the attached managed scaling policy for an Amazon EMR cluster.
+ */
+GetManagedScalingPolicyResponse * EmrClient::getManagedScalingPolicy(const GetManagedScalingPolicyRequest &request)
+{
+    return qobject_cast<GetManagedScalingPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * GetStudioSessionMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Fetches mapping details for the specified Amazon EMR Studio and identity (user or
+ */
+GetStudioSessionMappingResponse * EmrClient::getStudioSessionMapping(const GetStudioSessionMappingRequest &request)
+{
+    return qobject_cast<GetStudioSessionMappingResponse *>(send(request));
 }
 
 /*!
@@ -434,6 +595,21 @@ ListInstancesResponse * EmrClient::listInstances(const ListInstancesRequest &req
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * ListNotebookExecutionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides summaries of all notebook executions. You can filter the list based on multiple criteria such as status, time
+ * range, and editor id. Returns a maximum of 50 notebook executions and a marker to track the paging of a longer notebook
+ * execution list across multiple <code>ListNotebookExecution</code>
+ */
+ListNotebookExecutionsResponse * EmrClient::listNotebookExecutions(const ListNotebookExecutionsRequest &request)
+{
+    return qobject_cast<ListNotebookExecutionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * ListSecurityConfigurationsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -453,11 +629,52 @@ ListSecurityConfigurationsResponse * EmrClient::listSecurityConfigurations(const
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Provides a list of steps for the cluster in reverse order unless you specify stepIds with the
+ * Provides a list of steps for the cluster in reverse order unless you specify <code>stepIds</code> with the request of
+ * filter by <code>StepStates</code>. You can specify a maximum of 10
  */
 ListStepsResponse * EmrClient::listSteps(const ListStepsRequest &request)
 {
     return qobject_cast<ListStepsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * ListStudioSessionMappingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all user or group session mappings for the Amazon EMR Studio specified by
+ */
+ListStudioSessionMappingsResponse * EmrClient::listStudioSessionMappings(const ListStudioSessionMappingsRequest &request)
+{
+    return qobject_cast<ListStudioSessionMappingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * ListStudiosResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of all Amazon EMR Studios associated with the AWS account. The list includes details such as ID, Studio
+ * Access URL, and creation time for each
+ */
+ListStudiosResponse * EmrClient::listStudios(const ListStudiosRequest &request)
+{
+    return qobject_cast<ListStudiosResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * ModifyClusterResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Modifies the number of steps that can be executed concurrently for the cluster specified using
+ */
+ModifyClusterResponse * EmrClient::modifyCluster(const ModifyClusterRequest &request)
+{
+    return qobject_cast<ModifyClusterResponse *>(send(request));
 }
 
 /*!
@@ -509,6 +726,37 @@ PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScal
 
 /*!
  * Sends \a request to the EmrClient service, and returns a pointer to an
+ * PutBlockPublicAccessConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates an Amazon EMR block public access configuration for your AWS account in the current Region. For more
+ * information see <a
+ * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block Public
+ * Access for Amazon EMR</a> in the <i>Amazon EMR Management
+ */
+PutBlockPublicAccessConfigurationResponse * EmrClient::putBlockPublicAccessConfiguration(const PutBlockPublicAccessConfigurationRequest &request)
+{
+    return qobject_cast<PutBlockPublicAccessConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * PutManagedScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates a managed scaling policy for an Amazon EMR cluster. The managed scaling policy defines the limits for
+ * resources, such as EC2 instances that can be added or terminated from a cluster. The policy only applies to the core and
+ * task nodes. The master node cannot be scaled after initial configuration.
+ */
+PutManagedScalingPolicyResponse * EmrClient::putManagedScalingPolicy(const PutManagedScalingPolicyRequest &request)
+{
+    return qobject_cast<PutManagedScalingPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
  * RemoveAutoScalingPolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -518,6 +766,19 @@ PutAutoScalingPolicyResponse * EmrClient::putAutoScalingPolicy(const PutAutoScal
 RemoveAutoScalingPolicyResponse * EmrClient::removeAutoScalingPolicy(const RemoveAutoScalingPolicyRequest &request)
 {
     return qobject_cast<RemoveAutoScalingPolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * RemoveManagedScalingPolicyResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a managed scaling policy from a specified EMR cluster.
+ */
+RemoveManagedScalingPolicyResponse * EmrClient::removeManagedScalingPolicy(const RemoveManagedScalingPolicyRequest &request)
+{
+    return qobject_cast<RemoveManagedScalingPolicyResponse *>(send(request));
 }
 
 /*!
@@ -623,14 +884,42 @@ SetTerminationProtectionResponse * EmrClient::setTerminationProtection(const Set
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Sets whether all AWS Identity and Access Management (IAM) users under your account can access the specified clusters
- * (job flows). This action works on running clusters. You can also set the visibility of a cluster when you launch it
- * using the <code>VisibleToAllUsers</code> parameter of <a>RunJobFlow</a>. The SetVisibleToAllUsers action can be called
- * only by an IAM user who created the cluster or the AWS account that owns the
+ * Sets the <a>Cluster$VisibleToAllUsers</a> value, which determines whether the cluster is visible to all IAM users of the
+ * AWS account associated with the cluster. Only the IAM user who created the cluster or the AWS account root user can call
+ * this action. The default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster
+ * actions if they have the proper IAM policy permissions. If set to <code>false</code>, only the IAM user that created the
+ * cluster can perform actions. This action works on running clusters. You can override the default <code>true</code>
+ * setting when you create a cluster by using the <code>VisibleToAllUsers</code> parameter with
  */
 SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleToAllUsersRequest &request)
 {
     return qobject_cast<SetVisibleToAllUsersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * StartNotebookExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a notebook
+ */
+StartNotebookExecutionResponse * EmrClient::startNotebookExecution(const StartNotebookExecutionRequest &request)
+{
+    return qobject_cast<StartNotebookExecutionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * StopNotebookExecutionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a notebook
+ */
+StopNotebookExecutionResponse * EmrClient::stopNotebookExecution(const StopNotebookExecutionRequest &request)
+{
+    return qobject_cast<StopNotebookExecutionResponse *>(send(request));
 }
 
 /*!
@@ -652,6 +941,32 @@ SetVisibleToAllUsersResponse * EmrClient::setVisibleToAllUsers(const SetVisibleT
 TerminateJobFlowsResponse * EmrClient::terminateJobFlows(const TerminateJobFlowsRequest &request)
 {
     return qobject_cast<TerminateJobFlowsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * UpdateStudioResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an Amazon EMR Studio configuration, including attributes such as name, description, and
+ */
+UpdateStudioResponse * EmrClient::updateStudio(const UpdateStudioRequest &request)
+{
+    return qobject_cast<UpdateStudioResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the EmrClient service, and returns a pointer to an
+ * UpdateStudioSessionMappingResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the session policy attached to the user or group for the specified Amazon EMR
+ */
+UpdateStudioSessionMappingResponse * EmrClient::updateStudioSessionMapping(const UpdateStudioSessionMappingRequest &request)
+{
+    return qobject_cast<UpdateStudioSessionMappingResponse *>(send(request));
 }
 
 /*!

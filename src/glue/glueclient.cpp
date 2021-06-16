@@ -45,6 +45,12 @@
 #include "batchgetworkflowsresponse.h"
 #include "batchstopjobrunrequest.h"
 #include "batchstopjobrunresponse.h"
+#include "batchupdatepartitionrequest.h"
+#include "batchupdatepartitionresponse.h"
+#include "cancelmltaskrunrequest.h"
+#include "cancelmltaskrunresponse.h"
+#include "checkschemaversionvalidityrequest.h"
+#include "checkschemaversionvalidityresponse.h"
 #include "createclassifierrequest.h"
 #include "createclassifierresponse.h"
 #include "createconnectionrequest.h"
@@ -57,8 +63,16 @@
 #include "createdevendpointresponse.h"
 #include "createjobrequest.h"
 #include "createjobresponse.h"
+#include "createmltransformrequest.h"
+#include "createmltransformresponse.h"
 #include "createpartitionrequest.h"
 #include "createpartitionresponse.h"
+#include "createpartitionindexrequest.h"
+#include "createpartitionindexresponse.h"
+#include "createregistryrequest.h"
+#include "createregistryresponse.h"
+#include "createschemarequest.h"
+#include "createschemaresponse.h"
 #include "createscriptrequest.h"
 #include "createscriptresponse.h"
 #include "createsecurityconfigurationrequest.h"
@@ -73,6 +87,10 @@
 #include "createworkflowresponse.h"
 #include "deleteclassifierrequest.h"
 #include "deleteclassifierresponse.h"
+#include "deletecolumnstatisticsforpartitionrequest.h"
+#include "deletecolumnstatisticsforpartitionresponse.h"
+#include "deletecolumnstatisticsfortablerequest.h"
+#include "deletecolumnstatisticsfortableresponse.h"
 #include "deleteconnectionrequest.h"
 #include "deleteconnectionresponse.h"
 #include "deletecrawlerrequest.h"
@@ -83,10 +101,20 @@
 #include "deletedevendpointresponse.h"
 #include "deletejobrequest.h"
 #include "deletejobresponse.h"
+#include "deletemltransformrequest.h"
+#include "deletemltransformresponse.h"
 #include "deletepartitionrequest.h"
 #include "deletepartitionresponse.h"
+#include "deletepartitionindexrequest.h"
+#include "deletepartitionindexresponse.h"
+#include "deleteregistryrequest.h"
+#include "deleteregistryresponse.h"
 #include "deleteresourcepolicyrequest.h"
 #include "deleteresourcepolicyresponse.h"
+#include "deleteschemarequest.h"
+#include "deleteschemaresponse.h"
+#include "deleteschemaversionsrequest.h"
+#include "deleteschemaversionsresponse.h"
 #include "deletesecurityconfigurationrequest.h"
 #include "deletesecurityconfigurationresponse.h"
 #include "deletetablerequest.h"
@@ -105,6 +133,10 @@
 #include "getclassifierresponse.h"
 #include "getclassifiersrequest.h"
 #include "getclassifiersresponse.h"
+#include "getcolumnstatisticsforpartitionrequest.h"
+#include "getcolumnstatisticsforpartitionresponse.h"
+#include "getcolumnstatisticsfortablerequest.h"
+#include "getcolumnstatisticsfortableresponse.h"
 #include "getconnectionrequest.h"
 #include "getconnectionresponse.h"
 #include "getconnectionsrequest.h"
@@ -129,22 +161,46 @@
 #include "getdevendpointsresponse.h"
 #include "getjobrequest.h"
 #include "getjobresponse.h"
+#include "getjobbookmarkrequest.h"
+#include "getjobbookmarkresponse.h"
 #include "getjobrunrequest.h"
 #include "getjobrunresponse.h"
 #include "getjobrunsrequest.h"
 #include "getjobrunsresponse.h"
 #include "getjobsrequest.h"
 #include "getjobsresponse.h"
+#include "getmltaskrunrequest.h"
+#include "getmltaskrunresponse.h"
+#include "getmltaskrunsrequest.h"
+#include "getmltaskrunsresponse.h"
+#include "getmltransformrequest.h"
+#include "getmltransformresponse.h"
+#include "getmltransformsrequest.h"
+#include "getmltransformsresponse.h"
 #include "getmappingrequest.h"
 #include "getmappingresponse.h"
 #include "getpartitionrequest.h"
 #include "getpartitionresponse.h"
+#include "getpartitionindexesrequest.h"
+#include "getpartitionindexesresponse.h"
 #include "getpartitionsrequest.h"
 #include "getpartitionsresponse.h"
 #include "getplanrequest.h"
 #include "getplanresponse.h"
+#include "getregistryrequest.h"
+#include "getregistryresponse.h"
+#include "getresourcepoliciesrequest.h"
+#include "getresourcepoliciesresponse.h"
 #include "getresourcepolicyrequest.h"
 #include "getresourcepolicyresponse.h"
+#include "getschemarequest.h"
+#include "getschemaresponse.h"
+#include "getschemabydefinitionrequest.h"
+#include "getschemabydefinitionresponse.h"
+#include "getschemaversionrequest.h"
+#include "getschemaversionresponse.h"
+#include "getschemaversionsdiffrequest.h"
+#include "getschemaversionsdiffresponse.h"
 #include "getsecurityconfigurationrequest.h"
 #include "getsecurityconfigurationresponse.h"
 #include "getsecurityconfigurationsrequest.h"
@@ -183,6 +239,14 @@
 #include "listdevendpointsresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
+#include "listmltransformsrequest.h"
+#include "listmltransformsresponse.h"
+#include "listregistriesrequest.h"
+#include "listregistriesresponse.h"
+#include "listschemaversionsrequest.h"
+#include "listschemaversionsresponse.h"
+#include "listschemasrequest.h"
+#include "listschemasresponse.h"
 #include "listtriggersrequest.h"
 #include "listtriggersresponse.h"
 #include "listworkflowsrequest.h"
@@ -191,16 +255,36 @@
 #include "putdatacatalogencryptionsettingsresponse.h"
 #include "putresourcepolicyrequest.h"
 #include "putresourcepolicyresponse.h"
+#include "putschemaversionmetadatarequest.h"
+#include "putschemaversionmetadataresponse.h"
 #include "putworkflowrunpropertiesrequest.h"
 #include "putworkflowrunpropertiesresponse.h"
+#include "queryschemaversionmetadatarequest.h"
+#include "queryschemaversionmetadataresponse.h"
+#include "registerschemaversionrequest.h"
+#include "registerschemaversionresponse.h"
+#include "removeschemaversionmetadatarequest.h"
+#include "removeschemaversionmetadataresponse.h"
 #include "resetjobbookmarkrequest.h"
 #include "resetjobbookmarkresponse.h"
+#include "resumeworkflowrunrequest.h"
+#include "resumeworkflowrunresponse.h"
+#include "searchtablesrequest.h"
+#include "searchtablesresponse.h"
 #include "startcrawlerrequest.h"
 #include "startcrawlerresponse.h"
 #include "startcrawlerschedulerequest.h"
 #include "startcrawlerscheduleresponse.h"
+#include "startexportlabelstaskrunrequest.h"
+#include "startexportlabelstaskrunresponse.h"
+#include "startimportlabelstaskrunrequest.h"
+#include "startimportlabelstaskrunresponse.h"
 #include "startjobrunrequest.h"
 #include "startjobrunresponse.h"
+#include "startmlevaluationtaskrunrequest.h"
+#include "startmlevaluationtaskrunresponse.h"
+#include "startmllabelingsetgenerationtaskrunrequest.h"
+#include "startmllabelingsetgenerationtaskrunresponse.h"
 #include "starttriggerrequest.h"
 #include "starttriggerresponse.h"
 #include "startworkflowrunrequest.h"
@@ -211,12 +295,18 @@
 #include "stopcrawlerscheduleresponse.h"
 #include "stoptriggerrequest.h"
 #include "stoptriggerresponse.h"
+#include "stopworkflowrunrequest.h"
+#include "stopworkflowrunresponse.h"
 #include "tagresourcerequest.h"
 #include "tagresourceresponse.h"
 #include "untagresourcerequest.h"
 #include "untagresourceresponse.h"
 #include "updateclassifierrequest.h"
 #include "updateclassifierresponse.h"
+#include "updatecolumnstatisticsforpartitionrequest.h"
+#include "updatecolumnstatisticsforpartitionresponse.h"
+#include "updatecolumnstatisticsfortablerequest.h"
+#include "updatecolumnstatisticsfortableresponse.h"
 #include "updateconnectionrequest.h"
 #include "updateconnectionresponse.h"
 #include "updatecrawlerrequest.h"
@@ -229,8 +319,14 @@
 #include "updatedevendpointresponse.h"
 #include "updatejobrequest.h"
 #include "updatejobresponse.h"
+#include "updatemltransformrequest.h"
+#include "updatemltransformresponse.h"
 #include "updatepartitionrequest.h"
 #include "updatepartitionresponse.h"
+#include "updateregistryrequest.h"
+#include "updateregistryresponse.h"
+#include "updateschemarequest.h"
+#include "updateschemaresponse.h"
 #include "updatetablerequest.h"
 #include "updatetableresponse.h"
 #include "updatetriggerrequest.h"
@@ -369,12 +465,12 @@ BatchDeletePartitionResponse * GlueClient::batchDeletePartition(const BatchDelet
  *
  * once> <note>
  *
- * After completing this operation, you will no longer have access to the table versions and partitions that belong to the
+ * After completing this operation, you no longer have access to the table versions and partitions that belong to the
  * deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
  *
  * service>
  *
- * To ensure immediate deletion of all related resources, before calling <code>BatchDeleteTable</code>, use
+ * To ensure the immediate deletion of all related resources, before calling <code>BatchDeleteTable</code>, use
  * <code>DeleteTableVersion</code> or <code>BatchDeleteTableVersion</code>, and <code>DeletePartition</code> or
  * <code>BatchDeletePartition</code>, to delete any resources that belong to the
  */
@@ -417,7 +513,7 @@ BatchGetCrawlersResponse * GlueClient::batchGetCrawlers(const BatchGetCrawlersRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns a list of resource metadata for a given list of DevEndpoint names. After calling the
+ * Returns a list of resource metadata for a given list of development endpoint names. After calling the
  * <code>ListDevEndpoints</code> operation, you can call this operation to access the data to which you have been granted
  * permissions. This operation supports all IAM permissions, including permission conditions that uses
  */
@@ -499,6 +595,49 @@ BatchStopJobRunResponse * GlueClient::batchStopJobRun(const BatchStopJobRunReque
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * BatchUpdatePartitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates one or more partitions in a batch
+ */
+BatchUpdatePartitionResponse * GlueClient::batchUpdatePartition(const BatchUpdatePartitionRequest &request)
+{
+    return qobject_cast<BatchUpdatePartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CancelMLTaskRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Cancels (stops) a task run. Machine learning task runs are asynchronous tasks that AWS Glue runs on your behalf as part
+ * of various machine learning workflows. You can cancel a machine learning task run at any time by calling
+ * <code>CancelMLTaskRun</code> with a task run's parent transform's <code>TransformID</code> and the task run's
+ * <code>TaskRunId</code>.
+ */
+CancelMLTaskRunResponse * GlueClient::cancelMLTaskRun(const CancelMLTaskRunRequest &request)
+{
+    return qobject_cast<CancelMLTaskRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CheckSchemaVersionValidityResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Validates the supplied schema. This call has no side effects, it simply validates using the supplied schema using
+ * <code>DataFormat</code> as the format. Since it does not take a schema set name, no compatibility checks are
+ */
+CheckSchemaVersionValidityResponse * GlueClient::checkSchemaVersionValidity(const CheckSchemaVersionValidityRequest &request)
+{
+    return qobject_cast<CheckSchemaVersionValidityResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * CreateClassifierResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -558,7 +697,7 @@ CreateDatabaseResponse * GlueClient::createDatabase(const CreateDatabaseRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new
+ * Creates a new development
  */
 CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpointRequest &request)
 {
@@ -580,6 +719,32 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateMLTransformResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates an AWS Glue machine learning transform. This operation creates the transform and all the necessary parameters to
+ * train
+ *
+ * it>
+ *
+ * Call this operation as the first step in the process of using a machine learning transform (such as the
+ * <code>FindMatches</code> transform) for deduplicating data. You can provide an optional <code>Description</code>, in
+ * addition to the parameters that you want to use for your
+ *
+ * algorithm>
+ *
+ * You must also specify certain parameters for the tasks that AWS Glue runs on your behalf as part of learning from your
+ * data and creating a high-quality machine learning transform. These parameters include <code>Role</code>, and optionally,
+ * <code>AllocatedCapacity</code>, <code>Timeout</code>, and <code>MaxRetries</code>. For more information, see <a
+ */
+CreateMLTransformResponse * GlueClient::createMLTransform(const CreateMLTransformRequest &request)
+{
+    return qobject_cast<CreateMLTransformResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * CreatePartitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -589,6 +754,58 @@ CreateJobResponse * GlueClient::createJob(const CreateJobRequest &request)
 CreatePartitionResponse * GlueClient::createPartition(const CreatePartitionRequest &request)
 {
     return qobject_cast<CreatePartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreatePartitionIndexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a specified partition index in an existing
+ */
+CreatePartitionIndexResponse * GlueClient::createPartitionIndex(const CreatePartitionIndexRequest &request)
+{
+    return qobject_cast<CreatePartitionIndexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateRegistryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new registry which may be used to hold a collection of
+ */
+CreateRegistryResponse * GlueClient::createRegistry(const CreateRegistryRequest &request)
+{
+    return qobject_cast<CreateRegistryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * CreateSchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new schema set and registers the schema definition. Returns an error if the schema set already exists without
+ * actually registering the
+ *
+ * version>
+ *
+ * When the schema set is created, a version checkpoint will be set to the first version. Compatibility mode "DISABLED"
+ * restricts any additional schema versions from being added after the first schema version. For all other compatibility
+ * modes, validation of compatibility settings will be applied only from the second version onwards when the
+ * <code>RegisterSchemaVersion</code> API is
+ *
+ * used>
+ *
+ * When this API is called without a <code>RegistryId</code>, this will create an entry for a "default-registry" in the
+ * registry database tables, if it is not already
+ */
+CreateSchemaResponse * GlueClient::createSchema(const CreateSchemaRequest &request)
+{
+    return qobject_cast<CreateSchemaResponse *>(send(request));
 }
 
 /*!
@@ -610,7 +827,10 @@ CreateScriptResponse * GlueClient::createScript(const CreateScriptRequest &reque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new security
+ * Creates a new security configuration. A security configuration is a set of security properties that can be used by AWS
+ * Glue. You can use a security configuration to encrypt data at rest. For information about using security configurations
+ * in AWS Glue, see <a href="https://docs.aws.amazon.com/glue/latest/dg/encryption-security-configuration.html">Encrypting
+ * Data Written by Crawlers, Jobs, and Development
  */
 CreateSecurityConfigurationResponse * GlueClient::createSecurityConfiguration(const CreateSecurityConfigurationRequest &request)
 {
@@ -684,6 +904,40 @@ DeleteClassifierResponse * GlueClient::deleteClassifier(const DeleteClassifierRe
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteColumnStatisticsForPartitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete the partition column statistics of a
+ *
+ * column>
+ *
+ * The Identity and Access Management (IAM) permission required for this operation is
+ */
+DeleteColumnStatisticsForPartitionResponse * GlueClient::deleteColumnStatisticsForPartition(const DeleteColumnStatisticsForPartitionRequest &request)
+{
+    return qobject_cast<DeleteColumnStatisticsForPartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteColumnStatisticsForTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves table statistics of
+ *
+ * columns>
+ *
+ * The Identity and Access Management (IAM) permission required for this operation is
+ */
+DeleteColumnStatisticsForTableResponse * GlueClient::deleteColumnStatisticsForTable(const DeleteColumnStatisticsForTableRequest &request)
+{
+    return qobject_cast<DeleteColumnStatisticsForTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * DeleteConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -714,17 +968,17 @@ DeleteCrawlerResponse * GlueClient::deleteCrawler(const DeleteCrawlerRequest &re
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Removes a specified Database from a Data
+ * Removes a specified database from a Data
  *
  * Catalog> <note>
  *
- * After completing this operation, you will no longer have access to the tables (and all table versions and partitions
- * that might belong to the tables) and the user-defined functions in the deleted database. AWS Glue deletes these
- * "orphaned" resources asynchronously in a timely manner, at the discretion of the
+ * After completing this operation, you no longer have access to the tables (and all table versions and partitions that
+ * might belong to the tables) and the user-defined functions in the deleted database. AWS Glue deletes these "orphaned"
+ * resources asynchronously in a timely manner, at the discretion of the
  *
  * service>
  *
- * To ensure immediate deletion of all related resources, before calling <code>DeleteDatabase</code>, use
+ * To ensure the immediate deletion of all related resources, before calling <code>DeleteDatabase</code>, use
  * <code>DeleteTableVersion</code> or <code>BatchDeleteTableVersion</code>, <code>DeletePartition</code> or
  * <code>BatchDeletePartition</code>, <code>DeleteUserDefinedFunction</code>, and <code>DeleteTable</code> or
  * <code>BatchDeleteTable</code>, to delete any resources that belong to the
@@ -740,7 +994,7 @@ DeleteDatabaseResponse * GlueClient::deleteDatabase(const DeleteDatabaseRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Deletes a specified
+ * Deletes a specified development
  */
 DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpointRequest &request)
 {
@@ -762,6 +1016,23 @@ DeleteJobResponse * GlueClient::deleteJob(const DeleteJobRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteMLTransformResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an AWS Glue machine learning transform. Machine learning transforms are a special type of transform that use
+ * machine learning to learn the details of the transformation to be performed by learning from examples provided by
+ * humans. These transformations are then saved by AWS Glue. If you no longer need a transform, you can delete it by
+ * calling <code>DeleteMLTransforms</code>. However, any AWS Glue jobs that still reference the deleted transform will no
+ * longer
+ */
+DeleteMLTransformResponse * GlueClient::deleteMLTransform(const DeleteMLTransformRequest &request)
+{
+    return qobject_cast<DeleteMLTransformResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * DeletePartitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -775,6 +1046,35 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeletePartitionIndexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a specified partition index from an existing
+ */
+DeletePartitionIndexResponse * GlueClient::deletePartitionIndex(const DeletePartitionIndexRequest &request)
+{
+    return qobject_cast<DeletePartitionIndexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteRegistryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete the entire registry including schema and all of its versions. To get the status of the delete operation, you can
+ * call the <code>GetRegistry</code> API after the asynchronous call. Deleting a registry will disable all online
+ * operations for the registry such as the <code>UpdateRegistry</code>, <code>CreateSchema</code>,
+ * <code>UpdateSchema</code>, and <code>RegisterSchemaVersion</code> APIs.
+ */
+DeleteRegistryResponse * GlueClient::deleteRegistry(const DeleteRegistryRequest &request)
+{
+    return qobject_cast<DeleteRegistryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * DeleteResourcePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -784,6 +1084,52 @@ DeletePartitionResponse * GlueClient::deletePartition(const DeletePartitionReque
 DeleteResourcePolicyResponse * GlueClient::deleteResourcePolicy(const DeleteResourcePolicyRequest &request)
 {
     return qobject_cast<DeleteResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteSchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the entire schema set, including the schema set and all of its versions. To get the status of the delete
+ * operation, you can call <code>GetSchema</code> API after the asynchronous call. Deleting a registry will disable all
+ * online operations for the schema, such as the <code>GetSchemaByDefinition</code>, and <code>RegisterSchemaVersion</code>
+ */
+DeleteSchemaResponse * GlueClient::deleteSchema(const DeleteSchemaRequest &request)
+{
+    return qobject_cast<DeleteSchemaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * DeleteSchemaVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Remove versions from the specified schema. A version number or range may be supplied. If the compatibility mode forbids
+ * deleting of a version that is necessary, such as BACKWARDS_FULL, an error is returned. Calling the
+ * <code>GetSchemaVersions</code> API after this call will list the status of the deleted
+ *
+ * versions>
+ *
+ * When the range of version numbers contain check pointed version, the API will return a 409 conflict and will not proceed
+ * with the deletion. You have to remove the checkpoint first using the <code>DeleteSchemaCheckpoint</code> API before
+ * using this
+ *
+ * API>
+ *
+ * You cannot use the <code>DeleteSchemaVersions</code> API to delete the first schema version in the schema set. The first
+ * schema version can only be deleted by the <code>DeleteSchema</code> API. This operation will also delete the attached
+ * <code>SchemaVersionMetadata</code> under the schema versions. Hard deletes will be enforced on the
+ *
+ * database>
+ *
+ * If the compatibility mode forbids deleting of a version that is necessary, such as BACKWARDS_FULL, an error is
+ */
+DeleteSchemaVersionsResponse * GlueClient::deleteSchemaVersions(const DeleteSchemaVersionsRequest &request)
+{
+    return qobject_cast<DeleteSchemaVersionsResponse *>(send(request));
 }
 
 /*!
@@ -809,12 +1155,12 @@ DeleteSecurityConfigurationResponse * GlueClient::deleteSecurityConfiguration(co
  *
  * Catalog> <note>
  *
- * After completing this operation, you will no longer have access to the table versions and partitions that belong to the
+ * After completing this operation, you no longer have access to the table versions and partitions that belong to the
  * deleted table. AWS Glue deletes these "orphaned" resources asynchronously in a timely manner, at the discretion of the
  *
  * service>
  *
- * To ensure immediate deletion of all related resources, before calling <code>DeleteTable</code>, use
+ * To ensure the immediate deletion of all related resources, before calling <code>DeleteTable</code>, use
  * <code>DeleteTableVersion</code> or <code>BatchDeleteTableVersion</code>, and <code>DeletePartition</code> or
  * <code>BatchDeletePartition</code>, to delete any resources that belong to the
  */
@@ -916,6 +1262,40 @@ GetClassifiersResponse * GlueClient::getClassifiers(const GetClassifiersRequest 
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetColumnStatisticsForPartitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves partition statistics of
+ *
+ * columns>
+ *
+ * The Identity and Access Management (IAM) permission required for this operation is
+ */
+GetColumnStatisticsForPartitionResponse * GlueClient::getColumnStatisticsForPartition(const GetColumnStatisticsForPartitionRequest &request)
+{
+    return qobject_cast<GetColumnStatisticsForPartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetColumnStatisticsForTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves table statistics of
+ *
+ * columns>
+ *
+ * The Identity and Access Management (IAM) permission required for this operation is
+ */
+GetColumnStatisticsForTableResponse * GlueClient::getColumnStatisticsForTable(const GetColumnStatisticsForTableRequest &request)
+{
+    return qobject_cast<GetColumnStatisticsForTableResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetConnectionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1011,7 +1391,7 @@ GetDatabaseResponse * GlueClient::getDatabase(const GetDatabaseRequest &request)
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves all Databases defined in a given Data
+ * Retrieves all databases defined in a given Data
  */
 GetDatabasesResponse * GlueClient::getDatabases(const GetDatabasesRequest &request)
 {
@@ -1037,9 +1417,9 @@ GetDataflowGraphResponse * GlueClient::getDataflowGraph(const GetDataflowGraphRe
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves information about a specified
+ * Retrieves information about a specified development
  *
- * DevEndpoint> <note>
+ * endpoint> <note>
  *
  * When you create a development endpoint in a virtual private cloud (VPC), AWS Glue returns only a private IP address, and
  * the public IP address field is not populated. When you create a non-VPC development endpoint, AWS Glue returns only a
@@ -1056,7 +1436,7 @@ GetDevEndpointResponse * GlueClient::getDevEndpoint(const GetDevEndpointRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves all the DevEndpoints in this AWS
+ * Retrieves all the development endpoints in this AWS
  *
  * account> <note>
  *
@@ -1080,6 +1460,19 @@ GetDevEndpointsResponse * GlueClient::getDevEndpoints(const GetDevEndpointsReque
 GetJobResponse * GlueClient::getJob(const GetJobRequest &request)
 {
     return qobject_cast<GetJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetJobBookmarkResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information on a job bookmark
+ */
+GetJobBookmarkResponse * GlueClient::getJobBookmark(const GetJobBookmarkRequest &request)
+{
+    return qobject_cast<GetJobBookmarkResponse *>(send(request));
 }
 
 /*!
@@ -1123,6 +1516,73 @@ GetJobsResponse * GlueClient::getJobs(const GetJobsRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetMLTaskRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets details for a specific task run on a machine learning transform. Machine learning task runs are asynchronous tasks
+ * that AWS Glue runs on your behalf as part of various machine learning workflows. You can check the stats of any task run
+ * by calling <code>GetMLTaskRun</code> with the <code>TaskRunID</code> and its parent transform's
+ */
+GetMLTaskRunResponse * GlueClient::getMLTaskRun(const GetMLTaskRunRequest &request)
+{
+    return qobject_cast<GetMLTaskRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetMLTaskRunsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of runs for a machine learning transform. Machine learning task runs are asynchronous tasks that AWS Glue
+ * runs on your behalf as part of various machine learning workflows. You can get a sortable, filterable list of machine
+ * learning task runs by calling <code>GetMLTaskRuns</code> with their parent transform's <code>TransformID</code> and
+ * other optional parameters as documented in this
+ *
+ * section>
+ *
+ * This operation returns a list of historic runs and must be
+ */
+GetMLTaskRunsResponse * GlueClient::getMLTaskRuns(const GetMLTaskRunsRequest &request)
+{
+    return qobject_cast<GetMLTaskRunsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetMLTransformResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets an AWS Glue machine learning transform artifact and all its corresponding metadata. Machine learning transforms are
+ * a special type of transform that use machine learning to learn the details of the transformation to be performed by
+ * learning from examples provided by humans. These transformations are then saved by AWS Glue. You can retrieve their
+ * metadata by calling
+ */
+GetMLTransformResponse * GlueClient::getMLTransform(const GetMLTransformRequest &request)
+{
+    return qobject_cast<GetMLTransformResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetMLTransformsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a sortable, filterable list of existing AWS Glue machine learning transforms. Machine learning transforms are a
+ * special type of transform that use machine learning to learn the details of the transformation to be performed by
+ * learning from examples provided by humans. These transformations are then saved by AWS Glue, and you can retrieve their
+ * metadata by calling
+ */
+GetMLTransformsResponse * GlueClient::getMLTransforms(const GetMLTransformsRequest &request)
+{
+    return qobject_cast<GetMLTransformsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetMappingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1145,6 +1605,19 @@ GetMappingResponse * GlueClient::getMapping(const GetMappingRequest &request)
 GetPartitionResponse * GlueClient::getPartition(const GetPartitionRequest &request)
 {
     return qobject_cast<GetPartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetPartitionIndexesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the partition indexes associated with a
+ */
+GetPartitionIndexesResponse * GlueClient::getPartitionIndexes(const GetPartitionIndexesRequest &request)
+{
+    return qobject_cast<GetPartitionIndexesResponse *>(send(request));
 }
 
 /*!
@@ -1175,6 +1648,38 @@ GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetRegistryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified registry in
+ */
+GetRegistryResponse * GlueClient::getRegistry(const GetRegistryRequest &request)
+{
+    return qobject_cast<GetRegistryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetResourcePoliciesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves the resource policies set on individual resources by AWS Resource Access Manager during cross-account
+ * permission grants. Also retrieves the Data Catalog resource
+ *
+ * policy>
+ *
+ * If you enabled metadata encryption in Data Catalog settings, and you do not have permission on the AWS KMS key, the
+ * operation can't return the Data Catalog resource
+ */
+GetResourcePoliciesResponse * GlueClient::getResourcePolicies(const GetResourcePoliciesRequest &request)
+{
+    return qobject_cast<GetResourcePoliciesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * GetResourcePolicyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1184,6 +1689,66 @@ GetPlanResponse * GlueClient::getPlan(const GetPlanRequest &request)
 GetResourcePolicyResponse * GlueClient::getResourcePolicy(const GetResourcePolicyRequest &request)
 {
     return qobject_cast<GetResourcePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the specified schema in
+ */
+GetSchemaResponse * GlueClient::getSchema(const GetSchemaRequest &request)
+{
+    return qobject_cast<GetSchemaResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSchemaByDefinitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a schema by the <code>SchemaDefinition</code>. The schema definition is sent to the Schema Registry,
+ * canonicalized, and hashed. If the hash is matched within the scope of the <code>SchemaName</code> or ARN (or the default
+ * registry, if none is supplied), that schema’s metadata is returned. Otherwise, a 404 or NotFound error is returned.
+ * Schema versions in <code>Deleted</code> statuses will not be included in the
+ */
+GetSchemaByDefinitionResponse * GlueClient::getSchemaByDefinition(const GetSchemaByDefinitionRequest &request)
+{
+    return qobject_cast<GetSchemaByDefinitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSchemaVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Get the specified schema by its unique ID assigned when a version of the schema is created or registered. Schema
+ * versions in Deleted status will not be included in the
+ */
+GetSchemaVersionResponse * GlueClient::getSchemaVersion(const GetSchemaVersionRequest &request)
+{
+    return qobject_cast<GetSchemaVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * GetSchemaVersionsDiffResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Fetches the schema version difference in the specified difference type between two stored schema versions in the Schema
+ *
+ * Registry>
+ *
+ * This API allows you to compare two schema versions between two schema definitions under the same
+ */
+GetSchemaVersionsDiffResponse * GlueClient::getSchemaVersionsDiff(const GetSchemaVersionsDiffRequest &request)
+{
+    return qobject_cast<GetSchemaVersionsDiffResponse *>(send(request));
 }
 
 /*!
@@ -1322,7 +1887,7 @@ GetUserDefinedFunctionResponse * GlueClient::getUserDefinedFunction(const GetUse
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves a multiple function definitions from the Data
+ * Retrieves multiple function definitions from the Data
  */
 GetUserDefinedFunctionsResponse * GlueClient::getUserDefinedFunctions(const GetUserDefinedFunctionsRequest &request)
 {
@@ -1387,7 +1952,7 @@ GetWorkflowRunsResponse * GlueClient::getWorkflowRuns(const GetWorkflowRunsReque
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Imports an existing Athena Data Catalog to AWS
+ * Imports an existing Amazon Athena Data Catalog to AWS
  */
 ImportCatalogToGlueResponse * GlueClient::importCatalogToGlue(const ImportCatalogToGlueRequest &request)
 {
@@ -1453,6 +2018,69 @@ ListJobsResponse * GlueClient::listJobs(const ListJobsRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListMLTransformsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Retrieves a sortable, filterable list of existing AWS Glue machine learning transforms in this AWS account, or the
+ * resources with the specified tag. This operation takes the optional <code>Tags</code> field, which you can use as a
+ * filter of the responses so that tagged resources can be retrieved as a group. If you choose to use tag filtering, only
+ * resources with the tags are retrieved.
+ */
+ListMLTransformsResponse * GlueClient::listMLTransforms(const ListMLTransformsRequest &request)
+{
+    return qobject_cast<ListMLTransformsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListRegistriesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of registries that you have created, with minimal registry information. Registries in the
+ * <code>Deleting</code> status will not be included in the results. Empty results will be returned if there are no
+ * registries
+ */
+ListRegistriesResponse * GlueClient::listRegistries(const ListRegistriesRequest &request)
+{
+    return qobject_cast<ListRegistriesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListSchemaVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of schema versions that you have created, with minimal information. Schema versions in Deleted status
+ * will not be included in the results. Empty results will be returned if there are no schema versions
+ */
+ListSchemaVersionsResponse * GlueClient::listSchemaVersions(const ListSchemaVersionsRequest &request)
+{
+    return qobject_cast<ListSchemaVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ListSchemasResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of schemas with minimal details. Schemas in Deleting status will not be included in the results. Empty
+ * results will be returned if there are no schemas
+ *
+ * available>
+ *
+ * When the <code>RegistryId</code> is not provided, all the schemas across registries will be part of the API
+ */
+ListSchemasResponse * GlueClient::listSchemas(const ListSchemasRequest &request)
+{
+    return qobject_cast<ListSchemasResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * ListTriggersResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1512,6 +2140,20 @@ PutResourcePolicyResponse * GlueClient::putResourcePolicy(const PutResourcePolic
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * PutSchemaVersionMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Puts the metadata key value pair for a specified schema version ID. A maximum of 10 key value pairs will be allowed per
+ * schema version. They can be added over one or more
+ */
+PutSchemaVersionMetadataResponse * GlueClient::putSchemaVersionMetadata(const PutSchemaVersionMetadataRequest &request)
+{
+    return qobject_cast<PutSchemaVersionMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * PutWorkflowRunPropertiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1526,6 +2168,58 @@ PutWorkflowRunPropertiesResponse * GlueClient::putWorkflowRunProperties(const Pu
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * QuerySchemaVersionMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Queries for the schema version metadata information.
+ */
+QuerySchemaVersionMetadataResponse * GlueClient::querySchemaVersionMetadata(const QuerySchemaVersionMetadataRequest &request)
+{
+    return qobject_cast<QuerySchemaVersionMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * RegisterSchemaVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds a new version to the existing schema. Returns an error if new version of schema does not meet the compatibility
+ * requirements of the schema set. This API will not create a new schema set and will return a 404 error if the schema set
+ * is not already present in the Schema
+ *
+ * Registry>
+ *
+ * If this is the first schema definition to be registered in the Schema Registry, this API will store the schema version
+ * and return immediately. Otherwise, this call has the potential to run longer than other operations due to compatibility
+ * modes. You can call the <code>GetSchemaVersion</code> API with the <code>SchemaVersionId</code> to check compatibility
+ *
+ * modes>
+ *
+ * If the same schema definition is already stored in Schema Registry as a version, the schema ID of the existing schema is
+ * returned to the
+ */
+RegisterSchemaVersionResponse * GlueClient::registerSchemaVersion(const RegisterSchemaVersionRequest &request)
+{
+    return qobject_cast<RegisterSchemaVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * RemoveSchemaVersionMetadataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes a key value pair from the schema version metadata for the specified schema version
+ */
+RemoveSchemaVersionMetadataResponse * GlueClient::removeSchemaVersionMetadata(const RemoveSchemaVersionMetadataRequest &request)
+{
+    return qobject_cast<RemoveSchemaVersionMetadataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * ResetJobBookmarkResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1535,6 +2229,42 @@ PutWorkflowRunPropertiesResponse * GlueClient::putWorkflowRunProperties(const Pu
 ResetJobBookmarkResponse * GlueClient::resetJobBookmark(const ResetJobBookmarkRequest &request)
 {
     return qobject_cast<ResetJobBookmarkResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * ResumeWorkflowRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Restarts selected nodes of a previous partially completed workflow run and resumes the workflow run. The selected nodes
+ * and all nodes that are downstream from the selected nodes are
+ */
+ResumeWorkflowRunResponse * GlueClient::resumeWorkflowRun(const ResumeWorkflowRunRequest &request)
+{
+    return qobject_cast<ResumeWorkflowRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * SearchTablesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Searches a set of tables based on properties in the table metadata as well as on the parent database. You can search
+ * against text or filter conditions.
+ *
+ * </p
+ *
+ * You can only get tables that you have access to based on the security policies defined in Lake Formation. You need at
+ * least a read-only access to the table for it to be returned. If you do not have access to all the columns in the table,
+ * these columns will not be searched against when returning the list of tables back to you. If you have access to the
+ * columns but not the data in the columns, those columns and the associated metadata for those columns will be included in
+ * the search.
+ */
+SearchTablesResponse * GlueClient::searchTables(const SearchTablesRequest &request)
+{
+    return qobject_cast<SearchTablesResponse *>(send(request));
 }
 
 /*!
@@ -1567,6 +2297,63 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StartExportLabelsTaskRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Begins an asynchronous task to export all labeled data for a particular transform. This task is the only label-related
+ * API call that is not part of the typical active learning workflow. You typically use
+ * <code>StartExportLabelsTaskRun</code> when you want to work with all of your existing labels at the same time, such as
+ * when you want to remove or change labels that were previously submitted as truth. This API operation accepts the
+ * <code>TransformId</code> whose labels you want to export and an Amazon Simple Storage Service (Amazon S3) path to export
+ * the labels to. The operation returns a <code>TaskRunId</code>. You can check on the status of your task run by calling
+ * the <code>GetMLTaskRun</code>
+ */
+StartExportLabelsTaskRunResponse * GlueClient::startExportLabelsTaskRun(const StartExportLabelsTaskRunRequest &request)
+{
+    return qobject_cast<StartExportLabelsTaskRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StartImportLabelsTaskRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Enables you to provide additional labels (examples of truth) to be used to teach the machine learning transform and
+ * improve its quality. This API operation is generally used as part of the active learning workflow that starts with the
+ * <code>StartMLLabelingSetGenerationTaskRun</code> call and that ultimately results in improving the quality of your
+ * machine learning transform.
+ *
+ * </p
+ *
+ * After the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue machine learning will have generated a
+ * series of questions for humans to answer. (Answering these questions is often called 'labeling' in the machine learning
+ * workflows). In the case of the <code>FindMatches</code> transform, these questions are of the form, “What is the correct
+ * way to group these rows together into groups composed entirely of matching records?” After the labeling process is
+ * finished, users upload their answers/labels with a call to <code>StartImportLabelsTaskRun</code>. After
+ * <code>StartImportLabelsTaskRun</code> finishes, all future runs of the machine learning transform use the new and
+ * improved labels and perform a higher-quality
+ *
+ * transformation>
+ *
+ * By default, <code>StartMLLabelingSetGenerationTaskRun</code> continually learns from and combines all labels that you
+ * upload unless you set <code>Replace</code> to true. If you set <code>Replace</code> to true,
+ * <code>StartImportLabelsTaskRun</code> deletes and forgets all previously uploaded labels and learns only from the exact
+ * set that you upload. Replacing labels can be helpful if you realize that you previously uploaded incorrect labels, and
+ * you believe that they are having a negative effect on your transform
+ *
+ * quality>
+ *
+ * You can check on the status of your task run by calling the <code>GetMLTaskRun</code> operation.
+ */
+StartImportLabelsTaskRunResponse * GlueClient::startImportLabelsTaskRun(const StartImportLabelsTaskRunRequest &request)
+{
+    return qobject_cast<StartImportLabelsTaskRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * StartJobRunResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1576,6 +2363,59 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
 StartJobRunResponse * GlueClient::startJobRun(const StartJobRunRequest &request)
 {
     return qobject_cast<StartJobRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StartMLEvaluationTaskRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a task to estimate the quality of the transform.
+ *
+ * </p
+ *
+ * When you provide label sets as examples of truth, AWS Glue machine learning uses some of those examples to learn from
+ * them. The rest of the labels are used as a test to estimate
+ *
+ * quality>
+ *
+ * Returns a unique identifier for the run. You can call <code>GetMLTaskRun</code> to get more information about the stats
+ * of the
+ */
+StartMLEvaluationTaskRunResponse * GlueClient::startMLEvaluationTaskRun(const StartMLEvaluationTaskRunRequest &request)
+{
+    return qobject_cast<StartMLEvaluationTaskRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StartMLLabelingSetGenerationTaskRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts the active learning workflow for your machine learning transform to improve the transform's quality by generating
+ * label sets and adding
+ *
+ * labels>
+ *
+ * When the <code>StartMLLabelingSetGenerationTaskRun</code> finishes, AWS Glue will have generated a "labeling set" or a
+ * set of questions for humans to
+ *
+ * answer>
+ *
+ * In the case of the <code>FindMatches</code> transform, these questions are of the form, “What is the correct way to
+ * group these rows together into groups composed entirely of matching records?”
+ *
+ * </p
+ *
+ * After the labeling process is finished, you can upload your labels with a call to <code>StartImportLabelsTaskRun</code>.
+ * After <code>StartImportLabelsTaskRun</code> finishes, all future runs of the machine learning transform will use the new
+ * and improved labels and perform a higher-quality
+ */
+StartMLLabelingSetGenerationTaskRunResponse * GlueClient::startMLLabelingSetGenerationTaskRun(const StartMLLabelingSetGenerationTaskRunRequest &request)
+{
+    return qobject_cast<StartMLLabelingSetGenerationTaskRunResponse *>(send(request));
 }
 
 /*!
@@ -1647,6 +2487,19 @@ StopTriggerResponse * GlueClient::stopTrigger(const StopTriggerRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * StopWorkflowRunResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops the execution of the specified workflow
+ */
+StopWorkflowRunResponse * GlueClient::stopWorkflowRun(const StopWorkflowRunRequest &request)
+{
+    return qobject_cast<StopWorkflowRunResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * TagResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1685,6 +2538,40 @@ UntagResourceResponse * GlueClient::untagResource(const UntagResourceRequest &re
 UpdateClassifierResponse * GlueClient::updateClassifier(const UpdateClassifierRequest &request)
 {
     return qobject_cast<UpdateClassifierResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateColumnStatisticsForPartitionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates partition statistics of
+ *
+ * columns>
+ *
+ * The Identity and Access Management (IAM) permission required for this operation is
+ */
+UpdateColumnStatisticsForPartitionResponse * GlueClient::updateColumnStatisticsForPartition(const UpdateColumnStatisticsForPartitionRequest &request)
+{
+    return qobject_cast<UpdateColumnStatisticsForPartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateColumnStatisticsForTableResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates or updates table statistics of
+ *
+ * columns>
+ *
+ * The Identity and Access Management (IAM) permission required for this operation is
+ */
+UpdateColumnStatisticsForTableResponse * GlueClient::updateColumnStatisticsForTable(const UpdateColumnStatisticsForTableRequest &request)
+{
+    return qobject_cast<UpdateColumnStatisticsForTableResponse *>(send(request));
 }
 
 /*!
@@ -1745,7 +2632,7 @@ UpdateDatabaseResponse * GlueClient::updateDatabase(const UpdateDatabaseRequest 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Updates a specified
+ * Updates a specified development
  */
 UpdateDevEndpointResponse * GlueClient::updateDevEndpoint(const UpdateDevEndpointRequest &request)
 {
@@ -1767,6 +2654,24 @@ UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 
 /*!
  * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateMLTransformResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing machine learning transform. Call this operation to tune the algorithm parameters to achieve better
+ *
+ * results>
+ *
+ * After calling this operation, you can call the <code>StartMLEvaluationTaskRun</code> operation to assess how well your
+ * new parameters achieved your goals (such as improving the quality of your machine learning transform, or making it more
+ */
+UpdateMLTransformResponse * GlueClient::updateMLTransform(const UpdateMLTransformRequest &request)
+{
+    return qobject_cast<UpdateMLTransformResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
  * UpdatePartitionResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1776,6 +2681,48 @@ UpdateJobResponse * GlueClient::updateJob(const UpdateJobRequest &request)
 UpdatePartitionResponse * GlueClient::updatePartition(const UpdatePartitionRequest &request)
 {
     return qobject_cast<UpdatePartitionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateRegistryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates an existing registry which is used to hold a collection of schemas. The updated properties relate to the
+ * registry, and do not modify any of the schemas within the registry.
+ */
+UpdateRegistryResponse * GlueClient::updateRegistry(const UpdateRegistryRequest &request)
+{
+    return qobject_cast<UpdateRegistryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the GlueClient service, and returns a pointer to an
+ * UpdateSchemaResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the description, compatibility setting, or version checkpoint for a schema
+ *
+ * set>
+ *
+ * For updating the compatibility setting, the call will not validate compatibility for the entire set of schema versions
+ * with the new compatibility setting. If the value for <code>Compatibility</code> is provided, the
+ * <code>VersionNumber</code> (a checkpoint) is also required. The API will validate the checkpoint version number for
+ *
+ * consistency>
+ *
+ * If the value for the <code>VersionNumber</code> (checkpoint) is provided, <code>Compatibility</code> is optional and
+ * this can be used to set/reset a checkpoint for the
+ *
+ * schema>
+ *
+ * This update will happen only if the schema is in the AVAILABLE
+ */
+UpdateSchemaResponse * GlueClient::updateSchema(const UpdateSchemaRequest &request)
+{
+    return qobject_cast<UpdateSchemaResponse *>(send(request));
 }
 
 /*!

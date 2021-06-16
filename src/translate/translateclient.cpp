@@ -21,16 +21,34 @@
 #include "translateclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createparalleldatarequest.h"
+#include "createparalleldataresponse.h"
+#include "deleteparalleldatarequest.h"
+#include "deleteparalleldataresponse.h"
 #include "deleteterminologyrequest.h"
 #include "deleteterminologyresponse.h"
+#include "describetexttranslationjobrequest.h"
+#include "describetexttranslationjobresponse.h"
+#include "getparalleldatarequest.h"
+#include "getparalleldataresponse.h"
 #include "getterminologyrequest.h"
 #include "getterminologyresponse.h"
 #include "importterminologyrequest.h"
 #include "importterminologyresponse.h"
+#include "listparalleldatarequest.h"
+#include "listparalleldataresponse.h"
 #include "listterminologiesrequest.h"
 #include "listterminologiesresponse.h"
+#include "listtexttranslationjobsrequest.h"
+#include "listtexttranslationjobsresponse.h"
+#include "starttexttranslationjobrequest.h"
+#include "starttexttranslationjobresponse.h"
+#include "stoptexttranslationjobrequest.h"
+#include "stoptexttranslationjobresponse.h"
 #include "translatetextrequest.h"
 #include "translatetextresponse.h"
+#include "updateparalleldatarequest.h"
+#include "updateparalleldataresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -112,6 +130,34 @@ TranslateClient::TranslateClient(
 
 /*!
  * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * CreateParallelDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3. Parallel data files
+ * contain examples of source phrases and their translations from your translation memory. By adding parallel data, you can
+ * influence the style, tone, and word choice in your translation
+ */
+CreateParallelDataResponse * TranslateClient::createParallelData(const CreateParallelDataRequest &request)
+{
+    return qobject_cast<CreateParallelDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * DeleteParallelDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a parallel data resource in Amazon
+ */
+DeleteParallelDataResponse * TranslateClient::deleteParallelData(const DeleteParallelDataRequest &request)
+{
+    return qobject_cast<DeleteParallelDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
  * DeleteTerminologyResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -121,6 +167,33 @@ TranslateClient::TranslateClient(
 DeleteTerminologyResponse * TranslateClient::deleteTerminology(const DeleteTerminologyRequest &request)
 {
     return qobject_cast<DeleteTerminologyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * DescribeTextTranslationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the properties associated with an asycnhronous batch translation job including name, ID, status, source and target
+ * languages, input/output S3 buckets, and so
+ */
+DescribeTextTranslationJobResponse * TranslateClient::describeTextTranslationJob(const DescribeTextTranslationJobRequest &request)
+{
+    return qobject_cast<DescribeTextTranslationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * GetParallelDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides information about a parallel data
+ */
+GetParallelDataResponse * TranslateClient::getParallelData(const GetParallelDataRequest &request)
+{
+    return qobject_cast<GetParallelDataResponse *>(send(request));
 }
 
 /*!
@@ -159,6 +232,19 @@ ImportTerminologyResponse * TranslateClient::importTerminology(const ImportTermi
 
 /*!
  * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * ListParallelDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Provides a list of your parallel data resources in Amazon
+ */
+ListParallelDataResponse * TranslateClient::listParallelData(const ListParallelDataRequest &request)
+{
+    return qobject_cast<ListParallelDataResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
  * ListTerminologiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -172,107 +258,89 @@ ListTerminologiesResponse * TranslateClient::listTerminologies(const ListTermino
 
 /*!
  * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * ListTextTranslationJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the batch translation jobs that you have
+ */
+ListTextTranslationJobsResponse * TranslateClient::listTextTranslationJobs(const ListTextTranslationJobsRequest &request)
+{
+    return qobject_cast<ListTextTranslationJobsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * StartTextTranslationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts an asynchronous batch translation job. Batch translation jobs can be used to translate large volumes of text
+ * across multiple documents at once. For more information, see
+ *
+ * <a>async</a>>
+ *
+ * Batch translation jobs can be described with the <a>DescribeTextTranslationJob</a> operation, listed with the
+ * <a>ListTextTranslationJobs</a> operation, and stopped with the <a>StopTextTranslationJob</a>
+ *
+ * operation> <note>
+ *
+ * Amazon Translate does not support batch translation of multiple source languages at
+ */
+StartTextTranslationJobResponse * TranslateClient::startTextTranslationJob(const StartTextTranslationJobRequest &request)
+{
+    return qobject_cast<StartTextTranslationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * StopTextTranslationJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops an asynchronous batch translation job that is in
+ *
+ * progress>
+ *
+ * If the job's state is <code>IN_PROGRESS</code>, the job will be marked for termination and put into the
+ * <code>STOP_REQUESTED</code> state. If the job completes before it can be stopped, it is put into the
+ * <code>COMPLETED</code> state. Otherwise, the job is put into the <code>STOPPED</code>
+ *
+ * state>
+ *
+ * Asynchronous batch translation jobs are started with the <a>StartTextTranslationJob</a> operation. You can use the
+ * <a>DescribeTextTranslationJob</a> or <a>ListTextTranslationJobs</a> operations to get a batch translation job's
+ */
+StopTextTranslationJobResponse * TranslateClient::stopTextTranslationJob(const StopTextTranslationJobRequest &request)
+{
+    return qobject_cast<StopTextTranslationJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
  * TranslateTextResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Translates input text from the source language to the target language. It is not necessary to use English (en) as either
- * the source or the target language but not all language combinations are supported by Amazon Translate. For more
- * information, see <a href="http://docs.aws.amazon.com/translate/latest/dg/pairs.html">Supported Language
- *
- * Pairs</a>> <ul> <li>
- *
- * Arabic
- *
- * (ar> </li> <li>
- *
- * Chinese (Simplified)
- *
- * (zh> </li> <li>
- *
- * Chinese (Traditional)
- *
- * (zh-TW> </li> <li>
- *
- * Czech
- *
- * (cs> </li> <li>
- *
- * Danish
- *
- * (da> </li> <li>
- *
- * Dutch
- *
- * (nl> </li> <li>
- *
- * English
- *
- * (en> </li> <li>
- *
- * Finnish
- *
- * (fi> </li> <li>
- *
- * French
- *
- * (fr> </li> <li>
- *
- * German
- *
- * (de> </li> <li>
- *
- * Hebrew
- *
- * (he> </li> <li>
- *
- * Indonesian
- *
- * (id> </li> <li>
- *
- * Italian
- *
- * (it> </li> <li>
- *
- * Japanese
- *
- * (ja> </li> <li>
- *
- * Korean
- *
- * (ko> </li> <li>
- *
- * Polish
- *
- * (pl> </li> <li>
- *
- * Portuguese
- *
- * (pt> </li> <li>
- *
- * Russian
- *
- * (ru> </li> <li>
- *
- * Spanish
- *
- * (es> </li> <li>
- *
- * Swedish
- *
- * (sv> </li> <li>
- *
- * Turkish
- *
- * (tr> </li> </ul>
- *
- * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
- * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon Translate will call Amazon Comprehend to
- * determine the source
+ * Translates input text from the source language to the target language. For a list of available languages and language
+ * codes, see
  */
 TranslateTextResponse * TranslateClient::translateText(const TranslateTextRequest &request)
 {
     return qobject_cast<TranslateTextResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the TranslateClient service, and returns a pointer to an
+ * UpdateParallelDataResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates a previously created parallel data resource by importing a new input file from Amazon
+ */
+UpdateParallelDataResponse * TranslateClient::updateParallelData(const UpdateParallelDataRequest &request)
+{
+    return qobject_cast<UpdateParallelDataResponse *>(send(request));
 }
 
 /*!

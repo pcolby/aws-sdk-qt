@@ -48,8 +48,10 @@ namespace Organizations {
  * \value DeleteOrganizationAction Organizations DeleteOrganization action.
  * \value DeleteOrganizationalUnitAction Organizations DeleteOrganizationalUnit action.
  * \value DeletePolicyAction Organizations DeletePolicy action.
+ * \value DeregisterDelegatedAdministratorAction Organizations DeregisterDelegatedAdministrator action.
  * \value DescribeAccountAction Organizations DescribeAccount action.
  * \value DescribeCreateAccountStatusAction Organizations DescribeCreateAccountStatus action.
+ * \value DescribeEffectivePolicyAction Organizations DescribeEffectivePolicy action.
  * \value DescribeHandshakeAction Organizations DescribeHandshake action.
  * \value DescribeOrganizationAction Organizations DescribeOrganization action.
  * \value DescribeOrganizationalUnitAction Organizations DescribeOrganizationalUnit action.
@@ -67,6 +69,8 @@ namespace Organizations {
  * \value ListAccountsForParentAction Organizations ListAccountsForParent action.
  * \value ListChildrenAction Organizations ListChildren action.
  * \value ListCreateAccountStatusAction Organizations ListCreateAccountStatus action.
+ * \value ListDelegatedAdministratorsAction Organizations ListDelegatedAdministrators action.
+ * \value ListDelegatedServicesForAccountAction Organizations ListDelegatedServicesForAccount action.
  * \value ListHandshakesForAccountAction Organizations ListHandshakesForAccount action.
  * \value ListHandshakesForOrganizationAction Organizations ListHandshakesForOrganization action.
  * \value ListOrganizationalUnitsForParentAction Organizations ListOrganizationalUnitsForParent action.
@@ -77,6 +81,7 @@ namespace Organizations {
  * \value ListTagsForResourceAction Organizations ListTagsForResource action.
  * \value ListTargetsForPolicyAction Organizations ListTargetsForPolicy action.
  * \value MoveAccountAction Organizations MoveAccount action.
+ * \value RegisterDelegatedAdministratorAction Organizations RegisterDelegatedAdministrator action.
  * \value RemoveAccountFromOrganizationAction Organizations RemoveAccountFromOrganization action.
  * \value TagResourceAction Organizations TagResource action.
  * \value UntagResourceAction Organizations UntagResource action.

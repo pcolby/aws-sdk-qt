@@ -9,6 +9,10 @@ add_library(QtAwsDirectoryService
   addiproutesrequest_p.h
   addiproutesresponse.h
   addiproutesresponse_p.h
+  addregionrequest.h
+  addregionrequest_p.h
+  addregionresponse.h
+  addregionresponse_p.h
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
   addtagstoresourceresponse.h
@@ -73,10 +77,18 @@ add_library(QtAwsDirectoryService
   deletetrustrequest_p.h
   deletetrustresponse.h
   deletetrustresponse_p.h
+  deregistercertificaterequest.h
+  deregistercertificaterequest_p.h
+  deregistercertificateresponse.h
+  deregistercertificateresponse_p.h
   deregistereventtopicrequest.h
   deregistereventtopicrequest_p.h
   deregistereventtopicresponse.h
   deregistereventtopicresponse_p.h
+  describecertificaterequest.h
+  describecertificaterequest_p.h
+  describecertificateresponse.h
+  describecertificateresponse_p.h
   describeconditionalforwardersrequest.h
   describeconditionalforwardersrequest_p.h
   describeconditionalforwardersresponse.h
@@ -93,6 +105,14 @@ add_library(QtAwsDirectoryService
   describeeventtopicsrequest_p.h
   describeeventtopicsresponse.h
   describeeventtopicsresponse_p.h
+  describeldapssettingsrequest.h
+  describeldapssettingsrequest_p.h
+  describeldapssettingsresponse.h
+  describeldapssettingsresponse_p.h
+  describeregionsrequest.h
+  describeregionsrequest_p.h
+  describeregionsresponse.h
+  describeregionsresponse_p.h
   describeshareddirectoriesrequest.h
   describeshareddirectoriesrequest_p.h
   describeshareddirectoriesresponse.h
@@ -111,6 +131,14 @@ add_library(QtAwsDirectoryService
   directoryservicerequest_p.h
   directoryserviceresponse.h
   directoryserviceresponse_p.h
+  disableclientauthenticationrequest.h
+  disableclientauthenticationrequest_p.h
+  disableclientauthenticationresponse.h
+  disableclientauthenticationresponse_p.h
+  disableldapsrequest.h
+  disableldapsrequest_p.h
+  disableldapsresponse.h
+  disableldapsresponse_p.h
   disableradiusrequest.h
   disableradiusrequest_p.h
   disableradiusresponse.h
@@ -119,6 +147,14 @@ add_library(QtAwsDirectoryService
   disablessorequest_p.h
   disablessoresponse.h
   disablessoresponse_p.h
+  enableclientauthenticationrequest.h
+  enableclientauthenticationrequest_p.h
+  enableclientauthenticationresponse.h
+  enableclientauthenticationresponse_p.h
+  enableldapsrequest.h
+  enableldapsrequest_p.h
+  enableldapsresponse.h
+  enableldapsresponse_p.h
   enableradiusrequest.h
   enableradiusrequest_p.h
   enableradiusresponse.h
@@ -135,6 +171,10 @@ add_library(QtAwsDirectoryService
   getsnapshotlimitsrequest_p.h
   getsnapshotlimitsresponse.h
   getsnapshotlimitsresponse_p.h
+  listcertificatesrequest.h
+  listcertificatesrequest_p.h
+  listcertificatesresponse.h
+  listcertificatesresponse_p.h
   listiproutesrequest.h
   listiproutesrequest_p.h
   listiproutesresponse.h
@@ -151,6 +191,10 @@ add_library(QtAwsDirectoryService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  registercertificaterequest.h
+  registercertificaterequest_p.h
+  registercertificateresponse.h
+  registercertificateresponse_p.h
   registereventtopicrequest.h
   registereventtopicrequest_p.h
   registereventtopicresponse.h
@@ -163,6 +207,10 @@ add_library(QtAwsDirectoryService
   removeiproutesrequest_p.h
   removeiproutesresponse.h
   removeiproutesresponse_p.h
+  removeregionrequest.h
+  removeregionrequest_p.h
+  removeregionresponse.h
+  removeregionresponse_p.h
   removetagsfromresourcerequest.h
   removetagsfromresourcerequest_p.h
   removetagsfromresourceresponse.h
@@ -211,6 +259,8 @@ add_library(QtAwsDirectoryService
   acceptshareddirectoryresponse.cpp
   addiproutesrequest.cpp
   addiproutesresponse.cpp
+  addregionrequest.cpp
+  addregionresponse.cpp
   addtagstoresourcerequest.cpp
   addtagstoresourceresponse.cpp
   cancelschemaextensionrequest.cpp
@@ -243,8 +293,12 @@ add_library(QtAwsDirectoryService
   deletesnapshotresponse.cpp
   deletetrustrequest.cpp
   deletetrustresponse.cpp
+  deregistercertificaterequest.cpp
+  deregistercertificateresponse.cpp
   deregistereventtopicrequest.cpp
   deregistereventtopicresponse.cpp
+  describecertificaterequest.cpp
+  describecertificateresponse.cpp
   describeconditionalforwardersrequest.cpp
   describeconditionalforwardersresponse.cpp
   describedirectoriesrequest.cpp
@@ -253,6 +307,10 @@ add_library(QtAwsDirectoryService
   describedomaincontrollersresponse.cpp
   describeeventtopicsrequest.cpp
   describeeventtopicsresponse.cpp
+  describeldapssettingsrequest.cpp
+  describeldapssettingsresponse.cpp
+  describeregionsrequest.cpp
+  describeregionsresponse.cpp
   describeshareddirectoriesrequest.cpp
   describeshareddirectoriesresponse.cpp
   describesnapshotsrequest.cpp
@@ -262,10 +320,18 @@ add_library(QtAwsDirectoryService
   directoryserviceclient.cpp
   directoryservicerequest.cpp
   directoryserviceresponse.cpp
+  disableclientauthenticationrequest.cpp
+  disableclientauthenticationresponse.cpp
+  disableldapsrequest.cpp
+  disableldapsresponse.cpp
   disableradiusrequest.cpp
   disableradiusresponse.cpp
   disablessorequest.cpp
   disablessoresponse.cpp
+  enableclientauthenticationrequest.cpp
+  enableclientauthenticationresponse.cpp
+  enableldapsrequest.cpp
+  enableldapsresponse.cpp
   enableradiusrequest.cpp
   enableradiusresponse.cpp
   enablessorequest.cpp
@@ -274,6 +340,8 @@ add_library(QtAwsDirectoryService
   getdirectorylimitsresponse.cpp
   getsnapshotlimitsrequest.cpp
   getsnapshotlimitsresponse.cpp
+  listcertificatesrequest.cpp
+  listcertificatesresponse.cpp
   listiproutesrequest.cpp
   listiproutesresponse.cpp
   listlogsubscriptionsrequest.cpp
@@ -282,12 +350,16 @@ add_library(QtAwsDirectoryService
   listschemaextensionsresponse.cpp
   listtagsforresourcerequest.cpp
   listtagsforresourceresponse.cpp
+  registercertificaterequest.cpp
+  registercertificateresponse.cpp
   registereventtopicrequest.cpp
   registereventtopicresponse.cpp
   rejectshareddirectoryrequest.cpp
   rejectshareddirectoryresponse.cpp
   removeiproutesrequest.cpp
   removeiproutesresponse.cpp
+  removeregionrequest.cpp
+  removeregionresponse.cpp
   removetagsfromresourcerequest.cpp
   removetagsfromresourceresponse.cpp
   resetuserpasswordrequest.cpp

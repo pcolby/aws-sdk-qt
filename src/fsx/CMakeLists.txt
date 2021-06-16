@@ -1,10 +1,26 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsFSx
+  associatefilesystemaliasesrequest.h
+  associatefilesystemaliasesrequest_p.h
+  associatefilesystemaliasesresponse.h
+  associatefilesystemaliasesresponse_p.h
+  canceldatarepositorytaskrequest.h
+  canceldatarepositorytaskrequest_p.h
+  canceldatarepositorytaskresponse.h
+  canceldatarepositorytaskresponse_p.h
+  copybackuprequest.h
+  copybackuprequest_p.h
+  copybackupresponse.h
+  copybackupresponse_p.h
   createbackuprequest.h
   createbackuprequest_p.h
   createbackupresponse.h
   createbackupresponse_p.h
+  createdatarepositorytaskrequest.h
+  createdatarepositorytaskrequest_p.h
+  createdatarepositorytaskresponse.h
+  createdatarepositorytaskresponse_p.h
   createfilesystemfrombackuprequest.h
   createfilesystemfrombackuprequest_p.h
   createfilesystemfrombackupresponse.h
@@ -25,10 +41,22 @@ add_library(QtAwsFSx
   describebackupsrequest_p.h
   describebackupsresponse.h
   describebackupsresponse_p.h
+  describedatarepositorytasksrequest.h
+  describedatarepositorytasksrequest_p.h
+  describedatarepositorytasksresponse.h
+  describedatarepositorytasksresponse_p.h
+  describefilesystemaliasesrequest.h
+  describefilesystemaliasesrequest_p.h
+  describefilesystemaliasesresponse.h
+  describefilesystemaliasesresponse_p.h
   describefilesystemsrequest.h
   describefilesystemsrequest_p.h
   describefilesystemsresponse.h
   describefilesystemsresponse_p.h
+  disassociatefilesystemaliasesrequest.h
+  disassociatefilesystemaliasesrequest_p.h
+  disassociatefilesystemaliasesresponse.h
+  disassociatefilesystemaliasesresponse_p.h
   fsxclient.h
   fsxclient_p.h
   fsxrequest.h
@@ -51,8 +79,16 @@ add_library(QtAwsFSx
   updatefilesystemrequest_p.h
   updatefilesystemresponse.h
   updatefilesystemresponse_p.h
+  associatefilesystemaliasesrequest.cpp
+  associatefilesystemaliasesresponse.cpp
+  canceldatarepositorytaskrequest.cpp
+  canceldatarepositorytaskresponse.cpp
+  copybackuprequest.cpp
+  copybackupresponse.cpp
   createbackuprequest.cpp
   createbackupresponse.cpp
+  createdatarepositorytaskrequest.cpp
+  createdatarepositorytaskresponse.cpp
   createfilesystemfrombackuprequest.cpp
   createfilesystemfrombackupresponse.cpp
   createfilesystemrequest.cpp
@@ -63,8 +99,14 @@ add_library(QtAwsFSx
   deletefilesystemresponse.cpp
   describebackupsrequest.cpp
   describebackupsresponse.cpp
+  describedatarepositorytasksrequest.cpp
+  describedatarepositorytasksresponse.cpp
+  describefilesystemaliasesrequest.cpp
+  describefilesystemaliasesresponse.cpp
   describefilesystemsrequest.cpp
   describefilesystemsresponse.cpp
+  disassociatefilesystemaliasesrequest.cpp
+  disassociatefilesystemaliasesresponse.cpp
   fsxclient.cpp
   fsxrequest.cpp
   fsxresponse.cpp

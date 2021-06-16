@@ -52,10 +52,16 @@ class PutResourcePolicyRequest;
 class PutResourcePolicyResponse;
 class PutSecretValueRequest;
 class PutSecretValueResponse;
+class RemoveRegionsFromReplicationRequest;
+class RemoveRegionsFromReplicationResponse;
+class ReplicateSecretToRegionsRequest;
+class ReplicateSecretToRegionsResponse;
 class RestoreSecretRequest;
 class RestoreSecretResponse;
 class RotateSecretRequest;
 class RotateSecretResponse;
+class StopReplicationToReplicaRequest;
+class StopReplicationToReplicaResponse;
 class TagResourceRequest;
 class TagResourceResponse;
 class UntagResourceRequest;
@@ -64,6 +70,8 @@ class UpdateSecretRequest;
 class UpdateSecretResponse;
 class UpdateSecretVersionStageRequest;
 class UpdateSecretVersionStageResponse;
+class ValidateResourcePolicyRequest;
+class ValidateResourcePolicyResponse;
 
 class QTAWS_EXPORT SecretsManagerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -93,12 +101,16 @@ public slots:
     ListSecretsResponse * listSecrets(const ListSecretsRequest &request);
     PutResourcePolicyResponse * putResourcePolicy(const PutResourcePolicyRequest &request);
     PutSecretValueResponse * putSecretValue(const PutSecretValueRequest &request);
+    RemoveRegionsFromReplicationResponse * removeRegionsFromReplication(const RemoveRegionsFromReplicationRequest &request);
+    ReplicateSecretToRegionsResponse * replicateSecretToRegions(const ReplicateSecretToRegionsRequest &request);
     RestoreSecretResponse * restoreSecret(const RestoreSecretRequest &request);
     RotateSecretResponse * rotateSecret(const RotateSecretRequest &request);
+    StopReplicationToReplicaResponse * stopReplicationToReplica(const StopReplicationToReplicaRequest &request);
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateSecretResponse * updateSecret(const UpdateSecretRequest &request);
     UpdateSecretVersionStageResponse * updateSecretVersionStage(const UpdateSecretVersionStageRequest &request);
+    ValidateResourcePolicyResponse * validateResourcePolicy(const ValidateResourcePolicyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(SecretsManagerClient)

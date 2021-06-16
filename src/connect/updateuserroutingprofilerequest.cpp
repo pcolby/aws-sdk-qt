@@ -31,28 +31,30 @@ namespace Connect {
  *
  * \inmodule QtAwsConnect
  *
- *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
- *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
- *  to set up and manage a customer contact center and provide reliable customer engagement at any
+ *  Amazon Connect is a cloud-based contact center solution that you use to set up and manage a customer contact center and
+ *  provide reliable customer engagement at any
  * 
  *  scale>
  * 
- *  Throttling limits for the Amazon Connect API
+ *  Amazon Connect provides metrics and real-time reporting that enable you to optimize contact routing. You can also
+ *  resolve customer issues more efficiently by getting customers in touch with the appropriate
  * 
- *  operations>
+ *  agents>
  * 
- *  For the <code>GetMetricData</code> and <code>GetCurrentMetricData</code> operations, a RateLimit of 5 per second, and a
- *  BurstLimit of 8 per
+ *  There are limits to the number of Amazon Connect resources that you can create. There are also limits to the number of
+ *  requests that you can make per second. For more information, see <a
+ *  href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect Service
+ *  Quotas</a> in the <i>Amazon Connect Administrator
  * 
- *  second>
+ *  Guide</i>>
  * 
- *  For all other operations, a RateLimit of 2 per second, and a BurstLimit of 5 per
+ *  You can connect programmatically to an AWS service by using an endpoint. For a list of Amazon Connect endpoints, see <a
+ *  href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
  * 
- *  second>
+ *  Endpoints</a>> <note>
  * 
- *  You can request an increase to the throttling limits by submitting a <a
- *  href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase">Amazon Connect service
- *  limits increase form</a>. You must be signed in to your AWS account to access the
+ *  Working with contact flows? Check out the <a
+ *  href="https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html">Amazon Connect Flow
  *
  * \sa ConnectClient::updateUserRoutingProfile
  */

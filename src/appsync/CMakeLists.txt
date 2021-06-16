@@ -7,6 +7,10 @@ add_library(QtAwsAppSync
   appsyncrequest_p.h
   appsyncresponse.h
   appsyncresponse_p.h
+  createapicacherequest.h
+  createapicacherequest_p.h
+  createapicacheresponse.h
+  createapicacheresponse_p.h
   createapikeyrequest.h
   createapikeyrequest_p.h
   createapikeyresponse.h
@@ -31,6 +35,10 @@ add_library(QtAwsAppSync
   createtyperequest_p.h
   createtyperesponse.h
   createtyperesponse_p.h
+  deleteapicacherequest.h
+  deleteapicacherequest_p.h
+  deleteapicacheresponse.h
+  deleteapicacheresponse_p.h
   deleteapikeyrequest.h
   deleteapikeyrequest_p.h
   deleteapikeyresponse.h
@@ -55,6 +63,14 @@ add_library(QtAwsAppSync
   deletetyperequest_p.h
   deletetyperesponse.h
   deletetyperesponse_p.h
+  flushapicacherequest.h
+  flushapicacherequest_p.h
+  flushapicacheresponse.h
+  flushapicacheresponse_p.h
+  getapicacherequest.h
+  getapicacherequest_p.h
+  getapicacheresponse.h
+  getapicacheresponse_p.h
   getdatasourcerequest.h
   getdatasourcerequest_p.h
   getdatasourceresponse.h
@@ -127,6 +143,10 @@ add_library(QtAwsAppSync
   untagresourcerequest_p.h
   untagresourceresponse.h
   untagresourceresponse_p.h
+  updateapicacherequest.h
+  updateapicacherequest_p.h
+  updateapicacheresponse.h
+  updateapicacheresponse_p.h
   updateapikeyrequest.h
   updateapikeyrequest_p.h
   updateapikeyresponse.h
@@ -154,6 +174,8 @@ add_library(QtAwsAppSync
   appsyncclient.cpp
   appsyncrequest.cpp
   appsyncresponse.cpp
+  createapicacherequest.cpp
+  createapicacheresponse.cpp
   createapikeyrequest.cpp
   createapikeyresponse.cpp
   createdatasourcerequest.cpp
@@ -166,6 +188,8 @@ add_library(QtAwsAppSync
   createresolverresponse.cpp
   createtyperequest.cpp
   createtyperesponse.cpp
+  deleteapicacherequest.cpp
+  deleteapicacheresponse.cpp
   deleteapikeyrequest.cpp
   deleteapikeyresponse.cpp
   deletedatasourcerequest.cpp
@@ -178,6 +202,10 @@ add_library(QtAwsAppSync
   deleteresolverresponse.cpp
   deletetyperequest.cpp
   deletetyperesponse.cpp
+  flushapicacherequest.cpp
+  flushapicacheresponse.cpp
+  getapicacherequest.cpp
+  getapicacheresponse.cpp
   getdatasourcerequest.cpp
   getdatasourceresponse.cpp
   getfunctionrequest.cpp
@@ -214,6 +242,8 @@ add_library(QtAwsAppSync
   tagresourceresponse.cpp
   untagresourcerequest.cpp
   untagresourceresponse.cpp
+  updateapicacherequest.cpp
+  updateapicacheresponse.cpp
   updateapikeyrequest.cpp
   updateapikeyresponse.cpp
   updatedatasourcerequest.cpp

@@ -29,6 +29,12 @@
 #include "getlifecyclepoliciesresponse.h"
 #include "getlifecyclepolicyrequest.h"
 #include "getlifecyclepolicyresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updatelifecyclepolicyrequest.h"
 #include "updatelifecyclepolicyresponse.h"
 
@@ -173,6 +179,45 @@ GetLifecyclePoliciesResponse * DlmClient::getLifecyclePolicies(const GetLifecycl
 GetLifecyclePolicyResponse * DlmClient::getLifecyclePolicy(const GetLifecyclePolicyRequest &request)
 {
     return qobject_cast<GetLifecyclePolicyResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DlmClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists the tags for the specified
+ */
+ListTagsForResourceResponse * DlmClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DlmClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds the specified tags to the specified
+ */
+TagResourceResponse * DlmClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DlmClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes the specified tags from the specified
+ */
+UntagResourceResponse * DlmClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

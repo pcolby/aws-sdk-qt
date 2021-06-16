@@ -28,6 +28,10 @@ namespace QtAws {
 namespace Route53Domains {
 
 class Route53DomainsClientPrivate;
+class AcceptDomainTransferFromAnotherAwsAccountRequest;
+class AcceptDomainTransferFromAnotherAwsAccountResponse;
+class CancelDomainTransferToAnotherAwsAccountRequest;
+class CancelDomainTransferToAnotherAwsAccountResponse;
 class CheckDomainAvailabilityRequest;
 class CheckDomainAvailabilityResponse;
 class CheckDomainTransferabilityRequest;
@@ -58,6 +62,8 @@ class ListTagsForDomainRequest;
 class ListTagsForDomainResponse;
 class RegisterDomainRequest;
 class RegisterDomainResponse;
+class RejectDomainTransferFromAnotherAwsAccountRequest;
+class RejectDomainTransferFromAnotherAwsAccountResponse;
 class RenewDomainRequest;
 class RenewDomainResponse;
 class ResendContactReachabilityEmailRequest;
@@ -66,6 +72,8 @@ class RetrieveDomainAuthCodeRequest;
 class RetrieveDomainAuthCodeResponse;
 class TransferDomainRequest;
 class TransferDomainResponse;
+class TransferDomainToAnotherAwsAccountRequest;
+class TransferDomainToAnotherAwsAccountResponse;
 class UpdateDomainContactRequest;
 class UpdateDomainContactResponse;
 class UpdateDomainContactPrivacyRequest;
@@ -93,6 +101,8 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    AcceptDomainTransferFromAnotherAwsAccountResponse * acceptDomainTransferFromAnotherAwsAccount(const AcceptDomainTransferFromAnotherAwsAccountRequest &request);
+    CancelDomainTransferToAnotherAwsAccountResponse * cancelDomainTransferToAnotherAwsAccount(const CancelDomainTransferToAnotherAwsAccountRequest &request);
     CheckDomainAvailabilityResponse * checkDomainAvailability(const CheckDomainAvailabilityRequest &request);
     CheckDomainTransferabilityResponse * checkDomainTransferability(const CheckDomainTransferabilityRequest &request);
     DeleteTagsForDomainResponse * deleteTagsForDomain(const DeleteTagsForDomainRequest &request);
@@ -108,10 +118,12 @@ public slots:
     ListOperationsResponse * listOperations(const ListOperationsRequest &request);
     ListTagsForDomainResponse * listTagsForDomain(const ListTagsForDomainRequest &request);
     RegisterDomainResponse * registerDomain(const RegisterDomainRequest &request);
+    RejectDomainTransferFromAnotherAwsAccountResponse * rejectDomainTransferFromAnotherAwsAccount(const RejectDomainTransferFromAnotherAwsAccountRequest &request);
     RenewDomainResponse * renewDomain(const RenewDomainRequest &request);
     ResendContactReachabilityEmailResponse * resendContactReachabilityEmail(const ResendContactReachabilityEmailRequest &request);
     RetrieveDomainAuthCodeResponse * retrieveDomainAuthCode(const RetrieveDomainAuthCodeRequest &request);
     TransferDomainResponse * transferDomain(const TransferDomainRequest &request);
+    TransferDomainToAnotherAwsAccountResponse * transferDomainToAnotherAwsAccount(const TransferDomainToAnotherAwsAccountRequest &request);
     UpdateDomainContactResponse * updateDomainContact(const UpdateDomainContactRequest &request);
     UpdateDomainContactPrivacyResponse * updateDomainContactPrivacy(const UpdateDomainContactPrivacyRequest &request);
     UpdateDomainNameserversResponse * updateDomainNameservers(const UpdateDomainNameserversRequest &request);

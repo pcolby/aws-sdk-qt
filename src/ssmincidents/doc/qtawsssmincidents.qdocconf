@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsSSMIncidents
+description = AWS SSMIncidents SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsssmincidents-index.html"
+navigation.landingtitle = "SSMIncidents"
+navigation.cppclassespage = "SSMIncidents C++ Classes"

@@ -305,8 +305,8 @@ DescribeDefaultParametersResponse * DaxClient::describeDefaultParameters(const D
  *
  * parameter>
  *
- * By default, only the events occurring within the last hour are returned; however, you can retrieve up to 14 days' worth
- * of events if
+ * By default, only the events occurring within the last 24 hours are returned; however, you can retrieve up to 14 days'
+ * worth of events if
  */
 DescribeEventsResponse * DaxClient::describeEvents(const DescribeEventsRequest &request)
 {
@@ -388,6 +388,10 @@ ListTagsResponse * DaxClient::listTags(const ListTagsRequest &request)
  *
  * Reboots a single node of a DAX cluster. The reboot action takes place as soon as possible. During the reboot, the node
  * status is set to
+ *
+ * REBOOTING> <note>
+ *
+ * <code>RebootNode</code> restarts the DAX engine process and does not remove the contents of the cache.
  */
 RebootNodeResponse * DaxClient::rebootNode(const RebootNodeRequest &request)
 {

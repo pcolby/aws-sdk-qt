@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsAppflow
+description = AWS Appflow SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawsappflow-index.html"
+navigation.landingtitle = "Appflow"
+navigation.cppclassespage = "Appflow C++ Classes"

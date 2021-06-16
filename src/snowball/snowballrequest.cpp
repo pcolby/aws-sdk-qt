@@ -41,19 +41,26 @@ namespace Snowball {
  * \value CreateAddressAction Snowball CreateAddress action.
  * \value CreateClusterAction Snowball CreateCluster action.
  * \value CreateJobAction Snowball CreateJob action.
+ * \value CreateLongTermPricingAction Snowball CreateLongTermPricing action.
+ * \value CreateReturnShippingLabelAction Snowball CreateReturnShippingLabel action.
  * \value DescribeAddressAction Snowball DescribeAddress action.
  * \value DescribeAddressesAction Snowball DescribeAddresses action.
  * \value DescribeClusterAction Snowball DescribeCluster action.
  * \value DescribeJobAction Snowball DescribeJob action.
+ * \value DescribeReturnShippingLabelAction Snowball DescribeReturnShippingLabel action.
  * \value GetJobManifestAction Snowball GetJobManifest action.
  * \value GetJobUnlockCodeAction Snowball GetJobUnlockCode action.
  * \value GetSnowballUsageAction Snowball GetSnowballUsage action.
+ * \value GetSoftwareUpdatesAction Snowball GetSoftwareUpdates action.
  * \value ListClusterJobsAction Snowball ListClusterJobs action.
  * \value ListClustersAction Snowball ListClusters action.
  * \value ListCompatibleImagesAction Snowball ListCompatibleImages action.
  * \value ListJobsAction Snowball ListJobs action.
+ * \value ListLongTermPricingAction Snowball ListLongTermPricing action.
  * \value UpdateClusterAction Snowball UpdateCluster action.
  * \value UpdateJobAction Snowball UpdateJob action.
+ * \value UpdateJobShipmentStateAction Snowball UpdateJobShipmentState action.
+ * \value UpdateLongTermPricingAction Snowball UpdateLongTermPricing action.
  */
 
 /*!

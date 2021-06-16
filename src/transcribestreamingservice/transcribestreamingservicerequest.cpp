@@ -36,6 +36,7 @@ namespace TranscribeStreamingService {
  * This enum describes the actions that can be performed as TranscribeStreamingService
  * requests.
  *
+ * \value StartMedicalStreamTranscriptionAction TranscribeStreamingService StartMedicalStreamTranscription action.
  * \value StartStreamTranscriptionAction TranscribeStreamingService StartStreamTranscription action.
  */
 

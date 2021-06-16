@@ -36,6 +36,7 @@ namespace MediaPackageVod {
  * This enum describes the actions that can be performed as MediaPackageVod
  * requests.
  *
+ * \value ConfigureLogsAction MediaPackageVod ConfigureLogs action.
  * \value CreateAssetAction MediaPackageVod CreateAsset action.
  * \value CreatePackagingConfigurationAction MediaPackageVod CreatePackagingConfiguration action.
  * \value CreatePackagingGroupAction MediaPackageVod CreatePackagingGroup action.
@@ -48,6 +49,10 @@ namespace MediaPackageVod {
  * \value ListAssetsAction MediaPackageVod ListAssets action.
  * \value ListPackagingConfigurationsAction MediaPackageVod ListPackagingConfigurations action.
  * \value ListPackagingGroupsAction MediaPackageVod ListPackagingGroups action.
+ * \value ListTagsForResourceAction MediaPackageVod ListTagsForResource action.
+ * \value TagResourceAction MediaPackageVod TagResource action.
+ * \value UntagResourceAction MediaPackageVod UntagResource action.
+ * \value UpdatePackagingGroupAction MediaPackageVod UpdatePackagingGroup action.
  */
 
 /*!

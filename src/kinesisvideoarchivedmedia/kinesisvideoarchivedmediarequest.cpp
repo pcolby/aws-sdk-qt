@@ -36,6 +36,7 @@ namespace KinesisVideoArchivedMedia {
  * This enum describes the actions that can be performed as KinesisVideoArchivedMedia
  * requests.
  *
+ * \value GetClipAction KinesisVideoArchivedMedia GetClip action.
  * \value GetDASHStreamingSessionURLAction KinesisVideoArchivedMedia GetDASHStreamingSessionURL action.
  * \value GetHLSStreamingSessionURLAction KinesisVideoArchivedMedia GetHLSStreamingSessionURL action.
  * \value GetMediaForFragmentListAction KinesisVideoArchivedMedia GetMediaForFragmentList action.

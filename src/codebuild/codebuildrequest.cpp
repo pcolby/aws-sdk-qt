@@ -37,23 +37,48 @@ namespace CodeBuild {
  * requests.
  *
  * \value BatchDeleteBuildsAction CodeBuild BatchDeleteBuilds action.
+ * \value BatchGetBuildBatchesAction CodeBuild BatchGetBuildBatches action.
  * \value BatchGetBuildsAction CodeBuild BatchGetBuilds action.
  * \value BatchGetProjectsAction CodeBuild BatchGetProjects action.
+ * \value BatchGetReportGroupsAction CodeBuild BatchGetReportGroups action.
+ * \value BatchGetReportsAction CodeBuild BatchGetReports action.
  * \value CreateProjectAction CodeBuild CreateProject action.
+ * \value CreateReportGroupAction CodeBuild CreateReportGroup action.
  * \value CreateWebhookAction CodeBuild CreateWebhook action.
+ * \value DeleteBuildBatchAction CodeBuild DeleteBuildBatch action.
  * \value DeleteProjectAction CodeBuild DeleteProject action.
+ * \value DeleteReportAction CodeBuild DeleteReport action.
+ * \value DeleteReportGroupAction CodeBuild DeleteReportGroup action.
+ * \value DeleteResourcePolicyAction CodeBuild DeleteResourcePolicy action.
  * \value DeleteSourceCredentialsAction CodeBuild DeleteSourceCredentials action.
  * \value DeleteWebhookAction CodeBuild DeleteWebhook action.
+ * \value DescribeCodeCoveragesAction CodeBuild DescribeCodeCoverages action.
+ * \value DescribeTestCasesAction CodeBuild DescribeTestCases action.
+ * \value GetReportGroupTrendAction CodeBuild GetReportGroupTrend action.
+ * \value GetResourcePolicyAction CodeBuild GetResourcePolicy action.
  * \value ImportSourceCredentialsAction CodeBuild ImportSourceCredentials action.
  * \value InvalidateProjectCacheAction CodeBuild InvalidateProjectCache action.
+ * \value ListBuildBatchesAction CodeBuild ListBuildBatches action.
+ * \value ListBuildBatchesForProjectAction CodeBuild ListBuildBatchesForProject action.
  * \value ListBuildsAction CodeBuild ListBuilds action.
  * \value ListBuildsForProjectAction CodeBuild ListBuildsForProject action.
  * \value ListCuratedEnvironmentImagesAction CodeBuild ListCuratedEnvironmentImages action.
  * \value ListProjectsAction CodeBuild ListProjects action.
+ * \value ListReportGroupsAction CodeBuild ListReportGroups action.
+ * \value ListReportsAction CodeBuild ListReports action.
+ * \value ListReportsForReportGroupAction CodeBuild ListReportsForReportGroup action.
+ * \value ListSharedProjectsAction CodeBuild ListSharedProjects action.
+ * \value ListSharedReportGroupsAction CodeBuild ListSharedReportGroups action.
  * \value ListSourceCredentialsAction CodeBuild ListSourceCredentials action.
+ * \value PutResourcePolicyAction CodeBuild PutResourcePolicy action.
+ * \value RetryBuildAction CodeBuild RetryBuild action.
+ * \value RetryBuildBatchAction CodeBuild RetryBuildBatch action.
  * \value StartBuildAction CodeBuild StartBuild action.
+ * \value StartBuildBatchAction CodeBuild StartBuildBatch action.
  * \value StopBuildAction CodeBuild StopBuild action.
+ * \value StopBuildBatchAction CodeBuild StopBuildBatch action.
  * \value UpdateProjectAction CodeBuild UpdateProject action.
+ * \value UpdateReportGroupAction CodeBuild UpdateReportGroup action.
  * \value UpdateWebhookAction CodeBuild UpdateWebhook action.
  */
 

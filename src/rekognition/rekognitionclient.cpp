@@ -25,24 +25,40 @@
 #include "comparefacesresponse.h"
 #include "createcollectionrequest.h"
 #include "createcollectionresponse.h"
+#include "createprojectrequest.h"
+#include "createprojectresponse.h"
+#include "createprojectversionrequest.h"
+#include "createprojectversionresponse.h"
 #include "createstreamprocessorrequest.h"
 #include "createstreamprocessorresponse.h"
 #include "deletecollectionrequest.h"
 #include "deletecollectionresponse.h"
 #include "deletefacesrequest.h"
 #include "deletefacesresponse.h"
+#include "deleteprojectrequest.h"
+#include "deleteprojectresponse.h"
+#include "deleteprojectversionrequest.h"
+#include "deleteprojectversionresponse.h"
 #include "deletestreamprocessorrequest.h"
 #include "deletestreamprocessorresponse.h"
 #include "describecollectionrequest.h"
 #include "describecollectionresponse.h"
+#include "describeprojectversionsrequest.h"
+#include "describeprojectversionsresponse.h"
+#include "describeprojectsrequest.h"
+#include "describeprojectsresponse.h"
 #include "describestreamprocessorrequest.h"
 #include "describestreamprocessorresponse.h"
+#include "detectcustomlabelsrequest.h"
+#include "detectcustomlabelsresponse.h"
 #include "detectfacesrequest.h"
 #include "detectfacesresponse.h"
 #include "detectlabelsrequest.h"
 #include "detectlabelsresponse.h"
 #include "detectmoderationlabelsrequest.h"
 #include "detectmoderationlabelsresponse.h"
+#include "detectprotectiveequipmentrequest.h"
+#include "detectprotectiveequipmentresponse.h"
 #include "detecttextrequest.h"
 #include "detecttextresponse.h"
 #include "getcelebrityinforequest.h"
@@ -59,6 +75,10 @@
 #include "getlabeldetectionresponse.h"
 #include "getpersontrackingrequest.h"
 #include "getpersontrackingresponse.h"
+#include "getsegmentdetectionrequest.h"
+#include "getsegmentdetectionresponse.h"
+#include "gettextdetectionrequest.h"
+#include "gettextdetectionresponse.h"
 #include "indexfacesrequest.h"
 #include "indexfacesresponse.h"
 #include "listcollectionsrequest.h"
@@ -67,6 +87,8 @@
 #include "listfacesresponse.h"
 #include "liststreamprocessorsrequest.h"
 #include "liststreamprocessorsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
 #include "recognizecelebritiesrequest.h"
 #include "recognizecelebritiesresponse.h"
 #include "searchfacesrequest.h"
@@ -85,10 +107,22 @@
 #include "startlabeldetectionresponse.h"
 #include "startpersontrackingrequest.h"
 #include "startpersontrackingresponse.h"
+#include "startprojectversionrequest.h"
+#include "startprojectversionresponse.h"
+#include "startsegmentdetectionrequest.h"
+#include "startsegmentdetectionresponse.h"
 #include "startstreamprocessorrequest.h"
 #include "startstreamprocessorresponse.h"
+#include "starttextdetectionrequest.h"
+#include "starttextdetectionresponse.h"
+#include "stopprojectversionrequest.h"
+#include "stopprojectversionresponse.h"
 #include "stopstreamprocessorrequest.h"
 #include "stopstreamprocessorresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -177,12 +211,20 @@ RekognitionClient::RekognitionClient(
  * Compares a face in the <i>source</i> input image with each of the 100 largest faces detected in the <i>target</i> input
  * image.
  *
- * </p <note>
+ * </p
  *
  * If the source image contains multiple faces, the service detects the largest face and compares it with each face
  * detected in the target image.
  *
- * </p </note>
+ * </p <note>
+ *
+ * CompareFaces uses machine learning algorithms, which are probabilistic. A false negative is an incorrect prediction that
+ * a face in the target image has a low similarity confidence score when compared to the face in the source image. To
+ * reduce the probability of false negatives, we recommend that you compare the target image against multiple source
+ * images. If you plan to use <code>CompareFaces</code> to make a decision that impacts an individual's rights, privacy, or
+ * access to services, we recommend that you pass the result to a human for review and further validation before taking
+ *
+ * action> </note>
  *
  * You pass the input and target images either as base64-encoded image bytes or as references to images in an Amazon S3
  * bucket. If you use the AWS CLI to call Amazon Rekognition operations, passing image bytes isn't supported. The image
@@ -207,6 +249,13 @@ RekognitionClient::RekognitionClient(
  * face in the source image, including the bounding box of the face and confidence
  *
  * value>
+ *
+ * The <code>QualityFilter</code> input parameter allows you to filter out detected faces that don’t meet a required
+ * quality bar. The quality bar is based on a variety of common use cases. Use <code>QualityFilter</code> to set the
+ * quality bar by specifying <code>LOW</code>, <code>MEDIUM</code>, or <code>HIGH</code>. If you do not want to filter
+ * detected faces, specify <code>NONE</code>. The default value is <code>NONE</code>.
+ *
+ * </p
  *
  * If the image doesn't contain Exif metadata, <code>CompareFaces</code> returns orientation information for the source and
  * target images. Use these values to display the images with the correct image
@@ -257,11 +306,62 @@ CompareFacesResponse * RekognitionClient::compareFaces(const CompareFacesRequest
  *
  * case-sensitive> </note>
  *
- * This operation requires permissions to perform the <code>rekognition:CreateCollection</code>
+ * This operation requires permissions to perform the <code>rekognition:CreateCollection</code> action. If you want to tag
+ * your collection, you also require permission to perform the <code>rekognition:TagResource</code>
  */
 CreateCollectionResponse * RekognitionClient::createCollection(const CreateCollectionRequest &request)
 {
     return qobject_cast<CreateCollectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * CreateProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new Amazon Rekognition Custom Labels project. A project is a logical grouping of resources (images, Labels,
+ * models) and operations (training, evaluation and detection).
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:CreateProject</code>
+ */
+CreateProjectResponse * RekognitionClient::createProject(const CreateProjectRequest &request)
+{
+    return qobject_cast<CreateProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * CreateProjectVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a new version of a model and begins training. Models are managed as part of an Amazon Rekognition Custom Labels
+ * project. You can specify one training dataset and one testing dataset. The response from
+ * <code>CreateProjectVersion</code> is an Amazon Resource Name (ARN) for the version of the model.
+ *
+ * </p
+ *
+ * Training takes a while to complete. You can get the current status by calling
+ *
+ * <a>DescribeProjectVersions</a>>
+ *
+ * Once training has successfully completed, call <a>DescribeProjectVersions</a> to get the training results and evaluate
+ * the model.
+ *
+ * </p
+ *
+ * After evaluating the model, you start the model by calling
+ *
+ * <a>StartProjectVersion</a>>
+ *
+ * This operation requires permissions to perform the <code>rekognition:CreateProjectVersion</code>
+ */
+CreateProjectVersionResponse * RekognitionClient::createProjectVersion(const CreateProjectVersionRequest &request)
+{
+    return qobject_cast<CreateProjectVersionResponse *>(send(request));
 }
 
 /*!
@@ -289,6 +389,11 @@ CreateCollectionResponse * RekognitionClient::createCollection(const CreateColle
  *
  * After you have finished analyzing a streaming video, use <a>StopStreamProcessor</a> to stop processing. You can delete
  * the stream processor by calling
+ *
+ * <a>DeleteStreamProcessor</a>>
+ *
+ * This operation requires permissions to perform the <code>rekognition:CreateStreamProcessor</code> action. If you want to
+ * tag your stream processor, you also require permission to perform the <code>rekognition:TagResource</code>
  */
 CreateStreamProcessorResponse * RekognitionClient::createStreamProcessor(const CreateStreamProcessorRequest &request)
 {
@@ -331,6 +436,47 @@ DeleteFacesResponse * RekognitionClient::deleteFaces(const DeleteFacesRequest &r
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DeleteProjectResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an Amazon Rekognition Custom Labels project. To delete a project you must first delete all models associated
+ * with the project. To delete a model, see
+ *
+ * <a>DeleteProjectVersion</a>>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DeleteProject</code> action.
+ */
+DeleteProjectResponse * RekognitionClient::deleteProject(const DeleteProjectRequest &request)
+{
+    return qobject_cast<DeleteProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DeleteProjectVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes an Amazon Rekognition Custom Labels model.
+ *
+ * </p
+ *
+ * You can't delete a model if it is running or if it is training. To check the status of a model, use the
+ * <code>Status</code> field returned from <a>DescribeProjectVersions</a>. To stop a running model call
+ * <a>StopProjectVersion</a>. If the model is training, wait until it
+ *
+ * finishes>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DeleteProjectVersion</code> action.
+ */
+DeleteProjectVersionResponse * RekognitionClient::deleteProjectVersion(const DeleteProjectVersionRequest &request)
+{
+    return qobject_cast<DeleteProjectVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * DeleteStreamProcessorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -364,6 +510,41 @@ DescribeCollectionResponse * RekognitionClient::describeCollection(const Describ
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DescribeProjectVersionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists and describes the models in an Amazon Rekognition Custom Labels project. You can specify up to 10 model versions
+ * in <code>ProjectVersionArns</code>. If you don't specify a value, descriptions for all models are
+ *
+ * returned>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DescribeProjectVersions</code>
+ */
+DescribeProjectVersionsResponse * RekognitionClient::describeProjectVersions(const DescribeProjectVersionsRequest &request)
+{
+    return qobject_cast<DescribeProjectVersionsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DescribeProjectsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Lists and gets information about your Amazon Rekognition Custom Labels
+ *
+ * projects>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DescribeProjects</code>
+ */
+DescribeProjectsResponse * RekognitionClient::describeProjects(const DescribeProjectsRequest &request)
+{
+    return qobject_cast<DescribeProjectsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * DescribeStreamProcessorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -379,6 +560,57 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DetectCustomLabelsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detects custom labels in a supplied image by using an Amazon Rekognition Custom Labels model.
+ *
+ * </p
+ *
+ * You specify which version of a model version to use by using the <code>ProjectVersionArn</code> input parameter.
+ *
+ * </p
+ *
+ * You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If you use
+ * the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG
+ * or JPEG formatted file.
+ *
+ * </p
+ *
+ * For each object that the model version detects on an image, the API returns a (<code>CustomLabel</code>) object in an
+ * array (<code>CustomLabels</code>). Each <code>CustomLabel</code> object provides the label name (<code>Name</code>), the
+ * level of confidence that the image contains the object (<code>Confidence</code>), and object location information, if it
+ * exists, for the label on the image (<code>Geometry</code>).
+ *
+ * </p
+ *
+ * During training model calculates a threshold value that determines if a prediction for a label is true. By default,
+ * <code>DetectCustomLabels</code> doesn't return labels whose confidence value is below the model's calculated threshold
+ * value. To filter labels that are returned, specify a value for <code>MinConfidence</code> that is higher than the
+ * model's calculated threshold. You can get the model's calculated threshold from the model's training results shown in
+ * the Amazon Rekognition Custom Labels console. To get all labels, regardless of confidence, specify a
+ * <code>MinConfidence</code> value of 0.
+ *
+ * </p
+ *
+ * You can also add the <code>MaxResults</code> parameter to limit the number of labels returned.
+ *
+ * </p
+ *
+ * This is a stateless API operation. That is, the operation does not persist any
+ *
+ * data>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DetectCustomLabels</code> action.
+ */
+DetectCustomLabelsResponse * RekognitionClient::detectCustomLabels(const DetectCustomLabelsRequest &request)
+{
+    return qobject_cast<DetectCustomLabelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * DetectFacesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -389,8 +621,8 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  *
  * <code>DetectFaces</code> detects the 100 largest faces in the image. For each face detected, the operation returns face
  * details. These details include a bounding box of the face, a confidence value (that the bounding box contains a face),
- * and a fixed set of attributes such as facial landmarks (for example, coordinates of eye and mouth), gender, presence of
- * beard, sunglasses, and so on.
+ * and a fixed set of attributes such as facial landmarks (for example, coordinates of eye and mouth), presence of beard,
+ * sunglasses, and so on.
  *
  * </p
  *
@@ -400,8 +632,8 @@ DescribeStreamProcessorResponse * RekognitionClient::describeStreamProcessor(con
  * </p
  *
  * You pass the input image either as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. If
- * you use the to call Amazon Rekognition operations, passing image bytes is not supported. The image must be either a PNG
- * or JPEG formatted file.
+ * you use the AWS CLI to call Amazon Rekognition operations, passing image bytes is not supported. The image must be
+ * either a PNG or JPEG formatted file.
  *
  * </p <note>
  *
@@ -525,9 +757,9 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Detects explicit or suggestive adult content in a specified JPEG or PNG format image. Use
- * <code>DetectModerationLabels</code> to moderate images depending on your requirements. For example, you might want to
- * filter images that contain nudity, but not images containing suggestive
+ * Detects unsafe content in a specified JPEG or PNG format image. Use <code>DetectModerationLabels</code> to moderate
+ * images depending on your requirements. For example, you might want to filter images that contain nudity, but not images
+ * containing suggestive
  *
  * content>
  *
@@ -546,6 +778,73 @@ DetectLabelsResponse * RekognitionClient::detectLabels(const DetectLabelsRequest
 DetectModerationLabelsResponse * RekognitionClient::detectModerationLabels(const DetectModerationLabelsRequest &request)
 {
     return qobject_cast<DetectModerationLabelsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * DetectProtectiveEquipmentResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Detects Personal Protective Equipment (PPE) worn by people detected in an image. Amazon Rekognition can detect the
+ * following types of
+ *
+ * PPE> <ul> <li>
+ *
+ * Face
+ *
+ * cove> </li> <li>
+ *
+ * Hand
+ *
+ * cove> </li> <li>
+ *
+ * Head
+ *
+ * cove> </li> </ul>
+ *
+ * You pass the input image as base64-encoded image bytes or as a reference to an image in an Amazon S3 bucket. The image
+ * must be either a PNG or JPG formatted file.
+ *
+ * </p
+ *
+ * <code>DetectProtectiveEquipment</code> detects PPE worn by up to 15 persons detected in an
+ *
+ * image>
+ *
+ * For each person detected in the image the API returns an array of body parts (face, head, left-hand, right-hand). For
+ * each body part, an array of detected items of PPE is returned, including an indicator of whether or not the PPE covers
+ * the body part. The API returns the confidence it has in each detection (person, PPE, body part and body part coverage).
+ * It also returns a bounding box (<a>BoundingBox</a>) for each detected person and each detected item of PPE.
+ *
+ * </p
+ *
+ * You can optionally request a summary of detected PPE items with the <code>SummarizationAttributes</code> input
+ * parameter. The summary provides the following information.
+ *
+ * </p <ul> <li>
+ *
+ * The persons detected as wearing all of the types of PPE that you
+ *
+ * specify> </li> <li>
+ *
+ * The persons detected as not wearing all of the types PPE that you
+ *
+ * specify> </li> <li>
+ *
+ * The persons detected where PPE adornment could not be determined.
+ *
+ * </p </li> </ul>
+ *
+ * This is a stateless API operation. That is, the operation does not persist any
+ *
+ * data>
+ *
+ * This operation requires permissions to perform the <code>rekognition:DetectProtectiveEquipment</code> action.
+ */
+DetectProtectiveEquipmentResponse * RekognitionClient::detectProtectiveEquipment(const DetectProtectiveEquipmentRequest &request)
+{
+    return qobject_cast<DetectProtectiveEquipmentResponse *>(send(request));
 }
 
 /*!
@@ -689,15 +988,15 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Gets the content moderation analysis results for a Amazon Rekognition Video analysis started by
+ * Gets the unsafe content analysis results for a Amazon Rekognition Video analysis started by
  *
  * <a>StartContentModeration</a>>
  *
- * Content moderation analysis of a video is an asynchronous operation. You start analysis by calling
+ * Unsafe content analysis of a video is an asynchronous operation. You start analysis by calling
  * <a>StartContentModeration</a> which returns a job identifier (<code>JobId</code>). When analysis finishes, Amazon
  * Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic registered in the
- * initial call to <code>StartContentModeration</code>. To get the results of the content moderation analysis, first check
- * that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call
+ * initial call to <code>StartContentModeration</code>. To get the results of the unsafe content analysis, first check that
+ * the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so, call
  * <code>GetContentModeration</code> and pass the job identifier (<code>JobId</code>) from the initial call to
  * <code>StartContentModeration</code>.
  *
@@ -707,8 +1006,8 @@ GetCelebrityRecognitionResponse * RekognitionClient::getCelebrityRecognition(con
  *
  * Guide>
  *
- * <code>GetContentModeration</code> returns detected content moderation labels, and the time they are detected, in an
- * array, <code>ModerationLabels</code>, of <a>ContentModerationDetection</a> objects.
+ * <code>GetContentModeration</code> returns detected unsafe content labels, and the time they are detected, in an array,
+ * <code>ModerationLabels</code>, of <a>ContentModerationDetection</a> objects.
  *
  * </p
  *
@@ -912,6 +1211,92 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * GetSegmentDetectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the segment detection results of a Amazon Rekognition Video analysis started by
+ *
+ * <a>StartSegmentDetection</a>>
+ *
+ * Segment detection with Amazon Rekognition Video is an asynchronous operation. You start segment detection by calling
+ * <a>StartSegmentDetection</a> which returns a job identifier (<code>JobId</code>). When the segment detection operation
+ * finishes, Amazon Rekognition publishes a completion status to the Amazon Simple Notification Service topic registered in
+ * the initial call to <code>StartSegmentDetection</code>. To get the results of the segment detection operation, first
+ * check that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. if so, call
+ * <code>GetSegmentDetection</code> and pass the job identifier (<code>JobId</code>) from the initial call of
+ *
+ * <code>StartSegmentDetection</code>>
+ *
+ * <code>GetSegmentDetection</code> returns detected segments in an array (<code>Segments</code>) of
+ * <a>SegmentDetection</a> objects. <code>Segments</code> is sorted by the segment types specified in the
+ * <code>SegmentTypes</code> input parameter of <code>StartSegmentDetection</code>. Each element of the array includes the
+ * detected segment, the precentage confidence in the acuracy of the detected segment, the type of the segment, and the
+ * frame in which the segment was
+ *
+ * detected>
+ *
+ * Use <code>SelectedSegmentTypes</code> to find out the type of segment detection requested in the call to
+ *
+ * <code>StartSegmentDetection</code>>
+ *
+ * Use the <code>MaxResults</code> parameter to limit the number of segment detections returned. If there are more results
+ * than specified in <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a
+ * pagination token for getting the next set of results. To get the next page of results, call
+ * <code>GetSegmentDetection</code> and populate the <code>NextToken</code> request parameter with the token value returned
+ * from the previous call to
+ *
+ * <code>GetSegmentDetection</code>>
+ *
+ * For more information, see Detecting Video Segments in Stored Video in the Amazon Rekognition Developer
+ */
+GetSegmentDetectionResponse * RekognitionClient::getSegmentDetection(const GetSegmentDetectionRequest &request)
+{
+    return qobject_cast<GetSegmentDetectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * GetTextDetectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets the text detection results of a Amazon Rekognition Video analysis started by
+ *
+ * <a>StartTextDetection</a>>
+ *
+ * Text detection with Amazon Rekognition Video is an asynchronous operation. You start text detection by calling
+ * <a>StartTextDetection</a> which returns a job identifier (<code>JobId</code>) When the text detection operation
+ * finishes, Amazon Rekognition publishes a completion status to the Amazon Simple Notification Service topic registered in
+ * the initial call to <code>StartTextDetection</code>. To get the results of the text detection operation, first check
+ * that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. if so, call
+ * <code>GetTextDetection</code> and pass the job identifier (<code>JobId</code>) from the initial call of
+ *
+ * <code>StartLabelDetection</code>>
+ *
+ * <code>GetTextDetection</code> returns an array of detected text (<code>TextDetections</code>) sorted by the time the
+ * text was detected, up to 50 words per frame of
+ *
+ * video>
+ *
+ * Each element of the array includes the detected text, the precentage confidence in the acuracy of the detected text, the
+ * time the text was detected, bounding box information for where the text was located, and unique identifiers for words
+ * and their
+ *
+ * lines>
+ *
+ * Use MaxResults parameter to limit the number of text detections returned. If there are more results than specified in
+ * <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a pagination token for
+ * getting the next set of results. To get the next page of results, call <code>GetTextDetection</code> and populate the
+ * <code>NextToken</code> request parameter with the token value returned from the previous call to
+ */
+GetTextDetectionResponse * RekognitionClient::getTextDetection(const GetTextDetectionRequest &request)
+{
+    return qobject_cast<GetTextDetectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * IndexFacesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -955,7 +1340,7 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * Guide>
  *
- * If you provide the optional <code>ExternalImageID</code> for the input image you provided, Amazon Rekognition associates
+ * If you provide the optional <code>ExternalImageId</code> for the input image you provided, Amazon Rekognition associates
  * this ID with all faces that it detects. When you call the <a>ListFaces</a> operation, the response returns the external
  * ID. You can use this external image ID to create a client-side index to associate the faces with each image. You can
  * then use the index to find all faces in an
@@ -968,16 +1353,16 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * background>
  *
- * The <code>QualityFilter</code> input parameter allows you to filter out detected faces that don’t meet the required
- * quality bar chosen by Amazon Rekognition. The quality bar is based on a variety of common use cases. By default,
- * <code>IndexFaces</code> filters detected faces. You can also explicitly filter detected faces by specifying
- * <code>AUTO</code> for the value of <code>QualityFilter</code>. If you do not want to filter detected faces, specify
- * <code>NONE</code>.
+ * The <code>QualityFilter</code> input parameter allows you to filter out detected faces that don’t meet a required
+ * quality bar. The quality bar is based on a variety of common use cases. By default, <code>IndexFaces</code> chooses the
+ * quality bar that's used to filter faces. You can also explicitly choose the quality bar. Use <code>QualityFilter</code>,
+ * to set the quality bar by specifying <code>LOW</code>, <code>MEDIUM</code>, or <code>HIGH</code>. If you do not want to
+ * filter detected faces, specify <code>NONE</code>.
  *
  * </p <note>
  *
- * To use quality filtering, you need a collection associated with version 3 of the face model. To get the version of the
- * face model associated with a collection, call <a>DescribeCollection</a>.
+ * To use quality filtering, you need a collection associated with version 3 of the face model or higher. To get the
+ * version of the face model associated with a collection, call <a>DescribeCollection</a>.
  *
  * </p </note>
  *
@@ -1004,7 +1389,11 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * The face has an extreme
  *
- * pose> </li> </ul>
+ * pose> </li> <li>
+ *
+ * The face doesn’t have enough detail to be suitable for face
+ *
+ * search> </li> </ul>
  *
  * In response, the <code>IndexFaces</code> operation returns an array of metadata for all detected faces,
  * <code>FaceRecords</code>. This includes:
@@ -1029,7 +1418,7 @@ GetPersonTrackingResponse * RekognitionClient::getPersonTracking(const GetPerson
  *
  * If you request all facial attributes (by using the <code>detectionAttributes</code> parameter), Amazon Rekognition
  * returns detailed facial attributes, such as facial landmarks (for example, location of eye and mouth) and other facial
- * attributes like gender. If you provide the same image, specify the same collection, and use the same external ID in the
+ * attributes. If you provide the same image, specify the same collection, and use the same external ID in the
  * <code>IndexFaces</code> operation, Amazon Rekognition doesn't save duplicate face
  *
  * metadata> <p/>
@@ -1103,6 +1492,23 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns a list of tags in an Amazon Rekognition collection, stream processor, or Custom Labels model.
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:ListTagsForResource</code> action.
+ */
+ListTagsForResourceResponse * RekognitionClient::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * RecognizeCelebritiesResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1112,9 +1518,9 @@ ListStreamProcessorsResponse * RekognitionClient::listStreamProcessors(const Lis
  *
  * </p
  *
- * <code>RecognizeCelebrities</code> returns the 100 largest faces in the image. It lists recognized celebrities in the
+ * <code>RecognizeCelebrities</code> returns the 64 largest faces in the image. It lists recognized celebrities in the
  * <code>CelebrityFaces</code> array and unrecognized faces in the <code>UnrecognizedFaces</code> array.
- * <code>RecognizeCelebrities</code> doesn't return celebrities whose faces aren't among the largest 100 faces in the
+ * <code>RecognizeCelebrities</code> doesn't return celebrities whose faces aren't among the largest 64 faces in the
  *
  * image>
  *
@@ -1217,9 +1623,26 @@ SearchFacesResponse * RekognitionClient::searchFaces(const SearchFacesRequest &r
  *
  * </p
  *
+ * If no faces are detected in the input image, <code>SearchFacesByImage</code> returns an
+ * <code>InvalidParameterException</code> error.
+ *
+ * </p
+ *
  * For an example, Searching for a Face Using an Image in the Amazon Rekognition Developer
  *
  * Guide>
+ *
+ * The <code>QualityFilter</code> input parameter allows you to filter out detected faces that don’t meet a required
+ * quality bar. The quality bar is based on a variety of common use cases. Use <code>QualityFilter</code> to set the
+ * quality bar for filtering by specifying <code>LOW</code>, <code>MEDIUM</code>, or <code>HIGH</code>. If you do not want
+ * to filter detected faces, specify <code>NONE</code>. The default value is
+ *
+ * <code>NONE</code>> <note>
+ *
+ * To use quality filtering, you need a collection associated with version 3 of the face model or higher. To get the
+ * version of the face model associated with a collection, call <a>DescribeCollection</a>.
+ *
+ * </p </note>
  *
  * This operation requires permissions to perform the <code>rekognition:SearchFacesByImage</code>
  */
@@ -1261,21 +1684,20 @@ StartCelebrityRecognitionResponse * RekognitionClient::startCelebrityRecognition
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts asynchronous detection of explicit or suggestive adult content in a stored
+ * Starts asynchronous detection of unsafe content in a stored
  *
  * video>
  *
  * Amazon Rekognition Video can moderate content in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
  * bucket name and the filename of the video. <code>StartContentModeration</code> returns a job identifier
- * (<code>JobId</code>) which you use to get the results of the analysis. When content moderation analysis is finished,
- * Amazon Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify
- * in
+ * (<code>JobId</code>) which you use to get the results of the analysis. When unsafe content analysis is finished, Amazon
+ * Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in
  *
  * <code>NotificationChannel</code>>
  *
- * To get the results of the content moderation analysis, first check that the status value published to the Amazon SNS
- * topic is <code>SUCCEEDED</code>. If so, call <a>GetContentModeration</a> and pass the job identifier
- * (<code>JobId</code>) from the initial call to <code>StartContentModeration</code>.
+ * To get the results of the unsafe content analysis, first check that the status value published to the Amazon SNS topic
+ * is <code>SUCCEEDED</code>. If so, call <a>GetContentModeration</a> and pass the job identifier (<code>JobId</code>) from
+ * the initial call to <code>StartContentModeration</code>.
  *
  * </p
  *
@@ -1397,6 +1819,69 @@ StartPersonTrackingResponse * RekognitionClient::startPersonTracking(const Start
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * StartProjectVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts the running of the version of a model. Starting a model takes a while to complete. To check the current state of
+ * the model, use
+ *
+ * <a>DescribeProjectVersions</a>>
+ *
+ * Once the model is running, you can detect custom labels in new images by calling
+ *
+ * <a>DetectCustomLabels</a>> <note>
+ *
+ * You are charged for the amount of time that the model is running. To stop a running model, call
+ *
+ * <a>StopProjectVersion</a>> </note>
+ *
+ * This operation requires permissions to perform the <code>rekognition:StartProjectVersion</code>
+ */
+StartProjectVersionResponse * RekognitionClient::startProjectVersion(const StartProjectVersionRequest &request)
+{
+    return qobject_cast<StartProjectVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * StartSegmentDetectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts asynchronous detection of segment detection in a stored
+ *
+ * video>
+ *
+ * Amazon Rekognition Video can detect segments in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
+ * bucket name and the filename of the video. <code>StartSegmentDetection</code> returns a job identifier
+ * (<code>JobId</code>) which you use to get the results of the operation. When segment detection is finished, Amazon
+ * Rekognition Video publishes a completion status to the Amazon Simple Notification Service topic that you specify in
+ *
+ * <code>NotificationChannel</code>>
+ *
+ * You can use the <code>Filters</code> (<a>StartSegmentDetectionFilters</a>) input parameter to specify the minimum
+ * detection confidence returned in the response. Within <code>Filters</code>, use <code>ShotFilter</code>
+ * (<a>StartShotDetectionFilter</a>) to filter detected shots. Use <code>TechnicalCueFilter</code>
+ * (<a>StartTechnicalCueDetectionFilter</a>) to filter technical cues.
+ *
+ * </p
+ *
+ * To get the results of the segment detection operation, first check that the status value published to the Amazon SNS
+ * topic is <code>SUCCEEDED</code>. if so, call <a>GetSegmentDetection</a> and pass the job identifier (<code>JobId</code>)
+ * from the initial call to <code>StartSegmentDetection</code>.
+ *
+ * </p
+ *
+ * For more information, see Detecting Video Segments in Stored Video in the Amazon Rekognition Developer
+ */
+StartSegmentDetectionResponse * RekognitionClient::startSegmentDetection(const StartSegmentDetectionRequest &request)
+{
+    return qobject_cast<StartSegmentDetectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * StartStreamProcessorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1412,6 +1897,46 @@ StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const Sta
 
 /*!
  * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * StartTextDetectionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts asynchronous detection of text in a stored
+ *
+ * video>
+ *
+ * Amazon Rekognition Video can detect text in a video stored in an Amazon S3 bucket. Use <a>Video</a> to specify the
+ * bucket name and the filename of the video. <code>StartTextDetection</code> returns a job identifier (<code>JobId</code>)
+ * which you use to get the results of the operation. When text detection is finished, Amazon Rekognition Video publishes a
+ * completion status to the Amazon Simple Notification Service topic that you specify in
+ *
+ * <code>NotificationChannel</code>>
+ *
+ * To get the results of the text detection operation, first check that the status value published to the Amazon SNS topic
+ * is <code>SUCCEEDED</code>. if so, call <a>GetTextDetection</a> and pass the job identifier (<code>JobId</code>) from the
+ * initial call to <code>StartTextDetection</code>.
+ */
+StartTextDetectionResponse * RekognitionClient::startTextDetection(const StartTextDetectionRequest &request)
+{
+    return qobject_cast<StartTextDetectionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * StopProjectVersionResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Stops a running model. The operation might take a while to complete. To check the current status, call
+ * <a>DescribeProjectVersions</a>.
+ */
+StopProjectVersionResponse * RekognitionClient::stopProjectVersion(const StopProjectVersionRequest &request)
+{
+    return qobject_cast<StopProjectVersionResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
  * StopStreamProcessorResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -1421,6 +1946,41 @@ StartStreamProcessorResponse * RekognitionClient::startStreamProcessor(const Sta
 StopStreamProcessorResponse * RekognitionClient::stopStreamProcessor(const StopStreamProcessorRequest &request)
 {
     return qobject_cast<StopStreamProcessorResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds one or more key-value tags to an Amazon Rekognition collection, stream processor, or Custom Labels model. For more
+ * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:TagResource</code> action.
+ */
+TagResourceResponse * RekognitionClient::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the RekognitionClient service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes one or more tags from an Amazon Rekognition collection, stream processor, or Custom Labels model.
+ *
+ * </p
+ *
+ * This operation requires permissions to perform the <code>rekognition:UntagResource</code> action.
+ */
+UntagResourceResponse * RekognitionClient::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

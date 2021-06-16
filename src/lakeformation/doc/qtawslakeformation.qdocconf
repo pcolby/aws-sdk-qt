@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsLakeFormation
+description = AWS LakeFormation SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawslakeformation-index.html"
+navigation.landingtitle = "LakeFormation"
+navigation.cppclassespage = "LakeFormation C++ Classes"

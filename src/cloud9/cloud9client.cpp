@@ -37,6 +37,12 @@
 #include "describeenvironmentsresponse.h"
 #include "listenvironmentsrequest.h"
 #include "listenvironmentsresponse.h"
+#include "listtagsforresourcerequest.h"
+#include "listtagsforresourceresponse.h"
+#include "tagresourcerequest.h"
+#include "tagresourceresponse.h"
+#include "untagresourcerequest.h"
+#include "untagresourceresponse.h"
 #include "updateenvironmentrequest.h"
 #include "updateenvironmentresponse.h"
 #include "updateenvironmentmembershiprequest.h"
@@ -112,6 +118,18 @@ namespace Cloud9 {
  *  <code>ListEnvironments</code>: Gets a list of environment
  * 
  *  identifiers> </li> <li>
+ * 
+ *  <code>ListTagsForResource</code>: Gets the tags for an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>TagResource</code>: Adds tags to an
+ * 
+ *  environment> </li> <li>
+ * 
+ *  <code>UntagResource</code>: Removes tags from an
+ * 
+ *  environment> </li> <li>
  * 
  *  <code>UpdateEnvironment</code>: Changes the settings of an existing
  * 
@@ -277,6 +295,49 @@ DescribeEnvironmentsResponse * Cloud9Client::describeEnvironments(const Describe
 ListEnvironmentsResponse * Cloud9Client::listEnvironments(const ListEnvironmentsRequest &request)
 {
     return qobject_cast<ListEnvironmentsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * ListTagsForResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Gets a list of the tags associated with an AWS Cloud9 development
+ */
+ListTagsForResourceResponse * Cloud9Client::listTagsForResource(const ListTagsForResourceRequest &request)
+{
+    return qobject_cast<ListTagsForResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * TagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Adds tags to an AWS Cloud9 development
+ *
+ * environment> <b>
+ *
+ * Tags that you add to an AWS Cloud9 environment by using this method will NOT be automatically propagated to underlying
+ */
+TagResourceResponse * Cloud9Client::tagResource(const TagResourceRequest &request)
+{
+    return qobject_cast<TagResourceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the Cloud9Client service, and returns a pointer to an
+ * UntagResourceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Removes tags from an AWS Cloud9 development
+ */
+UntagResourceResponse * Cloud9Client::untagResource(const UntagResourceRequest &request)
+{
+    return qobject_cast<UntagResourceResponse *>(send(request));
 }
 
 /*!

@@ -41,7 +41,9 @@ namespace KinesisAnalyticsV2 {
  * \value AddApplicationInputProcessingConfigurationAction KinesisAnalyticsV2 AddApplicationInputProcessingConfiguration action.
  * \value AddApplicationOutputAction KinesisAnalyticsV2 AddApplicationOutput action.
  * \value AddApplicationReferenceDataSourceAction KinesisAnalyticsV2 AddApplicationReferenceDataSource action.
+ * \value AddApplicationVpcConfigurationAction KinesisAnalyticsV2 AddApplicationVpcConfiguration action.
  * \value CreateApplicationAction KinesisAnalyticsV2 CreateApplication action.
+ * \value CreateApplicationPresignedUrlAction KinesisAnalyticsV2 CreateApplicationPresignedUrl action.
  * \value CreateApplicationSnapshotAction KinesisAnalyticsV2 CreateApplicationSnapshot action.
  * \value DeleteApplicationAction KinesisAnalyticsV2 DeleteApplication action.
  * \value DeleteApplicationCloudWatchLoggingOptionAction KinesisAnalyticsV2 DeleteApplicationCloudWatchLoggingOption action.
@@ -49,17 +51,22 @@ namespace KinesisAnalyticsV2 {
  * \value DeleteApplicationOutputAction KinesisAnalyticsV2 DeleteApplicationOutput action.
  * \value DeleteApplicationReferenceDataSourceAction KinesisAnalyticsV2 DeleteApplicationReferenceDataSource action.
  * \value DeleteApplicationSnapshotAction KinesisAnalyticsV2 DeleteApplicationSnapshot action.
+ * \value DeleteApplicationVpcConfigurationAction KinesisAnalyticsV2 DeleteApplicationVpcConfiguration action.
  * \value DescribeApplicationAction KinesisAnalyticsV2 DescribeApplication action.
  * \value DescribeApplicationSnapshotAction KinesisAnalyticsV2 DescribeApplicationSnapshot action.
+ * \value DescribeApplicationVersionAction KinesisAnalyticsV2 DescribeApplicationVersion action.
  * \value DiscoverInputSchemaAction KinesisAnalyticsV2 DiscoverInputSchema action.
  * \value ListApplicationSnapshotsAction KinesisAnalyticsV2 ListApplicationSnapshots action.
+ * \value ListApplicationVersionsAction KinesisAnalyticsV2 ListApplicationVersions action.
  * \value ListApplicationsAction KinesisAnalyticsV2 ListApplications action.
  * \value ListTagsForResourceAction KinesisAnalyticsV2 ListTagsForResource action.
+ * \value RollbackApplicationAction KinesisAnalyticsV2 RollbackApplication action.
  * \value StartApplicationAction KinesisAnalyticsV2 StartApplication action.
  * \value StopApplicationAction KinesisAnalyticsV2 StopApplication action.
  * \value TagResourceAction KinesisAnalyticsV2 TagResource action.
  * \value UntagResourceAction KinesisAnalyticsV2 UntagResource action.
  * \value UpdateApplicationAction KinesisAnalyticsV2 UpdateApplication action.
+ * \value UpdateApplicationMaintenanceConfigurationAction KinesisAnalyticsV2 UpdateApplicationMaintenanceConfiguration action.
  */
 
 /*!

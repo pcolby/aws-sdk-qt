@@ -37,6 +37,8 @@ class QTAWS_EXPORT Route53DomainsRequest : public QtAws::Core::AwsAbstractReques
 public:
     /// Actions supported by Route53Domains.
     enum Action {
+        AcceptDomainTransferFromAnotherAwsAccountAction,
+        CancelDomainTransferToAnotherAwsAccountAction,
         CheckDomainAvailabilityAction,
         CheckDomainTransferabilityAction,
         DeleteTagsForDomainAction,
@@ -52,10 +54,12 @@ public:
         ListOperationsAction,
         ListTagsForDomainAction,
         RegisterDomainAction,
+        RejectDomainTransferFromAnotherAwsAccountAction,
         RenewDomainAction,
         ResendContactReachabilityEmailAction,
         RetrieveDomainAuthCodeAction,
         TransferDomainAction,
+        TransferDomainToAnotherAwsAccountAction,
         UpdateDomainContactAction,
         UpdateDomainContactPrivacyAction,
         UpdateDomainNameserversAction,

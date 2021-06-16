@@ -359,14 +359,26 @@ add_library(QtAwsIam
   listinstanceprofilesrequest_p.h
   listinstanceprofilesresponse.h
   listinstanceprofilesresponse_p.h
+  listinstanceprofiletagsrequest.h
+  listinstanceprofiletagsrequest_p.h
+  listinstanceprofiletagsresponse.h
+  listinstanceprofiletagsresponse_p.h
   listmfadevicesrequest.h
   listmfadevicesrequest_p.h
   listmfadevicesresponse.h
   listmfadevicesresponse_p.h
+  listmfadevicetagsrequest.h
+  listmfadevicetagsrequest_p.h
+  listmfadevicetagsresponse.h
+  listmfadevicetagsresponse_p.h
   listopenidconnectprovidersrequest.h
   listopenidconnectprovidersrequest_p.h
   listopenidconnectprovidersresponse.h
   listopenidconnectprovidersresponse_p.h
+  listopenidconnectprovidertagsrequest.h
+  listopenidconnectprovidertagsrequest_p.h
+  listopenidconnectprovidertagsresponse.h
+  listopenidconnectprovidertagsresponse_p.h
   listpoliciesgrantingserviceaccessrequest.h
   listpoliciesgrantingserviceaccessrequest_p.h
   listpoliciesgrantingserviceaccessresponse.h
@@ -375,6 +387,10 @@ add_library(QtAwsIam
   listpoliciesrequest_p.h
   listpoliciesresponse.h
   listpoliciesresponse_p.h
+  listpolicytagsrequest.h
+  listpolicytagsrequest_p.h
+  listpolicytagsresponse.h
+  listpolicytagsresponse_p.h
   listpolicyversionsrequest.h
   listpolicyversionsrequest_p.h
   listpolicyversionsresponse.h
@@ -395,10 +411,18 @@ add_library(QtAwsIam
   listsamlprovidersrequest_p.h
   listsamlprovidersresponse.h
   listsamlprovidersresponse_p.h
+  listsamlprovidertagsrequest.h
+  listsamlprovidertagsrequest_p.h
+  listsamlprovidertagsresponse.h
+  listsamlprovidertagsresponse_p.h
   listservercertificatesrequest.h
   listservercertificatesrequest_p.h
   listservercertificatesresponse.h
   listservercertificatesresponse_p.h
+  listservercertificatetagsrequest.h
+  listservercertificatetagsrequest_p.h
+  listservercertificatetagsresponse.h
+  listservercertificatetagsresponse_p.h
   listservicespecificcredentialsrequest.h
   listservicespecificcredentialsrequest_p.h
   listservicespecificcredentialsresponse.h
@@ -483,18 +507,66 @@ add_library(QtAwsIam
   simulateprincipalpolicyrequest_p.h
   simulateprincipalpolicyresponse.h
   simulateprincipalpolicyresponse_p.h
+  taginstanceprofilerequest.h
+  taginstanceprofilerequest_p.h
+  taginstanceprofileresponse.h
+  taginstanceprofileresponse_p.h
+  tagmfadevicerequest.h
+  tagmfadevicerequest_p.h
+  tagmfadeviceresponse.h
+  tagmfadeviceresponse_p.h
+  tagopenidconnectproviderrequest.h
+  tagopenidconnectproviderrequest_p.h
+  tagopenidconnectproviderresponse.h
+  tagopenidconnectproviderresponse_p.h
+  tagpolicyrequest.h
+  tagpolicyrequest_p.h
+  tagpolicyresponse.h
+  tagpolicyresponse_p.h
   tagrolerequest.h
   tagrolerequest_p.h
   tagroleresponse.h
   tagroleresponse_p.h
+  tagsamlproviderrequest.h
+  tagsamlproviderrequest_p.h
+  tagsamlproviderresponse.h
+  tagsamlproviderresponse_p.h
+  tagservercertificaterequest.h
+  tagservercertificaterequest_p.h
+  tagservercertificateresponse.h
+  tagservercertificateresponse_p.h
   taguserrequest.h
   taguserrequest_p.h
   taguserresponse.h
   taguserresponse_p.h
+  untaginstanceprofilerequest.h
+  untaginstanceprofilerequest_p.h
+  untaginstanceprofileresponse.h
+  untaginstanceprofileresponse_p.h
+  untagmfadevicerequest.h
+  untagmfadevicerequest_p.h
+  untagmfadeviceresponse.h
+  untagmfadeviceresponse_p.h
+  untagopenidconnectproviderrequest.h
+  untagopenidconnectproviderrequest_p.h
+  untagopenidconnectproviderresponse.h
+  untagopenidconnectproviderresponse_p.h
+  untagpolicyrequest.h
+  untagpolicyrequest_p.h
+  untagpolicyresponse.h
+  untagpolicyresponse_p.h
   untagrolerequest.h
   untagrolerequest_p.h
   untagroleresponse.h
   untagroleresponse_p.h
+  untagsamlproviderrequest.h
+  untagsamlproviderrequest_p.h
+  untagsamlproviderresponse.h
+  untagsamlproviderresponse_p.h
+  untagservercertificaterequest.h
+  untagservercertificaterequest_p.h
+  untagservercertificateresponse.h
+  untagservercertificateresponse_p.h
   untaguserrequest.h
   untaguserrequest_p.h
   untaguserresponse.h
@@ -746,14 +818,22 @@ add_library(QtAwsIam
   listinstanceprofilesforroleresponse.cpp
   listinstanceprofilesrequest.cpp
   listinstanceprofilesresponse.cpp
+  listinstanceprofiletagsrequest.cpp
+  listinstanceprofiletagsresponse.cpp
   listmfadevicesrequest.cpp
   listmfadevicesresponse.cpp
+  listmfadevicetagsrequest.cpp
+  listmfadevicetagsresponse.cpp
   listopenidconnectprovidersrequest.cpp
   listopenidconnectprovidersresponse.cpp
+  listopenidconnectprovidertagsrequest.cpp
+  listopenidconnectprovidertagsresponse.cpp
   listpoliciesgrantingserviceaccessrequest.cpp
   listpoliciesgrantingserviceaccessresponse.cpp
   listpoliciesrequest.cpp
   listpoliciesresponse.cpp
+  listpolicytagsrequest.cpp
+  listpolicytagsresponse.cpp
   listpolicyversionsrequest.cpp
   listpolicyversionsresponse.cpp
   listrolepoliciesrequest.cpp
@@ -764,8 +844,12 @@ add_library(QtAwsIam
   listroletagsresponse.cpp
   listsamlprovidersrequest.cpp
   listsamlprovidersresponse.cpp
+  listsamlprovidertagsrequest.cpp
+  listsamlprovidertagsresponse.cpp
   listservercertificatesrequest.cpp
   listservercertificatesresponse.cpp
+  listservercertificatetagsrequest.cpp
+  listservercertificatetagsresponse.cpp
   listservicespecificcredentialsrequest.cpp
   listservicespecificcredentialsresponse.cpp
   listsigningcertificatesrequest.cpp
@@ -808,12 +892,36 @@ add_library(QtAwsIam
   simulatecustompolicyresponse.cpp
   simulateprincipalpolicyrequest.cpp
   simulateprincipalpolicyresponse.cpp
+  taginstanceprofilerequest.cpp
+  taginstanceprofileresponse.cpp
+  tagmfadevicerequest.cpp
+  tagmfadeviceresponse.cpp
+  tagopenidconnectproviderrequest.cpp
+  tagopenidconnectproviderresponse.cpp
+  tagpolicyrequest.cpp
+  tagpolicyresponse.cpp
   tagrolerequest.cpp
   tagroleresponse.cpp
+  tagsamlproviderrequest.cpp
+  tagsamlproviderresponse.cpp
+  tagservercertificaterequest.cpp
+  tagservercertificateresponse.cpp
   taguserrequest.cpp
   taguserresponse.cpp
+  untaginstanceprofilerequest.cpp
+  untaginstanceprofileresponse.cpp
+  untagmfadevicerequest.cpp
+  untagmfadeviceresponse.cpp
+  untagopenidconnectproviderrequest.cpp
+  untagopenidconnectproviderresponse.cpp
+  untagpolicyrequest.cpp
+  untagpolicyresponse.cpp
   untagrolerequest.cpp
   untagroleresponse.cpp
+  untagsamlproviderrequest.cpp
+  untagsamlproviderresponse.cpp
+  untagservercertificaterequest.cpp
+  untagservercertificateresponse.cpp
   untaguserrequest.cpp
   untaguserresponse.cpp
   updateaccesskeyrequest.cpp

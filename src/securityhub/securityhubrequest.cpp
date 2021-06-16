@@ -36,10 +36,12 @@ namespace SecurityHub {
  * This enum describes the actions that can be performed as SecurityHub
  * requests.
  *
+ * \value AcceptAdministratorInvitationAction SecurityHub AcceptAdministratorInvitation action.
  * \value AcceptInvitationAction SecurityHub AcceptInvitation action.
  * \value BatchDisableStandardsAction SecurityHub BatchDisableStandards action.
  * \value BatchEnableStandardsAction SecurityHub BatchEnableStandards action.
  * \value BatchImportFindingsAction SecurityHub BatchImportFindings action.
+ * \value BatchUpdateFindingsAction SecurityHub BatchUpdateFindings action.
  * \value CreateActionTargetAction SecurityHub CreateActionTarget action.
  * \value CreateInsightAction SecurityHub CreateInsight action.
  * \value CreateMembersAction SecurityHub CreateMembers action.
@@ -50,13 +52,20 @@ namespace SecurityHub {
  * \value DeleteMembersAction SecurityHub DeleteMembers action.
  * \value DescribeActionTargetsAction SecurityHub DescribeActionTargets action.
  * \value DescribeHubAction SecurityHub DescribeHub action.
+ * \value DescribeOrganizationConfigurationAction SecurityHub DescribeOrganizationConfiguration action.
  * \value DescribeProductsAction SecurityHub DescribeProducts action.
+ * \value DescribeStandardsAction SecurityHub DescribeStandards action.
+ * \value DescribeStandardsControlsAction SecurityHub DescribeStandardsControls action.
  * \value DisableImportFindingsForProductAction SecurityHub DisableImportFindingsForProduct action.
+ * \value DisableOrganizationAdminAccountAction SecurityHub DisableOrganizationAdminAccount action.
  * \value DisableSecurityHubAction SecurityHub DisableSecurityHub action.
+ * \value DisassociateFromAdministratorAccountAction SecurityHub DisassociateFromAdministratorAccount action.
  * \value DisassociateFromMasterAccountAction SecurityHub DisassociateFromMasterAccount action.
  * \value DisassociateMembersAction SecurityHub DisassociateMembers action.
  * \value EnableImportFindingsForProductAction SecurityHub EnableImportFindingsForProduct action.
+ * \value EnableOrganizationAdminAccountAction SecurityHub EnableOrganizationAdminAccount action.
  * \value EnableSecurityHubAction SecurityHub EnableSecurityHub action.
+ * \value GetAdministratorAccountAction SecurityHub GetAdministratorAccount action.
  * \value GetEnabledStandardsAction SecurityHub GetEnabledStandards action.
  * \value GetFindingsAction SecurityHub GetFindings action.
  * \value GetInsightResultsAction SecurityHub GetInsightResults action.
@@ -68,12 +77,16 @@ namespace SecurityHub {
  * \value ListEnabledProductsForImportAction SecurityHub ListEnabledProductsForImport action.
  * \value ListInvitationsAction SecurityHub ListInvitations action.
  * \value ListMembersAction SecurityHub ListMembers action.
+ * \value ListOrganizationAdminAccountsAction SecurityHub ListOrganizationAdminAccounts action.
  * \value ListTagsForResourceAction SecurityHub ListTagsForResource action.
  * \value TagResourceAction SecurityHub TagResource action.
  * \value UntagResourceAction SecurityHub UntagResource action.
  * \value UpdateActionTargetAction SecurityHub UpdateActionTarget action.
  * \value UpdateFindingsAction SecurityHub UpdateFindings action.
  * \value UpdateInsightAction SecurityHub UpdateInsight action.
+ * \value UpdateOrganizationConfigurationAction SecurityHub UpdateOrganizationConfiguration action.
+ * \value UpdateSecurityHubConfigurationAction SecurityHub UpdateSecurityHubConfiguration action.
+ * \value UpdateStandardsControlAction SecurityHub UpdateStandardsControl action.
  */
 
 /*!

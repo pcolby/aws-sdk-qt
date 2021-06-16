@@ -47,6 +47,14 @@ add_library(QtAwsCloudHSMV2
   listtagsrequest_p.h
   listtagsresponse.h
   listtagsresponse_p.h
+  modifybackupattributesrequest.h
+  modifybackupattributesrequest_p.h
+  modifybackupattributesresponse.h
+  modifybackupattributesresponse_p.h
+  modifyclusterrequest.h
+  modifyclusterrequest_p.h
+  modifyclusterresponse.h
+  modifyclusterresponse_p.h
   restorebackuprequest.h
   restorebackuprequest_p.h
   restorebackupresponse.h
@@ -82,6 +90,10 @@ add_library(QtAwsCloudHSMV2
   initializeclusterresponse.cpp
   listtagsrequest.cpp
   listtagsresponse.cpp
+  modifybackupattributesrequest.cpp
+  modifybackupattributesresponse.cpp
+  modifyclusterrequest.cpp
+  modifyclusterresponse.cpp
   restorebackuprequest.cpp
   restorebackupresponse.cpp
   tagresourcerequest.cpp

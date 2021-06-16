@@ -36,26 +36,64 @@ namespace Route53Resolver {
  * This enum describes the actions that can be performed as Route53Resolver
  * requests.
  *
+ * \value AssociateFirewallRuleGroupAction Route53Resolver AssociateFirewallRuleGroup action.
  * \value AssociateResolverEndpointIpAddressAction Route53Resolver AssociateResolverEndpointIpAddress action.
+ * \value AssociateResolverQueryLogConfigAction Route53Resolver AssociateResolverQueryLogConfig action.
  * \value AssociateResolverRuleAction Route53Resolver AssociateResolverRule action.
+ * \value CreateFirewallDomainListAction Route53Resolver CreateFirewallDomainList action.
+ * \value CreateFirewallRuleAction Route53Resolver CreateFirewallRule action.
+ * \value CreateFirewallRuleGroupAction Route53Resolver CreateFirewallRuleGroup action.
  * \value CreateResolverEndpointAction Route53Resolver CreateResolverEndpoint action.
+ * \value CreateResolverQueryLogConfigAction Route53Resolver CreateResolverQueryLogConfig action.
  * \value CreateResolverRuleAction Route53Resolver CreateResolverRule action.
+ * \value DeleteFirewallDomainListAction Route53Resolver DeleteFirewallDomainList action.
+ * \value DeleteFirewallRuleAction Route53Resolver DeleteFirewallRule action.
+ * \value DeleteFirewallRuleGroupAction Route53Resolver DeleteFirewallRuleGroup action.
  * \value DeleteResolverEndpointAction Route53Resolver DeleteResolverEndpoint action.
+ * \value DeleteResolverQueryLogConfigAction Route53Resolver DeleteResolverQueryLogConfig action.
  * \value DeleteResolverRuleAction Route53Resolver DeleteResolverRule action.
+ * \value DisassociateFirewallRuleGroupAction Route53Resolver DisassociateFirewallRuleGroup action.
  * \value DisassociateResolverEndpointIpAddressAction Route53Resolver DisassociateResolverEndpointIpAddress action.
+ * \value DisassociateResolverQueryLogConfigAction Route53Resolver DisassociateResolverQueryLogConfig action.
  * \value DisassociateResolverRuleAction Route53Resolver DisassociateResolverRule action.
+ * \value GetFirewallConfigAction Route53Resolver GetFirewallConfig action.
+ * \value GetFirewallDomainListAction Route53Resolver GetFirewallDomainList action.
+ * \value GetFirewallRuleGroupAction Route53Resolver GetFirewallRuleGroup action.
+ * \value GetFirewallRuleGroupAssociationAction Route53Resolver GetFirewallRuleGroupAssociation action.
+ * \value GetFirewallRuleGroupPolicyAction Route53Resolver GetFirewallRuleGroupPolicy action.
+ * \value GetResolverDnssecConfigAction Route53Resolver GetResolverDnssecConfig action.
  * \value GetResolverEndpointAction Route53Resolver GetResolverEndpoint action.
+ * \value GetResolverQueryLogConfigAction Route53Resolver GetResolverQueryLogConfig action.
+ * \value GetResolverQueryLogConfigAssociationAction Route53Resolver GetResolverQueryLogConfigAssociation action.
+ * \value GetResolverQueryLogConfigPolicyAction Route53Resolver GetResolverQueryLogConfigPolicy action.
  * \value GetResolverRuleAction Route53Resolver GetResolverRule action.
  * \value GetResolverRuleAssociationAction Route53Resolver GetResolverRuleAssociation action.
  * \value GetResolverRulePolicyAction Route53Resolver GetResolverRulePolicy action.
+ * \value ImportFirewallDomainsAction Route53Resolver ImportFirewallDomains action.
+ * \value ListFirewallConfigsAction Route53Resolver ListFirewallConfigs action.
+ * \value ListFirewallDomainListsAction Route53Resolver ListFirewallDomainLists action.
+ * \value ListFirewallDomainsAction Route53Resolver ListFirewallDomains action.
+ * \value ListFirewallRuleGroupAssociationsAction Route53Resolver ListFirewallRuleGroupAssociations action.
+ * \value ListFirewallRuleGroupsAction Route53Resolver ListFirewallRuleGroups action.
+ * \value ListFirewallRulesAction Route53Resolver ListFirewallRules action.
+ * \value ListResolverDnssecConfigsAction Route53Resolver ListResolverDnssecConfigs action.
  * \value ListResolverEndpointIpAddressesAction Route53Resolver ListResolverEndpointIpAddresses action.
  * \value ListResolverEndpointsAction Route53Resolver ListResolverEndpoints action.
+ * \value ListResolverQueryLogConfigAssociationsAction Route53Resolver ListResolverQueryLogConfigAssociations action.
+ * \value ListResolverQueryLogConfigsAction Route53Resolver ListResolverQueryLogConfigs action.
  * \value ListResolverRuleAssociationsAction Route53Resolver ListResolverRuleAssociations action.
  * \value ListResolverRulesAction Route53Resolver ListResolverRules action.
  * \value ListTagsForResourceAction Route53Resolver ListTagsForResource action.
+ * \value PutFirewallRuleGroupPolicyAction Route53Resolver PutFirewallRuleGroupPolicy action.
+ * \value PutResolverQueryLogConfigPolicyAction Route53Resolver PutResolverQueryLogConfigPolicy action.
  * \value PutResolverRulePolicyAction Route53Resolver PutResolverRulePolicy action.
  * \value TagResourceAction Route53Resolver TagResource action.
  * \value UntagResourceAction Route53Resolver UntagResource action.
+ * \value UpdateFirewallConfigAction Route53Resolver UpdateFirewallConfig action.
+ * \value UpdateFirewallDomainsAction Route53Resolver UpdateFirewallDomains action.
+ * \value UpdateFirewallRuleAction Route53Resolver UpdateFirewallRule action.
+ * \value UpdateFirewallRuleGroupAssociationAction Route53Resolver UpdateFirewallRuleGroupAssociation action.
+ * \value UpdateResolverDnssecConfigAction Route53Resolver UpdateResolverDnssecConfig action.
  * \value UpdateResolverEndpointAction Route53Resolver UpdateResolverEndpoint action.
  * \value UpdateResolverRuleAction Route53Resolver UpdateResolverRule action.
  */

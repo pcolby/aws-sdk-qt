@@ -36,14 +36,20 @@ namespace Transfer {
  * This enum describes the actions that can be performed as Transfer
  * requests.
  *
+ * \value CreateAccessAction Transfer CreateAccess action.
  * \value CreateServerAction Transfer CreateServer action.
  * \value CreateUserAction Transfer CreateUser action.
+ * \value DeleteAccessAction Transfer DeleteAccess action.
  * \value DeleteServerAction Transfer DeleteServer action.
  * \value DeleteSshPublicKeyAction Transfer DeleteSshPublicKey action.
  * \value DeleteUserAction Transfer DeleteUser action.
+ * \value DescribeAccessAction Transfer DescribeAccess action.
+ * \value DescribeSecurityPolicyAction Transfer DescribeSecurityPolicy action.
  * \value DescribeServerAction Transfer DescribeServer action.
  * \value DescribeUserAction Transfer DescribeUser action.
  * \value ImportSshPublicKeyAction Transfer ImportSshPublicKey action.
+ * \value ListAccessesAction Transfer ListAccesses action.
+ * \value ListSecurityPoliciesAction Transfer ListSecurityPolicies action.
  * \value ListServersAction Transfer ListServers action.
  * \value ListTagsForResourceAction Transfer ListTagsForResource action.
  * \value ListUsersAction Transfer ListUsers action.
@@ -52,6 +58,7 @@ namespace Transfer {
  * \value TagResourceAction Transfer TagResource action.
  * \value TestIdentityProviderAction Transfer TestIdentityProvider action.
  * \value UntagResourceAction Transfer UntagResource action.
+ * \value UpdateAccessAction Transfer UpdateAccess action.
  * \value UpdateServerAction Transfer UpdateServer action.
  * \value UpdateUserAction Transfer UpdateUser action.
  */

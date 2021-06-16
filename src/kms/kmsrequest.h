@@ -56,11 +56,14 @@ public:
         EnableKeyRotationAction,
         EncryptAction,
         GenerateDataKeyAction,
+        GenerateDataKeyPairAction,
+        GenerateDataKeyPairWithoutPlaintextAction,
         GenerateDataKeyWithoutPlaintextAction,
         GenerateRandomAction,
         GetKeyPolicyAction,
         GetKeyRotationStatusAction,
         GetParametersForImportAction,
+        GetPublicKeyAction,
         ImportKeyMaterialAction,
         ListAliasesAction,
         ListGrantsAction,
@@ -73,11 +76,13 @@ public:
         RetireGrantAction,
         RevokeGrantAction,
         ScheduleKeyDeletionAction,
+        SignAction,
         TagResourceAction,
         UntagResourceAction,
         UpdateAliasAction,
         UpdateCustomKeyStoreAction,
         UpdateKeyDescriptionAction,
+        VerifyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

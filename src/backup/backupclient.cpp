@@ -43,12 +43,20 @@
 #include "describebackupjobresponse.h"
 #include "describebackupvaultrequest.h"
 #include "describebackupvaultresponse.h"
+#include "describecopyjobrequest.h"
+#include "describecopyjobresponse.h"
+#include "describeglobalsettingsrequest.h"
+#include "describeglobalsettingsresponse.h"
 #include "describeprotectedresourcerequest.h"
 #include "describeprotectedresourceresponse.h"
 #include "describerecoverypointrequest.h"
 #include "describerecoverypointresponse.h"
+#include "describeregionsettingsrequest.h"
+#include "describeregionsettingsresponse.h"
 #include "describerestorejobrequest.h"
 #include "describerestorejobresponse.h"
+#include "disassociaterecoverypointrequest.h"
+#include "disassociaterecoverypointresponse.h"
 #include "exportbackupplantemplaterequest.h"
 #include "exportbackupplantemplateresponse.h"
 #include "getbackupplanrequest.h"
@@ -79,6 +87,8 @@
 #include "listbackupselectionsresponse.h"
 #include "listbackupvaultsrequest.h"
 #include "listbackupvaultsresponse.h"
+#include "listcopyjobsrequest.h"
+#include "listcopyjobsresponse.h"
 #include "listprotectedresourcesrequest.h"
 #include "listprotectedresourcesresponse.h"
 #include "listrecoverypointsbybackupvaultrequest.h"
@@ -95,6 +105,8 @@
 #include "putbackupvaultnotificationsresponse.h"
 #include "startbackupjobrequest.h"
 #include "startbackupjobresponse.h"
+#include "startcopyjobrequest.h"
+#include "startcopyjobresponse.h"
 #include "startrestorejobrequest.h"
 #include "startrestorejobresponse.h"
 #include "stopbackupjobrequest.h"
@@ -105,8 +117,12 @@
 #include "untagresourceresponse.h"
 #include "updatebackupplanrequest.h"
 #include "updatebackupplanresponse.h"
+#include "updateglobalsettingsrequest.h"
+#include "updateglobalsettingsresponse.h"
 #include "updaterecoverypointlifecyclerequest.h"
 #include "updaterecoverypointlifecycleresponse.h"
+#include "updateregionsettingsrequest.h"
+#include "updateregionsettingsresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -195,12 +211,12 @@ BackupClient::BackupClient(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Backup plans are documents that contain information that AWS Backup uses to schedule tasks that create recovery points
- * of
+ * Creates a backup plan using a backup plan name and backup rules. A backup plan is a document that contains information
+ * that AWS Backup uses to schedule tasks that create recovery points for
  *
  * resources>
  *
- * If you call <code>CreateBackupPlan</code> with a plan that already exists, the existing <code>backupPlanId</code> is
+ * If you call <code>CreateBackupPlan</code> with a plan that already exists, an <code>AlreadyExistsException</code> is
  */
 CreateBackupPlanResponse * BackupClient::createBackupPlan(const CreateBackupPlanRequest &request)
 {
@@ -254,11 +270,11 @@ CreateBackupPlanResponse * BackupClient::createBackupPlan(const CreateBackupPlan
  * <code>"department=finance"</code>, <code>"importance=critical"</code>, in addition to an EBS volume with the specified
  * volume
  *
- * Id>
+ * ID>
  *
  * Resources and conditions are additive in that all resources that match the pattern are selected. This shouldn't be
- * confused with a logical AND, where all conditions must match. The matching patterns are logically 'put together using
- * the OR operator. In other words, all patterns that match are selected for
+ * confused with a logical AND, where all conditions must match. The matching patterns are logically put together using the
+ * OR operator. In other words, all patterns that match are selected for
  */
 CreateBackupSelectionResponse * BackupClient::createBackupSelection(const CreateBackupSelectionRequest &request)
 {
@@ -356,6 +372,11 @@ DeleteBackupVaultNotificationsResponse * BackupClient::deleteBackupVaultNotifica
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes the recovery point specified by a recovery point
+ *
+ * ID>
+ *
+ * If the recovery point ID belongs to a continuous backup, calling this endpoint deletes the existing continuous backup
+ * and stops future continuous
  */
 DeleteRecoveryPointResponse * BackupClient::deleteRecoveryPoint(const DeleteRecoveryPointRequest &request)
 {
@@ -368,7 +389,7 @@ DeleteRecoveryPointResponse * BackupClient::deleteRecoveryPoint(const DeleteReco
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns metadata associated with creating a backup of a
+ * Returns backup job details for the specified
  */
 DescribeBackupJobResponse * BackupClient::describeBackupJob(const DescribeBackupJobRequest &request)
 {
@@ -390,11 +411,37 @@ DescribeBackupVaultResponse * BackupClient::describeBackupVault(const DescribeBa
 
 /*!
  * Sends \a request to the BackupClient service, and returns a pointer to an
+ * DescribeCopyJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns metadata associated with creating a copy of a
+ */
+DescribeCopyJobResponse * BackupClient::describeCopyJob(const DescribeCopyJobRequest &request)
+{
+    return qobject_cast<DescribeCopyJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
+ * DescribeGlobalSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes the global settings of the AWS account, including whether it is opted in to cross-account
+ */
+DescribeGlobalSettingsResponse * BackupClient::describeGlobalSettings(const DescribeGlobalSettingsRequest &request)
+{
+    return qobject_cast<DescribeGlobalSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
  * DescribeProtectedResourceResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns information about a saved resource, including the last time it was backed-up, its Amazon Resource Name (ARN),
+ * Returns information about a saved resource, including the last time it was backed up, its Amazon Resource Name (ARN),
  * and the AWS service type of the saved
  */
 DescribeProtectedResourceResponse * BackupClient::describeProtectedResource(const DescribeProtectedResourceRequest &request)
@@ -417,6 +464,22 @@ DescribeRecoveryPointResponse * BackupClient::describeRecoveryPoint(const Descri
 
 /*!
  * Sends \a request to the BackupClient service, and returns a pointer to an
+ * DescribeRegionSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns the current service opt-in settings for the Region. If service-opt-in is enabled for a service, AWS Backup tries
+ * to protect that service's resources in this Region, when the resource is included in an on-demand backup or scheduled
+ * backup plan. Otherwise, AWS Backup does not try to protect that service's resources in this Region, AWS Backup does not
+ * try to protect that service's resources in this
+ */
+DescribeRegionSettingsResponse * BackupClient::describeRegionSettings(const DescribeRegionSettingsRequest &request)
+{
+    return qobject_cast<DescribeRegionSettingsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
  * DescribeRestoreJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -426,6 +489,25 @@ DescribeRecoveryPointResponse * BackupClient::describeRecoveryPoint(const Descri
 DescribeRestoreJobResponse * BackupClient::describeRestoreJob(const DescribeRestoreJobRequest &request)
 {
     return qobject_cast<DescribeRestoreJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
+ * DisassociateRecoveryPointResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes the specified continuous backup recovery point from AWS Backup and releases control of that continuous backup to
+ * the source service, such as Amazon RDS. The source service will continue to create and retain continuous backups using
+ * the lifecycle that you specified in your original backup
+ *
+ * plan>
+ *
+ * Does not support snapshot backup recovery
+ */
+DisassociateRecoveryPointResponse * BackupClient::disassociateRecoveryPoint(const DisassociateRecoveryPointRequest &request)
+{
+    return qobject_cast<DisassociateRecoveryPointResponse *>(send(request));
 }
 
 /*!
@@ -447,7 +529,8 @@ ExportBackupPlanTemplateResponse * BackupClient::exportBackupPlanTemplate(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns the body of a backup plan in JSON format, in addition to plan
+ * Returns <code>BackupPlan</code> details for the specified <code>BackupPlanId</code>. The details are the body of a
+ * backup plan in JSON format, in addition to plan
  */
 GetBackupPlanResponse * BackupClient::getBackupPlan(const GetBackupPlanRequest &request)
 {
@@ -526,14 +609,7 @@ GetBackupVaultNotificationsResponse * BackupClient::getBackupVaultNotifications(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns two sets of metadata key-value pairs. The first set lists the metadata that the recovery point was created with.
- * The second set lists the metadata key-value pairs that are required to restore the recovery
- *
- * point>
- *
- * These sets can be the same, or the restore metadata set can contain different values if the target service to be
- * restored has changed since the recovery point was created and now requires additional or different information in order
- * to be
+ * Returns a set of metadata key-value pairs that were used to create the
  */
 GetRecoveryPointRestoreMetadataResponse * BackupClient::getRecoveryPointRestoreMetadata(const GetRecoveryPointRestoreMetadataRequest &request)
 {
@@ -572,7 +648,8 @@ GetSupportedResourceTypesResponse * BackupClient::getSupportedResourceTypes()
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns metadata about your backup
+ * Returns a list of existing backup jobs for an authenticated account for the last 30 days. For a longer period of time,
+ * consider using these <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/monitoring.html">monitoring
  */
 ListBackupJobsResponse * BackupClient::listBackupJobs(const ListBackupJobsRequest &request)
 {
@@ -612,8 +689,9 @@ ListBackupPlanVersionsResponse * BackupClient::listBackupPlanVersions(const List
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Returns metadata of your saved backup plans, including Amazon Resource Names (ARNs), plan IDs, creation and deletion
- * dates, version IDs, plan names, and creator request
+ * Returns a list of existing backup plans for an authenticated account. The list is populated only if the advanced option
+ * is set for the backup plan. The list contains information such as Amazon Resource Names (ARNs), plan IDs, creation and
+ * deletion dates, version IDs, plan names, and creator request
  */
 ListBackupPlansResponse * BackupClient::listBackupPlans(const ListBackupPlansRequest &request)
 {
@@ -644,6 +722,19 @@ ListBackupSelectionsResponse * BackupClient::listBackupSelections(const ListBack
 ListBackupVaultsResponse * BackupClient::listBackupVaults(const ListBackupVaultsRequest &request)
 {
     return qobject_cast<ListBackupVaultsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
+ * ListCopyJobsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns metadata about your copy
+ */
+ListCopyJobsResponse * BackupClient::listCopyJobs(const ListCopyJobsRequest &request)
+{
+    return qobject_cast<ListCopyJobsResponse *>(send(request));
 }
 
 /*!
@@ -706,6 +797,10 @@ ListRestoreJobsResponse * BackupClient::listRestoreJobs(const ListRestoreJobsReq
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Returns a list of key-value pairs assigned to a target recovery point, backup plan, or backup
+ *
+ * vault> <note>
+ *
+ * <code>ListTags</code> are currently only supported with Amazon EFS
  */
 ListTagsResponse * BackupClient::listTags(const ListTagsRequest &request)
 {
@@ -745,7 +840,7 @@ PutBackupVaultNotificationsResponse * BackupClient::putBackupVaultNotifications(
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Starts a job to create a one-time backup of the specified
+ * Starts an on-demand backup job for the specified
  */
 StartBackupJobResponse * BackupClient::startBackupJob(const StartBackupJobRequest &request)
 {
@@ -754,16 +849,28 @@ StartBackupJobResponse * BackupClient::startBackupJob(const StartBackupJobReques
 
 /*!
  * Sends \a request to the BackupClient service, and returns a pointer to an
+ * StartCopyJobResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Starts a job to create a one-time copy of the specified
+ *
+ * resource>
+ *
+ * Does not support continuous
+ */
+StartCopyJobResponse * BackupClient::startCopyJob(const StartCopyJobRequest &request)
+{
+    return qobject_cast<StartCopyJobResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
  * StartRestoreJobResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Recovers the saved resource identified by an Amazon Resource Name (ARN).
- *
- * </p
- *
- * If the resource ARN is included in the request, then the last complete backup of that resource is recovered. If the ARN
- * of a recovery point is supplied, then that recovery point is
+ * Recovers the saved resource identified by an Amazon Resource Name
  */
 StartRestoreJobResponse * BackupClient::startRestoreJob(const StartRestoreJobRequest &request)
 {
@@ -816,12 +923,26 @@ UntagResourceResponse * BackupClient::untagResource(const UntagResourceRequest &
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Replaces the body of a saved backup plan identified by its <code>backupPlanId</code> with the input document in JSON
- * format. The new version is uniquely identified by a
+ * Updates an existing backup plan identified by its <code>backupPlanId</code> with the input document in JSON format. The
+ * new version is uniquely identified by a
  */
 UpdateBackupPlanResponse * BackupClient::updateBackupPlan(const UpdateBackupPlanRequest &request)
 {
     return qobject_cast<UpdateBackupPlanResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
+ * UpdateGlobalSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the current global settings for the AWS account. Use the <code>DescribeGlobalSettings</code> API to determine
+ * the current
+ */
+UpdateGlobalSettingsResponse * BackupClient::updateGlobalSettings(const UpdateGlobalSettingsRequest &request)
+{
+    return qobject_cast<UpdateGlobalSettingsResponse *>(send(request));
 }
 
 /*!
@@ -835,17 +956,41 @@ UpdateBackupPlanResponse * BackupClient::updateBackupPlan(const UpdateBackupPlan
  * point>
  *
  * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
- * transitions and expires backups automatically according to the lifecycle that you define.
+ * transitions and expires backups automatically according to the lifecycle that you
  *
- * </p
+ * define>
  *
  * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the “expire
  * after days” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to cold
- * after days” setting cannot be changed after a backup has been transitioned to cold.
+ * after days” setting cannot be changed after a backup has been transitioned to
+ *
+ * cold>
+ *
+ * Only Amazon EFS file system backups can be transitioned to cold
+ *
+ * storage>
+ *
+ * Does not support continuous
  */
 UpdateRecoveryPointLifecycleResponse * BackupClient::updateRecoveryPointLifecycle(const UpdateRecoveryPointLifecycleRequest &request)
 {
     return qobject_cast<UpdateRecoveryPointLifecycleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the BackupClient service, and returns a pointer to an
+ * UpdateRegionSettingsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the current service opt-in settings for the Region. If service-opt-in is enabled for a service, AWS Backup tries
+ * to protect that service's resources in this Region, when the resource is included in an on-demand backup or scheduled
+ * backup plan. Otherwise, AWS Backup does not try to protect that service's resources in this Region. Use the
+ * <code>DescribeRegionSettings</code> API to determine the resource types that are
+ */
+UpdateRegionSettingsResponse * BackupClient::updateRegionSettings(const UpdateRegionSettingsRequest &request)
+{
+    return qobject_cast<UpdateRegionSettingsResponse *>(send(request));
 }
 
 /*!

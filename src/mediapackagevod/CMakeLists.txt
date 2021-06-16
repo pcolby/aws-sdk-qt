@@ -1,6 +1,10 @@
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsMediaPackageVod
+  configurelogsrequest.h
+  configurelogsrequest_p.h
+  configurelogsresponse.h
+  configurelogsresponse_p.h
   createassetrequest.h
   createassetrequest_p.h
   createassetresponse.h
@@ -49,12 +53,30 @@ add_library(QtAwsMediaPackageVod
   listpackaginggroupsrequest_p.h
   listpackaginggroupsresponse.h
   listpackaginggroupsresponse_p.h
+  listtagsforresourcerequest.h
+  listtagsforresourcerequest_p.h
+  listtagsforresourceresponse.h
+  listtagsforresourceresponse_p.h
   mediapackagevodclient.h
   mediapackagevodclient_p.h
   mediapackagevodrequest.h
   mediapackagevodrequest_p.h
   mediapackagevodresponse.h
   mediapackagevodresponse_p.h
+  tagresourcerequest.h
+  tagresourcerequest_p.h
+  tagresourceresponse.h
+  tagresourceresponse_p.h
+  untagresourcerequest.h
+  untagresourcerequest_p.h
+  untagresourceresponse.h
+  untagresourceresponse_p.h
+  updatepackaginggrouprequest.h
+  updatepackaginggrouprequest_p.h
+  updatepackaginggroupresponse.h
+  updatepackaginggroupresponse_p.h
+  configurelogsrequest.cpp
+  configurelogsresponse.cpp
   createassetrequest.cpp
   createassetresponse.cpp
   createpackagingconfigurationrequest.cpp
@@ -79,9 +101,17 @@ add_library(QtAwsMediaPackageVod
   listpackagingconfigurationsresponse.cpp
   listpackaginggroupsrequest.cpp
   listpackaginggroupsresponse.cpp
+  listtagsforresourcerequest.cpp
+  listtagsforresourceresponse.cpp
   mediapackagevodclient.cpp
   mediapackagevodrequest.cpp
-  mediapackagevodresponse.cpp)
+  mediapackagevodresponse.cpp
+  tagresourcerequest.cpp
+  tagresourceresponse.cpp
+  untagresourcerequest.cpp
+  untagresourceresponse.cpp
+  updatepackaginggrouprequest.cpp
+  updatepackaginggroupresponse.cpp)
 
 add_dependencies(QtAwsMediaPackageVod QtAwsCore)
 

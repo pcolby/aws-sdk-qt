@@ -21,14 +21,30 @@
 #include "medialiveclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "acceptinputdevicetransferrequest.h"
+#include "acceptinputdevicetransferresponse.h"
+#include "batchdeleterequest.h"
+#include "batchdeleteresponse.h"
+#include "batchstartrequest.h"
+#include "batchstartresponse.h"
+#include "batchstoprequest.h"
+#include "batchstopresponse.h"
 #include "batchupdateschedulerequest.h"
 #include "batchupdatescheduleresponse.h"
+#include "cancelinputdevicetransferrequest.h"
+#include "cancelinputdevicetransferresponse.h"
 #include "createchannelrequest.h"
 #include "createchannelresponse.h"
 #include "createinputrequest.h"
 #include "createinputresponse.h"
 #include "createinputsecuritygrouprequest.h"
 #include "createinputsecuritygroupresponse.h"
+#include "createmultiplexrequest.h"
+#include "createmultiplexresponse.h"
+#include "createmultiplexprogramrequest.h"
+#include "createmultiplexprogramresponse.h"
+#include "createpartnerinputrequest.h"
+#include "createpartnerinputresponse.h"
 #include "createtagsrequest.h"
 #include "createtagsresponse.h"
 #include "deletechannelrequest.h"
@@ -37,6 +53,10 @@
 #include "deleteinputresponse.h"
 #include "deleteinputsecuritygrouprequest.h"
 #include "deleteinputsecuritygroupresponse.h"
+#include "deletemultiplexrequest.h"
+#include "deletemultiplexresponse.h"
+#include "deletemultiplexprogramrequest.h"
+#include "deletemultiplexprogramresponse.h"
 #include "deletereservationrequest.h"
 #include "deletereservationresponse.h"
 #include "deleteschedulerequest.h"
@@ -47,8 +67,16 @@
 #include "describechannelresponse.h"
 #include "describeinputrequest.h"
 #include "describeinputresponse.h"
+#include "describeinputdevicerequest.h"
+#include "describeinputdeviceresponse.h"
+#include "describeinputdevicethumbnailrequest.h"
+#include "describeinputdevicethumbnailresponse.h"
 #include "describeinputsecuritygrouprequest.h"
 #include "describeinputsecuritygroupresponse.h"
+#include "describemultiplexrequest.h"
+#include "describemultiplexresponse.h"
+#include "describemultiplexprogramrequest.h"
+#include "describemultiplexprogramresponse.h"
 #include "describeofferingrequest.h"
 #include "describeofferingresponse.h"
 #include "describereservationrequest.h"
@@ -57,10 +85,18 @@
 #include "describescheduleresponse.h"
 #include "listchannelsrequest.h"
 #include "listchannelsresponse.h"
+#include "listinputdevicetransfersrequest.h"
+#include "listinputdevicetransfersresponse.h"
+#include "listinputdevicesrequest.h"
+#include "listinputdevicesresponse.h"
 #include "listinputsecuritygroupsrequest.h"
 #include "listinputsecuritygroupsresponse.h"
 #include "listinputsrequest.h"
 #include "listinputsresponse.h"
+#include "listmultiplexprogramsrequest.h"
+#include "listmultiplexprogramsresponse.h"
+#include "listmultiplexesrequest.h"
+#include "listmultiplexesresponse.h"
 #include "listofferingsrequest.h"
 #include "listofferingsresponse.h"
 #include "listreservationsrequest.h"
@@ -69,18 +105,32 @@
 #include "listtagsforresourceresponse.h"
 #include "purchaseofferingrequest.h"
 #include "purchaseofferingresponse.h"
+#include "rejectinputdevicetransferrequest.h"
+#include "rejectinputdevicetransferresponse.h"
 #include "startchannelrequest.h"
 #include "startchannelresponse.h"
+#include "startmultiplexrequest.h"
+#include "startmultiplexresponse.h"
 #include "stopchannelrequest.h"
 #include "stopchannelresponse.h"
+#include "stopmultiplexrequest.h"
+#include "stopmultiplexresponse.h"
+#include "transferinputdevicerequest.h"
+#include "transferinputdeviceresponse.h"
 #include "updatechannelrequest.h"
 #include "updatechannelresponse.h"
 #include "updatechannelclassrequest.h"
 #include "updatechannelclassresponse.h"
 #include "updateinputrequest.h"
 #include "updateinputresponse.h"
+#include "updateinputdevicerequest.h"
+#include "updateinputdeviceresponse.h"
 #include "updateinputsecuritygrouprequest.h"
 #include "updateinputsecuritygroupresponse.h"
+#include "updatemultiplexrequest.h"
+#include "updatemultiplexresponse.h"
+#include "updatemultiplexprogramrequest.h"
+#include "updatemultiplexprogramresponse.h"
 #include "updatereservationrequest.h"
 #include "updatereservationresponse.h"
 
@@ -163,6 +213,54 @@ MediaLiveClient::MediaLiveClient(
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * AcceptInputDeviceTransferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+AcceptInputDeviceTransferResponse * MediaLiveClient::acceptInputDeviceTransfer(const AcceptInputDeviceTransferRequest &request)
+{
+    return qobject_cast<AcceptInputDeviceTransferResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * BatchDeleteResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+BatchDeleteResponse * MediaLiveClient::batchDelete(const BatchDeleteRequest &request)
+{
+    return qobject_cast<BatchDeleteResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * BatchStartResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+BatchStartResponse * MediaLiveClient::batchStart(const BatchStartRequest &request)
+{
+    return qobject_cast<BatchStartResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * BatchStopResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+BatchStopResponse * MediaLiveClient::batchStop(const BatchStopRequest &request)
+{
+    return qobject_cast<BatchStopResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * BatchUpdateScheduleResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -171,6 +269,18 @@ MediaLiveClient::MediaLiveClient(
 BatchUpdateScheduleResponse * MediaLiveClient::batchUpdateSchedule(const BatchUpdateScheduleRequest &request)
 {
     return qobject_cast<BatchUpdateScheduleResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CancelInputDeviceTransferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CancelInputDeviceTransferResponse * MediaLiveClient::cancelInputDeviceTransfer(const CancelInputDeviceTransferRequest &request)
+{
+    return qobject_cast<CancelInputDeviceTransferResponse *>(send(request));
 }
 
 /*!
@@ -207,6 +317,42 @@ CreateInputResponse * MediaLiveClient::createInput(const CreateInputRequest &req
 CreateInputSecurityGroupResponse * MediaLiveClient::createInputSecurityGroup(const CreateInputSecurityGroupRequest &request)
 {
     return qobject_cast<CreateInputSecurityGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreateMultiplexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateMultiplexResponse * MediaLiveClient::createMultiplex(const CreateMultiplexRequest &request)
+{
+    return qobject_cast<CreateMultiplexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreateMultiplexProgramResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreateMultiplexProgramResponse * MediaLiveClient::createMultiplexProgram(const CreateMultiplexProgramRequest &request)
+{
+    return qobject_cast<CreateMultiplexProgramResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * CreatePartnerInputResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+CreatePartnerInputResponse * MediaLiveClient::createPartnerInput(const CreatePartnerInputRequest &request)
+{
+    return qobject_cast<CreatePartnerInputResponse *>(send(request));
 }
 
 /*!
@@ -255,6 +401,30 @@ DeleteInputResponse * MediaLiveClient::deleteInput(const DeleteInputRequest &req
 DeleteInputSecurityGroupResponse * MediaLiveClient::deleteInputSecurityGroup(const DeleteInputSecurityGroupRequest &request)
 {
     return qobject_cast<DeleteInputSecurityGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteMultiplexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteMultiplexResponse * MediaLiveClient::deleteMultiplex(const DeleteMultiplexRequest &request)
+{
+    return qobject_cast<DeleteMultiplexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DeleteMultiplexProgramResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DeleteMultiplexProgramResponse * MediaLiveClient::deleteMultiplexProgram(const DeleteMultiplexProgramRequest &request)
+{
+    return qobject_cast<DeleteMultiplexProgramResponse *>(send(request));
 }
 
 /*!
@@ -319,6 +489,30 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeInputDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeInputDeviceResponse * MediaLiveClient::describeInputDevice(const DescribeInputDeviceRequest &request)
+{
+    return qobject_cast<DescribeInputDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeInputDeviceThumbnailResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeInputDeviceThumbnailResponse * MediaLiveClient::describeInputDeviceThumbnail(const DescribeInputDeviceThumbnailRequest &request)
+{
+    return qobject_cast<DescribeInputDeviceThumbnailResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * DescribeInputSecurityGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -327,6 +521,30 @@ DescribeInputResponse * MediaLiveClient::describeInput(const DescribeInputReques
 DescribeInputSecurityGroupResponse * MediaLiveClient::describeInputSecurityGroup(const DescribeInputSecurityGroupRequest &request)
 {
     return qobject_cast<DescribeInputSecurityGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeMultiplexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeMultiplexResponse * MediaLiveClient::describeMultiplex(const DescribeMultiplexRequest &request)
+{
+    return qobject_cast<DescribeMultiplexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * DescribeMultiplexProgramResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+DescribeMultiplexProgramResponse * MediaLiveClient::describeMultiplexProgram(const DescribeMultiplexProgramRequest &request)
+{
+    return qobject_cast<DescribeMultiplexProgramResponse *>(send(request));
 }
 
 /*!
@@ -379,6 +597,31 @@ ListChannelsResponse * MediaLiveClient::listChannels(const ListChannelsRequest &
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListInputDeviceTransfersResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * List input devices that are currently being transferred. List input devices that you are transferring from your AWS
+ */
+ListInputDeviceTransfersResponse * MediaLiveClient::listInputDeviceTransfers(const ListInputDeviceTransfersRequest &request)
+{
+    return qobject_cast<ListInputDeviceTransfersResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListInputDevicesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListInputDevicesResponse * MediaLiveClient::listInputDevices(const ListInputDevicesRequest &request)
+{
+    return qobject_cast<ListInputDevicesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * ListInputSecurityGroupsResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -399,6 +642,30 @@ ListInputSecurityGroupsResponse * MediaLiveClient::listInputSecurityGroups(const
 ListInputsResponse * MediaLiveClient::listInputs(const ListInputsRequest &request)
 {
     return qobject_cast<ListInputsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListMultiplexProgramsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListMultiplexProgramsResponse * MediaLiveClient::listMultiplexPrograms(const ListMultiplexProgramsRequest &request)
+{
+    return qobject_cast<ListMultiplexProgramsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * ListMultiplexesResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+ListMultiplexesResponse * MediaLiveClient::listMultiplexes(const ListMultiplexesRequest &request)
+{
+    return qobject_cast<ListMultiplexesResponse *>(send(request));
 }
 
 /*!
@@ -451,6 +718,18 @@ PurchaseOfferingResponse * MediaLiveClient::purchaseOffering(const PurchaseOffer
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * RejectInputDeviceTransferResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+RejectInputDeviceTransferResponse * MediaLiveClient::rejectInputDeviceTransfer(const RejectInputDeviceTransferRequest &request)
+{
+    return qobject_cast<RejectInputDeviceTransferResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * StartChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -463,6 +742,18 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * StartMultiplexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+StartMultiplexResponse * MediaLiveClient::startMultiplex(const StartMultiplexRequest &request)
+{
+    return qobject_cast<StartMultiplexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * StopChannelResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -471,6 +762,31 @@ StartChannelResponse * MediaLiveClient::startChannel(const StartChannelRequest &
 StopChannelResponse * MediaLiveClient::stopChannel(const StopChannelRequest &request)
 {
     return qobject_cast<StopChannelResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * StopMultiplexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+StopMultiplexResponse * MediaLiveClient::stopMultiplex(const StopMultiplexRequest &request)
+{
+    return qobject_cast<StopMultiplexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * TransferInputDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Start an input device transfer to another AWS account. After you make the request, the other account must accept or
+ */
+TransferInputDeviceResponse * MediaLiveClient::transferInputDevice(const TransferInputDeviceRequest &request)
+{
+    return qobject_cast<TransferInputDeviceResponse *>(send(request));
 }
 
 /*!
@@ -511,6 +827,18 @@ UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &req
 
 /*!
  * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateInputDeviceResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateInputDeviceResponse * MediaLiveClient::updateInputDevice(const UpdateInputDeviceRequest &request)
+{
+    return qobject_cast<UpdateInputDeviceResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
  * UpdateInputSecurityGroupResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -519,6 +847,30 @@ UpdateInputResponse * MediaLiveClient::updateInput(const UpdateInputRequest &req
 UpdateInputSecurityGroupResponse * MediaLiveClient::updateInputSecurityGroup(const UpdateInputSecurityGroupRequest &request)
 {
     return qobject_cast<UpdateInputSecurityGroupResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateMultiplexResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateMultiplexResponse * MediaLiveClient::updateMultiplex(const UpdateMultiplexRequest &request)
+{
+    return qobject_cast<UpdateMultiplexResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the MediaLiveClient service, and returns a pointer to an
+ * UpdateMultiplexProgramResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ */
+UpdateMultiplexProgramResponse * MediaLiveClient::updateMultiplexProgram(const UpdateMultiplexProgramRequest &request)
+{
+    return qobject_cast<UpdateMultiplexProgramResponse *>(send(request));
 }
 
 /*!
