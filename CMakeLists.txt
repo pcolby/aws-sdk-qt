@@ -9,6 +9,9 @@ project(
  #HOMEPAGE_URL "https://github.com/pcolby/aws-sdk-qt"
   LANGUAGES CXX)
 
+# Disable automatic ASCII conversions.
+add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
+
 # Enable (and stop on) compiler warnings.
 include(CheckCXXCompilerFlag)
 check_cxx_compiler_flag(-Wall   HAVE_WALL)
