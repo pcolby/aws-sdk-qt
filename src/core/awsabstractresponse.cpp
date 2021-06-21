@@ -210,17 +210,17 @@ QString AwsAbstractResponse::xmlParseErrorString() const
  *
  * @todo   Move this toVariant function to somewhere more generic.
  */
-QVariantMap AwsAbstractResponse::toVariant(
+QMultiMap<QString, QVariant> AwsAbstractResponse::toVariant(
     QXmlStreamReader &xml, const QString &prefix, const int maxDepth)
 {
     if (maxDepth < 0) {
         qWarning() << QObject::tr("max depth exceeded");
-        return QVariantMap();
+        return QMultiMap<QString, QVariant>();
     }
 
     if (xml.hasError()) {
         qWarning() << xml.errorString();
-        return QVariantMap();
+        return QMultiMap<QString, QVariant>();
     }
 
     if (xml.tokenType() == QXmlStreamReader::NoToken)
@@ -230,26 +230,26 @@ QVariantMap AwsAbstractResponse::toVariant(
         (xml.tokenType() != QXmlStreamReader::StartElement)) {
         qWarning() << QObject::tr("unexpected XML tokenType %1 (%2)")
                       .arg(xml.tokenString()).arg(xml.tokenType());
-        return QVariantMap();
+        return QMultiMap<QString, QVariant>();
     }
 
-    QVariantMap map;
+    QMultiMap<QString, QVariant> multiMap;
     if (xml.tokenType() == QXmlStreamReader::StartDocument) {
-        map.insert(prefix + QLatin1String("DocumentEncoding"), xml.documentEncoding().toString());
-        map.insert(prefix + QLatin1String("DocumentVersion"), xml.documentVersion().toString());
-        map.insert(prefix + QLatin1String("StandaloneDocument"), xml.isStandaloneDocument());
+        multiMap.insert(prefix + QLatin1String("DocumentEncoding"), xml.documentEncoding().toString());
+        multiMap.insert(prefix + QLatin1String("DocumentVersion"), xml.documentVersion().toString());
+        multiMap.insert(prefix + QLatin1String("StandaloneDocument"), xml.isStandaloneDocument());
     } else {
         if (!xml.namespaceUri().isEmpty())
-            map.insert(prefix + QLatin1String("NamespaceUri"), xml.namespaceUri().toString());
+            multiMap.insert(prefix + QLatin1String("NamespaceUri"), xml.namespaceUri().toString());
         foreach (const QXmlStreamAttribute &attribute, xml.attributes()) {
-            QVariantMap attributeMap;
-            attributeMap.insert(QLatin1String("Value"), attribute.value().toString());
+            QVariantMap attributemultiMap;
+            attributemultiMap.insert(QLatin1String("Value"), attribute.value().toString());
             if (!attribute.namespaceUri().isEmpty())
-                attributeMap.insert(QLatin1String("NamespaceUri"), attribute.namespaceUri().toString());
+                attributemultiMap.insert(QLatin1String("NamespaceUri"), attribute.namespaceUri().toString());
             if (!attribute.prefix().isEmpty())
-                attributeMap.insert(QLatin1String("Prefix"), attribute.prefix().toString());
-            attributeMap.insert(QLatin1String("QualifiedName"), attribute.qualifiedName().toString());
-            map.insertMulti(prefix + attribute.name().toString(), attributeMap);
+                attributemultiMap.insert(QLatin1String("Prefix"), attribute.prefix().toString());
+            attributemultiMap.insert(QLatin1String("QualifiedName"), attribute.qualifiedName().toString());
+            multiMap.insert(prefix + attribute.name().toString(), attributemultiMap);
         }
     }
 
@@ -260,15 +260,15 @@ QVariantMap AwsAbstractResponse::toVariant(
         case QXmlStreamReader::Comment:
         case QXmlStreamReader::DTD:
         case QXmlStreamReader::EntityReference:
-            map.insertMulti(prefix + xml.tokenString(), xml.text().toString());
+            multiMap.insert(prefix + xml.tokenString(), xml.text().toString());
             break;
         case QXmlStreamReader::ProcessingInstruction:
-            map.insertMulti(prefix + xml.processingInstructionTarget().toString(),
+            multiMap.insert(prefix + xml.processingInstructionTarget().toString(),
                             xml.processingInstructionData().toString());
             break;
         case QXmlStreamReader::StartElement: {
             const QString elementName = xml.name().toString();
-            map.insertMulti(elementName, toVariant(xml, prefix, maxDepth-1));
+            multiMap.insert(elementName, toVariant(xml, prefix, maxDepth-1));
             break;
         }
         default:
@@ -276,7 +276,7 @@ QVariantMap AwsAbstractResponse::toVariant(
                           .arg(xml.tokenString()).arg(xml.tokenType());
         }
     }
-    return map;
+    return multiMap;
 }
 
 /*!

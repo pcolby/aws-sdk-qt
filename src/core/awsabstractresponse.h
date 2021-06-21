@@ -49,7 +49,7 @@ public:
     virtual const AwsAbstractRequest * request() const = 0;
 
     /// @todo Find a better home for "QVariantMap toVariant(QXmlStreamReader &xml, ...)"
-    static QVariantMap toVariant(QXmlStreamReader &xml,
+    static QMultiMap<QString, QVariant> toVariant(QXmlStreamReader &xml,
                                  const QString &prefix = QLatin1String("."),
                                  const int maxDepth = 1024);
 
