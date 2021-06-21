@@ -20,7 +20,7 @@
 #include "s3controlclient.h"
 #include "s3controlclient_p.h"
 
-#include "core/awssignatures3v4.h"
+#include "core/awssignaturev4.h"
 #include "createaccesspointrequest.h"
 #include "createaccesspointresponse.h"
 #include "createaccesspointforobjectlambdarequest.h"
@@ -2112,7 +2112,7 @@ UpdateJobStatusResponse * S3ControlClient::updateJobStatus(const UpdateJobStatus
 S3ControlClientPrivate::S3ControlClientPrivate(S3ControlClient * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    signature = new QtAws::Core::AwsSignatureS3V4();
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace S3Control
