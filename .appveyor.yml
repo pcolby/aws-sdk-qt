@@ -31,7 +31,7 @@ install:
   #- C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
   - cmake --version
   - set PATH
-  - if %QTDIR:msvc=%==%QTDIR% set PATH=
+  - if %QTDIR:msvc=%==%QTDIR% set "PATH="
   - '%QTDIR%\bin\qtenv2.bat'
   - set PATH
   - if %QTDIR:_64=%==%QTDIR% ( set MSVC_ARCH=x86 ) else set MSVC_ARCH=x64
