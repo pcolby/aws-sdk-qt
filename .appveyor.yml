@@ -31,8 +31,8 @@ install:
   #- C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
   - cmake --version
   - set PATH
-  - if %QTDIR:msvc=%==%QTDIR% set "PATH="
-  - set "PATH=%PATH:C:\Program Files\Git\usr\bin;=%"
+  - if %QTDIR:msvc=%==%QTDIR% set PATH="%PATH:C:\Program Files\Git\usr\bin;=%"
+  #- set PATH="%PATH:C:\Program Files\Git\usr\bin;=%"
   - set PATH
   - '%QTDIR%\bin\qtenv2.bat'
   - set PATH
@@ -42,8 +42,8 @@ install:
   - if %QTDIR:msvc=%==%QTDIR% %make% --version
   - if not %QTDIR:msvc2013=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %ARCH%
   - if not %QTDIR:msvc2015=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %ARCH%
-  - if not %QTDIR:mingw=%==%QTDIR% set "CMAKE_GENERATOR=MinGW Makefiles"
-  - if not %QTDIR:msvc=%==%QTDIR% set "CMAKE_GENERATOR=NMake Makefiles"
+  - if not %QTDIR:mingw=%==%QTDIR% set CMAKE_GENERATOR="MinGW Makefiles"
+  - if not %QTDIR:msvc=%==%QTDIR% set CMAKE_GENERATOR="NMake Makefiles"
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
   - set CMAKE
