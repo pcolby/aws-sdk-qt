@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
+message("cmake version ${CMAKE_VERSION}")
 
 set(CMAKE_CXX_EXTENSIONS OFF)
 

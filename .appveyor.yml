@@ -32,28 +32,19 @@ install:
   - '%QTDIR%\bin\qtenv2.bat'
   - if %QTDIR:_64=%==%QTDIR% ( set MSVC_ARCH=x86 ) else set MSVC_ARCH=x64
   - if %QTDIR:msvc=%==%QTDIR% g++ --version
-  - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
-  - if %QTDIR:msvc=%==%QTDIR% %make% --version
   - if not %QTDIR:msvc2013=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %ARCH%
   - if not %QTDIR:msvc2015=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %ARCH%
   - if not %QTDIR:mingw=%==%QTDIR% set CMAKE_GENERATOR="MinGW Makefiles"
   - if not %QTDIR:msvc=%==%QTDIR% set CMAKE_GENERATOR="NMake Makefiles"
-  - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
-  - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
 
 before_build:
-  - set CMAKE
-  - cmake --version
   # Remove git's sh.exe from the path, as it conflicts with CMake's MinGW generator (until 3.17)
   - if %QTDIR:msvc=%==%QTDIR% set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
-  # Prepare the out-of-source build directory.
-  - mkdir %APPVEYOR_BUILD_FOLDER%-build
+  - cmake -E make_directory %APPVEYOR_BUILD_FOLDER%-build
   - cmake -G %CMAKE_GENERATOR% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
-  - cd %APPVEYOR_BUILD_FOLDER%-build
-  - dir
-  - '%make%'
+  - cmake --build %APPVEYOR_BUILD_FOLDER%-build
 
 after_build:
   # Add a link to the build output within the source directory. This is needed because AppVeyor does
@@ -63,7 +54,7 @@ after_build:
 
 test_script:
   # @todo output using Qt's -xunitxml option
-  - if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
+  #- if not %CONFIGURATION%==debug %make% check TESTARGS=-silent
 
 # @todo after_test upload results
 
