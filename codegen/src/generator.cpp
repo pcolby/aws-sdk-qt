@@ -177,7 +177,12 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
 
     QStringList lines;
     QString line;
-    foreach (QString word, content.split(QRegularExpression(QSL("\\s+")), QString::SkipEmptyParts)) {
+    #if (QT_VERSION > QT_VERSION_CHECK(5, 14, 0))
+        #define SKIP_EMPTY_PARTS Qt::SkipEmptyParts // Introduced in Qt 5.14.
+    #else
+        #define SKIP_EMPTY_PARTS QString::SkipEmptyParts // Deprecated in Qt 5.15.
+    #endif
+    foreach (QString word, content.split(QRegularExpression(QSL("\\s+")), SKIP_EMPTY_PARTS)) {
         if (word.startsWith(QSL("<p>")) || word.endsWith(QSL("</p>"))) {
             lines.append(line);
             line.clear();
