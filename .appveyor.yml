@@ -2,24 +2,30 @@ version: '{branch}-{build}'
 
 environment:
   matrix:
-    - QTDIR: C:\Qt\5.6.3\mingw49_32
-    - QTDIR: C:\Qt\5.6.3\msvc2013
-    - QTDIR: C:\Qt\5.6.3\msvc2013_64
-    - QTDIR: C:\Qt\5.6.3\msvc2015
-    - QTDIR: C:\Qt\5.6.3\msvc2015_64
+    - QTDIR: C:\Qt\5.6\mingw49_32
+    - QTDIR: C:\Qt\5.6\msvc2013
+    - QTDIR: C:\Qt\5.6\msvc2013_64
+    - QTDIR: C:\Qt\5.6\msvc2015
+    - QTDIR: C:\Qt\5.6\msvc2015_64
     - QTDIR: C:\Qt\5.7\mingw53_32
     - QTDIR: C:\Qt\5.7\msvc2015
-    - QTDIR: C:\Qt\5.9.5\mingw53_32
-    - QTDIR: C:\Qt\5.9.5\msvc2013_64
-    - QTDIR: C:\Qt\5.9.5\msvc2015
-    - QTDIR: C:\Qt\5.9.5\msvc2015_64
-    - QTDIR: C:\Qt\5.10.1\mingw53_32
-    - QTDIR: C:\Qt\5.10.1\msvc2013_64
-    - QTDIR: C:\Qt\5.10.1\msvc2015
-    - QTDIR: C:\Qt\5.10.1\msvc2015_64
-    - QTDIR: C:\Qt\5.11.1\mingw53_32
-    - QTDIR: C:\Qt\5.11.1\msvc2015
-    - QTDIR: C:\Qt\5.11.1\msvc2015_64
+    - QTDIR: C:\Qt\5.9\mingw53_32
+    - QTDIR: C:\Qt\5.9\msvc2013_64
+    - QTDIR: C:\Qt\5.9\msvc2015
+    - QTDIR: C:\Qt\5.9\msvc2015_64
+    - QTDIR: C:\Qt\5.10\mingw53_32
+    - QTDIR: C:\Qt\5.10\msvc2013_64
+    - QTDIR: C:\Qt\5.10\msvc2015
+    - QTDIR: C:\Qt\5.10\msvc2015_64
+    - QTDIR: C:\Qt\5.11\mingw53_32
+    - QTDIR: C:\Qt\5.11\msvc2015
+    - QTDIR: C:\Qt\5.11\msvc2015_64
+    - QTDIR: C:\Qt\5.12\mingw73_32
+    - QTDIR: C:\Qt\5.12\mingw73_64
+    - QTDIR: C:\Qt\5.12\msvc2015_64
+    - QTDIR: C:\Qt\5.13\mingw73_32
+    - QTDIR: C:\Qt\5.13\mingw73_64
+    - QTDIR: C:\Qt\5.13\msvc2015_64
 
 install:
   - C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
@@ -37,7 +43,7 @@ install:
 before_build:
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
-  - qmake -o %APPVEYOR_BUILD_FOLDER%-build -r -Wall -Wlogic -Wparser CONFIG+=%CONFIGURATION% %APPVEYOR_BUILD_FOLDER%
+  - cmake -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%-build
@@ -46,7 +52,8 @@ build_script:
 after_build:
   # Add a link to the build output within the source directory. This is needed because AppVeyor does
   # not support extracting artifacts from out-of-source build directories. See 'artifacts' below.
-  - mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
+  # @todo build artifacts are all different now...
+  #- mklink %APPVEYOR_BUILD_FOLDER%\qtaws.dll %APPVEYOR_BUILD_FOLDER%-build\%CONFIGURATION%\qtaws.dll
 
 test_script:
   # @todo output using Qt's -xunitxml option
@@ -54,9 +61,9 @@ test_script:
 
 # @todo after_test upload results
 
-artifacts:
-  - path: qtaws.dll
+#artifacts:
+#  - path: qtaws.dll
 
-notifications:
-  - provider: Webhook
-    url: https://webhooks.gitter.im/e/db2b6ec088084f138e57
+#notifications:
+#  - provider: Webhook
+#    url: https://webhooks.gitter.im/e/db2b6ec088084f138e57
