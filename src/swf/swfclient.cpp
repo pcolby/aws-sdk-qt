@@ -907,7 +907,7 @@ ListClosedWorkflowExecutionsResponse * SwfClient::listClosedWorkflowExecutions(c
  * follows> <ul> <li>
  *
  * Use a <code>Resource</code> element with the domain name to limit the action to only specified domains. The element must
- * be set to <code>arn:aws:swf::AccountID:domain/*</code>, where <i>AccountID</i> is the account ID, with no
+ * be set to <code>arn:aws:swf::AccountID:domain/&ast;</code>, where <i>AccountID</i> is the account ID, with no
  *
  * dashes> </li> <li>
  *

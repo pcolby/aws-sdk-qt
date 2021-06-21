@@ -614,7 +614,7 @@ CreateKeySigningKeyResponse * Route53Client::createKeySigningKey(const CreateKey
  *
  * example>
  *
- * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/*</code>
+ * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/&ast;</code>
  *
  * </p <note>
  *

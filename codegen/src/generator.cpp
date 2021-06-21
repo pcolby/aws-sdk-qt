@@ -175,6 +175,10 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
     content.replace(QSL("<important>"), QSL("<b>"));
     content.replace(QSL("</important>"), QSL("</b>"));
 
+    // Replace /* and */ with &ast; versions to avoid breaking comment blocks.
+    content.replace(QSL("/*"), QSL("/&ast;"));
+    content.replace(QSL("*/"), QSL("&ast;/"));
+
     QStringList lines;
     QString line;
     #if (QT_VERSION > QT_VERSION_CHECK(5, 14, 0))
