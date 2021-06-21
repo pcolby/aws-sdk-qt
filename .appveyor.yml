@@ -53,7 +53,8 @@ before_build:
   - cmake --version
   - cmake --help
   # Removed git's sh.exe from the path; it interferes with CMake
-  - set PATH=%PATH:C:\Program Files (x86)\Git\bin;=%
+  - set PATH="%PATH:C:\Program Files (x86)\Git\bin;=%"
+  - set PATH
   - cmake -G %CMAKE_GENERATOR% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
