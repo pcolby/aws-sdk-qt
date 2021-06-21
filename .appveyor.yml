@@ -40,10 +40,12 @@ install:
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
   - '%QTDIR%\bin\qtenv2.bat'
+  - set
 
 before_build:
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
+  - set
   - cmake -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
