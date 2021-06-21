@@ -29,9 +29,12 @@ if (HAVE_WEXTRA)
 endif()
 
 # See if we have Grantlee available.
-find_package(Grantlee5)
+find_package(Grantlee5 QUIET)
 if (Grantlee5_FOUND)
+  message("-- Found Grantlee ${Grantlee5_VERSION}")
   add_subdirectory(codegen)
+else()
+  message("Grantlee not found; codegen sub-project skipped")
 endif()
 
 add_subdirectory(doc)
