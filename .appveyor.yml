@@ -26,9 +26,7 @@ configuration:
   - release
 
 install:
-  - appveyor-retry choco install doxygen.portable
-  - appveyor-retry choco install graphviz.portable
-  # Setup the build toolchains.
+  - dir C:\Qt\
   - '%QTDIR%\bin\qtenv2.bat'
   - qmake -v
   - if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
