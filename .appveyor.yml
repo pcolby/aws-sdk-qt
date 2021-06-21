@@ -44,14 +44,11 @@ install:
   - if not %QTDIR:msvc=%==%QTDIR% set CMAKE_GENERATOR="NMake Makefiles"
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
+  - set CMAKE
 
 before_build:
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
-  - set CMAKE
-  # Removed git's sh.exe from the path; it interferes with CMake
-  - set PATH="%PATH:C:\Program Files (x86)\Git\bin;=%"
-  - set PATH
   - cmake -G %CMAKE_GENERATOR% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
