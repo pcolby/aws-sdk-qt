@@ -28,7 +28,7 @@ environment:
     - QTDIR: C:\Qt\5.13\msvc2015_64
 
 install:
-  - C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
+  #- C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
   - '%QTDIR%\bin\qtenv2.bat'
   - cmake --version
   - if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
@@ -47,6 +47,7 @@ before_build:
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%-build
+  - dir
   - '%make%'
 
 after_build:
