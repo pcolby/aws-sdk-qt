@@ -30,23 +30,26 @@ environment:
 install:
   #- C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
   - '%QTDIR%\bin\qtenv2.bat'
-  - cmake --version
-  - if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
+  - if %QTDIR:_64=%==%QTDIR% ( set MSVC_ARCH=x86 ) else set MSVC_ARCH=x64
+  - if %QTDIR:_64=%==%QTDIR% ( set CMAKE_ARCH=Win32 ) else set CMAKE_ARCH=x64
   - if %QTDIR:msvc=%==%QTDIR% g++ --version
   - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
   - if %QTDIR:msvc=%==%QTDIR% %make% --version
   - if not %QTDIR:msvc2013=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %ARCH%
   - if not %QTDIR:msvc2015=%==%QTDIR% call "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %ARCH%
+  - if not %QTDIR:mingw=%==%QTDIR% set CMAKE_GENERATOR "MinGW Makefiles"
+  - if not %QTDIR:msvc2013=%==%QTDIR% set CMAKE_GENERATOR "Visual Studio 12 2013"
+  - if not %QTDIR:msvc2015=%==%QTDIR% set CMAKE_GENERATOR "Visual Studio 14 2015"
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
   - '%QTDIR%\bin\qtenv2.bat'
-  - set
 
 before_build:
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
   - set
-  - cmake -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
+  - set CMAKE
+  - cmake -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build -G %CMAKE_GENERATOR% -A %CMAKE_ARCH%
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%-build
