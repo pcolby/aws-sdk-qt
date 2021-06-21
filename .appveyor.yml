@@ -43,7 +43,8 @@ before_build:
   - cmake -G %CMAKE_GENERATOR% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
-  - cmake --build %APPVEYOR_BUILD_FOLDER%-build
+  # @todo Just targetting a subset of libs for now, to save AppVeyor resources.
+  - cmake --build %APPVEYOR_BUILD_FOLDER%-build --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
 after_build:
   # Add a link to the build output within the source directory. This is needed because AppVeyor does
