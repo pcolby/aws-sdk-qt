@@ -32,7 +32,7 @@ install:
   - cmake --version
   - set PATH
   - if %QTDIR:msvc=%==%QTDIR% set "PATH="
-  - set "PATH="
+  - set "PATH=%PATH:C:\Program Files\Git\usr\bin;=%"
   - set PATH
   - '%QTDIR%\bin\qtenv2.bat'
   - set PATH
