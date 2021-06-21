@@ -21,14 +21,10 @@ environment:
     - QTDIR: C:\Qt\5.11.1\msvc2015
     - QTDIR: C:\Qt\5.11.1\msvc2015_64
 
-configuration:
-  - debug
-  - release
-
 install:
-  - dir C:\Qt\
+  - C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
   - '%QTDIR%\bin\qtenv2.bat'
-  - qmake -v
+  - cmake --version
   - if %QTDIR:_64=%==%QTDIR% ( set ARCH=x86 ) else set ARCH=x64
   - if %QTDIR:msvc=%==%QTDIR% g++ --version
   - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
