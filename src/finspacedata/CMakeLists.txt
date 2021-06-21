@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsFinSpaceData
@@ -31,4 +34,4 @@ add_library(QtAwsFinSpaceData
 
 add_dependencies(QtAwsFinSpaceData QtAwsCore)
 
-target_link_libraries(QtAwsFinSpaceData Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsFinSpaceData PRIVATE Qt5::Core Qt5::Network)

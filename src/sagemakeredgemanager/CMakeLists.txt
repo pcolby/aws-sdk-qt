@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsSagemakerEdgeManager
@@ -25,4 +28,4 @@ add_library(QtAwsSagemakerEdgeManager
 
 add_dependencies(QtAwsSagemakerEdgeManager QtAwsCore)
 
-target_link_libraries(QtAwsSagemakerEdgeManager Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsSagemakerEdgeManager PRIVATE Qt5::Core Qt5::Network)

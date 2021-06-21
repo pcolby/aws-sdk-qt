@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsIoTFleetHub
@@ -61,4 +64,4 @@ add_library(QtAwsIoTFleetHub
 
 add_dependencies(QtAwsIoTFleetHub QtAwsCore)
 
-target_link_libraries(QtAwsIoTFleetHub Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsIoTFleetHub PRIVATE Qt5::Core Qt5::Network)

@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsNimbleStudio
@@ -283,4 +286,4 @@ add_library(QtAwsNimbleStudio
 
 add_dependencies(QtAwsNimbleStudio QtAwsCore)
 
-target_link_libraries(QtAwsNimbleStudio Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsNimbleStudio PRIVATE Qt5::Core Qt5::Network)

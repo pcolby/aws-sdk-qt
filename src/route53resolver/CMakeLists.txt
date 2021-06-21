@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsRoute53Resolver
@@ -373,4 +376,4 @@ add_library(QtAwsRoute53Resolver
 
 add_dependencies(QtAwsRoute53Resolver QtAwsCore)
 
-target_link_libraries(QtAwsRoute53Resolver Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsRoute53Resolver PRIVATE Qt5::Core Qt5::Network)

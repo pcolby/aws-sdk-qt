@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsCloudWatchEvents
@@ -319,4 +322,4 @@ add_library(QtAwsCloudWatchEvents
 
 add_dependencies(QtAwsCloudWatchEvents QtAwsCore)
 
-target_link_libraries(QtAwsCloudWatchEvents Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsCloudWatchEvents PRIVATE Qt5::Core Qt5::Network)

@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsTranscribeStreamingService
@@ -25,4 +28,4 @@ add_library(QtAwsTranscribeStreamingService
 
 add_dependencies(QtAwsTranscribeStreamingService QtAwsCore)
 
-target_link_libraries(QtAwsTranscribeStreamingService Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsTranscribeStreamingService PRIVATE Qt5::Core Qt5::Network)

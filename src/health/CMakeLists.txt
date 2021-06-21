@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsHealth
@@ -91,4 +94,4 @@ add_library(QtAwsHealth
 
 add_dependencies(QtAwsHealth QtAwsCore)
 
-target_link_libraries(QtAwsHealth Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsHealth PRIVATE Qt5::Core Qt5::Network)

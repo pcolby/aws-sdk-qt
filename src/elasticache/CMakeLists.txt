@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsElastiCache
@@ -403,4 +406,4 @@ add_library(QtAwsElastiCache
 
 add_dependencies(QtAwsElastiCache QtAwsCore)
 
-target_link_libraries(QtAwsElastiCache Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsElastiCache PRIVATE Qt5::Core Qt5::Network)

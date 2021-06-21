@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsCognitoIdentity
@@ -151,4 +154,4 @@ add_library(QtAwsCognitoIdentity
 
 add_dependencies(QtAwsCognitoIdentity QtAwsCore)
 
-target_link_libraries(QtAwsCognitoIdentity Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsCognitoIdentity PRIVATE Qt5::Core Qt5::Network)

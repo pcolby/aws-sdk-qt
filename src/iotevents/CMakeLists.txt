@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsIoTEvents
@@ -169,4 +172,4 @@ add_library(QtAwsIoTEvents
 
 add_dependencies(QtAwsIoTEvents QtAwsCore)
 
-target_link_libraries(QtAwsIoTEvents Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsIoTEvents PRIVATE Qt5::Core Qt5::Network)

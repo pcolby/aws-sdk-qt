@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsElasticLoadBalancingv2
@@ -217,4 +220,4 @@ add_library(QtAwsElasticLoadBalancingv2
 
 add_dependencies(QtAwsElasticLoadBalancingv2 QtAwsCore)
 
-target_link_libraries(QtAwsElasticLoadBalancingv2 Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsElasticLoadBalancingv2 PRIVATE Qt5::Core Qt5::Network)

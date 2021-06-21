@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsMarketplaceMetering
@@ -37,4 +40,4 @@ add_library(QtAwsMarketplaceMetering
 
 add_dependencies(QtAwsMarketplaceMetering QtAwsCore)
 
-target_link_libraries(QtAwsMarketplaceMetering Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsMarketplaceMetering PRIVATE Qt5::Core Qt5::Network)

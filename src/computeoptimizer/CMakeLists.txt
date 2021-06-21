@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsComputeOptimizer
@@ -91,4 +94,4 @@ add_library(QtAwsComputeOptimizer
 
 add_dependencies(QtAwsComputeOptimizer QtAwsCore)
 
-target_link_libraries(QtAwsComputeOptimizer Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsComputeOptimizer PRIVATE Qt5::Core Qt5::Network)

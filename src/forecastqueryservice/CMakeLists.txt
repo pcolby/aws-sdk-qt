@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsForecastQueryService
@@ -19,4 +22,4 @@ add_library(QtAwsForecastQueryService
 
 add_dependencies(QtAwsForecastQueryService QtAwsCore)
 
-target_link_libraries(QtAwsForecastQueryService Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsForecastQueryService PRIVATE Qt5::Core Qt5::Network)

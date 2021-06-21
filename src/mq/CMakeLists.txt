@@ -1,3 +1,6 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(QtAwsMq
@@ -145,4 +148,4 @@ add_library(QtAwsMq
 
 add_dependencies(QtAwsMq QtAwsCore)
 
-target_link_libraries(QtAwsMq Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsMq PRIVATE Qt5::Core Qt5::Network)

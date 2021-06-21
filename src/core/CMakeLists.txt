@@ -44,4 +44,4 @@ add_library(
   awssignaturev4.h
   awssignaturev4_p.h)
 
-target_link_libraries(QtAwsCore Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsCore PRIVATE Qt5::Core Qt5::Network)
