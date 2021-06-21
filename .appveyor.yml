@@ -29,13 +29,7 @@ environment:
 
 install:
   #- C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
-  - cmake --version
-  - set PATH
-  - if %QTDIR:msvc=%==%QTDIR% set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
-  #- set PATH="%PATH:C:\Program Files\Git\usr\bin;=%"
-  - set PATH
   - '%QTDIR%\bin\qtenv2.bat'
-  - set PATH
   - if %QTDIR:_64=%==%QTDIR% ( set MSVC_ARCH=x86 ) else set MSVC_ARCH=x64
   - if %QTDIR:msvc=%==%QTDIR% g++ --version
   - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
@@ -46,9 +40,12 @@ install:
   - if not %QTDIR:msvc=%==%QTDIR% set CMAKE_GENERATOR="NMake Makefiles"
   - if not %QTDIR:msvc=%==%QTDIR% set make=nmake.exe
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
-  - set CMAKE
 
 before_build:
+  - set CMAKE
+  - cmake --version
+  # Remove git's sh.exe from the path, as it conflicts with CMake's MinGW generator (until 3.17)
+  - if %QTDIR:msvc=%==%QTDIR% set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
   # Prepare the out-of-source build directory.
   - mkdir %APPVEYOR_BUILD_FOLDER%-build
   - cmake -G %CMAKE_GENERATOR% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
