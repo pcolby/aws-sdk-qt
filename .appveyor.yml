@@ -31,7 +31,7 @@ install:
   #- C:\cygwin\bin\find C:\Qt -maxdepth 2 -type d
   - '%QTDIR%\bin\qtenv2.bat'
   - if %QTDIR:_64=%==%QTDIR% ( set MSVC_ARCH=x86 ) else set MSVC_ARCH=x64
-  - if %QTDIR:_64=%==%QTDIR% ( set CMAKE_ARCH=Win32 ) else set CMAKE_ARCH=x64
+  #- if %QTDIR:_64=%==%QTDIR% ( set CMAKE_ARCH=Win32 ) else set CMAKE_ARCH=x64
   - if %QTDIR:msvc=%==%QTDIR% g++ --version
   - if %QTDIR:msvc=%==%QTDIR% set make=mingw32-make.exe
   - if %QTDIR:msvc=%==%QTDIR% %make% --version
@@ -54,7 +54,7 @@ before_build:
   - cmake --help
   # Removed git's sh.exe from the path; it interferes with CMake
   - set PATH=%PATH:C:\Program Files (x86)\Git\bin;=%
-  - cmake -G %CMAKE_GENERATOR% -A %CMAKE_ARCH% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
+  - cmake -G %CMAKE_GENERATOR% -S %APPVEYOR_BUILD_FOLDER% -B %APPVEYOR_BUILD_FOLDER%-build
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%-build
