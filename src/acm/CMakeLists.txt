@@ -104,6 +104,4 @@ add_library(QtAwsAcm
   updatecertificateoptionsrequest.cpp
   updatecertificateoptionsresponse.cpp)
 
-add_dependencies(QtAwsAcm QtAwsCore)
-
-target_link_libraries(QtAwsAcm PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsAcm PRIVATE QtAwsCore Qt5::Core Qt5::Network)
