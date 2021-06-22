@@ -28,8 +28,9 @@ jobs:
     - name: Install Tools
       run: sudo apt install gcc libgrantlee5-dev
     - name: Install Qt
-      #uses: jurplel/install-qt-action@v2
-      with: { version: ${{ matrix.qt }} }
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt }}
     - name: Build
       env: { CC: gcc, CXX: g++ }
       run: |
@@ -45,7 +46,8 @@ jobs:
       run: brew install clang
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
-      with: { version: ${{ matrix.qt }} }
+      with:
+        version: ${{ matrix.qt }}
     - name: Build
       env: { CC: clang, CXX: clang++ }
       run: |
@@ -61,7 +63,8 @@ jobs:
       run: brew install gcc
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
-      with: { version: ${{ matrix.qt }} }
+      with:
+        version: ${{ matrix.qt }}
     - name: Build
       env: { CC: gcc, CXX: g++ }
       run: |
