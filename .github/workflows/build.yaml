@@ -12,7 +12,8 @@ jobs:
       run: sudo apt install clang libgrantlee5-dev
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
-    #  with: { version: ${{ matrix.qt }} }
+      with:
+        version: ${{ matrix.qt }}
     - name: Build
       env: { CC: clang, CXX: clang++ }
       run: |
