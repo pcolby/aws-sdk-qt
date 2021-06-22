@@ -3,17 +3,28 @@ name: Build
 on: [push]
 
 jobs:
+  codegen:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Grantlee
+      run: sudo apt install libgrantlee5-dev
+    - name: Build
+      run: |
+        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" --target codegen
+
   linux-clang:
     runs-on: ubuntu-latest
-    #strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
       run: sudo apt install clang libgrantlee5-dev
-    #- name: Install Qt
-    #  uses: jurplel/install-qt-action@v2
-    #  with:
-    #    version: ${{ matrix.qt }}
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt }}
     - name: Build
       env: { CC: clang, CXX: clang++ }
       run: |
@@ -42,8 +53,6 @@ jobs:
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
-    - name: Install Tools
-      run: brew install clang
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
@@ -59,7 +68,7 @@ jobs:
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
-    - name: Install Tools
+    - name: Install GCC
       run: brew install gcc
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
