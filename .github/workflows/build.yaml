@@ -5,20 +5,20 @@ on: [push]
 jobs:
   linux-clang:
     runs-on: ubuntu-latest
-    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+    #strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
       run: sudo apt install clang libgrantlee5-dev
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: ${{ matrix.qt }}
+    #- name: Install Qt
+    #  uses: jurplel/install-qt-action@v2
+    #  with:
+    #    version: ${{ matrix.qt }}
     - name: Build
       env: { CC: clang, CXX: clang++ }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$env.RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   linux-gcc:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
       env: { CC: gcc, CXX: g++ }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$env.RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   macos-clang:
     runs-on: macOS-latest
@@ -52,7 +52,7 @@ jobs:
       env: { CC: clang, CXX: clang++ }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$env.RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   macos-gcc:
     runs-on: macOS-latest
@@ -69,7 +69,7 @@ jobs:
       env: { CC: gcc, CXX: g++ }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$env.RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   # @todo windows-mingw
 
