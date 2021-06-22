@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public NetworkFirewallRequestPrivate {
+class UntagResourceRequestPrivate : public NetworkFirewallRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const NetworkFirewallRequest::Action action,

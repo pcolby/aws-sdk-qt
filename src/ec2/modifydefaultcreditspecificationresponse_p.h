@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyDefaultCreditSpecificationResponse;
 
-class QTAWS_EXPORT ModifyDefaultCreditSpecificationResponsePrivate : public Ec2ResponsePrivate {
+class ModifyDefaultCreditSpecificationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

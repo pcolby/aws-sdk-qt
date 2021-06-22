@@ -27,7 +27,7 @@ namespace Glue {
 
 class RemoveSchemaVersionMetadataResponse;
 
-class QTAWS_EXPORT RemoveSchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
+class RemoveSchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
 
 public:
 

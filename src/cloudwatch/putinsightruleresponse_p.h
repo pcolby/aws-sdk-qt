@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class PutInsightRuleResponse;
 
-class QTAWS_EXPORT PutInsightRuleResponsePrivate : public CloudWatchResponsePrivate {
+class PutInsightRuleResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 

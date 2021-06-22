@@ -29,7 +29,7 @@ namespace AppRunner {
 
 class AppRunnerClient;
 
-class QTAWS_EXPORT AppRunnerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppRunnerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppRunnerClientPrivate(AppRunnerClient * const q);

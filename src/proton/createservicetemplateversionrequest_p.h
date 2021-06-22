@@ -28,7 +28,7 @@ namespace Proton {
 
 class CreateServiceTemplateVersionRequest;
 
-class QTAWS_EXPORT CreateServiceTemplateVersionRequestPrivate : public ProtonRequestPrivate {
+class CreateServiceTemplateVersionRequestPrivate : public ProtonRequestPrivate {
 
 public:
     CreateServiceTemplateVersionRequestPrivate(const ProtonRequest::Action action,

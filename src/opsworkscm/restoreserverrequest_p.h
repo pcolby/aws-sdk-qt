@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class RestoreServerRequest;
 
-class QTAWS_EXPORT RestoreServerRequestPrivate : public OpsWorksCMRequestPrivate {
+class RestoreServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     RestoreServerRequestPrivate(const OpsWorksCMRequest::Action action,

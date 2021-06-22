@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeApplicationsRequest;
 
-class QTAWS_EXPORT DescribeApplicationsRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class DescribeApplicationsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DescribeApplicationsRequestPrivate(const ElasticBeanstalkRequest::Action action,

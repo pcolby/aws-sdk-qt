@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteSnapshotScheduleRequest;
 
-class QTAWS_EXPORT DeleteSnapshotScheduleRequestPrivate : public RedshiftRequestPrivate {
+class DeleteSnapshotScheduleRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteSnapshotScheduleRequestPrivate(const RedshiftRequest::Action action,

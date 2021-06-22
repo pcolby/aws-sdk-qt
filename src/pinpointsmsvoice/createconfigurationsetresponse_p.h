@@ -27,7 +27,7 @@ namespace PinpointSMSVoice {
 
 class CreateConfigurationSetResponse;
 
-class QTAWS_EXPORT CreateConfigurationSetResponsePrivate : public PinpointSMSVoiceResponsePrivate {
+class CreateConfigurationSetResponsePrivate : public PinpointSMSVoiceResponsePrivate {
 
 public:
 

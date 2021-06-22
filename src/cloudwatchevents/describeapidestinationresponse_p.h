@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DescribeApiDestinationResponse;
 
-class QTAWS_EXPORT DescribeApiDestinationResponsePrivate : public CloudWatchEventsResponsePrivate {
+class DescribeApiDestinationResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

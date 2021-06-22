@@ -27,7 +27,7 @@ namespace Core {
 
 class AwsAbstractCredentials;
 
-class QTAWS_EXPORT AwsAbstractCredentialsPrivate {
+class AwsAbstractCredentialsPrivate {
 
 public:
     AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q);

@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public LicenseManagerRequestPrivate {
+class UntagResourceRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const LicenseManagerRequest::Action action,

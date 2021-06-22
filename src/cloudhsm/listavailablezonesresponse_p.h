@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class ListAvailableZonesResponse;
 
-class QTAWS_EXPORT ListAvailableZonesResponsePrivate : public CloudHSMResponsePrivate {
+class ListAvailableZonesResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 

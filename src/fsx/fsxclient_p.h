@@ -29,7 +29,7 @@ namespace FSx {
 
 class FSxClient;
 
-class QTAWS_EXPORT FSxClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FSxClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     FSxClientPrivate(FSxClient * const q);

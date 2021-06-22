@@ -28,7 +28,7 @@ namespace Amplify {
 
 class ListAppsRequest;
 
-class QTAWS_EXPORT ListAppsRequestPrivate : public AmplifyRequestPrivate {
+class ListAppsRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     ListAppsRequestPrivate(const AmplifyRequest::Action action,

@@ -27,7 +27,7 @@ namespace ApplicationAutoScaling {
 
 class RegisterScalableTargetResponse;
 
-class QTAWS_EXPORT RegisterScalableTargetResponsePrivate : public ApplicationAutoScalingResponsePrivate {
+class RegisterScalableTargetResponsePrivate : public ApplicationAutoScalingResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace Athena {
 
 class AthenaClient;
 
-class QTAWS_EXPORT AthenaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AthenaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AthenaClientPrivate(AthenaClient * const q);

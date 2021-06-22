@@ -27,7 +27,7 @@ namespace EC2 {
 
 class SendDiagnosticInterruptResponse;
 
-class QTAWS_EXPORT SendDiagnosticInterruptResponsePrivate : public Ec2ResponsePrivate {
+class SendDiagnosticInterruptResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ApplicationCostProfiler {
 
 class ImportApplicationUsageRequest;
 
-class QTAWS_EXPORT ImportApplicationUsageRequestPrivate : public ApplicationCostProfilerRequestPrivate {
+class ImportApplicationUsageRequestPrivate : public ApplicationCostProfilerRequestPrivate {
 
 public:
     ImportApplicationUsageRequestPrivate(const ApplicationCostProfilerRequest::Action action,

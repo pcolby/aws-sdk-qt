@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ServiceQuotasResponsePrivate {
+class UntagResourceResponsePrivate : public ServiceQuotasResponsePrivate {
 
 public:
 

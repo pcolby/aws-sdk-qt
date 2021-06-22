@@ -27,7 +27,7 @@ namespace IoT {
 
 class SetDefaultPolicyVersionResponse;
 
-class QTAWS_EXPORT SetDefaultPolicyVersionResponsePrivate : public IoTResponsePrivate {
+class SetDefaultPolicyVersionResponsePrivate : public IoTResponsePrivate {
 
 public:
 

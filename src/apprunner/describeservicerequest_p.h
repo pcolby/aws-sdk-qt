@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class DescribeServiceRequest;
 
-class QTAWS_EXPORT DescribeServiceRequestPrivate : public AppRunnerRequestPrivate {
+class DescribeServiceRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     DescribeServiceRequestPrivate(const AppRunnerRequest::Action action,

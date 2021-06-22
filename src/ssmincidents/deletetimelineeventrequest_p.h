@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class DeleteTimelineEventRequest;
 
-class QTAWS_EXPORT DeleteTimelineEventRequestPrivate : public SSMIncidentsRequestPrivate {
+class DeleteTimelineEventRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     DeleteTimelineEventRequestPrivate(const SSMIncidentsRequest::Action action,

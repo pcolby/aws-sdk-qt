@@ -28,7 +28,7 @@ namespace mgn {
 
 class UpdateReplicationConfigurationRequest;
 
-class QTAWS_EXPORT UpdateReplicationConfigurationRequestPrivate : public mgnRequestPrivate {
+class UpdateReplicationConfigurationRequestPrivate : public mgnRequestPrivate {
 
 public:
     UpdateReplicationConfigurationRequestPrivate(const mgnRequest::Action action,

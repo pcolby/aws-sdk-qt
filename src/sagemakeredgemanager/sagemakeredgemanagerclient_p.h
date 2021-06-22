@@ -29,7 +29,7 @@ namespace SagemakerEdgeManager {
 
 class SagemakerEdgeManagerClient;
 
-class QTAWS_EXPORT SagemakerEdgeManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SagemakerEdgeManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SagemakerEdgeManagerClientPrivate(SagemakerEdgeManagerClient * const q);

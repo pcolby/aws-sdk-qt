@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class CreateDeviceDefinitionRequest;
 
-class QTAWS_EXPORT CreateDeviceDefinitionRequestPrivate : public GreengrassRequestPrivate {
+class CreateDeviceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     CreateDeviceDefinitionRequestPrivate(const GreengrassRequest::Action action,

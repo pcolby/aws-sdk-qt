@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class PutPermissionPolicyRequest;
 
-class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
+class PutPermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     PutPermissionPolicyRequestPrivate(const WAFRegionalRequest::Action action,

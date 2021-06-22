@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DescribeGroupsResponse;
 
-class QTAWS_EXPORT DescribeGroupsResponsePrivate : public WorkDocsResponsePrivate {
+class DescribeGroupsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

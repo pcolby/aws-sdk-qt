@@ -28,7 +28,7 @@ namespace IAM {
 
 class SetSecurityTokenServicePreferencesRequest;
 
-class QTAWS_EXPORT SetSecurityTokenServicePreferencesRequestPrivate : public IamRequestPrivate {
+class SetSecurityTokenServicePreferencesRequestPrivate : public IamRequestPrivate {
 
 public:
     SetSecurityTokenServicePreferencesRequestPrivate(const IamRequest::Action action,

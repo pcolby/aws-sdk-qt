@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public MediaTailorResponsePrivate {
+class ListTagsForResourceResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

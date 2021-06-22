@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public QuickSightRequestPrivate {
+class UntagResourceRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const QuickSightRequest::Action action,

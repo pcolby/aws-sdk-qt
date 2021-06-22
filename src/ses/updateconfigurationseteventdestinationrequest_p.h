@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetEventDestinationRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetEventDestinationRequestPrivate : public SesRequestPrivate {
+class UpdateConfigurationSetEventDestinationRequestPrivate : public SesRequestPrivate {
 
 public:
     UpdateConfigurationSetEventDestinationRequestPrivate(const SesRequest::Action action,

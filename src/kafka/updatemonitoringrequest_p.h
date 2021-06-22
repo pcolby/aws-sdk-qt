@@ -28,7 +28,7 @@ namespace Kafka {
 
 class UpdateMonitoringRequest;
 
-class QTAWS_EXPORT UpdateMonitoringRequestPrivate : public KafkaRequestPrivate {
+class UpdateMonitoringRequestPrivate : public KafkaRequestPrivate {
 
 public:
     UpdateMonitoringRequestPrivate(const KafkaRequest::Action action,

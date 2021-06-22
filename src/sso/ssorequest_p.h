@@ -28,7 +28,7 @@ namespace SSO {
 
 class SsoRequest;
 
-class QTAWS_EXPORT SsoRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsoRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SsoRequest::Action action; ///< SSO action to be performed.

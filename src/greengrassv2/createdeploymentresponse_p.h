@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class CreateDeploymentResponse;
 
-class QTAWS_EXPORT CreateDeploymentResponsePrivate : public GreengrassV2ResponsePrivate {
+class CreateDeploymentResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 

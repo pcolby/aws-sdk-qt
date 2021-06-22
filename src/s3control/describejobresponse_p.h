@@ -27,7 +27,7 @@ namespace S3Control {
 
 class DescribeJobResponse;
 
-class QTAWS_EXPORT DescribeJobResponsePrivate : public S3ControlResponsePrivate {
+class DescribeJobResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

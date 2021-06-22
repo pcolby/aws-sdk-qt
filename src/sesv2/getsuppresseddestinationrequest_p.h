@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetSuppressedDestinationRequest;
 
-class QTAWS_EXPORT GetSuppressedDestinationRequestPrivate : public Sesv2RequestPrivate {
+class GetSuppressedDestinationRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     GetSuppressedDestinationRequestPrivate(const Sesv2Request::Action action,

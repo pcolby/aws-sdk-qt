@@ -29,7 +29,7 @@ namespace WellArchitected {
 
 class WellArchitectedClient;
 
-class QTAWS_EXPORT WellArchitectedClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WellArchitectedClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WellArchitectedClientPrivate(WellArchitectedClient * const q);

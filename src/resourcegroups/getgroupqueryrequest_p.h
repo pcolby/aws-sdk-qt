@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class GetGroupQueryRequest;
 
-class QTAWS_EXPORT GetGroupQueryRequestPrivate : public ResourceGroupsRequestPrivate {
+class GetGroupQueryRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     GetGroupQueryRequestPrivate(const ResourceGroupsRequest::Action action,

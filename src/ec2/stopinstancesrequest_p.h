@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StopInstancesRequest;
 
-class QTAWS_EXPORT StopInstancesRequestPrivate : public Ec2RequestPrivate {
+class StopInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
     StopInstancesRequestPrivate(const Ec2Request::Action action,

@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class DeleteExportRequest;
 
-class QTAWS_EXPORT DeleteExportRequestPrivate : public LexModelsV2RequestPrivate {
+class DeleteExportRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     DeleteExportRequestPrivate(const LexModelsV2Request::Action action,

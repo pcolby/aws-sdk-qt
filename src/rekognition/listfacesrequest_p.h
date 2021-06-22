@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class ListFacesRequest;
 
-class QTAWS_EXPORT ListFacesRequestPrivate : public RekognitionRequestPrivate {
+class ListFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     ListFacesRequestPrivate(const RekognitionRequest::Action action,

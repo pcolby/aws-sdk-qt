@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class TestFailoverResponse;
 
-class QTAWS_EXPORT TestFailoverResponsePrivate : public ElastiCacheResponsePrivate {
+class TestFailoverResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

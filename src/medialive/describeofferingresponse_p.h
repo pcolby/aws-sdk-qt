@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DescribeOfferingResponse;
 
-class QTAWS_EXPORT DescribeOfferingResponsePrivate : public MediaLiveResponsePrivate {
+class DescribeOfferingResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

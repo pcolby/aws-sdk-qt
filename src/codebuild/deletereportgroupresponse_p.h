@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DeleteReportGroupResponse;
 
-class QTAWS_EXPORT DeleteReportGroupResponsePrivate : public CodeBuildResponsePrivate {
+class DeleteReportGroupResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

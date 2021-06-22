@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DescribeInstanceHealthRequest;
 
-class QTAWS_EXPORT DescribeInstanceHealthRequestPrivate : public ElasticLoadBalancingRequestPrivate {
+class DescribeInstanceHealthRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DescribeInstanceHealthRequestPrivate(const ElasticLoadBalancingRequest::Action action,

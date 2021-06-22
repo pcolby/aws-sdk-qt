@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class PinpointEmailResponse;
 
-class QTAWS_EXPORT PinpointEmailResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PinpointEmailResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MediaStoreData {
 
 class DeleteObjectRequest;
 
-class QTAWS_EXPORT DeleteObjectRequestPrivate : public MediaStoreDataRequestPrivate {
+class DeleteObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
     DeleteObjectRequestPrivate(const MediaStoreDataRequest::Action action,

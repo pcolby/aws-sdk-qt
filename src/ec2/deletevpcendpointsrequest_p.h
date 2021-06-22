@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteVpcEndpointsRequest;
 
-class QTAWS_EXPORT DeleteVpcEndpointsRequestPrivate : public Ec2RequestPrivate {
+class DeleteVpcEndpointsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteVpcEndpointsRequestPrivate(const Ec2Request::Action action,

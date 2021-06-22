@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class DeactivatePipelineRequest;
 
-class QTAWS_EXPORT DeactivatePipelineRequestPrivate : public DataPipelineRequestPrivate {
+class DeactivatePipelineRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     DeactivatePipelineRequestPrivate(const DataPipelineRequest::Action action,

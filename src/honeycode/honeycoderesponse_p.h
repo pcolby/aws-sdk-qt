@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class HoneycodeResponse;
 
-class QTAWS_EXPORT HoneycodeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class HoneycodeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

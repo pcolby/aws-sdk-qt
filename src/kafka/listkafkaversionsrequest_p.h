@@ -28,7 +28,7 @@ namespace Kafka {
 
 class ListKafkaVersionsRequest;
 
-class QTAWS_EXPORT ListKafkaVersionsRequestPrivate : public KafkaRequestPrivate {
+class ListKafkaVersionsRequestPrivate : public KafkaRequestPrivate {
 
 public:
     ListKafkaVersionsRequestPrivate(const KafkaRequest::Action action,

@@ -28,7 +28,7 @@ namespace EMR {
 
 class GetManagedScalingPolicyRequest;
 
-class QTAWS_EXPORT GetManagedScalingPolicyRequestPrivate : public EmrRequestPrivate {
+class GetManagedScalingPolicyRequestPrivate : public EmrRequestPrivate {
 
 public:
     GetManagedScalingPolicyRequestPrivate(const EmrRequest::Action action,

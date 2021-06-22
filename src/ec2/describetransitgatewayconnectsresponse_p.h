@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeTransitGatewayConnectsResponse;
 
-class QTAWS_EXPORT DescribeTransitGatewayConnectsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeTransitGatewayConnectsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

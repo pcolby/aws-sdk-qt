@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class CreateProjectRequest;
 
-class QTAWS_EXPORT CreateProjectRequestPrivate : public LookoutforVisionRequestPrivate {
+class CreateProjectRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     CreateProjectRequestPrivate(const LookoutforVisionRequest::Action action,

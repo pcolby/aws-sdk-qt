@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class UntagResourceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const ServiceDiscoveryRequest::Action action,

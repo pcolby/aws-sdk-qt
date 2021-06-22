@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyLaunchTemplateResponse;
 
-class QTAWS_EXPORT ModifyLaunchTemplateResponsePrivate : public Ec2ResponsePrivate {
+class ModifyLaunchTemplateResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

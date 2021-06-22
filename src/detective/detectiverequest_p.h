@@ -28,7 +28,7 @@ namespace Detective {
 
 class DetectiveRequest;
 
-class QTAWS_EXPORT DetectiveRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DetectiveRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DetectiveRequest::Action action; ///< Detective action to be performed.

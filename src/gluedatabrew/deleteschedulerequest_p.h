@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class DeleteScheduleRequest;
 
-class QTAWS_EXPORT DeleteScheduleRequestPrivate : public GlueDataBrewRequestPrivate {
+class DeleteScheduleRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     DeleteScheduleRequestPrivate(const GlueDataBrewRequest::Action action,

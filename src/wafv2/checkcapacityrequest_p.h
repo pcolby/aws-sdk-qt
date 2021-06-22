@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class CheckCapacityRequest;
 
-class QTAWS_EXPORT CheckCapacityRequestPrivate : public Wafv2RequestPrivate {
+class CheckCapacityRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     CheckCapacityRequestPrivate(const Wafv2Request::Action action,

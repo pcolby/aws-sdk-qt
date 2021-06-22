@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class DescribeInstanceAccessControlAttributeConfigurationRequest;
 
-class QTAWS_EXPORT DescribeInstanceAccessControlAttributeConfigurationRequestPrivate : public SSOAdminRequestPrivate {
+class DescribeInstanceAccessControlAttributeConfigurationRequestPrivate : public SSOAdminRequestPrivate {
 
 public:
     DescribeInstanceAccessControlAttributeConfigurationRequestPrivate(const SSOAdminRequest::Action action,

@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DisableGatewayResponse;
 
-class QTAWS_EXPORT DisableGatewayResponsePrivate : public StorageGatewayResponsePrivate {
+class DisableGatewayResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

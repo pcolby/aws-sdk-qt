@@ -28,7 +28,7 @@ namespace Neptune {
 
 class ModifyDBParameterGroupRequest;
 
-class QTAWS_EXPORT ModifyDBParameterGroupRequestPrivate : public NeptuneRequestPrivate {
+class ModifyDBParameterGroupRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     ModifyDBParameterGroupRequestPrivate(const NeptuneRequest::Action action,

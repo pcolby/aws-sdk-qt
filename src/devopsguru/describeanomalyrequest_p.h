@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class DescribeAnomalyRequest;
 
-class QTAWS_EXPORT DescribeAnomalyRequestPrivate : public DevOpsGuruRequestPrivate {
+class DescribeAnomalyRequestPrivate : public DevOpsGuruRequestPrivate {
 
 public:
     DescribeAnomalyRequestPrivate(const DevOpsGuruRequest::Action action,

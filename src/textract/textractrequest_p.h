@@ -28,7 +28,7 @@ namespace Textract {
 
 class TextractRequest;
 
-class QTAWS_EXPORT TextractRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TextractRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TextractRequest::Action action; ///< Textract action to be performed.

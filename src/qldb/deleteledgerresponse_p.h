@@ -27,7 +27,7 @@ namespace QLDB {
 
 class DeleteLedgerResponse;
 
-class QTAWS_EXPORT DeleteLedgerResponsePrivate : public QldbResponsePrivate {
+class DeleteLedgerResponsePrivate : public QldbResponsePrivate {
 
 public:
 

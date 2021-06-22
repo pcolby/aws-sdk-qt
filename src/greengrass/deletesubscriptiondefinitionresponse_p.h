@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class DeleteSubscriptionDefinitionResponse;
 
-class QTAWS_EXPORT DeleteSubscriptionDefinitionResponsePrivate : public GreengrassResponsePrivate {
+class DeleteSubscriptionDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

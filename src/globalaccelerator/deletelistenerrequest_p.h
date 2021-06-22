@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class DeleteListenerRequest;
 
-class QTAWS_EXPORT DeleteListenerRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class DeleteListenerRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     DeleteListenerRequestPrivate(const GlobalAcceleratorRequest::Action action,

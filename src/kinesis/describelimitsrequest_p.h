@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class DescribeLimitsRequest;
 
-class QTAWS_EXPORT DescribeLimitsRequestPrivate : public KinesisRequestPrivate {
+class DescribeLimitsRequestPrivate : public KinesisRequestPrivate {
 
 public:
     DescribeLimitsRequestPrivate(const KinesisRequest::Action action,

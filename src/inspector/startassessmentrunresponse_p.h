@@ -27,7 +27,7 @@ namespace Inspector {
 
 class StartAssessmentRunResponse;
 
-class QTAWS_EXPORT StartAssessmentRunResponsePrivate : public InspectorResponsePrivate {
+class StartAssessmentRunResponsePrivate : public InspectorResponsePrivate {
 
 public:
 

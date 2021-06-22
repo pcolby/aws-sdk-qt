@@ -29,7 +29,7 @@ namespace ACMPCA {
 
 class AcmpcaClient;
 
-class QTAWS_EXPORT AcmpcaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AcmpcaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AcmpcaClientPrivate(AcmpcaClient * const q);

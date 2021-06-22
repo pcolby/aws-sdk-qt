@@ -27,7 +27,7 @@ namespace IoT {
 
 class GetPolicyVersionResponse;
 
-class QTAWS_EXPORT GetPolicyVersionResponsePrivate : public IoTResponsePrivate {
+class GetPolicyVersionResponsePrivate : public IoTResponsePrivate {
 
 public:
 

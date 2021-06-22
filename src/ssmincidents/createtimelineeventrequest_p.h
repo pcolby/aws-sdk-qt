@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class CreateTimelineEventRequest;
 
-class QTAWS_EXPORT CreateTimelineEventRequestPrivate : public SSMIncidentsRequestPrivate {
+class CreateTimelineEventRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     CreateTimelineEventRequestPrivate(const SSMIncidentsRequest::Action action,

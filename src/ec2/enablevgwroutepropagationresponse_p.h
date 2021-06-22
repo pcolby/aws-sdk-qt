@@ -27,7 +27,7 @@ namespace EC2 {
 
 class EnableVgwRoutePropagationResponse;
 
-class QTAWS_EXPORT EnableVgwRoutePropagationResponsePrivate : public Ec2ResponsePrivate {
+class EnableVgwRoutePropagationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

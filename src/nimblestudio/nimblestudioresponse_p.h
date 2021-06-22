@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class NimbleStudioResponse;
 
-class QTAWS_EXPORT NimbleStudioResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class NimbleStudioResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class ValidateConfigurationRequest;
 
-class QTAWS_EXPORT ValidateConfigurationRequestPrivate : public AppConfigRequestPrivate {
+class ValidateConfigurationRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     ValidateConfigurationRequestPrivate(const AppConfigRequest::Action action,

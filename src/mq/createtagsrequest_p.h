@@ -28,7 +28,7 @@ namespace MQ {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public MqRequestPrivate {
+class CreateTagsRequestPrivate : public MqRequestPrivate {
 
 public:
     CreateTagsRequestPrivate(const MqRequest::Action action,

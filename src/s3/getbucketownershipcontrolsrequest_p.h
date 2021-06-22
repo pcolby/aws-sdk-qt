@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketOwnershipControlsRequest;
 
-class QTAWS_EXPORT GetBucketOwnershipControlsRequestPrivate : public S3RequestPrivate {
+class GetBucketOwnershipControlsRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketOwnershipControlsRequestPrivate(const S3Request::Action action,

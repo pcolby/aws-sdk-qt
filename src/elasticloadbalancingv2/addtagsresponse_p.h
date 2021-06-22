@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class AddTagsResponse;
 
-class QTAWS_EXPORT AddTagsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+class AddTagsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
 
 public:
 

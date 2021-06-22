@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class GetThingShadowRequest;
 
-class QTAWS_EXPORT GetThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
+class GetThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
     GetThingShadowRequestPrivate(const IoTDataPlaneRequest::Action action,

@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetRequestValidatorsRequest;
 
-class QTAWS_EXPORT GetRequestValidatorsRequestPrivate : public APIGatewayRequestPrivate {
+class GetRequestValidatorsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetRequestValidatorsRequestPrivate(const APIGatewayRequest::Action action,

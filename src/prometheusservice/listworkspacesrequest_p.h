@@ -28,7 +28,7 @@ namespace PrometheusService {
 
 class ListWorkspacesRequest;
 
-class QTAWS_EXPORT ListWorkspacesRequestPrivate : public PrometheusServiceRequestPrivate {
+class ListWorkspacesRequestPrivate : public PrometheusServiceRequestPrivate {
 
 public:
     ListWorkspacesRequestPrivate(const PrometheusServiceRequest::Action action,

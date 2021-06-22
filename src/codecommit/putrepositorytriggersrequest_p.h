@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class PutRepositoryTriggersRequest;
 
-class QTAWS_EXPORT PutRepositoryTriggersRequestPrivate : public CodeCommitRequestPrivate {
+class PutRepositoryTriggersRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     PutRepositoryTriggersRequestPrivate(const CodeCommitRequest::Action action,

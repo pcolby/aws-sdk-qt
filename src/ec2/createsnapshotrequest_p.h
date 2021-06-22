@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateSnapshotRequest;
 
-class QTAWS_EXPORT CreateSnapshotRequestPrivate : public Ec2RequestPrivate {
+class CreateSnapshotRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateSnapshotRequestPrivate(const Ec2Request::Action action,

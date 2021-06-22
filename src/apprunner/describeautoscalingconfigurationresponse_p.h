@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DescribeAutoScalingConfigurationResponse;
 
-class QTAWS_EXPORT DescribeAutoScalingConfigurationResponsePrivate : public AppRunnerResponsePrivate {
+class DescribeAutoScalingConfigurationResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

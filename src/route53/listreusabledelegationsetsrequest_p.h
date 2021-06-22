@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ListReusableDelegationSetsRequest;
 
-class QTAWS_EXPORT ListReusableDelegationSetsRequestPrivate : public Route53RequestPrivate {
+class ListReusableDelegationSetsRequestPrivate : public Route53RequestPrivate {
 
 public:
     ListReusableDelegationSetsRequestPrivate(const Route53Request::Action action,

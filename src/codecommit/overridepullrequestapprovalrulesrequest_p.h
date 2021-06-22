@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class OverridePullRequestApprovalRulesRequest;
 
-class QTAWS_EXPORT OverridePullRequestApprovalRulesRequestPrivate : public CodeCommitRequestPrivate {
+class OverridePullRequestApprovalRulesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     OverridePullRequestApprovalRulesRequestPrivate(const CodeCommitRequest::Action action,

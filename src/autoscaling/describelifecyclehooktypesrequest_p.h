@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribeLifecycleHookTypesRequest;
 
-class QTAWS_EXPORT DescribeLifecycleHookTypesRequestPrivate : public AutoScalingRequestPrivate {
+class DescribeLifecycleHookTypesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DescribeLifecycleHookTypesRequestPrivate(const AutoScalingRequest::Action action,

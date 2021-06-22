@@ -28,7 +28,7 @@ namespace Connect {
 
 class CreateIntegrationAssociationRequest;
 
-class QTAWS_EXPORT CreateIntegrationAssociationRequestPrivate : public ConnectRequestPrivate {
+class CreateIntegrationAssociationRequestPrivate : public ConnectRequestPrivate {
 
 public:
     CreateIntegrationAssociationRequestPrivate(const ConnectRequest::Action action,

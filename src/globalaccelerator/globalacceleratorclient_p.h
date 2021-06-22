@@ -29,7 +29,7 @@ namespace GlobalAccelerator {
 
 class GlobalAcceleratorClient;
 
-class QTAWS_EXPORT GlobalAcceleratorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GlobalAcceleratorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GlobalAcceleratorClientPrivate(GlobalAcceleratorClient * const q);

@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class CompleteMigrationRequest;
 
-class QTAWS_EXPORT CompleteMigrationRequestPrivate : public ElastiCacheRequestPrivate {
+class CompleteMigrationRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     CompleteMigrationRequestPrivate(const ElastiCacheRequest::Action action,

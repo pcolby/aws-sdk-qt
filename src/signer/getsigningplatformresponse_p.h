@@ -27,7 +27,7 @@ namespace signer {
 
 class GetSigningPlatformResponse;
 
-class QTAWS_EXPORT GetSigningPlatformResponsePrivate : public signerResponsePrivate {
+class GetSigningPlatformResponsePrivate : public signerResponsePrivate {
 
 public:
 

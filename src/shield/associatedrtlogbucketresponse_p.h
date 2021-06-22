@@ -27,7 +27,7 @@ namespace Shield {
 
 class AssociateDRTLogBucketResponse;
 
-class QTAWS_EXPORT AssociateDRTLogBucketResponsePrivate : public ShieldResponsePrivate {
+class AssociateDRTLogBucketResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

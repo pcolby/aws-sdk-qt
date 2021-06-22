@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class GetContentModerationResponse;
 
-class QTAWS_EXPORT GetContentModerationResponsePrivate : public RekognitionResponsePrivate {
+class GetContentModerationResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

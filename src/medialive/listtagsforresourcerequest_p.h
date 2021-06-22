@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public MediaLiveRequestPrivate {
+class ListTagsForResourceRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const MediaLiveRequest::Action action,

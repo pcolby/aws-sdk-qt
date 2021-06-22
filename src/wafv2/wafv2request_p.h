@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class Wafv2Request;
 
-class QTAWS_EXPORT Wafv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Wafv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Wafv2Request::Action action; ///< WAFV2 action to be performed.

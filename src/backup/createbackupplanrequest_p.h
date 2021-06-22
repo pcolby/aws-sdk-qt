@@ -28,7 +28,7 @@ namespace Backup {
 
 class CreateBackupPlanRequest;
 
-class QTAWS_EXPORT CreateBackupPlanRequestPrivate : public BackupRequestPrivate {
+class CreateBackupPlanRequestPrivate : public BackupRequestPrivate {
 
 public:
     CreateBackupPlanRequestPrivate(const BackupRequest::Action action,

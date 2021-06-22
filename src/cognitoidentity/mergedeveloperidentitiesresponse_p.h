@@ -27,7 +27,7 @@ namespace CognitoIdentity {
 
 class MergeDeveloperIdentitiesResponse;
 
-class QTAWS_EXPORT MergeDeveloperIdentitiesResponsePrivate : public CognitoIdentityResponsePrivate {
+class MergeDeveloperIdentitiesResponsePrivate : public CognitoIdentityResponsePrivate {
 
 public:
 

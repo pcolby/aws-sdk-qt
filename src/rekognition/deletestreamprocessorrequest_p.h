@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DeleteStreamProcessorRequest;
 
-class QTAWS_EXPORT DeleteStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
+class DeleteStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DeleteStreamProcessorRequestPrivate(const RekognitionRequest::Action action,

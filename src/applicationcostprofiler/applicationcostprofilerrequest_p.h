@@ -28,7 +28,7 @@ namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerRequest;
 
-class QTAWS_EXPORT ApplicationCostProfilerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApplicationCostProfilerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApplicationCostProfilerRequest::Action action; ///< ApplicationCostProfiler action to be performed.

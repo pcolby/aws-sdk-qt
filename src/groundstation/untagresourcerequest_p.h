@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public GroundStationRequestPrivate {
+class UntagResourceRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const GroundStationRequest::Action action,

@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class SetLocalConsolePasswordRequest;
 
-class QTAWS_EXPORT SetLocalConsolePasswordRequestPrivate : public StorageGatewayRequestPrivate {
+class SetLocalConsolePasswordRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     SetLocalConsolePasswordRequestPrivate(const StorageGatewayRequest::Action action,

@@ -28,7 +28,7 @@ namespace Personalize {
 
 class PersonalizeRequest;
 
-class QTAWS_EXPORT PersonalizeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PersonalizeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PersonalizeRequest::Action action; ///< Personalize action to be performed.

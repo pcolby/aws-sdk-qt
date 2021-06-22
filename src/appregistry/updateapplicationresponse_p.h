@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class UpdateApplicationResponse;
 
-class QTAWS_EXPORT UpdateApplicationResponsePrivate : public AppRegistryResponsePrivate {
+class UpdateApplicationResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 

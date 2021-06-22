@@ -27,7 +27,7 @@ namespace SSO {
 
 class GetRoleCredentialsResponse;
 
-class QTAWS_EXPORT GetRoleCredentialsResponsePrivate : public SsoResponsePrivate {
+class GetRoleCredentialsResponsePrivate : public SsoResponsePrivate {
 
 public:
 

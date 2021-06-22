@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateScheduledActionRequest;
 
-class QTAWS_EXPORT CreateScheduledActionRequestPrivate : public RedshiftRequestPrivate {
+class CreateScheduledActionRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     CreateScheduledActionRequestPrivate(const RedshiftRequest::Action action,

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class CodeDeployRequest;
 
-class QTAWS_EXPORT CodeDeployRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeDeployRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeDeployRequest::Action action; ///< CodeDeploy action to be performed.

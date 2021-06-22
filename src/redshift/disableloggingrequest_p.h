@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DisableLoggingRequest;
 
-class QTAWS_EXPORT DisableLoggingRequestPrivate : public RedshiftRequestPrivate {
+class DisableLoggingRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DisableLoggingRequestPrivate(const RedshiftRequest::Action action,

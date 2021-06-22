@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class StopSentimentDetectionJobResponse;
 
-class QTAWS_EXPORT StopSentimentDetectionJobResponsePrivate : public ComprehendResponsePrivate {
+class StopSentimentDetectionJobResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

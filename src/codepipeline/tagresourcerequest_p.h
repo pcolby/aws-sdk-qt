@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CodePipelineRequestPrivate {
+class TagResourceRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CodePipelineRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class BatchPutMessageRequest;
 
-class QTAWS_EXPORT BatchPutMessageRequestPrivate : public IoTAnalyticsRequestPrivate {
+class BatchPutMessageRequestPrivate : public IoTAnalyticsRequestPrivate {
 
 public:
     BatchPutMessageRequestPrivate(const IoTAnalyticsRequest::Action action,

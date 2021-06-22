@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteDataSourceRequest;
 
-class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public AppSyncRequestPrivate {
+class DeleteDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     DeleteDataSourceRequestPrivate(const AppSyncRequest::Action action,

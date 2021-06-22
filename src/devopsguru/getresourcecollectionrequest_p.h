@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class GetResourceCollectionRequest;
 
-class QTAWS_EXPORT GetResourceCollectionRequestPrivate : public DevOpsGuruRequestPrivate {
+class GetResourceCollectionRequestPrivate : public DevOpsGuruRequestPrivate {
 
 public:
     GetResourceCollectionRequestPrivate(const DevOpsGuruRequest::Action action,

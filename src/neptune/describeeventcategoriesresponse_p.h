@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribeEventCategoriesResponse;
 
-class QTAWS_EXPORT DescribeEventCategoriesResponsePrivate : public NeptuneResponsePrivate {
+class DescribeEventCategoriesResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

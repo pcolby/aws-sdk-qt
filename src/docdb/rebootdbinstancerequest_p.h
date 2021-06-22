@@ -28,7 +28,7 @@ namespace DocDB {
 
 class RebootDBInstanceRequest;
 
-class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public DocDBRequestPrivate {
+class RebootDBInstanceRequestPrivate : public DocDBRequestPrivate {
 
 public:
     RebootDBInstanceRequestPrivate(const DocDBRequest::Action action,

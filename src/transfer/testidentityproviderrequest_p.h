@@ -28,7 +28,7 @@ namespace Transfer {
 
 class TestIdentityProviderRequest;
 
-class QTAWS_EXPORT TestIdentityProviderRequestPrivate : public TransferRequestPrivate {
+class TestIdentityProviderRequestPrivate : public TransferRequestPrivate {
 
 public:
     TestIdentityProviderRequestPrivate(const TransferRequest::Action action,

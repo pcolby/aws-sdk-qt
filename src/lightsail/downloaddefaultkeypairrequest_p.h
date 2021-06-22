@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DownloadDefaultKeyPairRequest;
 
-class QTAWS_EXPORT DownloadDefaultKeyPairRequestPrivate : public LightsailRequestPrivate {
+class DownloadDefaultKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DownloadDefaultKeyPairRequestPrivate(const LightsailRequest::Action action,

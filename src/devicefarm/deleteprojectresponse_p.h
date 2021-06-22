@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteProjectResponse;
 
-class QTAWS_EXPORT DeleteProjectResponsePrivate : public DeviceFarmResponsePrivate {
+class DeleteProjectResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

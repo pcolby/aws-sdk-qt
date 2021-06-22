@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeleteNotificationConfigurationRequest;
 
-class QTAWS_EXPORT DeleteNotificationConfigurationRequestPrivate : public AutoScalingRequestPrivate {
+class DeleteNotificationConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeleteNotificationConfigurationRequestPrivate(const AutoScalingRequest::Action action,

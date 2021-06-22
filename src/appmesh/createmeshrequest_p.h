@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class CreateMeshRequest;
 
-class QTAWS_EXPORT CreateMeshRequestPrivate : public AppMeshRequestPrivate {
+class CreateMeshRequestPrivate : public AppMeshRequestPrivate {
 
 public:
     CreateMeshRequestPrivate(const AppMeshRequest::Action action,

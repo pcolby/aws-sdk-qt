@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class CustomerProfilesRequest;
 
-class QTAWS_EXPORT CustomerProfilesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CustomerProfilesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CustomerProfilesRequest::Action action; ///< CustomerProfiles action to be performed.

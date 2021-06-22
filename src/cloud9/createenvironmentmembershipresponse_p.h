@@ -27,7 +27,7 @@ namespace Cloud9 {
 
 class CreateEnvironmentMembershipResponse;
 
-class QTAWS_EXPORT CreateEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate {
+class CreateEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 

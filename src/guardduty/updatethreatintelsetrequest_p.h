@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class UpdateThreatIntelSetRequest;
 
-class QTAWS_EXPORT UpdateThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
+class UpdateThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     UpdateThreatIntelSetRequestPrivate(const GuardDutyRequest::Action action,

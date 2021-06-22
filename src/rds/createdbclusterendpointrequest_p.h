@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBClusterEndpointRequest;
 
-class QTAWS_EXPORT CreateDBClusterEndpointRequestPrivate : public RdsRequestPrivate {
+class CreateDBClusterEndpointRequestPrivate : public RdsRequestPrivate {
 
 public:
     CreateDBClusterEndpointRequestPrivate(const RdsRequest::Action action,

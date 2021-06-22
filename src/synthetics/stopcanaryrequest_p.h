@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class StopCanaryRequest;
 
-class QTAWS_EXPORT StopCanaryRequestPrivate : public SyntheticsRequestPrivate {
+class StopCanaryRequestPrivate : public SyntheticsRequestPrivate {
 
 public:
     StopCanaryRequestPrivate(const SyntheticsRequest::Action action,

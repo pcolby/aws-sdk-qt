@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DeleteDocumentClassifierRequest;
 
-class QTAWS_EXPORT DeleteDocumentClassifierRequestPrivate : public ComprehendRequestPrivate {
+class DeleteDocumentClassifierRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     DeleteDocumentClassifierRequestPrivate(const ComprehendRequest::Action action,

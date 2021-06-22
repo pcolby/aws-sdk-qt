@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListTestGridSessionArtifactsResponse;
 
-class QTAWS_EXPORT ListTestGridSessionArtifactsResponsePrivate : public DeviceFarmResponsePrivate {
+class ListTestGridSessionArtifactsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ECR {
 
 class BatchCheckLayerAvailabilityRequest;
 
-class QTAWS_EXPORT BatchCheckLayerAvailabilityRequestPrivate : public EcrRequestPrivate {
+class BatchCheckLayerAvailabilityRequestPrivate : public EcrRequestPrivate {
 
 public:
     BatchCheckLayerAvailabilityRequestPrivate(const EcrRequest::Action action,

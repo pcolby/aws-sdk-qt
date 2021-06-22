@@ -28,7 +28,7 @@ namespace SSM {
 
 class LabelParameterVersionRequest;
 
-class QTAWS_EXPORT LabelParameterVersionRequestPrivate : public SsmRequestPrivate {
+class LabelParameterVersionRequestPrivate : public SsmRequestPrivate {
 
 public:
     LabelParameterVersionRequestPrivate(const SsmRequest::Action action,

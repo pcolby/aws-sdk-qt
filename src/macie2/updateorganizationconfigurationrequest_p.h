@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class UpdateOrganizationConfigurationRequest;
 
-class QTAWS_EXPORT UpdateOrganizationConfigurationRequestPrivate : public Macie2RequestPrivate {
+class UpdateOrganizationConfigurationRequestPrivate : public Macie2RequestPrivate {
 
 public:
     UpdateOrganizationConfigurationRequestPrivate(const Macie2Request::Action action,

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class AcceptAdministratorInvitationRequest;
 
-class QTAWS_EXPORT AcceptAdministratorInvitationRequestPrivate : public SecurityHubRequestPrivate {
+class AcceptAdministratorInvitationRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     AcceptAdministratorInvitationRequestPrivate(const SecurityHubRequest::Action action,

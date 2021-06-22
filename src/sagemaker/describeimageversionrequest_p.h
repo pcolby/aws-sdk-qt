@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeImageVersionRequest;
 
-class QTAWS_EXPORT DescribeImageVersionRequestPrivate : public SageMakerRequestPrivate {
+class DescribeImageVersionRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeImageVersionRequestPrivate(const SageMakerRequest::Action action,

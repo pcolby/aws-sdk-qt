@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class ResetUserPasswordRequest;
 
-class QTAWS_EXPORT ResetUserPasswordRequestPrivate : public DirectoryServiceRequestPrivate {
+class ResetUserPasswordRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     ResetUserPasswordRequestPrivate(const DirectoryServiceRequest::Action action,

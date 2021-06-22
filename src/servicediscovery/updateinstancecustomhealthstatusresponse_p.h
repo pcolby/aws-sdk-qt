@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class UpdateInstanceCustomHealthStatusResponse;
 
-class QTAWS_EXPORT UpdateInstanceCustomHealthStatusResponsePrivate : public ServiceDiscoveryResponsePrivate {
+class UpdateInstanceCustomHealthStatusResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 

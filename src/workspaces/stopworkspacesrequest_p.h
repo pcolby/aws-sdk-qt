@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class StopWorkspacesRequest;
 
-class QTAWS_EXPORT StopWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
+class StopWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     StopWorkspacesRequestPrivate(const WorkSpacesRequest::Action action,

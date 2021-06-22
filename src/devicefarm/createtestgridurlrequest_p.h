@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateTestGridUrlRequest;
 
-class QTAWS_EXPORT CreateTestGridUrlRequestPrivate : public DeviceFarmRequestPrivate {
+class CreateTestGridUrlRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     CreateTestGridUrlRequestPrivate(const DeviceFarmRequest::Action action,

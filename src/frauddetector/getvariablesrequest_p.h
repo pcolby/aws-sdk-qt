@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class GetVariablesRequest;
 
-class QTAWS_EXPORT GetVariablesRequestPrivate : public FraudDetectorRequestPrivate {
+class GetVariablesRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     GetVariablesRequestPrivate(const FraudDetectorRequest::Action action,

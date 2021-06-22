@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateDomainRequest;
 
-class QTAWS_EXPORT UpdateDomainRequestPrivate : public SageMakerRequestPrivate {
+class UpdateDomainRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     UpdateDomainRequestPrivate(const SageMakerRequest::Action action,

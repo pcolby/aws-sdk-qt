@@ -28,7 +28,7 @@ namespace ConnectParticipant {
 
 class GetAttachmentRequest;
 
-class QTAWS_EXPORT GetAttachmentRequestPrivate : public ConnectParticipantRequestPrivate {
+class GetAttachmentRequestPrivate : public ConnectParticipantRequestPrivate {
 
 public:
     GetAttachmentRequestPrivate(const ConnectParticipantRequest::Action action,

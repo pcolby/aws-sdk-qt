@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class CreateVariableRequest;
 
-class QTAWS_EXPORT CreateVariableRequestPrivate : public FraudDetectorRequestPrivate {
+class CreateVariableRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     CreateVariableRequestPrivate(const FraudDetectorRequest::Action action,

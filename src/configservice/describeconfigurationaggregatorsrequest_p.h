@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeConfigurationAggregatorsRequest;
 
-class QTAWS_EXPORT DescribeConfigurationAggregatorsRequestPrivate : public ConfigServiceRequestPrivate {
+class DescribeConfigurationAggregatorsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeConfigurationAggregatorsRequestPrivate(const ConfigServiceRequest::Action action,

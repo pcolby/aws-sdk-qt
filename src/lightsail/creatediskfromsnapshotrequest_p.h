@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateDiskFromSnapshotRequest;
 
-class QTAWS_EXPORT CreateDiskFromSnapshotRequestPrivate : public LightsailRequestPrivate {
+class CreateDiskFromSnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CreateDiskFromSnapshotRequestPrivate(const LightsailRequest::Action action,

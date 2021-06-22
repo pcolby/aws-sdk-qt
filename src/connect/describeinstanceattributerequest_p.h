@@ -28,7 +28,7 @@ namespace Connect {
 
 class DescribeInstanceAttributeRequest;
 
-class QTAWS_EXPORT DescribeInstanceAttributeRequestPrivate : public ConnectRequestPrivate {
+class DescribeInstanceAttributeRequestPrivate : public ConnectRequestPrivate {
 
 public:
     DescribeInstanceAttributeRequestPrivate(const ConnectRequest::Action action,

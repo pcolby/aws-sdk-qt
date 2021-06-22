@@ -28,7 +28,7 @@ namespace EFS {
 
 class PutAccountPreferencesRequest;
 
-class QTAWS_EXPORT PutAccountPreferencesRequestPrivate : public EfsRequestPrivate {
+class PutAccountPreferencesRequestPrivate : public EfsRequestPrivate {
 
 public:
     PutAccountPreferencesRequestPrivate(const EfsRequest::Action action,

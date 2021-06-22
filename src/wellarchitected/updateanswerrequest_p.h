@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class UpdateAnswerRequest;
 
-class QTAWS_EXPORT UpdateAnswerRequestPrivate : public WellArchitectedRequestPrivate {
+class UpdateAnswerRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     UpdateAnswerRequestPrivate(const WellArchitectedRequest::Action action,

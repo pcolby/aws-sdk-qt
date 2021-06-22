@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class BatchGetReportGroupsRequest;
 
-class QTAWS_EXPORT BatchGetReportGroupsRequestPrivate : public CodeBuildRequestPrivate {
+class BatchGetReportGroupsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     BatchGetReportGroupsRequestPrivate(const CodeBuildRequest::Action action,

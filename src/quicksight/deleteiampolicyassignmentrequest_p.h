@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DeleteIAMPolicyAssignmentRequest;
 
-class QTAWS_EXPORT DeleteIAMPolicyAssignmentRequestPrivate : public QuickSightRequestPrivate {
+class DeleteIAMPolicyAssignmentRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DeleteIAMPolicyAssignmentRequestPrivate(const QuickSightRequest::Action action,

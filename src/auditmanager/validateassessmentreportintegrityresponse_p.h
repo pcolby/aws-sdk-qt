@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class ValidateAssessmentReportIntegrityResponse;
 
-class QTAWS_EXPORT ValidateAssessmentReportIntegrityResponsePrivate : public AuditManagerResponsePrivate {
+class ValidateAssessmentReportIntegrityResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateBaiduChannelRequest;
 
-class QTAWS_EXPORT UpdateBaiduChannelRequestPrivate : public PinpointRequestPrivate {
+class UpdateBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateBaiduChannelRequestPrivate(const PinpointRequest::Action action,

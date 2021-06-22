@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetConfigurationSetRequest;
 
-class QTAWS_EXPORT GetConfigurationSetRequestPrivate : public Sesv2RequestPrivate {
+class GetConfigurationSetRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     GetConfigurationSetRequestPrivate(const Sesv2Request::Action action,

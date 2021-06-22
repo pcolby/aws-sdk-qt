@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteCapacityProviderRequest;
 
-class QTAWS_EXPORT DeleteCapacityProviderRequestPrivate : public EcsRequestPrivate {
+class DeleteCapacityProviderRequestPrivate : public EcsRequestPrivate {
 
 public:
     DeleteCapacityProviderRequestPrivate(const EcsRequest::Action action,

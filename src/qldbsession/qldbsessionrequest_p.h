@@ -28,7 +28,7 @@ namespace QLDBSession {
 
 class QLDBSessionRequest;
 
-class QTAWS_EXPORT QLDBSessionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QLDBSessionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     QLDBSessionRequest::Action action; ///< QLDBSession action to be performed.

@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetReservationUtilizationRequest;
 
-class QTAWS_EXPORT GetReservationUtilizationRequestPrivate : public CostExplorerRequestPrivate {
+class GetReservationUtilizationRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetReservationUtilizationRequestPrivate(const CostExplorerRequest::Action action,

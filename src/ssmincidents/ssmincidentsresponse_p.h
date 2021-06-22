@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class SSMIncidentsResponse;
 
-class QTAWS_EXPORT SSMIncidentsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SSMIncidentsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

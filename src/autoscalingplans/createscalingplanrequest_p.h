@@ -28,7 +28,7 @@ namespace AutoScalingPlans {
 
 class CreateScalingPlanRequest;
 
-class QTAWS_EXPORT CreateScalingPlanRequestPrivate : public AutoScalingPlansRequestPrivate {
+class CreateScalingPlanRequestPrivate : public AutoScalingPlansRequestPrivate {
 
 public:
     CreateScalingPlanRequestPrivate(const AutoScalingPlansRequest::Action action,

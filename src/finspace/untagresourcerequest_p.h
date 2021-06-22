@@ -28,7 +28,7 @@ namespace finspace {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public finspaceRequestPrivate {
+class UntagResourceRequestPrivate : public finspaceRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const finspaceRequest::Action action,

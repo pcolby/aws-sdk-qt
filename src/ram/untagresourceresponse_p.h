@@ -27,7 +27,7 @@ namespace RAM {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public RamResponsePrivate {
+class UntagResourceResponsePrivate : public RamResponsePrivate {
 
 public:
 

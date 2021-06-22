@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeTrialComponentRequest;
 
-class QTAWS_EXPORT DescribeTrialComponentRequestPrivate : public SageMakerRequestPrivate {
+class DescribeTrialComponentRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeTrialComponentRequestPrivate(const SageMakerRequest::Action action,

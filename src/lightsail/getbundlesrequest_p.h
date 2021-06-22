@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetBundlesRequest;
 
-class QTAWS_EXPORT GetBundlesRequestPrivate : public LightsailRequestPrivate {
+class GetBundlesRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetBundlesRequestPrivate(const LightsailRequest::Action action,

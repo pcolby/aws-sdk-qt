@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class DeleteAttributeGroupRequest;
 
-class QTAWS_EXPORT DeleteAttributeGroupRequestPrivate : public AppRegistryRequestPrivate {
+class DeleteAttributeGroupRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     DeleteAttributeGroupRequestPrivate(const AppRegistryRequest::Action action,

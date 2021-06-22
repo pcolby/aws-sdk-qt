@@ -34,7 +34,7 @@ namespace Core {
 
 class AwsSignatureV3;
 
-class QTAWS_EXPORT AwsSignatureV3Private : public AwsAbstractSignaturePrivate {
+class AwsSignatureV3Private : public AwsAbstractSignaturePrivate {
 
 public:
     AwsSignatureV3Private(const QCryptographicHash::Algorithm hashAlgorithm, AwsSignatureV3 * const q);

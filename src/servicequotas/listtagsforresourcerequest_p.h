@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ServiceQuotasRequestPrivate {
+class ListTagsForResourceRequestPrivate : public ServiceQuotasRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const ServiceQuotasRequest::Action action,

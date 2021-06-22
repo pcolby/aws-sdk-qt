@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ResetCacheParameterGroupRequest;
 
-class QTAWS_EXPORT ResetCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
+class ResetCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ResetCacheParameterGroupRequestPrivate(const ElastiCacheRequest::Action action,

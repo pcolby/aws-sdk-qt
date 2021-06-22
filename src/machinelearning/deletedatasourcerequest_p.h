@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteDataSourceRequest;
 
-class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public MachineLearningRequestPrivate {
+class DeleteDataSourceRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteDataSourceRequestPrivate(const MachineLearningRequest::Action action,

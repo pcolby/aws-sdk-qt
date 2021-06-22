@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class GetOpenIdTokenRequest;
 
-class QTAWS_EXPORT GetOpenIdTokenRequestPrivate : public CognitoIdentityRequestPrivate {
+class GetOpenIdTokenRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     GetOpenIdTokenRequestPrivate(const CognitoIdentityRequest::Action action,

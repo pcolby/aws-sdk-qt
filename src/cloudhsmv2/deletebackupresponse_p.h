@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class DeleteBackupResponse;
 
-class QTAWS_EXPORT DeleteBackupResponsePrivate : public CloudHSMV2ResponsePrivate {
+class DeleteBackupResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 

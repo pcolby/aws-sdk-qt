@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class ListApplicationsRequest;
 
-class QTAWS_EXPORT ListApplicationsRequestPrivate : public AppConfigRequestPrivate {
+class ListApplicationsRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     ListApplicationsRequestPrivate(const AppConfigRequest::Action action,

@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class RemoveBackendConfigResponse;
 
-class QTAWS_EXPORT RemoveBackendConfigResponsePrivate : public AmplifyBackendResponsePrivate {
+class RemoveBackendConfigResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 

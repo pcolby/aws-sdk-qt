@@ -28,7 +28,7 @@ namespace Proton {
 
 class UpdateEnvironmentTemplateVersionRequest;
 
-class QTAWS_EXPORT UpdateEnvironmentTemplateVersionRequestPrivate : public ProtonRequestPrivate {
+class UpdateEnvironmentTemplateVersionRequestPrivate : public ProtonRequestPrivate {
 
 public:
     UpdateEnvironmentTemplateVersionRequestPrivate(const ProtonRequest::Action action,

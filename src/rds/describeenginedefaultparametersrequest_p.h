@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeEngineDefaultParametersRequest;
 
-class QTAWS_EXPORT DescribeEngineDefaultParametersRequestPrivate : public RdsRequestPrivate {
+class DescribeEngineDefaultParametersRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeEngineDefaultParametersRequestPrivate(const RdsRequest::Action action,

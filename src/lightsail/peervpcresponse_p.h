@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class PeerVpcResponse;
 
-class QTAWS_EXPORT PeerVpcResponsePrivate : public LightsailResponsePrivate {
+class PeerVpcResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

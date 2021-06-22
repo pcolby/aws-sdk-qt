@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class DeleteStreamingSessionRequest;
 
-class QTAWS_EXPORT DeleteStreamingSessionRequestPrivate : public NimbleStudioRequestPrivate {
+class DeleteStreamingSessionRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     DeleteStreamingSessionRequestPrivate(const NimbleStudioRequest::Action action,

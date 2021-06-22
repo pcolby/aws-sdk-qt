@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class StartMaintenanceRequest;
 
-class QTAWS_EXPORT StartMaintenanceRequestPrivate : public OpsWorksCMRequestPrivate {
+class StartMaintenanceRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     StartMaintenanceRequestPrivate(const OpsWorksCMRequest::Action action,

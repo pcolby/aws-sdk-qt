@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetConnectionStatusResponse;
 
-class QTAWS_EXPORT GetConnectionStatusResponsePrivate : public SsmResponsePrivate {
+class GetConnectionStatusResponsePrivate : public SsmResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetDataCatalogEncryptionSettingsRequest;
 
-class QTAWS_EXPORT GetDataCatalogEncryptionSettingsRequestPrivate : public GlueRequestPrivate {
+class GetDataCatalogEncryptionSettingsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetDataCatalogEncryptionSettingsRequestPrivate(const GlueRequest::Action action,

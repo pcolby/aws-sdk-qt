@@ -29,7 +29,7 @@ namespace MarketplaceMetering {
 
 class MarketplaceMeteringClient;
 
-class QTAWS_EXPORT MarketplaceMeteringClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MarketplaceMeteringClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q);

@@ -29,7 +29,7 @@ namespace GlueDataBrew {
 
 class GlueDataBrewClient;
 
-class QTAWS_EXPORT GlueDataBrewClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GlueDataBrewClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GlueDataBrewClientPrivate(GlueDataBrewClient * const q);

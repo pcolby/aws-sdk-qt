@@ -29,7 +29,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClient;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MarketplaceCommerceAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q);

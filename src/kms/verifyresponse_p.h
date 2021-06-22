@@ -27,7 +27,7 @@ namespace KMS {
 
 class VerifyResponse;
 
-class QTAWS_EXPORT VerifyResponsePrivate : public KmsResponsePrivate {
+class VerifyResponsePrivate : public KmsResponsePrivate {
 
 public:
 

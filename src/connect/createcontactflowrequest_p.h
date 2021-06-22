@@ -28,7 +28,7 @@ namespace Connect {
 
 class CreateContactFlowRequest;
 
-class QTAWS_EXPORT CreateContactFlowRequestPrivate : public ConnectRequestPrivate {
+class CreateContactFlowRequestPrivate : public ConnectRequestPrivate {
 
 public:
     CreateContactFlowRequestPrivate(const ConnectRequest::Action action,

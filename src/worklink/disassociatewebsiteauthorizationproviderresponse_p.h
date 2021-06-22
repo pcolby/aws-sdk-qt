@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class DisassociateWebsiteAuthorizationProviderResponse;
 
-class QTAWS_EXPORT DisassociateWebsiteAuthorizationProviderResponsePrivate : public WorkLinkResponsePrivate {
+class DisassociateWebsiteAuthorizationProviderResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

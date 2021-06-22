@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteUserRequest;
 
-class QTAWS_EXPORT DeleteUserRequestPrivate : public WorkDocsRequestPrivate {
+class DeleteUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DeleteUserRequestPrivate(const WorkDocsRequest::Action action,

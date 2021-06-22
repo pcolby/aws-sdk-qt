@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public NimbleStudioRequestPrivate {
+class UntagResourceRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const NimbleStudioRequest::Action action,

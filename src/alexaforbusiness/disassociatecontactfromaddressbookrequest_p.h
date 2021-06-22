@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DisassociateContactFromAddressBookRequest;
 
-class QTAWS_EXPORT DisassociateContactFromAddressBookRequestPrivate : public AlexaForBusinessRequestPrivate {
+class DisassociateContactFromAddressBookRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DisassociateContactFromAddressBookRequestPrivate(const AlexaForBusinessRequest::Action action,

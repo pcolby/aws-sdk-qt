@@ -28,7 +28,7 @@ namespace Shield {
 
 class UpdateEmergencyContactSettingsRequest;
 
-class QTAWS_EXPORT UpdateEmergencyContactSettingsRequestPrivate : public ShieldRequestPrivate {
+class UpdateEmergencyContactSettingsRequestPrivate : public ShieldRequestPrivate {
 
 public:
     UpdateEmergencyContactSettingsRequestPrivate(const ShieldRequest::Action action,

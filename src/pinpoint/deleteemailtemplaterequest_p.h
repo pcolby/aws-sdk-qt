@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteEmailTemplateRequest;
 
-class QTAWS_EXPORT DeleteEmailTemplateRequestPrivate : public PinpointRequestPrivate {
+class DeleteEmailTemplateRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteEmailTemplateRequestPrivate(const PinpointRequest::Action action,

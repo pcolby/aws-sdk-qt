@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class DetectCustomLabelsResponse;
 
-class QTAWS_EXPORT DetectCustomLabelsResponsePrivate : public RekognitionResponsePrivate {
+class DetectCustomLabelsResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

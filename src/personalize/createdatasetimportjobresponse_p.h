@@ -27,7 +27,7 @@ namespace Personalize {
 
 class CreateDatasetImportJobResponse;
 
-class QTAWS_EXPORT CreateDatasetImportJobResponsePrivate : public PersonalizeResponsePrivate {
+class CreateDatasetImportJobResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ConnectParticipant {
 
 class CreateParticipantConnectionRequest;
 
-class QTAWS_EXPORT CreateParticipantConnectionRequestPrivate : public ConnectParticipantRequestPrivate {
+class CreateParticipantConnectionRequestPrivate : public ConnectParticipantRequestPrivate {
 
 public:
     CreateParticipantConnectionRequestPrivate(const ConnectParticipantRequest::Action action,

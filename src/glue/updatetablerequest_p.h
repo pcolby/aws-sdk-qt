@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateTableRequest;
 
-class QTAWS_EXPORT UpdateTableRequestPrivate : public GlueRequestPrivate {
+class UpdateTableRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateTableRequestPrivate(const GlueRequest::Action action,

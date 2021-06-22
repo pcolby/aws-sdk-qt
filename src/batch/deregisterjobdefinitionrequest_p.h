@@ -28,7 +28,7 @@ namespace Batch {
 
 class DeregisterJobDefinitionRequest;
 
-class QTAWS_EXPORT DeregisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
+class DeregisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
 
 public:
     DeregisterJobDefinitionRequestPrivate(const BatchRequest::Action action,

@@ -28,7 +28,7 @@ namespace Route53 {
 
 class EnableHostedZoneDNSSECRequest;
 
-class QTAWS_EXPORT EnableHostedZoneDNSSECRequestPrivate : public Route53RequestPrivate {
+class EnableHostedZoneDNSSECRequestPrivate : public Route53RequestPrivate {
 
 public:
     EnableHostedZoneDNSSECRequestPrivate(const Route53Request::Action action,

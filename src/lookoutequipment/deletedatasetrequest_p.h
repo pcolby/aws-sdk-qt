@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class DeleteDatasetRequest;
 
-class QTAWS_EXPORT DeleteDatasetRequestPrivate : public LookoutEquipmentRequestPrivate {
+class DeleteDatasetRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     DeleteDatasetRequestPrivate(const LookoutEquipmentRequest::Action action,

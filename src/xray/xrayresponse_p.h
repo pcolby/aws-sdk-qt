@@ -27,7 +27,7 @@ namespace XRay {
 
 class XRayResponse;
 
-class QTAWS_EXPORT XRayResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class XRayResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class PutResourcePolicyRequest;
 
-class QTAWS_EXPORT PutResourcePolicyRequestPrivate : public CodeBuildRequestPrivate {
+class PutResourcePolicyRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     PutResourcePolicyRequestPrivate(const CodeBuildRequest::Action action,

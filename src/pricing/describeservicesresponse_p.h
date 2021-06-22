@@ -27,7 +27,7 @@ namespace Pricing {
 
 class DescribeServicesResponse;
 
-class QTAWS_EXPORT DescribeServicesResponsePrivate : public PricingResponsePrivate {
+class DescribeServicesResponsePrivate : public PricingResponsePrivate {
 
 public:
 

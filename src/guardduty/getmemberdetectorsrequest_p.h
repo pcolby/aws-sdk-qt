@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GetMemberDetectorsRequest;
 
-class QTAWS_EXPORT GetMemberDetectorsRequestPrivate : public GuardDutyRequestPrivate {
+class GetMemberDetectorsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     GetMemberDetectorsRequestPrivate(const GuardDutyRequest::Action action,

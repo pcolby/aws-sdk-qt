@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class AssociateKmsKeyRequest;
 
-class QTAWS_EXPORT AssociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
+class AssociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     AssociateKmsKeyRequestPrivate(const CloudWatchLogsRequest::Action action,

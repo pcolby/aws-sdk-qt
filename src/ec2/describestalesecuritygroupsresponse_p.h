@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeStaleSecurityGroupsResponse;
 
-class QTAWS_EXPORT DescribeStaleSecurityGroupsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeStaleSecurityGroupsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

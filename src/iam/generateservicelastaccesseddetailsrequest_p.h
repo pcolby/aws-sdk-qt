@@ -28,7 +28,7 @@ namespace IAM {
 
 class GenerateServiceLastAccessedDetailsRequest;
 
-class QTAWS_EXPORT GenerateServiceLastAccessedDetailsRequestPrivate : public IamRequestPrivate {
+class GenerateServiceLastAccessedDetailsRequestPrivate : public IamRequestPrivate {
 
 public:
     GenerateServiceLastAccessedDetailsRequestPrivate(const IamRequest::Action action,

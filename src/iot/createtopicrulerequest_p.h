@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateTopicRuleRequest;
 
-class QTAWS_EXPORT CreateTopicRuleRequestPrivate : public IoTRequestPrivate {
+class CreateTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateTopicRuleRequestPrivate(const IoTRequest::Action action,

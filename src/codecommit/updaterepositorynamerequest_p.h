@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UpdateRepositoryNameRequest;
 
-class QTAWS_EXPORT UpdateRepositoryNameRequestPrivate : public CodeCommitRequestPrivate {
+class UpdateRepositoryNameRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     UpdateRepositoryNameRequestPrivate(const CodeCommitRequest::Action action,

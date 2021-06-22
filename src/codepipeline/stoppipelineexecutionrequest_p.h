@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class StopPipelineExecutionRequest;
 
-class QTAWS_EXPORT StopPipelineExecutionRequestPrivate : public CodePipelineRequestPrivate {
+class StopPipelineExecutionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     StopPipelineExecutionRequestPrivate(const CodePipelineRequest::Action action,

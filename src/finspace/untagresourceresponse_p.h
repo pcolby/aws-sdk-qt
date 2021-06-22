@@ -27,7 +27,7 @@ namespace finspace {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public finspaceResponsePrivate {
+class UntagResourceResponsePrivate : public finspaceResponsePrivate {
 
 public:
 

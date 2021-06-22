@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class ListPermissionSetProvisioningStatusRequest;
 
-class QTAWS_EXPORT ListPermissionSetProvisioningStatusRequestPrivate : public SSOAdminRequestPrivate {
+class ListPermissionSetProvisioningStatusRequestPrivate : public SSOAdminRequestPrivate {
 
 public:
     ListPermissionSetProvisioningStatusRequestPrivate(const SSOAdminRequest::Action action,

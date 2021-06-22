@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class UpdateElasticsearchDomainConfigResponse;
 
-class QTAWS_EXPORT UpdateElasticsearchDomainConfigResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class UpdateElasticsearchDomainConfigResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

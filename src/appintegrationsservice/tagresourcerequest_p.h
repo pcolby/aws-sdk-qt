@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AppIntegrationsServiceRequestPrivate {
+class TagResourceRequestPrivate : public AppIntegrationsServiceRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AppIntegrationsServiceRequest::Action action,

@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class RevokeInvitationResponse;
 
-class QTAWS_EXPORT RevokeInvitationResponsePrivate : public AlexaForBusinessResponsePrivate {
+class RevokeInvitationResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

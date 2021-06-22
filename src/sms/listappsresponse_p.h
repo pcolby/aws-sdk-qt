@@ -27,7 +27,7 @@ namespace SMS {
 
 class ListAppsResponse;
 
-class QTAWS_EXPORT ListAppsResponsePrivate : public SmsResponsePrivate {
+class ListAppsResponsePrivate : public SmsResponsePrivate {
 
 public:
 

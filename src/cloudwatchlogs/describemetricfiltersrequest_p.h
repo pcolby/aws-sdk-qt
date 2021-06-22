@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeMetricFiltersRequest;
 
-class QTAWS_EXPORT DescribeMetricFiltersRequestPrivate : public CloudWatchLogsRequestPrivate {
+class DescribeMetricFiltersRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DescribeMetricFiltersRequestPrivate(const CloudWatchLogsRequest::Action action,

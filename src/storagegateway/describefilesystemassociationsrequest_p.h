@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeFileSystemAssociationsRequest;
 
-class QTAWS_EXPORT DescribeFileSystemAssociationsRequestPrivate : public StorageGatewayRequestPrivate {
+class DescribeFileSystemAssociationsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeFileSystemAssociationsRequestPrivate(const StorageGatewayRequest::Action action,

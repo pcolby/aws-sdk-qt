@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CopySnapshotRequest;
 
-class QTAWS_EXPORT CopySnapshotRequestPrivate : public LightsailRequestPrivate {
+class CopySnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CopySnapshotRequestPrivate(const LightsailRequest::Action action,

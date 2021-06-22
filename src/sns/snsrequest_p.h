@@ -28,7 +28,7 @@ namespace SNS {
 
 class SnsRequest;
 
-class QTAWS_EXPORT SnsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SnsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SnsRequest::Action action; ///< SNS action to be performed.

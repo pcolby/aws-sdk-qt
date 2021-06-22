@@ -28,7 +28,7 @@ namespace EC2 {
 
 class BundleInstanceRequest;
 
-class QTAWS_EXPORT BundleInstanceRequestPrivate : public Ec2RequestPrivate {
+class BundleInstanceRequestPrivate : public Ec2RequestPrivate {
 
 public:
     BundleInstanceRequestPrivate(const Ec2Request::Action action,

@@ -29,7 +29,7 @@ namespace QLDBSession {
 
 class QLDBSessionClient;
 
-class QTAWS_EXPORT QLDBSessionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class QLDBSessionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     QLDBSessionClientPrivate(QLDBSessionClient * const q);

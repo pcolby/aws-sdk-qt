@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class DeleteResourcePolicyRequest;
 
-class QTAWS_EXPORT DeleteResourcePolicyRequestPrivate : public SecretsManagerRequestPrivate {
+class DeleteResourcePolicyRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     DeleteResourcePolicyRequestPrivate(const SecretsManagerRequest::Action action,

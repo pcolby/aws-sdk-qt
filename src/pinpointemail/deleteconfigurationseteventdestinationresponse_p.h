@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class DeleteConfigurationSetEventDestinationResponse;
 
-class QTAWS_EXPORT DeleteConfigurationSetEventDestinationResponsePrivate : public PinpointEmailResponsePrivate {
+class DeleteConfigurationSetEventDestinationResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

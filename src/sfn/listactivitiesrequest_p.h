@@ -28,7 +28,7 @@ namespace SFN {
 
 class ListActivitiesRequest;
 
-class QTAWS_EXPORT ListActivitiesRequestPrivate : public SfnRequestPrivate {
+class ListActivitiesRequestPrivate : public SfnRequestPrivate {
 
 public:
     ListActivitiesRequestPrivate(const SfnRequest::Action action,

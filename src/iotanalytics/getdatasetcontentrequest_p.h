@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class GetDatasetContentRequest;
 
-class QTAWS_EXPORT GetDatasetContentRequestPrivate : public IoTAnalyticsRequestPrivate {
+class GetDatasetContentRequestPrivate : public IoTAnalyticsRequestPrivate {
 
 public:
     GetDatasetContentRequestPrivate(const IoTAnalyticsRequest::Action action,

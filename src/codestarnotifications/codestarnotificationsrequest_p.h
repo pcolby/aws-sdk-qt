@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class CodeStarNotificationsRequest;
 
-class QTAWS_EXPORT CodeStarNotificationsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeStarNotificationsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeStarNotificationsRequest::Action action; ///< CodeStarNotifications action to be performed.

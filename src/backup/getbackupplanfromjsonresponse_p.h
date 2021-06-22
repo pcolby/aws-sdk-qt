@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetBackupPlanFromJSONResponse;
 
-class QTAWS_EXPORT GetBackupPlanFromJSONResponsePrivate : public BackupResponsePrivate {
+class GetBackupPlanFromJSONResponsePrivate : public BackupResponsePrivate {
 
 public:
 

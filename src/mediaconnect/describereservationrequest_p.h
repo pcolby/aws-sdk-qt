@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class DescribeReservationRequest;
 
-class QTAWS_EXPORT DescribeReservationRequestPrivate : public MediaConnectRequestPrivate {
+class DescribeReservationRequestPrivate : public MediaConnectRequestPrivate {
 
 public:
     DescribeReservationRequestPrivate(const MediaConnectRequest::Action action,

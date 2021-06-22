@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class CreateStreamRequest;
 
-class QTAWS_EXPORT CreateStreamRequestPrivate : public KinesisRequestPrivate {
+class CreateStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
     CreateStreamRequestPrivate(const KinesisRequest::Action action,

@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetMaintenanceWindowExecutionTaskResponse;
 
-class QTAWS_EXPORT GetMaintenanceWindowExecutionTaskResponsePrivate : public SsmResponsePrivate {
+class GetMaintenanceWindowExecutionTaskResponsePrivate : public SsmResponsePrivate {
 
 public:
 

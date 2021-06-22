@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class EnableOrganizationAdminAccountRequest;
 
-class QTAWS_EXPORT EnableOrganizationAdminAccountRequestPrivate : public SecurityHubRequestPrivate {
+class EnableOrganizationAdminAccountRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     EnableOrganizationAdminAccountRequestPrivate(const SecurityHubRequest::Action action,

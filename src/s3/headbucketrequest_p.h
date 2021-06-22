@@ -28,7 +28,7 @@ namespace S3 {
 
 class HeadBucketRequest;
 
-class QTAWS_EXPORT HeadBucketRequestPrivate : public S3RequestPrivate {
+class HeadBucketRequestPrivate : public S3RequestPrivate {
 
 public:
     HeadBucketRequestPrivate(const S3Request::Action action,

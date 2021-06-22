@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class GetSearchSuggestionsResponse;
 
-class QTAWS_EXPORT GetSearchSuggestionsResponsePrivate : public SageMakerResponsePrivate {
+class GetSearchSuggestionsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

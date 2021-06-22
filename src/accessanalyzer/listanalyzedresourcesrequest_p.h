@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class ListAnalyzedResourcesRequest;
 
-class QTAWS_EXPORT ListAnalyzedResourcesRequestPrivate : public AccessAnalyzerRequestPrivate {
+class ListAnalyzedResourcesRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     ListAnalyzedResourcesRequestPrivate(const AccessAnalyzerRequest::Action action,

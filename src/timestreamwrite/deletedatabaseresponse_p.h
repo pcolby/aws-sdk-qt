@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class DeleteDatabaseResponse;
 
-class QTAWS_EXPORT DeleteDatabaseResponsePrivate : public TimestreamWriteResponsePrivate {
+class DeleteDatabaseResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 

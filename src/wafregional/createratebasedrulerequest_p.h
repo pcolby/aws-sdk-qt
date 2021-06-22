@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateRateBasedRuleRequest;
 
-class QTAWS_EXPORT CreateRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateRateBasedRuleRequestPrivate(const WAFRegionalRequest::Action action,

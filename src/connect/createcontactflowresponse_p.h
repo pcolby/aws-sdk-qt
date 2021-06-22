@@ -27,7 +27,7 @@ namespace Connect {
 
 class CreateContactFlowResponse;
 
-class QTAWS_EXPORT CreateContactFlowResponsePrivate : public ConnectResponsePrivate {
+class CreateContactFlowResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace SecurityHub {
 
 class SecurityHubClient;
 
-class QTAWS_EXPORT SecurityHubClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SecurityHubClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SecurityHubClientPrivate(SecurityHubClient * const q);

@@ -28,7 +28,7 @@ namespace PrometheusService {
 
 class PrometheusServiceRequest;
 
-class QTAWS_EXPORT PrometheusServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PrometheusServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PrometheusServiceRequest::Action action; ///< PrometheusService action to be performed.

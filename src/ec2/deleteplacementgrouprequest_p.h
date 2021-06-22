@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeletePlacementGroupRequest;
 
-class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public Ec2RequestPrivate {
+class DeletePlacementGroupRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeletePlacementGroupRequestPrivate(const Ec2Request::Action action,

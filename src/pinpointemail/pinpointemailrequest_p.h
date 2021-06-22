@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class PinpointEmailRequest;
 
-class QTAWS_EXPORT PinpointEmailRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PinpointEmailRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PinpointEmailRequest::Action action; ///< PinpointEmail action to be performed.

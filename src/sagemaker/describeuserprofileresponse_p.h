@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeUserProfileResponse;
 
-class QTAWS_EXPORT DescribeUserProfileResponsePrivate : public SageMakerResponsePrivate {
+class DescribeUserProfileResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

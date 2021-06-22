@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class PurchaseReservedElasticsearchInstanceOfferingRequest;
 
-class QTAWS_EXPORT PurchaseReservedElasticsearchInstanceOfferingRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class PurchaseReservedElasticsearchInstanceOfferingRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     PurchaseReservedElasticsearchInstanceOfferingRequestPrivate(const ElasticsearchServiceRequest::Action action,

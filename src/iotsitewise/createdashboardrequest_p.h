@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class CreateDashboardRequest;
 
-class QTAWS_EXPORT CreateDashboardRequestPrivate : public IoTSiteWiseRequestPrivate {
+class CreateDashboardRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     CreateDashboardRequestPrivate(const IoTSiteWiseRequest::Action action,

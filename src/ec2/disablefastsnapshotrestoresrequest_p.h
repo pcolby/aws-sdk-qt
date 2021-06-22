@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableFastSnapshotRestoresRequest;
 
-class QTAWS_EXPORT DisableFastSnapshotRestoresRequestPrivate : public Ec2RequestPrivate {
+class DisableFastSnapshotRestoresRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisableFastSnapshotRestoresRequestPrivate(const Ec2Request::Action action,

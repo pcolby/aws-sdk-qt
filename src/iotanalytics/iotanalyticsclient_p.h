@@ -29,7 +29,7 @@ namespace IoTAnalytics {
 
 class IoTAnalyticsClient;
 
-class QTAWS_EXPORT IoTAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTAnalyticsClientPrivate(IoTAnalyticsClient * const q);

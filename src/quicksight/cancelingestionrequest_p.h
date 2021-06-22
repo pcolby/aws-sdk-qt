@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CancelIngestionRequest;
 
-class QTAWS_EXPORT CancelIngestionRequestPrivate : public QuickSightRequestPrivate {
+class CancelIngestionRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     CancelIngestionRequestPrivate(const QuickSightRequest::Action action,

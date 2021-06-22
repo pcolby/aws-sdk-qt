@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class DeleteTimelineEventResponse;
 
-class QTAWS_EXPORT DeleteTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
+class DeleteTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

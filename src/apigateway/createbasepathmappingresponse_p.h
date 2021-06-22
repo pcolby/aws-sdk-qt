@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class CreateBasePathMappingResponse;
 
-class QTAWS_EXPORT CreateBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
+class CreateBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 

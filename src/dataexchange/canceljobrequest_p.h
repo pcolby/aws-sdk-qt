@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public DataExchangeRequestPrivate {
+class CancelJobRequestPrivate : public DataExchangeRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const DataExchangeRequest::Action action,

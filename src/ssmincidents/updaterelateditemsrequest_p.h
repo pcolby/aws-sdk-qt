@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class UpdateRelatedItemsRequest;
 
-class QTAWS_EXPORT UpdateRelatedItemsRequestPrivate : public SSMIncidentsRequestPrivate {
+class UpdateRelatedItemsRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     UpdateRelatedItemsRequestPrivate(const SSMIncidentsRequest::Action action,

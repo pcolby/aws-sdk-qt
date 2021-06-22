@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetAdmChannelResponse;
 
-class QTAWS_EXPORT GetAdmChannelResponsePrivate : public PinpointResponsePrivate {
+class GetAdmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

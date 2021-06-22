@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeAccountRequest;
 
-class QTAWS_EXPORT DescribeAccountRequestPrivate : public WorkSpacesRequestPrivate {
+class DescribeAccountRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DescribeAccountRequestPrivate(const WorkSpacesRequest::Action action,

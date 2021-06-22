@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class GetConnectionRequest;
 
-class QTAWS_EXPORT GetConnectionRequestPrivate : public CodeStarconnectionsRequestPrivate {
+class GetConnectionRequestPrivate : public CodeStarconnectionsRequestPrivate {
 
 public:
     GetConnectionRequestPrivate(const CodeStarconnectionsRequest::Action action,

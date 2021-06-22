@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public IoTThingsGraphResponsePrivate {
+class UntagResourceResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

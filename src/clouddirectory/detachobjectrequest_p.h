@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DetachObjectRequest;
 
-class QTAWS_EXPORT DetachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
+class DetachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DetachObjectRequestPrivate(const CloudDirectoryRequest::Action action,

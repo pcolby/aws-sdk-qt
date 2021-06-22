@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class StopTrainingDocumentClassifierResponse;
 
-class QTAWS_EXPORT StopTrainingDocumentClassifierResponsePrivate : public ComprehendResponsePrivate {
+class StopTrainingDocumentClassifierResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

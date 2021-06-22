@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeGroupsRequest;
 
-class QTAWS_EXPORT DescribeGroupsRequestPrivate : public WorkDocsRequestPrivate {
+class DescribeGroupsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeGroupsRequestPrivate(const WorkDocsRequest::Action action,

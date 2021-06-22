@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetDatabasesRequest;
 
-class QTAWS_EXPORT GetDatabasesRequestPrivate : public GlueRequestPrivate {
+class GetDatabasesRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetDatabasesRequestPrivate(const GlueRequest::Action action,

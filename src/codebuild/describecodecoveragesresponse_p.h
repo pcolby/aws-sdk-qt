@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DescribeCodeCoveragesResponse;
 
-class QTAWS_EXPORT DescribeCodeCoveragesResponsePrivate : public CodeBuildResponsePrivate {
+class DescribeCodeCoveragesResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

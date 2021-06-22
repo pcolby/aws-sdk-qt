@@ -28,7 +28,7 @@ namespace CodeGuruReviewer {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CodeGuruReviewerRequestPrivate {
+class UntagResourceRequestPrivate : public CodeGuruReviewerRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CodeGuruReviewerRequest::Action action,

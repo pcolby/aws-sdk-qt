@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListOrganizationPortfolioAccessRequest;
 
-class QTAWS_EXPORT ListOrganizationPortfolioAccessRequestPrivate : public ServiceCatalogRequestPrivate {
+class ListOrganizationPortfolioAccessRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListOrganizationPortfolioAccessRequestPrivate(const ServiceCatalogRequest::Action action,

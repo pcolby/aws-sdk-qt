@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetMessagingSessionEndpointResponse;
 
-class QTAWS_EXPORT GetMessagingSessionEndpointResponsePrivate : public ChimeResponsePrivate {
+class GetMessagingSessionEndpointResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

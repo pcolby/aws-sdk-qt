@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeLocalGatewayVirtualInterfaceGroupsRequest;
 
-class QTAWS_EXPORT DescribeLocalGatewayVirtualInterfaceGroupsRequestPrivate : public Ec2RequestPrivate {
+class DescribeLocalGatewayVirtualInterfaceGroupsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeLocalGatewayVirtualInterfaceGroupsRequestPrivate(const Ec2Request::Action action,

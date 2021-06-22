@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeInstanceEventNotificationAttributesRequest;
 
-class QTAWS_EXPORT DescribeInstanceEventNotificationAttributesRequestPrivate : public Ec2RequestPrivate {
+class DescribeInstanceEventNotificationAttributesRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeInstanceEventNotificationAttributesRequestPrivate(const Ec2Request::Action action,

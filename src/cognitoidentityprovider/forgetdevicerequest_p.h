@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ForgetDeviceRequest;
 
-class QTAWS_EXPORT ForgetDeviceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class ForgetDeviceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ForgetDeviceRequestPrivate(const CognitoIdentityProviderRequest::Action action,

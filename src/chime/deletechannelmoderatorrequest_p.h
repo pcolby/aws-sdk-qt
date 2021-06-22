@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteChannelModeratorRequest;
 
-class QTAWS_EXPORT DeleteChannelModeratorRequestPrivate : public ChimeRequestPrivate {
+class DeleteChannelModeratorRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DeleteChannelModeratorRequestPrivate(const ChimeRequest::Action action,

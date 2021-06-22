@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ApplySecurityGroupsToClientVpnTargetNetworkRequest;
 
-class QTAWS_EXPORT ApplySecurityGroupsToClientVpnTargetNetworkRequestPrivate : public Ec2RequestPrivate {
+class ApplySecurityGroupsToClientVpnTargetNetworkRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ApplySecurityGroupsToClientVpnTargetNetworkRequestPrivate(const Ec2Request::Action action,

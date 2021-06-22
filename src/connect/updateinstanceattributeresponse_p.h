@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateInstanceAttributeResponse;
 
-class QTAWS_EXPORT UpdateInstanceAttributeResponsePrivate : public ConnectResponsePrivate {
+class UpdateInstanceAttributeResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

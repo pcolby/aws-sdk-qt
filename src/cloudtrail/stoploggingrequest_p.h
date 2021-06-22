@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class StopLoggingRequest;
 
-class QTAWS_EXPORT StopLoggingRequestPrivate : public CloudTrailRequestPrivate {
+class StopLoggingRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     StopLoggingRequestPrivate(const CloudTrailRequest::Action action,

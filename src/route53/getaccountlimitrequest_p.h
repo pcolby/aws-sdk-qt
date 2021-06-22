@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetAccountLimitRequest;
 
-class QTAWS_EXPORT GetAccountLimitRequestPrivate : public Route53RequestPrivate {
+class GetAccountLimitRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetAccountLimitRequestPrivate(const Route53Request::Action action,

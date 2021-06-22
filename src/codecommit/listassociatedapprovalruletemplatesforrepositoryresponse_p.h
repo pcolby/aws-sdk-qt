@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class ListAssociatedApprovalRuleTemplatesForRepositoryResponse;
 
-class QTAWS_EXPORT ListAssociatedApprovalRuleTemplatesForRepositoryResponsePrivate : public CodeCommitResponsePrivate {
+class ListAssociatedApprovalRuleTemplatesForRepositoryResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

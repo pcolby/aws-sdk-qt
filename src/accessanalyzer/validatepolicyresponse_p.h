@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class ValidatePolicyResponse;
 
-class QTAWS_EXPORT ValidatePolicyResponsePrivate : public AccessAnalyzerResponsePrivate {
+class ValidatePolicyResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class UpdateFlowTemplateRequest;
 
-class QTAWS_EXPORT UpdateFlowTemplateRequestPrivate : public IoTThingsGraphRequestPrivate {
+class UpdateFlowTemplateRequestPrivate : public IoTThingsGraphRequestPrivate {
 
 public:
     UpdateFlowTemplateRequestPrivate(const IoTThingsGraphRequest::Action action,

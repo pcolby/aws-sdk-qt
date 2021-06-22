@@ -28,7 +28,7 @@ namespace SSM {
 
 class CreateOpsMetadataRequest;
 
-class QTAWS_EXPORT CreateOpsMetadataRequestPrivate : public SsmRequestPrivate {
+class CreateOpsMetadataRequestPrivate : public SsmRequestPrivate {
 
 public:
     CreateOpsMetadataRequestPrivate(const SsmRequest::Action action,

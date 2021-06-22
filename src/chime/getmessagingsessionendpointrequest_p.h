@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetMessagingSessionEndpointRequest;
 
-class QTAWS_EXPORT GetMessagingSessionEndpointRequestPrivate : public ChimeRequestPrivate {
+class GetMessagingSessionEndpointRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetMessagingSessionEndpointRequestPrivate(const ChimeRequest::Action action,

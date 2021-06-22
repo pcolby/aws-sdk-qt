@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class DeleteCoreDefinitionResponse;
 
-class QTAWS_EXPORT DeleteCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
+class DeleteCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

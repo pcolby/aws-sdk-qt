@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class RegisterInstanceRequest;
 
-class QTAWS_EXPORT RegisterInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class RegisterInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     RegisterInstanceRequestPrivate(const ServiceDiscoveryRequest::Action action,

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class GetDashboardEmbedUrlRequest;
 
-class QTAWS_EXPORT GetDashboardEmbedUrlRequestPrivate : public QuickSightRequestPrivate {
+class GetDashboardEmbedUrlRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     GetDashboardEmbedUrlRequestPrivate(const QuickSightRequest::Action action,

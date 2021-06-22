@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AllocateAddressRequest;
 
-class QTAWS_EXPORT AllocateAddressRequestPrivate : public Ec2RequestPrivate {
+class AllocateAddressRequestPrivate : public Ec2RequestPrivate {
 
 public:
     AllocateAddressRequestPrivate(const Ec2Request::Action action,

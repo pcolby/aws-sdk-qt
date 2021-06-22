@@ -28,7 +28,7 @@ namespace Batch {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public BatchRequestPrivate {
+class TagResourceRequestPrivate : public BatchRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const BatchRequest::Action action,

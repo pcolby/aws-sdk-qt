@@ -27,7 +27,7 @@ namespace mgn {
 
 class DeleteReplicationConfigurationTemplateResponse;
 
-class QTAWS_EXPORT DeleteReplicationConfigurationTemplateResponsePrivate : public mgnResponsePrivate {
+class DeleteReplicationConfigurationTemplateResponsePrivate : public mgnResponsePrivate {
 
 public:
 

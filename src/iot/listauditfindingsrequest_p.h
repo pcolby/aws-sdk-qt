@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListAuditFindingsRequest;
 
-class QTAWS_EXPORT ListAuditFindingsRequestPrivate : public IoTRequestPrivate {
+class ListAuditFindingsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListAuditFindingsRequestPrivate(const IoTRequest::Action action,

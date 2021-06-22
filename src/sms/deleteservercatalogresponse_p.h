@@ -27,7 +27,7 @@ namespace SMS {
 
 class DeleteServerCatalogResponse;
 
-class QTAWS_EXPORT DeleteServerCatalogResponsePrivate : public SmsResponsePrivate {
+class DeleteServerCatalogResponsePrivate : public SmsResponsePrivate {
 
 public:
 

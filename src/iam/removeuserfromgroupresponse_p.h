@@ -27,7 +27,7 @@ namespace IAM {
 
 class RemoveUserFromGroupResponse;
 
-class QTAWS_EXPORT RemoveUserFromGroupResponsePrivate : public IamResponsePrivate {
+class RemoveUserFromGroupResponsePrivate : public IamResponsePrivate {
 
 public:
 

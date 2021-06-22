@@ -28,7 +28,7 @@ namespace SNS {
 
 class ConfirmSubscriptionRequest;
 
-class QTAWS_EXPORT ConfirmSubscriptionRequestPrivate : public SnsRequestPrivate {
+class ConfirmSubscriptionRequestPrivate : public SnsRequestPrivate {
 
 public:
     ConfirmSubscriptionRequestPrivate(const SnsRequest::Action action,

@@ -28,7 +28,7 @@ namespace SSM {
 
 class SendAutomationSignalRequest;
 
-class QTAWS_EXPORT SendAutomationSignalRequestPrivate : public SsmRequestPrivate {
+class SendAutomationSignalRequestPrivate : public SsmRequestPrivate {
 
 public:
     SendAutomationSignalRequestPrivate(const SsmRequest::Action action,

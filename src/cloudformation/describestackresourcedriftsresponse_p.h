@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DescribeStackResourceDriftsResponse;
 
-class QTAWS_EXPORT DescribeStackResourceDriftsResponsePrivate : public CloudFormationResponsePrivate {
+class DescribeStackResourceDriftsResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

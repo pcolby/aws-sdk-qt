@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class BatchDeleteScheduledActionRequest;
 
-class QTAWS_EXPORT BatchDeleteScheduledActionRequestPrivate : public AutoScalingRequestPrivate {
+class BatchDeleteScheduledActionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     BatchDeleteScheduledActionRequestPrivate(const AutoScalingRequest::Action action,

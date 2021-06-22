@@ -28,7 +28,7 @@ namespace PI {
 
 class GetResourceMetricsRequest;
 
-class QTAWS_EXPORT GetResourceMetricsRequestPrivate : public PiRequestPrivate {
+class GetResourceMetricsRequestPrivate : public PiRequestPrivate {
 
 public:
     GetResourceMetricsRequestPrivate(const PiRequest::Action action,

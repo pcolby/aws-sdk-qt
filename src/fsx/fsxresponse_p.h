@@ -27,7 +27,7 @@ namespace FSx {
 
 class FSxResponse;
 
-class QTAWS_EXPORT FSxResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FSxResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace EKS {
 
 class EksRequest;
 
-class QTAWS_EXPORT EksRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EksRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EksRequest::Action action; ///< EKS action to be performed.

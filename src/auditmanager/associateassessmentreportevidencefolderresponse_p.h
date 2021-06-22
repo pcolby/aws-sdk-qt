@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class AssociateAssessmentReportEvidenceFolderResponse;
 
-class QTAWS_EXPORT AssociateAssessmentReportEvidenceFolderResponsePrivate : public AuditManagerResponsePrivate {
+class AssociateAssessmentReportEvidenceFolderResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

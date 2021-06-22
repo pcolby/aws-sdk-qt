@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public GreengrassRequestPrivate {
+class UntagResourceRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const GreengrassRequest::Action action,

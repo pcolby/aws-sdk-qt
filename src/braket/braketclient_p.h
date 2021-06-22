@@ -29,7 +29,7 @@ namespace Braket {
 
 class BraketClient;
 
-class QTAWS_EXPORT BraketClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class BraketClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     BraketClientPrivate(BraketClient * const q);

@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class ExecuteChangeSetRequest;
 
-class QTAWS_EXPORT ExecuteChangeSetRequestPrivate : public CloudFormationRequestPrivate {
+class ExecuteChangeSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     ExecuteChangeSetRequestPrivate(const CloudFormationRequest::Action action,

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteKeyPairRequest;
 
-class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public LightsailRequestPrivate {
+class DeleteKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteKeyPairRequestPrivate(const LightsailRequest::Action action,

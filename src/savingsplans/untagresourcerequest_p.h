@@ -28,7 +28,7 @@ namespace SavingsPlans {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public SavingsPlansRequestPrivate {
+class UntagResourceRequestPrivate : public SavingsPlansRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const SavingsPlansRequest::Action action,

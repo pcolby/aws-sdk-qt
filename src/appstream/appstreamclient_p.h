@@ -29,7 +29,7 @@ namespace AppStream {
 
 class AppStreamClient;
 
-class QTAWS_EXPORT AppStreamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppStreamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppStreamClientPrivate(AppStreamClient * const q);

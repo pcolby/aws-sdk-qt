@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class CompleteLifecycleActionRequest;
 
-class QTAWS_EXPORT CompleteLifecycleActionRequestPrivate : public AutoScalingRequestPrivate {
+class CompleteLifecycleActionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     CompleteLifecycleActionRequestPrivate(const AutoScalingRequest::Action action,

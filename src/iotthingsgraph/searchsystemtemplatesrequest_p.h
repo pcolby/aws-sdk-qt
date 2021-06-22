@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class SearchSystemTemplatesRequest;
 
-class QTAWS_EXPORT SearchSystemTemplatesRequestPrivate : public IoTThingsGraphRequestPrivate {
+class SearchSystemTemplatesRequestPrivate : public IoTThingsGraphRequestPrivate {
 
 public:
     SearchSystemTemplatesRequestPrivate(const IoTThingsGraphRequest::Action action,

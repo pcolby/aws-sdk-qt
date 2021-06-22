@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DeregisterTypeRequest;
 
-class QTAWS_EXPORT DeregisterTypeRequestPrivate : public CloudFormationRequestPrivate {
+class DeregisterTypeRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     DeregisterTypeRequestPrivate(const CloudFormationRequest::Action action,

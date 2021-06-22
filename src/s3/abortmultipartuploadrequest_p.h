@@ -28,7 +28,7 @@ namespace S3 {
 
 class AbortMultipartUploadRequest;
 
-class QTAWS_EXPORT AbortMultipartUploadRequestPrivate : public S3RequestPrivate {
+class AbortMultipartUploadRequestPrivate : public S3RequestPrivate {
 
 public:
     AbortMultipartUploadRequestPrivate(const S3Request::Action action,

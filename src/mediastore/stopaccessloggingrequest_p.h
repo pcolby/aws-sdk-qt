@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class StopAccessLoggingRequest;
 
-class QTAWS_EXPORT StopAccessLoggingRequestPrivate : public MediaStoreRequestPrivate {
+class StopAccessLoggingRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     StopAccessLoggingRequestPrivate(const MediaStoreRequest::Action action,

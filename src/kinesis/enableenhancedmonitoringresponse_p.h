@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class EnableEnhancedMonitoringResponse;
 
-class QTAWS_EXPORT EnableEnhancedMonitoringResponsePrivate : public KinesisResponsePrivate {
+class EnableEnhancedMonitoringResponsePrivate : public KinesisResponsePrivate {
 
 public:
 

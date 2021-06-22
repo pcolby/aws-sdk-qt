@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class CreateWebhookResponse;
 
-class QTAWS_EXPORT CreateWebhookResponsePrivate : public CodeBuildResponsePrivate {
+class CreateWebhookResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

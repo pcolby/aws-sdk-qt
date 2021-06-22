@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartCrawlerRequest;
 
-class QTAWS_EXPORT StartCrawlerRequestPrivate : public GlueRequestPrivate {
+class StartCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartCrawlerRequestPrivate(const GlueRequest::Action action,

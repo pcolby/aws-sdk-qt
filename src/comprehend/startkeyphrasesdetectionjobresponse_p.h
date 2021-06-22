@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class StartKeyPhrasesDetectionJobResponse;
 
-class QTAWS_EXPORT StartKeyPhrasesDetectionJobResponsePrivate : public ComprehendResponsePrivate {
+class StartKeyPhrasesDetectionJobResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

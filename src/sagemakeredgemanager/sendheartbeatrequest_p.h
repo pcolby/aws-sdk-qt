@@ -28,7 +28,7 @@ namespace SagemakerEdgeManager {
 
 class SendHeartbeatRequest;
 
-class QTAWS_EXPORT SendHeartbeatRequestPrivate : public SagemakerEdgeManagerRequestPrivate {
+class SendHeartbeatRequestPrivate : public SagemakerEdgeManagerRequestPrivate {
 
 public:
     SendHeartbeatRequestPrivate(const SagemakerEdgeManagerRequest::Action action,

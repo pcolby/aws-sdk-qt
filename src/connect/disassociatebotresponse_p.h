@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateBotResponse;
 
-class QTAWS_EXPORT DisassociateBotResponsePrivate : public ConnectResponsePrivate {
+class DisassociateBotResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

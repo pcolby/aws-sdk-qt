@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyVpcTenancyResponse;
 
-class QTAWS_EXPORT ModifyVpcTenancyResponsePrivate : public Ec2ResponsePrivate {
+class ModifyVpcTenancyResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

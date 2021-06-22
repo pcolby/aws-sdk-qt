@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class NetworkFirewallResponse;
 
-class QTAWS_EXPORT NetworkFirewallResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class NetworkFirewallResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

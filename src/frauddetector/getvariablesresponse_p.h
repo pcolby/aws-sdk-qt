@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetVariablesResponse;
 
-class QTAWS_EXPORT GetVariablesResponsePrivate : public FraudDetectorResponsePrivate {
+class GetVariablesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 

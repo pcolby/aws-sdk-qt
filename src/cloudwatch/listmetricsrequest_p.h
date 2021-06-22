@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class ListMetricsRequest;
 
-class QTAWS_EXPORT ListMetricsRequestPrivate : public CloudWatchRequestPrivate {
+class ListMetricsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     ListMetricsRequestPrivate(const CloudWatchRequest::Action action,

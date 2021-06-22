@@ -28,7 +28,7 @@ namespace CloudSearchDomain {
 
 class UploadDocumentsRequest;
 
-class QTAWS_EXPORT UploadDocumentsRequestPrivate : public CloudSearchDomainRequestPrivate {
+class UploadDocumentsRequestPrivate : public CloudSearchDomainRequestPrivate {
 
 public:
     UploadDocumentsRequestPrivate(const CloudSearchDomainRequest::Action action,

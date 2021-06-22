@@ -28,7 +28,7 @@ namespace Amplify {
 
 class DeleteBranchRequest;
 
-class QTAWS_EXPORT DeleteBranchRequestPrivate : public AmplifyRequestPrivate {
+class DeleteBranchRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     DeleteBranchRequestPrivate(const AmplifyRequest::Action action,

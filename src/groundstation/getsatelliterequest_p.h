@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class GetSatelliteRequest;
 
-class QTAWS_EXPORT GetSatelliteRequestPrivate : public GroundStationRequestPrivate {
+class GetSatelliteRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     GetSatelliteRequestPrivate(const GroundStationRequest::Action action,

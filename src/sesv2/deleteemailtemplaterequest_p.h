@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class DeleteEmailTemplateRequest;
 
-class QTAWS_EXPORT DeleteEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
+class DeleteEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     DeleteEmailTemplateRequestPrivate(const Sesv2Request::Action action,

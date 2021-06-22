@@ -28,7 +28,7 @@ namespace Redshift {
 
 class AuthorizeEndpointAccessRequest;
 
-class QTAWS_EXPORT AuthorizeEndpointAccessRequestPrivate : public RedshiftRequestPrivate {
+class AuthorizeEndpointAccessRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     AuthorizeEndpointAccessRequestPrivate(const RedshiftRequest::Action action,

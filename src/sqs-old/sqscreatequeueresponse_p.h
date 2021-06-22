@@ -27,7 +27,7 @@ namespace SqsOld {
 
 class SqsCreateQueueResponse;
 
-class QTAWS_EXPORT SqsCreateQueueResponsePrivate : public SqsResponsePrivate {
+class SqsCreateQueueResponsePrivate : public SqsResponsePrivate {
 
 public:
     QString queueUrl; ///< Created queue URL.

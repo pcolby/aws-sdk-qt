@@ -28,7 +28,7 @@ namespace Amplify {
 
 class DeleteJobRequest;
 
-class QTAWS_EXPORT DeleteJobRequestPrivate : public AmplifyRequestPrivate {
+class DeleteJobRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     DeleteJobRequestPrivate(const AmplifyRequest::Action action,

@@ -28,7 +28,7 @@ namespace Lambda {
 
 class InvokeAsyncRequest;
 
-class QTAWS_EXPORT InvokeAsyncRequestPrivate : public LambdaRequestPrivate {
+class InvokeAsyncRequestPrivate : public LambdaRequestPrivate {
 
 public:
     InvokeAsyncRequestPrivate(const LambdaRequest::Action action,

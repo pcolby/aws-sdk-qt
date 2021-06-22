@@ -27,7 +27,7 @@ namespace Detective {
 
 class RejectInvitationResponse;
 
-class QTAWS_EXPORT RejectInvitationResponsePrivate : public DetectiveResponsePrivate {
+class RejectInvitationResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 

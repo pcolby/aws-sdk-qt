@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketPolicyResponse;
 
-class QTAWS_EXPORT GetBucketPolicyResponsePrivate : public S3ResponsePrivate {
+class GetBucketPolicyResponsePrivate : public S3ResponsePrivate {
 
 public:
 

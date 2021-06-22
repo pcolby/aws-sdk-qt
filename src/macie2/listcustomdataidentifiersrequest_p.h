@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class ListCustomDataIdentifiersRequest;
 
-class QTAWS_EXPORT ListCustomDataIdentifiersRequestPrivate : public Macie2RequestPrivate {
+class ListCustomDataIdentifiersRequestPrivate : public Macie2RequestPrivate {
 
 public:
     ListCustomDataIdentifiersRequestPrivate(const Macie2Request::Action action,

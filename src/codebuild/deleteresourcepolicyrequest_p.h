@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class DeleteResourcePolicyRequest;
 
-class QTAWS_EXPORT DeleteResourcePolicyRequestPrivate : public CodeBuildRequestPrivate {
+class DeleteResourcePolicyRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     DeleteResourcePolicyRequestPrivate(const CodeBuildRequest::Action action,

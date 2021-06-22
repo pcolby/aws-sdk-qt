@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class UpdateChannelResponse;
 
-class QTAWS_EXPORT UpdateChannelResponsePrivate : public MediaPackageResponsePrivate {
+class UpdateChannelResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

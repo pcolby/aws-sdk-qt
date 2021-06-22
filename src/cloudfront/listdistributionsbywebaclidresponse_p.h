@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class ListDistributionsByWebACLIdResponse;
 
-class QTAWS_EXPORT ListDistributionsByWebACLIdResponsePrivate : public CloudFrontResponsePrivate {
+class ListDistributionsByWebACLIdResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

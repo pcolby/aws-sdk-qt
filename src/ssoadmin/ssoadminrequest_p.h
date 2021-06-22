@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class SSOAdminRequest;
 
-class QTAWS_EXPORT SSOAdminRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SSOAdminRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SSOAdminRequest::Action action; ///< SSOAdmin action to be performed.

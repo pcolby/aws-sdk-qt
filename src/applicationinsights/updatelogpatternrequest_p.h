@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class UpdateLogPatternRequest;
 
-class QTAWS_EXPORT UpdateLogPatternRequestPrivate : public ApplicationInsightsRequestPrivate {
+class UpdateLogPatternRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     UpdateLogPatternRequestPrivate(const ApplicationInsightsRequest::Action action,

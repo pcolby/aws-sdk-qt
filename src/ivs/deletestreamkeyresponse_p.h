@@ -27,7 +27,7 @@ namespace IVS {
 
 class DeleteStreamKeyResponse;
 
-class QTAWS_EXPORT DeleteStreamKeyResponsePrivate : public IvsResponsePrivate {
+class DeleteStreamKeyResponsePrivate : public IvsResponsePrivate {
 
 public:
 

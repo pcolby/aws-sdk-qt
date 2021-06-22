@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public MediaPackageResponsePrivate {
+class UntagResourceResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

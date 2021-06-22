@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class ExitStandbyRequest;
 
-class QTAWS_EXPORT ExitStandbyRequestPrivate : public AutoScalingRequestPrivate {
+class ExitStandbyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     ExitStandbyRequestPrivate(const AutoScalingRequest::Action action,

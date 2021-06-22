@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class DataExchangeRequest;
 
-class QTAWS_EXPORT DataExchangeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DataExchangeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DataExchangeRequest::Action action; ///< DataExchange action to be performed.

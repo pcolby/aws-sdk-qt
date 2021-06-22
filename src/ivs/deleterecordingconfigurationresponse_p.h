@@ -27,7 +27,7 @@ namespace IVS {
 
 class DeleteRecordingConfigurationResponse;
 
-class QTAWS_EXPORT DeleteRecordingConfigurationResponsePrivate : public IvsResponsePrivate {
+class DeleteRecordingConfigurationResponsePrivate : public IvsResponsePrivate {
 
 public:
 

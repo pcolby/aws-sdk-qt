@@ -28,7 +28,7 @@ namespace Translate {
 
 class ListTextTranslationJobsRequest;
 
-class QTAWS_EXPORT ListTextTranslationJobsRequestPrivate : public TranslateRequestPrivate {
+class ListTextTranslationJobsRequestPrivate : public TranslateRequestPrivate {
 
 public:
     ListTextTranslationJobsRequestPrivate(const TranslateRequest::Action action,

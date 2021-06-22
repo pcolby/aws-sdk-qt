@@ -28,7 +28,7 @@ namespace LocationService {
 
 class ListDevicePositionsRequest;
 
-class QTAWS_EXPORT ListDevicePositionsRequestPrivate : public LocationServiceRequestPrivate {
+class ListDevicePositionsRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     ListDevicePositionsRequestPrivate(const LocationServiceRequest::Action action,

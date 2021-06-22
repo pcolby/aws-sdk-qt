@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class GreengrassV2Request;
 
-class QTAWS_EXPORT GreengrassV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GreengrassV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GreengrassV2Request::Action action; ///< GreengrassV2 action to be performed.

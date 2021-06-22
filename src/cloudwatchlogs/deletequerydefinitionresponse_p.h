@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class DeleteQueryDefinitionResponse;
 
-class QTAWS_EXPORT DeleteQueryDefinitionResponsePrivate : public CloudWatchLogsResponsePrivate {
+class DeleteQueryDefinitionResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 

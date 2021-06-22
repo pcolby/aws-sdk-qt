@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class CreateGlobalTableResponse;
 
-class QTAWS_EXPORT CreateGlobalTableResponsePrivate : public DynamoDBResponsePrivate {
+class CreateGlobalTableResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class GetKeyGroupResponse;
 
-class QTAWS_EXPORT GetKeyGroupResponsePrivate : public CloudFrontResponsePrivate {
+class GetKeyGroupResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

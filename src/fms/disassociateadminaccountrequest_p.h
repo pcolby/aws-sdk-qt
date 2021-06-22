@@ -28,7 +28,7 @@ namespace FMS {
 
 class DisassociateAdminAccountRequest;
 
-class QTAWS_EXPORT DisassociateAdminAccountRequestPrivate : public FmsRequestPrivate {
+class DisassociateAdminAccountRequestPrivate : public FmsRequestPrivate {
 
 public:
     DisassociateAdminAccountRequestPrivate(const FmsRequest::Action action,

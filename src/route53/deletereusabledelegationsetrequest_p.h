@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteReusableDelegationSetRequest;
 
-class QTAWS_EXPORT DeleteReusableDelegationSetRequestPrivate : public Route53RequestPrivate {
+class DeleteReusableDelegationSetRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteReusableDelegationSetRequestPrivate(const Route53Request::Action action,

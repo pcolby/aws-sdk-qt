@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class DescribePageResponse;
 
-class QTAWS_EXPORT DescribePageResponsePrivate : public SSMContactsResponsePrivate {
+class DescribePageResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 

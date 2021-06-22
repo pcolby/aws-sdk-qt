@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class ModifySelfservicePermissionsRequest;
 
-class QTAWS_EXPORT ModifySelfservicePermissionsRequestPrivate : public WorkSpacesRequestPrivate {
+class ModifySelfservicePermissionsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     ModifySelfservicePermissionsRequestPrivate(const WorkSpacesRequest::Action action,

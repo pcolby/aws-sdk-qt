@@ -29,7 +29,7 @@ namespace LicenseManager {
 
 class LicenseManagerClient;
 
-class QTAWS_EXPORT LicenseManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LicenseManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LicenseManagerClientPrivate(LicenseManagerClient * const q);

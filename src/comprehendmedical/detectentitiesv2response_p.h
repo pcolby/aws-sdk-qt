@@ -27,7 +27,7 @@ namespace ComprehendMedical {
 
 class DetectEntitiesV2Response;
 
-class QTAWS_EXPORT DetectEntitiesV2ResponsePrivate : public ComprehendMedicalResponsePrivate {
+class DetectEntitiesV2ResponsePrivate : public ComprehendMedicalResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class ListOriginEndpointsRequest;
 
-class QTAWS_EXPORT ListOriginEndpointsRequestPrivate : public MediaPackageRequestPrivate {
+class ListOriginEndpointsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     ListOriginEndpointsRequestPrivate(const MediaPackageRequest::Action action,

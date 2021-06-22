@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class DeleteConnectionRequest;
 
-class QTAWS_EXPORT DeleteConnectionRequestPrivate : public CodeStarconnectionsRequestPrivate {
+class DeleteConnectionRequestPrivate : public CodeStarconnectionsRequestPrivate {
 
 public:
     DeleteConnectionRequestPrivate(const CodeStarconnectionsRequest::Action action,

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class EnableSecurityHubRequest;
 
-class QTAWS_EXPORT EnableSecurityHubRequestPrivate : public SecurityHubRequestPrivate {
+class EnableSecurityHubRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     EnableSecurityHubRequestPrivate(const SecurityHubRequest::Action action,

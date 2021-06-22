@@ -28,7 +28,7 @@ namespace MTurk {
 
 class UpdateQualificationTypeRequest;
 
-class QTAWS_EXPORT UpdateQualificationTypeRequestPrivate : public MTurkRequestPrivate {
+class UpdateQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
     UpdateQualificationTypeRequestPrivate(const MTurkRequest::Action action,

@@ -28,7 +28,7 @@ namespace S3Control {
 
 class PutStorageLensConfigurationRequest;
 
-class QTAWS_EXPORT PutStorageLensConfigurationRequestPrivate : public S3ControlRequestPrivate {
+class PutStorageLensConfigurationRequestPrivate : public S3ControlRequestPrivate {
 
 public:
     PutStorageLensConfigurationRequestPrivate(const S3ControlRequest::Action action,

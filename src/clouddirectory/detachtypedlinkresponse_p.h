@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class DetachTypedLinkResponse;
 
-class QTAWS_EXPORT DetachTypedLinkResponsePrivate : public CloudDirectoryResponsePrivate {
+class DetachTypedLinkResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

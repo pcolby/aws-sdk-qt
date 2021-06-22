@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class DescribePermissionSetProvisioningStatusResponse;
 
-class QTAWS_EXPORT DescribePermissionSetProvisioningStatusResponsePrivate : public SSOAdminResponsePrivate {
+class DescribePermissionSetProvisioningStatusResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CopyImageResponse;
 
-class QTAWS_EXPORT CopyImageResponsePrivate : public Ec2ResponsePrivate {
+class CopyImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

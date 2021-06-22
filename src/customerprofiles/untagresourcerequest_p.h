@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CustomerProfilesRequestPrivate {
+class UntagResourceRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CustomerProfilesRequest::Action action,

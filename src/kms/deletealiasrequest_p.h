@@ -28,7 +28,7 @@ namespace KMS {
 
 class DeleteAliasRequest;
 
-class QTAWS_EXPORT DeleteAliasRequestPrivate : public KmsRequestPrivate {
+class DeleteAliasRequestPrivate : public KmsRequestPrivate {
 
 public:
     DeleteAliasRequestPrivate(const KmsRequest::Action action,

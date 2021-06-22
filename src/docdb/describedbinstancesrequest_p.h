@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeDBInstancesRequest;
 
-class QTAWS_EXPORT DescribeDBInstancesRequestPrivate : public DocDBRequestPrivate {
+class DescribeDBInstancesRequestPrivate : public DocDBRequestPrivate {
 
 public:
     DescribeDBInstancesRequestPrivate(const DocDBRequest::Action action,

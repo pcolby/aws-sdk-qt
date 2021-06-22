@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public AppIntegrationsServiceRequestPrivate {
+class UntagResourceRequestPrivate : public AppIntegrationsServiceRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const AppIntegrationsServiceRequest::Action action,

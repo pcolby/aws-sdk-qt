@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorResponse;
 
-class QTAWS_EXPORT IoTDeviceAdvisorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTDeviceAdvisorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

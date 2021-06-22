@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteCustomMetricRequest;
 
-class QTAWS_EXPORT DeleteCustomMetricRequestPrivate : public IoTRequestPrivate {
+class DeleteCustomMetricRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteCustomMetricRequestPrivate(const IoTRequest::Action action,

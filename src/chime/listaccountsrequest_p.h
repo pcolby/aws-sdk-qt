@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListAccountsRequest;
 
-class QTAWS_EXPORT ListAccountsRequestPrivate : public ChimeRequestPrivate {
+class ListAccountsRequestPrivate : public ChimeRequestPrivate {
 
 public:
     ListAccountsRequestPrivate(const ChimeRequest::Action action,

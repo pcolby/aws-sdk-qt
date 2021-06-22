@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ElastiCacheRequest;
 
-class QTAWS_EXPORT ElastiCacheRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElastiCacheRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElastiCacheRequest::Action action; ///< ElastiCache action to be performed.

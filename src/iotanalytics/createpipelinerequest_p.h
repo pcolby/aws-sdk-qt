@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class CreatePipelineRequest;
 
-class QTAWS_EXPORT CreatePipelineRequestPrivate : public IoTAnalyticsRequestPrivate {
+class CreatePipelineRequestPrivate : public IoTAnalyticsRequestPrivate {
 
 public:
     CreatePipelineRequestPrivate(const IoTAnalyticsRequest::Action action,

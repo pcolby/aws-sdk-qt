@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ListDevicesRequest;
 
-class QTAWS_EXPORT ListDevicesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class ListDevicesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ListDevicesRequestPrivate(const CognitoIdentityProviderRequest::Action action,

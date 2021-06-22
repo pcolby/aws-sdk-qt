@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RegisterElasticIpRequest;
 
-class QTAWS_EXPORT RegisterElasticIpRequestPrivate : public OpsWorksRequestPrivate {
+class RegisterElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RegisterElasticIpRequestPrivate(const OpsWorksRequest::Action action,

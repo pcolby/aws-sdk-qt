@@ -28,7 +28,7 @@ namespace Neptune {
 
 class RemoveSourceIdentifierFromSubscriptionRequest;
 
-class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionRequestPrivate : public NeptuneRequestPrivate {
+class RemoveSourceIdentifierFromSubscriptionRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     RemoveSourceIdentifierFromSubscriptionRequestPrivate(const NeptuneRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoT {
 
 class AttachPrincipalPolicyRequest;
 
-class QTAWS_EXPORT AttachPrincipalPolicyRequestPrivate : public IoTRequestPrivate {
+class AttachPrincipalPolicyRequestPrivate : public IoTRequestPrivate {
 
 public:
     AttachPrincipalPolicyRequestPrivate(const IoTRequest::Action action,

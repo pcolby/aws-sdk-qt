@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class BatchGetAggregateResourceConfigResponse;
 
-class QTAWS_EXPORT BatchGetAggregateResourceConfigResponsePrivate : public ConfigServiceResponsePrivate {
+class BatchGetAggregateResourceConfigResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

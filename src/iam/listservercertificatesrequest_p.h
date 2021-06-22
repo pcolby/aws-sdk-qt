@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListServerCertificatesRequest;
 
-class QTAWS_EXPORT ListServerCertificatesRequestPrivate : public IamRequestPrivate {
+class ListServerCertificatesRequestPrivate : public IamRequestPrivate {
 
 public:
     ListServerCertificatesRequestPrivate(const IamRequest::Action action,

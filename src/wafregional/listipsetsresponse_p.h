@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class ListIPSetsResponse;
 
-class QTAWS_EXPORT ListIPSetsResponsePrivate : public WAFRegionalResponsePrivate {
+class ListIPSetsResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

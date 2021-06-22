@@ -27,7 +27,7 @@ namespace SqsOld {
 
 class SqsDeleteMessageResponse;
 
-class QTAWS_EXPORT SqsDeleteMessageResponsePrivate : public SqsResponsePrivate {
+class SqsDeleteMessageResponsePrivate : public SqsResponsePrivate {
 
 public:
     QString queueUrl; ///< Created queue URL.

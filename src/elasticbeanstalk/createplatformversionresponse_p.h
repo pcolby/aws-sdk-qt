@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class CreatePlatformVersionResponse;
 
-class QTAWS_EXPORT CreatePlatformVersionResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class CreatePlatformVersionResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

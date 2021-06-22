@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteSnapshotCopyGrantRequest;
 
-class QTAWS_EXPORT DeleteSnapshotCopyGrantRequestPrivate : public RedshiftRequestPrivate {
+class DeleteSnapshotCopyGrantRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteSnapshotCopyGrantRequestPrivate(const RedshiftRequest::Action action,

@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public MediaConnectRequestPrivate {
+class UntagResourceRequestPrivate : public MediaConnectRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const MediaConnectRequest::Action action,

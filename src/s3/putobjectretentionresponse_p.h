@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutObjectRetentionResponse;
 
-class QTAWS_EXPORT PutObjectRetentionResponsePrivate : public S3ResponsePrivate {
+class PutObjectRetentionResponsePrivate : public S3ResponsePrivate {
 
 public:
 

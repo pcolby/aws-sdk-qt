@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class StartProjectSessionResponse;
 
-class QTAWS_EXPORT StartProjectSessionResponsePrivate : public GlueDataBrewResponsePrivate {
+class StartProjectSessionResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 

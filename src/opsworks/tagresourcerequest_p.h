@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public OpsWorksRequestPrivate {
+class TagResourceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const OpsWorksRequest::Action action,

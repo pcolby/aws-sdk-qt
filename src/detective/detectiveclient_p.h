@@ -29,7 +29,7 @@ namespace Detective {
 
 class DetectiveClient;
 
-class QTAWS_EXPORT DetectiveClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DetectiveClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DetectiveClientPrivate(DetectiveClient * const q);

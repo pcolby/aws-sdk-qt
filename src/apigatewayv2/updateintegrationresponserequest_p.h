@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class UpdateIntegrationResponseRequest;
 
-class QTAWS_EXPORT UpdateIntegrationResponseRequestPrivate : public ApiGatewayV2RequestPrivate {
+class UpdateIntegrationResponseRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     UpdateIntegrationResponseRequestPrivate(const ApiGatewayV2Request::Action action,

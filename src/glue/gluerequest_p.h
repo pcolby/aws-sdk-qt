@@ -28,7 +28,7 @@ namespace Glue {
 
 class GlueRequest;
 
-class QTAWS_EXPORT GlueRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GlueRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GlueRequest::Action action; ///< Glue action to be performed.

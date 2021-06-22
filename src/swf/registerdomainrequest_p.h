@@ -28,7 +28,7 @@ namespace SWF {
 
 class RegisterDomainRequest;
 
-class QTAWS_EXPORT RegisterDomainRequestPrivate : public SwfRequestPrivate {
+class RegisterDomainRequestPrivate : public SwfRequestPrivate {
 
 public:
     RegisterDomainRequestPrivate(const SwfRequest::Action action,

@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class DescribeAlarmsForMetricResponse;
 
-class QTAWS_EXPORT DescribeAlarmsForMetricResponsePrivate : public CloudWatchResponsePrivate {
+class DescribeAlarmsForMetricResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 

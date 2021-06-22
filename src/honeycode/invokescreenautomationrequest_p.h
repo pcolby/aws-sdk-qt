@@ -28,7 +28,7 @@ namespace Honeycode {
 
 class InvokeScreenAutomationRequest;
 
-class QTAWS_EXPORT InvokeScreenAutomationRequestPrivate : public HoneycodeRequestPrivate {
+class InvokeScreenAutomationRequestPrivate : public HoneycodeRequestPrivate {
 
 public:
     InvokeScreenAutomationRequestPrivate(const HoneycodeRequest::Action action,

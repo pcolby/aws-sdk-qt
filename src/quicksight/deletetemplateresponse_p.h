@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteTemplateResponse;
 
-class QTAWS_EXPORT DeleteTemplateResponsePrivate : public QuickSightResponsePrivate {
+class DeleteTemplateResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

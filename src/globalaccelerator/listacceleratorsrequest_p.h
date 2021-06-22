@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class ListAcceleratorsRequest;
 
-class QTAWS_EXPORT ListAcceleratorsRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class ListAcceleratorsRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     ListAcceleratorsRequestPrivate(const GlobalAcceleratorRequest::Action action,

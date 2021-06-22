@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketCorsResponse;
 
-class QTAWS_EXPORT DeleteBucketCorsResponsePrivate : public S3ResponsePrivate {
+class DeleteBucketCorsResponsePrivate : public S3ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteAggregationAuthorizationRequest;
 
-class QTAWS_EXPORT DeleteAggregationAuthorizationRequestPrivate : public ConfigServiceRequestPrivate {
+class DeleteAggregationAuthorizationRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteAggregationAuthorizationRequestPrivate(const ConfigServiceRequest::Action action,

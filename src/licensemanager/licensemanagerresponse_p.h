@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class LicenseManagerResponse;
 
-class QTAWS_EXPORT LicenseManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LicenseManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

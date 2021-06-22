@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class DeleteVodSourceResponse;
 
-class QTAWS_EXPORT DeleteVodSourceResponsePrivate : public MediaTailorResponsePrivate {
+class DeleteVodSourceResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

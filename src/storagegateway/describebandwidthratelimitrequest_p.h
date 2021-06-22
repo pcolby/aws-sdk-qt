@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeBandwidthRateLimitRequest;
 
-class QTAWS_EXPORT DescribeBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
+class DescribeBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeBandwidthRateLimitRequestPrivate(const StorageGatewayRequest::Action action,

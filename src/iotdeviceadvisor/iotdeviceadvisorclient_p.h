@@ -29,7 +29,7 @@ namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorClient;
 
-class QTAWS_EXPORT IoTDeviceAdvisorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTDeviceAdvisorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q);

@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class ListRulesRequest;
 
-class QTAWS_EXPORT ListRulesRequestPrivate : public CloudWatchEventsRequestPrivate {
+class ListRulesRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     ListRulesRequestPrivate(const CloudWatchEventsRequest::Action action,

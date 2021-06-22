@@ -27,7 +27,7 @@ namespace SSO {
 
 class SsoResponse;
 
-class QTAWS_EXPORT SsoResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SsoResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

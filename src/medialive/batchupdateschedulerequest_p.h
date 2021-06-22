@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class BatchUpdateScheduleRequest;
 
-class QTAWS_EXPORT BatchUpdateScheduleRequestPrivate : public MediaLiveRequestPrivate {
+class BatchUpdateScheduleRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     BatchUpdateScheduleRequestPrivate(const MediaLiveRequest::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteManagedPrefixListRequest;
 
-class QTAWS_EXPORT DeleteManagedPrefixListRequestPrivate : public Ec2RequestPrivate {
+class DeleteManagedPrefixListRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteManagedPrefixListRequestPrivate(const Ec2Request::Action action,

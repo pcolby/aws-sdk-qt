@@ -27,7 +27,7 @@ namespace PrometheusService {
 
 class PrometheusServiceResponse;
 
-class QTAWS_EXPORT PrometheusServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PrometheusServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

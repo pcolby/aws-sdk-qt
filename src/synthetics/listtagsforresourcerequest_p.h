@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SyntheticsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SyntheticsRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SyntheticsRequest::Action action,

@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class AssociateTransitGatewayConnectPeerRequest;
 
-class QTAWS_EXPORT AssociateTransitGatewayConnectPeerRequestPrivate : public NetworkManagerRequestPrivate {
+class AssociateTransitGatewayConnectPeerRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     AssociateTransitGatewayConnectPeerRequestPrivate(const NetworkManagerRequest::Action action,

@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class GetPolicyResponse;
 
-class QTAWS_EXPORT GetPolicyResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class GetPolicyResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

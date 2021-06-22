@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class UpdateVocabularyResponse;
 
-class QTAWS_EXPORT UpdateVocabularyResponsePrivate : public TranscribeServiceResponsePrivate {
+class UpdateVocabularyResponsePrivate : public TranscribeServiceResponsePrivate {
 
 public:
 

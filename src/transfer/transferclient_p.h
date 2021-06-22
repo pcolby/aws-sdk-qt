@@ -29,7 +29,7 @@ namespace Transfer {
 
 class TransferClient;
 
-class QTAWS_EXPORT TransferClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TransferClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     TransferClientPrivate(TransferClient * const q);

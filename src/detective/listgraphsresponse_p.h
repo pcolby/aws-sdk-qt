@@ -27,7 +27,7 @@ namespace Detective {
 
 class ListGraphsResponse;
 
-class QTAWS_EXPORT ListGraphsResponsePrivate : public DetectiveResponsePrivate {
+class ListGraphsResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 

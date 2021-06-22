@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateSMBSecurityStrategyRequest;
 
-class QTAWS_EXPORT UpdateSMBSecurityStrategyRequestPrivate : public StorageGatewayRequestPrivate {
+class UpdateSMBSecurityStrategyRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateSMBSecurityStrategyRequestPrivate(const StorageGatewayRequest::Action action,

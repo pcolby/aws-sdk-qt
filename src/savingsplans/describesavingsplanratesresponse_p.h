@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class DescribeSavingsPlanRatesResponse;
 
-class QTAWS_EXPORT DescribeSavingsPlanRatesResponsePrivate : public SavingsPlansResponsePrivate {
+class DescribeSavingsPlanRatesResponsePrivate : public SavingsPlansResponsePrivate {
 
 public:
 

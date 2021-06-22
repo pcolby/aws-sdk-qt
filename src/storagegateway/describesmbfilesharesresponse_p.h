@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeSMBFileSharesResponse;
 
-class QTAWS_EXPORT DescribeSMBFileSharesResponsePrivate : public StorageGatewayResponsePrivate {
+class DescribeSMBFileSharesResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

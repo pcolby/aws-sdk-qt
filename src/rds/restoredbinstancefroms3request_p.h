@@ -28,7 +28,7 @@ namespace RDS {
 
 class RestoreDBInstanceFromS3Request;
 
-class QTAWS_EXPORT RestoreDBInstanceFromS3RequestPrivate : public RdsRequestPrivate {
+class RestoreDBInstanceFromS3RequestPrivate : public RdsRequestPrivate {
 
 public:
     RestoreDBInstanceFromS3RequestPrivate(const RdsRequest::Action action,

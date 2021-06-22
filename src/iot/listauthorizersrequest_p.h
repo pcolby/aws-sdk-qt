@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListAuthorizersRequest;
 
-class QTAWS_EXPORT ListAuthorizersRequestPrivate : public IoTRequestPrivate {
+class ListAuthorizersRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListAuthorizersRequestPrivate(const IoTRequest::Action action,

@@ -27,7 +27,7 @@ namespace IoTFleetHub {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public IoTFleetHubResponsePrivate {
+class TagResourceResponsePrivate : public IoTFleetHubResponsePrivate {
 
 public:
 

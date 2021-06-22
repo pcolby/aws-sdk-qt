@@ -28,7 +28,7 @@ namespace DataSync {
 
 class StartTaskExecutionRequest;
 
-class QTAWS_EXPORT StartTaskExecutionRequestPrivate : public DataSyncRequestPrivate {
+class StartTaskExecutionRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     StartTaskExecutionRequestPrivate(const DataSyncRequest::Action action,

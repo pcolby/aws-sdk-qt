@@ -28,7 +28,7 @@ namespace ComprehendMedical {
 
 class StartPHIDetectionJobRequest;
 
-class QTAWS_EXPORT StartPHIDetectionJobRequestPrivate : public ComprehendMedicalRequestPrivate {
+class StartPHIDetectionJobRequestPrivate : public ComprehendMedicalRequestPrivate {
 
 public:
     StartPHIDetectionJobRequestPrivate(const ComprehendMedicalRequest::Action action,

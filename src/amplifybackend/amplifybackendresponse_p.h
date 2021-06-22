@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class AmplifyBackendResponse;
 
-class QTAWS_EXPORT AmplifyBackendResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AmplifyBackendResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

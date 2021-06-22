@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class ListMembersRequest;
 
-class QTAWS_EXPORT ListMembersRequestPrivate : public SecurityHubRequestPrivate {
+class ListMembersRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     ListMembersRequestPrivate(const SecurityHubRequest::Action action,

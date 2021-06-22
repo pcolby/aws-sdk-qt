@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DescribeDominantLanguageDetectionJobRequest;
 
-class QTAWS_EXPORT DescribeDominantLanguageDetectionJobRequestPrivate : public ComprehendRequestPrivate {
+class DescribeDominantLanguageDetectionJobRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     DescribeDominantLanguageDetectionJobRequestPrivate(const ComprehendRequest::Action action,

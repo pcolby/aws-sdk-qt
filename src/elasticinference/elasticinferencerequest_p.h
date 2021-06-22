@@ -28,7 +28,7 @@ namespace ElasticInference {
 
 class ElasticInferenceRequest;
 
-class QTAWS_EXPORT ElasticInferenceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticInferenceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticInferenceRequest::Action action; ///< ElasticInference action to be performed.

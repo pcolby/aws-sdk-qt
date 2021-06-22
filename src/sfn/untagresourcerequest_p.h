@@ -28,7 +28,7 @@ namespace SFN {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public SfnRequestPrivate {
+class UntagResourceRequestPrivate : public SfnRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const SfnRequest::Action action,

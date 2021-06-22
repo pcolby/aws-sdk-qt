@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateLongTermPricingRequest;
 
-class QTAWS_EXPORT UpdateLongTermPricingRequestPrivate : public SnowballRequestPrivate {
+class UpdateLongTermPricingRequestPrivate : public SnowballRequestPrivate {
 
 public:
     UpdateLongTermPricingRequestPrivate(const SnowballRequest::Action action,

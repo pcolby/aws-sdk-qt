@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetAggregateDiscoveredResourceCountsRequest;
 
-class QTAWS_EXPORT GetAggregateDiscoveredResourceCountsRequestPrivate : public ConfigServiceRequestPrivate {
+class GetAggregateDiscoveredResourceCountsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetAggregateDiscoveredResourceCountsRequestPrivate(const ConfigServiceRequest::Action action,

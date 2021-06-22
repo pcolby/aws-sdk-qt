@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class KinesisAnalyticsRequest;
 
-class QTAWS_EXPORT KinesisAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KinesisAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     KinesisAnalyticsRequest::Action action; ///< KinesisAnalytics action to be performed.

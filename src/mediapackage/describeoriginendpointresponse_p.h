@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class DescribeOriginEndpointResponse;
 
-class QTAWS_EXPORT DescribeOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
+class DescribeOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

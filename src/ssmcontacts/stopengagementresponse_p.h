@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class StopEngagementResponse;
 
-class QTAWS_EXPORT StopEngagementResponsePrivate : public SSMContactsResponsePrivate {
+class StopEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 

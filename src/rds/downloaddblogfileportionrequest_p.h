@@ -28,7 +28,7 @@ namespace RDS {
 
 class DownloadDBLogFilePortionRequest;
 
-class QTAWS_EXPORT DownloadDBLogFilePortionRequestPrivate : public RdsRequestPrivate {
+class DownloadDBLogFilePortionRequestPrivate : public RdsRequestPrivate {
 
 public:
     DownloadDBLogFilePortionRequestPrivate(const RdsRequest::Action action,

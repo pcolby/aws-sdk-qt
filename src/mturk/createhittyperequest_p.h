@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateHITTypeRequest;
 
-class QTAWS_EXPORT CreateHITTypeRequestPrivate : public MTurkRequestPrivate {
+class CreateHITTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
     CreateHITTypeRequestPrivate(const MTurkRequest::Action action,

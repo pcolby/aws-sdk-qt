@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetInsightImpactGraphRequest;
 
-class QTAWS_EXPORT GetInsightImpactGraphRequestPrivate : public XRayRequestPrivate {
+class GetInsightImpactGraphRequestPrivate : public XRayRequestPrivate {
 
 public:
     GetInsightImpactGraphRequestPrivate(const XRayRequest::Action action,

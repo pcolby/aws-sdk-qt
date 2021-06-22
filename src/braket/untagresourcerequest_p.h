@@ -28,7 +28,7 @@ namespace Braket {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public BraketRequestPrivate {
+class UntagResourceRequestPrivate : public BraketRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const BraketRequest::Action action,

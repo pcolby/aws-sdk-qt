@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetMergeCommitRequest;
 
-class QTAWS_EXPORT GetMergeCommitRequestPrivate : public CodeCommitRequestPrivate {
+class GetMergeCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetMergeCommitRequestPrivate(const CodeCommitRequest::Action action,

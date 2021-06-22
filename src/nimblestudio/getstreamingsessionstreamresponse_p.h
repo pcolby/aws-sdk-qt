@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class GetStreamingSessionStreamResponse;
 
-class QTAWS_EXPORT GetStreamingSessionStreamResponsePrivate : public NimbleStudioResponsePrivate {
+class GetStreamingSessionStreamResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

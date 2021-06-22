@@ -27,7 +27,7 @@ namespace Kafka {
 
 class BatchAssociateScramSecretResponse;
 
-class QTAWS_EXPORT BatchAssociateScramSecretResponsePrivate : public KafkaResponsePrivate {
+class BatchAssociateScramSecretResponsePrivate : public KafkaResponsePrivate {
 
 public:
 

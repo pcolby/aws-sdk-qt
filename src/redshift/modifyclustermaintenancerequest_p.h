@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyClusterMaintenanceRequest;
 
-class QTAWS_EXPORT ModifyClusterMaintenanceRequestPrivate : public RedshiftRequestPrivate {
+class ModifyClusterMaintenanceRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifyClusterMaintenanceRequestPrivate(const RedshiftRequest::Action action,

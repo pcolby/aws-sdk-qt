@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class DeregisterScalableTargetRequest;
 
-class QTAWS_EXPORT DeregisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
+class DeregisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
     DeregisterScalableTargetRequestPrivate(const ApplicationAutoScalingRequest::Action action,

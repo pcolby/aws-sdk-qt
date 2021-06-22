@@ -28,7 +28,7 @@ namespace Firehose {
 
 class DescribeDeliveryStreamRequest;
 
-class QTAWS_EXPORT DescribeDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
+class DescribeDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     DescribeDeliveryStreamRequestPrivate(const FirehoseRequest::Action action,

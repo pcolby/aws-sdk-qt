@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateKeyPairResponse;
 
-class QTAWS_EXPORT CreateKeyPairResponsePrivate : public LightsailResponsePrivate {
+class CreateKeyPairResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

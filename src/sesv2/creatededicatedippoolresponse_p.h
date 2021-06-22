@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateDedicatedIpPoolResponse;
 
-class QTAWS_EXPORT CreateDedicatedIpPoolResponsePrivate : public Sesv2ResponsePrivate {
+class CreateDedicatedIpPoolResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

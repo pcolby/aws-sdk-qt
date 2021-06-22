@@ -27,7 +27,7 @@ namespace Translate {
 
 class StopTextTranslationJobResponse;
 
-class QTAWS_EXPORT StopTextTranslationJobResponsePrivate : public TranslateResponsePrivate {
+class StopTextTranslationJobResponsePrivate : public TranslateResponsePrivate {
 
 public:
 

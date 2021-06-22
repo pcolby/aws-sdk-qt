@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class AssociateProductWithPortfolioRequest;
 
-class QTAWS_EXPORT AssociateProductWithPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
+class AssociateProductWithPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     AssociateProductWithPortfolioRequestPrivate(const ServiceCatalogRequest::Action action,

@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class RevokeIpRulesResponse;
 
-class QTAWS_EXPORT RevokeIpRulesResponsePrivate : public WorkSpacesResponsePrivate {
+class RevokeIpRulesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

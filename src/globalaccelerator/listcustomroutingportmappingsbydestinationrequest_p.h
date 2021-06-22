@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class ListCustomRoutingPortMappingsByDestinationRequest;
 
-class QTAWS_EXPORT ListCustomRoutingPortMappingsByDestinationRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class ListCustomRoutingPortMappingsByDestinationRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     ListCustomRoutingPortMappingsByDestinationRequestPrivate(const GlobalAcceleratorRequest::Action action,

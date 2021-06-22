@@ -27,7 +27,7 @@ namespace Proton {
 
 class ProtonResponse;
 
-class QTAWS_EXPORT ProtonResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ProtonResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

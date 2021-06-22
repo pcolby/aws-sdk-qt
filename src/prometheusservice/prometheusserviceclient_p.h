@@ -29,7 +29,7 @@ namespace PrometheusService {
 
 class PrometheusServiceClient;
 
-class QTAWS_EXPORT PrometheusServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PrometheusServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PrometheusServiceClientPrivate(PrometheusServiceClient * const q);

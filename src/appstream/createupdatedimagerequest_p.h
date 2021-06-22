@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateUpdatedImageRequest;
 
-class QTAWS_EXPORT CreateUpdatedImageRequestPrivate : public AppStreamRequestPrivate {
+class CreateUpdatedImageRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CreateUpdatedImageRequestPrivate(const AppStreamRequest::Action action,

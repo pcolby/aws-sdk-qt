@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListComplianceSummariesRequest;
 
-class QTAWS_EXPORT ListComplianceSummariesRequestPrivate : public SsmRequestPrivate {
+class ListComplianceSummariesRequestPrivate : public SsmRequestPrivate {
 
 public:
     ListComplianceSummariesRequestPrivate(const SsmRequest::Action action,

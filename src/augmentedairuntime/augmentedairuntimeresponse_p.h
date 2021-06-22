@@ -27,7 +27,7 @@ namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeResponse;
 
-class QTAWS_EXPORT AugmentedAIRuntimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AugmentedAIRuntimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

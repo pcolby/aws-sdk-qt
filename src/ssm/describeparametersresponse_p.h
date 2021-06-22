@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeParametersResponse;
 
-class QTAWS_EXPORT DescribeParametersResponsePrivate : public SsmResponsePrivate {
+class DescribeParametersResponsePrivate : public SsmResponsePrivate {
 
 public:
 

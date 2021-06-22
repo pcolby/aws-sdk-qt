@@ -28,7 +28,7 @@ namespace Batch {
 
 class BatchRequest;
 
-class QTAWS_EXPORT BatchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class BatchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     BatchRequest::Action action; ///< Batch action to be performed.

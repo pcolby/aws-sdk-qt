@@ -29,7 +29,7 @@ namespace EMRContainers {
 
 class EMRContainersClient;
 
-class QTAWS_EXPORT EMRContainersClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EMRContainersClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EMRContainersClientPrivate(EMRContainersClient * const q);

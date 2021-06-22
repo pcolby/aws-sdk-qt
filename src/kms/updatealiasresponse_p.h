@@ -27,7 +27,7 @@ namespace KMS {
 
 class UpdateAliasResponse;
 
-class QTAWS_EXPORT UpdateAliasResponsePrivate : public KmsResponsePrivate {
+class UpdateAliasResponsePrivate : public KmsResponsePrivate {
 
 public:
 

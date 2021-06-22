@@ -27,7 +27,7 @@ namespace MarketplaceMetering {
 
 class ResolveCustomerResponse;
 
-class QTAWS_EXPORT ResolveCustomerResponsePrivate : public MarketplaceMeteringResponsePrivate {
+class ResolveCustomerResponsePrivate : public MarketplaceMeteringResponsePrivate {
 
 public:
 

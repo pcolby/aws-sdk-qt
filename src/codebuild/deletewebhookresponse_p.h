@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DeleteWebhookResponse;
 
-class QTAWS_EXPORT DeleteWebhookResponsePrivate : public CodeBuildResponsePrivate {
+class DeleteWebhookResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

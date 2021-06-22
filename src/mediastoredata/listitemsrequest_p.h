@@ -28,7 +28,7 @@ namespace MediaStoreData {
 
 class ListItemsRequest;
 
-class QTAWS_EXPORT ListItemsRequestPrivate : public MediaStoreDataRequestPrivate {
+class ListItemsRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
     ListItemsRequestPrivate(const MediaStoreDataRequest::Action action,

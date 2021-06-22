@@ -27,7 +27,7 @@ namespace Schemas {
 
 class PutCodeBindingResponse;
 
-class QTAWS_EXPORT PutCodeBindingResponsePrivate : public SchemasResponsePrivate {
+class PutCodeBindingResponsePrivate : public SchemasResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class ResetResourceLogLevelResponse;
 
-class QTAWS_EXPORT ResetResourceLogLevelResponsePrivate : public IoTWirelessResponsePrivate {
+class ResetResourceLogLevelResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 

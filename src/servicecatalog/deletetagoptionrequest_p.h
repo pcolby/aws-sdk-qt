@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeleteTagOptionRequest;
 
-class QTAWS_EXPORT DeleteTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
+class DeleteTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeleteTagOptionRequestPrivate(const ServiceCatalogRequest::Action action,

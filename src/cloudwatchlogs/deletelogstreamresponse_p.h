@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class DeleteLogStreamResponse;
 
-class QTAWS_EXPORT DeleteLogStreamResponsePrivate : public CloudWatchLogsResponsePrivate {
+class DeleteLogStreamResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 

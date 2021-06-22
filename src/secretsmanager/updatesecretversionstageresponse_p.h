@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class UpdateSecretVersionStageResponse;
 
-class QTAWS_EXPORT UpdateSecretVersionStageResponsePrivate : public SecretsManagerResponsePrivate {
+class UpdateSecretVersionStageResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 

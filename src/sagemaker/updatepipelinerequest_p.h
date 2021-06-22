@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdatePipelineRequest;
 
-class QTAWS_EXPORT UpdatePipelineRequestPrivate : public SageMakerRequestPrivate {
+class UpdatePipelineRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     UpdatePipelineRequestPrivate(const SageMakerRequest::Action action,

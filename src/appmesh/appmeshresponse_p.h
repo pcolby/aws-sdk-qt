@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class AppMeshResponse;
 
-class QTAWS_EXPORT AppMeshResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppMeshResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

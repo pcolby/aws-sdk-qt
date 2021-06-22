@@ -28,7 +28,7 @@ namespace SES {
 
 class SendCustomVerificationEmailRequest;
 
-class QTAWS_EXPORT SendCustomVerificationEmailRequestPrivate : public SesRequestPrivate {
+class SendCustomVerificationEmailRequestPrivate : public SesRequestPrivate {
 
 public:
     SendCustomVerificationEmailRequestPrivate(const SesRequest::Action action,

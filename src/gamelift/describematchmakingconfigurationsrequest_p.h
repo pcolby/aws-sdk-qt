@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeMatchmakingConfigurationsRequest;
 
-class QTAWS_EXPORT DescribeMatchmakingConfigurationsRequestPrivate : public GameLiftRequestPrivate {
+class DescribeMatchmakingConfigurationsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeMatchmakingConfigurationsRequestPrivate(const GameLiftRequest::Action action,

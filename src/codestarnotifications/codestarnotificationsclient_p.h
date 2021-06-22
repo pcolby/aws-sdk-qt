@@ -29,7 +29,7 @@ namespace CodeStarNotifications {
 
 class CodeStarNotificationsClient;
 
-class QTAWS_EXPORT CodeStarNotificationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeStarNotificationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q);

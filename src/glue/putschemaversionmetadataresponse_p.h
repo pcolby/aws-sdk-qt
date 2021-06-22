@@ -27,7 +27,7 @@ namespace Glue {
 
 class PutSchemaVersionMetadataResponse;
 
-class QTAWS_EXPORT PutSchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
+class PutSchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
 
 public:
 

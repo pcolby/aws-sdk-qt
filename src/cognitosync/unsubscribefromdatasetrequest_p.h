@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class UnsubscribeFromDatasetRequest;
 
-class QTAWS_EXPORT UnsubscribeFromDatasetRequestPrivate : public CognitoSyncRequestPrivate {
+class UnsubscribeFromDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     UnsubscribeFromDatasetRequestPrivate(const CognitoSyncRequest::Action action,

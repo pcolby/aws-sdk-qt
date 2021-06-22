@@ -28,7 +28,7 @@ namespace HealthLake {
 
 class DeleteFHIRDatastoreRequest;
 
-class QTAWS_EXPORT DeleteFHIRDatastoreRequestPrivate : public HealthLakeRequestPrivate {
+class DeleteFHIRDatastoreRequestPrivate : public HealthLakeRequestPrivate {
 
 public:
     DeleteFHIRDatastoreRequestPrivate(const HealthLakeRequest::Action action,

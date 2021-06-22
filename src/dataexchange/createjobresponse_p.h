@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class CreateJobResponse;
 
-class QTAWS_EXPORT CreateJobResponsePrivate : public DataExchangeResponsePrivate {
+class CreateJobResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 

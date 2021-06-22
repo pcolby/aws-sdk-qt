@@ -28,7 +28,7 @@ namespace Inspector {
 
 class DescribeRulesPackagesRequest;
 
-class QTAWS_EXPORT DescribeRulesPackagesRequestPrivate : public InspectorRequestPrivate {
+class DescribeRulesPackagesRequestPrivate : public InspectorRequestPrivate {
 
 public:
     DescribeRulesPackagesRequestPrivate(const InspectorRequest::Action action,

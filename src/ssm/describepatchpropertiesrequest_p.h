@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribePatchPropertiesRequest;
 
-class QTAWS_EXPORT DescribePatchPropertiesRequestPrivate : public SsmRequestPrivate {
+class DescribePatchPropertiesRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribePatchPropertiesRequestPrivate(const SsmRequest::Action action,

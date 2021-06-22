@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class CreateIPSetRequest;
 
-class QTAWS_EXPORT CreateIPSetRequestPrivate : public Wafv2RequestPrivate {
+class CreateIPSetRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     CreateIPSetRequestPrivate(const Wafv2Request::Action action,

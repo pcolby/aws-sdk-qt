@@ -27,7 +27,7 @@ namespace MWAA {
 
 class DeleteEnvironmentResponse;
 
-class QTAWS_EXPORT DeleteEnvironmentResponsePrivate : public MwaaResponsePrivate {
+class DeleteEnvironmentResponsePrivate : public MwaaResponsePrivate {
 
 public:
 

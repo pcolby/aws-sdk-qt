@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeBundleTasksRequest;
 
-class QTAWS_EXPORT DescribeBundleTasksRequestPrivate : public Ec2RequestPrivate {
+class DescribeBundleTasksRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeBundleTasksRequestPrivate(const Ec2Request::Action action,

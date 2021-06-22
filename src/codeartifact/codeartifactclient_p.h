@@ -29,7 +29,7 @@ namespace CodeArtifact {
 
 class CodeArtifactClient;
 
-class QTAWS_EXPORT CodeArtifactClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeArtifactClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeArtifactClientPrivate(CodeArtifactClient * const q);

@@ -32,7 +32,7 @@ namespace Core {
 
 class AwsSignatureV2;
 
-class QTAWS_EXPORT AwsSignatureV2Private : public AwsAbstractSignaturePrivate {
+class AwsSignatureV2Private : public AwsAbstractSignaturePrivate {
 
 public:
     QCryptographicHash::Algorithm hashAlgorithm; ///< Hash algorithm to use when signing.

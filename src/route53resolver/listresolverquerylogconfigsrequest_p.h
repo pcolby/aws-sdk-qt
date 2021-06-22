@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class ListResolverQueryLogConfigsRequest;
 
-class QTAWS_EXPORT ListResolverQueryLogConfigsRequestPrivate : public Route53ResolverRequestPrivate {
+class ListResolverQueryLogConfigsRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     ListResolverQueryLogConfigsRequestPrivate(const Route53ResolverRequest::Action action,

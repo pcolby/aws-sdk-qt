@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class DescribeConnectionResponse;
 
-class QTAWS_EXPORT DescribeConnectionResponsePrivate : public EventBridgeResponsePrivate {
+class DescribeConnectionResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

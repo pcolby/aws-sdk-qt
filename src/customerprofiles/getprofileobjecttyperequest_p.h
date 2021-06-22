@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class GetProfileObjectTypeRequest;
 
-class QTAWS_EXPORT GetProfileObjectTypeRequestPrivate : public CustomerProfilesRequestPrivate {
+class GetProfileObjectTypeRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     GetProfileObjectTypeRequestPrivate(const CustomerProfilesRequest::Action action,

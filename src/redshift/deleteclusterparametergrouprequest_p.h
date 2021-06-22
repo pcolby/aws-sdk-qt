@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteClusterParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteClusterParameterGroupRequestPrivate : public RedshiftRequestPrivate {
+class DeleteClusterParameterGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteClusterParameterGroupRequestPrivate(const RedshiftRequest::Action action,

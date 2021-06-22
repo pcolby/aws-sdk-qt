@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class IncreaseReplicaCountResponse;
 
-class QTAWS_EXPORT IncreaseReplicaCountResponsePrivate : public ElastiCacheResponsePrivate {
+class IncreaseReplicaCountResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

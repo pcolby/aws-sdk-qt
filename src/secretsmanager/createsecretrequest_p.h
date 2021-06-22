@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class CreateSecretRequest;
 
-class QTAWS_EXPORT CreateSecretRequestPrivate : public SecretsManagerRequestPrivate {
+class CreateSecretRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     CreateSecretRequestPrivate(const SecretsManagerRequest::Action action,

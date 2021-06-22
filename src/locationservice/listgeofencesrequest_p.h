@@ -28,7 +28,7 @@ namespace LocationService {
 
 class ListGeofencesRequest;
 
-class QTAWS_EXPORT ListGeofencesRequestPrivate : public LocationServiceRequestPrivate {
+class ListGeofencesRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     ListGeofencesRequestPrivate(const LocationServiceRequest::Action action,

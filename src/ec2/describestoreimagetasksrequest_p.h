@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeStoreImageTasksRequest;
 
-class QTAWS_EXPORT DescribeStoreImageTasksRequestPrivate : public Ec2RequestPrivate {
+class DescribeStoreImageTasksRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeStoreImageTasksRequestPrivate(const Ec2Request::Action action,

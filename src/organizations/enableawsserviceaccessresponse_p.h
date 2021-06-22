@@ -27,7 +27,7 @@ namespace Organizations {
 
 class EnableAWSServiceAccessResponse;
 
-class QTAWS_EXPORT EnableAWSServiceAccessResponsePrivate : public OrganizationsResponsePrivate {
+class EnableAWSServiceAccessResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

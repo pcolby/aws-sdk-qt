@@ -28,7 +28,7 @@ namespace SSOOIDC {
 
 class CreateTokenRequest;
 
-class QTAWS_EXPORT CreateTokenRequestPrivate : public SsooidcRequestPrivate {
+class CreateTokenRequestPrivate : public SsooidcRequestPrivate {
 
 public:
     CreateTokenRequestPrivate(const SsooidcRequest::Action action,

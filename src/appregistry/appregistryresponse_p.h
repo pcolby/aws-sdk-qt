@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class AppRegistryResponse;
 
-class QTAWS_EXPORT AppRegistryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppRegistryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

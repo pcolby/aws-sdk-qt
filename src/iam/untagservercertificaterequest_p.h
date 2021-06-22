@@ -28,7 +28,7 @@ namespace IAM {
 
 class UntagServerCertificateRequest;
 
-class QTAWS_EXPORT UntagServerCertificateRequestPrivate : public IamRequestPrivate {
+class UntagServerCertificateRequestPrivate : public IamRequestPrivate {
 
 public:
     UntagServerCertificateRequestPrivate(const IamRequest::Action action,

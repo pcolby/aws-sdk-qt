@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DeleteSlotResponse;
 
-class QTAWS_EXPORT DeleteSlotResponsePrivate : public LexModelsV2ResponsePrivate {
+class DeleteSlotResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

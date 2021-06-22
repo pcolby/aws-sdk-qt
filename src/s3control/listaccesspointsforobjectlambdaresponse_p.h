@@ -27,7 +27,7 @@ namespace S3Control {
 
 class ListAccessPointsForObjectLambdaResponse;
 
-class QTAWS_EXPORT ListAccessPointsForObjectLambdaResponsePrivate : public S3ControlResponsePrivate {
+class ListAccessPointsForObjectLambdaResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

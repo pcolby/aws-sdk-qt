@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public DataExchangeRequestPrivate {
+class TagResourceRequestPrivate : public DataExchangeRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const DataExchangeRequest::Action action,

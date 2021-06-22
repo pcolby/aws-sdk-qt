@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetEbsDefaultKmsKeyIdRequest;
 
-class QTAWS_EXPORT GetEbsDefaultKmsKeyIdRequestPrivate : public Ec2RequestPrivate {
+class GetEbsDefaultKmsKeyIdRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetEbsDefaultKmsKeyIdRequestPrivate(const Ec2Request::Action action,

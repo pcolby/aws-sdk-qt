@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class RemovePermissionRequest;
 
-class QTAWS_EXPORT RemovePermissionRequestPrivate : public CodeGuruProfilerRequestPrivate {
+class RemovePermissionRequestPrivate : public CodeGuruProfilerRequestPrivate {
 
 public:
     RemovePermissionRequestPrivate(const CodeGuruProfilerRequest::Action action,

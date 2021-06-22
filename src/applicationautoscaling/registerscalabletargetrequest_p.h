@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class RegisterScalableTargetRequest;
 
-class QTAWS_EXPORT RegisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
+class RegisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
     RegisterScalableTargetRequestPrivate(const ApplicationAutoScalingRequest::Action action,

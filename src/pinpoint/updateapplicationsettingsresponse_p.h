@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateApplicationSettingsResponse;
 
-class QTAWS_EXPORT UpdateApplicationSettingsResponsePrivate : public PinpointResponsePrivate {
+class UpdateApplicationSettingsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

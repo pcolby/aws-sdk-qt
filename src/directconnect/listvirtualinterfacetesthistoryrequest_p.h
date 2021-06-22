@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class ListVirtualInterfaceTestHistoryRequest;
 
-class QTAWS_EXPORT ListVirtualInterfaceTestHistoryRequestPrivate : public DirectConnectRequestPrivate {
+class ListVirtualInterfaceTestHistoryRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     ListVirtualInterfaceTestHistoryRequestPrivate(const DirectConnectRequest::Action action,

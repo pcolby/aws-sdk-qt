@@ -28,7 +28,7 @@ namespace KMS {
 
 class UpdateCustomKeyStoreRequest;
 
-class QTAWS_EXPORT UpdateCustomKeyStoreRequestPrivate : public KmsRequestPrivate {
+class UpdateCustomKeyStoreRequestPrivate : public KmsRequestPrivate {
 
 public:
     UpdateCustomKeyStoreRequestPrivate(const KmsRequest::Action action,

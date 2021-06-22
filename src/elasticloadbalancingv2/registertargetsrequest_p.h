@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class RegisterTargetsRequest;
 
-class QTAWS_EXPORT RegisterTargetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
+class RegisterTargetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     RegisterTargetsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,

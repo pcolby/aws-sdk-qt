@@ -28,7 +28,7 @@ namespace Schemas {
 
 class PutCodeBindingRequest;
 
-class QTAWS_EXPORT PutCodeBindingRequestPrivate : public SchemasRequestPrivate {
+class PutCodeBindingRequestPrivate : public SchemasRequestPrivate {
 
 public:
     PutCodeBindingRequestPrivate(const SchemasRequest::Action action,

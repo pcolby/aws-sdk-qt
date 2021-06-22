@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class UpdateContactRequest;
 
-class QTAWS_EXPORT UpdateContactRequestPrivate : public SSMContactsRequestPrivate {
+class UpdateContactRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     UpdateContactRequestPrivate(const SSMContactsRequest::Action action,

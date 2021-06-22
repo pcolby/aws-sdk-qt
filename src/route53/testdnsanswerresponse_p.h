@@ -27,7 +27,7 @@ namespace Route53 {
 
 class TestDNSAnswerResponse;
 
-class QTAWS_EXPORT TestDNSAnswerResponsePrivate : public Route53ResponsePrivate {
+class TestDNSAnswerResponsePrivate : public Route53ResponsePrivate {
 
 public:
 

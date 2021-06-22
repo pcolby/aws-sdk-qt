@@ -28,7 +28,7 @@ namespace SNS {
 
 class SetEndpointAttributesRequest;
 
-class QTAWS_EXPORT SetEndpointAttributesRequestPrivate : public SnsRequestPrivate {
+class SetEndpointAttributesRequestPrivate : public SnsRequestPrivate {
 
 public:
     SetEndpointAttributesRequestPrivate(const SnsRequest::Action action,

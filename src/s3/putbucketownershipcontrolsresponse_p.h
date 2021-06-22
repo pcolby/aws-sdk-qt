@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketOwnershipControlsResponse;
 
-class QTAWS_EXPORT PutBucketOwnershipControlsResponsePrivate : public S3ResponsePrivate {
+class PutBucketOwnershipControlsResponsePrivate : public S3ResponsePrivate {
 
 public:
 

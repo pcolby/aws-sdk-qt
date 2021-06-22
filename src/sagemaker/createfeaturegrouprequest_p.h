@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateFeatureGroupRequest;
 
-class QTAWS_EXPORT CreateFeatureGroupRequestPrivate : public SageMakerRequestPrivate {
+class CreateFeatureGroupRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateFeatureGroupRequestPrivate(const SageMakerRequest::Action action,

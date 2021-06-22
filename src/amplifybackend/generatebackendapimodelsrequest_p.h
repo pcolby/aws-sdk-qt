@@ -28,7 +28,7 @@ namespace AmplifyBackend {
 
 class GenerateBackendAPIModelsRequest;
 
-class QTAWS_EXPORT GenerateBackendAPIModelsRequestPrivate : public AmplifyBackendRequestPrivate {
+class GenerateBackendAPIModelsRequestPrivate : public AmplifyBackendRequestPrivate {
 
 public:
     GenerateBackendAPIModelsRequestPrivate(const AmplifyBackendRequest::Action action,

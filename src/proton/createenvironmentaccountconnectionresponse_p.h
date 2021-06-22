@@ -27,7 +27,7 @@ namespace Proton {
 
 class CreateEnvironmentAccountConnectionResponse;
 
-class QTAWS_EXPORT CreateEnvironmentAccountConnectionResponsePrivate : public ProtonResponsePrivate {
+class CreateEnvironmentAccountConnectionResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

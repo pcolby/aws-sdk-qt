@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class DescribeLoggingOptionsRequest;
 
-class QTAWS_EXPORT DescribeLoggingOptionsRequestPrivate : public IoTAnalyticsRequestPrivate {
+class DescribeLoggingOptionsRequestPrivate : public IoTAnalyticsRequestPrivate {
 
 public:
     DescribeLoggingOptionsRequestPrivate(const IoTAnalyticsRequest::Action action,

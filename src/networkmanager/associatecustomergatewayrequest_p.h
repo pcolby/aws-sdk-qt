@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class AssociateCustomerGatewayRequest;
 
-class QTAWS_EXPORT AssociateCustomerGatewayRequestPrivate : public NetworkManagerRequestPrivate {
+class AssociateCustomerGatewayRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     AssociateCustomerGatewayRequestPrivate(const NetworkManagerRequest::Action action,

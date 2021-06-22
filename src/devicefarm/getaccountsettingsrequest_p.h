@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetAccountSettingsRequest;
 
-class QTAWS_EXPORT GetAccountSettingsRequestPrivate : public DeviceFarmRequestPrivate {
+class GetAccountSettingsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetAccountSettingsRequestPrivate(const DeviceFarmRequest::Action action,

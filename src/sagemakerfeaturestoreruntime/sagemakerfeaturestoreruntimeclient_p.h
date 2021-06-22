@@ -29,7 +29,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class SageMakerFeatureStoreRuntimeClient;
 
-class QTAWS_EXPORT SageMakerFeatureStoreRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SageMakerFeatureStoreRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SageMakerFeatureStoreRuntimeClientPrivate(SageMakerFeatureStoreRuntimeClient * const q);

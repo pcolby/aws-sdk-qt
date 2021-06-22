@@ -27,7 +27,7 @@ namespace KMS {
 
 class EncryptResponse;
 
-class QTAWS_EXPORT EncryptResponsePrivate : public KmsResponsePrivate {
+class EncryptResponsePrivate : public KmsResponsePrivate {
 
 public:
 

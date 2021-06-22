@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSOAdminRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SSOAdminRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SSOAdminRequest::Action action,

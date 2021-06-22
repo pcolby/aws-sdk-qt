@@ -27,7 +27,7 @@ namespace Route53 {
 
 class DeleteKeySigningKeyResponse;
 
-class QTAWS_EXPORT DeleteKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
+class DeleteKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
 
 public:
 

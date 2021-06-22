@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class AttachTypedLinkRequest;
 
-class QTAWS_EXPORT AttachTypedLinkRequestPrivate : public CloudDirectoryRequestPrivate {
+class AttachTypedLinkRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     AttachTypedLinkRequestPrivate(const CloudDirectoryRequest::Action action,

@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class PutAccountSuppressionAttributesResponse;
 
-class QTAWS_EXPORT PutAccountSuppressionAttributesResponsePrivate : public Sesv2ResponsePrivate {
+class PutAccountSuppressionAttributesResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

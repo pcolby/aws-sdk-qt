@@ -27,7 +27,7 @@ namespace Batch {
 
 class DescribeJobsResponse;
 
-class QTAWS_EXPORT DescribeJobsResponsePrivate : public BatchResponsePrivate {
+class DescribeJobsResponsePrivate : public BatchResponsePrivate {
 
 public:
 

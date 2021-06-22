@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class Macie2Request;
 
-class QTAWS_EXPORT Macie2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Macie2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Macie2Request::Action action; ///< Macie2 action to be performed.

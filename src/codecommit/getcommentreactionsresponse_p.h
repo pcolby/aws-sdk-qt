@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class GetCommentReactionsResponse;
 
-class QTAWS_EXPORT GetCommentReactionsResponsePrivate : public CodeCommitResponsePrivate {
+class GetCommentReactionsResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

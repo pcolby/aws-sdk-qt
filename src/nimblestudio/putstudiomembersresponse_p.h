@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class PutStudioMembersResponse;
 
-class QTAWS_EXPORT PutStudioMembersResponsePrivate : public NimbleStudioResponsePrivate {
+class PutStudioMembersResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

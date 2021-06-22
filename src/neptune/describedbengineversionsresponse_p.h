@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribeDBEngineVersionsResponse;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsResponsePrivate : public NeptuneResponsePrivate {
+class DescribeDBEngineVersionsResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

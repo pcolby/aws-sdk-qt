@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchDeleteTableRequest;
 
-class QTAWS_EXPORT BatchDeleteTableRequestPrivate : public GlueRequestPrivate {
+class BatchDeleteTableRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchDeleteTableRequestPrivate(const GlueRequest::Action action,

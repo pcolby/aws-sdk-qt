@@ -28,7 +28,7 @@ namespace finspace {
 
 class finspaceRequest;
 
-class QTAWS_EXPORT finspaceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class finspaceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     finspaceRequest::Action action; ///< finspace action to be performed.

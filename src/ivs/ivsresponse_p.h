@@ -27,7 +27,7 @@ namespace IVS {
 
 class IvsResponse;
 
-class QTAWS_EXPORT IvsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IvsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

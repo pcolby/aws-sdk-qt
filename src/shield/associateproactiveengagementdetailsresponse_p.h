@@ -27,7 +27,7 @@ namespace Shield {
 
 class AssociateProactiveEngagementDetailsResponse;
 
-class QTAWS_EXPORT AssociateProactiveEngagementDetailsResponsePrivate : public ShieldResponsePrivate {
+class AssociateProactiveEngagementDetailsResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace WAF {
 
 class CreateSizeConstraintSetRequest;
 
-class QTAWS_EXPORT CreateSizeConstraintSetRequestPrivate : public WafRequestPrivate {
+class CreateSizeConstraintSetRequestPrivate : public WafRequestPrivate {
 
 public:
     CreateSizeConstraintSetRequestPrivate(const WafRequest::Action action,

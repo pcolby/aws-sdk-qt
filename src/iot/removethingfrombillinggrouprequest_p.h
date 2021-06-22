@@ -28,7 +28,7 @@ namespace IoT {
 
 class RemoveThingFromBillingGroupRequest;
 
-class QTAWS_EXPORT RemoveThingFromBillingGroupRequestPrivate : public IoTRequestPrivate {
+class RemoveThingFromBillingGroupRequestPrivate : public IoTRequestPrivate {
 
 public:
     RemoveThingFromBillingGroupRequestPrivate(const IoTRequest::Action action,

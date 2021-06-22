@@ -28,7 +28,7 @@ namespace IoT1ClickDevicesService {
 
 class ListDeviceEventsRequest;
 
-class QTAWS_EXPORT ListDeviceEventsRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class ListDeviceEventsRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
 
 public:
     ListDeviceEventsRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,

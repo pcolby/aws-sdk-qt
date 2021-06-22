@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class StopDeploymentRequest;
 
-class QTAWS_EXPORT StopDeploymentRequestPrivate : public AppConfigRequestPrivate {
+class StopDeploymentRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     StopDeploymentRequestPrivate(const AppConfigRequest::Action action,

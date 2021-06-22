@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class StartSegmentDetectionResponse;
 
-class QTAWS_EXPORT StartSegmentDetectionResponsePrivate : public RekognitionResponsePrivate {
+class StartSegmentDetectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

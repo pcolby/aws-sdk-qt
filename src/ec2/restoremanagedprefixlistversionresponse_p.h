@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RestoreManagedPrefixListVersionResponse;
 
-class QTAWS_EXPORT RestoreManagedPrefixListVersionResponsePrivate : public Ec2ResponsePrivate {
+class RestoreManagedPrefixListVersionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

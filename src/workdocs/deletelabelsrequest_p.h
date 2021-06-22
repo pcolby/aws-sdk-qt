@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteLabelsRequest;
 
-class QTAWS_EXPORT DeleteLabelsRequestPrivate : public WorkDocsRequestPrivate {
+class DeleteLabelsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DeleteLabelsRequestPrivate(const WorkDocsRequest::Action action,

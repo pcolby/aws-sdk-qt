@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListThingRegistrationTasksResponse;
 
-class QTAWS_EXPORT ListThingRegistrationTasksResponsePrivate : public IoTResponsePrivate {
+class ListThingRegistrationTasksResponsePrivate : public IoTResponsePrivate {
 
 public:
 

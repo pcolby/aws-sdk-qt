@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class GetAuthorizationTokenResponse;
 
-class QTAWS_EXPORT GetAuthorizationTokenResponsePrivate : public ECRPublicResponsePrivate {
+class GetAuthorizationTokenResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 

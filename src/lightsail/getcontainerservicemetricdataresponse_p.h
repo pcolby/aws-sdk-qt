@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetContainerServiceMetricDataResponse;
 
-class QTAWS_EXPORT GetContainerServiceMetricDataResponsePrivate : public LightsailResponsePrivate {
+class GetContainerServiceMetricDataResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

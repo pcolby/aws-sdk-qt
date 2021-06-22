@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DeleteUserRequest;
 
-class QTAWS_EXPORT DeleteUserRequestPrivate : public WorkMailRequestPrivate {
+class DeleteUserRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DeleteUserRequestPrivate(const WorkMailRequest::Action action,

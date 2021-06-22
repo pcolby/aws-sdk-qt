@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyInstancePlacementResponse;
 
-class QTAWS_EXPORT ModifyInstancePlacementResponsePrivate : public Ec2ResponsePrivate {
+class ModifyInstancePlacementResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

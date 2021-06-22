@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ExecuteProvisionedProductPlanRequest;
 
-class QTAWS_EXPORT ExecuteProvisionedProductPlanRequestPrivate : public ServiceCatalogRequestPrivate {
+class ExecuteProvisionedProductPlanRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ExecuteProvisionedProductPlanRequestPrivate(const ServiceCatalogRequest::Action action,

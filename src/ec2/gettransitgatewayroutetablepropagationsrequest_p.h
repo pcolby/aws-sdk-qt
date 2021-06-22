@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetTransitGatewayRouteTablePropagationsRequest;
 
-class QTAWS_EXPORT GetTransitGatewayRouteTablePropagationsRequestPrivate : public Ec2RequestPrivate {
+class GetTransitGatewayRouteTablePropagationsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetTransitGatewayRouteTablePropagationsRequestPrivate(const Ec2Request::Action action,

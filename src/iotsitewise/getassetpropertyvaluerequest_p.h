@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class GetAssetPropertyValueRequest;
 
-class QTAWS_EXPORT GetAssetPropertyValueRequestPrivate : public IoTSiteWiseRequestPrivate {
+class GetAssetPropertyValueRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     GetAssetPropertyValueRequestPrivate(const IoTSiteWiseRequest::Action action,

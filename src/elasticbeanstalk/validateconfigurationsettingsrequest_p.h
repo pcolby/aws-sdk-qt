@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class ValidateConfigurationSettingsRequest;
 
-class QTAWS_EXPORT ValidateConfigurationSettingsRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class ValidateConfigurationSettingsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     ValidateConfigurationSettingsRequestPrivate(const ElasticBeanstalkRequest::Action action,

@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class StopDeploymentResponse;
 
-class QTAWS_EXPORT StopDeploymentResponsePrivate : public AppConfigResponsePrivate {
+class StopDeploymentResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

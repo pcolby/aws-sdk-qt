@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DeleteEnvironmentConfigurationRequest;
 
-class QTAWS_EXPORT DeleteEnvironmentConfigurationRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class DeleteEnvironmentConfigurationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DeleteEnvironmentConfigurationRequestPrivate(const ElasticBeanstalkRequest::Action action,

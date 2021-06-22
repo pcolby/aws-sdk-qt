@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeAvailabilityZonesResponse;
 
-class QTAWS_EXPORT DescribeAvailabilityZonesResponsePrivate : public Ec2ResponsePrivate {
+class DescribeAvailabilityZonesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

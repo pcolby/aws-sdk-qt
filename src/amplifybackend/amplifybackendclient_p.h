@@ -29,7 +29,7 @@ namespace AmplifyBackend {
 
 class AmplifyBackendClient;
 
-class QTAWS_EXPORT AmplifyBackendClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AmplifyBackendClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AmplifyBackendClientPrivate(AmplifyBackendClient * const q);

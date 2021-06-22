@@ -27,7 +27,7 @@ namespace SES {
 
 class TestRenderTemplateResponse;
 
-class QTAWS_EXPORT TestRenderTemplateResponsePrivate : public SesResponsePrivate {
+class TestRenderTemplateResponsePrivate : public SesResponsePrivate {
 
 public:
 

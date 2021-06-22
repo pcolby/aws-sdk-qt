@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class StopChannelRequest;
 
-class QTAWS_EXPORT StopChannelRequestPrivate : public MediaTailorRequestPrivate {
+class StopChannelRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     StopChannelRequestPrivate(const MediaTailorRequest::Action action,

@@ -27,7 +27,7 @@ namespace ECR {
 
 class BatchGetImageResponse;
 
-class QTAWS_EXPORT BatchGetImageResponsePrivate : public EcrResponsePrivate {
+class BatchGetImageResponsePrivate : public EcrResponsePrivate {
 
 public:
 

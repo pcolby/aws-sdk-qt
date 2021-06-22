@@ -28,7 +28,7 @@ namespace Lambda {
 
 class UpdateFunctionEventInvokeConfigRequest;
 
-class QTAWS_EXPORT UpdateFunctionEventInvokeConfigRequestPrivate : public LambdaRequestPrivate {
+class UpdateFunctionEventInvokeConfigRequestPrivate : public LambdaRequestPrivate {
 
 public:
     UpdateFunctionEventInvokeConfigRequestPrivate(const LambdaRequest::Action action,

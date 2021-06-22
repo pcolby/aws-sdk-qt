@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateRegexMatchSetRequest;
 
-class QTAWS_EXPORT CreateRegexMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class CreateRegexMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateRegexMatchSetRequestPrivate(const WAFRegionalRequest::Action action,

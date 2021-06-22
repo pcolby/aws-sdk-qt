@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class UpdateConnectionAliasPermissionRequest;
 
-class QTAWS_EXPORT UpdateConnectionAliasPermissionRequestPrivate : public WorkSpacesRequestPrivate {
+class UpdateConnectionAliasPermissionRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     UpdateConnectionAliasPermissionRequestPrivate(const WorkSpacesRequest::Action action,

@@ -29,7 +29,7 @@ namespace ManagedBlockchain {
 
 class ManagedBlockchainClient;
 
-class QTAWS_EXPORT ManagedBlockchainClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ManagedBlockchainClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ManagedBlockchainClientPrivate(ManagedBlockchainClient * const q);

@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class RemoveTagsFromResourceResponse;
 
-class QTAWS_EXPORT RemoveTagsFromResourceResponsePrivate : public DirectoryServiceResponsePrivate {
+class RemoveTagsFromResourceResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

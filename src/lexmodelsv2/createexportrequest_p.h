@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class CreateExportRequest;
 
-class QTAWS_EXPORT CreateExportRequestPrivate : public LexModelsV2RequestPrivate {
+class CreateExportRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     CreateExportRequestPrivate(const LexModelsV2Request::Action action,

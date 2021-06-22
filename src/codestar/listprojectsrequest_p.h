@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class ListProjectsRequest;
 
-class QTAWS_EXPORT ListProjectsRequestPrivate : public CodeStarRequestPrivate {
+class ListProjectsRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     ListProjectsRequestPrivate(const CodeStarRequest::Action action,

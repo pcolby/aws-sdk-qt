@@ -27,7 +27,7 @@ namespace EFS {
 
 class DeleteTagsResponse;
 
-class QTAWS_EXPORT DeleteTagsResponsePrivate : public EfsResponsePrivate {
+class DeleteTagsResponsePrivate : public EfsResponsePrivate {
 
 public:
 

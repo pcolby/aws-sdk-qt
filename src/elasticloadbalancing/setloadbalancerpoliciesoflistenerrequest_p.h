@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class SetLoadBalancerPoliciesOfListenerRequest;
 
-class QTAWS_EXPORT SetLoadBalancerPoliciesOfListenerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
+class SetLoadBalancerPoliciesOfListenerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     SetLoadBalancerPoliciesOfListenerRequestPrivate(const ElasticLoadBalancingRequest::Action action,

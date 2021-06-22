@@ -28,7 +28,7 @@ namespace DataSync {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public DataSyncRequestPrivate {
+class UntagResourceRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const DataSyncRequest::Action action,

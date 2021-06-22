@@ -27,7 +27,7 @@ namespace FSx {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public FSxResponsePrivate {
+class UntagResourceResponsePrivate : public FSxResponsePrivate {
 
 public:
 

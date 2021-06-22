@@ -27,7 +27,7 @@ namespace PersonalizeEvents {
 
 class PutItemsResponse;
 
-class QTAWS_EXPORT PutItemsResponsePrivate : public PersonalizeEventsResponsePrivate {
+class PutItemsResponsePrivate : public PersonalizeEventsResponsePrivate {
 
 public:
 

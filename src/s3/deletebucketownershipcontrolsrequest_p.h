@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketOwnershipControlsRequest;
 
-class QTAWS_EXPORT DeleteBucketOwnershipControlsRequestPrivate : public S3RequestPrivate {
+class DeleteBucketOwnershipControlsRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteBucketOwnershipControlsRequestPrivate(const S3Request::Action action,

@@ -28,7 +28,7 @@ namespace LocationService {
 
 class DescribeGeofenceCollectionRequest;
 
-class QTAWS_EXPORT DescribeGeofenceCollectionRequestPrivate : public LocationServiceRequestPrivate {
+class DescribeGeofenceCollectionRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     DescribeGeofenceCollectionRequestPrivate(const LocationServiceRequest::Action action,

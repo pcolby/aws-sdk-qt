@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DeleteConnectionAliasRequest;
 
-class QTAWS_EXPORT DeleteConnectionAliasRequestPrivate : public WorkSpacesRequestPrivate {
+class DeleteConnectionAliasRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DeleteConnectionAliasRequestPrivate(const WorkSpacesRequest::Action action,

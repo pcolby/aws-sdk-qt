@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class ReportTaskRunnerHeartbeatRequest;
 
-class QTAWS_EXPORT ReportTaskRunnerHeartbeatRequestPrivate : public DataPipelineRequestPrivate {
+class ReportTaskRunnerHeartbeatRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     ReportTaskRunnerHeartbeatRequestPrivate(const DataPipelineRequest::Action action,

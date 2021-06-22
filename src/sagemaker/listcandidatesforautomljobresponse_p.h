@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListCandidatesForAutoMLJobResponse;
 
-class QTAWS_EXPORT ListCandidatesForAutoMLJobResponsePrivate : public SageMakerResponsePrivate {
+class ListCandidatesForAutoMLJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

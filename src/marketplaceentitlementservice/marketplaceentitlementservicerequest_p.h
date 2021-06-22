@@ -28,7 +28,7 @@ namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceRequest;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MarketplaceEntitlementServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MarketplaceEntitlementServiceRequest::Action action; ///< MarketplaceEntitlementService action to be performed.

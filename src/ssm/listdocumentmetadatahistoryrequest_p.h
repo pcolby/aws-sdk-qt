@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListDocumentMetadataHistoryRequest;
 
-class QTAWS_EXPORT ListDocumentMetadataHistoryRequestPrivate : public SsmRequestPrivate {
+class ListDocumentMetadataHistoryRequestPrivate : public SsmRequestPrivate {
 
 public:
     ListDocumentMetadataHistoryRequestPrivate(const SsmRequest::Action action,

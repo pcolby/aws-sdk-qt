@@ -27,7 +27,7 @@ namespace ImportExport {
 
 class GetStatusResponse;
 
-class QTAWS_EXPORT GetStatusResponsePrivate : public ImportExportResponsePrivate {
+class GetStatusResponsePrivate : public ImportExportResponsePrivate {
 
 public:
 

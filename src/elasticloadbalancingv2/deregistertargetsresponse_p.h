@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeregisterTargetsResponse;
 
-class QTAWS_EXPORT DeregisterTargetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+class DeregisterTargetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
 
 public:
 

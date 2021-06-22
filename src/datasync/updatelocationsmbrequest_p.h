@@ -28,7 +28,7 @@ namespace DataSync {
 
 class UpdateLocationSmbRequest;
 
-class QTAWS_EXPORT UpdateLocationSmbRequestPrivate : public DataSyncRequestPrivate {
+class UpdateLocationSmbRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     UpdateLocationSmbRequestPrivate(const DataSyncRequest::Action action,

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DisableKinesisStreamingDestinationRequest;
 
-class QTAWS_EXPORT DisableKinesisStreamingDestinationRequestPrivate : public DynamoDBRequestPrivate {
+class DisableKinesisStreamingDestinationRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DisableKinesisStreamingDestinationRequestPrivate(const DynamoDBRequest::Action action,

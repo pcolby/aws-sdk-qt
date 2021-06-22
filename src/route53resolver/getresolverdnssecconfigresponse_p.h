@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class GetResolverDnssecConfigResponse;
 
-class QTAWS_EXPORT GetResolverDnssecConfigResponsePrivate : public Route53ResolverResponsePrivate {
+class GetResolverDnssecConfigResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 

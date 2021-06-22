@@ -28,7 +28,7 @@ namespace Schemas {
 
 class PutResourcePolicyRequest;
 
-class QTAWS_EXPORT PutResourcePolicyRequestPrivate : public SchemasRequestPrivate {
+class PutResourcePolicyRequestPrivate : public SchemasRequestPrivate {
 
 public:
     PutResourcePolicyRequestPrivate(const SchemasRequest::Action action,

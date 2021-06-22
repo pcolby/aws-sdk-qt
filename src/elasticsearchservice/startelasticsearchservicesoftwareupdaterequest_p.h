@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class StartElasticsearchServiceSoftwareUpdateRequest;
 
-class QTAWS_EXPORT StartElasticsearchServiceSoftwareUpdateRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class StartElasticsearchServiceSoftwareUpdateRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     StartElasticsearchServiceSoftwareUpdateRequestPrivate(const ElasticsearchServiceRequest::Action action,

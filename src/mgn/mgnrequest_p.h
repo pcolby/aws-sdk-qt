@@ -28,7 +28,7 @@ namespace mgn {
 
 class mgnRequest;
 
-class QTAWS_EXPORT mgnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class mgnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     mgnRequest::Action action; ///< mgn action to be performed.

@@ -27,7 +27,7 @@ namespace finspace {
 
 class GetEnvironmentResponse;
 
-class QTAWS_EXPORT GetEnvironmentResponsePrivate : public finspaceResponsePrivate {
+class GetEnvironmentResponsePrivate : public finspaceResponsePrivate {
 
 public:
 

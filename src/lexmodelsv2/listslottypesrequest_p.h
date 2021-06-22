@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class ListSlotTypesRequest;
 
-class QTAWS_EXPORT ListSlotTypesRequestPrivate : public LexModelsV2RequestPrivate {
+class ListSlotTypesRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     ListSlotTypesRequestPrivate(const LexModelsV2Request::Action action,

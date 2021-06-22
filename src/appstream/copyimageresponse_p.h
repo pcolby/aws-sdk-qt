@@ -27,7 +27,7 @@ namespace AppStream {
 
 class CopyImageResponse;
 
-class QTAWS_EXPORT CopyImageResponsePrivate : public AppStreamResponsePrivate {
+class CopyImageResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

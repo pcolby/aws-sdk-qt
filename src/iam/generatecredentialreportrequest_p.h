@@ -28,7 +28,7 @@ namespace IAM {
 
 class GenerateCredentialReportRequest;
 
-class QTAWS_EXPORT GenerateCredentialReportRequestPrivate : public IamRequestPrivate {
+class GenerateCredentialReportRequestPrivate : public IamRequestPrivate {
 
 public:
     GenerateCredentialReportRequestPrivate(const IamRequest::Action action,

@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateDevicesRequest;
 
-class QTAWS_EXPORT UpdateDevicesRequestPrivate : public SageMakerRequestPrivate {
+class UpdateDevicesRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     UpdateDevicesRequestPrivate(const SageMakerRequest::Action action,

@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public ApplicationInsightsRequestPrivate {
+class UntagResourceRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const ApplicationInsightsRequest::Action action,

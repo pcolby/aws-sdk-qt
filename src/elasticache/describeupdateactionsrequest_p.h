@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeUpdateActionsRequest;
 
-class QTAWS_EXPORT DescribeUpdateActionsRequestPrivate : public ElastiCacheRequestPrivate {
+class DescribeUpdateActionsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeUpdateActionsRequestPrivate(const ElastiCacheRequest::Action action,

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyReservedInstancesResponse;
 
-class QTAWS_EXPORT ModifyReservedInstancesResponsePrivate : public Ec2ResponsePrivate {
+class ModifyReservedInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

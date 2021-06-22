@@ -28,7 +28,7 @@ namespace Neptune {
 
 class RebootDBInstanceRequest;
 
-class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public NeptuneRequestPrivate {
+class RebootDBInstanceRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     RebootDBInstanceRequestPrivate(const NeptuneRequest::Action action,

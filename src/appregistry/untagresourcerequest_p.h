@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public AppRegistryRequestPrivate {
+class UntagResourceRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const AppRegistryRequest::Action action,

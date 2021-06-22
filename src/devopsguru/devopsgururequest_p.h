@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class DevOpsGuruRequest;
 
-class QTAWS_EXPORT DevOpsGuruRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DevOpsGuruRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DevOpsGuruRequest::Action action; ///< DevOpsGuru action to be performed.

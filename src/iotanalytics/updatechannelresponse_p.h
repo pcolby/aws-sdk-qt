@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class UpdateChannelResponse;
 
-class QTAWS_EXPORT UpdateChannelResponsePrivate : public IoTAnalyticsResponsePrivate {
+class UpdateChannelResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 

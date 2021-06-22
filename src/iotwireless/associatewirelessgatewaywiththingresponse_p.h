@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class AssociateWirelessGatewayWithThingResponse;
 
-class QTAWS_EXPORT AssociateWirelessGatewayWithThingResponsePrivate : public IoTWirelessResponsePrivate {
+class AssociateWirelessGatewayWithThingResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 

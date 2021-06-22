@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class NetworkManagerRequest;
 
-class QTAWS_EXPORT NetworkManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class NetworkManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NetworkManagerRequest::Action action; ///< NetworkManager action to be performed.

@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class SetDesiredCapacityRequest;
 
-class QTAWS_EXPORT SetDesiredCapacityRequestPrivate : public AutoScalingRequestPrivate {
+class SetDesiredCapacityRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     SetDesiredCapacityRequestPrivate(const AutoScalingRequest::Action action,

@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class AddTagsToResourceRequest;
 
-class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public ElastiCacheRequestPrivate {
+class AddTagsToResourceRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     AddTagsToResourceRequestPrivate(const ElastiCacheRequest::Action action,

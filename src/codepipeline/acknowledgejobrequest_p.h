@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class AcknowledgeJobRequest;
 
-class QTAWS_EXPORT AcknowledgeJobRequestPrivate : public CodePipelineRequestPrivate {
+class AcknowledgeJobRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     AcknowledgeJobRequestPrivate(const CodePipelineRequest::Action action,

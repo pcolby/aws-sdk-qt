@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class PutDataLakeSettingsResponse;
 
-class QTAWS_EXPORT PutDataLakeSettingsResponsePrivate : public LakeFormationResponsePrivate {
+class PutDataLakeSettingsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 

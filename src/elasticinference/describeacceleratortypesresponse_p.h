@@ -27,7 +27,7 @@ namespace ElasticInference {
 
 class DescribeAcceleratorTypesResponse;
 
-class QTAWS_EXPORT DescribeAcceleratorTypesResponsePrivate : public ElasticInferenceResponsePrivate {
+class DescribeAcceleratorTypesResponsePrivate : public ElasticInferenceResponsePrivate {
 
 public:
 

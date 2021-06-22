@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutDeliverabilityDashboardOptionRequest;
 
-class QTAWS_EXPORT PutDeliverabilityDashboardOptionRequestPrivate : public Sesv2RequestPrivate {
+class PutDeliverabilityDashboardOptionRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     PutDeliverabilityDashboardOptionRequestPrivate(const Sesv2Request::Action action,

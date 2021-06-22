@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetContainerImagesResponse;
 
-class QTAWS_EXPORT GetContainerImagesResponsePrivate : public LightsailResponsePrivate {
+class GetContainerImagesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

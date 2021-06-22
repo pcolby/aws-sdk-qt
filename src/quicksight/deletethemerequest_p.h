@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DeleteThemeRequest;
 
-class QTAWS_EXPORT DeleteThemeRequestPrivate : public QuickSightRequestPrivate {
+class DeleteThemeRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DeleteThemeRequestPrivate(const QuickSightRequest::Action action,

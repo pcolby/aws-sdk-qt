@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DeleteProvisionedProductPlanResponse;
 
-class QTAWS_EXPORT DeleteProvisionedProductPlanResponsePrivate : public ServiceCatalogResponsePrivate {
+class DeleteProvisionedProductPlanResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

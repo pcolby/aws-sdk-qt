@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketEncryptionRequest;
 
-class QTAWS_EXPORT PutBucketEncryptionRequestPrivate : public S3RequestPrivate {
+class PutBucketEncryptionRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketEncryptionRequestPrivate(const S3Request::Action action,

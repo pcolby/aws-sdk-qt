@@ -27,7 +27,7 @@ namespace MarketplaceCatalog {
 
 class DescribeChangeSetResponse;
 
-class QTAWS_EXPORT DescribeChangeSetResponsePrivate : public MarketplaceCatalogResponsePrivate {
+class DescribeChangeSetResponsePrivate : public MarketplaceCatalogResponsePrivate {
 
 public:
 

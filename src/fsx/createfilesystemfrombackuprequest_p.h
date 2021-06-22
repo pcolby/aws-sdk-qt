@@ -28,7 +28,7 @@ namespace FSx {
 
 class CreateFileSystemFromBackupRequest;
 
-class QTAWS_EXPORT CreateFileSystemFromBackupRequestPrivate : public FSxRequestPrivate {
+class CreateFileSystemFromBackupRequestPrivate : public FSxRequestPrivate {
 
 public:
     CreateFileSystemFromBackupRequestPrivate(const FSxRequest::Action action,

@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListPoliciesForTargetResponse;
 
-class QTAWS_EXPORT ListPoliciesForTargetResponsePrivate : public OrganizationsResponsePrivate {
+class ListPoliciesForTargetResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

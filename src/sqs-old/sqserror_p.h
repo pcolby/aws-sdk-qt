@@ -25,7 +25,7 @@
 namespace QtAws {
 namespace SqsOld {
 
-class QTAWS_EXPORT SqsErrorPrivate {
+class SqsErrorPrivate {
 
 public:
     SqsError::ErrorCode code; ///< SQS error code.

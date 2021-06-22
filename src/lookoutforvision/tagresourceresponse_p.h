@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public LookoutforVisionResponsePrivate {
+class TagResourceResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class GetNamespaceRequest;
 
-class QTAWS_EXPORT GetNamespaceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class GetNamespaceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     GetNamespaceRequestPrivate(const ServiceDiscoveryRequest::Action action,

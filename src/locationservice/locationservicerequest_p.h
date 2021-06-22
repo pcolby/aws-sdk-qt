@@ -28,7 +28,7 @@ namespace LocationService {
 
 class LocationServiceRequest;
 
-class QTAWS_EXPORT LocationServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LocationServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LocationServiceRequest::Action action; ///< LocationService action to be performed.

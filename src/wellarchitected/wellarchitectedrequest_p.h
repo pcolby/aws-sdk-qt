@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class WellArchitectedRequest;
 
-class QTAWS_EXPORT WellArchitectedRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WellArchitectedRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WellArchitectedRequest::Action action; ///< WellArchitected action to be performed.

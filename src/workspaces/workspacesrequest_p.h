@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class WorkSpacesRequest;
 
-class QTAWS_EXPORT WorkSpacesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WorkSpacesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WorkSpacesRequest::Action action; ///< WorkSpaces action to be performed.

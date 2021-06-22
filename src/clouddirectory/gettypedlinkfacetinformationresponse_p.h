@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class GetTypedLinkFacetInformationResponse;
 
-class QTAWS_EXPORT GetTypedLinkFacetInformationResponsePrivate : public CloudDirectoryResponsePrivate {
+class GetTypedLinkFacetInformationResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

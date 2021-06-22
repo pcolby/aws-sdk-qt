@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class ResendContactReachabilityEmailRequest;
 
-class QTAWS_EXPORT ResendContactReachabilityEmailRequestPrivate : public Route53DomainsRequestPrivate {
+class ResendContactReachabilityEmailRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     ResendContactReachabilityEmailRequestPrivate(const Route53DomainsRequest::Action action,

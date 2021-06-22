@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class ListEnabledProductsForImportResponse;
 
-class QTAWS_EXPORT ListEnabledProductsForImportResponsePrivate : public SecurityHubResponsePrivate {
+class ListEnabledProductsForImportResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

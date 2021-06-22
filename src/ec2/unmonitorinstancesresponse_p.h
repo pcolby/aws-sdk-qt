@@ -27,7 +27,7 @@ namespace EC2 {
 
 class UnmonitorInstancesResponse;
 
-class QTAWS_EXPORT UnmonitorInstancesResponsePrivate : public Ec2ResponsePrivate {
+class UnmonitorInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DescribeTemplatePermissionsRequest;
 
-class QTAWS_EXPORT DescribeTemplatePermissionsRequestPrivate : public QuickSightRequestPrivate {
+class DescribeTemplatePermissionsRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DescribeTemplatePermissionsRequestPrivate(const QuickSightRequest::Action action,

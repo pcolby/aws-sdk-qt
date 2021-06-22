@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class StartDataIngestionJobRequest;
 
-class QTAWS_EXPORT StartDataIngestionJobRequestPrivate : public LookoutEquipmentRequestPrivate {
+class StartDataIngestionJobRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     StartDataIngestionJobRequestPrivate(const LookoutEquipmentRequest::Action action,

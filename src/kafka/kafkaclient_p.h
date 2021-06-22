@@ -29,7 +29,7 @@ namespace Kafka {
 
 class KafkaClient;
 
-class QTAWS_EXPORT KafkaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class KafkaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     KafkaClientPrivate(KafkaClient * const q);

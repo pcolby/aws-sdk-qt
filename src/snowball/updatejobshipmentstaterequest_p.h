@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateJobShipmentStateRequest;
 
-class QTAWS_EXPORT UpdateJobShipmentStateRequestPrivate : public SnowballRequestPrivate {
+class UpdateJobShipmentStateRequestPrivate : public SnowballRequestPrivate {
 
 public:
     UpdateJobShipmentStateRequestPrivate(const SnowballRequest::Action action,

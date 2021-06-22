@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DescribeInstancesHealthResponse;
 
-class QTAWS_EXPORT DescribeInstancesHealthResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class DescribeInstancesHealthResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

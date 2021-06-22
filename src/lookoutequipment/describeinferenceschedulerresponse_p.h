@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class DescribeInferenceSchedulerResponse;
 
-class QTAWS_EXPORT DescribeInferenceSchedulerResponsePrivate : public LookoutEquipmentResponsePrivate {
+class DescribeInferenceSchedulerResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 

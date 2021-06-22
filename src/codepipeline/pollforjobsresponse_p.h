@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class PollForJobsResponse;
 
-class QTAWS_EXPORT PollForJobsResponsePrivate : public CodePipelineResponsePrivate {
+class PollForJobsResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 

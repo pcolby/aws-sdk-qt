@@ -27,7 +27,7 @@ namespace Athena {
 
 class ListPreparedStatementsResponse;
 
-class QTAWS_EXPORT ListPreparedStatementsResponsePrivate : public AthenaResponsePrivate {
+class ListPreparedStatementsResponsePrivate : public AthenaResponsePrivate {
 
 public:
 

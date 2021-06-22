@@ -28,7 +28,7 @@ namespace RDSDataService {
 
 class RDSDataServiceRequest;
 
-class QTAWS_EXPORT RDSDataServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RDSDataServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RDSDataServiceRequest::Action action; ///< RDSDataService action to be performed.

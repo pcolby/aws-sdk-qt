@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DescribeEffectivePolicyRequest;
 
-class QTAWS_EXPORT DescribeEffectivePolicyRequestPrivate : public OrganizationsRequestPrivate {
+class DescribeEffectivePolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DescribeEffectivePolicyRequestPrivate(const OrganizationsRequest::Action action,

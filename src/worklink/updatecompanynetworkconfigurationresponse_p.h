@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UpdateCompanyNetworkConfigurationResponse;
 
-class QTAWS_EXPORT UpdateCompanyNetworkConfigurationResponsePrivate : public WorkLinkResponsePrivate {
+class UpdateCompanyNetworkConfigurationResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

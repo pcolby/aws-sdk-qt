@@ -29,7 +29,7 @@ namespace PinpointSMSVoice {
 
 class PinpointSMSVoiceClient;
 
-class QTAWS_EXPORT PinpointSMSVoiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PinpointSMSVoiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q);

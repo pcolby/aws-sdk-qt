@@ -27,7 +27,7 @@ namespace RAM {
 
 class EnableSharingWithAwsOrganizationResponse;
 
-class QTAWS_EXPORT EnableSharingWithAwsOrganizationResponsePrivate : public RamResponsePrivate {
+class EnableSharingWithAwsOrganizationResponsePrivate : public RamResponsePrivate {
 
 public:
 

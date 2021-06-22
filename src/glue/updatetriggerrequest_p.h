@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateTriggerRequest;
 
-class QTAWS_EXPORT UpdateTriggerRequestPrivate : public GlueRequestPrivate {
+class UpdateTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateTriggerRequestPrivate(const GlueRequest::Action action,

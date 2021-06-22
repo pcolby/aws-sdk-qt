@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class DescribeEndpointsResponse;
 
-class QTAWS_EXPORT DescribeEndpointsResponsePrivate : public MediaConvertResponsePrivate {
+class DescribeEndpointsResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 

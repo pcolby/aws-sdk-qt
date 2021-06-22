@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ResetAddressAttributeResponse;
 
-class QTAWS_EXPORT ResetAddressAttributeResponsePrivate : public Ec2ResponsePrivate {
+class ResetAddressAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ImportKeyPairResponse;
 
-class QTAWS_EXPORT ImportKeyPairResponsePrivate : public Ec2ResponsePrivate {
+class ImportKeyPairResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

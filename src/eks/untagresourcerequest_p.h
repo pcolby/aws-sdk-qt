@@ -28,7 +28,7 @@ namespace EKS {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public EksRequestPrivate {
+class UntagResourceRequestPrivate : public EksRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const EksRequest::Action action,

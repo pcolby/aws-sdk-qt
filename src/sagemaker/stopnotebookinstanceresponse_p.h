@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopNotebookInstanceResponse;
 
-class QTAWS_EXPORT StopNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
+class StopNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

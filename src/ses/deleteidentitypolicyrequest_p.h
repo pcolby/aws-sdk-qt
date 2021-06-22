@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteIdentityPolicyRequest;
 
-class QTAWS_EXPORT DeleteIdentityPolicyRequestPrivate : public SesRequestPrivate {
+class DeleteIdentityPolicyRequestPrivate : public SesRequestPrivate {
 
 public:
     DeleteIdentityPolicyRequestPrivate(const SesRequest::Action action,

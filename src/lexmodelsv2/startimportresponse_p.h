@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class StartImportResponse;
 
-class QTAWS_EXPORT StartImportResponsePrivate : public LexModelsV2ResponsePrivate {
+class StartImportResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class PublishRequest;
 
-class QTAWS_EXPORT PublishRequestPrivate : public IoTDataPlaneRequestPrivate {
+class PublishRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
     PublishRequestPrivate(const IoTDataPlaneRequest::Action action,

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetFacetRequest;
 
-class QTAWS_EXPORT GetFacetRequestPrivate : public CloudDirectoryRequestPrivate {
+class GetFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     GetFacetRequestPrivate(const CloudDirectoryRequest::Action action,

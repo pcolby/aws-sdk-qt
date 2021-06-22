@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DescribeRecipeResponse;
 
-class QTAWS_EXPORT DescribeRecipeResponsePrivate : public PersonalizeResponsePrivate {
+class DescribeRecipeResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

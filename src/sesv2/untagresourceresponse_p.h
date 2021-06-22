@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public Sesv2ResponsePrivate {
+class UntagResourceResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

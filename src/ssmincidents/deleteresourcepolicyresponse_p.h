@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class DeleteResourcePolicyResponse;
 
-class QTAWS_EXPORT DeleteResourcePolicyResponsePrivate : public SSMIncidentsResponsePrivate {
+class DeleteResourcePolicyResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

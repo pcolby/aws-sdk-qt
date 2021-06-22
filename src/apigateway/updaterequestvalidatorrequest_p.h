@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateRequestValidatorRequest;
 
-class QTAWS_EXPORT UpdateRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UpdateRequestValidatorRequestPrivate(const APIGatewayRequest::Action action,

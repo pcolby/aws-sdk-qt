@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteResourcePolicyResponse;
 
-class QTAWS_EXPORT DeleteResourcePolicyResponsePrivate : public GlueResponsePrivate {
+class DeleteResourcePolicyResponsePrivate : public GlueResponsePrivate {
 
 public:
 

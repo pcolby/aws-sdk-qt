@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class RebalanceSlotsInGlobalReplicationGroupResponse;
 
-class QTAWS_EXPORT RebalanceSlotsInGlobalReplicationGroupResponsePrivate : public ElastiCacheResponsePrivate {
+class RebalanceSlotsInGlobalReplicationGroupResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

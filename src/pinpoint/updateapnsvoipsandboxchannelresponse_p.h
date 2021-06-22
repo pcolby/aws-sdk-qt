@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateApnsVoipSandboxChannelResponse;
 
-class QTAWS_EXPORT UpdateApnsVoipSandboxChannelResponsePrivate : public PinpointResponsePrivate {
+class UpdateApnsVoipSandboxChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace kendra {
 
 class UpdateQuerySuggestionsConfigResponse;
 
-class QTAWS_EXPORT UpdateQuerySuggestionsConfigResponsePrivate : public kendraResponsePrivate {
+class UpdateQuerySuggestionsConfigResponsePrivate : public kendraResponsePrivate {
 
 public:
 

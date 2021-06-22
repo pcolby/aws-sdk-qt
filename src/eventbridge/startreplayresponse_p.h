@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class StartReplayResponse;
 
-class QTAWS_EXPORT StartReplayResponsePrivate : public EventBridgeResponsePrivate {
+class StartReplayResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

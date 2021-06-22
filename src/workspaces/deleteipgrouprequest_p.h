@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DeleteIpGroupRequest;
 
-class QTAWS_EXPORT DeleteIpGroupRequestPrivate : public WorkSpacesRequestPrivate {
+class DeleteIpGroupRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DeleteIpGroupRequestPrivate(const WorkSpacesRequest::Action action,

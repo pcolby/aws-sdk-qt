@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class UpdateMetricSetRequest;
 
-class QTAWS_EXPORT UpdateMetricSetRequestPrivate : public LookoutMetricsRequestPrivate {
+class UpdateMetricSetRequestPrivate : public LookoutMetricsRequestPrivate {
 
 public:
     UpdateMetricSetRequestPrivate(const LookoutMetricsRequest::Action action,

@@ -28,7 +28,7 @@ namespace FIS {
 
 class FisRequest;
 
-class QTAWS_EXPORT FisRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FisRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FisRequest::Action action; ///< FIS action to be performed.

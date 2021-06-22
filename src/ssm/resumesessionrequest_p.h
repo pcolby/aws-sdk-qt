@@ -28,7 +28,7 @@ namespace SSM {
 
 class ResumeSessionRequest;
 
-class QTAWS_EXPORT ResumeSessionRequestPrivate : public SsmRequestPrivate {
+class ResumeSessionRequestPrivate : public SsmRequestPrivate {
 
 public:
     ResumeSessionRequestPrivate(const SsmRequest::Action action,

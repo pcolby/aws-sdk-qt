@@ -28,7 +28,7 @@ namespace mgn {
 
 class DescribeSourceServersRequest;
 
-class QTAWS_EXPORT DescribeSourceServersRequestPrivate : public mgnRequestPrivate {
+class DescribeSourceServersRequestPrivate : public mgnRequestPrivate {
 
 public:
     DescribeSourceServersRequestPrivate(const mgnRequest::Action action,

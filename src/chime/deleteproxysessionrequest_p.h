@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteProxySessionRequest;
 
-class QTAWS_EXPORT DeleteProxySessionRequestPrivate : public ChimeRequestPrivate {
+class DeleteProxySessionRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DeleteProxySessionRequestPrivate(const ChimeRequest::Action action,

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetDistributionsRequest;
 
-class QTAWS_EXPORT GetDistributionsRequestPrivate : public LightsailRequestPrivate {
+class GetDistributionsRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetDistributionsRequestPrivate(const LightsailRequest::Action action,

@@ -29,7 +29,7 @@ namespace SSMIncidents {
 
 class SSMIncidentsClient;
 
-class QTAWS_EXPORT SSMIncidentsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SSMIncidentsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SSMIncidentsClientPrivate(SSMIncidentsClient * const q);

@@ -27,7 +27,7 @@ namespace Textract {
 
 class DetectDocumentTextResponse;
 
-class QTAWS_EXPORT DetectDocumentTextResponsePrivate : public TextractResponsePrivate {
+class DetectDocumentTextResponsePrivate : public TextractResponsePrivate {
 
 public:
 

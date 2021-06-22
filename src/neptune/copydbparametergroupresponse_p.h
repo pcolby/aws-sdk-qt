@@ -27,7 +27,7 @@ namespace Neptune {
 
 class CopyDBParameterGroupResponse;
 
-class QTAWS_EXPORT CopyDBParameterGroupResponsePrivate : public NeptuneResponsePrivate {
+class CopyDBParameterGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

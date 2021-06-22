@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class TestEventPatternResponse;
 
-class QTAWS_EXPORT TestEventPatternResponsePrivate : public EventBridgeResponsePrivate {
+class TestEventPatternResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

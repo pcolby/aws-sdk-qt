@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class DeleteApplicationsResponse;
 
-class QTAWS_EXPORT DeleteApplicationsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+class DeleteApplicationsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
 
 public:
 

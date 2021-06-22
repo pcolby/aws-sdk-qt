@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutApprovalResultRequest;
 
-class QTAWS_EXPORT PutApprovalResultRequestPrivate : public CodePipelineRequestPrivate {
+class PutApprovalResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutApprovalResultRequestPrivate(const CodePipelineRequest::Action action,

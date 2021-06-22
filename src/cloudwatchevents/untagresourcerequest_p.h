@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudWatchEventsRequestPrivate {
+class UntagResourceRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CloudWatchEventsRequest::Action action,

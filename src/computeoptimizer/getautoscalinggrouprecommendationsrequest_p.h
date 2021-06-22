@@ -28,7 +28,7 @@ namespace ComputeOptimizer {
 
 class GetAutoScalingGroupRecommendationsRequest;
 
-class QTAWS_EXPORT GetAutoScalingGroupRecommendationsRequestPrivate : public ComputeOptimizerRequestPrivate {
+class GetAutoScalingGroupRecommendationsRequestPrivate : public ComputeOptimizerRequestPrivate {
 
 public:
     GetAutoScalingGroupRecommendationsRequestPrivate(const ComputeOptimizerRequest::Action action,

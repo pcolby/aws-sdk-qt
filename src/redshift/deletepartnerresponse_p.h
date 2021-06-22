@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeletePartnerResponse;
 
-class QTAWS_EXPORT DeletePartnerResponsePrivate : public RedshiftResponsePrivate {
+class DeletePartnerResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

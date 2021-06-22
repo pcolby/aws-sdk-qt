@@ -28,7 +28,7 @@ namespace signer {
 
 class DescribeSigningJobRequest;
 
-class QTAWS_EXPORT DescribeSigningJobRequestPrivate : public signerRequestPrivate {
+class DescribeSigningJobRequestPrivate : public signerRequestPrivate {
 
 public:
     DescribeSigningJobRequestPrivate(const signerRequest::Action action,

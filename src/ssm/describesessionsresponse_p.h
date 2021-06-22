@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeSessionsResponse;
 
-class QTAWS_EXPORT DescribeSessionsResponsePrivate : public SsmResponsePrivate {
+class DescribeSessionsResponsePrivate : public SsmResponsePrivate {
 
 public:
 

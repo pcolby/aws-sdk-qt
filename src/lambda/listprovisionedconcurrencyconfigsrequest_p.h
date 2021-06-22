@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListProvisionedConcurrencyConfigsRequest;
 
-class QTAWS_EXPORT ListProvisionedConcurrencyConfigsRequestPrivate : public LambdaRequestPrivate {
+class ListProvisionedConcurrencyConfigsRequestPrivate : public LambdaRequestPrivate {
 
 public:
     ListProvisionedConcurrencyConfigsRequestPrivate(const LambdaRequest::Action action,

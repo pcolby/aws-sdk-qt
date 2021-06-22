@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class CreateIPSetResponse;
 
-class QTAWS_EXPORT CreateIPSetResponsePrivate : public Wafv2ResponsePrivate {
+class CreateIPSetResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 

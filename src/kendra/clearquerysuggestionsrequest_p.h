@@ -28,7 +28,7 @@ namespace kendra {
 
 class ClearQuerySuggestionsRequest;
 
-class QTAWS_EXPORT ClearQuerySuggestionsRequestPrivate : public kendraRequestPrivate {
+class ClearQuerySuggestionsRequestPrivate : public kendraRequestPrivate {
 
 public:
     ClearQuerySuggestionsRequestPrivate(const kendraRequest::Action action,

@@ -27,7 +27,7 @@ namespace AppIntegrationsService {
 
 class AppIntegrationsServiceResponse;
 
-class QTAWS_EXPORT AppIntegrationsServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppIntegrationsServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

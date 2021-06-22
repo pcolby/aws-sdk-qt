@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class GetDeploymentResponse;
 
-class QTAWS_EXPORT GetDeploymentResponsePrivate : public AppConfigResponsePrivate {
+class GetDeploymentResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

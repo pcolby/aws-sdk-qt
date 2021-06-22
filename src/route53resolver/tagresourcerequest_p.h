@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public Route53ResolverRequestPrivate {
+class TagResourceRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const Route53ResolverRequest::Action action,

@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class RejectDomainTransferFromAnotherAwsAccountResponse;
 
-class QTAWS_EXPORT RejectDomainTransferFromAnotherAwsAccountResponsePrivate : public Route53DomainsResponsePrivate {
+class RejectDomainTransferFromAnotherAwsAccountResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 

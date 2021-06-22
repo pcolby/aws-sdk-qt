@@ -28,7 +28,7 @@ namespace Chime {
 
 class SearchAvailablePhoneNumbersRequest;
 
-class QTAWS_EXPORT SearchAvailablePhoneNumbersRequestPrivate : public ChimeRequestPrivate {
+class SearchAvailablePhoneNumbersRequestPrivate : public ChimeRequestPrivate {
 
 public:
     SearchAvailablePhoneNumbersRequestPrivate(const ChimeRequest::Action action,

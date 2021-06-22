@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetSipMediaApplicationLoggingConfigurationRequest;
 
-class QTAWS_EXPORT GetSipMediaApplicationLoggingConfigurationRequestPrivate : public ChimeRequestPrivate {
+class GetSipMediaApplicationLoggingConfigurationRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetSipMediaApplicationLoggingConfigurationRequestPrivate(const ChimeRequest::Action action,

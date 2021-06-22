@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class ListDistributedGrantsRequest;
 
-class QTAWS_EXPORT ListDistributedGrantsRequestPrivate : public LicenseManagerRequestPrivate {
+class ListDistributedGrantsRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     ListDistributedGrantsRequestPrivate(const LicenseManagerRequest::Action action,

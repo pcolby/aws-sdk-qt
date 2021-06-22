@@ -28,7 +28,7 @@ namespace CodeGuruReviewer {
 
 class ListRecommendationsRequest;
 
-class QTAWS_EXPORT ListRecommendationsRequestPrivate : public CodeGuruReviewerRequestPrivate {
+class ListRecommendationsRequestPrivate : public CodeGuruReviewerRequestPrivate {
 
 public:
     ListRecommendationsRequestPrivate(const CodeGuruReviewerRequest::Action action,

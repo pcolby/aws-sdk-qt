@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisassociateRouteTableRequest;
 
-class QTAWS_EXPORT DisassociateRouteTableRequestPrivate : public Ec2RequestPrivate {
+class DisassociateRouteTableRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisassociateRouteTableRequestPrivate(const Ec2Request::Action action,

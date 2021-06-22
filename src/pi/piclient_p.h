@@ -29,7 +29,7 @@ namespace PI {
 
 class PiClient;
 
-class QTAWS_EXPORT PiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PiClientPrivate(PiClient * const q);

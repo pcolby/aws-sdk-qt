@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class DeleteAnomalySubscriptionRequest;
 
-class QTAWS_EXPORT DeleteAnomalySubscriptionRequestPrivate : public CostExplorerRequestPrivate {
+class DeleteAnomalySubscriptionRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     DeleteAnomalySubscriptionRequestPrivate(const CostExplorerRequest::Action action,

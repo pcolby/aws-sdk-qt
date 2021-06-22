@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteXssMatchSetRequest;
 
-class QTAWS_EXPORT DeleteXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeleteXssMatchSetRequestPrivate(const WAFRegionalRequest::Action action,

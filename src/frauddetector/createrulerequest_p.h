@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class CreateRuleRequest;
 
-class QTAWS_EXPORT CreateRuleRequestPrivate : public FraudDetectorRequestPrivate {
+class CreateRuleRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     CreateRuleRequestPrivate(const FraudDetectorRequest::Action action,

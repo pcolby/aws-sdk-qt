@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class DeleteFirewallManagerRuleGroupsRequest;
 
-class QTAWS_EXPORT DeleteFirewallManagerRuleGroupsRequestPrivate : public Wafv2RequestPrivate {
+class DeleteFirewallManagerRuleGroupsRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     DeleteFirewallManagerRuleGroupsRequestPrivate(const Wafv2Request::Action action,

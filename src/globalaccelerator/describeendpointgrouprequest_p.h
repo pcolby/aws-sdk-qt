@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class DescribeEndpointGroupRequest;
 
-class QTAWS_EXPORT DescribeEndpointGroupRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class DescribeEndpointGroupRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     DescribeEndpointGroupRequestPrivate(const GlobalAcceleratorRequest::Action action,

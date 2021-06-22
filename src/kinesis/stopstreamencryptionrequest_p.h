@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class StopStreamEncryptionRequest;
 
-class QTAWS_EXPORT StopStreamEncryptionRequestPrivate : public KinesisRequestPrivate {
+class StopStreamEncryptionRequestPrivate : public KinesisRequestPrivate {
 
 public:
     StopStreamEncryptionRequestPrivate(const KinesisRequest::Action action,

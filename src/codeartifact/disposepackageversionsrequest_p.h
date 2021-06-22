@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class DisposePackageVersionsRequest;
 
-class QTAWS_EXPORT DisposePackageVersionsRequestPrivate : public CodeArtifactRequestPrivate {
+class DisposePackageVersionsRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     DisposePackageVersionsRequestPrivate(const CodeArtifactRequest::Action action,

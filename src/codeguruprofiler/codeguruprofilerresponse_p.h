@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class CodeGuruProfilerResponse;
 
-class QTAWS_EXPORT CodeGuruProfilerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CodeGuruProfilerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

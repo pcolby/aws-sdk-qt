@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class CreateInvalidationResponse;
 
-class QTAWS_EXPORT CreateInvalidationResponsePrivate : public CloudFrontResponsePrivate {
+class CreateInvalidationResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class PutContactPolicyRequest;
 
-class QTAWS_EXPORT PutContactPolicyRequestPrivate : public SSMContactsRequestPrivate {
+class PutContactPolicyRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     PutContactPolicyRequestPrivate(const SSMContactsRequest::Action action,

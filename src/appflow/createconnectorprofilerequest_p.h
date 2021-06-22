@@ -28,7 +28,7 @@ namespace Appflow {
 
 class CreateConnectorProfileRequest;
 
-class QTAWS_EXPORT CreateConnectorProfileRequestPrivate : public AppflowRequestPrivate {
+class CreateConnectorProfileRequestPrivate : public AppflowRequestPrivate {
 
 public:
     CreateConnectorProfileRequestPrivate(const AppflowRequest::Action action,

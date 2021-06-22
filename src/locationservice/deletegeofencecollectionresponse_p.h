@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DeleteGeofenceCollectionResponse;
 
-class QTAWS_EXPORT DeleteGeofenceCollectionResponsePrivate : public LocationServiceResponsePrivate {
+class DeleteGeofenceCollectionResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

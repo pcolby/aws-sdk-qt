@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DescribeUserRequest;
 
-class QTAWS_EXPORT DescribeUserRequestPrivate : public WorkMailRequestPrivate {
+class DescribeUserRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DescribeUserRequestPrivate(const WorkMailRequest::Action action,

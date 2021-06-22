@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeDBSubnetGroupsResponse;
 
-class QTAWS_EXPORT DescribeDBSubnetGroupsResponsePrivate : public RdsResponsePrivate {
+class DescribeDBSubnetGroupsResponsePrivate : public RdsResponsePrivate {
 
 public:
 

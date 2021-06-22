@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class PollForTaskResponse;
 
-class QTAWS_EXPORT PollForTaskResponsePrivate : public DataPipelineResponsePrivate {
+class PollForTaskResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 

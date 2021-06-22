@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class CheckDomainTransferabilityRequest;
 
-class QTAWS_EXPORT CheckDomainTransferabilityRequestPrivate : public Route53DomainsRequestPrivate {
+class CheckDomainTransferabilityRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     CheckDomainTransferabilityRequestPrivate(const Route53DomainsRequest::Action action,

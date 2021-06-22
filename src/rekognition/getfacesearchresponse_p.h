@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class GetFaceSearchResponse;
 
-class QTAWS_EXPORT GetFaceSearchResponsePrivate : public RekognitionResponsePrivate {
+class GetFaceSearchResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace ComprehendMedical {
 
 class ListRxNormInferenceJobsResponse;
 
-class QTAWS_EXPORT ListRxNormInferenceJobsResponsePrivate : public ComprehendMedicalResponsePrivate {
+class ListRxNormInferenceJobsResponsePrivate : public ComprehendMedicalResponsePrivate {
 
 public:
 

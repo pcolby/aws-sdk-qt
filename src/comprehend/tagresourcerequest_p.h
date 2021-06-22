@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public ComprehendRequestPrivate {
+class TagResourceRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const ComprehendRequest::Action action,

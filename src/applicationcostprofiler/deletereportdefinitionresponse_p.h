@@ -27,7 +27,7 @@ namespace ApplicationCostProfiler {
 
 class DeleteReportDefinitionResponse;
 
-class QTAWS_EXPORT DeleteReportDefinitionResponsePrivate : public ApplicationCostProfilerResponsePrivate {
+class DeleteReportDefinitionResponsePrivate : public ApplicationCostProfilerResponsePrivate {
 
 public:
 

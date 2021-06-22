@@ -29,7 +29,7 @@ namespace LookoutEquipment {
 
 class LookoutEquipmentClient;
 
-class QTAWS_EXPORT LookoutEquipmentClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LookoutEquipmentClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LookoutEquipmentClientPrivate(LookoutEquipmentClient * const q);

@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class DissociateEntityFromThingResponse;
 
-class QTAWS_EXPORT DissociateEntityFromThingResponsePrivate : public IoTThingsGraphResponsePrivate {
+class DissociateEntityFromThingResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

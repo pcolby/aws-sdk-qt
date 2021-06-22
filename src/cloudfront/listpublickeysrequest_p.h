@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListPublicKeysRequest;
 
-class QTAWS_EXPORT ListPublicKeysRequestPrivate : public CloudFrontRequestPrivate {
+class ListPublicKeysRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListPublicKeysRequestPrivate(const CloudFrontRequest::Action action,

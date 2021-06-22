@@ -27,7 +27,7 @@ namespace AppIntegrationsService {
 
 class DeleteEventIntegrationResponse;
 
-class QTAWS_EXPORT DeleteEventIntegrationResponsePrivate : public AppIntegrationsServiceResponsePrivate {
+class DeleteEventIntegrationResponsePrivate : public AppIntegrationsServiceResponsePrivate {
 
 public:
 

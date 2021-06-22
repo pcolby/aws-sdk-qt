@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetIndexingConfigurationRequest;
 
-class QTAWS_EXPORT GetIndexingConfigurationRequestPrivate : public IoTRequestPrivate {
+class GetIndexingConfigurationRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetIndexingConfigurationRequestPrivate(const IoTRequest::Action action,

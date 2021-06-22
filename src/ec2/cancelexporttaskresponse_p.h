@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CancelExportTaskResponse;
 
-class QTAWS_EXPORT CancelExportTaskResponsePrivate : public Ec2ResponsePrivate {
+class CancelExportTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketEncryptionResponse;
 
-class QTAWS_EXPORT DeleteBucketEncryptionResponsePrivate : public S3ResponsePrivate {
+class DeleteBucketEncryptionResponsePrivate : public S3ResponsePrivate {
 
 public:
 

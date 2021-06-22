@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class UpdateApiDestinationResponse;
 
-class QTAWS_EXPORT UpdateApiDestinationResponsePrivate : public EventBridgeResponsePrivate {
+class UpdateApiDestinationResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

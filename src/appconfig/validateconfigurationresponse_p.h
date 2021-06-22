@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class ValidateConfigurationResponse;
 
-class QTAWS_EXPORT ValidateConfigurationResponsePrivate : public AppConfigResponsePrivate {
+class ValidateConfigurationResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

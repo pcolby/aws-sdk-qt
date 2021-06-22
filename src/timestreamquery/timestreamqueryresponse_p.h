@@ -27,7 +27,7 @@ namespace TimestreamQuery {
 
 class TimestreamQueryResponse;
 
-class QTAWS_EXPORT TimestreamQueryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TimestreamQueryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class DeleteMemberRequest;
 
-class QTAWS_EXPORT DeleteMemberRequestPrivate : public ManagedBlockchainRequestPrivate {
+class DeleteMemberRequestPrivate : public ManagedBlockchainRequestPrivate {
 
 public:
     DeleteMemberRequestPrivate(const ManagedBlockchainRequest::Action action,

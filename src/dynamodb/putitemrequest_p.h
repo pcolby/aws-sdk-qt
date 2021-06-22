@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class PutItemRequest;
 
-class QTAWS_EXPORT PutItemRequestPrivate : public DynamoDBRequestPrivate {
+class PutItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     PutItemRequestPrivate(const DynamoDBRequest::Action action,

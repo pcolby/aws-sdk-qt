@@ -28,7 +28,7 @@ namespace EKS {
 
 class UpdateAddonRequest;
 
-class QTAWS_EXPORT UpdateAddonRequestPrivate : public EksRequestPrivate {
+class UpdateAddonRequestPrivate : public EksRequestPrivate {
 
 public:
     UpdateAddonRequestPrivate(const EksRequest::Action action,

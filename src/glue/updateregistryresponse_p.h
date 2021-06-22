@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateRegistryResponse;
 
-class QTAWS_EXPORT UpdateRegistryResponsePrivate : public GlueResponsePrivate {
+class UpdateRegistryResponsePrivate : public GlueResponsePrivate {
 
 public:
 

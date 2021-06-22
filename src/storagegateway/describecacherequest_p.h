@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeCacheRequest;
 
-class QTAWS_EXPORT DescribeCacheRequestPrivate : public StorageGatewayRequestPrivate {
+class DescribeCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeCacheRequestPrivate(const StorageGatewayRequest::Action action,

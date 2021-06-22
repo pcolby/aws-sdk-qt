@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class CreateWorldExportJobResponse;
 
-class QTAWS_EXPORT CreateWorldExportJobResponsePrivate : public RoboMakerResponsePrivate {
+class CreateWorldExportJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 

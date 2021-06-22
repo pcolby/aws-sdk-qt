@@ -28,7 +28,7 @@ namespace Detective {
 
 class DisassociateMembershipRequest;
 
-class QTAWS_EXPORT DisassociateMembershipRequestPrivate : public DetectiveRequestPrivate {
+class DisassociateMembershipRequestPrivate : public DetectiveRequestPrivate {
 
 public:
     DisassociateMembershipRequestPrivate(const DetectiveRequest::Action action,

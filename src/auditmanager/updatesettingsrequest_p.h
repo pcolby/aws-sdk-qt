@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class UpdateSettingsRequest;
 
-class QTAWS_EXPORT UpdateSettingsRequestPrivate : public AuditManagerRequestPrivate {
+class UpdateSettingsRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     UpdateSettingsRequestPrivate(const AuditManagerRequest::Action action,

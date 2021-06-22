@@ -28,7 +28,7 @@ namespace mgn {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public mgnRequestPrivate {
+class UntagResourceRequestPrivate : public mgnRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const mgnRequest::Action action,

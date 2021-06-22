@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class DeleteStreamingImageRequest;
 
-class QTAWS_EXPORT DeleteStreamingImageRequestPrivate : public NimbleStudioRequestPrivate {
+class DeleteStreamingImageRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     DeleteStreamingImageRequestPrivate(const NimbleStudioRequest::Action action,

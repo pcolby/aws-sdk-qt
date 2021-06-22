@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteTrialComponentResponse;
 
-class QTAWS_EXPORT DeleteTrialComponentResponsePrivate : public SageMakerResponsePrivate {
+class DeleteTrialComponentResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

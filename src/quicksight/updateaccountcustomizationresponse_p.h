@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class UpdateAccountCustomizationResponse;
 
-class QTAWS_EXPORT UpdateAccountCustomizationResponsePrivate : public QuickSightResponsePrivate {
+class UpdateAccountCustomizationResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

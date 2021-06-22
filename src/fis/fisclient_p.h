@@ -29,7 +29,7 @@ namespace FIS {
 
 class FisClient;
 
-class QTAWS_EXPORT FisClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FisClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     FisClientPrivate(FisClient * const q);

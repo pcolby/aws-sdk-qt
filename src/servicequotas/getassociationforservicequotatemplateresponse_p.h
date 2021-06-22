@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class GetAssociationForServiceQuotaTemplateResponse;
 
-class QTAWS_EXPORT GetAssociationForServiceQuotaTemplateResponsePrivate : public ServiceQuotasResponsePrivate {
+class GetAssociationForServiceQuotaTemplateResponsePrivate : public ServiceQuotasResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteInstanceRequest;
 
-class QTAWS_EXPORT DeleteInstanceRequestPrivate : public LightsailRequestPrivate {
+class DeleteInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteInstanceRequestPrivate(const LightsailRequest::Action action,

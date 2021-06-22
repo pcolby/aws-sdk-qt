@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public CloudFrontResponsePrivate {
+class TagResourceResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

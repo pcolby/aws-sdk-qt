@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public Cloud9RequestPrivate {
+class TagResourceRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     TagResourceRequestPrivate(const Cloud9Request::Action action,

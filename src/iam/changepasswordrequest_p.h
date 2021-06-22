@@ -28,7 +28,7 @@ namespace IAM {
 
 class ChangePasswordRequest;
 
-class QTAWS_EXPORT ChangePasswordRequestPrivate : public IamRequestPrivate {
+class ChangePasswordRequestPrivate : public IamRequestPrivate {
 
 public:
     ChangePasswordRequestPrivate(const IamRequest::Action action,

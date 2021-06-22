@@ -29,7 +29,7 @@ namespace SNS {
 
 class SnsClient;
 
-class QTAWS_EXPORT SnsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SnsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SnsClientPrivate(SnsClient * const q);

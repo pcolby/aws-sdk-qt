@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public EventBridgeResponsePrivate {
+class TagResourceResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

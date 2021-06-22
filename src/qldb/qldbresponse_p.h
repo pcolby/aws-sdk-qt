@@ -27,7 +27,7 @@ namespace QLDB {
 
 class QldbResponse;
 
-class QTAWS_EXPORT QldbResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QldbResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

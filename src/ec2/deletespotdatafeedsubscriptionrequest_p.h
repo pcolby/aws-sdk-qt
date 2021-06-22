@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteSpotDatafeedSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionRequestPrivate : public Ec2RequestPrivate {
+class DeleteSpotDatafeedSubscriptionRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteSpotDatafeedSubscriptionRequestPrivate(const Ec2Request::Action action,

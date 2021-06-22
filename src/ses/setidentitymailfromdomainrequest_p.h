@@ -28,7 +28,7 @@ namespace SES {
 
 class SetIdentityMailFromDomainRequest;
 
-class QTAWS_EXPORT SetIdentityMailFromDomainRequestPrivate : public SesRequestPrivate {
+class SetIdentityMailFromDomainRequestPrivate : public SesRequestPrivate {
 
 public:
     SetIdentityMailFromDomainRequestPrivate(const SesRequest::Action action,

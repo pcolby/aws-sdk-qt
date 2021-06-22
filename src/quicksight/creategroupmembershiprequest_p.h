@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CreateGroupMembershipRequest;
 
-class QTAWS_EXPORT CreateGroupMembershipRequestPrivate : public QuickSightRequestPrivate {
+class CreateGroupMembershipRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     CreateGroupMembershipRequestPrivate(const QuickSightRequest::Action action,

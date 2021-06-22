@@ -27,7 +27,7 @@ namespace EC2 {
 
 class SearchLocalGatewayRoutesResponse;
 
-class QTAWS_EXPORT SearchLocalGatewayRoutesResponsePrivate : public Ec2ResponsePrivate {
+class SearchLocalGatewayRoutesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

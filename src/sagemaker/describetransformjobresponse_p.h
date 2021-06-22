@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeTransformJobResponse;
 
-class QTAWS_EXPORT DescribeTransformJobResponsePrivate : public SageMakerResponsePrivate {
+class DescribeTransformJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

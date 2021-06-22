@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateVolumeRequest;
 
-class QTAWS_EXPORT UpdateVolumeRequestPrivate : public OpsWorksRequestPrivate {
+class UpdateVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateVolumeRequestPrivate(const OpsWorksRequest::Action action,

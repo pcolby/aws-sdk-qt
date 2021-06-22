@@ -29,7 +29,7 @@ namespace DataExchange {
 
 class DataExchangeClient;
 
-class QTAWS_EXPORT DataExchangeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DataExchangeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DataExchangeClientPrivate(DataExchangeClient * const q);

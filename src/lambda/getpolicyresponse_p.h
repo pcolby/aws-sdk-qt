@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetPolicyResponse;
 
-class QTAWS_EXPORT GetPolicyResponsePrivate : public LambdaResponsePrivate {
+class GetPolicyResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

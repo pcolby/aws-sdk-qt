@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteCrawlerRequest;
 
-class QTAWS_EXPORT DeleteCrawlerRequestPrivate : public GlueRequestPrivate {
+class DeleteCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteCrawlerRequestPrivate(const GlueRequest::Action action,

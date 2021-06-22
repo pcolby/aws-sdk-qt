@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class PutRecordsRequest;
 
-class QTAWS_EXPORT PutRecordsRequestPrivate : public KinesisRequestPrivate {
+class PutRecordsRequestPrivate : public KinesisRequestPrivate {
 
 public:
     PutRecordsRequestPrivate(const KinesisRequest::Action action,

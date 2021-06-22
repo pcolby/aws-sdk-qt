@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class RetryBuildBatchResponse;
 
-class QTAWS_EXPORT RetryBuildBatchResponsePrivate : public CodeBuildResponsePrivate {
+class RetryBuildBatchResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

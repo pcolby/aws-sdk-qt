@@ -27,7 +27,7 @@ namespace Proton {
 
 class ListEnvironmentTemplateVersionsResponse;
 
-class QTAWS_EXPORT ListEnvironmentTemplateVersionsResponsePrivate : public ProtonResponsePrivate {
+class ListEnvironmentTemplateVersionsResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

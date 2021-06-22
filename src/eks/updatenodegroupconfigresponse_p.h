@@ -27,7 +27,7 @@ namespace EKS {
 
 class UpdateNodegroupConfigResponse;
 
-class QTAWS_EXPORT UpdateNodegroupConfigResponsePrivate : public EksResponsePrivate {
+class UpdateNodegroupConfigResponsePrivate : public EksResponsePrivate {
 
 public:
 

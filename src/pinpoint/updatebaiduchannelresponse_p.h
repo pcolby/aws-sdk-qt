@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateBaiduChannelResponse;
 
-class QTAWS_EXPORT UpdateBaiduChannelResponsePrivate : public PinpointResponsePrivate {
+class UpdateBaiduChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CodeDeployRequestPrivate {
+class UntagResourceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CodeDeployRequest::Action action,

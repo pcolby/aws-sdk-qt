@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DeleteEventTrackerResponse;
 
-class QTAWS_EXPORT DeleteEventTrackerResponsePrivate : public PersonalizeResponsePrivate {
+class DeleteEventTrackerResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

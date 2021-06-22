@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class ListPermissionsResponse;
 
-class QTAWS_EXPORT ListPermissionsResponsePrivate : public LakeFormationResponsePrivate {
+class ListPermissionsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 

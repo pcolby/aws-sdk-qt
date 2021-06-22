@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CognitoIdentityRequestPrivate {
+class TagResourceRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CognitoIdentityRequest::Action action,

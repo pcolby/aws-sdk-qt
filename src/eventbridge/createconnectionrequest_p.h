@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class CreateConnectionRequest;
 
-class QTAWS_EXPORT CreateConnectionRequestPrivate : public EventBridgeRequestPrivate {
+class CreateConnectionRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     CreateConnectionRequestPrivate(const EventBridgeRequest::Action action,

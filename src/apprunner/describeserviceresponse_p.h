@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DescribeServiceResponse;
 
-class QTAWS_EXPORT DescribeServiceResponsePrivate : public AppRunnerResponsePrivate {
+class DescribeServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

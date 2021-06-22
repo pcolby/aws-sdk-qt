@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class DescribeDatasetRequest;
 
-class QTAWS_EXPORT DescribeDatasetRequestPrivate : public CognitoSyncRequestPrivate {
+class DescribeDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     DescribeDatasetRequestPrivate(const CognitoSyncRequest::Action action,

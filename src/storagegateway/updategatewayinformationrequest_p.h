@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateGatewayInformationRequest;
 
-class QTAWS_EXPORT UpdateGatewayInformationRequestPrivate : public StorageGatewayRequestPrivate {
+class UpdateGatewayInformationRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateGatewayInformationRequestPrivate(const StorageGatewayRequest::Action action,

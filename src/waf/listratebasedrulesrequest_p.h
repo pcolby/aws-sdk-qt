@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListRateBasedRulesRequest;
 
-class QTAWS_EXPORT ListRateBasedRulesRequestPrivate : public WafRequestPrivate {
+class ListRateBasedRulesRequestPrivate : public WafRequestPrivate {
 
 public:
     ListRateBasedRulesRequestPrivate(const WafRequest::Action action,

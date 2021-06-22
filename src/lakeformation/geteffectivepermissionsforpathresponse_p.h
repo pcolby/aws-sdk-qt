@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class GetEffectivePermissionsForPathResponse;
 
-class QTAWS_EXPORT GetEffectivePermissionsForPathResponsePrivate : public LakeFormationResponsePrivate {
+class GetEffectivePermissionsForPathResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 

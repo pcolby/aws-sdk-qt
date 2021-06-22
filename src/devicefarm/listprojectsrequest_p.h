@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListProjectsRequest;
 
-class QTAWS_EXPORT ListProjectsRequestPrivate : public DeviceFarmRequestPrivate {
+class ListProjectsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListProjectsRequestPrivate(const DeviceFarmRequest::Action action,

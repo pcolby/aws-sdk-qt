@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetHealthCheckStatusRequest;
 
-class QTAWS_EXPORT GetHealthCheckStatusRequestPrivate : public Route53RequestPrivate {
+class GetHealthCheckStatusRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetHealthCheckStatusRequestPrivate(const Route53Request::Action action,

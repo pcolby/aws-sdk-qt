@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class LexRuntimeV2Request;
 
-class QTAWS_EXPORT LexRuntimeV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexRuntimeV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LexRuntimeV2Request::Action action; ///< LexRuntimeV2 action to be performed.

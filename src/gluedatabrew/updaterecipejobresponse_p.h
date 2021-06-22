@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class UpdateRecipeJobResponse;
 
-class QTAWS_EXPORT UpdateRecipeJobResponsePrivate : public GlueDataBrewResponsePrivate {
+class UpdateRecipeJobResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 

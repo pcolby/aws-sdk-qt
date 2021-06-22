@@ -27,7 +27,7 @@ namespace DataSync {
 
 class UpdateAgentResponse;
 
-class QTAWS_EXPORT UpdateAgentResponsePrivate : public DataSyncResponsePrivate {
+class UpdateAgentResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 

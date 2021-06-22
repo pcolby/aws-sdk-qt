@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class CreatePresetRequest;
 
-class QTAWS_EXPORT CreatePresetRequestPrivate : public MediaConvertRequestPrivate {
+class CreatePresetRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     CreatePresetRequestPrivate(const MediaConvertRequest::Action action,

@@ -28,7 +28,7 @@ namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeRequest;
 
-class QTAWS_EXPORT PersonalizeRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PersonalizeRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PersonalizeRuntimeRequest::Action action; ///< PersonalizeRuntime action to be performed.

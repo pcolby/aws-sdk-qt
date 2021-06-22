@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteServiceRequest;
 
-class QTAWS_EXPORT DeleteServiceRequestPrivate : public EcsRequestPrivate {
+class DeleteServiceRequestPrivate : public EcsRequestPrivate {
 
 public:
     DeleteServiceRequestPrivate(const EcsRequest::Action action,

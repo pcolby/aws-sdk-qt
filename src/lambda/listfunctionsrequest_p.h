@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListFunctionsRequest;
 
-class QTAWS_EXPORT ListFunctionsRequestPrivate : public LambdaRequestPrivate {
+class ListFunctionsRequestPrivate : public LambdaRequestPrivate {
 
 public:
     ListFunctionsRequestPrivate(const LambdaRequest::Action action,

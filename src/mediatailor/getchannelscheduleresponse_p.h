@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class GetChannelScheduleResponse;
 
-class QTAWS_EXPORT GetChannelScheduleResponsePrivate : public MediaTailorResponsePrivate {
+class GetChannelScheduleResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

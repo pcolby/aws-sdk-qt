@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class GetEmailIdentityRequest;
 
-class QTAWS_EXPORT GetEmailIdentityRequestPrivate : public PinpointEmailRequestPrivate {
+class GetEmailIdentityRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     GetEmailIdentityRequestPrivate(const PinpointEmailRequest::Action action,

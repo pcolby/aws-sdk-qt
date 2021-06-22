@@ -27,7 +27,7 @@ namespace Macie {
 
 class MacieResponse;
 
-class QTAWS_EXPORT MacieResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MacieResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

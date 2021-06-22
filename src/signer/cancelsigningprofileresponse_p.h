@@ -27,7 +27,7 @@ namespace signer {
 
 class CancelSigningProfileResponse;
 
-class QTAWS_EXPORT CancelSigningProfileResponsePrivate : public signerResponsePrivate {
+class CancelSigningProfileResponsePrivate : public signerResponsePrivate {
 
 public:
 

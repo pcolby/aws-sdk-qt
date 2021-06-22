@@ -28,7 +28,7 @@ namespace CostandUsageReportService {
 
 class ModifyReportDefinitionRequest;
 
-class QTAWS_EXPORT ModifyReportDefinitionRequestPrivate : public CostandUsageReportServiceRequestPrivate {
+class ModifyReportDefinitionRequestPrivate : public CostandUsageReportServiceRequestPrivate {
 
 public:
     ModifyReportDefinitionRequestPrivate(const CostandUsageReportServiceRequest::Action action,

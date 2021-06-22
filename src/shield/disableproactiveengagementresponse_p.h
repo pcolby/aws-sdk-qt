@@ -27,7 +27,7 @@ namespace Shield {
 
 class DisableProactiveEngagementResponse;
 
-class QTAWS_EXPORT DisableProactiveEngagementResponsePrivate : public ShieldResponsePrivate {
+class DisableProactiveEngagementResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class CodeCommitClient;
 
-class QTAWS_EXPORT CodeCommitClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeCommitClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeCommitClientPrivate(CodeCommitClient * const q);

@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class ListApplicationsRequest;
 
-class QTAWS_EXPORT ListApplicationsRequestPrivate : public AppRegistryRequestPrivate {
+class ListApplicationsRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     ListApplicationsRequestPrivate(const AppRegistryRequest::Action action,

@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class CreateHostedConfigurationVersionRequest;
 
-class QTAWS_EXPORT CreateHostedConfigurationVersionRequestPrivate : public AppConfigRequestPrivate {
+class CreateHostedConfigurationVersionRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     CreateHostedConfigurationVersionRequestPrivate(const AppConfigRequest::Action action,

@@ -28,7 +28,7 @@ namespace DLM {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public DlmRequestPrivate {
+class ListTagsForResourceRequestPrivate : public DlmRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const DlmRequest::Action action,

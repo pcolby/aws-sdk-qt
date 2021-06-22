@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class ListJobTemplatesRequest;
 
-class QTAWS_EXPORT ListJobTemplatesRequestPrivate : public MediaConvertRequestPrivate {
+class ListJobTemplatesRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     ListJobTemplatesRequestPrivate(const MediaConvertRequest::Action action,

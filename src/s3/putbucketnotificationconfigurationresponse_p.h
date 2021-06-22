@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketNotificationConfigurationResponse;
 
-class QTAWS_EXPORT PutBucketNotificationConfigurationResponsePrivate : public S3ResponsePrivate {
+class PutBucketNotificationConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 

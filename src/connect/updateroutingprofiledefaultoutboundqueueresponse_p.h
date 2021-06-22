@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateRoutingProfileDefaultOutboundQueueResponse;
 
-class QTAWS_EXPORT UpdateRoutingProfileDefaultOutboundQueueResponsePrivate : public ConnectResponsePrivate {
+class UpdateRoutingProfileDefaultOutboundQueueResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SQS {
 
 class SetQueueAttributesResponse;
 
-class QTAWS_EXPORT SetQueueAttributesResponsePrivate : public SqsResponsePrivate {
+class SetQueueAttributesResponsePrivate : public SqsResponsePrivate {
 
 public:
 

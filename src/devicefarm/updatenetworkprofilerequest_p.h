@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class UpdateNetworkProfileRequest;
 
-class QTAWS_EXPORT UpdateNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
+class UpdateNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     UpdateNetworkProfileRequestPrivate(const DeviceFarmRequest::Action action,

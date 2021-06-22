@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class MediaConnectResponse;
 
-class QTAWS_EXPORT MediaConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MediaConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

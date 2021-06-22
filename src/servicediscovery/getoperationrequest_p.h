@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class GetOperationRequest;
 
-class QTAWS_EXPORT GetOperationRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class GetOperationRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     GetOperationRequestPrivate(const ServiceDiscoveryRequest::Action action,

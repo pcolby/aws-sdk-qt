@@ -29,7 +29,7 @@ namespace Personalize {
 
 class PersonalizeClient;
 
-class QTAWS_EXPORT PersonalizeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PersonalizeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PersonalizeClientPrivate(PersonalizeClient * const q);

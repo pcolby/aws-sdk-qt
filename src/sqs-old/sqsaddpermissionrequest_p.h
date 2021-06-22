@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsAddPermissionRequest;
 
-class QTAWS_EXPORT SqsAddPermissionRequestPrivate : public SqsRequestPrivate {
+class SqsAddPermissionRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsAddPermissionRequest::PermissionsMap permissions; ///< Permissions to add.

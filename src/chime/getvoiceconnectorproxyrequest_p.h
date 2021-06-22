@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetVoiceConnectorProxyRequest;
 
-class QTAWS_EXPORT GetVoiceConnectorProxyRequestPrivate : public ChimeRequestPrivate {
+class GetVoiceConnectorProxyRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetVoiceConnectorProxyRequestPrivate(const ChimeRequest::Action action,

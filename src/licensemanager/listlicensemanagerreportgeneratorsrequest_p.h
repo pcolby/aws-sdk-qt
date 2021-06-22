@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class ListLicenseManagerReportGeneratorsRequest;
 
-class QTAWS_EXPORT ListLicenseManagerReportGeneratorsRequestPrivate : public LicenseManagerRequestPrivate {
+class ListLicenseManagerReportGeneratorsRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     ListLicenseManagerReportGeneratorsRequestPrivate(const LicenseManagerRequest::Action action,

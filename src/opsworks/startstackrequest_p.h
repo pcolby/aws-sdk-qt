@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class StartStackRequest;
 
-class QTAWS_EXPORT StartStackRequestPrivate : public OpsWorksRequestPrivate {
+class StartStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     StartStackRequestPrivate(const OpsWorksRequest::Action action,

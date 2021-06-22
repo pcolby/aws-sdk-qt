@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeInstanceInformationRequest;
 
-class QTAWS_EXPORT DescribeInstanceInformationRequestPrivate : public SsmRequestPrivate {
+class DescribeInstanceInformationRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeInstanceInformationRequestPrivate(const SsmRequest::Action action,

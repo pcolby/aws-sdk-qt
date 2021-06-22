@@ -27,7 +27,7 @@ namespace DataSync {
 
 class CreateLocationEfsResponse;
 
-class QTAWS_EXPORT CreateLocationEfsResponsePrivate : public DataSyncResponsePrivate {
+class CreateLocationEfsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 

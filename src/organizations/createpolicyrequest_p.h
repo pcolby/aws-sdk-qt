@@ -28,7 +28,7 @@ namespace Organizations {
 
 class CreatePolicyRequest;
 
-class QTAWS_EXPORT CreatePolicyRequestPrivate : public OrganizationsRequestPrivate {
+class CreatePolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     CreatePolicyRequestPrivate(const OrganizationsRequest::Action action,

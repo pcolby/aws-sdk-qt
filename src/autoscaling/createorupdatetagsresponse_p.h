@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class CreateOrUpdateTagsResponse;
 
-class QTAWS_EXPORT CreateOrUpdateTagsResponsePrivate : public AutoScalingResponsePrivate {
+class CreateOrUpdateTagsResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace signer {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public signerResponsePrivate {
+class TagResourceResponsePrivate : public signerResponsePrivate {
 
 public:
 

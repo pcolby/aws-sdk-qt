@@ -27,7 +27,7 @@ namespace EMR {
 
 class PutAutoScalingPolicyResponse;
 
-class QTAWS_EXPORT PutAutoScalingPolicyResponsePrivate : public EmrResponsePrivate {
+class PutAutoScalingPolicyResponsePrivate : public EmrResponsePrivate {
 
 public:
 

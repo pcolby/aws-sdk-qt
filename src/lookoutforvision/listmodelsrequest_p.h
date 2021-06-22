@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class ListModelsRequest;
 
-class QTAWS_EXPORT ListModelsRequestPrivate : public LookoutforVisionRequestPrivate {
+class ListModelsRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     ListModelsRequestPrivate(const LookoutforVisionRequest::Action action,

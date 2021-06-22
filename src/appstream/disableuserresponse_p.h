@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DisableUserResponse;
 
-class QTAWS_EXPORT DisableUserResponsePrivate : public AppStreamResponsePrivate {
+class DisableUserResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

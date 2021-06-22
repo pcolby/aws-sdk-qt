@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public imagebuilderResponsePrivate {
+class UntagResourceResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class DeleteCoreDeviceResponse;
 
-class QTAWS_EXPORT DeleteCoreDeviceResponsePrivate : public GreengrassV2ResponsePrivate {
+class DeleteCoreDeviceResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 

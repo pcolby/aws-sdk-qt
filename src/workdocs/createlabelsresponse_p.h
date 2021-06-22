@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class CreateLabelsResponse;
 
-class QTAWS_EXPORT CreateLabelsResponsePrivate : public WorkDocsResponsePrivate {
+class CreateLabelsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

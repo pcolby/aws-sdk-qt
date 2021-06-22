@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class PutIntegrationRequest;
 
-class QTAWS_EXPORT PutIntegrationRequestPrivate : public APIGatewayRequestPrivate {
+class PutIntegrationRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     PutIntegrationRequestPrivate(const APIGatewayRequest::Action action,

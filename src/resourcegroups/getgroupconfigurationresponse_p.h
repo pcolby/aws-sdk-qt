@@ -27,7 +27,7 @@ namespace ResourceGroups {
 
 class GetGroupConfigurationResponse;
 
-class QTAWS_EXPORT GetGroupConfigurationResponsePrivate : public ResourceGroupsResponsePrivate {
+class GetGroupConfigurationResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 

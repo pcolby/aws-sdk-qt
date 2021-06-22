@@ -27,7 +27,7 @@ namespace DLM {
 
 class CreateLifecyclePolicyResponse;
 
-class QTAWS_EXPORT CreateLifecyclePolicyResponsePrivate : public DlmResponsePrivate {
+class CreateLifecyclePolicyResponsePrivate : public DlmResponsePrivate {
 
 public:
 

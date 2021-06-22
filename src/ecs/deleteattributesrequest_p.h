@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteAttributesRequest;
 
-class QTAWS_EXPORT DeleteAttributesRequestPrivate : public EcsRequestPrivate {
+class DeleteAttributesRequestPrivate : public EcsRequestPrivate {
 
 public:
     DeleteAttributesRequestPrivate(const EcsRequest::Action action,

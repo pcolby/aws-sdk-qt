@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CloudDirectoryRequestPrivate {
+class TagResourceRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CloudDirectoryRequest::Action action,

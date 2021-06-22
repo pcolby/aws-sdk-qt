@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class StopStackSetOperationResponse;
 
-class QTAWS_EXPORT StopStackSetOperationResponsePrivate : public CloudFormationResponsePrivate {
+class StopStackSetOperationResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

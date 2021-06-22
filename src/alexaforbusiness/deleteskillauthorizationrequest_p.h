@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteSkillAuthorizationRequest;
 
-class QTAWS_EXPORT DeleteSkillAuthorizationRequestPrivate : public AlexaForBusinessRequestPrivate {
+class DeleteSkillAuthorizationRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DeleteSkillAuthorizationRequestPrivate(const AlexaForBusinessRequest::Action action,

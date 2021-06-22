@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class DeleteLogPatternResponse;
 
-class QTAWS_EXPORT DeleteLogPatternResponsePrivate : public ApplicationInsightsResponsePrivate {
+class DeleteLogPatternResponsePrivate : public ApplicationInsightsResponsePrivate {
 
 public:
 

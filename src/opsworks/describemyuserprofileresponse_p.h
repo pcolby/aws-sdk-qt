@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeMyUserProfileResponse;
 
-class QTAWS_EXPORT DescribeMyUserProfileResponsePrivate : public OpsWorksResponsePrivate {
+class DescribeMyUserProfileResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

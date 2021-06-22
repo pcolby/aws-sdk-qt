@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class CreateMonitoringSubscriptionResponse;
 
-class QTAWS_EXPORT CreateMonitoringSubscriptionResponsePrivate : public CloudFrontResponsePrivate {
+class CreateMonitoringSubscriptionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

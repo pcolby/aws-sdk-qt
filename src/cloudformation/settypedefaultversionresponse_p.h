@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class SetTypeDefaultVersionResponse;
 
-class QTAWS_EXPORT SetTypeDefaultVersionResponsePrivate : public CloudFormationResponsePrivate {
+class SetTypeDefaultVersionResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

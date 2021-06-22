@@ -27,7 +27,7 @@ namespace KMS {
 
 class DescribeCustomKeyStoresResponse;
 
-class QTAWS_EXPORT DescribeCustomKeyStoresResponsePrivate : public KmsResponsePrivate {
+class DescribeCustomKeyStoresResponsePrivate : public KmsResponsePrivate {
 
 public:
 

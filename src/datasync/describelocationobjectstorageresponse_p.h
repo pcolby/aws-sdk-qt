@@ -27,7 +27,7 @@ namespace DataSync {
 
 class DescribeLocationObjectStorageResponse;
 
-class QTAWS_EXPORT DescribeLocationObjectStorageResponsePrivate : public DataSyncResponsePrivate {
+class DescribeLocationObjectStorageResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 

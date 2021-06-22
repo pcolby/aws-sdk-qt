@@ -27,7 +27,7 @@ namespace Appflow {
 
 class ListConnectorEntitiesResponse;
 
-class QTAWS_EXPORT ListConnectorEntitiesResponsePrivate : public AppflowResponsePrivate {
+class ListConnectorEntitiesResponsePrivate : public AppflowResponsePrivate {
 
 public:
 

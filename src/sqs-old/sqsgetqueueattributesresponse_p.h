@@ -27,7 +27,7 @@ namespace SqsOld {
 
 class SqsGetQueueAttributesResponse;
 
-class QTAWS_EXPORT SqsGetQueueAttributesResponsePrivate : public SqsResponsePrivate {
+class SqsGetQueueAttributesResponsePrivate : public SqsResponsePrivate {
 
 public:
     SqsGetQueueAttributesResponsePrivate(SqsGetQueueAttributesResponse * const q);

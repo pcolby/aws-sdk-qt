@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DeleteEventSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DeleteEventSubscriptionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DeleteEventSubscriptionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class UpdateOrganizationConfigurationRequest;
 
-class QTAWS_EXPORT UpdateOrganizationConfigurationRequestPrivate : public SecurityHubRequestPrivate {
+class UpdateOrganizationConfigurationRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     UpdateOrganizationConfigurationRequestPrivate(const SecurityHubRequest::Action action,

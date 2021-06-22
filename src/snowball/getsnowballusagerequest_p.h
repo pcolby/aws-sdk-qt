@@ -28,7 +28,7 @@ namespace Snowball {
 
 class GetSnowballUsageRequest;
 
-class QTAWS_EXPORT GetSnowballUsageRequestPrivate : public SnowballRequestPrivate {
+class GetSnowballUsageRequestPrivate : public SnowballRequestPrivate {
 
 public:
     GetSnowballUsageRequestPrivate(const SnowballRequest::Action action,

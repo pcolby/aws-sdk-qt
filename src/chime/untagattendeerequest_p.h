@@ -28,7 +28,7 @@ namespace Chime {
 
 class UntagAttendeeRequest;
 
-class QTAWS_EXPORT UntagAttendeeRequestPrivate : public ChimeRequestPrivate {
+class UntagAttendeeRequestPrivate : public ChimeRequestPrivate {
 
 public:
     UntagAttendeeRequestPrivate(const ChimeRequest::Action action,

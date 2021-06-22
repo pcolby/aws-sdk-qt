@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetExportJobsRequest;
 
-class QTAWS_EXPORT GetExportJobsRequestPrivate : public PinpointRequestPrivate {
+class GetExportJobsRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetExportJobsRequestPrivate(const PinpointRequest::Action action,

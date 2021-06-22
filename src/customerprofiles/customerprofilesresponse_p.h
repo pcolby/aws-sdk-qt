@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class CustomerProfilesResponse;
 
-class QTAWS_EXPORT CustomerProfilesResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CustomerProfilesResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

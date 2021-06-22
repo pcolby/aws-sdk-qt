@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class DeleteTagsForDomainResponse;
 
-class QTAWS_EXPORT DeleteTagsForDomainResponsePrivate : public Route53DomainsResponsePrivate {
+class DeleteTagsForDomainResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 

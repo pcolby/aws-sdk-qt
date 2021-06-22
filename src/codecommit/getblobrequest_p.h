@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetBlobRequest;
 
-class QTAWS_EXPORT GetBlobRequestPrivate : public CodeCommitRequestPrivate {
+class GetBlobRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetBlobRequestPrivate(const CodeCommitRequest::Action action,

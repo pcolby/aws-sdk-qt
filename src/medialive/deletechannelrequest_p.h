@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteChannelRequest;
 
-class QTAWS_EXPORT DeleteChannelRequestPrivate : public MediaLiveRequestPrivate {
+class DeleteChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DeleteChannelRequestPrivate(const MediaLiveRequest::Action action,

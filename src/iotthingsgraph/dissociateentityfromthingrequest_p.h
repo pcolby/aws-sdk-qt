@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class DissociateEntityFromThingRequest;
 
-class QTAWS_EXPORT DissociateEntityFromThingRequestPrivate : public IoTThingsGraphRequestPrivate {
+class DissociateEntityFromThingRequestPrivate : public IoTThingsGraphRequestPrivate {
 
 public:
     DissociateEntityFromThingRequestPrivate(const IoTThingsGraphRequest::Action action,

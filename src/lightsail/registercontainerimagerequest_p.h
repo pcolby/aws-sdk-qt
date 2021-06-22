@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class RegisterContainerImageRequest;
 
-class QTAWS_EXPORT RegisterContainerImageRequestPrivate : public LightsailRequestPrivate {
+class RegisterContainerImageRequestPrivate : public LightsailRequestPrivate {
 
 public:
     RegisterContainerImageRequestPrivate(const LightsailRequest::Action action,

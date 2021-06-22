@@ -28,7 +28,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class GetComplianceSummaryRequest;
 
-class QTAWS_EXPORT GetComplianceSummaryRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
+class GetComplianceSummaryRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
 
 public:
     GetComplianceSummaryRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,

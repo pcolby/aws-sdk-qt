@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DescribeLoaRequest;
 
-class QTAWS_EXPORT DescribeLoaRequestPrivate : public DirectConnectRequestPrivate {
+class DescribeLoaRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DescribeLoaRequestPrivate(const DirectConnectRequest::Action action,

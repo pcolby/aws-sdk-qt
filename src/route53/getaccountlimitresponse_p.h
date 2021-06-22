@@ -27,7 +27,7 @@ namespace Route53 {
 
 class GetAccountLimitResponse;
 
-class QTAWS_EXPORT GetAccountLimitResponsePrivate : public Route53ResponsePrivate {
+class GetAccountLimitResponsePrivate : public Route53ResponsePrivate {
 
 public:
 

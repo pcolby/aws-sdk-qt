@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class CheckoutBorrowLicenseRequest;
 
-class QTAWS_EXPORT CheckoutBorrowLicenseRequestPrivate : public LicenseManagerRequestPrivate {
+class CheckoutBorrowLicenseRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     CheckoutBorrowLicenseRequestPrivate(const LicenseManagerRequest::Action action,

@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class StartConversationRequest;
 
-class QTAWS_EXPORT StartConversationRequestPrivate : public LexRuntimeV2RequestPrivate {
+class StartConversationRequestPrivate : public LexRuntimeV2RequestPrivate {
 
 public:
     StartConversationRequestPrivate(const LexRuntimeV2Request::Action action,

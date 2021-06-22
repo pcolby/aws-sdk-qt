@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class PutLifecycleHookResponse;
 
-class QTAWS_EXPORT PutLifecycleHookResponsePrivate : public AutoScalingResponsePrivate {
+class PutLifecycleHookResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

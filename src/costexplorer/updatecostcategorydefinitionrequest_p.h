@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class UpdateCostCategoryDefinitionRequest;
 
-class QTAWS_EXPORT UpdateCostCategoryDefinitionRequestPrivate : public CostExplorerRequestPrivate {
+class UpdateCostCategoryDefinitionRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     UpdateCostCategoryDefinitionRequestPrivate(const CostExplorerRequest::Action action,

@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class BatchDetectKeyPhrasesRequest;
 
-class QTAWS_EXPORT BatchDetectKeyPhrasesRequestPrivate : public ComprehendRequestPrivate {
+class BatchDetectKeyPhrasesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     BatchDetectKeyPhrasesRequestPrivate(const ComprehendRequest::Action action,

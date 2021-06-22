@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class DescribeBackupsRequest;
 
-class QTAWS_EXPORT DescribeBackupsRequestPrivate : public CloudHSMV2RequestPrivate {
+class DescribeBackupsRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     DescribeBackupsRequestPrivate(const CloudHSMV2Request::Action action,

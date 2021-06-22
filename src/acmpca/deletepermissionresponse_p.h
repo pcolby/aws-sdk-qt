@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class DeletePermissionResponse;
 
-class QTAWS_EXPORT DeletePermissionResponsePrivate : public AcmpcaResponsePrivate {
+class DeletePermissionResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 

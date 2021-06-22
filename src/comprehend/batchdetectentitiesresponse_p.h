@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class BatchDetectEntitiesResponse;
 
-class QTAWS_EXPORT BatchDetectEntitiesResponsePrivate : public ComprehendResponsePrivate {
+class BatchDetectEntitiesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

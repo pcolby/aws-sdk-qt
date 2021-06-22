@@ -29,7 +29,7 @@ namespace MWAA {
 
 class MwaaClient;
 
-class QTAWS_EXPORT MwaaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MwaaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MwaaClientPrivate(MwaaClient * const q);

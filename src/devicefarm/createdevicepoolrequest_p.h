@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateDevicePoolRequest;
 
-class QTAWS_EXPORT CreateDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
+class CreateDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     CreateDevicePoolRequestPrivate(const DeviceFarmRequest::Action action,

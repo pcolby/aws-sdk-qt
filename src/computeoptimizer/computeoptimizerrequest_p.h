@@ -28,7 +28,7 @@ namespace ComputeOptimizer {
 
 class ComputeOptimizerRequest;
 
-class QTAWS_EXPORT ComputeOptimizerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ComputeOptimizerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ComputeOptimizerRequest::Action action; ///< ComputeOptimizer action to be performed.

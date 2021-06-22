@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeDefaultAuthorizerResponse;
 
-class QTAWS_EXPORT DescribeDefaultAuthorizerResponsePrivate : public IoTResponsePrivate {
+class DescribeDefaultAuthorizerResponsePrivate : public IoTResponsePrivate {
 
 public:
 

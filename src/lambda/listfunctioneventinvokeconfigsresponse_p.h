@@ -27,7 +27,7 @@ namespace Lambda {
 
 class ListFunctionEventInvokeConfigsResponse;
 
-class QTAWS_EXPORT ListFunctionEventInvokeConfigsResponsePrivate : public LambdaResponsePrivate {
+class ListFunctionEventInvokeConfigsResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

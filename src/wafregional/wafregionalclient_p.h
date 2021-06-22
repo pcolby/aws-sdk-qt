@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class WAFRegionalClient;
 
-class QTAWS_EXPORT WAFRegionalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WAFRegionalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WAFRegionalClientPrivate(WAFRegionalClient * const q);

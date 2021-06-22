@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DescribeOrganizationRequest;
 
-class QTAWS_EXPORT DescribeOrganizationRequestPrivate : public OrganizationsRequestPrivate {
+class DescribeOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DescribeOrganizationRequestPrivate(const OrganizationsRequest::Action action,

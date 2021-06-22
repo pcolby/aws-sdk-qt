@@ -28,7 +28,7 @@ namespace SMS {
 
 class PutAppReplicationConfigurationRequest;
 
-class QTAWS_EXPORT PutAppReplicationConfigurationRequestPrivate : public SmsRequestPrivate {
+class PutAppReplicationConfigurationRequestPrivate : public SmsRequestPrivate {
 
 public:
     PutAppReplicationConfigurationRequestPrivate(const SmsRequest::Action action,

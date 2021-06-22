@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetSamplingTargetsRequest;
 
-class QTAWS_EXPORT GetSamplingTargetsRequestPrivate : public XRayRequestPrivate {
+class GetSamplingTargetsRequestPrivate : public XRayRequestPrivate {
 
 public:
     GetSamplingTargetsRequestPrivate(const XRayRequest::Action action,

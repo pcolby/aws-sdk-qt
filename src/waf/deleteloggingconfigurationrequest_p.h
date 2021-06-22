@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteLoggingConfigurationRequest;
 
-class QTAWS_EXPORT DeleteLoggingConfigurationRequestPrivate : public WafRequestPrivate {
+class DeleteLoggingConfigurationRequestPrivate : public WafRequestPrivate {
 
 public:
     DeleteLoggingConfigurationRequestPrivate(const WafRequest::Action action,

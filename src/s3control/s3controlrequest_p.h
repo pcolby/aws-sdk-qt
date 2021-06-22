@@ -28,7 +28,7 @@ namespace S3Control {
 
 class S3ControlRequest;
 
-class QTAWS_EXPORT S3ControlRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class S3ControlRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     S3ControlRequest::Action action; ///< S3Control action to be performed.

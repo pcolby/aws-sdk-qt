@@ -28,7 +28,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class UntagResourcesRequest;
 
-class QTAWS_EXPORT UntagResourcesRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
+class UntagResourcesRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
 
 public:
     UntagResourcesRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,

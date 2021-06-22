@@ -27,7 +27,7 @@ namespace SES {
 
 class PutConfigurationSetDeliveryOptionsResponse;
 
-class QTAWS_EXPORT PutConfigurationSetDeliveryOptionsResponsePrivate : public SesResponsePrivate {
+class PutConfigurationSetDeliveryOptionsResponsePrivate : public SesResponsePrivate {
 
 public:
 

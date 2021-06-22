@@ -28,7 +28,7 @@ namespace Firehose {
 
 class PutRecordBatchRequest;
 
-class QTAWS_EXPORT PutRecordBatchRequestPrivate : public FirehoseRequestPrivate {
+class PutRecordBatchRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     PutRecordBatchRequestPrivate(const FirehoseRequest::Action action,

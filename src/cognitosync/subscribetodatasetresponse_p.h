@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class SubscribeToDatasetResponse;
 
-class QTAWS_EXPORT SubscribeToDatasetResponsePrivate : public CognitoSyncResponsePrivate {
+class SubscribeToDatasetResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 

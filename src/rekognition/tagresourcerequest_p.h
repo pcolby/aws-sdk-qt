@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public RekognitionRequestPrivate {
+class TagResourceRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const RekognitionRequest::Action action,

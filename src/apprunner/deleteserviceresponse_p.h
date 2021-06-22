@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DeleteServiceResponse;
 
-class QTAWS_EXPORT DeleteServiceResponsePrivate : public AppRunnerResponsePrivate {
+class DeleteServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

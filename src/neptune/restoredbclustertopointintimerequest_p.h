@@ -28,7 +28,7 @@ namespace Neptune {
 
 class RestoreDBClusterToPointInTimeRequest;
 
-class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequestPrivate : public NeptuneRequestPrivate {
+class RestoreDBClusterToPointInTimeRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     RestoreDBClusterToPointInTimeRequestPrivate(const NeptuneRequest::Action action,

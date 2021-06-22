@@ -27,7 +27,7 @@ namespace Personalize {
 
 class ListFiltersResponse;
 
-class QTAWS_EXPORT ListFiltersResponsePrivate : public PersonalizeResponsePrivate {
+class ListFiltersResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

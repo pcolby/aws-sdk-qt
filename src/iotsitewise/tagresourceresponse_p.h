@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public IoTSiteWiseResponsePrivate {
+class TagResourceResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateClientVpnRouteRequest;
 
-class QTAWS_EXPORT CreateClientVpnRouteRequestPrivate : public Ec2RequestPrivate {
+class CreateClientVpnRouteRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateClientVpnRouteRequestPrivate(const Ec2Request::Action action,

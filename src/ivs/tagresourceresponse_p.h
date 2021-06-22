@@ -27,7 +27,7 @@ namespace IVS {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public IvsResponsePrivate {
+class TagResourceResponsePrivate : public IvsResponsePrivate {
 
 public:
 

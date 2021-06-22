@@ -27,7 +27,7 @@ namespace SES {
 
 class VerifyEmailAddressResponse;
 
-class QTAWS_EXPORT VerifyEmailAddressResponsePrivate : public SesResponsePrivate {
+class VerifyEmailAddressResponsePrivate : public SesResponsePrivate {
 
 public:
 

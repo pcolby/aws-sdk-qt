@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeDBSubnetGroupsRequest;
 
-class QTAWS_EXPORT DescribeDBSubnetGroupsRequestPrivate : public DocDBRequestPrivate {
+class DescribeDBSubnetGroupsRequestPrivate : public DocDBRequestPrivate {
 
 public:
     DescribeDBSubnetGroupsRequestPrivate(const DocDBRequest::Action action,

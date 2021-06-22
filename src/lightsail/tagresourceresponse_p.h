@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public LightsailResponsePrivate {
+class TagResourceResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

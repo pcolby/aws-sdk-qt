@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyFpgaImageAttributeRequest;
 
-class QTAWS_EXPORT ModifyFpgaImageAttributeRequestPrivate : public Ec2RequestPrivate {
+class ModifyFpgaImageAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifyFpgaImageAttributeRequestPrivate(const Ec2Request::Action action,

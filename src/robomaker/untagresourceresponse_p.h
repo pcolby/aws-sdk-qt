@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public RoboMakerResponsePrivate {
+class UntagResourceResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 

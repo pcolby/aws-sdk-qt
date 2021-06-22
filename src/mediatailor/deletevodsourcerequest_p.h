@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class DeleteVodSourceRequest;
 
-class QTAWS_EXPORT DeleteVodSourceRequestPrivate : public MediaTailorRequestPrivate {
+class DeleteVodSourceRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     DeleteVodSourceRequestPrivate(const MediaTailorRequest::Action action,

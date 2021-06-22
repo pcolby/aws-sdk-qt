@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteSmsChannelResponse;
 
-class QTAWS_EXPORT DeleteSmsChannelResponsePrivate : public PinpointResponsePrivate {
+class DeleteSmsChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

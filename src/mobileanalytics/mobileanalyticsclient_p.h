@@ -29,7 +29,7 @@ namespace MobileAnalytics {
 
 class MobileAnalyticsClient;
 
-class QTAWS_EXPORT MobileAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MobileAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q);

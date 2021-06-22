@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class ListConnectionsResponse;
 
-class QTAWS_EXPORT ListConnectionsResponsePrivate : public AppRunnerResponsePrivate {
+class ListConnectionsResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

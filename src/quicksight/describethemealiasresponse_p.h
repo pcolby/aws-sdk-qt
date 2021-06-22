@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DescribeThemeAliasResponse;
 
-class QTAWS_EXPORT DescribeThemeAliasResponsePrivate : public QuickSightResponsePrivate {
+class DescribeThemeAliasResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

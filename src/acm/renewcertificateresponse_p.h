@@ -27,7 +27,7 @@ namespace ACM {
 
 class RenewCertificateResponse;
 
-class QTAWS_EXPORT RenewCertificateResponsePrivate : public AcmResponsePrivate {
+class RenewCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 

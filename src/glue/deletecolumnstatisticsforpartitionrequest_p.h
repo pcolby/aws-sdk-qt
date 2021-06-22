@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteColumnStatisticsForPartitionRequest;
 
-class QTAWS_EXPORT DeleteColumnStatisticsForPartitionRequestPrivate : public GlueRequestPrivate {
+class DeleteColumnStatisticsForPartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteColumnStatisticsForPartitionRequestPrivate(const GlueRequest::Action action,

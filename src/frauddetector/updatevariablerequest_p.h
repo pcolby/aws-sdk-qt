@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class UpdateVariableRequest;
 
-class QTAWS_EXPORT UpdateVariableRequestPrivate : public FraudDetectorRequestPrivate {
+class UpdateVariableRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     UpdateVariableRequestPrivate(const FraudDetectorRequest::Action action,

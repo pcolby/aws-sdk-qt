@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeValidDBInstanceModificationsRequest;
 
-class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequestPrivate : public NeptuneRequestPrivate {
+class DescribeValidDBInstanceModificationsRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     DescribeValidDBInstanceModificationsRequestPrivate(const NeptuneRequest::Action action,

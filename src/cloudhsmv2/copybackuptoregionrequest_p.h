@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class CopyBackupToRegionRequest;
 
-class QTAWS_EXPORT CopyBackupToRegionRequestPrivate : public CloudHSMV2RequestPrivate {
+class CopyBackupToRegionRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     CopyBackupToRegionRequestPrivate(const CloudHSMV2Request::Action action,

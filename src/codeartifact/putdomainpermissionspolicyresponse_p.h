@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class PutDomainPermissionsPolicyResponse;
 
-class QTAWS_EXPORT PutDomainPermissionsPolicyResponsePrivate : public CodeArtifactResponsePrivate {
+class PutDomainPermissionsPolicyResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

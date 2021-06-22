@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class PutChannelPolicyRequest;
 
-class QTAWS_EXPORT PutChannelPolicyRequestPrivate : public MediaTailorRequestPrivate {
+class PutChannelPolicyRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     PutChannelPolicyRequestPrivate(const MediaTailorRequest::Action action,

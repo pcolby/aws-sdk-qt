@@ -27,7 +27,7 @@ namespace ComprehendMedical {
 
 class StartPHIDetectionJobResponse;
 
-class QTAWS_EXPORT StartPHIDetectionJobResponsePrivate : public ComprehendMedicalResponsePrivate {
+class StartPHIDetectionJobResponsePrivate : public ComprehendMedicalResponsePrivate {
 
 public:
 

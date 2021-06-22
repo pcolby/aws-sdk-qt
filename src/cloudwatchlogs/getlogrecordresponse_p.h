@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class GetLogRecordResponse;
 
-class QTAWS_EXPORT GetLogRecordResponsePrivate : public CloudWatchLogsResponsePrivate {
+class GetLogRecordResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 

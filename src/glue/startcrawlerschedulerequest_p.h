@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartCrawlerScheduleRequest;
 
-class QTAWS_EXPORT StartCrawlerScheduleRequestPrivate : public GlueRequestPrivate {
+class StartCrawlerScheduleRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartCrawlerScheduleRequestPrivate(const GlueRequest::Action action,

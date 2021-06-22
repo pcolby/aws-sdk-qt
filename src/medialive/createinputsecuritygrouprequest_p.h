@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class CreateInputSecurityGroupRequest;
 
-class QTAWS_EXPORT CreateInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
+class CreateInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     CreateInputSecurityGroupRequestPrivate(const MediaLiveRequest::Action action,

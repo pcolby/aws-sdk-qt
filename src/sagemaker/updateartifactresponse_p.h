@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class UpdateArtifactResponse;
 
-class QTAWS_EXPORT UpdateArtifactResponsePrivate : public SageMakerResponsePrivate {
+class UpdateArtifactResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

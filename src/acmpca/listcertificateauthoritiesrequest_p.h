@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class ListCertificateAuthoritiesRequest;
 
-class QTAWS_EXPORT ListCertificateAuthoritiesRequestPrivate : public AcmpcaRequestPrivate {
+class ListCertificateAuthoritiesRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
     ListCertificateAuthoritiesRequestPrivate(const AcmpcaRequest::Action action,

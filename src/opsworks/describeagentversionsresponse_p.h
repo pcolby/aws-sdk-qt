@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeAgentVersionsResponse;
 
-class QTAWS_EXPORT DescribeAgentVersionsResponsePrivate : public OpsWorksResponsePrivate {
+class DescribeAgentVersionsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

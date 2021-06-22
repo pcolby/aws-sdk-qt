@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteColumnStatisticsForPartitionResponse;
 
-class QTAWS_EXPORT DeleteColumnStatisticsForPartitionResponsePrivate : public GlueResponsePrivate {
+class DeleteColumnStatisticsForPartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 

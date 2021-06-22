@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateAccountAuditConfigurationRequest;
 
-class QTAWS_EXPORT UpdateAccountAuditConfigurationRequestPrivate : public IoTRequestPrivate {
+class UpdateAccountAuditConfigurationRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateAccountAuditConfigurationRequestPrivate(const IoTRequest::Action action,

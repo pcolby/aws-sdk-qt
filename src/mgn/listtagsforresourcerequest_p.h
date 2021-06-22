@@ -28,7 +28,7 @@ namespace mgn {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public mgnRequestPrivate {
+class ListTagsForResourceRequestPrivate : public mgnRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const mgnRequest::Action action,

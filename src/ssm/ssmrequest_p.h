@@ -28,7 +28,7 @@ namespace SSM {
 
 class SsmRequest;
 
-class QTAWS_EXPORT SsmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SsmRequest::Action action; ///< SSM action to be performed.

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableVgwRoutePropagationRequest;
 
-class QTAWS_EXPORT DisableVgwRoutePropagationRequestPrivate : public Ec2RequestPrivate {
+class DisableVgwRoutePropagationRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisableVgwRoutePropagationRequestPrivate(const Ec2Request::Action action,

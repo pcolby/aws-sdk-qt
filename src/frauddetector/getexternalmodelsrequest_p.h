@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class GetExternalModelsRequest;
 
-class QTAWS_EXPORT GetExternalModelsRequestPrivate : public FraudDetectorRequestPrivate {
+class GetExternalModelsRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     GetExternalModelsRequestPrivate(const FraudDetectorRequest::Action action,

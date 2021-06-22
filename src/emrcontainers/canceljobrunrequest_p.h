@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class CancelJobRunRequest;
 
-class QTAWS_EXPORT CancelJobRunRequestPrivate : public EMRContainersRequestPrivate {
+class CancelJobRunRequestPrivate : public EMRContainersRequestPrivate {
 
 public:
     CancelJobRunRequestPrivate(const EMRContainersRequest::Action action,

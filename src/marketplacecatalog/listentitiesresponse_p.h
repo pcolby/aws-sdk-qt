@@ -27,7 +27,7 @@ namespace MarketplaceCatalog {
 
 class ListEntitiesResponse;
 
-class QTAWS_EXPORT ListEntitiesResponsePrivate : public MarketplaceCatalogResponsePrivate {
+class ListEntitiesResponsePrivate : public MarketplaceCatalogResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVpcPeeringConnectionOptionsRequest;
 
-class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsRequestPrivate : public Ec2RequestPrivate {
+class ModifyVpcPeeringConnectionOptionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifyVpcPeeringConnectionOptionsRequestPrivate(const Ec2Request::Action action,

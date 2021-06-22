@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class GetCredentialsForIdentityRequest;
 
-class QTAWS_EXPORT GetCredentialsForIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
+class GetCredentialsForIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     GetCredentialsForIdentityRequestPrivate(const CognitoIdentityRequest::Action action,

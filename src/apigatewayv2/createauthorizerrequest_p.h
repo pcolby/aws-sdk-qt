@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class CreateAuthorizerRequest;
 
-class QTAWS_EXPORT CreateAuthorizerRequestPrivate : public ApiGatewayV2RequestPrivate {
+class CreateAuthorizerRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     CreateAuthorizerRequestPrivate(const ApiGatewayV2Request::Action action,

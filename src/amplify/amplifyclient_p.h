@@ -29,7 +29,7 @@ namespace Amplify {
 
 class AmplifyClient;
 
-class QTAWS_EXPORT AmplifyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AmplifyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AmplifyClientPrivate(AmplifyClient * const q);

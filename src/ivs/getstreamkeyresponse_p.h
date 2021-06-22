@@ -27,7 +27,7 @@ namespace IVS {
 
 class GetStreamKeyResponse;
 
-class QTAWS_EXPORT GetStreamKeyResponsePrivate : public IvsResponsePrivate {
+class GetStreamKeyResponsePrivate : public IvsResponsePrivate {
 
 public:
 

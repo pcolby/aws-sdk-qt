@@ -29,7 +29,7 @@ namespace QLDB {
 
 class QldbClient;
 
-class QTAWS_EXPORT QldbClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class QldbClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     QldbClientPrivate(QldbClient * const q);

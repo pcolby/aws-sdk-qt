@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateMyUserProfileRequest;
 
-class QTAWS_EXPORT UpdateMyUserProfileRequestPrivate : public OpsWorksRequestPrivate {
+class UpdateMyUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateMyUserProfileRequestPrivate(const OpsWorksRequest::Action action,

@@ -28,7 +28,7 @@ namespace KinesisVideoSignalingChannels {
 
 class KinesisVideoSignalingChannelsRequest;
 
-class QTAWS_EXPORT KinesisVideoSignalingChannelsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KinesisVideoSignalingChannelsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     KinesisVideoSignalingChannelsRequest::Action action; ///< KinesisVideoSignalingChannels action to be performed.

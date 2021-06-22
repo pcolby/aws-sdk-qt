@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class UpdateLensReviewResponse;
 
-class QTAWS_EXPORT UpdateLensReviewResponsePrivate : public WellArchitectedResponsePrivate {
+class UpdateLensReviewResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 

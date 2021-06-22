@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CancelSpotFleetRequestsResponse;
 
-class QTAWS_EXPORT CancelSpotFleetRequestsResponsePrivate : public Ec2ResponsePrivate {
+class CancelSpotFleetRequestsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

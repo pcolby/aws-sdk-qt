@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DeleteWarmPoolResponse;
 
-class QTAWS_EXPORT DeleteWarmPoolResponsePrivate : public AutoScalingResponsePrivate {
+class DeleteWarmPoolResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class FilterLogEventsRequest;
 
-class QTAWS_EXPORT FilterLogEventsRequestPrivate : public CloudWatchLogsRequestPrivate {
+class FilterLogEventsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     FilterLogEventsRequestPrivate(const CloudWatchLogsRequest::Action action,

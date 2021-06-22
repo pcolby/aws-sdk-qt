@@ -28,7 +28,7 @@ namespace Athena {
 
 class GetQueryResultsRequest;
 
-class QTAWS_EXPORT GetQueryResultsRequestPrivate : public AthenaRequestPrivate {
+class GetQueryResultsRequestPrivate : public AthenaRequestPrivate {
 
 public:
     GetQueryResultsRequestPrivate(const AthenaRequest::Action action,

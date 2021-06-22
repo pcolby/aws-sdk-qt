@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DeleteLoggerDefinitionRequest;
 
-class QTAWS_EXPORT DeleteLoggerDefinitionRequestPrivate : public GreengrassRequestPrivate {
+class DeleteLoggerDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DeleteLoggerDefinitionRequestPrivate(const GreengrassRequest::Action action,

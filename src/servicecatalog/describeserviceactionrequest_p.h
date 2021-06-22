@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeServiceActionRequest;
 
-class QTAWS_EXPORT DescribeServiceActionRequestPrivate : public ServiceCatalogRequestPrivate {
+class DescribeServiceActionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeServiceActionRequestPrivate(const ServiceCatalogRequest::Action action,

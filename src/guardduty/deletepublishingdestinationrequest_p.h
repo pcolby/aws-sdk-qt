@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeletePublishingDestinationRequest;
 
-class QTAWS_EXPORT DeletePublishingDestinationRequestPrivate : public GuardDutyRequestPrivate {
+class DeletePublishingDestinationRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DeletePublishingDestinationRequestPrivate(const GuardDutyRequest::Action action,

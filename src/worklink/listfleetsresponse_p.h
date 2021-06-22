@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class ListFleetsResponse;
 
-class QTAWS_EXPORT ListFleetsResponsePrivate : public WorkLinkResponsePrivate {
+class ListFleetsResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DescribeMapResponse;
 
-class QTAWS_EXPORT DescribeMapResponsePrivate : public LocationServiceResponsePrivate {
+class DescribeMapResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

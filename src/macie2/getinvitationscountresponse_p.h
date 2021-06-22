@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class GetInvitationsCountResponse;
 
-class QTAWS_EXPORT GetInvitationsCountResponsePrivate : public Macie2ResponsePrivate {
+class GetInvitationsCountResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class MediaConvertRequest;
 
-class QTAWS_EXPORT MediaConvertRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaConvertRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaConvertRequest::Action action; ///< MediaConvert action to be performed.

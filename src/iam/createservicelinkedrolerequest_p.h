@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateServiceLinkedRoleRequest;
 
-class QTAWS_EXPORT CreateServiceLinkedRoleRequestPrivate : public IamRequestPrivate {
+class CreateServiceLinkedRoleRequestPrivate : public IamRequestPrivate {
 
 public:
     CreateServiceLinkedRoleRequestPrivate(const IamRequest::Action action,

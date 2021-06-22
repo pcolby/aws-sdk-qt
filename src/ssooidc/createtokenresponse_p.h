@@ -27,7 +27,7 @@ namespace SSOOIDC {
 
 class CreateTokenResponse;
 
-class QTAWS_EXPORT CreateTokenResponsePrivate : public SsooidcResponsePrivate {
+class CreateTokenResponsePrivate : public SsooidcResponsePrivate {
 
 public:
 

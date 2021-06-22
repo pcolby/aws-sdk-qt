@@ -27,7 +27,7 @@ namespace kendra {
 
 class DeleteThesaurusResponse;
 
-class QTAWS_EXPORT DeleteThesaurusResponsePrivate : public kendraResponsePrivate {
+class DeleteThesaurusResponsePrivate : public kendraResponsePrivate {
 
 public:
 

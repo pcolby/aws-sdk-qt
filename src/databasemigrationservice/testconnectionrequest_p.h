@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class TestConnectionRequest;
 
-class QTAWS_EXPORT TestConnectionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class TestConnectionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     TestConnectionRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

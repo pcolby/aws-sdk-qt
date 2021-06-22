@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class UpdateClientCertificateResponse;
 
-class QTAWS_EXPORT UpdateClientCertificateResponsePrivate : public APIGatewayResponsePrivate {
+class UpdateClientCertificateResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 

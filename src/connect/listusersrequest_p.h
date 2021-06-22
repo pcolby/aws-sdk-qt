@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListUsersRequest;
 
-class QTAWS_EXPORT ListUsersRequestPrivate : public ConnectRequestPrivate {
+class ListUsersRequestPrivate : public ConnectRequestPrivate {
 
 public:
     ListUsersRequestPrivate(const ConnectRequest::Action action,

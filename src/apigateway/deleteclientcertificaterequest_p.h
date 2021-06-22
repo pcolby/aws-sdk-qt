@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteClientCertificateRequest;
 
-class QTAWS_EXPORT DeleteClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteClientCertificateRequestPrivate(const APIGatewayRequest::Action action,

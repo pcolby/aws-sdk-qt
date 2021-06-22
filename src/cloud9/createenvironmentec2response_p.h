@@ -27,7 +27,7 @@ namespace Cloud9 {
 
 class CreateEnvironmentEC2Response;
 
-class QTAWS_EXPORT CreateEnvironmentEC2ResponsePrivate : public Cloud9ResponsePrivate {
+class CreateEnvironmentEC2ResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 

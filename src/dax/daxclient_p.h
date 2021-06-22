@@ -29,7 +29,7 @@ namespace DAX {
 
 class DaxClient;
 
-class QTAWS_EXPORT DaxClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DaxClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DaxClientPrivate(DaxClient * const q);

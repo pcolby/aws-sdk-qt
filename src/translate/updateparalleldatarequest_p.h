@@ -28,7 +28,7 @@ namespace Translate {
 
 class UpdateParallelDataRequest;
 
-class QTAWS_EXPORT UpdateParallelDataRequestPrivate : public TranslateRequestPrivate {
+class UpdateParallelDataRequestPrivate : public TranslateRequestPrivate {
 
 public:
     UpdateParallelDataRequestPrivate(const TranslateRequest::Action action,

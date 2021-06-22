@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateSigningCertificateResponse;
 
-class QTAWS_EXPORT UpdateSigningCertificateResponsePrivate : public IamResponsePrivate {
+class UpdateSigningCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 

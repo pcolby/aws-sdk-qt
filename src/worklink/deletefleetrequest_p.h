@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DeleteFleetRequest;
 
-class QTAWS_EXPORT DeleteFleetRequestPrivate : public WorkLinkRequestPrivate {
+class DeleteFleetRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     DeleteFleetRequestPrivate(const WorkLinkRequest::Action action,

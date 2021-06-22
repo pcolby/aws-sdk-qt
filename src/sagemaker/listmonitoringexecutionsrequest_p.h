@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListMonitoringExecutionsRequest;
 
-class QTAWS_EXPORT ListMonitoringExecutionsRequestPrivate : public SageMakerRequestPrivate {
+class ListMonitoringExecutionsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     ListMonitoringExecutionsRequestPrivate(const SageMakerRequest::Action action,

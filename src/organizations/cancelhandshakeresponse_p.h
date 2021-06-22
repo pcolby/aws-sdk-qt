@@ -27,7 +27,7 @@ namespace Organizations {
 
 class CancelHandshakeResponse;
 
-class QTAWS_EXPORT CancelHandshakeResponsePrivate : public OrganizationsResponsePrivate {
+class CancelHandshakeResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

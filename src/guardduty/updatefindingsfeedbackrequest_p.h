@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class UpdateFindingsFeedbackRequest;
 
-class QTAWS_EXPORT UpdateFindingsFeedbackRequestPrivate : public GuardDutyRequestPrivate {
+class UpdateFindingsFeedbackRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     UpdateFindingsFeedbackRequestPrivate(const GuardDutyRequest::Action action,

@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class GroundStationResponse;
 
-class QTAWS_EXPORT GroundStationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GroundStationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

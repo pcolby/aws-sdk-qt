@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyInstanceMetadataOptionsResponse;
 
-class QTAWS_EXPORT ModifyInstanceMetadataOptionsResponsePrivate : public Ec2ResponsePrivate {
+class ModifyInstanceMetadataOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

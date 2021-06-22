@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class GetSnapshotLimitsResponse;
 
-class QTAWS_EXPORT GetSnapshotLimitsResponsePrivate : public DirectoryServiceResponsePrivate {
+class GetSnapshotLimitsResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

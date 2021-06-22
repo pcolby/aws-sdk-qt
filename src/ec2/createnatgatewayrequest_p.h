@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateNatGatewayRequest;
 
-class QTAWS_EXPORT CreateNatGatewayRequestPrivate : public Ec2RequestPrivate {
+class CreateNatGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateNatGatewayRequestPrivate(const Ec2Request::Action action,

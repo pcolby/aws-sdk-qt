@@ -27,7 +27,7 @@ namespace AppSync {
 
 class ListGraphqlApisResponse;
 
-class QTAWS_EXPORT ListGraphqlApisResponsePrivate : public AppSyncResponsePrivate {
+class ListGraphqlApisResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 

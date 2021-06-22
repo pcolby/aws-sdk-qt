@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class DeleteDedicatedIpPoolRequest;
 
-class QTAWS_EXPORT DeleteDedicatedIpPoolRequestPrivate : public PinpointEmailRequestPrivate {
+class DeleteDedicatedIpPoolRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     DeleteDedicatedIpPoolRequestPrivate(const PinpointEmailRequest::Action action,

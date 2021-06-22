@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DescribeSchemaRequest;
 
-class QTAWS_EXPORT DescribeSchemaRequestPrivate : public SchemasRequestPrivate {
+class DescribeSchemaRequestPrivate : public SchemasRequestPrivate {
 
 public:
     DescribeSchemaRequestPrivate(const SchemasRequest::Action action,

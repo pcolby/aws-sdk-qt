@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class GetDeliverabilityTestReportResponse;
 
-class QTAWS_EXPORT GetDeliverabilityTestReportResponsePrivate : public PinpointEmailResponsePrivate {
+class GetDeliverabilityTestReportResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

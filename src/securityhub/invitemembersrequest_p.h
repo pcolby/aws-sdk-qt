@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class InviteMembersRequest;
 
-class QTAWS_EXPORT InviteMembersRequestPrivate : public SecurityHubRequestPrivate {
+class InviteMembersRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     InviteMembersRequestPrivate(const SecurityHubRequest::Action action,

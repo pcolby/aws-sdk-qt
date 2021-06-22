@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteInventoryRequest;
 
-class QTAWS_EXPORT DeleteInventoryRequestPrivate : public SsmRequestPrivate {
+class DeleteInventoryRequestPrivate : public SsmRequestPrivate {
 
 public:
     DeleteInventoryRequestPrivate(const SsmRequest::Action action,

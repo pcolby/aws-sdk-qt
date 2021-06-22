@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class ListImportsRequest;
 
-class QTAWS_EXPORT ListImportsRequestPrivate : public CloudFormationRequestPrivate {
+class ListImportsRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     ListImportsRequestPrivate(const CloudFormationRequest::Action action,

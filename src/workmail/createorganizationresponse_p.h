@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class CreateOrganizationResponse;
 
-class QTAWS_EXPORT CreateOrganizationResponsePrivate : public WorkMailResponsePrivate {
+class CreateOrganizationResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

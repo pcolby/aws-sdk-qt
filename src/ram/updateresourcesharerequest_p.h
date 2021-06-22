@@ -28,7 +28,7 @@ namespace RAM {
 
 class UpdateResourceShareRequest;
 
-class QTAWS_EXPORT UpdateResourceShareRequestPrivate : public RamRequestPrivate {
+class UpdateResourceShareRequestPrivate : public RamRequestPrivate {
 
 public:
     UpdateResourceShareRequestPrivate(const RamRequest::Action action,

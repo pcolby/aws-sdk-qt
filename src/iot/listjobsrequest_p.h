@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListJobsRequest;
 
-class QTAWS_EXPORT ListJobsRequestPrivate : public IoTRequestPrivate {
+class ListJobsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListJobsRequestPrivate(const IoTRequest::Action action,

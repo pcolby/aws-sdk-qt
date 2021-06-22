@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetAssociatedIpv6PoolCidrsResponse;
 
-class QTAWS_EXPORT GetAssociatedIpv6PoolCidrsResponsePrivate : public Ec2ResponsePrivate {
+class GetAssociatedIpv6PoolCidrsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

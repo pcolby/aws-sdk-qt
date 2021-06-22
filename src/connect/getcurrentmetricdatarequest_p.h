@@ -28,7 +28,7 @@ namespace Connect {
 
 class GetCurrentMetricDataRequest;
 
-class QTAWS_EXPORT GetCurrentMetricDataRequestPrivate : public ConnectRequestPrivate {
+class GetCurrentMetricDataRequestPrivate : public ConnectRequestPrivate {
 
 public:
     GetCurrentMetricDataRequestPrivate(const ConnectRequest::Action action,

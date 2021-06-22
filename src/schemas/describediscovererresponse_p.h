@@ -27,7 +27,7 @@ namespace Schemas {
 
 class DescribeDiscovererResponse;
 
-class QTAWS_EXPORT DescribeDiscovererResponsePrivate : public SchemasResponsePrivate {
+class DescribeDiscovererResponsePrivate : public SchemasResponsePrivate {
 
 public:
 

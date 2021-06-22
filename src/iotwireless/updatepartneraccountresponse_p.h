@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class UpdatePartnerAccountResponse;
 
-class QTAWS_EXPORT UpdatePartnerAccountResponsePrivate : public IoTWirelessResponsePrivate {
+class UpdatePartnerAccountResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 

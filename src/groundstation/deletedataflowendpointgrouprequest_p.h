@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class DeleteDataflowEndpointGroupRequest;
 
-class QTAWS_EXPORT DeleteDataflowEndpointGroupRequestPrivate : public GroundStationRequestPrivate {
+class DeleteDataflowEndpointGroupRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     DeleteDataflowEndpointGroupRequestPrivate(const GroundStationRequest::Action action,

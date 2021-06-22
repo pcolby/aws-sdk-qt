@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class SecurityHubRequest;
 
-class QTAWS_EXPORT SecurityHubRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SecurityHubRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SecurityHubRequest::Action action; ///< SecurityHub action to be performed.

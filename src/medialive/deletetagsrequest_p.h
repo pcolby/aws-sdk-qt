@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public MediaLiveRequestPrivate {
+class DeleteTagsRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const MediaLiveRequest::Action action,

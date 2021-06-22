@@ -28,7 +28,7 @@ namespace RedshiftDataAPIService {
 
 class DescribeStatementRequest;
 
-class QTAWS_EXPORT DescribeStatementRequestPrivate : public RedshiftDataAPIServiceRequestPrivate {
+class DescribeStatementRequestPrivate : public RedshiftDataAPIServiceRequestPrivate {
 
 public:
     DescribeStatementRequestPrivate(const RedshiftDataAPIServiceRequest::Action action,

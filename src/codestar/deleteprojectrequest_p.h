@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class DeleteProjectRequest;
 
-class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeStarRequestPrivate {
+class DeleteProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     DeleteProjectRequestPrivate(const CodeStarRequest::Action action,

@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListSecurityKeysRequest;
 
-class QTAWS_EXPORT ListSecurityKeysRequestPrivate : public ConnectRequestPrivate {
+class ListSecurityKeysRequestPrivate : public ConnectRequestPrivate {
 
 public:
     ListSecurityKeysRequestPrivate(const ConnectRequest::Action action,

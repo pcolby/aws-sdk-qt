@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class WorkLinkRequest;
 
-class QTAWS_EXPORT WorkLinkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WorkLinkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WorkLinkRequest::Action action; ///< WorkLink action to be performed.

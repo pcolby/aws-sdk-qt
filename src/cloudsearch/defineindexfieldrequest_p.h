@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineIndexFieldRequest;
 
-class QTAWS_EXPORT DefineIndexFieldRequestPrivate : public CloudSearchRequestPrivate {
+class DefineIndexFieldRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DefineIndexFieldRequestPrivate(const CloudSearchRequest::Action action,

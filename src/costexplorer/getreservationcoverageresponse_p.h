@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetReservationCoverageResponse;
 
-class QTAWS_EXPORT GetReservationCoverageResponsePrivate : public CostExplorerResponsePrivate {
+class GetReservationCoverageResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 

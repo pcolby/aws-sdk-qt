@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteDevEndpointRequest;
 
-class QTAWS_EXPORT DeleteDevEndpointRequestPrivate : public GlueRequestPrivate {
+class DeleteDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteDevEndpointRequestPrivate(const GlueRequest::Action action,

@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class DisassociateMemberResponse;
 
-class QTAWS_EXPORT DisassociateMemberResponsePrivate : public Macie2ResponsePrivate {
+class DisassociateMemberResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

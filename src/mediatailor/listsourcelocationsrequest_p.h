@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class ListSourceLocationsRequest;
 
-class QTAWS_EXPORT ListSourceLocationsRequestPrivate : public MediaTailorRequestPrivate {
+class ListSourceLocationsRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     ListSourceLocationsRequestPrivate(const MediaTailorRequest::Action action,

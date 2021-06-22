@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetMLTransformsRequest;
 
-class QTAWS_EXPORT GetMLTransformsRequestPrivate : public GlueRequestPrivate {
+class GetMLTransformsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetMLTransformsRequestPrivate(const GlueRequest::Action action,

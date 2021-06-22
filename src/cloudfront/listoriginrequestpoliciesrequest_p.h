@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListOriginRequestPoliciesRequest;
 
-class QTAWS_EXPORT ListOriginRequestPoliciesRequestPrivate : public CloudFrontRequestPrivate {
+class ListOriginRequestPoliciesRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListOriginRequestPoliciesRequestPrivate(const CloudFrontRequest::Action action,

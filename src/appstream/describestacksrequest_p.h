@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeStacksRequest;
 
-class QTAWS_EXPORT DescribeStacksRequestPrivate : public AppStreamRequestPrivate {
+class DescribeStacksRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DescribeStacksRequestPrivate(const AppStreamRequest::Action action,

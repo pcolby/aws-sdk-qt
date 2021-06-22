@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class UpdateShardCountRequest;
 
-class QTAWS_EXPORT UpdateShardCountRequestPrivate : public KinesisRequestPrivate {
+class UpdateShardCountRequestPrivate : public KinesisRequestPrivate {
 
 public:
     UpdateShardCountRequestPrivate(const KinesisRequest::Action action,

@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class ListNotificationChannelsRequest;
 
-class QTAWS_EXPORT ListNotificationChannelsRequestPrivate : public DevOpsGuruRequestPrivate {
+class ListNotificationChannelsRequestPrivate : public DevOpsGuruRequestPrivate {
 
 public:
     ListNotificationChannelsRequestPrivate(const DevOpsGuruRequest::Action action,

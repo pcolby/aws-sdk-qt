@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public AppRegistryResponsePrivate {
+class TagResourceResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 

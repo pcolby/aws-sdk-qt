@@ -27,7 +27,7 @@ namespace Transfer {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public TransferResponsePrivate {
+class ListTagsForResourceResponsePrivate : public TransferResponsePrivate {
 
 public:
 

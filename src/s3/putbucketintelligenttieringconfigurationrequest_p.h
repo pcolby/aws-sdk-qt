@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketIntelligentTieringConfigurationRequest;
 
-class QTAWS_EXPORT PutBucketIntelligentTieringConfigurationRequestPrivate : public S3RequestPrivate {
+class PutBucketIntelligentTieringConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketIntelligentTieringConfigurationRequestPrivate(const S3Request::Action action,

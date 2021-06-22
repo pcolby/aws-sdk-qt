@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class UpdatePipelineNotificationsResponse;
 
-class QTAWS_EXPORT UpdatePipelineNotificationsResponsePrivate : public ElasticTranscoderResponsePrivate {
+class UpdatePipelineNotificationsResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetEvidenceFoldersByAssessmentControlRequest;
 
-class QTAWS_EXPORT GetEvidenceFoldersByAssessmentControlRequestPrivate : public AuditManagerRequestPrivate {
+class GetEvidenceFoldersByAssessmentControlRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     GetEvidenceFoldersByAssessmentControlRequestPrivate(const AuditManagerRequest::Action action,

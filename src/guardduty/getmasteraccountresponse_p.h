@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GetMasterAccountResponse;
 
-class QTAWS_EXPORT GetMasterAccountResponsePrivate : public GuardDutyResponsePrivate {
+class GetMasterAccountResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

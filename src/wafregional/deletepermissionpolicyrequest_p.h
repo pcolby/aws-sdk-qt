@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeletePermissionPolicyRequest;
 
-class QTAWS_EXPORT DeletePermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
+class DeletePermissionPolicyRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeletePermissionPolicyRequestPrivate(const WAFRegionalRequest::Action action,

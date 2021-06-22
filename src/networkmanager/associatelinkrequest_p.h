@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class AssociateLinkRequest;
 
-class QTAWS_EXPORT AssociateLinkRequestPrivate : public NetworkManagerRequestPrivate {
+class AssociateLinkRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     AssociateLinkRequestPrivate(const NetworkManagerRequest::Action action,

@@ -28,7 +28,7 @@ namespace Detective {
 
 class DeleteGraphRequest;
 
-class QTAWS_EXPORT DeleteGraphRequestPrivate : public DetectiveRequestPrivate {
+class DeleteGraphRequestPrivate : public DetectiveRequestPrivate {
 
 public:
     DeleteGraphRequestPrivate(const DetectiveRequest::Action action,

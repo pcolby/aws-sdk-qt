@@ -27,7 +27,7 @@ namespace ECR {
 
 class BatchDeleteImageResponse;
 
-class QTAWS_EXPORT BatchDeleteImageResponsePrivate : public EcrResponsePrivate {
+class BatchDeleteImageResponsePrivate : public EcrResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace S3Control {
 
 class DeleteAccessPointPolicyForObjectLambdaResponse;
 
-class QTAWS_EXPORT DeleteAccessPointPolicyForObjectLambdaResponsePrivate : public S3ControlResponsePrivate {
+class DeleteAccessPointPolicyForObjectLambdaResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

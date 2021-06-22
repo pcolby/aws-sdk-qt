@@ -27,7 +27,7 @@ namespace Snowball {
 
 class SnowballResponse;
 
-class QTAWS_EXPORT SnowballResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SnowballResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

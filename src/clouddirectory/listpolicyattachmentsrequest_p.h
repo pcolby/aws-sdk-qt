@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListPolicyAttachmentsRequest;
 
-class QTAWS_EXPORT ListPolicyAttachmentsRequestPrivate : public CloudDirectoryRequestPrivate {
+class ListPolicyAttachmentsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListPolicyAttachmentsRequestPrivate(const CloudDirectoryRequest::Action action,

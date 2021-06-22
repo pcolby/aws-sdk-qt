@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class CreateAlarmModelRequest;
 
-class QTAWS_EXPORT CreateAlarmModelRequestPrivate : public IoTEventsRequestPrivate {
+class CreateAlarmModelRequestPrivate : public IoTEventsRequestPrivate {
 
 public:
     CreateAlarmModelRequestPrivate(const IoTEventsRequest::Action action,

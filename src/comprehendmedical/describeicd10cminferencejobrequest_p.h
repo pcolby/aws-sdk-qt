@@ -28,7 +28,7 @@ namespace ComprehendMedical {
 
 class DescribeICD10CMInferenceJobRequest;
 
-class QTAWS_EXPORT DescribeICD10CMInferenceJobRequestPrivate : public ComprehendMedicalRequestPrivate {
+class DescribeICD10CMInferenceJobRequestPrivate : public ComprehendMedicalRequestPrivate {
 
 public:
     DescribeICD10CMInferenceJobRequestPrivate(const ComprehendMedicalRequest::Action action,

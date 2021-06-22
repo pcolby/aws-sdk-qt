@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class BatchDisassociateApprovalRuleTemplateFromRepositoriesRequest;
 
-class QTAWS_EXPORT BatchDisassociateApprovalRuleTemplateFromRepositoriesRequestPrivate : public CodeCommitRequestPrivate {
+class BatchDisassociateApprovalRuleTemplateFromRepositoriesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     BatchDisassociateApprovalRuleTemplateFromRepositoriesRequestPrivate(const CodeCommitRequest::Action action,

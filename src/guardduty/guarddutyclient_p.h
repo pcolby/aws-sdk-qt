@@ -29,7 +29,7 @@ namespace GuardDuty {
 
 class GuardDutyClient;
 
-class QTAWS_EXPORT GuardDutyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GuardDutyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GuardDutyClientPrivate(GuardDutyClient * const q);

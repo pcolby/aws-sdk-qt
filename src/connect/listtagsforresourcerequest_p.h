@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ConnectRequestPrivate {
+class ListTagsForResourceRequestPrivate : public ConnectRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const ConnectRequest::Action action,

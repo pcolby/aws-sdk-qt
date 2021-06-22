@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateFleetPortSettingsRequest;
 
-class QTAWS_EXPORT UpdateFleetPortSettingsRequestPrivate : public GameLiftRequestPrivate {
+class UpdateFleetPortSettingsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateFleetPortSettingsRequestPrivate(const GameLiftRequest::Action action,

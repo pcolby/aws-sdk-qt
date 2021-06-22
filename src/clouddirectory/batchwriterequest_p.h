@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class BatchWriteRequest;
 
-class QTAWS_EXPORT BatchWriteRequestPrivate : public CloudDirectoryRequestPrivate {
+class BatchWriteRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     BatchWriteRequestPrivate(const CloudDirectoryRequest::Action action,

@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class RecognizeCelebritiesResponse;
 
-class QTAWS_EXPORT RecognizeCelebritiesResponsePrivate : public RekognitionResponsePrivate {
+class RecognizeCelebritiesResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

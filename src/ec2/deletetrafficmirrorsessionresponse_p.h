@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteTrafficMirrorSessionResponse;
 
-class QTAWS_EXPORT DeleteTrafficMirrorSessionResponsePrivate : public Ec2ResponsePrivate {
+class DeleteTrafficMirrorSessionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

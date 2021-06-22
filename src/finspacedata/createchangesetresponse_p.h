@@ -27,7 +27,7 @@ namespace FinSpaceData {
 
 class CreateChangesetResponse;
 
-class QTAWS_EXPORT CreateChangesetResponsePrivate : public FinSpaceDataResponsePrivate {
+class CreateChangesetResponsePrivate : public FinSpaceDataResponsePrivate {
 
 public:
 

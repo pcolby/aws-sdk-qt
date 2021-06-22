@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeIpv6PoolsResponse;
 
-class QTAWS_EXPORT DescribeIpv6PoolsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeIpv6PoolsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

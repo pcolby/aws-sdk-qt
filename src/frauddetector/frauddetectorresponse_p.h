@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class FraudDetectorResponse;
 
-class QTAWS_EXPORT FraudDetectorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FraudDetectorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

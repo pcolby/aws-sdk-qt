@@ -29,7 +29,7 @@ namespace MarketplaceCatalog {
 
 class MarketplaceCatalogClient;
 
-class QTAWS_EXPORT MarketplaceCatalogClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MarketplaceCatalogClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MarketplaceCatalogClientPrivate(MarketplaceCatalogClient * const q);

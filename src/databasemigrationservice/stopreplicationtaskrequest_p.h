@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class StopReplicationTaskRequest;
 
-class QTAWS_EXPORT StopReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class StopReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     StopReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

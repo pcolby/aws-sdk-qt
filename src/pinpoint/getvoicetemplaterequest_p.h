@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetVoiceTemplateRequest;
 
-class QTAWS_EXPORT GetVoiceTemplateRequestPrivate : public PinpointRequestPrivate {
+class GetVoiceTemplateRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetVoiceTemplateRequestPrivate(const PinpointRequest::Action action,

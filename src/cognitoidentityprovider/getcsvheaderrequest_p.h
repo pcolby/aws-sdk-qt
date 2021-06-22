@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class GetCSVHeaderRequest;
 
-class QTAWS_EXPORT GetCSVHeaderRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class GetCSVHeaderRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     GetCSVHeaderRequestPrivate(const CognitoIdentityProviderRequest::Action action,

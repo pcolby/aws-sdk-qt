@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class UpdateEndpointRequest;
 
-class QTAWS_EXPORT UpdateEndpointRequestPrivate : public ComprehendRequestPrivate {
+class UpdateEndpointRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     UpdateEndpointRequestPrivate(const ComprehendRequest::Action action,

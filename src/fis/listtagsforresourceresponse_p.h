@@ -27,7 +27,7 @@ namespace FIS {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public FisResponsePrivate {
+class ListTagsForResourceResponsePrivate : public FisResponsePrivate {
 
 public:
 

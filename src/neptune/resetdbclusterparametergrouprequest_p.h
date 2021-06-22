@@ -28,7 +28,7 @@ namespace Neptune {
 
 class ResetDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT ResetDBClusterParameterGroupRequestPrivate : public NeptuneRequestPrivate {
+class ResetDBClusterParameterGroupRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     ResetDBClusterParameterGroupRequestPrivate(const NeptuneRequest::Action action,

@@ -28,7 +28,7 @@ namespace STS {
 
 class StsRequest;
 
-class QTAWS_EXPORT StsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class StsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     StsRequest::Action action; ///< STS action to be performed.

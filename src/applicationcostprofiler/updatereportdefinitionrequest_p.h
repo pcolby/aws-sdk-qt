@@ -28,7 +28,7 @@ namespace ApplicationCostProfiler {
 
 class UpdateReportDefinitionRequest;
 
-class QTAWS_EXPORT UpdateReportDefinitionRequestPrivate : public ApplicationCostProfilerRequestPrivate {
+class UpdateReportDefinitionRequestPrivate : public ApplicationCostProfilerRequestPrivate {
 
 public:
     UpdateReportDefinitionRequestPrivate(const ApplicationCostProfilerRequest::Action action,

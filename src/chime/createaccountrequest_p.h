@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateAccountRequest;
 
-class QTAWS_EXPORT CreateAccountRequestPrivate : public ChimeRequestPrivate {
+class CreateAccountRequestPrivate : public ChimeRequestPrivate {
 
 public:
     CreateAccountRequestPrivate(const ChimeRequest::Action action,

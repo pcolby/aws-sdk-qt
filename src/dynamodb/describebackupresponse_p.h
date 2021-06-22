@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeBackupResponse;
 
-class QTAWS_EXPORT DescribeBackupResponsePrivate : public DynamoDBResponsePrivate {
+class DescribeBackupResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

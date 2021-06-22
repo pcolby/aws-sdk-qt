@@ -27,7 +27,7 @@ namespace kendra {
 
 class DescribeIndexResponse;
 
-class QTAWS_EXPORT DescribeIndexResponsePrivate : public kendraResponsePrivate {
+class DescribeIndexResponsePrivate : public kendraResponsePrivate {
 
 public:
 

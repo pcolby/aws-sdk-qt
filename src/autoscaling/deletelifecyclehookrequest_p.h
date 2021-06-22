@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeleteLifecycleHookRequest;
 
-class QTAWS_EXPORT DeleteLifecycleHookRequestPrivate : public AutoScalingRequestPrivate {
+class DeleteLifecycleHookRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeleteLifecycleHookRequestPrivate(const AutoScalingRequest::Action action,

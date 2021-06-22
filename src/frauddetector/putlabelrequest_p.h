@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class PutLabelRequest;
 
-class QTAWS_EXPORT PutLabelRequestPrivate : public FraudDetectorRequestPrivate {
+class PutLabelRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     PutLabelRequestPrivate(const FraudDetectorRequest::Action action,

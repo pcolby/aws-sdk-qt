@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class CreateDatasetGroupRequest;
 
-class QTAWS_EXPORT CreateDatasetGroupRequestPrivate : public ForecastServiceRequestPrivate {
+class CreateDatasetGroupRequestPrivate : public ForecastServiceRequestPrivate {
 
 public:
     CreateDatasetGroupRequestPrivate(const ForecastServiceRequest::Action action,

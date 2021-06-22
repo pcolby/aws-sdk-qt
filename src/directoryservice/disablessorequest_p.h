@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DisableSsoRequest;
 
-class QTAWS_EXPORT DisableSsoRequestPrivate : public DirectoryServiceRequestPrivate {
+class DisableSsoRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DisableSsoRequestPrivate(const DirectoryServiceRequest::Action action,

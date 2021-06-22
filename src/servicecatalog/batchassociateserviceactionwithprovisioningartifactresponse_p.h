@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class BatchAssociateServiceActionWithProvisioningArtifactResponse;
 
-class QTAWS_EXPORT BatchAssociateServiceActionWithProvisioningArtifactResponsePrivate : public ServiceCatalogResponsePrivate {
+class BatchAssociateServiceActionWithProvisioningArtifactResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

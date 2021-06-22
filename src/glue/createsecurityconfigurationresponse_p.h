@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateSecurityConfigurationResponse;
 
-class QTAWS_EXPORT CreateSecurityConfigurationResponsePrivate : public GlueResponsePrivate {
+class CreateSecurityConfigurationResponsePrivate : public GlueResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace RDS {
 
 class ModifyOptionGroupResponse;
 
-class QTAWS_EXPORT ModifyOptionGroupResponsePrivate : public RdsResponsePrivate {
+class ModifyOptionGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 

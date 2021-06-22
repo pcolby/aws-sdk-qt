@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListViolationEventsRequest;
 
-class QTAWS_EXPORT ListViolationEventsRequestPrivate : public IoTRequestPrivate {
+class ListViolationEventsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListViolationEventsRequestPrivate(const IoTRequest::Action action,

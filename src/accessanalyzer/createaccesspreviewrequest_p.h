@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class CreateAccessPreviewRequest;
 
-class QTAWS_EXPORT CreateAccessPreviewRequestPrivate : public AccessAnalyzerRequestPrivate {
+class CreateAccessPreviewRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     CreateAccessPreviewRequestPrivate(const AccessAnalyzerRequest::Action action,

@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class UpdateApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,

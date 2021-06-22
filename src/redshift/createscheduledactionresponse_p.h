@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateScheduledActionResponse;
 
-class QTAWS_EXPORT CreateScheduledActionResponsePrivate : public RedshiftResponsePrivate {
+class CreateScheduledActionResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Glacier {
 
 class ListProvisionedCapacityRequest;
 
-class QTAWS_EXPORT ListProvisionedCapacityRequestPrivate : public GlacierRequestPrivate {
+class ListProvisionedCapacityRequestPrivate : public GlacierRequestPrivate {
 
 public:
     ListProvisionedCapacityRequestPrivate(const GlacierRequest::Action action,

@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class SetTypeDefaultVersionRequest;
 
-class QTAWS_EXPORT SetTypeDefaultVersionRequestPrivate : public CloudFormationRequestPrivate {
+class SetTypeDefaultVersionRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     SetTypeDefaultVersionRequestPrivate(const CloudFormationRequest::Action action,

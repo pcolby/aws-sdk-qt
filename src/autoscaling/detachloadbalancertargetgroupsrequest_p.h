@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DetachLoadBalancerTargetGroupsRequest;
 
-class QTAWS_EXPORT DetachLoadBalancerTargetGroupsRequestPrivate : public AutoScalingRequestPrivate {
+class DetachLoadBalancerTargetGroupsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DetachLoadBalancerTargetGroupsRequestPrivate(const AutoScalingRequest::Action action,

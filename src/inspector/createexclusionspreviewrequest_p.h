@@ -28,7 +28,7 @@ namespace Inspector {
 
 class CreateExclusionsPreviewRequest;
 
-class QTAWS_EXPORT CreateExclusionsPreviewRequestPrivate : public InspectorRequestPrivate {
+class CreateExclusionsPreviewRequestPrivate : public InspectorRequestPrivate {
 
 public:
     CreateExclusionsPreviewRequestPrivate(const InspectorRequest::Action action,

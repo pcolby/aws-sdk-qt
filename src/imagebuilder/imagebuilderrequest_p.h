@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class imagebuilderRequest;
 
-class QTAWS_EXPORT imagebuilderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class imagebuilderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     imagebuilderRequest::Action action; ///< imagebuilder action to be performed.

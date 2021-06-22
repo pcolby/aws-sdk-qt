@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class PutConfigurationSetDeliveryOptionsResponse;
 
-class QTAWS_EXPORT PutConfigurationSetDeliveryOptionsResponsePrivate : public PinpointEmailResponsePrivate {
+class PutConfigurationSetDeliveryOptionsResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

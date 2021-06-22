@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class ListEnvironmentsRequest;
 
-class QTAWS_EXPORT ListEnvironmentsRequestPrivate : public Cloud9RequestPrivate {
+class ListEnvironmentsRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     ListEnvironmentsRequestPrivate(const Cloud9Request::Action action,

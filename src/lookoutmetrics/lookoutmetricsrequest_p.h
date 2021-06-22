@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class LookoutMetricsRequest;
 
-class QTAWS_EXPORT LookoutMetricsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LookoutMetricsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LookoutMetricsRequest::Action action; ///< LookoutMetrics action to be performed.

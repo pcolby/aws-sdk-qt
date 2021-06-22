@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class RekognitionRequest;
 
-class QTAWS_EXPORT RekognitionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RekognitionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RekognitionRequest::Action action; ///< Rekognition action to be performed.

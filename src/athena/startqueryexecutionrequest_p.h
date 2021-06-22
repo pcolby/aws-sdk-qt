@@ -28,7 +28,7 @@ namespace Athena {
 
 class StartQueryExecutionRequest;
 
-class QTAWS_EXPORT StartQueryExecutionRequestPrivate : public AthenaRequestPrivate {
+class StartQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
     StartQueryExecutionRequestPrivate(const AthenaRequest::Action action,

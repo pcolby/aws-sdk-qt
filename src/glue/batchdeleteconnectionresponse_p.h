@@ -27,7 +27,7 @@ namespace Glue {
 
 class BatchDeleteConnectionResponse;
 
-class QTAWS_EXPORT BatchDeleteConnectionResponsePrivate : public GlueResponsePrivate {
+class BatchDeleteConnectionResponsePrivate : public GlueResponsePrivate {
 
 public:
 

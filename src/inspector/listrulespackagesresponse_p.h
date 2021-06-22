@@ -27,7 +27,7 @@ namespace Inspector {
 
 class ListRulesPackagesResponse;
 
-class QTAWS_EXPORT ListRulesPackagesResponsePrivate : public InspectorResponsePrivate {
+class ListRulesPackagesResponsePrivate : public InspectorResponsePrivate {
 
 public:
 

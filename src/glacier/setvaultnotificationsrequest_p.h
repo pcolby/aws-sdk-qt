@@ -28,7 +28,7 @@ namespace Glacier {
 
 class SetVaultNotificationsRequest;
 
-class QTAWS_EXPORT SetVaultNotificationsRequestPrivate : public GlacierRequestPrivate {
+class SetVaultNotificationsRequestPrivate : public GlacierRequestPrivate {
 
 public:
     SetVaultNotificationsRequestPrivate(const GlacierRequest::Action action,

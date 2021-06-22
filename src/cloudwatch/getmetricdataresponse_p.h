@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class GetMetricDataResponse;
 
-class QTAWS_EXPORT GetMetricDataResponsePrivate : public CloudWatchResponsePrivate {
+class GetMetricDataResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 

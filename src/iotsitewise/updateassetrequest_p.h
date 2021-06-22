@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class UpdateAssetRequest;
 
-class QTAWS_EXPORT UpdateAssetRequestPrivate : public IoTSiteWiseRequestPrivate {
+class UpdateAssetRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     UpdateAssetRequestPrivate(const IoTSiteWiseRequest::Action action,

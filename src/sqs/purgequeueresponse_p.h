@@ -27,7 +27,7 @@ namespace SQS {
 
 class PurgeQueueResponse;
 
-class QTAWS_EXPORT PurgeQueueResponsePrivate : public SqsResponsePrivate {
+class PurgeQueueResponsePrivate : public SqsResponsePrivate {
 
 public:
 

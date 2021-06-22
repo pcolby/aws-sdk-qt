@@ -27,7 +27,7 @@ namespace KMS {
 
 class CancelKeyDeletionResponse;
 
-class QTAWS_EXPORT CancelKeyDeletionResponsePrivate : public KmsResponsePrivate {
+class CancelKeyDeletionResponsePrivate : public KmsResponsePrivate {
 
 public:
 

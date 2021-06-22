@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteNetworkInterfacePermissionResponse;
 
-class QTAWS_EXPORT DeleteNetworkInterfacePermissionResponsePrivate : public Ec2ResponsePrivate {
+class DeleteNetworkInterfacePermissionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

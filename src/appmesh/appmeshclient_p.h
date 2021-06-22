@@ -29,7 +29,7 @@ namespace AppMesh {
 
 class AppMeshClient;
 
-class QTAWS_EXPORT AppMeshClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppMeshClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppMeshClientPrivate(AppMeshClient * const q);

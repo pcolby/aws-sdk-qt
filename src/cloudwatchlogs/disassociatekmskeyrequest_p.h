@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DisassociateKmsKeyRequest;
 
-class QTAWS_EXPORT DisassociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
+class DisassociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DisassociateKmsKeyRequestPrivate(const CloudWatchLogsRequest::Action action,

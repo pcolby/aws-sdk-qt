@@ -28,7 +28,7 @@ namespace SNS {
 
 class OptInPhoneNumberRequest;
 
-class QTAWS_EXPORT OptInPhoneNumberRequestPrivate : public SnsRequestPrivate {
+class OptInPhoneNumberRequestPrivate : public SnsRequestPrivate {
 
 public:
     OptInPhoneNumberRequestPrivate(const SnsRequest::Action action,

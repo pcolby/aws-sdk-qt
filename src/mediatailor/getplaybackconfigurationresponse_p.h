@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class GetPlaybackConfigurationResponse;
 
-class QTAWS_EXPORT GetPlaybackConfigurationResponsePrivate : public MediaTailorResponsePrivate {
+class GetPlaybackConfigurationResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

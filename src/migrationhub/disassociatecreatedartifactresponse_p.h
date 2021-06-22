@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class DisassociateCreatedArtifactResponse;
 
-class QTAWS_EXPORT DisassociateCreatedArtifactResponsePrivate : public MigrationHubResponsePrivate {
+class DisassociateCreatedArtifactResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 

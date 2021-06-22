@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public WorkSpacesRequestPrivate {
+class DescribeTagsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const WorkSpacesRequest::Action action,

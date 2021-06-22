@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateWorkerBlockRequest;
 
-class QTAWS_EXPORT CreateWorkerBlockRequestPrivate : public MTurkRequestPrivate {
+class CreateWorkerBlockRequestPrivate : public MTurkRequestPrivate {
 
 public:
     CreateWorkerBlockRequestPrivate(const MTurkRequest::Action action,

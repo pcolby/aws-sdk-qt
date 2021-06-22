@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class StopMultiplexResponse;
 
-class QTAWS_EXPORT StopMultiplexResponsePrivate : public MediaLiveResponsePrivate {
+class StopMultiplexResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

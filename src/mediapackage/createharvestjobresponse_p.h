@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class CreateHarvestJobResponse;
 
-class QTAWS_EXPORT CreateHarvestJobResponsePrivate : public MediaPackageResponsePrivate {
+class CreateHarvestJobResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

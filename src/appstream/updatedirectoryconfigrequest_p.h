@@ -28,7 +28,7 @@ namespace AppStream {
 
 class UpdateDirectoryConfigRequest;
 
-class QTAWS_EXPORT UpdateDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
+class UpdateDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     UpdateDirectoryConfigRequestPrivate(const AppStreamRequest::Action action,

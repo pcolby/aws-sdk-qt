@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class UpdateGroupCertificateConfigurationResponse;
 
-class QTAWS_EXPORT UpdateGroupCertificateConfigurationResponsePrivate : public GreengrassResponsePrivate {
+class UpdateGroupCertificateConfigurationResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

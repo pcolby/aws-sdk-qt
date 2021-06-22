@@ -28,7 +28,7 @@ namespace AmplifyBackend {
 
 class CloneBackendRequest;
 
-class QTAWS_EXPORT CloneBackendRequestPrivate : public AmplifyBackendRequestPrivate {
+class CloneBackendRequestPrivate : public AmplifyBackendRequestPrivate {
 
 public:
     CloneBackendRequestPrivate(const AmplifyBackendRequest::Action action,

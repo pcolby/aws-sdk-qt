@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteConferenceProviderRequest;
 
-class QTAWS_EXPORT DeleteConferenceProviderRequestPrivate : public AlexaForBusinessRequestPrivate {
+class DeleteConferenceProviderRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DeleteConferenceProviderRequestPrivate(const AlexaForBusinessRequest::Action action,

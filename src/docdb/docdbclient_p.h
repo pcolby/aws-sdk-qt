@@ -29,7 +29,7 @@ namespace DocDB {
 
 class DocDBClient;
 
-class QTAWS_EXPORT DocDBClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DocDBClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DocDBClientPrivate(DocDBClient * const q);

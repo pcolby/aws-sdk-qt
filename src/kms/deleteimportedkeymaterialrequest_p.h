@@ -28,7 +28,7 @@ namespace KMS {
 
 class DeleteImportedKeyMaterialRequest;
 
-class QTAWS_EXPORT DeleteImportedKeyMaterialRequestPrivate : public KmsRequestPrivate {
+class DeleteImportedKeyMaterialRequestPrivate : public KmsRequestPrivate {
 
 public:
     DeleteImportedKeyMaterialRequestPrivate(const KmsRequest::Action action,

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class GetDashboardEmbedUrlResponse;
 
-class QTAWS_EXPORT GetDashboardEmbedUrlResponsePrivate : public QuickSightResponsePrivate {
+class GetDashboardEmbedUrlResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

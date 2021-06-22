@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteAccountSettingRequest;
 
-class QTAWS_EXPORT DeleteAccountSettingRequestPrivate : public EcsRequestPrivate {
+class DeleteAccountSettingRequestPrivate : public EcsRequestPrivate {
 
 public:
     DeleteAccountSettingRequestPrivate(const EcsRequest::Action action,

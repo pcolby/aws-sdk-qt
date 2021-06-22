@@ -27,7 +27,7 @@ namespace EC2 {
 
 class StartVpcEndpointServicePrivateDnsVerificationResponse;
 
-class QTAWS_EXPORT StartVpcEndpointServicePrivateDnsVerificationResponsePrivate : public Ec2ResponsePrivate {
+class StartVpcEndpointServicePrivateDnsVerificationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

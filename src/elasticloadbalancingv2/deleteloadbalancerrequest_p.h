@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeleteLoadBalancerRequest;
 
-class QTAWS_EXPORT DeleteLoadBalancerRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
+class DeleteLoadBalancerRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DeleteLoadBalancerRequestPrivate(const ElasticLoadBalancingv2Request::Action action,

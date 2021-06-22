@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class UpdateAnalysisResponse;
 
-class QTAWS_EXPORT UpdateAnalysisResponsePrivate : public QuickSightResponsePrivate {
+class UpdateAnalysisResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

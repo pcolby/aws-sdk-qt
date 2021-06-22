@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class AssociatePackageRequest;
 
-class QTAWS_EXPORT AssociatePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class AssociatePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     AssociatePackageRequestPrivate(const ElasticsearchServiceRequest::Action action,

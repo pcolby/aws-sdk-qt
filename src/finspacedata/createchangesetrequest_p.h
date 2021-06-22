@@ -28,7 +28,7 @@ namespace FinSpaceData {
 
 class CreateChangesetRequest;
 
-class QTAWS_EXPORT CreateChangesetRequestPrivate : public FinSpaceDataRequestPrivate {
+class CreateChangesetRequestPrivate : public FinSpaceDataRequestPrivate {
 
 public:
     CreateChangesetRequestPrivate(const FinSpaceDataRequest::Action action,

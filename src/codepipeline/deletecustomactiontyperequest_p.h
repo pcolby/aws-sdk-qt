@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DeleteCustomActionTypeRequest;
 
-class QTAWS_EXPORT DeleteCustomActionTypeRequestPrivate : public CodePipelineRequestPrivate {
+class DeleteCustomActionTypeRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     DeleteCustomActionTypeRequestPrivate(const CodePipelineRequest::Action action,

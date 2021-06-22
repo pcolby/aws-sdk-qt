@@ -29,7 +29,7 @@ namespace SMS {
 
 class SmsClient;
 
-class QTAWS_EXPORT SmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SmsClientPrivate(SmsClient * const q);

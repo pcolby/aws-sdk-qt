@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class ListReservationsResponse;
 
-class QTAWS_EXPORT ListReservationsResponsePrivate : public MediaConnectResponsePrivate {
+class ListReservationsResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 

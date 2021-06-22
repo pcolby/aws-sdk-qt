@@ -28,7 +28,7 @@ namespace Redshift {
 
 class BatchModifyClusterSnapshotsRequest;
 
-class QTAWS_EXPORT BatchModifyClusterSnapshotsRequestPrivate : public RedshiftRequestPrivate {
+class BatchModifyClusterSnapshotsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     BatchModifyClusterSnapshotsRequestPrivate(const RedshiftRequest::Action action,

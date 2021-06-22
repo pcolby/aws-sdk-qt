@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class ListCustomRoutingEndpointGroupsRequest;
 
-class QTAWS_EXPORT ListCustomRoutingEndpointGroupsRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class ListCustomRoutingEndpointGroupsRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     ListCustomRoutingEndpointGroupsRequestPrivate(const GlobalAcceleratorRequest::Action action,

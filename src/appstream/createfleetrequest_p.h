@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateFleetRequest;
 
-class QTAWS_EXPORT CreateFleetRequestPrivate : public AppStreamRequestPrivate {
+class CreateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CreateFleetRequestPrivate(const AppStreamRequest::Action action,

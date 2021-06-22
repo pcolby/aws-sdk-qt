@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class ListVirtualRoutersRequest;
 
-class QTAWS_EXPORT ListVirtualRoutersRequestPrivate : public AppMeshRequestPrivate {
+class ListVirtualRoutersRequestPrivate : public AppMeshRequestPrivate {
 
 public:
     ListVirtualRoutersRequestPrivate(const AppMeshRequest::Action action,

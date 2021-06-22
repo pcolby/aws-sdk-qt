@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class GetDeliverabilityDashboardOptionsResponse;
 
-class QTAWS_EXPORT GetDeliverabilityDashboardOptionsResponsePrivate : public PinpointEmailResponsePrivate {
+class GetDeliverabilityDashboardOptionsResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

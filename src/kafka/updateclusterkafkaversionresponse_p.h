@@ -27,7 +27,7 @@ namespace Kafka {
 
 class UpdateClusterKafkaVersionResponse;
 
-class QTAWS_EXPORT UpdateClusterKafkaVersionResponsePrivate : public KafkaResponsePrivate {
+class UpdateClusterKafkaVersionResponsePrivate : public KafkaResponsePrivate {
 
 public:
 

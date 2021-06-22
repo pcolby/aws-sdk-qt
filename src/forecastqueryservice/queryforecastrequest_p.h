@@ -28,7 +28,7 @@ namespace ForecastQueryService {
 
 class QueryForecastRequest;
 
-class QTAWS_EXPORT QueryForecastRequestPrivate : public ForecastQueryServiceRequestPrivate {
+class QueryForecastRequestPrivate : public ForecastQueryServiceRequestPrivate {
 
 public:
     QueryForecastRequestPrivate(const ForecastQueryServiceRequest::Action action,

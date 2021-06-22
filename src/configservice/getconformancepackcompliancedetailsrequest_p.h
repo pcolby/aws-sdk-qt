@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetConformancePackComplianceDetailsRequest;
 
-class QTAWS_EXPORT GetConformancePackComplianceDetailsRequestPrivate : public ConfigServiceRequestPrivate {
+class GetConformancePackComplianceDetailsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetConformancePackComplianceDetailsRequestPrivate(const ConfigServiceRequest::Action action,

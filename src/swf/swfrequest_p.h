@@ -28,7 +28,7 @@ namespace SWF {
 
 class SwfRequest;
 
-class QTAWS_EXPORT SwfRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SwfRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SwfRequest::Action action; ///< SWF action to be performed.

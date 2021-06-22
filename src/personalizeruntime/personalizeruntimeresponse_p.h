@@ -27,7 +27,7 @@ namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeResponse;
 
-class QTAWS_EXPORT PersonalizeRuntimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PersonalizeRuntimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

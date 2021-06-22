@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteColumnStatisticsForTableRequest;
 
-class QTAWS_EXPORT DeleteColumnStatisticsForTableRequestPrivate : public GlueRequestPrivate {
+class DeleteColumnStatisticsForTableRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteColumnStatisticsForTableRequestPrivate(const GlueRequest::Action action,

@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteInstallationMediaResponse;
 
-class QTAWS_EXPORT DeleteInstallationMediaResponsePrivate : public RdsResponsePrivate {
+class DeleteInstallationMediaResponsePrivate : public RdsResponsePrivate {
 
 public:
 

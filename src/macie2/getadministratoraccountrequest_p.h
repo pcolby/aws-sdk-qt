@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class GetAdministratorAccountRequest;
 
-class QTAWS_EXPORT GetAdministratorAccountRequestPrivate : public Macie2RequestPrivate {
+class GetAdministratorAccountRequestPrivate : public Macie2RequestPrivate {
 
 public:
     GetAdministratorAccountRequestPrivate(const Macie2Request::Action action,

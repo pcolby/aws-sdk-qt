@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class CreateProgressUpdateStreamRequest;
 
-class QTAWS_EXPORT CreateProgressUpdateStreamRequestPrivate : public MigrationHubRequestPrivate {
+class CreateProgressUpdateStreamRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     CreateProgressUpdateStreamRequestPrivate(const MigrationHubRequest::Action action,

@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CancelArchivalRequest;
 
-class QTAWS_EXPORT CancelArchivalRequestPrivate : public StorageGatewayRequestPrivate {
+class CancelArchivalRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CancelArchivalRequestPrivate(const StorageGatewayRequest::Action action,

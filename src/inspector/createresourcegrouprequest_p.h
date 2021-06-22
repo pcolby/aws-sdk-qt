@@ -28,7 +28,7 @@ namespace Inspector {
 
 class CreateResourceGroupRequest;
 
-class QTAWS_EXPORT CreateResourceGroupRequestPrivate : public InspectorRequestPrivate {
+class CreateResourceGroupRequestPrivate : public InspectorRequestPrivate {
 
 public:
     CreateResourceGroupRequestPrivate(const InspectorRequest::Action action,

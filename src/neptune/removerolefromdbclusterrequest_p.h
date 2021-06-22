@@ -28,7 +28,7 @@ namespace Neptune {
 
 class RemoveRoleFromDBClusterRequest;
 
-class QTAWS_EXPORT RemoveRoleFromDBClusterRequestPrivate : public NeptuneRequestPrivate {
+class RemoveRoleFromDBClusterRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     RemoveRoleFromDBClusterRequestPrivate(const NeptuneRequest::Action action,

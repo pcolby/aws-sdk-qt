@@ -28,7 +28,7 @@ namespace DocDB {
 
 class ModifyDBClusterRequest;
 
-class QTAWS_EXPORT ModifyDBClusterRequestPrivate : public DocDBRequestPrivate {
+class ModifyDBClusterRequestPrivate : public DocDBRequestPrivate {
 
 public:
     ModifyDBClusterRequestPrivate(const DocDBRequest::Action action,

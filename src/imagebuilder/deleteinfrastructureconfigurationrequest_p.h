@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class DeleteInfrastructureConfigurationRequest;
 
-class QTAWS_EXPORT DeleteInfrastructureConfigurationRequestPrivate : public imagebuilderRequestPrivate {
+class DeleteInfrastructureConfigurationRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     DeleteInfrastructureConfigurationRequestPrivate(const imagebuilderRequest::Action action,

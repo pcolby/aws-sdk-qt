@@ -27,7 +27,7 @@ namespace Shield {
 
 class CreateProtectionResponse;
 
-class QTAWS_EXPORT CreateProtectionResponsePrivate : public ShieldResponsePrivate {
+class CreateProtectionResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

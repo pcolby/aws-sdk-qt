@@ -28,7 +28,7 @@ namespace AppStream {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public AppStreamRequestPrivate {
+class ListTagsForResourceRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const AppStreamRequest::Action action,

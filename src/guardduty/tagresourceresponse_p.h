@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public GuardDutyResponsePrivate {
+class TagResourceResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

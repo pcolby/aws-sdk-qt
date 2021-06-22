@@ -27,7 +27,7 @@ namespace EC2 {
 
 class EnableFastSnapshotRestoresResponse;
 
-class QTAWS_EXPORT EnableFastSnapshotRestoresResponsePrivate : public Ec2ResponsePrivate {
+class EnableFastSnapshotRestoresResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

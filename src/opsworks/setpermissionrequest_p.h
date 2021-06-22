@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class SetPermissionRequest;
 
-class QTAWS_EXPORT SetPermissionRequestPrivate : public OpsWorksRequestPrivate {
+class SetPermissionRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     SetPermissionRequestPrivate(const OpsWorksRequest::Action action,

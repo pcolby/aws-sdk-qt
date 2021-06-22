@@ -27,7 +27,7 @@ namespace Connect {
 
 class DeleteInstanceResponse;
 
-class QTAWS_EXPORT DeleteInstanceResponsePrivate : public ConnectResponsePrivate {
+class DeleteInstanceResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

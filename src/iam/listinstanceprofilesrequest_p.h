@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListInstanceProfilesRequest;
 
-class QTAWS_EXPORT ListInstanceProfilesRequestPrivate : public IamRequestPrivate {
+class ListInstanceProfilesRequestPrivate : public IamRequestPrivate {
 
 public:
     ListInstanceProfilesRequestPrivate(const IamRequest::Action action,

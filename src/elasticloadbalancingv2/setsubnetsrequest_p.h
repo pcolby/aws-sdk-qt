@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetSubnetsRequest;
 
-class QTAWS_EXPORT SetSubnetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
+class SetSubnetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     SetSubnetsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RevokeClientVpnIngressRequest;
 
-class QTAWS_EXPORT RevokeClientVpnIngressRequestPrivate : public Ec2RequestPrivate {
+class RevokeClientVpnIngressRequestPrivate : public Ec2RequestPrivate {
 
 public:
     RevokeClientVpnIngressRequestPrivate(const Ec2Request::Action action,

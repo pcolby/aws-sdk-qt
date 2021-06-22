@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DeleteCampaignResponse;
 
-class QTAWS_EXPORT DeleteCampaignResponsePrivate : public PersonalizeResponsePrivate {
+class DeleteCampaignResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

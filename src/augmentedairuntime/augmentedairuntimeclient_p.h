@@ -29,7 +29,7 @@ namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeClient;
 
-class QTAWS_EXPORT AugmentedAIRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AugmentedAIRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AugmentedAIRuntimeClientPrivate(AugmentedAIRuntimeClient * const q);

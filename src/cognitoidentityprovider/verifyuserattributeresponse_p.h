@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class VerifyUserAttributeResponse;
 
-class QTAWS_EXPORT VerifyUserAttributeResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+class VerifyUserAttributeResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 

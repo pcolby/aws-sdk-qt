@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class DescribeBucketsResponse;
 
-class QTAWS_EXPORT DescribeBucketsResponsePrivate : public Macie2ResponsePrivate {
+class DescribeBucketsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

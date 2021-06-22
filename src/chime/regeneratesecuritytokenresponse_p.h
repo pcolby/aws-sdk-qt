@@ -27,7 +27,7 @@ namespace Chime {
 
 class RegenerateSecurityTokenResponse;
 
-class QTAWS_EXPORT RegenerateSecurityTokenResponsePrivate : public ChimeResponsePrivate {
+class RegenerateSecurityTokenResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DeleteTaskRequest;
 
-class QTAWS_EXPORT DeleteTaskRequestPrivate : public DataSyncRequestPrivate {
+class DeleteTaskRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     DeleteTaskRequestPrivate(const DataSyncRequest::Action action,

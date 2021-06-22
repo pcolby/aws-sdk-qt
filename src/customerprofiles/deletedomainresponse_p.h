@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class DeleteDomainResponse;
 
-class QTAWS_EXPORT DeleteDomainResponsePrivate : public CustomerProfilesResponsePrivate {
+class DeleteDomainResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 

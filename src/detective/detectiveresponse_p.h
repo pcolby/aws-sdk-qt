@@ -27,7 +27,7 @@ namespace Detective {
 
 class DetectiveResponse;
 
-class QTAWS_EXPORT DetectiveResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DetectiveResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

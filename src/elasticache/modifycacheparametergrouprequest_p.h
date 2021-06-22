@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ModifyCacheParameterGroupRequest;
 
-class QTAWS_EXPORT ModifyCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
+class ModifyCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ModifyCacheParameterGroupRequestPrivate(const ElastiCacheRequest::Action action,

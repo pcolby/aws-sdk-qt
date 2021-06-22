@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class UploadLayerPartRequest;
 
-class QTAWS_EXPORT UploadLayerPartRequestPrivate : public ECRPublicRequestPrivate {
+class UploadLayerPartRequestPrivate : public ECRPublicRequestPrivate {
 
 public:
     UploadLayerPartRequestPrivate(const ECRPublicRequest::Action action,

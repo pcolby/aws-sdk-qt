@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class ArchiveFindingsRequest;
 
-class QTAWS_EXPORT ArchiveFindingsRequestPrivate : public GuardDutyRequestPrivate {
+class ArchiveFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     ArchiveFindingsRequestPrivate(const GuardDutyRequest::Action action,

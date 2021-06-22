@@ -28,7 +28,7 @@ namespace FMS {
 
 class GetViolationDetailsRequest;
 
-class QTAWS_EXPORT GetViolationDetailsRequestPrivate : public FmsRequestPrivate {
+class GetViolationDetailsRequestPrivate : public FmsRequestPrivate {
 
 public:
     GetViolationDetailsRequestPrivate(const FmsRequest::Action action,

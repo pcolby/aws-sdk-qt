@@ -27,7 +27,7 @@ namespace MarketplaceCatalog {
 
 class MarketplaceCatalogResponse;
 
-class QTAWS_EXPORT MarketplaceCatalogResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MarketplaceCatalogResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

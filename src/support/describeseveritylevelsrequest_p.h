@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeSeverityLevelsRequest;
 
-class QTAWS_EXPORT DescribeSeverityLevelsRequestPrivate : public SupportRequestPrivate {
+class DescribeSeverityLevelsRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeSeverityLevelsRequestPrivate(const SupportRequest::Action action,

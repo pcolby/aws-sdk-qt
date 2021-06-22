@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public SyntheticsResponsePrivate {
+class ListTagsForResourceResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 

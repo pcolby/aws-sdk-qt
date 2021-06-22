@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeOrderableReplicationInstancesRequest;
 
-class QTAWS_EXPORT DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeOrderableReplicationInstancesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

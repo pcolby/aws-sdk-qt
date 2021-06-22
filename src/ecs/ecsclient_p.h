@@ -29,7 +29,7 @@ namespace ECS {
 
 class EcsClient;
 
-class QTAWS_EXPORT EcsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EcsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EcsClientPrivate(EcsClient * const q);

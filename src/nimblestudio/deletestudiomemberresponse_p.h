@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class DeleteStudioMemberResponse;
 
-class QTAWS_EXPORT DeleteStudioMemberResponsePrivate : public NimbleStudioResponsePrivate {
+class DeleteStudioMemberResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public MediaTailorRequestPrivate {
+class UntagResourceRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const MediaTailorRequest::Action action,

@@ -27,7 +27,7 @@ namespace EKS {
 
 class DescribeAddonVersionsResponse;
 
-class QTAWS_EXPORT DescribeAddonVersionsResponsePrivate : public EksResponsePrivate {
+class DescribeAddonVersionsResponsePrivate : public EksResponsePrivate {
 
 public:
 

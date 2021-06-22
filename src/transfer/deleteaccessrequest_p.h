@@ -28,7 +28,7 @@ namespace Transfer {
 
 class DeleteAccessRequest;
 
-class QTAWS_EXPORT DeleteAccessRequestPrivate : public TransferRequestPrivate {
+class DeleteAccessRequestPrivate : public TransferRequestPrivate {
 
 public:
     DeleteAccessRequestPrivate(const TransferRequest::Action action,

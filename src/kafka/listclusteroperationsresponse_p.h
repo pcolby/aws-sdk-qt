@@ -27,7 +27,7 @@ namespace Kafka {
 
 class ListClusterOperationsResponse;
 
-class QTAWS_EXPORT ListClusterOperationsResponsePrivate : public KafkaResponsePrivate {
+class ListClusterOperationsResponsePrivate : public KafkaResponsePrivate {
 
 public:
 

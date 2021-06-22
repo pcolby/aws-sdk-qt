@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteRealtimeLogConfigResponse;
 
-class QTAWS_EXPORT DeleteRealtimeLogConfigResponsePrivate : public CloudFrontResponsePrivate {
+class DeleteRealtimeLogConfigResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

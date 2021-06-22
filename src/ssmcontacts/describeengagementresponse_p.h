@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class DescribeEngagementResponse;
 
-class QTAWS_EXPORT DescribeEngagementResponsePrivate : public SSMContactsResponsePrivate {
+class DescribeEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 

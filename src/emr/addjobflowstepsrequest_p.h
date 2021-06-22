@@ -28,7 +28,7 @@ namespace EMR {
 
 class AddJobFlowStepsRequest;
 
-class QTAWS_EXPORT AddJobFlowStepsRequestPrivate : public EmrRequestPrivate {
+class AddJobFlowStepsRequestPrivate : public EmrRequestPrivate {
 
 public:
     AddJobFlowStepsRequestPrivate(const EmrRequest::Action action,

@@ -28,7 +28,7 @@ namespace MWAA {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public MwaaRequestPrivate {
+class TagResourceRequestPrivate : public MwaaRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const MwaaRequest::Action action,

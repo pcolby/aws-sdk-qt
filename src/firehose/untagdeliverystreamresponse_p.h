@@ -27,7 +27,7 @@ namespace Firehose {
 
 class UntagDeliveryStreamResponse;
 
-class QTAWS_EXPORT UntagDeliveryStreamResponsePrivate : public FirehoseResponsePrivate {
+class UntagDeliveryStreamResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 

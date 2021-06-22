@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutConfigurationSetSuppressionOptionsRequest;
 
-class QTAWS_EXPORT PutConfigurationSetSuppressionOptionsRequestPrivate : public Sesv2RequestPrivate {
+class PutConfigurationSetSuppressionOptionsRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     PutConfigurationSetSuppressionOptionsRequestPrivate(const Sesv2Request::Action action,

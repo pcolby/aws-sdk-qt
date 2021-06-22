@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class AccessAnalyzerResponse;
 
-class QTAWS_EXPORT AccessAnalyzerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AccessAnalyzerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

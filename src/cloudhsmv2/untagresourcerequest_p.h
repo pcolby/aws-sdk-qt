@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudHSMV2RequestPrivate {
+class UntagResourceRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CloudHSMV2Request::Action action,

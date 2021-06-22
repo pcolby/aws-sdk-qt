@@ -27,7 +27,7 @@ namespace EC2InstanceConnect {
 
 class EC2InstanceConnectResponse;
 
-class QTAWS_EXPORT EC2InstanceConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EC2InstanceConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

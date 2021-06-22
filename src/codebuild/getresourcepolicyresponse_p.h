@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class GetResourcePolicyResponse;
 
-class QTAWS_EXPORT GetResourcePolicyResponsePrivate : public CodeBuildResponsePrivate {
+class GetResourcePolicyResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

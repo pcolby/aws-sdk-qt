@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DeregisterTypeResponse;
 
-class QTAWS_EXPORT DeregisterTypeResponsePrivate : public CloudFormationResponsePrivate {
+class DeregisterTypeResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

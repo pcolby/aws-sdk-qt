@@ -27,7 +27,7 @@ namespace WAF {
 
 class PutLoggingConfigurationResponse;
 
-class QTAWS_EXPORT PutLoggingConfigurationResponsePrivate : public WafResponsePrivate {
+class PutLoggingConfigurationResponsePrivate : public WafResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RotateEncryptionKeyRequest;
 
-class QTAWS_EXPORT RotateEncryptionKeyRequestPrivate : public RedshiftRequestPrivate {
+class RotateEncryptionKeyRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     RotateEncryptionKeyRequestPrivate(const RedshiftRequest::Action action,

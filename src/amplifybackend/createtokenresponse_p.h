@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class CreateTokenResponse;
 
-class QTAWS_EXPORT CreateTokenResponsePrivate : public AmplifyBackendResponsePrivate {
+class CreateTokenResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 

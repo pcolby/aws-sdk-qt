@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListDistributionsByKeyGroupRequest;
 
-class QTAWS_EXPORT ListDistributionsByKeyGroupRequestPrivate : public CloudFrontRequestPrivate {
+class ListDistributionsByKeyGroupRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListDistributionsByKeyGroupRequestPrivate(const CloudFrontRequest::Action action,

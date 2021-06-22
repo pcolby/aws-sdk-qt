@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DeleteStackResponse;
 
-class QTAWS_EXPORT DeleteStackResponsePrivate : public CloudFormationResponsePrivate {
+class DeleteStackResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

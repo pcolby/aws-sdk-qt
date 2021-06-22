@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetCampaignActivitiesRequest;
 
-class QTAWS_EXPORT GetCampaignActivitiesRequestPrivate : public PinpointRequestPrivate {
+class GetCampaignActivitiesRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetCampaignActivitiesRequestPrivate(const PinpointRequest::Action action,

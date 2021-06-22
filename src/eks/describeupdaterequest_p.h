@@ -28,7 +28,7 @@ namespace EKS {
 
 class DescribeUpdateRequest;
 
-class QTAWS_EXPORT DescribeUpdateRequestPrivate : public EksRequestPrivate {
+class DescribeUpdateRequestPrivate : public EksRequestPrivate {
 
 public:
     DescribeUpdateRequestPrivate(const EksRequest::Action action,

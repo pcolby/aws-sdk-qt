@@ -28,7 +28,7 @@ namespace mgn {
 
 class StartTestRequest;
 
-class QTAWS_EXPORT StartTestRequestPrivate : public mgnRequestPrivate {
+class StartTestRequestPrivate : public mgnRequestPrivate {
 
 public:
     StartTestRequestPrivate(const mgnRequest::Action action,

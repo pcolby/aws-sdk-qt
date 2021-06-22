@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyAddressAttributeResponse;
 
-class QTAWS_EXPORT ModifyAddressAttributeResponsePrivate : public Ec2ResponsePrivate {
+class ModifyAddressAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

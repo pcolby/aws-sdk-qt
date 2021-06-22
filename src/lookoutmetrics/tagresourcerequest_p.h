@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public LookoutMetricsRequestPrivate {
+class TagResourceRequestPrivate : public LookoutMetricsRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const LookoutMetricsRequest::Action action,

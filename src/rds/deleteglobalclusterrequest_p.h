@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteGlobalClusterRequest;
 
-class QTAWS_EXPORT DeleteGlobalClusterRequestPrivate : public RdsRequestPrivate {
+class DeleteGlobalClusterRequestPrivate : public RdsRequestPrivate {
 
 public:
     DeleteGlobalClusterRequestPrivate(const RdsRequest::Action action,

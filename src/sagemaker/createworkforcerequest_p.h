@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateWorkforceRequest;
 
-class QTAWS_EXPORT CreateWorkforceRequestPrivate : public SageMakerRequestPrivate {
+class CreateWorkforceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateWorkforceRequestPrivate(const SageMakerRequest::Action action,

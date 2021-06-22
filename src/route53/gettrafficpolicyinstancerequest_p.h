@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetTrafficPolicyInstanceRequest;
 
-class QTAWS_EXPORT GetTrafficPolicyInstanceRequestPrivate : public Route53RequestPrivate {
+class GetTrafficPolicyInstanceRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetTrafficPolicyInstanceRequestPrivate(const Route53Request::Action action,

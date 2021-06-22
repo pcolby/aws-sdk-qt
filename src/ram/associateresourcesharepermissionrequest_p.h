@@ -28,7 +28,7 @@ namespace RAM {
 
 class AssociateResourceSharePermissionRequest;
 
-class QTAWS_EXPORT AssociateResourceSharePermissionRequestPrivate : public RamRequestPrivate {
+class AssociateResourceSharePermissionRequestPrivate : public RamRequestPrivate {
 
 public:
     AssociateResourceSharePermissionRequestPrivate(const RamRequest::Action action,

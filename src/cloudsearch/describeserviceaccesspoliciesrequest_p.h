@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DescribeServiceAccessPoliciesRequest;
 
-class QTAWS_EXPORT DescribeServiceAccessPoliciesRequestPrivate : public CloudSearchRequestPrivate {
+class DescribeServiceAccessPoliciesRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DescribeServiceAccessPoliciesRequestPrivate(const CloudSearchRequest::Action action,

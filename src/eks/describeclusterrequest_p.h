@@ -28,7 +28,7 @@ namespace EKS {
 
 class DescribeClusterRequest;
 
-class QTAWS_EXPORT DescribeClusterRequestPrivate : public EksRequestPrivate {
+class DescribeClusterRequestPrivate : public EksRequestPrivate {
 
 public:
     DescribeClusterRequestPrivate(const EksRequest::Action action,

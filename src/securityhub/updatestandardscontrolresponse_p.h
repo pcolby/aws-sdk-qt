@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class UpdateStandardsControlResponse;
 
-class QTAWS_EXPORT UpdateStandardsControlResponsePrivate : public SecurityHubResponsePrivate {
+class UpdateStandardsControlResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

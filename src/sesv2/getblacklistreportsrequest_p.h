@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetBlacklistReportsRequest;
 
-class QTAWS_EXPORT GetBlacklistReportsRequestPrivate : public Sesv2RequestPrivate {
+class GetBlacklistReportsRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     GetBlacklistReportsRequestPrivate(const Sesv2Request::Action action,

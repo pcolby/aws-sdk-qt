@@ -28,7 +28,7 @@ namespace EMR {
 
 class PutAutoScalingPolicyRequest;
 
-class QTAWS_EXPORT PutAutoScalingPolicyRequestPrivate : public EmrRequestPrivate {
+class PutAutoScalingPolicyRequestPrivate : public EmrRequestPrivate {
 
 public:
     PutAutoScalingPolicyRequestPrivate(const EmrRequest::Action action,

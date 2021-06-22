@@ -27,7 +27,7 @@ namespace kendra {
 
 class StopDataSourceSyncJobResponse;
 
-class QTAWS_EXPORT StopDataSourceSyncJobResponsePrivate : public kendraResponsePrivate {
+class StopDataSourceSyncJobResponsePrivate : public kendraResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ECS {
 
 class CreateCapacityProviderRequest;
 
-class QTAWS_EXPORT CreateCapacityProviderRequestPrivate : public EcsRequestPrivate {
+class CreateCapacityProviderRequestPrivate : public EcsRequestPrivate {
 
 public:
     CreateCapacityProviderRequestPrivate(const EcsRequest::Action action,

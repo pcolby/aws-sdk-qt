@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class ListNotificationsRequest;
 
-class QTAWS_EXPORT ListNotificationsRequestPrivate : public AuditManagerRequestPrivate {
+class ListNotificationsRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     ListNotificationsRequestPrivate(const AuditManagerRequest::Action action,

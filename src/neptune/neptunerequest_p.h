@@ -28,7 +28,7 @@ namespace Neptune {
 
 class NeptuneRequest;
 
-class QTAWS_EXPORT NeptuneRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class NeptuneRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NeptuneRequest::Action action; ///< Neptune action to be performed.

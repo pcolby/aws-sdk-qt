@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class DeleteInstanceAccessControlAttributeConfigurationResponse;
 
-class QTAWS_EXPORT DeleteInstanceAccessControlAttributeConfigurationResponsePrivate : public SSOAdminResponsePrivate {
+class DeleteInstanceAccessControlAttributeConfigurationResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 

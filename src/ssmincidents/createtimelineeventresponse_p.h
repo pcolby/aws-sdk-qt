@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class CreateTimelineEventResponse;
 
-class QTAWS_EXPORT CreateTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
+class CreateTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

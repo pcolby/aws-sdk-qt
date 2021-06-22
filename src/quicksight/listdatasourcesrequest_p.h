@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class ListDataSourcesRequest;
 
-class QTAWS_EXPORT ListDataSourcesRequestPrivate : public QuickSightRequestPrivate {
+class ListDataSourcesRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     ListDataSourcesRequestPrivate(const QuickSightRequest::Action action,

@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class AuditManagerRequest;
 
-class QTAWS_EXPORT AuditManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AuditManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AuditManagerRequest::Action action; ///< AuditManager action to be performed.

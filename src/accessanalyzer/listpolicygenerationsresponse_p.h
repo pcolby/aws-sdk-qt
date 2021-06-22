@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class ListPolicyGenerationsResponse;
 
-class QTAWS_EXPORT ListPolicyGenerationsResponsePrivate : public AccessAnalyzerResponsePrivate {
+class ListPolicyGenerationsResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 

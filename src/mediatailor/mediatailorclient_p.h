@@ -29,7 +29,7 @@ namespace MediaTailor {
 
 class MediaTailorClient;
 
-class QTAWS_EXPORT MediaTailorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MediaTailorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MediaTailorClientPrivate(MediaTailorClient * const q);

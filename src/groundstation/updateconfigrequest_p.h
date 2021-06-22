@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class UpdateConfigRequest;
 
-class QTAWS_EXPORT UpdateConfigRequestPrivate : public GroundStationRequestPrivate {
+class UpdateConfigRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     UpdateConfigRequestPrivate(const GroundStationRequest::Action action,

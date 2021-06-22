@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateBotResponse;
 
-class QTAWS_EXPORT UpdateBotResponsePrivate : public ChimeResponsePrivate {
+class UpdateBotResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class DescribeHapgRequest;
 
-class QTAWS_EXPORT DescribeHapgRequestPrivate : public CloudHSMRequestPrivate {
+class DescribeHapgRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     DescribeHapgRequestPrivate(const CloudHSMRequest::Action action,

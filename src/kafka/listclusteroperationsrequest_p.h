@@ -28,7 +28,7 @@ namespace Kafka {
 
 class ListClusterOperationsRequest;
 
-class QTAWS_EXPORT ListClusterOperationsRequestPrivate : public KafkaRequestPrivate {
+class ListClusterOperationsRequestPrivate : public KafkaRequestPrivate {
 
 public:
     ListClusterOperationsRequestPrivate(const KafkaRequest::Action action,

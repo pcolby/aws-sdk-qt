@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetInstanceStateRequest;
 
-class QTAWS_EXPORT GetInstanceStateRequestPrivate : public LightsailRequestPrivate {
+class GetInstanceStateRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetInstanceStateRequestPrivate(const LightsailRequest::Action action,

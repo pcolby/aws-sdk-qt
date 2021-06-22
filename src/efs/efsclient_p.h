@@ -29,7 +29,7 @@ namespace EFS {
 
 class EfsClient;
 
-class QTAWS_EXPORT EfsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EfsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EfsClientPrivate(EfsClient * const q);

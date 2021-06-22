@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class ElasticLoadBalancingRequest;
 
-class QTAWS_EXPORT ElasticLoadBalancingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticLoadBalancingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticLoadBalancingRequest::Action action; ///< ElasticLoadBalancing action to be performed.

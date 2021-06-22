@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class GetDistributionConfigurationResponse;
 
-class QTAWS_EXPORT GetDistributionConfigurationResponsePrivate : public imagebuilderResponsePrivate {
+class GetDistributionConfigurationResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 

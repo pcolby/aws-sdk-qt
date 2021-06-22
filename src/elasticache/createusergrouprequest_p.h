@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class CreateUserGroupRequest;
 
-class QTAWS_EXPORT CreateUserGroupRequestPrivate : public ElastiCacheRequestPrivate {
+class CreateUserGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     CreateUserGroupRequestPrivate(const ElastiCacheRequest::Action action,

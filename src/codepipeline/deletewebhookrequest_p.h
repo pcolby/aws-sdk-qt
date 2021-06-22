@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DeleteWebhookRequest;
 
-class QTAWS_EXPORT DeleteWebhookRequestPrivate : public CodePipelineRequestPrivate {
+class DeleteWebhookRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     DeleteWebhookRequestPrivate(const CodePipelineRequest::Action action,

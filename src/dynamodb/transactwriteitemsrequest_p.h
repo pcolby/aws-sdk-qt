@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class TransactWriteItemsRequest;
 
-class QTAWS_EXPORT TransactWriteItemsRequestPrivate : public DynamoDBRequestPrivate {
+class TransactWriteItemsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     TransactWriteItemsRequestPrivate(const DynamoDBRequest::Action action,

@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListHsmsRequest;
 
-class QTAWS_EXPORT ListHsmsRequestPrivate : public CloudHSMRequestPrivate {
+class ListHsmsRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListHsmsRequestPrivate(const CloudHSMRequest::Action action,

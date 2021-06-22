@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteRetentionPolicyRequest;
 
-class QTAWS_EXPORT DeleteRetentionPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
+class DeleteRetentionPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteRetentionPolicyRequestPrivate(const CloudWatchLogsRequest::Action action,

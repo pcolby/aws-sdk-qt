@@ -28,7 +28,7 @@ namespace SWF {
 
 class RegisterWorkflowTypeRequest;
 
-class QTAWS_EXPORT RegisterWorkflowTypeRequestPrivate : public SwfRequestPrivate {
+class RegisterWorkflowTypeRequestPrivate : public SwfRequestPrivate {
 
 public:
     RegisterWorkflowTypeRequestPrivate(const SwfRequest::Action action,

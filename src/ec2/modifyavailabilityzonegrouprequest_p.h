@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyAvailabilityZoneGroupRequest;
 
-class QTAWS_EXPORT ModifyAvailabilityZoneGroupRequestPrivate : public Ec2RequestPrivate {
+class ModifyAvailabilityZoneGroupRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifyAvailabilityZoneGroupRequestPrivate(const Ec2Request::Action action,

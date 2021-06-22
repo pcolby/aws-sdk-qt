@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class UpdateDestinationRequest;
 
-class QTAWS_EXPORT UpdateDestinationRequestPrivate : public IoTWirelessRequestPrivate {
+class UpdateDestinationRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     UpdateDestinationRequestPrivate(const IoTWirelessRequest::Action action,

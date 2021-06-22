@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetSubscriptionDefinitionVersionRequest;
 
-class QTAWS_EXPORT GetSubscriptionDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
+class GetSubscriptionDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetSubscriptionDefinitionVersionRequestPrivate(const GreengrassRequest::Action action,

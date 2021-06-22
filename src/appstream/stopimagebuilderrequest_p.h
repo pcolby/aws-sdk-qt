@@ -28,7 +28,7 @@ namespace AppStream {
 
 class StopImageBuilderRequest;
 
-class QTAWS_EXPORT StopImageBuilderRequestPrivate : public AppStreamRequestPrivate {
+class StopImageBuilderRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     StopImageBuilderRequestPrivate(const AppStreamRequest::Action action,

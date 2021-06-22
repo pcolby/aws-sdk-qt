@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListAvailableZonesRequest;
 
-class QTAWS_EXPORT ListAvailableZonesRequestPrivate : public CloudHSMRequestPrivate {
+class ListAvailableZonesRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListAvailableZonesRequestPrivate(const CloudHSMRequest::Action action,

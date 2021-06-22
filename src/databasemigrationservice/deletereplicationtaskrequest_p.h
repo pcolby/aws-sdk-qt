@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DeleteReplicationTaskRequest;
 
-class QTAWS_EXPORT DeleteReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DeleteReplicationTaskRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DeleteReplicationTaskRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

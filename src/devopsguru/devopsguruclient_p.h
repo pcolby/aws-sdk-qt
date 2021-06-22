@@ -29,7 +29,7 @@ namespace DevOpsGuru {
 
 class DevOpsGuruClient;
 
-class QTAWS_EXPORT DevOpsGuruClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DevOpsGuruClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DevOpsGuruClientPrivate(DevOpsGuruClient * const q);

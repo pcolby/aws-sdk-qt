@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBProxyTargetGroupsRequest;
 
-class QTAWS_EXPORT DescribeDBProxyTargetGroupsRequestPrivate : public RdsRequestPrivate {
+class DescribeDBProxyTargetGroupsRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeDBProxyTargetGroupsRequestPrivate(const RdsRequest::Action action,

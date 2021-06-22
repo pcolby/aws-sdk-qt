@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class ValidatePolicyRequest;
 
-class QTAWS_EXPORT ValidatePolicyRequestPrivate : public AccessAnalyzerRequestPrivate {
+class ValidatePolicyRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     ValidatePolicyRequestPrivate(const AccessAnalyzerRequest::Action action,

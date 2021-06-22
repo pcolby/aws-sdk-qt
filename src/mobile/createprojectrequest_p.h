@@ -28,7 +28,7 @@ namespace Mobile {
 
 class CreateProjectRequest;
 
-class QTAWS_EXPORT CreateProjectRequestPrivate : public MobileRequestPrivate {
+class CreateProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
     CreateProjectRequestPrivate(const MobileRequest::Action action,

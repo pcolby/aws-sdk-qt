@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public LexModelsV2ResponsePrivate {
+class ListTagsForResourceResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

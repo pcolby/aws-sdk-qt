@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteApiKeyRequest;
 
-class QTAWS_EXPORT DeleteApiKeyRequestPrivate : public APIGatewayRequestPrivate {
+class DeleteApiKeyRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteApiKeyRequestPrivate(const APIGatewayRequest::Action action,

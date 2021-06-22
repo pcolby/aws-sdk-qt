@@ -28,7 +28,7 @@ namespace Proton {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public ProtonRequestPrivate {
+class UntagResourceRequestPrivate : public ProtonRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const ProtonRequest::Action action,

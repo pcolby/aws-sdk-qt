@@ -27,7 +27,7 @@ namespace ECR {
 
 class PutImageScanningConfigurationResponse;
 
-class QTAWS_EXPORT PutImageScanningConfigurationResponsePrivate : public EcrResponsePrivate {
+class PutImageScanningConfigurationResponsePrivate : public EcrResponsePrivate {
 
 public:
 

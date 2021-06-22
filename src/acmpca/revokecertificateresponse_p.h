@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class RevokeCertificateResponse;
 
-class QTAWS_EXPORT RevokeCertificateResponsePrivate : public AcmpcaResponsePrivate {
+class RevokeCertificateResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class AssociateContactWithAddressBookResponse;
 
-class QTAWS_EXPORT AssociateContactWithAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate {
+class AssociateContactWithAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

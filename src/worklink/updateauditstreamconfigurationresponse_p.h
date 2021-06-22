@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UpdateAuditStreamConfigurationResponse;
 
-class QTAWS_EXPORT UpdateAuditStreamConfigurationResponsePrivate : public WorkLinkResponsePrivate {
+class UpdateAuditStreamConfigurationResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

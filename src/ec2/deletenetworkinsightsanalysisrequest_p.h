@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteNetworkInsightsAnalysisRequest;
 
-class QTAWS_EXPORT DeleteNetworkInsightsAnalysisRequestPrivate : public Ec2RequestPrivate {
+class DeleteNetworkInsightsAnalysisRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteNetworkInsightsAnalysisRequestPrivate(const Ec2Request::Action action,

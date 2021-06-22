@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StopGameSessionPlacementRequest;
 
-class QTAWS_EXPORT StopGameSessionPlacementRequestPrivate : public GameLiftRequestPrivate {
+class StopGameSessionPlacementRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     StopGameSessionPlacementRequestPrivate(const GameLiftRequest::Action action,

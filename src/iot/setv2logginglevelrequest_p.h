@@ -28,7 +28,7 @@ namespace IoT {
 
 class SetV2LoggingLevelRequest;
 
-class QTAWS_EXPORT SetV2LoggingLevelRequestPrivate : public IoTRequestPrivate {
+class SetV2LoggingLevelRequestPrivate : public IoTRequestPrivate {
 
 public:
     SetV2LoggingLevelRequestPrivate(const IoTRequest::Action action,

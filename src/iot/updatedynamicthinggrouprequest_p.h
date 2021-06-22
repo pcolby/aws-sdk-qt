@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateDynamicThingGroupRequest;
 
-class QTAWS_EXPORT UpdateDynamicThingGroupRequestPrivate : public IoTRequestPrivate {
+class UpdateDynamicThingGroupRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateDynamicThingGroupRequestPrivate(const IoTRequest::Action action,

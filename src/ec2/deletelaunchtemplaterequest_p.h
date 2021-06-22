@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteLaunchTemplateRequest;
 
-class QTAWS_EXPORT DeleteLaunchTemplateRequestPrivate : public Ec2RequestPrivate {
+class DeleteLaunchTemplateRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteLaunchTemplateRequestPrivate(const Ec2Request::Action action,

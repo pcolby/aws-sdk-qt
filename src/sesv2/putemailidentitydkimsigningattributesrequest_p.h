@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutEmailIdentityDkimSigningAttributesRequest;
 
-class QTAWS_EXPORT PutEmailIdentityDkimSigningAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutEmailIdentityDkimSigningAttributesRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     PutEmailIdentityDkimSigningAttributesRequestPrivate(const Sesv2Request::Action action,

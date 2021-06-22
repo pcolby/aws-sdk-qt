@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketMetricsConfigurationRequest;
 
-class QTAWS_EXPORT PutBucketMetricsConfigurationRequestPrivate : public S3RequestPrivate {
+class PutBucketMetricsConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketMetricsConfigurationRequestPrivate(const S3Request::Action action,

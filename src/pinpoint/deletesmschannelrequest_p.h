@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteSmsChannelRequest;
 
-class QTAWS_EXPORT DeleteSmsChannelRequestPrivate : public PinpointRequestPrivate {
+class DeleteSmsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteSmsChannelRequestPrivate(const PinpointRequest::Action action,

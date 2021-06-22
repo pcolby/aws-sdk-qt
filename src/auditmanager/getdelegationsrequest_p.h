@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetDelegationsRequest;
 
-class QTAWS_EXPORT GetDelegationsRequestPrivate : public AuditManagerRequestPrivate {
+class GetDelegationsRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     GetDelegationsRequestPrivate(const AuditManagerRequest::Action action,

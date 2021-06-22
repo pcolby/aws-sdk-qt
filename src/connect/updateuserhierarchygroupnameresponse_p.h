@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateUserHierarchyGroupNameResponse;
 
-class QTAWS_EXPORT UpdateUserHierarchyGroupNameResponsePrivate : public ConnectResponsePrivate {
+class UpdateUserHierarchyGroupNameResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

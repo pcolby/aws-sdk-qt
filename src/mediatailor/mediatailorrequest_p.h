@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class MediaTailorRequest;
 
-class QTAWS_EXPORT MediaTailorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaTailorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaTailorRequest::Action action; ///< MediaTailor action to be performed.

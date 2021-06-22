@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListChannelModeratorsRequest;
 
-class QTAWS_EXPORT ListChannelModeratorsRequestPrivate : public ChimeRequestPrivate {
+class ListChannelModeratorsRequestPrivate : public ChimeRequestPrivate {
 
 public:
     ListChannelModeratorsRequestPrivate(const ChimeRequest::Action action,

@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class AcceptInboundCrossClusterSearchConnectionRequest;
 
-class QTAWS_EXPORT AcceptInboundCrossClusterSearchConnectionRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class AcceptInboundCrossClusterSearchConnectionRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     AcceptInboundCrossClusterSearchConnectionRequestPrivate(const ElasticsearchServiceRequest::Action action,

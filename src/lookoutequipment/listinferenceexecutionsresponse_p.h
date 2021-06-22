@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class ListInferenceExecutionsResponse;
 
-class QTAWS_EXPORT ListInferenceExecutionsResponsePrivate : public LookoutEquipmentResponsePrivate {
+class ListInferenceExecutionsResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DeregisterDelegatedAdministratorResponse;
 
-class QTAWS_EXPORT DeregisterDelegatedAdministratorResponsePrivate : public OrganizationsResponsePrivate {
+class DeregisterDelegatedAdministratorResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

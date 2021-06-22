@@ -28,7 +28,7 @@ namespace GameLift {
 
 class GameLiftRequest;
 
-class QTAWS_EXPORT GameLiftRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GameLiftRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GameLiftRequest::Action action; ///< GameLift action to be performed.

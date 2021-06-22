@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetObjectTorrentRequest;
 
-class QTAWS_EXPORT GetObjectTorrentRequestPrivate : public S3RequestPrivate {
+class GetObjectTorrentRequestPrivate : public S3RequestPrivate {
 
 public:
     GetObjectTorrentRequestPrivate(const S3Request::Action action,

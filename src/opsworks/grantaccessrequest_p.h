@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class GrantAccessRequest;
 
-class QTAWS_EXPORT GrantAccessRequestPrivate : public OpsWorksRequestPrivate {
+class GrantAccessRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     GrantAccessRequestPrivate(const OpsWorksRequest::Action action,

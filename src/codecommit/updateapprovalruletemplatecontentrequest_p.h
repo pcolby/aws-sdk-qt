@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UpdateApprovalRuleTemplateContentRequest;
 
-class QTAWS_EXPORT UpdateApprovalRuleTemplateContentRequestPrivate : public CodeCommitRequestPrivate {
+class UpdateApprovalRuleTemplateContentRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     UpdateApprovalRuleTemplateContentRequestPrivate(const CodeCommitRequest::Action action,

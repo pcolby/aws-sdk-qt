@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class CreateSubscriptionDefinitionVersionResponse;
 
-class QTAWS_EXPORT CreateSubscriptionDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
+class CreateSubscriptionDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

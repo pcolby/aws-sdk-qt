@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListVoiceConnectorGroupsResponse;
 
-class QTAWS_EXPORT ListVoiceConnectorGroupsResponsePrivate : public ChimeResponsePrivate {
+class ListVoiceConnectorGroupsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

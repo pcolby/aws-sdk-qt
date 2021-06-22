@@ -28,7 +28,7 @@ namespace SMS {
 
 class StopAppReplicationRequest;
 
-class QTAWS_EXPORT StopAppReplicationRequestPrivate : public SmsRequestPrivate {
+class StopAppReplicationRequestPrivate : public SmsRequestPrivate {
 
 public:
     StopAppReplicationRequestPrivate(const SmsRequest::Action action,

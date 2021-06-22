@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeSnapshotsResponse;
 
-class QTAWS_EXPORT DescribeSnapshotsResponsePrivate : public DirectoryServiceResponsePrivate {
+class DescribeSnapshotsResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

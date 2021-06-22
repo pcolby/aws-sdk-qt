@@ -28,7 +28,7 @@ namespace Schemas {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SchemasRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SchemasRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SchemasRequest::Action action,

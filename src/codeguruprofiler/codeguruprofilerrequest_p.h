@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class CodeGuruProfilerRequest;
 
-class QTAWS_EXPORT CodeGuruProfilerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeGuruProfilerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeGuruProfilerRequest::Action action; ///< CodeGuruProfiler action to be performed.

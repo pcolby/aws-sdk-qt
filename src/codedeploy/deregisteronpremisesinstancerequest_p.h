@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class DeregisterOnPremisesInstanceRequest;
 
-class QTAWS_EXPORT DeregisterOnPremisesInstanceRequestPrivate : public CodeDeployRequestPrivate {
+class DeregisterOnPremisesInstanceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     DeregisterOnPremisesInstanceRequestPrivate(const CodeDeployRequest::Action action,

@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class ReplicateSecretToRegionsRequest;
 
-class QTAWS_EXPORT ReplicateSecretToRegionsRequestPrivate : public SecretsManagerRequestPrivate {
+class ReplicateSecretToRegionsRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     ReplicateSecretToRegionsRequestPrivate(const SecretsManagerRequest::Action action,

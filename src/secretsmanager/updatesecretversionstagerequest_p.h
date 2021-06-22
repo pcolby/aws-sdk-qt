@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class UpdateSecretVersionStageRequest;
 
-class QTAWS_EXPORT UpdateSecretVersionStageRequestPrivate : public SecretsManagerRequestPrivate {
+class UpdateSecretVersionStageRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     UpdateSecretVersionStageRequestPrivate(const SecretsManagerRequest::Action action,

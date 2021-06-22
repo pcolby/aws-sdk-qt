@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class CognitoIdentityRequest;
 
-class QTAWS_EXPORT CognitoIdentityRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CognitoIdentityRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CognitoIdentityRequest::Action action; ///< CognitoIdentity action to be performed.

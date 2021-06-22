@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeTransformJobRequest;
 
-class QTAWS_EXPORT DescribeTransformJobRequestPrivate : public SageMakerRequestPrivate {
+class DescribeTransformJobRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeTransformJobRequestPrivate(const SageMakerRequest::Action action,

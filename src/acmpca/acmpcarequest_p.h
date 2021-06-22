@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class AcmpcaRequest;
 
-class QTAWS_EXPORT AcmpcaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AcmpcaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AcmpcaRequest::Action action; ///< ACMPCA action to be performed.

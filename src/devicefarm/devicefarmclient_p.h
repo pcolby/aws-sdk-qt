@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class DeviceFarmClient;
 
-class QTAWS_EXPORT DeviceFarmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DeviceFarmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DeviceFarmClientPrivate(DeviceFarmClient * const q);

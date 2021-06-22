@@ -29,7 +29,7 @@ namespace IoT1ClickProjects {
 
 class IoT1ClickProjectsClient;
 
-class QTAWS_EXPORT IoT1ClickProjectsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoT1ClickProjectsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoT1ClickProjectsClientPrivate(IoT1ClickProjectsClient * const q);

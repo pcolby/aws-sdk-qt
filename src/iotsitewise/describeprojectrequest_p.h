@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DescribeProjectRequest;
 
-class QTAWS_EXPORT DescribeProjectRequestPrivate : public IoTSiteWiseRequestPrivate {
+class DescribeProjectRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     DescribeProjectRequestPrivate(const IoTSiteWiseRequest::Action action,

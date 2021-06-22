@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class DeleteContactChannelRequest;
 
-class QTAWS_EXPORT DeleteContactChannelRequestPrivate : public SSMContactsRequestPrivate {
+class DeleteContactChannelRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     DeleteContactChannelRequestPrivate(const SSMContactsRequest::Action action,

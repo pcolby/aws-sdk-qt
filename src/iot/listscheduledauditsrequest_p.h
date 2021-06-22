@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListScheduledAuditsRequest;
 
-class QTAWS_EXPORT ListScheduledAuditsRequestPrivate : public IoTRequestPrivate {
+class ListScheduledAuditsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListScheduledAuditsRequestPrivate(const IoTRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTFleetHub {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public IoTFleetHubRequestPrivate {
+class UpdateApplicationRequestPrivate : public IoTFleetHubRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const IoTFleetHubRequest::Action action,

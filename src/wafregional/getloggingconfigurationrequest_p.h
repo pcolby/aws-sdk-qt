@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetLoggingConfigurationRequest;
 
-class QTAWS_EXPORT GetLoggingConfigurationRequestPrivate : public WAFRegionalRequestPrivate {
+class GetLoggingConfigurationRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetLoggingConfigurationRequestPrivate(const WAFRegionalRequest::Action action,

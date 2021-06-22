@@ -27,7 +27,7 @@ namespace DocDB {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public DocDBResponsePrivate {
+class ListTagsForResourceResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

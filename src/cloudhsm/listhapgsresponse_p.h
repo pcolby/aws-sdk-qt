@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class ListHapgsResponse;
 
-class QTAWS_EXPORT ListHapgsResponsePrivate : public CloudHSMResponsePrivate {
+class ListHapgsResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 

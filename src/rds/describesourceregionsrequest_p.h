@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeSourceRegionsRequest;
 
-class QTAWS_EXPORT DescribeSourceRegionsRequestPrivate : public RdsRequestPrivate {
+class DescribeSourceRegionsRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeSourceRegionsRequestPrivate(const RdsRequest::Action action,

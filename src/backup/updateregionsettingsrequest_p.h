@@ -28,7 +28,7 @@ namespace Backup {
 
 class UpdateRegionSettingsRequest;
 
-class QTAWS_EXPORT UpdateRegionSettingsRequestPrivate : public BackupRequestPrivate {
+class UpdateRegionSettingsRequestPrivate : public BackupRequestPrivate {
 
 public:
     UpdateRegionSettingsRequestPrivate(const BackupRequest::Action action,

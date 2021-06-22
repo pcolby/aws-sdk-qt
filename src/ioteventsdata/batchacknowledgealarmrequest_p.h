@@ -28,7 +28,7 @@ namespace IoTEventsData {
 
 class BatchAcknowledgeAlarmRequest;
 
-class QTAWS_EXPORT BatchAcknowledgeAlarmRequestPrivate : public IoTEventsDataRequestPrivate {
+class BatchAcknowledgeAlarmRequestPrivate : public IoTEventsDataRequestPrivate {
 
 public:
     BatchAcknowledgeAlarmRequestPrivate(const IoTEventsDataRequest::Action action,

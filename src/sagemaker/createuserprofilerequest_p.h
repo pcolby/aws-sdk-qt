@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateUserProfileRequest;
 
-class QTAWS_EXPORT CreateUserProfileRequestPrivate : public SageMakerRequestPrivate {
+class CreateUserProfileRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateUserProfileRequestPrivate(const SageMakerRequest::Action action,

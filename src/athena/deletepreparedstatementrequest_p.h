@@ -28,7 +28,7 @@ namespace Athena {
 
 class DeletePreparedStatementRequest;
 
-class QTAWS_EXPORT DeletePreparedStatementRequestPrivate : public AthenaRequestPrivate {
+class DeletePreparedStatementRequestPrivate : public AthenaRequestPrivate {
 
 public:
     DeletePreparedStatementRequestPrivate(const AthenaRequest::Action action,

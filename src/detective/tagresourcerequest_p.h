@@ -28,7 +28,7 @@ namespace Detective {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public DetectiveRequestPrivate {
+class TagResourceRequestPrivate : public DetectiveRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const DetectiveRequest::Action action,

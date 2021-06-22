@@ -29,7 +29,7 @@ namespace SSMContacts {
 
 class SSMContactsClient;
 
-class QTAWS_EXPORT SSMContactsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SSMContactsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SSMContactsClientPrivate(SSMContactsClient * const q);

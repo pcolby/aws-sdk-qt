@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class CreateLogStreamRequest;
 
-class QTAWS_EXPORT CreateLogStreamRequestPrivate : public CloudWatchLogsRequestPrivate {
+class CreateLogStreamRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     CreateLogStreamRequestPrivate(const CloudWatchLogsRequest::Action action,

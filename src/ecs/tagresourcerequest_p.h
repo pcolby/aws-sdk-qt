@@ -28,7 +28,7 @@ namespace ECS {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public EcsRequestPrivate {
+class TagResourceRequestPrivate : public EcsRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const EcsRequest::Action action,

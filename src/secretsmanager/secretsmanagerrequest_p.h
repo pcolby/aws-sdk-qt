@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class SecretsManagerRequest;
 
-class QTAWS_EXPORT SecretsManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SecretsManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SecretsManagerRequest::Action action; ///< SecretsManager action to be performed.

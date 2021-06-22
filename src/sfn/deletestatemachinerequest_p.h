@@ -28,7 +28,7 @@ namespace SFN {
 
 class DeleteStateMachineRequest;
 
-class QTAWS_EXPORT DeleteStateMachineRequestPrivate : public SfnRequestPrivate {
+class DeleteStateMachineRequestPrivate : public SfnRequestPrivate {
 
 public:
     DeleteStateMachineRequestPrivate(const SfnRequest::Action action,

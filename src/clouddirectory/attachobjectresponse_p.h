@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class AttachObjectResponse;
 
-class QTAWS_EXPORT AttachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
+class AttachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

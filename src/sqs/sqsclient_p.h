@@ -29,7 +29,7 @@ namespace SQS {
 
 class SqsClient;
 
-class QTAWS_EXPORT SqsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SqsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SqsClientPrivate(SqsClient * const q);

@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribePendingMaintenanceActionsRequest;
 
-class QTAWS_EXPORT DescribePendingMaintenanceActionsRequestPrivate : public RdsRequestPrivate {
+class DescribePendingMaintenanceActionsRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribePendingMaintenanceActionsRequestPrivate(const RdsRequest::Action action,

@@ -27,7 +27,7 @@ namespace Appflow {
 
 class AppflowResponse;
 
-class QTAWS_EXPORT AppflowResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppflowResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ReleaseHostsResponse;
 
-class QTAWS_EXPORT ReleaseHostsResponsePrivate : public Ec2ResponsePrivate {
+class ReleaseHostsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

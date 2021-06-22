@@ -27,7 +27,7 @@ namespace mgn {
 
 class StartCutoverResponse;
 
-class QTAWS_EXPORT StartCutoverResponsePrivate : public mgnResponsePrivate {
+class StartCutoverResponsePrivate : public mgnResponsePrivate {
 
 public:
 

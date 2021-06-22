@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteGcmChannelResponse;
 
-class QTAWS_EXPORT DeleteGcmChannelResponsePrivate : public PinpointResponsePrivate {
+class DeleteGcmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

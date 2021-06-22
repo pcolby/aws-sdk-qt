@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class InviteMembersResponse;
 
-class QTAWS_EXPORT InviteMembersResponsePrivate : public SecurityHubResponsePrivate {
+class InviteMembersResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

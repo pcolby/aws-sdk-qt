@@ -28,7 +28,7 @@ namespace Glue {
 
 class PutSchemaVersionMetadataRequest;
 
-class QTAWS_EXPORT PutSchemaVersionMetadataRequestPrivate : public GlueRequestPrivate {
+class PutSchemaVersionMetadataRequestPrivate : public GlueRequestPrivate {
 
 public:
     PutSchemaVersionMetadataRequestPrivate(const GlueRequest::Action action,

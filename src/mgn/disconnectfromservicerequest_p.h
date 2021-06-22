@@ -28,7 +28,7 @@ namespace mgn {
 
 class DisconnectFromServiceRequest;
 
-class QTAWS_EXPORT DisconnectFromServiceRequestPrivate : public mgnRequestPrivate {
+class DisconnectFromServiceRequestPrivate : public mgnRequestPrivate {
 
 public:
     DisconnectFromServiceRequestPrivate(const mgnRequest::Action action,

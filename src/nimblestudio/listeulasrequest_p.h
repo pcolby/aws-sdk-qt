@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class ListEulasRequest;
 
-class QTAWS_EXPORT ListEulasRequestPrivate : public NimbleStudioRequestPrivate {
+class ListEulasRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     ListEulasRequestPrivate(const NimbleStudioRequest::Action action,

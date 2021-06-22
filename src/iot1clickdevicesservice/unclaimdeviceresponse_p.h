@@ -27,7 +27,7 @@ namespace IoT1ClickDevicesService {
 
 class UnclaimDeviceResponse;
 
-class QTAWS_EXPORT UnclaimDeviceResponsePrivate : public IoT1ClickDevicesServiceResponsePrivate {
+class UnclaimDeviceResponsePrivate : public IoT1ClickDevicesServiceResponsePrivate {
 
 public:
 

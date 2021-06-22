@@ -28,7 +28,7 @@ namespace MarketplaceCatalog {
 
 class DescribeEntityRequest;
 
-class QTAWS_EXPORT DescribeEntityRequestPrivate : public MarketplaceCatalogRequestPrivate {
+class DescribeEntityRequestPrivate : public MarketplaceCatalogRequestPrivate {
 
 public:
     DescribeEntityRequestPrivate(const MarketplaceCatalogRequest::Action action,

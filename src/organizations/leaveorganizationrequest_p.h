@@ -28,7 +28,7 @@ namespace Organizations {
 
 class LeaveOrganizationRequest;
 
-class QTAWS_EXPORT LeaveOrganizationRequestPrivate : public OrganizationsRequestPrivate {
+class LeaveOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     LeaveOrganizationRequestPrivate(const OrganizationsRequest::Action action,

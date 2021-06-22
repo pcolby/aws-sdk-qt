@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class GetUtterancesViewResponse;
 
-class QTAWS_EXPORT GetUtterancesViewResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class GetUtterancesViewResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 

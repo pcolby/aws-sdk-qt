@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class UpdateContainerServiceResponse;
 
-class QTAWS_EXPORT UpdateContainerServiceResponsePrivate : public LightsailResponsePrivate {
+class UpdateContainerServiceResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

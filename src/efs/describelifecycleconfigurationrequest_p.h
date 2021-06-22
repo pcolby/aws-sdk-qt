@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeLifecycleConfigurationRequest;
 
-class QTAWS_EXPORT DescribeLifecycleConfigurationRequestPrivate : public EfsRequestPrivate {
+class DescribeLifecycleConfigurationRequestPrivate : public EfsRequestPrivate {
 
 public:
     DescribeLifecycleConfigurationRequestPrivate(const EfsRequest::Action action,

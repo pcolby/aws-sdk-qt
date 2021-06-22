@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class StopPiiEntitiesDetectionJobRequest;
 
-class QTAWS_EXPORT StopPiiEntitiesDetectionJobRequestPrivate : public ComprehendRequestPrivate {
+class StopPiiEntitiesDetectionJobRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     StopPiiEntitiesDetectionJobRequestPrivate(const ComprehendRequest::Action action,

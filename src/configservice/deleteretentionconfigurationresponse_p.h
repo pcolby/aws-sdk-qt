@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteRetentionConfigurationResponse;
 
-class QTAWS_EXPORT DeleteRetentionConfigurationResponsePrivate : public ConfigServiceResponsePrivate {
+class DeleteRetentionConfigurationResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

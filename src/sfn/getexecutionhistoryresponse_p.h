@@ -27,7 +27,7 @@ namespace SFN {
 
 class GetExecutionHistoryResponse;
 
-class QTAWS_EXPORT GetExecutionHistoryResponsePrivate : public SfnResponsePrivate {
+class GetExecutionHistoryResponsePrivate : public SfnResponsePrivate {
 
 public:
 

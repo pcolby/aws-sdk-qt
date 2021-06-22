@@ -28,7 +28,7 @@ namespace Organizations {
 
 class InviteAccountToOrganizationRequest;
 
-class QTAWS_EXPORT InviteAccountToOrganizationRequestPrivate : public OrganizationsRequestPrivate {
+class InviteAccountToOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     InviteAccountToOrganizationRequestPrivate(const OrganizationsRequest::Action action,

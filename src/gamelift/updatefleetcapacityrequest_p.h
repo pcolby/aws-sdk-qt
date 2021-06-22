@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateFleetCapacityRequest;
 
-class QTAWS_EXPORT UpdateFleetCapacityRequestPrivate : public GameLiftRequestPrivate {
+class UpdateFleetCapacityRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateFleetCapacityRequestPrivate(const GameLiftRequest::Action action,

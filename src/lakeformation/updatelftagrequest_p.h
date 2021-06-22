@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class UpdateLFTagRequest;
 
-class QTAWS_EXPORT UpdateLFTagRequestPrivate : public LakeFormationRequestPrivate {
+class UpdateLFTagRequestPrivate : public LakeFormationRequestPrivate {
 
 public:
     UpdateLFTagRequestPrivate(const LakeFormationRequest::Action action,

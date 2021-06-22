@@ -27,7 +27,7 @@ namespace SWF {
 
 class DeprecateActivityTypeResponse;
 
-class QTAWS_EXPORT DeprecateActivityTypeResponsePrivate : public SwfResponsePrivate {
+class DeprecateActivityTypeResponsePrivate : public SwfResponsePrivate {
 
 public:
 

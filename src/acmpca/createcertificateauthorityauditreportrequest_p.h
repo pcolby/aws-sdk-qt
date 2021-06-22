@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class CreateCertificateAuthorityAuditReportRequest;
 
-class QTAWS_EXPORT CreateCertificateAuthorityAuditReportRequestPrivate : public AcmpcaRequestPrivate {
+class CreateCertificateAuthorityAuditReportRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
     CreateCertificateAuthorityAuditReportRequestPrivate(const AcmpcaRequest::Action action,

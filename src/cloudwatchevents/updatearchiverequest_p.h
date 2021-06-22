@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class UpdateArchiveRequest;
 
-class QTAWS_EXPORT UpdateArchiveRequestPrivate : public CloudWatchEventsRequestPrivate {
+class UpdateArchiveRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     UpdateArchiveRequestPrivate(const CloudWatchEventsRequest::Action action,

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeliverConfigSnapshotResponse;
 
-class QTAWS_EXPORT DeliverConfigSnapshotResponsePrivate : public ConfigServiceResponsePrivate {
+class DeliverConfigSnapshotResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

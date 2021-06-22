@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class CreateApplicationResponse;
 
-class QTAWS_EXPORT CreateApplicationResponsePrivate : public CodeDeployResponsePrivate {
+class CreateApplicationResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class BatchDeleteRecipeVersionRequest;
 
-class QTAWS_EXPORT BatchDeleteRecipeVersionRequestPrivate : public GlueDataBrewRequestPrivate {
+class BatchDeleteRecipeVersionRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     BatchDeleteRecipeVersionRequestPrivate(const GlueDataBrewRequest::Action action,

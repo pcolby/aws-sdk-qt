@@ -28,7 +28,7 @@ namespace Chime {
 
 class BatchCreateChannelMembershipRequest;
 
-class QTAWS_EXPORT BatchCreateChannelMembershipRequestPrivate : public ChimeRequestPrivate {
+class BatchCreateChannelMembershipRequestPrivate : public ChimeRequestPrivate {
 
 public:
     BatchCreateChannelMembershipRequestPrivate(const ChimeRequest::Action action,

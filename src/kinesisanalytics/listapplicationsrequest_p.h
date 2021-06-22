@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class ListApplicationsRequest;
 
-class QTAWS_EXPORT ListApplicationsRequestPrivate : public KinesisAnalyticsRequestPrivate {
+class ListApplicationsRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     ListApplicationsRequestPrivate(const KinesisAnalyticsRequest::Action action,

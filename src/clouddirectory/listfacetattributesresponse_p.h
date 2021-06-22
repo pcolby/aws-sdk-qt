@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListFacetAttributesResponse;
 
-class QTAWS_EXPORT ListFacetAttributesResponsePrivate : public CloudDirectoryResponsePrivate {
+class ListFacetAttributesResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

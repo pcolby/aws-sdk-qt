@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public NimbleStudioRequestPrivate {
+class ListTagsForResourceRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const NimbleStudioRequest::Action action,

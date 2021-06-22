@@ -27,7 +27,7 @@ namespace Personalize {
 
 class PersonalizeResponse;
 
-class QTAWS_EXPORT PersonalizeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PersonalizeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

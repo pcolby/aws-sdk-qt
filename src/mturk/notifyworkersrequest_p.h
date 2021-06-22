@@ -28,7 +28,7 @@ namespace MTurk {
 
 class NotifyWorkersRequest;
 
-class QTAWS_EXPORT NotifyWorkersRequestPrivate : public MTurkRequestPrivate {
+class NotifyWorkersRequestPrivate : public MTurkRequestPrivate {
 
 public:
     NotifyWorkersRequestPrivate(const MTurkRequest::Action action,

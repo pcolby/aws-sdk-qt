@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class DeleteDeploymentRequest;
 
-class QTAWS_EXPORT DeleteDeploymentRequestPrivate : public ApiGatewayV2RequestPrivate {
+class DeleteDeploymentRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     DeleteDeploymentRequestPrivate(const ApiGatewayV2Request::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetConsoleScreenshotRequest;
 
-class QTAWS_EXPORT GetConsoleScreenshotRequestPrivate : public Ec2RequestPrivate {
+class GetConsoleScreenshotRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetConsoleScreenshotRequestPrivate(const Ec2Request::Action action,

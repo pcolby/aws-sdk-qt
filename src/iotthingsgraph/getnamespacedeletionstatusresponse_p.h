@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class GetNamespaceDeletionStatusResponse;
 
-class QTAWS_EXPORT GetNamespaceDeletionStatusResponsePrivate : public IoTThingsGraphResponsePrivate {
+class GetNamespaceDeletionStatusResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

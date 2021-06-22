@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetDeployablePatchSnapshotForInstanceRequest;
 
-class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceRequestPrivate : public SsmRequestPrivate {
+class GetDeployablePatchSnapshotForInstanceRequestPrivate : public SsmRequestPrivate {
 
 public:
     GetDeployablePatchSnapshotForInstanceRequestPrivate(const SsmRequest::Action action,

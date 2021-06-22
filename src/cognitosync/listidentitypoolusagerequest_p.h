@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class ListIdentityPoolUsageRequest;
 
-class QTAWS_EXPORT ListIdentityPoolUsageRequestPrivate : public CognitoSyncRequestPrivate {
+class ListIdentityPoolUsageRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     ListIdentityPoolUsageRequestPrivate(const CognitoSyncRequest::Action action,

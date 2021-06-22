@@ -29,7 +29,7 @@ namespace QuickSight {
 
 class QuickSightClient;
 
-class QTAWS_EXPORT QuickSightClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class QuickSightClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     QuickSightClientPrivate(QuickSightClient * const q);

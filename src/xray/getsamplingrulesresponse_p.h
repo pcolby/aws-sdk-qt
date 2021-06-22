@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetSamplingRulesResponse;
 
-class QTAWS_EXPORT GetSamplingRulesResponsePrivate : public XRayResponsePrivate {
+class GetSamplingRulesResponsePrivate : public XRayResponsePrivate {
 
 public:
 

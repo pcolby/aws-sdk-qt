@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ImportClientVpnClientCertificateRevocationListResponse;
 
-class QTAWS_EXPORT ImportClientVpnClientCertificateRevocationListResponsePrivate : public Ec2ResponsePrivate {
+class ImportClientVpnClientCertificateRevocationListResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

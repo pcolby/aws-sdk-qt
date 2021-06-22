@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class StopBuildRequest;
 
-class QTAWS_EXPORT StopBuildRequestPrivate : public CodeBuildRequestPrivate {
+class StopBuildRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     StopBuildRequestPrivate(const CodeBuildRequest::Action action,

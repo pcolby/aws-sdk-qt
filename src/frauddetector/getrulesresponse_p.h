@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetRulesResponse;
 
-class QTAWS_EXPORT GetRulesResponsePrivate : public FraudDetectorResponsePrivate {
+class GetRulesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public NetworkManagerRequestPrivate {
+class UntagResourceRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const NetworkManagerRequest::Action action,

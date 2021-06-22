@@ -28,7 +28,7 @@ namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceRequest;
 
-class QTAWS_EXPORT TranscribeStreamingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TranscribeStreamingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TranscribeStreamingServiceRequest::Action action; ///< TranscribeStreamingService action to be performed.

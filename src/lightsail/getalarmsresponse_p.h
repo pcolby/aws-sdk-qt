@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetAlarmsResponse;
 
-class QTAWS_EXPORT GetAlarmsResponsePrivate : public LightsailResponsePrivate {
+class GetAlarmsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

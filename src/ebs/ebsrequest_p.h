@@ -28,7 +28,7 @@ namespace EBS {
 
 class EbsRequest;
 
-class QTAWS_EXPORT EbsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EbsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EbsRequest::Action action; ///< EBS action to be performed.

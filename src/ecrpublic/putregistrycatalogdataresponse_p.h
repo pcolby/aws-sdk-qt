@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class PutRegistryCatalogDataResponse;
 
-class QTAWS_EXPORT PutRegistryCatalogDataResponsePrivate : public ECRPublicResponsePrivate {
+class PutRegistryCatalogDataResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 

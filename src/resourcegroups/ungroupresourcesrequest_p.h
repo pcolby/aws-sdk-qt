@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class UngroupResourcesRequest;
 
-class QTAWS_EXPORT UngroupResourcesRequestPrivate : public ResourceGroupsRequestPrivate {
+class UngroupResourcesRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     UngroupResourcesRequestPrivate(const ResourceGroupsRequest::Action action,

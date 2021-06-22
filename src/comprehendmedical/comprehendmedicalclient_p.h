@@ -29,7 +29,7 @@ namespace ComprehendMedical {
 
 class ComprehendMedicalClient;
 
-class QTAWS_EXPORT ComprehendMedicalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ComprehendMedicalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ComprehendMedicalClientPrivate(ComprehendMedicalClient * const q);

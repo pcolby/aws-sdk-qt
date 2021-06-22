@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DeleteTapePoolResponse;
 
-class QTAWS_EXPORT DeleteTapePoolResponsePrivate : public StorageGatewayResponsePrivate {
+class DeleteTapePoolResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

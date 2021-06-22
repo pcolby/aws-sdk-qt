@@ -27,7 +27,7 @@ namespace Appflow {
 
 class UpdateFlowResponse;
 
-class QTAWS_EXPORT UpdateFlowResponsePrivate : public AppflowResponsePrivate {
+class UpdateFlowResponsePrivate : public AppflowResponsePrivate {
 
 public:
 

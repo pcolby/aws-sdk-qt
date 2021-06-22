@@ -28,7 +28,7 @@ namespace Appflow {
 
 class AppflowRequest;
 
-class QTAWS_EXPORT AppflowRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppflowRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppflowRequest::Action action; ///< Appflow action to be performed.

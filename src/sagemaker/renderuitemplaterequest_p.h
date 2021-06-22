@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class RenderUiTemplateRequest;
 
-class QTAWS_EXPORT RenderUiTemplateRequestPrivate : public SageMakerRequestPrivate {
+class RenderUiTemplateRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     RenderUiTemplateRequestPrivate(const SageMakerRequest::Action action,

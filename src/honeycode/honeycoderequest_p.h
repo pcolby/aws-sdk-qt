@@ -28,7 +28,7 @@ namespace Honeycode {
 
 class HoneycodeRequest;
 
-class QTAWS_EXPORT HoneycodeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class HoneycodeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     HoneycodeRequest::Action action; ///< Honeycode action to be performed.

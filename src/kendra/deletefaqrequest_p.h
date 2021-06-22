@@ -28,7 +28,7 @@ namespace kendra {
 
 class DeleteFaqRequest;
 
-class QTAWS_EXPORT DeleteFaqRequestPrivate : public kendraRequestPrivate {
+class DeleteFaqRequestPrivate : public kendraRequestPrivate {
 
 public:
     DeleteFaqRequestPrivate(const kendraRequest::Action action,

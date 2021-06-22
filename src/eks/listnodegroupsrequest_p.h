@@ -28,7 +28,7 @@ namespace EKS {
 
 class ListNodegroupsRequest;
 
-class QTAWS_EXPORT ListNodegroupsRequestPrivate : public EksRequestPrivate {
+class ListNodegroupsRequestPrivate : public EksRequestPrivate {
 
 public:
     ListNodegroupsRequestPrivate(const EksRequest::Action action,

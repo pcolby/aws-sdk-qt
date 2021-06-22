@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteFlowLogsRequest;
 
-class QTAWS_EXPORT DeleteFlowLogsRequestPrivate : public Ec2RequestPrivate {
+class DeleteFlowLogsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteFlowLogsRequestPrivate(const Ec2Request::Action action,

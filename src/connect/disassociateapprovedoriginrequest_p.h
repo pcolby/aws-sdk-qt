@@ -28,7 +28,7 @@ namespace Connect {
 
 class DisassociateApprovedOriginRequest;
 
-class QTAWS_EXPORT DisassociateApprovedOriginRequestPrivate : public ConnectRequestPrivate {
+class DisassociateApprovedOriginRequestPrivate : public ConnectRequestPrivate {
 
 public:
     DisassociateApprovedOriginRequestPrivate(const ConnectRequest::Action action,

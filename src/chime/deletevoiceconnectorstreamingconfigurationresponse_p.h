@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteVoiceConnectorStreamingConfigurationResponse;
 
-class QTAWS_EXPORT DeleteVoiceConnectorStreamingConfigurationResponsePrivate : public ChimeResponsePrivate {
+class DeleteVoiceConnectorStreamingConfigurationResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

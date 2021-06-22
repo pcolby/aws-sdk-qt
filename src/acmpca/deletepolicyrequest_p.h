@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class DeletePolicyRequest;
 
-class QTAWS_EXPORT DeletePolicyRequestPrivate : public AcmpcaRequestPrivate {
+class DeletePolicyRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
     DeletePolicyRequestPrivate(const AcmpcaRequest::Action action,

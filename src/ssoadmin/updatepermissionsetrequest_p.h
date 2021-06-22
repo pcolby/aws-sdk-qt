@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class UpdatePermissionSetRequest;
 
-class QTAWS_EXPORT UpdatePermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class UpdatePermissionSetRequestPrivate : public SSOAdminRequestPrivate {
 
 public:
     UpdatePermissionSetRequestPrivate(const SSOAdminRequest::Action action,

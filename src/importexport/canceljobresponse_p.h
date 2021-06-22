@@ -27,7 +27,7 @@ namespace ImportExport {
 
 class CancelJobResponse;
 
-class QTAWS_EXPORT CancelJobResponsePrivate : public ImportExportResponsePrivate {
+class CancelJobResponsePrivate : public ImportExportResponsePrivate {
 
 public:
 

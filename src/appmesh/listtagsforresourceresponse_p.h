@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public AppMeshResponsePrivate {
+class ListTagsForResourceResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 

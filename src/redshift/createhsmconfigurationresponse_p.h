@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateHsmConfigurationResponse;
 
-class QTAWS_EXPORT CreateHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
+class CreateHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

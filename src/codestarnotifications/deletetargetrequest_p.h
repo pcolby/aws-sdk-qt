@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class DeleteTargetRequest;
 
-class QTAWS_EXPORT DeleteTargetRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class DeleteTargetRequestPrivate : public CodeStarNotificationsRequestPrivate {
 
 public:
     DeleteTargetRequestPrivate(const CodeStarNotificationsRequest::Action action,

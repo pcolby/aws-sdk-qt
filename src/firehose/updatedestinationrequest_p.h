@@ -28,7 +28,7 @@ namespace Firehose {
 
 class UpdateDestinationRequest;
 
-class QTAWS_EXPORT UpdateDestinationRequestPrivate : public FirehoseRequestPrivate {
+class UpdateDestinationRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     UpdateDestinationRequestPrivate(const FirehoseRequest::Action action,

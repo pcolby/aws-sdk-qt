@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class WorkMailResponse;
 
-class QTAWS_EXPORT WorkMailResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class WorkMailResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

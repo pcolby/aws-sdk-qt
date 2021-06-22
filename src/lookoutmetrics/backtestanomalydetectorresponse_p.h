@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class BackTestAnomalyDetectorResponse;
 
-class QTAWS_EXPORT BackTestAnomalyDetectorResponsePrivate : public LookoutMetricsResponsePrivate {
+class BackTestAnomalyDetectorResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateManagedInstanceRoleRequest;
 
-class QTAWS_EXPORT UpdateManagedInstanceRoleRequestPrivate : public SsmRequestPrivate {
+class UpdateManagedInstanceRoleRequestPrivate : public SsmRequestPrivate {
 
 public:
     UpdateManagedInstanceRoleRequestPrivate(const SsmRequest::Action action,

@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class GetCertificateResponse;
 
-class QTAWS_EXPORT GetCertificateResponsePrivate : public AcmpcaResponsePrivate {
+class GetCertificateResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 

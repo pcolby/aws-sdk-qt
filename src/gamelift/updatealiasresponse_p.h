@@ -27,7 +27,7 @@ namespace GameLift {
 
 class UpdateAliasResponse;
 
-class QTAWS_EXPORT UpdateAliasResponsePrivate : public GameLiftResponsePrivate {
+class UpdateAliasResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

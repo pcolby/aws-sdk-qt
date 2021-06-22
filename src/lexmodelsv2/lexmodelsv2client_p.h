@@ -29,7 +29,7 @@ namespace LexModelsV2 {
 
 class LexModelsV2Client;
 
-class QTAWS_EXPORT LexModelsV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LexModelsV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LexModelsV2ClientPrivate(LexModelsV2Client * const q);

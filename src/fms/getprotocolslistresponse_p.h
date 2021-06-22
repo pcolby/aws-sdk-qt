@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetProtocolsListResponse;
 
-class QTAWS_EXPORT GetProtocolsListResponsePrivate : public FmsResponsePrivate {
+class GetProtocolsListResponsePrivate : public FmsResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeletePublicAccessBlockResponse;
 
-class QTAWS_EXPORT DeletePublicAccessBlockResponsePrivate : public S3ResponsePrivate {
+class DeletePublicAccessBlockResponsePrivate : public S3ResponsePrivate {
 
 public:
 

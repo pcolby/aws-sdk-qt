@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class UpdateServiceRequest;
 
-class QTAWS_EXPORT UpdateServiceRequestPrivate : public AppRunnerRequestPrivate {
+class UpdateServiceRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     UpdateServiceRequestPrivate(const AppRunnerRequest::Action action,

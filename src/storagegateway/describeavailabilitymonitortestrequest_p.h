@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeAvailabilityMonitorTestRequest;
 
-class QTAWS_EXPORT DescribeAvailabilityMonitorTestRequestPrivate : public StorageGatewayRequestPrivate {
+class DescribeAvailabilityMonitorTestRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeAvailabilityMonitorTestRequestPrivate(const StorageGatewayRequest::Action action,

@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public WorkLinkRequestPrivate {
+class ListTagsForResourceRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const WorkLinkRequest::Action action,

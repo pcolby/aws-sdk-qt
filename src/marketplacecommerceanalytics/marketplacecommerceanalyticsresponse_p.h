@@ -27,7 +27,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsResponse;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MarketplaceCommerceAnalyticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

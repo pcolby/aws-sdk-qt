@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class DeleteStreamRequest;
 
-class QTAWS_EXPORT DeleteStreamRequestPrivate : public KinesisRequestPrivate {
+class DeleteStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
     DeleteStreamRequestPrivate(const KinesisRequest::Action action,

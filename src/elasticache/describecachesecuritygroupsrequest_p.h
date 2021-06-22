@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeCacheSecurityGroupsRequest;
 
-class QTAWS_EXPORT DescribeCacheSecurityGroupsRequestPrivate : public ElastiCacheRequestPrivate {
+class DescribeCacheSecurityGroupsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeCacheSecurityGroupsRequestPrivate(const ElastiCacheRequest::Action action,

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public QuickSightRequestPrivate {
+class ListTagsForResourceRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const QuickSightRequest::Action action,

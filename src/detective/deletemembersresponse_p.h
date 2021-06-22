@@ -27,7 +27,7 @@ namespace Detective {
 
 class DeleteMembersResponse;
 
-class QTAWS_EXPORT DeleteMembersResponsePrivate : public DetectiveResponsePrivate {
+class DeleteMembersResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class ListOperationsResponse;
 
-class QTAWS_EXPORT ListOperationsResponsePrivate : public AppRunnerResponsePrivate {
+class ListOperationsResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ApiGatewayManagementApi {
 
 class PostToConnectionRequest;
 
-class QTAWS_EXPORT PostToConnectionRequestPrivate : public ApiGatewayManagementApiRequestPrivate {
+class PostToConnectionRequestPrivate : public ApiGatewayManagementApiRequestPrivate {
 
 public:
     PostToConnectionRequestPrivate(const ApiGatewayManagementApiRequest::Action action,

@@ -28,7 +28,7 @@ namespace Inspector {
 
 class ListFindingsRequest;
 
-class QTAWS_EXPORT ListFindingsRequestPrivate : public InspectorRequestPrivate {
+class ListFindingsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     ListFindingsRequestPrivate(const InspectorRequest::Action action,

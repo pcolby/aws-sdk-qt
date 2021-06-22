@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ReplaceTransitGatewayRouteRequest;
 
-class QTAWS_EXPORT ReplaceTransitGatewayRouteRequestPrivate : public Ec2RequestPrivate {
+class ReplaceTransitGatewayRouteRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ReplaceTransitGatewayRouteRequestPrivate(const Ec2Request::Action action,

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetDistributionMetricDataRequest;
 
-class QTAWS_EXPORT GetDistributionMetricDataRequestPrivate : public LightsailRequestPrivate {
+class GetDistributionMetricDataRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetDistributionMetricDataRequestPrivate(const LightsailRequest::Action action,

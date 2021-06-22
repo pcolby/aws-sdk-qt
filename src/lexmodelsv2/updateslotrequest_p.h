@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class UpdateSlotRequest;
 
-class QTAWS_EXPORT UpdateSlotRequestPrivate : public LexModelsV2RequestPrivate {
+class UpdateSlotRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     UpdateSlotRequestPrivate(const LexModelsV2Request::Action action,

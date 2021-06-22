@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CloseInstancePublicPortsResponse;
 
-class QTAWS_EXPORT CloseInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
+class CloseInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

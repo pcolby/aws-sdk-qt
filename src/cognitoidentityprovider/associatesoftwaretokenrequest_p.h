@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AssociateSoftwareTokenRequest;
 
-class QTAWS_EXPORT AssociateSoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class AssociateSoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AssociateSoftwareTokenRequestPrivate(const CognitoIdentityProviderRequest::Action action,

@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationInputProcessingConfigurationRequest;
 
-class QTAWS_EXPORT DeleteApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsRequestPrivate {
+class DeleteApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     DeleteApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalyticsRequest::Action action,

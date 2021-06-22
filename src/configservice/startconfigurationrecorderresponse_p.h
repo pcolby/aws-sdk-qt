@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class StartConfigurationRecorderResponse;
 
-class QTAWS_EXPORT StartConfigurationRecorderResponsePrivate : public ConfigServiceResponsePrivate {
+class StartConfigurationRecorderResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

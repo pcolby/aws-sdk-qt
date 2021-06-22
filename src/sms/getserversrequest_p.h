@@ -28,7 +28,7 @@ namespace SMS {
 
 class GetServersRequest;
 
-class QTAWS_EXPORT GetServersRequestPrivate : public SmsRequestPrivate {
+class GetServersRequestPrivate : public SmsRequestPrivate {
 
 public:
     GetServersRequestPrivate(const SmsRequest::Action action,

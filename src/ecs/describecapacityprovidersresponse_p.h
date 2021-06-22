@@ -27,7 +27,7 @@ namespace ECS {
 
 class DescribeCapacityProvidersResponse;
 
-class QTAWS_EXPORT DescribeCapacityProvidersResponsePrivate : public EcsResponsePrivate {
+class DescribeCapacityProvidersResponsePrivate : public EcsResponsePrivate {
 
 public:
 

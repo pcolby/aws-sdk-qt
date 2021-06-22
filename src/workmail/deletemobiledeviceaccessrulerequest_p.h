@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DeleteMobileDeviceAccessRuleRequest;
 
-class QTAWS_EXPORT DeleteMobileDeviceAccessRuleRequestPrivate : public WorkMailRequestPrivate {
+class DeleteMobileDeviceAccessRuleRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DeleteMobileDeviceAccessRuleRequestPrivate(const WorkMailRequest::Action action,

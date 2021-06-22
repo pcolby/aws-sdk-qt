@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeReplaceRootVolumeTasksRequest;
 
-class QTAWS_EXPORT DescribeReplaceRootVolumeTasksRequestPrivate : public Ec2RequestPrivate {
+class DescribeReplaceRootVolumeTasksRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeReplaceRootVolumeTasksRequestPrivate(const Ec2Request::Action action,

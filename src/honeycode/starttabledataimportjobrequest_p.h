@@ -28,7 +28,7 @@ namespace Honeycode {
 
 class StartTableDataImportJobRequest;
 
-class QTAWS_EXPORT StartTableDataImportJobRequestPrivate : public HoneycodeRequestPrivate {
+class StartTableDataImportJobRequestPrivate : public HoneycodeRequestPrivate {
 
 public:
     StartTableDataImportJobRequestPrivate(const HoneycodeRequest::Action action,

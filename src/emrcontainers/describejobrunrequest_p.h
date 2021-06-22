@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class DescribeJobRunRequest;
 
-class QTAWS_EXPORT DescribeJobRunRequestPrivate : public EMRContainersRequestPrivate {
+class DescribeJobRunRequestPrivate : public EMRContainersRequestPrivate {
 
 public:
     DescribeJobRunRequestPrivate(const EMRContainersRequest::Action action,

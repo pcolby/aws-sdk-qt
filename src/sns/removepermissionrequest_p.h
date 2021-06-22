@@ -28,7 +28,7 @@ namespace SNS {
 
 class RemovePermissionRequest;
 
-class QTAWS_EXPORT RemovePermissionRequestPrivate : public SnsRequestPrivate {
+class RemovePermissionRequestPrivate : public SnsRequestPrivate {
 
 public:
     RemovePermissionRequestPrivate(const SnsRequest::Action action,

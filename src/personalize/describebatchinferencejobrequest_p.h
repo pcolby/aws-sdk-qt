@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DescribeBatchInferenceJobRequest;
 
-class QTAWS_EXPORT DescribeBatchInferenceJobRequestPrivate : public PersonalizeRequestPrivate {
+class DescribeBatchInferenceJobRequestPrivate : public PersonalizeRequestPrivate {
 
 public:
     DescribeBatchInferenceJobRequestPrivate(const PersonalizeRequest::Action action,

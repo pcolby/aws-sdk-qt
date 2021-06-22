@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeMaintenanceStartTimeResponse;
 
-class QTAWS_EXPORT DescribeMaintenanceStartTimeResponsePrivate : public StorageGatewayResponsePrivate {
+class DescribeMaintenanceStartTimeResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Glacier {
 
 class DescribeJobResponse;
 
-class QTAWS_EXPORT DescribeJobResponsePrivate : public GlacierResponsePrivate {
+class DescribeJobResponsePrivate : public GlacierResponsePrivate {
 
 public:
 

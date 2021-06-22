@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class PutGroupConfigurationRequest;
 
-class QTAWS_EXPORT PutGroupConfigurationRequestPrivate : public ResourceGroupsRequestPrivate {
+class PutGroupConfigurationRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     PutGroupConfigurationRequestPrivate(const ResourceGroupsRequest::Action action,

@@ -28,7 +28,7 @@ namespace KMS {
 
 class CreateKeyRequest;
 
-class QTAWS_EXPORT CreateKeyRequestPrivate : public KmsRequestPrivate {
+class CreateKeyRequestPrivate : public KmsRequestPrivate {
 
 public:
     CreateKeyRequestPrivate(const KmsRequest::Action action,

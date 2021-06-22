@@ -28,7 +28,7 @@ namespace ECR {
 
 class DescribeImageScanFindingsRequest;
 
-class QTAWS_EXPORT DescribeImageScanFindingsRequestPrivate : public EcrRequestPrivate {
+class DescribeImageScanFindingsRequestPrivate : public EcrRequestPrivate {
 
 public:
     DescribeImageScanFindingsRequestPrivate(const EcrRequest::Action action,

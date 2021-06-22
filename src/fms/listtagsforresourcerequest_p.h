@@ -28,7 +28,7 @@ namespace FMS {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public FmsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public FmsRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const FmsRequest::Action action,

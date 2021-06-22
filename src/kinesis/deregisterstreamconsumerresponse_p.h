@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class DeregisterStreamConsumerResponse;
 
-class QTAWS_EXPORT DeregisterStreamConsumerResponsePrivate : public KinesisResponsePrivate {
+class DeregisterStreamConsumerResponsePrivate : public KinesisResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Detective {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public DetectiveResponsePrivate {
+class TagResourceResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 

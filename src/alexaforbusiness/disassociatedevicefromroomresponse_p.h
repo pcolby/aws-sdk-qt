@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class DisassociateDeviceFromRoomResponse;
 
-class QTAWS_EXPORT DisassociateDeviceFromRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+class DisassociateDeviceFromRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

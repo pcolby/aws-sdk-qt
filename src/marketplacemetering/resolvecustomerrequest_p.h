@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class ResolveCustomerRequest;
 
-class QTAWS_EXPORT ResolveCustomerRequestPrivate : public MarketplaceMeteringRequestPrivate {
+class ResolveCustomerRequestPrivate : public MarketplaceMeteringRequestPrivate {
 
 public:
     ResolveCustomerRequestPrivate(const MarketplaceMeteringRequest::Action action,

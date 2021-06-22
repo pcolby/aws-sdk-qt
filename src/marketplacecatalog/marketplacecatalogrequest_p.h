@@ -28,7 +28,7 @@ namespace MarketplaceCatalog {
 
 class MarketplaceCatalogRequest;
 
-class QTAWS_EXPORT MarketplaceCatalogRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MarketplaceCatalogRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MarketplaceCatalogRequest::Action action; ///< MarketplaceCatalog action to be performed.

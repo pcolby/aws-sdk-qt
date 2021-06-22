@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class UpdateDomainNameserversRequest;
 
-class QTAWS_EXPORT UpdateDomainNameserversRequestPrivate : public Route53DomainsRequestPrivate {
+class UpdateDomainNameserversRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     UpdateDomainNameserversRequestPrivate(const Route53DomainsRequest::Action action,

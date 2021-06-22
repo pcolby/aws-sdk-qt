@@ -27,7 +27,7 @@ namespace SSM {
 
 class ListAssociationsResponse;
 
-class QTAWS_EXPORT ListAssociationsResponsePrivate : public SsmResponsePrivate {
+class ListAssociationsResponsePrivate : public SsmResponsePrivate {
 
 public:
 

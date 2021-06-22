@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DescribeStandardsControlsRequest;
 
-class QTAWS_EXPORT DescribeStandardsControlsRequestPrivate : public SecurityHubRequestPrivate {
+class DescribeStandardsControlsRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     DescribeStandardsControlsRequestPrivate(const SecurityHubRequest::Action action,

@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeComplianceByConfigRuleRequest;
 
-class QTAWS_EXPORT DescribeComplianceByConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
+class DescribeComplianceByConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeComplianceByConfigRuleRequestPrivate(const ConfigServiceRequest::Action action,

@@ -27,7 +27,7 @@ namespace IAM {
 
 class CreateRoleResponse;
 
-class QTAWS_EXPORT CreateRoleResponsePrivate : public IamResponsePrivate {
+class CreateRoleResponsePrivate : public IamResponsePrivate {
 
 public:
 

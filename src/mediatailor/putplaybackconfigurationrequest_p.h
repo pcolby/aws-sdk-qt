@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class PutPlaybackConfigurationRequest;
 
-class QTAWS_EXPORT PutPlaybackConfigurationRequestPrivate : public MediaTailorRequestPrivate {
+class PutPlaybackConfigurationRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     PutPlaybackConfigurationRequestPrivate(const MediaTailorRequest::Action action,

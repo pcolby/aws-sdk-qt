@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class CreateDatasetGroupResponse;
 
-class QTAWS_EXPORT CreateDatasetGroupResponsePrivate : public ForecastServiceResponsePrivate {
+class CreateDatasetGroupResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 

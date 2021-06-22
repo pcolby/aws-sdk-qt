@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class DeleteRepositoryRequest;
 
-class QTAWS_EXPORT DeleteRepositoryRequestPrivate : public CodeArtifactRequestPrivate {
+class DeleteRepositoryRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     DeleteRepositoryRequestPrivate(const CodeArtifactRequest::Action action,

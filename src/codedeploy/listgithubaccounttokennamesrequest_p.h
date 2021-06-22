@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ListGitHubAccountTokenNamesRequest;
 
-class QTAWS_EXPORT ListGitHubAccountTokenNamesRequestPrivate : public CodeDeployRequestPrivate {
+class ListGitHubAccountTokenNamesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     ListGitHubAccountTokenNamesRequestPrivate(const CodeDeployRequest::Action action,

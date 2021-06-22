@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteNetworkAclEntryResponse;
 
-class QTAWS_EXPORT DeleteNetworkAclEntryResponsePrivate : public Ec2ResponsePrivate {
+class DeleteNetworkAclEntryResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

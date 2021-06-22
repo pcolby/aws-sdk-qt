@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class UpdateRecordsRequest;
 
-class QTAWS_EXPORT UpdateRecordsRequestPrivate : public CognitoSyncRequestPrivate {
+class UpdateRecordsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     UpdateRecordsRequestPrivate(const CognitoSyncRequest::Action action,

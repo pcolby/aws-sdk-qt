@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DeleteResourceServerRequest;
 
-class QTAWS_EXPORT DeleteResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class DeleteResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DeleteResourceServerRequestPrivate(const CognitoIdentityProviderRequest::Action action,

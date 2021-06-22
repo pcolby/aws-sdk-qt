@@ -27,7 +27,7 @@ namespace LexRuntimeService {
 
 class DeleteSessionResponse;
 
-class QTAWS_EXPORT DeleteSessionResponsePrivate : public LexRuntimeServiceResponsePrivate {
+class DeleteSessionResponsePrivate : public LexRuntimeServiceResponsePrivate {
 
 public:
 

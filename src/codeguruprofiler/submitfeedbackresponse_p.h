@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class SubmitFeedbackResponse;
 
-class QTAWS_EXPORT SubmitFeedbackResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class SubmitFeedbackResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

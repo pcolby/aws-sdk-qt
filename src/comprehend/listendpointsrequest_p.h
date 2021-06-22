@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class ListEndpointsRequest;
 
-class QTAWS_EXPORT ListEndpointsRequestPrivate : public ComprehendRequestPrivate {
+class ListEndpointsRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     ListEndpointsRequestPrivate(const ComprehendRequest::Action action,

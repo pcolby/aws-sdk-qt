@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeleteApiDestinationRequest;
 
-class QTAWS_EXPORT DeleteApiDestinationRequestPrivate : public EventBridgeRequestPrivate {
+class DeleteApiDestinationRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DeleteApiDestinationRequestPrivate(const EventBridgeRequest::Action action,

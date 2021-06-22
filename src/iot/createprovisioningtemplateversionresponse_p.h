@@ -27,7 +27,7 @@ namespace IoT {
 
 class CreateProvisioningTemplateVersionResponse;
 
-class QTAWS_EXPORT CreateProvisioningTemplateVersionResponsePrivate : public IoTResponsePrivate {
+class CreateProvisioningTemplateVersionResponsePrivate : public IoTResponsePrivate {
 
 public:
 

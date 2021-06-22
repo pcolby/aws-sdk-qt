@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SecurityHubRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SecurityHubRequest::Action action,

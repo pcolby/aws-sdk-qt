@@ -27,7 +27,7 @@ namespace Glacier {
 
 class UploadArchiveResponse;
 
-class QTAWS_EXPORT UploadArchiveResponsePrivate : public GlacierResponsePrivate {
+class UploadArchiveResponsePrivate : public GlacierResponsePrivate {
 
 public:
 

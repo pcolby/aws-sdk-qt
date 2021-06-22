@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class ListStreamProcessorsRequest;
 
-class QTAWS_EXPORT ListStreamProcessorsRequestPrivate : public RekognitionRequestPrivate {
+class ListStreamProcessorsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     ListStreamProcessorsRequestPrivate(const RekognitionRequest::Action action,

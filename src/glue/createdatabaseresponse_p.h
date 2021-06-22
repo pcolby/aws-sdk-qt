@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateDatabaseResponse;
 
-class QTAWS_EXPORT CreateDatabaseResponsePrivate : public GlueResponsePrivate {
+class CreateDatabaseResponsePrivate : public GlueResponsePrivate {
 
 public:
 

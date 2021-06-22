@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DeleteTrustRequest;
 
-class QTAWS_EXPORT DeleteTrustRequestPrivate : public DirectoryServiceRequestPrivate {
+class DeleteTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DeleteTrustRequestPrivate(const DirectoryServiceRequest::Action action,

@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeReservationRequest;
 
-class QTAWS_EXPORT DescribeReservationRequestPrivate : public MediaLiveRequestPrivate {
+class DescribeReservationRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DescribeReservationRequestPrivate(const MediaLiveRequest::Action action,

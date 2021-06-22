@@ -28,7 +28,7 @@ namespace EFS {
 
 class CreateFileSystemRequest;
 
-class QTAWS_EXPORT CreateFileSystemRequestPrivate : public EfsRequestPrivate {
+class CreateFileSystemRequestPrivate : public EfsRequestPrivate {
 
 public:
     CreateFileSystemRequestPrivate(const EfsRequest::Action action,

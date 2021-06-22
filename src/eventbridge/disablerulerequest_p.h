@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DisableRuleRequest;
 
-class QTAWS_EXPORT DisableRuleRequestPrivate : public EventBridgeRequestPrivate {
+class DisableRuleRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DisableRuleRequestPrivate(const EventBridgeRequest::Action action,

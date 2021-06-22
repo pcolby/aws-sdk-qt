@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public GlueDataBrewRequestPrivate {
+class UntagResourceRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const GlueDataBrewRequest::Action action,

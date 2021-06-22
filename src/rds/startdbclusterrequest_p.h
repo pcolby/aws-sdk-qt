@@ -28,7 +28,7 @@ namespace RDS {
 
 class StartDBClusterRequest;
 
-class QTAWS_EXPORT StartDBClusterRequestPrivate : public RdsRequestPrivate {
+class StartDBClusterRequestPrivate : public RdsRequestPrivate {
 
 public:
     StartDBClusterRequestPrivate(const RdsRequest::Action action,

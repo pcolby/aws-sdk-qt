@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class ApplicationInsightsRequest;
 
-class QTAWS_EXPORT ApplicationInsightsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApplicationInsightsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApplicationInsightsRequest::Action action; ///< ApplicationInsights action to be performed.

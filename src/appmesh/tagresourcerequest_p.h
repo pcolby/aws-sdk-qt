@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AppMeshRequestPrivate {
+class TagResourceRequestPrivate : public AppMeshRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AppMeshRequest::Action action,

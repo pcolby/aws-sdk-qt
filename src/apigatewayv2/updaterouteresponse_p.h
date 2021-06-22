@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class UpdateRouteResponse;
 
-class QTAWS_EXPORT UpdateRouteResponsePrivate : public ApiGatewayV2ResponsePrivate {
+class UpdateRouteResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 

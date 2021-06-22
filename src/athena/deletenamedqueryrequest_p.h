@@ -28,7 +28,7 @@ namespace Athena {
 
 class DeleteNamedQueryRequest;
 
-class QTAWS_EXPORT DeleteNamedQueryRequestPrivate : public AthenaRequestPrivate {
+class DeleteNamedQueryRequestPrivate : public AthenaRequestPrivate {
 
 public:
     DeleteNamedQueryRequestPrivate(const AthenaRequest::Action action,

@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class LookoutMetricsResponse;
 
-class QTAWS_EXPORT LookoutMetricsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LookoutMetricsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

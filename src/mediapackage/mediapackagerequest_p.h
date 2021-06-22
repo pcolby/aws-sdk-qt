@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class MediaPackageRequest;
 
-class QTAWS_EXPORT MediaPackageRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaPackageRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaPackageRequest::Action action; ///< MediaPackage action to be performed.

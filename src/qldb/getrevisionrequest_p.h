@@ -28,7 +28,7 @@ namespace QLDB {
 
 class GetRevisionRequest;
 
-class QTAWS_EXPORT GetRevisionRequestPrivate : public QldbRequestPrivate {
+class GetRevisionRequestPrivate : public QldbRequestPrivate {
 
 public:
     GetRevisionRequestPrivate(const QldbRequest::Action action,

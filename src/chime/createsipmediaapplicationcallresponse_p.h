@@ -27,7 +27,7 @@ namespace Chime {
 
 class CreateSipMediaApplicationCallResponse;
 
-class QTAWS_EXPORT CreateSipMediaApplicationCallResponsePrivate : public ChimeResponsePrivate {
+class CreateSipMediaApplicationCallResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

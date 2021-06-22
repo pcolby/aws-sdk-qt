@@ -29,7 +29,7 @@ namespace kendra {
 
 class kendraClient;
 
-class QTAWS_EXPORT kendraClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class kendraClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     kendraClientPrivate(kendraClient * const q);

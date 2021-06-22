@@ -27,7 +27,7 @@ namespace QLDB {
 
 class GetDigestResponse;
 
-class QTAWS_EXPORT GetDigestResponsePrivate : public QldbResponsePrivate {
+class GetDigestResponsePrivate : public QldbResponsePrivate {
 
 public:
 

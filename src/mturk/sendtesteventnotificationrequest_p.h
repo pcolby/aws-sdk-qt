@@ -28,7 +28,7 @@ namespace MTurk {
 
 class SendTestEventNotificationRequest;
 
-class QTAWS_EXPORT SendTestEventNotificationRequestPrivate : public MTurkRequestPrivate {
+class SendTestEventNotificationRequestPrivate : public MTurkRequestPrivate {
 
 public:
     SendTestEventNotificationRequestPrivate(const MTurkRequest::Action action,

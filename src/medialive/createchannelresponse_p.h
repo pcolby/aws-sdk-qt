@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class CreateChannelResponse;
 
-class QTAWS_EXPORT CreateChannelResponsePrivate : public MediaLiveResponsePrivate {
+class CreateChannelResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

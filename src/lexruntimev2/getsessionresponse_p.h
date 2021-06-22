@@ -27,7 +27,7 @@ namespace LexRuntimeV2 {
 
 class GetSessionResponse;
 
-class QTAWS_EXPORT GetSessionResponsePrivate : public LexRuntimeV2ResponsePrivate {
+class GetSessionResponsePrivate : public LexRuntimeV2ResponsePrivate {
 
 public:
 

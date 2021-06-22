@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteSSHPublicKeyRequest;
 
-class QTAWS_EXPORT DeleteSSHPublicKeyRequestPrivate : public IamRequestPrivate {
+class DeleteSSHPublicKeyRequestPrivate : public IamRequestPrivate {
 
 public:
     DeleteSSHPublicKeyRequestPrivate(const IamRequest::Action action,

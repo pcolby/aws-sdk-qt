@@ -27,7 +27,7 @@ namespace SFN {
 
 class DescribeActivityResponse;
 
-class QTAWS_EXPORT DescribeActivityResponsePrivate : public SfnResponsePrivate {
+class DescribeActivityResponsePrivate : public SfnResponsePrivate {
 
 public:
 

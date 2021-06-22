@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteConnectionRequest;
 
-class QTAWS_EXPORT DeleteConnectionRequestPrivate : public GlueRequestPrivate {
+class DeleteConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteConnectionRequestPrivate(const GlueRequest::Action action,

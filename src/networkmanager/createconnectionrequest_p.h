@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class CreateConnectionRequest;
 
-class QTAWS_EXPORT CreateConnectionRequestPrivate : public NetworkManagerRequestPrivate {
+class CreateConnectionRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     CreateConnectionRequestPrivate(const NetworkManagerRequest::Action action,

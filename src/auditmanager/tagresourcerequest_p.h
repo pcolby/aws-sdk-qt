@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AuditManagerRequestPrivate {
+class TagResourceRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AuditManagerRequest::Action action,

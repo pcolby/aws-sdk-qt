@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class ListVodSourcesResponse;
 
-class QTAWS_EXPORT ListVodSourcesResponsePrivate : public MediaTailorResponsePrivate {
+class ListVodSourcesResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

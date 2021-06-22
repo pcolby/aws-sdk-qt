@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetJobsRequest;
 
-class QTAWS_EXPORT GetJobsRequestPrivate : public GlueRequestPrivate {
+class GetJobsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetJobsRequestPrivate(const GlueRequest::Action action,

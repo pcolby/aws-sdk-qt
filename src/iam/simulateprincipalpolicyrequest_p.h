@@ -28,7 +28,7 @@ namespace IAM {
 
 class SimulatePrincipalPolicyRequest;
 
-class QTAWS_EXPORT SimulatePrincipalPolicyRequestPrivate : public IamRequestPrivate {
+class SimulatePrincipalPolicyRequestPrivate : public IamRequestPrivate {
 
 public:
     SimulatePrincipalPolicyRequestPrivate(const IamRequest::Action action,

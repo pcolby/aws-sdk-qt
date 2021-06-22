@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteAppInstanceUserResponse;
 
-class QTAWS_EXPORT DeleteAppInstanceUserResponsePrivate : public ChimeResponsePrivate {
+class DeleteAppInstanceUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EFS {
 
 class DeleteFileSystemPolicyResponse;
 
-class QTAWS_EXPORT DeleteFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
+class DeleteFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SWF {
 
 class RespondActivityTaskFailedRequest;
 
-class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SwfRequestPrivate {
+class RespondActivityTaskFailedRequestPrivate : public SwfRequestPrivate {
 
 public:
     RespondActivityTaskFailedRequestPrivate(const SwfRequest::Action action,

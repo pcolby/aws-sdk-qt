@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class RoboMakerResponse;
 
-class QTAWS_EXPORT RoboMakerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class RoboMakerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

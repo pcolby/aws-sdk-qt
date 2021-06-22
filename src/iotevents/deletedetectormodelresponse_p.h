@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class DeleteDetectorModelResponse;
 
-class QTAWS_EXPORT DeleteDetectorModelResponsePrivate : public IoTEventsResponsePrivate {
+class DeleteDetectorModelResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 

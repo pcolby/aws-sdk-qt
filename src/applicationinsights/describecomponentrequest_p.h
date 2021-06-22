@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class DescribeComponentRequest;
 
-class QTAWS_EXPORT DescribeComponentRequestPrivate : public ApplicationInsightsRequestPrivate {
+class DescribeComponentRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     DescribeComponentRequestPrivate(const ApplicationInsightsRequest::Action action,

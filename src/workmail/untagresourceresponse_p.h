@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public WorkMailResponsePrivate {
+class UntagResourceResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

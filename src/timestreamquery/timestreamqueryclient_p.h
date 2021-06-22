@@ -29,7 +29,7 @@ namespace TimestreamQuery {
 
 class TimestreamQueryClient;
 
-class QTAWS_EXPORT TimestreamQueryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TimestreamQueryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     TimestreamQueryClientPrivate(TimestreamQueryClient * const q);

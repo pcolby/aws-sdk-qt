@@ -29,7 +29,7 @@ namespace LexRuntimeV2 {
 
 class LexRuntimeV2Client;
 
-class QTAWS_EXPORT LexRuntimeV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LexRuntimeV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LexRuntimeV2ClientPrivate(LexRuntimeV2Client * const q);

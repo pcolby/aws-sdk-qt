@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeVpcPeeringAuthorizationsRequest;
 
-class QTAWS_EXPORT DescribeVpcPeeringAuthorizationsRequestPrivate : public GameLiftRequestPrivate {
+class DescribeVpcPeeringAuthorizationsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeVpcPeeringAuthorizationsRequestPrivate(const GameLiftRequest::Action action,

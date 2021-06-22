@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public RedshiftRequestPrivate {
+class DeleteTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const RedshiftRequest::Action action,

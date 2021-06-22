@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class DeleteMissionProfileRequest;
 
-class QTAWS_EXPORT DeleteMissionProfileRequestPrivate : public GroundStationRequestPrivate {
+class DeleteMissionProfileRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     DeleteMissionProfileRequestPrivate(const GroundStationRequest::Action action,

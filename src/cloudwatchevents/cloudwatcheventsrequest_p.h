@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class CloudWatchEventsRequest;
 
-class QTAWS_EXPORT CloudWatchEventsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudWatchEventsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudWatchEventsRequest::Action action; ///< CloudWatchEvents action to be performed.

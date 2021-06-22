@@ -27,7 +27,7 @@ namespace Neptune {
 
 class NeptuneResponse;
 
-class QTAWS_EXPORT NeptuneResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class NeptuneResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DetectProtectiveEquipmentRequest;
 
-class QTAWS_EXPORT DetectProtectiveEquipmentRequestPrivate : public RekognitionRequestPrivate {
+class DetectProtectiveEquipmentRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DetectProtectiveEquipmentRequestPrivate(const RekognitionRequest::Action action,

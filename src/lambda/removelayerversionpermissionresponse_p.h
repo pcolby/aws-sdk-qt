@@ -27,7 +27,7 @@ namespace Lambda {
 
 class RemoveLayerVersionPermissionResponse;
 
-class QTAWS_EXPORT RemoveLayerVersionPermissionResponsePrivate : public LambdaResponsePrivate {
+class RemoveLayerVersionPermissionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

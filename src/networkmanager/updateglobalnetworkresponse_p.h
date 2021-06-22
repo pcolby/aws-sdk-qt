@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class UpdateGlobalNetworkResponse;
 
-class QTAWS_EXPORT UpdateGlobalNetworkResponsePrivate : public NetworkManagerResponsePrivate {
+class UpdateGlobalNetworkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 

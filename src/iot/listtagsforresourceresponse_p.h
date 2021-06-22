@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public IoTResponsePrivate {
+class ListTagsForResourceResponsePrivate : public IoTResponsePrivate {
 
 public:
 

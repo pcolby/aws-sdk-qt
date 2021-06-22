@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class ListRealtimeLogConfigsResponse;
 
-class QTAWS_EXPORT ListRealtimeLogConfigsResponsePrivate : public CloudFrontResponsePrivate {
+class ListRealtimeLogConfigsResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

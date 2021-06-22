@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class PutPermissionRequest;
 
-class QTAWS_EXPORT PutPermissionRequestPrivate : public CloudWatchEventsRequestPrivate {
+class PutPermissionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     PutPermissionRequestPrivate(const CloudWatchEventsRequest::Action action,

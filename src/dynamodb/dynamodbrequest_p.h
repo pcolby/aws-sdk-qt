@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DynamoDBRequest;
 
-class QTAWS_EXPORT DynamoDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DynamoDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DynamoDBRequest::Action action; ///< DynamoDB action to be performed.

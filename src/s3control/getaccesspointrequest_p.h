@@ -28,7 +28,7 @@ namespace S3Control {
 
 class GetAccessPointRequest;
 
-class QTAWS_EXPORT GetAccessPointRequestPrivate : public S3ControlRequestPrivate {
+class GetAccessPointRequestPrivate : public S3ControlRequestPrivate {
 
 public:
     GetAccessPointRequestPrivate(const S3ControlRequest::Action action,

@@ -28,7 +28,7 @@ namespace ECS {
 
 class DescribeCapacityProvidersRequest;
 
-class QTAWS_EXPORT DescribeCapacityProvidersRequestPrivate : public EcsRequestPrivate {
+class DescribeCapacityProvidersRequestPrivate : public EcsRequestPrivate {
 
 public:
     DescribeCapacityProvidersRequestPrivate(const EcsRequest::Action action,

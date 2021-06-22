@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ResetUserPasswordResponse;
 
-class QTAWS_EXPORT ResetUserPasswordResponsePrivate : public DirectoryServiceResponsePrivate {
+class ResetUserPasswordResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

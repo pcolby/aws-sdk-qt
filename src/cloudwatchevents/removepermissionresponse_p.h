@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class RemovePermissionResponse;
 
-class QTAWS_EXPORT RemovePermissionResponsePrivate : public CloudWatchEventsResponsePrivate {
+class RemovePermissionResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

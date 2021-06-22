@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeSessionsRequest;
 
-class QTAWS_EXPORT DescribeSessionsRequestPrivate : public SsmRequestPrivate {
+class DescribeSessionsRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeSessionsRequestPrivate(const SsmRequest::Action action,

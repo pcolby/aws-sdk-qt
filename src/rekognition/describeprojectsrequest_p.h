@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DescribeProjectsRequest;
 
-class QTAWS_EXPORT DescribeProjectsRequestPrivate : public RekognitionRequestPrivate {
+class DescribeProjectsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DescribeProjectsRequestPrivate(const RekognitionRequest::Action action,

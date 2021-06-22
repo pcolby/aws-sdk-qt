@@ -28,7 +28,7 @@ namespace FMS {
 
 class DeletePolicyRequest;
 
-class QTAWS_EXPORT DeletePolicyRequestPrivate : public FmsRequestPrivate {
+class DeletePolicyRequestPrivate : public FmsRequestPrivate {
 
 public:
     DeletePolicyRequestPrivate(const FmsRequest::Action action,

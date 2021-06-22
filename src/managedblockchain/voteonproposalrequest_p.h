@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class VoteOnProposalRequest;
 
-class QTAWS_EXPORT VoteOnProposalRequestPrivate : public ManagedBlockchainRequestPrivate {
+class VoteOnProposalRequestPrivate : public ManagedBlockchainRequestPrivate {
 
 public:
     VoteOnProposalRequestPrivate(const ManagedBlockchainRequest::Action action,

@@ -29,7 +29,7 @@ namespace AppIntegrationsService {
 
 class AppIntegrationsServiceClient;
 
-class QTAWS_EXPORT AppIntegrationsServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppIntegrationsServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppIntegrationsServiceClientPrivate(AppIntegrationsServiceClient * const q);

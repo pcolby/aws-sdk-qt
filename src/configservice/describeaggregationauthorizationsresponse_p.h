@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DescribeAggregationAuthorizationsResponse;
 
-class QTAWS_EXPORT DescribeAggregationAuthorizationsResponsePrivate : public ConfigServiceResponsePrivate {
+class DescribeAggregationAuthorizationsResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

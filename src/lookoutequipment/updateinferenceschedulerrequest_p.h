@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class UpdateInferenceSchedulerRequest;
 
-class QTAWS_EXPORT UpdateInferenceSchedulerRequestPrivate : public LookoutEquipmentRequestPrivate {
+class UpdateInferenceSchedulerRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     UpdateInferenceSchedulerRequestPrivate(const LookoutEquipmentRequest::Action action,

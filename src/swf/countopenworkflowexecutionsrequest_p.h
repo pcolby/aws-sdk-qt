@@ -28,7 +28,7 @@ namespace SWF {
 
 class CountOpenWorkflowExecutionsRequest;
 
-class QTAWS_EXPORT CountOpenWorkflowExecutionsRequestPrivate : public SwfRequestPrivate {
+class CountOpenWorkflowExecutionsRequestPrivate : public SwfRequestPrivate {
 
 public:
     CountOpenWorkflowExecutionsRequestPrivate(const SwfRequest::Action action,

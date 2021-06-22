@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetProvisionedConcurrencyConfigResponse;
 
-class QTAWS_EXPORT GetProvisionedConcurrencyConfigResponsePrivate : public LambdaResponsePrivate {
+class GetProvisionedConcurrencyConfigResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

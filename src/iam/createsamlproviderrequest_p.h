@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateSAMLProviderRequest;
 
-class QTAWS_EXPORT CreateSAMLProviderRequestPrivate : public IamRequestPrivate {
+class CreateSAMLProviderRequestPrivate : public IamRequestPrivate {
 
 public:
     CreateSAMLProviderRequestPrivate(const IamRequest::Action action,

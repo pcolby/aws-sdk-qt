@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class Sesv2Response;
 
-class QTAWS_EXPORT Sesv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class Sesv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

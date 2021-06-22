@@ -27,7 +27,7 @@ namespace KMS {
 
 class ConnectCustomKeyStoreResponse;
 
-class QTAWS_EXPORT ConnectCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
+class ConnectCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
 
 public:
 

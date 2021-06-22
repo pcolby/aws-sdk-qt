@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopHyperParameterTuningJobResponse;
 
-class QTAWS_EXPORT StopHyperParameterTuningJobResponsePrivate : public SageMakerResponsePrivate {
+class StopHyperParameterTuningJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

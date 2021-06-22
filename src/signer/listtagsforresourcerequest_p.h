@@ -28,7 +28,7 @@ namespace signer {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public signerRequestPrivate {
+class ListTagsForResourceRequestPrivate : public signerRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const signerRequest::Action action,

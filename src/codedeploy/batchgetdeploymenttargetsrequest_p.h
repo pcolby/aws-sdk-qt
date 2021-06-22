@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class BatchGetDeploymentTargetsRequest;
 
-class QTAWS_EXPORT BatchGetDeploymentTargetsRequestPrivate : public CodeDeployRequestPrivate {
+class BatchGetDeploymentTargetsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     BatchGetDeploymentTargetsRequestPrivate(const CodeDeployRequest::Action action,

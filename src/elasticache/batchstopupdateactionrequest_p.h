@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class BatchStopUpdateActionRequest;
 
-class QTAWS_EXPORT BatchStopUpdateActionRequestPrivate : public ElastiCacheRequestPrivate {
+class BatchStopUpdateActionRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     BatchStopUpdateActionRequestPrivate(const ElastiCacheRequest::Action action,

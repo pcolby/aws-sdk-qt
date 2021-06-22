@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class BatchExecuteStatementRequest;
 
-class QTAWS_EXPORT BatchExecuteStatementRequestPrivate : public DynamoDBRequestPrivate {
+class BatchExecuteStatementRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     BatchExecuteStatementRequestPrivate(const DynamoDBRequest::Action action,

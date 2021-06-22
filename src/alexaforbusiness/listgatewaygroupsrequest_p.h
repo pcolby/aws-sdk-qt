@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListGatewayGroupsRequest;
 
-class QTAWS_EXPORT ListGatewayGroupsRequestPrivate : public AlexaForBusinessRequestPrivate {
+class ListGatewayGroupsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     ListGatewayGroupsRequestPrivate(const AlexaForBusinessRequest::Action action,

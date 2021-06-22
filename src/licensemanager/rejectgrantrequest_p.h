@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class RejectGrantRequest;
 
-class QTAWS_EXPORT RejectGrantRequestPrivate : public LicenseManagerRequestPrivate {
+class RejectGrantRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     RejectGrantRequestPrivate(const LicenseManagerRequest::Action action,

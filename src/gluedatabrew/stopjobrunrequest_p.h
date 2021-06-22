@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class StopJobRunRequest;
 
-class QTAWS_EXPORT StopJobRunRequestPrivate : public GlueDataBrewRequestPrivate {
+class StopJobRunRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     StopJobRunRequestPrivate(const GlueDataBrewRequest::Action action,

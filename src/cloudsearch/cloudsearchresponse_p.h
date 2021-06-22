@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class CloudSearchResponse;
 
-class QTAWS_EXPORT CloudSearchResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CloudSearchResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

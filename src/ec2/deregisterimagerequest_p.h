@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeregisterImageRequest;
 
-class QTAWS_EXPORT DeregisterImageRequestPrivate : public Ec2RequestPrivate {
+class DeregisterImageRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeregisterImageRequestPrivate(const Ec2Request::Action action,

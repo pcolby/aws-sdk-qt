@@ -27,7 +27,7 @@ namespace Glue {
 
 class ResetJobBookmarkResponse;
 
-class QTAWS_EXPORT ResetJobBookmarkResponsePrivate : public GlueResponsePrivate {
+class ResetJobBookmarkResponsePrivate : public GlueResponsePrivate {
 
 public:
 

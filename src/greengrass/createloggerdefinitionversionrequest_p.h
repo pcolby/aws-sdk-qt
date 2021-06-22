@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class CreateLoggerDefinitionVersionRequest;
 
-class QTAWS_EXPORT CreateLoggerDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
+class CreateLoggerDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     CreateLoggerDefinitionVersionRequestPrivate(const GreengrassRequest::Action action,

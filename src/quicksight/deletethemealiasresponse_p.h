@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteThemeAliasResponse;
 
-class QTAWS_EXPORT DeleteThemeAliasResponsePrivate : public QuickSightResponsePrivate {
+class DeleteThemeAliasResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

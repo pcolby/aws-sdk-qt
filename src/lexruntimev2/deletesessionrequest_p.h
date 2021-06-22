@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class DeleteSessionRequest;
 
-class QTAWS_EXPORT DeleteSessionRequestPrivate : public LexRuntimeV2RequestPrivate {
+class DeleteSessionRequestPrivate : public LexRuntimeV2RequestPrivate {
 
 public:
     DeleteSessionRequestPrivate(const LexRuntimeV2Request::Action action,

@@ -28,7 +28,7 @@ namespace Snowball {
 
 class CreateReturnShippingLabelRequest;
 
-class QTAWS_EXPORT CreateReturnShippingLabelRequestPrivate : public SnowballRequestPrivate {
+class CreateReturnShippingLabelRequestPrivate : public SnowballRequestPrivate {
 
 public:
     CreateReturnShippingLabelRequestPrivate(const SnowballRequest::Action action,

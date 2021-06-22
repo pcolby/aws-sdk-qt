@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeHostsRequest;
 
-class QTAWS_EXPORT DescribeHostsRequestPrivate : public Ec2RequestPrivate {
+class DescribeHostsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeHostsRequestPrivate(const Ec2Request::Action action,

@@ -28,7 +28,7 @@ namespace IoT {
 
 class StartDetectMitigationActionsTaskRequest;
 
-class QTAWS_EXPORT StartDetectMitigationActionsTaskRequestPrivate : public IoTRequestPrivate {
+class StartDetectMitigationActionsTaskRequestPrivate : public IoTRequestPrivate {
 
 public:
     StartDetectMitigationActionsTaskRequestPrivate(const IoTRequest::Action action,

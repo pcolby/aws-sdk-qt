@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteRoomSkillParameterRequest;
 
-class QTAWS_EXPORT DeleteRoomSkillParameterRequestPrivate : public AlexaForBusinessRequestPrivate {
+class DeleteRoomSkillParameterRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DeleteRoomSkillParameterRequestPrivate(const AlexaForBusinessRequest::Action action,

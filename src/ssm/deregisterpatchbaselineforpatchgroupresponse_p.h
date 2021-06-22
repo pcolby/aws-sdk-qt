@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeregisterPatchBaselineForPatchGroupResponse;
 
-class QTAWS_EXPORT DeregisterPatchBaselineForPatchGroupResponsePrivate : public SsmResponsePrivate {
+class DeregisterPatchBaselineForPatchGroupResponsePrivate : public SsmResponsePrivate {
 
 public:
 

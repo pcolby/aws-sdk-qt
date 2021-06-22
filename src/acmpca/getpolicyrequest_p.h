@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class GetPolicyRequest;
 
-class QTAWS_EXPORT GetPolicyRequestPrivate : public AcmpcaRequestPrivate {
+class GetPolicyRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
     GetPolicyRequestPrivate(const AcmpcaRequest::Action action,

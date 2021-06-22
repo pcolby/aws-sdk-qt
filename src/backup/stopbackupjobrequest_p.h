@@ -28,7 +28,7 @@ namespace Backup {
 
 class StopBackupJobRequest;
 
-class QTAWS_EXPORT StopBackupJobRequestPrivate : public BackupRequestPrivate {
+class StopBackupJobRequestPrivate : public BackupRequestPrivate {
 
 public:
     StopBackupJobRequestPrivate(const BackupRequest::Action action,

@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ServiceCatalogRequest;
 
-class QTAWS_EXPORT ServiceCatalogRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ServiceCatalogRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ServiceCatalogRequest::Action action; ///< ServiceCatalog action to be performed.

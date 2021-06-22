@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class DeleteWebhookRequest;
 
-class QTAWS_EXPORT DeleteWebhookRequestPrivate : public CodeBuildRequestPrivate {
+class DeleteWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     DeleteWebhookRequestPrivate(const CodeBuildRequest::Action action,

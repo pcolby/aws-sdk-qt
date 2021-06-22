@@ -28,7 +28,7 @@ namespace QLDB {
 
 class QldbRequest;
 
-class QTAWS_EXPORT QldbRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QldbRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     QldbRequest::Action action; ///< QLDB action to be performed.

@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class GetPersonTrackingResponse;
 
-class QTAWS_EXPORT GetPersonTrackingResponsePrivate : public RekognitionResponsePrivate {
+class GetPersonTrackingResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EBS {
 
 class EbsResponse;
 
-class QTAWS_EXPORT EbsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EbsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

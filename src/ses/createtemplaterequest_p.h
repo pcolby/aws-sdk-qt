@@ -28,7 +28,7 @@ namespace SES {
 
 class CreateTemplateRequest;
 
-class QTAWS_EXPORT CreateTemplateRequestPrivate : public SesRequestPrivate {
+class CreateTemplateRequestPrivate : public SesRequestPrivate {
 
 public:
     CreateTemplateRequestPrivate(const SesRequest::Action action,

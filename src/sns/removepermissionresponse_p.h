@@ -27,7 +27,7 @@ namespace SNS {
 
 class RemovePermissionResponse;
 
-class QTAWS_EXPORT RemovePermissionResponsePrivate : public SnsResponsePrivate {
+class RemovePermissionResponsePrivate : public SnsResponsePrivate {
 
 public:
 

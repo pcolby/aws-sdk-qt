@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class SetInstanceHealthResponse;
 
-class QTAWS_EXPORT SetInstanceHealthResponsePrivate : public AutoScalingResponsePrivate {
+class SetInstanceHealthResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

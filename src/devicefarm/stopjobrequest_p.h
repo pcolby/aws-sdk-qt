@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class StopJobRequest;
 
-class QTAWS_EXPORT StopJobRequestPrivate : public DeviceFarmRequestPrivate {
+class StopJobRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     StopJobRequestPrivate(const DeviceFarmRequest::Action action,

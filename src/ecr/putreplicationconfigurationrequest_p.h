@@ -28,7 +28,7 @@ namespace ECR {
 
 class PutReplicationConfigurationRequest;
 
-class QTAWS_EXPORT PutReplicationConfigurationRequestPrivate : public EcrRequestPrivate {
+class PutReplicationConfigurationRequestPrivate : public EcrRequestPrivate {
 
 public:
     PutReplicationConfigurationRequestPrivate(const EcrRequest::Action action,

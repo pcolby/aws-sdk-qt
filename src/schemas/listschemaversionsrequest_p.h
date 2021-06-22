@@ -28,7 +28,7 @@ namespace Schemas {
 
 class ListSchemaVersionsRequest;
 
-class QTAWS_EXPORT ListSchemaVersionsRequestPrivate : public SchemasRequestPrivate {
+class ListSchemaVersionsRequestPrivate : public SchemasRequestPrivate {
 
 public:
     ListSchemaVersionsRequestPrivate(const SchemasRequest::Action action,

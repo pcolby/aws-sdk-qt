@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class ListBotAliasesRequest;
 
-class QTAWS_EXPORT ListBotAliasesRequestPrivate : public LexModelsV2RequestPrivate {
+class ListBotAliasesRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     ListBotAliasesRequestPrivate(const LexModelsV2Request::Action action,

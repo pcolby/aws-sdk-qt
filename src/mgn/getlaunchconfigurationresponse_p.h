@@ -27,7 +27,7 @@ namespace mgn {
 
 class GetLaunchConfigurationResponse;
 
-class QTAWS_EXPORT GetLaunchConfigurationResponsePrivate : public mgnResponsePrivate {
+class GetLaunchConfigurationResponsePrivate : public mgnResponsePrivate {
 
 public:
 

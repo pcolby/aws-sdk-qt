@@ -27,7 +27,7 @@ namespace MQ {
 
 class CreateTagsResponse;
 
-class QTAWS_EXPORT CreateTagsResponsePrivate : public MqResponsePrivate {
+class CreateTagsResponsePrivate : public MqResponsePrivate {
 
 public:
 

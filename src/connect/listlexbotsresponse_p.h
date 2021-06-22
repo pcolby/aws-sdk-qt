@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListLexBotsResponse;
 
-class QTAWS_EXPORT ListLexBotsResponsePrivate : public ConnectResponsePrivate {
+class ListLexBotsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

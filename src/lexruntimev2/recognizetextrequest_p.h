@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class RecognizeTextRequest;
 
-class QTAWS_EXPORT RecognizeTextRequestPrivate : public LexRuntimeV2RequestPrivate {
+class RecognizeTextRequestPrivate : public LexRuntimeV2RequestPrivate {
 
 public:
     RecognizeTextRequestPrivate(const LexRuntimeV2Request::Action action,

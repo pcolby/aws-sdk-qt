@@ -29,7 +29,7 @@ namespace ResourceGroups {
 
 class ResourceGroupsClient;
 
-class QTAWS_EXPORT ResourceGroupsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ResourceGroupsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ResourceGroupsClientPrivate(ResourceGroupsClient * const q);

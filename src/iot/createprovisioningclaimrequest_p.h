@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateProvisioningClaimRequest;
 
-class QTAWS_EXPORT CreateProvisioningClaimRequestPrivate : public IoTRequestPrivate {
+class CreateProvisioningClaimRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateProvisioningClaimRequestPrivate(const IoTRequest::Action action,

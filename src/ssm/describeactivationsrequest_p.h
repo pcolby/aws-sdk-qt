@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeActivationsRequest;
 
-class QTAWS_EXPORT DescribeActivationsRequestPrivate : public SsmRequestPrivate {
+class DescribeActivationsRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeActivationsRequestPrivate(const SsmRequest::Action action,

@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class BatchUpdateTableRowsResponse;
 
-class QTAWS_EXPORT BatchUpdateTableRowsResponsePrivate : public HoneycodeResponsePrivate {
+class BatchUpdateTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 

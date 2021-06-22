@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class GetRepositoryPermissionsPolicyRequest;
 
-class QTAWS_EXPORT GetRepositoryPermissionsPolicyRequestPrivate : public CodeArtifactRequestPrivate {
+class GetRepositoryPermissionsPolicyRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     GetRepositoryPermissionsPolicyRequestPrivate(const CodeArtifactRequest::Action action,

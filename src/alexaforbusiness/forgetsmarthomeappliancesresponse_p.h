@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class ForgetSmartHomeAppliancesResponse;
 
-class QTAWS_EXPORT ForgetSmartHomeAppliancesResponsePrivate : public AlexaForBusinessResponsePrivate {
+class ForgetSmartHomeAppliancesResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteAttendeeResponse;
 
-class QTAWS_EXPORT DeleteAttendeeResponsePrivate : public ChimeResponsePrivate {
+class DeleteAttendeeResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class DeletePortalResponse;
 
-class QTAWS_EXPORT DeletePortalResponsePrivate : public IoTSiteWiseResponsePrivate {
+class DeletePortalResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

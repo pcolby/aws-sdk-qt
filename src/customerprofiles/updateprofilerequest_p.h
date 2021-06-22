@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class UpdateProfileRequest;
 
-class QTAWS_EXPORT UpdateProfileRequestPrivate : public CustomerProfilesRequestPrivate {
+class UpdateProfileRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     UpdateProfileRequestPrivate(const CustomerProfilesRequest::Action action,

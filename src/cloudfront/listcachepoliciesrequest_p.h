@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListCachePoliciesRequest;
 
-class QTAWS_EXPORT ListCachePoliciesRequestPrivate : public CloudFrontRequestPrivate {
+class ListCachePoliciesRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListCachePoliciesRequestPrivate(const CloudFrontRequest::Action action,

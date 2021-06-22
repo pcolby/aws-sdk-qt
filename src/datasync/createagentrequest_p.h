@@ -28,7 +28,7 @@ namespace DataSync {
 
 class CreateAgentRequest;
 
-class QTAWS_EXPORT CreateAgentRequestPrivate : public DataSyncRequestPrivate {
+class CreateAgentRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     CreateAgentRequestPrivate(const DataSyncRequest::Action action,

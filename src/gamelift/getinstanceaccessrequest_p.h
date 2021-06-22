@@ -28,7 +28,7 @@ namespace GameLift {
 
 class GetInstanceAccessRequest;
 
-class QTAWS_EXPORT GetInstanceAccessRequestPrivate : public GameLiftRequestPrivate {
+class GetInstanceAccessRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     GetInstanceAccessRequestPrivate(const GameLiftRequest::Action action,

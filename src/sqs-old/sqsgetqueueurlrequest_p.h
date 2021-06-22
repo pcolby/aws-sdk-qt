@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsGetQueueUrlRequest;
 
-class QTAWS_EXPORT SqsGetQueueUrlRequestPrivate : public SqsRequestPrivate {
+class SqsGetQueueUrlRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsGetQueueUrlRequestPrivate(const SqsRequest::Action action,

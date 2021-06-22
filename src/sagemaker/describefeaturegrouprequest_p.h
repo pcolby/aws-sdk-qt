@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeFeatureGroupRequest;
 
-class QTAWS_EXPORT DescribeFeatureGroupRequestPrivate : public SageMakerRequestPrivate {
+class DescribeFeatureGroupRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeFeatureGroupRequestPrivate(const SageMakerRequest::Action action,

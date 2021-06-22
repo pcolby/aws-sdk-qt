@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeVpcEndpointConnectionNotificationsResponse;
 
-class QTAWS_EXPORT DescribeVpcEndpointConnectionNotificationsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeVpcEndpointConnectionNotificationsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

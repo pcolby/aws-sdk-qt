@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class ListChannelsResponse;
 
-class QTAWS_EXPORT ListChannelsResponsePrivate : public MediaPackageResponsePrivate {
+class ListChannelsResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

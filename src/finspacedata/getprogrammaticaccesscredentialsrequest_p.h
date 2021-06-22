@@ -28,7 +28,7 @@ namespace FinSpaceData {
 
 class GetProgrammaticAccessCredentialsRequest;
 
-class QTAWS_EXPORT GetProgrammaticAccessCredentialsRequestPrivate : public FinSpaceDataRequestPrivate {
+class GetProgrammaticAccessCredentialsRequestPrivate : public FinSpaceDataRequestPrivate {
 
 public:
     GetProgrammaticAccessCredentialsRequestPrivate(const FinSpaceDataRequest::Action action,

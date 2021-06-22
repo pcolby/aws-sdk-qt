@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteCertificateResponse;
 
-class QTAWS_EXPORT DeleteCertificateResponsePrivate : public LightsailResponsePrivate {
+class DeleteCertificateResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

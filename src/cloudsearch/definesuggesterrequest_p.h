@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineSuggesterRequest;
 
-class QTAWS_EXPORT DefineSuggesterRequestPrivate : public CloudSearchRequestPrivate {
+class DefineSuggesterRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DefineSuggesterRequestPrivate(const CloudSearchRequest::Action action,

@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DeleteOrganizationResponse;
 
-class QTAWS_EXPORT DeleteOrganizationResponsePrivate : public OrganizationsResponsePrivate {
+class DeleteOrganizationResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

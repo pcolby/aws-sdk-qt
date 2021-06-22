@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class AppIntegrationsServiceRequest;
 
-class QTAWS_EXPORT AppIntegrationsServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppIntegrationsServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppIntegrationsServiceRequest::Action action; ///< AppIntegrationsService action to be performed.

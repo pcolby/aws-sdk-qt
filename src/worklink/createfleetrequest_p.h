@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class CreateFleetRequest;
 
-class QTAWS_EXPORT CreateFleetRequestPrivate : public WorkLinkRequestPrivate {
+class CreateFleetRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     CreateFleetRequestPrivate(const WorkLinkRequest::Action action,

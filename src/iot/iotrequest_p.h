@@ -28,7 +28,7 @@ namespace IoT {
 
 class IoTRequest;
 
-class QTAWS_EXPORT IoTRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTRequest::Action action; ///< IoT action to be performed.

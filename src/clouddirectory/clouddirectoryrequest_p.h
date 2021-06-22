@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class CloudDirectoryRequest;
 
-class QTAWS_EXPORT CloudDirectoryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudDirectoryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudDirectoryRequest::Action action; ///< CloudDirectory action to be performed.

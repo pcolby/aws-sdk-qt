@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public CodeArtifactResponsePrivate {
+class UntagResourceResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

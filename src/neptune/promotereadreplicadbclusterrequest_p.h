@@ -28,7 +28,7 @@ namespace Neptune {
 
 class PromoteReadReplicaDBClusterRequest;
 
-class QTAWS_EXPORT PromoteReadReplicaDBClusterRequestPrivate : public NeptuneRequestPrivate {
+class PromoteReadReplicaDBClusterRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     PromoteReadReplicaDBClusterRequestPrivate(const NeptuneRequest::Action action,

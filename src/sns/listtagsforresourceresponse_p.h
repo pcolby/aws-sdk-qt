@@ -27,7 +27,7 @@ namespace SNS {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public SnsResponsePrivate {
+class ListTagsForResourceResponsePrivate : public SnsResponsePrivate {
 
 public:
 

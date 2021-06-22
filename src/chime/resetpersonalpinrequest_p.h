@@ -28,7 +28,7 @@ namespace Chime {
 
 class ResetPersonalPINRequest;
 
-class QTAWS_EXPORT ResetPersonalPINRequestPrivate : public ChimeRequestPrivate {
+class ResetPersonalPINRequestPrivate : public ChimeRequestPrivate {
 
 public:
     ResetPersonalPINRequestPrivate(const ChimeRequest::Action action,

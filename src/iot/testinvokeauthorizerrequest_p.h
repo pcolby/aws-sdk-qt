@@ -28,7 +28,7 @@ namespace IoT {
 
 class TestInvokeAuthorizerRequest;
 
-class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public IoTRequestPrivate {
+class TestInvokeAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     TestInvokeAuthorizerRequestPrivate(const IoTRequest::Action action,

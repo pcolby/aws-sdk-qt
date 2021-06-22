@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class GetAccessTokenRequest;
 
-class QTAWS_EXPORT GetAccessTokenRequestPrivate : public LicenseManagerRequestPrivate {
+class GetAccessTokenRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     GetAccessTokenRequestPrivate(const LicenseManagerRequest::Action action,

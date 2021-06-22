@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ExportTransitGatewayRoutesResponse;
 
-class QTAWS_EXPORT ExportTransitGatewayRoutesResponsePrivate : public Ec2ResponsePrivate {
+class ExportTransitGatewayRoutesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

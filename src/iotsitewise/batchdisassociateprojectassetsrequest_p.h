@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class BatchDisassociateProjectAssetsRequest;
 
-class QTAWS_EXPORT BatchDisassociateProjectAssetsRequestPrivate : public IoTSiteWiseRequestPrivate {
+class BatchDisassociateProjectAssetsRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     BatchDisassociateProjectAssetsRequestPrivate(const IoTSiteWiseRequest::Action action,

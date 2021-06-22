@@ -28,7 +28,7 @@ namespace LocationService {
 
 class CalculateRouteRequest;
 
-class QTAWS_EXPORT CalculateRouteRequestPrivate : public LocationServiceRequestPrivate {
+class CalculateRouteRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     CalculateRouteRequestPrivate(const LocationServiceRequest::Action action,

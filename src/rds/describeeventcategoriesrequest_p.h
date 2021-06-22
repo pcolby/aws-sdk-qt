@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeEventCategoriesRequest;
 
-class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public RdsRequestPrivate {
+class DescribeEventCategoriesRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeEventCategoriesRequestPrivate(const RdsRequest::Action action,

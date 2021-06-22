@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RebootInstanceRequest;
 
-class QTAWS_EXPORT RebootInstanceRequestPrivate : public OpsWorksRequestPrivate {
+class RebootInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RebootInstanceRequestPrivate(const OpsWorksRequest::Action action,

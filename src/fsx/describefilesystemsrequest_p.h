@@ -28,7 +28,7 @@ namespace FSx {
 
 class DescribeFileSystemsRequest;
 
-class QTAWS_EXPORT DescribeFileSystemsRequestPrivate : public FSxRequestPrivate {
+class DescribeFileSystemsRequestPrivate : public FSxRequestPrivate {
 
 public:
     DescribeFileSystemsRequestPrivate(const FSxRequest::Action action,

@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class DescribeDatasetRequest;
 
-class QTAWS_EXPORT DescribeDatasetRequestPrivate : public LookoutforVisionRequestPrivate {
+class DescribeDatasetRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     DescribeDatasetRequestPrivate(const LookoutforVisionRequest::Action action,

@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class GetCloudFormationTemplateRequest;
 
-class QTAWS_EXPORT GetCloudFormationTemplateRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
+class GetCloudFormationTemplateRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     GetCloudFormationTemplateRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,

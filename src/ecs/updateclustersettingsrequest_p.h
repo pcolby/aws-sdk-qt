@@ -28,7 +28,7 @@ namespace ECS {
 
 class UpdateClusterSettingsRequest;
 
-class QTAWS_EXPORT UpdateClusterSettingsRequestPrivate : public EcsRequestPrivate {
+class UpdateClusterSettingsRequestPrivate : public EcsRequestPrivate {
 
 public:
     UpdateClusterSettingsRequestPrivate(const EcsRequest::Action action,

@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class DataExchangeResponse;
 
-class QTAWS_EXPORT DataExchangeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DataExchangeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

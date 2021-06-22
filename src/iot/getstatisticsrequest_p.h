@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetStatisticsRequest;
 
-class QTAWS_EXPORT GetStatisticsRequestPrivate : public IoTRequestPrivate {
+class GetStatisticsRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetStatisticsRequestPrivate(const IoTRequest::Action action,

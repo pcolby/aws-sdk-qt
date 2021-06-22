@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class StopProcessingJobRequest;
 
-class QTAWS_EXPORT StopProcessingJobRequestPrivate : public SageMakerRequestPrivate {
+class StopProcessingJobRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     StopProcessingJobRequestPrivate(const SageMakerRequest::Action action,

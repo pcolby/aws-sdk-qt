@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class UpdatePrimaryEmailAddressResponse;
 
-class QTAWS_EXPORT UpdatePrimaryEmailAddressResponsePrivate : public WorkMailResponsePrivate {
+class UpdatePrimaryEmailAddressResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

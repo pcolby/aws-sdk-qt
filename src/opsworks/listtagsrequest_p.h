@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public OpsWorksRequestPrivate {
+class ListTagsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     ListTagsRequestPrivate(const OpsWorksRequest::Action action,

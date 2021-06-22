@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class BatchDeleteBuildsRequest;
 
-class QTAWS_EXPORT BatchDeleteBuildsRequestPrivate : public CodeBuildRequestPrivate {
+class BatchDeleteBuildsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     BatchDeleteBuildsRequestPrivate(const CodeBuildRequest::Action action,

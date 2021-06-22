@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteDirectoryConfigResponse;
 
-class QTAWS_EXPORT DeleteDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
+class DeleteDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class CreateSampleFindingsRequest;
 
-class QTAWS_EXPORT CreateSampleFindingsRequestPrivate : public GuardDutyRequestPrivate {
+class CreateSampleFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     CreateSampleFindingsRequestPrivate(const GuardDutyRequest::Action action,

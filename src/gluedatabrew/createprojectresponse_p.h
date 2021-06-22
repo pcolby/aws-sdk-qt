@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class CreateProjectResponse;
 
-class QTAWS_EXPORT CreateProjectResponsePrivate : public GlueDataBrewResponsePrivate {
+class CreateProjectResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 

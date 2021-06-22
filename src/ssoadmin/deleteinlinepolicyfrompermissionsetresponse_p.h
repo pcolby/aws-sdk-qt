@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class DeleteInlinePolicyFromPermissionSetResponse;
 
-class QTAWS_EXPORT DeleteInlinePolicyFromPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
+class DeleteInlinePolicyFromPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 

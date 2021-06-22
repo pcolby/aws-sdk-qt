@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class DeleteQueueRequest;
 
-class QTAWS_EXPORT DeleteQueueRequestPrivate : public MediaConvertRequestPrivate {
+class DeleteQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     DeleteQueueRequestPrivate(const MediaConvertRequest::Action action,

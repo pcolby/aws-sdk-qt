@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class EnableAlarmActionsRequest;
 
-class QTAWS_EXPORT EnableAlarmActionsRequestPrivate : public CloudWatchRequestPrivate {
+class EnableAlarmActionsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     EnableAlarmActionsRequestPrivate(const CloudWatchRequest::Action action,

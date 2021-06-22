@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartProjectVersionRequest;
 
-class QTAWS_EXPORT StartProjectVersionRequestPrivate : public RekognitionRequestPrivate {
+class StartProjectVersionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StartProjectVersionRequestPrivate(const RekognitionRequest::Action action,

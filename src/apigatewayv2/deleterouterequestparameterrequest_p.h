@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class DeleteRouteRequestParameterRequest;
 
-class QTAWS_EXPORT DeleteRouteRequestParameterRequestPrivate : public ApiGatewayV2RequestPrivate {
+class DeleteRouteRequestParameterRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     DeleteRouteRequestParameterRequestPrivate(const ApiGatewayV2Request::Action action,

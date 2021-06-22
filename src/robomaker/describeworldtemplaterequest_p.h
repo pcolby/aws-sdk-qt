@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class DescribeWorldTemplateRequest;
 
-class QTAWS_EXPORT DescribeWorldTemplateRequestPrivate : public RoboMakerRequestPrivate {
+class DescribeWorldTemplateRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     DescribeWorldTemplateRequestPrivate(const RoboMakerRequest::Action action,

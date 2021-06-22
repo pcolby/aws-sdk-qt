@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class ExportApiRequest;
 
-class QTAWS_EXPORT ExportApiRequestPrivate : public ApiGatewayV2RequestPrivate {
+class ExportApiRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     ExportApiRequestPrivate(const ApiGatewayV2Request::Action action,

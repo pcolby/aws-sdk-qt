@@ -27,7 +27,7 @@ namespace SSM {
 
 class StartAssociationsOnceResponse;
 
-class QTAWS_EXPORT StartAssociationsOnceResponsePrivate : public SsmResponsePrivate {
+class StartAssociationsOnceResponsePrivate : public SsmResponsePrivate {
 
 public:
 

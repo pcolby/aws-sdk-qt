@@ -27,7 +27,7 @@ namespace Neptune {
 
 class RemoveSourceIdentifierFromSubscriptionResponse;
 
-class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionResponsePrivate : public NeptuneResponsePrivate {
+class RemoveSourceIdentifierFromSubscriptionResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

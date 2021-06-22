@@ -27,7 +27,7 @@ namespace ECR {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public EcrResponsePrivate {
+class UntagResourceResponsePrivate : public EcrResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeMountTargetSecurityGroupsResponse;
 
-class QTAWS_EXPORT DescribeMountTargetSecurityGroupsResponsePrivate : public EfsResponsePrivate {
+class DescribeMountTargetSecurityGroupsResponsePrivate : public EfsResponsePrivate {
 
 public:
 

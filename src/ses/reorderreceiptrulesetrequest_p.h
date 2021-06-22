@@ -28,7 +28,7 @@ namespace SES {
 
 class ReorderReceiptRuleSetRequest;
 
-class QTAWS_EXPORT ReorderReceiptRuleSetRequestPrivate : public SesRequestPrivate {
+class ReorderReceiptRuleSetRequestPrivate : public SesRequestPrivate {
 
 public:
     ReorderReceiptRuleSetRequestPrivate(const SesRequest::Action action,

@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class ConfigureLogsResponse;
 
-class QTAWS_EXPORT ConfigureLogsResponsePrivate : public MediaPackageResponsePrivate {
+class ConfigureLogsResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

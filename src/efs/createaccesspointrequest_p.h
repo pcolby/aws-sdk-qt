@@ -28,7 +28,7 @@ namespace EFS {
 
 class CreateAccessPointRequest;
 
-class QTAWS_EXPORT CreateAccessPointRequestPrivate : public EfsRequestPrivate {
+class CreateAccessPointRequestPrivate : public EfsRequestPrivate {
 
 public:
     CreateAccessPointRequestPrivate(const EfsRequest::Action action,

@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class CreateDataflowEndpointGroupResponse;
 
-class QTAWS_EXPORT CreateDataflowEndpointGroupResponsePrivate : public GroundStationResponsePrivate {
+class CreateDataflowEndpointGroupResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 

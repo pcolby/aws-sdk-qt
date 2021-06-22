@@ -27,7 +27,7 @@ namespace Transfer {
 
 class DeleteUserResponse;
 
-class QTAWS_EXPORT DeleteUserResponsePrivate : public TransferResponsePrivate {
+class DeleteUserResponsePrivate : public TransferResponsePrivate {
 
 public:
 

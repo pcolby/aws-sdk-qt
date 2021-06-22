@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class ComprehendRequest;
 
-class QTAWS_EXPORT ComprehendRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ComprehendRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ComprehendRequest::Action action; ///< Comprehend action to be performed.

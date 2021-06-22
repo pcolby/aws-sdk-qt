@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class InvalidateProjectCacheResponse;
 
-class QTAWS_EXPORT InvalidateProjectCacheResponsePrivate : public CodeBuildResponsePrivate {
+class InvalidateProjectCacheResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListInstanceStorageConfigsRequest;
 
-class QTAWS_EXPORT ListInstanceStorageConfigsRequestPrivate : public ConnectRequestPrivate {
+class ListInstanceStorageConfigsRequestPrivate : public ConnectRequestPrivate {
 
 public:
     ListInstanceStorageConfigsRequestPrivate(const ConnectRequest::Action action,

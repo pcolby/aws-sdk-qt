@@ -27,7 +27,7 @@ namespace DocDB {
 
 class CopyDBClusterSnapshotResponse;
 
-class QTAWS_EXPORT CopyDBClusterSnapshotResponsePrivate : public DocDBResponsePrivate {
+class CopyDBClusterSnapshotResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace TimestreamWrite {
 
 class DescribeDatabaseRequest;
 
-class QTAWS_EXPORT DescribeDatabaseRequestPrivate : public TimestreamWriteRequestPrivate {
+class DescribeDatabaseRequestPrivate : public TimestreamWriteRequestPrivate {
 
 public:
     DescribeDatabaseRequestPrivate(const TimestreamWriteRequest::Action action,

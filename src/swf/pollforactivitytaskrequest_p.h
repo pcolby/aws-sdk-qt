@@ -28,7 +28,7 @@ namespace SWF {
 
 class PollForActivityTaskRequest;
 
-class QTAWS_EXPORT PollForActivityTaskRequestPrivate : public SwfRequestPrivate {
+class PollForActivityTaskRequestPrivate : public SwfRequestPrivate {
 
 public:
     PollForActivityTaskRequestPrivate(const SwfRequest::Action action,

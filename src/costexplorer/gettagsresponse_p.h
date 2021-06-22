@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetTagsResponse;
 
-class QTAWS_EXPORT GetTagsResponsePrivate : public CostExplorerResponsePrivate {
+class GetTagsResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DocDB {
 
 class RestoreDBClusterFromSnapshotRequest;
 
-class QTAWS_EXPORT RestoreDBClusterFromSnapshotRequestPrivate : public DocDBRequestPrivate {
+class RestoreDBClusterFromSnapshotRequestPrivate : public DocDBRequestPrivate {
 
 public:
     RestoreDBClusterFromSnapshotRequestPrivate(const DocDBRequest::Action action,

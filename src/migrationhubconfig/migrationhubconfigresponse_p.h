@@ -27,7 +27,7 @@ namespace MigrationHubConfig {
 
 class MigrationHubConfigResponse;
 
-class QTAWS_EXPORT MigrationHubConfigResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MigrationHubConfigResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

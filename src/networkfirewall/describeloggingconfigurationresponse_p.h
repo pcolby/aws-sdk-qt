@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class DescribeLoggingConfigurationResponse;
 
-class QTAWS_EXPORT DescribeLoggingConfigurationResponsePrivate : public NetworkFirewallResponsePrivate {
+class DescribeLoggingConfigurationResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

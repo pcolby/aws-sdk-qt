@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class RecordLifecycleActionHeartbeatResponse;
 
-class QTAWS_EXPORT RecordLifecycleActionHeartbeatResponsePrivate : public AutoScalingResponsePrivate {
+class RecordLifecycleActionHeartbeatResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

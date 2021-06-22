@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class SubscribeRequest;
 
-class QTAWS_EXPORT SubscribeRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class SubscribeRequestPrivate : public CodeStarNotificationsRequestPrivate {
 
 public:
     SubscribeRequestPrivate(const CodeStarNotificationsRequest::Action action,

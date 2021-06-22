@@ -29,7 +29,7 @@ namespace DLM {
 
 class DlmClient;
 
-class QTAWS_EXPORT DlmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DlmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DlmClientPrivate(DlmClient * const q);

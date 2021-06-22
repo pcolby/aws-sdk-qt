@@ -27,7 +27,7 @@ namespace Chime {
 
 class DisassociateSigninDelegateGroupsFromAccountResponse;
 
-class QTAWS_EXPORT DisassociateSigninDelegateGroupsFromAccountResponsePrivate : public ChimeResponsePrivate {
+class DisassociateSigninDelegateGroupsFromAccountResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

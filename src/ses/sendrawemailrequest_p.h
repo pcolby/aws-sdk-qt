@@ -28,7 +28,7 @@ namespace SES {
 
 class SendRawEmailRequest;
 
-class QTAWS_EXPORT SendRawEmailRequestPrivate : public SesRequestPrivate {
+class SendRawEmailRequestPrivate : public SesRequestPrivate {
 
 public:
     SendRawEmailRequestPrivate(const SesRequest::Action action,

@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteUserProfileRequest;
 
-class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public OpsWorksRequestPrivate {
+class DeleteUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeleteUserProfileRequestPrivate(const OpsWorksRequest::Action action,

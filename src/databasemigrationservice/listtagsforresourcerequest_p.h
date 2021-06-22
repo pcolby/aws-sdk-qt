@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class ListTagsForResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

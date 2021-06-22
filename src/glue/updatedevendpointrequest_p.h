@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateDevEndpointRequest;
 
-class QTAWS_EXPORT UpdateDevEndpointRequestPrivate : public GlueRequestPrivate {
+class UpdateDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateDevEndpointRequestPrivate(const GlueRequest::Action action,

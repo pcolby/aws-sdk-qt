@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class GetPendingJobExecutionsRequest;
 
-class QTAWS_EXPORT GetPendingJobExecutionsRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
+class GetPendingJobExecutionsRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     GetPendingJobExecutionsRequestPrivate(const IoTJobsDataPlaneRequest::Action action,

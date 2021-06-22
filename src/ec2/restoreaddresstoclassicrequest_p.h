@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RestoreAddressToClassicRequest;
 
-class QTAWS_EXPORT RestoreAddressToClassicRequestPrivate : public Ec2RequestPrivate {
+class RestoreAddressToClassicRequestPrivate : public Ec2RequestPrivate {
 
 public:
     RestoreAddressToClassicRequestPrivate(const Ec2Request::Action action,

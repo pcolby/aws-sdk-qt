@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DescribeAnalysisSchemesResponse;
 
-class QTAWS_EXPORT DescribeAnalysisSchemesResponsePrivate : public CloudSearchResponsePrivate {
+class DescribeAnalysisSchemesResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 

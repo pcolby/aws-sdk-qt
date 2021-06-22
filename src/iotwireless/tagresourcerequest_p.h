@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public IoTWirelessRequestPrivate {
+class TagResourceRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const IoTWirelessRequest::Action action,

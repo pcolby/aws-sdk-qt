@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public LookoutEquipmentResponsePrivate {
+class TagResourceResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 

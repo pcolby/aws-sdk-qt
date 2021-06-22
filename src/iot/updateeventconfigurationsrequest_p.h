@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateEventConfigurationsRequest;
 
-class QTAWS_EXPORT UpdateEventConfigurationsRequestPrivate : public IoTRequestPrivate {
+class UpdateEventConfigurationsRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateEventConfigurationsRequestPrivate(const IoTRequest::Action action,

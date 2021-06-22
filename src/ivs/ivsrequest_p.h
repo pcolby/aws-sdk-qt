@@ -28,7 +28,7 @@ namespace IVS {
 
 class IvsRequest;
 
-class QTAWS_EXPORT IvsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IvsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IvsRequest::Action action; ///< IVS action to be performed.

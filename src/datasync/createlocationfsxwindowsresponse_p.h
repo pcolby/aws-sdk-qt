@@ -27,7 +27,7 @@ namespace DataSync {
 
 class CreateLocationFsxWindowsResponse;
 
-class QTAWS_EXPORT CreateLocationFsxWindowsResponsePrivate : public DataSyncResponsePrivate {
+class CreateLocationFsxWindowsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 

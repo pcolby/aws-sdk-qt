@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class GetFolderResponse;
 
-class QTAWS_EXPORT GetFolderResponsePrivate : public CodeCommitResponsePrivate {
+class GetFolderResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

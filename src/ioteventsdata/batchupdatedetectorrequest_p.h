@@ -28,7 +28,7 @@ namespace IoTEventsData {
 
 class BatchUpdateDetectorRequest;
 
-class QTAWS_EXPORT BatchUpdateDetectorRequestPrivate : public IoTEventsDataRequestPrivate {
+class BatchUpdateDetectorRequestPrivate : public IoTEventsDataRequestPrivate {
 
 public:
     BatchUpdateDetectorRequestPrivate(const IoTEventsDataRequest::Action action,

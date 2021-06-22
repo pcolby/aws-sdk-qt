@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class ServiceCatalogClient;
 
-class QTAWS_EXPORT ServiceCatalogClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ServiceCatalogClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ServiceCatalogClientPrivate(ServiceCatalogClient * const q);

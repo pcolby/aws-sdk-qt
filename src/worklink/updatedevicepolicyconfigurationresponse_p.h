@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UpdateDevicePolicyConfigurationResponse;
 
-class QTAWS_EXPORT UpdateDevicePolicyConfigurationResponsePrivate : public WorkLinkResponsePrivate {
+class UpdateDevicePolicyConfigurationResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

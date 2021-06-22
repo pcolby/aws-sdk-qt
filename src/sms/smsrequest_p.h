@@ -28,7 +28,7 @@ namespace SMS {
 
 class SmsRequest;
 
-class QTAWS_EXPORT SmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SmsRequest::Action action; ///< SMS action to be performed.

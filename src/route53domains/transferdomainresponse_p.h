@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class TransferDomainResponse;
 
-class QTAWS_EXPORT TransferDomainResponsePrivate : public Route53DomainsResponsePrivate {
+class TransferDomainResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class AcceptDomainTransferFromAnotherAwsAccountRequest;
 
-class QTAWS_EXPORT AcceptDomainTransferFromAnotherAwsAccountRequestPrivate : public Route53DomainsRequestPrivate {
+class AcceptDomainTransferFromAnotherAwsAccountRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     AcceptDomainTransferFromAnotherAwsAccountRequestPrivate(const Route53DomainsRequest::Action action,

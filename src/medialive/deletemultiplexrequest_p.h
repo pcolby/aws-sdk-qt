@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteMultiplexRequest;
 
-class QTAWS_EXPORT DeleteMultiplexRequestPrivate : public MediaLiveRequestPrivate {
+class DeleteMultiplexRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DeleteMultiplexRequestPrivate(const MediaLiveRequest::Action action,

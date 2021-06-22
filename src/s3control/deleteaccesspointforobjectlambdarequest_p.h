@@ -28,7 +28,7 @@ namespace S3Control {
 
 class DeleteAccessPointForObjectLambdaRequest;
 
-class QTAWS_EXPORT DeleteAccessPointForObjectLambdaRequestPrivate : public S3ControlRequestPrivate {
+class DeleteAccessPointForObjectLambdaRequestPrivate : public S3ControlRequestPrivate {
 
 public:
     DeleteAccessPointForObjectLambdaRequestPrivate(const S3ControlRequest::Action action,

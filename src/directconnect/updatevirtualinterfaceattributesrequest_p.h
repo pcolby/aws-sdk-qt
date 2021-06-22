@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class UpdateVirtualInterfaceAttributesRequest;
 
-class QTAWS_EXPORT UpdateVirtualInterfaceAttributesRequestPrivate : public DirectConnectRequestPrivate {
+class UpdateVirtualInterfaceAttributesRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     UpdateVirtualInterfaceAttributesRequestPrivate(const DirectConnectRequest::Action action,

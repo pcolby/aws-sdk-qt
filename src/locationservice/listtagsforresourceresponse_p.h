@@ -27,7 +27,7 @@ namespace LocationService {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public LocationServiceResponsePrivate {
+class ListTagsForResourceResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

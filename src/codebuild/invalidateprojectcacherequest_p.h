@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class InvalidateProjectCacheRequest;
 
-class QTAWS_EXPORT InvalidateProjectCacheRequestPrivate : public CodeBuildRequestPrivate {
+class InvalidateProjectCacheRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     InvalidateProjectCacheRequestPrivate(const CodeBuildRequest::Action action,

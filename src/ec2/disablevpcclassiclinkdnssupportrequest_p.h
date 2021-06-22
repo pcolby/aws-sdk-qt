@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableVpcClassicLinkDnsSupportRequest;
 
-class QTAWS_EXPORT DisableVpcClassicLinkDnsSupportRequestPrivate : public Ec2RequestPrivate {
+class DisableVpcClassicLinkDnsSupportRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisableVpcClassicLinkDnsSupportRequestPrivate(const Ec2Request::Action action,

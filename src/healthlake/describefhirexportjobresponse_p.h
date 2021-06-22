@@ -27,7 +27,7 @@ namespace HealthLake {
 
 class DescribeFHIRExportJobResponse;
 
-class QTAWS_EXPORT DescribeFHIRExportJobResponsePrivate : public HealthLakeResponsePrivate {
+class DescribeFHIRExportJobResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 

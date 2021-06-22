@@ -28,7 +28,7 @@ namespace EC2 {
 
 class UnassignPrivateIpAddressesRequest;
 
-class QTAWS_EXPORT UnassignPrivateIpAddressesRequestPrivate : public Ec2RequestPrivate {
+class UnassignPrivateIpAddressesRequestPrivate : public Ec2RequestPrivate {
 
 public:
     UnassignPrivateIpAddressesRequestPrivate(const Ec2Request::Action action,

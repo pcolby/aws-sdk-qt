@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreateRealtimeLogConfigRequest;
 
-class QTAWS_EXPORT CreateRealtimeLogConfigRequestPrivate : public CloudFrontRequestPrivate {
+class CreateRealtimeLogConfigRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     CreateRealtimeLogConfigRequestPrivate(const CloudFrontRequest::Action action,

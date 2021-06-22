@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class UpdateDomainEndpointOptionsRequest;
 
-class QTAWS_EXPORT UpdateDomainEndpointOptionsRequestPrivate : public CloudSearchRequestPrivate {
+class UpdateDomainEndpointOptionsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     UpdateDomainEndpointOptionsRequestPrivate(const CloudSearchRequest::Action action,

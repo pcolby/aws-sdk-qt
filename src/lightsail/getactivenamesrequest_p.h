@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetActiveNamesRequest;
 
-class QTAWS_EXPORT GetActiveNamesRequestPrivate : public LightsailRequestPrivate {
+class GetActiveNamesRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetActiveNamesRequestPrivate(const LightsailRequest::Action action,

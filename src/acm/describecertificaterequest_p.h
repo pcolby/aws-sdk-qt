@@ -28,7 +28,7 @@ namespace ACM {
 
 class DescribeCertificateRequest;
 
-class QTAWS_EXPORT DescribeCertificateRequestPrivate : public AcmRequestPrivate {
+class DescribeCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
     DescribeCertificateRequestPrivate(const AcmRequest::Action action,

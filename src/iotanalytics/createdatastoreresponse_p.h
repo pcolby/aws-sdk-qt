@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class CreateDatastoreResponse;
 
-class QTAWS_EXPORT CreateDatastoreResponsePrivate : public IoTAnalyticsResponsePrivate {
+class CreateDatastoreResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 

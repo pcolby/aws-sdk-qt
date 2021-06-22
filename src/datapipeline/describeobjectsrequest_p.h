@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class DescribeObjectsRequest;
 
-class QTAWS_EXPORT DescribeObjectsRequestPrivate : public DataPipelineRequestPrivate {
+class DescribeObjectsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     DescribeObjectsRequestPrivate(const DataPipelineRequest::Action action,

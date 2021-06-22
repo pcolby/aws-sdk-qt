@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DeleteTypedLinkFacetRequest;
 
-class QTAWS_EXPORT DeleteTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
+class DeleteTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DeleteTypedLinkFacetRequestPrivate(const CloudDirectoryRequest::Action action,

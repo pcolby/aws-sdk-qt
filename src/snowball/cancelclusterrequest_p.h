@@ -28,7 +28,7 @@ namespace Snowball {
 
 class CancelClusterRequest;
 
-class QTAWS_EXPORT CancelClusterRequestPrivate : public SnowballRequestPrivate {
+class CancelClusterRequestPrivate : public SnowballRequestPrivate {
 
 public:
     CancelClusterRequestPrivate(const SnowballRequest::Action action,

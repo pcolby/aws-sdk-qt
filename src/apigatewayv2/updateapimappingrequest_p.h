@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class UpdateApiMappingRequest;
 
-class QTAWS_EXPORT UpdateApiMappingRequestPrivate : public ApiGatewayV2RequestPrivate {
+class UpdateApiMappingRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     UpdateApiMappingRequestPrivate(const ApiGatewayV2Request::Action action,

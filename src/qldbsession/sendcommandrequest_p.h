@@ -28,7 +28,7 @@ namespace QLDBSession {
 
 class SendCommandRequest;
 
-class QTAWS_EXPORT SendCommandRequestPrivate : public QLDBSessionRequestPrivate {
+class SendCommandRequestPrivate : public QLDBSessionRequestPrivate {
 
 public:
     SendCommandRequestPrivate(const QLDBSessionRequest::Action action,

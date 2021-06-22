@@ -27,7 +27,7 @@ namespace Outposts {
 
 class GetOutpostInstanceTypesResponse;
 
-class QTAWS_EXPORT GetOutpostInstanceTypesResponsePrivate : public OutpostsResponsePrivate {
+class GetOutpostInstanceTypesResponsePrivate : public OutpostsResponsePrivate {
 
 public:
 

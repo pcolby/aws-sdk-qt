@@ -27,7 +27,7 @@ namespace PI {
 
 class GetDimensionKeyDetailsResponse;
 
-class QTAWS_EXPORT GetDimensionKeyDetailsResponsePrivate : public PiResponsePrivate {
+class GetDimensionKeyDetailsResponsePrivate : public PiResponsePrivate {
 
 public:
 

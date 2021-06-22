@@ -27,7 +27,7 @@ namespace EKS {
 
 class UpdateClusterVersionResponse;
 
-class QTAWS_EXPORT UpdateClusterVersionResponsePrivate : public EksResponsePrivate {
+class UpdateClusterVersionResponsePrivate : public EksResponsePrivate {
 
 public:
 

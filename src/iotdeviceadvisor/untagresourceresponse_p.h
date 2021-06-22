@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
+class UntagResourceResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
 
 public:
 

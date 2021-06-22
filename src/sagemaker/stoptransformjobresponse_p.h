@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopTransformJobResponse;
 
-class QTAWS_EXPORT StopTransformJobResponsePrivate : public SageMakerResponsePrivate {
+class StopTransformJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

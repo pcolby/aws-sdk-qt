@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StartInstancesRequest;
 
-class QTAWS_EXPORT StartInstancesRequestPrivate : public Ec2RequestPrivate {
+class StartInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
     StartInstancesRequestPrivate(const Ec2Request::Action action,

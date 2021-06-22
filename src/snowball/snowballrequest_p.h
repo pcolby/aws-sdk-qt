@@ -28,7 +28,7 @@ namespace Snowball {
 
 class SnowballRequest;
 
-class QTAWS_EXPORT SnowballRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SnowballRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SnowballRequest::Action action; ///< Snowball action to be performed.

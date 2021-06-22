@@ -29,7 +29,7 @@ namespace imagebuilder {
 
 class imagebuilderClient;
 
-class QTAWS_EXPORT imagebuilderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class imagebuilderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     imagebuilderClientPrivate(imagebuilderClient * const q);

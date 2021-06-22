@@ -28,7 +28,7 @@ namespace RAM {
 
 class EnableSharingWithAwsOrganizationRequest;
 
-class QTAWS_EXPORT EnableSharingWithAwsOrganizationRequestPrivate : public RamRequestPrivate {
+class EnableSharingWithAwsOrganizationRequestPrivate : public RamRequestPrivate {
 
 public:
     EnableSharingWithAwsOrganizationRequestPrivate(const RamRequest::Action action,

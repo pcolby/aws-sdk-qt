@@ -28,7 +28,7 @@ namespace IoTFleetHub {
 
 class DeleteApplicationRequest;
 
-class QTAWS_EXPORT DeleteApplicationRequestPrivate : public IoTFleetHubRequestPrivate {
+class DeleteApplicationRequestPrivate : public IoTFleetHubRequestPrivate {
 
 public:
     DeleteApplicationRequestPrivate(const IoTFleetHubRequest::Action action,

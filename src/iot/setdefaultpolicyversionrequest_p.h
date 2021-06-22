@@ -28,7 +28,7 @@ namespace IoT {
 
 class SetDefaultPolicyVersionRequest;
 
-class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IoTRequestPrivate {
+class SetDefaultPolicyVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
     SetDefaultPolicyVersionRequestPrivate(const IoTRequest::Action action,

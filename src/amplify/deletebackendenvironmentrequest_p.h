@@ -28,7 +28,7 @@ namespace Amplify {
 
 class DeleteBackendEnvironmentRequest;
 
-class QTAWS_EXPORT DeleteBackendEnvironmentRequestPrivate : public AmplifyRequestPrivate {
+class DeleteBackendEnvironmentRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     DeleteBackendEnvironmentRequestPrivate(const AmplifyRequest::Action action,

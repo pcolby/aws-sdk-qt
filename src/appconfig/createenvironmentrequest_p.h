@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class CreateEnvironmentRequest;
 
-class QTAWS_EXPORT CreateEnvironmentRequestPrivate : public AppConfigRequestPrivate {
+class CreateEnvironmentRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     CreateEnvironmentRequestPrivate(const AppConfigRequest::Action action,

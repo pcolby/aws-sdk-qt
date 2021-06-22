@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class DeleteTagsForDomainRequest;
 
-class QTAWS_EXPORT DeleteTagsForDomainRequestPrivate : public Route53DomainsRequestPrivate {
+class DeleteTagsForDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     DeleteTagsForDomainRequestPrivate(const Route53DomainsRequest::Action action,

@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class EMRContainersRequest;
 
-class QTAWS_EXPORT EMRContainersRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EMRContainersRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EMRContainersRequest::Action action; ///< EMRContainers action to be performed.

@@ -28,7 +28,7 @@ namespace SSM {
 
 class StartAssociationsOnceRequest;
 
-class QTAWS_EXPORT StartAssociationsOnceRequestPrivate : public SsmRequestPrivate {
+class StartAssociationsOnceRequestPrivate : public SsmRequestPrivate {
 
 public:
     StartAssociationsOnceRequestPrivate(const SsmRequest::Action action,

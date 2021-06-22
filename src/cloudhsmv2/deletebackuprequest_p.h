@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class DeleteBackupRequest;
 
-class QTAWS_EXPORT DeleteBackupRequestPrivate : public CloudHSMV2RequestPrivate {
+class DeleteBackupRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     DeleteBackupRequestPrivate(const CloudHSMV2Request::Action action,

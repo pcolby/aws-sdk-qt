@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class GlueDataBrewRequest;
 
-class QTAWS_EXPORT GlueDataBrewRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GlueDataBrewRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GlueDataBrewRequest::Action action; ///< GlueDataBrew action to be performed.

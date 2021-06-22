@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteUserPermissionsBoundaryResponse;
 
-class QTAWS_EXPORT DeleteUserPermissionsBoundaryResponsePrivate : public IamResponsePrivate {
+class DeleteUserPermissionsBoundaryResponsePrivate : public IamResponsePrivate {
 
 public:
 

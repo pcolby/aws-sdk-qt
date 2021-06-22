@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateAssociationStatusRequest;
 
-class QTAWS_EXPORT UpdateAssociationStatusRequestPrivate : public SsmRequestPrivate {
+class UpdateAssociationStatusRequestPrivate : public SsmRequestPrivate {
 
 public:
     UpdateAssociationStatusRequestPrivate(const SsmRequest::Action action,

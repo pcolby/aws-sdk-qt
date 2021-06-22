@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteSubnetRequest;
 
-class QTAWS_EXPORT DeleteSubnetRequestPrivate : public Ec2RequestPrivate {
+class DeleteSubnetRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteSubnetRequestPrivate(const Ec2Request::Action action,

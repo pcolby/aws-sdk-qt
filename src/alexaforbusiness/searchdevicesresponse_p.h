@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class SearchDevicesResponse;
 
-class QTAWS_EXPORT SearchDevicesResponsePrivate : public AlexaForBusinessResponsePrivate {
+class SearchDevicesResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateChannelReadMarkerResponse;
 
-class QTAWS_EXPORT UpdateChannelReadMarkerResponsePrivate : public ChimeResponsePrivate {
+class UpdateChannelReadMarkerResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

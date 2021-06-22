@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class IoTSiteWiseRequest;
 
-class QTAWS_EXPORT IoTSiteWiseRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTSiteWiseRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTSiteWiseRequest::Action action; ///< IoTSiteWise action to be performed.

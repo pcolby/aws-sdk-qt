@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class GetTextDetectionResponse;
 
-class QTAWS_EXPORT GetTextDetectionResponsePrivate : public RekognitionResponsePrivate {
+class GetTextDetectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

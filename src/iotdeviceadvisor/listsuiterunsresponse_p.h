@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class ListSuiteRunsResponse;
 
-class QTAWS_EXPORT ListSuiteRunsResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
+class ListSuiteRunsResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
 
 public:
 

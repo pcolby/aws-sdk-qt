@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class UpdateStageRequest;
 
-class QTAWS_EXPORT UpdateStageRequestPrivate : public ApiGatewayV2RequestPrivate {
+class UpdateStageRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     UpdateStageRequestPrivate(const ApiGatewayV2Request::Action action,

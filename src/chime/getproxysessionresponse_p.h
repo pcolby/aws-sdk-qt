@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetProxySessionResponse;
 
-class QTAWS_EXPORT GetProxySessionResponsePrivate : public ChimeResponsePrivate {
+class GetProxySessionResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

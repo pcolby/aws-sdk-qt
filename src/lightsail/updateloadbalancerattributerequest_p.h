@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class UpdateLoadBalancerAttributeRequest;
 
-class QTAWS_EXPORT UpdateLoadBalancerAttributeRequestPrivate : public LightsailRequestPrivate {
+class UpdateLoadBalancerAttributeRequestPrivate : public LightsailRequestPrivate {
 
 public:
     UpdateLoadBalancerAttributeRequestPrivate(const LightsailRequest::Action action,

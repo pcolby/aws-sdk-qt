@@ -28,7 +28,7 @@ namespace IoT {
 
 class SearchIndexRequest;
 
-class QTAWS_EXPORT SearchIndexRequestPrivate : public IoTRequestPrivate {
+class SearchIndexRequestPrivate : public IoTRequestPrivate {
 
 public:
     SearchIndexRequestPrivate(const IoTRequest::Action action,

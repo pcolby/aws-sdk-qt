@@ -29,7 +29,7 @@ namespace Connect {
 
 class ConnectClient;
 
-class QTAWS_EXPORT ConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ConnectClientPrivate(ConnectClient * const q);

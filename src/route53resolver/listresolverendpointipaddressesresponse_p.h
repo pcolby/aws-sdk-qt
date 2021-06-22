@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class ListResolverEndpointIpAddressesResponse;
 
-class QTAWS_EXPORT ListResolverEndpointIpAddressesResponsePrivate : public Route53ResolverResponsePrivate {
+class ListResolverEndpointIpAddressesResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 

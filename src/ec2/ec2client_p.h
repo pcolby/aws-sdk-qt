@@ -29,7 +29,7 @@ namespace EC2 {
 
 class Ec2Client;
 
-class QTAWS_EXPORT Ec2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class Ec2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     Ec2ClientPrivate(Ec2Client * const q);

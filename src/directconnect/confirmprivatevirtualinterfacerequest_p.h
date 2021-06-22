@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class ConfirmPrivateVirtualInterfaceRequest;
 
-class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
+class ConfirmPrivateVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     ConfirmPrivateVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,

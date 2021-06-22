@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeVpcClassicLinkRequest;
 
-class QTAWS_EXPORT DescribeVpcClassicLinkRequestPrivate : public Ec2RequestPrivate {
+class DescribeVpcClassicLinkRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeVpcClassicLinkRequestPrivate(const Ec2Request::Action action,

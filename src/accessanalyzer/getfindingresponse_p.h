@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class GetFindingResponse;
 
-class QTAWS_EXPORT GetFindingResponsePrivate : public AccessAnalyzerResponsePrivate {
+class GetFindingResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 

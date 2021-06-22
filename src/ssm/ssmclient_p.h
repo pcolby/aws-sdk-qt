@@ -29,7 +29,7 @@ namespace SSM {
 
 class SsmClient;
 
-class QTAWS_EXPORT SsmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SsmClientPrivate(SsmClient * const q);

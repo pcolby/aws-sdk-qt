@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetResourcePoliciesRequest;
 
-class QTAWS_EXPORT GetResourcePoliciesRequestPrivate : public GlueRequestPrivate {
+class GetResourcePoliciesRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetResourcePoliciesRequestPrivate(const GlueRequest::Action action,

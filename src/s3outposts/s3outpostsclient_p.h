@@ -29,7 +29,7 @@ namespace S3Outposts {
 
 class S3OutpostsClient;
 
-class QTAWS_EXPORT S3OutpostsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class S3OutpostsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     S3OutpostsClientPrivate(S3OutpostsClient * const q);

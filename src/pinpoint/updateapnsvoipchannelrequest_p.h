@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateApnsVoipChannelRequest;
 
-class QTAWS_EXPORT UpdateApnsVoipChannelRequestPrivate : public PinpointRequestPrivate {
+class UpdateApnsVoipChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateApnsVoipChannelRequestPrivate(const PinpointRequest::Action action,

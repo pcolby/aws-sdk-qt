@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class AttachVolumeResponse;
 
-class QTAWS_EXPORT AttachVolumeResponsePrivate : public StorageGatewayResponsePrivate {
+class AttachVolumeResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

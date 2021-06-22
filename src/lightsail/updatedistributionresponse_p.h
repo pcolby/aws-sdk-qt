@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class UpdateDistributionResponse;
 
-class QTAWS_EXPORT UpdateDistributionResponsePrivate : public LightsailResponsePrivate {
+class UpdateDistributionResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateDeviceFleetResponse;
 
-class QTAWS_EXPORT CreateDeviceFleetResponsePrivate : public SageMakerResponsePrivate {
+class CreateDeviceFleetResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

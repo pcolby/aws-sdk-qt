@@ -28,7 +28,7 @@ namespace MTurk {
 
 class AssociateQualificationWithWorkerRequest;
 
-class QTAWS_EXPORT AssociateQualificationWithWorkerRequestPrivate : public MTurkRequestPrivate {
+class AssociateQualificationWithWorkerRequestPrivate : public MTurkRequestPrivate {
 
 public:
     AssociateQualificationWithWorkerRequestPrivate(const MTurkRequest::Action action,

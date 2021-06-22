@@ -28,7 +28,7 @@ namespace IVS {
 
 class BatchGetStreamKeyRequest;
 
-class QTAWS_EXPORT BatchGetStreamKeyRequestPrivate : public IvsRequestPrivate {
+class BatchGetStreamKeyRequestPrivate : public IvsRequestPrivate {
 
 public:
     BatchGetStreamKeyRequestPrivate(const IvsRequest::Action action,

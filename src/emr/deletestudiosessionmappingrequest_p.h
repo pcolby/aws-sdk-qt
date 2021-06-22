@@ -28,7 +28,7 @@ namespace EMR {
 
 class DeleteStudioSessionMappingRequest;
 
-class QTAWS_EXPORT DeleteStudioSessionMappingRequestPrivate : public EmrRequestPrivate {
+class DeleteStudioSessionMappingRequestPrivate : public EmrRequestPrivate {
 
 public:
     DeleteStudioSessionMappingRequestPrivate(const EmrRequest::Action action,

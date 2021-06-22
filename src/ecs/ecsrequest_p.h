@@ -28,7 +28,7 @@ namespace ECS {
 
 class EcsRequest;
 
-class QTAWS_EXPORT EcsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EcsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EcsRequest::Action action; ///< ECS action to be performed.

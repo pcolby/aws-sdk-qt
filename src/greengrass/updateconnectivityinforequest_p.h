@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class UpdateConnectivityInfoRequest;
 
-class QTAWS_EXPORT UpdateConnectivityInfoRequestPrivate : public GreengrassRequestPrivate {
+class UpdateConnectivityInfoRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     UpdateConnectivityInfoRequestPrivate(const GreengrassRequest::Action action,

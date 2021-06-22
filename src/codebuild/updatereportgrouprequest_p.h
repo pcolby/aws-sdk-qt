@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class UpdateReportGroupRequest;
 
-class QTAWS_EXPORT UpdateReportGroupRequestPrivate : public CodeBuildRequestPrivate {
+class UpdateReportGroupRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     UpdateReportGroupRequestPrivate(const CodeBuildRequest::Action action,

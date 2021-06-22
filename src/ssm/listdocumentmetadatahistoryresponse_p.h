@@ -27,7 +27,7 @@ namespace SSM {
 
 class ListDocumentMetadataHistoryResponse;
 
-class QTAWS_EXPORT ListDocumentMetadataHistoryResponsePrivate : public SsmResponsePrivate {
+class ListDocumentMetadataHistoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 

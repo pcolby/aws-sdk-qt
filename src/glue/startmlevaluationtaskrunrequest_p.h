@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartMLEvaluationTaskRunRequest;
 
-class QTAWS_EXPORT StartMLEvaluationTaskRunRequestPrivate : public GlueRequestPrivate {
+class StartMLEvaluationTaskRunRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartMLEvaluationTaskRunRequestPrivate(const GlueRequest::Action action,

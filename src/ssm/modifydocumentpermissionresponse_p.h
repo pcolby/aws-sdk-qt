@@ -27,7 +27,7 @@ namespace SSM {
 
 class ModifyDocumentPermissionResponse;
 
-class QTAWS_EXPORT ModifyDocumentPermissionResponsePrivate : public SsmResponsePrivate {
+class ModifyDocumentPermissionResponsePrivate : public SsmResponsePrivate {
 
 public:
 

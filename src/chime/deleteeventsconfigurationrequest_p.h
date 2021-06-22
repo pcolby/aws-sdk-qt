@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteEventsConfigurationRequest;
 
-class QTAWS_EXPORT DeleteEventsConfigurationRequestPrivate : public ChimeRequestPrivate {
+class DeleteEventsConfigurationRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DeleteEventsConfigurationRequestPrivate(const ChimeRequest::Action action,

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class StopRelationalDatabaseResponse;
 
-class QTAWS_EXPORT StopRelationalDatabaseResponsePrivate : public LightsailResponsePrivate {
+class StopRelationalDatabaseResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

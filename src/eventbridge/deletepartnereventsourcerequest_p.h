@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeletePartnerEventSourceRequest;
 
-class QTAWS_EXPORT DeletePartnerEventSourceRequestPrivate : public EventBridgeRequestPrivate {
+class DeletePartnerEventSourceRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DeletePartnerEventSourceRequestPrivate(const EventBridgeRequest::Action action,

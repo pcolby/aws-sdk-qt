@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetPlanRequest;
 
-class QTAWS_EXPORT GetPlanRequestPrivate : public GlueRequestPrivate {
+class GetPlanRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetPlanRequestPrivate(const GlueRequest::Action action,

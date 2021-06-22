@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteNamespaceResponse;
 
-class QTAWS_EXPORT DeleteNamespaceResponsePrivate : public QuickSightResponsePrivate {
+class DeleteNamespaceResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

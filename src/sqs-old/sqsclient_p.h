@@ -29,7 +29,7 @@ namespace SqsOld {
 
 class SqsClient;
 
-class QTAWS_EXPORT SqsClientPrivate : public AwsAbstractClientPrivate {
+class SqsClientPrivate : public AwsAbstractClientPrivate {
 
 public:
     SqsClientPrivate(SqsClient * const q);

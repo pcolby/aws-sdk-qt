@@ -28,7 +28,7 @@ namespace Chime {
 
 class BatchUpdateUserRequest;
 
-class QTAWS_EXPORT BatchUpdateUserRequestPrivate : public ChimeRequestPrivate {
+class BatchUpdateUserRequestPrivate : public ChimeRequestPrivate {
 
 public:
     BatchUpdateUserRequestPrivate(const ChimeRequest::Action action,

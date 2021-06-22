@@ -29,7 +29,7 @@ namespace MigrationHubConfig {
 
 class MigrationHubConfigClient;
 
-class QTAWS_EXPORT MigrationHubConfigClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MigrationHubConfigClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MigrationHubConfigClientPrivate(MigrationHubConfigClient * const q);

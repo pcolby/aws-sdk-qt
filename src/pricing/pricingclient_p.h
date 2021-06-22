@@ -29,7 +29,7 @@ namespace Pricing {
 
 class PricingClient;
 
-class QTAWS_EXPORT PricingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PricingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PricingClientPrivate(PricingClient * const q);

@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class UpdatePresetResponse;
 
-class QTAWS_EXPORT UpdatePresetResponsePrivate : public MediaConvertResponsePrivate {
+class UpdatePresetResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 

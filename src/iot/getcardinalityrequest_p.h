@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetCardinalityRequest;
 
-class QTAWS_EXPORT GetCardinalityRequestPrivate : public IoTRequestPrivate {
+class GetCardinalityRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetCardinalityRequestPrivate(const IoTRequest::Action action,

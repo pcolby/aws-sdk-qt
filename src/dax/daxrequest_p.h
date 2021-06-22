@@ -28,7 +28,7 @@ namespace DAX {
 
 class DaxRequest;
 
-class QTAWS_EXPORT DaxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DaxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DaxRequest::Action action; ///< DAX action to be performed.

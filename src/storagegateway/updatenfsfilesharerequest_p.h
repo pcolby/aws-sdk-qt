@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateNFSFileShareRequest;
 
-class QTAWS_EXPORT UpdateNFSFileShareRequestPrivate : public StorageGatewayRequestPrivate {
+class UpdateNFSFileShareRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateNFSFileShareRequestPrivate(const StorageGatewayRequest::Action action,

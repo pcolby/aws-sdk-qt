@@ -28,7 +28,7 @@ namespace Translate {
 
 class DeleteTerminologyRequest;
 
-class QTAWS_EXPORT DeleteTerminologyRequestPrivate : public TranslateRequestPrivate {
+class DeleteTerminologyRequestPrivate : public TranslateRequestPrivate {
 
 public:
     DeleteTerminologyRequestPrivate(const TranslateRequest::Action action,

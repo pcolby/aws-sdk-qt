@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateImageRequest;
 
-class QTAWS_EXPORT CreateImageRequestPrivate : public SageMakerRequestPrivate {
+class CreateImageRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateImageRequestPrivate(const SageMakerRequest::Action action,

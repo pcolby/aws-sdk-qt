@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ConfirmProductInstanceRequest;
 
-class QTAWS_EXPORT ConfirmProductInstanceRequestPrivate : public Ec2RequestPrivate {
+class ConfirmProductInstanceRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ConfirmProductInstanceRequestPrivate(const Ec2Request::Action action,

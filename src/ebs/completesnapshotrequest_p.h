@@ -28,7 +28,7 @@ namespace EBS {
 
 class CompleteSnapshotRequest;
 
-class QTAWS_EXPORT CompleteSnapshotRequestPrivate : public EbsRequestPrivate {
+class CompleteSnapshotRequestPrivate : public EbsRequestPrivate {
 
 public:
     CompleteSnapshotRequestPrivate(const EbsRequest::Action action,

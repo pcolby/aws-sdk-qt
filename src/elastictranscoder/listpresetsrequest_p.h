@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class ListPresetsRequest;
 
-class QTAWS_EXPORT ListPresetsRequestPrivate : public ElasticTranscoderRequestPrivate {
+class ListPresetsRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     ListPresetsRequestPrivate(const ElasticTranscoderRequest::Action action,

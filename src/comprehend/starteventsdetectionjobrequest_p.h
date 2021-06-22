@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class StartEventsDetectionJobRequest;
 
-class QTAWS_EXPORT StartEventsDetectionJobRequestPrivate : public ComprehendRequestPrivate {
+class StartEventsDetectionJobRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     StartEventsDetectionJobRequestPrivate(const ComprehendRequest::Action action,

@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class CreateEventBusResponse;
 
-class QTAWS_EXPORT CreateEventBusResponsePrivate : public CloudWatchEventsResponsePrivate {
+class CreateEventBusResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

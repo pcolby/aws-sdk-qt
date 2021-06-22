@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListHandshakesForAccountRequest;
 
-class QTAWS_EXPORT ListHandshakesForAccountRequestPrivate : public OrganizationsRequestPrivate {
+class ListHandshakesForAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListHandshakesForAccountRequestPrivate(const OrganizationsRequest::Action action,

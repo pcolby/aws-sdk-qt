@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class RevokeTokenRequest;
 
-class QTAWS_EXPORT RevokeTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class RevokeTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     RevokeTokenRequestPrivate(const CognitoIdentityProviderRequest::Action action,

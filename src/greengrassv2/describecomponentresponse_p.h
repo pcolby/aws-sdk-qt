@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class DescribeComponentResponse;
 
-class QTAWS_EXPORT DescribeComponentResponsePrivate : public GreengrassV2ResponsePrivate {
+class DescribeComponentResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 

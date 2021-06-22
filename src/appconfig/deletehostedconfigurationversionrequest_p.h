@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class DeleteHostedConfigurationVersionRequest;
 
-class QTAWS_EXPORT DeleteHostedConfigurationVersionRequestPrivate : public AppConfigRequestPrivate {
+class DeleteHostedConfigurationVersionRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     DeleteHostedConfigurationVersionRequestPrivate(const AppConfigRequest::Action action,

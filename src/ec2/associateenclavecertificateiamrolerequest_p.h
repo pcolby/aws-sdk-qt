@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AssociateEnclaveCertificateIamRoleRequest;
 
-class QTAWS_EXPORT AssociateEnclaveCertificateIamRoleRequestPrivate : public Ec2RequestPrivate {
+class AssociateEnclaveCertificateIamRoleRequestPrivate : public Ec2RequestPrivate {
 
 public:
     AssociateEnclaveCertificateIamRoleRequestPrivate(const Ec2Request::Action action,

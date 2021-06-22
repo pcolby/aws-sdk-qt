@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class StartLabelDetectionResponse;
 
-class QTAWS_EXPORT StartLabelDetectionResponsePrivate : public RekognitionResponsePrivate {
+class StartLabelDetectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

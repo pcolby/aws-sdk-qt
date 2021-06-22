@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketCorsResponse;
 
-class QTAWS_EXPORT PutBucketCorsResponsePrivate : public S3ResponsePrivate {
+class PutBucketCorsResponsePrivate : public S3ResponsePrivate {
 
 public:
 

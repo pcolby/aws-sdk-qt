@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutObjectLockConfigurationRequest;
 
-class QTAWS_EXPORT PutObjectLockConfigurationRequestPrivate : public S3RequestPrivate {
+class PutObjectLockConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     PutObjectLockConfigurationRequestPrivate(const S3Request::Action action,

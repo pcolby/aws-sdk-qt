@@ -27,7 +27,7 @@ namespace IdentityStore {
 
 class DescribeUserResponse;
 
-class QTAWS_EXPORT DescribeUserResponsePrivate : public IdentityStoreResponsePrivate {
+class DescribeUserResponsePrivate : public IdentityStoreResponsePrivate {
 
 public:
 

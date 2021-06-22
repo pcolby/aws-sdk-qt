@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class PutLifecyclePolicyRequest;
 
-class QTAWS_EXPORT PutLifecyclePolicyRequestPrivate : public MediaStoreRequestPrivate {
+class PutLifecyclePolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     PutLifecyclePolicyRequestPrivate(const MediaStoreRequest::Action action,

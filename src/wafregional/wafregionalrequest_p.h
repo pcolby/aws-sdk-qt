@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class WAFRegionalRequest;
 
-class QTAWS_EXPORT WAFRegionalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WAFRegionalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WAFRegionalRequest::Action action; ///< WAFRegional action to be performed.

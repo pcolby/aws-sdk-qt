@@ -27,7 +27,7 @@ namespace MTurk {
 
 class GetAssignmentResponse;
 
-class QTAWS_EXPORT GetAssignmentResponsePrivate : public MTurkResponsePrivate {
+class GetAssignmentResponsePrivate : public MTurkResponsePrivate {
 
 public:
 

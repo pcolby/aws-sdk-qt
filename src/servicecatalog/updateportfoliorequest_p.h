@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class UpdatePortfolioRequest;
 
-class QTAWS_EXPORT UpdatePortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
+class UpdatePortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     UpdatePortfolioRequestPrivate(const ServiceCatalogRequest::Action action,

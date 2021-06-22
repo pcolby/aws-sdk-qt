@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteTransitGatewayPrefixListReferenceRequest;
 
-class QTAWS_EXPORT DeleteTransitGatewayPrefixListReferenceRequestPrivate : public Ec2RequestPrivate {
+class DeleteTransitGatewayPrefixListReferenceRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteTransitGatewayPrefixListReferenceRequestPrivate(const Ec2Request::Action action,

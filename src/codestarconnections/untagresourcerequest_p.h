@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CodeStarconnectionsRequestPrivate {
+class UntagResourceRequestPrivate : public CodeStarconnectionsRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CodeStarconnectionsRequest::Action action,

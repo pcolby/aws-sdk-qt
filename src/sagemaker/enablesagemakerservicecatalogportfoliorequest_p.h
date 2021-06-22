@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class EnableSagemakerServicecatalogPortfolioRequest;
 
-class QTAWS_EXPORT EnableSagemakerServicecatalogPortfolioRequestPrivate : public SageMakerRequestPrivate {
+class EnableSagemakerServicecatalogPortfolioRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     EnableSagemakerServicecatalogPortfolioRequestPrivate(const SageMakerRequest::Action action,

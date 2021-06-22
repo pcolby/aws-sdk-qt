@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class GetResolverEndpointRequest;
 
-class QTAWS_EXPORT GetResolverEndpointRequestPrivate : public Route53ResolverRequestPrivate {
+class GetResolverEndpointRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     GetResolverEndpointRequestPrivate(const Route53ResolverRequest::Action action,

@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class GetWorldTemplateBodyRequest;
 
-class QTAWS_EXPORT GetWorldTemplateBodyRequestPrivate : public RoboMakerRequestPrivate {
+class GetWorldTemplateBodyRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     GetWorldTemplateBodyRequestPrivate(const RoboMakerRequest::Action action,

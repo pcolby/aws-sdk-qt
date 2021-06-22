@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class ElasticTranscoderRequest;
 
-class QTAWS_EXPORT ElasticTranscoderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticTranscoderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticTranscoderRequest::Action action; ///< ElasticTranscoder action to be performed.

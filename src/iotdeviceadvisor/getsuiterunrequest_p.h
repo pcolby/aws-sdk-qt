@@ -28,7 +28,7 @@ namespace IoTDeviceAdvisor {
 
 class GetSuiteRunRequest;
 
-class QTAWS_EXPORT GetSuiteRunRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class GetSuiteRunRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
 
 public:
     GetSuiteRunRequestPrivate(const IoTDeviceAdvisorRequest::Action action,

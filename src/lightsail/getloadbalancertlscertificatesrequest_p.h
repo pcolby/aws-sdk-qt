@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetLoadBalancerTlsCertificatesRequest;
 
-class QTAWS_EXPORT GetLoadBalancerTlsCertificatesRequestPrivate : public LightsailRequestPrivate {
+class GetLoadBalancerTlsCertificatesRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetLoadBalancerTlsCertificatesRequestPrivate(const LightsailRequest::Action action,

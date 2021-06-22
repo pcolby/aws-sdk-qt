@@ -27,7 +27,7 @@ namespace DLM {
 
 class DlmResponse;
 
-class QTAWS_EXPORT DlmResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DlmResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

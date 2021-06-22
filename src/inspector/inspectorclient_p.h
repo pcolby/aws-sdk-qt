@@ -29,7 +29,7 @@ namespace Inspector {
 
 class InspectorClient;
 
-class QTAWS_EXPORT InspectorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class InspectorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     InspectorClientPrivate(InspectorClient * const q);

@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class DescribeDataIngestionJobResponse;
 
-class QTAWS_EXPORT DescribeDataIngestionJobResponsePrivate : public LookoutEquipmentResponsePrivate {
+class DescribeDataIngestionJobResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 

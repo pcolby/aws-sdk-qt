@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetCrawlerMetricsRequest;
 
-class QTAWS_EXPORT GetCrawlerMetricsRequestPrivate : public GlueRequestPrivate {
+class GetCrawlerMetricsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetCrawlerMetricsRequestPrivate(const GlueRequest::Action action,

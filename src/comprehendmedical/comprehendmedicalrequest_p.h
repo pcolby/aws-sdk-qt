@@ -28,7 +28,7 @@ namespace ComprehendMedical {
 
 class ComprehendMedicalRequest;
 
-class QTAWS_EXPORT ComprehendMedicalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ComprehendMedicalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ComprehendMedicalRequest::Action action; ///< ComprehendMedical action to be performed.

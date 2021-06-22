@@ -28,7 +28,7 @@ namespace AppStream {
 
 class ExpireSessionRequest;
 
-class QTAWS_EXPORT ExpireSessionRequestPrivate : public AppStreamRequestPrivate {
+class ExpireSessionRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     ExpireSessionRequestPrivate(const AppStreamRequest::Action action,

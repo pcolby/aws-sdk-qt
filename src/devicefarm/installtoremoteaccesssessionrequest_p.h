@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class InstallToRemoteAccessSessionRequest;
 
-class QTAWS_EXPORT InstallToRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
+class InstallToRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     InstallToRemoteAccessSessionRequestPrivate(const DeviceFarmRequest::Action action,

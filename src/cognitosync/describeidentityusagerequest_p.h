@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class DescribeIdentityUsageRequest;
 
-class QTAWS_EXPORT DescribeIdentityUsageRequestPrivate : public CognitoSyncRequestPrivate {
+class DescribeIdentityUsageRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     DescribeIdentityUsageRequestPrivate(const CognitoSyncRequest::Action action,

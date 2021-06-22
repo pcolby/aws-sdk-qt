@@ -27,7 +27,7 @@ namespace AppStream {
 
 class UpdateDirectoryConfigResponse;
 
-class QTAWS_EXPORT UpdateDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
+class UpdateDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

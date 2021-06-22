@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class GetImageRecipePolicyRequest;
 
-class QTAWS_EXPORT GetImageRecipePolicyRequestPrivate : public imagebuilderRequestPrivate {
+class GetImageRecipePolicyRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     GetImageRecipePolicyRequestPrivate(const imagebuilderRequest::Action action,

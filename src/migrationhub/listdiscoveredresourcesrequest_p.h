@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class ListDiscoveredResourcesRequest;
 
-class QTAWS_EXPORT ListDiscoveredResourcesRequestPrivate : public MigrationHubRequestPrivate {
+class ListDiscoveredResourcesRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     ListDiscoveredResourcesRequestPrivate(const MigrationHubRequest::Action action,

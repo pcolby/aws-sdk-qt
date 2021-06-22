@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DescribePendingMaintenanceActionsResponse;
 
-class QTAWS_EXPORT DescribePendingMaintenanceActionsResponsePrivate : public DocDBResponsePrivate {
+class DescribePendingMaintenanceActionsResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class AttachCertificateToDistributionResponse;
 
-class QTAWS_EXPORT AttachCertificateToDistributionResponsePrivate : public LightsailResponsePrivate {
+class AttachCertificateToDistributionResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

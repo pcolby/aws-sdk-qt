@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class StartSchemaExtensionRequest;
 
-class QTAWS_EXPORT StartSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
+class StartSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     StartSchemaExtensionRequestPrivate(const DirectoryServiceRequest::Action action,

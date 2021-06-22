@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class DeleteSecretRequest;
 
-class QTAWS_EXPORT DeleteSecretRequestPrivate : public SecretsManagerRequestPrivate {
+class DeleteSecretRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     DeleteSecretRequestPrivate(const SecretsManagerRequest::Action action,

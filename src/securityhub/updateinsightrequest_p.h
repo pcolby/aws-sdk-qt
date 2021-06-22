@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class UpdateInsightRequest;
 
-class QTAWS_EXPORT UpdateInsightRequestPrivate : public SecurityHubRequestPrivate {
+class UpdateInsightRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     UpdateInsightRequestPrivate(const SecurityHubRequest::Action action,

@@ -28,7 +28,7 @@ namespace QLDB {
 
 class ListJournalS3ExportsRequest;
 
-class QTAWS_EXPORT ListJournalS3ExportsRequestPrivate : public QldbRequestPrivate {
+class ListJournalS3ExportsRequestPrivate : public QldbRequestPrivate {
 
 public:
     ListJournalS3ExportsRequestPrivate(const QldbRequest::Action action,

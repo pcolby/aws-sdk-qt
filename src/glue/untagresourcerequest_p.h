@@ -28,7 +28,7 @@ namespace Glue {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public GlueRequestPrivate {
+class UntagResourceRequestPrivate : public GlueRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const GlueRequest::Action action,

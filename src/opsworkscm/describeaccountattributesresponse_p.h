@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DescribeAccountAttributesResponse;
 
-class QTAWS_EXPORT DescribeAccountAttributesResponsePrivate : public OpsWorksCMResponsePrivate {
+class DescribeAccountAttributesResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 

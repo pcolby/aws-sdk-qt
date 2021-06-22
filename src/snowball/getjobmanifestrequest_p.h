@@ -28,7 +28,7 @@ namespace Snowball {
 
 class GetJobManifestRequest;
 
-class QTAWS_EXPORT GetJobManifestRequestPrivate : public SnowballRequestPrivate {
+class GetJobManifestRequestPrivate : public SnowballRequestPrivate {
 
 public:
     GetJobManifestRequestPrivate(const SnowballRequest::Action action,

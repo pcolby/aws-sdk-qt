@@ -28,7 +28,7 @@ namespace MQ {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public MqRequestPrivate {
+class DeleteTagsRequestPrivate : public MqRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const MqRequest::Action action,

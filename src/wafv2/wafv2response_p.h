@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class Wafv2Response;
 
-class QTAWS_EXPORT Wafv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class Wafv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetStreamingDistributionConfigRequest;
 
-class QTAWS_EXPORT GetStreamingDistributionConfigRequestPrivate : public CloudFrontRequestPrivate {
+class GetStreamingDistributionConfigRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     GetStreamingDistributionConfigRequestPrivate(const CloudFrontRequest::Action action,

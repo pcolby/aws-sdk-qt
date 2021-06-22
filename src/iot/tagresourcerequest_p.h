@@ -28,7 +28,7 @@ namespace IoT {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public IoTRequestPrivate {
+class TagResourceRequestPrivate : public IoTRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const IoTRequest::Action action,

@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class ExtendLicenseConsumptionRequest;
 
-class QTAWS_EXPORT ExtendLicenseConsumptionRequestPrivate : public LicenseManagerRequestPrivate {
+class ExtendLicenseConsumptionRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     ExtendLicenseConsumptionRequestPrivate(const LicenseManagerRequest::Action action,

@@ -27,7 +27,7 @@ namespace SWF {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public SwfResponsePrivate {
+class UntagResourceResponsePrivate : public SwfResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class MigrateWorkspaceResponse;
 
-class QTAWS_EXPORT MigrateWorkspaceResponsePrivate : public WorkSpacesResponsePrivate {
+class MigrateWorkspaceResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

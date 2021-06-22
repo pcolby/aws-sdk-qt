@@ -27,7 +27,7 @@ namespace EKS {
 
 class ListNodegroupsResponse;
 
-class QTAWS_EXPORT ListNodegroupsResponsePrivate : public EksResponsePrivate {
+class ListNodegroupsResponsePrivate : public EksResponsePrivate {
 
 public:
 

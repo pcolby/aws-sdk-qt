@@ -28,7 +28,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIRequest;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ResourceGroupsTaggingAPIRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ResourceGroupsTaggingAPIRequest::Action action; ///< ResourceGroupsTaggingAPI action to be performed.

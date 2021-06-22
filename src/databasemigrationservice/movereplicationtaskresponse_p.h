@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class MoveReplicationTaskResponse;
 
-class QTAWS_EXPORT MoveReplicationTaskResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+class MoveReplicationTaskResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
 
 public:
 

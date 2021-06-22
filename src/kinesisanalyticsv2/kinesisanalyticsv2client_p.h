@@ -29,7 +29,7 @@ namespace KinesisAnalyticsV2 {
 
 class KinesisAnalyticsV2Client;
 
-class QTAWS_EXPORT KinesisAnalyticsV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class KinesisAnalyticsV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     KinesisAnalyticsV2ClientPrivate(KinesisAnalyticsV2Client * const q);

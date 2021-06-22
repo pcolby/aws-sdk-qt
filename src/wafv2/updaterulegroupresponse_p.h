@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class UpdateRuleGroupResponse;
 
-class QTAWS_EXPORT UpdateRuleGroupResponsePrivate : public Wafv2ResponsePrivate {
+class UpdateRuleGroupResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 

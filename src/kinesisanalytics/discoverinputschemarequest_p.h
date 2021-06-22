@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DiscoverInputSchemaRequest;
 
-class QTAWS_EXPORT DiscoverInputSchemaRequestPrivate : public KinesisAnalyticsRequestPrivate {
+class DiscoverInputSchemaRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     DiscoverInputSchemaRequestPrivate(const KinesisAnalyticsRequest::Action action,

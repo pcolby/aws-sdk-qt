@@ -27,7 +27,7 @@ namespace EC2InstanceConnect {
 
 class SendSerialConsoleSSHPublicKeyResponse;
 
-class QTAWS_EXPORT SendSerialConsoleSSHPublicKeyResponsePrivate : public EC2InstanceConnectResponsePrivate {
+class SendSerialConsoleSSHPublicKeyResponsePrivate : public EC2InstanceConnectResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteStackResponse;
 
-class QTAWS_EXPORT DeleteStackResponsePrivate : public AppStreamResponsePrivate {
+class DeleteStackResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteImagePermissionsResponse;
 
-class QTAWS_EXPORT DeleteImagePermissionsResponsePrivate : public AppStreamResponsePrivate {
+class DeleteImagePermissionsResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public MediaPackageResponsePrivate {
+class ListTagsForResourceResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 

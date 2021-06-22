@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class imagebuilderResponse;
 
-class QTAWS_EXPORT imagebuilderResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class imagebuilderResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

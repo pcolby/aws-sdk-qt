@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeTagOptionResponse;
 
-class QTAWS_EXPORT DescribeTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
+class DescribeTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

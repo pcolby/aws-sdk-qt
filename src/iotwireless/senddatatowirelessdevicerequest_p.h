@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class SendDataToWirelessDeviceRequest;
 
-class QTAWS_EXPORT SendDataToWirelessDeviceRequestPrivate : public IoTWirelessRequestPrivate {
+class SendDataToWirelessDeviceRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     SendDataToWirelessDeviceRequestPrivate(const IoTWirelessRequest::Action action,

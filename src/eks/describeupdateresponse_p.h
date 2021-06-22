@@ -27,7 +27,7 @@ namespace EKS {
 
 class DescribeUpdateResponse;
 
-class QTAWS_EXPORT DescribeUpdateResponsePrivate : public EksResponsePrivate {
+class DescribeUpdateResponsePrivate : public EksResponsePrivate {
 
 public:
 

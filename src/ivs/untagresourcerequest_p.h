@@ -28,7 +28,7 @@ namespace IVS {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public IvsRequestPrivate {
+class UntagResourceRequestPrivate : public IvsRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const IvsRequest::Action action,

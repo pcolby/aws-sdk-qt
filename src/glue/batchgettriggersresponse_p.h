@@ -27,7 +27,7 @@ namespace Glue {
 
 class BatchGetTriggersResponse;
 
-class QTAWS_EXPORT BatchGetTriggersResponsePrivate : public GlueResponsePrivate {
+class BatchGetTriggersResponsePrivate : public GlueResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace FIS {
 
 class StopExperimentResponse;
 
-class QTAWS_EXPORT StopExperimentResponsePrivate : public FisResponsePrivate {
+class StopExperimentResponsePrivate : public FisResponsePrivate {
 
 public:
 

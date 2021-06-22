@@ -27,7 +27,7 @@ namespace FSx {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public FSxResponsePrivate {
+class TagResourceResponsePrivate : public FSxResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class MergeBranchesByThreeWayResponse;
 
-class QTAWS_EXPORT MergeBranchesByThreeWayResponsePrivate : public CodeCommitResponsePrivate {
+class MergeBranchesByThreeWayResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

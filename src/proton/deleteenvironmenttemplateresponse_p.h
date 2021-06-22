@@ -27,7 +27,7 @@ namespace Proton {
 
 class DeleteEnvironmentTemplateResponse;
 
-class QTAWS_EXPORT DeleteEnvironmentTemplateResponsePrivate : public ProtonResponsePrivate {
+class DeleteEnvironmentTemplateResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

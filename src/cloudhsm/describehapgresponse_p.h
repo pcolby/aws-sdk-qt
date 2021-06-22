@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class DescribeHapgResponse;
 
-class QTAWS_EXPORT DescribeHapgResponsePrivate : public CloudHSMResponsePrivate {
+class DescribeHapgResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 

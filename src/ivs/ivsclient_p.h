@@ -29,7 +29,7 @@ namespace IVS {
 
 class IvsClient;
 
-class QTAWS_EXPORT IvsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IvsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IvsClientPrivate(IvsClient * const q);

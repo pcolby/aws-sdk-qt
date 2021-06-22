@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class DeleteCoreDeviceRequest;
 
-class QTAWS_EXPORT DeleteCoreDeviceRequestPrivate : public GreengrassV2RequestPrivate {
+class DeleteCoreDeviceRequestPrivate : public GreengrassV2RequestPrivate {
 
 public:
     DeleteCoreDeviceRequestPrivate(const GreengrassV2Request::Action action,

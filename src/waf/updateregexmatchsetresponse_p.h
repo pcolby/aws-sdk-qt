@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateRegexMatchSetResponse;
 
-class QTAWS_EXPORT UpdateRegexMatchSetResponsePrivate : public WafResponsePrivate {
+class UpdateRegexMatchSetResponsePrivate : public WafResponsePrivate {
 
 public:
 

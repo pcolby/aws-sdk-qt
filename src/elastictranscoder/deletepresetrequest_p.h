@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class DeletePresetRequest;
 
-class QTAWS_EXPORT DeletePresetRequestPrivate : public ElasticTranscoderRequestPrivate {
+class DeletePresetRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     DeletePresetRequestPrivate(const ElasticTranscoderRequest::Action action,

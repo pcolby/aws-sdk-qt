@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class IoTThingsGraphRequest;
 
-class QTAWS_EXPORT IoTThingsGraphRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTThingsGraphRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTThingsGraphRequest::Action action; ///< IoTThingsGraph action to be performed.

@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public CodePipelineResponsePrivate {
+class TagResourceResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 

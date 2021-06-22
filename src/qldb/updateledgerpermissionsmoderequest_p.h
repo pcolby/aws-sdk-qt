@@ -28,7 +28,7 @@ namespace QLDB {
 
 class UpdateLedgerPermissionsModeRequest;
 
-class QTAWS_EXPORT UpdateLedgerPermissionsModeRequestPrivate : public QldbRequestPrivate {
+class UpdateLedgerPermissionsModeRequestPrivate : public QldbRequestPrivate {
 
 public:
     UpdateLedgerPermissionsModeRequestPrivate(const QldbRequest::Action action,

@@ -27,7 +27,7 @@ namespace Batch {
 
 class ListJobsResponse;
 
-class QTAWS_EXPORT ListJobsResponsePrivate : public BatchResponsePrivate {
+class ListJobsResponsePrivate : public BatchResponsePrivate {
 
 public:
 

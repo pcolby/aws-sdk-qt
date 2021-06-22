@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class CreateFacetResponse;
 
-class QTAWS_EXPORT CreateFacetResponsePrivate : public CloudDirectoryResponsePrivate {
+class CreateFacetResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class GetFolderRequest;
 
-class QTAWS_EXPORT GetFolderRequestPrivate : public WorkDocsRequestPrivate {
+class GetFolderRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     GetFolderRequestPrivate(const WorkDocsRequest::Action action,

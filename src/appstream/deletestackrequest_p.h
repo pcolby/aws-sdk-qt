@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DeleteStackRequest;
 
-class QTAWS_EXPORT DeleteStackRequestPrivate : public AppStreamRequestPrivate {
+class DeleteStackRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DeleteStackRequestPrivate(const AppStreamRequest::Action action,

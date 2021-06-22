@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class DeleteDeploymentGroupResponse;
 
-class QTAWS_EXPORT DeleteDeploymentGroupResponsePrivate : public CodeDeployResponsePrivate {
+class DeleteDeploymentGroupResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 

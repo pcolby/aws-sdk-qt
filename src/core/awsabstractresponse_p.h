@@ -33,7 +33,7 @@ namespace Core {
 class AwsAbstractRequest;
 class AwsAbstractResponse;
 
-class QTAWS_EXPORT AwsAbstractResponsePrivate {
+class AwsAbstractResponsePrivate {
 
 public:
     QNetworkReply * reply;              ///< Network reply for this response.

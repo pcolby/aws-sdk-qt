@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateColumnStatisticsForTableResponse;
 
-class QTAWS_EXPORT UpdateColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate {
+class UpdateColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate {
 
 public:
 

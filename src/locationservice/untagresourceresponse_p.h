@@ -27,7 +27,7 @@ namespace LocationService {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public LocationServiceResponsePrivate {
+class UntagResourceResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

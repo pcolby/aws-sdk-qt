@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class UpdateShardCountResponse;
 
-class QTAWS_EXPORT UpdateShardCountResponsePrivate : public KinesisResponsePrivate {
+class UpdateShardCountResponsePrivate : public KinesisResponsePrivate {
 
 public:
 

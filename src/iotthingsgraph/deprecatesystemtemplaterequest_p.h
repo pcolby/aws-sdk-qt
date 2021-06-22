@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class DeprecateSystemTemplateRequest;
 
-class QTAWS_EXPORT DeprecateSystemTemplateRequestPrivate : public IoTThingsGraphRequestPrivate {
+class DeprecateSystemTemplateRequestPrivate : public IoTThingsGraphRequestPrivate {
 
 public:
     DeprecateSystemTemplateRequestPrivate(const IoTThingsGraphRequest::Action action,

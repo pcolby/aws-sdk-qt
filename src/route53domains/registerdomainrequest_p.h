@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class RegisterDomainRequest;
 
-class QTAWS_EXPORT RegisterDomainRequestPrivate : public Route53DomainsRequestPrivate {
+class RegisterDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     RegisterDomainRequestPrivate(const Route53DomainsRequest::Action action,

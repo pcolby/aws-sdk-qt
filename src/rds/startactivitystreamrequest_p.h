@@ -28,7 +28,7 @@ namespace RDS {
 
 class StartActivityStreamRequest;
 
-class QTAWS_EXPORT StartActivityStreamRequestPrivate : public RdsRequestPrivate {
+class StartActivityStreamRequestPrivate : public RdsRequestPrivate {
 
 public:
     StartActivityStreamRequestPrivate(const RdsRequest::Action action,

@@ -29,7 +29,7 @@ namespace LexRuntimeService {
 
 class LexRuntimeServiceClient;
 
-class QTAWS_EXPORT LexRuntimeServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LexRuntimeServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q);

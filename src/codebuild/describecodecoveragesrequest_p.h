@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class DescribeCodeCoveragesRequest;
 
-class QTAWS_EXPORT DescribeCodeCoveragesRequestPrivate : public CodeBuildRequestPrivate {
+class DescribeCodeCoveragesRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     DescribeCodeCoveragesRequestPrivate(const CodeBuildRequest::Action action,

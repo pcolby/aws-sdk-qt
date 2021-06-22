@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public Sesv2RequestPrivate {
+class UntagResourceRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const Sesv2Request::Action action,

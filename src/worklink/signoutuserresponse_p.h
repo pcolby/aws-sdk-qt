@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class SignOutUserResponse;
 
-class QTAWS_EXPORT SignOutUserResponsePrivate : public WorkLinkResponsePrivate {
+class SignOutUserResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

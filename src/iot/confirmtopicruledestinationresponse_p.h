@@ -27,7 +27,7 @@ namespace IoT {
 
 class ConfirmTopicRuleDestinationResponse;
 
-class QTAWS_EXPORT ConfirmTopicRuleDestinationResponsePrivate : public IoTResponsePrivate {
+class ConfirmTopicRuleDestinationResponsePrivate : public IoTResponsePrivate {
 
 public:
 

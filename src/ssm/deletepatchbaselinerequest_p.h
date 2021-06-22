@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeletePatchBaselineRequest;
 
-class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SsmRequestPrivate {
+class DeletePatchBaselineRequestPrivate : public SsmRequestPrivate {
 
 public:
     DeletePatchBaselineRequestPrivate(const SsmRequest::Action action,

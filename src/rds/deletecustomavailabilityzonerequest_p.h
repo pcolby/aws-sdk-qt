@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteCustomAvailabilityZoneRequest;
 
-class QTAWS_EXPORT DeleteCustomAvailabilityZoneRequestPrivate : public RdsRequestPrivate {
+class DeleteCustomAvailabilityZoneRequestPrivate : public RdsRequestPrivate {
 
 public:
     DeleteCustomAvailabilityZoneRequestPrivate(const RdsRequest::Action action,

@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class GetMetricStreamRequest;
 
-class QTAWS_EXPORT GetMetricStreamRequestPrivate : public CloudWatchRequestPrivate {
+class GetMetricStreamRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     GetMetricStreamRequestPrivate(const CloudWatchRequest::Action action,

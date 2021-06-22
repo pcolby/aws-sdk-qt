@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DeleteStackSetRequest;
 
-class QTAWS_EXPORT DeleteStackSetRequestPrivate : public CloudFormationRequestPrivate {
+class DeleteStackSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     DeleteStackSetRequestPrivate(const CloudFormationRequest::Action action,

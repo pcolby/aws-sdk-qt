@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeLimitsRequest;
 
-class QTAWS_EXPORT DescribeLimitsRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeLimitsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeLimitsRequestPrivate(const DynamoDBRequest::Action action,

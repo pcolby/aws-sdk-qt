@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateEmailIdentityResponse;
 
-class QTAWS_EXPORT CreateEmailIdentityResponsePrivate : public Sesv2ResponsePrivate {
+class CreateEmailIdentityResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

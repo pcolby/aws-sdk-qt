@@ -27,7 +27,7 @@ namespace Connect {
 
 class StartChatContactResponse;
 
-class QTAWS_EXPORT StartChatContactResponsePrivate : public ConnectResponsePrivate {
+class StartChatContactResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetWebACLRequest;
 
-class QTAWS_EXPORT GetWebACLRequestPrivate : public WafRequestPrivate {
+class GetWebACLRequestPrivate : public WafRequestPrivate {
 
 public:
     GetWebACLRequestPrivate(const WafRequest::Action action,

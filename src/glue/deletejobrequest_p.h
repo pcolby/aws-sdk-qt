@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteJobRequest;
 
-class QTAWS_EXPORT DeleteJobRequestPrivate : public GlueRequestPrivate {
+class DeleteJobRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteJobRequestPrivate(const GlueRequest::Action action,

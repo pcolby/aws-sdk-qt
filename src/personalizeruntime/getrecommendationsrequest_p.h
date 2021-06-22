@@ -28,7 +28,7 @@ namespace PersonalizeRuntime {
 
 class GetRecommendationsRequest;
 
-class QTAWS_EXPORT GetRecommendationsRequestPrivate : public PersonalizeRuntimeRequestPrivate {
+class GetRecommendationsRequestPrivate : public PersonalizeRuntimeRequestPrivate {
 
 public:
     GetRecommendationsRequestPrivate(const PersonalizeRuntimeRequest::Action action,

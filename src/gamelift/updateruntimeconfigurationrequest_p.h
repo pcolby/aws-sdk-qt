@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateRuntimeConfigurationRequest;
 
-class QTAWS_EXPORT UpdateRuntimeConfigurationRequestPrivate : public GameLiftRequestPrivate {
+class UpdateRuntimeConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateRuntimeConfigurationRequestPrivate(const GameLiftRequest::Action action,

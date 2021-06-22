@@ -28,7 +28,7 @@ namespace LexRuntimeService {
 
 class LexRuntimeServiceRequest;
 
-class QTAWS_EXPORT LexRuntimeServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexRuntimeServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LexRuntimeServiceRequest::Action action; ///< LexRuntimeService action to be performed.

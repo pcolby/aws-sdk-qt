@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetRolePolicyRequest;
 
-class QTAWS_EXPORT GetRolePolicyRequestPrivate : public IamRequestPrivate {
+class GetRolePolicyRequestPrivate : public IamRequestPrivate {
 
 public:
     GetRolePolicyRequestPrivate(const IamRequest::Action action,

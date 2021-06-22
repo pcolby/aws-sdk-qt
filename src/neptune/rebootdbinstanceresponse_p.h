@@ -27,7 +27,7 @@ namespace Neptune {
 
 class RebootDBInstanceResponse;
 
-class QTAWS_EXPORT RebootDBInstanceResponsePrivate : public NeptuneResponsePrivate {
+class RebootDBInstanceResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

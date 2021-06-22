@@ -27,7 +27,7 @@ namespace IoT {
 
 class CreateCustomMetricResponse;
 
-class QTAWS_EXPORT CreateCustomMetricResponsePrivate : public IoTResponsePrivate {
+class CreateCustomMetricResponsePrivate : public IoTResponsePrivate {
 
 public:
 

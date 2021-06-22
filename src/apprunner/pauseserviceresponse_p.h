@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class PauseServiceResponse;
 
-class QTAWS_EXPORT PauseServiceResponsePrivate : public AppRunnerResponsePrivate {
+class PauseServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

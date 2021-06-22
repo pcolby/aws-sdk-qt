@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeDirectoriesRequest;
 
-class QTAWS_EXPORT DescribeDirectoriesRequestPrivate : public DirectoryServiceRequestPrivate {
+class DescribeDirectoriesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DescribeDirectoriesRequestPrivate(const DirectoryServiceRequest::Action action,

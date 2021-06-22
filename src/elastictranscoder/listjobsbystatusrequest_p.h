@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class ListJobsByStatusRequest;
 
-class QTAWS_EXPORT ListJobsByStatusRequestPrivate : public ElasticTranscoderRequestPrivate {
+class ListJobsByStatusRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     ListJobsByStatusRequestPrivate(const ElasticTranscoderRequest::Action action,

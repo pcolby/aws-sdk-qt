@@ -28,7 +28,7 @@ namespace Appflow {
 
 class DescribeFlowRequest;
 
-class QTAWS_EXPORT DescribeFlowRequestPrivate : public AppflowRequestPrivate {
+class DescribeFlowRequestPrivate : public AppflowRequestPrivate {
 
 public:
     DescribeFlowRequestPrivate(const AppflowRequest::Action action,

@@ -28,7 +28,7 @@ namespace QLDB {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public QldbRequestPrivate {
+class TagResourceRequestPrivate : public QldbRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const QldbRequest::Action action,

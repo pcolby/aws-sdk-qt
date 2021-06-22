@@ -28,7 +28,7 @@ namespace Redshift {
 
 class AcceptReservedNodeExchangeRequest;
 
-class QTAWS_EXPORT AcceptReservedNodeExchangeRequestPrivate : public RedshiftRequestPrivate {
+class AcceptReservedNodeExchangeRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     AcceptReservedNodeExchangeRequestPrivate(const RedshiftRequest::Action action,

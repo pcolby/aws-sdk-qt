@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeIpv6PoolsRequest;
 
-class QTAWS_EXPORT DescribeIpv6PoolsRequestPrivate : public Ec2RequestPrivate {
+class DescribeIpv6PoolsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeIpv6PoolsRequestPrivate(const Ec2Request::Action action,

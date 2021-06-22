@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class MergeProfilesRequest;
 
-class QTAWS_EXPORT MergeProfilesRequestPrivate : public CustomerProfilesRequestPrivate {
+class MergeProfilesRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     MergeProfilesRequestPrivate(const CustomerProfilesRequest::Action action,

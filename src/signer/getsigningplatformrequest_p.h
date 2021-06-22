@@ -28,7 +28,7 @@ namespace signer {
 
 class GetSigningPlatformRequest;
 
-class QTAWS_EXPORT GetSigningPlatformRequestPrivate : public signerRequestPrivate {
+class GetSigningPlatformRequestPrivate : public signerRequestPrivate {
 
 public:
     GetSigningPlatformRequestPrivate(const signerRequest::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DetachVolumeRequest;
 
-class QTAWS_EXPORT DetachVolumeRequestPrivate : public Ec2RequestPrivate {
+class DetachVolumeRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DetachVolumeRequestPrivate(const Ec2Request::Action action,

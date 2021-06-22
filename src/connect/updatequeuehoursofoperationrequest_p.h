@@ -28,7 +28,7 @@ namespace Connect {
 
 class UpdateQueueHoursOfOperationRequest;
 
-class QTAWS_EXPORT UpdateQueueHoursOfOperationRequestPrivate : public ConnectRequestPrivate {
+class UpdateQueueHoursOfOperationRequestPrivate : public ConnectRequestPrivate {
 
 public:
     UpdateQueueHoursOfOperationRequestPrivate(const ConnectRequest::Action action,

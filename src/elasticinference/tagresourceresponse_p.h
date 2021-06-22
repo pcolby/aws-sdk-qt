@@ -27,7 +27,7 @@ namespace ElasticInference {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public ElasticInferenceResponsePrivate {
+class TagResourceResponsePrivate : public ElasticInferenceResponsePrivate {
 
 public:
 

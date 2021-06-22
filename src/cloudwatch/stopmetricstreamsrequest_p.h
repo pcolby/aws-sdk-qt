@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class StopMetricStreamsRequest;
 
-class QTAWS_EXPORT StopMetricStreamsRequestPrivate : public CloudWatchRequestPrivate {
+class StopMetricStreamsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     StopMetricStreamsRequestPrivate(const CloudWatchRequest::Action action,

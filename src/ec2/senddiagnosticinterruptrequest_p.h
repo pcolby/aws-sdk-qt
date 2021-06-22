@@ -28,7 +28,7 @@ namespace EC2 {
 
 class SendDiagnosticInterruptRequest;
 
-class QTAWS_EXPORT SendDiagnosticInterruptRequestPrivate : public Ec2RequestPrivate {
+class SendDiagnosticInterruptRequestPrivate : public Ec2RequestPrivate {
 
 public:
     SendDiagnosticInterruptRequestPrivate(const Ec2Request::Action action,

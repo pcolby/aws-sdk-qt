@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class DeleteEnvironmentResponse;
 
-class QTAWS_EXPORT DeleteEnvironmentResponsePrivate : public AppConfigResponsePrivate {
+class DeleteEnvironmentResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

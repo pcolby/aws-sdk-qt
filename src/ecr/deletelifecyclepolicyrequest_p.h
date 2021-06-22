@@ -28,7 +28,7 @@ namespace ECR {
 
 class DeleteLifecyclePolicyRequest;
 
-class QTAWS_EXPORT DeleteLifecyclePolicyRequestPrivate : public EcrRequestPrivate {
+class DeleteLifecyclePolicyRequestPrivate : public EcrRequestPrivate {
 
 public:
     DeleteLifecyclePolicyRequestPrivate(const EcrRequest::Action action,

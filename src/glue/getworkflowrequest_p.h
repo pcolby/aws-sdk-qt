@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetWorkflowRequest;
 
-class QTAWS_EXPORT GetWorkflowRequestPrivate : public GlueRequestPrivate {
+class GetWorkflowRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetWorkflowRequestPrivate(const GlueRequest::Action action,

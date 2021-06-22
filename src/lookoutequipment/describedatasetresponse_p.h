@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class DescribeDatasetResponse;
 
-class QTAWS_EXPORT DescribeDatasetResponsePrivate : public LookoutEquipmentResponsePrivate {
+class DescribeDatasetResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 

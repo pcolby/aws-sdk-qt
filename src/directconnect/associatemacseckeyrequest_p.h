@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AssociateMacSecKeyRequest;
 
-class QTAWS_EXPORT AssociateMacSecKeyRequestPrivate : public DirectConnectRequestPrivate {
+class AssociateMacSecKeyRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     AssociateMacSecKeyRequestPrivate(const DirectConnectRequest::Action action,

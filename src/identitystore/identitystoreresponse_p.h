@@ -27,7 +27,7 @@ namespace IdentityStore {
 
 class IdentityStoreResponse;
 
-class QTAWS_EXPORT IdentityStoreResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IdentityStoreResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

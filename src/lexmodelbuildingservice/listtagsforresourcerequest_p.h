@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class ListTagsForResourceRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const LexModelBuildingServiceRequest::Action action,

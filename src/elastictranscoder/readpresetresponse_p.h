@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class ReadPresetResponse;
 
-class QTAWS_EXPORT ReadPresetResponsePrivate : public ElasticTranscoderResponsePrivate {
+class ReadPresetResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 

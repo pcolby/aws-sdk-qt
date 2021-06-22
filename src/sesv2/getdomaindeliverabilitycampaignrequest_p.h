@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetDomainDeliverabilityCampaignRequest;
 
-class QTAWS_EXPORT GetDomainDeliverabilityCampaignRequestPrivate : public Sesv2RequestPrivate {
+class GetDomainDeliverabilityCampaignRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     GetDomainDeliverabilityCampaignRequestPrivate(const Sesv2Request::Action action,

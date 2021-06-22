@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class EnableMacieResponse;
 
-class QTAWS_EXPORT EnableMacieResponsePrivate : public Macie2ResponsePrivate {
+class EnableMacieResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

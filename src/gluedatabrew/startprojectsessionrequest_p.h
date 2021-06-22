@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class StartProjectSessionRequest;
 
-class QTAWS_EXPORT StartProjectSessionRequestPrivate : public GlueDataBrewRequestPrivate {
+class StartProjectSessionRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     StartProjectSessionRequestPrivate(const GlueDataBrewRequest::Action action,

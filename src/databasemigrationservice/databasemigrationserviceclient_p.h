@@ -29,7 +29,7 @@ namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClient;
 
-class QTAWS_EXPORT DatabaseMigrationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DatabaseMigrationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q);

@@ -28,7 +28,7 @@ namespace LocationService {
 
 class DeleteTrackerRequest;
 
-class QTAWS_EXPORT DeleteTrackerRequestPrivate : public LocationServiceRequestPrivate {
+class DeleteTrackerRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     DeleteTrackerRequestPrivate(const LocationServiceRequest::Action action,

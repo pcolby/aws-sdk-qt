@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public GlueDataBrewResponsePrivate {
+class ListTagsForResourceResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 

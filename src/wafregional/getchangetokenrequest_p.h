@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetChangeTokenRequest;
 
-class QTAWS_EXPORT GetChangeTokenRequestPrivate : public WAFRegionalRequestPrivate {
+class GetChangeTokenRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetChangeTokenRequestPrivate(const WAFRegionalRequest::Action action,

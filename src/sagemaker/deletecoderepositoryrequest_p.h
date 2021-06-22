@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteCodeRepositoryRequest;
 
-class QTAWS_EXPORT DeleteCodeRepositoryRequestPrivate : public SageMakerRequestPrivate {
+class DeleteCodeRepositoryRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteCodeRepositoryRequestPrivate(const SageMakerRequest::Action action,

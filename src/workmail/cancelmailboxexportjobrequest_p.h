@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CancelMailboxExportJobRequest;
 
-class QTAWS_EXPORT CancelMailboxExportJobRequestPrivate : public WorkMailRequestPrivate {
+class CancelMailboxExportJobRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     CancelMailboxExportJobRequestPrivate(const WorkMailRequest::Action action,

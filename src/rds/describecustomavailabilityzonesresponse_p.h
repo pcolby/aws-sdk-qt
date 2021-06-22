@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeCustomAvailabilityZonesResponse;
 
-class QTAWS_EXPORT DescribeCustomAvailabilityZonesResponsePrivate : public RdsResponsePrivate {
+class DescribeCustomAvailabilityZonesResponsePrivate : public RdsResponsePrivate {
 
 public:
 

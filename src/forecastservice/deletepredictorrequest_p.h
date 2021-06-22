@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DeletePredictorRequest;
 
-class QTAWS_EXPORT DeletePredictorRequestPrivate : public ForecastServiceRequestPrivate {
+class DeletePredictorRequestPrivate : public ForecastServiceRequestPrivate {
 
 public:
     DeletePredictorRequestPrivate(const ForecastServiceRequest::Action action,

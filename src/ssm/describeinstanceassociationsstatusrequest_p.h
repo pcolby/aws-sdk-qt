@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeInstanceAssociationsStatusRequest;
 
-class QTAWS_EXPORT DescribeInstanceAssociationsStatusRequestPrivate : public SsmRequestPrivate {
+class DescribeInstanceAssociationsStatusRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeInstanceAssociationsStatusRequestPrivate(const SsmRequest::Action action,

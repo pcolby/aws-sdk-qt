@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeJobExecutionRequest;
 
-class QTAWS_EXPORT DescribeJobExecutionRequestPrivate : public IoTRequestPrivate {
+class DescribeJobExecutionRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeJobExecutionRequestPrivate(const IoTRequest::Action action,

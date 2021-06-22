@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class RemoveAttributesRequest;
 
-class QTAWS_EXPORT RemoveAttributesRequestPrivate : public PinpointRequestPrivate {
+class RemoveAttributesRequestPrivate : public PinpointRequestPrivate {
 
 public:
     RemoveAttributesRequestPrivate(const PinpointRequest::Action action,

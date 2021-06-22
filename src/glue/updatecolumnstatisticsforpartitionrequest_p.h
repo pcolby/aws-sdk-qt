@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateColumnStatisticsForPartitionRequest;
 
-class QTAWS_EXPORT UpdateColumnStatisticsForPartitionRequestPrivate : public GlueRequestPrivate {
+class UpdateColumnStatisticsForPartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateColumnStatisticsForPartitionRequestPrivate(const GlueRequest::Action action,

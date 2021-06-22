@@ -27,7 +27,7 @@ namespace S3Control {
 
 class GetBucketTaggingResponse;
 
-class QTAWS_EXPORT GetBucketTaggingResponsePrivate : public S3ControlResponsePrivate {
+class GetBucketTaggingResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

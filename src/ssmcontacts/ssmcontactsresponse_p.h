@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class SSMContactsResponse;
 
-class QTAWS_EXPORT SSMContactsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SSMContactsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

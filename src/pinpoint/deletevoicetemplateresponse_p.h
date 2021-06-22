@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteVoiceTemplateResponse;
 
-class QTAWS_EXPORT DeleteVoiceTemplateResponsePrivate : public PinpointResponsePrivate {
+class DeleteVoiceTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

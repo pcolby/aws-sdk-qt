@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeOrderableDBInstanceOptionsRequest;
 
-class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequestPrivate : public RdsRequestPrivate {
+class DescribeOrderableDBInstanceOptionsRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeOrderableDBInstanceOptionsRequestPrivate(const RdsRequest::Action action,

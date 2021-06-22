@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteByteMatchSetRequest;
 
-class QTAWS_EXPORT DeleteByteMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteByteMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeleteByteMatchSetRequestPrivate(const WAFRegionalRequest::Action action,

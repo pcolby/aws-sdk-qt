@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DescribeReservationResponse;
 
-class QTAWS_EXPORT DescribeReservationResponsePrivate : public MediaLiveResponsePrivate {
+class DescribeReservationResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

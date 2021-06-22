@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class CreateRateBasedRuleResponse;
 
-class QTAWS_EXPORT CreateRateBasedRuleResponsePrivate : public WAFRegionalResponsePrivate {
+class CreateRateBasedRuleResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

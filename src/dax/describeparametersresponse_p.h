@@ -27,7 +27,7 @@ namespace DAX {
 
 class DescribeParametersResponse;
 
-class QTAWS_EXPORT DescribeParametersResponsePrivate : public DaxResponsePrivate {
+class DescribeParametersResponsePrivate : public DaxResponsePrivate {
 
 public:
 

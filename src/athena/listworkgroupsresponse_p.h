@@ -27,7 +27,7 @@ namespace Athena {
 
 class ListWorkGroupsResponse;
 
-class QTAWS_EXPORT ListWorkGroupsResponsePrivate : public AthenaResponsePrivate {
+class ListWorkGroupsResponsePrivate : public AthenaResponsePrivate {
 
 public:
 

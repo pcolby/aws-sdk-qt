@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class DescribeImportRequest;
 
-class QTAWS_EXPORT DescribeImportRequestPrivate : public LexModelsV2RequestPrivate {
+class DescribeImportRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     DescribeImportRequestPrivate(const LexModelsV2Request::Action action,

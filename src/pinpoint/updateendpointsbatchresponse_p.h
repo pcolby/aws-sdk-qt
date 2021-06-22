@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateEndpointsBatchResponse;
 
-class QTAWS_EXPORT UpdateEndpointsBatchResponsePrivate : public PinpointResponsePrivate {
+class UpdateEndpointsBatchResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

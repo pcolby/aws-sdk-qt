@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class RebootCacheClusterRequest;
 
-class QTAWS_EXPORT RebootCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
+class RebootCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     RebootCacheClusterRequestPrivate(const ElastiCacheRequest::Action action,

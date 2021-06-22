@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyTransitGatewayVpcAttachmentRequest;
 
-class QTAWS_EXPORT ModifyTransitGatewayVpcAttachmentRequestPrivate : public Ec2RequestPrivate {
+class ModifyTransitGatewayVpcAttachmentRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifyTransitGatewayVpcAttachmentRequestPrivate(const Ec2Request::Action action,

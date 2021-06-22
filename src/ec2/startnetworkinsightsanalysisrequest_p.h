@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StartNetworkInsightsAnalysisRequest;
 
-class QTAWS_EXPORT StartNetworkInsightsAnalysisRequestPrivate : public Ec2RequestPrivate {
+class StartNetworkInsightsAnalysisRequestPrivate : public Ec2RequestPrivate {
 
 public:
     StartNetworkInsightsAnalysisRequestPrivate(const Ec2Request::Action action,

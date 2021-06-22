@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class PutExternalEvaluationRequest;
 
-class QTAWS_EXPORT PutExternalEvaluationRequestPrivate : public ConfigServiceRequestPrivate {
+class PutExternalEvaluationRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     PutExternalEvaluationRequestPrivate(const ConfigServiceRequest::Action action,

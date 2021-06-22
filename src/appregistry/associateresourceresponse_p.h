@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class AssociateResourceResponse;
 
-class QTAWS_EXPORT AssociateResourceResponsePrivate : public AppRegistryResponsePrivate {
+class AssociateResourceResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 

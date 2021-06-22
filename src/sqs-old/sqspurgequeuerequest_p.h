@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsPurgeQueueRequest;
 
-class QTAWS_EXPORT SqsPurgeQueueRequestPrivate : public SqsRequestPrivate {
+class SqsPurgeQueueRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsPurgeQueueRequestPrivate(const SqsRequest::Action action,

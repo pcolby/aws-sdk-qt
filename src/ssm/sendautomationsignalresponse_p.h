@@ -27,7 +27,7 @@ namespace SSM {
 
 class SendAutomationSignalResponse;
 
-class QTAWS_EXPORT SendAutomationSignalResponsePrivate : public SsmResponsePrivate {
+class SendAutomationSignalResponsePrivate : public SsmResponsePrivate {
 
 public:
 

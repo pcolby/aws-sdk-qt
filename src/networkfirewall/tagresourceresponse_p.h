@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public NetworkFirewallResponsePrivate {
+class TagResourceResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

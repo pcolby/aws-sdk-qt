@@ -27,7 +27,7 @@ namespace IAM {
 
 class SimulatePrincipalPolicyResponse;
 
-class QTAWS_EXPORT SimulatePrincipalPolicyResponsePrivate : public IamResponsePrivate {
+class SimulatePrincipalPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 

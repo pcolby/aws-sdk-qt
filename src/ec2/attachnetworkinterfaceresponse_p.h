@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AttachNetworkInterfaceResponse;
 
-class QTAWS_EXPORT AttachNetworkInterfaceResponsePrivate : public Ec2ResponsePrivate {
+class AttachNetworkInterfaceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

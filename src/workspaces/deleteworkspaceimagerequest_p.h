@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DeleteWorkspaceImageRequest;
 
-class QTAWS_EXPORT DeleteWorkspaceImageRequestPrivate : public WorkSpacesRequestPrivate {
+class DeleteWorkspaceImageRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DeleteWorkspaceImageRequestPrivate(const WorkSpacesRequest::Action action,

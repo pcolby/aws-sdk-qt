@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class BatchAssociateClientDeviceWithCoreDeviceRequest;
 
-class QTAWS_EXPORT BatchAssociateClientDeviceWithCoreDeviceRequestPrivate : public GreengrassV2RequestPrivate {
+class BatchAssociateClientDeviceWithCoreDeviceRequestPrivate : public GreengrassV2RequestPrivate {
 
 public:
     BatchAssociateClientDeviceWithCoreDeviceRequestPrivate(const GreengrassV2Request::Action action,

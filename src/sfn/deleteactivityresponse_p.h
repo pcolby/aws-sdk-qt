@@ -27,7 +27,7 @@ namespace SFN {
 
 class DeleteActivityResponse;
 
-class QTAWS_EXPORT DeleteActivityResponsePrivate : public SfnResponsePrivate {
+class DeleteActivityResponsePrivate : public SfnResponsePrivate {
 
 public:
 

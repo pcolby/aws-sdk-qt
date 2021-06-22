@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeOrderableDBInstanceOptionsResponse;
 
-class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsResponsePrivate : public RdsResponsePrivate {
+class DescribeOrderableDBInstanceOptionsResponsePrivate : public RdsResponsePrivate {
 
 public:
 

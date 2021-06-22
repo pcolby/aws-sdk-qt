@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class SendPipelineExecutionStepSuccessRequest;
 
-class QTAWS_EXPORT SendPipelineExecutionStepSuccessRequestPrivate : public SageMakerRequestPrivate {
+class SendPipelineExecutionStepSuccessRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     SendPipelineExecutionStepSuccessRequestPrivate(const SageMakerRequest::Action action,

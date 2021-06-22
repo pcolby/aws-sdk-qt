@@ -27,7 +27,7 @@ namespace Chime {
 
 class ChimeResponse;
 
-class QTAWS_EXPORT ChimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ChimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

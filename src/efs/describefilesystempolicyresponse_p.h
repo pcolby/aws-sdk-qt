@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeFileSystemPolicyResponse;
 
-class QTAWS_EXPORT DescribeFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
+class DescribeFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 

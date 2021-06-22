@@ -29,7 +29,7 @@ namespace Honeycode {
 
 class HoneycodeClient;
 
-class QTAWS_EXPORT HoneycodeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class HoneycodeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     HoneycodeClientPrivate(HoneycodeClient * const q);

@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class DeleteDedicatedIpPoolRequest;
 
-class QTAWS_EXPORT DeleteDedicatedIpPoolRequestPrivate : public Sesv2RequestPrivate {
+class DeleteDedicatedIpPoolRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     DeleteDedicatedIpPoolRequestPrivate(const Sesv2Request::Action action,

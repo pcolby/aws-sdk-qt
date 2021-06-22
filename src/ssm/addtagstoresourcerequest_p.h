@@ -28,7 +28,7 @@ namespace SSM {
 
 class AddTagsToResourceRequest;
 
-class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public SsmRequestPrivate {
+class AddTagsToResourceRequestPrivate : public SsmRequestPrivate {
 
 public:
     AddTagsToResourceRequestPrivate(const SsmRequest::Action action,

@@ -27,7 +27,7 @@ namespace RDS {
 
 class RestoreDBClusterToPointInTimeResponse;
 
-class QTAWS_EXPORT RestoreDBClusterToPointInTimeResponsePrivate : public RdsResponsePrivate {
+class RestoreDBClusterToPointInTimeResponsePrivate : public RdsResponsePrivate {
 
 public:
 

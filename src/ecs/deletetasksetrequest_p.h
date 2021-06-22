@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteTaskSetRequest;
 
-class QTAWS_EXPORT DeleteTaskSetRequestPrivate : public EcsRequestPrivate {
+class DeleteTaskSetRequestPrivate : public EcsRequestPrivate {
 
 public:
     DeleteTaskSetRequestPrivate(const EcsRequest::Action action,

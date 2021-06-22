@@ -27,7 +27,7 @@ namespace Organizations {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public OrganizationsResponsePrivate {
+class TagResourceResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

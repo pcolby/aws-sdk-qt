@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class DescribeApplicationVersionRequest;
 
-class QTAWS_EXPORT DescribeApplicationVersionRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
+class DescribeApplicationVersionRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
 
 public:
     DescribeApplicationVersionRequestPrivate(const KinesisAnalyticsV2Request::Action action,

@@ -27,7 +27,7 @@ namespace IAM {
 
 class UntagServerCertificateResponse;
 
-class QTAWS_EXPORT UntagServerCertificateResponsePrivate : public IamResponsePrivate {
+class UntagServerCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 

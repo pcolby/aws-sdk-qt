@@ -27,7 +27,7 @@ namespace EKS {
 
 class CreateFargateProfileResponse;
 
-class QTAWS_EXPORT CreateFargateProfileResponsePrivate : public EksResponsePrivate {
+class CreateFargateProfileResponsePrivate : public EksResponsePrivate {
 
 public:
 

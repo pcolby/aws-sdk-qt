@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreateUserDefinedFunctionRequest;
 
-class QTAWS_EXPORT CreateUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
+class CreateUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
 
 public:
     CreateUserDefinedFunctionRequestPrivate(const GlueRequest::Action action,

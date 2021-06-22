@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DeleteDBClusterResponse;
 
-class QTAWS_EXPORT DeleteDBClusterResponsePrivate : public DocDBResponsePrivate {
+class DeleteDBClusterResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

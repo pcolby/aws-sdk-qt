@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class PutWarmPoolResponse;
 
-class QTAWS_EXPORT PutWarmPoolResponsePrivate : public AutoScalingResponsePrivate {
+class PutWarmPoolResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

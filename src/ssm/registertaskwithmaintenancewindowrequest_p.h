@@ -28,7 +28,7 @@ namespace SSM {
 
 class RegisterTaskWithMaintenanceWindowRequest;
 
-class QTAWS_EXPORT RegisterTaskWithMaintenanceWindowRequestPrivate : public SsmRequestPrivate {
+class RegisterTaskWithMaintenanceWindowRequestPrivate : public SsmRequestPrivate {
 
 public:
     RegisterTaskWithMaintenanceWindowRequestPrivate(const SsmRequest::Action action,

@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetOriginRequestPolicyConfigRequest;
 
-class QTAWS_EXPORT GetOriginRequestPolicyConfigRequestPrivate : public CloudFrontRequestPrivate {
+class GetOriginRequestPolicyConfigRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     GetOriginRequestPolicyConfigRequestPrivate(const CloudFrontRequest::Action action,

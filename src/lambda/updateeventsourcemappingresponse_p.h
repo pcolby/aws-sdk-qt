@@ -27,7 +27,7 @@ namespace Lambda {
 
 class UpdateEventSourceMappingResponse;
 
-class QTAWS_EXPORT UpdateEventSourceMappingResponsePrivate : public LambdaResponsePrivate {
+class UpdateEventSourceMappingResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

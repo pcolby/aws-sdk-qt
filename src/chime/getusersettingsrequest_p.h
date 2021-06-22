@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetUserSettingsRequest;
 
-class QTAWS_EXPORT GetUserSettingsRequestPrivate : public ChimeRequestPrivate {
+class GetUserSettingsRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetUserSettingsRequestPrivate(const ChimeRequest::Action action,

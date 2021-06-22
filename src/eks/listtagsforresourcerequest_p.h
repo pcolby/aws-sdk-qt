@@ -28,7 +28,7 @@ namespace EKS {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public EksRequestPrivate {
+class ListTagsForResourceRequestPrivate : public EksRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const EksRequest::Action action,

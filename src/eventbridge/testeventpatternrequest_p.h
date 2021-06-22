@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class TestEventPatternRequest;
 
-class QTAWS_EXPORT TestEventPatternRequestPrivate : public EventBridgeRequestPrivate {
+class TestEventPatternRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     TestEventPatternRequestPrivate(const EventBridgeRequest::Action action,

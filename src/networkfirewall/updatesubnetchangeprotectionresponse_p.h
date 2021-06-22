@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class UpdateSubnetChangeProtectionResponse;
 
-class QTAWS_EXPORT UpdateSubnetChangeProtectionResponsePrivate : public NetworkFirewallResponsePrivate {
+class UpdateSubnetChangeProtectionResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

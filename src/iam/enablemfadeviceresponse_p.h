@@ -27,7 +27,7 @@ namespace IAM {
 
 class EnableMFADeviceResponse;
 
-class QTAWS_EXPORT EnableMFADeviceResponsePrivate : public IamResponsePrivate {
+class EnableMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 

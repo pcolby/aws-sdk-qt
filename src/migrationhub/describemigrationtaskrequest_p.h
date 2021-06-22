@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DescribeMigrationTaskRequest;
 
-class QTAWS_EXPORT DescribeMigrationTaskRequestPrivate : public MigrationHubRequestPrivate {
+class DescribeMigrationTaskRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     DescribeMigrationTaskRequestPrivate(const MigrationHubRequest::Action action,

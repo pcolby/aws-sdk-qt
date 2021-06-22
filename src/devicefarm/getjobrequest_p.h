@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetJobRequest;
 
-class QTAWS_EXPORT GetJobRequestPrivate : public DeviceFarmRequestPrivate {
+class GetJobRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetJobRequestPrivate(const DeviceFarmRequest::Action action,

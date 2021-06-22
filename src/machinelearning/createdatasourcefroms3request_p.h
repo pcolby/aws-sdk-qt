@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromS3Request;
 
-class QTAWS_EXPORT CreateDataSourceFromS3RequestPrivate : public MachineLearningRequestPrivate {
+class CreateDataSourceFromS3RequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     CreateDataSourceFromS3RequestPrivate(const MachineLearningRequest::Action action,

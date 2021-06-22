@@ -28,7 +28,7 @@ namespace Connect {
 
 class DisassociateBotRequest;
 
-class QTAWS_EXPORT DisassociateBotRequestPrivate : public ConnectRequestPrivate {
+class DisassociateBotRequestPrivate : public ConnectRequestPrivate {
 
 public:
     DisassociateBotRequestPrivate(const ConnectRequest::Action action,

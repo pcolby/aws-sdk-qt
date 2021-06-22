@@ -27,7 +27,7 @@ namespace ECR {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public EcrResponsePrivate {
+class TagResourceResponsePrivate : public EcrResponsePrivate {
 
 public:
 

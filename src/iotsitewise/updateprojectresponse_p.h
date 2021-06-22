@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class UpdateProjectResponse;
 
-class QTAWS_EXPORT UpdateProjectResponsePrivate : public IoTSiteWiseResponsePrivate {
+class UpdateProjectResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

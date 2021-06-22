@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteUserResponse;
 
-class QTAWS_EXPORT DeleteUserResponsePrivate : public IamResponsePrivate {
+class DeleteUserResponsePrivate : public IamResponsePrivate {
 
 public:
 

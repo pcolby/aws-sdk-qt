@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetApnsChannelRequest;
 
-class QTAWS_EXPORT GetApnsChannelRequestPrivate : public PinpointRequestPrivate {
+class GetApnsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetApnsChannelRequestPrivate(const PinpointRequest::Action action,

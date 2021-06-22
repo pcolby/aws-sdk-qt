@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteStreamingDistributionRequest;
 
-class QTAWS_EXPORT DeleteStreamingDistributionRequestPrivate : public CloudFrontRequestPrivate {
+class DeleteStreamingDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     DeleteStreamingDistributionRequestPrivate(const CloudFrontRequest::Action action,

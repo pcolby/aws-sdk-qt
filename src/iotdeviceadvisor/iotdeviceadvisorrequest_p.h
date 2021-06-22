@@ -28,7 +28,7 @@ namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorRequest;
 
-class QTAWS_EXPORT IoTDeviceAdvisorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTDeviceAdvisorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTDeviceAdvisorRequest::Action action; ///< IoTDeviceAdvisor action to be performed.

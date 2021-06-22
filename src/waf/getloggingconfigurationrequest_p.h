@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetLoggingConfigurationRequest;
 
-class QTAWS_EXPORT GetLoggingConfigurationRequestPrivate : public WafRequestPrivate {
+class GetLoggingConfigurationRequestPrivate : public WafRequestPrivate {
 
 public:
     GetLoggingConfigurationRequestPrivate(const WafRequest::Action action,

@@ -28,7 +28,7 @@ namespace Braket {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public BraketRequestPrivate {
+class ListTagsForResourceRequestPrivate : public BraketRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const BraketRequest::Action action,

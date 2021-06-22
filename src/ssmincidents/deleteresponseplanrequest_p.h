@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class DeleteResponsePlanRequest;
 
-class QTAWS_EXPORT DeleteResponsePlanRequestPrivate : public SSMIncidentsRequestPrivate {
+class DeleteResponsePlanRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     DeleteResponsePlanRequestPrivate(const SSMIncidentsRequest::Action action,

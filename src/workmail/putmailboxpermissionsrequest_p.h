@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class PutMailboxPermissionsRequest;
 
-class QTAWS_EXPORT PutMailboxPermissionsRequestPrivate : public WorkMailRequestPrivate {
+class PutMailboxPermissionsRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     PutMailboxPermissionsRequestPrivate(const WorkMailRequest::Action action,

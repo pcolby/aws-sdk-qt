@@ -27,7 +27,7 @@ namespace IVS {
 
 class DeletePlaybackKeyPairResponse;
 
-class QTAWS_EXPORT DeletePlaybackKeyPairResponsePrivate : public IvsResponsePrivate {
+class DeletePlaybackKeyPairResponsePrivate : public IvsResponsePrivate {
 
 public:
 

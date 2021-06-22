@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ScanRequest;
 
-class QTAWS_EXPORT ScanRequestPrivate : public DynamoDBRequestPrivate {
+class ScanRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ScanRequestPrivate(const DynamoDBRequest::Action action,

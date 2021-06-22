@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class CreateRegexPatternSetRequest;
 
-class QTAWS_EXPORT CreateRegexPatternSetRequestPrivate : public Wafv2RequestPrivate {
+class CreateRegexPatternSetRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     CreateRegexPatternSetRequestPrivate(const Wafv2Request::Action action,

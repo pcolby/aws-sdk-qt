@@ -28,7 +28,7 @@ namespace EBS {
 
 class PutSnapshotBlockRequest;
 
-class QTAWS_EXPORT PutSnapshotBlockRequestPrivate : public EbsRequestPrivate {
+class PutSnapshotBlockRequestPrivate : public EbsRequestPrivate {
 
 public:
     PutSnapshotBlockRequestPrivate(const EbsRequest::Action action,

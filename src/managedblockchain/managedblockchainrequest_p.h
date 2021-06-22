@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class ManagedBlockchainRequest;
 
-class QTAWS_EXPORT ManagedBlockchainRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ManagedBlockchainRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ManagedBlockchainRequest::Action action; ///< ManagedBlockchain action to be performed.

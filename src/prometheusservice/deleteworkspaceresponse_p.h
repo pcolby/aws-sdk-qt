@@ -27,7 +27,7 @@ namespace PrometheusService {
 
 class DeleteWorkspaceResponse;
 
-class QTAWS_EXPORT DeleteWorkspaceResponsePrivate : public PrometheusServiceResponsePrivate {
+class DeleteWorkspaceResponsePrivate : public PrometheusServiceResponsePrivate {
 
 public:
 

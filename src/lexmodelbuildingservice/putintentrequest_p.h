@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class PutIntentRequest;
 
-class QTAWS_EXPORT PutIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class PutIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     PutIntentRequestPrivate(const LexModelBuildingServiceRequest::Action action,

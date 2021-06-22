@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class RemoveResourcePermissionResponse;
 
-class QTAWS_EXPORT RemoveResourcePermissionResponsePrivate : public WorkDocsResponsePrivate {
+class RemoveResourcePermissionResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class ListPlatformBranchesRequest;
 
-class QTAWS_EXPORT ListPlatformBranchesRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class ListPlatformBranchesRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     ListPlatformBranchesRequestPrivate(const ElasticBeanstalkRequest::Action action,

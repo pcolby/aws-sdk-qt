@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class DeleteImageRequest;
 
-class QTAWS_EXPORT DeleteImageRequestPrivate : public imagebuilderRequestPrivate {
+class DeleteImageRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     DeleteImageRequestPrivate(const imagebuilderRequest::Action action,

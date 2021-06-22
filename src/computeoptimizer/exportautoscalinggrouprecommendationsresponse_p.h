@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class ExportAutoScalingGroupRecommendationsResponse;
 
-class QTAWS_EXPORT ExportAutoScalingGroupRecommendationsResponsePrivate : public ComputeOptimizerResponsePrivate {
+class ExportAutoScalingGroupRecommendationsResponsePrivate : public ComputeOptimizerResponsePrivate {
 
 public:
 

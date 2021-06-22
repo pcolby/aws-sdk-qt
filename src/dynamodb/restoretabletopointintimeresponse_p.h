@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class RestoreTableToPointInTimeResponse;
 
-class QTAWS_EXPORT RestoreTableToPointInTimeResponsePrivate : public DynamoDBResponsePrivate {
+class RestoreTableToPointInTimeResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

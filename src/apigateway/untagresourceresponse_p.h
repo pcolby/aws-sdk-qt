@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public APIGatewayResponsePrivate {
+class UntagResourceResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 

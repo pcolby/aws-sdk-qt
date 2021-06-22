@@ -27,7 +27,7 @@ namespace DAX {
 
 class DescribeEventsResponse;
 
-class QTAWS_EXPORT DescribeEventsResponsePrivate : public DaxResponsePrivate {
+class DescribeEventsResponsePrivate : public DaxResponsePrivate {
 
 public:
 

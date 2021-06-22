@@ -28,7 +28,7 @@ namespace RDS {
 
 class CancelExportTaskRequest;
 
-class QTAWS_EXPORT CancelExportTaskRequestPrivate : public RdsRequestPrivate {
+class CancelExportTaskRequestPrivate : public RdsRequestPrivate {
 
 public:
     CancelExportTaskRequestPrivate(const RdsRequest::Action action,

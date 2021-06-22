@@ -27,7 +27,7 @@ namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingResponse;
 
-class QTAWS_EXPORT IoTSecureTunnelingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTSecureTunnelingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

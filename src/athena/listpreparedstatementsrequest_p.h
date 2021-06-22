@@ -28,7 +28,7 @@ namespace Athena {
 
 class ListPreparedStatementsRequest;
 
-class QTAWS_EXPORT ListPreparedStatementsRequestPrivate : public AthenaRequestPrivate {
+class ListPreparedStatementsRequestPrivate : public AthenaRequestPrivate {
 
 public:
     ListPreparedStatementsRequestPrivate(const AthenaRequest::Action action,

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class UpdateDashboardPublishedVersionResponse;
 
-class QTAWS_EXPORT UpdateDashboardPublishedVersionResponsePrivate : public QuickSightResponsePrivate {
+class UpdateDashboardPublishedVersionResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

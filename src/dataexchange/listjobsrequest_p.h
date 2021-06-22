@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class ListJobsRequest;
 
-class QTAWS_EXPORT ListJobsRequestPrivate : public DataExchangeRequestPrivate {
+class ListJobsRequestPrivate : public DataExchangeRequestPrivate {
 
 public:
     ListJobsRequestPrivate(const DataExchangeRequest::Action action,

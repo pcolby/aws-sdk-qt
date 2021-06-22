@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class ListByoipCidrsRequest;
 
-class QTAWS_EXPORT ListByoipCidrsRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class ListByoipCidrsRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     ListByoipCidrsRequestPrivate(const GlobalAcceleratorRequest::Action action,

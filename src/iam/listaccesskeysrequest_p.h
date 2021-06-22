@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListAccessKeysRequest;
 
-class QTAWS_EXPORT ListAccessKeysRequestPrivate : public IamRequestPrivate {
+class ListAccessKeysRequestPrivate : public IamRequestPrivate {
 
 public:
     ListAccessKeysRequestPrivate(const IamRequest::Action action,

@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class CreateProjectResponse;
 
-class QTAWS_EXPORT CreateProjectResponsePrivate : public IoT1ClickProjectsResponsePrivate {
+class CreateProjectResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 

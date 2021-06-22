@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DisassociateFromMasterAccountRequest;
 
-class QTAWS_EXPORT DisassociateFromMasterAccountRequestPrivate : public GuardDutyRequestPrivate {
+class DisassociateFromMasterAccountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DisassociateFromMasterAccountRequestPrivate(const GuardDutyRequest::Action action,

@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DescribeLocationObjectStorageRequest;
 
-class QTAWS_EXPORT DescribeLocationObjectStorageRequestPrivate : public DataSyncRequestPrivate {
+class DescribeLocationObjectStorageRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     DescribeLocationObjectStorageRequestPrivate(const DataSyncRequest::Action action,

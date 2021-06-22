@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeConnectionAliasesRequest;
 
-class QTAWS_EXPORT DescribeConnectionAliasesRequestPrivate : public WorkSpacesRequestPrivate {
+class DescribeConnectionAliasesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DescribeConnectionAliasesRequestPrivate(const WorkSpacesRequest::Action action,

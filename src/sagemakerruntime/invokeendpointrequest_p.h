@@ -28,7 +28,7 @@ namespace SageMakerRuntime {
 
 class InvokeEndpointRequest;
 
-class QTAWS_EXPORT InvokeEndpointRequestPrivate : public SageMakerRuntimeRequestPrivate {
+class InvokeEndpointRequestPrivate : public SageMakerRuntimeRequestPrivate {
 
 public:
     InvokeEndpointRequestPrivate(const SageMakerRuntimeRequest::Action action,

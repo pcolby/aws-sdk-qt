@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class UpdateInstanceProfileRequest;
 
-class QTAWS_EXPORT UpdateInstanceProfileRequestPrivate : public DeviceFarmRequestPrivate {
+class UpdateInstanceProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     UpdateInstanceProfileRequestPrivate(const DeviceFarmRequest::Action action,

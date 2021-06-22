@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public RedshiftRequestPrivate {
+class CreateTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     CreateTagsRequestPrivate(const RedshiftRequest::Action action,

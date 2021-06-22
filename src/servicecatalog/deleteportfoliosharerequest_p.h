@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeletePortfolioShareRequest;
 
-class QTAWS_EXPORT DeletePortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
+class DeletePortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeletePortfolioShareRequestPrivate(const ServiceCatalogRequest::Action action,

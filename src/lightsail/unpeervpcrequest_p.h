@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class UnpeerVpcRequest;
 
-class QTAWS_EXPORT UnpeerVpcRequestPrivate : public LightsailRequestPrivate {
+class UnpeerVpcRequestPrivate : public LightsailRequestPrivate {
 
 public:
     UnpeerVpcRequestPrivate(const LightsailRequest::Action action,

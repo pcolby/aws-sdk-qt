@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateStreamingURLRequest;
 
-class QTAWS_EXPORT CreateStreamingURLRequestPrivate : public AppStreamRequestPrivate {
+class CreateStreamingURLRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CreateStreamingURLRequestPrivate(const AppStreamRequest::Action action,

@@ -29,7 +29,7 @@ namespace EventBridge {
 
 class EventBridgeClient;
 
-class QTAWS_EXPORT EventBridgeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EventBridgeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EventBridgeClientPrivate(EventBridgeClient * const q);

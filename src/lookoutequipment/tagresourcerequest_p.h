@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public LookoutEquipmentRequestPrivate {
+class TagResourceRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const LookoutEquipmentRequest::Action action,

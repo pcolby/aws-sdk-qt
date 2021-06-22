@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class ListInstancesRequest;
 
-class QTAWS_EXPORT ListInstancesRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class ListInstancesRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     ListInstancesRequestPrivate(const ServiceDiscoveryRequest::Action action,

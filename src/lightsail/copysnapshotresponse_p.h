@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CopySnapshotResponse;
 
-class QTAWS_EXPORT CopySnapshotResponsePrivate : public LightsailResponsePrivate {
+class CopySnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

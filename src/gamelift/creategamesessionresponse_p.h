@@ -27,7 +27,7 @@ namespace GameLift {
 
 class CreateGameSessionResponse;
 
-class QTAWS_EXPORT CreateGameSessionResponsePrivate : public GameLiftResponsePrivate {
+class CreateGameSessionResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

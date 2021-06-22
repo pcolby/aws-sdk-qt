@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class PurchaseReservedCacheNodesOfferingRequest;
 
-class QTAWS_EXPORT PurchaseReservedCacheNodesOfferingRequestPrivate : public ElastiCacheRequestPrivate {
+class PurchaseReservedCacheNodesOfferingRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     PurchaseReservedCacheNodesOfferingRequestPrivate(const ElastiCacheRequest::Action action,

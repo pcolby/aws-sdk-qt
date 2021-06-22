@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeregisterInstanceEventNotificationAttributesRequest;
 
-class QTAWS_EXPORT DeregisterInstanceEventNotificationAttributesRequestPrivate : public Ec2RequestPrivate {
+class DeregisterInstanceEventNotificationAttributesRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeregisterInstanceEventNotificationAttributesRequestPrivate(const Ec2Request::Action action,

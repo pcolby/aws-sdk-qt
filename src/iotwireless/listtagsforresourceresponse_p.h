@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public IoTWirelessResponsePrivate {
+class ListTagsForResourceResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 

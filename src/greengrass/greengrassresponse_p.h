@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class GreengrassResponse;
 
-class QTAWS_EXPORT GreengrassResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GreengrassResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

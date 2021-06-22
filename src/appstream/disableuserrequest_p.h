@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DisableUserRequest;
 
-class QTAWS_EXPORT DisableUserRequestPrivate : public AppStreamRequestPrivate {
+class DisableUserRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DisableUserRequestPrivate(const AppStreamRequest::Action action,

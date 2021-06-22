@@ -27,7 +27,7 @@ namespace RAM {
 
 class DeleteResourceShareResponse;
 
-class QTAWS_EXPORT DeleteResourceShareResponsePrivate : public RamResponsePrivate {
+class DeleteResourceShareResponsePrivate : public RamResponsePrivate {
 
 public:
 

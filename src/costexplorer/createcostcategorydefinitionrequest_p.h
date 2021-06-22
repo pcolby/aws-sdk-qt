@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class CreateCostCategoryDefinitionRequest;
 
-class QTAWS_EXPORT CreateCostCategoryDefinitionRequestPrivate : public CostExplorerRequestPrivate {
+class CreateCostCategoryDefinitionRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     CreateCostCategoryDefinitionRequestPrivate(const CostExplorerRequest::Action action,

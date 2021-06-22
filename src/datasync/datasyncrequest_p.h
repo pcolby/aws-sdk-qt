@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DataSyncRequest;
 
-class QTAWS_EXPORT DataSyncRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DataSyncRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DataSyncRequest::Action action; ///< DataSync action to be performed.

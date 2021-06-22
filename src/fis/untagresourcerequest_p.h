@@ -28,7 +28,7 @@ namespace FIS {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public FisRequestPrivate {
+class UntagResourceRequestPrivate : public FisRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const FisRequest::Action action,

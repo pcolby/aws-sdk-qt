@@ -29,7 +29,7 @@ namespace CloudHSM {
 
 class CloudHSMClient;
 
-class QTAWS_EXPORT CloudHSMClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CloudHSMClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudHSMClientPrivate(CloudHSMClient * const q);

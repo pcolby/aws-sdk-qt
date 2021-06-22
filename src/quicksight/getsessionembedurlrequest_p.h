@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class GetSessionEmbedUrlRequest;
 
-class QTAWS_EXPORT GetSessionEmbedUrlRequestPrivate : public QuickSightRequestPrivate {
+class GetSessionEmbedUrlRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     GetSessionEmbedUrlRequestPrivate(const QuickSightRequest::Action action,

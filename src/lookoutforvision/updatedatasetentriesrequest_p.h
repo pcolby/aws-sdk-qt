@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class UpdateDatasetEntriesRequest;
 
-class QTAWS_EXPORT UpdateDatasetEntriesRequestPrivate : public LookoutforVisionRequestPrivate {
+class UpdateDatasetEntriesRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     UpdateDatasetEntriesRequestPrivate(const LookoutforVisionRequest::Action action,

@@ -28,7 +28,7 @@ namespace Shield {
 
 class DeleteProtectionRequest;
 
-class QTAWS_EXPORT DeleteProtectionRequestPrivate : public ShieldRequestPrivate {
+class DeleteProtectionRequestPrivate : public ShieldRequestPrivate {
 
 public:
     DeleteProtectionRequestPrivate(const ShieldRequest::Action action,

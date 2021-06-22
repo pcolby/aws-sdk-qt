@@ -27,7 +27,7 @@ namespace Redshift {
 
 class GetReservedNodeExchangeOfferingsResponse;
 
-class QTAWS_EXPORT GetReservedNodeExchangeOfferingsResponsePrivate : public RedshiftResponsePrivate {
+class GetReservedNodeExchangeOfferingsResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

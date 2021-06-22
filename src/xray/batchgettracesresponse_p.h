@@ -27,7 +27,7 @@ namespace XRay {
 
 class BatchGetTracesResponse;
 
-class QTAWS_EXPORT BatchGetTracesResponsePrivate : public XRayResponsePrivate {
+class BatchGetTracesResponsePrivate : public XRayResponsePrivate {
 
 public:
 

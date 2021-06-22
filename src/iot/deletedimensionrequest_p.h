@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteDimensionRequest;
 
-class QTAWS_EXPORT DeleteDimensionRequestPrivate : public IoTRequestPrivate {
+class DeleteDimensionRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteDimensionRequestPrivate(const IoTRequest::Action action,

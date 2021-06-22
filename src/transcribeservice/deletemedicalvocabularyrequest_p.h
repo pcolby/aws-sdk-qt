@@ -28,7 +28,7 @@ namespace TranscribeService {
 
 class DeleteMedicalVocabularyRequest;
 
-class QTAWS_EXPORT DeleteMedicalVocabularyRequestPrivate : public TranscribeServiceRequestPrivate {
+class DeleteMedicalVocabularyRequestPrivate : public TranscribeServiceRequestPrivate {
 
 public:
     DeleteMedicalVocabularyRequestPrivate(const TranscribeServiceRequest::Action action,

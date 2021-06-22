@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class CreateDomainRequest;
 
-class QTAWS_EXPORT CreateDomainRequestPrivate : public CodeArtifactRequestPrivate {
+class CreateDomainRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     CreateDomainRequestPrivate(const CodeArtifactRequest::Action action,

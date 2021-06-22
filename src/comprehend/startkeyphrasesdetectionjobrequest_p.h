@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class StartKeyPhrasesDetectionJobRequest;
 
-class QTAWS_EXPORT StartKeyPhrasesDetectionJobRequestPrivate : public ComprehendRequestPrivate {
+class StartKeyPhrasesDetectionJobRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     StartKeyPhrasesDetectionJobRequestPrivate(const ComprehendRequest::Action action,

@@ -28,7 +28,7 @@ namespace Proton {
 
 class CancelEnvironmentDeploymentRequest;
 
-class QTAWS_EXPORT CancelEnvironmentDeploymentRequestPrivate : public ProtonRequestPrivate {
+class CancelEnvironmentDeploymentRequestPrivate : public ProtonRequestPrivate {
 
 public:
     CancelEnvironmentDeploymentRequestPrivate(const ProtonRequest::Action action,

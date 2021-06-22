@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifySpotFleetRequestRequest;
 
-class QTAWS_EXPORT ModifySpotFleetRequestRequestPrivate : public Ec2RequestPrivate {
+class ModifySpotFleetRequestRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifySpotFleetRequestRequestPrivate(const Ec2Request::Action action,

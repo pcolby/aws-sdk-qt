@@ -28,7 +28,7 @@ namespace SES {
 
 class SetIdentityHeadersInNotificationsEnabledRequest;
 
-class QTAWS_EXPORT SetIdentityHeadersInNotificationsEnabledRequestPrivate : public SesRequestPrivate {
+class SetIdentityHeadersInNotificationsEnabledRequestPrivate : public SesRequestPrivate {
 
 public:
     SetIdentityHeadersInNotificationsEnabledRequestPrivate(const SesRequest::Action action,

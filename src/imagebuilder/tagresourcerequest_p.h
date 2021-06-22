@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public imagebuilderRequestPrivate {
+class TagResourceRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const imagebuilderRequest::Action action,

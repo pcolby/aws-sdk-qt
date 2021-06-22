@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListCertificatesByCARequest;
 
-class QTAWS_EXPORT ListCertificatesByCARequestPrivate : public IoTRequestPrivate {
+class ListCertificatesByCARequestPrivate : public IoTRequestPrivate {
 
 public:
     ListCertificatesByCARequestPrivate(const IoTRequest::Action action,

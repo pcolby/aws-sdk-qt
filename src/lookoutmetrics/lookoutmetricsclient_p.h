@@ -29,7 +29,7 @@ namespace LookoutMetrics {
 
 class LookoutMetricsClient;
 
-class QTAWS_EXPORT LookoutMetricsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LookoutMetricsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LookoutMetricsClientPrivate(LookoutMetricsClient * const q);

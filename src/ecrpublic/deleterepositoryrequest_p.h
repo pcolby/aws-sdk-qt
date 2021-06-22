@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class DeleteRepositoryRequest;
 
-class QTAWS_EXPORT DeleteRepositoryRequestPrivate : public ECRPublicRequestPrivate {
+class DeleteRepositoryRequestPrivate : public ECRPublicRequestPrivate {
 
 public:
     DeleteRepositoryRequestPrivate(const ECRPublicRequest::Action action,

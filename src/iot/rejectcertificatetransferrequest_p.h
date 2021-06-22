@@ -28,7 +28,7 @@ namespace IoT {
 
 class RejectCertificateTransferRequest;
 
-class QTAWS_EXPORT RejectCertificateTransferRequestPrivate : public IoTRequestPrivate {
+class RejectCertificateTransferRequestPrivate : public IoTRequestPrivate {
 
 public:
     RejectCertificateTransferRequestPrivate(const IoTRequest::Action action,

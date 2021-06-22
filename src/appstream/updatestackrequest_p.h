@@ -28,7 +28,7 @@ namespace AppStream {
 
 class UpdateStackRequest;
 
-class QTAWS_EXPORT UpdateStackRequestPrivate : public AppStreamRequestPrivate {
+class UpdateStackRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     UpdateStackRequestPrivate(const AppStreamRequest::Action action,

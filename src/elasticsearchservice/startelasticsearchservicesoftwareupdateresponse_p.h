@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class StartElasticsearchServiceSoftwareUpdateResponse;
 
-class QTAWS_EXPORT StartElasticsearchServiceSoftwareUpdateResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class StartElasticsearchServiceSoftwareUpdateResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

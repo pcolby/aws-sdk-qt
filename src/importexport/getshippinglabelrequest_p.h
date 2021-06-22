@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class GetShippingLabelRequest;
 
-class QTAWS_EXPORT GetShippingLabelRequestPrivate : public ImportExportRequestPrivate {
+class GetShippingLabelRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     GetShippingLabelRequestPrivate(const ImportExportRequest::Action action,

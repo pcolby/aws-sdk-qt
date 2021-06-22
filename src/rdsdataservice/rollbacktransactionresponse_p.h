@@ -27,7 +27,7 @@ namespace RDSDataService {
 
 class RollbackTransactionResponse;
 
-class QTAWS_EXPORT RollbackTransactionResponsePrivate : public RDSDataServiceResponsePrivate {
+class RollbackTransactionResponsePrivate : public RDSDataServiceResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace SecretsManager {
 
 class SecretsManagerClient;
 
-class QTAWS_EXPORT SecretsManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SecretsManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SecretsManagerClientPrivate(SecretsManagerClient * const q);

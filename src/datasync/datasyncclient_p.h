@@ -29,7 +29,7 @@ namespace DataSync {
 
 class DataSyncClient;
 
-class QTAWS_EXPORT DataSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DataSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DataSyncClientPrivate(DataSyncClient * const q);

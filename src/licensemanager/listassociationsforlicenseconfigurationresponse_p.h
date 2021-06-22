@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class ListAssociationsForLicenseConfigurationResponse;
 
-class QTAWS_EXPORT ListAssociationsForLicenseConfigurationResponsePrivate : public LicenseManagerResponsePrivate {
+class ListAssociationsForLicenseConfigurationResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 

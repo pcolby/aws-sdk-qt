@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class ListManagedPoliciesInPermissionSetResponse;
 
-class QTAWS_EXPORT ListManagedPoliciesInPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
+class ListManagedPoliciesInPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 

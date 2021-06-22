@@ -28,7 +28,7 @@ namespace SNS {
 
 class SubscribeRequest;
 
-class QTAWS_EXPORT SubscribeRequestPrivate : public SnsRequestPrivate {
+class SubscribeRequestPrivate : public SnsRequestPrivate {
 
 public:
     SubscribeRequestPrivate(const SnsRequest::Action action,

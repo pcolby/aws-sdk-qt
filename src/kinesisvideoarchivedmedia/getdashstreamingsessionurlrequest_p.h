@@ -28,7 +28,7 @@ namespace KinesisVideoArchivedMedia {
 
 class GetDASHStreamingSessionURLRequest;
 
-class QTAWS_EXPORT GetDASHStreamingSessionURLRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
+class GetDASHStreamingSessionURLRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
 
 public:
     GetDASHStreamingSessionURLRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action,

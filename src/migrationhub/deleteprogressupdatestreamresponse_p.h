@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class DeleteProgressUpdateStreamResponse;
 
-class QTAWS_EXPORT DeleteProgressUpdateStreamResponsePrivate : public MigrationHubResponsePrivate {
+class DeleteProgressUpdateStreamResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 

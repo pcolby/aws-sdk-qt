@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetAppInstanceRetentionSettingsRequest;
 
-class QTAWS_EXPORT GetAppInstanceRetentionSettingsRequestPrivate : public ChimeRequestPrivate {
+class GetAppInstanceRetentionSettingsRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetAppInstanceRetentionSettingsRequestPrivate(const ChimeRequest::Action action,

@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class GetAuthorizationTokenResponse;
 
-class QTAWS_EXPORT GetAuthorizationTokenResponsePrivate : public CodeArtifactResponsePrivate {
+class GetAuthorizationTokenResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

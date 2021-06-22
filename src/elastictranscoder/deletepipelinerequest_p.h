@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class DeletePipelineRequest;
 
-class QTAWS_EXPORT DeletePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
+class DeletePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     DeletePipelineRequestPrivate(const ElasticTranscoderRequest::Action action,

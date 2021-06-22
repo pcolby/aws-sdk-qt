@@ -27,7 +27,7 @@ namespace MWAA {
 
 class MwaaResponse;
 
-class QTAWS_EXPORT MwaaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MwaaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

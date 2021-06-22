@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class RegisterRdsDbInstanceResponse;
 
-class QTAWS_EXPORT RegisterRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
+class RegisterRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

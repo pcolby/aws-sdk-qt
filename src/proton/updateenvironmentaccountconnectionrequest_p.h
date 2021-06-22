@@ -28,7 +28,7 @@ namespace Proton {
 
 class UpdateEnvironmentAccountConnectionRequest;
 
-class QTAWS_EXPORT UpdateEnvironmentAccountConnectionRequestPrivate : public ProtonRequestPrivate {
+class UpdateEnvironmentAccountConnectionRequestPrivate : public ProtonRequestPrivate {
 
 public:
     UpdateEnvironmentAccountConnectionRequestPrivate(const ProtonRequest::Action action,

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CancelCapacityReservationResponse;
 
-class QTAWS_EXPORT CancelCapacityReservationResponsePrivate : public Ec2ResponsePrivate {
+class CancelCapacityReservationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

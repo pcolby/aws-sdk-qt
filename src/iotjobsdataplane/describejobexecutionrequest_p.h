@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class DescribeJobExecutionRequest;
 
-class QTAWS_EXPORT DescribeJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
+class DescribeJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     DescribeJobExecutionRequestPrivate(const IoTJobsDataPlaneRequest::Action action,

@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class AbortDocumentVersionUploadRequest;
 
-class QTAWS_EXPORT AbortDocumentVersionUploadRequestPrivate : public WorkDocsRequestPrivate {
+class AbortDocumentVersionUploadRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     AbortDocumentVersionUploadRequestPrivate(const WorkDocsRequest::Action action,

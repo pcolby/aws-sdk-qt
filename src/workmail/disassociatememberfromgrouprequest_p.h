@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DisassociateMemberFromGroupRequest;
 
-class QTAWS_EXPORT DisassociateMemberFromGroupRequestPrivate : public WorkMailRequestPrivate {
+class DisassociateMemberFromGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DisassociateMemberFromGroupRequestPrivate(const WorkMailRequest::Action action,

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteRelationalDatabaseSnapshotRequest;
 
-class QTAWS_EXPORT DeleteRelationalDatabaseSnapshotRequestPrivate : public LightsailRequestPrivate {
+class DeleteRelationalDatabaseSnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteRelationalDatabaseSnapshotRequestPrivate(const LightsailRequest::Action action,

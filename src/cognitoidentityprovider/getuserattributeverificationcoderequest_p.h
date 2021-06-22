@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class GetUserAttributeVerificationCodeRequest;
 
-class QTAWS_EXPORT GetUserAttributeVerificationCodeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class GetUserAttributeVerificationCodeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     GetUserAttributeVerificationCodeRequestPrivate(const CognitoIdentityProviderRequest::Action action,

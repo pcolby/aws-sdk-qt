@@ -28,7 +28,7 @@ namespace ECR {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public EcrRequestPrivate {
+class ListTagsForResourceRequestPrivate : public EcrRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const EcrRequest::Action action,

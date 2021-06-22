@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class AssociateNodeResponse;
 
-class QTAWS_EXPORT AssociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
+class AssociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 

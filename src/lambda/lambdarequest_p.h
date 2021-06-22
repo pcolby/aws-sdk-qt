@@ -28,7 +28,7 @@ namespace Lambda {
 
 class LambdaRequest;
 
-class QTAWS_EXPORT LambdaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LambdaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LambdaRequest::Action action; ///< Lambda action to be performed.

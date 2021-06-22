@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class AddTagsToResourceResponse;
 
-class QTAWS_EXPORT AddTagsToResourceResponsePrivate : public CloudHSMResponsePrivate {
+class AddTagsToResourceResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 

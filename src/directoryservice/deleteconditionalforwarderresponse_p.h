@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeleteConditionalForwarderResponse;
 
-class QTAWS_EXPORT DeleteConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
+class DeleteConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

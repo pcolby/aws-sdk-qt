@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class CreateConditionalForwarderResponse;
 
-class QTAWS_EXPORT CreateConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
+class CreateConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

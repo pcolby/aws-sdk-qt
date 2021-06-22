@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class DeleteLoggingConfigurationResponse;
 
-class QTAWS_EXPORT DeleteLoggingConfigurationResponsePrivate : public Wafv2ResponsePrivate {
+class DeleteLoggingConfigurationResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 

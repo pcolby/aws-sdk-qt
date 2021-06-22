@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class DeleteForecastExportJobResponse;
 
-class QTAWS_EXPORT DeleteForecastExportJobResponsePrivate : public ForecastServiceResponsePrivate {
+class DeleteForecastExportJobResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class ListRuleGroupsResponse;
 
-class QTAWS_EXPORT ListRuleGroupsResponsePrivate : public NetworkFirewallResponsePrivate {
+class ListRuleGroupsResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

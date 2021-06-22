@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateDocumentMetadataRequest;
 
-class QTAWS_EXPORT UpdateDocumentMetadataRequestPrivate : public SsmRequestPrivate {
+class UpdateDocumentMetadataRequestPrivate : public SsmRequestPrivate {
 
 public:
     UpdateDocumentMetadataRequestPrivate(const SsmRequest::Action action,

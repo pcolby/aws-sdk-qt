@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CopyImageRequest;
 
-class QTAWS_EXPORT CopyImageRequestPrivate : public AppStreamRequestPrivate {
+class CopyImageRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CopyImageRequestPrivate(const AppStreamRequest::Action action,

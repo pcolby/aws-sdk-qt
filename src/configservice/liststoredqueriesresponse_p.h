@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class ListStoredQueriesResponse;
 
-class QTAWS_EXPORT ListStoredQueriesResponsePrivate : public ConfigServiceResponsePrivate {
+class ListStoredQueriesResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

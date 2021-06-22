@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class StartChannelRequest;
 
-class QTAWS_EXPORT StartChannelRequestPrivate : public MediaLiveRequestPrivate {
+class StartChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     StartChannelRequestPrivate(const MediaLiveRequest::Action action,

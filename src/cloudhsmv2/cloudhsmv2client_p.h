@@ -29,7 +29,7 @@ namespace CloudHSMV2 {
 
 class CloudHSMV2Client;
 
-class QTAWS_EXPORT CloudHSMV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CloudHSMV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CloudHSMV2ClientPrivate(CloudHSMV2Client * const q);

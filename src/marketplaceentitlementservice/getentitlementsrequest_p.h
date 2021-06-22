@@ -28,7 +28,7 @@ namespace MarketplaceEntitlementService {
 
 class GetEntitlementsRequest;
 
-class QTAWS_EXPORT GetEntitlementsRequestPrivate : public MarketplaceEntitlementServiceRequestPrivate {
+class GetEntitlementsRequestPrivate : public MarketplaceEntitlementServiceRequestPrivate {
 
 public:
     GetEntitlementsRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTEventsData {
 
 class BatchResetAlarmRequest;
 
-class QTAWS_EXPORT BatchResetAlarmRequestPrivate : public IoTEventsDataRequestPrivate {
+class BatchResetAlarmRequestPrivate : public IoTEventsDataRequestPrivate {
 
 public:
     BatchResetAlarmRequestPrivate(const IoTEventsDataRequest::Action action,

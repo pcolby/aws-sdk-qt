@@ -27,7 +27,7 @@ namespace Connect {
 
 class CreateIntegrationAssociationResponse;
 
-class QTAWS_EXPORT CreateIntegrationAssociationResponsePrivate : public ConnectResponsePrivate {
+class CreateIntegrationAssociationResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

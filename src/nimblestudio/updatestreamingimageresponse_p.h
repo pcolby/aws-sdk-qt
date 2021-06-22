@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class UpdateStreamingImageResponse;
 
-class QTAWS_EXPORT UpdateStreamingImageResponsePrivate : public NimbleStudioResponsePrivate {
+class UpdateStreamingImageResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

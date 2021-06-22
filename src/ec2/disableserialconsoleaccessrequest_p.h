@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableSerialConsoleAccessRequest;
 
-class QTAWS_EXPORT DisableSerialConsoleAccessRequestPrivate : public Ec2RequestPrivate {
+class DisableSerialConsoleAccessRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisableSerialConsoleAccessRequestPrivate(const Ec2Request::Action action,

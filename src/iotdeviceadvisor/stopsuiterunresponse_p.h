@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class StopSuiteRunResponse;
 
-class QTAWS_EXPORT StopSuiteRunResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
+class StopSuiteRunResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
 
 public:
 

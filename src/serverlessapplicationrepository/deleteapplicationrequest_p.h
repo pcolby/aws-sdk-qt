@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class DeleteApplicationRequest;
 
-class QTAWS_EXPORT DeleteApplicationRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
+class DeleteApplicationRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     DeleteApplicationRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,

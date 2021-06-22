@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class DeleteProjectVersionResponse;
 
-class QTAWS_EXPORT DeleteProjectVersionResponsePrivate : public RekognitionResponsePrivate {
+class DeleteProjectVersionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

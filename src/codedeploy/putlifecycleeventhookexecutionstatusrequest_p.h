@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class PutLifecycleEventHookExecutionStatusRequest;
 
-class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusRequestPrivate : public CodeDeployRequestPrivate {
+class PutLifecycleEventHookExecutionStatusRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     PutLifecycleEventHookExecutionStatusRequestPrivate(const CodeDeployRequest::Action action,

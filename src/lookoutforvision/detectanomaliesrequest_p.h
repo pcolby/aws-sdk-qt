@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class DetectAnomaliesRequest;
 
-class QTAWS_EXPORT DetectAnomaliesRequestPrivate : public LookoutforVisionRequestPrivate {
+class DetectAnomaliesRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     DetectAnomaliesRequestPrivate(const LookoutforVisionRequest::Action action,

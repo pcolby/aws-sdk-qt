@@ -28,7 +28,7 @@ namespace Personalize {
 
 class ListSolutionVersionsRequest;
 
-class QTAWS_EXPORT ListSolutionVersionsRequestPrivate : public PersonalizeRequestPrivate {
+class ListSolutionVersionsRequestPrivate : public PersonalizeRequestPrivate {
 
 public:
     ListSolutionVersionsRequestPrivate(const PersonalizeRequest::Action action,

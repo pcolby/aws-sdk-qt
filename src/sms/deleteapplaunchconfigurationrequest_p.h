@@ -28,7 +28,7 @@ namespace SMS {
 
 class DeleteAppLaunchConfigurationRequest;
 
-class QTAWS_EXPORT DeleteAppLaunchConfigurationRequestPrivate : public SmsRequestPrivate {
+class DeleteAppLaunchConfigurationRequestPrivate : public SmsRequestPrivate {
 
 public:
     DeleteAppLaunchConfigurationRequestPrivate(const SmsRequest::Action action,

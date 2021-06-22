@@ -28,7 +28,7 @@ namespace SSOOIDC {
 
 class SsooidcRequest;
 
-class QTAWS_EXPORT SsooidcRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsooidcRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SsooidcRequest::Action action; ///< SSOOIDC action to be performed.

@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DisassociateConfigurationItemsFromApplicationRequest;
 
-class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,

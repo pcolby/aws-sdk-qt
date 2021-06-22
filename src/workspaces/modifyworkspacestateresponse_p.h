@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class ModifyWorkspaceStateResponse;
 
-class QTAWS_EXPORT ModifyWorkspaceStateResponsePrivate : public WorkSpacesResponsePrivate {
+class ModifyWorkspaceStateResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetCostAndUsageWithResourcesResponse;
 
-class QTAWS_EXPORT GetCostAndUsageWithResourcesResponsePrivate : public CostExplorerResponsePrivate {
+class GetCostAndUsageWithResourcesResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ElastiCacheRequestPrivate {
+class ListTagsForResourceRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const ElastiCacheRequest::Action action,

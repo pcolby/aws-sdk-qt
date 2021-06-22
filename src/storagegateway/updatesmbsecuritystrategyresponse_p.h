@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateSMBSecurityStrategyResponse;
 
-class QTAWS_EXPORT UpdateSMBSecurityStrategyResponsePrivate : public StorageGatewayResponsePrivate {
+class UpdateSMBSecurityStrategyResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

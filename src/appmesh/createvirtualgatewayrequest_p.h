@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class CreateVirtualGatewayRequest;
 
-class QTAWS_EXPORT CreateVirtualGatewayRequestPrivate : public AppMeshRequestPrivate {
+class CreateVirtualGatewayRequestPrivate : public AppMeshRequestPrivate {
 
 public:
     CreateVirtualGatewayRequestPrivate(const AppMeshRequest::Action action,

@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class DeleteArchiveRuleRequest;
 
-class QTAWS_EXPORT DeleteArchiveRuleRequestPrivate : public AccessAnalyzerRequestPrivate {
+class DeleteArchiveRuleRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     DeleteArchiveRuleRequestPrivate(const AccessAnalyzerRequest::Action action,

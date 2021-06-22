@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class BatchMeterUsageRequest;
 
-class QTAWS_EXPORT BatchMeterUsageRequestPrivate : public MarketplaceMeteringRequestPrivate {
+class BatchMeterUsageRequestPrivate : public MarketplaceMeteringRequestPrivate {
 
 public:
     BatchMeterUsageRequestPrivate(const MarketplaceMeteringRequest::Action action,

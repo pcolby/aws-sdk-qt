@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteLogGroupRequest;
 
-class QTAWS_EXPORT DeleteLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
+class DeleteLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteLogGroupRequestPrivate(const CloudWatchLogsRequest::Action action,

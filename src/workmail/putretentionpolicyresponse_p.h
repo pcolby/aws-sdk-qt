@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class PutRetentionPolicyResponse;
 
-class QTAWS_EXPORT PutRetentionPolicyResponsePrivate : public WorkMailResponsePrivate {
+class PutRetentionPolicyResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

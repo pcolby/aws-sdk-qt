@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public CloudWatchResponsePrivate {
+class TagResourceResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 

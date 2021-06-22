@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeContributorInsightsRequest;
 
-class QTAWS_EXPORT DescribeContributorInsightsRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeContributorInsightsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeContributorInsightsRequestPrivate(const DynamoDBRequest::Action action,

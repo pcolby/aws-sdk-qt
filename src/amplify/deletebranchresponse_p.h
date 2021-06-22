@@ -27,7 +27,7 @@ namespace Amplify {
 
 class DeleteBranchResponse;
 
-class QTAWS_EXPORT DeleteBranchResponsePrivate : public AmplifyResponsePrivate {
+class DeleteBranchResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

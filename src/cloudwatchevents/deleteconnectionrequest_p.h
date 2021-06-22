@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DeleteConnectionRequest;
 
-class QTAWS_EXPORT DeleteConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
+class DeleteConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     DeleteConnectionRequestPrivate(const CloudWatchEventsRequest::Action action,

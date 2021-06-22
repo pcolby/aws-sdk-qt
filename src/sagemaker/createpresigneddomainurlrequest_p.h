@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreatePresignedDomainUrlRequest;
 
-class QTAWS_EXPORT CreatePresignedDomainUrlRequestPrivate : public SageMakerRequestPrivate {
+class CreatePresignedDomainUrlRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreatePresignedDomainUrlRequestPrivate(const SageMakerRequest::Action action,

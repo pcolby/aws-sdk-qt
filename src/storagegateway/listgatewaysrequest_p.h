@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListGatewaysRequest;
 
-class QTAWS_EXPORT ListGatewaysRequestPrivate : public StorageGatewayRequestPrivate {
+class ListGatewaysRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ListGatewaysRequestPrivate(const StorageGatewayRequest::Action action,

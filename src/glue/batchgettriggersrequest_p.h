@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchGetTriggersRequest;
 
-class QTAWS_EXPORT BatchGetTriggersRequestPrivate : public GlueRequestPrivate {
+class BatchGetTriggersRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchGetTriggersRequestPrivate(const GlueRequest::Action action,

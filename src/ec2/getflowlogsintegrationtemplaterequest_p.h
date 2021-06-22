@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetFlowLogsIntegrationTemplateRequest;
 
-class QTAWS_EXPORT GetFlowLogsIntegrationTemplateRequestPrivate : public Ec2RequestPrivate {
+class GetFlowLogsIntegrationTemplateRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetFlowLogsIntegrationTemplateRequestPrivate(const Ec2Request::Action action,

@@ -27,7 +27,7 @@ namespace Glue {
 
 class PutResourcePolicyResponse;
 
-class QTAWS_EXPORT PutResourcePolicyResponsePrivate : public GlueResponsePrivate {
+class PutResourcePolicyResponsePrivate : public GlueResponsePrivate {
 
 public:
 

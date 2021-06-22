@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListRecordHistoryRequest;
 
-class QTAWS_EXPORT ListRecordHistoryRequestPrivate : public ServiceCatalogRequestPrivate {
+class ListRecordHistoryRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListRecordHistoryRequestPrivate(const ServiceCatalogRequest::Action action,

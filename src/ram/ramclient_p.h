@@ -29,7 +29,7 @@ namespace RAM {
 
 class RamClient;
 
-class QTAWS_EXPORT RamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class RamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     RamClientPrivate(RamClient * const q);

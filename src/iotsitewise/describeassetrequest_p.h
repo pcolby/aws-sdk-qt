@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DescribeAssetRequest;
 
-class QTAWS_EXPORT DescribeAssetRequestPrivate : public IoTSiteWiseRequestPrivate {
+class DescribeAssetRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     DescribeAssetRequestPrivate(const IoTSiteWiseRequest::Action action,

@@ -27,7 +27,7 @@ namespace signer {
 
 class signerResponse;
 
-class QTAWS_EXPORT signerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class signerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

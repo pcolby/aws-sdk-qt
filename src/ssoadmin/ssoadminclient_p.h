@@ -29,7 +29,7 @@ namespace SSOAdmin {
 
 class SSOAdminClient;
 
-class QTAWS_EXPORT SSOAdminClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SSOAdminClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SSOAdminClientPrivate(SSOAdminClient * const q);

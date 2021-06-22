@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetAuthorizersRequest;
 
-class QTAWS_EXPORT GetAuthorizersRequestPrivate : public ApiGatewayV2RequestPrivate {
+class GetAuthorizersRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     GetAuthorizersRequestPrivate(const ApiGatewayV2Request::Action action,

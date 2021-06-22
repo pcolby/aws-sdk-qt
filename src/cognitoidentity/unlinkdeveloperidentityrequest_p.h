@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class UnlinkDeveloperIdentityRequest;
 
-class QTAWS_EXPORT UnlinkDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
+class UnlinkDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     UnlinkDeveloperIdentityRequestPrivate(const CognitoIdentityRequest::Action action,

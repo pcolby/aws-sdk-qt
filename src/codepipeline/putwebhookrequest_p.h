@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutWebhookRequest;
 
-class QTAWS_EXPORT PutWebhookRequestPrivate : public CodePipelineRequestPrivate {
+class PutWebhookRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutWebhookRequestPrivate(const CodePipelineRequest::Action action,

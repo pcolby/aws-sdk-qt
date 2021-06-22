@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class SelectResourceConfigResponse;
 
-class QTAWS_EXPORT SelectResourceConfigResponsePrivate : public ConfigServiceResponsePrivate {
+class SelectResourceConfigResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class ListAvailableManagementCidrRangesResponse;
 
-class QTAWS_EXPORT ListAvailableManagementCidrRangesResponsePrivate : public WorkSpacesResponsePrivate {
+class ListAvailableManagementCidrRangesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

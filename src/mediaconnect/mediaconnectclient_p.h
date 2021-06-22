@@ -29,7 +29,7 @@ namespace MediaConnect {
 
 class MediaConnectClient;
 
-class QTAWS_EXPORT MediaConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MediaConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MediaConnectClientPrivate(MediaConnectClient * const q);

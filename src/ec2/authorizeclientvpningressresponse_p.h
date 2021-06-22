@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AuthorizeClientVpnIngressResponse;
 
-class QTAWS_EXPORT AuthorizeClientVpnIngressResponsePrivate : public Ec2ResponsePrivate {
+class AuthorizeClientVpnIngressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

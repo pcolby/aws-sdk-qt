@@ -29,7 +29,7 @@ namespace PinpointEmail {
 
 class PinpointEmailClient;
 
-class QTAWS_EXPORT PinpointEmailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PinpointEmailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PinpointEmailClientPrivate(PinpointEmailClient * const q);

@@ -29,7 +29,7 @@ namespace NimbleStudio {
 
 class NimbleStudioClient;
 
-class QTAWS_EXPORT NimbleStudioClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class NimbleStudioClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     NimbleStudioClientPrivate(NimbleStudioClient * const q);

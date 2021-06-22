@@ -28,7 +28,7 @@ namespace EKS {
 
 class UpdateClusterConfigRequest;
 
-class QTAWS_EXPORT UpdateClusterConfigRequestPrivate : public EksRequestPrivate {
+class UpdateClusterConfigRequestPrivate : public EksRequestPrivate {
 
 public:
     UpdateClusterConfigRequestPrivate(const EksRequest::Action action,

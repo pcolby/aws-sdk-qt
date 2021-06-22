@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetSchemaVersionRequest;
 
-class QTAWS_EXPORT GetSchemaVersionRequestPrivate : public GlueRequestPrivate {
+class GetSchemaVersionRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetSchemaVersionRequestPrivate(const GlueRequest::Action action,

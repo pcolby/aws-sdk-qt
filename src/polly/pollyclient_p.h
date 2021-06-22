@@ -29,7 +29,7 @@ namespace Polly {
 
 class PollyClient;
 
-class QTAWS_EXPORT PollyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PollyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PollyClientPrivate(PollyClient * const q);

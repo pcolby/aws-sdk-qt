@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class DisableDirectoryResponse;
 
-class QTAWS_EXPORT DisableDirectoryResponsePrivate : public CloudDirectoryResponsePrivate {
+class DisableDirectoryResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

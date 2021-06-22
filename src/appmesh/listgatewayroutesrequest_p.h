@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class ListGatewayRoutesRequest;
 
-class QTAWS_EXPORT ListGatewayRoutesRequestPrivate : public AppMeshRequestPrivate {
+class ListGatewayRoutesRequestPrivate : public AppMeshRequestPrivate {
 
 public:
     ListGatewayRoutesRequestPrivate(const AppMeshRequest::Action action,

@@ -28,7 +28,7 @@ namespace S3Control {
 
 class GetJobTaggingRequest;
 
-class QTAWS_EXPORT GetJobTaggingRequestPrivate : public S3ControlRequestPrivate {
+class GetJobTaggingRequestPrivate : public S3ControlRequestPrivate {
 
 public:
     GetJobTaggingRequestPrivate(const S3ControlRequest::Action action,

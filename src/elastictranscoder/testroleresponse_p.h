@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class TestRoleResponse;
 
-class QTAWS_EXPORT TestRoleResponsePrivate : public ElasticTranscoderResponsePrivate {
+class TestRoleResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 

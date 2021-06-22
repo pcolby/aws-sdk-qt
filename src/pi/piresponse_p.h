@@ -27,7 +27,7 @@ namespace PI {
 
 class PiResponse;
 
-class QTAWS_EXPORT PiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

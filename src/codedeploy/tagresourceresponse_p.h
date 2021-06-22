@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public CodeDeployResponsePrivate {
+class TagResourceResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 

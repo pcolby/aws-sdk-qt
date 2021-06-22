@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class CreateImageRequest;
 
-class QTAWS_EXPORT CreateImageRequestPrivate : public imagebuilderRequestPrivate {
+class CreateImageRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     CreateImageRequestPrivate(const imagebuilderRequest::Action action,

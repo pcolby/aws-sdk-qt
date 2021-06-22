@@ -27,7 +27,7 @@ namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerResponse;
 
-class QTAWS_EXPORT ApplicationCostProfilerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApplicationCostProfilerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

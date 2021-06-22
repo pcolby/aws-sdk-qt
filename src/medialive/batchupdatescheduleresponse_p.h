@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class BatchUpdateScheduleResponse;
 
-class QTAWS_EXPORT BatchUpdateScheduleResponsePrivate : public MediaLiveResponsePrivate {
+class BatchUpdateScheduleResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

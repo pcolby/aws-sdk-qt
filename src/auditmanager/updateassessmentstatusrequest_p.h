@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class UpdateAssessmentStatusRequest;
 
-class QTAWS_EXPORT UpdateAssessmentStatusRequestPrivate : public AuditManagerRequestPrivate {
+class UpdateAssessmentStatusRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     UpdateAssessmentStatusRequestPrivate(const AuditManagerRequest::Action action,

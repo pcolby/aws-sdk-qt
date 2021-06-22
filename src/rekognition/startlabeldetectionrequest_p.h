@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartLabelDetectionRequest;
 
-class QTAWS_EXPORT StartLabelDetectionRequestPrivate : public RekognitionRequestPrivate {
+class StartLabelDetectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StartLabelDetectionRequestPrivate(const RekognitionRequest::Action action,

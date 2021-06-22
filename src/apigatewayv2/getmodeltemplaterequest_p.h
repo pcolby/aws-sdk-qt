@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetModelTemplateRequest;
 
-class QTAWS_EXPORT GetModelTemplateRequestPrivate : public ApiGatewayV2RequestPrivate {
+class GetModelTemplateRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     GetModelTemplateRequestPrivate(const ApiGatewayV2Request::Action action,

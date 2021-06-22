@@ -27,7 +27,7 @@ namespace WAF {
 
 class GetRuleResponse;
 
-class QTAWS_EXPORT GetRuleResponsePrivate : public WafResponsePrivate {
+class GetRuleResponsePrivate : public WafResponsePrivate {
 
 public:
 

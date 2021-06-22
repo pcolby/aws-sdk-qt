@@ -28,7 +28,7 @@ namespace Batch {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public BatchRequestPrivate {
+class UntagResourceRequestPrivate : public BatchRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const BatchRequest::Action action,

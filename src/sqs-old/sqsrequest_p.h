@@ -31,7 +31,7 @@ class QUrlQuery;
 namespace QtAws {
 namespace SqsOld {
 
-class QTAWS_EXPORT SqsRequestPrivate : public AwsAbstractRequestPrivate {
+class SqsRequestPrivate : public AwsAbstractRequestPrivate {
 
 public:
     SqsRequest::Action action; ///< SQS action to be performed.

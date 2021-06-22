@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public OpsWorksCMRequestPrivate {
+class ListTagsForResourceRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const OpsWorksCMRequest::Action action,

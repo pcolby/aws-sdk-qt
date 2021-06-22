@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class IoTSiteWiseResponse;
 
-class QTAWS_EXPORT IoTSiteWiseResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTSiteWiseResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

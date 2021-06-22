@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class AttachObjectRequest;
 
-class QTAWS_EXPORT AttachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
+class AttachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     AttachObjectRequestPrivate(const CloudDirectoryRequest::Action action,

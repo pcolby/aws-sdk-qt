@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class SetUserSettingsRequest;
 
-class QTAWS_EXPORT SetUserSettingsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class SetUserSettingsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     SetUserSettingsRequestPrivate(const CognitoIdentityProviderRequest::Action action,

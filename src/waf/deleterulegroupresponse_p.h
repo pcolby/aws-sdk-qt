@@ -27,7 +27,7 @@ namespace WAF {
 
 class DeleteRuleGroupResponse;
 
-class QTAWS_EXPORT DeleteRuleGroupResponsePrivate : public WafResponsePrivate {
+class DeleteRuleGroupResponsePrivate : public WafResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Amplify {
 
 class StartJobRequest;
 
-class QTAWS_EXPORT StartJobRequestPrivate : public AmplifyRequestPrivate {
+class StartJobRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     StartJobRequestPrivate(const AmplifyRequest::Action action,

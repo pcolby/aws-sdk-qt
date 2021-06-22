@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class GetMinuteUsageRequest;
 
-class QTAWS_EXPORT GetMinuteUsageRequestPrivate : public GroundStationRequestPrivate {
+class GetMinuteUsageRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     GetMinuteUsageRequestPrivate(const GroundStationRequest::Action action,

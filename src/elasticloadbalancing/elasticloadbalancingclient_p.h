@@ -29,7 +29,7 @@ namespace ElasticLoadBalancing {
 
 class ElasticLoadBalancingClient;
 
-class QTAWS_EXPORT ElasticLoadBalancingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ElasticLoadBalancingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ElasticLoadBalancingClientPrivate(ElasticLoadBalancingClient * const q);

@@ -27,7 +27,7 @@ namespace RAM {
 
 class RamResponse;
 
-class QTAWS_EXPORT RamResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class RamResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteEventSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RdsRequestPrivate {
+class DeleteEventSubscriptionRequestPrivate : public RdsRequestPrivate {
 
 public:
     DeleteEventSubscriptionRequestPrivate(const RdsRequest::Action action,

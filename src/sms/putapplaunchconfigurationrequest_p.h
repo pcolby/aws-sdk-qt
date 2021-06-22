@@ -28,7 +28,7 @@ namespace SMS {
 
 class PutAppLaunchConfigurationRequest;
 
-class QTAWS_EXPORT PutAppLaunchConfigurationRequestPrivate : public SmsRequestPrivate {
+class PutAppLaunchConfigurationRequestPrivate : public SmsRequestPrivate {
 
 public:
     PutAppLaunchConfigurationRequestPrivate(const SmsRequest::Action action,

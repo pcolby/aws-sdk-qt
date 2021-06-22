@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class PutRuleResponse;
 
-class QTAWS_EXPORT PutRuleResponsePrivate : public EventBridgeResponsePrivate {
+class PutRuleResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

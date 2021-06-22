@@ -27,7 +27,7 @@ namespace LocationService {
 
 class BatchGetDevicePositionResponse;
 
-class QTAWS_EXPORT BatchGetDevicePositionResponsePrivate : public LocationServiceResponsePrivate {
+class BatchGetDevicePositionResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

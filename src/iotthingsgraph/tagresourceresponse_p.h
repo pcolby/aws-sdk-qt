@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public IoTThingsGraphResponsePrivate {
+class TagResourceResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

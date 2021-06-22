@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DisableAWSServiceAccessRequest;
 
-class QTAWS_EXPORT DisableAWSServiceAccessRequestPrivate : public OrganizationsRequestPrivate {
+class DisableAWSServiceAccessRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DisableAWSServiceAccessRequestPrivate(const OrganizationsRequest::Action action,

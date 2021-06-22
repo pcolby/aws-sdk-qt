@@ -28,7 +28,7 @@ namespace SSOOIDC {
 
 class StartDeviceAuthorizationRequest;
 
-class QTAWS_EXPORT StartDeviceAuthorizationRequestPrivate : public SsooidcRequestPrivate {
+class StartDeviceAuthorizationRequestPrivate : public SsooidcRequestPrivate {
 
 public:
     StartDeviceAuthorizationRequestPrivate(const SsooidcRequest::Action action,

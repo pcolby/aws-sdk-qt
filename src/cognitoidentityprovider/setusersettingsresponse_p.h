@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class SetUserSettingsResponse;
 
-class QTAWS_EXPORT SetUserSettingsResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+class SetUserSettingsResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 

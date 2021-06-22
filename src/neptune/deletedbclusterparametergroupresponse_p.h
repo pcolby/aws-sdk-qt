@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DeleteDBClusterParameterGroupResponse;
 
-class QTAWS_EXPORT DeleteDBClusterParameterGroupResponsePrivate : public NeptuneResponsePrivate {
+class DeleteDBClusterParameterGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

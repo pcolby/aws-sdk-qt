@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class UpdateAvailabilityOptionsResponse;
 
-class QTAWS_EXPORT UpdateAvailabilityOptionsResponsePrivate : public CloudSearchResponsePrivate {
+class UpdateAvailabilityOptionsResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 

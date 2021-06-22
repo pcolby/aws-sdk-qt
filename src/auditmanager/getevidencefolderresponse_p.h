@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetEvidenceFolderResponse;
 
-class QTAWS_EXPORT GetEvidenceFolderResponsePrivate : public AuditManagerResponsePrivate {
+class GetEvidenceFolderResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

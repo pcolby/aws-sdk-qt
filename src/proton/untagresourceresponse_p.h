@@ -27,7 +27,7 @@ namespace Proton {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ProtonResponsePrivate {
+class UntagResourceResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

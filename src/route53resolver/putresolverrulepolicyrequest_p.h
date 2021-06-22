@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class PutResolverRulePolicyRequest;
 
-class QTAWS_EXPORT PutResolverRulePolicyRequestPrivate : public Route53ResolverRequestPrivate {
+class PutResolverRulePolicyRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     PutResolverRulePolicyRequestPrivate(const Route53ResolverRequest::Action action,

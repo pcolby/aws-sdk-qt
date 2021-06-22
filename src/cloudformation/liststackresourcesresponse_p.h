@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class ListStackResourcesResponse;
 
-class QTAWS_EXPORT ListStackResourcesResponsePrivate : public CloudFormationResponsePrivate {
+class ListStackResourcesResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

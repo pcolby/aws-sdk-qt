@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class DeleteWorkloadShareRequest;
 
-class QTAWS_EXPORT DeleteWorkloadShareRequestPrivate : public WellArchitectedRequestPrivate {
+class DeleteWorkloadShareRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     DeleteWorkloadShareRequestPrivate(const WellArchitectedRequest::Action action,

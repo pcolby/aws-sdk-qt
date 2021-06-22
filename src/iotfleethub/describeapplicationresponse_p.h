@@ -27,7 +27,7 @@ namespace IoTFleetHub {
 
 class DescribeApplicationResponse;
 
-class QTAWS_EXPORT DescribeApplicationResponsePrivate : public IoTFleetHubResponsePrivate {
+class DescribeApplicationResponsePrivate : public IoTFleetHubResponsePrivate {
 
 public:
 

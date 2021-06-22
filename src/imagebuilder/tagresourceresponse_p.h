@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public imagebuilderResponsePrivate {
+class TagResourceResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 

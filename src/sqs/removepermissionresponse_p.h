@@ -27,7 +27,7 @@ namespace SQS {
 
 class RemovePermissionResponse;
 
-class QTAWS_EXPORT RemovePermissionResponsePrivate : public SqsResponsePrivate {
+class RemovePermissionResponsePrivate : public SqsResponsePrivate {
 
 public:
 

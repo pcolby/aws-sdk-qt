@@ -29,7 +29,7 @@ namespace WorkMailMessageFlow {
 
 class WorkMailMessageFlowClient;
 
-class QTAWS_EXPORT WorkMailMessageFlowClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WorkMailMessageFlowClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WorkMailMessageFlowClientPrivate(WorkMailMessageFlowClient * const q);

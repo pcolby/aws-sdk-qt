@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class UpdateDomainMetadataRequest;
 
-class QTAWS_EXPORT UpdateDomainMetadataRequestPrivate : public WorkLinkRequestPrivate {
+class UpdateDomainMetadataRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     UpdateDomainMetadataRequestPrivate(const WorkLinkRequest::Action action,

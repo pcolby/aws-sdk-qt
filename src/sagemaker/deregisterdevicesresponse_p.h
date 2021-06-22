@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeregisterDevicesResponse;
 
-class QTAWS_EXPORT DeregisterDevicesResponsePrivate : public SageMakerResponsePrivate {
+class DeregisterDevicesResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

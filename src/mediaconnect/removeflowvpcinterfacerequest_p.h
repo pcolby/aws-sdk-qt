@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class RemoveFlowVpcInterfaceRequest;
 
-class QTAWS_EXPORT RemoveFlowVpcInterfaceRequestPrivate : public MediaConnectRequestPrivate {
+class RemoveFlowVpcInterfaceRequestPrivate : public MediaConnectRequestPrivate {
 
 public:
     RemoveFlowVpcInterfaceRequestPrivate(const MediaConnectRequest::Action action,

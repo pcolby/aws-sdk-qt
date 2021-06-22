@@ -29,7 +29,7 @@ namespace MediaPackageVod {
 
 class MediaPackageVodClient;
 
-class QTAWS_EXPORT MediaPackageVodClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MediaPackageVodClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MediaPackageVodClientPrivate(MediaPackageVodClient * const q);

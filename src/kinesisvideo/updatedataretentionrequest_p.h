@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class UpdateDataRetentionRequest;
 
-class QTAWS_EXPORT UpdateDataRetentionRequestPrivate : public KinesisVideoRequestPrivate {
+class UpdateDataRetentionRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     UpdateDataRetentionRequestPrivate(const KinesisVideoRequest::Action action,

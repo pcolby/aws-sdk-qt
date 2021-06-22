@@ -27,7 +27,7 @@ namespace IVS {
 
 class CreateChannelResponse;
 
-class QTAWS_EXPORT CreateChannelResponsePrivate : public IvsResponsePrivate {
+class CreateChannelResponsePrivate : public IvsResponsePrivate {
 
 public:
 

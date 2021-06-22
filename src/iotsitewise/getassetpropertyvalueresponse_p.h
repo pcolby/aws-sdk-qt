@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class GetAssetPropertyValueResponse;
 
-class QTAWS_EXPORT GetAssetPropertyValueResponsePrivate : public IoTSiteWiseResponsePrivate {
+class GetAssetPropertyValueResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

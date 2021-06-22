@@ -27,7 +27,7 @@ namespace MTurk {
 
 class AssociateQualificationWithWorkerResponse;
 
-class QTAWS_EXPORT AssociateQualificationWithWorkerResponsePrivate : public MTurkResponsePrivate {
+class AssociateQualificationWithWorkerResponsePrivate : public MTurkResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class CreateBotVersionResponse;
 
-class QTAWS_EXPORT CreateBotVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class CreateBotVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 

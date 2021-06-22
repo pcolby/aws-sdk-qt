@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class QuickSightResponse;
 
-class QTAWS_EXPORT QuickSightResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QuickSightResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

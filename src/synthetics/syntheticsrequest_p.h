@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class SyntheticsRequest;
 
-class QTAWS_EXPORT SyntheticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SyntheticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SyntheticsRequest::Action action; ///< Synthetics action to be performed.

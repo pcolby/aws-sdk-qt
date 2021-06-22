@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutObjectTaggingRequest;
 
-class QTAWS_EXPORT PutObjectTaggingRequestPrivate : public S3RequestPrivate {
+class PutObjectTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
     PutObjectTaggingRequestPrivate(const S3Request::Action action,

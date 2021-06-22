@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeleteDirectoryResponse;
 
-class QTAWS_EXPORT DeleteDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
+class DeleteDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

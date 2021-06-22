@@ -28,7 +28,7 @@ namespace Organizations {
 
 class EnableAllFeaturesRequest;
 
-class QTAWS_EXPORT EnableAllFeaturesRequestPrivate : public OrganizationsRequestPrivate {
+class EnableAllFeaturesRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     EnableAllFeaturesRequestPrivate(const OrganizationsRequest::Action action,

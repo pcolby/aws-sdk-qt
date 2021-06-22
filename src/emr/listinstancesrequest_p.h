@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListInstancesRequest;
 
-class QTAWS_EXPORT ListInstancesRequestPrivate : public EmrRequestPrivate {
+class ListInstancesRequestPrivate : public EmrRequestPrivate {
 
 public:
     ListInstancesRequestPrivate(const EmrRequest::Action action,

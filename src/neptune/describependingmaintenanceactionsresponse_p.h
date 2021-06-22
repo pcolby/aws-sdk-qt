@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribePendingMaintenanceActionsResponse;
 
-class QTAWS_EXPORT DescribePendingMaintenanceActionsResponsePrivate : public NeptuneResponsePrivate {
+class DescribePendingMaintenanceActionsResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

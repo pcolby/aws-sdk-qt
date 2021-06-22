@@ -27,7 +27,7 @@ namespace Outposts {
 
 class OutpostsResponse;
 
-class QTAWS_EXPORT OutpostsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class OutpostsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

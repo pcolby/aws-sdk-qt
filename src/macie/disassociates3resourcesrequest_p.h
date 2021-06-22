@@ -28,7 +28,7 @@ namespace Macie {
 
 class DisassociateS3ResourcesRequest;
 
-class QTAWS_EXPORT DisassociateS3ResourcesRequestPrivate : public MacieRequestPrivate {
+class DisassociateS3ResourcesRequestPrivate : public MacieRequestPrivate {
 
 public:
     DisassociateS3ResourcesRequestPrivate(const MacieRequest::Action action,

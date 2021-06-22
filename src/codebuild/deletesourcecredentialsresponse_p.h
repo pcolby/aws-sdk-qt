@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DeleteSourceCredentialsResponse;
 
-class QTAWS_EXPORT DeleteSourceCredentialsResponsePrivate : public CodeBuildResponsePrivate {
+class DeleteSourceCredentialsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AcceptDirectConnectGatewayAssociationProposalRequest;
 
-class QTAWS_EXPORT AcceptDirectConnectGatewayAssociationProposalRequestPrivate : public DirectConnectRequestPrivate {
+class AcceptDirectConnectGatewayAssociationProposalRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     AcceptDirectConnectGatewayAssociationProposalRequestPrivate(const DirectConnectRequest::Action action,

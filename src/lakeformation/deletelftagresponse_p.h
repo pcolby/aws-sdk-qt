@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class DeleteLFTagResponse;
 
-class QTAWS_EXPORT DeleteLFTagResponsePrivate : public LakeFormationResponsePrivate {
+class DeleteLFTagResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 

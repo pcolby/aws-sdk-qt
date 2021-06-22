@@ -28,7 +28,7 @@ namespace Snowball {
 
 class GetSoftwareUpdatesRequest;
 
-class QTAWS_EXPORT GetSoftwareUpdatesRequestPrivate : public SnowballRequestPrivate {
+class GetSoftwareUpdatesRequestPrivate : public SnowballRequestPrivate {
 
 public:
     GetSoftwareUpdatesRequestPrivate(const SnowballRequest::Action action,

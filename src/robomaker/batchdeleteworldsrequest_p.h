@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class BatchDeleteWorldsRequest;
 
-class QTAWS_EXPORT BatchDeleteWorldsRequestPrivate : public RoboMakerRequestPrivate {
+class BatchDeleteWorldsRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     BatchDeleteWorldsRequestPrivate(const RoboMakerRequest::Action action,

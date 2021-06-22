@@ -27,7 +27,7 @@ namespace FIS {
 
 class FisResponse;
 
-class QTAWS_EXPORT FisResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FisResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

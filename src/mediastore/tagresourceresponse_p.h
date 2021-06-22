@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public MediaStoreResponsePrivate {
+class TagResourceResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 

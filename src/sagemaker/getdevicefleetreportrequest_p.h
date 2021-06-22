@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class GetDeviceFleetReportRequest;
 
-class QTAWS_EXPORT GetDeviceFleetReportRequestPrivate : public SageMakerRequestPrivate {
+class GetDeviceFleetReportRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     GetDeviceFleetReportRequestPrivate(const SageMakerRequest::Action action,

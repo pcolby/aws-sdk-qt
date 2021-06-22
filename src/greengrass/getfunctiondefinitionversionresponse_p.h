@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class GetFunctionDefinitionVersionResponse;
 
-class QTAWS_EXPORT GetFunctionDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
+class GetFunctionDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

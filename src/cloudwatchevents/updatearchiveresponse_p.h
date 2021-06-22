@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class UpdateArchiveResponse;
 
-class QTAWS_EXPORT UpdateArchiveResponsePrivate : public CloudWatchEventsResponsePrivate {
+class UpdateArchiveResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MTurk {
 
 class DeleteWorkerBlockRequest;
 
-class QTAWS_EXPORT DeleteWorkerBlockRequestPrivate : public MTurkRequestPrivate {
+class DeleteWorkerBlockRequestPrivate : public MTurkRequestPrivate {
 
 public:
     DeleteWorkerBlockRequestPrivate(const MTurkRequest::Action action,

@@ -27,7 +27,7 @@ namespace MTurk {
 
 class MTurkResponse;
 
-class QTAWS_EXPORT MTurkResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MTurkResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class ListManagedEndpointsResponse;
 
-class QTAWS_EXPORT ListManagedEndpointsResponsePrivate : public EMRContainersResponsePrivate {
+class ListManagedEndpointsResponsePrivate : public EMRContainersResponsePrivate {
 
 public:
 

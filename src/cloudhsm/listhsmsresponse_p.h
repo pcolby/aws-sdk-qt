@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class ListHsmsResponse;
 
-class QTAWS_EXPORT ListHsmsResponsePrivate : public CloudHSMResponsePrivate {
+class ListHsmsResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 

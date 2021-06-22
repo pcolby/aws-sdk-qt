@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeNetworkInsightsPathsResponse;
 
-class QTAWS_EXPORT DescribeNetworkInsightsPathsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeNetworkInsightsPathsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

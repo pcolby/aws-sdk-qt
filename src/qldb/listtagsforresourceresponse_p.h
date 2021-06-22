@@ -27,7 +27,7 @@ namespace QLDB {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public QldbResponsePrivate {
+class ListTagsForResourceResponsePrivate : public QldbResponsePrivate {
 
 public:
 

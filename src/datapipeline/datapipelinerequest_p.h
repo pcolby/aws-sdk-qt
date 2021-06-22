@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class DataPipelineRequest;
 
-class QTAWS_EXPORT DataPipelineRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DataPipelineRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DataPipelineRequest::Action action; ///< DataPipeline action to be performed.

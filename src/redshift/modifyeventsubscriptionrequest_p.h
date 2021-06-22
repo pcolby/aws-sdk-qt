@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyEventSubscriptionRequest;
 
-class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public RedshiftRequestPrivate {
+class ModifyEventSubscriptionRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifyEventSubscriptionRequestPrivate(const RedshiftRequest::Action action,

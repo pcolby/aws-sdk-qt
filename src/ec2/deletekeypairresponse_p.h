@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteKeyPairResponse;
 
-class QTAWS_EXPORT DeleteKeyPairResponsePrivate : public Ec2ResponsePrivate {
+class DeleteKeyPairResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

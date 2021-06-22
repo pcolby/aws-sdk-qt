@@ -27,7 +27,7 @@ namespace SWF {
 
 class ListActivityTypesResponse;
 
-class QTAWS_EXPORT ListActivityTypesResponsePrivate : public SwfResponsePrivate {
+class ListActivityTypesResponsePrivate : public SwfResponsePrivate {
 
 public:
 

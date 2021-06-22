@@ -28,7 +28,7 @@ namespace PrometheusService {
 
 class DeleteWorkspaceRequest;
 
-class QTAWS_EXPORT DeleteWorkspaceRequestPrivate : public PrometheusServiceRequestPrivate {
+class DeleteWorkspaceRequestPrivate : public PrometheusServiceRequestPrivate {
 
 public:
     DeleteWorkspaceRequestPrivate(const PrometheusServiceRequest::Action action,

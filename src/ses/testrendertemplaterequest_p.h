@@ -28,7 +28,7 @@ namespace SES {
 
 class TestRenderTemplateRequest;
 
-class QTAWS_EXPORT TestRenderTemplateRequestPrivate : public SesRequestPrivate {
+class TestRenderTemplateRequestPrivate : public SesRequestPrivate {
 
 public:
     TestRenderTemplateRequestPrivate(const SesRequest::Action action,

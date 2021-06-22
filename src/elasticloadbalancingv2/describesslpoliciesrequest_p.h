@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeSSLPoliciesRequest;
 
-class QTAWS_EXPORT DescribeSSLPoliciesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
+class DescribeSSLPoliciesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DescribeSSLPoliciesRequestPrivate(const ElasticLoadBalancingv2Request::Action action,

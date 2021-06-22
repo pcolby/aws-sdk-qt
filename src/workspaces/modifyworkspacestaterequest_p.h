@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class ModifyWorkspaceStateRequest;
 
-class QTAWS_EXPORT ModifyWorkspaceStateRequestPrivate : public WorkSpacesRequestPrivate {
+class ModifyWorkspaceStateRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     ModifyWorkspaceStateRequestPrivate(const WorkSpacesRequest::Action action,

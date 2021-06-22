@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdatePatchBaselineRequest;
 
-class QTAWS_EXPORT UpdatePatchBaselineRequestPrivate : public SsmRequestPrivate {
+class UpdatePatchBaselineRequestPrivate : public SsmRequestPrivate {
 
 public:
     UpdatePatchBaselineRequestPrivate(const SsmRequest::Action action,

@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class DeleteConfigurationSetEventDestinationRequest;
 
-class QTAWS_EXPORT DeleteConfigurationSetEventDestinationRequestPrivate : public Sesv2RequestPrivate {
+class DeleteConfigurationSetEventDestinationRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     DeleteConfigurationSetEventDestinationRequestPrivate(const Sesv2Request::Action action,

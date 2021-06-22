@@ -28,7 +28,7 @@ namespace kendra {
 
 class kendraRequest;
 
-class QTAWS_EXPORT kendraRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class kendraRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     kendraRequest::Action action; ///< kendra action to be performed.

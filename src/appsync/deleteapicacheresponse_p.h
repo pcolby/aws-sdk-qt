@@ -27,7 +27,7 @@ namespace AppSync {
 
 class DeleteApiCacheResponse;
 
-class QTAWS_EXPORT DeleteApiCacheResponsePrivate : public AppSyncResponsePrivate {
+class DeleteApiCacheResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GuardDutyResponse;
 
-class QTAWS_EXPORT GuardDutyResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GuardDutyResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

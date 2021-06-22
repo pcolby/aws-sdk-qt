@@ -28,7 +28,7 @@ namespace IoTEventsData {
 
 class BatchSnoozeAlarmRequest;
 
-class QTAWS_EXPORT BatchSnoozeAlarmRequestPrivate : public IoTEventsDataRequestPrivate {
+class BatchSnoozeAlarmRequestPrivate : public IoTEventsDataRequestPrivate {
 
 public:
     BatchSnoozeAlarmRequestPrivate(const IoTEventsDataRequest::Action action,

@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteAccessKeyRequest;
 
-class QTAWS_EXPORT DeleteAccessKeyRequestPrivate : public IamRequestPrivate {
+class DeleteAccessKeyRequestPrivate : public IamRequestPrivate {
 
 public:
     DeleteAccessKeyRequestPrivate(const IamRequest::Action action,

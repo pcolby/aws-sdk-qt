@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class TimestreamWriteResponse;
 
-class QTAWS_EXPORT TimestreamWriteResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TimestreamWriteResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

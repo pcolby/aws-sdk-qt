@@ -28,7 +28,7 @@ namespace Transfer {
 
 class DescribeServerRequest;
 
-class QTAWS_EXPORT DescribeServerRequestPrivate : public TransferRequestPrivate {
+class DescribeServerRequestPrivate : public TransferRequestPrivate {
 
 public:
     DescribeServerRequestPrivate(const TransferRequest::Action action,

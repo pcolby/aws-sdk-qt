@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class UploadLayerPartResponse;
 
-class QTAWS_EXPORT UploadLayerPartResponsePrivate : public ECRPublicResponsePrivate {
+class UploadLayerPartResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 

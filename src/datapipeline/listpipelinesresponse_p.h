@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class ListPipelinesResponse;
 
-class QTAWS_EXPORT ListPipelinesResponsePrivate : public DataPipelineResponsePrivate {
+class ListPipelinesResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 

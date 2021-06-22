@@ -28,7 +28,7 @@ namespace SSO {
 
 class GetRoleCredentialsRequest;
 
-class QTAWS_EXPORT GetRoleCredentialsRequestPrivate : public SsoRequestPrivate {
+class GetRoleCredentialsRequestPrivate : public SsoRequestPrivate {
 
 public:
     GetRoleCredentialsRequestPrivate(const SsoRequest::Action action,

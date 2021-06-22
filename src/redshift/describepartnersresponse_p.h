@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribePartnersResponse;
 
-class QTAWS_EXPORT DescribePartnersResponsePrivate : public RedshiftResponsePrivate {
+class DescribePartnersResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

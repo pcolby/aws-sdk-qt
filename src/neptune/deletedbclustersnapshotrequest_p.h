@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DeleteDBClusterSnapshotRequest;
 
-class QTAWS_EXPORT DeleteDBClusterSnapshotRequestPrivate : public NeptuneRequestPrivate {
+class DeleteDBClusterSnapshotRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     DeleteDBClusterSnapshotRequestPrivate(const NeptuneRequest::Action action,

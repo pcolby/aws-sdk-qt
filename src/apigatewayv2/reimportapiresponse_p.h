@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class ReimportApiResponse;
 
-class QTAWS_EXPORT ReimportApiResponsePrivate : public ApiGatewayV2ResponsePrivate {
+class ReimportApiResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 

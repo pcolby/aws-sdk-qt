@@ -29,7 +29,7 @@ namespace ECRPublic {
 
 class ECRPublicClient;
 
-class QTAWS_EXPORT ECRPublicClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ECRPublicClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ECRPublicClientPrivate(ECRPublicClient * const q);

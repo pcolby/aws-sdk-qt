@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DisassociateWebACLResponse;
 
-class QTAWS_EXPORT DisassociateWebACLResponsePrivate : public WAFRegionalResponsePrivate {
+class DisassociateWebACLResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

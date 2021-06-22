@@ -27,7 +27,7 @@ namespace Shield {
 
 class UpdateSubscriptionResponse;
 
-class QTAWS_EXPORT UpdateSubscriptionResponsePrivate : public ShieldResponsePrivate {
+class UpdateSubscriptionResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

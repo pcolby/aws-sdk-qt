@@ -28,7 +28,7 @@ namespace AutoScalingPlans {
 
 class DeleteScalingPlanRequest;
 
-class QTAWS_EXPORT DeleteScalingPlanRequestPrivate : public AutoScalingPlansRequestPrivate {
+class DeleteScalingPlanRequestPrivate : public AutoScalingPlansRequestPrivate {
 
 public:
     DeleteScalingPlanRequestPrivate(const AutoScalingPlansRequest::Action action,

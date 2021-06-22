@@ -27,7 +27,7 @@ namespace IVS {
 
 class BatchGetChannelResponse;
 
-class QTAWS_EXPORT BatchGetChannelResponsePrivate : public IvsResponsePrivate {
+class BatchGetChannelResponsePrivate : public IvsResponsePrivate {
 
 public:
 

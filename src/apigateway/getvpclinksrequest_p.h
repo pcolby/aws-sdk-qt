@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetVpcLinksRequest;
 
-class QTAWS_EXPORT GetVpcLinksRequestPrivate : public APIGatewayRequestPrivate {
+class GetVpcLinksRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetVpcLinksRequestPrivate(const APIGatewayRequest::Action action,

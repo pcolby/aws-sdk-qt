@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class UpdateStreamResponse;
 
-class QTAWS_EXPORT UpdateStreamResponsePrivate : public KinesisVideoResponsePrivate {
+class UpdateStreamResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 

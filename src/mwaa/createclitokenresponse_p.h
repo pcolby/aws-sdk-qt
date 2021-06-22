@@ -27,7 +27,7 @@ namespace MWAA {
 
 class CreateCliTokenResponse;
 
-class QTAWS_EXPORT CreateCliTokenResponsePrivate : public MwaaResponsePrivate {
+class CreateCliTokenResponsePrivate : public MwaaResponsePrivate {
 
 public:
 

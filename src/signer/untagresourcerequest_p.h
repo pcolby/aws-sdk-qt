@@ -28,7 +28,7 @@ namespace signer {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public signerRequestPrivate {
+class UntagResourceRequestPrivate : public signerRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const signerRequest::Action action,

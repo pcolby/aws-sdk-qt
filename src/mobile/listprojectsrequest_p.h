@@ -28,7 +28,7 @@ namespace Mobile {
 
 class ListProjectsRequest;
 
-class QTAWS_EXPORT ListProjectsRequestPrivate : public MobileRequestPrivate {
+class ListProjectsRequestPrivate : public MobileRequestPrivate {
 
 public:
     ListProjectsRequestPrivate(const MobileRequest::Action action,

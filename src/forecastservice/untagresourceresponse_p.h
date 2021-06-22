@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ForecastServiceResponsePrivate {
+class UntagResourceResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 

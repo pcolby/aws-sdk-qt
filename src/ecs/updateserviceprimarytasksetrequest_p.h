@@ -28,7 +28,7 @@ namespace ECS {
 
 class UpdateServicePrimaryTaskSetRequest;
 
-class QTAWS_EXPORT UpdateServicePrimaryTaskSetRequestPrivate : public EcsRequestPrivate {
+class UpdateServicePrimaryTaskSetRequestPrivate : public EcsRequestPrivate {
 
 public:
     UpdateServicePrimaryTaskSetRequestPrivate(const EcsRequest::Action action,

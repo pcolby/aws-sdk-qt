@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class AppConfigRequest;
 
-class QTAWS_EXPORT AppConfigRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppConfigRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppConfigRequest::Action action; ///< AppConfig action to be performed.

@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class StopFlowResponse;
 
-class QTAWS_EXPORT StopFlowResponsePrivate : public MediaConnectResponsePrivate {
+class StopFlowResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 

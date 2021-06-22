@@ -27,7 +27,7 @@ namespace RDS {
 
 class StartExportTaskResponse;
 
-class QTAWS_EXPORT StartExportTaskResponsePrivate : public RdsResponsePrivate {
+class StartExportTaskResponsePrivate : public RdsResponsePrivate {
 
 public:
 

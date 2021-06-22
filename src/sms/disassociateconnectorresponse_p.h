@@ -27,7 +27,7 @@ namespace SMS {
 
 class DisassociateConnectorResponse;
 
-class QTAWS_EXPORT DisassociateConnectorResponsePrivate : public SmsResponsePrivate {
+class DisassociateConnectorResponsePrivate : public SmsResponsePrivate {
 
 public:
 

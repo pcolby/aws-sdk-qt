@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class ListPackageVersionAssetsRequest;
 
-class QTAWS_EXPORT ListPackageVersionAssetsRequestPrivate : public CodeArtifactRequestPrivate {
+class ListPackageVersionAssetsRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     ListPackageVersionAssetsRequestPrivate(const CodeArtifactRequest::Action action,

@@ -28,7 +28,7 @@ namespace Amplify {
 
 class DeleteDomainAssociationRequest;
 
-class QTAWS_EXPORT DeleteDomainAssociationRequestPrivate : public AmplifyRequestPrivate {
+class DeleteDomainAssociationRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     DeleteDomainAssociationRequestPrivate(const AmplifyRequest::Action action,

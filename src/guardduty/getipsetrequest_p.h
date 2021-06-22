@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GetIPSetRequest;
 
-class QTAWS_EXPORT GetIPSetRequestPrivate : public GuardDutyRequestPrivate {
+class GetIPSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     GetIPSetRequestPrivate(const GuardDutyRequest::Action action,

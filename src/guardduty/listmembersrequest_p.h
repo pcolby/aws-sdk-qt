@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class ListMembersRequest;
 
-class QTAWS_EXPORT ListMembersRequestPrivate : public GuardDutyRequestPrivate {
+class ListMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     ListMembersRequestPrivate(const GuardDutyRequest::Action action,

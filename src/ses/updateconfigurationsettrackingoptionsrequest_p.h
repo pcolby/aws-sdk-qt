@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetTrackingOptionsRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsRequestPrivate : public SesRequestPrivate {
+class UpdateConfigurationSetTrackingOptionsRequestPrivate : public SesRequestPrivate {
 
 public:
     UpdateConfigurationSetTrackingOptionsRequestPrivate(const SesRequest::Action action,

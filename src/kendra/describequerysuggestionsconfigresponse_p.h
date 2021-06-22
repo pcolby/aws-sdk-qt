@@ -27,7 +27,7 @@ namespace kendra {
 
 class DescribeQuerySuggestionsConfigResponse;
 
-class QTAWS_EXPORT DescribeQuerySuggestionsConfigResponsePrivate : public kendraResponsePrivate {
+class DescribeQuerySuggestionsConfigResponsePrivate : public kendraResponsePrivate {
 
 public:
 

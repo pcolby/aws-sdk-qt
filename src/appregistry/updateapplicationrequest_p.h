@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public AppRegistryRequestPrivate {
+class UpdateApplicationRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const AppRegistryRequest::Action action,

@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class ModifyEndpointRequest;
 
-class QTAWS_EXPORT ModifyEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class ModifyEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     ModifyEndpointRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

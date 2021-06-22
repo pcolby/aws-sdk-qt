@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class UpdateLFTagResponse;
 
-class QTAWS_EXPORT UpdateLFTagResponsePrivate : public LakeFormationResponsePrivate {
+class UpdateLFTagResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 

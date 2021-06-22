@@ -27,7 +27,7 @@ namespace MTurk {
 
 class DeleteWorkerBlockResponse;
 
-class QTAWS_EXPORT DeleteWorkerBlockResponsePrivate : public MTurkResponsePrivate {
+class DeleteWorkerBlockResponsePrivate : public MTurkResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ListAllowedNodeTypeModificationsRequest;
 
-class QTAWS_EXPORT ListAllowedNodeTypeModificationsRequestPrivate : public ElastiCacheRequestPrivate {
+class ListAllowedNodeTypeModificationsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ListAllowedNodeTypeModificationsRequestPrivate(const ElastiCacheRequest::Action action,

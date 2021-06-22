@@ -28,7 +28,7 @@ namespace Health {
 
 class DescribeEventsRequest;
 
-class QTAWS_EXPORT DescribeEventsRequestPrivate : public HealthRequestPrivate {
+class DescribeEventsRequestPrivate : public HealthRequestPrivate {
 
 public:
     DescribeEventsRequestPrivate(const HealthRequest::Action action,

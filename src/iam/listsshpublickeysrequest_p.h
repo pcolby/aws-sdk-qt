@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListSSHPublicKeysRequest;
 
-class QTAWS_EXPORT ListSSHPublicKeysRequestPrivate : public IamRequestPrivate {
+class ListSSHPublicKeysRequestPrivate : public IamRequestPrivate {
 
 public:
     ListSSHPublicKeysRequestPrivate(const IamRequest::Action action,

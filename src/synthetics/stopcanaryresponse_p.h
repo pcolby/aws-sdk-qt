@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class StopCanaryResponse;
 
-class QTAWS_EXPORT StopCanaryResponsePrivate : public SyntheticsResponsePrivate {
+class StopCanaryResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 

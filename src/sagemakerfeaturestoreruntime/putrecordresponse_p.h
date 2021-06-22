@@ -27,7 +27,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class PutRecordResponse;
 
-class QTAWS_EXPORT PutRecordResponsePrivate : public SageMakerFeatureStoreRuntimeResponsePrivate {
+class PutRecordResponsePrivate : public SageMakerFeatureStoreRuntimeResponsePrivate {
 
 public:
 

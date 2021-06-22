@@ -27,7 +27,7 @@ namespace Connect {
 
 class DescribeUserResponse;
 
-class QTAWS_EXPORT DescribeUserResponsePrivate : public ConnectResponsePrivate {
+class DescribeUserResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

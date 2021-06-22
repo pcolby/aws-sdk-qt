@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class GetWirelessGatewayTaskDefinitionResponse;
 
-class QTAWS_EXPORT GetWirelessGatewayTaskDefinitionResponsePrivate : public IoTWirelessResponsePrivate {
+class GetWirelessGatewayTaskDefinitionResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteSecurityConfigurationRequest;
 
-class QTAWS_EXPORT DeleteSecurityConfigurationRequestPrivate : public GlueRequestPrivate {
+class DeleteSecurityConfigurationRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteSecurityConfigurationRequestPrivate(const GlueRequest::Action action,

@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class CreateContainerResponse;
 
-class QTAWS_EXPORT CreateContainerResponsePrivate : public MediaStoreResponsePrivate {
+class CreateContainerResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 

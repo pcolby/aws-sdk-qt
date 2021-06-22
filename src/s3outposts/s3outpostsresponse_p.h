@@ -27,7 +27,7 @@ namespace S3Outposts {
 
 class S3OutpostsResponse;
 
-class QTAWS_EXPORT S3OutpostsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class S3OutpostsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

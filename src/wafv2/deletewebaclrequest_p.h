@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class DeleteWebACLRequest;
 
-class QTAWS_EXPORT DeleteWebACLRequestPrivate : public Wafv2RequestPrivate {
+class DeleteWebACLRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     DeleteWebACLRequestPrivate(const Wafv2Request::Action action,

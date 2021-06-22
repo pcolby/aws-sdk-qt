@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateMLTransformResponse;
 
-class QTAWS_EXPORT UpdateMLTransformResponsePrivate : public GlueResponsePrivate {
+class UpdateMLTransformResponsePrivate : public GlueResponsePrivate {
 
 public:
 

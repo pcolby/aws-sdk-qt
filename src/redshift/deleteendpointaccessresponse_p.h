@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteEndpointAccessResponse;
 
-class QTAWS_EXPORT DeleteEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
+class DeleteEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

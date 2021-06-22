@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsListDeadLetterSourceQueuesRequest;
 
-class QTAWS_EXPORT SqsListDeadLetterSourceQueuesRequestPrivate : public SqsRequestPrivate {
+class SqsListDeadLetterSourceQueuesRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsListDeadLetterSourceQueuesRequestPrivate(const SqsRequest::Action action,

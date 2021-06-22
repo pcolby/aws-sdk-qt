@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class GetDataflowEndpointGroupRequest;
 
-class QTAWS_EXPORT GetDataflowEndpointGroupRequestPrivate : public GroundStationRequestPrivate {
+class GetDataflowEndpointGroupRequestPrivate : public GroundStationRequestPrivate {
 
 public:
     GetDataflowEndpointGroupRequestPrivate(const GroundStationRequest::Action action,

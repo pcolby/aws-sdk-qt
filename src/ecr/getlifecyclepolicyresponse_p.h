@@ -27,7 +27,7 @@ namespace ECR {
 
 class GetLifecyclePolicyResponse;
 
-class QTAWS_EXPORT GetLifecyclePolicyResponsePrivate : public EcrResponsePrivate {
+class GetLifecyclePolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 

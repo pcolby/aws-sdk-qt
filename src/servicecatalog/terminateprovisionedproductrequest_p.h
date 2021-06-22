@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class TerminateProvisionedProductRequest;
 
-class QTAWS_EXPORT TerminateProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
+class TerminateProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     TerminateProvisionedProductRequestPrivate(const ServiceCatalogRequest::Action action,

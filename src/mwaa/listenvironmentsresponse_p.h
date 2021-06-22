@@ -27,7 +27,7 @@ namespace MWAA {
 
 class ListEnvironmentsResponse;
 
-class QTAWS_EXPORT ListEnvironmentsResponsePrivate : public MwaaResponsePrivate {
+class ListEnvironmentsResponsePrivate : public MwaaResponsePrivate {
 
 public:
 

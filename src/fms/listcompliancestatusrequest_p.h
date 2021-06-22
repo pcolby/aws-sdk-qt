@@ -28,7 +28,7 @@ namespace FMS {
 
 class ListComplianceStatusRequest;
 
-class QTAWS_EXPORT ListComplianceStatusRequestPrivate : public FmsRequestPrivate {
+class ListComplianceStatusRequestPrivate : public FmsRequestPrivate {
 
 public:
     ListComplianceStatusRequestPrivate(const FmsRequest::Action action,

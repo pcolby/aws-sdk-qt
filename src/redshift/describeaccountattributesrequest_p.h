@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeAccountAttributesRequest;
 
-class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public RedshiftRequestPrivate {
+class DescribeAccountAttributesRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeAccountAttributesRequestPrivate(const RedshiftRequest::Action action,

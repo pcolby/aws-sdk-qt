@@ -28,7 +28,7 @@ namespace IdentityStore {
 
 class ListUsersRequest;
 
-class QTAWS_EXPORT ListUsersRequestPrivate : public IdentityStoreRequestPrivate {
+class ListUsersRequestPrivate : public IdentityStoreRequestPrivate {
 
 public:
     ListUsersRequestPrivate(const IdentityStoreRequest::Action action,

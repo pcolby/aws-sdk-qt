@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class GetContainerRecipePolicyResponse;
 
-class QTAWS_EXPORT GetContainerRecipePolicyResponsePrivate : public imagebuilderResponsePrivate {
+class GetContainerRecipePolicyResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 

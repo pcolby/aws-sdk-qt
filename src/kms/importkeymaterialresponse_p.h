@@ -27,7 +27,7 @@ namespace KMS {
 
 class ImportKeyMaterialResponse;
 
-class QTAWS_EXPORT ImportKeyMaterialResponsePrivate : public KmsResponsePrivate {
+class ImportKeyMaterialResponsePrivate : public KmsResponsePrivate {
 
 public:
 

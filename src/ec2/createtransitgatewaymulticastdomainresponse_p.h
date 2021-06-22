@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateTransitGatewayMulticastDomainResponse;
 
-class QTAWS_EXPORT CreateTransitGatewayMulticastDomainResponsePrivate : public Ec2ResponsePrivate {
+class CreateTransitGatewayMulticastDomainResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

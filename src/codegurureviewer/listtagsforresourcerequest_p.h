@@ -28,7 +28,7 @@ namespace CodeGuruReviewer {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CodeGuruReviewerRequestPrivate {
+class ListTagsForResourceRequestPrivate : public CodeGuruReviewerRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const CodeGuruReviewerRequest::Action action,

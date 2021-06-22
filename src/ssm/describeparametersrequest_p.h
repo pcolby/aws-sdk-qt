@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeParametersRequest;
 
-class QTAWS_EXPORT DescribeParametersRequestPrivate : public SsmRequestPrivate {
+class DescribeParametersRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeParametersRequestPrivate(const SsmRequest::Action action,

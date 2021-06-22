@@ -28,7 +28,7 @@ namespace SES {
 
 class VerifyDomainIdentityRequest;
 
-class QTAWS_EXPORT VerifyDomainIdentityRequestPrivate : public SesRequestPrivate {
+class VerifyDomainIdentityRequestPrivate : public SesRequestPrivate {
 
 public:
     VerifyDomainIdentityRequestPrivate(const SesRequest::Action action,

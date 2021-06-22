@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public LookoutEquipmentRequestPrivate {
+class ListTagsForResourceRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const LookoutEquipmentRequest::Action action,

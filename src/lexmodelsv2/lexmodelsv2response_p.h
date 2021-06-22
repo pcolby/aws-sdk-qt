@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class LexModelsV2Response;
 
-class QTAWS_EXPORT LexModelsV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LexModelsV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

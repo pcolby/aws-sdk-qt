@@ -28,7 +28,7 @@ namespace Health {
 
 class DescribeAffectedEntitiesForOrganizationRequest;
 
-class QTAWS_EXPORT DescribeAffectedEntitiesForOrganizationRequestPrivate : public HealthRequestPrivate {
+class DescribeAffectedEntitiesForOrganizationRequestPrivate : public HealthRequestPrivate {
 
 public:
     DescribeAffectedEntitiesForOrganizationRequestPrivate(const HealthRequest::Action action,

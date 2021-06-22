@@ -27,7 +27,7 @@ namespace AppIntegrationsService {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public AppIntegrationsServiceResponsePrivate {
+class ListTagsForResourceResponsePrivate : public AppIntegrationsServiceResponsePrivate {
 
 public:
 

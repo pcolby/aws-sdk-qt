@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DescribeConformancePackStatusResponse;
 
-class QTAWS_EXPORT DescribeConformancePackStatusResponsePrivate : public ConfigServiceResponsePrivate {
+class DescribeConformancePackStatusResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

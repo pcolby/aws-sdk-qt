@@ -27,7 +27,7 @@ namespace Transfer {
 
 class DeleteSshPublicKeyResponse;
 
-class QTAWS_EXPORT DeleteSshPublicKeyResponsePrivate : public TransferResponsePrivate {
+class DeleteSshPublicKeyResponsePrivate : public TransferResponsePrivate {
 
 public:
 

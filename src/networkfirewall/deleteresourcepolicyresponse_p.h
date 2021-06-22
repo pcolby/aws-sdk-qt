@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class DeleteResourcePolicyResponse;
 
-class QTAWS_EXPORT DeleteResourcePolicyResponsePrivate : public NetworkFirewallResponsePrivate {
+class DeleteResourcePolicyResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

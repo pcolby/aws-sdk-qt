@@ -27,7 +27,7 @@ namespace Redshift {
 
 class PauseClusterResponse;
 
-class QTAWS_EXPORT PauseClusterResponsePrivate : public RedshiftResponsePrivate {
+class PauseClusterResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListTrainingJobsForHyperParameterTuningJobResponse;
 
-class QTAWS_EXPORT ListTrainingJobsForHyperParameterTuningJobResponsePrivate : public SageMakerResponsePrivate {
+class ListTrainingJobsForHyperParameterTuningJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

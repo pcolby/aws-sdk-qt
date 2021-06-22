@@ -28,7 +28,7 @@ namespace Route53 {
 
 class CreateQueryLoggingConfigRequest;
 
-class QTAWS_EXPORT CreateQueryLoggingConfigRequestPrivate : public Route53RequestPrivate {
+class CreateQueryLoggingConfigRequestPrivate : public Route53RequestPrivate {
 
 public:
     CreateQueryLoggingConfigRequestPrivate(const Route53Request::Action action,

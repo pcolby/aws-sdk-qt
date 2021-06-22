@@ -28,7 +28,7 @@ namespace LocationService {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public LocationServiceRequestPrivate {
+class TagResourceRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const LocationServiceRequest::Action action,

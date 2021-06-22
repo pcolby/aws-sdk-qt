@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public AuditManagerResponsePrivate {
+class UntagResourceResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class ListStreamsResponse;
 
-class QTAWS_EXPORT ListStreamsResponsePrivate : public KinesisResponsePrivate {
+class ListStreamsResponsePrivate : public KinesisResponsePrivate {
 
 public:
 

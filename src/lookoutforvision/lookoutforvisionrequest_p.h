@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class LookoutforVisionRequest;
 
-class QTAWS_EXPORT LookoutforVisionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LookoutforVisionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LookoutforVisionRequest::Action action; ///< LookoutforVision action to be performed.

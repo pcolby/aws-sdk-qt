@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetManagedPrefixListAssociationsRequest;
 
-class QTAWS_EXPORT GetManagedPrefixListAssociationsRequestPrivate : public Ec2RequestPrivate {
+class GetManagedPrefixListAssociationsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetManagedPrefixListAssociationsRequestPrivate(const Ec2Request::Action action,

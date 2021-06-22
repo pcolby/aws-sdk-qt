@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class UnshareApplicationRequest;
 
-class QTAWS_EXPORT UnshareApplicationRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
+class UnshareApplicationRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     UnshareApplicationRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,

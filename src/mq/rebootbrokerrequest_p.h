@@ -28,7 +28,7 @@ namespace MQ {
 
 class RebootBrokerRequest;
 
-class QTAWS_EXPORT RebootBrokerRequestPrivate : public MqRequestPrivate {
+class RebootBrokerRequestPrivate : public MqRequestPrivate {
 
 public:
     RebootBrokerRequestPrivate(const MqRequest::Action action,

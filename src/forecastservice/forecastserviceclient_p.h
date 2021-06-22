@@ -29,7 +29,7 @@ namespace ForecastService {
 
 class ForecastServiceClient;
 
-class QTAWS_EXPORT ForecastServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ForecastServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ForecastServiceClientPrivate(ForecastServiceClient * const q);

@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationOutputRequest;
 
-class QTAWS_EXPORT AddApplicationOutputRequestPrivate : public KinesisAnalyticsRequestPrivate {
+class AddApplicationOutputRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     AddApplicationOutputRequestPrivate(const KinesisAnalyticsRequest::Action action,

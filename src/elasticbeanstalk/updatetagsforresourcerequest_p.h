@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class UpdateTagsForResourceRequest;
 
-class QTAWS_EXPORT UpdateTagsForResourceRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class UpdateTagsForResourceRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     UpdateTagsForResourceRequestPrivate(const ElasticBeanstalkRequest::Action action,

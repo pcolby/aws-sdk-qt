@@ -27,7 +27,7 @@ namespace AppSync {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public AppSyncResponsePrivate {
+class UntagResourceResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 

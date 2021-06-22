@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class CreateRepositoryRequest;
 
-class QTAWS_EXPORT CreateRepositoryRequestPrivate : public CodeArtifactRequestPrivate {
+class CreateRepositoryRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     CreateRepositoryRequestPrivate(const CodeArtifactRequest::Action action,

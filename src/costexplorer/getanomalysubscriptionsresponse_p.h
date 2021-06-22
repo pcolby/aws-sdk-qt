@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetAnomalySubscriptionsResponse;
 
-class QTAWS_EXPORT GetAnomalySubscriptionsResponsePrivate : public CostExplorerResponsePrivate {
+class GetAnomalySubscriptionsResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 

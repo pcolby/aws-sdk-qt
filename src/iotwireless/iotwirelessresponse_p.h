@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class IoTWirelessResponse;
 
-class QTAWS_EXPORT IoTWirelessResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTWirelessResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

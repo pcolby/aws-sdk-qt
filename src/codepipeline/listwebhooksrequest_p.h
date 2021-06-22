@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class ListWebhooksRequest;
 
-class QTAWS_EXPORT ListWebhooksRequestPrivate : public CodePipelineRequestPrivate {
+class ListWebhooksRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     ListWebhooksRequestPrivate(const CodePipelineRequest::Action action,

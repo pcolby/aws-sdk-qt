@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class AttachLoadBalancerTlsCertificateRequest;
 
-class QTAWS_EXPORT AttachLoadBalancerTlsCertificateRequestPrivate : public LightsailRequestPrivate {
+class AttachLoadBalancerTlsCertificateRequestPrivate : public LightsailRequestPrivate {
 
 public:
     AttachLoadBalancerTlsCertificateRequestPrivate(const LightsailRequest::Action action,

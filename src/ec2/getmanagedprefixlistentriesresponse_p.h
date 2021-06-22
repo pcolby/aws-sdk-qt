@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetManagedPrefixListEntriesResponse;
 
-class QTAWS_EXPORT GetManagedPrefixListEntriesResponsePrivate : public Ec2ResponsePrivate {
+class GetManagedPrefixListEntriesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

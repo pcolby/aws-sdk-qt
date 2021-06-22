@@ -29,7 +29,7 @@ namespace AccessAnalyzer {
 
 class AccessAnalyzerClient;
 
-class QTAWS_EXPORT AccessAnalyzerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AccessAnalyzerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AccessAnalyzerClientPrivate(AccessAnalyzerClient * const q);

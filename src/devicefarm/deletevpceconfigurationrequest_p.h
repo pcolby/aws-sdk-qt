@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeleteVPCEConfigurationRequest;
 
-class QTAWS_EXPORT DeleteVPCEConfigurationRequestPrivate : public DeviceFarmRequestPrivate {
+class DeleteVPCEConfigurationRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     DeleteVPCEConfigurationRequestPrivate(const DeviceFarmRequest::Action action,

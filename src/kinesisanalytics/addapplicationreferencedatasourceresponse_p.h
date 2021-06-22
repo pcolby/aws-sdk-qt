@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationReferenceDataSourceResponse;
 
-class QTAWS_EXPORT AddApplicationReferenceDataSourceResponsePrivate : public KinesisAnalyticsResponsePrivate {
+class AddApplicationReferenceDataSourceResponsePrivate : public KinesisAnalyticsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MQ {
 
 class DeleteBrokerRequest;
 
-class QTAWS_EXPORT DeleteBrokerRequestPrivate : public MqRequestPrivate {
+class DeleteBrokerRequestPrivate : public MqRequestPrivate {
 
 public:
     DeleteBrokerRequestPrivate(const MqRequest::Action action,

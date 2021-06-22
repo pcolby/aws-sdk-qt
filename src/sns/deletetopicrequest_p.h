@@ -28,7 +28,7 @@ namespace SNS {
 
 class DeleteTopicRequest;
 
-class QTAWS_EXPORT DeleteTopicRequestPrivate : public SnsRequestPrivate {
+class DeleteTopicRequestPrivate : public SnsRequestPrivate {
 
 public:
     DeleteTopicRequestPrivate(const SnsRequest::Action action,

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ApproveSkillRequest;
 
-class QTAWS_EXPORT ApproveSkillRequestPrivate : public AlexaForBusinessRequestPrivate {
+class ApproveSkillRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     ApproveSkillRequestPrivate(const AlexaForBusinessRequest::Action action,

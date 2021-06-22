@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public MediaConvertRequestPrivate {
+class TagResourceRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const MediaConvertRequest::Action action,

@@ -28,7 +28,7 @@ namespace IVS {
 
 class CreateStreamKeyRequest;
 
-class QTAWS_EXPORT CreateStreamKeyRequestPrivate : public IvsRequestPrivate {
+class CreateStreamKeyRequestPrivate : public IvsRequestPrivate {
 
 public:
     CreateStreamKeyRequestPrivate(const IvsRequest::Action action,

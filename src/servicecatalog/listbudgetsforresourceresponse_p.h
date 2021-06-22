@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class ListBudgetsForResourceResponse;
 
-class QTAWS_EXPORT ListBudgetsForResourceResponsePrivate : public ServiceCatalogResponsePrivate {
+class ListBudgetsForResourceResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

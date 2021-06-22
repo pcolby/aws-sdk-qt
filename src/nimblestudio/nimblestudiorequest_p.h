@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class NimbleStudioRequest;
 
-class QTAWS_EXPORT NimbleStudioRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class NimbleStudioRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NimbleStudioRequest::Action action; ///< NimbleStudio action to be performed.

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateReservedInstancesListingRequest;
 
-class QTAWS_EXPORT CreateReservedInstancesListingRequestPrivate : public Ec2RequestPrivate {
+class CreateReservedInstancesListingRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateReservedInstancesListingRequestPrivate(const Ec2Request::Action action,

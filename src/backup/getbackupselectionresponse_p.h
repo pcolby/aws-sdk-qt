@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetBackupSelectionResponse;
 
-class QTAWS_EXPORT GetBackupSelectionResponsePrivate : public BackupResponsePrivate {
+class GetBackupSelectionResponsePrivate : public BackupResponsePrivate {
 
 public:
 

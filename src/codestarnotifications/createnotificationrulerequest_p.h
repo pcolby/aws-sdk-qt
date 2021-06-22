@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class CreateNotificationRuleRequest;
 
-class QTAWS_EXPORT CreateNotificationRuleRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class CreateNotificationRuleRequestPrivate : public CodeStarNotificationsRequestPrivate {
 
 public:
     CreateNotificationRuleRequestPrivate(const CodeStarNotificationsRequest::Action action,

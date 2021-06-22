@@ -29,7 +29,7 @@ namespace Chime {
 
 class ChimeClient;
 
-class QTAWS_EXPORT ChimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ChimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ChimeClientPrivate(ChimeClient * const q);

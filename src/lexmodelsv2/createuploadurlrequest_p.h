@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class CreateUploadUrlRequest;
 
-class QTAWS_EXPORT CreateUploadUrlRequestPrivate : public LexModelsV2RequestPrivate {
+class CreateUploadUrlRequestPrivate : public LexModelsV2RequestPrivate {
 
 public:
     CreateUploadUrlRequestPrivate(const LexModelsV2Request::Action action,

@@ -29,7 +29,7 @@ namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingClient;
 
-class QTAWS_EXPORT ApplicationAutoScalingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApplicationAutoScalingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ApplicationAutoScalingClientPrivate(ApplicationAutoScalingClient * const q);

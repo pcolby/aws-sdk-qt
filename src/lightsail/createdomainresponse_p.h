@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateDomainResponse;
 
-class QTAWS_EXPORT CreateDomainResponsePrivate : public LightsailResponsePrivate {
+class CreateDomainResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Kafka {
 
 class UpdateBrokerStorageResponse;
 
-class QTAWS_EXPORT UpdateBrokerStorageResponsePrivate : public KafkaResponsePrivate {
+class UpdateBrokerStorageResponsePrivate : public KafkaResponsePrivate {
 
 public:
 

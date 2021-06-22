@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeactivateEventSourceRequest;
 
-class QTAWS_EXPORT DeactivateEventSourceRequestPrivate : public EventBridgeRequestPrivate {
+class DeactivateEventSourceRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DeactivateEventSourceRequestPrivate(const EventBridgeRequest::Action action,

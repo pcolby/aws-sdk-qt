@@ -28,7 +28,7 @@ namespace EFS {
 
 class DeleteAccessPointRequest;
 
-class QTAWS_EXPORT DeleteAccessPointRequestPrivate : public EfsRequestPrivate {
+class DeleteAccessPointRequestPrivate : public EfsRequestPrivate {
 
 public:
     DeleteAccessPointRequestPrivate(const EfsRequest::Action action,

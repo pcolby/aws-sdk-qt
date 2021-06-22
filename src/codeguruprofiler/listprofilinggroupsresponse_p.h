@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class ListProfilingGroupsResponse;
 
-class QTAWS_EXPORT ListProfilingGroupsResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class ListProfilingGroupsResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class UpdateLoggerDefinitionResponse;
 
-class QTAWS_EXPORT UpdateLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
+class UpdateLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DeleteDashboardRequest;
 
-class QTAWS_EXPORT DeleteDashboardRequestPrivate : public IoTSiteWiseRequestPrivate {
+class DeleteDashboardRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     DeleteDashboardRequestPrivate(const IoTSiteWiseRequest::Action action,

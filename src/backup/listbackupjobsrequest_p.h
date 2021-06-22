@@ -28,7 +28,7 @@ namespace Backup {
 
 class ListBackupJobsRequest;
 
-class QTAWS_EXPORT ListBackupJobsRequestPrivate : public BackupRequestPrivate {
+class ListBackupJobsRequestPrivate : public BackupRequestPrivate {
 
 public:
     ListBackupJobsRequestPrivate(const BackupRequest::Action action,

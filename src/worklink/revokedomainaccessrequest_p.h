@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class RevokeDomainAccessRequest;
 
-class QTAWS_EXPORT RevokeDomainAccessRequestPrivate : public WorkLinkRequestPrivate {
+class RevokeDomainAccessRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     RevokeDomainAccessRequestPrivate(const WorkLinkRequest::Action action,

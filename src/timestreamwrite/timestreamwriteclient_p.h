@@ -29,7 +29,7 @@ namespace TimestreamWrite {
 
 class TimestreamWriteClient;
 
-class QTAWS_EXPORT TimestreamWriteClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TimestreamWriteClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     TimestreamWriteClientPrivate(TimestreamWriteClient * const q);

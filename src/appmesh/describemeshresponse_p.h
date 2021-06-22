@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DescribeMeshResponse;
 
-class QTAWS_EXPORT DescribeMeshResponsePrivate : public AppMeshResponsePrivate {
+class DescribeMeshResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SQS {
 
 class CreateQueueRequest;
 
-class QTAWS_EXPORT CreateQueueRequestPrivate : public SqsRequestPrivate {
+class CreateQueueRequestPrivate : public SqsRequestPrivate {
 
 public:
     CreateQueueRequestPrivate(const SqsRequest::Action action,

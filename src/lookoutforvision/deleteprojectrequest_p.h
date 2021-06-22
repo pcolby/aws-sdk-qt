@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class DeleteProjectRequest;
 
-class QTAWS_EXPORT DeleteProjectRequestPrivate : public LookoutforVisionRequestPrivate {
+class DeleteProjectRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     DeleteProjectRequestPrivate(const LookoutforVisionRequest::Action action,

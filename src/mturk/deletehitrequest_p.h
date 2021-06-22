@@ -28,7 +28,7 @@ namespace MTurk {
 
 class DeleteHITRequest;
 
-class QTAWS_EXPORT DeleteHITRequestPrivate : public MTurkRequestPrivate {
+class DeleteHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
     DeleteHITRequestPrivate(const MTurkRequest::Action action,

@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeleteConstraintRequest;
 
-class QTAWS_EXPORT DeleteConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
+class DeleteConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeleteConstraintRequestPrivate(const ServiceCatalogRequest::Action action,

@@ -27,7 +27,7 @@ namespace CognitoIdentity {
 
 class DescribeIdentityPoolResponse;
 
-class QTAWS_EXPORT DescribeIdentityPoolResponsePrivate : public CognitoIdentityResponsePrivate {
+class DescribeIdentityPoolResponsePrivate : public CognitoIdentityResponsePrivate {
 
 public:
 

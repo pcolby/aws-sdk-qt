@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class UpdateRadiusRequest;
 
-class QTAWS_EXPORT UpdateRadiusRequestPrivate : public DirectoryServiceRequestPrivate {
+class UpdateRadiusRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     UpdateRadiusRequestPrivate(const DirectoryServiceRequest::Action action,

@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class ListConfigurationProfilesResponse;
 
-class QTAWS_EXPORT ListConfigurationProfilesResponsePrivate : public AppConfigResponsePrivate {
+class ListConfigurationProfilesResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

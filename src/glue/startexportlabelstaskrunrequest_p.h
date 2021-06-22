@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartExportLabelsTaskRunRequest;
 
-class QTAWS_EXPORT StartExportLabelsTaskRunRequestPrivate : public GlueRequestPrivate {
+class StartExportLabelsTaskRunRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartExportLabelsTaskRunRequestPrivate(const GlueRequest::Action action,

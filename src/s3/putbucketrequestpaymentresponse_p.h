@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketRequestPaymentResponse;
 
-class QTAWS_EXPORT PutBucketRequestPaymentResponsePrivate : public S3ResponsePrivate {
+class PutBucketRequestPaymentResponsePrivate : public S3ResponsePrivate {
 
 public:
 

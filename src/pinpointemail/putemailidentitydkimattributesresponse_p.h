@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class PutEmailIdentityDkimAttributesResponse;
 
-class QTAWS_EXPORT PutEmailIdentityDkimAttributesResponsePrivate : public PinpointEmailResponsePrivate {
+class PutEmailIdentityDkimAttributesResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

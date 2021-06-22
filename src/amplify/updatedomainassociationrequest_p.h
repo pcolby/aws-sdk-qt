@@ -28,7 +28,7 @@ namespace Amplify {
 
 class UpdateDomainAssociationRequest;
 
-class QTAWS_EXPORT UpdateDomainAssociationRequestPrivate : public AmplifyRequestPrivate {
+class UpdateDomainAssociationRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     UpdateDomainAssociationRequestPrivate(const AmplifyRequest::Action action,

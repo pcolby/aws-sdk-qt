@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeAvailablePatchesRequest;
 
-class QTAWS_EXPORT DescribeAvailablePatchesRequestPrivate : public SsmRequestPrivate {
+class DescribeAvailablePatchesRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeAvailablePatchesRequestPrivate(const SsmRequest::Action action,

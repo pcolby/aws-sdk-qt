@@ -28,7 +28,7 @@ namespace SFN {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SfnRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SfnRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SfnRequest::Action action,

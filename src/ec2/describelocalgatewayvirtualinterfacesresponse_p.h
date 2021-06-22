@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeLocalGatewayVirtualInterfacesResponse;
 
-class QTAWS_EXPORT DescribeLocalGatewayVirtualInterfacesResponsePrivate : public Ec2ResponsePrivate {
+class DescribeLocalGatewayVirtualInterfacesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

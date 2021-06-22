@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopEdgePackagingJobResponse;
 
-class QTAWS_EXPORT StopEdgePackagingJobResponsePrivate : public SageMakerResponsePrivate {
+class StopEdgePackagingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

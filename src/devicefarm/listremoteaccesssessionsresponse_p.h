@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListRemoteAccessSessionsResponse;
 
-class QTAWS_EXPORT ListRemoteAccessSessionsResponsePrivate : public DeviceFarmResponsePrivate {
+class ListRemoteAccessSessionsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

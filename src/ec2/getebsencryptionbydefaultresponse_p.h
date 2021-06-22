@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetEbsEncryptionByDefaultResponse;
 
-class QTAWS_EXPORT GetEbsEncryptionByDefaultResponsePrivate : public Ec2ResponsePrivate {
+class GetEbsEncryptionByDefaultResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

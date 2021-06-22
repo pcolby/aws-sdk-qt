@@ -27,7 +27,7 @@ namespace Polly {
 
 class PollyResponse;
 
-class QTAWS_EXPORT PollyResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PollyResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

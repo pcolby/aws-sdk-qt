@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class GetConferencePreferenceRequest;
 
-class QTAWS_EXPORT GetConferencePreferenceRequestPrivate : public AlexaForBusinessRequestPrivate {
+class GetConferencePreferenceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     GetConferencePreferenceRequestPrivate(const AlexaForBusinessRequest::Action action,

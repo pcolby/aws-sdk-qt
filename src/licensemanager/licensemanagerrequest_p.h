@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class LicenseManagerRequest;
 
-class QTAWS_EXPORT LicenseManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LicenseManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LicenseManagerRequest::Action action; ///< LicenseManager action to be performed.

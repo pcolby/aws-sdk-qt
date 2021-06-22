@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetCommitRequest;
 
-class QTAWS_EXPORT GetCommitRequestPrivate : public CodeCommitRequestPrivate {
+class GetCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetCommitRequestPrivate(const CodeCommitRequest::Action action,

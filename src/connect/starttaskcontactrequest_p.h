@@ -28,7 +28,7 @@ namespace Connect {
 
 class StartTaskContactRequest;
 
-class QTAWS_EXPORT StartTaskContactRequestPrivate : public ConnectRequestPrivate {
+class StartTaskContactRequestPrivate : public ConnectRequestPrivate {
 
 public:
     StartTaskContactRequestPrivate(const ConnectRequest::Action action,

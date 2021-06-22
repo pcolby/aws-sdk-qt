@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListAutomaticTapeCreationPoliciesRequest;
 
-class QTAWS_EXPORT ListAutomaticTapeCreationPoliciesRequestPrivate : public StorageGatewayRequestPrivate {
+class ListAutomaticTapeCreationPoliciesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ListAutomaticTapeCreationPoliciesRequestPrivate(const StorageGatewayRequest::Action action,

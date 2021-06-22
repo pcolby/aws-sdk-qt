@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class RemovePermissionRequest;
 
-class QTAWS_EXPORT RemovePermissionRequestPrivate : public EventBridgeRequestPrivate {
+class RemovePermissionRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     RemovePermissionRequestPrivate(const EventBridgeRequest::Action action,

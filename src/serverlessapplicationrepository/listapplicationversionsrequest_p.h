@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class ListApplicationVersionsRequest;
 
-class QTAWS_EXPORT ListApplicationVersionsRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
+class ListApplicationVersionsRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     ListApplicationVersionsRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,

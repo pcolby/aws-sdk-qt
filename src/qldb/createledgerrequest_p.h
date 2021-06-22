@@ -28,7 +28,7 @@ namespace QLDB {
 
 class CreateLedgerRequest;
 
-class QTAWS_EXPORT CreateLedgerRequestPrivate : public QldbRequestPrivate {
+class CreateLedgerRequestPrivate : public QldbRequestPrivate {
 
 public:
     CreateLedgerRequestPrivate(const QldbRequest::Action action,

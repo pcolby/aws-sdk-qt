@@ -29,7 +29,7 @@ namespace Proton {
 
 class ProtonClient;
 
-class QTAWS_EXPORT ProtonClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ProtonClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ProtonClientPrivate(ProtonClient * const q);

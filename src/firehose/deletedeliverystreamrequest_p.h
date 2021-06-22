@@ -28,7 +28,7 @@ namespace Firehose {
 
 class DeleteDeliveryStreamRequest;
 
-class QTAWS_EXPORT DeleteDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
+class DeleteDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     DeleteDeliveryStreamRequestPrivate(const FirehoseRequest::Action action,

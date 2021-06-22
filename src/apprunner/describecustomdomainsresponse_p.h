@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DescribeCustomDomainsResponse;
 
-class QTAWS_EXPORT DescribeCustomDomainsResponsePrivate : public AppRunnerResponsePrivate {
+class DescribeCustomDomainsResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

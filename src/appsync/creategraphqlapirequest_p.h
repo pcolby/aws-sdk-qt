@@ -28,7 +28,7 @@ namespace AppSync {
 
 class CreateGraphqlApiRequest;
 
-class QTAWS_EXPORT CreateGraphqlApiRequestPrivate : public AppSyncRequestPrivate {
+class CreateGraphqlApiRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     CreateGraphqlApiRequestPrivate(const AppSyncRequest::Action action,

@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class GetBlacklistReportsRequest;
 
-class QTAWS_EXPORT GetBlacklistReportsRequestPrivate : public PinpointEmailRequestPrivate {
+class GetBlacklistReportsRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     GetBlacklistReportsRequestPrivate(const PinpointEmailRequest::Action action,

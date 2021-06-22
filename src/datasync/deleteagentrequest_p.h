@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DeleteAgentRequest;
 
-class QTAWS_EXPORT DeleteAgentRequestPrivate : public DataSyncRequestPrivate {
+class DeleteAgentRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     DeleteAgentRequestPrivate(const DataSyncRequest::Action action,

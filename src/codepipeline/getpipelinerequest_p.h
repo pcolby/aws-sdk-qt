@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class GetPipelineRequest;
 
-class QTAWS_EXPORT GetPipelineRequestPrivate : public CodePipelineRequestPrivate {
+class GetPipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     GetPipelineRequestPrivate(const CodePipelineRequest::Action action,

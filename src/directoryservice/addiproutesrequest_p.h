@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class AddIpRoutesRequest;
 
-class QTAWS_EXPORT AddIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
+class AddIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     AddIpRoutesRequestPrivate(const DirectoryServiceRequest::Action action,

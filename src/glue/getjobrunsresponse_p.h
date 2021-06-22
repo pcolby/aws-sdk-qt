@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetJobRunsResponse;
 
-class QTAWS_EXPORT GetJobRunsResponsePrivate : public GlueResponsePrivate {
+class GetJobRunsResponsePrivate : public GlueResponsePrivate {
 
 public:
 

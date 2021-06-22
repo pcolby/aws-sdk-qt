@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class AssociateIpGroupsRequest;
 
-class QTAWS_EXPORT AssociateIpGroupsRequestPrivate : public WorkSpacesRequestPrivate {
+class AssociateIpGroupsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     AssociateIpGroupsRequestPrivate(const WorkSpacesRequest::Action action,

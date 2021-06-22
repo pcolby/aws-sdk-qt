@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class DeleteAttributesResponse;
 
-class QTAWS_EXPORT DeleteAttributesResponsePrivate : public SimpleDBResponsePrivate {
+class DeleteAttributesResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 

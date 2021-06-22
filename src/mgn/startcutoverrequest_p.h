@@ -28,7 +28,7 @@ namespace mgn {
 
 class StartCutoverRequest;
 
-class QTAWS_EXPORT StartCutoverRequestPrivate : public mgnRequestPrivate {
+class StartCutoverRequestPrivate : public mgnRequestPrivate {
 
 public:
     StartCutoverRequestPrivate(const mgnRequest::Action action,

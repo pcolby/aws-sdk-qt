@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisassociateAddressRequest;
 
-class QTAWS_EXPORT DisassociateAddressRequestPrivate : public Ec2RequestPrivate {
+class DisassociateAddressRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisassociateAddressRequestPrivate(const Ec2Request::Action action,

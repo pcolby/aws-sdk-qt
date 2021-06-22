@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class LookoutEquipmentRequest;
 
-class QTAWS_EXPORT LookoutEquipmentRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LookoutEquipmentRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LookoutEquipmentRequest::Action action; ///< LookoutEquipment action to be performed.

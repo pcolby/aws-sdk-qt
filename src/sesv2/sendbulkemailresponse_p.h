@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class SendBulkEmailResponse;
 
-class QTAWS_EXPORT SendBulkEmailResponsePrivate : public Sesv2ResponsePrivate {
+class SendBulkEmailResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

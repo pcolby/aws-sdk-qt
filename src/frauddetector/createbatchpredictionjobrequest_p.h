@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class CreateBatchPredictionJobRequest;
 
-class QTAWS_EXPORT CreateBatchPredictionJobRequestPrivate : public FraudDetectorRequestPrivate {
+class CreateBatchPredictionJobRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     CreateBatchPredictionJobRequestPrivate(const FraudDetectorRequest::Action action,

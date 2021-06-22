@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class ListGitHubAccountTokenNamesResponse;
 
-class QTAWS_EXPORT ListGitHubAccountTokenNamesResponsePrivate : public CodeDeployResponsePrivate {
+class ListGitHubAccountTokenNamesResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 

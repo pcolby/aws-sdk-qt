@@ -29,7 +29,7 @@ namespace Support {
 
 class SupportClient;
 
-class QTAWS_EXPORT SupportClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SupportClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SupportClientPrivate(SupportClient * const q);

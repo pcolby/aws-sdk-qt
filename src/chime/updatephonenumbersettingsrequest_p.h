@@ -28,7 +28,7 @@ namespace Chime {
 
 class UpdatePhoneNumberSettingsRequest;
 
-class QTAWS_EXPORT UpdatePhoneNumberSettingsRequestPrivate : public ChimeRequestPrivate {
+class UpdatePhoneNumberSettingsRequestPrivate : public ChimeRequestPrivate {
 
 public:
     UpdatePhoneNumberSettingsRequestPrivate(const ChimeRequest::Action action,

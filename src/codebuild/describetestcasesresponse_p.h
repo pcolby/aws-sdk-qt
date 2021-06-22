@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DescribeTestCasesResponse;
 
-class QTAWS_EXPORT DescribeTestCasesResponsePrivate : public CodeBuildResponsePrivate {
+class DescribeTestCasesResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

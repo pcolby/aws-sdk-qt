@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DeleteResourceTreeRequest;
 
-class QTAWS_EXPORT DeleteResourceTreeRequestPrivate : public ForecastServiceRequestPrivate {
+class DeleteResourceTreeRequestPrivate : public ForecastServiceRequestPrivate {
 
 public:
     DeleteResourceTreeRequestPrivate(const ForecastServiceRequest::Action action,

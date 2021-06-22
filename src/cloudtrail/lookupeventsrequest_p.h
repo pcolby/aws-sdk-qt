@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class LookupEventsRequest;
 
-class QTAWS_EXPORT LookupEventsRequestPrivate : public CloudTrailRequestPrivate {
+class LookupEventsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     LookupEventsRequestPrivate(const CloudTrailRequest::Action action,

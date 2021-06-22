@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketInventoryConfigurationResponse;
 
-class QTAWS_EXPORT DeleteBucketInventoryConfigurationResponsePrivate : public S3ResponsePrivate {
+class DeleteBucketInventoryConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 

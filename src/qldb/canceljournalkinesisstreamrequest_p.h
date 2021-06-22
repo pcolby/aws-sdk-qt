@@ -28,7 +28,7 @@ namespace QLDB {
 
 class CancelJournalKinesisStreamRequest;
 
-class QTAWS_EXPORT CancelJournalKinesisStreamRequestPrivate : public QldbRequestPrivate {
+class CancelJournalKinesisStreamRequestPrivate : public QldbRequestPrivate {
 
 public:
     CancelJournalKinesisStreamRequestPrivate(const QldbRequest::Action action,

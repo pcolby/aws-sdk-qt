@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DeleteRouteCalculatorResponse;
 
-class QTAWS_EXPORT DeleteRouteCalculatorResponsePrivate : public LocationServiceResponsePrivate {
+class DeleteRouteCalculatorResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

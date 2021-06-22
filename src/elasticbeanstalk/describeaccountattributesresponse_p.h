@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DescribeAccountAttributesResponse;
 
-class QTAWS_EXPORT DescribeAccountAttributesResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class DescribeAccountAttributesResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

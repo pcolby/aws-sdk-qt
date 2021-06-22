@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetPolicyResponse;
 
-class QTAWS_EXPORT GetPolicyResponsePrivate : public FmsResponsePrivate {
+class GetPolicyResponsePrivate : public FmsResponsePrivate {
 
 public:
 

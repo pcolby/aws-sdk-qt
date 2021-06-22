@@ -27,7 +27,7 @@ namespace Appflow {
 
 class DescribeConnectorProfilesResponse;
 
-class QTAWS_EXPORT DescribeConnectorProfilesResponsePrivate : public AppflowResponsePrivate {
+class DescribeConnectorProfilesResponsePrivate : public AppflowResponsePrivate {
 
 public:
 

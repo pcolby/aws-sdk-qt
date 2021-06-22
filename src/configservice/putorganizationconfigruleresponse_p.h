@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutOrganizationConfigRuleResponse;
 
-class QTAWS_EXPORT PutOrganizationConfigRuleResponsePrivate : public ConfigServiceResponsePrivate {
+class PutOrganizationConfigRuleResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

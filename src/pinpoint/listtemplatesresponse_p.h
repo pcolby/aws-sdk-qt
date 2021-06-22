@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class ListTemplatesResponse;
 
-class QTAWS_EXPORT ListTemplatesResponsePrivate : public PinpointResponsePrivate {
+class ListTemplatesResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

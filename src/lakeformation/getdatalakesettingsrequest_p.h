@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class GetDataLakeSettingsRequest;
 
-class QTAWS_EXPORT GetDataLakeSettingsRequestPrivate : public LakeFormationRequestPrivate {
+class GetDataLakeSettingsRequestPrivate : public LakeFormationRequestPrivate {
 
 public:
     GetDataLakeSettingsRequestPrivate(const LakeFormationRequest::Action action,

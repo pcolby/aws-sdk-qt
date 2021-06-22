@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class StartInstanceRefreshResponse;
 
-class QTAWS_EXPORT StartInstanceRefreshResponsePrivate : public AutoScalingResponsePrivate {
+class StartInstanceRefreshResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

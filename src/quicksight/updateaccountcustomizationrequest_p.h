@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UpdateAccountCustomizationRequest;
 
-class QTAWS_EXPORT UpdateAccountCustomizationRequestPrivate : public QuickSightRequestPrivate {
+class UpdateAccountCustomizationRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     UpdateAccountCustomizationRequestPrivate(const QuickSightRequest::Action action,

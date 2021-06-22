@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeDBInstancesRequest;
 
-class QTAWS_EXPORT DescribeDBInstancesRequestPrivate : public NeptuneRequestPrivate {
+class DescribeDBInstancesRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     DescribeDBInstancesRequestPrivate(const NeptuneRequest::Action action,

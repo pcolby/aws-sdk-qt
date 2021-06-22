@@ -9,7 +9,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceClassName}}ResponsePrivate {
+class {{ClassName}}Private : public {{ServiceClassName}}ResponsePrivate {
 
 public:
     {# @todo data members go here #}

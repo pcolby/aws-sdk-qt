@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribeAutoScalingInstancesRequest;
 
-class QTAWS_EXPORT DescribeAutoScalingInstancesRequestPrivate : public AutoScalingRequestPrivate {
+class DescribeAutoScalingInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DescribeAutoScalingInstancesRequestPrivate(const AutoScalingRequest::Action action,

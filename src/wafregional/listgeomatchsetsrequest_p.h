@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListGeoMatchSetsRequest;
 
-class QTAWS_EXPORT ListGeoMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
+class ListGeoMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     ListGeoMatchSetsRequestPrivate(const WAFRegionalRequest::Action action,

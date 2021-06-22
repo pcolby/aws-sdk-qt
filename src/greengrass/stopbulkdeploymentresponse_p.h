@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class StopBulkDeploymentResponse;
 
-class QTAWS_EXPORT StopBulkDeploymentResponsePrivate : public GreengrassResponsePrivate {
+class StopBulkDeploymentResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

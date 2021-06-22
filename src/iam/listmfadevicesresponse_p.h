@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListMFADevicesResponse;
 
-class QTAWS_EXPORT ListMFADevicesResponsePrivate : public IamResponsePrivate {
+class ListMFADevicesResponsePrivate : public IamResponsePrivate {
 
 public:
 

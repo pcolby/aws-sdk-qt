@@ -28,7 +28,7 @@ namespace Kafka {
 
 class DeleteConfigurationRequest;
 
-class QTAWS_EXPORT DeleteConfigurationRequestPrivate : public KafkaRequestPrivate {
+class DeleteConfigurationRequestPrivate : public KafkaRequestPrivate {
 
 public:
     DeleteConfigurationRequestPrivate(const KafkaRequest::Action action,

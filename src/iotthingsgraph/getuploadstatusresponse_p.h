@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class GetUploadStatusResponse;
 
-class QTAWS_EXPORT GetUploadStatusResponsePrivate : public IoTThingsGraphResponsePrivate {
+class GetUploadStatusResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

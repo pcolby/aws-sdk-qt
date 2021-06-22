@@ -27,7 +27,7 @@ namespace S3Control {
 
 class PutStorageLensConfigurationTaggingResponse;
 
-class QTAWS_EXPORT PutStorageLensConfigurationTaggingResponsePrivate : public S3ControlResponsePrivate {
+class PutStorageLensConfigurationTaggingResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

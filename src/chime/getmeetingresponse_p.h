@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetMeetingResponse;
 
-class QTAWS_EXPORT GetMeetingResponsePrivate : public ChimeResponsePrivate {
+class GetMeetingResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

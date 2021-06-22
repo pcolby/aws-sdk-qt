@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class GetMetricWidgetImageResponse;
 
-class QTAWS_EXPORT GetMetricWidgetImageResponsePrivate : public CloudWatchResponsePrivate {
+class GetMetricWidgetImageResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 

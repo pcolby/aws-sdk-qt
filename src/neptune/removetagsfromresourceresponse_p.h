@@ -27,7 +27,7 @@ namespace Neptune {
 
 class RemoveTagsFromResourceResponse;
 
-class QTAWS_EXPORT RemoveTagsFromResourceResponsePrivate : public NeptuneResponsePrivate {
+class RemoveTagsFromResourceResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

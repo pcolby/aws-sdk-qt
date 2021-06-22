@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class UpdateVpcLinkResponse;
 
-class QTAWS_EXPORT UpdateVpcLinkResponsePrivate : public ApiGatewayV2ResponsePrivate {
+class UpdateVpcLinkResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class ListEnabledProductsForImportRequest;
 
-class QTAWS_EXPORT ListEnabledProductsForImportRequestPrivate : public SecurityHubRequestPrivate {
+class ListEnabledProductsForImportRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     ListEnabledProductsForImportRequestPrivate(const SecurityHubRequest::Action action,

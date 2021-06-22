@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListNotebookInstanceLifecycleConfigsResponse;
 
-class QTAWS_EXPORT ListNotebookInstanceLifecycleConfigsResponsePrivate : public SageMakerResponsePrivate {
+class ListNotebookInstanceLifecycleConfigsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

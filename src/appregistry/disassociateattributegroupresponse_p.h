@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class DisassociateAttributeGroupResponse;
 
-class QTAWS_EXPORT DisassociateAttributeGroupResponsePrivate : public AppRegistryResponsePrivate {
+class DisassociateAttributeGroupResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace IoT {
 
 class GetTopicRuleResponse;
 
-class QTAWS_EXPORT GetTopicRuleResponsePrivate : public IoTResponsePrivate {
+class GetTopicRuleResponsePrivate : public IoTResponsePrivate {
 
 public:
 

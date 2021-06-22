@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetRegionsRequest;
 
-class QTAWS_EXPORT GetRegionsRequestPrivate : public LightsailRequestPrivate {
+class GetRegionsRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetRegionsRequestPrivate(const LightsailRequest::Action action,

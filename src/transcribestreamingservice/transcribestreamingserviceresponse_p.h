@@ -27,7 +27,7 @@ namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceResponse;
 
-class QTAWS_EXPORT TranscribeStreamingServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TranscribeStreamingServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

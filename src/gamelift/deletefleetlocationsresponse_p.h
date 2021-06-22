@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteFleetLocationsResponse;
 
-class QTAWS_EXPORT DeleteFleetLocationsResponsePrivate : public GameLiftResponsePrivate {
+class DeleteFleetLocationsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

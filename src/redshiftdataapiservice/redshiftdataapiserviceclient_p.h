@@ -29,7 +29,7 @@ namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceClient;
 
-class QTAWS_EXPORT RedshiftDataAPIServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class RedshiftDataAPIServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     RedshiftDataAPIServiceClientPrivate(RedshiftDataAPIServiceClient * const q);

@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteTriggerRequest;
 
-class QTAWS_EXPORT DeleteTriggerRequestPrivate : public GlueRequestPrivate {
+class DeleteTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteTriggerRequestPrivate(const GlueRequest::Action action,

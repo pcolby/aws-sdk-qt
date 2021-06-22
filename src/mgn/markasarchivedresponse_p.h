@@ -27,7 +27,7 @@ namespace mgn {
 
 class MarkAsArchivedResponse;
 
-class QTAWS_EXPORT MarkAsArchivedResponsePrivate : public mgnResponsePrivate {
+class MarkAsArchivedResponsePrivate : public mgnResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class DeleteTokenResponse;
 
-class QTAWS_EXPORT DeleteTokenResponsePrivate : public LicenseManagerResponsePrivate {
+class DeleteTokenResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 

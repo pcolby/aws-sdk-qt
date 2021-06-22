@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteGatewayGroupRequest;
 
-class QTAWS_EXPORT DeleteGatewayGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
+class DeleteGatewayGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DeleteGatewayGroupRequestPrivate(const AlexaForBusinessRequest::Action action,

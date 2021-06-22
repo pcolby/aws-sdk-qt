@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeLayersRequest;
 
-class QTAWS_EXPORT DescribeLayersRequestPrivate : public OpsWorksRequestPrivate {
+class DescribeLayersRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeLayersRequestPrivate(const OpsWorksRequest::Action action,

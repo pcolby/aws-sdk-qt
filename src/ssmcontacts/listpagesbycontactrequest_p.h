@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class ListPagesByContactRequest;
 
-class QTAWS_EXPORT ListPagesByContactRequestPrivate : public SSMContactsRequestPrivate {
+class ListPagesByContactRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     ListPagesByContactRequestPrivate(const SSMContactsRequest::Action action,

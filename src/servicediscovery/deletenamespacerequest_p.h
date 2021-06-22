@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class DeleteNamespaceRequest;
 
-class QTAWS_EXPORT DeleteNamespaceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class DeleteNamespaceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     DeleteNamespaceRequestPrivate(const ServiceDiscoveryRequest::Action action,

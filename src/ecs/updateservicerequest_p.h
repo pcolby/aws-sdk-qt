@@ -28,7 +28,7 @@ namespace ECS {
 
 class UpdateServiceRequest;
 
-class QTAWS_EXPORT UpdateServiceRequestPrivate : public EcsRequestPrivate {
+class UpdateServiceRequestPrivate : public EcsRequestPrivate {
 
 public:
     UpdateServiceRequestPrivate(const EcsRequest::Action action,

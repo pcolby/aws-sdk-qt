@@ -27,7 +27,7 @@ namespace Kafka {
 
 class DescribeConfigurationResponse;
 
-class QTAWS_EXPORT DescribeConfigurationResponsePrivate : public KafkaResponsePrivate {
+class DescribeConfigurationResponsePrivate : public KafkaResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Lambda {
 
 class LambdaResponse;
 
-class QTAWS_EXPORT LambdaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LambdaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

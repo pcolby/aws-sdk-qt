@@ -28,7 +28,7 @@ namespace AppStream {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public AppStreamRequestPrivate {
+class UntagResourceRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const AppStreamRequest::Action action,

@@ -27,7 +27,7 @@ namespace WAF {
 
 class WafResponse;
 
-class QTAWS_EXPORT WafResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class WafResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class EventBridgeResponse;
 
-class QTAWS_EXPORT EventBridgeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EventBridgeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

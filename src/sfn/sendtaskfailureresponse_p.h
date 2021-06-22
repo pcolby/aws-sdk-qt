@@ -27,7 +27,7 @@ namespace SFN {
 
 class SendTaskFailureResponse;
 
-class QTAWS_EXPORT SendTaskFailureResponsePrivate : public SfnResponsePrivate {
+class SendTaskFailureResponsePrivate : public SfnResponsePrivate {
 
 public:
 

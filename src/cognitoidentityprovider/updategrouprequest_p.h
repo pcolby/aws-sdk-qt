@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class UpdateGroupRequest;
 
-class QTAWS_EXPORT UpdateGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class UpdateGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     UpdateGroupRequestPrivate(const CognitoIdentityProviderRequest::Action action,

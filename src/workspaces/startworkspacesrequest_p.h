@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class StartWorkspacesRequest;
 
-class QTAWS_EXPORT StartWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
+class StartWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     StartWorkspacesRequestPrivate(const WorkSpacesRequest::Action action,

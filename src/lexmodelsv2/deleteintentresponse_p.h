@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DeleteIntentResponse;
 
-class QTAWS_EXPORT DeleteIntentResponsePrivate : public LexModelsV2ResponsePrivate {
+class DeleteIntentResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListPipelinesRequest;
 
-class QTAWS_EXPORT ListPipelinesRequestPrivate : public SageMakerRequestPrivate {
+class ListPipelinesRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     ListPipelinesRequestPrivate(const SageMakerRequest::Action action,

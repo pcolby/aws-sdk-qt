@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class PutSlotTypeResponse;
 
-class QTAWS_EXPORT PutSlotTypeResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class PutSlotTypeResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 

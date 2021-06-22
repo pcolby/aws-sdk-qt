@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class DeleteDatasetRequest;
 
-class QTAWS_EXPORT DeleteDatasetRequestPrivate : public CognitoSyncRequestPrivate {
+class DeleteDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     DeleteDatasetRequestPrivate(const CognitoSyncRequest::Action action,

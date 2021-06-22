@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class GetFindingRequest;
 
-class QTAWS_EXPORT GetFindingRequestPrivate : public AccessAnalyzerRequestPrivate {
+class GetFindingRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     GetFindingRequestPrivate(const AccessAnalyzerRequest::Action action,

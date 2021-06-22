@@ -27,7 +27,7 @@ namespace QLDBSession {
 
 class QLDBSessionResponse;
 
-class QTAWS_EXPORT QLDBSessionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QLDBSessionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

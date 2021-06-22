@@ -27,7 +27,7 @@ namespace Proton {
 
 class CancelServicePipelineDeploymentResponse;
 
-class QTAWS_EXPORT CancelServicePipelineDeploymentResponsePrivate : public ProtonResponsePrivate {
+class CancelServicePipelineDeploymentResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeLDAPSSettingsResponse;
 
-class QTAWS_EXPORT DescribeLDAPSSettingsResponsePrivate : public DirectoryServiceResponsePrivate {
+class DescribeLDAPSSettingsResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

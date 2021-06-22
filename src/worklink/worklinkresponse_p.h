@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class WorkLinkResponse;
 
-class QTAWS_EXPORT WorkLinkResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class WorkLinkResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

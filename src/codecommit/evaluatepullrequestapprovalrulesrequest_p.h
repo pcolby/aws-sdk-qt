@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class EvaluatePullRequestApprovalRulesRequest;
 
-class QTAWS_EXPORT EvaluatePullRequestApprovalRulesRequestPrivate : public CodeCommitRequestPrivate {
+class EvaluatePullRequestApprovalRulesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     EvaluatePullRequestApprovalRulesRequestPrivate(const CodeCommitRequest::Action action,

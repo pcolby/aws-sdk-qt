@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public DeviceFarmResponsePrivate {
+class UntagResourceResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

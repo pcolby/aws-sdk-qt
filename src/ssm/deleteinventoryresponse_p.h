@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteInventoryResponse;
 
-class QTAWS_EXPORT DeleteInventoryResponsePrivate : public SsmResponsePrivate {
+class DeleteInventoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class UpdateHostRequest;
 
-class QTAWS_EXPORT UpdateHostRequestPrivate : public CodeStarconnectionsRequestPrivate {
+class UpdateHostRequestPrivate : public CodeStarconnectionsRequestPrivate {
 
 public:
     UpdateHostRequestPrivate(const CodeStarconnectionsRequest::Action action,

@@ -27,7 +27,7 @@ namespace RDS {
 
 class ResetDBParameterGroupResponse;
 
-class QTAWS_EXPORT ResetDBParameterGroupResponsePrivate : public RdsResponsePrivate {
+class ResetDBParameterGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 

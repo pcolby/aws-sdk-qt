@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListStackInstancesForProvisionedProductRequest;
 
-class QTAWS_EXPORT ListStackInstancesForProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
+class ListStackInstancesForProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListStackInstancesForProvisionedProductRequestPrivate(const ServiceCatalogRequest::Action action,

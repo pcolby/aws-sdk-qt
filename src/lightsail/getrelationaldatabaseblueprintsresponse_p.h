@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetRelationalDatabaseBlueprintsResponse;
 
-class QTAWS_EXPORT GetRelationalDatabaseBlueprintsResponsePrivate : public LightsailResponsePrivate {
+class GetRelationalDatabaseBlueprintsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class CreateLoadBalancerPolicyResponse;
 
-class QTAWS_EXPORT CreateLoadBalancerPolicyResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+class CreateLoadBalancerPolicyResponsePrivate : public ElasticLoadBalancingResponsePrivate {
 
 public:
 

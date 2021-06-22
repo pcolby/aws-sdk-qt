@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class IoTAnalyticsResponse;
 
-class QTAWS_EXPORT IoTAnalyticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTAnalyticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

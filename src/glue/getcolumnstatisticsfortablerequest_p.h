@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetColumnStatisticsForTableRequest;
 
-class QTAWS_EXPORT GetColumnStatisticsForTableRequestPrivate : public GlueRequestPrivate {
+class GetColumnStatisticsForTableRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetColumnStatisticsForTableRequestPrivate(const GlueRequest::Action action,

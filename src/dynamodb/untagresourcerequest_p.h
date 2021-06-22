@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public DynamoDBRequestPrivate {
+class UntagResourceRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const DynamoDBRequest::Action action,

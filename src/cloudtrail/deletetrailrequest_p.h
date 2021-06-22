@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class DeleteTrailRequest;
 
-class QTAWS_EXPORT DeleteTrailRequestPrivate : public CloudTrailRequestPrivate {
+class DeleteTrailRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     DeleteTrailRequestPrivate(const CloudTrailRequest::Action action,

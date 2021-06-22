@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class GetInlinePolicyForPermissionSetResponse;
 
-class QTAWS_EXPORT GetInlinePolicyForPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
+class GetInlinePolicyForPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetUploadRequest;
 
-class QTAWS_EXPORT GetUploadRequestPrivate : public DeviceFarmRequestPrivate {
+class GetUploadRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetUploadRequestPrivate(const DeviceFarmRequest::Action action,

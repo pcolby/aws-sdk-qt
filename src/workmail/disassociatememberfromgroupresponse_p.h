@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class DisassociateMemberFromGroupResponse;
 
-class QTAWS_EXPORT DisassociateMemberFromGroupResponsePrivate : public WorkMailResponsePrivate {
+class DisassociateMemberFromGroupResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

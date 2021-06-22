@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeAgentVersionsRequest;
 
-class QTAWS_EXPORT DescribeAgentVersionsRequestPrivate : public OpsWorksRequestPrivate {
+class DescribeAgentVersionsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeAgentVersionsRequestPrivate(const OpsWorksRequest::Action action,

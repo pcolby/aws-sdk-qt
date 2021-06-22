@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeTimeToLiveResponse;
 
-class QTAWS_EXPORT DescribeTimeToLiveResponsePrivate : public DynamoDBResponsePrivate {
+class DescribeTimeToLiveResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

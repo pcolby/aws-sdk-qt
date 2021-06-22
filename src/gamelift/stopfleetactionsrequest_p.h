@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StopFleetActionsRequest;
 
-class QTAWS_EXPORT StopFleetActionsRequestPrivate : public GameLiftRequestPrivate {
+class StopFleetActionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     StopFleetActionsRequestPrivate(const GameLiftRequest::Action action,

@@ -28,7 +28,7 @@ namespace AppSync {
 
 class StartSchemaCreationRequest;
 
-class QTAWS_EXPORT StartSchemaCreationRequestPrivate : public AppSyncRequestPrivate {
+class StartSchemaCreationRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     StartSchemaCreationRequestPrivate(const AppSyncRequest::Action action,

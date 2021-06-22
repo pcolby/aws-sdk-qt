@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribePatchBaselinesResponse;
 
-class QTAWS_EXPORT DescribePatchBaselinesResponsePrivate : public SsmResponsePrivate {
+class DescribePatchBaselinesResponsePrivate : public SsmResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SWF {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public SwfRequestPrivate {
+class TagResourceRequestPrivate : public SwfRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const SwfRequest::Action action,

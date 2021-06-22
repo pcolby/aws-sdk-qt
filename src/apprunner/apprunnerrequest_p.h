@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class AppRunnerRequest;
 
-class QTAWS_EXPORT AppRunnerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppRunnerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppRunnerRequest::Action action; ///< AppRunner action to be performed.

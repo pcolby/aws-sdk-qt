@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class CreateServiceRequest;
 
-class QTAWS_EXPORT CreateServiceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class CreateServiceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     CreateServiceRequestPrivate(const ServiceDiscoveryRequest::Action action,

@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class CopyWorkspaceImageRequest;
 
-class QTAWS_EXPORT CopyWorkspaceImageRequestPrivate : public WorkSpacesRequestPrivate {
+class CopyWorkspaceImageRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     CopyWorkspaceImageRequestPrivate(const WorkSpacesRequest::Action action,

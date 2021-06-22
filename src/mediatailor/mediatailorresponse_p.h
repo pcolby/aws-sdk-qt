@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class MediaTailorResponse;
 
-class QTAWS_EXPORT MediaTailorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MediaTailorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

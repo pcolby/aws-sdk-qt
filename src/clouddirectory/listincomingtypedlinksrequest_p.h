@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListIncomingTypedLinksRequest;
 
-class QTAWS_EXPORT ListIncomingTypedLinksRequestPrivate : public CloudDirectoryRequestPrivate {
+class ListIncomingTypedLinksRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListIncomingTypedLinksRequestPrivate(const CloudDirectoryRequest::Action action,

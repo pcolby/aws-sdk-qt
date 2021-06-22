@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DeleteServerRequest;
 
-class QTAWS_EXPORT DeleteServerRequestPrivate : public OpsWorksCMRequestPrivate {
+class DeleteServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DeleteServerRequestPrivate(const OpsWorksCMRequest::Action action,

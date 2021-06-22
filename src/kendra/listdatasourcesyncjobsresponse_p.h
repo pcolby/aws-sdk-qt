@@ -27,7 +27,7 @@ namespace kendra {
 
 class ListDataSourceSyncJobsResponse;
 
-class QTAWS_EXPORT ListDataSourceSyncJobsResponsePrivate : public kendraResponsePrivate {
+class ListDataSourceSyncJobsResponsePrivate : public kendraResponsePrivate {
 
 public:
 

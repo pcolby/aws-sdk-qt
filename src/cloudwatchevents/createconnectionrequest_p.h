@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class CreateConnectionRequest;
 
-class QTAWS_EXPORT CreateConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
+class CreateConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     CreateConnectionRequestPrivate(const CloudWatchEventsRequest::Action action,

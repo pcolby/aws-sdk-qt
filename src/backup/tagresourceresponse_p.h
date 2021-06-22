@@ -27,7 +27,7 @@ namespace Backup {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public BackupResponsePrivate {
+class TagResourceResponsePrivate : public BackupResponsePrivate {
 
 public:
 

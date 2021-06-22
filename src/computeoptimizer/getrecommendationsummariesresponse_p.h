@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class GetRecommendationSummariesResponse;
 
-class QTAWS_EXPORT GetRecommendationSummariesResponsePrivate : public ComputeOptimizerResponsePrivate {
+class GetRecommendationSummariesResponsePrivate : public ComputeOptimizerResponsePrivate {
 
 public:
 

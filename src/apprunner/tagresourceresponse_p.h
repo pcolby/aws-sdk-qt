@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public AppRunnerResponsePrivate {
+class TagResourceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

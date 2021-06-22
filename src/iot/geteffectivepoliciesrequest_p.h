@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetEffectivePoliciesRequest;
 
-class QTAWS_EXPORT GetEffectivePoliciesRequestPrivate : public IoTRequestPrivate {
+class GetEffectivePoliciesRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetEffectivePoliciesRequestPrivate(const IoTRequest::Action action,

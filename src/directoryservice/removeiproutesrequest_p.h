@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RemoveIpRoutesRequest;
 
-class QTAWS_EXPORT RemoveIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
+class RemoveIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     RemoveIpRoutesRequestPrivate(const DirectoryServiceRequest::Action action,

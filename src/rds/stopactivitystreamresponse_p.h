@@ -27,7 +27,7 @@ namespace RDS {
 
 class StopActivityStreamResponse;
 
-class QTAWS_EXPORT StopActivityStreamResponsePrivate : public RdsResponsePrivate {
+class StopActivityStreamResponsePrivate : public RdsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteSipRuleRequest;
 
-class QTAWS_EXPORT DeleteSipRuleRequestPrivate : public ChimeRequestPrivate {
+class DeleteSipRuleRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DeleteSipRuleRequestPrivate(const ChimeRequest::Action action,

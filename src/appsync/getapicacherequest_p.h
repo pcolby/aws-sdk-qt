@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetApiCacheRequest;
 
-class QTAWS_EXPORT GetApiCacheRequestPrivate : public AppSyncRequestPrivate {
+class GetApiCacheRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     GetApiCacheRequestPrivate(const AppSyncRequest::Action action,

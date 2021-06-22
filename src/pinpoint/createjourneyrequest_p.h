@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class CreateJourneyRequest;
 
-class QTAWS_EXPORT CreateJourneyRequestPrivate : public PinpointRequestPrivate {
+class CreateJourneyRequestPrivate : public PinpointRequestPrivate {
 
 public:
     CreateJourneyRequestPrivate(const PinpointRequest::Action action,

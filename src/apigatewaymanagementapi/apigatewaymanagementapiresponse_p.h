@@ -27,7 +27,7 @@ namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiResponse;
 
-class QTAWS_EXPORT ApiGatewayManagementApiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApiGatewayManagementApiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

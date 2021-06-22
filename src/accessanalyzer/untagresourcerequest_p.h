@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public AccessAnalyzerRequestPrivate {
+class UntagResourceRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const AccessAnalyzerRequest::Action action,

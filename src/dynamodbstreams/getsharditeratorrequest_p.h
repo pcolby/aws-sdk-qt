@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 
 class GetShardIteratorRequest;
 
-class QTAWS_EXPORT GetShardIteratorRequestPrivate : public DynamoDBStreamsRequestPrivate {
+class GetShardIteratorRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
     GetShardIteratorRequestPrivate(const DynamoDBStreamsRequest::Action action,

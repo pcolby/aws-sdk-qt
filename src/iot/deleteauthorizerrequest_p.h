@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteAuthorizerRequest;
 
-class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public IoTRequestPrivate {
+class DeleteAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteAuthorizerRequestPrivate(const IoTRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTEventsData {
 
 class BatchPutMessageRequest;
 
-class QTAWS_EXPORT BatchPutMessageRequestPrivate : public IoTEventsDataRequestPrivate {
+class BatchPutMessageRequestPrivate : public IoTEventsDataRequestPrivate {
 
 public:
     BatchPutMessageRequestPrivate(const IoTEventsDataRequest::Action action,

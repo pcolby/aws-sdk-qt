@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public DynamoDBRequestPrivate {
+class TagResourceRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const DynamoDBRequest::Action action,

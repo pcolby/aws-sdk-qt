@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetAuthorizerRequest;
 
-class QTAWS_EXPORT GetAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
+class GetAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetAuthorizerRequestPrivate(const APIGatewayRequest::Action action,

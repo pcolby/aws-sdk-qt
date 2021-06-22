@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public QuickSightResponsePrivate {
+class ListTagsForResourceResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

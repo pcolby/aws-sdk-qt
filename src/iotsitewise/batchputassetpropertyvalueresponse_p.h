@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class BatchPutAssetPropertyValueResponse;
 
-class QTAWS_EXPORT BatchPutAssetPropertyValueResponsePrivate : public IoTSiteWiseResponsePrivate {
+class BatchPutAssetPropertyValueResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Chime {
 
 class UpdateChannelReadMarkerRequest;
 
-class QTAWS_EXPORT UpdateChannelReadMarkerRequestPrivate : public ChimeRequestPrivate {
+class UpdateChannelReadMarkerRequestPrivate : public ChimeRequestPrivate {
 
 public:
     UpdateChannelReadMarkerRequestPrivate(const ChimeRequest::Action action,

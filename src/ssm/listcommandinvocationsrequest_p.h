@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListCommandInvocationsRequest;
 
-class QTAWS_EXPORT ListCommandInvocationsRequestPrivate : public SsmRequestPrivate {
+class ListCommandInvocationsRequestPrivate : public SsmRequestPrivate {
 
 public:
     ListCommandInvocationsRequestPrivate(const SsmRequest::Action action,

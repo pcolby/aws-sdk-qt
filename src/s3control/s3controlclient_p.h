@@ -29,7 +29,7 @@ namespace S3Control {
 
 class S3ControlClient;
 
-class QTAWS_EXPORT S3ControlClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class S3ControlClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     S3ControlClientPrivate(S3ControlClient * const q);

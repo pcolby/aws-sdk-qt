@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class CancelPolicyGenerationRequest;
 
-class QTAWS_EXPORT CancelPolicyGenerationRequestPrivate : public AccessAnalyzerRequestPrivate {
+class CancelPolicyGenerationRequestPrivate : public AccessAnalyzerRequestPrivate {
 
 public:
     CancelPolicyGenerationRequestPrivate(const AccessAnalyzerRequest::Action action,

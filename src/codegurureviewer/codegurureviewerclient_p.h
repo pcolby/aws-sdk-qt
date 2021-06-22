@@ -29,7 +29,7 @@ namespace CodeGuruReviewer {
 
 class CodeGuruReviewerClient;
 
-class QTAWS_EXPORT CodeGuruReviewerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeGuruReviewerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeGuruReviewerClientPrivate(CodeGuruReviewerClient * const q);

@@ -27,7 +27,7 @@ namespace ECS {
 
 class RegisterContainerInstanceResponse;
 
-class QTAWS_EXPORT RegisterContainerInstanceResponsePrivate : public EcsResponsePrivate {
+class RegisterContainerInstanceResponsePrivate : public EcsResponsePrivate {
 
 public:
 

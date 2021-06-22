@@ -27,7 +27,7 @@ namespace SES {
 
 class DeleteConfigurationSetResponse;
 
-class QTAWS_EXPORT DeleteConfigurationSetResponsePrivate : public SesResponsePrivate {
+class DeleteConfigurationSetResponsePrivate : public SesResponsePrivate {
 
 public:
 

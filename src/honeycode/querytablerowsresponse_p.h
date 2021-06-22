@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class QueryTableRowsResponse;
 
-class QTAWS_EXPORT QueryTableRowsResponsePrivate : public HoneycodeResponsePrivate {
+class QueryTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 

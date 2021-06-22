@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class UpdateDetectorVersionMetadataResponse;
 
-class QTAWS_EXPORT UpdateDetectorVersionMetadataResponsePrivate : public FraudDetectorResponsePrivate {
+class UpdateDetectorVersionMetadataResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 

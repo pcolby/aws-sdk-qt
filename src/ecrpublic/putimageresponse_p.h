@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class PutImageResponse;
 
-class QTAWS_EXPORT PutImageResponsePrivate : public ECRPublicResponsePrivate {
+class PutImageResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 

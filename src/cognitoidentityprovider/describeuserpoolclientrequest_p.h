@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DescribeUserPoolClientRequest;
 
-class QTAWS_EXPORT DescribeUserPoolClientRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class DescribeUserPoolClientRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DescribeUserPoolClientRequestPrivate(const CognitoIdentityProviderRequest::Action action,

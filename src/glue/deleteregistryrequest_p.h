@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteRegistryRequest;
 
-class QTAWS_EXPORT DeleteRegistryRequestPrivate : public GlueRequestPrivate {
+class DeleteRegistryRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteRegistryRequestPrivate(const GlueRequest::Action action,

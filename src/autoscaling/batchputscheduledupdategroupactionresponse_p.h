@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class BatchPutScheduledUpdateGroupActionResponse;
 
-class QTAWS_EXPORT BatchPutScheduledUpdateGroupActionResponsePrivate : public AutoScalingResponsePrivate {
+class BatchPutScheduledUpdateGroupActionResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

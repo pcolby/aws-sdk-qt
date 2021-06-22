@@ -28,7 +28,7 @@ namespace Mobile {
 
 class MobileRequest;
 
-class QTAWS_EXPORT MobileRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MobileRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MobileRequest::Action action; ///< Mobile action to be performed.

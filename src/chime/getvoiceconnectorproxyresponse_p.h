@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetVoiceConnectorProxyResponse;
 
-class QTAWS_EXPORT GetVoiceConnectorProxyResponsePrivate : public ChimeResponsePrivate {
+class GetVoiceConnectorProxyResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

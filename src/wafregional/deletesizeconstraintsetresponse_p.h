@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DeleteSizeConstraintSetResponse;
 
-class QTAWS_EXPORT DeleteSizeConstraintSetResponsePrivate : public WAFRegionalResponsePrivate {
+class DeleteSizeConstraintSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

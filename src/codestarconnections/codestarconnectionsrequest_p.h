@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class CodeStarconnectionsRequest;
 
-class QTAWS_EXPORT CodeStarconnectionsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeStarconnectionsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeStarconnectionsRequest::Action action; ///< CodeStarconnections action to be performed.

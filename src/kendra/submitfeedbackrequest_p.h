@@ -28,7 +28,7 @@ namespace kendra {
 
 class SubmitFeedbackRequest;
 
-class QTAWS_EXPORT SubmitFeedbackRequestPrivate : public kendraRequestPrivate {
+class SubmitFeedbackRequestPrivate : public kendraRequestPrivate {
 
 public:
     SubmitFeedbackRequestPrivate(const kendraRequest::Action action,

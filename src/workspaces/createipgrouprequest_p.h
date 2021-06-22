@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class CreateIpGroupRequest;
 
-class QTAWS_EXPORT CreateIpGroupRequestPrivate : public WorkSpacesRequestPrivate {
+class CreateIpGroupRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     CreateIpGroupRequestPrivate(const WorkSpacesRequest::Action action,

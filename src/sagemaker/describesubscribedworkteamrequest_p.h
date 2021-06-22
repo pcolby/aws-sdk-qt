@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeSubscribedWorkteamRequest;
 
-class QTAWS_EXPORT DescribeSubscribedWorkteamRequestPrivate : public SageMakerRequestPrivate {
+class DescribeSubscribedWorkteamRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeSubscribedWorkteamRequestPrivate(const SageMakerRequest::Action action,

@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public ApplicationInsightsRequestPrivate {
+class TagResourceRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const ApplicationInsightsRequest::Action action,

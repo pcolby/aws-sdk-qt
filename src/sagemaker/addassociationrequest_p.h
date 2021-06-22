@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class AddAssociationRequest;
 
-class QTAWS_EXPORT AddAssociationRequestPrivate : public SageMakerRequestPrivate {
+class AddAssociationRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     AddAssociationRequestPrivate(const SageMakerRequest::Action action,

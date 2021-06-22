@@ -27,7 +27,7 @@ namespace Lambda {
 
 class PublishVersionResponse;
 
-class QTAWS_EXPORT PublishVersionResponsePrivate : public LambdaResponsePrivate {
+class PublishVersionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

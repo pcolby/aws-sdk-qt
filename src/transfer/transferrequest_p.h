@@ -28,7 +28,7 @@ namespace Transfer {
 
 class TransferRequest;
 
-class QTAWS_EXPORT TransferRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TransferRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TransferRequest::Action action; ///< Transfer action to be performed.

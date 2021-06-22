@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class ListBuildsResponse;
 
-class QTAWS_EXPORT ListBuildsResponsePrivate : public CodeBuildResponsePrivate {
+class ListBuildsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 

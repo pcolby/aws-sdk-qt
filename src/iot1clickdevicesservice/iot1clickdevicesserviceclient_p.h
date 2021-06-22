@@ -29,7 +29,7 @@ namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceClient;
 
-class QTAWS_EXPORT IoT1ClickDevicesServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoT1ClickDevicesServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoT1ClickDevicesServiceClientPrivate(IoT1ClickDevicesServiceClient * const q);

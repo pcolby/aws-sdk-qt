@@ -28,7 +28,7 @@ namespace ECR {
 
 class CompleteLayerUploadRequest;
 
-class QTAWS_EXPORT CompleteLayerUploadRequestPrivate : public EcrRequestPrivate {
+class CompleteLayerUploadRequestPrivate : public EcrRequestPrivate {
 
 public:
     CompleteLayerUploadRequestPrivate(const EcrRequest::Action action,

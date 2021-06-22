@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class TransactGetItemsResponse;
 
-class QTAWS_EXPORT TransactGetItemsResponsePrivate : public DynamoDBResponsePrivate {
+class TransactGetItemsResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

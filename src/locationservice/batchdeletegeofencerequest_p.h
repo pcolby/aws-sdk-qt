@@ -28,7 +28,7 @@ namespace LocationService {
 
 class BatchDeleteGeofenceRequest;
 
-class QTAWS_EXPORT BatchDeleteGeofenceRequestPrivate : public LocationServiceRequestPrivate {
+class BatchDeleteGeofenceRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     BatchDeleteGeofenceRequestPrivate(const LocationServiceRequest::Action action,

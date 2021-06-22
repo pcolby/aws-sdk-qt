@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteDimensionResponse;
 
-class QTAWS_EXPORT DeleteDimensionResponsePrivate : public IoTResponsePrivate {
+class DeleteDimensionResponsePrivate : public IoTResponsePrivate {
 
 public:
 

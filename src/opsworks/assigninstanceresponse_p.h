@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class AssignInstanceResponse;
 
-class QTAWS_EXPORT AssignInstanceResponsePrivate : public OpsWorksResponsePrivate {
+class AssignInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

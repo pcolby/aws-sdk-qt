@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public TimestreamWriteResponsePrivate {
+class TagResourceResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 

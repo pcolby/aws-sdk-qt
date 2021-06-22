@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class PutRecordsResponse;
 
-class QTAWS_EXPORT PutRecordsResponsePrivate : public KinesisResponsePrivate {
+class PutRecordsResponsePrivate : public KinesisResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace LakeFormation {
 
 class LakeFormationClient;
 
-class QTAWS_EXPORT LakeFormationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LakeFormationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LakeFormationClientPrivate(LakeFormationClient * const q);

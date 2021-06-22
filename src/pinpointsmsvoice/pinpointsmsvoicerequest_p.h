@@ -28,7 +28,7 @@ namespace PinpointSMSVoice {
 
 class PinpointSMSVoiceRequest;
 
-class QTAWS_EXPORT PinpointSMSVoiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PinpointSMSVoiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PinpointSMSVoiceRequest::Action action; ///< PinpointSMSVoice action to be performed.

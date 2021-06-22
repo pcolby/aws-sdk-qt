@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class UnsubscribeRequest;
 
-class QTAWS_EXPORT UnsubscribeRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class UnsubscribeRequestPrivate : public CodeStarNotificationsRequestPrivate {
 
 public:
     UnsubscribeRequestPrivate(const CodeStarNotificationsRequest::Action action,

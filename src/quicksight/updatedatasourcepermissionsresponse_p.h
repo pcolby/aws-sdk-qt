@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class UpdateDataSourcePermissionsResponse;
 
-class QTAWS_EXPORT UpdateDataSourcePermissionsResponsePrivate : public QuickSightResponsePrivate {
+class UpdateDataSourcePermissionsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

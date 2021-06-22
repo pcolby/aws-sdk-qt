@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetOfferingStatusRequest;
 
-class QTAWS_EXPORT GetOfferingStatusRequestPrivate : public DeviceFarmRequestPrivate {
+class GetOfferingStatusRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetOfferingStatusRequestPrivate(const DeviceFarmRequest::Action action,

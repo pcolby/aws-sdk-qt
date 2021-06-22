@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListIAMPolicyAssignmentsForUserResponse;
 
-class QTAWS_EXPORT ListIAMPolicyAssignmentsForUserResponsePrivate : public QuickSightResponsePrivate {
+class ListIAMPolicyAssignmentsForUserResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

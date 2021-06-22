@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetGeoMatchSetRequest;
 
-class QTAWS_EXPORT GetGeoMatchSetRequestPrivate : public WafRequestPrivate {
+class GetGeoMatchSetRequestPrivate : public WafRequestPrivate {
 
 public:
     GetGeoMatchSetRequestPrivate(const WafRequest::Action action,

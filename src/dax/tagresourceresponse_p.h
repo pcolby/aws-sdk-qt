@@ -27,7 +27,7 @@ namespace DAX {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public DaxResponsePrivate {
+class TagResourceResponsePrivate : public DaxResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DeleteUsageReportSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteUsageReportSubscriptionRequestPrivate : public AppStreamRequestPrivate {
+class DeleteUsageReportSubscriptionRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DeleteUsageReportSubscriptionRequestPrivate(const AppStreamRequest::Action action,

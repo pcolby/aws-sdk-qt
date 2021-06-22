@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class ListAccountIntegrationsRequest;
 
-class QTAWS_EXPORT ListAccountIntegrationsRequestPrivate : public CustomerProfilesRequestPrivate {
+class ListAccountIntegrationsRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     ListAccountIntegrationsRequestPrivate(const CustomerProfilesRequest::Action action,

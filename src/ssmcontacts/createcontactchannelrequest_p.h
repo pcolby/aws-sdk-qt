@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class CreateContactChannelRequest;
 
-class QTAWS_EXPORT CreateContactChannelRequestPrivate : public SSMContactsRequestPrivate {
+class CreateContactChannelRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     CreateContactChannelRequestPrivate(const SSMContactsRequest::Action action,

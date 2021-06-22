@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class ListDedicatedIpPoolsRequest;
 
-class QTAWS_EXPORT ListDedicatedIpPoolsRequestPrivate : public Sesv2RequestPrivate {
+class ListDedicatedIpPoolsRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     ListDedicatedIpPoolsRequestPrivate(const Sesv2Request::Action action,

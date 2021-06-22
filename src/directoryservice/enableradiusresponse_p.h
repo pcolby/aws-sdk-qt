@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class EnableRadiusResponse;
 
-class QTAWS_EXPORT EnableRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
+class EnableRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

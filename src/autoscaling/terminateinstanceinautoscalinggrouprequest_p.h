@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class TerminateInstanceInAutoScalingGroupRequest;
 
-class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
+class TerminateInstanceInAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     TerminateInstanceInAutoScalingGroupRequestPrivate(const AutoScalingRequest::Action action,

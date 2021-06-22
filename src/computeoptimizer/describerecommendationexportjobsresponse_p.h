@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class DescribeRecommendationExportJobsResponse;
 
-class QTAWS_EXPORT DescribeRecommendationExportJobsResponsePrivate : public ComputeOptimizerResponsePrivate {
+class DescribeRecommendationExportJobsResponsePrivate : public ComputeOptimizerResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetEventPredictionResponse;
 
-class QTAWS_EXPORT GetEventPredictionResponsePrivate : public FraudDetectorResponsePrivate {
+class GetEventPredictionResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 

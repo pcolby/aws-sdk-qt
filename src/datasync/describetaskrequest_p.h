@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DescribeTaskRequest;
 
-class QTAWS_EXPORT DescribeTaskRequestPrivate : public DataSyncRequestPrivate {
+class DescribeTaskRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     DescribeTaskRequestPrivate(const DataSyncRequest::Action action,

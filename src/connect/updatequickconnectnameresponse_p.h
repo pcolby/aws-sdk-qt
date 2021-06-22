@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateQuickConnectNameResponse;
 
-class QTAWS_EXPORT UpdateQuickConnectNameResponsePrivate : public ConnectResponsePrivate {
+class UpdateQuickConnectNameResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

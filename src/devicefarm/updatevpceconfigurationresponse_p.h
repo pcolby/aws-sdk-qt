@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class UpdateVPCEConfigurationResponse;
 
-class QTAWS_EXPORT UpdateVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate {
+class UpdateVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

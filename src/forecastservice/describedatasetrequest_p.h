@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DescribeDatasetRequest;
 
-class QTAWS_EXPORT DescribeDatasetRequestPrivate : public ForecastServiceRequestPrivate {
+class DescribeDatasetRequestPrivate : public ForecastServiceRequestPrivate {
 
 public:
     DescribeDatasetRequestPrivate(const ForecastServiceRequest::Action action,

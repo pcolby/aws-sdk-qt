@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateDiskResponse;
 
-class QTAWS_EXPORT CreateDiskResponsePrivate : public LightsailResponsePrivate {
+class CreateDiskResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

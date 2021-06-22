@@ -29,7 +29,7 @@ namespace SavingsPlans {
 
 class SavingsPlansClient;
 
-class QTAWS_EXPORT SavingsPlansClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SavingsPlansClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SavingsPlansClientPrivate(SavingsPlansClient * const q);

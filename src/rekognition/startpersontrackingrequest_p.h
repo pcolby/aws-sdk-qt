@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartPersonTrackingRequest;
 
-class QTAWS_EXPORT StartPersonTrackingRequestPrivate : public RekognitionRequestPrivate {
+class StartPersonTrackingRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StartPersonTrackingRequestPrivate(const RekognitionRequest::Action action,

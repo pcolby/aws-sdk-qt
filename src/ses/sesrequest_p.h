@@ -28,7 +28,7 @@ namespace SES {
 
 class SesRequest;
 
-class QTAWS_EXPORT SesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SesRequest::Action action; ///< SES action to be performed.

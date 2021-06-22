@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteRouteRequest;
 
-class QTAWS_EXPORT DeleteRouteRequestPrivate : public Ec2RequestPrivate {
+class DeleteRouteRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteRouteRequestPrivate(const Ec2Request::Action action,

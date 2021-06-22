@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DeleteInsightRulesRequest;
 
-class QTAWS_EXPORT DeleteInsightRulesRequestPrivate : public CloudWatchRequestPrivate {
+class DeleteInsightRulesRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DeleteInsightRulesRequestPrivate(const CloudWatchRequest::Action action,

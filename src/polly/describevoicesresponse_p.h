@@ -27,7 +27,7 @@ namespace Polly {
 
 class DescribeVoicesResponse;
 
-class QTAWS_EXPORT DescribeVoicesResponsePrivate : public PollyResponsePrivate {
+class DescribeVoicesResponsePrivate : public PollyResponsePrivate {
 
 public:
 

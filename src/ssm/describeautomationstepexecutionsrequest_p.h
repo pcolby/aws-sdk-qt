@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeAutomationStepExecutionsRequest;
 
-class QTAWS_EXPORT DescribeAutomationStepExecutionsRequestPrivate : public SsmRequestPrivate {
+class DescribeAutomationStepExecutionsRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeAutomationStepExecutionsRequestPrivate(const SsmRequest::Action action,

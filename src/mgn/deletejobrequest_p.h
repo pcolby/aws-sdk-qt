@@ -28,7 +28,7 @@ namespace mgn {
 
 class DeleteJobRequest;
 
-class QTAWS_EXPORT DeleteJobRequestPrivate : public mgnRequestPrivate {
+class DeleteJobRequestPrivate : public mgnRequestPrivate {
 
 public:
     DeleteJobRequestPrivate(const mgnRequest::Action action,

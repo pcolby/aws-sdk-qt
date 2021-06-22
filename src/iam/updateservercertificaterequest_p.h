@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateServerCertificateRequest;
 
-class QTAWS_EXPORT UpdateServerCertificateRequestPrivate : public IamRequestPrivate {
+class UpdateServerCertificateRequestPrivate : public IamRequestPrivate {
 
 public:
     UpdateServerCertificateRequestPrivate(const IamRequest::Action action,

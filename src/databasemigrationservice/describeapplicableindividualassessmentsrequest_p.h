@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeApplicableIndividualAssessmentsRequest;
 
-class QTAWS_EXPORT DescribeApplicableIndividualAssessmentsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeApplicableIndividualAssessmentsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeApplicableIndividualAssessmentsRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

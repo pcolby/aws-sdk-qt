@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteLoginProfileRequest;
 
-class QTAWS_EXPORT DeleteLoginProfileRequestPrivate : public IamRequestPrivate {
+class DeleteLoginProfileRequestPrivate : public IamRequestPrivate {
 
 public:
     DeleteLoginProfileRequestPrivate(const IamRequest::Action action,

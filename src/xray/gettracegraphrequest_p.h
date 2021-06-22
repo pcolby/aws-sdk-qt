@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetTraceGraphRequest;
 
-class QTAWS_EXPORT GetTraceGraphRequestPrivate : public XRayRequestPrivate {
+class GetTraceGraphRequestPrivate : public XRayRequestPrivate {
 
 public:
     GetTraceGraphRequestPrivate(const XRayRequest::Action action,

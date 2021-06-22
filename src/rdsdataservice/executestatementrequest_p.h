@@ -28,7 +28,7 @@ namespace RDSDataService {
 
 class ExecuteStatementRequest;
 
-class QTAWS_EXPORT ExecuteStatementRequestPrivate : public RDSDataServiceRequestPrivate {
+class ExecuteStatementRequestPrivate : public RDSDataServiceRequestPrivate {
 
 public:
     ExecuteStatementRequestPrivate(const RDSDataServiceRequest::Action action,

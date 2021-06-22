@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class UntagResourceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CognitoIdentityProviderRequest::Action action,

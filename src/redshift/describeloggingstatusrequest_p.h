@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeLoggingStatusRequest;
 
-class QTAWS_EXPORT DescribeLoggingStatusRequestPrivate : public RedshiftRequestPrivate {
+class DescribeLoggingStatusRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeLoggingStatusRequestPrivate(const RedshiftRequest::Action action,

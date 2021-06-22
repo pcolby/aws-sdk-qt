@@ -28,7 +28,7 @@ namespace Schemas {
 
 class UpdateRegistryRequest;
 
-class QTAWS_EXPORT UpdateRegistryRequestPrivate : public SchemasRequestPrivate {
+class UpdateRegistryRequestPrivate : public SchemasRequestPrivate {
 
 public:
     UpdateRegistryRequestPrivate(const SchemasRequest::Action action,

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteHsmConfigurationResponse;
 
-class QTAWS_EXPORT DeleteHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
+class DeleteHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

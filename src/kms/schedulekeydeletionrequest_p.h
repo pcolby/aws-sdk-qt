@@ -28,7 +28,7 @@ namespace KMS {
 
 class ScheduleKeyDeletionRequest;
 
-class QTAWS_EXPORT ScheduleKeyDeletionRequestPrivate : public KmsRequestPrivate {
+class ScheduleKeyDeletionRequestPrivate : public KmsRequestPrivate {
 
 public:
     ScheduleKeyDeletionRequestPrivate(const KmsRequest::Action action,

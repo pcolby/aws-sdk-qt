@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DeleteGatewayRequest;
 
-class QTAWS_EXPORT DeleteGatewayRequestPrivate : public IoTSiteWiseRequestPrivate {
+class DeleteGatewayRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     DeleteGatewayRequestPrivate(const IoTSiteWiseRequest::Action action,

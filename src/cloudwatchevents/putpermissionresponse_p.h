@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class PutPermissionResponse;
 
-class QTAWS_EXPORT PutPermissionResponsePrivate : public CloudWatchEventsResponsePrivate {
+class PutPermissionResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

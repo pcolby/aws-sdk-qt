@@ -28,7 +28,7 @@ namespace SMS {
 
 class LaunchAppRequest;
 
-class QTAWS_EXPORT LaunchAppRequestPrivate : public SmsRequestPrivate {
+class LaunchAppRequestPrivate : public SmsRequestPrivate {
 
 public:
     LaunchAppRequestPrivate(const SmsRequest::Action action,

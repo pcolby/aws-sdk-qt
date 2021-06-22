@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class GetSigningCertificateRequest;
 
-class QTAWS_EXPORT GetSigningCertificateRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class GetSigningCertificateRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     GetSigningCertificateRequestPrivate(const CognitoIdentityProviderRequest::Action action,

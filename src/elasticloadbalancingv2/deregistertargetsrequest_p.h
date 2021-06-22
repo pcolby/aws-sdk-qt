@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeregisterTargetsRequest;
 
-class QTAWS_EXPORT DeregisterTargetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
+class DeregisterTargetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DeregisterTargetsRequestPrivate(const ElasticLoadBalancingv2Request::Action action,

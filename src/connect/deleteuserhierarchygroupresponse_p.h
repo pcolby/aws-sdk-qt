@@ -27,7 +27,7 @@ namespace Connect {
 
 class DeleteUserHierarchyGroupResponse;
 
-class QTAWS_EXPORT DeleteUserHierarchyGroupResponsePrivate : public ConnectResponsePrivate {
+class DeleteUserHierarchyGroupResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

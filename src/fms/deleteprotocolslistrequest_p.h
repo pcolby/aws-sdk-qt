@@ -28,7 +28,7 @@ namespace FMS {
 
 class DeleteProtocolsListRequest;
 
-class QTAWS_EXPORT DeleteProtocolsListRequestPrivate : public FmsRequestPrivate {
+class DeleteProtocolsListRequestPrivate : public FmsRequestPrivate {
 
 public:
     DeleteProtocolsListRequestPrivate(const FmsRequest::Action action,

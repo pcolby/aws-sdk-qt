@@ -28,7 +28,7 @@ namespace KMS {
 
 class EnableKeyRequest;
 
-class QTAWS_EXPORT EnableKeyRequestPrivate : public KmsRequestPrivate {
+class EnableKeyRequestPrivate : public KmsRequestPrivate {
 
 public:
     EnableKeyRequestPrivate(const KmsRequest::Action action,

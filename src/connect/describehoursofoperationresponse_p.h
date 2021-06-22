@@ -27,7 +27,7 @@ namespace Connect {
 
 class DescribeHoursOfOperationResponse;
 
-class QTAWS_EXPORT DescribeHoursOfOperationResponsePrivate : public ConnectResponsePrivate {
+class DescribeHoursOfOperationResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

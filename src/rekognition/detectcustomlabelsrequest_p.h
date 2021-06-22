@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DetectCustomLabelsRequest;
 
-class QTAWS_EXPORT DetectCustomLabelsRequestPrivate : public RekognitionRequestPrivate {
+class DetectCustomLabelsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DetectCustomLabelsRequestPrivate(const RekognitionRequest::Action action,

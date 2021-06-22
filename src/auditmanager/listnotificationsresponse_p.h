@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class ListNotificationsResponse;
 
-class QTAWS_EXPORT ListNotificationsResponsePrivate : public AuditManagerResponsePrivate {
+class ListNotificationsResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

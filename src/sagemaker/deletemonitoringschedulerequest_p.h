@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteMonitoringScheduleRequest;
 
-class QTAWS_EXPORT DeleteMonitoringScheduleRequestPrivate : public SageMakerRequestPrivate {
+class DeleteMonitoringScheduleRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteMonitoringScheduleRequestPrivate(const SageMakerRequest::Action action,

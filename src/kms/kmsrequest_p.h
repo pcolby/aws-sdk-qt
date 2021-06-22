@@ -28,7 +28,7 @@ namespace KMS {
 
 class KmsRequest;
 
-class QTAWS_EXPORT KmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     KmsRequest::Action action; ///< KMS action to be performed.

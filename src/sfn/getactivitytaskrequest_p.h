@@ -28,7 +28,7 @@ namespace SFN {
 
 class GetActivityTaskRequest;
 
-class QTAWS_EXPORT GetActivityTaskRequestPrivate : public SfnRequestPrivate {
+class GetActivityTaskRequestPrivate : public SfnRequestPrivate {
 
 public:
     GetActivityTaskRequestPrivate(const SfnRequest::Action action,

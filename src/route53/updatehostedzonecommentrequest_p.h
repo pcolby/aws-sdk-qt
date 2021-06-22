@@ -28,7 +28,7 @@ namespace Route53 {
 
 class UpdateHostedZoneCommentRequest;
 
-class QTAWS_EXPORT UpdateHostedZoneCommentRequestPrivate : public Route53RequestPrivate {
+class UpdateHostedZoneCommentRequestPrivate : public Route53RequestPrivate {
 
 public:
     UpdateHostedZoneCommentRequestPrivate(const Route53Request::Action action,

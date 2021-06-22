@@ -27,7 +27,7 @@ namespace KMS {
 
 class DisableKeyRotationResponse;
 
-class QTAWS_EXPORT DisableKeyRotationResponsePrivate : public KmsResponsePrivate {
+class DisableKeyRotationResponsePrivate : public KmsResponsePrivate {
 
 public:
 

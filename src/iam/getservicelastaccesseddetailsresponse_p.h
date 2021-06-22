@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetServiceLastAccessedDetailsResponse;
 
-class QTAWS_EXPORT GetServiceLastAccessedDetailsResponsePrivate : public IamResponsePrivate {
+class GetServiceLastAccessedDetailsResponsePrivate : public IamResponsePrivate {
 
 public:
 

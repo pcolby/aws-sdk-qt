@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartFaceDetectionRequest;
 
-class QTAWS_EXPORT StartFaceDetectionRequestPrivate : public RekognitionRequestPrivate {
+class StartFaceDetectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StartFaceDetectionRequestPrivate(const RekognitionRequest::Action action,

@@ -29,7 +29,7 @@ namespace ElasticInference {
 
 class ElasticInferenceClient;
 
-class QTAWS_EXPORT ElasticInferenceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ElasticInferenceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ElasticInferenceClientPrivate(ElasticInferenceClient * const q);

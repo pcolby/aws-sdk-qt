@@ -27,7 +27,7 @@ namespace Redshift {
 
 class BatchModifyClusterSnapshotsResponse;
 
-class QTAWS_EXPORT BatchModifyClusterSnapshotsResponsePrivate : public RedshiftResponsePrivate {
+class BatchModifyClusterSnapshotsResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

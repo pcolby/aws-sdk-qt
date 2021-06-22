@@ -28,7 +28,7 @@ namespace Lambda {
 
 class GetPolicyRequest;
 
-class QTAWS_EXPORT GetPolicyRequestPrivate : public LambdaRequestPrivate {
+class GetPolicyRequestPrivate : public LambdaRequestPrivate {
 
 public:
     GetPolicyRequestPrivate(const LambdaRequest::Action action,

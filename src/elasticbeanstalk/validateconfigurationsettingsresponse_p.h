@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class ValidateConfigurationSettingsResponse;
 
-class QTAWS_EXPORT ValidateConfigurationSettingsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class ValidateConfigurationSettingsResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

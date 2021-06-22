@@ -28,7 +28,7 @@ namespace Amplify {
 
 class UpdateBranchRequest;
 
-class QTAWS_EXPORT UpdateBranchRequestPrivate : public AmplifyRequestPrivate {
+class UpdateBranchRequestPrivate : public AmplifyRequestPrivate {
 
 public:
     UpdateBranchRequestPrivate(const AmplifyRequest::Action action,

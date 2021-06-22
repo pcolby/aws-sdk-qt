@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateQueueMaxContactsResponse;
 
-class QTAWS_EXPORT UpdateQueueMaxContactsResponsePrivate : public ConnectResponsePrivate {
+class UpdateQueueMaxContactsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

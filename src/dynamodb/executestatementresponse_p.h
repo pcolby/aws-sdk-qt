@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class ExecuteStatementResponse;
 
-class QTAWS_EXPORT ExecuteStatementResponsePrivate : public DynamoDBResponsePrivate {
+class ExecuteStatementResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public GameLiftRequestPrivate {
+class UntagResourceRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const GameLiftRequest::Action action,

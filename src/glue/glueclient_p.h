@@ -29,7 +29,7 @@ namespace Glue {
 
 class GlueClient;
 
-class QTAWS_EXPORT GlueClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GlueClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GlueClientPrivate(GlueClient * const q);

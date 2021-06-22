@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class ListHarvestJobsRequest;
 
-class QTAWS_EXPORT ListHarvestJobsRequestPrivate : public MediaPackageRequestPrivate {
+class ListHarvestJobsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     ListHarvestJobsRequestPrivate(const MediaPackageRequest::Action action,

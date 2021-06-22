@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class DeleteCustomVerificationEmailTemplateResponse;
 
-class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateResponsePrivate : public Sesv2ResponsePrivate {
+class DeleteCustomVerificationEmailTemplateResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

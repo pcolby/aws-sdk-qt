@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class GlueDataBrewResponse;
 
-class QTAWS_EXPORT GlueDataBrewResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GlueDataBrewResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

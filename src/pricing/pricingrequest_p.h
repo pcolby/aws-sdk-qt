@@ -28,7 +28,7 @@ namespace Pricing {
 
 class PricingRequest;
 
-class QTAWS_EXPORT PricingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PricingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PricingRequest::Action action; ///< Pricing action to be performed.

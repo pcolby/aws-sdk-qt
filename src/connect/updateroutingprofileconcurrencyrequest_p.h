@@ -28,7 +28,7 @@ namespace Connect {
 
 class UpdateRoutingProfileConcurrencyRequest;
 
-class QTAWS_EXPORT UpdateRoutingProfileConcurrencyRequestPrivate : public ConnectRequestPrivate {
+class UpdateRoutingProfileConcurrencyRequestPrivate : public ConnectRequestPrivate {
 
 public:
     UpdateRoutingProfileConcurrencyRequestPrivate(const ConnectRequest::Action action,

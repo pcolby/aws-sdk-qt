@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeCertificatesRequest;
 
-class QTAWS_EXPORT DescribeCertificatesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
+class DescribeCertificatesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeCertificatesRequestPrivate(const DatabaseMigrationServiceRequest::Action action,

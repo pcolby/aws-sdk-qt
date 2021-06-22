@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSMIncidentsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SSMIncidentsRequest::Action action,

@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class StartIncidentResponse;
 
-class QTAWS_EXPORT StartIncidentResponsePrivate : public SSMIncidentsResponsePrivate {
+class StartIncidentResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

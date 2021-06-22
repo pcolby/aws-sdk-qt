@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class ServiceQuotasRequest;
 
-class QTAWS_EXPORT ServiceQuotasRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ServiceQuotasRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ServiceQuotasRequest::Action action; ///< ServiceQuotas action to be performed.

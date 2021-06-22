@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteVpcPeeringConnectionResponse;
 
-class QTAWS_EXPORT DeleteVpcPeeringConnectionResponsePrivate : public Ec2ResponsePrivate {
+class DeleteVpcPeeringConnectionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

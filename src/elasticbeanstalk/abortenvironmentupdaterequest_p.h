@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class AbortEnvironmentUpdateRequest;
 
-class QTAWS_EXPORT AbortEnvironmentUpdateRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class AbortEnvironmentUpdateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     AbortEnvironmentUpdateRequestPrivate(const ElasticBeanstalkRequest::Action action,

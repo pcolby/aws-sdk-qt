@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsDeleteMessageRequest;
 
-class QTAWS_EXPORT SqsDeleteMessageRequestPrivate : public SqsRequestPrivate {
+class SqsDeleteMessageRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsDeleteMessageRequestPrivate(const SqsRequest::Action action,

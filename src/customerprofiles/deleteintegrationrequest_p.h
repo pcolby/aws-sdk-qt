@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class DeleteIntegrationRequest;
 
-class QTAWS_EXPORT DeleteIntegrationRequestPrivate : public CustomerProfilesRequestPrivate {
+class DeleteIntegrationRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     DeleteIntegrationRequestPrivate(const CustomerProfilesRequest::Action action,

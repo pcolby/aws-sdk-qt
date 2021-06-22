@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteFunctionRequest;
 
-class QTAWS_EXPORT DeleteFunctionRequestPrivate : public LambdaRequestPrivate {
+class DeleteFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     DeleteFunctionRequestPrivate(const LambdaRequest::Action action,

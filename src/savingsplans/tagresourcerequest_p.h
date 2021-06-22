@@ -28,7 +28,7 @@ namespace SavingsPlans {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public SavingsPlansRequestPrivate {
+class TagResourceRequestPrivate : public SavingsPlansRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const SavingsPlansRequest::Action action,

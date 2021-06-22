@@ -28,7 +28,7 @@ namespace Neptune {
 
 class StopDBClusterRequest;
 
-class QTAWS_EXPORT StopDBClusterRequestPrivate : public NeptuneRequestPrivate {
+class StopDBClusterRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     StopDBClusterRequestPrivate(const NeptuneRequest::Action action,

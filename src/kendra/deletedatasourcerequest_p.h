@@ -28,7 +28,7 @@ namespace kendra {
 
 class DeleteDataSourceRequest;
 
-class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public kendraRequestPrivate {
+class DeleteDataSourceRequestPrivate : public kendraRequestPrivate {
 
 public:
     DeleteDataSourceRequestPrivate(const kendraRequest::Action action,

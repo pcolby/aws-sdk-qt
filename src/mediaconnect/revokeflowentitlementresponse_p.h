@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class RevokeFlowEntitlementResponse;
 
-class QTAWS_EXPORT RevokeFlowEntitlementResponsePrivate : public MediaConnectResponsePrivate {
+class RevokeFlowEntitlementResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 

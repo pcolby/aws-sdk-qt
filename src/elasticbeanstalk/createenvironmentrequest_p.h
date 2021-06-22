@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CreateEnvironmentRequest;
 
-class QTAWS_EXPORT CreateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class CreateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     CreateEnvironmentRequestPrivate(const ElasticBeanstalkRequest::Action action,

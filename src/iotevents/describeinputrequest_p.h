@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class DescribeInputRequest;
 
-class QTAWS_EXPORT DescribeInputRequestPrivate : public IoTEventsRequestPrivate {
+class DescribeInputRequestPrivate : public IoTEventsRequestPrivate {
 
 public:
     DescribeInputRequestPrivate(const IoTEventsRequest::Action action,

@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class ListEntityRecognizersResponse;
 
-class QTAWS_EXPORT ListEntityRecognizersResponsePrivate : public ComprehendResponsePrivate {
+class ListEntityRecognizersResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

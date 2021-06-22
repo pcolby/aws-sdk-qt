@@ -27,7 +27,7 @@ namespace Inspector {
 
 class GetTelemetryMetadataResponse;
 
-class QTAWS_EXPORT GetTelemetryMetadataResponsePrivate : public InspectorResponsePrivate {
+class GetTelemetryMetadataResponsePrivate : public InspectorResponsePrivate {
 
 public:
 

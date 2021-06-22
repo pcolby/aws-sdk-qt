@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class IoTEventsRequest;
 
-class QTAWS_EXPORT IoTEventsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTEventsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTEventsRequest::Action action; ///< IoTEvents action to be performed.

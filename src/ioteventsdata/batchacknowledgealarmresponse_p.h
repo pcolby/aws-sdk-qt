@@ -27,7 +27,7 @@ namespace IoTEventsData {
 
 class BatchAcknowledgeAlarmResponse;
 
-class QTAWS_EXPORT BatchAcknowledgeAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
+class BatchAcknowledgeAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
 
 public:
 

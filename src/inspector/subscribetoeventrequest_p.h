@@ -28,7 +28,7 @@ namespace Inspector {
 
 class SubscribeToEventRequest;
 
-class QTAWS_EXPORT SubscribeToEventRequestPrivate : public InspectorRequestPrivate {
+class SubscribeToEventRequestPrivate : public InspectorRequestPrivate {
 
 public:
     SubscribeToEventRequestPrivate(const InspectorRequest::Action action,

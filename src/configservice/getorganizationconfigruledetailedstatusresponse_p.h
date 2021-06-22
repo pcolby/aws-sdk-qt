@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class GetOrganizationConfigRuleDetailedStatusResponse;
 
-class QTAWS_EXPORT GetOrganizationConfigRuleDetailedStatusResponsePrivate : public ConfigServiceResponsePrivate {
+class GetOrganizationConfigRuleDetailedStatusResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

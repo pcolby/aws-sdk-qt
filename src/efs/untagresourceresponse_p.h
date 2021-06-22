@@ -27,7 +27,7 @@ namespace EFS {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public EfsResponsePrivate {
+class UntagResourceResponsePrivate : public EfsResponsePrivate {
 
 public:
 

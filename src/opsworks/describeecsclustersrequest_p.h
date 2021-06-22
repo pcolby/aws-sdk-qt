@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeEcsClustersRequest;
 
-class QTAWS_EXPORT DescribeEcsClustersRequestPrivate : public OpsWorksRequestPrivate {
+class DescribeEcsClustersRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeEcsClustersRequestPrivate(const OpsWorksRequest::Action action,

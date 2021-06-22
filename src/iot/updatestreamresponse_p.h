@@ -27,7 +27,7 @@ namespace IoT {
 
 class UpdateStreamResponse;
 
-class QTAWS_EXPORT UpdateStreamResponsePrivate : public IoTResponsePrivate {
+class UpdateStreamResponsePrivate : public IoTResponsePrivate {
 
 public:
 

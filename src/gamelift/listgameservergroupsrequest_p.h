@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListGameServerGroupsRequest;
 
-class QTAWS_EXPORT ListGameServerGroupsRequestPrivate : public GameLiftRequestPrivate {
+class ListGameServerGroupsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     ListGameServerGroupsRequestPrivate(const GameLiftRequest::Action action,

@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class ListJobsByStatusResponse;
 
-class QTAWS_EXPORT ListJobsByStatusResponsePrivate : public ElasticTranscoderResponsePrivate {
+class ListJobsByStatusResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 

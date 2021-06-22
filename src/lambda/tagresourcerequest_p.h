@@ -28,7 +28,7 @@ namespace Lambda {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public LambdaRequestPrivate {
+class TagResourceRequestPrivate : public LambdaRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const LambdaRequest::Action action,

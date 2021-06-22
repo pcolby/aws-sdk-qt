@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class MachineLearningRequest;
 
-class QTAWS_EXPORT MachineLearningRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MachineLearningRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MachineLearningRequest::Action action; ///< MachineLearning action to be performed.

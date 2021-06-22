@@ -28,7 +28,7 @@ namespace IoT {
 
 class ValidateSecurityProfileBehaviorsRequest;
 
-class QTAWS_EXPORT ValidateSecurityProfileBehaviorsRequestPrivate : public IoTRequestPrivate {
+class ValidateSecurityProfileBehaviorsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ValidateSecurityProfileBehaviorsRequestPrivate(const IoTRequest::Action action,

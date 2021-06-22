@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class ValidateResourcePolicyResponse;
 
-class QTAWS_EXPORT ValidateResourcePolicyResponsePrivate : public SecretsManagerResponsePrivate {
+class ValidateResourcePolicyResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 

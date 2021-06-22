@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteEventSourceMappingRequest;
 
-class QTAWS_EXPORT DeleteEventSourceMappingRequestPrivate : public LambdaRequestPrivate {
+class DeleteEventSourceMappingRequestPrivate : public LambdaRequestPrivate {
 
 public:
     DeleteEventSourceMappingRequestPrivate(const LambdaRequest::Action action,

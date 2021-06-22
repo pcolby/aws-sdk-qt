@@ -28,7 +28,7 @@ namespace Braket {
 
 class BraketRequest;
 
-class QTAWS_EXPORT BraketRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class BraketRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     BraketRequest::Action action; ///< Braket action to be performed.

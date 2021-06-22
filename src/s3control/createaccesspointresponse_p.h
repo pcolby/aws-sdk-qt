@@ -27,7 +27,7 @@ namespace S3Control {
 
 class CreateAccessPointResponse;
 
-class QTAWS_EXPORT CreateAccessPointResponsePrivate : public S3ControlResponsePrivate {
+class CreateAccessPointResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

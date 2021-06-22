@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class UpdateGlobalNetworkRequest;
 
-class QTAWS_EXPORT UpdateGlobalNetworkRequestPrivate : public NetworkManagerRequestPrivate {
+class UpdateGlobalNetworkRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     UpdateGlobalNetworkRequestPrivate(const NetworkManagerRequest::Action action,

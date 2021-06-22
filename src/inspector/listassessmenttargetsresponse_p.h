@@ -27,7 +27,7 @@ namespace Inspector {
 
 class ListAssessmentTargetsResponse;
 
-class QTAWS_EXPORT ListAssessmentTargetsResponsePrivate : public InspectorResponsePrivate {
+class ListAssessmentTargetsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 

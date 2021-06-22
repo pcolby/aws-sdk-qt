@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetDeploymentRequest;
 
-class QTAWS_EXPORT GetDeploymentRequestPrivate : public ApiGatewayV2RequestPrivate {
+class GetDeploymentRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     GetDeploymentRequestPrivate(const ApiGatewayV2Request::Action action,

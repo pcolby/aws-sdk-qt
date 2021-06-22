@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteGameServerGroupResponse;
 
-class QTAWS_EXPORT DeleteGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
+class DeleteGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

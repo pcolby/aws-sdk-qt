@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public PinpointEmailRequestPrivate {
+class TagResourceRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const PinpointEmailRequest::Action action,

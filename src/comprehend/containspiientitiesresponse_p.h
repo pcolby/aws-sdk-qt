@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class ContainsPiiEntitiesResponse;
 
-class QTAWS_EXPORT ContainsPiiEntitiesResponsePrivate : public ComprehendResponsePrivate {
+class ContainsPiiEntitiesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

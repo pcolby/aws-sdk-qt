@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DescribeDatasetGroupRequest;
 
-class QTAWS_EXPORT DescribeDatasetGroupRequestPrivate : public PersonalizeRequestPrivate {
+class DescribeDatasetGroupRequestPrivate : public PersonalizeRequestPrivate {
 
 public:
     DescribeDatasetGroupRequestPrivate(const PersonalizeRequest::Action action,

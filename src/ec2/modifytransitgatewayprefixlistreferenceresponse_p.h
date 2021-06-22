@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyTransitGatewayPrefixListReferenceResponse;
 
-class QTAWS_EXPORT ModifyTransitGatewayPrefixListReferenceResponsePrivate : public Ec2ResponsePrivate {
+class ModifyTransitGatewayPrefixListReferenceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

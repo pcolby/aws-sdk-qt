@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteOpsMetadataResponse;
 
-class QTAWS_EXPORT DeleteOpsMetadataResponsePrivate : public SsmResponsePrivate {
+class DeleteOpsMetadataResponsePrivate : public SsmResponsePrivate {
 
 public:
 

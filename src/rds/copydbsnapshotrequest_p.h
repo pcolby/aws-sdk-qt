@@ -28,7 +28,7 @@ namespace RDS {
 
 class CopyDBSnapshotRequest;
 
-class QTAWS_EXPORT CopyDBSnapshotRequestPrivate : public RdsRequestPrivate {
+class CopyDBSnapshotRequestPrivate : public RdsRequestPrivate {
 
 public:
     CopyDBSnapshotRequestPrivate(const RdsRequest::Action action,

@@ -29,7 +29,7 @@ namespace IdentityStore {
 
 class IdentityStoreClient;
 
-class QTAWS_EXPORT IdentityStoreClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IdentityStoreClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IdentityStoreClientPrivate(IdentityStoreClient * const q);

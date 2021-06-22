@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class GetStudioMemberRequest;
 
-class QTAWS_EXPORT GetStudioMemberRequestPrivate : public NimbleStudioRequestPrivate {
+class GetStudioMemberRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     GetStudioMemberRequestPrivate(const NimbleStudioRequest::Action action,

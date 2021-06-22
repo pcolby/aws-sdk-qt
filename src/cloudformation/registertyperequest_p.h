@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class RegisterTypeRequest;
 
-class QTAWS_EXPORT RegisterTypeRequestPrivate : public CloudFormationRequestPrivate {
+class RegisterTypeRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     RegisterTypeRequestPrivate(const CloudFormationRequest::Action action,

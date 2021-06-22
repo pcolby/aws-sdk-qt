@@ -28,7 +28,7 @@ namespace KMS {
 
 class ListResourceTagsRequest;
 
-class QTAWS_EXPORT ListResourceTagsRequestPrivate : public KmsRequestPrivate {
+class ListResourceTagsRequestPrivate : public KmsRequestPrivate {
 
 public:
     ListResourceTagsRequestPrivate(const KmsRequest::Action action,

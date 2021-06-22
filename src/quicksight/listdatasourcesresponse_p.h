@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListDataSourcesResponse;
 
-class QTAWS_EXPORT ListDataSourcesResponsePrivate : public QuickSightResponsePrivate {
+class ListDataSourcesResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

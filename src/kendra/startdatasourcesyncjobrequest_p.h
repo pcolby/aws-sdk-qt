@@ -28,7 +28,7 @@ namespace kendra {
 
 class StartDataSourceSyncJobRequest;
 
-class QTAWS_EXPORT StartDataSourceSyncJobRequestPrivate : public kendraRequestPrivate {
+class StartDataSourceSyncJobRequestPrivate : public kendraRequestPrivate {
 
 public:
     StartDataSourceSyncJobRequestPrivate(const kendraRequest::Action action,

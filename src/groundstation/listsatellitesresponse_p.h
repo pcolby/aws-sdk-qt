@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class ListSatellitesResponse;
 
-class QTAWS_EXPORT ListSatellitesResponsePrivate : public GroundStationResponsePrivate {
+class ListSatellitesResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 

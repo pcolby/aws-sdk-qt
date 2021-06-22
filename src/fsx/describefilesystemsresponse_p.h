@@ -27,7 +27,7 @@ namespace FSx {
 
 class DescribeFileSystemsResponse;
 
-class QTAWS_EXPORT DescribeFileSystemsResponsePrivate : public FSxResponsePrivate {
+class DescribeFileSystemsResponsePrivate : public FSxResponsePrivate {
 
 public:
 

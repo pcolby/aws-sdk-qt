@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class GetResponsePlanResponse;
 
-class QTAWS_EXPORT GetResponsePlanResponsePrivate : public SSMIncidentsResponsePrivate {
+class GetResponsePlanResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

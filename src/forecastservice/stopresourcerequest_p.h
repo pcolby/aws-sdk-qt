@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class StopResourceRequest;
 
-class QTAWS_EXPORT StopResourceRequestPrivate : public ForecastServiceRequestPrivate {
+class StopResourceRequestPrivate : public ForecastServiceRequestPrivate {
 
 public:
     StopResourceRequestPrivate(const ForecastServiceRequest::Action action,

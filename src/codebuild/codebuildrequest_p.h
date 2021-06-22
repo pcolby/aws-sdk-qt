@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class CodeBuildRequest;
 
-class QTAWS_EXPORT CodeBuildRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeBuildRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeBuildRequest::Action action; ///< CodeBuild action to be performed.

@@ -27,7 +27,7 @@ namespace FSx {
 
 class DeleteFileSystemResponse;
 
-class QTAWS_EXPORT DeleteFileSystemResponsePrivate : public FSxResponsePrivate {
+class DeleteFileSystemResponsePrivate : public FSxResponsePrivate {
 
 public:
 

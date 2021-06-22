@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetOrganizationConformancePackDetailedStatusRequest;
 
-class QTAWS_EXPORT GetOrganizationConformancePackDetailedStatusRequestPrivate : public ConfigServiceRequestPrivate {
+class GetOrganizationConformancePackDetailedStatusRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetOrganizationConformancePackDetailedStatusRequestPrivate(const ConfigServiceRequest::Action action,

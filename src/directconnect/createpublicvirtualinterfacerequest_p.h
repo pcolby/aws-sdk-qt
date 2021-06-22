@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreatePublicVirtualInterfaceRequest;
 
-class QTAWS_EXPORT CreatePublicVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
+class CreatePublicVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreatePublicVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,

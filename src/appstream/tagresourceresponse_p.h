@@ -27,7 +27,7 @@ namespace AppStream {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public AppStreamResponsePrivate {
+class TagResourceResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

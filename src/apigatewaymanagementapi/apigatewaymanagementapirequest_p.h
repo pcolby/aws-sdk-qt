@@ -28,7 +28,7 @@ namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiRequest;
 
-class QTAWS_EXPORT ApiGatewayManagementApiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApiGatewayManagementApiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApiGatewayManagementApiRequest::Action action; ///< ApiGatewayManagementApi action to be performed.

@@ -29,7 +29,7 @@ namespace ServiceQuotas {
 
 class ServiceQuotasClient;
 
-class QTAWS_EXPORT ServiceQuotasClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ServiceQuotasClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ServiceQuotasClientPrivate(ServiceQuotasClient * const q);

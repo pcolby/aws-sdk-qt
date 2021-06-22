@@ -29,7 +29,7 @@ namespace PersonalizeEvents {
 
 class PersonalizeEventsClient;
 
-class QTAWS_EXPORT PersonalizeEventsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PersonalizeEventsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PersonalizeEventsClientPrivate(PersonalizeEventsClient * const q);

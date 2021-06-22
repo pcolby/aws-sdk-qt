@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeDeliveryChannelsRequest;
 
-class QTAWS_EXPORT DescribeDeliveryChannelsRequestPrivate : public ConfigServiceRequestPrivate {
+class DescribeDeliveryChannelsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeDeliveryChannelsRequestPrivate(const ConfigServiceRequest::Action action,

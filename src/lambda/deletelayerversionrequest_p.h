@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteLayerVersionRequest;
 
-class QTAWS_EXPORT DeleteLayerVersionRequestPrivate : public LambdaRequestPrivate {
+class DeleteLayerVersionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     DeleteLayerVersionRequestPrivate(const LambdaRequest::Action action,

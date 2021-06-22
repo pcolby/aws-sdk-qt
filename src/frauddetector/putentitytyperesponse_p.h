@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class PutEntityTypeResponse;
 
-class QTAWS_EXPORT PutEntityTypeResponsePrivate : public FraudDetectorResponsePrivate {
+class PutEntityTypeResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 

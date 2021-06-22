@@ -27,7 +27,7 @@ namespace PI {
 
 class GetResourceMetricsResponse;
 
-class QTAWS_EXPORT GetResourceMetricsResponsePrivate : public PiResponsePrivate {
+class GetResourceMetricsResponsePrivate : public PiResponsePrivate {
 
 public:
 

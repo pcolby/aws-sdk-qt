@@ -29,7 +29,7 @@ namespace CodePipeline {
 
 class CodePipelineClient;
 
-class QTAWS_EXPORT CodePipelineClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodePipelineClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodePipelineClientPrivate(CodePipelineClient * const q);

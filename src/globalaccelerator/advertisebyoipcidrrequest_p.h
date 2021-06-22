@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class AdvertiseByoipCidrRequest;
 
-class QTAWS_EXPORT AdvertiseByoipCidrRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class AdvertiseByoipCidrRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     AdvertiseByoipCidrRequestPrivate(const GlobalAcceleratorRequest::Action action,

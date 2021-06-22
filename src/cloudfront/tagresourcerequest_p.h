@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CloudFrontRequestPrivate {
+class TagResourceRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CloudFrontRequest::Action action,

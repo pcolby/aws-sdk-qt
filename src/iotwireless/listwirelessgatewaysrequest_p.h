@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class ListWirelessGatewaysRequest;
 
-class QTAWS_EXPORT ListWirelessGatewaysRequestPrivate : public IoTWirelessRequestPrivate {
+class ListWirelessGatewaysRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     ListWirelessGatewaysRequestPrivate(const IoTWirelessRequest::Action action,

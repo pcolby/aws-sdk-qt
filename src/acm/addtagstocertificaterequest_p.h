@@ -28,7 +28,7 @@ namespace ACM {
 
 class AddTagsToCertificateRequest;
 
-class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public AcmRequestPrivate {
+class AddTagsToCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
     AddTagsToCertificateRequestPrivate(const AcmRequest::Action action,

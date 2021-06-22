@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class DeleteMailboxPermissionsResponse;
 
-class QTAWS_EXPORT DeleteMailboxPermissionsResponsePrivate : public WorkMailResponsePrivate {
+class DeleteMailboxPermissionsResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

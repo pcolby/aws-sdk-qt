@@ -27,7 +27,7 @@ namespace QLDB {
 
 class UpdateLedgerPermissionsModeResponse;
 
-class QTAWS_EXPORT UpdateLedgerPermissionsModeResponsePrivate : public QldbResponsePrivate {
+class UpdateLedgerPermissionsModeResponsePrivate : public QldbResponsePrivate {
 
 public:
 

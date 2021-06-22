@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetFindingsResponse;
 
-class QTAWS_EXPORT GetFindingsResponsePrivate : public SecurityHubResponsePrivate {
+class GetFindingsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

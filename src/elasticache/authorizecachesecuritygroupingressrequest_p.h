@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class AuthorizeCacheSecurityGroupIngressRequest;
 
-class QTAWS_EXPORT AuthorizeCacheSecurityGroupIngressRequestPrivate : public ElastiCacheRequestPrivate {
+class AuthorizeCacheSecurityGroupIngressRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     AuthorizeCacheSecurityGroupIngressRequestPrivate(const ElastiCacheRequest::Action action,

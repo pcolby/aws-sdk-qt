@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeLogGroupsRequest;
 
-class QTAWS_EXPORT DescribeLogGroupsRequestPrivate : public CloudWatchLogsRequestPrivate {
+class DescribeLogGroupsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DescribeLogGroupsRequestPrivate(const CloudWatchLogsRequest::Action action,

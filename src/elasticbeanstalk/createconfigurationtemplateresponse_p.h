@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class CreateConfigurationTemplateResponse;
 
-class QTAWS_EXPORT CreateConfigurationTemplateResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class CreateConfigurationTemplateResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

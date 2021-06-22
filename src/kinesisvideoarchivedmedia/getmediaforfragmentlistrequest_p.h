@@ -28,7 +28,7 @@ namespace KinesisVideoArchivedMedia {
 
 class GetMediaForFragmentListRequest;
 
-class QTAWS_EXPORT GetMediaForFragmentListRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
+class GetMediaForFragmentListRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
 
 public:
     GetMediaForFragmentListRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action,

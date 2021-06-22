@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class CreateStreamingSessionRequest;
 
-class QTAWS_EXPORT CreateStreamingSessionRequestPrivate : public NimbleStudioRequestPrivate {
+class CreateStreamingSessionRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     CreateStreamingSessionRequestPrivate(const NimbleStudioRequest::Action action,

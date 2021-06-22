@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateContextRequest;
 
-class QTAWS_EXPORT CreateContextRequestPrivate : public SageMakerRequestPrivate {
+class CreateContextRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateContextRequestPrivate(const SageMakerRequest::Action action,

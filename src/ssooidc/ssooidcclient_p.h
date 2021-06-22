@@ -29,7 +29,7 @@ namespace SSOOIDC {
 
 class SsooidcClient;
 
-class QTAWS_EXPORT SsooidcClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsooidcClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SsooidcClientPrivate(SsooidcClient * const q);

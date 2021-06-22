@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public AppConfigRequestPrivate {
+class ListTagsForResourceRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const AppConfigRequest::Action action,

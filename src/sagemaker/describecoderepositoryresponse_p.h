@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeCodeRepositoryResponse;
 
-class QTAWS_EXPORT DescribeCodeRepositoryResponsePrivate : public SageMakerResponsePrivate {
+class DescribeCodeRepositoryResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeprecateThingTypeRequest;
 
-class QTAWS_EXPORT DeprecateThingTypeRequestPrivate : public IoTRequestPrivate {
+class DeprecateThingTypeRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeprecateThingTypeRequestPrivate(const IoTRequest::Action action,

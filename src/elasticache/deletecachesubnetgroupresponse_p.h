@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DeleteCacheSubnetGroupResponse;
 
-class QTAWS_EXPORT DeleteCacheSubnetGroupResponsePrivate : public ElastiCacheResponsePrivate {
+class DeleteCacheSubnetGroupResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class DeleteMemberResponse;
 
-class QTAWS_EXPORT DeleteMemberResponsePrivate : public Macie2ResponsePrivate {
+class DeleteMemberResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

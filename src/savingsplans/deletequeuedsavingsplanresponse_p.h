@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class DeleteQueuedSavingsPlanResponse;
 
-class QTAWS_EXPORT DeleteQueuedSavingsPlanResponsePrivate : public SavingsPlansResponsePrivate {
+class DeleteQueuedSavingsPlanResponsePrivate : public SavingsPlansResponsePrivate {
 
 public:
 

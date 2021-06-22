@@ -27,7 +27,7 @@ namespace EKS {
 
 class EksResponse;
 
-class QTAWS_EXPORT EksResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EksResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

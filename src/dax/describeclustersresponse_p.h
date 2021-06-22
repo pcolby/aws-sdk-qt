@@ -27,7 +27,7 @@ namespace DAX {
 
 class DescribeClustersResponse;
 
-class QTAWS_EXPORT DescribeClustersResponsePrivate : public DaxResponsePrivate {
+class DescribeClustersResponsePrivate : public DaxResponsePrivate {
 
 public:
 

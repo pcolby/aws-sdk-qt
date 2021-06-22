@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class UpdateChannelRequest;
 
-class QTAWS_EXPORT UpdateChannelRequestPrivate : public MediaTailorRequestPrivate {
+class UpdateChannelRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     UpdateChannelRequestPrivate(const MediaTailorRequest::Action action,

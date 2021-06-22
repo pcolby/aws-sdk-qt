@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class GetDomainStatisticsReportRequest;
 
-class QTAWS_EXPORT GetDomainStatisticsReportRequestPrivate : public PinpointEmailRequestPrivate {
+class GetDomainStatisticsReportRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     GetDomainStatisticsReportRequestPrivate(const PinpointEmailRequest::Action action,

@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class MediaStoreRequest;
 
-class QTAWS_EXPORT MediaStoreRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaStoreRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaStoreRequest::Action action; ///< MediaStore action to be performed.

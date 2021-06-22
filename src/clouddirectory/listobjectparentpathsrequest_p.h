@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListObjectParentPathsRequest;
 
-class QTAWS_EXPORT ListObjectParentPathsRequestPrivate : public CloudDirectoryRequestPrivate {
+class ListObjectParentPathsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListObjectParentPathsRequestPrivate(const CloudDirectoryRequest::Action action,

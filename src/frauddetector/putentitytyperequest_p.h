@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class PutEntityTypeRequest;
 
-class QTAWS_EXPORT PutEntityTypeRequestPrivate : public FraudDetectorRequestPrivate {
+class PutEntityTypeRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     PutEntityTypeRequestPrivate(const FraudDetectorRequest::Action action,

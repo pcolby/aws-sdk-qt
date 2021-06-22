@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class UpdateContributorInsightsRequest;
 
-class QTAWS_EXPORT UpdateContributorInsightsRequestPrivate : public DynamoDBRequestPrivate {
+class UpdateContributorInsightsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     UpdateContributorInsightsRequestPrivate(const DynamoDBRequest::Action action,

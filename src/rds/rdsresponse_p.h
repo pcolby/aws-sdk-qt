@@ -27,7 +27,7 @@ namespace RDS {
 
 class RdsResponse;
 
-class QTAWS_EXPORT RdsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class RdsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

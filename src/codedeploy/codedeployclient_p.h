@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class CodeDeployClient;
 
-class QTAWS_EXPORT CodeDeployClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeDeployClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeDeployClientPrivate(CodeDeployClient * const q);

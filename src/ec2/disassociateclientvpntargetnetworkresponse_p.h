@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DisassociateClientVpnTargetNetworkResponse;
 
-class QTAWS_EXPORT DisassociateClientVpnTargetNetworkResponsePrivate : public Ec2ResponsePrivate {
+class DisassociateClientVpnTargetNetworkResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

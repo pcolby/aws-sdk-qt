@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class CreateServerRequest;
 
-class QTAWS_EXPORT CreateServerRequestPrivate : public OpsWorksCMRequestPrivate {
+class CreateServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     CreateServerRequestPrivate(const OpsWorksCMRequest::Action action,

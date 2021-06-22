@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class PublishFunctionRequest;
 
-class QTAWS_EXPORT PublishFunctionRequestPrivate : public CloudFrontRequestPrivate {
+class PublishFunctionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     PublishFunctionRequestPrivate(const CloudFrontRequest::Action action,

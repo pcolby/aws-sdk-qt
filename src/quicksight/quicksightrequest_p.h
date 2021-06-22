@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class QuickSightRequest;
 
-class QTAWS_EXPORT QuickSightRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QuickSightRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     QuickSightRequest::Action action; ///< QuickSight action to be performed.

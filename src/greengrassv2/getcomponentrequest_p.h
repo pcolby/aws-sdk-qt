@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class GetComponentRequest;
 
-class QTAWS_EXPORT GetComponentRequestPrivate : public GreengrassV2RequestPrivate {
+class GetComponentRequestPrivate : public GreengrassV2RequestPrivate {
 
 public:
     GetComponentRequestPrivate(const GreengrassV2Request::Action action,

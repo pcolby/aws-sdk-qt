@@ -28,7 +28,7 @@ namespace IoTDeviceAdvisor {
 
 class ListSuiteDefinitionsRequest;
 
-class QTAWS_EXPORT ListSuiteDefinitionsRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
+class ListSuiteDefinitionsRequestPrivate : public IoTDeviceAdvisorRequestPrivate {
 
 public:
     ListSuiteDefinitionsRequestPrivate(const IoTDeviceAdvisorRequest::Action action,

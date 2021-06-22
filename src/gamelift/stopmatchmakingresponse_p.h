@@ -27,7 +27,7 @@ namespace GameLift {
 
 class StopMatchmakingResponse;
 
-class QTAWS_EXPORT StopMatchmakingResponsePrivate : public GameLiftResponsePrivate {
+class StopMatchmakingResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

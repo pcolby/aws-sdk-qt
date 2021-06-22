@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class RestoreDomainAccessResponse;
 
-class QTAWS_EXPORT RestoreDomainAccessResponsePrivate : public WorkLinkResponsePrivate {
+class RestoreDomainAccessResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace KinesisVideoSignalingChannels {
 
 class GetIceServerConfigResponse;
 
-class QTAWS_EXPORT GetIceServerConfigResponsePrivate : public KinesisVideoSignalingChannelsResponsePrivate {
+class GetIceServerConfigResponsePrivate : public KinesisVideoSignalingChannelsResponsePrivate {
 
 public:
 

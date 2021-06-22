@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateSigningCertificateRequest;
 
-class QTAWS_EXPORT UpdateSigningCertificateRequestPrivate : public IamRequestPrivate {
+class UpdateSigningCertificateRequestPrivate : public IamRequestPrivate {
 
 public:
     UpdateSigningCertificateRequestPrivate(const IamRequest::Action action,

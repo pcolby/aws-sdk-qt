@@ -29,7 +29,7 @@ namespace Lambda {
 
 class LambdaClient;
 
-class QTAWS_EXPORT LambdaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LambdaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LambdaClientPrivate(LambdaClient * const q);

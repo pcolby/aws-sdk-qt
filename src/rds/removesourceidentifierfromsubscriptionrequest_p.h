@@ -28,7 +28,7 @@ namespace RDS {
 
 class RemoveSourceIdentifierFromSubscriptionRequest;
 
-class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionRequestPrivate : public RdsRequestPrivate {
+class RemoveSourceIdentifierFromSubscriptionRequestPrivate : public RdsRequestPrivate {
 
 public:
     RemoveSourceIdentifierFromSubscriptionRequestPrivate(const RdsRequest::Action action,

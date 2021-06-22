@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class AttachVolumeRequest;
 
-class QTAWS_EXPORT AttachVolumeRequestPrivate : public StorageGatewayRequestPrivate {
+class AttachVolumeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     AttachVolumeRequestPrivate(const StorageGatewayRequest::Action action,

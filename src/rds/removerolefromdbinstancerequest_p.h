@@ -28,7 +28,7 @@ namespace RDS {
 
 class RemoveRoleFromDBInstanceRequest;
 
-class QTAWS_EXPORT RemoveRoleFromDBInstanceRequestPrivate : public RdsRequestPrivate {
+class RemoveRoleFromDBInstanceRequestPrivate : public RdsRequestPrivate {
 
 public:
     RemoveRoleFromDBInstanceRequestPrivate(const RdsRequest::Action action,

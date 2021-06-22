@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class DeleteEnvironmentRequest;
 
-class QTAWS_EXPORT DeleteEnvironmentRequestPrivate : public Cloud9RequestPrivate {
+class DeleteEnvironmentRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     DeleteEnvironmentRequestPrivate(const Cloud9Request::Action action,

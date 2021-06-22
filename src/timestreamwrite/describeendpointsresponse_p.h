@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class DescribeEndpointsResponse;
 
-class QTAWS_EXPORT DescribeEndpointsResponsePrivate : public TimestreamWriteResponsePrivate {
+class DescribeEndpointsResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 

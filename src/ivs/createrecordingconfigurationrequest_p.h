@@ -28,7 +28,7 @@ namespace IVS {
 
 class CreateRecordingConfigurationRequest;
 
-class QTAWS_EXPORT CreateRecordingConfigurationRequestPrivate : public IvsRequestPrivate {
+class CreateRecordingConfigurationRequestPrivate : public IvsRequestPrivate {
 
 public:
     CreateRecordingConfigurationRequestPrivate(const IvsRequest::Action action,

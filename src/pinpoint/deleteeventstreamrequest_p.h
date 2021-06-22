@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteEventStreamRequest;
 
-class QTAWS_EXPORT DeleteEventStreamRequestPrivate : public PinpointRequestPrivate {
+class DeleteEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteEventStreamRequestPrivate(const PinpointRequest::Action action,

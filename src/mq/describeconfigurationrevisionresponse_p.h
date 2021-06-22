@@ -27,7 +27,7 @@ namespace MQ {
 
 class DescribeConfigurationRevisionResponse;
 
-class QTAWS_EXPORT DescribeConfigurationRevisionResponsePrivate : public MqResponsePrivate {
+class DescribeConfigurationRevisionResponsePrivate : public MqResponsePrivate {
 
 public:
 

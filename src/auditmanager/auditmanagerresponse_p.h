@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class AuditManagerResponse;
 
-class QTAWS_EXPORT AuditManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AuditManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

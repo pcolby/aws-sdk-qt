@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ResolveRoomRequest;
 
-class QTAWS_EXPORT ResolveRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
+class ResolveRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     ResolveRoomRequestPrivate(const AlexaForBusinessRequest::Action action,

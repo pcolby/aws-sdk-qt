@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class DeregisterOrganizationAdminAccountRequest;
 
-class QTAWS_EXPORT DeregisterOrganizationAdminAccountRequestPrivate : public AuditManagerRequestPrivate {
+class DeregisterOrganizationAdminAccountRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     DeregisterOrganizationAdminAccountRequestPrivate(const AuditManagerRequest::Action action,

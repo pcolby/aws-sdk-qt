@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class GetDifferencesResponse;
 
-class QTAWS_EXPORT GetDifferencesResponsePrivate : public CodeCommitResponsePrivate {
+class GetDifferencesResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CodeStar {
 
 class DescribeProjectResponse;
 
-class QTAWS_EXPORT DescribeProjectResponsePrivate : public CodeStarResponsePrivate {
+class DescribeProjectResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 

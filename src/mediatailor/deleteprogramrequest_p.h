@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class DeleteProgramRequest;
 
-class QTAWS_EXPORT DeleteProgramRequestPrivate : public MediaTailorRequestPrivate {
+class DeleteProgramRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     DeleteProgramRequestPrivate(const MediaTailorRequest::Action action,

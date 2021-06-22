@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class ListNotificationsRequest;
 
-class QTAWS_EXPORT ListNotificationsRequestPrivate : public WellArchitectedRequestPrivate {
+class ListNotificationsRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     ListNotificationsRequestPrivate(const WellArchitectedRequest::Action action,

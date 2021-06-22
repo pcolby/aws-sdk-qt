@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class DeleteConnectionResponse;
 
-class QTAWS_EXPORT DeleteConnectionResponsePrivate : public NetworkManagerResponsePrivate {
+class DeleteConnectionResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 

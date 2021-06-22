@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class SyntheticsResponse;
 
-class QTAWS_EXPORT SyntheticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SyntheticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

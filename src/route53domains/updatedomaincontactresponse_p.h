@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class UpdateDomainContactResponse;
 
-class QTAWS_EXPORT UpdateDomainContactResponsePrivate : public Route53DomainsResponsePrivate {
+class UpdateDomainContactResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 

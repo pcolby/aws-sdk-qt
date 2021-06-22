@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeTrustedAdvisorCheckResultRequest;
 
-class QTAWS_EXPORT DescribeTrustedAdvisorCheckResultRequestPrivate : public SupportRequestPrivate {
+class DescribeTrustedAdvisorCheckResultRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeTrustedAdvisorCheckResultRequestPrivate(const SupportRequest::Action action,

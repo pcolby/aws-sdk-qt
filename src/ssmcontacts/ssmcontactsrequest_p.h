@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class SSMContactsRequest;
 
-class QTAWS_EXPORT SSMContactsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SSMContactsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SSMContactsRequest::Action action; ///< SSMContacts action to be performed.

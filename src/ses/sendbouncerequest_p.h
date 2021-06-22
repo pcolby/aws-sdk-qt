@@ -28,7 +28,7 @@ namespace SES {
 
 class SendBounceRequest;
 
-class QTAWS_EXPORT SendBounceRequestPrivate : public SesRequestPrivate {
+class SendBounceRequestPrivate : public SesRequestPrivate {
 
 public:
     SendBounceRequestPrivate(const SesRequest::Action action,

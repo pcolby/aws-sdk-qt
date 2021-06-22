@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeregisterTransitGatewayMulticastGroupSourcesResponse;
 
-class QTAWS_EXPORT DeregisterTransitGatewayMulticastGroupSourcesResponsePrivate : public Ec2ResponsePrivate {
+class DeregisterTransitGatewayMulticastGroupSourcesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

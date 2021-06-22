@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetLoadBalancerRequest;
 
-class QTAWS_EXPORT GetLoadBalancerRequestPrivate : public LightsailRequestPrivate {
+class GetLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetLoadBalancerRequestPrivate(const LightsailRequest::Action action,

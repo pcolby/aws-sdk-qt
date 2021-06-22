@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class ConfigServiceClient;
 
-class QTAWS_EXPORT ConfigServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ConfigServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ConfigServiceClientPrivate(ConfigServiceClient * const q);

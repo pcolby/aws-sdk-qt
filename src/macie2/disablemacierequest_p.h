@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class DisableMacieRequest;
 
-class QTAWS_EXPORT DisableMacieRequestPrivate : public Macie2RequestPrivate {
+class DisableMacieRequestPrivate : public Macie2RequestPrivate {
 
 public:
     DisableMacieRequestPrivate(const Macie2Request::Action action,

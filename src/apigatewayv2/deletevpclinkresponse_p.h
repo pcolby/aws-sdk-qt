@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteVpcLinkResponse;
 
-class QTAWS_EXPORT DeleteVpcLinkResponsePrivate : public ApiGatewayV2ResponsePrivate {
+class DeleteVpcLinkResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Inspector {
 
 class ListAssessmentRunsRequest;
 
-class QTAWS_EXPORT ListAssessmentRunsRequestPrivate : public InspectorRequestPrivate {
+class ListAssessmentRunsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     ListAssessmentRunsRequestPrivate(const InspectorRequest::Action action,

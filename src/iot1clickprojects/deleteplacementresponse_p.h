@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class DeletePlacementResponse;
 
-class QTAWS_EXPORT DeletePlacementResponsePrivate : public IoT1ClickProjectsResponsePrivate {
+class DeletePlacementResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 

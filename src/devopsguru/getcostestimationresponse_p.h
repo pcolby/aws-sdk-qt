@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class GetCostEstimationResponse;
 
-class QTAWS_EXPORT GetCostEstimationResponsePrivate : public DevOpsGuruResponsePrivate {
+class GetCostEstimationResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 

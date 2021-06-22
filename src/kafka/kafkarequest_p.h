@@ -28,7 +28,7 @@ namespace Kafka {
 
 class KafkaRequest;
 
-class QTAWS_EXPORT KafkaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KafkaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     KafkaRequest::Action action; ///< Kafka action to be performed.

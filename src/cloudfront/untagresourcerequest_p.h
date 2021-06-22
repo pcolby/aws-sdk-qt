@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudFrontRequestPrivate {
+class UntagResourceRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CloudFrontRequest::Action action,

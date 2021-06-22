@@ -27,7 +27,7 @@ namespace IoTEventsData {
 
 class DescribeAlarmResponse;
 
-class QTAWS_EXPORT DescribeAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
+class DescribeAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
 
 public:
 

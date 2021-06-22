@@ -28,7 +28,7 @@ namespace IoT1ClickDevicesService {
 
 class ClaimDevicesByClaimCodeRequest;
 
-class QTAWS_EXPORT ClaimDevicesByClaimCodeRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
+class ClaimDevicesByClaimCodeRequestPrivate : public IoT1ClickDevicesServiceRequestPrivate {
 
 public:
     ClaimDevicesByClaimCodeRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action,

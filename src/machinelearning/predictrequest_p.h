@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class PredictRequest;
 
-class QTAWS_EXPORT PredictRequestPrivate : public MachineLearningRequestPrivate {
+class PredictRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     PredictRequestPrivate(const MachineLearningRequest::Action action,

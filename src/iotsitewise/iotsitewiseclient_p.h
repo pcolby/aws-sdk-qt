@@ -29,7 +29,7 @@ namespace IoTSiteWise {
 
 class IoTSiteWiseClient;
 
-class QTAWS_EXPORT IoTSiteWiseClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTSiteWiseClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTSiteWiseClientPrivate(IoTSiteWiseClient * const q);

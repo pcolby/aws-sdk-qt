@@ -29,7 +29,7 @@ namespace CustomerProfiles {
 
 class CustomerProfilesClient;
 
-class QTAWS_EXPORT CustomerProfilesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CustomerProfilesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CustomerProfilesClientPrivate(CustomerProfilesClient * const q);

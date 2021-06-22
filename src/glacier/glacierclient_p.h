@@ -29,7 +29,7 @@ namespace Glacier {
 
 class GlacierClient;
 
-class QTAWS_EXPORT GlacierClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GlacierClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GlacierClientPrivate(GlacierClient * const q);

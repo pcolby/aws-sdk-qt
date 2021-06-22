@@ -27,7 +27,7 @@ namespace Braket {
 
 class BraketResponse;
 
-class QTAWS_EXPORT BraketResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class BraketResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

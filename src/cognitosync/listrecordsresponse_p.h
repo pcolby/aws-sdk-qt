@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class ListRecordsResponse;
 
-class QTAWS_EXPORT ListRecordsResponsePrivate : public CognitoSyncResponsePrivate {
+class ListRecordsResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteLayerRequest;
 
-class QTAWS_EXPORT DeleteLayerRequestPrivate : public OpsWorksRequestPrivate {
+class DeleteLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeleteLayerRequestPrivate(const OpsWorksRequest::Action action,

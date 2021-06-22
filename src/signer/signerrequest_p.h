@@ -28,7 +28,7 @@ namespace signer {
 
 class signerRequest;
 
-class QTAWS_EXPORT signerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class signerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     signerRequest::Action action; ///< signer action to be performed.

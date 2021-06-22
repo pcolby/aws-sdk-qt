@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class ListTagsForResourceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const ServiceDiscoveryRequest::Action action,

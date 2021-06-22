@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetSampledRequestsRequest;
 
-class QTAWS_EXPORT GetSampledRequestsRequestPrivate : public WAFRegionalRequestPrivate {
+class GetSampledRequestsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetSampledRequestsRequestPrivate(const WAFRegionalRequest::Action action,

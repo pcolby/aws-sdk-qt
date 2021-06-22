@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class CreateEnvironmentEC2Request;
 
-class QTAWS_EXPORT CreateEnvironmentEC2RequestPrivate : public Cloud9RequestPrivate {
+class CreateEnvironmentEC2RequestPrivate : public Cloud9RequestPrivate {
 
 public:
     CreateEnvironmentEC2RequestPrivate(const Cloud9Request::Action action,

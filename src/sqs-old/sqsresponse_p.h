@@ -30,7 +30,7 @@ namespace SqsOld {
 
 class SqsResponse;
 
-class QTAWS_EXPORT SqsResponsePrivate : public AwsAbstractResponsePrivate {
+class SqsResponsePrivate : public AwsAbstractResponsePrivate {
 
 public:
     SqsErrorList errors; ///< SQS errors.

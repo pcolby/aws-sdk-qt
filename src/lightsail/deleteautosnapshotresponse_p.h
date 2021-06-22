@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteAutoSnapshotResponse;
 
-class QTAWS_EXPORT DeleteAutoSnapshotResponsePrivate : public LightsailResponsePrivate {
+class DeleteAutoSnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

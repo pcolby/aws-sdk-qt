@@ -27,7 +27,7 @@ namespace Chime {
 
 class AssociatePhoneNumberWithUserResponse;
 
-class QTAWS_EXPORT AssociatePhoneNumberWithUserResponsePrivate : public ChimeResponsePrivate {
+class AssociatePhoneNumberWithUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

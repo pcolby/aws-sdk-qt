@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateVpcEndpointRequest;
 
-class QTAWS_EXPORT CreateVpcEndpointRequestPrivate : public Ec2RequestPrivate {
+class CreateVpcEndpointRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateVpcEndpointRequestPrivate(const Ec2Request::Action action,

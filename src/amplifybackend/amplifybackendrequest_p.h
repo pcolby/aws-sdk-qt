@@ -28,7 +28,7 @@ namespace AmplifyBackend {
 
 class AmplifyBackendRequest;
 
-class QTAWS_EXPORT AmplifyBackendRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AmplifyBackendRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AmplifyBackendRequest::Action action; ///< AmplifyBackend action to be performed.

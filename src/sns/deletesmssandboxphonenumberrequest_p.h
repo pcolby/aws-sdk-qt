@@ -28,7 +28,7 @@ namespace SNS {
 
 class DeleteSMSSandboxPhoneNumberRequest;
 
-class QTAWS_EXPORT DeleteSMSSandboxPhoneNumberRequestPrivate : public SnsRequestPrivate {
+class DeleteSMSSandboxPhoneNumberRequestPrivate : public SnsRequestPrivate {
 
 public:
     DeleteSMSSandboxPhoneNumberRequestPrivate(const SnsRequest::Action action,

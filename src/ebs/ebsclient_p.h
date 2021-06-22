@@ -29,7 +29,7 @@ namespace EBS {
 
 class EbsClient;
 
-class QTAWS_EXPORT EbsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EbsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EbsClientPrivate(EbsClient * const q);

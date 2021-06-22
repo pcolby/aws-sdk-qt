@@ -27,7 +27,7 @@ namespace Polly {
 
 class DeleteLexiconResponse;
 
-class QTAWS_EXPORT DeleteLexiconResponsePrivate : public PollyResponsePrivate {
+class DeleteLexiconResponsePrivate : public PollyResponsePrivate {
 
 public:
 

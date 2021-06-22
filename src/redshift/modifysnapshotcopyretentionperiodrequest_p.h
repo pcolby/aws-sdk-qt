@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifySnapshotCopyRetentionPeriodRequest;
 
-class QTAWS_EXPORT ModifySnapshotCopyRetentionPeriodRequestPrivate : public RedshiftRequestPrivate {
+class ModifySnapshotCopyRetentionPeriodRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifySnapshotCopyRetentionPeriodRequestPrivate(const RedshiftRequest::Action action,

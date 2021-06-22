@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class UntagCertificateAuthorityRequest;
 
-class QTAWS_EXPORT UntagCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
+class UntagCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
     UntagCertificateAuthorityRequestPrivate(const AcmpcaRequest::Action action,

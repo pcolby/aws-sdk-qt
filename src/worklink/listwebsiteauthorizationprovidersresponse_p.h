@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class ListWebsiteAuthorizationProvidersResponse;
 
-class QTAWS_EXPORT ListWebsiteAuthorizationProvidersResponsePrivate : public WorkLinkResponsePrivate {
+class ListWebsiteAuthorizationProvidersResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SWF {
 
 class DeprecateActivityTypeRequest;
 
-class QTAWS_EXPORT DeprecateActivityTypeRequestPrivate : public SwfRequestPrivate {
+class DeprecateActivityTypeRequestPrivate : public SwfRequestPrivate {
 
 public:
     DeprecateActivityTypeRequestPrivate(const SwfRequest::Action action,

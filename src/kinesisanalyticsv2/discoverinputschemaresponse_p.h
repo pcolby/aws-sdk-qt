@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class DiscoverInputSchemaResponse;
 
-class QTAWS_EXPORT DiscoverInputSchemaResponsePrivate : public KinesisAnalyticsV2ResponsePrivate {
+class DiscoverInputSchemaResponsePrivate : public KinesisAnalyticsV2ResponsePrivate {
 
 public:
 

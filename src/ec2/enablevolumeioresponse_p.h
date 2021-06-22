@@ -27,7 +27,7 @@ namespace EC2 {
 
 class EnableVolumeIOResponse;
 
-class QTAWS_EXPORT EnableVolumeIOResponsePrivate : public Ec2ResponsePrivate {
+class EnableVolumeIOResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

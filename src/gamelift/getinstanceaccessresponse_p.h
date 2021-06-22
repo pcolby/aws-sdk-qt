@@ -27,7 +27,7 @@ namespace GameLift {
 
 class GetInstanceAccessResponse;
 
-class QTAWS_EXPORT GetInstanceAccessResponsePrivate : public GameLiftResponsePrivate {
+class GetInstanceAccessResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

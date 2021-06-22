@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class InitiateLayerUploadRequest;
 
-class QTAWS_EXPORT InitiateLayerUploadRequestPrivate : public ECRPublicRequestPrivate {
+class InitiateLayerUploadRequestPrivate : public ECRPublicRequestPrivate {
 
 public:
     InitiateLayerUploadRequestPrivate(const ECRPublicRequest::Action action,

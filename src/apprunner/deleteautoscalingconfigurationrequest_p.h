@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class DeleteAutoScalingConfigurationRequest;
 
-class QTAWS_EXPORT DeleteAutoScalingConfigurationRequestPrivate : public AppRunnerRequestPrivate {
+class DeleteAutoScalingConfigurationRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     DeleteAutoScalingConfigurationRequestPrivate(const AppRunnerRequest::Action action,

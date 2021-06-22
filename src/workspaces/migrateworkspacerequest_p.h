@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class MigrateWorkspaceRequest;
 
-class QTAWS_EXPORT MigrateWorkspaceRequestPrivate : public WorkSpacesRequestPrivate {
+class MigrateWorkspaceRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     MigrateWorkspaceRequestPrivate(const WorkSpacesRequest::Action action,

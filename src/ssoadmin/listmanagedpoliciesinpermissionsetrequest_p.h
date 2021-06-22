@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class ListManagedPoliciesInPermissionSetRequest;
 
-class QTAWS_EXPORT ListManagedPoliciesInPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class ListManagedPoliciesInPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
 
 public:
     ListManagedPoliciesInPermissionSetRequestPrivate(const SSOAdminRequest::Action action,

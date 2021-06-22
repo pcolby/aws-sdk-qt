@@ -27,7 +27,7 @@ namespace Redshift {
 
 class RotateEncryptionKeyResponse;
 
-class QTAWS_EXPORT RotateEncryptionKeyResponsePrivate : public RedshiftResponsePrivate {
+class RotateEncryptionKeyResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

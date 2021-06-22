@@ -29,7 +29,7 @@ namespace EMR {
 
 class EmrClient;
 
-class QTAWS_EXPORT EmrClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EmrClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EmrClientPrivate(EmrClient * const q);

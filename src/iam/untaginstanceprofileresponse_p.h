@@ -27,7 +27,7 @@ namespace IAM {
 
 class UntagInstanceProfileResponse;
 
-class QTAWS_EXPORT UntagInstanceProfileResponsePrivate : public IamResponsePrivate {
+class UntagInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 

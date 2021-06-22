@@ -28,7 +28,7 @@ namespace EFS {
 
 class EfsRequest;
 
-class QTAWS_EXPORT EfsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EfsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EfsRequest::Action action; ///< EFS action to be performed.

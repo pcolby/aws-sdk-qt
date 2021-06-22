@@ -28,7 +28,7 @@ namespace Lambda {
 
 class PublishVersionRequest;
 
-class QTAWS_EXPORT PublishVersionRequestPrivate : public LambdaRequestPrivate {
+class PublishVersionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     PublishVersionRequestPrivate(const LambdaRequest::Action action,

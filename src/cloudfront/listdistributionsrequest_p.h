@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListDistributionsRequest;
 
-class QTAWS_EXPORT ListDistributionsRequestPrivate : public CloudFrontRequestPrivate {
+class ListDistributionsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListDistributionsRequestPrivate(const CloudFrontRequest::Action action,

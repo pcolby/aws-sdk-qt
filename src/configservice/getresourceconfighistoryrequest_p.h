@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetResourceConfigHistoryRequest;
 
-class QTAWS_EXPORT GetResourceConfigHistoryRequestPrivate : public ConfigServiceRequestPrivate {
+class GetResourceConfigHistoryRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetResourceConfigHistoryRequestPrivate(const ConfigServiceRequest::Action action,

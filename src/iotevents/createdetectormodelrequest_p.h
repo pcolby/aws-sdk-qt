@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class CreateDetectorModelRequest;
 
-class QTAWS_EXPORT CreateDetectorModelRequestPrivate : public IoTEventsRequestPrivate {
+class CreateDetectorModelRequestPrivate : public IoTEventsRequestPrivate {
 
 public:
     CreateDetectorModelRequestPrivate(const IoTEventsRequest::Action action,

@@ -27,7 +27,7 @@ namespace Chime {
 
 class BatchSuspendUserResponse;
 
-class QTAWS_EXPORT BatchSuspendUserResponsePrivate : public ChimeResponsePrivate {
+class BatchSuspendUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

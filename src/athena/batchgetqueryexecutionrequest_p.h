@@ -28,7 +28,7 @@ namespace Athena {
 
 class BatchGetQueryExecutionRequest;
 
-class QTAWS_EXPORT BatchGetQueryExecutionRequestPrivate : public AthenaRequestPrivate {
+class BatchGetQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
     BatchGetQueryExecutionRequestPrivate(const AthenaRequest::Action action,

@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class DetectSentimentResponse;
 
-class QTAWS_EXPORT DetectSentimentResponsePrivate : public ComprehendResponsePrivate {
+class DetectSentimentResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

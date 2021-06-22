@@ -27,7 +27,7 @@ namespace GameLift {
 
 class SuspendGameServerGroupResponse;
 
-class QTAWS_EXPORT SuspendGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
+class SuspendGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

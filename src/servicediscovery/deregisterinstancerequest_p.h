@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class DeregisterInstanceRequest;
 
-class QTAWS_EXPORT DeregisterInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
+class DeregisterInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     DeregisterInstanceRequestPrivate(const ServiceDiscoveryRequest::Action action,

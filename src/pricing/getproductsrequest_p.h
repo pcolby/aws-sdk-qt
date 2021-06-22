@@ -28,7 +28,7 @@ namespace Pricing {
 
 class GetProductsRequest;
 
-class QTAWS_EXPORT GetProductsRequestPrivate : public PricingRequestPrivate {
+class GetProductsRequestPrivate : public PricingRequestPrivate {
 
 public:
     GetProductsRequestPrivate(const PricingRequest::Action action,

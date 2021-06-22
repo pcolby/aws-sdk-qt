@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class ListAnomaliesForInsightResponse;
 
-class QTAWS_EXPORT ListAnomaliesForInsightResponsePrivate : public DevOpsGuruResponsePrivate {
+class ListAnomaliesForInsightResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 

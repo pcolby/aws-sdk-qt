@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteSchemaRequest;
 
-class QTAWS_EXPORT DeleteSchemaRequestPrivate : public GlueRequestPrivate {
+class DeleteSchemaRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteSchemaRequestPrivate(const GlueRequest::Action action,

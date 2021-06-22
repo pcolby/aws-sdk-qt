@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetInsightEventsRequest;
 
-class QTAWS_EXPORT GetInsightEventsRequestPrivate : public XRayRequestPrivate {
+class GetInsightEventsRequestPrivate : public XRayRequestPrivate {
 
 public:
     GetInsightEventsRequestPrivate(const XRayRequest::Action action,

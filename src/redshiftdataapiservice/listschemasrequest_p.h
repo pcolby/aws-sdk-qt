@@ -28,7 +28,7 @@ namespace RedshiftDataAPIService {
 
 class ListSchemasRequest;
 
-class QTAWS_EXPORT ListSchemasRequestPrivate : public RedshiftDataAPIServiceRequestPrivate {
+class ListSchemasRequestPrivate : public RedshiftDataAPIServiceRequestPrivate {
 
 public:
     ListSchemasRequestPrivate(const RedshiftDataAPIServiceRequest::Action action,

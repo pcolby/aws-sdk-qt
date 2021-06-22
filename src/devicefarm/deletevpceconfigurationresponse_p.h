@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteVPCEConfigurationResponse;
 
-class QTAWS_EXPORT DeleteVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate {
+class DeleteVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

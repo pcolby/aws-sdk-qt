@@ -29,7 +29,7 @@ namespace IoTEventsData {
 
 class IoTEventsDataClient;
 
-class QTAWS_EXPORT IoTEventsDataClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTEventsDataClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTEventsDataClientPrivate(IoTEventsDataClient * const q);

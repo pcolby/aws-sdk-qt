@@ -28,7 +28,7 @@ namespace SagemakerEdgeManager {
 
 class GetDeviceRegistrationRequest;
 
-class QTAWS_EXPORT GetDeviceRegistrationRequestPrivate : public SagemakerEdgeManagerRequestPrivate {
+class GetDeviceRegistrationRequestPrivate : public SagemakerEdgeManagerRequestPrivate {
 
 public:
     GetDeviceRegistrationRequestPrivate(const SagemakerEdgeManagerRequest::Action action,

@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateSnapshotRequest;
 
-class QTAWS_EXPORT CreateSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
+class CreateSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateSnapshotRequestPrivate(const DirectoryServiceRequest::Action action,

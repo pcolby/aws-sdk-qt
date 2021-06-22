@@ -27,7 +27,7 @@ namespace CostandUsageReportService {
 
 class DeleteReportDefinitionResponse;
 
-class QTAWS_EXPORT DeleteReportDefinitionResponsePrivate : public CostandUsageReportServiceResponsePrivate {
+class DeleteReportDefinitionResponsePrivate : public CostandUsageReportServiceResponsePrivate {
 
 public:
 

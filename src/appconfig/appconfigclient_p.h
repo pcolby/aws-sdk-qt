@@ -29,7 +29,7 @@ namespace AppConfig {
 
 class AppConfigClient;
 
-class QTAWS_EXPORT AppConfigClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppConfigClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppConfigClientPrivate(AppConfigClient * const q);

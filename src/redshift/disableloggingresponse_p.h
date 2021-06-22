@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DisableLoggingResponse;
 
-class QTAWS_EXPORT DisableLoggingResponsePrivate : public RedshiftResponsePrivate {
+class DisableLoggingResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

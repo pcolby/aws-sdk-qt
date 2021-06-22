@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class StartImportTaskResponse;
 
-class QTAWS_EXPORT StartImportTaskResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+class StartImportTaskResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
 
 public:
 

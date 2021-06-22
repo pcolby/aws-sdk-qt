@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class PutEventStreamRequest;
 
-class QTAWS_EXPORT PutEventStreamRequestPrivate : public PinpointRequestPrivate {
+class PutEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
     PutEventStreamRequestPrivate(const PinpointRequest::Action action,

@@ -27,7 +27,7 @@ namespace Transfer {
 
 class ListSecurityPoliciesResponse;
 
-class QTAWS_EXPORT ListSecurityPoliciesResponsePrivate : public TransferResponsePrivate {
+class ListSecurityPoliciesResponsePrivate : public TransferResponsePrivate {
 
 public:
 

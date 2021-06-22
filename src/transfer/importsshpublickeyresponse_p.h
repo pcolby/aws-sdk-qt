@@ -27,7 +27,7 @@ namespace Transfer {
 
 class ImportSshPublicKeyResponse;
 
-class QTAWS_EXPORT ImportSshPublicKeyResponsePrivate : public TransferResponsePrivate {
+class ImportSshPublicKeyResponsePrivate : public TransferResponsePrivate {
 
 public:
 

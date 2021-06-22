@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateSecurityKeyResponse;
 
-class QTAWS_EXPORT DisassociateSecurityKeyResponsePrivate : public ConnectResponsePrivate {
+class DisassociateSecurityKeyResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

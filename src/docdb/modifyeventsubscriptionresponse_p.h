@@ -27,7 +27,7 @@ namespace DocDB {
 
 class ModifyEventSubscriptionResponse;
 
-class QTAWS_EXPORT ModifyEventSubscriptionResponsePrivate : public DocDBResponsePrivate {
+class ModifyEventSubscriptionResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

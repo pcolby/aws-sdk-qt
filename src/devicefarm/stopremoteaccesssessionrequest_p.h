@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class StopRemoteAccessSessionRequest;
 
-class QTAWS_EXPORT StopRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
+class StopRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     StopRemoteAccessSessionRequestPrivate(const DeviceFarmRequest::Action action,

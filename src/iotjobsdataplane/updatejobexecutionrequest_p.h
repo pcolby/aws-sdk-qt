@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class UpdateJobExecutionRequest;
 
-class QTAWS_EXPORT UpdateJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
+class UpdateJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     UpdateJobExecutionRequestPrivate(const IoTJobsDataPlaneRequest::Action action,

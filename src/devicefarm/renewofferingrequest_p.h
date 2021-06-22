@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class RenewOfferingRequest;
 
-class QTAWS_EXPORT RenewOfferingRequestPrivate : public DeviceFarmRequestPrivate {
+class RenewOfferingRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     RenewOfferingRequestPrivate(const DeviceFarmRequest::Action action,

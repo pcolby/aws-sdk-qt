@@ -28,7 +28,7 @@ namespace mgn {
 
 class TerminateTargetInstancesRequest;
 
-class QTAWS_EXPORT TerminateTargetInstancesRequestPrivate : public mgnRequestPrivate {
+class TerminateTargetInstancesRequestPrivate : public mgnRequestPrivate {
 
 public:
     TerminateTargetInstancesRequestPrivate(const mgnRequest::Action action,

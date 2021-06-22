@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetLoginProfileRequest;
 
-class QTAWS_EXPORT GetLoginProfileRequestPrivate : public IamRequestPrivate {
+class GetLoginProfileRequestPrivate : public IamRequestPrivate {
 
 public:
     GetLoginProfileRequestPrivate(const IamRequest::Action action,

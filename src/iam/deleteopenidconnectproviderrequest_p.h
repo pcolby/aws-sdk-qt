@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteOpenIDConnectProviderRequest;
 
-class QTAWS_EXPORT DeleteOpenIDConnectProviderRequestPrivate : public IamRequestPrivate {
+class DeleteOpenIDConnectProviderRequestPrivate : public IamRequestPrivate {
 
 public:
     DeleteOpenIDConnectProviderRequestPrivate(const IamRequest::Action action,

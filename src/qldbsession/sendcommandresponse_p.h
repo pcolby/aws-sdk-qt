@@ -27,7 +27,7 @@ namespace QLDBSession {
 
 class SendCommandResponse;
 
-class QTAWS_EXPORT SendCommandResponsePrivate : public QLDBSessionResponsePrivate {
+class SendCommandResponsePrivate : public QLDBSessionResponsePrivate {
 
 public:
 

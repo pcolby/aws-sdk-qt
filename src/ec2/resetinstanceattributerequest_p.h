@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ResetInstanceAttributeRequest;
 
-class QTAWS_EXPORT ResetInstanceAttributeRequestPrivate : public Ec2RequestPrivate {
+class ResetInstanceAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ResetInstanceAttributeRequestPrivate(const Ec2Request::Action action,

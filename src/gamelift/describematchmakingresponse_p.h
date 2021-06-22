@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeMatchmakingResponse;
 
-class QTAWS_EXPORT DescribeMatchmakingResponsePrivate : public GameLiftResponsePrivate {
+class DescribeMatchmakingResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

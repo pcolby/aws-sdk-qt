@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class ListShardsRequest;
 
-class QTAWS_EXPORT ListShardsRequestPrivate : public KinesisRequestPrivate {
+class ListShardsRequestPrivate : public KinesisRequestPrivate {
 
 public:
     ListShardsRequestPrivate(const KinesisRequest::Action action,

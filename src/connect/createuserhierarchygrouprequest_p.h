@@ -28,7 +28,7 @@ namespace Connect {
 
 class CreateUserHierarchyGroupRequest;
 
-class QTAWS_EXPORT CreateUserHierarchyGroupRequestPrivate : public ConnectRequestPrivate {
+class CreateUserHierarchyGroupRequestPrivate : public ConnectRequestPrivate {
 
 public:
     CreateUserHierarchyGroupRequestPrivate(const ConnectRequest::Action action,

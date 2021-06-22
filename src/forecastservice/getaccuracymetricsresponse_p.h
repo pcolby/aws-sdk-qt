@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class GetAccuracyMetricsResponse;
 
-class QTAWS_EXPORT GetAccuracyMetricsResponsePrivate : public ForecastServiceResponsePrivate {
+class GetAccuracyMetricsResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 

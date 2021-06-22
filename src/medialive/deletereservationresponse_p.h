@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DeleteReservationResponse;
 
-class QTAWS_EXPORT DeleteReservationResponsePrivate : public MediaLiveResponsePrivate {
+class DeleteReservationResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

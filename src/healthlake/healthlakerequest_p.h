@@ -28,7 +28,7 @@ namespace HealthLake {
 
 class HealthLakeRequest;
 
-class QTAWS_EXPORT HealthLakeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class HealthLakeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     HealthLakeRequest::Action action; ///< HealthLake action to be performed.

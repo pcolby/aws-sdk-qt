@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public ServiceDiscoveryResponsePrivate {
+class TagResourceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 

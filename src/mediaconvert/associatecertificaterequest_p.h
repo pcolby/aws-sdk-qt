@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class AssociateCertificateRequest;
 
-class QTAWS_EXPORT AssociateCertificateRequestPrivate : public MediaConvertRequestPrivate {
+class AssociateCertificateRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     AssociateCertificateRequestPrivate(const MediaConvertRequest::Action action,

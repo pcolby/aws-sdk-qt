@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DocDBResponse;
 
-class QTAWS_EXPORT DocDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DocDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

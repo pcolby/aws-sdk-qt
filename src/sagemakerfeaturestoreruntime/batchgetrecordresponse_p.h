@@ -27,7 +27,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class BatchGetRecordResponse;
 
-class QTAWS_EXPORT BatchGetRecordResponsePrivate : public SageMakerFeatureStoreRuntimeResponsePrivate {
+class BatchGetRecordResponsePrivate : public SageMakerFeatureStoreRuntimeResponsePrivate {
 
 public:
 

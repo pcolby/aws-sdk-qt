@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DeleteDBClusterSnapshotRequest;
 
-class QTAWS_EXPORT DeleteDBClusterSnapshotRequestPrivate : public DocDBRequestPrivate {
+class DeleteDBClusterSnapshotRequestPrivate : public DocDBRequestPrivate {
 
 public:
     DeleteDBClusterSnapshotRequestPrivate(const DocDBRequest::Action action,

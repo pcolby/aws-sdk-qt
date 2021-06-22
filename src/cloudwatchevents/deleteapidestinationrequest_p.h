@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DeleteApiDestinationRequest;
 
-class QTAWS_EXPORT DeleteApiDestinationRequestPrivate : public CloudWatchEventsRequestPrivate {
+class DeleteApiDestinationRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     DeleteApiDestinationRequestPrivate(const CloudWatchEventsRequest::Action action,

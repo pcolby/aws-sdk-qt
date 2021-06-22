@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class UpdateFunctionDefinitionRequest;
 
-class QTAWS_EXPORT UpdateFunctionDefinitionRequestPrivate : public GreengrassRequestPrivate {
+class UpdateFunctionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     UpdateFunctionDefinitionRequestPrivate(const GreengrassRequest::Action action,

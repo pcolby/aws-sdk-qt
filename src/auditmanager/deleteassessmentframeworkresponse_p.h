@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class DeleteAssessmentFrameworkResponse;
 
-class QTAWS_EXPORT DeleteAssessmentFrameworkResponsePrivate : public AuditManagerResponsePrivate {
+class DeleteAssessmentFrameworkResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

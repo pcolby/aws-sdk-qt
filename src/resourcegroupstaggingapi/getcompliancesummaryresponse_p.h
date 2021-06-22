@@ -27,7 +27,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class GetComplianceSummaryResponse;
 
-class QTAWS_EXPORT GetComplianceSummaryResponsePrivate : public ResourceGroupsTaggingAPIResponsePrivate {
+class GetComplianceSummaryResponsePrivate : public ResourceGroupsTaggingAPIResponsePrivate {
 
 public:
 

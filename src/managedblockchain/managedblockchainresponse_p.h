@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class ManagedBlockchainResponse;
 
-class QTAWS_EXPORT ManagedBlockchainResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ManagedBlockchainResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

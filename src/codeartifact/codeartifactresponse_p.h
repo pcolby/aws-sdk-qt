@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class CodeArtifactResponse;
 
-class QTAWS_EXPORT CodeArtifactResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CodeArtifactResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class ListRepositoriesInDomainResponse;
 
-class QTAWS_EXPORT ListRepositoriesInDomainResponsePrivate : public CodeArtifactResponsePrivate {
+class ListRepositoriesInDomainResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace IoTFleetHub {
 
 class IoTFleetHubResponse;
 
-class QTAWS_EXPORT IoTFleetHubResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTFleetHubResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

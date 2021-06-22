@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class CreateEntityRecognizerRequest;
 
-class QTAWS_EXPORT CreateEntityRecognizerRequestPrivate : public ComprehendRequestPrivate {
+class CreateEntityRecognizerRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     CreateEntityRecognizerRequestPrivate(const ComprehendRequest::Action action,

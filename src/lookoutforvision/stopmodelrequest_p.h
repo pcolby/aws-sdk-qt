@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class StopModelRequest;
 
-class QTAWS_EXPORT StopModelRequestPrivate : public LookoutforVisionRequestPrivate {
+class StopModelRequestPrivate : public LookoutforVisionRequestPrivate {
 
 public:
     StopModelRequestPrivate(const LookoutforVisionRequest::Action action,

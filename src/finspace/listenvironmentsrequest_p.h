@@ -28,7 +28,7 @@ namespace finspace {
 
 class ListEnvironmentsRequest;
 
-class QTAWS_EXPORT ListEnvironmentsRequestPrivate : public finspaceRequestPrivate {
+class ListEnvironmentsRequestPrivate : public finspaceRequestPrivate {
 
 public:
     ListEnvironmentsRequestPrivate(const finspaceRequest::Action action,

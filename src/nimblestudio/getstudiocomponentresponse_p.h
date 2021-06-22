@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class GetStudioComponentResponse;
 
-class QTAWS_EXPORT GetStudioComponentResponsePrivate : public NimbleStudioResponsePrivate {
+class GetStudioComponentResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CodeGuruReviewer {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public CodeGuruReviewerResponsePrivate {
+class UntagResourceResponsePrivate : public CodeGuruReviewerResponsePrivate {
 
 public:
 

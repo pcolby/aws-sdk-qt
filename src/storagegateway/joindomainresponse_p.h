@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class JoinDomainResponse;
 
-class QTAWS_EXPORT JoinDomainResponsePrivate : public StorageGatewayResponsePrivate {
+class JoinDomainResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

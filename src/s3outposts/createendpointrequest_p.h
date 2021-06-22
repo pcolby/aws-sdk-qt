@@ -28,7 +28,7 @@ namespace S3Outposts {
 
 class CreateEndpointRequest;
 
-class QTAWS_EXPORT CreateEndpointRequestPrivate : public S3OutpostsRequestPrivate {
+class CreateEndpointRequestPrivate : public S3OutpostsRequestPrivate {
 
 public:
     CreateEndpointRequestPrivate(const S3OutpostsRequest::Action action,

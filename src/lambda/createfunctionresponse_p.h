@@ -27,7 +27,7 @@ namespace Lambda {
 
 class CreateFunctionResponse;
 
-class QTAWS_EXPORT CreateFunctionResponsePrivate : public LambdaResponsePrivate {
+class CreateFunctionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

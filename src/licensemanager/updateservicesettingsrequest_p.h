@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class UpdateServiceSettingsRequest;
 
-class QTAWS_EXPORT UpdateServiceSettingsRequestPrivate : public LicenseManagerRequestPrivate {
+class UpdateServiceSettingsRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     UpdateServiceSettingsRequestPrivate(const LicenseManagerRequest::Action action,

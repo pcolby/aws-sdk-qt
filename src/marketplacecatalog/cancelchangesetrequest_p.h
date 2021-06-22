@@ -28,7 +28,7 @@ namespace MarketplaceCatalog {
 
 class CancelChangeSetRequest;
 
-class QTAWS_EXPORT CancelChangeSetRequestPrivate : public MarketplaceCatalogRequestPrivate {
+class CancelChangeSetRequestPrivate : public MarketplaceCatalogRequestPrivate {
 
 public:
     CancelChangeSetRequestPrivate(const MarketplaceCatalogRequest::Action action,

@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public WorkLinkResponsePrivate {
+class UntagResourceResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

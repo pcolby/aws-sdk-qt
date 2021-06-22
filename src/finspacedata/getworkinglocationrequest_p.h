@@ -28,7 +28,7 @@ namespace FinSpaceData {
 
 class GetWorkingLocationRequest;
 
-class QTAWS_EXPORT GetWorkingLocationRequestPrivate : public FinSpaceDataRequestPrivate {
+class GetWorkingLocationRequestPrivate : public FinSpaceDataRequestPrivate {
 
 public:
     GetWorkingLocationRequestPrivate(const FinSpaceDataRequest::Action action,

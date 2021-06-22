@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateDBProxyResponse;
 
-class QTAWS_EXPORT CreateDBProxyResponsePrivate : public RdsResponsePrivate {
+class CreateDBProxyResponsePrivate : public RdsResponsePrivate {
 
 public:
 

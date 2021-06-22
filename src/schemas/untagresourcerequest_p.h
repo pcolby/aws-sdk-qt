@@ -28,7 +28,7 @@ namespace Schemas {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public SchemasRequestPrivate {
+class UntagResourceRequestPrivate : public SchemasRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const SchemasRequest::Action action,

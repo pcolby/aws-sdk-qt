@@ -27,7 +27,7 @@ namespace Schemas {
 
 class GetCodeBindingSourceResponse;
 
-class QTAWS_EXPORT GetCodeBindingSourceResponsePrivate : public SchemasResponsePrivate {
+class GetCodeBindingSourceResponsePrivate : public SchemasResponsePrivate {
 
 public:
 

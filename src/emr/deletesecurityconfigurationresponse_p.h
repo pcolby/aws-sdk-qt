@@ -27,7 +27,7 @@ namespace EMR {
 
 class DeleteSecurityConfigurationResponse;
 
-class QTAWS_EXPORT DeleteSecurityConfigurationResponsePrivate : public EmrResponsePrivate {
+class DeleteSecurityConfigurationResponsePrivate : public EmrResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeTableReplicaAutoScalingResponse;
 
-class QTAWS_EXPORT DescribeTableReplicaAutoScalingResponsePrivate : public DynamoDBResponsePrivate {
+class DescribeTableReplicaAutoScalingResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

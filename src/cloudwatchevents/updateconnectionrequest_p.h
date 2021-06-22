@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class UpdateConnectionRequest;
 
-class QTAWS_EXPORT UpdateConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
+class UpdateConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     UpdateConnectionRequestPrivate(const CloudWatchEventsRequest::Action action,

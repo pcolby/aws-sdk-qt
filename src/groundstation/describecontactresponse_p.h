@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class DescribeContactResponse;
 
-class QTAWS_EXPORT DescribeContactResponsePrivate : public GroundStationResponsePrivate {
+class DescribeContactResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class DeleteApplicationRequest;
 
-class QTAWS_EXPORT DeleteApplicationRequestPrivate : public AppRegistryRequestPrivate {
+class DeleteApplicationRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     DeleteApplicationRequestPrivate(const AppRegistryRequest::Action action,

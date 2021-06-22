@@ -27,7 +27,7 @@ namespace kendra {
 
 class BatchGetDocumentStatusResponse;
 
-class QTAWS_EXPORT BatchGetDocumentStatusResponsePrivate : public kendraResponsePrivate {
+class BatchGetDocumentStatusResponsePrivate : public kendraResponsePrivate {
 
 public:
 

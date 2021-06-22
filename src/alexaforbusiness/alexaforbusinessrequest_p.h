@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class AlexaForBusinessRequest;
 
-class QTAWS_EXPORT AlexaForBusinessRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AlexaForBusinessRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AlexaForBusinessRequest::Action action; ///< AlexaForBusiness action to be performed.

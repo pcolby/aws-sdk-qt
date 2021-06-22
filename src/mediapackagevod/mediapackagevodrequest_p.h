@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class MediaPackageVodRequest;
 
-class QTAWS_EXPORT MediaPackageVodRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaPackageVodRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaPackageVodRequest::Action action; ///< MediaPackageVod action to be performed.

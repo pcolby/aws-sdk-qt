@@ -29,7 +29,7 @@ namespace EC2InstanceConnect {
 
 class EC2InstanceConnectClient;
 
-class QTAWS_EXPORT EC2InstanceConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EC2InstanceConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q);

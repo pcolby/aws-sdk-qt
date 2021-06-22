@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class IoTAnalyticsRequest;
 
-class QTAWS_EXPORT IoTAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTAnalyticsRequest::Action action; ///< IoTAnalytics action to be performed.

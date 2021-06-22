@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public Macie2RequestPrivate {
+class TagResourceRequestPrivate : public Macie2RequestPrivate {
 
 public:
     TagResourceRequestPrivate(const Macie2Request::Action action,

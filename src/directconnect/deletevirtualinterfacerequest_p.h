@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteVirtualInterfaceRequest;
 
-class QTAWS_EXPORT DeleteVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
+class DeleteVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DeleteVirtualInterfaceRequestPrivate(const DirectConnectRequest::Action action,

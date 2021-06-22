@@ -27,7 +27,7 @@ namespace Route53 {
 
 class ActivateKeySigningKeyResponse;
 
-class QTAWS_EXPORT ActivateKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
+class ActivateKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class ListRobotApplicationsRequest;
 
-class QTAWS_EXPORT ListRobotApplicationsRequestPrivate : public RoboMakerRequestPrivate {
+class ListRobotApplicationsRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     ListRobotApplicationsRequestPrivate(const RoboMakerRequest::Action action,

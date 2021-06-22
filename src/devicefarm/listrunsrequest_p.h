@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListRunsRequest;
 
-class QTAWS_EXPORT ListRunsRequestPrivate : public DeviceFarmRequestPrivate {
+class ListRunsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListRunsRequestPrivate(const DeviceFarmRequest::Action action,

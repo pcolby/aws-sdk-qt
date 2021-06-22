@@ -28,7 +28,7 @@ namespace Backup {
 
 class PutBackupVaultAccessPolicyRequest;
 
-class QTAWS_EXPORT PutBackupVaultAccessPolicyRequestPrivate : public BackupRequestPrivate {
+class PutBackupVaultAccessPolicyRequestPrivate : public BackupRequestPrivate {
 
 public:
     PutBackupVaultAccessPolicyRequestPrivate(const BackupRequest::Action action,

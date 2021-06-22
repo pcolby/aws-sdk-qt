@@ -28,7 +28,7 @@ namespace Backup {
 
 class StartRestoreJobRequest;
 
-class QTAWS_EXPORT StartRestoreJobRequestPrivate : public BackupRequestPrivate {
+class StartRestoreJobRequestPrivate : public BackupRequestPrivate {
 
 public:
     StartRestoreJobRequestPrivate(const BackupRequest::Action action,

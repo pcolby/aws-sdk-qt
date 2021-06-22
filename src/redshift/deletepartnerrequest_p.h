@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeletePartnerRequest;
 
-class QTAWS_EXPORT DeletePartnerRequestPrivate : public RedshiftRequestPrivate {
+class DeletePartnerRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeletePartnerRequestPrivate(const RedshiftRequest::Action action,

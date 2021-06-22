@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DisassociateFromAdministratorAccountResponse;
 
-class QTAWS_EXPORT DisassociateFromAdministratorAccountResponsePrivate : public SecurityHubResponsePrivate {
+class DisassociateFromAdministratorAccountResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

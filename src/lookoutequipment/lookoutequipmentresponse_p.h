@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class LookoutEquipmentResponse;
 
-class QTAWS_EXPORT LookoutEquipmentResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LookoutEquipmentResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

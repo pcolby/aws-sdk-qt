@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsReceiveMessageRequest;
 
-class QTAWS_EXPORT SqsReceiveMessageRequestPrivate : public SqsRequestPrivate {
+class SqsReceiveMessageRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsReceiveMessageRequestPrivate(const SqsRequest::Action action,

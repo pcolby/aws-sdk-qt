@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class CreateAnomalyMonitorRequest;
 
-class QTAWS_EXPORT CreateAnomalyMonitorRequestPrivate : public CostExplorerRequestPrivate {
+class CreateAnomalyMonitorRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     CreateAnomalyMonitorRequestPrivate(const CostExplorerRequest::Action action,

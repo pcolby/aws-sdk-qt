@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class ListGroupVersionsRequest;
 
-class QTAWS_EXPORT ListGroupVersionsRequestPrivate : public GreengrassRequestPrivate {
+class ListGroupVersionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     ListGroupVersionsRequestPrivate(const GreengrassRequest::Action action,

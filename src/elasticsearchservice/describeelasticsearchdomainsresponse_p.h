@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class DescribeElasticsearchDomainsResponse;
 
-class QTAWS_EXPORT DescribeElasticsearchDomainsResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class DescribeElasticsearchDomainsResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

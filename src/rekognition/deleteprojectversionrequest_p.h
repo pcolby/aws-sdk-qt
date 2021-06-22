@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DeleteProjectVersionRequest;
 
-class QTAWS_EXPORT DeleteProjectVersionRequestPrivate : public RekognitionRequestPrivate {
+class DeleteProjectVersionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DeleteProjectVersionRequestPrivate(const RekognitionRequest::Action action,

@@ -28,7 +28,7 @@ namespace IAM {
 
 class UntagUserRequest;
 
-class QTAWS_EXPORT UntagUserRequestPrivate : public IamRequestPrivate {
+class UntagUserRequestPrivate : public IamRequestPrivate {
 
 public:
     UntagUserRequestPrivate(const IamRequest::Action action,

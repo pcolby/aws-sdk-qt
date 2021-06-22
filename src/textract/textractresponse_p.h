@@ -27,7 +27,7 @@ namespace Textract {
 
 class TextractResponse;
 
-class QTAWS_EXPORT TextractResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TextractResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

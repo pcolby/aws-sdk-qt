@@ -29,7 +29,7 @@ namespace FMS {
 
 class FmsClient;
 
-class QTAWS_EXPORT FmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     FmsClientPrivate(FmsClient * const q);

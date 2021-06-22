@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class UpdateRepositoryRequest;
 
-class QTAWS_EXPORT UpdateRepositoryRequestPrivate : public CodeArtifactRequestPrivate {
+class UpdateRepositoryRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     UpdateRepositoryRequestPrivate(const CodeArtifactRequest::Action action,

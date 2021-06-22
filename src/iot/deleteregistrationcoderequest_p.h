@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteRegistrationCodeRequest;
 
-class QTAWS_EXPORT DeleteRegistrationCodeRequestPrivate : public IoTRequestPrivate {
+class DeleteRegistrationCodeRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteRegistrationCodeRequestPrivate(const IoTRequest::Action action,

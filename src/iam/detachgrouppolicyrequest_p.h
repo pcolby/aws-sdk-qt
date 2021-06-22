@@ -28,7 +28,7 @@ namespace IAM {
 
 class DetachGroupPolicyRequest;
 
-class QTAWS_EXPORT DetachGroupPolicyRequestPrivate : public IamRequestPrivate {
+class DetachGroupPolicyRequestPrivate : public IamRequestPrivate {
 
 public:
     DetachGroupPolicyRequestPrivate(const IamRequest::Action action,

@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeAttachmentRequest;
 
-class QTAWS_EXPORT DescribeAttachmentRequestPrivate : public SupportRequestPrivate {
+class DescribeAttachmentRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeAttachmentRequestPrivate(const SupportRequest::Action action,

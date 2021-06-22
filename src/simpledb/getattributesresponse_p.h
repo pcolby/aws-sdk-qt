@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class GetAttributesResponse;
 
-class QTAWS_EXPORT GetAttributesResponsePrivate : public SimpleDBResponsePrivate {
+class GetAttributesResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 

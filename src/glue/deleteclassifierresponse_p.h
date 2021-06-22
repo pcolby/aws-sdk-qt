@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteClassifierResponse;
 
-class QTAWS_EXPORT DeleteClassifierResponsePrivate : public GlueResponsePrivate {
+class DeleteClassifierResponsePrivate : public GlueResponsePrivate {
 
 public:
 

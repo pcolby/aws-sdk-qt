@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DescribeCacheClustersResponse;
 
-class QTAWS_EXPORT DescribeCacheClustersResponsePrivate : public ElastiCacheResponsePrivate {
+class DescribeCacheClustersResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

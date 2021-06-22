@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeAccessPointsResponse;
 
-class QTAWS_EXPORT DescribeAccessPointsResponsePrivate : public EfsResponsePrivate {
+class DescribeAccessPointsResponsePrivate : public EfsResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace LocationService {
 
 class BatchDeleteDevicePositionHistoryResponse;
 
-class QTAWS_EXPORT BatchDeleteDevicePositionHistoryResponsePrivate : public LocationServiceResponsePrivate {
+class BatchDeleteDevicePositionHistoryResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

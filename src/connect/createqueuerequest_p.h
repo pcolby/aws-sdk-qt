@@ -28,7 +28,7 @@ namespace Connect {
 
 class CreateQueueRequest;
 
-class QTAWS_EXPORT CreateQueueRequestPrivate : public ConnectRequestPrivate {
+class CreateQueueRequestPrivate : public ConnectRequestPrivate {
 
 public:
     CreateQueueRequestPrivate(const ConnectRequest::Action action,

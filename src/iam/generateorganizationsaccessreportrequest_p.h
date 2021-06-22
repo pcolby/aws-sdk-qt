@@ -28,7 +28,7 @@ namespace IAM {
 
 class GenerateOrganizationsAccessReportRequest;
 
-class QTAWS_EXPORT GenerateOrganizationsAccessReportRequestPrivate : public IamRequestPrivate {
+class GenerateOrganizationsAccessReportRequestPrivate : public IamRequestPrivate {
 
 public:
     GenerateOrganizationsAccessReportRequestPrivate(const IamRequest::Action action,

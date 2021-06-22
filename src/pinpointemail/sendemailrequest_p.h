@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class SendEmailRequest;
 
-class QTAWS_EXPORT SendEmailRequestPrivate : public PinpointEmailRequestPrivate {
+class SendEmailRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     SendEmailRequestPrivate(const PinpointEmailRequest::Action action,

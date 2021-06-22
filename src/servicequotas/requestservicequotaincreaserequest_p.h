@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class RequestServiceQuotaIncreaseRequest;
 
-class QTAWS_EXPORT RequestServiceQuotaIncreaseRequestPrivate : public ServiceQuotasRequestPrivate {
+class RequestServiceQuotaIncreaseRequestPrivate : public ServiceQuotasRequestPrivate {
 
 public:
     RequestServiceQuotaIncreaseRequestPrivate(const ServiceQuotasRequest::Action action,

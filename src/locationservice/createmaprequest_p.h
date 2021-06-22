@@ -28,7 +28,7 @@ namespace LocationService {
 
 class CreateMapRequest;
 
-class QTAWS_EXPORT CreateMapRequestPrivate : public LocationServiceRequestPrivate {
+class CreateMapRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     CreateMapRequestPrivate(const LocationServiceRequest::Action action,

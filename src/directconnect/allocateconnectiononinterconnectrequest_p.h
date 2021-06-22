@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AllocateConnectionOnInterconnectRequest;
 
-class QTAWS_EXPORT AllocateConnectionOnInterconnectRequestPrivate : public DirectConnectRequestPrivate {
+class AllocateConnectionOnInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     AllocateConnectionOnInterconnectRequestPrivate(const DirectConnectRequest::Action action,

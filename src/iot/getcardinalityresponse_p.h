@@ -27,7 +27,7 @@ namespace IoT {
 
 class GetCardinalityResponse;
 
-class QTAWS_EXPORT GetCardinalityResponsePrivate : public IoTResponsePrivate {
+class GetCardinalityResponsePrivate : public IoTResponsePrivate {
 
 public:
 

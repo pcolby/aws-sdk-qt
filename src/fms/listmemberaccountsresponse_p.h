@@ -27,7 +27,7 @@ namespace FMS {
 
 class ListMemberAccountsResponse;
 
-class QTAWS_EXPORT ListMemberAccountsResponsePrivate : public FmsResponsePrivate {
+class ListMemberAccountsResponsePrivate : public FmsResponsePrivate {
 
 public:
 

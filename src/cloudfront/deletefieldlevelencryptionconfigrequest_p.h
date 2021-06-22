@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteFieldLevelEncryptionConfigRequest;
 
-class QTAWS_EXPORT DeleteFieldLevelEncryptionConfigRequestPrivate : public CloudFrontRequestPrivate {
+class DeleteFieldLevelEncryptionConfigRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     DeleteFieldLevelEncryptionConfigRequestPrivate(const CloudFrontRequest::Action action,

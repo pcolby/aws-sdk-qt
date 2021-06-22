@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DeletePlaceIndexResponse;
 
-class QTAWS_EXPORT DeletePlaceIndexResponsePrivate : public LocationServiceResponsePrivate {
+class DeletePlaceIndexResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

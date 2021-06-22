@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class StartMailboxExportJobResponse;
 
-class QTAWS_EXPORT StartMailboxExportJobResponsePrivate : public WorkMailResponsePrivate {
+class StartMailboxExportJobResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

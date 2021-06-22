@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class AddCacheResponse;
 
-class QTAWS_EXPORT AddCacheResponsePrivate : public StorageGatewayResponsePrivate {
+class AddCacheResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

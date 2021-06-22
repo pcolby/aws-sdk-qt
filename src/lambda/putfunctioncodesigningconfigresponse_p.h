@@ -27,7 +27,7 @@ namespace Lambda {
 
 class PutFunctionCodeSigningConfigResponse;
 
-class QTAWS_EXPORT PutFunctionCodeSigningConfigResponsePrivate : public LambdaResponsePrivate {
+class PutFunctionCodeSigningConfigResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class GetEventIntegrationRequest;
 
-class QTAWS_EXPORT GetEventIntegrationRequestPrivate : public AppIntegrationsServiceRequestPrivate {
+class GetEventIntegrationRequestPrivate : public AppIntegrationsServiceRequestPrivate {
 
 public:
     GetEventIntegrationRequestPrivate(const AppIntegrationsServiceRequest::Action action,

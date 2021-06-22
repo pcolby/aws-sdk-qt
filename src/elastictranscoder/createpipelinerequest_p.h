@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class CreatePipelineRequest;
 
-class QTAWS_EXPORT CreatePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
+class CreatePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     CreatePipelineRequestPrivate(const ElasticTranscoderRequest::Action action,

@@ -27,7 +27,7 @@ namespace KMS {
 
 class ListGrantsResponse;
 
-class QTAWS_EXPORT ListGrantsResponsePrivate : public KmsResponsePrivate {
+class ListGrantsResponsePrivate : public KmsResponsePrivate {
 
 public:
 

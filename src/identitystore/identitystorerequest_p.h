@@ -28,7 +28,7 @@ namespace IdentityStore {
 
 class IdentityStoreRequest;
 
-class QTAWS_EXPORT IdentityStoreRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IdentityStoreRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IdentityStoreRequest::Action action; ///< IdentityStore action to be performed.

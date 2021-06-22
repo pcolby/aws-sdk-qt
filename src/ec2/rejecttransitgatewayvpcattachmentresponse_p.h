@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RejectTransitGatewayVpcAttachmentResponse;
 
-class QTAWS_EXPORT RejectTransitGatewayVpcAttachmentResponsePrivate : public Ec2ResponsePrivate {
+class RejectTransitGatewayVpcAttachmentResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

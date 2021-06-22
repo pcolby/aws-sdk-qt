@@ -28,7 +28,7 @@ namespace FSx {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public FSxRequestPrivate {
+class UntagResourceRequestPrivate : public FSxRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const FSxRequest::Action action,

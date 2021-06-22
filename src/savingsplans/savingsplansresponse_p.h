@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class SavingsPlansResponse;
 
-class QTAWS_EXPORT SavingsPlansResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SavingsPlansResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

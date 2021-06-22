@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public SSMIncidentsRequestPrivate {
+class UntagResourceRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const SSMIncidentsRequest::Action action,

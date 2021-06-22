@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteTrafficPolicyRequest;
 
-class QTAWS_EXPORT DeleteTrafficPolicyRequestPrivate : public Route53RequestPrivate {
+class DeleteTrafficPolicyRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteTrafficPolicyRequestPrivate(const Route53Request::Action action,

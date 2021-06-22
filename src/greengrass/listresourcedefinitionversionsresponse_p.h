@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListResourceDefinitionVersionsResponse;
 
-class QTAWS_EXPORT ListResourceDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
+class ListResourceDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

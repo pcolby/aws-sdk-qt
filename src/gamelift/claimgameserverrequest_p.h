@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ClaimGameServerRequest;
 
-class QTAWS_EXPORT ClaimGameServerRequestPrivate : public GameLiftRequestPrivate {
+class ClaimGameServerRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     ClaimGameServerRequestPrivate(const GameLiftRequest::Action action,

@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteDBClusterParameterGroupRequestPrivate : public RdsRequestPrivate {
+class DeleteDBClusterParameterGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
     DeleteDBClusterParameterGroupRequestPrivate(const RdsRequest::Action action,

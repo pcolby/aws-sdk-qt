@@ -27,7 +27,7 @@ namespace Lambda {
 
 class ListLayersResponse;
 
-class QTAWS_EXPORT ListLayersResponsePrivate : public LambdaResponsePrivate {
+class ListLayersResponsePrivate : public LambdaResponsePrivate {
 
 public:
 

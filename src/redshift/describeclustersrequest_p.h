@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClustersRequest;
 
-class QTAWS_EXPORT DescribeClustersRequestPrivate : public RedshiftRequestPrivate {
+class DescribeClustersRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeClustersRequestPrivate(const RedshiftRequest::Action action,

@@ -28,7 +28,7 @@ namespace RAM {
 
 class ListResourceTypesRequest;
 
-class QTAWS_EXPORT ListResourceTypesRequestPrivate : public RamRequestPrivate {
+class ListResourceTypesRequestPrivate : public RamRequestPrivate {
 
 public:
     ListResourceTypesRequestPrivate(const RamRequest::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifySubnetAttributeRequest;
 
-class QTAWS_EXPORT ModifySubnetAttributeRequestPrivate : public Ec2RequestPrivate {
+class ModifySubnetAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifySubnetAttributeRequestPrivate(const Ec2Request::Action action,

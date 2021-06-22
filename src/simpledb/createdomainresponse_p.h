@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class CreateDomainResponse;
 
-class QTAWS_EXPORT CreateDomainResponsePrivate : public SimpleDBResponsePrivate {
+class CreateDomainResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 

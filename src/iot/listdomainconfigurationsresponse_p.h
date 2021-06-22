@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListDomainConfigurationsResponse;
 
-class QTAWS_EXPORT ListDomainConfigurationsResponsePrivate : public IoTResponsePrivate {
+class ListDomainConfigurationsResponsePrivate : public IoTResponsePrivate {
 
 public:
 

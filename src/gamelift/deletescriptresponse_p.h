@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteScriptResponse;
 
-class QTAWS_EXPORT DeleteScriptResponsePrivate : public GameLiftResponsePrivate {
+class DeleteScriptResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 

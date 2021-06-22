@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeMultiplexRequest;
 
-class QTAWS_EXPORT DescribeMultiplexRequestPrivate : public MediaLiveRequestPrivate {
+class DescribeMultiplexRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DescribeMultiplexRequestPrivate(const MediaLiveRequest::Action action,

@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyListenerResponse;
 
-class QTAWS_EXPORT ModifyListenerResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+class ModifyListenerResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
 
 public:
 

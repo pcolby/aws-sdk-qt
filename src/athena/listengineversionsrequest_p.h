@@ -28,7 +28,7 @@ namespace Athena {
 
 class ListEngineVersionsRequest;
 
-class QTAWS_EXPORT ListEngineVersionsRequestPrivate : public AthenaRequestPrivate {
+class ListEngineVersionsRequestPrivate : public AthenaRequestPrivate {
 
 public:
     ListEngineVersionsRequestPrivate(const AthenaRequest::Action action,

@@ -27,7 +27,7 @@ namespace IAM {
 
 class TagInstanceProfileResponse;
 
-class QTAWS_EXPORT TagInstanceProfileResponsePrivate : public IamResponsePrivate {
+class TagInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 

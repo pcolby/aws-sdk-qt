@@ -27,7 +27,7 @@ namespace AppSync {
 
 class ListResolversResponse;
 
-class QTAWS_EXPORT ListResolversResponsePrivate : public AppSyncResponsePrivate {
+class ListResolversResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 

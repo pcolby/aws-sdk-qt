@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class RegisterCertificateResponse;
 
-class QTAWS_EXPORT RegisterCertificateResponsePrivate : public DirectoryServiceResponsePrivate {
+class RegisterCertificateResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

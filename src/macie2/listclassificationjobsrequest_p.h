@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class ListClassificationJobsRequest;
 
-class QTAWS_EXPORT ListClassificationJobsRequestPrivate : public Macie2RequestPrivate {
+class ListClassificationJobsRequestPrivate : public Macie2RequestPrivate {
 
 public:
     ListClassificationJobsRequestPrivate(const Macie2Request::Action action,

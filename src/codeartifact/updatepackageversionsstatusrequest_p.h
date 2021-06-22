@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class UpdatePackageVersionsStatusRequest;
 
-class QTAWS_EXPORT UpdatePackageVersionsStatusRequestPrivate : public CodeArtifactRequestPrivate {
+class UpdatePackageVersionsStatusRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     UpdatePackageVersionsStatusRequestPrivate(const CodeArtifactRequest::Action action,

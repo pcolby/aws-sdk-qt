@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeletePolicyRequest;
 
-class QTAWS_EXPORT DeletePolicyRequestPrivate : public IoTRequestPrivate {
+class DeletePolicyRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeletePolicyRequestPrivate(const IoTRequest::Action action,

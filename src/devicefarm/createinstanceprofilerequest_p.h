@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateInstanceProfileRequest;
 
-class QTAWS_EXPORT CreateInstanceProfileRequestPrivate : public DeviceFarmRequestPrivate {
+class CreateInstanceProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     CreateInstanceProfileRequestPrivate(const DeviceFarmRequest::Action action,

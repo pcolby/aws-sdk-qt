@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ListQueryLoggingConfigsRequest;
 
-class QTAWS_EXPORT ListQueryLoggingConfigsRequestPrivate : public Route53RequestPrivate {
+class ListQueryLoggingConfigsRequestPrivate : public Route53RequestPrivate {
 
 public:
     ListQueryLoggingConfigsRequestPrivate(const Route53Request::Action action,

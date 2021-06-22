@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class AttachLoadBalancerTargetGroupsResponse;
 
-class QTAWS_EXPORT AttachLoadBalancerTargetGroupsResponsePrivate : public AutoScalingResponsePrivate {
+class AttachLoadBalancerTargetGroupsResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

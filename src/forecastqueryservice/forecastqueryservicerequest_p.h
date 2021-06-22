@@ -28,7 +28,7 @@ namespace ForecastQueryService {
 
 class ForecastQueryServiceRequest;
 
-class QTAWS_EXPORT ForecastQueryServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ForecastQueryServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ForecastQueryServiceRequest::Action action; ///< ForecastQueryService action to be performed.

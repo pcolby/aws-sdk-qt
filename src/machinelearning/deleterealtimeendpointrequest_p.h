@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteRealtimeEndpointRequest;
 
-class QTAWS_EXPORT DeleteRealtimeEndpointRequestPrivate : public MachineLearningRequestPrivate {
+class DeleteRealtimeEndpointRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteRealtimeEndpointRequestPrivate(const MachineLearningRequest::Action action,

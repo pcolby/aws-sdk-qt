@@ -27,7 +27,7 @@ namespace EMR {
 
 class RemoveManagedScalingPolicyResponse;
 
-class QTAWS_EXPORT RemoveManagedScalingPolicyResponsePrivate : public EmrResponsePrivate {
+class RemoveManagedScalingPolicyResponsePrivate : public EmrResponsePrivate {
 
 public:
 

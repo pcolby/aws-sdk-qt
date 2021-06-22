@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateContainerServiceRegistryLoginRequest;
 
-class QTAWS_EXPORT CreateContainerServiceRegistryLoginRequestPrivate : public LightsailRequestPrivate {
+class CreateContainerServiceRegistryLoginRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CreateContainerServiceRegistryLoginRequestPrivate(const LightsailRequest::Action action,

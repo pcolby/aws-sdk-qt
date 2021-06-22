@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class GetThirdPartyJobDetailsResponse;
 
-class QTAWS_EXPORT GetThirdPartyJobDetailsResponsePrivate : public CodePipelineResponsePrivate {
+class GetThirdPartyJobDetailsResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 

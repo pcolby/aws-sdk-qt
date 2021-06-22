@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteDBParameterGroupRequestPrivate : public RdsRequestPrivate {
+class DeleteDBParameterGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
     DeleteDBParameterGroupRequestPrivate(const RdsRequest::Action action,

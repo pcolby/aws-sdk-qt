@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public MediaStoreRequestPrivate {
+class TagResourceRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const MediaStoreRequest::Action action,

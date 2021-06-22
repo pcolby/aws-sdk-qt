@@ -28,7 +28,7 @@ namespace Lambda {
 
 class PutFunctionConcurrencyRequest;
 
-class QTAWS_EXPORT PutFunctionConcurrencyRequestPrivate : public LambdaRequestPrivate {
+class PutFunctionConcurrencyRequestPrivate : public LambdaRequestPrivate {
 
 public:
     PutFunctionConcurrencyRequestPrivate(const LambdaRequest::Action action,

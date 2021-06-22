@@ -27,7 +27,7 @@ namespace Amplify {
 
 class DeleteBackendEnvironmentResponse;
 
-class QTAWS_EXPORT DeleteBackendEnvironmentResponsePrivate : public AmplifyResponsePrivate {
+class DeleteBackendEnvironmentResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

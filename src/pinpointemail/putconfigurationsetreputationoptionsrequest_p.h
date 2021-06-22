@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class PutConfigurationSetReputationOptionsRequest;
 
-class QTAWS_EXPORT PutConfigurationSetReputationOptionsRequestPrivate : public PinpointEmailRequestPrivate {
+class PutConfigurationSetReputationOptionsRequestPrivate : public PinpointEmailRequestPrivate {
 
 public:
     PutConfigurationSetReputationOptionsRequestPrivate(const PinpointEmailRequest::Action action,

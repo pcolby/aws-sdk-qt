@@ -27,7 +27,7 @@ namespace Athena {
 
 class CreateDataCatalogResponse;
 
-class QTAWS_EXPORT CreateDataCatalogResponsePrivate : public AthenaResponsePrivate {
+class CreateDataCatalogResponsePrivate : public AthenaResponsePrivate {
 
 public:
 

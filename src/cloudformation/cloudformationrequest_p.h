@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class CloudFormationRequest;
 
-class QTAWS_EXPORT CloudFormationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudFormationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudFormationRequest::Action action; ///< CloudFormation action to be performed.

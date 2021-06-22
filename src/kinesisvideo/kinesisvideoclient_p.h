@@ -29,7 +29,7 @@ namespace KinesisVideo {
 
 class KinesisVideoClient;
 
-class QTAWS_EXPORT KinesisVideoClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class KinesisVideoClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     KinesisVideoClientPrivate(KinesisVideoClient * const q);

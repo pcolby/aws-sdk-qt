@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteOriginRequestPolicyRequest;
 
-class QTAWS_EXPORT DeleteOriginRequestPolicyRequestPrivate : public CloudFrontRequestPrivate {
+class DeleteOriginRequestPolicyRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     DeleteOriginRequestPolicyRequestPrivate(const CloudFrontRequest::Action action,

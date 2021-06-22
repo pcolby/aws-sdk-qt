@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class CreateSizeConstraintSetResponse;
 
-class QTAWS_EXPORT CreateSizeConstraintSetResponsePrivate : public WAFRegionalResponsePrivate {
+class CreateSizeConstraintSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

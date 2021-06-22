@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteAppInstanceRequest;
 
-class QTAWS_EXPORT DeleteAppInstanceRequestPrivate : public ChimeRequestPrivate {
+class DeleteAppInstanceRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DeleteAppInstanceRequestPrivate(const ChimeRequest::Action action,

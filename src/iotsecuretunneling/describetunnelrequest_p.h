@@ -28,7 +28,7 @@ namespace IoTSecureTunneling {
 
 class DescribeTunnelRequest;
 
-class QTAWS_EXPORT DescribeTunnelRequestPrivate : public IoTSecureTunnelingRequestPrivate {
+class DescribeTunnelRequestPrivate : public IoTSecureTunnelingRequestPrivate {
 
 public:
     DescribeTunnelRequestPrivate(const IoTSecureTunnelingRequest::Action action,

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class AddTagsToOnPremisesInstancesRequest;
 
-class QTAWS_EXPORT AddTagsToOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
+class AddTagsToOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     AddTagsToOnPremisesInstancesRequestPrivate(const CodeDeployRequest::Action action,

@@ -28,7 +28,7 @@ namespace Chime {
 
 class UpdateAppInstanceRequest;
 
-class QTAWS_EXPORT UpdateAppInstanceRequestPrivate : public ChimeRequestPrivate {
+class UpdateAppInstanceRequestPrivate : public ChimeRequestPrivate {
 
 public:
     UpdateAppInstanceRequestPrivate(const ChimeRequest::Action action,

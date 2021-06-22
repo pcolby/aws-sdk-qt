@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public ChimeResponsePrivate {
+class ListTagsForResourceResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

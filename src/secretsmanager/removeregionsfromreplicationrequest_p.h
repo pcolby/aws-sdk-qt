@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class RemoveRegionsFromReplicationRequest;
 
-class QTAWS_EXPORT RemoveRegionsFromReplicationRequestPrivate : public SecretsManagerRequestPrivate {
+class RemoveRegionsFromReplicationRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     RemoveRegionsFromReplicationRequestPrivate(const SecretsManagerRequest::Action action,

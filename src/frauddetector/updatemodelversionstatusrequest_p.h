@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class UpdateModelVersionStatusRequest;
 
-class QTAWS_EXPORT UpdateModelVersionStatusRequestPrivate : public FraudDetectorRequestPrivate {
+class UpdateModelVersionStatusRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     UpdateModelVersionStatusRequestPrivate(const FraudDetectorRequest::Action action,

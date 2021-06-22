@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class GetAttributesRequest;
 
-class QTAWS_EXPORT GetAttributesRequestPrivate : public SimpleDBRequestPrivate {
+class GetAttributesRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
     GetAttributesRequestPrivate(const SimpleDBRequest::Action action,

@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public OrganizationsResponsePrivate {
+class ListTagsForResourceResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

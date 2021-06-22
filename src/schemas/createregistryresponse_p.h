@@ -27,7 +27,7 @@ namespace Schemas {
 
 class CreateRegistryResponse;
 
-class QTAWS_EXPORT CreateRegistryResponsePrivate : public SchemasResponsePrivate {
+class CreateRegistryResponsePrivate : public SchemasResponsePrivate {
 
 public:
 

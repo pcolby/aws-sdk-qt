@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class UpdateFirewallDomainsRequest;
 
-class QTAWS_EXPORT UpdateFirewallDomainsRequestPrivate : public Route53ResolverRequestPrivate {
+class UpdateFirewallDomainsRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     UpdateFirewallDomainsRequestPrivate(const Route53ResolverRequest::Action action,

@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class GetReplicationSetRequest;
 
-class QTAWS_EXPORT GetReplicationSetRequestPrivate : public SSMIncidentsRequestPrivate {
+class GetReplicationSetRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     GetReplicationSetRequestPrivate(const SSMIncidentsRequest::Action action,

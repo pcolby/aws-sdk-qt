@@ -28,7 +28,7 @@ namespace EC2 {
 
 class TerminateClientVpnConnectionsRequest;
 
-class QTAWS_EXPORT TerminateClientVpnConnectionsRequestPrivate : public Ec2RequestPrivate {
+class TerminateClientVpnConnectionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     TerminateClientVpnConnectionsRequestPrivate(const Ec2Request::Action action,

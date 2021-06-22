@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListModelBiasJobDefinitionsResponse;
 
-class QTAWS_EXPORT ListModelBiasJobDefinitionsResponsePrivate : public SageMakerResponsePrivate {
+class ListModelBiasJobDefinitionsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

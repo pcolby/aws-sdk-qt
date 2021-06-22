@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class GetDeploymentGroupRequest;
 
-class QTAWS_EXPORT GetDeploymentGroupRequestPrivate : public CodeDeployRequestPrivate {
+class GetDeploymentGroupRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     GetDeploymentGroupRequestPrivate(const CodeDeployRequest::Action action,

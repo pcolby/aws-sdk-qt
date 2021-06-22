@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class StartModelResponse;
 
-class QTAWS_EXPORT StartModelResponsePrivate : public LookoutforVisionResponsePrivate {
+class StartModelResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 

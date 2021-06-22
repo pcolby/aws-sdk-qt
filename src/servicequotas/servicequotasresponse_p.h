@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class ServiceQuotasResponse;
 
-class QTAWS_EXPORT ServiceQuotasResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ServiceQuotasResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

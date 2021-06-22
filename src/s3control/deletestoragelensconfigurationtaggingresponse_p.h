@@ -27,7 +27,7 @@ namespace S3Control {
 
 class DeleteStorageLensConfigurationTaggingResponse;
 
-class QTAWS_EXPORT DeleteStorageLensConfigurationTaggingResponsePrivate : public S3ControlResponsePrivate {
+class DeleteStorageLensConfigurationTaggingResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

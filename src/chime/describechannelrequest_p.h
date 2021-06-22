@@ -28,7 +28,7 @@ namespace Chime {
 
 class DescribeChannelRequest;
 
-class QTAWS_EXPORT DescribeChannelRequestPrivate : public ChimeRequestPrivate {
+class DescribeChannelRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DescribeChannelRequestPrivate(const ChimeRequest::Action action,

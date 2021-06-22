@@ -29,7 +29,7 @@ namespace NetworkManager {
 
 class NetworkManagerClient;
 
-class QTAWS_EXPORT NetworkManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class NetworkManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     NetworkManagerClientPrivate(NetworkManagerClient * const q);

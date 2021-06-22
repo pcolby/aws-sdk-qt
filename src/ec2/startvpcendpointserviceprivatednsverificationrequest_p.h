@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StartVpcEndpointServicePrivateDnsVerificationRequest;
 
-class QTAWS_EXPORT StartVpcEndpointServicePrivateDnsVerificationRequestPrivate : public Ec2RequestPrivate {
+class StartVpcEndpointServicePrivateDnsVerificationRequestPrivate : public Ec2RequestPrivate {
 
 public:
     StartVpcEndpointServicePrivateDnsVerificationRequestPrivate(const Ec2Request::Action action,

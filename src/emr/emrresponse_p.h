@@ -27,7 +27,7 @@ namespace EMR {
 
 class EmrResponse;
 
-class QTAWS_EXPORT EmrResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EmrResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

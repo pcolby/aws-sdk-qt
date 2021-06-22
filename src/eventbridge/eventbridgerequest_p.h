@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class EventBridgeRequest;
 
-class QTAWS_EXPORT EventBridgeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EventBridgeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EventBridgeRequest::Action action; ///< EventBridge action to be performed.

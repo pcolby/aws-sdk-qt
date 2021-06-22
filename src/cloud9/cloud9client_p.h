@@ -29,7 +29,7 @@ namespace Cloud9 {
 
 class Cloud9Client;
 
-class QTAWS_EXPORT Cloud9ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class Cloud9ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     Cloud9ClientPrivate(Cloud9Client * const q);

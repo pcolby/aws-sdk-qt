@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetParameterHistoryResponse;
 
-class QTAWS_EXPORT GetParameterHistoryResponsePrivate : public SsmResponsePrivate {
+class GetParameterHistoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 

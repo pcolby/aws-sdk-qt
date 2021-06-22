@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class UpdateTeamMemberRequest;
 
-class QTAWS_EXPORT UpdateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
+class UpdateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     UpdateTeamMemberRequestPrivate(const CodeStarRequest::Action action,

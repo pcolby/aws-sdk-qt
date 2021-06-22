@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class BatchDeleteImportDataResponse;
 
-class QTAWS_EXPORT BatchDeleteImportDataResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+class BatchDeleteImportDataResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
 
 public:
 

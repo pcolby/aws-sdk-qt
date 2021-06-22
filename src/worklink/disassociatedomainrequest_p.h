@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DisassociateDomainRequest;
 
-class QTAWS_EXPORT DisassociateDomainRequestPrivate : public WorkLinkRequestPrivate {
+class DisassociateDomainRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     DisassociateDomainRequestPrivate(const WorkLinkRequest::Action action,

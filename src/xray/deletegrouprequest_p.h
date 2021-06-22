@@ -28,7 +28,7 @@ namespace XRay {
 
 class DeleteGroupRequest;
 
-class QTAWS_EXPORT DeleteGroupRequestPrivate : public XRayRequestPrivate {
+class DeleteGroupRequestPrivate : public XRayRequestPrivate {
 
 public:
     DeleteGroupRequestPrivate(const XRayRequest::Action action,

@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class LexModelBuildingServiceRequest;
 
-class QTAWS_EXPORT LexModelBuildingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexModelBuildingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LexModelBuildingServiceRequest::Action action; ///< LexModelBuildingService action to be performed.

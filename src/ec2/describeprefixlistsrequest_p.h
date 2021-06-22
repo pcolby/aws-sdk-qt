@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribePrefixListsRequest;
 
-class QTAWS_EXPORT DescribePrefixListsRequestPrivate : public Ec2RequestPrivate {
+class DescribePrefixListsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribePrefixListsRequestPrivate(const Ec2Request::Action action,

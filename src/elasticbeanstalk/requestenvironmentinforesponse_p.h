@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class RequestEnvironmentInfoResponse;
 
-class QTAWS_EXPORT RequestEnvironmentInfoResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class RequestEnvironmentInfoResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

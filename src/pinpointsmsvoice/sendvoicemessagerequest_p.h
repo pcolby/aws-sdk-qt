@@ -28,7 +28,7 @@ namespace PinpointSMSVoice {
 
 class SendVoiceMessageRequest;
 
-class QTAWS_EXPORT SendVoiceMessageRequestPrivate : public PinpointSMSVoiceRequestPrivate {
+class SendVoiceMessageRequestPrivate : public PinpointSMSVoiceRequestPrivate {
 
 public:
     SendVoiceMessageRequestPrivate(const PinpointSMSVoiceRequest::Action action,

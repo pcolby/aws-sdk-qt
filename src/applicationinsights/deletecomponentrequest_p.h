@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class DeleteComponentRequest;
 
-class QTAWS_EXPORT DeleteComponentRequestPrivate : public ApplicationInsightsRequestPrivate {
+class DeleteComponentRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     DeleteComponentRequestPrivate(const ApplicationInsightsRequest::Action action,

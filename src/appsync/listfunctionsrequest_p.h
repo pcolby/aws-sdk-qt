@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListFunctionsRequest;
 
-class QTAWS_EXPORT ListFunctionsRequestPrivate : public AppSyncRequestPrivate {
+class ListFunctionsRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListFunctionsRequestPrivate(const AppSyncRequest::Action action,

@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetChangeRequest;
 
-class QTAWS_EXPORT GetChangeRequestPrivate : public Route53RequestPrivate {
+class GetChangeRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetChangeRequestPrivate(const Route53Request::Action action,

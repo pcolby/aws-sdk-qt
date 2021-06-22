@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class BatchImportFindingsRequest;
 
-class QTAWS_EXPORT BatchImportFindingsRequestPrivate : public SecurityHubRequestPrivate {
+class BatchImportFindingsRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     BatchImportFindingsRequestPrivate(const SecurityHubRequest::Action action,

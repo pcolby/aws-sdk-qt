@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class UpdateWorldTemplateRequest;
 
-class QTAWS_EXPORT UpdateWorldTemplateRequestPrivate : public RoboMakerRequestPrivate {
+class UpdateWorldTemplateRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     UpdateWorldTemplateRequestPrivate(const RoboMakerRequest::Action action,

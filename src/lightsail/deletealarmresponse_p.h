@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteAlarmResponse;
 
-class QTAWS_EXPORT DeleteAlarmResponsePrivate : public LightsailResponsePrivate {
+class DeleteAlarmResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace S3Control {
 
 class ListRegionalBucketsResponse;
 
-class QTAWS_EXPORT ListRegionalBucketsResponsePrivate : public S3ControlResponsePrivate {
+class ListRegionalBucketsResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

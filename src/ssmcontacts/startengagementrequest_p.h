@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class StartEngagementRequest;
 
-class QTAWS_EXPORT StartEngagementRequestPrivate : public SSMContactsRequestPrivate {
+class StartEngagementRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     StartEngagementRequestPrivate(const SSMContactsRequest::Action action,

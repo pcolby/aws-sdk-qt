@@ -28,7 +28,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class PutRecordRequest;
 
-class QTAWS_EXPORT PutRecordRequestPrivate : public SageMakerFeatureStoreRuntimeRequestPrivate {
+class PutRecordRequestPrivate : public SageMakerFeatureStoreRuntimeRequestPrivate {
 
 public:
     PutRecordRequestPrivate(const SageMakerFeatureStoreRuntimeRequest::Action action,

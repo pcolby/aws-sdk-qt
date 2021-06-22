@@ -27,7 +27,7 @@ namespace mgn {
 
 class mgnResponse;
 
-class QTAWS_EXPORT mgnResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class mgnResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

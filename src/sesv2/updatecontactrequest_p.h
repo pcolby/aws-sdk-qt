@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class UpdateContactRequest;
 
-class QTAWS_EXPORT UpdateContactRequestPrivate : public Sesv2RequestPrivate {
+class UpdateContactRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     UpdateContactRequestPrivate(const Sesv2Request::Action action,

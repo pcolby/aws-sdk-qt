@@ -27,7 +27,7 @@ namespace EFS {
 
 class PutBackupPolicyResponse;
 
-class QTAWS_EXPORT PutBackupPolicyResponsePrivate : public EfsResponsePrivate {
+class PutBackupPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 

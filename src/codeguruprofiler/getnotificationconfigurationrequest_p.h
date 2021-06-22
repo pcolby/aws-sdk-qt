@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class GetNotificationConfigurationRequest;
 
-class QTAWS_EXPORT GetNotificationConfigurationRequestPrivate : public CodeGuruProfilerRequestPrivate {
+class GetNotificationConfigurationRequestPrivate : public CodeGuruProfilerRequestPrivate {
 
 public:
     GetNotificationConfigurationRequestPrivate(const CodeGuruProfilerRequest::Action action,

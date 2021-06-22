@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public ComprehendRequestPrivate {
+class UntagResourceRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const ComprehendRequest::Action action,

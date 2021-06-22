@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeExportTasksRequest;
 
-class QTAWS_EXPORT DescribeExportTasksRequestPrivate : public RdsRequestPrivate {
+class DescribeExportTasksRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeExportTasksRequestPrivate(const RdsRequest::Action action,

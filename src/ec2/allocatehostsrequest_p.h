@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AllocateHostsRequest;
 
-class QTAWS_EXPORT AllocateHostsRequestPrivate : public Ec2RequestPrivate {
+class AllocateHostsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     AllocateHostsRequestPrivate(const Ec2Request::Action action,

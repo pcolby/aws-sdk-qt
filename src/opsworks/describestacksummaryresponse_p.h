@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeStackSummaryResponse;
 
-class QTAWS_EXPORT DescribeStackSummaryResponsePrivate : public OpsWorksResponsePrivate {
+class DescribeStackSummaryResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

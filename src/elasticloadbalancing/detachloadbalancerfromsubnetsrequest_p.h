@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DetachLoadBalancerFromSubnetsRequest;
 
-class QTAWS_EXPORT DetachLoadBalancerFromSubnetsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
+class DetachLoadBalancerFromSubnetsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DetachLoadBalancerFromSubnetsRequestPrivate(const ElasticLoadBalancingRequest::Action action,

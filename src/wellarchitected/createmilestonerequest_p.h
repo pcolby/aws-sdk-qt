@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class CreateMilestoneRequest;
 
-class QTAWS_EXPORT CreateMilestoneRequestPrivate : public WellArchitectedRequestPrivate {
+class CreateMilestoneRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     CreateMilestoneRequestPrivate(const WellArchitectedRequest::Action action,

@@ -28,7 +28,7 @@ namespace ECR {
 
 class BatchGetImageRequest;
 
-class QTAWS_EXPORT BatchGetImageRequestPrivate : public EcrRequestPrivate {
+class BatchGetImageRequestPrivate : public EcrRequestPrivate {
 
 public:
     BatchGetImageRequestPrivate(const EcrRequest::Action action,

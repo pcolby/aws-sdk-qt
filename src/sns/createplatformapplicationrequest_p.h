@@ -28,7 +28,7 @@ namespace SNS {
 
 class CreatePlatformApplicationRequest;
 
-class QTAWS_EXPORT CreatePlatformApplicationRequestPrivate : public SnsRequestPrivate {
+class CreatePlatformApplicationRequestPrivate : public SnsRequestPrivate {
 
 public:
     CreatePlatformApplicationRequestPrivate(const SnsRequest::Action action,

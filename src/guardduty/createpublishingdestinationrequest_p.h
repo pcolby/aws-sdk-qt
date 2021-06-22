@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class CreatePublishingDestinationRequest;
 
-class QTAWS_EXPORT CreatePublishingDestinationRequestPrivate : public GuardDutyRequestPrivate {
+class CreatePublishingDestinationRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     CreatePublishingDestinationRequestPrivate(const GuardDutyRequest::Action action,

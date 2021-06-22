@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DeletePackageVersionsResponse;
 
-class QTAWS_EXPORT DeletePackageVersionsResponsePrivate : public CodeArtifactResponsePrivate {
+class DeletePackageVersionsResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class LightsailResponse;
 
-class QTAWS_EXPORT LightsailResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LightsailResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

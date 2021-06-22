@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class ViewBillingRequest;
 
-class QTAWS_EXPORT ViewBillingRequestPrivate : public Route53DomainsRequestPrivate {
+class ViewBillingRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     ViewBillingRequestPrivate(const Route53DomainsRequest::Action action,

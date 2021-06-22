@@ -29,7 +29,7 @@ namespace STS {
 
 class StsClient;
 
-class QTAWS_EXPORT StsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class StsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     StsClientPrivate(StsClient * const q);

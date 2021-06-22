@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeServicesRequest;
 
-class QTAWS_EXPORT DescribeServicesRequestPrivate : public SupportRequestPrivate {
+class DescribeServicesRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeServicesRequestPrivate(const SupportRequest::Action action,

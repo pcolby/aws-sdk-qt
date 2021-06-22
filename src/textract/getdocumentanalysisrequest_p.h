@@ -28,7 +28,7 @@ namespace Textract {
 
 class GetDocumentAnalysisRequest;
 
-class QTAWS_EXPORT GetDocumentAnalysisRequestPrivate : public TextractRequestPrivate {
+class GetDocumentAnalysisRequestPrivate : public TextractRequestPrivate {
 
 public:
     GetDocumentAnalysisRequestPrivate(const TextractRequest::Action action,

@@ -27,7 +27,7 @@ namespace Schemas {
 
 class UpdateSchemaResponse;
 
-class QTAWS_EXPORT UpdateSchemaResponsePrivate : public SchemasResponsePrivate {
+class UpdateSchemaResponsePrivate : public SchemasResponsePrivate {
 
 public:
 

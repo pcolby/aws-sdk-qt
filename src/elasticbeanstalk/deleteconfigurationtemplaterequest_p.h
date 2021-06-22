@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DeleteConfigurationTemplateRequest;
 
-class QTAWS_EXPORT DeleteConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class DeleteConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DeleteConfigurationTemplateRequestPrivate(const ElasticBeanstalkRequest::Action action,

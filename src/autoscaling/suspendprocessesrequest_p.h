@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class SuspendProcessesRequest;
 
-class QTAWS_EXPORT SuspendProcessesRequestPrivate : public AutoScalingRequestPrivate {
+class SuspendProcessesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     SuspendProcessesRequestPrivate(const AutoScalingRequest::Action action,

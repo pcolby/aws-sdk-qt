@@ -28,7 +28,7 @@ namespace MWAA {
 
 class MwaaRequest;
 
-class QTAWS_EXPORT MwaaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MwaaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MwaaRequest::Action action; ///< MWAA action to be performed.

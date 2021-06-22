@@ -28,7 +28,7 @@ namespace SQS {
 
 class ChangeMessageVisibilityBatchRequest;
 
-class QTAWS_EXPORT ChangeMessageVisibilityBatchRequestPrivate : public SqsRequestPrivate {
+class ChangeMessageVisibilityBatchRequestPrivate : public SqsRequestPrivate {
 
 public:
     ChangeMessageVisibilityBatchRequestPrivate(const SqsRequest::Action action,

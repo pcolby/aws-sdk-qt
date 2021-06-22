@@ -28,7 +28,7 @@ namespace AppSync {
 
 class UpdateApiKeyRequest;
 
-class QTAWS_EXPORT UpdateApiKeyRequestPrivate : public AppSyncRequestPrivate {
+class UpdateApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     UpdateApiKeyRequestPrivate(const AppSyncRequest::Action action,

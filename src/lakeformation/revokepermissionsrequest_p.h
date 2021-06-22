@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class RevokePermissionsRequest;
 
-class QTAWS_EXPORT RevokePermissionsRequestPrivate : public LakeFormationRequestPrivate {
+class RevokePermissionsRequestPrivate : public LakeFormationRequestPrivate {
 
 public:
     RevokePermissionsRequestPrivate(const LakeFormationRequest::Action action,

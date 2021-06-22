@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class ListVirtualClustersResponse;
 
-class QTAWS_EXPORT ListVirtualClustersResponsePrivate : public EMRContainersResponsePrivate {
+class ListVirtualClustersResponsePrivate : public EMRContainersResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class SkipWaitTimeForInstanceTerminationRequest;
 
-class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationRequestPrivate : public CodeDeployRequestPrivate {
+class SkipWaitTimeForInstanceTerminationRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     SkipWaitTimeForInstanceTerminationRequestPrivate(const CodeDeployRequest::Action action,

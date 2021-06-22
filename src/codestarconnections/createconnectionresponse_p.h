@@ -27,7 +27,7 @@ namespace CodeStarconnections {
 
 class CreateConnectionResponse;
 
-class QTAWS_EXPORT CreateConnectionResponsePrivate : public CodeStarconnectionsResponsePrivate {
+class CreateConnectionResponsePrivate : public CodeStarconnectionsResponsePrivate {
 
 public:
 

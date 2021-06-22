@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CodeCommitRequestPrivate {
+class TagResourceRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CodeCommitRequest::Action action,

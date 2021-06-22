@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetMLTaskRunsRequest;
 
-class QTAWS_EXPORT GetMLTaskRunsRequestPrivate : public GlueRequestPrivate {
+class GetMLTaskRunsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetMLTaskRunsRequestPrivate(const GlueRequest::Action action,

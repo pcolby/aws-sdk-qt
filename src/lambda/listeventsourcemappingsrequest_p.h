@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListEventSourceMappingsRequest;
 
-class QTAWS_EXPORT ListEventSourceMappingsRequestPrivate : public LambdaRequestPrivate {
+class ListEventSourceMappingsRequestPrivate : public LambdaRequestPrivate {
 
 public:
     ListEventSourceMappingsRequestPrivate(const LambdaRequest::Action action,

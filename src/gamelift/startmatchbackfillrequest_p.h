@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StartMatchBackfillRequest;
 
-class QTAWS_EXPORT StartMatchBackfillRequestPrivate : public GameLiftRequestPrivate {
+class StartMatchBackfillRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     StartMatchBackfillRequestPrivate(const GameLiftRequest::Action action,

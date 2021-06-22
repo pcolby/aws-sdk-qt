@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class EMRContainersResponse;
 
-class QTAWS_EXPORT EMRContainersResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EMRContainersResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

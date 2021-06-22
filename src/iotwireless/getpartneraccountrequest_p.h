@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class GetPartnerAccountRequest;
 
-class QTAWS_EXPORT GetPartnerAccountRequestPrivate : public IoTWirelessRequestPrivate {
+class GetPartnerAccountRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     GetPartnerAccountRequestPrivate(const IoTWirelessRequest::Action action,

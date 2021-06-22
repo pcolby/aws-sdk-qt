@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public FraudDetectorRequestPrivate {
+class TagResourceRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const FraudDetectorRequest::Action action,

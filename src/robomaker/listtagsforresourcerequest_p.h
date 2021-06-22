@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public RoboMakerRequestPrivate {
+class ListTagsForResourceRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const RoboMakerRequest::Action action,

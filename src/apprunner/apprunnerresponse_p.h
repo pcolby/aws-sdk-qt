@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class AppRunnerResponse;
 
-class QTAWS_EXPORT AppRunnerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppRunnerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class IncreaseStreamRetentionPeriodRequest;
 
-class QTAWS_EXPORT IncreaseStreamRetentionPeriodRequestPrivate : public KinesisRequestPrivate {
+class IncreaseStreamRetentionPeriodRequestPrivate : public KinesisRequestPrivate {
 
 public:
     IncreaseStreamRetentionPeriodRequestPrivate(const KinesisRequest::Action action,

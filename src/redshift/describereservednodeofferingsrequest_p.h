@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeReservedNodeOfferingsRequest;
 
-class QTAWS_EXPORT DescribeReservedNodeOfferingsRequestPrivate : public RedshiftRequestPrivate {
+class DescribeReservedNodeOfferingsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeReservedNodeOfferingsRequestPrivate(const RedshiftRequest::Action action,

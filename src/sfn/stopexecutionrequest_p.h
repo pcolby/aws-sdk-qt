@@ -28,7 +28,7 @@ namespace SFN {
 
 class StopExecutionRequest;
 
-class QTAWS_EXPORT StopExecutionRequestPrivate : public SfnRequestPrivate {
+class StopExecutionRequestPrivate : public SfnRequestPrivate {
 
 public:
     StopExecutionRequestPrivate(const SfnRequest::Action action,

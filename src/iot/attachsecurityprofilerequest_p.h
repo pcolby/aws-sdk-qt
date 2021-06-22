@@ -28,7 +28,7 @@ namespace IoT {
 
 class AttachSecurityProfileRequest;
 
-class QTAWS_EXPORT AttachSecurityProfileRequestPrivate : public IoTRequestPrivate {
+class AttachSecurityProfileRequestPrivate : public IoTRequestPrivate {
 
 public:
     AttachSecurityProfileRequestPrivate(const IoTRequest::Action action,

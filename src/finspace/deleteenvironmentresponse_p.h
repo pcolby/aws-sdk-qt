@@ -27,7 +27,7 @@ namespace finspace {
 
 class DeleteEnvironmentResponse;
 
-class QTAWS_EXPORT DeleteEnvironmentResponsePrivate : public finspaceResponsePrivate {
+class DeleteEnvironmentResponsePrivate : public finspaceResponsePrivate {
 
 public:
 

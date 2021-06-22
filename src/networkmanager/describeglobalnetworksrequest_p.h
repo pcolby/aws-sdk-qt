@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class DescribeGlobalNetworksRequest;
 
-class QTAWS_EXPORT DescribeGlobalNetworksRequestPrivate : public NetworkManagerRequestPrivate {
+class DescribeGlobalNetworksRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     DescribeGlobalNetworksRequestPrivate(const NetworkManagerRequest::Action action,

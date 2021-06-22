@@ -28,7 +28,7 @@ namespace IoT1ClickProjects {
 
 class UpdateProjectRequest;
 
-class QTAWS_EXPORT UpdateProjectRequestPrivate : public IoT1ClickProjectsRequestPrivate {
+class UpdateProjectRequestPrivate : public IoT1ClickProjectsRequestPrivate {
 
 public:
     UpdateProjectRequestPrivate(const IoT1ClickProjectsRequest::Action action,

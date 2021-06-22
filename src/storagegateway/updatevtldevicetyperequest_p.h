@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateVTLDeviceTypeRequest;
 
-class QTAWS_EXPORT UpdateVTLDeviceTypeRequestPrivate : public StorageGatewayRequestPrivate {
+class UpdateVTLDeviceTypeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateVTLDeviceTypeRequestPrivate(const StorageGatewayRequest::Action action,

@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class BatchStartRequest;
 
-class QTAWS_EXPORT BatchStartRequestPrivate : public MediaLiveRequestPrivate {
+class BatchStartRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     BatchStartRequestPrivate(const MediaLiveRequest::Action action,

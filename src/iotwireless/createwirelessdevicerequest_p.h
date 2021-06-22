@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class CreateWirelessDeviceRequest;
 
-class QTAWS_EXPORT CreateWirelessDeviceRequestPrivate : public IoTWirelessRequestPrivate {
+class CreateWirelessDeviceRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     CreateWirelessDeviceRequestPrivate(const IoTWirelessRequest::Action action,

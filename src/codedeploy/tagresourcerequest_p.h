@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CodeDeployRequestPrivate {
+class TagResourceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CodeDeployRequest::Action action,

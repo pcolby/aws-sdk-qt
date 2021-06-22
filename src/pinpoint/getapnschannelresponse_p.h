@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetApnsChannelResponse;
 
-class QTAWS_EXPORT GetApnsChannelResponsePrivate : public PinpointResponsePrivate {
+class GetApnsChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

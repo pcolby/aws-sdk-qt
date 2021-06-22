@@ -28,7 +28,7 @@ namespace Personalize {
 
 class CreateSolutionRequest;
 
-class QTAWS_EXPORT CreateSolutionRequestPrivate : public PersonalizeRequestPrivate {
+class CreateSolutionRequestPrivate : public PersonalizeRequestPrivate {
 
 public:
     CreateSolutionRequestPrivate(const PersonalizeRequest::Action action,

@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class ListConfigurationHistoryRequest;
 
-class QTAWS_EXPORT ListConfigurationHistoryRequestPrivate : public ApplicationInsightsRequestPrivate {
+class ListConfigurationHistoryRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     ListConfigurationHistoryRequestPrivate(const ApplicationInsightsRequest::Action action,

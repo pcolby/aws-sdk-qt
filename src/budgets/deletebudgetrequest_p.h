@@ -28,7 +28,7 @@ namespace Budgets {
 
 class DeleteBudgetRequest;
 
-class QTAWS_EXPORT DeleteBudgetRequestPrivate : public BudgetsRequestPrivate {
+class DeleteBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     DeleteBudgetRequestPrivate(const BudgetsRequest::Action action,

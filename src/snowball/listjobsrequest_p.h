@@ -28,7 +28,7 @@ namespace Snowball {
 
 class ListJobsRequest;
 
-class QTAWS_EXPORT ListJobsRequestPrivate : public SnowballRequestPrivate {
+class ListJobsRequestPrivate : public SnowballRequestPrivate {
 
 public:
     ListJobsRequestPrivate(const SnowballRequest::Action action,

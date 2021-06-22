@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class WithdrawByoipCidrRequest;
 
-class QTAWS_EXPORT WithdrawByoipCidrRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class WithdrawByoipCidrRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     WithdrawByoipCidrRequestPrivate(const GlobalAcceleratorRequest::Action action,

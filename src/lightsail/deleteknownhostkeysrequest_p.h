@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteKnownHostKeysRequest;
 
-class QTAWS_EXPORT DeleteKnownHostKeysRequestPrivate : public LightsailRequestPrivate {
+class DeleteKnownHostKeysRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteKnownHostKeysRequestPrivate(const LightsailRequest::Action action,

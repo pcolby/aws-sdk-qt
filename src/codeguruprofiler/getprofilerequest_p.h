@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class GetProfileRequest;
 
-class QTAWS_EXPORT GetProfileRequestPrivate : public CodeGuruProfilerRequestPrivate {
+class GetProfileRequestPrivate : public CodeGuruProfilerRequestPrivate {
 
 public:
     GetProfileRequestPrivate(const CodeGuruProfilerRequest::Action action,

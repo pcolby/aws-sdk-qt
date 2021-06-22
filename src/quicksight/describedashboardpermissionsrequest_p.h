@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DescribeDashboardPermissionsRequest;
 
-class QTAWS_EXPORT DescribeDashboardPermissionsRequestPrivate : public QuickSightRequestPrivate {
+class DescribeDashboardPermissionsRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DescribeDashboardPermissionsRequestPrivate(const QuickSightRequest::Action action,

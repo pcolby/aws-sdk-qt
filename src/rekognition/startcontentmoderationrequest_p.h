@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartContentModerationRequest;
 
-class QTAWS_EXPORT StartContentModerationRequestPrivate : public RekognitionRequestPrivate {
+class StartContentModerationRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StartContentModerationRequestPrivate(const RekognitionRequest::Action action,

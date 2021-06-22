@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class GlobalAcceleratorRequest;
 
-class QTAWS_EXPORT GlobalAcceleratorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GlobalAcceleratorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GlobalAcceleratorRequest::Action action; ///< GlobalAccelerator action to be performed.

@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class CreateLagResponse;
 
-class QTAWS_EXPORT CreateLagResponsePrivate : public DirectConnectResponsePrivate {
+class CreateLagResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 

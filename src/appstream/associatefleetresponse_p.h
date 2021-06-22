@@ -27,7 +27,7 @@ namespace AppStream {
 
 class AssociateFleetResponse;
 
-class QTAWS_EXPORT AssociateFleetResponsePrivate : public AppStreamResponsePrivate {
+class AssociateFleetResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class EnableSnapshotCopyRequest;
 
-class QTAWS_EXPORT EnableSnapshotCopyRequestPrivate : public RedshiftRequestPrivate {
+class EnableSnapshotCopyRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     EnableSnapshotCopyRequestPrivate(const RedshiftRequest::Action action,

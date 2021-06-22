@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GetInvitationsCountResponse;
 
-class QTAWS_EXPORT GetInvitationsCountResponsePrivate : public GuardDutyResponsePrivate {
+class GetInvitationsCountResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

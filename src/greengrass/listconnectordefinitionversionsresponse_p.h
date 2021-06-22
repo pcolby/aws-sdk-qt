@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListConnectorDefinitionVersionsResponse;
 
-class QTAWS_EXPORT ListConnectorDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
+class ListConnectorDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class CreateMemberRequest;
 
-class QTAWS_EXPORT CreateMemberRequestPrivate : public Macie2RequestPrivate {
+class CreateMemberRequestPrivate : public Macie2RequestPrivate {
 
 public:
     CreateMemberRequestPrivate(const Macie2Request::Action action,

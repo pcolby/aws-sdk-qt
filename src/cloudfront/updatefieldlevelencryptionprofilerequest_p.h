@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class UpdateFieldLevelEncryptionProfileRequest;
 
-class QTAWS_EXPORT UpdateFieldLevelEncryptionProfileRequestPrivate : public CloudFrontRequestPrivate {
+class UpdateFieldLevelEncryptionProfileRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     UpdateFieldLevelEncryptionProfileRequestPrivate(const CloudFrontRequest::Action action,

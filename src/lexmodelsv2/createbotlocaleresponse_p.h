@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class CreateBotLocaleResponse;
 
-class QTAWS_EXPORT CreateBotLocaleResponsePrivate : public LexModelsV2ResponsePrivate {
+class CreateBotLocaleResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

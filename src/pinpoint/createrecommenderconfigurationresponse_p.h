@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class CreateRecommenderConfigurationResponse;
 
-class QTAWS_EXPORT CreateRecommenderConfigurationResponsePrivate : public PinpointResponsePrivate {
+class CreateRecommenderConfigurationResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

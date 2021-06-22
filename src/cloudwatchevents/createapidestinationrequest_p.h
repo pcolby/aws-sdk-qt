@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class CreateApiDestinationRequest;
 
-class QTAWS_EXPORT CreateApiDestinationRequestPrivate : public CloudWatchEventsRequestPrivate {
+class CreateApiDestinationRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     CreateApiDestinationRequestPrivate(const CloudWatchEventsRequest::Action action,

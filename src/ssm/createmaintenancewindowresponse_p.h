@@ -27,7 +27,7 @@ namespace SSM {
 
 class CreateMaintenanceWindowResponse;
 
-class QTAWS_EXPORT CreateMaintenanceWindowResponsePrivate : public SsmResponsePrivate {
+class CreateMaintenanceWindowResponsePrivate : public SsmResponsePrivate {
 
 public:
 

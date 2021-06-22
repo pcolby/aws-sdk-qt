@@ -28,7 +28,7 @@ namespace IVS {
 
 class GetChannelRequest;
 
-class QTAWS_EXPORT GetChannelRequestPrivate : public IvsRequestPrivate {
+class GetChannelRequestPrivate : public IvsRequestPrivate {
 
 public:
     GetChannelRequestPrivate(const IvsRequest::Action action,

@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DescribeAlgorithmResponse;
 
-class QTAWS_EXPORT DescribeAlgorithmResponsePrivate : public PersonalizeResponsePrivate {
+class DescribeAlgorithmResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

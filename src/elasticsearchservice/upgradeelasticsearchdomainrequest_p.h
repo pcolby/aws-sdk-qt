@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class UpgradeElasticsearchDomainRequest;
 
-class QTAWS_EXPORT UpgradeElasticsearchDomainRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class UpgradeElasticsearchDomainRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     UpgradeElasticsearchDomainRequestPrivate(const ElasticsearchServiceRequest::Action action,

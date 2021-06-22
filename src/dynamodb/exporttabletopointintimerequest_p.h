@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ExportTableToPointInTimeRequest;
 
-class QTAWS_EXPORT ExportTableToPointInTimeRequestPrivate : public DynamoDBRequestPrivate {
+class ExportTableToPointInTimeRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ExportTableToPointInTimeRequestPrivate(const DynamoDBRequest::Action action,

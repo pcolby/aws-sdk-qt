@@ -27,7 +27,7 @@ namespace Braket {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public BraketResponsePrivate {
+class UntagResourceResponsePrivate : public BraketResponsePrivate {
 
 public:
 

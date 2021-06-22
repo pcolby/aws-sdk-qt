@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class StartStudioSSOConfigurationRepairRequest;
 
-class QTAWS_EXPORT StartStudioSSOConfigurationRepairRequestPrivate : public NimbleStudioRequestPrivate {
+class StartStudioSSOConfigurationRepairRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     StartStudioSSOConfigurationRepairRequestPrivate(const NimbleStudioRequest::Action action,

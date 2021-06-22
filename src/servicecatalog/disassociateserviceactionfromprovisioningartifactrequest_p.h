@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DisassociateServiceActionFromProvisioningArtifactRequest;
 
-class QTAWS_EXPORT DisassociateServiceActionFromProvisioningArtifactRequestPrivate : public ServiceCatalogRequestPrivate {
+class DisassociateServiceActionFromProvisioningArtifactRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DisassociateServiceActionFromProvisioningArtifactRequestPrivate(const ServiceCatalogRequest::Action action,

@@ -29,7 +29,7 @@ namespace Core {
 
 class AwsRegion;
 
-class QTAWS_EXPORT AwsRegionPrivate {
+class AwsRegionPrivate {
 
 public:
     AwsRegionPrivate(const int region, AwsRegion * const q);

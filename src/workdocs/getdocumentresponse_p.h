@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class GetDocumentResponse;
 
-class QTAWS_EXPORT GetDocumentResponsePrivate : public WorkDocsResponsePrivate {
+class GetDocumentResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

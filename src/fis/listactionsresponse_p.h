@@ -27,7 +27,7 @@ namespace FIS {
 
 class ListActionsResponse;
 
-class QTAWS_EXPORT ListActionsResponsePrivate : public FisResponsePrivate {
+class ListActionsResponsePrivate : public FisResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DescribeAlarmsRequest;
 
-class QTAWS_EXPORT DescribeAlarmsRequestPrivate : public CloudWatchRequestPrivate {
+class DescribeAlarmsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DescribeAlarmsRequestPrivate(const CloudWatchRequest::Action action,

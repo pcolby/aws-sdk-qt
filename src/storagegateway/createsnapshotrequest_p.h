@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CreateSnapshotRequest;
 
-class QTAWS_EXPORT CreateSnapshotRequestPrivate : public StorageGatewayRequestPrivate {
+class CreateSnapshotRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CreateSnapshotRequestPrivate(const StorageGatewayRequest::Action action,

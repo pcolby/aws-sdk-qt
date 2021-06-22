@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeInputDeviceThumbnailRequest;
 
-class QTAWS_EXPORT DescribeInputDeviceThumbnailRequestPrivate : public MediaLiveRequestPrivate {
+class DescribeInputDeviceThumbnailRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DescribeInputDeviceThumbnailRequestPrivate(const MediaLiveRequest::Action action,

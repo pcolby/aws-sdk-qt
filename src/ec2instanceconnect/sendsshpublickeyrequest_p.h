@@ -28,7 +28,7 @@ namespace EC2InstanceConnect {
 
 class SendSSHPublicKeyRequest;
 
-class QTAWS_EXPORT SendSSHPublicKeyRequestPrivate : public EC2InstanceConnectRequestPrivate {
+class SendSSHPublicKeyRequestPrivate : public EC2InstanceConnectRequestPrivate {
 
 public:
     SendSSHPublicKeyRequestPrivate(const EC2InstanceConnectRequest::Action action,

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DeleteItemRequest;
 
-class QTAWS_EXPORT DeleteItemRequestPrivate : public DynamoDBRequestPrivate {
+class DeleteItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DeleteItemRequestPrivate(const DynamoDBRequest::Action action,

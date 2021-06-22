@@ -27,7 +27,7 @@ namespace WAF {
 
 class GetRateBasedRuleManagedKeysResponse;
 
-class QTAWS_EXPORT GetRateBasedRuleManagedKeysResponsePrivate : public WafResponsePrivate {
+class GetRateBasedRuleManagedKeysResponsePrivate : public WafResponsePrivate {
 
 public:
 

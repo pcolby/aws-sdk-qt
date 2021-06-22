@@ -29,7 +29,7 @@ namespace LocationService {
 
 class LocationServiceClient;
 
-class QTAWS_EXPORT LocationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LocationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LocationServiceClientPrivate(LocationServiceClient * const q);

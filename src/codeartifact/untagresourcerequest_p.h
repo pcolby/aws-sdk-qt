@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CodeArtifactRequestPrivate {
+class UntagResourceRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CodeArtifactRequest::Action action,

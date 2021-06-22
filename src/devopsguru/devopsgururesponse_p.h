@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class DevOpsGuruResponse;
 
-class QTAWS_EXPORT DevOpsGuruResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DevOpsGuruResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

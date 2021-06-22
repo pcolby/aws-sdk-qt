@@ -28,7 +28,7 @@ namespace Athena {
 
 class CreateWorkGroupRequest;
 
-class QTAWS_EXPORT CreateWorkGroupRequestPrivate : public AthenaRequestPrivate {
+class CreateWorkGroupRequestPrivate : public AthenaRequestPrivate {
 
 public:
     CreateWorkGroupRequestPrivate(const AthenaRequest::Action action,

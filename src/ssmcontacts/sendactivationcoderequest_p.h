@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class SendActivationCodeRequest;
 
-class QTAWS_EXPORT SendActivationCodeRequestPrivate : public SSMContactsRequestPrivate {
+class SendActivationCodeRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     SendActivationCodeRequestPrivate(const SSMContactsRequest::Action action,

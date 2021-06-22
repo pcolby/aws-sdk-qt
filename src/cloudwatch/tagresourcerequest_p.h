@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CloudWatchRequestPrivate {
+class TagResourceRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CloudWatchRequest::Action action,

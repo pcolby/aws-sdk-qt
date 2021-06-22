@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class EnableImportFindingsForProductResponse;
 
-class QTAWS_EXPORT EnableImportFindingsForProductResponsePrivate : public SecurityHubResponsePrivate {
+class EnableImportFindingsForProductResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

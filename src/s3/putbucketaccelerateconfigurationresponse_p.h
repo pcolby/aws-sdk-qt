@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketAccelerateConfigurationResponse;
 
-class QTAWS_EXPORT PutBucketAccelerateConfigurationResponsePrivate : public S3ResponsePrivate {
+class PutBucketAccelerateConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 

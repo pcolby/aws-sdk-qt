@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class GetRandomPasswordRequest;
 
-class QTAWS_EXPORT GetRandomPasswordRequestPrivate : public SecretsManagerRequestPrivate {
+class GetRandomPasswordRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     GetRandomPasswordRequestPrivate(const SecretsManagerRequest::Action action,

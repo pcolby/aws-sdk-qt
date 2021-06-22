@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DisassociateCustomDomainResponse;
 
-class QTAWS_EXPORT DisassociateCustomDomainResponsePrivate : public AppRunnerResponsePrivate {
+class DisassociateCustomDomainResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

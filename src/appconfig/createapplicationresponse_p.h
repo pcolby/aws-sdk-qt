@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class CreateApplicationResponse;
 
-class QTAWS_EXPORT CreateApplicationResponsePrivate : public AppConfigResponsePrivate {
+class CreateApplicationResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateCapacityReservationRequest;
 
-class QTAWS_EXPORT CreateCapacityReservationRequestPrivate : public Ec2RequestPrivate {
+class CreateCapacityReservationRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateCapacityReservationRequestPrivate(const Ec2Request::Action action,

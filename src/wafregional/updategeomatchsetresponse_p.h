@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class UpdateGeoMatchSetResponse;
 
-class QTAWS_EXPORT UpdateGeoMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+class UpdateGeoMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

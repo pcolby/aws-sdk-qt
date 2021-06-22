@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class ResolveComponentCandidatesRequest;
 
-class QTAWS_EXPORT ResolveComponentCandidatesRequestPrivate : public GreengrassV2RequestPrivate {
+class ResolveComponentCandidatesRequestPrivate : public GreengrassV2RequestPrivate {
 
 public:
     ResolveComponentCandidatesRequestPrivate(const GreengrassV2Request::Action action,

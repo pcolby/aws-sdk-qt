@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DeleteVirtualServiceResponse;
 
-class QTAWS_EXPORT DeleteVirtualServiceResponsePrivate : public AppMeshResponsePrivate {
+class DeleteVirtualServiceResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 

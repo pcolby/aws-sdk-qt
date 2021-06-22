@@ -27,7 +27,7 @@ namespace Polly {
 
 class ListSpeechSynthesisTasksResponse;
 
-class QTAWS_EXPORT ListSpeechSynthesisTasksResponsePrivate : public PollyResponsePrivate {
+class ListSpeechSynthesisTasksResponsePrivate : public PollyResponsePrivate {
 
 public:
 

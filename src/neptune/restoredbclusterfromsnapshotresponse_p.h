@@ -27,7 +27,7 @@ namespace Neptune {
 
 class RestoreDBClusterFromSnapshotResponse;
 
-class QTAWS_EXPORT RestoreDBClusterFromSnapshotResponsePrivate : public NeptuneResponsePrivate {
+class RestoreDBClusterFromSnapshotResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

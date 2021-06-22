@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class UpdateFirewallPolicyChangeProtectionResponse;
 
-class QTAWS_EXPORT UpdateFirewallPolicyChangeProtectionResponsePrivate : public NetworkFirewallResponsePrivate {
+class UpdateFirewallPolicyChangeProtectionResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

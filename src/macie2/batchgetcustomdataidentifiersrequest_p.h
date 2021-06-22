@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class BatchGetCustomDataIdentifiersRequest;
 
-class QTAWS_EXPORT BatchGetCustomDataIdentifiersRequestPrivate : public Macie2RequestPrivate {
+class BatchGetCustomDataIdentifiersRequestPrivate : public Macie2RequestPrivate {
 
 public:
     BatchGetCustomDataIdentifiersRequestPrivate(const Macie2Request::Action action,

@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DescribeFleetMetadataRequest;
 
-class QTAWS_EXPORT DescribeFleetMetadataRequestPrivate : public WorkLinkRequestPrivate {
+class DescribeFleetMetadataRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     DescribeFleetMetadataRequestPrivate(const WorkLinkRequest::Action action,

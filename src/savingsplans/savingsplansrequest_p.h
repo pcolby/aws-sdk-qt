@@ -28,7 +28,7 @@ namespace SavingsPlans {
 
 class SavingsPlansRequest;
 
-class QTAWS_EXPORT SavingsPlansRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SavingsPlansRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SavingsPlansRequest::Action action; ///< SavingsPlans action to be performed.

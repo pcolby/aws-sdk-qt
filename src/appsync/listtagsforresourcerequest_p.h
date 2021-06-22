@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public AppSyncRequestPrivate {
+class ListTagsForResourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const AppSyncRequest::Action action,

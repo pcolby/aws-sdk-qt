@@ -28,7 +28,7 @@ namespace Shield {
 
 class ShieldRequest;
 
-class QTAWS_EXPORT ShieldRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ShieldRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ShieldRequest::Action action; ///< Shield action to be performed.

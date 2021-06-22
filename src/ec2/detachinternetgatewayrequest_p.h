@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DetachInternetGatewayRequest;
 
-class QTAWS_EXPORT DetachInternetGatewayRequestPrivate : public Ec2RequestPrivate {
+class DetachInternetGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DetachInternetGatewayRequestPrivate(const Ec2Request::Action action,

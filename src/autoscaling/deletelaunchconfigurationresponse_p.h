@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DeleteLaunchConfigurationResponse;
 
-class QTAWS_EXPORT DeleteLaunchConfigurationResponsePrivate : public AutoScalingResponsePrivate {
+class DeleteLaunchConfigurationResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

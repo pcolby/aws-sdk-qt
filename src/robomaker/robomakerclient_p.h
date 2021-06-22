@@ -29,7 +29,7 @@ namespace RoboMaker {
 
 class RoboMakerClient;
 
-class QTAWS_EXPORT RoboMakerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class RoboMakerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     RoboMakerClientPrivate(RoboMakerClient * const q);

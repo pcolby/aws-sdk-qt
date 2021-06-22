@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineAnalysisSchemeRequest;
 
-class QTAWS_EXPORT DefineAnalysisSchemeRequestPrivate : public CloudSearchRequestPrivate {
+class DefineAnalysisSchemeRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DefineAnalysisSchemeRequestPrivate(const CloudSearchRequest::Action action,

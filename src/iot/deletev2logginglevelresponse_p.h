@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteV2LoggingLevelResponse;
 
-class QTAWS_EXPORT DeleteV2LoggingLevelResponsePrivate : public IoTResponsePrivate {
+class DeleteV2LoggingLevelResponsePrivate : public IoTResponsePrivate {
 
 public:
 

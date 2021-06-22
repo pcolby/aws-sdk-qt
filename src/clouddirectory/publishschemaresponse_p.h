@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class PublishSchemaResponse;
 
-class QTAWS_EXPORT PublishSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
+class PublishSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

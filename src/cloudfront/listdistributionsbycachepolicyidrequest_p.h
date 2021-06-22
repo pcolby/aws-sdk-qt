@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListDistributionsByCachePolicyIdRequest;
 
-class QTAWS_EXPORT ListDistributionsByCachePolicyIdRequestPrivate : public CloudFrontRequestPrivate {
+class ListDistributionsByCachePolicyIdRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListDistributionsByCachePolicyIdRequestPrivate(const CloudFrontRequest::Action action,

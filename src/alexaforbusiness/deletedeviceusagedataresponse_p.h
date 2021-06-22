@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class DeleteDeviceUsageDataResponse;
 
-class QTAWS_EXPORT DeleteDeviceUsageDataResponsePrivate : public AlexaForBusinessResponsePrivate {
+class DeleteDeviceUsageDataResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

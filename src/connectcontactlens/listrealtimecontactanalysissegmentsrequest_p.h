@@ -28,7 +28,7 @@ namespace ConnectContactLens {
 
 class ListRealtimeContactAnalysisSegmentsRequest;
 
-class QTAWS_EXPORT ListRealtimeContactAnalysisSegmentsRequestPrivate : public ConnectContactLensRequestPrivate {
+class ListRealtimeContactAnalysisSegmentsRequestPrivate : public ConnectContactLensRequestPrivate {
 
 public:
     ListRealtimeContactAnalysisSegmentsRequestPrivate(const ConnectContactLensRequest::Action action,

@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeEventsRequest;
 
-class QTAWS_EXPORT DescribeEventsRequestPrivate : public NeptuneRequestPrivate {
+class DescribeEventsRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     DescribeEventsRequestPrivate(const NeptuneRequest::Action action,

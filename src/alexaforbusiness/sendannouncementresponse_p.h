@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class SendAnnouncementResponse;
 
-class QTAWS_EXPORT SendAnnouncementResponsePrivate : public AlexaForBusinessResponsePrivate {
+class SendAnnouncementResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

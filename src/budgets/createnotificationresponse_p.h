@@ -27,7 +27,7 @@ namespace Budgets {
 
 class CreateNotificationResponse;
 
-class QTAWS_EXPORT CreateNotificationResponsePrivate : public BudgetsResponsePrivate {
+class CreateNotificationResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 

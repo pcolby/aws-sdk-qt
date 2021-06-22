@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class StartMigrationResponse;
 
-class QTAWS_EXPORT StartMigrationResponsePrivate : public ElastiCacheResponsePrivate {
+class StartMigrationResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

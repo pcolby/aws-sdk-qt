@@ -28,7 +28,7 @@ namespace DLM {
 
 class DlmRequest;
 
-class QTAWS_EXPORT DlmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DlmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DlmRequest::Action action; ///< DLM action to be performed.

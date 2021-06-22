@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateModelBiasJobDefinitionRequest;
 
-class QTAWS_EXPORT CreateModelBiasJobDefinitionRequestPrivate : public SageMakerRequestPrivate {
+class CreateModelBiasJobDefinitionRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateModelBiasJobDefinitionRequestPrivate(const SageMakerRequest::Action action,

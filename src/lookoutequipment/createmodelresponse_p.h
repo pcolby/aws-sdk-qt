@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class CreateModelResponse;
 
-class QTAWS_EXPORT CreateModelResponsePrivate : public LookoutEquipmentResponsePrivate {
+class CreateModelResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 

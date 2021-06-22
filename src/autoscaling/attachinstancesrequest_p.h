@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class AttachInstancesRequest;
 
-class QTAWS_EXPORT AttachInstancesRequestPrivate : public AutoScalingRequestPrivate {
+class AttachInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     AttachInstancesRequestPrivate(const AutoScalingRequest::Action action,

@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteCampaignRequest;
 
-class QTAWS_EXPORT DeleteCampaignRequestPrivate : public PinpointRequestPrivate {
+class DeleteCampaignRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteCampaignRequestPrivate(const PinpointRequest::Action action,

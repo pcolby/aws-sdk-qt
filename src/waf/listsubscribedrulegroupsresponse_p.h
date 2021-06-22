@@ -27,7 +27,7 @@ namespace WAF {
 
 class ListSubscribedRuleGroupsResponse;
 
-class QTAWS_EXPORT ListSubscribedRuleGroupsResponsePrivate : public WafResponsePrivate {
+class ListSubscribedRuleGroupsResponsePrivate : public WafResponsePrivate {
 
 public:
 

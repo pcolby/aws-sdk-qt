@@ -28,7 +28,7 @@ namespace kendra {
 
 class QueryRequest;
 
-class QTAWS_EXPORT QueryRequestPrivate : public kendraRequestPrivate {
+class QueryRequestPrivate : public kendraRequestPrivate {
 
 public:
     QueryRequestPrivate(const kendraRequest::Action action,

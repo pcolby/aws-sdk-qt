@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class ResetCacheResponse;
 
-class QTAWS_EXPORT ResetCacheResponsePrivate : public StorageGatewayResponsePrivate {
+class ResetCacheResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

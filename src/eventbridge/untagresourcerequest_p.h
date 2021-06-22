@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public EventBridgeRequestPrivate {
+class UntagResourceRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const EventBridgeRequest::Action action,

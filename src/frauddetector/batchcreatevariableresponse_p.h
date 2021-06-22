@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class BatchCreateVariableResponse;
 
-class QTAWS_EXPORT BatchCreateVariableResponsePrivate : public FraudDetectorResponsePrivate {
+class BatchCreateVariableResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 

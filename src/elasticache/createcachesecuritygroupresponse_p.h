@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class CreateCacheSecurityGroupResponse;
 
-class QTAWS_EXPORT CreateCacheSecurityGroupResponsePrivate : public ElastiCacheResponsePrivate {
+class CreateCacheSecurityGroupResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

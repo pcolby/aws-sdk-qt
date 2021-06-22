@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class DeleteSourceLocationRequest;
 
-class QTAWS_EXPORT DeleteSourceLocationRequestPrivate : public MediaTailorRequestPrivate {
+class DeleteSourceLocationRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     DeleteSourceLocationRequestPrivate(const MediaTailorRequest::Action action,

@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RegisterInstanceRequest;
 
-class QTAWS_EXPORT RegisterInstanceRequestPrivate : public OpsWorksRequestPrivate {
+class RegisterInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RegisterInstanceRequestPrivate(const OpsWorksRequest::Action action,

@@ -27,7 +27,7 @@ namespace Schemas {
 
 class SchemasResponse;
 
-class QTAWS_EXPORT SchemasResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SchemasResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

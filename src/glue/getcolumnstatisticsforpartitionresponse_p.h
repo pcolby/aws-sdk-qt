@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetColumnStatisticsForPartitionResponse;
 
-class QTAWS_EXPORT GetColumnStatisticsForPartitionResponsePrivate : public GlueResponsePrivate {
+class GetColumnStatisticsForPartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 

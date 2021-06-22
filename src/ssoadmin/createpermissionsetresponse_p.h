@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class CreatePermissionSetResponse;
 
-class QTAWS_EXPORT CreatePermissionSetResponsePrivate : public SSOAdminResponsePrivate {
+class CreatePermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 

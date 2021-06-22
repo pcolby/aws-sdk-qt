@@ -28,7 +28,7 @@ namespace Macie {
 
 class AssociateS3ResourcesRequest;
 
-class QTAWS_EXPORT AssociateS3ResourcesRequestPrivate : public MacieRequestPrivate {
+class AssociateS3ResourcesRequestPrivate : public MacieRequestPrivate {
 
 public:
     AssociateS3ResourcesRequestPrivate(const MacieRequest::Action action,

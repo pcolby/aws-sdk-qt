@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteResourceConfigRequest;
 
-class QTAWS_EXPORT DeleteResourceConfigRequestPrivate : public ConfigServiceRequestPrivate {
+class DeleteResourceConfigRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteResourceConfigRequestPrivate(const ConfigServiceRequest::Action action,

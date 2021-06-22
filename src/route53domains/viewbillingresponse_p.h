@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class ViewBillingResponse;
 
-class QTAWS_EXPORT ViewBillingResponsePrivate : public Route53DomainsResponsePrivate {
+class ViewBillingResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 

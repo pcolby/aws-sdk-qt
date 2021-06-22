@@ -35,7 +35,7 @@ namespace Core {
 
 class AwsEndpoint;
 
-class QTAWS_EXPORT AwsEndpointPrivate {
+class AwsEndpointPrivate {
 
 public:
     QString hostName;    ///< This endpoint's hostname.

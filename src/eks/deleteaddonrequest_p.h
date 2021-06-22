@@ -28,7 +28,7 @@ namespace EKS {
 
 class DeleteAddonRequest;
 
-class QTAWS_EXPORT DeleteAddonRequestPrivate : public EksRequestPrivate {
+class DeleteAddonRequestPrivate : public EksRequestPrivate {
 
 public:
     DeleteAddonRequestPrivate(const EksRequest::Action action,

@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class UpdateDeploymentStrategyRequest;
 
-class QTAWS_EXPORT UpdateDeploymentStrategyRequestPrivate : public AppConfigRequestPrivate {
+class UpdateDeploymentStrategyRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     UpdateDeploymentStrategyRequestPrivate(const AppConfigRequest::Action action,

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CreateDataSetRequest;
 
-class QTAWS_EXPORT CreateDataSetRequestPrivate : public QuickSightRequestPrivate {
+class CreateDataSetRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     CreateDataSetRequestPrivate(const QuickSightRequest::Action action,

@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class DeleteVariableRequest;
 
-class QTAWS_EXPORT DeleteVariableRequestPrivate : public FraudDetectorRequestPrivate {
+class DeleteVariableRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     DeleteVariableRequestPrivate(const FraudDetectorRequest::Action action,

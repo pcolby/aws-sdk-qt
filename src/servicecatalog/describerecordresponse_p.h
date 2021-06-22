@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeRecordResponse;
 
-class QTAWS_EXPORT DescribeRecordResponsePrivate : public ServiceCatalogResponsePrivate {
+class DescribeRecordResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

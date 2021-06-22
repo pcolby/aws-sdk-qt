@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class RemoveFlowMediaStreamResponse;
 
-class QTAWS_EXPORT RemoveFlowMediaStreamResponsePrivate : public MediaConnectResponsePrivate {
+class RemoveFlowMediaStreamResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 

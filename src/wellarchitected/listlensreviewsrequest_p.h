@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class ListLensReviewsRequest;
 
-class QTAWS_EXPORT ListLensReviewsRequestPrivate : public WellArchitectedRequestPrivate {
+class ListLensReviewsRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     ListLensReviewsRequestPrivate(const WellArchitectedRequest::Action action,

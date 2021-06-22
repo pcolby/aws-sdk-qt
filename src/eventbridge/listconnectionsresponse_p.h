@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class ListConnectionsResponse;
 
-class QTAWS_EXPORT ListConnectionsResponsePrivate : public EventBridgeResponsePrivate {
+class ListConnectionsResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

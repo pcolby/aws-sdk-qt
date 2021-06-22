@@ -28,7 +28,7 @@ namespace XRay {
 
 class PutTelemetryRecordsRequest;
 
-class QTAWS_EXPORT PutTelemetryRecordsRequestPrivate : public XRayRequestPrivate {
+class PutTelemetryRecordsRequestPrivate : public XRayRequestPrivate {
 
 public:
     PutTelemetryRecordsRequestPrivate(const XRayRequest::Action action,

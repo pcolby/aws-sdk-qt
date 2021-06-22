@@ -29,7 +29,7 @@ namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiClient;
 
-class QTAWS_EXPORT ApiGatewayManagementApiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApiGatewayManagementApiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q);

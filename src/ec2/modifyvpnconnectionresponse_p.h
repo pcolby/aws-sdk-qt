@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyVpnConnectionResponse;
 
-class QTAWS_EXPORT ModifyVpnConnectionResponsePrivate : public Ec2ResponsePrivate {
+class ModifyVpnConnectionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

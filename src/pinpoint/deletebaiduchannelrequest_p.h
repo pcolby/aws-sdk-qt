@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteBaiduChannelRequest;
 
-class QTAWS_EXPORT DeleteBaiduChannelRequestPrivate : public PinpointRequestPrivate {
+class DeleteBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteBaiduChannelRequestPrivate(const PinpointRequest::Action action,

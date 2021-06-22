@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class DeleteBotAliasRequest;
 
-class QTAWS_EXPORT DeleteBotAliasRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class DeleteBotAliasRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     DeleteBotAliasRequestPrivate(const LexModelBuildingServiceRequest::Action action,

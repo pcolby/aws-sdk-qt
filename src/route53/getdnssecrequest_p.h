@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetDNSSECRequest;
 
-class QTAWS_EXPORT GetDNSSECRequestPrivate : public Route53RequestPrivate {
+class GetDNSSECRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetDNSSECRequestPrivate(const Route53Request::Action action,

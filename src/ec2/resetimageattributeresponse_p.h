@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ResetImageAttributeResponse;
 
-class QTAWS_EXPORT ResetImageAttributeResponsePrivate : public Ec2ResponsePrivate {
+class ResetImageAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class ForecastServiceRequest;
 
-class QTAWS_EXPORT ForecastServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ForecastServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ForecastServiceRequest::Action action; ///< ForecastService action to be performed.

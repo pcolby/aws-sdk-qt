@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public CustomerProfilesResponsePrivate {
+class ListTagsForResourceResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 

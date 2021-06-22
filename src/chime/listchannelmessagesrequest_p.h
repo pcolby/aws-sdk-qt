@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListChannelMessagesRequest;
 
-class QTAWS_EXPORT ListChannelMessagesRequestPrivate : public ChimeRequestPrivate {
+class ListChannelMessagesRequestPrivate : public ChimeRequestPrivate {
 
 public:
     ListChannelMessagesRequestPrivate(const ChimeRequest::Action action,

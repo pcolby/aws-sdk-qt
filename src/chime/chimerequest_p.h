@@ -28,7 +28,7 @@ namespace Chime {
 
 class ChimeRequest;
 
-class QTAWS_EXPORT ChimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ChimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ChimeRequest::Action action; ///< Chime action to be performed.

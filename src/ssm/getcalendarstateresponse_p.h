@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetCalendarStateResponse;
 
-class QTAWS_EXPORT GetCalendarStateResponsePrivate : public SsmResponsePrivate {
+class GetCalendarStateResponsePrivate : public SsmResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class AddTagsRequest;
 
-class QTAWS_EXPORT AddTagsRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class AddTagsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     AddTagsRequestPrivate(const ElasticsearchServiceRequest::Action action,

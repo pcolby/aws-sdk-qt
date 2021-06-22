@@ -27,7 +27,7 @@ namespace EC2 {
 
 class UpdateSecurityGroupRuleDescriptionsIngressResponse;
 
-class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate : public Ec2ResponsePrivate {
+class UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

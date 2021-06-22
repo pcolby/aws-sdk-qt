@@ -27,7 +27,7 @@ namespace LexRuntimeService {
 
 class PostTextResponse;
 
-class QTAWS_EXPORT PostTextResponsePrivate : public LexRuntimeServiceResponsePrivate {
+class PostTextResponsePrivate : public LexRuntimeServiceResponsePrivate {
 
 public:
 

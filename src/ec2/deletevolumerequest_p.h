@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteVolumeRequest;
 
-class QTAWS_EXPORT DeleteVolumeRequestPrivate : public Ec2RequestPrivate {
+class DeleteVolumeRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteVolumeRequestPrivate(const Ec2Request::Action action,

@@ -28,7 +28,7 @@ namespace S3 {
 
 class SelectObjectContentRequest;
 
-class QTAWS_EXPORT SelectObjectContentRequestPrivate : public S3RequestPrivate {
+class SelectObjectContentRequestPrivate : public S3RequestPrivate {
 
 public:
     SelectObjectContentRequestPrivate(const S3Request::Action action,

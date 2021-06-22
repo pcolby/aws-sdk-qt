@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class DeleteRuleGroupRequest;
 
-class QTAWS_EXPORT DeleteRuleGroupRequestPrivate : public Wafv2RequestPrivate {
+class DeleteRuleGroupRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     DeleteRuleGroupRequestPrivate(const Wafv2Request::Action action,

@@ -27,7 +27,7 @@ namespace IoT {
 
 class DisableTopicRuleResponse;
 
-class QTAWS_EXPORT DisableTopicRuleResponsePrivate : public IoTResponsePrivate {
+class DisableTopicRuleResponsePrivate : public IoTResponsePrivate {
 
 public:
 

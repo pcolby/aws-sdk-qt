@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class RegisterDevicesRequest;
 
-class QTAWS_EXPORT RegisterDevicesRequestPrivate : public SageMakerRequestPrivate {
+class RegisterDevicesRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     RegisterDevicesRequestPrivate(const SageMakerRequest::Action action,

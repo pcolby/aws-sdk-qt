@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class ApplicationInsightsResponse;
 
-class QTAWS_EXPORT ApplicationInsightsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApplicationInsightsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

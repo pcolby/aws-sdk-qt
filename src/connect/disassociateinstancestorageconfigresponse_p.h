@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateInstanceStorageConfigResponse;
 
-class QTAWS_EXPORT DisassociateInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate {
+class DisassociateInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

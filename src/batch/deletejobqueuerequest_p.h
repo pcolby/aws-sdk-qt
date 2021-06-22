@@ -28,7 +28,7 @@ namespace Batch {
 
 class DeleteJobQueueRequest;
 
-class QTAWS_EXPORT DeleteJobQueueRequestPrivate : public BatchRequestPrivate {
+class DeleteJobQueueRequestPrivate : public BatchRequestPrivate {
 
 public:
     DeleteJobQueueRequestPrivate(const BatchRequest::Action action,

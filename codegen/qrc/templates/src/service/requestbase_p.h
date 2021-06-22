@@ -10,7 +10,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class QTAWS_EXPORT {{ClassName}}Private : public QtAws::Core::AwsAbstractRequestPrivate {
+class {{ClassName}}Private : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     {{ClassName}}::Action action; ///< {{ServiceName}} action to be performed.

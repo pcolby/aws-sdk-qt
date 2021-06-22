@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateOptionGroupRequest;
 
-class QTAWS_EXPORT CreateOptionGroupRequestPrivate : public RdsRequestPrivate {
+class CreateOptionGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
     CreateOptionGroupRequestPrivate(const RdsRequest::Action action,

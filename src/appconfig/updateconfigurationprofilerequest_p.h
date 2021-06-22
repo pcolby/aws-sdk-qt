@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class UpdateConfigurationProfileRequest;
 
-class QTAWS_EXPORT UpdateConfigurationProfileRequestPrivate : public AppConfigRequestPrivate {
+class UpdateConfigurationProfileRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     UpdateConfigurationProfileRequestPrivate(const AppConfigRequest::Action action,

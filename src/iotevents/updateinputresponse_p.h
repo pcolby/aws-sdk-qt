@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class UpdateInputResponse;
 
-class QTAWS_EXPORT UpdateInputResponsePrivate : public IoTEventsResponsePrivate {
+class UpdateInputResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 

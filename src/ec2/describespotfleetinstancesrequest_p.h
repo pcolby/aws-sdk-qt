@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeSpotFleetInstancesRequest;
 
-class QTAWS_EXPORT DescribeSpotFleetInstancesRequestPrivate : public Ec2RequestPrivate {
+class DescribeSpotFleetInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeSpotFleetInstancesRequestPrivate(const Ec2Request::Action action,

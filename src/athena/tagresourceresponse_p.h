@@ -27,7 +27,7 @@ namespace Athena {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public AthenaResponsePrivate {
+class TagResourceResponsePrivate : public AthenaResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class DeleteDatasetResponse;
 
-class QTAWS_EXPORT DeleteDatasetResponsePrivate : public ForecastServiceResponsePrivate {
+class DeleteDatasetResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 

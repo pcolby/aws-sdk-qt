@@ -29,7 +29,7 @@ namespace CodeGuruProfiler {
 
 class CodeGuruProfilerClient;
 
-class QTAWS_EXPORT CodeGuruProfilerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeGuruProfilerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CodeGuruProfilerClientPrivate(CodeGuruProfilerClient * const q);

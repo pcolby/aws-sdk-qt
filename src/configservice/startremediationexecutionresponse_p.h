@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class StartRemediationExecutionResponse;
 
-class QTAWS_EXPORT StartRemediationExecutionResponsePrivate : public ConfigServiceResponsePrivate {
+class StartRemediationExecutionResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

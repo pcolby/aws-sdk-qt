@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DescribeFeatureTransformationRequest;
 
-class QTAWS_EXPORT DescribeFeatureTransformationRequestPrivate : public PersonalizeRequestPrivate {
+class DescribeFeatureTransformationRequestPrivate : public PersonalizeRequestPrivate {
 
 public:
     DescribeFeatureTransformationRequestPrivate(const PersonalizeRequest::Action action,

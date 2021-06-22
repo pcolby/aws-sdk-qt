@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class CreateMedicalVocabularyResponse;
 
-class QTAWS_EXPORT CreateMedicalVocabularyResponsePrivate : public TranscribeServiceResponsePrivate {
+class CreateMedicalVocabularyResponsePrivate : public TranscribeServiceResponsePrivate {
 
 public:
 

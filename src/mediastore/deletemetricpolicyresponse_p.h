@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class DeleteMetricPolicyResponse;
 
-class QTAWS_EXPORT DeleteMetricPolicyResponsePrivate : public MediaStoreResponsePrivate {
+class DeleteMetricPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 

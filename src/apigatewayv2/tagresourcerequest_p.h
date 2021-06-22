@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public ApiGatewayV2RequestPrivate {
+class TagResourceRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     TagResourceRequestPrivate(const ApiGatewayV2Request::Action action,

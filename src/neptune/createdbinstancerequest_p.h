@@ -28,7 +28,7 @@ namespace Neptune {
 
 class CreateDBInstanceRequest;
 
-class QTAWS_EXPORT CreateDBInstanceRequestPrivate : public NeptuneRequestPrivate {
+class CreateDBInstanceRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     CreateDBInstanceRequestPrivate(const NeptuneRequest::Action action,

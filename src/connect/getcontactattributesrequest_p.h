@@ -28,7 +28,7 @@ namespace Connect {
 
 class GetContactAttributesRequest;
 
-class QTAWS_EXPORT GetContactAttributesRequestPrivate : public ConnectRequestPrivate {
+class GetContactAttributesRequestPrivate : public ConnectRequestPrivate {
 
 public:
     GetContactAttributesRequestPrivate(const ConnectRequest::Action action,

@@ -28,7 +28,7 @@ namespace Backup {
 
 class GetBackupVaultNotificationsRequest;
 
-class QTAWS_EXPORT GetBackupVaultNotificationsRequestPrivate : public BackupRequestPrivate {
+class GetBackupVaultNotificationsRequestPrivate : public BackupRequestPrivate {
 
 public:
     GetBackupVaultNotificationsRequestPrivate(const BackupRequest::Action action,

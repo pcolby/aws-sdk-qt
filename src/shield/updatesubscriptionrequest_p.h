@@ -28,7 +28,7 @@ namespace Shield {
 
 class UpdateSubscriptionRequest;
 
-class QTAWS_EXPORT UpdateSubscriptionRequestPrivate : public ShieldRequestPrivate {
+class UpdateSubscriptionRequestPrivate : public ShieldRequestPrivate {
 
 public:
     UpdateSubscriptionRequestPrivate(const ShieldRequest::Action action,

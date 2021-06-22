@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeUploadBufferResponse;
 
-class QTAWS_EXPORT DescribeUploadBufferResponsePrivate : public StorageGatewayResponsePrivate {
+class DescribeUploadBufferResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

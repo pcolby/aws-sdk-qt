@@ -28,7 +28,7 @@ namespace Shield {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public ShieldRequestPrivate {
+class UntagResourceRequestPrivate : public ShieldRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const ShieldRequest::Action action,

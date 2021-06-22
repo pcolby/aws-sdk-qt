@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DisassociateDelegateFromResourceRequest;
 
-class QTAWS_EXPORT DisassociateDelegateFromResourceRequestPrivate : public WorkMailRequestPrivate {
+class DisassociateDelegateFromResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DisassociateDelegateFromResourceRequestPrivate(const WorkMailRequest::Action action,

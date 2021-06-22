@@ -29,7 +29,7 @@ namespace Macie {
 
 class MacieClient;
 
-class QTAWS_EXPORT MacieClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MacieClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MacieClientPrivate(MacieClient * const q);

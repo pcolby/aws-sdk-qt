@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DescribeAggregateComplianceByConfigRulesResponse;
 
-class QTAWS_EXPORT DescribeAggregateComplianceByConfigRulesResponsePrivate : public ConfigServiceResponsePrivate {
+class DescribeAggregateComplianceByConfigRulesResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

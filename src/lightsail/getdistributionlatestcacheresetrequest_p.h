@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetDistributionLatestCacheResetRequest;
 
-class QTAWS_EXPORT GetDistributionLatestCacheResetRequestPrivate : public LightsailRequestPrivate {
+class GetDistributionLatestCacheResetRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetDistributionLatestCacheResetRequestPrivate(const LightsailRequest::Action action,

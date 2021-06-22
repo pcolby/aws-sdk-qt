@@ -28,7 +28,7 @@ namespace Connect {
 
 class DescribeHoursOfOperationRequest;
 
-class QTAWS_EXPORT DescribeHoursOfOperationRequestPrivate : public ConnectRequestPrivate {
+class DescribeHoursOfOperationRequestPrivate : public ConnectRequestPrivate {
 
 public:
     DescribeHoursOfOperationRequestPrivate(const ConnectRequest::Action action,

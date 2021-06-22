@@ -28,7 +28,7 @@ namespace SES {
 
 class ListConfigurationSetsRequest;
 
-class QTAWS_EXPORT ListConfigurationSetsRequestPrivate : public SesRequestPrivate {
+class ListConfigurationSetsRequestPrivate : public SesRequestPrivate {
 
 public:
     ListConfigurationSetsRequestPrivate(const SesRequest::Action action,

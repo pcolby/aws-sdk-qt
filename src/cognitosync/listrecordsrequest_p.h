@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class ListRecordsRequest;
 
-class QTAWS_EXPORT ListRecordsRequestPrivate : public CognitoSyncRequestPrivate {
+class ListRecordsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     ListRecordsRequestPrivate(const CognitoSyncRequest::Action action,

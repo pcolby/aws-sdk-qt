@@ -29,7 +29,7 @@ namespace IoTFleetHub {
 
 class IoTFleetHubClient;
 
-class QTAWS_EXPORT IoTFleetHubClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTFleetHubClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTFleetHubClientPrivate(IoTFleetHubClient * const q);

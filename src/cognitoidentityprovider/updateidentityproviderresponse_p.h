@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class UpdateIdentityProviderResponse;
 
-class QTAWS_EXPORT UpdateIdentityProviderResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+class UpdateIdentityProviderResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 

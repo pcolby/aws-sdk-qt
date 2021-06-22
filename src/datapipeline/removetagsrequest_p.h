@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class RemoveTagsRequest;
 
-class QTAWS_EXPORT RemoveTagsRequestPrivate : public DataPipelineRequestPrivate {
+class RemoveTagsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     RemoveTagsRequestPrivate(const DataPipelineRequest::Action action,

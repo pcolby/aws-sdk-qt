@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class DeleteHostedConfigurationVersionResponse;
 
-class QTAWS_EXPORT DeleteHostedConfigurationVersionResponsePrivate : public AppConfigResponsePrivate {
+class DeleteHostedConfigurationVersionResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 

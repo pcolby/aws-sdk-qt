@@ -27,7 +27,7 @@ namespace Batch {
 
 class DeleteJobQueueResponse;
 
-class QTAWS_EXPORT DeleteJobQueueResponsePrivate : public BatchResponsePrivate {
+class DeleteJobQueueResponsePrivate : public BatchResponsePrivate {
 
 public:
 

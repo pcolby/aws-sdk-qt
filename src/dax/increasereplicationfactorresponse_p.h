@@ -27,7 +27,7 @@ namespace DAX {
 
 class IncreaseReplicationFactorResponse;
 
-class QTAWS_EXPORT IncreaseReplicationFactorResponsePrivate : public DaxResponsePrivate {
+class IncreaseReplicationFactorResponsePrivate : public DaxResponsePrivate {
 
 public:
 

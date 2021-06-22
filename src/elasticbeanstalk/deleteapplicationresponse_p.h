@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DeleteApplicationResponse;
 
-class QTAWS_EXPORT DeleteApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class DeleteApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

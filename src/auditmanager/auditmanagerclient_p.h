@@ -29,7 +29,7 @@ namespace AuditManager {
 
 class AuditManagerClient;
 
-class QTAWS_EXPORT AuditManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AuditManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AuditManagerClientPrivate(AuditManagerClient * const q);

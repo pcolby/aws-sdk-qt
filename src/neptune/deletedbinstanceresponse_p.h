@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DeleteDBInstanceResponse;
 
-class QTAWS_EXPORT DeleteDBInstanceResponsePrivate : public NeptuneResponsePrivate {
+class DeleteDBInstanceResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

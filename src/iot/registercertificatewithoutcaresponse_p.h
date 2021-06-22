@@ -27,7 +27,7 @@ namespace IoT {
 
 class RegisterCertificateWithoutCAResponse;
 
-class QTAWS_EXPORT RegisterCertificateWithoutCAResponsePrivate : public IoTResponsePrivate {
+class RegisterCertificateWithoutCAResponsePrivate : public IoTResponsePrivate {
 
 public:
 

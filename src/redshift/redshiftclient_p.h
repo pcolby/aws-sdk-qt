@@ -29,7 +29,7 @@ namespace Redshift {
 
 class RedshiftClient;
 
-class QTAWS_EXPORT RedshiftClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class RedshiftClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     RedshiftClientPrivate(RedshiftClient * const q);

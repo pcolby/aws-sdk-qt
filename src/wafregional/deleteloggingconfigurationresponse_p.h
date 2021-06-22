@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DeleteLoggingConfigurationResponse;
 
-class QTAWS_EXPORT DeleteLoggingConfigurationResponsePrivate : public WAFRegionalResponsePrivate {
+class DeleteLoggingConfigurationResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

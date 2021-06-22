@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class DescribeRepositoriesRequest;
 
-class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public ECRPublicRequestPrivate {
+class DescribeRepositoriesRequestPrivate : public ECRPublicRequestPrivate {
 
 public:
     DescribeRepositoriesRequestPrivate(const ECRPublicRequest::Action action,

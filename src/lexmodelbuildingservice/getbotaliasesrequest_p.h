@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class GetBotAliasesRequest;
 
-class QTAWS_EXPORT GetBotAliasesRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class GetBotAliasesRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     GetBotAliasesRequestPrivate(const LexModelBuildingServiceRequest::Action action,

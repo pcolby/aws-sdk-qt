@@ -27,7 +27,7 @@ namespace EBS {
 
 class CompleteSnapshotResponse;
 
-class QTAWS_EXPORT CompleteSnapshotResponsePrivate : public EbsResponsePrivate {
+class CompleteSnapshotResponsePrivate : public EbsResponsePrivate {
 
 public:
 

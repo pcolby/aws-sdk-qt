@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ScheduleRunRequest;
 
-class QTAWS_EXPORT ScheduleRunRequestPrivate : public DeviceFarmRequestPrivate {
+class ScheduleRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ScheduleRunRequestPrivate(const DeviceFarmRequest::Action action,

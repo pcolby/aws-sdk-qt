@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetApiMappingsRequest;
 
-class QTAWS_EXPORT GetApiMappingsRequestPrivate : public ApiGatewayV2RequestPrivate {
+class GetApiMappingsRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     GetApiMappingsRequestPrivate(const ApiGatewayV2Request::Action action,

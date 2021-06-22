@@ -27,7 +27,7 @@ namespace Appflow {
 
 class DeleteConnectorProfileResponse;
 
-class QTAWS_EXPORT DeleteConnectorProfileResponsePrivate : public AppflowResponsePrivate {
+class DeleteConnectorProfileResponsePrivate : public AppflowResponsePrivate {
 
 public:
 

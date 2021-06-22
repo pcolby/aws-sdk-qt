@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class ListWorkloadSharesRequest;
 
-class QTAWS_EXPORT ListWorkloadSharesRequestPrivate : public WellArchitectedRequestPrivate {
+class ListWorkloadSharesRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     ListWorkloadSharesRequestPrivate(const WellArchitectedRequest::Action action,

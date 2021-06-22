@@ -27,7 +27,7 @@ namespace RDS {
 
 class RemoveSourceIdentifierFromSubscriptionResponse;
 
-class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionResponsePrivate : public RdsResponsePrivate {
+class RemoveSourceIdentifierFromSubscriptionResponsePrivate : public RdsResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DescribeStackDriftDetectionStatusResponse;
 
-class QTAWS_EXPORT DescribeStackDriftDetectionStatusResponsePrivate : public CloudFormationResponsePrivate {
+class DescribeStackDriftDetectionStatusResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

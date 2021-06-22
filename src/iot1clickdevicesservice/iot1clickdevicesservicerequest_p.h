@@ -28,7 +28,7 @@ namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceRequest;
 
-class QTAWS_EXPORT IoT1ClickDevicesServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoT1ClickDevicesServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoT1ClickDevicesServiceRequest::Action action; ///< IoT1ClickDevicesService action to be performed.

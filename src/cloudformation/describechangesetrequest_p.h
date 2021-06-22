@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DescribeChangeSetRequest;
 
-class QTAWS_EXPORT DescribeChangeSetRequestPrivate : public CloudFormationRequestPrivate {
+class DescribeChangeSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     DescribeChangeSetRequestPrivate(const CloudFormationRequest::Action action,

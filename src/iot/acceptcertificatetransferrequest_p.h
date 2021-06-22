@@ -28,7 +28,7 @@ namespace IoT {
 
 class AcceptCertificateTransferRequest;
 
-class QTAWS_EXPORT AcceptCertificateTransferRequestPrivate : public IoTRequestPrivate {
+class AcceptCertificateTransferRequestPrivate : public IoTRequestPrivate {
 
 public:
     AcceptCertificateTransferRequestPrivate(const IoTRequest::Action action,

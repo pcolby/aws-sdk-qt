@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribeEngineDefaultClusterParametersResponse;
 
-class QTAWS_EXPORT DescribeEngineDefaultClusterParametersResponsePrivate : public NeptuneResponsePrivate {
+class DescribeEngineDefaultClusterParametersResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

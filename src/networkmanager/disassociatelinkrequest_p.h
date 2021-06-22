@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class DisassociateLinkRequest;
 
-class QTAWS_EXPORT DisassociateLinkRequestPrivate : public NetworkManagerRequestPrivate {
+class DisassociateLinkRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     DisassociateLinkRequestPrivate(const NetworkManagerRequest::Action action,

@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListAccessControlRulesResponse;
 
-class QTAWS_EXPORT ListAccessControlRulesResponsePrivate : public WorkMailResponsePrivate {
+class ListAccessControlRulesResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class AppRegistryRequest;
 
-class QTAWS_EXPORT AppRegistryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppRegistryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppRegistryRequest::Action action; ///< AppRegistry action to be performed.

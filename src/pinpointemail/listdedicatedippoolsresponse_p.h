@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class ListDedicatedIpPoolsResponse;
 
-class QTAWS_EXPORT ListDedicatedIpPoolsResponsePrivate : public PinpointEmailResponsePrivate {
+class ListDedicatedIpPoolsResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

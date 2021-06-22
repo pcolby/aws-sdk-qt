@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetAssociatedRoleRequest;
 
-class QTAWS_EXPORT GetAssociatedRoleRequestPrivate : public GreengrassRequestPrivate {
+class GetAssociatedRoleRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetAssociatedRoleRequestPrivate(const GreengrassRequest::Action action,

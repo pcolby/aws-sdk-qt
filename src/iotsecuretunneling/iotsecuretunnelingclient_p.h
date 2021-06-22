@@ -29,7 +29,7 @@ namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingClient;
 
-class QTAWS_EXPORT IoTSecureTunnelingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTSecureTunnelingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTSecureTunnelingClientPrivate(IoTSecureTunnelingClient * const q);

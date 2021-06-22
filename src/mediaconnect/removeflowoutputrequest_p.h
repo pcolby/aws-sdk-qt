@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class RemoveFlowOutputRequest;
 
-class QTAWS_EXPORT RemoveFlowOutputRequestPrivate : public MediaConnectRequestPrivate {
+class RemoveFlowOutputRequestPrivate : public MediaConnectRequestPrivate {
 
 public:
     RemoveFlowOutputRequestPrivate(const MediaConnectRequest::Action action,

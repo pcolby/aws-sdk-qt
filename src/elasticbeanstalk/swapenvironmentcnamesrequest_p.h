@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class SwapEnvironmentCNAMEsRequest;
 
-class QTAWS_EXPORT SwapEnvironmentCNAMEsRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class SwapEnvironmentCNAMEsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     SwapEnvironmentCNAMEsRequestPrivate(const ElasticBeanstalkRequest::Action action,

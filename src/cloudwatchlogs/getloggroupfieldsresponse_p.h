@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class GetLogGroupFieldsResponse;
 
-class QTAWS_EXPORT GetLogGroupFieldsResponsePrivate : public CloudWatchLogsResponsePrivate {
+class GetLogGroupFieldsResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class ComputeOptimizerResponse;
 
-class QTAWS_EXPORT ComputeOptimizerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ComputeOptimizerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

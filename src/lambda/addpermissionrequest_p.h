@@ -28,7 +28,7 @@ namespace Lambda {
 
 class AddPermissionRequest;
 
-class QTAWS_EXPORT AddPermissionRequestPrivate : public LambdaRequestPrivate {
+class AddPermissionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     AddPermissionRequestPrivate(const LambdaRequest::Action action,

@@ -27,7 +27,7 @@ namespace S3Control {
 
 class S3ControlResponse;
 
-class QTAWS_EXPORT S3ControlResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class S3ControlResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

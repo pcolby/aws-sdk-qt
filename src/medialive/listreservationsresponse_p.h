@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class ListReservationsResponse;
 
-class QTAWS_EXPORT ListReservationsResponsePrivate : public MediaLiveResponsePrivate {
+class ListReservationsResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

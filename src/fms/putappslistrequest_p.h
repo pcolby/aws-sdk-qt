@@ -28,7 +28,7 @@ namespace FMS {
 
 class PutAppsListRequest;
 
-class QTAWS_EXPORT PutAppsListRequestPrivate : public FmsRequestPrivate {
+class PutAppsListRequestPrivate : public FmsRequestPrivate {
 
 public:
     PutAppsListRequestPrivate(const FmsRequest::Action action,

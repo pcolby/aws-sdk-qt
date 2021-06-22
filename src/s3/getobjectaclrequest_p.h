@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetObjectAclRequest;
 
-class QTAWS_EXPORT GetObjectAclRequestPrivate : public S3RequestPrivate {
+class GetObjectAclRequestPrivate : public S3RequestPrivate {
 
 public:
     GetObjectAclRequestPrivate(const S3Request::Action action,

@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DeletePackageRequest;
 
-class QTAWS_EXPORT DeletePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DeletePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     DeletePackageRequestPrivate(const ElasticsearchServiceRequest::Action action,

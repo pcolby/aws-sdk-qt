@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class CreateTapeWithBarcodeResponse;
 
-class QTAWS_EXPORT CreateTapeWithBarcodeResponsePrivate : public StorageGatewayResponsePrivate {
+class CreateTapeWithBarcodeResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

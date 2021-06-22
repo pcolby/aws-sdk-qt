@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListConstraintsForPortfolioRequest;
 
-class QTAWS_EXPORT ListConstraintsForPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
+class ListConstraintsForPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListConstraintsForPortfolioRequestPrivate(const ServiceCatalogRequest::Action action,

@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class UpdateTestGridProjectResponse;
 
-class QTAWS_EXPORT UpdateTestGridProjectResponsePrivate : public DeviceFarmResponsePrivate {
+class UpdateTestGridProjectResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

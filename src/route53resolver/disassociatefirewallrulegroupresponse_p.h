@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class DisassociateFirewallRuleGroupResponse;
 
-class QTAWS_EXPORT DisassociateFirewallRuleGroupResponsePrivate : public Route53ResolverResponsePrivate {
+class DisassociateFirewallRuleGroupResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 

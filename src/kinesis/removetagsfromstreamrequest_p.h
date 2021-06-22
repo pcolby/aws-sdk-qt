@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class RemoveTagsFromStreamRequest;
 
-class QTAWS_EXPORT RemoveTagsFromStreamRequestPrivate : public KinesisRequestPrivate {
+class RemoveTagsFromStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
     RemoveTagsFromStreamRequestPrivate(const KinesisRequest::Action action,

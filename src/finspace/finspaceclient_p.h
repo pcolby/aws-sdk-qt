@@ -29,7 +29,7 @@ namespace finspace {
 
 class finspaceClient;
 
-class QTAWS_EXPORT finspaceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class finspaceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     finspaceClientPrivate(finspaceClient * const q);

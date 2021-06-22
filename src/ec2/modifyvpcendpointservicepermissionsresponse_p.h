@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyVpcEndpointServicePermissionsResponse;
 
-class QTAWS_EXPORT ModifyVpcEndpointServicePermissionsResponsePrivate : public Ec2ResponsePrivate {
+class ModifyVpcEndpointServicePermissionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

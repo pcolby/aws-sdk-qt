@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public WAFRegionalRequestPrivate {
+class ListTagsForResourceRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const WAFRegionalRequest::Action action,

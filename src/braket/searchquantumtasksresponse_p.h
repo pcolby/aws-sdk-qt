@@ -27,7 +27,7 @@ namespace Braket {
 
 class SearchQuantumTasksResponse;
 
-class QTAWS_EXPORT SearchQuantumTasksResponsePrivate : public BraketResponsePrivate {
+class SearchQuantumTasksResponsePrivate : public BraketResponsePrivate {
 
 public:
 

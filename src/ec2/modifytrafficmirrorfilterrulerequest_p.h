@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyTrafficMirrorFilterRuleRequest;
 
-class QTAWS_EXPORT ModifyTrafficMirrorFilterRuleRequestPrivate : public Ec2RequestPrivate {
+class ModifyTrafficMirrorFilterRuleRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifyTrafficMirrorFilterRuleRequestPrivate(const Ec2Request::Action action,

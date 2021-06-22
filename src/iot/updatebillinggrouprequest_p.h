@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateBillingGroupRequest;
 
-class QTAWS_EXPORT UpdateBillingGroupRequestPrivate : public IoTRequestPrivate {
+class UpdateBillingGroupRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateBillingGroupRequestPrivate(const IoTRequest::Action action,

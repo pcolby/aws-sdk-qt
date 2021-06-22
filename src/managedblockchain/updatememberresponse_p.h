@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class UpdateMemberResponse;
 
-class QTAWS_EXPORT UpdateMemberResponsePrivate : public ManagedBlockchainResponsePrivate {
+class UpdateMemberResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 

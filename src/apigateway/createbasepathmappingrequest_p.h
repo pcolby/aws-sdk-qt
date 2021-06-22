@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class CreateBasePathMappingRequest;
 
-class QTAWS_EXPORT CreateBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
+class CreateBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     CreateBasePathMappingRequestPrivate(const APIGatewayRequest::Action action,

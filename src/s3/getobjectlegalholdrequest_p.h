@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetObjectLegalHoldRequest;
 
-class QTAWS_EXPORT GetObjectLegalHoldRequestPrivate : public S3RequestPrivate {
+class GetObjectLegalHoldRequestPrivate : public S3RequestPrivate {
 
 public:
     GetObjectLegalHoldRequestPrivate(const S3Request::Action action,

@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public ImportExportRequestPrivate {
+class CancelJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const ImportExportRequest::Action action,

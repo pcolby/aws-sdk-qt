@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteModelQualityJobDefinitionRequest;
 
-class QTAWS_EXPORT DeleteModelQualityJobDefinitionRequestPrivate : public SageMakerRequestPrivate {
+class DeleteModelQualityJobDefinitionRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteModelQualityJobDefinitionRequestPrivate(const SageMakerRequest::Action action,

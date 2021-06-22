@@ -28,7 +28,7 @@ namespace Glue {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public GlueRequestPrivate {
+class TagResourceRequestPrivate : public GlueRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const GlueRequest::Action action,

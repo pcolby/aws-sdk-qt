@@ -28,7 +28,7 @@ namespace SMS {
 
 class StartOnDemandReplicationRunRequest;
 
-class QTAWS_EXPORT StartOnDemandReplicationRunRequestPrivate : public SmsRequestPrivate {
+class StartOnDemandReplicationRunRequestPrivate : public SmsRequestPrivate {
 
 public:
     StartOnDemandReplicationRunRequestPrivate(const SmsRequest::Action action,

@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class GetPackageVersionHistoryRequest;
 
-class QTAWS_EXPORT GetPackageVersionHistoryRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class GetPackageVersionHistoryRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     GetPackageVersionHistoryRequestPrivate(const ElasticsearchServiceRequest::Action action,

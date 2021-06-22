@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetSizeConstraintSetRequest;
 
-class QTAWS_EXPORT GetSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
+class GetSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetSizeConstraintSetRequestPrivate(const WAFRegionalRequest::Action action,

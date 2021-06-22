@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class ImportComponentRequest;
 
-class QTAWS_EXPORT ImportComponentRequestPrivate : public imagebuilderRequestPrivate {
+class ImportComponentRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     ImportComponentRequestPrivate(const imagebuilderRequest::Action action,

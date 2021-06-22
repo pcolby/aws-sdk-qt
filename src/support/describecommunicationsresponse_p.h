@@ -27,7 +27,7 @@ namespace Support {
 
 class DescribeCommunicationsResponse;
 
-class QTAWS_EXPORT DescribeCommunicationsResponsePrivate : public SupportResponsePrivate {
+class DescribeCommunicationsResponsePrivate : public SupportResponsePrivate {
 
 public:
 

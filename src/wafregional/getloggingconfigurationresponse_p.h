@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class GetLoggingConfigurationResponse;
 
-class QTAWS_EXPORT GetLoggingConfigurationResponsePrivate : public WAFRegionalResponsePrivate {
+class GetLoggingConfigurationResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

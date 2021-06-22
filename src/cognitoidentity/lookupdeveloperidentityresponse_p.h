@@ -27,7 +27,7 @@ namespace CognitoIdentity {
 
 class LookupDeveloperIdentityResponse;
 
-class QTAWS_EXPORT LookupDeveloperIdentityResponsePrivate : public CognitoIdentityResponsePrivate {
+class LookupDeveloperIdentityResponsePrivate : public CognitoIdentityResponsePrivate {
 
 public:
 

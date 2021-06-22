@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateCommentRequest;
 
-class QTAWS_EXPORT CreateCommentRequestPrivate : public WorkDocsRequestPrivate {
+class CreateCommentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     CreateCommentRequestPrivate(const WorkDocsRequest::Action action,

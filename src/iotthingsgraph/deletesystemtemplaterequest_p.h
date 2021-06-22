@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class DeleteSystemTemplateRequest;
 
-class QTAWS_EXPORT DeleteSystemTemplateRequestPrivate : public IoTThingsGraphRequestPrivate {
+class DeleteSystemTemplateRequestPrivate : public IoTThingsGraphRequestPrivate {
 
 public:
     DeleteSystemTemplateRequestPrivate(const IoTThingsGraphRequest::Action action,

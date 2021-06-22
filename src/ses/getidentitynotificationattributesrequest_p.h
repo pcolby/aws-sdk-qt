@@ -28,7 +28,7 @@ namespace SES {
 
 class GetIdentityNotificationAttributesRequest;
 
-class QTAWS_EXPORT GetIdentityNotificationAttributesRequestPrivate : public SesRequestPrivate {
+class GetIdentityNotificationAttributesRequestPrivate : public SesRequestPrivate {
 
 public:
     GetIdentityNotificationAttributesRequestPrivate(const SesRequest::Action action,

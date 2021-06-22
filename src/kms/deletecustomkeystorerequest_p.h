@@ -28,7 +28,7 @@ namespace KMS {
 
 class DeleteCustomKeyStoreRequest;
 
-class QTAWS_EXPORT DeleteCustomKeyStoreRequestPrivate : public KmsRequestPrivate {
+class DeleteCustomKeyStoreRequestPrivate : public KmsRequestPrivate {
 
 public:
     DeleteCustomKeyStoreRequestPrivate(const KmsRequest::Action action,

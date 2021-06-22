@@ -28,7 +28,7 @@ namespace SSO {
 
 class LogoutRequest;
 
-class QTAWS_EXPORT LogoutRequestPrivate : public SsoRequestPrivate {
+class LogoutRequestPrivate : public SsoRequestPrivate {
 
 public:
     LogoutRequestPrivate(const SsoRequest::Action action,

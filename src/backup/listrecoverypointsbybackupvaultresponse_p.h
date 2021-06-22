@@ -27,7 +27,7 @@ namespace Backup {
 
 class ListRecoveryPointsByBackupVaultResponse;
 
-class QTAWS_EXPORT ListRecoveryPointsByBackupVaultResponsePrivate : public BackupResponsePrivate {
+class ListRecoveryPointsByBackupVaultResponsePrivate : public BackupResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace Organizations {
 
 class OrganizationsClient;
 
-class QTAWS_EXPORT OrganizationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class OrganizationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     OrganizationsClientPrivate(OrganizationsClient * const q);

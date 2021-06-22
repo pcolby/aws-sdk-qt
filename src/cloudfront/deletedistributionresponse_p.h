@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteDistributionResponse;
 
-class QTAWS_EXPORT DeleteDistributionResponsePrivate : public CloudFrontResponsePrivate {
+class DeleteDistributionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

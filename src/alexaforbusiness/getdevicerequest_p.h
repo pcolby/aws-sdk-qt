@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class GetDeviceRequest;
 
-class QTAWS_EXPORT GetDeviceRequestPrivate : public AlexaForBusinessRequestPrivate {
+class GetDeviceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     GetDeviceRequestPrivate(const AlexaForBusinessRequest::Action action,

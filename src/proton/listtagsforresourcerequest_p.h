@@ -28,7 +28,7 @@ namespace Proton {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ProtonRequestPrivate {
+class ListTagsForResourceRequestPrivate : public ProtonRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const ProtonRequest::Action action,

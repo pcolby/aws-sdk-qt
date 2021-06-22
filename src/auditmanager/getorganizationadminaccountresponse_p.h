@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetOrganizationAdminAccountResponse;
 
-class QTAWS_EXPORT GetOrganizationAdminAccountResponsePrivate : public AuditManagerResponsePrivate {
+class GetOrganizationAdminAccountResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

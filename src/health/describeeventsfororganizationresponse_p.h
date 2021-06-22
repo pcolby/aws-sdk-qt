@@ -27,7 +27,7 @@ namespace Health {
 
 class DescribeEventsForOrganizationResponse;
 
-class QTAWS_EXPORT DescribeEventsForOrganizationResponsePrivate : public HealthResponsePrivate {
+class DescribeEventsForOrganizationResponsePrivate : public HealthResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class GetInsightRuleReportRequest;
 
-class QTAWS_EXPORT GetInsightRuleReportRequestPrivate : public CloudWatchRequestPrivate {
+class GetInsightRuleReportRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     GetInsightRuleReportRequestPrivate(const CloudWatchRequest::Action action,

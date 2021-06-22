@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class UpdateRelationalDatabaseRequest;
 
-class QTAWS_EXPORT UpdateRelationalDatabaseRequestPrivate : public LightsailRequestPrivate {
+class UpdateRelationalDatabaseRequestPrivate : public LightsailRequestPrivate {
 
 public:
     UpdateRelationalDatabaseRequestPrivate(const LightsailRequest::Action action,

@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class AcmpcaResponse;
 
-class QTAWS_EXPORT AcmpcaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AcmpcaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

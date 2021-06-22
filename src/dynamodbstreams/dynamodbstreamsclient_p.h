@@ -29,7 +29,7 @@ namespace DynamoDBStreams {
 
 class DynamoDBStreamsClient;
 
-class QTAWS_EXPORT DynamoDBStreamsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DynamoDBStreamsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q);

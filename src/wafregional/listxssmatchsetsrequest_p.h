@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListXssMatchSetsRequest;
 
-class QTAWS_EXPORT ListXssMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
+class ListXssMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     ListXssMatchSetsRequestPrivate(const WAFRegionalRequest::Action action,

@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class UpdateComponentConfigurationRequest;
 
-class QTAWS_EXPORT UpdateComponentConfigurationRequestPrivate : public ApplicationInsightsRequestPrivate {
+class UpdateComponentConfigurationRequestPrivate : public ApplicationInsightsRequestPrivate {
 
 public:
     UpdateComponentConfigurationRequestPrivate(const ApplicationInsightsRequest::Action action,

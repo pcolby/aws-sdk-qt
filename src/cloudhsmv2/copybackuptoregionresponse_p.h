@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class CopyBackupToRegionResponse;
 
-class QTAWS_EXPORT CopyBackupToRegionResponsePrivate : public CloudHSMV2ResponsePrivate {
+class CopyBackupToRegionResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 

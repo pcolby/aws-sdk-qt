@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class RegisterContainerImageResponse;
 
-class QTAWS_EXPORT RegisterContainerImageResponsePrivate : public LightsailResponsePrivate {
+class RegisterContainerImageResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

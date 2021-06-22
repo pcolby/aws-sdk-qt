@@ -28,7 +28,7 @@ namespace SES {
 
 class DescribeActiveReceiptRuleSetRequest;
 
-class QTAWS_EXPORT DescribeActiveReceiptRuleSetRequestPrivate : public SesRequestPrivate {
+class DescribeActiveReceiptRuleSetRequestPrivate : public SesRequestPrivate {
 
 public:
     DescribeActiveReceiptRuleSetRequestPrivate(const SesRequest::Action action,

@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DisassociateTagOptionFromResourceResponse;
 
-class QTAWS_EXPORT DisassociateTagOptionFromResourceResponsePrivate : public ServiceCatalogResponsePrivate {
+class DisassociateTagOptionFromResourceResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

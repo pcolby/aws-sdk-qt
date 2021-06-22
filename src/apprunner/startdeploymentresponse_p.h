@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class StartDeploymentResponse;
 
-class QTAWS_EXPORT StartDeploymentResponsePrivate : public AppRunnerResponsePrivate {
+class StartDeploymentResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteTableVersionRequest;
 
-class QTAWS_EXPORT DeleteTableVersionRequestPrivate : public GlueRequestPrivate {
+class DeleteTableVersionRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteTableVersionRequestPrivate(const GlueRequest::Action action,

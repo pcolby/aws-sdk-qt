@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeModelPackageRequest;
 
-class QTAWS_EXPORT DescribeModelPackageRequestPrivate : public SageMakerRequestPrivate {
+class DescribeModelPackageRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeModelPackageRequestPrivate(const SageMakerRequest::Action action,

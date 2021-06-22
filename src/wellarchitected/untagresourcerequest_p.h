@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public WellArchitectedRequestPrivate {
+class UntagResourceRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const WellArchitectedRequest::Action action,

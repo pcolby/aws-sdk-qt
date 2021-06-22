@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class CreateTransitVirtualInterfaceResponse;
 
-class QTAWS_EXPORT CreateTransitVirtualInterfaceResponsePrivate : public DirectConnectResponsePrivate {
+class CreateTransitVirtualInterfaceResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class ListInstalledComponentsResponse;
 
-class QTAWS_EXPORT ListInstalledComponentsResponsePrivate : public GreengrassV2ResponsePrivate {
+class ListInstalledComponentsResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 

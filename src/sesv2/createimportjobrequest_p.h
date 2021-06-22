@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class CreateImportJobRequest;
 
-class QTAWS_EXPORT CreateImportJobRequestPrivate : public Sesv2RequestPrivate {
+class CreateImportJobRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     CreateImportJobRequestPrivate(const Sesv2Request::Action action,

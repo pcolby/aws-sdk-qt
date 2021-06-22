@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteEgressOnlyInternetGatewayRequest;
 
-class QTAWS_EXPORT DeleteEgressOnlyInternetGatewayRequestPrivate : public Ec2RequestPrivate {
+class DeleteEgressOnlyInternetGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteEgressOnlyInternetGatewayRequestPrivate(const Ec2Request::Action action,

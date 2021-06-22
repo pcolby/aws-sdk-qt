@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class ConfigServiceRequest;
 
-class QTAWS_EXPORT ConfigServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ConfigServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ConfigServiceRequest::Action action; ///< ConfigService action to be performed.

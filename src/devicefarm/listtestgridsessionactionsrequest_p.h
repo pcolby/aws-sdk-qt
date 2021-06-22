@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListTestGridSessionActionsRequest;
 
-class QTAWS_EXPORT ListTestGridSessionActionsRequestPrivate : public DeviceFarmRequestPrivate {
+class ListTestGridSessionActionsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListTestGridSessionActionsRequestPrivate(const DeviceFarmRequest::Action action,

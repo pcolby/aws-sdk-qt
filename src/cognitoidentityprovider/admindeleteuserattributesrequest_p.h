@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminDeleteUserAttributesRequest;
 
-class QTAWS_EXPORT AdminDeleteUserAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class AdminDeleteUserAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminDeleteUserAttributesRequestPrivate(const CognitoIdentityProviderRequest::Action action,

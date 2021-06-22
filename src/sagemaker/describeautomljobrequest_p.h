@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeAutoMLJobRequest;
 
-class QTAWS_EXPORT DescribeAutoMLJobRequestPrivate : public SageMakerRequestPrivate {
+class DescribeAutoMLJobRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeAutoMLJobRequestPrivate(const SageMakerRequest::Action action,

@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class StopUserImportJobResponse;
 
-class QTAWS_EXPORT StopUserImportJobResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+class StopUserImportJobResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 

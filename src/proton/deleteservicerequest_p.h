@@ -28,7 +28,7 @@ namespace Proton {
 
 class DeleteServiceRequest;
 
-class QTAWS_EXPORT DeleteServiceRequestPrivate : public ProtonRequestPrivate {
+class DeleteServiceRequestPrivate : public ProtonRequestPrivate {
 
 public:
     DeleteServiceRequestPrivate(const ProtonRequest::Action action,

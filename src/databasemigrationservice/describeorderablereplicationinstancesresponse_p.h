@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DescribeOrderableReplicationInstancesResponse;
 
-class QTAWS_EXPORT DescribeOrderableReplicationInstancesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+class DescribeOrderableReplicationInstancesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
 
 public:
 

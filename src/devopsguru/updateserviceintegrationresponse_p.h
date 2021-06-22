@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class UpdateServiceIntegrationResponse;
 
-class QTAWS_EXPORT UpdateServiceIntegrationResponsePrivate : public DevOpsGuruResponsePrivate {
+class UpdateServiceIntegrationResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 

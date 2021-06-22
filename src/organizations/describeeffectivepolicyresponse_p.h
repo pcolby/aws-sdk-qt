@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DescribeEffectivePolicyResponse;
 
-class QTAWS_EXPORT DescribeEffectivePolicyResponsePrivate : public OrganizationsResponsePrivate {
+class DescribeEffectivePolicyResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 

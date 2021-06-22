@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetEmailChannelRequest;
 
-class QTAWS_EXPORT GetEmailChannelRequestPrivate : public PinpointRequestPrivate {
+class GetEmailChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetEmailChannelRequestPrivate(const PinpointRequest::Action action,

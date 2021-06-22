@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class ListServiceProfilesRequest;
 
-class QTAWS_EXPORT ListServiceProfilesRequestPrivate : public IoTWirelessRequestPrivate {
+class ListServiceProfilesRequestPrivate : public IoTWirelessRequestPrivate {
 
 public:
     ListServiceProfilesRequestPrivate(const IoTWirelessRequest::Action action,

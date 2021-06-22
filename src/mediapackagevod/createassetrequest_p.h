@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class CreateAssetRequest;
 
-class QTAWS_EXPORT CreateAssetRequestPrivate : public MediaPackageVodRequestPrivate {
+class CreateAssetRequestPrivate : public MediaPackageVodRequestPrivate {
 
 public:
     CreateAssetRequestPrivate(const MediaPackageVodRequest::Action action,

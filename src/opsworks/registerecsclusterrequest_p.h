@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RegisterEcsClusterRequest;
 
-class QTAWS_EXPORT RegisterEcsClusterRequestPrivate : public OpsWorksRequestPrivate {
+class RegisterEcsClusterRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RegisterEcsClusterRequestPrivate(const OpsWorksRequest::Action action,

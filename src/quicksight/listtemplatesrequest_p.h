@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class ListTemplatesRequest;
 
-class QTAWS_EXPORT ListTemplatesRequestPrivate : public QuickSightRequestPrivate {
+class ListTemplatesRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     ListTemplatesRequestPrivate(const QuickSightRequest::Action action,

@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DeleteCommentResponse;
 
-class QTAWS_EXPORT DeleteCommentResponsePrivate : public WorkDocsResponsePrivate {
+class DeleteCommentResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

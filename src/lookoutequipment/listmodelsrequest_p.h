@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class ListModelsRequest;
 
-class QTAWS_EXPORT ListModelsRequestPrivate : public LookoutEquipmentRequestPrivate {
+class ListModelsRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     ListModelsRequestPrivate(const LookoutEquipmentRequest::Action action,

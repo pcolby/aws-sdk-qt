@@ -27,7 +27,7 @@ namespace SqsOld {
 
 class SqsChangeMessageVisibilityResponse;
 
-class QTAWS_EXPORT SqsChangeMessageVisibilityResponsePrivate : public SqsResponsePrivate {
+class SqsChangeMessageVisibilityResponsePrivate : public SqsResponsePrivate {
 
 public:
     QString queueUrl; ///< Created queue URL.

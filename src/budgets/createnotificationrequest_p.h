@@ -28,7 +28,7 @@ namespace Budgets {
 
 class CreateNotificationRequest;
 
-class QTAWS_EXPORT CreateNotificationRequestPrivate : public BudgetsRequestPrivate {
+class CreateNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     CreateNotificationRequestPrivate(const BudgetsRequest::Action action,

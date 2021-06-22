@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class ListAssociatedAttributeGroupsRequest;
 
-class QTAWS_EXPORT ListAssociatedAttributeGroupsRequestPrivate : public AppRegistryRequestPrivate {
+class ListAssociatedAttributeGroupsRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     ListAssociatedAttributeGroupsRequestPrivate(const AppRegistryRequest::Action action,

@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class CreateJourneyResponse;
 
-class QTAWS_EXPORT CreateJourneyResponsePrivate : public PinpointResponsePrivate {
+class CreateJourneyResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

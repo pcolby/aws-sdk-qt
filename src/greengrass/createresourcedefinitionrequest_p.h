@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class CreateResourceDefinitionRequest;
 
-class QTAWS_EXPORT CreateResourceDefinitionRequestPrivate : public GreengrassRequestPrivate {
+class CreateResourceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     CreateResourceDefinitionRequestPrivate(const GreengrassRequest::Action action,

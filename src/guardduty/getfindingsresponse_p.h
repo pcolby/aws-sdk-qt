@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GetFindingsResponse;
 
-class QTAWS_EXPORT GetFindingsResponsePrivate : public GuardDutyResponsePrivate {
+class GetFindingsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

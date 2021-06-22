@@ -27,7 +27,7 @@ namespace S3Control {
 
 class PutAccessPointPolicyForObjectLambdaResponse;
 
-class QTAWS_EXPORT PutAccessPointPolicyForObjectLambdaResponsePrivate : public S3ControlResponsePrivate {
+class PutAccessPointPolicyForObjectLambdaResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

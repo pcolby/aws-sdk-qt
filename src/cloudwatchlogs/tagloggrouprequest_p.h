@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class TagLogGroupRequest;
 
-class QTAWS_EXPORT TagLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
+class TagLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     TagLogGroupRequestPrivate(const CloudWatchLogsRequest::Action action,

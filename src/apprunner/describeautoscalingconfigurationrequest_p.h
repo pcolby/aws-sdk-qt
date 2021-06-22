@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class DescribeAutoScalingConfigurationRequest;
 
-class QTAWS_EXPORT DescribeAutoScalingConfigurationRequestPrivate : public AppRunnerRequestPrivate {
+class DescribeAutoScalingConfigurationRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     DescribeAutoScalingConfigurationRequestPrivate(const AppRunnerRequest::Action action,

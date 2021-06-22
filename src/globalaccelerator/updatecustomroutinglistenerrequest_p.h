@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class UpdateCustomRoutingListenerRequest;
 
-class QTAWS_EXPORT UpdateCustomRoutingListenerRequestPrivate : public GlobalAcceleratorRequestPrivate {
+class UpdateCustomRoutingListenerRequestPrivate : public GlobalAcceleratorRequestPrivate {
 
 public:
     UpdateCustomRoutingListenerRequestPrivate(const GlobalAcceleratorRequest::Action action,

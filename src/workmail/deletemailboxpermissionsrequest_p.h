@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DeleteMailboxPermissionsRequest;
 
-class QTAWS_EXPORT DeleteMailboxPermissionsRequestPrivate : public WorkMailRequestPrivate {
+class DeleteMailboxPermissionsRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DeleteMailboxPermissionsRequestPrivate(const WorkMailRequest::Action action,

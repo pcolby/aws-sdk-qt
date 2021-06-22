@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class SignalResourceRequest;
 
-class QTAWS_EXPORT SignalResourceRequestPrivate : public CloudFormationRequestPrivate {
+class SignalResourceRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     SignalResourceRequestPrivate(const CloudFormationRequest::Action action,

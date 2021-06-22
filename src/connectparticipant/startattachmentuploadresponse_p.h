@@ -27,7 +27,7 @@ namespace ConnectParticipant {
 
 class StartAttachmentUploadResponse;
 
-class QTAWS_EXPORT StartAttachmentUploadResponsePrivate : public ConnectParticipantResponsePrivate {
+class StartAttachmentUploadResponsePrivate : public ConnectParticipantResponsePrivate {
 
 public:
 

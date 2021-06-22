@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreatePublicKeyRequest;
 
-class QTAWS_EXPORT CreatePublicKeyRequestPrivate : public CloudFrontRequestPrivate {
+class CreatePublicKeyRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     CreatePublicKeyRequestPrivate(const CloudFrontRequest::Action action,

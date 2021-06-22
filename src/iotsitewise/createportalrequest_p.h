@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class CreatePortalRequest;
 
-class QTAWS_EXPORT CreatePortalRequestPrivate : public IoTSiteWiseRequestPrivate {
+class CreatePortalRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     CreatePortalRequestPrivate(const IoTSiteWiseRequest::Action action,

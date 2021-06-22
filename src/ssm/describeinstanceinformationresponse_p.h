@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeInstanceInformationResponse;
 
-class QTAWS_EXPORT DescribeInstanceInformationResponsePrivate : public SsmResponsePrivate {
+class DescribeInstanceInformationResponsePrivate : public SsmResponsePrivate {
 
 public:
 

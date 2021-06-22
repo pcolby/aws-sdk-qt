@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeregisterTargetFromMaintenanceWindowRequest;
 
-class QTAWS_EXPORT DeregisterTargetFromMaintenanceWindowRequestPrivate : public SsmRequestPrivate {
+class DeregisterTargetFromMaintenanceWindowRequestPrivate : public SsmRequestPrivate {
 
 public:
     DeregisterTargetFromMaintenanceWindowRequestPrivate(const SsmRequest::Action action,

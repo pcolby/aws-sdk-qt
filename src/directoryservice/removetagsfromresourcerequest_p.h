@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RemoveTagsFromResourceRequest;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public DirectoryServiceRequestPrivate {
+class RemoveTagsFromResourceRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     RemoveTagsFromResourceRequestPrivate(const DirectoryServiceRequest::Action action,

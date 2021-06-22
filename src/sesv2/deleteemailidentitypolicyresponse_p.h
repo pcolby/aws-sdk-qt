@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class DeleteEmailIdentityPolicyResponse;
 
-class QTAWS_EXPORT DeleteEmailIdentityPolicyResponsePrivate : public Sesv2ResponsePrivate {
+class DeleteEmailIdentityPolicyResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

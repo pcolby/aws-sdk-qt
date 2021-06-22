@@ -29,7 +29,7 @@ namespace Textract {
 
 class TextractClient;
 
-class QTAWS_EXPORT TextractClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TextractClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     TextractClientPrivate(TextractClient * const q);

@@ -27,7 +27,7 @@ namespace Shield {
 
 class AssociateDRTRoleResponse;
 
-class QTAWS_EXPORT AssociateDRTRoleResponsePrivate : public ShieldResponsePrivate {
+class AssociateDRTRoleResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

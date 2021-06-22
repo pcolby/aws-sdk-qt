@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class CreateDatasetRequest;
 
-class QTAWS_EXPORT CreateDatasetRequestPrivate : public GlueDataBrewRequestPrivate {
+class CreateDatasetRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     CreateDatasetRequestPrivate(const GlueDataBrewRequest::Action action,

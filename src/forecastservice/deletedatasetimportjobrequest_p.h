@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DeleteDatasetImportJobRequest;
 
-class QTAWS_EXPORT DeleteDatasetImportJobRequestPrivate : public ForecastServiceRequestPrivate {
+class DeleteDatasetImportJobRequestPrivate : public ForecastServiceRequestPrivate {
 
 public:
     DeleteDatasetImportJobRequestPrivate(const ForecastServiceRequest::Action action,

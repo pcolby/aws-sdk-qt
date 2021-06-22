@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DeleteSnapshotRequest;
 
-class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public ElastiCacheRequestPrivate {
+class DeleteSnapshotRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DeleteSnapshotRequestPrivate(const ElastiCacheRequest::Action action,

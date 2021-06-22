@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class CreateDevicePoolResponse;
 
-class QTAWS_EXPORT CreateDevicePoolResponsePrivate : public DeviceFarmResponsePrivate {
+class CreateDevicePoolResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

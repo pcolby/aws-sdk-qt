@@ -27,7 +27,7 @@ namespace EMR {
 
 class StopNotebookExecutionResponse;
 
-class QTAWS_EXPORT StopNotebookExecutionResponsePrivate : public EmrResponsePrivate {
+class StopNotebookExecutionResponsePrivate : public EmrResponsePrivate {
 
 public:
 

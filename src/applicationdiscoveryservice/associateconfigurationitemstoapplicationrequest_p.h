@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class AssociateConfigurationItemsToApplicationRequest;
 
-class QTAWS_EXPORT AssociateConfigurationItemsToApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class AssociateConfigurationItemsToApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     AssociateConfigurationItemsToApplicationRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,

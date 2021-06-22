@@ -27,7 +27,7 @@ namespace mgn {
 
 class CreateReplicationConfigurationTemplateResponse;
 
-class QTAWS_EXPORT CreateReplicationConfigurationTemplateResponsePrivate : public mgnResponsePrivate {
+class CreateReplicationConfigurationTemplateResponsePrivate : public mgnResponsePrivate {
 
 public:
 

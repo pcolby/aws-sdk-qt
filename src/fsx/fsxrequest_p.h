@@ -28,7 +28,7 @@ namespace FSx {
 
 class FSxRequest;
 
-class QTAWS_EXPORT FSxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FSxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FSxRequest::Action action; ///< FSx action to be performed.

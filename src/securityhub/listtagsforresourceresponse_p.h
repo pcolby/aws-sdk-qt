@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public SecurityHubResponsePrivate {
+class ListTagsForResourceResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

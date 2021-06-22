@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class CreateCustomVerificationEmailTemplateRequest;
 
-class QTAWS_EXPORT CreateCustomVerificationEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
+class CreateCustomVerificationEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     CreateCustomVerificationEmailTemplateRequestPrivate(const Sesv2Request::Action action,

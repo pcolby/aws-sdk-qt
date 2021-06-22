@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateDirectConnectGatewayAssociationRequest;
 
-class QTAWS_EXPORT CreateDirectConnectGatewayAssociationRequestPrivate : public DirectConnectRequestPrivate {
+class CreateDirectConnectGatewayAssociationRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreateDirectConnectGatewayAssociationRequestPrivate(const DirectConnectRequest::Action action,

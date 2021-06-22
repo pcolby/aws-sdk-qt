@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteInstanceRequest;
 
-class QTAWS_EXPORT DeleteInstanceRequestPrivate : public OpsWorksRequestPrivate {
+class DeleteInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeleteInstanceRequestPrivate(const OpsWorksRequest::Action action,

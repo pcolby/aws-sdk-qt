@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeIdFormatRequest;
 
-class QTAWS_EXPORT DescribeIdFormatRequestPrivate : public Ec2RequestPrivate {
+class DescribeIdFormatRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeIdFormatRequestPrivate(const Ec2Request::Action action,

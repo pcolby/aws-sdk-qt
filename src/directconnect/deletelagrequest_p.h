@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteLagRequest;
 
-class QTAWS_EXPORT DeleteLagRequestPrivate : public DirectConnectRequestPrivate {
+class DeleteLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DeleteLagRequestPrivate(const DirectConnectRequest::Action action,

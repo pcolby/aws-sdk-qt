@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class AddTagsRequest;
 
-class QTAWS_EXPORT AddTagsRequestPrivate : public MachineLearningRequestPrivate {
+class AddTagsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     AddTagsRequestPrivate(const MachineLearningRequest::Action action,

@@ -27,7 +27,7 @@ namespace Chime {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ChimeResponsePrivate {
+class UntagResourceResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

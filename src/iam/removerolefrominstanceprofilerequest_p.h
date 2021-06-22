@@ -28,7 +28,7 @@ namespace IAM {
 
 class RemoveRoleFromInstanceProfileRequest;
 
-class QTAWS_EXPORT RemoveRoleFromInstanceProfileRequestPrivate : public IamRequestPrivate {
+class RemoveRoleFromInstanceProfileRequestPrivate : public IamRequestPrivate {
 
 public:
     RemoveRoleFromInstanceProfileRequestPrivate(const IamRequest::Action action,

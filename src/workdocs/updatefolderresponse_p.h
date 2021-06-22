@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class UpdateFolderResponse;
 
-class QTAWS_EXPORT UpdateFolderResponsePrivate : public WorkDocsResponsePrivate {
+class UpdateFolderResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClient;
 
-class QTAWS_EXPORT ServerlessApplicationRepositoryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ServerlessApplicationRepositoryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q);

@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class TestConnectionResponse;
 
-class QTAWS_EXPORT TestConnectionResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+class TestConnectionResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
 
 public:
 

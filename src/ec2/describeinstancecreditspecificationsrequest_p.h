@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeInstanceCreditSpecificationsRequest;
 
-class QTAWS_EXPORT DescribeInstanceCreditSpecificationsRequestPrivate : public Ec2RequestPrivate {
+class DescribeInstanceCreditSpecificationsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeInstanceCreditSpecificationsRequestPrivate(const Ec2Request::Action action,

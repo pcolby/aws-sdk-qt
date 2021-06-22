@@ -27,7 +27,7 @@ namespace SSO {
 
 class LogoutResponse;
 
-class QTAWS_EXPORT LogoutResponsePrivate : public SsoResponsePrivate {
+class LogoutResponsePrivate : public SsoResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace ECS {
 
 class UpdateServiceResponse;
 
-class QTAWS_EXPORT UpdateServiceResponsePrivate : public EcsResponsePrivate {
+class UpdateServiceResponsePrivate : public EcsResponsePrivate {
 
 public:
 

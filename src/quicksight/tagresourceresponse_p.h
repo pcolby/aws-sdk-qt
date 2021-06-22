@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public QuickSightResponsePrivate {
+class TagResourceResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

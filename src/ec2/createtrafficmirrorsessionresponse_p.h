@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateTrafficMirrorSessionResponse;
 
-class QTAWS_EXPORT CreateTrafficMirrorSessionResponsePrivate : public Ec2ResponsePrivate {
+class CreateTrafficMirrorSessionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

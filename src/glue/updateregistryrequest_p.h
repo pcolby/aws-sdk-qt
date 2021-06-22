@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateRegistryRequest;
 
-class QTAWS_EXPORT UpdateRegistryRequestPrivate : public GlueRequestPrivate {
+class UpdateRegistryRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateRegistryRequestPrivate(const GlueRequest::Action action,

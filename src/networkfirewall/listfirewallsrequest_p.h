@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class ListFirewallsRequest;
 
-class QTAWS_EXPORT ListFirewallsRequestPrivate : public NetworkFirewallRequestPrivate {
+class ListFirewallsRequestPrivate : public NetworkFirewallRequestPrivate {
 
 public:
     ListFirewallsRequestPrivate(const NetworkFirewallRequest::Action action,

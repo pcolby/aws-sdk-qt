@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudHSMRequestPrivate {
+class ListTagsForResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const CloudHSMRequest::Action action,

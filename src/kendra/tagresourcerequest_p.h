@@ -28,7 +28,7 @@ namespace kendra {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public kendraRequestPrivate {
+class TagResourceRequestPrivate : public kendraRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const kendraRequest::Action action,

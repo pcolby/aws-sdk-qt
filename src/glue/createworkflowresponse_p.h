@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateWorkflowResponse;
 
-class QTAWS_EXPORT CreateWorkflowResponsePrivate : public GlueResponsePrivate {
+class CreateWorkflowResponsePrivate : public GlueResponsePrivate {
 
 public:
 

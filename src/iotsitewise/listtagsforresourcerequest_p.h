@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public IoTSiteWiseRequestPrivate {
+class ListTagsForResourceRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const IoTSiteWiseRequest::Action action,

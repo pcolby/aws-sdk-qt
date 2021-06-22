@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class RegisterToWorkMailRequest;
 
-class QTAWS_EXPORT RegisterToWorkMailRequestPrivate : public WorkMailRequestPrivate {
+class RegisterToWorkMailRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     RegisterToWorkMailRequestPrivate(const WorkMailRequest::Action action,

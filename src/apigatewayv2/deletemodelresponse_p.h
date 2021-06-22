@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteModelResponse;
 
-class QTAWS_EXPORT DeleteModelResponsePrivate : public ApiGatewayV2ResponsePrivate {
+class DeleteModelResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 

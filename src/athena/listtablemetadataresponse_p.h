@@ -27,7 +27,7 @@ namespace Athena {
 
 class ListTableMetadataResponse;
 
-class QTAWS_EXPORT ListTableMetadataResponsePrivate : public AthenaResponsePrivate {
+class ListTableMetadataResponsePrivate : public AthenaResponsePrivate {
 
 public:
 

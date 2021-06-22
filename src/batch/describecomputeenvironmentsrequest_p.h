@@ -28,7 +28,7 @@ namespace Batch {
 
 class DescribeComputeEnvironmentsRequest;
 
-class QTAWS_EXPORT DescribeComputeEnvironmentsRequestPrivate : public BatchRequestPrivate {
+class DescribeComputeEnvironmentsRequestPrivate : public BatchRequestPrivate {
 
 public:
     DescribeComputeEnvironmentsRequestPrivate(const BatchRequest::Action action,

@@ -28,7 +28,7 @@ namespace signer {
 
 class RevokeSigningProfileRequest;
 
-class QTAWS_EXPORT RevokeSigningProfileRequestPrivate : public signerRequestPrivate {
+class RevokeSigningProfileRequestPrivate : public signerRequestPrivate {
 
 public:
     RevokeSigningProfileRequestPrivate(const signerRequest::Action action,

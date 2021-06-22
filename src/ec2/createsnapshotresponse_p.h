@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateSnapshotResponse;
 
-class QTAWS_EXPORT CreateSnapshotResponsePrivate : public Ec2ResponsePrivate {
+class CreateSnapshotResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

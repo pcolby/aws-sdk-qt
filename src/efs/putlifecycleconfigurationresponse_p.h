@@ -27,7 +27,7 @@ namespace EFS {
 
 class PutLifecycleConfigurationResponse;
 
-class QTAWS_EXPORT PutLifecycleConfigurationResponsePrivate : public EfsResponsePrivate {
+class PutLifecycleConfigurationResponsePrivate : public EfsResponsePrivate {
 
 public:
 

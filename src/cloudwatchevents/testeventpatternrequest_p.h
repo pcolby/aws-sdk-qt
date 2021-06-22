@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class TestEventPatternRequest;
 
-class QTAWS_EXPORT TestEventPatternRequestPrivate : public CloudWatchEventsRequestPrivate {
+class TestEventPatternRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     TestEventPatternRequestPrivate(const CloudWatchEventsRequest::Action action,

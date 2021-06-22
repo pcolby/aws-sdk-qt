@@ -27,7 +27,7 @@ namespace Glue {
 
 class StopTriggerResponse;
 
-class QTAWS_EXPORT StopTriggerResponsePrivate : public GlueResponsePrivate {
+class StopTriggerResponsePrivate : public GlueResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class PutAccountSendingAttributesResponse;
 
-class QTAWS_EXPORT PutAccountSendingAttributesResponsePrivate : public PinpointEmailResponsePrivate {
+class PutAccountSendingAttributesResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 

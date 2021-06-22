@@ -28,7 +28,7 @@ namespace Kafka {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public KafkaRequestPrivate {
+class ListTagsForResourceRequestPrivate : public KafkaRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const KafkaRequest::Action action,

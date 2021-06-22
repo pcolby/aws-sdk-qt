@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class CreateResolverRuleResponse;
 
-class QTAWS_EXPORT CreateResolverRuleResponsePrivate : public Route53ResolverResponsePrivate {
+class CreateResolverRuleResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 

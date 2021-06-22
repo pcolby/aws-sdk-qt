@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AttachVpnGatewayRequest;
 
-class QTAWS_EXPORT AttachVpnGatewayRequestPrivate : public Ec2RequestPrivate {
+class AttachVpnGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     AttachVpnGatewayRequestPrivate(const Ec2Request::Action action,

@@ -28,7 +28,7 @@ namespace Backup {
 
 class DescribeRecoveryPointRequest;
 
-class QTAWS_EXPORT DescribeRecoveryPointRequestPrivate : public BackupRequestPrivate {
+class DescribeRecoveryPointRequestPrivate : public BackupRequestPrivate {
 
 public:
     DescribeRecoveryPointRequestPrivate(const BackupRequest::Action action,

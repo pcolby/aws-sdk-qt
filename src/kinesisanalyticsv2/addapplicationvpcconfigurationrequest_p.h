@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class AddApplicationVpcConfigurationRequest;
 
-class QTAWS_EXPORT AddApplicationVpcConfigurationRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
+class AddApplicationVpcConfigurationRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
 
 public:
     AddApplicationVpcConfigurationRequestPrivate(const KinesisAnalyticsV2Request::Action action,

@@ -29,7 +29,7 @@ namespace Snowball {
 
 class SnowballClient;
 
-class QTAWS_EXPORT SnowballClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SnowballClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SnowballClientPrivate(SnowballClient * const q);

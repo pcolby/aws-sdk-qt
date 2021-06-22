@@ -27,7 +27,7 @@ namespace Chime {
 
 class BatchCreateRoomMembershipResponse;
 
-class QTAWS_EXPORT BatchCreateRoomMembershipResponsePrivate : public ChimeResponsePrivate {
+class BatchCreateRoomMembershipResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

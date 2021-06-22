@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class CreateResourcePolicyResponse;
 
-class QTAWS_EXPORT CreateResourcePolicyResponsePrivate : public LexModelsV2ResponsePrivate {
+class CreateResourcePolicyResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

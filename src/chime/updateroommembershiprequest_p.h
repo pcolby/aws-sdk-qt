@@ -28,7 +28,7 @@ namespace Chime {
 
 class UpdateRoomMembershipRequest;
 
-class QTAWS_EXPORT UpdateRoomMembershipRequestPrivate : public ChimeRequestPrivate {
+class UpdateRoomMembershipRequestPrivate : public ChimeRequestPrivate {
 
 public:
     UpdateRoomMembershipRequestPrivate(const ChimeRequest::Action action,

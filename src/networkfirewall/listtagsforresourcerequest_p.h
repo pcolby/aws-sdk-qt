@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public NetworkFirewallRequestPrivate {
+class ListTagsForResourceRequestPrivate : public NetworkFirewallRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const NetworkFirewallRequest::Action action,

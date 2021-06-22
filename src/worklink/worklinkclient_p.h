@@ -29,7 +29,7 @@ namespace WorkLink {
 
 class WorkLinkClient;
 
-class QTAWS_EXPORT WorkLinkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WorkLinkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     WorkLinkClientPrivate(WorkLinkClient * const q);

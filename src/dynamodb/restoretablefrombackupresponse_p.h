@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class RestoreTableFromBackupResponse;
 
-class QTAWS_EXPORT RestoreTableFromBackupResponsePrivate : public DynamoDBResponsePrivate {
+class RestoreTableFromBackupResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

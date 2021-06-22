@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class StopChannelRequest;
 
-class QTAWS_EXPORT StopChannelRequestPrivate : public MediaLiveRequestPrivate {
+class StopChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     StopChannelRequestPrivate(const MediaLiveRequest::Action action,

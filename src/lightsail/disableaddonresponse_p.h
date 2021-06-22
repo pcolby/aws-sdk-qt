@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DisableAddOnResponse;
 
-class QTAWS_EXPORT DisableAddOnResponsePrivate : public LightsailResponsePrivate {
+class DisableAddOnResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

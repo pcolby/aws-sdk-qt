@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DeleteSchemaVersionRequest;
 
-class QTAWS_EXPORT DeleteSchemaVersionRequestPrivate : public SchemasRequestPrivate {
+class DeleteSchemaVersionRequestPrivate : public SchemasRequestPrivate {
 
 public:
     DeleteSchemaVersionRequestPrivate(const SchemasRequest::Action action,

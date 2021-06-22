@@ -29,7 +29,7 @@ namespace Core {
 
 class AwsBasicCredentials;
 
-class QTAWS_EXPORT AwsBasicCredentialsPrivate : public AwsAbstractCredentialsPrivate {
+class AwsBasicCredentialsPrivate : public AwsAbstractCredentialsPrivate {
 
 public:
     QString accessKeyId; ///< AWS Access Key ID.

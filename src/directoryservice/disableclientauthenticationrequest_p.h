@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DisableClientAuthenticationRequest;
 
-class QTAWS_EXPORT DisableClientAuthenticationRequestPrivate : public DirectoryServiceRequestPrivate {
+class DisableClientAuthenticationRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DisableClientAuthenticationRequestPrivate(const DirectoryServiceRequest::Action action,

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ConfigServiceResponsePrivate {
+class UntagResourceResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

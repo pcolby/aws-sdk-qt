@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class AppMeshRequest;
 
-class QTAWS_EXPORT AppMeshRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppMeshRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppMeshRequest::Action action; ///< AppMesh action to be performed.

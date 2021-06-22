@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetConsoleOutputRequest;
 
-class QTAWS_EXPORT GetConsoleOutputRequestPrivate : public Ec2RequestPrivate {
+class GetConsoleOutputRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetConsoleOutputRequestPrivate(const Ec2Request::Action action,

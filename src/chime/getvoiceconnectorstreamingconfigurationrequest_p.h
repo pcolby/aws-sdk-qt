@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetVoiceConnectorStreamingConfigurationRequest;
 
-class QTAWS_EXPORT GetVoiceConnectorStreamingConfigurationRequestPrivate : public ChimeRequestPrivate {
+class GetVoiceConnectorStreamingConfigurationRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetVoiceConnectorStreamingConfigurationRequestPrivate(const ChimeRequest::Action action,

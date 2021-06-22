@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeCertificateRequest;
 
-class QTAWS_EXPORT DescribeCertificateRequestPrivate : public IoTRequestPrivate {
+class DescribeCertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeCertificateRequestPrivate(const IoTRequest::Action action,

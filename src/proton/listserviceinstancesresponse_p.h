@@ -27,7 +27,7 @@ namespace Proton {
 
 class ListServiceInstancesResponse;
 
-class QTAWS_EXPORT ListServiceInstancesResponsePrivate : public ProtonResponsePrivate {
+class ListServiceInstancesResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

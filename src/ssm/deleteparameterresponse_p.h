@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteParameterResponse;
 
-class QTAWS_EXPORT DeleteParameterResponsePrivate : public SsmResponsePrivate {
+class DeleteParameterResponsePrivate : public SsmResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Shield {
 
 class ListResourcesInProtectionGroupResponse;
 
-class QTAWS_EXPORT ListResourcesInProtectionGroupResponsePrivate : public ShieldResponsePrivate {
+class ListResourcesInProtectionGroupResponsePrivate : public ShieldResponsePrivate {
 
 public:
 

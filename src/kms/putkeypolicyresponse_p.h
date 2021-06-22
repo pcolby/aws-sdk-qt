@@ -27,7 +27,7 @@ namespace KMS {
 
 class PutKeyPolicyResponse;
 
-class QTAWS_EXPORT PutKeyPolicyResponsePrivate : public KmsResponsePrivate {
+class PutKeyPolicyResponsePrivate : public KmsResponsePrivate {
 
 public:
 

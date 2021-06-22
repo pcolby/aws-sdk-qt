@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class UpdateNetworkProfileResponse;
 
-class QTAWS_EXPORT UpdateNetworkProfileResponsePrivate : public AlexaForBusinessResponsePrivate {
+class UpdateNetworkProfileResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

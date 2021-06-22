@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class ListSourceCredentialsRequest;
 
-class QTAWS_EXPORT ListSourceCredentialsRequestPrivate : public CodeBuildRequestPrivate {
+class ListSourceCredentialsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     ListSourceCredentialsRequestPrivate(const CodeBuildRequest::Action action,

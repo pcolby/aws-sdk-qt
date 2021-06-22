@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListDevelopmentSchemaArnsResponse;
 
-class QTAWS_EXPORT ListDevelopmentSchemaArnsResponsePrivate : public CloudDirectoryResponsePrivate {
+class ListDevelopmentSchemaArnsResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

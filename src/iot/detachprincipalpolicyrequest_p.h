@@ -28,7 +28,7 @@ namespace IoT {
 
 class DetachPrincipalPolicyRequest;
 
-class QTAWS_EXPORT DetachPrincipalPolicyRequestPrivate : public IoTRequestPrivate {
+class DetachPrincipalPolicyRequestPrivate : public IoTRequestPrivate {
 
 public:
     DetachPrincipalPolicyRequestPrivate(const IoTRequest::Action action,

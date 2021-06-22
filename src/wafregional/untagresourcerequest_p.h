@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public WAFRegionalRequestPrivate {
+class UntagResourceRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const WAFRegionalRequest::Action action,

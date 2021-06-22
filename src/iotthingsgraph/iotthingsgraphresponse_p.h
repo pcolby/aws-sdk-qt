@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class IoTThingsGraphResponse;
 
-class QTAWS_EXPORT IoTThingsGraphResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTThingsGraphResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

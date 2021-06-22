@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class StartPipelineExecutionRequest;
 
-class QTAWS_EXPORT StartPipelineExecutionRequestPrivate : public SageMakerRequestPrivate {
+class StartPipelineExecutionRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     StartPipelineExecutionRequestPrivate(const SageMakerRequest::Action action,

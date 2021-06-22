@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeContinuousExportsRequest;
 
-class QTAWS_EXPORT DescribeContinuousExportsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DescribeContinuousExportsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     DescribeContinuousExportsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,

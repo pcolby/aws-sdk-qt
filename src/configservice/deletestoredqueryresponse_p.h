@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteStoredQueryResponse;
 
-class QTAWS_EXPORT DeleteStoredQueryResponsePrivate : public ConfigServiceResponsePrivate {
+class DeleteStoredQueryResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 

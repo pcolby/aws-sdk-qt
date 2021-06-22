@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteColumnStatisticsForTableResponse;
 
-class QTAWS_EXPORT DeleteColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate {
+class DeleteColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchGetCrawlersRequest;
 
-class QTAWS_EXPORT BatchGetCrawlersRequestPrivate : public GlueRequestPrivate {
+class BatchGetCrawlersRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchGetCrawlersRequestPrivate(const GlueRequest::Action action,

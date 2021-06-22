@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class EnableSagemakerServicecatalogPortfolioResponse;
 
-class QTAWS_EXPORT EnableSagemakerServicecatalogPortfolioResponsePrivate : public SageMakerResponsePrivate {
+class EnableSagemakerServicecatalogPortfolioResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SQS {
 
 class GetQueueUrlResponse;
 
-class QTAWS_EXPORT GetQueueUrlResponsePrivate : public SqsResponsePrivate {
+class GetQueueUrlResponsePrivate : public SqsResponsePrivate {
 
 public:
 

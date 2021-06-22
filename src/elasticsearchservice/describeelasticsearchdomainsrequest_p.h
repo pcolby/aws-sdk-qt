@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DescribeElasticsearchDomainsRequest;
 
-class QTAWS_EXPORT DescribeElasticsearchDomainsRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DescribeElasticsearchDomainsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     DescribeElasticsearchDomainsRequestPrivate(const ElasticsearchServiceRequest::Action action,

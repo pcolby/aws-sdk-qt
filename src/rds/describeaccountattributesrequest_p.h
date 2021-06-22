@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeAccountAttributesRequest;
 
-class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public RdsRequestPrivate {
+class DescribeAccountAttributesRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeAccountAttributesRequestPrivate(const RdsRequest::Action action,

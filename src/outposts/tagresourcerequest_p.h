@@ -28,7 +28,7 @@ namespace Outposts {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public OutpostsRequestPrivate {
+class TagResourceRequestPrivate : public OutpostsRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const OutpostsRequest::Action action,

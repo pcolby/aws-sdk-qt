@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class ExportLambdaFunctionRecommendationsResponse;
 
-class QTAWS_EXPORT ExportLambdaFunctionRecommendationsResponsePrivate : public ComputeOptimizerResponsePrivate {
+class ExportLambdaFunctionRecommendationsResponsePrivate : public ComputeOptimizerResponsePrivate {
 
 public:
 

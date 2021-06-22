@@ -28,7 +28,7 @@ namespace Polly {
 
 class ListLexiconsRequest;
 
-class QTAWS_EXPORT ListLexiconsRequestPrivate : public PollyRequestPrivate {
+class ListLexiconsRequestPrivate : public PollyRequestPrivate {
 
 public:
     ListLexiconsRequestPrivate(const PollyRequest::Action action,

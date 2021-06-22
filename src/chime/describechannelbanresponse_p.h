@@ -27,7 +27,7 @@ namespace Chime {
 
 class DescribeChannelBanResponse;
 
-class QTAWS_EXPORT DescribeChannelBanResponsePrivate : public ChimeResponsePrivate {
+class DescribeChannelBanResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

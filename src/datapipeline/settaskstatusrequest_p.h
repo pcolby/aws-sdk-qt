@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class SetTaskStatusRequest;
 
-class QTAWS_EXPORT SetTaskStatusRequestPrivate : public DataPipelineRequestPrivate {
+class SetTaskStatusRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     SetTaskStatusRequestPrivate(const DataPipelineRequest::Action action,

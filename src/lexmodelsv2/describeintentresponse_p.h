@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DescribeIntentResponse;
 
-class QTAWS_EXPORT DescribeIntentResponsePrivate : public LexModelsV2ResponsePrivate {
+class DescribeIntentResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

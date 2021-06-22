@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class ExitStandbyResponse;
 
-class QTAWS_EXPORT ExitStandbyResponsePrivate : public AutoScalingResponsePrivate {
+class ExitStandbyResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 

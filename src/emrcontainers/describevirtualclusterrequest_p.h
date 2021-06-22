@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class DescribeVirtualClusterRequest;
 
-class QTAWS_EXPORT DescribeVirtualClusterRequestPrivate : public EMRContainersRequestPrivate {
+class DescribeVirtualClusterRequestPrivate : public EMRContainersRequestPrivate {
 
 public:
     DescribeVirtualClusterRequestPrivate(const EMRContainersRequest::Action action,

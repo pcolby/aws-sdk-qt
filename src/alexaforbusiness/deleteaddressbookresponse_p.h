@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class DeleteAddressBookResponse;
 
-class QTAWS_EXPORT DeleteAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate {
+class DeleteAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 

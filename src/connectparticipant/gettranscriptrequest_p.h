@@ -28,7 +28,7 @@ namespace ConnectParticipant {
 
 class GetTranscriptRequest;
 
-class QTAWS_EXPORT GetTranscriptRequestPrivate : public ConnectParticipantRequestPrivate {
+class GetTranscriptRequestPrivate : public ConnectParticipantRequestPrivate {
 
 public:
     GetTranscriptRequestPrivate(const ConnectParticipantRequest::Action action,

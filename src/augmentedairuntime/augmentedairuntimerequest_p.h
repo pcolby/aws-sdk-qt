@@ -28,7 +28,7 @@ namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeRequest;
 
-class QTAWS_EXPORT AugmentedAIRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AugmentedAIRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AugmentedAIRuntimeRequest::Action action; ///< AugmentedAIRuntime action to be performed.

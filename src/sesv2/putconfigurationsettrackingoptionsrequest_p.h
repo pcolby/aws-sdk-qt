@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutConfigurationSetTrackingOptionsRequest;
 
-class QTAWS_EXPORT PutConfigurationSetTrackingOptionsRequestPrivate : public Sesv2RequestPrivate {
+class PutConfigurationSetTrackingOptionsRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     PutConfigurationSetTrackingOptionsRequestPrivate(const Sesv2Request::Action action,

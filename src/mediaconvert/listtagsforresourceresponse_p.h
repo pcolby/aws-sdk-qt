@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public MediaConvertResponsePrivate {
+class ListTagsForResourceResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 

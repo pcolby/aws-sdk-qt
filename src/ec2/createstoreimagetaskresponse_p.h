@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateStoreImageTaskResponse;
 
-class QTAWS_EXPORT CreateStoreImageTaskResponsePrivate : public Ec2ResponsePrivate {
+class CreateStoreImageTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

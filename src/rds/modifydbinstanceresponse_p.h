@@ -27,7 +27,7 @@ namespace RDS {
 
 class ModifyDBInstanceResponse;
 
-class QTAWS_EXPORT ModifyDBInstanceResponsePrivate : public RdsResponsePrivate {
+class ModifyDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 

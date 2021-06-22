@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DetachVolumeResponse;
 
-class QTAWS_EXPORT DetachVolumeResponsePrivate : public Ec2ResponsePrivate {
+class DetachVolumeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

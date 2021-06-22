@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class AssociateResolverEndpointIpAddressRequest;
 
-class QTAWS_EXPORT AssociateResolverEndpointIpAddressRequestPrivate : public Route53ResolverRequestPrivate {
+class AssociateResolverEndpointIpAddressRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     AssociateResolverEndpointIpAddressRequestPrivate(const Route53ResolverRequest::Action action,

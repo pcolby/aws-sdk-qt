@@ -27,7 +27,7 @@ namespace SES {
 
 class SetReceiptRulePositionResponse;
 
-class QTAWS_EXPORT SetReceiptRulePositionResponsePrivate : public SesResponsePrivate {
+class SetReceiptRulePositionResponsePrivate : public SesResponsePrivate {
 
 public:
 

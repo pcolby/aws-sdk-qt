@@ -29,7 +29,7 @@ namespace CognitoSync {
 
 class CognitoSyncClient;
 
-class QTAWS_EXPORT CognitoSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CognitoSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     CognitoSyncClientPrivate(CognitoSyncClient * const q);

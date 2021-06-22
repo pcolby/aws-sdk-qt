@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetLoggingOptionsRequest;
 
-class QTAWS_EXPORT GetLoggingOptionsRequestPrivate : public IoTRequestPrivate {
+class GetLoggingOptionsRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetLoggingOptionsRequestPrivate(const IoTRequest::Action action,

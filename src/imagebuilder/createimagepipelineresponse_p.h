@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class CreateImagePipelineResponse;
 
-class QTAWS_EXPORT CreateImagePipelineResponsePrivate : public imagebuilderResponsePrivate {
+class CreateImagePipelineResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 

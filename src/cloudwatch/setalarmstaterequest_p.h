@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class SetAlarmStateRequest;
 
-class QTAWS_EXPORT SetAlarmStateRequestPrivate : public CloudWatchRequestPrivate {
+class SetAlarmStateRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     SetAlarmStateRequestPrivate(const CloudWatchRequest::Action action,

@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeEngineDefaultClusterParametersRequest;
 
-class QTAWS_EXPORT DescribeEngineDefaultClusterParametersRequestPrivate : public NeptuneRequestPrivate {
+class DescribeEngineDefaultClusterParametersRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     DescribeEngineDefaultClusterParametersRequestPrivate(const NeptuneRequest::Action action,

@@ -27,7 +27,7 @@ namespace S3 {
 
 class SelectObjectContentResponse;
 
-class QTAWS_EXPORT SelectObjectContentResponsePrivate : public S3ResponsePrivate {
+class SelectObjectContentResponsePrivate : public S3ResponsePrivate {
 
 public:
 

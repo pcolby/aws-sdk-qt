@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class ListElasticsearchVersionsResponse;
 
-class QTAWS_EXPORT ListElasticsearchVersionsResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class ListElasticsearchVersionsResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

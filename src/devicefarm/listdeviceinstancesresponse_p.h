@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListDeviceInstancesResponse;
 
-class QTAWS_EXPORT ListDeviceInstancesResponsePrivate : public DeviceFarmResponsePrivate {
+class ListDeviceInstancesResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

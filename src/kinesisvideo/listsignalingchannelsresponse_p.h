@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class ListSignalingChannelsResponse;
 
-class QTAWS_EXPORT ListSignalingChannelsResponsePrivate : public KinesisVideoResponsePrivate {
+class ListSignalingChannelsResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 

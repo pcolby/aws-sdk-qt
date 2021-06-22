@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DeleteBatchPredictionResponse;
 
-class QTAWS_EXPORT DeleteBatchPredictionResponsePrivate : public MachineLearningResponsePrivate {
+class DeleteBatchPredictionResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 

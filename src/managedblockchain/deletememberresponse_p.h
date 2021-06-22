@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class DeleteMemberResponse;
 
-class QTAWS_EXPORT DeleteMemberResponsePrivate : public ManagedBlockchainResponsePrivate {
+class DeleteMemberResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 

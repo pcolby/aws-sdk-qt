@@ -28,7 +28,7 @@ namespace Kafka {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public KafkaRequestPrivate {
+class UntagResourceRequestPrivate : public KafkaRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const KafkaRequest::Action action,

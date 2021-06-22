@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateEndpointAccessResponse;
 
-class QTAWS_EXPORT CreateEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
+class CreateEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

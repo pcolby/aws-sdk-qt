@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AttachInternetGatewayRequest;
 
-class QTAWS_EXPORT AttachInternetGatewayRequestPrivate : public Ec2RequestPrivate {
+class AttachInternetGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     AttachInternetGatewayRequestPrivate(const Ec2Request::Action action,

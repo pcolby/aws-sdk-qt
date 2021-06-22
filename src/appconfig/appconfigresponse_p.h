@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class AppConfigResponse;
 
-class QTAWS_EXPORT AppConfigResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppConfigResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

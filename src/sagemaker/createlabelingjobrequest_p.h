@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateLabelingJobRequest;
 
-class QTAWS_EXPORT CreateLabelingJobRequestPrivate : public SageMakerRequestPrivate {
+class CreateLabelingJobRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateLabelingJobRequestPrivate(const SageMakerRequest::Action action,

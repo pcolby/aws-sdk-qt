@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public OpsWorksCMRequestPrivate {
+class UntagResourceRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const OpsWorksCMRequest::Action action,

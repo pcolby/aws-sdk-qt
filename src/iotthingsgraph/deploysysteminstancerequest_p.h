@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class DeploySystemInstanceRequest;
 
-class QTAWS_EXPORT DeploySystemInstanceRequestPrivate : public IoTThingsGraphRequestPrivate {
+class DeploySystemInstanceRequestPrivate : public IoTThingsGraphRequestPrivate {
 
 public:
     DeploySystemInstanceRequestPrivate(const IoTThingsGraphRequest::Action action,

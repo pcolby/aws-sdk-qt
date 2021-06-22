@@ -28,7 +28,7 @@ namespace Neptune {
 
 class ApplyPendingMaintenanceActionRequest;
 
-class QTAWS_EXPORT ApplyPendingMaintenanceActionRequestPrivate : public NeptuneRequestPrivate {
+class ApplyPendingMaintenanceActionRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     ApplyPendingMaintenanceActionRequestPrivate(const NeptuneRequest::Action action,

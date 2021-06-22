@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteMetricFilterRequest;
 
-class QTAWS_EXPORT DeleteMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
+class DeleteMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteMetricFilterRequestPrivate(const CloudWatchLogsRequest::Action action,

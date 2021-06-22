@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class DeclineInvitationsResponse;
 
-class QTAWS_EXPORT DeclineInvitationsResponsePrivate : public GuardDutyResponsePrivate {
+class DeclineInvitationsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

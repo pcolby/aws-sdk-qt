@@ -28,7 +28,7 @@ namespace ElasticInference {
 
 class DescribeAcceleratorOfferingsRequest;
 
-class QTAWS_EXPORT DescribeAcceleratorOfferingsRequestPrivate : public ElasticInferenceRequestPrivate {
+class DescribeAcceleratorOfferingsRequestPrivate : public ElasticInferenceRequestPrivate {
 
 public:
     DescribeAcceleratorOfferingsRequestPrivate(const ElasticInferenceRequest::Action action,

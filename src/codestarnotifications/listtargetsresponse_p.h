@@ -27,7 +27,7 @@ namespace CodeStarNotifications {
 
 class ListTargetsResponse;
 
-class QTAWS_EXPORT ListTargetsResponsePrivate : public CodeStarNotificationsResponsePrivate {
+class ListTargetsResponsePrivate : public CodeStarNotificationsResponsePrivate {
 
 public:
 

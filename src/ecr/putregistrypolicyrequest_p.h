@@ -28,7 +28,7 @@ namespace ECR {
 
 class PutRegistryPolicyRequest;
 
-class QTAWS_EXPORT PutRegistryPolicyRequestPrivate : public EcrRequestPrivate {
+class PutRegistryPolicyRequestPrivate : public EcrRequestPrivate {
 
 public:
     PutRegistryPolicyRequestPrivate(const EcrRequest::Action action,

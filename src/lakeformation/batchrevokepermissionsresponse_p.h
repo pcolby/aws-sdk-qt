@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class BatchRevokePermissionsResponse;
 
-class QTAWS_EXPORT BatchRevokePermissionsResponsePrivate : public LakeFormationResponsePrivate {
+class BatchRevokePermissionsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 

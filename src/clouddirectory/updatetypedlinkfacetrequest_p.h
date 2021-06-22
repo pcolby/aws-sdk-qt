@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UpdateTypedLinkFacetRequest;
 
-class QTAWS_EXPORT UpdateTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
+class UpdateTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     UpdateTypedLinkFacetRequestPrivate(const CloudDirectoryRequest::Action action,

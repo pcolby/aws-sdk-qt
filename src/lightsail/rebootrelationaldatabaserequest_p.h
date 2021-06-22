@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class RebootRelationalDatabaseRequest;
 
-class QTAWS_EXPORT RebootRelationalDatabaseRequestPrivate : public LightsailRequestPrivate {
+class RebootRelationalDatabaseRequestPrivate : public LightsailRequestPrivate {
 
 public:
     RebootRelationalDatabaseRequestPrivate(const LightsailRequest::Action action,

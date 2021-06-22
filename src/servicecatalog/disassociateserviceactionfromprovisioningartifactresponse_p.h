@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DisassociateServiceActionFromProvisioningArtifactResponse;
 
-class QTAWS_EXPORT DisassociateServiceActionFromProvisioningArtifactResponsePrivate : public ServiceCatalogResponsePrivate {
+class DisassociateServiceActionFromProvisioningArtifactResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

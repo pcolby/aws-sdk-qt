@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class DescribeConnectionsOnInterconnectResponse;
 
-class QTAWS_EXPORT DescribeConnectionsOnInterconnectResponsePrivate : public DirectConnectResponsePrivate {
+class DescribeConnectionsOnInterconnectResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class GetTrailStatusResponse;
 
-class QTAWS_EXPORT GetTrailStatusResponsePrivate : public CloudTrailResponsePrivate {
+class GetTrailStatusResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 

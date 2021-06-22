@@ -27,7 +27,7 @@ namespace CodeStarNotifications {
 
 class SubscribeResponse;
 
-class QTAWS_EXPORT SubscribeResponsePrivate : public CodeStarNotificationsResponsePrivate {
+class SubscribeResponsePrivate : public CodeStarNotificationsResponsePrivate {
 
 public:
 

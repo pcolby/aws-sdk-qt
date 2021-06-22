@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CreateThemeAliasRequest;
 
-class QTAWS_EXPORT CreateThemeAliasRequestPrivate : public QuickSightRequestPrivate {
+class CreateThemeAliasRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     CreateThemeAliasRequestPrivate(const QuickSightRequest::Action action,

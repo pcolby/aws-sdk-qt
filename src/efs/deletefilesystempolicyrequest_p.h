@@ -28,7 +28,7 @@ namespace EFS {
 
 class DeleteFileSystemPolicyRequest;
 
-class QTAWS_EXPORT DeleteFileSystemPolicyRequestPrivate : public EfsRequestPrivate {
+class DeleteFileSystemPolicyRequestPrivate : public EfsRequestPrivate {
 
 public:
     DeleteFileSystemPolicyRequestPrivate(const EfsRequest::Action action,

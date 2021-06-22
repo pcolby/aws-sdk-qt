@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class UpdateAuthorizerRequest;
 
-class QTAWS_EXPORT UpdateAuthorizerRequestPrivate : public ApiGatewayV2RequestPrivate {
+class UpdateAuthorizerRequestPrivate : public ApiGatewayV2RequestPrivate {
 
 public:
     UpdateAuthorizerRequestPrivate(const ApiGatewayV2Request::Action action,

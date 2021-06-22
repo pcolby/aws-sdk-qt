@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteJobResponse;
 
-class QTAWS_EXPORT DeleteJobResponsePrivate : public IoTResponsePrivate {
+class DeleteJobResponsePrivate : public IoTResponsePrivate {
 
 public:
 

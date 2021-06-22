@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class LexModelsV2Request;
 
-class QTAWS_EXPORT LexModelsV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexModelsV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LexModelsV2Request::Action action; ///< LexModelsV2 action to be performed.

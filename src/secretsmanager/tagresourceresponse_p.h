@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public SecretsManagerResponsePrivate {
+class TagResourceResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 

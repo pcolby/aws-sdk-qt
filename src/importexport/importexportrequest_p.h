@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class ImportExportRequest;
 
-class QTAWS_EXPORT ImportExportRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ImportExportRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ImportExportRequest::Action action; ///< ImportExport action to be performed.

@@ -27,7 +27,7 @@ namespace IVS {
 
 class StopStreamResponse;
 
-class QTAWS_EXPORT StopStreamResponsePrivate : public IvsResponsePrivate {
+class StopStreamResponsePrivate : public IvsResponsePrivate {
 
 public:
 

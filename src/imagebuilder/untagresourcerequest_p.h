@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public imagebuilderRequestPrivate {
+class UntagResourceRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const imagebuilderRequest::Action action,

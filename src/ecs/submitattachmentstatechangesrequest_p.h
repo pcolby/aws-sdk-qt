@@ -28,7 +28,7 @@ namespace ECS {
 
 class SubmitAttachmentStateChangesRequest;
 
-class QTAWS_EXPORT SubmitAttachmentStateChangesRequestPrivate : public EcsRequestPrivate {
+class SubmitAttachmentStateChangesRequestPrivate : public EcsRequestPrivate {
 
 public:
     SubmitAttachmentStateChangesRequestPrivate(const EcsRequest::Action action,

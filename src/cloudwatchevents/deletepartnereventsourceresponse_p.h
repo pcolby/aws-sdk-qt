@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DeletePartnerEventSourceResponse;
 
-class QTAWS_EXPORT DeletePartnerEventSourceResponsePrivate : public CloudWatchEventsResponsePrivate {
+class DeletePartnerEventSourceResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

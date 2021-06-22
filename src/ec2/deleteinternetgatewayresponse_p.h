@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteInternetGatewayResponse;
 
-class QTAWS_EXPORT DeleteInternetGatewayResponsePrivate : public Ec2ResponsePrivate {
+class DeleteInternetGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

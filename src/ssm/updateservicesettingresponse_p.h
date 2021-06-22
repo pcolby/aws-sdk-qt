@@ -27,7 +27,7 @@ namespace SSM {
 
 class UpdateServiceSettingResponse;
 
-class QTAWS_EXPORT UpdateServiceSettingResponsePrivate : public SsmResponsePrivate {
+class UpdateServiceSettingResponsePrivate : public SsmResponsePrivate {
 
 public:
 

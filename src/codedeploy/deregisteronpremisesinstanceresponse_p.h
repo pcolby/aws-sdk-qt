@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class DeregisterOnPremisesInstanceResponse;
 
-class QTAWS_EXPORT DeregisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePrivate {
+class DeregisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 

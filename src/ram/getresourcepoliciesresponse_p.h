@@ -27,7 +27,7 @@ namespace RAM {
 
 class GetResourcePoliciesResponse;
 
-class QTAWS_EXPORT GetResourcePoliciesResponsePrivate : public RamResponsePrivate {
+class GetResourcePoliciesResponsePrivate : public RamResponsePrivate {
 
 public:
 

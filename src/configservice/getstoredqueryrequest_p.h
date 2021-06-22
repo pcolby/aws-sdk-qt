@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetStoredQueryRequest;
 
-class QTAWS_EXPORT GetStoredQueryRequestPrivate : public ConfigServiceRequestPrivate {
+class GetStoredQueryRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetStoredQueryRequestPrivate(const ConfigServiceRequest::Action action,

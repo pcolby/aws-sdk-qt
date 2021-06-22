@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribeDBInstancesResponse;
 
-class QTAWS_EXPORT DescribeDBInstancesResponsePrivate : public NeptuneResponsePrivate {
+class DescribeDBInstancesResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

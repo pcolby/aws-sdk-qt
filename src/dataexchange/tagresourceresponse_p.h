@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public DataExchangeResponsePrivate {
+class TagResourceResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 

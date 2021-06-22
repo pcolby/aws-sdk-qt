@@ -28,7 +28,7 @@ namespace SNS {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public SnsRequestPrivate {
+class TagResourceRequestPrivate : public SnsRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const SnsRequest::Action action,

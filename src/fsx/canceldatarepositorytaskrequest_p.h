@@ -28,7 +28,7 @@ namespace FSx {
 
 class CancelDataRepositoryTaskRequest;
 
-class QTAWS_EXPORT CancelDataRepositoryTaskRequestPrivate : public FSxRequestPrivate {
+class CancelDataRepositoryTaskRequestPrivate : public FSxRequestPrivate {
 
 public:
     CancelDataRepositoryTaskRequestPrivate(const FSxRequest::Action action,

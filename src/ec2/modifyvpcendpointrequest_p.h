@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVpcEndpointRequest;
 
-class QTAWS_EXPORT ModifyVpcEndpointRequestPrivate : public Ec2RequestPrivate {
+class ModifyVpcEndpointRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ModifyVpcEndpointRequestPrivate(const Ec2Request::Action action,

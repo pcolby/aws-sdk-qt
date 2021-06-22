@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
+class UpdateApplicationRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const KinesisAnalyticsV2Request::Action action,

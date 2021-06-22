@@ -27,7 +27,7 @@ namespace ECR {
 
 class GetRegistryPolicyResponse;
 
-class QTAWS_EXPORT GetRegistryPolicyResponsePrivate : public EcrResponsePrivate {
+class GetRegistryPolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 

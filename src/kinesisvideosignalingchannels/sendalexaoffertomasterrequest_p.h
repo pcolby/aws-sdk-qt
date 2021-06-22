@@ -28,7 +28,7 @@ namespace KinesisVideoSignalingChannels {
 
 class SendAlexaOfferToMasterRequest;
 
-class QTAWS_EXPORT SendAlexaOfferToMasterRequestPrivate : public KinesisVideoSignalingChannelsRequestPrivate {
+class SendAlexaOfferToMasterRequestPrivate : public KinesisVideoSignalingChannelsRequestPrivate {
 
 public:
     SendAlexaOfferToMasterRequestPrivate(const KinesisVideoSignalingChannelsRequest::Action action,

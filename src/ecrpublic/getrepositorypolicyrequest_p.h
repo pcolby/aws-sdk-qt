@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class GetRepositoryPolicyRequest;
 
-class QTAWS_EXPORT GetRepositoryPolicyRequestPrivate : public ECRPublicRequestPrivate {
+class GetRepositoryPolicyRequestPrivate : public ECRPublicRequestPrivate {
 
 public:
     GetRepositoryPolicyRequestPrivate(const ECRPublicRequest::Action action,

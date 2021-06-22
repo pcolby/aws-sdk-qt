@@ -27,7 +27,7 @@ namespace signer {
 
 class ListProfilePermissionsResponse;
 
-class QTAWS_EXPORT ListProfilePermissionsResponsePrivate : public signerResponsePrivate {
+class ListProfilePermissionsResponsePrivate : public signerResponsePrivate {
 
 public:
 

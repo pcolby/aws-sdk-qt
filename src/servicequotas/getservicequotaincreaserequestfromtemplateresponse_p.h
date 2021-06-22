@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class GetServiceQuotaIncreaseRequestFromTemplateResponse;
 
-class QTAWS_EXPORT GetServiceQuotaIncreaseRequestFromTemplateResponsePrivate : public ServiceQuotasResponsePrivate {
+class GetServiceQuotaIncreaseRequestFromTemplateResponsePrivate : public ServiceQuotasResponsePrivate {
 
 public:
 

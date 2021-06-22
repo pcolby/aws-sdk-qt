@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DisableDirectoryRequest;
 
-class QTAWS_EXPORT DisableDirectoryRequestPrivate : public CloudDirectoryRequestPrivate {
+class DisableDirectoryRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DisableDirectoryRequestPrivate(const CloudDirectoryRequest::Action action,

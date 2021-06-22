@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class CopyPackageVersionsResponse;
 
-class QTAWS_EXPORT CopyPackageVersionsResponsePrivate : public CodeArtifactResponsePrivate {
+class CopyPackageVersionsResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

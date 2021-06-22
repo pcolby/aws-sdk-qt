@@ -28,7 +28,7 @@ namespace DataSync {
 
 class CreateLocationFsxWindowsRequest;
 
-class QTAWS_EXPORT CreateLocationFsxWindowsRequestPrivate : public DataSyncRequestPrivate {
+class CreateLocationFsxWindowsRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     CreateLocationFsxWindowsRequestPrivate(const DataSyncRequest::Action action,

@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class DeleteNamespaceResponse;
 
-class QTAWS_EXPORT DeleteNamespaceResponsePrivate : public IoTThingsGraphResponsePrivate {
+class DeleteNamespaceResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

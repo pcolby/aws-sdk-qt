@@ -29,7 +29,7 @@ namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerClient;
 
-class QTAWS_EXPORT ApplicationCostProfilerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApplicationCostProfilerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ApplicationCostProfilerClientPrivate(ApplicationCostProfilerClient * const q);

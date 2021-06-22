@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteLaunchTemplateVersionsResponse;
 
-class QTAWS_EXPORT DeleteLaunchTemplateVersionsResponsePrivate : public Ec2ResponsePrivate {
+class DeleteLaunchTemplateVersionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

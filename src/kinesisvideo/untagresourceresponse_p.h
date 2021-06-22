@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public KinesisVideoResponsePrivate {
+class UntagResourceResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace IoTThingsGraph {
 
 class IoTThingsGraphClient;
 
-class QTAWS_EXPORT IoTThingsGraphClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTThingsGraphClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTThingsGraphClientPrivate(IoTThingsGraphClient * const q);

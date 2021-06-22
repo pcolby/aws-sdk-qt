@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public ApplicationInsightsResponsePrivate {
+class ListTagsForResourceResponsePrivate : public ApplicationInsightsResponsePrivate {
 
 public:
 

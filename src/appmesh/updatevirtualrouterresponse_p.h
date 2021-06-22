@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class UpdateVirtualRouterResponse;
 
-class QTAWS_EXPORT UpdateVirtualRouterResponsePrivate : public AppMeshResponsePrivate {
+class UpdateVirtualRouterResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 

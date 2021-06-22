@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class EnableOrganizationAdminAccountResponse;
 
-class QTAWS_EXPORT EnableOrganizationAdminAccountResponsePrivate : public GuardDutyResponsePrivate {
+class EnableOrganizationAdminAccountResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

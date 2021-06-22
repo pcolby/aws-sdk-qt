@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetEnabledStandardsResponse;
 
-class QTAWS_EXPORT GetEnabledStandardsResponsePrivate : public SecurityHubResponsePrivate {
+class GetEnabledStandardsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Appflow {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AppflowRequestPrivate {
+class TagResourceRequestPrivate : public AppflowRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AppflowRequest::Action action,

@@ -27,7 +27,7 @@ namespace mgn {
 
 class ChangeServerLifeCycleStateResponse;
 
-class QTAWS_EXPORT ChangeServerLifeCycleStateResponsePrivate : public mgnResponsePrivate {
+class ChangeServerLifeCycleStateResponsePrivate : public mgnResponsePrivate {
 
 public:
 

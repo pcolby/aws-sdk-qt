@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class DeleteExternalModelRequest;
 
-class QTAWS_EXPORT DeleteExternalModelRequestPrivate : public FraudDetectorRequestPrivate {
+class DeleteExternalModelRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     DeleteExternalModelRequestPrivate(const FraudDetectorRequest::Action action,

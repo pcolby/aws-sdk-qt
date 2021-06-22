@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class GetModelsResponse;
 
-class QTAWS_EXPORT GetModelsResponsePrivate : public APIGatewayResponsePrivate {
+class GetModelsResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 

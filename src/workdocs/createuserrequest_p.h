@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateUserRequest;
 
-class QTAWS_EXPORT CreateUserRequestPrivate : public WorkDocsRequestPrivate {
+class CreateUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     CreateUserRequestPrivate(const WorkDocsRequest::Action action,

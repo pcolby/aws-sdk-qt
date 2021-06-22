@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class DeleteStreamingSessionResponse;
 
-class QTAWS_EXPORT DeleteStreamingSessionResponsePrivate : public NimbleStudioResponsePrivate {
+class DeleteStreamingSessionResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

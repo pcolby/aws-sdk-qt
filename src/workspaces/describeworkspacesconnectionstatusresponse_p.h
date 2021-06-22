@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DescribeWorkspacesConnectionStatusResponse;
 
-class QTAWS_EXPORT DescribeWorkspacesConnectionStatusResponsePrivate : public WorkSpacesResponsePrivate {
+class DescribeWorkspacesConnectionStatusResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

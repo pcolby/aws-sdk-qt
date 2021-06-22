@@ -28,7 +28,7 @@ namespace DAX {
 
 class CreateSubnetGroupRequest;
 
-class QTAWS_EXPORT CreateSubnetGroupRequestPrivate : public DaxRequestPrivate {
+class CreateSubnetGroupRequestPrivate : public DaxRequestPrivate {
 
 public:
     CreateSubnetGroupRequestPrivate(const DaxRequest::Action action,

@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public MediaStoreRequestPrivate {
+class UntagResourceRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const MediaStoreRequest::Action action,

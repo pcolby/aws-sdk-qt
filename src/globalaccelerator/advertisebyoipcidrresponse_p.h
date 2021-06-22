@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class AdvertiseByoipCidrResponse;
 
-class QTAWS_EXPORT AdvertiseByoipCidrResponsePrivate : public GlobalAcceleratorResponsePrivate {
+class AdvertiseByoipCidrResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 

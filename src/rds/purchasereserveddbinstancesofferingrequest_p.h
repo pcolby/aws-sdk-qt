@@ -28,7 +28,7 @@ namespace RDS {
 
 class PurchaseReservedDBInstancesOfferingRequest;
 
-class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingRequestPrivate : public RdsRequestPrivate {
+class PurchaseReservedDBInstancesOfferingRequestPrivate : public RdsRequestPrivate {
 
 public:
     PurchaseReservedDBInstancesOfferingRequestPrivate(const RdsRequest::Action action,

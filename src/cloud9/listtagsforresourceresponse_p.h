@@ -27,7 +27,7 @@ namespace Cloud9 {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public Cloud9ResponsePrivate {
+class ListTagsForResourceResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 

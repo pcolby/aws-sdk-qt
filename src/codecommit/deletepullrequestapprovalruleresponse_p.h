@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DeletePullRequestApprovalRuleResponse;
 
-class QTAWS_EXPORT DeletePullRequestApprovalRuleResponsePrivate : public CodeCommitResponsePrivate {
+class DeletePullRequestApprovalRuleResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

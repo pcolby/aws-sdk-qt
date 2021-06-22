@@ -27,7 +27,7 @@ namespace AugmentedAIRuntime {
 
 class StopHumanLoopResponse;
 
-class QTAWS_EXPORT StopHumanLoopResponsePrivate : public AugmentedAIRuntimeResponsePrivate {
+class StopHumanLoopResponsePrivate : public AugmentedAIRuntimeResponsePrivate {
 
 public:
 

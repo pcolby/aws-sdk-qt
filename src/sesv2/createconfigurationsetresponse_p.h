@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateConfigurationSetResponse;
 
-class QTAWS_EXPORT CreateConfigurationSetResponsePrivate : public Sesv2ResponsePrivate {
+class CreateConfigurationSetResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

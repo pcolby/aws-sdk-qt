@@ -28,7 +28,7 @@ namespace Inspector {
 
 class SetTagsForResourceRequest;
 
-class QTAWS_EXPORT SetTagsForResourceRequestPrivate : public InspectorRequestPrivate {
+class SetTagsForResourceRequestPrivate : public InspectorRequestPrivate {
 
 public:
     SetTagsForResourceRequestPrivate(const InspectorRequest::Action action,

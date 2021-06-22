@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class GetRepositoryEndpointResponse;
 
-class QTAWS_EXPORT GetRepositoryEndpointResponsePrivate : public CodeArtifactResponsePrivate {
+class GetRepositoryEndpointResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

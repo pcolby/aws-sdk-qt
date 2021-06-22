@@ -28,7 +28,7 @@ namespace Appflow {
 
 class DeleteFlowRequest;
 
-class QTAWS_EXPORT DeleteFlowRequestPrivate : public AppflowRequestPrivate {
+class DeleteFlowRequestPrivate : public AppflowRequestPrivate {
 
 public:
     DeleteFlowRequestPrivate(const AppflowRequest::Action action,

@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UpdatePullRequestDescriptionRequest;
 
-class QTAWS_EXPORT UpdatePullRequestDescriptionRequestPrivate : public CodeCommitRequestPrivate {
+class UpdatePullRequestDescriptionRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     UpdatePullRequestDescriptionRequestPrivate(const CodeCommitRequest::Action action,

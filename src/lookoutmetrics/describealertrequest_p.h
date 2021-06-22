@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class DescribeAlertRequest;
 
-class QTAWS_EXPORT DescribeAlertRequestPrivate : public LookoutMetricsRequestPrivate {
+class DescribeAlertRequestPrivate : public LookoutMetricsRequestPrivate {
 
 public:
     DescribeAlertRequestPrivate(const LookoutMetricsRequest::Action action,

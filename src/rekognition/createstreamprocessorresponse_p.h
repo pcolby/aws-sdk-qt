@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class CreateStreamProcessorResponse;
 
-class QTAWS_EXPORT CreateStreamProcessorResponsePrivate : public RekognitionResponsePrivate {
+class CreateStreamProcessorResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

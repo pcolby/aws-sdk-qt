@@ -28,7 +28,7 @@ namespace Proton {
 
 class ProtonRequest;
 
-class QTAWS_EXPORT ProtonRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ProtonRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ProtonRequest::Action action; ///< Proton action to be performed.

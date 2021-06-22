@@ -28,7 +28,7 @@ namespace SNS {
 
 class ListOriginationNumbersRequest;
 
-class QTAWS_EXPORT ListOriginationNumbersRequestPrivate : public SnsRequestPrivate {
+class ListOriginationNumbersRequestPrivate : public SnsRequestPrivate {
 
 public:
     ListOriginationNumbersRequestPrivate(const SnsRequest::Action action,

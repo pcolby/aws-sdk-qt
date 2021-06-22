@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class GetIdentityPoolRolesRequest;
 
-class QTAWS_EXPORT GetIdentityPoolRolesRequestPrivate : public CognitoIdentityRequestPrivate {
+class GetIdentityPoolRolesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     GetIdentityPoolRolesRequestPrivate(const CognitoIdentityRequest::Action action,

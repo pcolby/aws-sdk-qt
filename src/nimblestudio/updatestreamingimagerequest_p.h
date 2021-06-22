@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class UpdateStreamingImageRequest;
 
-class QTAWS_EXPORT UpdateStreamingImageRequestPrivate : public NimbleStudioRequestPrivate {
+class UpdateStreamingImageRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     UpdateStreamingImageRequestPrivate(const NimbleStudioRequest::Action action,

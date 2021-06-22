@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class GetThingRuntimeConfigurationResponse;
 
-class QTAWS_EXPORT GetThingRuntimeConfigurationResponsePrivate : public GreengrassResponsePrivate {
+class GetThingRuntimeConfigurationResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

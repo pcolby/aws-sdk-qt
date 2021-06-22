@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateSMBFileShareVisibilityResponse;
 
-class QTAWS_EXPORT UpdateSMBFileShareVisibilityResponsePrivate : public StorageGatewayResponsePrivate {
+class UpdateSMBFileShareVisibilityResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

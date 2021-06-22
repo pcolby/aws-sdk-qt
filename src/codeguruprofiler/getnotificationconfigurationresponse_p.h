@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class GetNotificationConfigurationResponse;
 
-class QTAWS_EXPORT GetNotificationConfigurationResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class GetNotificationConfigurationResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

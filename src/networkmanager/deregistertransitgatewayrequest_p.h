@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class DeregisterTransitGatewayRequest;
 
-class QTAWS_EXPORT DeregisterTransitGatewayRequestPrivate : public NetworkManagerRequestPrivate {
+class DeregisterTransitGatewayRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     DeregisterTransitGatewayRequestPrivate(const NetworkManagerRequest::Action action,

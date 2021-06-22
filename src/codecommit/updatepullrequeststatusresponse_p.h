@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class UpdatePullRequestStatusResponse;
 
-class QTAWS_EXPORT UpdatePullRequestStatusResponsePrivate : public CodeCommitResponsePrivate {
+class UpdatePullRequestStatusResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace MTurk {
 
 class ListReviewableHITsRequest;
 
-class QTAWS_EXPORT ListReviewableHITsRequestPrivate : public MTurkRequestPrivate {
+class ListReviewableHITsRequestPrivate : public MTurkRequestPrivate {
 
 public:
     ListReviewableHITsRequestPrivate(const MTurkRequest::Action action,

@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class RebuildEnvironmentRequest;
 
-class QTAWS_EXPORT RebuildEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
+class RebuildEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     RebuildEnvironmentRequestPrivate(const ElasticBeanstalkRequest::Action action,

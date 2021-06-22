@@ -28,7 +28,7 @@ namespace Route53 {
 
 class Route53Request;
 
-class QTAWS_EXPORT Route53RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Route53RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Route53Request::Action action; ///< Route53 action to be performed.

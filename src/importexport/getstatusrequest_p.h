@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class GetStatusRequest;
 
-class QTAWS_EXPORT GetStatusRequestPrivate : public ImportExportRequestPrivate {
+class GetStatusRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     GetStatusRequestPrivate(const ImportExportRequest::Action action,

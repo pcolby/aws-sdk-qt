@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class RebootReplicationInstanceResponse;
 
-class QTAWS_EXPORT RebootReplicationInstanceResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+class RebootReplicationInstanceResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
 
 public:
 

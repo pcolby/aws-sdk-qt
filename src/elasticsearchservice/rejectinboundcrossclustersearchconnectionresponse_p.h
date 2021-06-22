@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class RejectInboundCrossClusterSearchConnectionResponse;
 
-class QTAWS_EXPORT RejectInboundCrossClusterSearchConnectionResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class RejectInboundCrossClusterSearchConnectionResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

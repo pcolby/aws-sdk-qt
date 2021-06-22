@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class GetSystemTemplateResponse;
 
-class QTAWS_EXPORT GetSystemTemplateResponsePrivate : public IoTThingsGraphResponsePrivate {
+class GetSystemTemplateResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

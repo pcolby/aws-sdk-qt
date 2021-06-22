@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DetachClassicLinkVpcResponse;
 
-class QTAWS_EXPORT DetachClassicLinkVpcResponsePrivate : public Ec2ResponsePrivate {
+class DetachClassicLinkVpcResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

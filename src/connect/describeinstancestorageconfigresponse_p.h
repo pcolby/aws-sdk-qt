@@ -27,7 +27,7 @@ namespace Connect {
 
 class DescribeInstanceStorageConfigResponse;
 
-class QTAWS_EXPORT DescribeInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate {
+class DescribeInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

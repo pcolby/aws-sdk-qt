@@ -27,7 +27,7 @@ namespace Route53 {
 
 class GetDNSSECResponse;
 
-class QTAWS_EXPORT GetDNSSECResponsePrivate : public Route53ResponsePrivate {
+class GetDNSSECResponsePrivate : public Route53ResponsePrivate {
 
 public:
 

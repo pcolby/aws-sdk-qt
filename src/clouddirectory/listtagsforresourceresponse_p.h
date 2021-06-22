@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public CloudDirectoryResponsePrivate {
+class ListTagsForResourceResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class RecordHandlerProgressResponse;
 
-class QTAWS_EXPORT RecordHandlerProgressResponsePrivate : public CloudFormationResponsePrivate {
+class RecordHandlerProgressResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 

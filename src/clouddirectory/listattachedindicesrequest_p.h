@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListAttachedIndicesRequest;
 
-class QTAWS_EXPORT ListAttachedIndicesRequestPrivate : public CloudDirectoryRequestPrivate {
+class ListAttachedIndicesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListAttachedIndicesRequestPrivate(const CloudDirectoryRequest::Action action,

@@ -27,7 +27,7 @@ namespace ECS {
 
 class SubmitAttachmentStateChangesResponse;
 
-class QTAWS_EXPORT SubmitAttachmentStateChangesResponsePrivate : public EcsResponsePrivate {
+class SubmitAttachmentStateChangesResponsePrivate : public EcsResponsePrivate {
 
 public:
 

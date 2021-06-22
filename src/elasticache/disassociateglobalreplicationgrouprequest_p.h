@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DisassociateGlobalReplicationGroupRequest;
 
-class QTAWS_EXPORT DisassociateGlobalReplicationGroupRequestPrivate : public ElastiCacheRequestPrivate {
+class DisassociateGlobalReplicationGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DisassociateGlobalReplicationGroupRequestPrivate(const ElastiCacheRequest::Action action,

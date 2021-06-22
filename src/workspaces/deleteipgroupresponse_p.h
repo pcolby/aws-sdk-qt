@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DeleteIpGroupResponse;
 
-class QTAWS_EXPORT DeleteIpGroupResponsePrivate : public WorkSpacesResponsePrivate {
+class DeleteIpGroupResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

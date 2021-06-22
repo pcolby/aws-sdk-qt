@@ -28,7 +28,7 @@ namespace DocDB {
 
 class CopyDBClusterSnapshotRequest;
 
-class QTAWS_EXPORT CopyDBClusterSnapshotRequestPrivate : public DocDBRequestPrivate {
+class CopyDBClusterSnapshotRequestPrivate : public DocDBRequestPrivate {
 
 public:
     CopyDBClusterSnapshotRequestPrivate(const DocDBRequest::Action action,

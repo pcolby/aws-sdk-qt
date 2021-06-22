@@ -28,7 +28,7 @@ namespace AppSync {
 
 class CreateDataSourceRequest;
 
-class QTAWS_EXPORT CreateDataSourceRequestPrivate : public AppSyncRequestPrivate {
+class CreateDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     CreateDataSourceRequestPrivate(const AppSyncRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTFleetHub {
 
 class IoTFleetHubRequest;
 
-class QTAWS_EXPORT IoTFleetHubRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTFleetHubRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTFleetHubRequest::Action action; ///< IoTFleetHub action to be performed.

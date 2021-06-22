@@ -27,7 +27,7 @@ namespace kendra {
 
 class BatchDeleteDocumentResponse;
 
-class QTAWS_EXPORT BatchDeleteDocumentResponsePrivate : public kendraResponsePrivate {
+class BatchDeleteDocumentResponsePrivate : public kendraResponsePrivate {
 
 public:
 

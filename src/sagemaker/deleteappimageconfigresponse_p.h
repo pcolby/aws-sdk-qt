@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteAppImageConfigResponse;
 
-class QTAWS_EXPORT DeleteAppImageConfigResponsePrivate : public SageMakerResponsePrivate {
+class DeleteAppImageConfigResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

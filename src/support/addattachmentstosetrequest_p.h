@@ -28,7 +28,7 @@ namespace Support {
 
 class AddAttachmentsToSetRequest;
 
-class QTAWS_EXPORT AddAttachmentsToSetRequestPrivate : public SupportRequestPrivate {
+class AddAttachmentsToSetRequestPrivate : public SupportRequestPrivate {
 
 public:
     AddAttachmentsToSetRequestPrivate(const SupportRequest::Action action,

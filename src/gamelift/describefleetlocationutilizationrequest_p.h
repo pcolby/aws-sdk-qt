@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeFleetLocationUtilizationRequest;
 
-class QTAWS_EXPORT DescribeFleetLocationUtilizationRequestPrivate : public GameLiftRequestPrivate {
+class DescribeFleetLocationUtilizationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeFleetLocationUtilizationRequestPrivate(const GameLiftRequest::Action action,

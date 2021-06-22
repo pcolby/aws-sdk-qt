@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteActionResponse;
 
-class QTAWS_EXPORT DeleteActionResponsePrivate : public SageMakerResponsePrivate {
+class DeleteActionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SWF {
 
 class UndeprecateDomainResponse;
 
-class QTAWS_EXPORT UndeprecateDomainResponsePrivate : public SwfResponsePrivate {
+class UndeprecateDomainResponsePrivate : public SwfResponsePrivate {
 
 public:
 

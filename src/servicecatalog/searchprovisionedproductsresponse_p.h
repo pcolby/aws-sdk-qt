@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class SearchProvisionedProductsResponse;
 
-class QTAWS_EXPORT SearchProvisionedProductsResponsePrivate : public ServiceCatalogResponsePrivate {
+class SearchProvisionedProductsResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 

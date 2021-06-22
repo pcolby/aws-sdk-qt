@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class UpdateChannelResponse;
 
-class QTAWS_EXPORT UpdateChannelResponsePrivate : public MediaTailorResponsePrivate {
+class UpdateChannelResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

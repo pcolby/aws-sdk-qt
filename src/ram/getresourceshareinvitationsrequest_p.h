@@ -28,7 +28,7 @@ namespace RAM {
 
 class GetResourceShareInvitationsRequest;
 
-class QTAWS_EXPORT GetResourceShareInvitationsRequestPrivate : public RamRequestPrivate {
+class GetResourceShareInvitationsRequestPrivate : public RamRequestPrivate {
 
 public:
     GetResourceShareInvitationsRequestPrivate(const RamRequest::Action action,

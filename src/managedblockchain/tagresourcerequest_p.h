@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public ManagedBlockchainRequestPrivate {
+class TagResourceRequestPrivate : public ManagedBlockchainRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const ManagedBlockchainRequest::Action action,

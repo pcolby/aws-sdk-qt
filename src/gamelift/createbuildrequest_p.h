@@ -28,7 +28,7 @@ namespace GameLift {
 
 class CreateBuildRequest;
 
-class QTAWS_EXPORT CreateBuildRequestPrivate : public GameLiftRequestPrivate {
+class CreateBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     CreateBuildRequestPrivate(const GameLiftRequest::Action action,

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ExecuteTransactionRequest;
 
-class QTAWS_EXPORT ExecuteTransactionRequestPrivate : public DynamoDBRequestPrivate {
+class ExecuteTransactionRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ExecuteTransactionRequestPrivate(const DynamoDBRequest::Action action,

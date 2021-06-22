@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class GetContactListResponse;
 
-class QTAWS_EXPORT GetContactListResponsePrivate : public Sesv2ResponsePrivate {
+class GetContactListResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

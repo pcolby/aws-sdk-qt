@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class UpdateStackInstancesRequest;
 
-class QTAWS_EXPORT UpdateStackInstancesRequestPrivate : public CloudFormationRequestPrivate {
+class UpdateStackInstancesRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     UpdateStackInstancesRequestPrivate(const CloudFormationRequest::Action action,

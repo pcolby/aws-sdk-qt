@@ -29,7 +29,7 @@ namespace GroundStation {
 
 class GroundStationClient;
 
-class QTAWS_EXPORT GroundStationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GroundStationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GroundStationClientPrivate(GroundStationClient * const q);

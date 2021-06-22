@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeEngineDefaultParametersRequest;
 
-class QTAWS_EXPORT DescribeEngineDefaultParametersRequestPrivate : public ElastiCacheRequestPrivate {
+class DescribeEngineDefaultParametersRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeEngineDefaultParametersRequestPrivate(const ElastiCacheRequest::Action action,

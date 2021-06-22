@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class SimpleDBRequest;
 
-class QTAWS_EXPORT SimpleDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SimpleDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SimpleDBRequest::Action action; ///< SimpleDB action to be performed.

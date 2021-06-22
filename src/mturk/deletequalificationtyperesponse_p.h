@@ -27,7 +27,7 @@ namespace MTurk {
 
 class DeleteQualificationTypeResponse;
 
-class QTAWS_EXPORT DeleteQualificationTypeResponsePrivate : public MTurkResponsePrivate {
+class DeleteQualificationTypeResponsePrivate : public MTurkResponsePrivate {
 
 public:
 

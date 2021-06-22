@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeProvisioningTemplateVersionRequest;
 
-class QTAWS_EXPORT DescribeProvisioningTemplateVersionRequestPrivate : public IoTRequestPrivate {
+class DescribeProvisioningTemplateVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeProvisioningTemplateVersionRequestPrivate(const IoTRequest::Action action,

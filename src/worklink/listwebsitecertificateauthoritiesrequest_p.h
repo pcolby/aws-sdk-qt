@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class ListWebsiteCertificateAuthoritiesRequest;
 
-class QTAWS_EXPORT ListWebsiteCertificateAuthoritiesRequestPrivate : public WorkLinkRequestPrivate {
+class ListWebsiteCertificateAuthoritiesRequestPrivate : public WorkLinkRequestPrivate {
 
 public:
     ListWebsiteCertificateAuthoritiesRequestPrivate(const WorkLinkRequest::Action action,

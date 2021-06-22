@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribePlayerSessionsRequest;
 
-class QTAWS_EXPORT DescribePlayerSessionsRequestPrivate : public GameLiftRequestPrivate {
+class DescribePlayerSessionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribePlayerSessionsRequestPrivate(const GameLiftRequest::Action action,

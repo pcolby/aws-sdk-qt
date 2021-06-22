@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CreateOrganizationRequest;
 
-class QTAWS_EXPORT CreateOrganizationRequestPrivate : public WorkMailRequestPrivate {
+class CreateOrganizationRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     CreateOrganizationRequestPrivate(const WorkMailRequest::Action action,

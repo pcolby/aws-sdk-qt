@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class GroundStationRequest;
 
-class QTAWS_EXPORT GroundStationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GroundStationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GroundStationRequest::Action action; ///< GroundStation action to be performed.

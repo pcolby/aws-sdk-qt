@@ -27,7 +27,7 @@ namespace Schemas {
 
 class GetResourcePolicyResponse;
 
-class QTAWS_EXPORT GetResourcePolicyResponsePrivate : public SchemasResponsePrivate {
+class GetResourcePolicyResponsePrivate : public SchemasResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Firehose {
 
 class TagDeliveryStreamRequest;
 
-class QTAWS_EXPORT TagDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
+class TagDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     TagDeliveryStreamRequestPrivate(const FirehoseRequest::Action action,

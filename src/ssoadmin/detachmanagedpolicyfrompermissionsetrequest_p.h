@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class DetachManagedPolicyFromPermissionSetRequest;
 
-class QTAWS_EXPORT DetachManagedPolicyFromPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
+class DetachManagedPolicyFromPermissionSetRequestPrivate : public SSOAdminRequestPrivate {
 
 public:
     DetachManagedPolicyFromPermissionSetRequestPrivate(const SSOAdminRequest::Action action,

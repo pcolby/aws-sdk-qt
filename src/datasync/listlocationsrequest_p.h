@@ -28,7 +28,7 @@ namespace DataSync {
 
 class ListLocationsRequest;
 
-class QTAWS_EXPORT ListLocationsRequestPrivate : public DataSyncRequestPrivate {
+class ListLocationsRequestPrivate : public DataSyncRequestPrivate {
 
 public:
     ListLocationsRequestPrivate(const DataSyncRequest::Action action,

@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class DeleteConfigurationProfileRequest;
 
-class QTAWS_EXPORT DeleteConfigurationProfileRequestPrivate : public AppConfigRequestPrivate {
+class DeleteConfigurationProfileRequestPrivate : public AppConfigRequestPrivate {
 
 public:
     DeleteConfigurationProfileRequestPrivate(const AppConfigRequest::Action action,

@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class GetBulkPublishDetailsResponse;
 
-class QTAWS_EXPORT GetBulkPublishDetailsResponsePrivate : public CognitoSyncResponsePrivate {
+class GetBulkPublishDetailsResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 

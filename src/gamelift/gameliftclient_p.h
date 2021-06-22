@@ -29,7 +29,7 @@ namespace GameLift {
 
 class GameLiftClient;
 
-class QTAWS_EXPORT GameLiftClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GameLiftClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GameLiftClientPrivate(GameLiftClient * const q);

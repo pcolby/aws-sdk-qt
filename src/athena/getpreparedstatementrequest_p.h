@@ -28,7 +28,7 @@ namespace Athena {
 
 class GetPreparedStatementRequest;
 
-class QTAWS_EXPORT GetPreparedStatementRequestPrivate : public AthenaRequestPrivate {
+class GetPreparedStatementRequestPrivate : public AthenaRequestPrivate {
 
 public:
     GetPreparedStatementRequestPrivate(const AthenaRequest::Action action,

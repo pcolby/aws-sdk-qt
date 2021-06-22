@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class UpdateWebACLRequest;
 
-class QTAWS_EXPORT UpdateWebACLRequestPrivate : public Wafv2RequestPrivate {
+class UpdateWebACLRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     UpdateWebACLRequestPrivate(const Wafv2Request::Action action,

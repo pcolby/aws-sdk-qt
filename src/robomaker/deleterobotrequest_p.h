@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class DeleteRobotRequest;
 
-class QTAWS_EXPORT DeleteRobotRequestPrivate : public RoboMakerRequestPrivate {
+class DeleteRobotRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     DeleteRobotRequestPrivate(const RoboMakerRequest::Action action,

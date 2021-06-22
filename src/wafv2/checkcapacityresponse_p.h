@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class CheckCapacityResponse;
 
-class QTAWS_EXPORT CheckCapacityResponsePrivate : public Wafv2ResponsePrivate {
+class CheckCapacityResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class ListPagesByEngagementResponse;
 
-class QTAWS_EXPORT ListPagesByEngagementResponsePrivate : public SSMContactsResponsePrivate {
+class ListPagesByEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace IoTDataPlane {
 
 class IoTDataPlaneClient;
 
-class QTAWS_EXPORT IoTDataPlaneClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTDataPlaneClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q);

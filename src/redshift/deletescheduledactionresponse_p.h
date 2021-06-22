@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteScheduledActionResponse;
 
-class QTAWS_EXPORT DeleteScheduledActionResponsePrivate : public RedshiftResponsePrivate {
+class DeleteScheduledActionResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

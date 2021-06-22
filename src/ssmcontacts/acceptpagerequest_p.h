@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class AcceptPageRequest;
 
-class QTAWS_EXPORT AcceptPageRequestPrivate : public SSMContactsRequestPrivate {
+class AcceptPageRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     AcceptPageRequestPrivate(const SSMContactsRequest::Action action,

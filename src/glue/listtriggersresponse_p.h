@@ -27,7 +27,7 @@ namespace Glue {
 
 class ListTriggersResponse;
 
-class QTAWS_EXPORT ListTriggersResponsePrivate : public GlueResponsePrivate {
+class ListTriggersResponsePrivate : public GlueResponsePrivate {
 
 public:
 

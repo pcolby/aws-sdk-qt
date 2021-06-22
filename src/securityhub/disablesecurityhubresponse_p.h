@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DisableSecurityHubResponse;
 
-class QTAWS_EXPORT DisableSecurityHubResponsePrivate : public SecurityHubResponsePrivate {
+class DisableSecurityHubResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace ComputeOptimizer {
 
 class ComputeOptimizerClient;
 
-class QTAWS_EXPORT ComputeOptimizerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ComputeOptimizerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ComputeOptimizerClientPrivate(ComputeOptimizerClient * const q);

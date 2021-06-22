@@ -28,7 +28,7 @@ namespace Backup {
 
 class BackupRequest;
 
-class QTAWS_EXPORT BackupRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class BackupRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     BackupRequest::Action action; ///< Backup action to be performed.

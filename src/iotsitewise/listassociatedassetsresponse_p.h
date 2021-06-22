@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class ListAssociatedAssetsResponse;
 
-class QTAWS_EXPORT ListAssociatedAssetsResponsePrivate : public IoTSiteWiseResponsePrivate {
+class ListAssociatedAssetsResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

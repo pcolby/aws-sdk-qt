@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class ListPermissionsResponse;
 
-class QTAWS_EXPORT ListPermissionsResponsePrivate : public AcmpcaResponsePrivate {
+class ListPermissionsResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 

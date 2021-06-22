@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class PutFindingsPublicationConfigurationResponse;
 
-class QTAWS_EXPORT PutFindingsPublicationConfigurationResponsePrivate : public Macie2ResponsePrivate {
+class PutFindingsPublicationConfigurationResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteDomainEntryRequest;
 
-class QTAWS_EXPORT DeleteDomainEntryRequestPrivate : public LightsailRequestPrivate {
+class DeleteDomainEntryRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteDomainEntryRequestPrivate(const LightsailRequest::Action action,

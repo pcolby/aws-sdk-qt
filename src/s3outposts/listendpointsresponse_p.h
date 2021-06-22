@@ -27,7 +27,7 @@ namespace S3Outposts {
 
 class ListEndpointsResponse;
 
-class QTAWS_EXPORT ListEndpointsResponsePrivate : public S3OutpostsResponsePrivate {
+class ListEndpointsResponsePrivate : public S3OutpostsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DetachDiskRequest;
 
-class QTAWS_EXPORT DetachDiskRequestPrivate : public LightsailRequestPrivate {
+class DetachDiskRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DetachDiskRequestPrivate(const LightsailRequest::Action action,

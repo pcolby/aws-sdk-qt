@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class GetResourcesRequest;
 
-class QTAWS_EXPORT GetResourcesRequestPrivate : public WorkDocsRequestPrivate {
+class GetResourcesRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     GetResourcesRequestPrivate(const WorkDocsRequest::Action action,

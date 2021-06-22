@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class ListPlatformBranchesResponse;
 
-class QTAWS_EXPORT ListPlatformBranchesResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class ListPlatformBranchesResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ReplaceNetworkAclEntryRequest;
 
-class QTAWS_EXPORT ReplaceNetworkAclEntryRequestPrivate : public Ec2RequestPrivate {
+class ReplaceNetworkAclEntryRequestPrivate : public Ec2RequestPrivate {
 
 public:
     ReplaceNetworkAclEntryRequestPrivate(const Ec2Request::Action action,

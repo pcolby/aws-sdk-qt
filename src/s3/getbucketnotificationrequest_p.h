@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketNotificationRequest;
 
-class QTAWS_EXPORT GetBucketNotificationRequestPrivate : public S3RequestPrivate {
+class GetBucketNotificationRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketNotificationRequestPrivate(const S3Request::Action action,

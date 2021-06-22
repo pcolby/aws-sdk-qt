@@ -27,7 +27,7 @@ namespace AppSync {
 
 class StartSchemaCreationResponse;
 
-class QTAWS_EXPORT StartSchemaCreationResponsePrivate : public AppSyncResponsePrivate {
+class StartSchemaCreationResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 

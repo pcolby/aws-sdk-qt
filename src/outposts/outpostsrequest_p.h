@@ -28,7 +28,7 @@ namespace Outposts {
 
 class OutpostsRequest;
 
-class QTAWS_EXPORT OutpostsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class OutpostsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     OutpostsRequest::Action action; ///< Outposts action to be performed.

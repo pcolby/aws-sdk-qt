@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class DeleteAnomalyDetectorResponse;
 
-class QTAWS_EXPORT DeleteAnomalyDetectorResponsePrivate : public CloudWatchResponsePrivate {
+class DeleteAnomalyDetectorResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 

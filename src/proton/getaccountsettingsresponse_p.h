@@ -27,7 +27,7 @@ namespace Proton {
 
 class GetAccountSettingsResponse;
 
-class QTAWS_EXPORT GetAccountSettingsResponsePrivate : public ProtonResponsePrivate {
+class GetAccountSettingsResponsePrivate : public ProtonResponsePrivate {
 
 public:
 

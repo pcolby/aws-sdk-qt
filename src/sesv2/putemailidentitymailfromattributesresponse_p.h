@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class PutEmailIdentityMailFromAttributesResponse;
 
-class QTAWS_EXPORT PutEmailIdentityMailFromAttributesResponsePrivate : public Sesv2ResponsePrivate {
+class PutEmailIdentityMailFromAttributesResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

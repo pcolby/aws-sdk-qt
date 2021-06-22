@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeDBEngineVersionsRequest;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsRequestPrivate : public NeptuneRequestPrivate {
+class DescribeDBEngineVersionsRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     DescribeDBEngineVersionsRequestPrivate(const NeptuneRequest::Action action,

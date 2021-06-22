@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class AdminUserGlobalSignOutResponse;
 
-class QTAWS_EXPORT AdminUserGlobalSignOutResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+class AdminUserGlobalSignOutResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 

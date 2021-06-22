@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class UpdateJobTemplateResponse;
 
-class QTAWS_EXPORT UpdateJobTemplateResponsePrivate : public MediaConvertResponsePrivate {
+class UpdateJobTemplateResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 

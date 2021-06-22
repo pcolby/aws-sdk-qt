@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DisassociateNodeResponse;
 
-class QTAWS_EXPORT DisassociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
+class DisassociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 

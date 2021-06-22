@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class AlexaForBusinessResponse;
 
-class QTAWS_EXPORT AlexaForBusinessResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AlexaForBusinessResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

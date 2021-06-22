@@ -27,7 +27,7 @@ namespace RAM {
 
 class ListResourcesResponse;
 
-class QTAWS_EXPORT ListResourcesResponsePrivate : public RamResponsePrivate {
+class ListResourcesResponsePrivate : public RamResponsePrivate {
 
 public:
 

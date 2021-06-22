@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeReservedDBInstancesRequest;
 
-class QTAWS_EXPORT DescribeReservedDBInstancesRequestPrivate : public RdsRequestPrivate {
+class DescribeReservedDBInstancesRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeReservedDBInstancesRequestPrivate(const RdsRequest::Action action,

@@ -28,7 +28,7 @@ namespace Glue {
 
 class PutDataCatalogEncryptionSettingsRequest;
 
-class QTAWS_EXPORT PutDataCatalogEncryptionSettingsRequestPrivate : public GlueRequestPrivate {
+class PutDataCatalogEncryptionSettingsRequestPrivate : public GlueRequestPrivate {
 
 public:
     PutDataCatalogEncryptionSettingsRequestPrivate(const GlueRequest::Action action,

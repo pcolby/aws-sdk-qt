@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class StartInstanceRefreshRequest;
 
-class QTAWS_EXPORT StartInstanceRefreshRequestPrivate : public AutoScalingRequestPrivate {
+class StartInstanceRefreshRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     StartInstanceRefreshRequestPrivate(const AutoScalingRequest::Action action,

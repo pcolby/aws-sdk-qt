@@ -27,7 +27,7 @@ namespace FinSpaceData {
 
 class FinSpaceDataResponse;
 
-class QTAWS_EXPORT FinSpaceDataResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FinSpaceDataResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

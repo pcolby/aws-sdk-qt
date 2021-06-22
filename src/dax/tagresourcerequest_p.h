@@ -28,7 +28,7 @@ namespace DAX {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public DaxRequestPrivate {
+class TagResourceRequestPrivate : public DaxRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const DaxRequest::Action action,

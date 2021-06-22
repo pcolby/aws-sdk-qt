@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DeleteConnectorDefinitionRequest;
 
-class QTAWS_EXPORT DeleteConnectorDefinitionRequestPrivate : public GreengrassRequestPrivate {
+class DeleteConnectorDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DeleteConnectorDefinitionRequestPrivate(const GreengrassRequest::Action action,

@@ -28,7 +28,7 @@ namespace Budgets {
 
 class CreateSubscriberRequest;
 
-class QTAWS_EXPORT CreateSubscriberRequestPrivate : public BudgetsRequestPrivate {
+class CreateSubscriberRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     CreateSubscriberRequestPrivate(const BudgetsRequest::Action action,

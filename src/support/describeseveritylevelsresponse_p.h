@@ -27,7 +27,7 @@ namespace Support {
 
 class DescribeSeverityLevelsResponse;
 
-class QTAWS_EXPORT DescribeSeverityLevelsResponsePrivate : public SupportResponsePrivate {
+class DescribeSeverityLevelsResponsePrivate : public SupportResponsePrivate {
 
 public:
 

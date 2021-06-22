@@ -28,7 +28,7 @@ namespace Connect {
 
 class UpdateUserPhoneConfigRequest;
 
-class QTAWS_EXPORT UpdateUserPhoneConfigRequestPrivate : public ConnectRequestPrivate {
+class UpdateUserPhoneConfigRequestPrivate : public ConnectRequestPrivate {
 
 public:
     UpdateUserPhoneConfigRequestPrivate(const ConnectRequest::Action action,

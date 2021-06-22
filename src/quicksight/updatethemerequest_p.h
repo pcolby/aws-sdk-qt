@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UpdateThemeRequest;
 
-class QTAWS_EXPORT UpdateThemeRequestPrivate : public QuickSightRequestPrivate {
+class UpdateThemeRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     UpdateThemeRequestPrivate(const QuickSightRequest::Action action,

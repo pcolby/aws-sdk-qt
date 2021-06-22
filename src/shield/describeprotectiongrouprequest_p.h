@@ -28,7 +28,7 @@ namespace Shield {
 
 class DescribeProtectionGroupRequest;
 
-class QTAWS_EXPORT DescribeProtectionGroupRequestPrivate : public ShieldRequestPrivate {
+class DescribeProtectionGroupRequestPrivate : public ShieldRequestPrivate {
 
 public:
     DescribeProtectionGroupRequestPrivate(const ShieldRequest::Action action,

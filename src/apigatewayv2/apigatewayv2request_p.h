@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class ApiGatewayV2Request;
 
-class QTAWS_EXPORT ApiGatewayV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApiGatewayV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApiGatewayV2Request::Action action; ///< ApiGatewayV2 action to be performed.

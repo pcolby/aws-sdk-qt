@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListNamespacesResponse;
 
-class QTAWS_EXPORT ListNamespacesResponsePrivate : public QuickSightResponsePrivate {
+class ListNamespacesResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class SetIpAddressTypeResponse;
 
-class QTAWS_EXPORT SetIpAddressTypeResponsePrivate : public LightsailResponsePrivate {
+class SetIpAddressTypeResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

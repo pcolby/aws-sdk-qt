@@ -28,7 +28,7 @@ namespace mgn {
 
 class ChangeServerLifeCycleStateRequest;
 
-class QTAWS_EXPORT ChangeServerLifeCycleStateRequestPrivate : public mgnRequestPrivate {
+class ChangeServerLifeCycleStateRequestPrivate : public mgnRequestPrivate {
 
 public:
     ChangeServerLifeCycleStateRequestPrivate(const mgnRequest::Action action,

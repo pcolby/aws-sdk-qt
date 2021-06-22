@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class NetworkManagerResponse;
 
-class QTAWS_EXPORT NetworkManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class NetworkManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

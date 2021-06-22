@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteRemediationExceptionsRequest;
 
-class QTAWS_EXPORT DeleteRemediationExceptionsRequestPrivate : public ConfigServiceRequestPrivate {
+class DeleteRemediationExceptionsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteRemediationExceptionsRequestPrivate(const ConfigServiceRequest::Action action,

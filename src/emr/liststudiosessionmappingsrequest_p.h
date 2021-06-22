@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListStudioSessionMappingsRequest;
 
-class QTAWS_EXPORT ListStudioSessionMappingsRequestPrivate : public EmrRequestPrivate {
+class ListStudioSessionMappingsRequestPrivate : public EmrRequestPrivate {
 
 public:
     ListStudioSessionMappingsRequestPrivate(const EmrRequest::Action action,

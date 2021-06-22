@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class StartInstanceRequest;
 
-class QTAWS_EXPORT StartInstanceRequestPrivate : public LightsailRequestPrivate {
+class StartInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
     StartInstanceRequestPrivate(const LightsailRequest::Action action,

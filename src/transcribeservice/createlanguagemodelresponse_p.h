@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class CreateLanguageModelResponse;
 
-class QTAWS_EXPORT CreateLanguageModelResponsePrivate : public TranscribeServiceResponsePrivate {
+class CreateLanguageModelResponsePrivate : public TranscribeServiceResponsePrivate {
 
 public:
 

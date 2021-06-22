@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class GetEffectivePermissionsForPathRequest;
 
-class QTAWS_EXPORT GetEffectivePermissionsForPathRequestPrivate : public LakeFormationRequestPrivate {
+class GetEffectivePermissionsForPathRequestPrivate : public LakeFormationRequestPrivate {
 
 public:
     GetEffectivePermissionsForPathRequestPrivate(const LakeFormationRequest::Action action,

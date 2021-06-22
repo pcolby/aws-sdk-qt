@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateNetworkAclResponse;
 
-class QTAWS_EXPORT CreateNetworkAclResponsePrivate : public Ec2ResponsePrivate {
+class CreateNetworkAclResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

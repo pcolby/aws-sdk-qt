@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DetachVpnGatewayRequest;
 
-class QTAWS_EXPORT DetachVpnGatewayRequestPrivate : public Ec2RequestPrivate {
+class DetachVpnGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DetachVpnGatewayRequestPrivate(const Ec2Request::Action action,

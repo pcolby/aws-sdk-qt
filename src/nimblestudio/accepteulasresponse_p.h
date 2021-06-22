@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class AcceptEulasResponse;
 
-class QTAWS_EXPORT AcceptEulasResponsePrivate : public NimbleStudioResponsePrivate {
+class AcceptEulasResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 

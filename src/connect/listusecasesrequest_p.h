@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListUseCasesRequest;
 
-class QTAWS_EXPORT ListUseCasesRequestPrivate : public ConnectRequestPrivate {
+class ListUseCasesRequestPrivate : public ConnectRequestPrivate {
 
 public:
     ListUseCasesRequestPrivate(const ConnectRequest::Action action,

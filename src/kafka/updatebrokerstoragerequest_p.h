@@ -28,7 +28,7 @@ namespace Kafka {
 
 class UpdateBrokerStorageRequest;
 
-class QTAWS_EXPORT UpdateBrokerStorageRequestPrivate : public KafkaRequestPrivate {
+class UpdateBrokerStorageRequestPrivate : public KafkaRequestPrivate {
 
 public:
     UpdateBrokerStorageRequestPrivate(const KafkaRequest::Action action,

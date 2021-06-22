@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DeleteBotLocaleResponse;
 
-class QTAWS_EXPORT DeleteBotLocaleResponsePrivate : public LexModelsV2ResponsePrivate {
+class DeleteBotLocaleResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Shield {
 
 class DisassociateDRTLogBucketRequest;
 
-class QTAWS_EXPORT DisassociateDRTLogBucketRequestPrivate : public ShieldRequestPrivate {
+class DisassociateDRTLogBucketRequestPrivate : public ShieldRequestPrivate {
 
 public:
     DisassociateDRTLogBucketRequestPrivate(const ShieldRequest::Action action,

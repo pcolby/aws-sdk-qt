@@ -28,7 +28,7 @@ namespace RDS {
 
 class StartExportTaskRequest;
 
-class QTAWS_EXPORT StartExportTaskRequestPrivate : public RdsRequestPrivate {
+class StartExportTaskRequestPrivate : public RdsRequestPrivate {
 
 public:
     StartExportTaskRequestPrivate(const RdsRequest::Action action,

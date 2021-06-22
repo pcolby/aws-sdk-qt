@@ -27,7 +27,7 @@ namespace Glacier {
 
 class CompleteVaultLockResponse;
 
-class QTAWS_EXPORT CompleteVaultLockResponsePrivate : public GlacierResponsePrivate {
+class CompleteVaultLockResponsePrivate : public GlacierResponsePrivate {
 
 public:
 

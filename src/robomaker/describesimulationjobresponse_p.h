@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class DescribeSimulationJobResponse;
 
-class QTAWS_EXPORT DescribeSimulationJobResponsePrivate : public RoboMakerResponsePrivate {
+class DescribeSimulationJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 

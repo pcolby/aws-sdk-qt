@@ -27,7 +27,7 @@ namespace EBS {
 
 class GetSnapshotBlockResponse;
 
-class QTAWS_EXPORT GetSnapshotBlockResponsePrivate : public EbsResponsePrivate {
+class GetSnapshotBlockResponsePrivate : public EbsResponsePrivate {
 
 public:
 

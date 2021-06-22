@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateCACertificateRequest;
 
-class QTAWS_EXPORT UpdateCACertificateRequestPrivate : public IoTRequestPrivate {
+class UpdateCACertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateCACertificateRequestPrivate(const IoTRequest::Action action,

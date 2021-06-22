@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class UpdateInputDeviceResponse;
 
-class QTAWS_EXPORT UpdateInputDeviceResponsePrivate : public MediaLiveResponsePrivate {
+class UpdateInputDeviceResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 

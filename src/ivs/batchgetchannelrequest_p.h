@@ -28,7 +28,7 @@ namespace IVS {
 
 class BatchGetChannelRequest;
 
-class QTAWS_EXPORT BatchGetChannelRequestPrivate : public IvsRequestPrivate {
+class BatchGetChannelRequestPrivate : public IvsRequestPrivate {
 
 public:
     BatchGetChannelRequestPrivate(const IvsRequest::Action action,

@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeRemediationConfigurationsRequest;
 
-class QTAWS_EXPORT DescribeRemediationConfigurationsRequestPrivate : public ConfigServiceRequestPrivate {
+class DescribeRemediationConfigurationsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeRemediationConfigurationsRequestPrivate(const ConfigServiceRequest::Action action,

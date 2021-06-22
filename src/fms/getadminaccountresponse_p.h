@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetAdminAccountResponse;
 
-class QTAWS_EXPORT GetAdminAccountResponsePrivate : public FmsResponsePrivate {
+class GetAdminAccountResponsePrivate : public FmsResponsePrivate {
 
 public:
 

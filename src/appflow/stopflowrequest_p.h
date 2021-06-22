@@ -28,7 +28,7 @@ namespace Appflow {
 
 class StopFlowRequest;
 
-class QTAWS_EXPORT StopFlowRequestPrivate : public AppflowRequestPrivate {
+class StopFlowRequestPrivate : public AppflowRequestPrivate {
 
 public:
     StopFlowRequestPrivate(const AppflowRequest::Action action,

@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeactivateMFADeviceRequest;
 
-class QTAWS_EXPORT DeactivateMFADeviceRequestPrivate : public IamRequestPrivate {
+class DeactivateMFADeviceRequestPrivate : public IamRequestPrivate {
 
 public:
     DeactivateMFADeviceRequestPrivate(const IamRequest::Action action,

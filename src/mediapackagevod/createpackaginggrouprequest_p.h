@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class CreatePackagingGroupRequest;
 
-class QTAWS_EXPORT CreatePackagingGroupRequestPrivate : public MediaPackageVodRequestPrivate {
+class CreatePackagingGroupRequestPrivate : public MediaPackageVodRequestPrivate {
 
 public:
     CreatePackagingGroupRequestPrivate(const MediaPackageVodRequest::Action action,

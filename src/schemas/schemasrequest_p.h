@@ -28,7 +28,7 @@ namespace Schemas {
 
 class SchemasRequest;
 
-class QTAWS_EXPORT SchemasRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SchemasRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SchemasRequest::Action action; ///< Schemas action to be performed.

@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutAccountDedicatedIpWarmupAttributesRequest;
 
-class QTAWS_EXPORT PutAccountDedicatedIpWarmupAttributesRequestPrivate : public Sesv2RequestPrivate {
+class PutAccountDedicatedIpWarmupAttributesRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     PutAccountDedicatedIpWarmupAttributesRequestPrivate(const Sesv2Request::Action action,

@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class LookoutforVisionResponse;
 
-class QTAWS_EXPORT LookoutforVisionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LookoutforVisionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

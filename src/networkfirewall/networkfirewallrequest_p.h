@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class NetworkFirewallRequest;
 
-class QTAWS_EXPORT NetworkFirewallRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class NetworkFirewallRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NetworkFirewallRequest::Action action; ///< NetworkFirewall action to be performed.

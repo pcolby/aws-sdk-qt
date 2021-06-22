@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListDetectMitigationActionsExecutionsResponse;
 
-class QTAWS_EXPORT ListDetectMitigationActionsExecutionsResponsePrivate : public IoTResponsePrivate {
+class ListDetectMitigationActionsExecutionsResponsePrivate : public IoTResponsePrivate {
 
 public:
 

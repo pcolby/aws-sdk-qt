@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeCoipPoolsRequest;
 
-class QTAWS_EXPORT DescribeCoipPoolsRequestPrivate : public Ec2RequestPrivate {
+class DescribeCoipPoolsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeCoipPoolsRequestPrivate(const Ec2Request::Action action,

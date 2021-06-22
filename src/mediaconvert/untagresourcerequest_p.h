@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public MediaConvertRequestPrivate {
+class UntagResourceRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const MediaConvertRequest::Action action,

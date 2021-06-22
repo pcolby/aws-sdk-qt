@@ -28,7 +28,7 @@ namespace STS {
 
 class GetAccessKeyInfoRequest;
 
-class QTAWS_EXPORT GetAccessKeyInfoRequestPrivate : public StsRequestPrivate {
+class GetAccessKeyInfoRequestPrivate : public StsRequestPrivate {
 
 public:
     GetAccessKeyInfoRequestPrivate(const StsRequest::Action action,

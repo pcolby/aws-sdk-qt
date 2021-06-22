@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateImageRequest;
 
-class QTAWS_EXPORT CreateImageRequestPrivate : public Ec2RequestPrivate {
+class CreateImageRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateImageRequestPrivate(const Ec2Request::Action action,

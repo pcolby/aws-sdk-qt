@@ -29,7 +29,7 @@ namespace SFN {
 
 class SfnClient;
 
-class QTAWS_EXPORT SfnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SfnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SfnClientPrivate(SfnClient * const q);

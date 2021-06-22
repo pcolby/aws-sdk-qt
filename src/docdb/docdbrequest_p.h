@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DocDBRequest;
 
-class QTAWS_EXPORT DocDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DocDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DocDBRequest::Action action; ///< DocDB action to be performed.

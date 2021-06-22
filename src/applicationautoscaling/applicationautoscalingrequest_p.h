@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingRequest;
 
-class QTAWS_EXPORT ApplicationAutoScalingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApplicationAutoScalingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApplicationAutoScalingRequest::Action action; ///< ApplicationAutoScaling action to be performed.

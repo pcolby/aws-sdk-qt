@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteHealthCheckRequest;
 
-class QTAWS_EXPORT DeleteHealthCheckRequestPrivate : public Route53RequestPrivate {
+class DeleteHealthCheckRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteHealthCheckRequestPrivate(const Route53Request::Action action,

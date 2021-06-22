@@ -28,7 +28,7 @@ namespace Batch {
 
 class RegisterJobDefinitionRequest;
 
-class QTAWS_EXPORT RegisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
+class RegisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
 
 public:
     RegisterJobDefinitionRequestPrivate(const BatchRequest::Action action,

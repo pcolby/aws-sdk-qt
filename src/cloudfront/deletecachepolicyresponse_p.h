@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteCachePolicyResponse;
 
-class QTAWS_EXPORT DeleteCachePolicyResponsePrivate : public CloudFrontResponsePrivate {
+class DeleteCachePolicyResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

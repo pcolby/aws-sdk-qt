@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DeleteUserPoolRequest;
 
-class QTAWS_EXPORT DeleteUserPoolRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class DeleteUserPoolRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DeleteUserPoolRequestPrivate(const CognitoIdentityProviderRequest::Action action,

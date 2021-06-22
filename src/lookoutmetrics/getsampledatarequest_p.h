@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class GetSampleDataRequest;
 
-class QTAWS_EXPORT GetSampleDataRequestPrivate : public LookoutMetricsRequestPrivate {
+class GetSampleDataRequestPrivate : public LookoutMetricsRequestPrivate {
 
 public:
     GetSampleDataRequestPrivate(const LookoutMetricsRequest::Action action,

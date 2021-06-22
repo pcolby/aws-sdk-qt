@@ -28,7 +28,7 @@ namespace Inspector {
 
 class RegisterCrossAccountAccessRoleRequest;
 
-class QTAWS_EXPORT RegisterCrossAccountAccessRoleRequestPrivate : public InspectorRequestPrivate {
+class RegisterCrossAccountAccessRoleRequestPrivate : public InspectorRequestPrivate {
 
 public:
     RegisterCrossAccountAccessRoleRequestPrivate(const InspectorRequest::Action action,

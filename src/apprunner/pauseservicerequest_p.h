@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class PauseServiceRequest;
 
-class QTAWS_EXPORT PauseServiceRequestPrivate : public AppRunnerRequestPrivate {
+class PauseServiceRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     PauseServiceRequestPrivate(const AppRunnerRequest::Action action,

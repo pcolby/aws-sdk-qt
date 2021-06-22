@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class DescribeStreamSummaryRequest;
 
-class QTAWS_EXPORT DescribeStreamSummaryRequestPrivate : public KinesisRequestPrivate {
+class DescribeStreamSummaryRequestPrivate : public KinesisRequestPrivate {
 
 public:
     DescribeStreamSummaryRequestPrivate(const KinesisRequest::Action action,

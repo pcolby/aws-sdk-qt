@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeleteFilterRequest;
 
-class QTAWS_EXPORT DeleteFilterRequestPrivate : public GuardDutyRequestPrivate {
+class DeleteFilterRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DeleteFilterRequestPrivate(const GuardDutyRequest::Action action,

@@ -28,7 +28,7 @@ namespace FIS {
 
 class GetExperimentRequest;
 
-class QTAWS_EXPORT GetExperimentRequestPrivate : public FisRequestPrivate {
+class GetExperimentRequestPrivate : public FisRequestPrivate {
 
 public:
     GetExperimentRequestPrivate(const FisRequest::Action action,

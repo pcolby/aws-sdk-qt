@@ -27,7 +27,7 @@ namespace Kafka {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public KafkaResponsePrivate {
+class UntagResourceResponsePrivate : public KafkaResponsePrivate {
 
 public:
 

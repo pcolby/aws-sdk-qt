@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetHealthCheckLastFailureReasonRequest;
 
-class QTAWS_EXPORT GetHealthCheckLastFailureReasonRequestPrivate : public Route53RequestPrivate {
+class GetHealthCheckLastFailureReasonRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetHealthCheckLastFailureReasonRequestPrivate(const Route53Request::Action action,

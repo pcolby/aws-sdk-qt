@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetObjectLockConfigurationResponse;
 
-class QTAWS_EXPORT GetObjectLockConfigurationResponsePrivate : public S3ResponsePrivate {
+class GetObjectLockConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class CreateLoadBalancerRequest;
 
-class QTAWS_EXPORT CreateLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
+class CreateLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     CreateLoadBalancerRequestPrivate(const ElasticLoadBalancingRequest::Action action,

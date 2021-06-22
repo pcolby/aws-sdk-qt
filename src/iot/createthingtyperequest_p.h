@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateThingTypeRequest;
 
-class QTAWS_EXPORT CreateThingTypeRequestPrivate : public IoTRequestPrivate {
+class CreateThingTypeRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateThingTypeRequestPrivate(const IoTRequest::Action action,

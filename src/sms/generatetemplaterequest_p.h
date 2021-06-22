@@ -28,7 +28,7 @@ namespace SMS {
 
 class GenerateTemplateRequest;
 
-class QTAWS_EXPORT GenerateTemplateRequestPrivate : public SmsRequestPrivate {
+class GenerateTemplateRequestPrivate : public SmsRequestPrivate {
 
 public:
     GenerateTemplateRequestPrivate(const SmsRequest::Action action,

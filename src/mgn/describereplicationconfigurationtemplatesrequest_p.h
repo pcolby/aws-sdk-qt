@@ -28,7 +28,7 @@ namespace mgn {
 
 class DescribeReplicationConfigurationTemplatesRequest;
 
-class QTAWS_EXPORT DescribeReplicationConfigurationTemplatesRequestPrivate : public mgnRequestPrivate {
+class DescribeReplicationConfigurationTemplatesRequestPrivate : public mgnRequestPrivate {
 
 public:
     DescribeReplicationConfigurationTemplatesRequestPrivate(const mgnRequest::Action action,

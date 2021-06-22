@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DisassociateFileSystemResponse;
 
-class QTAWS_EXPORT DisassociateFileSystemResponsePrivate : public StorageGatewayResponsePrivate {
+class DisassociateFileSystemResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

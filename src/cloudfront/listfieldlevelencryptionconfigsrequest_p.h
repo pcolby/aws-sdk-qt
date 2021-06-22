@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListFieldLevelEncryptionConfigsRequest;
 
-class QTAWS_EXPORT ListFieldLevelEncryptionConfigsRequestPrivate : public CloudFrontRequestPrivate {
+class ListFieldLevelEncryptionConfigsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListFieldLevelEncryptionConfigsRequestPrivate(const CloudFrontRequest::Action action,

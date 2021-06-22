@@ -27,7 +27,7 @@ namespace MTurk {
 
 class ListAssignmentsForHITResponse;
 
-class QTAWS_EXPORT ListAssignmentsForHITResponsePrivate : public MTurkResponsePrivate {
+class ListAssignmentsForHITResponsePrivate : public MTurkResponsePrivate {
 
 public:
 

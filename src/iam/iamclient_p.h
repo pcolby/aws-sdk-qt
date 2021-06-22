@@ -29,7 +29,7 @@ namespace IAM {
 
 class IamClient;
 
-class QTAWS_EXPORT IamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IamClientPrivate(IamClient * const q);

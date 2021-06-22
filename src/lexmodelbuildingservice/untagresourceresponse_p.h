@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+class UntagResourceResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 

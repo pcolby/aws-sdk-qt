@@ -28,7 +28,7 @@ namespace SNS {
 
 class GetSubscriptionAttributesRequest;
 
-class QTAWS_EXPORT GetSubscriptionAttributesRequestPrivate : public SnsRequestPrivate {
+class GetSubscriptionAttributesRequestPrivate : public SnsRequestPrivate {
 
 public:
     GetSubscriptionAttributesRequestPrivate(const SnsRequest::Action action,

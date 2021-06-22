@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeClassicLinkInstancesResponse;
 
-class QTAWS_EXPORT DescribeClassicLinkInstancesResponsePrivate : public Ec2ResponsePrivate {
+class DescribeClassicLinkInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class ApplyArchiveRuleResponse;
 
-class QTAWS_EXPORT ApplyArchiveRuleResponsePrivate : public AccessAnalyzerResponsePrivate {
+class ApplyArchiveRuleResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 

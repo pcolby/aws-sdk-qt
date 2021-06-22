@@ -28,7 +28,7 @@ namespace DocDB {
 
 class CreateEventSubscriptionRequest;
 
-class QTAWS_EXPORT CreateEventSubscriptionRequestPrivate : public DocDBRequestPrivate {
+class CreateEventSubscriptionRequestPrivate : public DocDBRequestPrivate {
 
 public:
     CreateEventSubscriptionRequestPrivate(const DocDBRequest::Action action,

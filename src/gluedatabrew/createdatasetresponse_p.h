@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class CreateDatasetResponse;
 
-class QTAWS_EXPORT CreateDatasetResponsePrivate : public GlueDataBrewResponsePrivate {
+class CreateDatasetResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 

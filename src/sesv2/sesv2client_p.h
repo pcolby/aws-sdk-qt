@@ -29,7 +29,7 @@ namespace SESV2 {
 
 class Sesv2Client;
 
-class QTAWS_EXPORT Sesv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class Sesv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     Sesv2ClientPrivate(Sesv2Client * const q);

@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeauthorizeConnectionRequest;
 
-class QTAWS_EXPORT DeauthorizeConnectionRequestPrivate : public EventBridgeRequestPrivate {
+class DeauthorizeConnectionRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DeauthorizeConnectionRequestPrivate(const EventBridgeRequest::Action action,

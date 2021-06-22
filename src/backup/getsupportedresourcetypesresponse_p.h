@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetSupportedResourceTypesResponse;
 
-class QTAWS_EXPORT GetSupportedResourceTypesResponsePrivate : public BackupResponsePrivate {
+class GetSupportedResourceTypesResponsePrivate : public BackupResponsePrivate {
 
 public:
 

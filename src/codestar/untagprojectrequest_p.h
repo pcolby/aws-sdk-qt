@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class UntagProjectRequest;
 
-class QTAWS_EXPORT UntagProjectRequestPrivate : public CodeStarRequestPrivate {
+class UntagProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     UntagProjectRequestPrivate(const CodeStarRequest::Action action,

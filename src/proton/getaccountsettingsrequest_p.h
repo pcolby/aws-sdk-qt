@@ -28,7 +28,7 @@ namespace Proton {
 
 class GetAccountSettingsRequest;
 
-class QTAWS_EXPORT GetAccountSettingsRequestPrivate : public ProtonRequestPrivate {
+class GetAccountSettingsRequestPrivate : public ProtonRequestPrivate {
 
 public:
     GetAccountSettingsRequestPrivate(const ProtonRequest::Action action,

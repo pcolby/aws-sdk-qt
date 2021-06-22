@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class RegisterAccountRequest;
 
-class QTAWS_EXPORT RegisterAccountRequestPrivate : public AuditManagerRequestPrivate {
+class RegisterAccountRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     RegisterAccountRequestPrivate(const AuditManagerRequest::Action action,

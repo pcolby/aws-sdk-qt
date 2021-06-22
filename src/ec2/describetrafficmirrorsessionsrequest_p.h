@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeTrafficMirrorSessionsRequest;
 
-class QTAWS_EXPORT DescribeTrafficMirrorSessionsRequestPrivate : public Ec2RequestPrivate {
+class DescribeTrafficMirrorSessionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeTrafficMirrorSessionsRequestPrivate(const Ec2Request::Action action,

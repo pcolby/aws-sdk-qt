@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DeauthorizeConnectionRequest;
 
-class QTAWS_EXPORT DeauthorizeConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
+class DeauthorizeConnectionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     DeauthorizeConnectionRequestPrivate(const CloudWatchEventsRequest::Action action,

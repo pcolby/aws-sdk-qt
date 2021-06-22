@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class UpdateOrganizationConfigurationResponse;
 
-class QTAWS_EXPORT UpdateOrganizationConfigurationResponsePrivate : public GuardDutyResponsePrivate {
+class UpdateOrganizationConfigurationResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

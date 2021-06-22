@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteIPSetRequest;
 
-class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WafRequestPrivate {
+class DeleteIPSetRequestPrivate : public WafRequestPrivate {
 
 public:
     DeleteIPSetRequestPrivate(const WafRequest::Action action,

@@ -27,7 +27,7 @@ namespace DLM {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public DlmResponsePrivate {
+class UntagResourceResponsePrivate : public DlmResponsePrivate {
 
 public:
 

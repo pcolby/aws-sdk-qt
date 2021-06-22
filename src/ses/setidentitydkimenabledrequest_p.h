@@ -28,7 +28,7 @@ namespace SES {
 
 class SetIdentityDkimEnabledRequest;
 
-class QTAWS_EXPORT SetIdentityDkimEnabledRequestPrivate : public SesRequestPrivate {
+class SetIdentityDkimEnabledRequestPrivate : public SesRequestPrivate {
 
 public:
     SetIdentityDkimEnabledRequestPrivate(const SesRequest::Action action,

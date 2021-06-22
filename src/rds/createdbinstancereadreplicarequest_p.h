@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBInstanceReadReplicaRequest;
 
-class QTAWS_EXPORT CreateDBInstanceReadReplicaRequestPrivate : public RdsRequestPrivate {
+class CreateDBInstanceReadReplicaRequestPrivate : public RdsRequestPrivate {
 
 public:
     CreateDBInstanceReadReplicaRequestPrivate(const RdsRequest::Action action,

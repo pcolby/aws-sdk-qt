@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class ElasticsearchServiceResponse;
 
-class QTAWS_EXPORT ElasticsearchServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ElasticsearchServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

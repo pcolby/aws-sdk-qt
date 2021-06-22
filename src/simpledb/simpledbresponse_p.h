@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class SimpleDBResponse;
 
-class QTAWS_EXPORT SimpleDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SimpleDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

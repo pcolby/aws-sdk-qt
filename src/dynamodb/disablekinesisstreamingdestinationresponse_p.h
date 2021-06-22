@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DisableKinesisStreamingDestinationResponse;
 
-class QTAWS_EXPORT DisableKinesisStreamingDestinationResponsePrivate : public DynamoDBResponsePrivate {
+class DisableKinesisStreamingDestinationResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 

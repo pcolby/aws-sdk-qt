@@ -29,7 +29,7 @@ namespace Backup {
 
 class BackupClient;
 
-class QTAWS_EXPORT BackupClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class BackupClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     BackupClientPrivate(BackupClient * const q);

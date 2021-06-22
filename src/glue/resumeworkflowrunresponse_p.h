@@ -27,7 +27,7 @@ namespace Glue {
 
 class ResumeWorkflowRunResponse;
 
-class QTAWS_EXPORT ResumeWorkflowRunResponsePrivate : public GlueResponsePrivate {
+class ResumeWorkflowRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 

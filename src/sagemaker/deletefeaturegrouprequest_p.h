@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteFeatureGroupRequest;
 
-class QTAWS_EXPORT DeleteFeatureGroupRequestPrivate : public SageMakerRequestPrivate {
+class DeleteFeatureGroupRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteFeatureGroupRequestPrivate(const SageMakerRequest::Action action,

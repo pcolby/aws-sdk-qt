@@ -27,7 +27,7 @@ namespace SSOOIDC {
 
 class SsooidcResponse;
 
-class QTAWS_EXPORT SsooidcResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SsooidcResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

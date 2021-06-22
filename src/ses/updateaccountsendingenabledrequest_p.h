@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateAccountSendingEnabledRequest;
 
-class QTAWS_EXPORT UpdateAccountSendingEnabledRequestPrivate : public SesRequestPrivate {
+class UpdateAccountSendingEnabledRequestPrivate : public SesRequestPrivate {
 
 public:
     UpdateAccountSendingEnabledRequestPrivate(const SesRequest::Action action,

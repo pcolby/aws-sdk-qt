@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public NetworkManagerResponsePrivate {
+class TagResourceResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 

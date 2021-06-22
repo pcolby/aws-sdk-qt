@@ -28,7 +28,7 @@ namespace ECR {
 
 class DescribeRegistryRequest;
 
-class QTAWS_EXPORT DescribeRegistryRequestPrivate : public EcrRequestPrivate {
+class DescribeRegistryRequestPrivate : public EcrRequestPrivate {
 
 public:
     DescribeRegistryRequestPrivate(const EcrRequest::Action action,

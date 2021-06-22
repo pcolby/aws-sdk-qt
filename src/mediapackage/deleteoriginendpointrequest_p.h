@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class DeleteOriginEndpointRequest;
 
-class QTAWS_EXPORT DeleteOriginEndpointRequestPrivate : public MediaPackageRequestPrivate {
+class DeleteOriginEndpointRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     DeleteOriginEndpointRequestPrivate(const MediaPackageRequest::Action action,

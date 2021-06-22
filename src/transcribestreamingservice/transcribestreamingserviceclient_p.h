@@ -29,7 +29,7 @@ namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceClient;
 
-class QTAWS_EXPORT TranscribeStreamingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TranscribeStreamingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     TranscribeStreamingServiceClientPrivate(TranscribeStreamingServiceClient * const q);

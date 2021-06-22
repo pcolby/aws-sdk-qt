@@ -28,7 +28,7 @@ namespace ACM {
 
 class DeleteCertificateRequest;
 
-class QTAWS_EXPORT DeleteCertificateRequestPrivate : public AcmRequestPrivate {
+class DeleteCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
     DeleteCertificateRequestPrivate(const AcmRequest::Action action,

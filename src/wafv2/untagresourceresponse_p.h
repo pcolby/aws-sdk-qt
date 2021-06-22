@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public Wafv2ResponsePrivate {
+class UntagResourceResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 

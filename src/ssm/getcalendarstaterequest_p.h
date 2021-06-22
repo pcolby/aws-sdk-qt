@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetCalendarStateRequest;
 
-class QTAWS_EXPORT GetCalendarStateRequestPrivate : public SsmRequestPrivate {
+class GetCalendarStateRequestPrivate : public SsmRequestPrivate {
 
 public:
     GetCalendarStateRequestPrivate(const SsmRequest::Action action,

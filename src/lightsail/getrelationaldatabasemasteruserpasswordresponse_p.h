@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetRelationalDatabaseMasterUserPasswordResponse;
 
-class QTAWS_EXPORT GetRelationalDatabaseMasterUserPasswordResponsePrivate : public LightsailResponsePrivate {
+class GetRelationalDatabaseMasterUserPasswordResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace FIS {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public FisRequestPrivate {
+class ListTagsForResourceRequestPrivate : public FisRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const FisRequest::Action action,

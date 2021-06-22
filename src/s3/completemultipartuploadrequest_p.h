@@ -28,7 +28,7 @@ namespace S3 {
 
 class CompleteMultipartUploadRequest;
 
-class QTAWS_EXPORT CompleteMultipartUploadRequestPrivate : public S3RequestPrivate {
+class CompleteMultipartUploadRequestPrivate : public S3RequestPrivate {
 
 public:
     CompleteMultipartUploadRequestPrivate(const S3Request::Action action,

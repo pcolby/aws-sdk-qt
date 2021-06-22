@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class ListCollectionsResponse;
 
-class QTAWS_EXPORT ListCollectionsResponsePrivate : public RekognitionResponsePrivate {
+class ListCollectionsResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 

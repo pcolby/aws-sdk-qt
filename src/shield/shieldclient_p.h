@@ -29,7 +29,7 @@ namespace Shield {
 
 class ShieldClient;
 
-class QTAWS_EXPORT ShieldClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ShieldClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ShieldClientPrivate(ShieldClient * const q);

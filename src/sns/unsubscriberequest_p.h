@@ -28,7 +28,7 @@ namespace SNS {
 
 class UnsubscribeRequest;
 
-class QTAWS_EXPORT UnsubscribeRequestPrivate : public SnsRequestPrivate {
+class UnsubscribeRequestPrivate : public SnsRequestPrivate {
 
 public:
     UnsubscribeRequestPrivate(const SnsRequest::Action action,

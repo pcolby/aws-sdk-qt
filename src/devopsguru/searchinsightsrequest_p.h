@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class SearchInsightsRequest;
 
-class QTAWS_EXPORT SearchInsightsRequestPrivate : public DevOpsGuruRequestPrivate {
+class SearchInsightsRequestPrivate : public DevOpsGuruRequestPrivate {
 
 public:
     SearchInsightsRequestPrivate(const DevOpsGuruRequest::Action action,

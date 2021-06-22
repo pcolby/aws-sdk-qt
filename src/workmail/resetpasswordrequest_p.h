@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class ResetPasswordRequest;
 
-class QTAWS_EXPORT ResetPasswordRequestPrivate : public WorkMailRequestPrivate {
+class ResetPasswordRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     ResetPasswordRequestPrivate(const WorkMailRequest::Action action,

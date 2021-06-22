@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class DeleteDetectorResponse;
 
-class QTAWS_EXPORT DeleteDetectorResponsePrivate : public GuardDutyResponsePrivate {
+class DeleteDetectorResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

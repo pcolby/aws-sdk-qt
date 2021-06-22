@@ -29,7 +29,7 @@ namespace AppRegistry {
 
 class AppRegistryClient;
 
-class QTAWS_EXPORT AppRegistryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppRegistryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppRegistryClientPrivate(AppRegistryClient * const q);

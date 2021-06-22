@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class BatchDeleteRequest;
 
-class QTAWS_EXPORT BatchDeleteRequestPrivate : public MediaLiveRequestPrivate {
+class BatchDeleteRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     BatchDeleteRequestPrivate(const MediaLiveRequest::Action action,

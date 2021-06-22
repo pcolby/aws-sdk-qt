@@ -27,7 +27,7 @@ namespace RDSDataService {
 
 class CommitTransactionResponse;
 
-class QTAWS_EXPORT CommitTransactionResponsePrivate : public RDSDataServiceResponsePrivate {
+class CommitTransactionResponsePrivate : public RDSDataServiceResponsePrivate {
 
 public:
 

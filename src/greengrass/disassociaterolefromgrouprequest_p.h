@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DisassociateRoleFromGroupRequest;
 
-class QTAWS_EXPORT DisassociateRoleFromGroupRequestPrivate : public GreengrassRequestPrivate {
+class DisassociateRoleFromGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DisassociateRoleFromGroupRequestPrivate(const GreengrassRequest::Action action,

@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class LakeFormationResponse;
 
-class QTAWS_EXPORT LakeFormationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LakeFormationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

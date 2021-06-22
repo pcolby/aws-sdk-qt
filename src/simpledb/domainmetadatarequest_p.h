@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class DomainMetadataRequest;
 
-class QTAWS_EXPORT DomainMetadataRequestPrivate : public SimpleDBRequestPrivate {
+class DomainMetadataRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
     DomainMetadataRequestPrivate(const SimpleDBRequest::Action action,

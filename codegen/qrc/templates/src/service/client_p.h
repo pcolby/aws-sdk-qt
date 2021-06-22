@@ -11,7 +11,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class QTAWS_EXPORT {{ClassName}}Private : public QtAws::Core::AwsAbstractClientPrivate {
+class {{ClassName}}Private : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     {{ClassName}}Private({{ClassName}} * const q);

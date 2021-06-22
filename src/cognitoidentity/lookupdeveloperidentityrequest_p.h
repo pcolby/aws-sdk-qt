@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class LookupDeveloperIdentityRequest;
 
-class QTAWS_EXPORT LookupDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
+class LookupDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     LookupDeveloperIdentityRequestPrivate(const CognitoIdentityRequest::Action action,

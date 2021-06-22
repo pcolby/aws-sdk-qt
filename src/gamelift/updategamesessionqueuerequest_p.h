@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateGameSessionQueueRequest;
 
-class QTAWS_EXPORT UpdateGameSessionQueueRequestPrivate : public GameLiftRequestPrivate {
+class UpdateGameSessionQueueRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateGameSessionQueueRequestPrivate(const GameLiftRequest::Action action,

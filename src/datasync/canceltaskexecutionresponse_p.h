@@ -27,7 +27,7 @@ namespace DataSync {
 
 class CancelTaskExecutionResponse;
 
-class QTAWS_EXPORT CancelTaskExecutionResponsePrivate : public DataSyncResponsePrivate {
+class CancelTaskExecutionResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 

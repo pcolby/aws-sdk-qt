@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class UpdateServerEngineAttributesResponse;
 
-class QTAWS_EXPORT UpdateServerEngineAttributesResponsePrivate : public OpsWorksCMResponsePrivate {
+class UpdateServerEngineAttributesResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 

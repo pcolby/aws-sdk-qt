@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class PutRegistryCatalogDataRequest;
 
-class QTAWS_EXPORT PutRegistryCatalogDataRequestPrivate : public ECRPublicRequestPrivate {
+class PutRegistryCatalogDataRequestPrivate : public ECRPublicRequestPrivate {
 
 public:
     PutRegistryCatalogDataRequestPrivate(const ECRPublicRequest::Action action,

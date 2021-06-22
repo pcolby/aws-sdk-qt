@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DeleteWorkspaceBundleResponse;
 
-class QTAWS_EXPORT DeleteWorkspaceBundleResponsePrivate : public WorkSpacesResponsePrivate {
+class DeleteWorkspaceBundleResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

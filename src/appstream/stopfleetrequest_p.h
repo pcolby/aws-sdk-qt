@@ -28,7 +28,7 @@ namespace AppStream {
 
 class StopFleetRequest;
 
-class QTAWS_EXPORT StopFleetRequestPrivate : public AppStreamRequestPrivate {
+class StopFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     StopFleetRequestPrivate(const AppStreamRequest::Action action,

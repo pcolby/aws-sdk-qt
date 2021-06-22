@@ -29,7 +29,7 @@ namespace SSO {
 
 class SsoClient;
 
-class QTAWS_EXPORT SsoClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsoClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SsoClientPrivate(SsoClient * const q);

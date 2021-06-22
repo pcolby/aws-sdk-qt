@@ -27,7 +27,7 @@ namespace kendra {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public kendraResponsePrivate {
+class ListTagsForResourceResponsePrivate : public kendraResponsePrivate {
 
 public:
 

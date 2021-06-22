@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListAccountsRequest;
 
-class QTAWS_EXPORT ListAccountsRequestPrivate : public OrganizationsRequestPrivate {
+class ListAccountsRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListAccountsRequestPrivate(const OrganizationsRequest::Action action,

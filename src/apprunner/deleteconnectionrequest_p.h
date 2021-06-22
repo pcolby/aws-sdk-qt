@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class DeleteConnectionRequest;
 
-class QTAWS_EXPORT DeleteConnectionRequestPrivate : public AppRunnerRequestPrivate {
+class DeleteConnectionRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     DeleteConnectionRequestPrivate(const AppRunnerRequest::Action action,

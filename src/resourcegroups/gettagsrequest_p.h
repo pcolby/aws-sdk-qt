@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class GetTagsRequest;
 
-class QTAWS_EXPORT GetTagsRequestPrivate : public ResourceGroupsRequestPrivate {
+class GetTagsRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     GetTagsRequestPrivate(const ResourceGroupsRequest::Action action,

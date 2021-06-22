@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class GetStreamingImageRequest;
 
-class QTAWS_EXPORT GetStreamingImageRequestPrivate : public NimbleStudioRequestPrivate {
+class GetStreamingImageRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     GetStreamingImageRequestPrivate(const NimbleStudioRequest::Action action,

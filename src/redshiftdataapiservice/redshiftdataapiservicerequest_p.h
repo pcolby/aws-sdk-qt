@@ -28,7 +28,7 @@ namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceRequest;
 
-class QTAWS_EXPORT RedshiftDataAPIServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RedshiftDataAPIServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RedshiftDataAPIServiceRequest::Action action; ///< RedshiftDataAPIService action to be performed.

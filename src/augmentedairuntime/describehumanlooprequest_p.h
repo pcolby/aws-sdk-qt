@@ -28,7 +28,7 @@ namespace AugmentedAIRuntime {
 
 class DescribeHumanLoopRequest;
 
-class QTAWS_EXPORT DescribeHumanLoopRequestPrivate : public AugmentedAIRuntimeRequestPrivate {
+class DescribeHumanLoopRequestPrivate : public AugmentedAIRuntimeRequestPrivate {
 
 public:
     DescribeHumanLoopRequestPrivate(const AugmentedAIRuntimeRequest::Action action,

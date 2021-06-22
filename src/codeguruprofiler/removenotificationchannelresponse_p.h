@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class RemoveNotificationChannelResponse;
 
-class QTAWS_EXPORT RemoveNotificationChannelResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class RemoveNotificationChannelResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeTimeToLiveRequest;
 
-class QTAWS_EXPORT DescribeTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
+class DescribeTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeTimeToLiveRequestPrivate(const DynamoDBRequest::Action action,

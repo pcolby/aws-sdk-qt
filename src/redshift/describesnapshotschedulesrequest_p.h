@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeSnapshotSchedulesRequest;
 
-class QTAWS_EXPORT DescribeSnapshotSchedulesRequestPrivate : public RedshiftRequestPrivate {
+class DescribeSnapshotSchedulesRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeSnapshotSchedulesRequestPrivate(const RedshiftRequest::Action action,

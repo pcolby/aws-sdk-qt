@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class ListRevisionAssetsRequest;
 
-class QTAWS_EXPORT ListRevisionAssetsRequestPrivate : public DataExchangeRequestPrivate {
+class ListRevisionAssetsRequestPrivate : public DataExchangeRequestPrivate {
 
 public:
     ListRevisionAssetsRequestPrivate(const DataExchangeRequest::Action action,

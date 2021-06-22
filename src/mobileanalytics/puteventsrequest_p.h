@@ -28,7 +28,7 @@ namespace MobileAnalytics {
 
 class PutEventsRequest;
 
-class QTAWS_EXPORT PutEventsRequestPrivate : public MobileAnalyticsRequestPrivate {
+class PutEventsRequestPrivate : public MobileAnalyticsRequestPrivate {
 
 public:
     PutEventsRequestPrivate(const MobileAnalyticsRequest::Action action,

@@ -28,7 +28,7 @@ namespace TranscribeService {
 
 class GetVocabularyRequest;
 
-class QTAWS_EXPORT GetVocabularyRequestPrivate : public TranscribeServiceRequestPrivate {
+class GetVocabularyRequestPrivate : public TranscribeServiceRequestPrivate {
 
 public:
     GetVocabularyRequestPrivate(const TranscribeServiceRequest::Action action,

@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class GetSecretValueResponse;
 
-class QTAWS_EXPORT GetSecretValueResponsePrivate : public SecretsManagerResponsePrivate {
+class GetSecretValueResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 

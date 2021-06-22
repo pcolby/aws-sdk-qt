@@ -28,7 +28,7 @@ namespace Glacier {
 
 class GetDataRetrievalPolicyRequest;
 
-class QTAWS_EXPORT GetDataRetrievalPolicyRequestPrivate : public GlacierRequestPrivate {
+class GetDataRetrievalPolicyRequestPrivate : public GlacierRequestPrivate {
 
 public:
     GetDataRetrievalPolicyRequestPrivate(const GlacierRequest::Action action,

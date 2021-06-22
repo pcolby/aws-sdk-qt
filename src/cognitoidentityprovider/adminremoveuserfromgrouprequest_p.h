@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminRemoveUserFromGroupRequest;
 
-class QTAWS_EXPORT AdminRemoveUserFromGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class AdminRemoveUserFromGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminRemoveUserFromGroupRequestPrivate(const CognitoIdentityProviderRequest::Action action,

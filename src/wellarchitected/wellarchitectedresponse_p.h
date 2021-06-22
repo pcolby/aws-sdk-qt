@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class WellArchitectedResponse;
 
-class QTAWS_EXPORT WellArchitectedResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class WellArchitectedResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

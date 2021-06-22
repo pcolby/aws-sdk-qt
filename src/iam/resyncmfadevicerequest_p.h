@@ -28,7 +28,7 @@ namespace IAM {
 
 class ResyncMFADeviceRequest;
 
-class QTAWS_EXPORT ResyncMFADeviceRequestPrivate : public IamRequestPrivate {
+class ResyncMFADeviceRequestPrivate : public IamRequestPrivate {
 
 public:
     ResyncMFADeviceRequestPrivate(const IamRequest::Action action,

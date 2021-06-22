@@ -27,7 +27,7 @@ namespace SagemakerEdgeManager {
 
 class SagemakerEdgeManagerResponse;
 
-class QTAWS_EXPORT SagemakerEdgeManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SagemakerEdgeManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

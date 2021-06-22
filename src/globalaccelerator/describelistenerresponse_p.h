@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DescribeListenerResponse;
 
-class QTAWS_EXPORT DescribeListenerResponsePrivate : public GlobalAcceleratorResponsePrivate {
+class DescribeListenerResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 

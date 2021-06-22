@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public EventBridgeRequestPrivate {
+class TagResourceRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const EventBridgeRequest::Action action,

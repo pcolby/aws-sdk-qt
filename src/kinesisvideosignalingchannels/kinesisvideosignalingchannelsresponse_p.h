@@ -27,7 +27,7 @@ namespace KinesisVideoSignalingChannels {
 
 class KinesisVideoSignalingChannelsResponse;
 
-class QTAWS_EXPORT KinesisVideoSignalingChannelsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class KinesisVideoSignalingChannelsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class SecurityHubResponse;
 
-class QTAWS_EXPORT SecurityHubResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SecurityHubResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

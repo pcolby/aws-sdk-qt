@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class ActivateUserResponse;
 
-class QTAWS_EXPORT ActivateUserResponsePrivate : public WorkDocsResponsePrivate {
+class ActivateUserResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 

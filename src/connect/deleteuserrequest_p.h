@@ -28,7 +28,7 @@ namespace Connect {
 
 class DeleteUserRequest;
 
-class QTAWS_EXPORT DeleteUserRequestPrivate : public ConnectRequestPrivate {
+class DeleteUserRequestPrivate : public ConnectRequestPrivate {
 
 public:
     DeleteUserRequestPrivate(const ConnectRequest::Action action,

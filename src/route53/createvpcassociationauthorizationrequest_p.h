@@ -28,7 +28,7 @@ namespace Route53 {
 
 class CreateVPCAssociationAuthorizationRequest;
 
-class QTAWS_EXPORT CreateVPCAssociationAuthorizationRequestPrivate : public Route53RequestPrivate {
+class CreateVPCAssociationAuthorizationRequestPrivate : public Route53RequestPrivate {
 
 public:
     CreateVPCAssociationAuthorizationRequestPrivate(const Route53Request::Action action,

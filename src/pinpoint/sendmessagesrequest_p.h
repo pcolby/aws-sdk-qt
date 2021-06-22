@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class SendMessagesRequest;
 
-class QTAWS_EXPORT SendMessagesRequestPrivate : public PinpointRequestPrivate {
+class SendMessagesRequestPrivate : public PinpointRequestPrivate {
 
 public:
     SendMessagesRequestPrivate(const PinpointRequest::Action action,

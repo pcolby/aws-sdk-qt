@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateLogSubscriptionRequest;
 
-class QTAWS_EXPORT CreateLogSubscriptionRequestPrivate : public DirectoryServiceRequestPrivate {
+class CreateLogSubscriptionRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateLogSubscriptionRequestPrivate(const DirectoryServiceRequest::Action action,

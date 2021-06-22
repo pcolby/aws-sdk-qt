@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetRecoveryPointRestoreMetadataResponse;
 
-class QTAWS_EXPORT GetRecoveryPointRestoreMetadataResponsePrivate : public BackupResponsePrivate {
+class GetRecoveryPointRestoreMetadataResponsePrivate : public BackupResponsePrivate {
 
 public:
 

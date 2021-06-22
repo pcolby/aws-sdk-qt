@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class PutRestApiResponse;
 
-class QTAWS_EXPORT PutRestApiResponsePrivate : public APIGatewayResponsePrivate {
+class PutRestApiResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GetInvitationsCountRequest;
 
-class QTAWS_EXPORT GetInvitationsCountRequestPrivate : public GuardDutyRequestPrivate {
+class GetInvitationsCountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     GetInvitationsCountRequestPrivate(const GuardDutyRequest::Action action,

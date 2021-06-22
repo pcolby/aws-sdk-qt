@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DeleteActionTargetResponse;
 
-class QTAWS_EXPORT DeleteActionTargetResponsePrivate : public SecurityHubResponsePrivate {
+class DeleteActionTargetResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

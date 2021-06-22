@@ -29,7 +29,7 @@ namespace GreengrassV2 {
 
 class GreengrassV2Client;
 
-class QTAWS_EXPORT GreengrassV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GreengrassV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     GreengrassV2ClientPrivate(GreengrassV2Client * const q);

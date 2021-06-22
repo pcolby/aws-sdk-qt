@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeEngineDefaultClusterParametersRequest;
 
-class QTAWS_EXPORT DescribeEngineDefaultClusterParametersRequestPrivate : public RdsRequestPrivate {
+class DescribeEngineDefaultClusterParametersRequestPrivate : public RdsRequestPrivate {
 
 public:
     DescribeEngineDefaultClusterParametersRequestPrivate(const RdsRequest::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetLaunchTemplateDataRequest;
 
-class QTAWS_EXPORT GetLaunchTemplateDataRequestPrivate : public Ec2RequestPrivate {
+class GetLaunchTemplateDataRequestPrivate : public Ec2RequestPrivate {
 
 public:
     GetLaunchTemplateDataRequestPrivate(const Ec2Request::Action action,

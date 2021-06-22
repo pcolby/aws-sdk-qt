@@ -28,7 +28,7 @@ namespace Connect {
 
 class StopContactRequest;
 
-class QTAWS_EXPORT StopContactRequestPrivate : public ConnectRequestPrivate {
+class StopContactRequestPrivate : public ConnectRequestPrivate {
 
 public:
     StopContactRequestPrivate(const ConnectRequest::Action action,

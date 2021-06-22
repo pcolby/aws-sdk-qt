@@ -27,7 +27,7 @@ namespace WAF {
 
 class CreateWebACLResponse;
 
-class QTAWS_EXPORT CreateWebACLResponsePrivate : public WafResponsePrivate {
+class CreateWebACLResponsePrivate : public WafResponsePrivate {
 
 public:
 

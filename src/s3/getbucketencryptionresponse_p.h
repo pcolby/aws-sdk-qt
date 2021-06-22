@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketEncryptionResponse;
 
-class QTAWS_EXPORT GetBucketEncryptionResponsePrivate : public S3ResponsePrivate {
+class GetBucketEncryptionResponsePrivate : public S3ResponsePrivate {
 
 public:
 

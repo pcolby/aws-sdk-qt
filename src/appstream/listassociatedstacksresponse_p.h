@@ -27,7 +27,7 @@ namespace AppStream {
 
 class ListAssociatedStacksResponse;
 
-class QTAWS_EXPORT ListAssociatedStacksResponsePrivate : public AppStreamResponsePrivate {
+class ListAssociatedStacksResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 

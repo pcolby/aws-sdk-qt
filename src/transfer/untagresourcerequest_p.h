@@ -28,7 +28,7 @@ namespace Transfer {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public TransferRequestPrivate {
+class UntagResourceRequestPrivate : public TransferRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const TransferRequest::Action action,

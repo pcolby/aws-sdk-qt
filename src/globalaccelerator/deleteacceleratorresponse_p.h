@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DeleteAcceleratorResponse;
 
-class QTAWS_EXPORT DeleteAcceleratorResponsePrivate : public GlobalAcceleratorResponsePrivate {
+class DeleteAcceleratorResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 

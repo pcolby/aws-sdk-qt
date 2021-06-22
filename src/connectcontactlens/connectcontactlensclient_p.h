@@ -29,7 +29,7 @@ namespace ConnectContactLens {
 
 class ConnectContactLensClient;
 
-class QTAWS_EXPORT ConnectContactLensClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ConnectContactLensClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ConnectContactLensClientPrivate(ConnectContactLensClient * const q);

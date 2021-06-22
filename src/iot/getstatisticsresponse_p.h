@@ -27,7 +27,7 @@ namespace IoT {
 
 class GetStatisticsResponse;
 
-class QTAWS_EXPORT GetStatisticsResponsePrivate : public IoTResponsePrivate {
+class GetStatisticsResponsePrivate : public IoTResponsePrivate {
 
 public:
 

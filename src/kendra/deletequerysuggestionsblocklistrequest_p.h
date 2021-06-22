@@ -28,7 +28,7 @@ namespace kendra {
 
 class DeleteQuerySuggestionsBlockListRequest;
 
-class QTAWS_EXPORT DeleteQuerySuggestionsBlockListRequestPrivate : public kendraRequestPrivate {
+class DeleteQuerySuggestionsBlockListRequestPrivate : public kendraRequestPrivate {
 
 public:
     DeleteQuerySuggestionsBlockListRequestPrivate(const kendraRequest::Action action,

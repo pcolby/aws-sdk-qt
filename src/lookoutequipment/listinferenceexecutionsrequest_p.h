@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class ListInferenceExecutionsRequest;
 
-class QTAWS_EXPORT ListInferenceExecutionsRequestPrivate : public LookoutEquipmentRequestPrivate {
+class ListInferenceExecutionsRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     ListInferenceExecutionsRequestPrivate(const LookoutEquipmentRequest::Action action,

@@ -10,7 +10,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceClassName}}RequestPrivate {
+class {{ClassName}}Private : public {{ServiceClassName}}RequestPrivate {
 
 public:
     {{ClassName}}Private(const {{ServiceClassName}}Request::Action action,

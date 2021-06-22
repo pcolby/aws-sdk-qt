@@ -29,7 +29,7 @@ namespace MachineLearning {
 
 class MachineLearningClient;
 
-class QTAWS_EXPORT MachineLearningClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MachineLearningClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MachineLearningClientPrivate(MachineLearningClient * const q);

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ListTablesRequest;
 
-class QTAWS_EXPORT ListTablesRequestPrivate : public DynamoDBRequestPrivate {
+class ListTablesRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ListTablesRequestPrivate(const DynamoDBRequest::Action action,

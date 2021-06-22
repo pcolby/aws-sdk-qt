@@ -27,7 +27,7 @@ namespace mgn {
 
 class StartTestResponse;
 
-class QTAWS_EXPORT StartTestResponsePrivate : public mgnResponsePrivate {
+class StartTestResponsePrivate : public mgnResponsePrivate {
 
 public:
 

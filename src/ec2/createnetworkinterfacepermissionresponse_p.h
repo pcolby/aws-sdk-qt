@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateNetworkInterfacePermissionResponse;
 
-class QTAWS_EXPORT CreateNetworkInterfacePermissionResponsePrivate : public Ec2ResponsePrivate {
+class CreateNetworkInterfacePermissionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class ListEntitiesDetectionJobsResponse;
 
-class QTAWS_EXPORT ListEntitiesDetectionJobsResponsePrivate : public ComprehendResponsePrivate {
+class ListEntitiesDetectionJobsResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 

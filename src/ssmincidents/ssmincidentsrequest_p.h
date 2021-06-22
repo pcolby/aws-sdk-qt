@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class SSMIncidentsRequest;
 
-class QTAWS_EXPORT SSMIncidentsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SSMIncidentsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SSMIncidentsRequest::Action action; ///< SSMIncidents action to be performed.

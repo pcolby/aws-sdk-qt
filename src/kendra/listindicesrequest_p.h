@@ -28,7 +28,7 @@ namespace kendra {
 
 class ListIndicesRequest;
 
-class QTAWS_EXPORT ListIndicesRequestPrivate : public kendraRequestPrivate {
+class ListIndicesRequestPrivate : public kendraRequestPrivate {
 
 public:
     ListIndicesRequestPrivate(const kendraRequest::Action action,

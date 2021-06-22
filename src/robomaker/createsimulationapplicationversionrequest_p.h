@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class CreateSimulationApplicationVersionRequest;
 
-class QTAWS_EXPORT CreateSimulationApplicationVersionRequestPrivate : public RoboMakerRequestPrivate {
+class CreateSimulationApplicationVersionRequestPrivate : public RoboMakerRequestPrivate {
 
 public:
     CreateSimulationApplicationVersionRequestPrivate(const RoboMakerRequest::Action action,

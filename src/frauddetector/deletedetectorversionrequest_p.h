@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class DeleteDetectorVersionRequest;
 
-class QTAWS_EXPORT DeleteDetectorVersionRequestPrivate : public FraudDetectorRequestPrivate {
+class DeleteDetectorVersionRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     DeleteDetectorVersionRequestPrivate(const FraudDetectorRequest::Action action,

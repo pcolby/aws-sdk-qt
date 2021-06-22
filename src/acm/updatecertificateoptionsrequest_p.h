@@ -28,7 +28,7 @@ namespace ACM {
 
 class UpdateCertificateOptionsRequest;
 
-class QTAWS_EXPORT UpdateCertificateOptionsRequestPrivate : public AcmRequestPrivate {
+class UpdateCertificateOptionsRequestPrivate : public AcmRequestPrivate {
 
 public:
     UpdateCertificateOptionsRequestPrivate(const AcmRequest::Action action,

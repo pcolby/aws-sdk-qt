@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class UpdateMultiplexProgramRequest;
 
-class QTAWS_EXPORT UpdateMultiplexProgramRequestPrivate : public MediaLiveRequestPrivate {
+class UpdateMultiplexProgramRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     UpdateMultiplexProgramRequestPrivate(const MediaLiveRequest::Action action,

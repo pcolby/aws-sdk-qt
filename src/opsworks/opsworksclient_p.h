@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class OpsWorksClient;
 
-class QTAWS_EXPORT OpsWorksClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class OpsWorksClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     OpsWorksClientPrivate(OpsWorksClient * const q);

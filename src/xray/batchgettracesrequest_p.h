@@ -28,7 +28,7 @@ namespace XRay {
 
 class BatchGetTracesRequest;
 
-class QTAWS_EXPORT BatchGetTracesRequestPrivate : public XRayRequestPrivate {
+class BatchGetTracesRequestPrivate : public XRayRequestPrivate {
 
 public:
     BatchGetTracesRequestPrivate(const XRayRequest::Action action,

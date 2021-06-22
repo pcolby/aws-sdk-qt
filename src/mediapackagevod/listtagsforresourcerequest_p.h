@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public MediaPackageVodRequestPrivate {
+class ListTagsForResourceRequestPrivate : public MediaPackageVodRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const MediaPackageVodRequest::Action action,

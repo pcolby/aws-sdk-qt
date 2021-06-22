@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeAddressesAttributeRequest;
 
-class QTAWS_EXPORT DescribeAddressesAttributeRequestPrivate : public Ec2RequestPrivate {
+class DescribeAddressesAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeAddressesAttributeRequestPrivate(const Ec2Request::Action action,

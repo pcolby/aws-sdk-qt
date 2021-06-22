@@ -28,7 +28,7 @@ namespace KinesisVideoArchivedMedia {
 
 class GetHLSStreamingSessionURLRequest;
 
-class QTAWS_EXPORT GetHLSStreamingSessionURLRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
+class GetHLSStreamingSessionURLRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
 
 public:
     GetHLSStreamingSessionURLRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action,

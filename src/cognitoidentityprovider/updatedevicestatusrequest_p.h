@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class UpdateDeviceStatusRequest;
 
-class QTAWS_EXPORT UpdateDeviceStatusRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class UpdateDeviceStatusRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     UpdateDeviceStatusRequestPrivate(const CognitoIdentityProviderRequest::Action action,

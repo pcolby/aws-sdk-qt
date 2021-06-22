@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class DescribeProgramRequest;
 
-class QTAWS_EXPORT DescribeProgramRequestPrivate : public MediaTailorRequestPrivate {
+class DescribeProgramRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     DescribeProgramRequestPrivate(const MediaTailorRequest::Action action,

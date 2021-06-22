@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class DeleteProjectResponse;
 
-class QTAWS_EXPORT DeleteProjectResponsePrivate : public GlueDataBrewResponsePrivate {
+class DeleteProjectResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 

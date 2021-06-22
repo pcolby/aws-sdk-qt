@@ -29,7 +29,7 @@ namespace Neptune {
 
 class NeptuneClient;
 
-class QTAWS_EXPORT NeptuneClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class NeptuneClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     NeptuneClientPrivate(NeptuneClient * const q);

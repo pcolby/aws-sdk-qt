@@ -27,7 +27,7 @@ namespace Kafka {
 
 class KafkaResponse;
 
-class QTAWS_EXPORT KafkaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class KafkaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

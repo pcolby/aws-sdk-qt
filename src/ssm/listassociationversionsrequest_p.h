@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListAssociationVersionsRequest;
 
-class QTAWS_EXPORT ListAssociationVersionsRequestPrivate : public SsmRequestPrivate {
+class ListAssociationVersionsRequestPrivate : public SsmRequestPrivate {
 
 public:
     ListAssociationVersionsRequestPrivate(const SsmRequest::Action action,

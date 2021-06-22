@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetSipRuleResponse;
 
-class QTAWS_EXPORT GetSipRuleResponsePrivate : public ChimeResponsePrivate {
+class GetSipRuleResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

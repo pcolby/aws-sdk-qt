@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class GetImportJobResponse;
 
-class QTAWS_EXPORT GetImportJobResponsePrivate : public Sesv2ResponsePrivate {
+class GetImportJobResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 

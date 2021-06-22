@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public Sesv2RequestPrivate {
+class TagResourceRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     TagResourceRequestPrivate(const Sesv2Request::Action action,

@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class CancelRotateSecretRequest;
 
-class QTAWS_EXPORT CancelRotateSecretRequestPrivate : public SecretsManagerRequestPrivate {
+class CancelRotateSecretRequestPrivate : public SecretsManagerRequestPrivate {
 
 public:
     CancelRotateSecretRequestPrivate(const SecretsManagerRequest::Action action,

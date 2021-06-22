@@ -27,7 +27,7 @@ namespace Mobile {
 
 class ListBundlesResponse;
 
-class QTAWS_EXPORT ListBundlesResponsePrivate : public MobileResponsePrivate {
+class ListBundlesResponsePrivate : public MobileResponsePrivate {
 
 public:
 

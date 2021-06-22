@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class SetTimeBasedAutoScalingRequest;
 
-class QTAWS_EXPORT SetTimeBasedAutoScalingRequestPrivate : public OpsWorksRequestPrivate {
+class SetTimeBasedAutoScalingRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     SetTimeBasedAutoScalingRequestPrivate(const OpsWorksRequest::Action action,

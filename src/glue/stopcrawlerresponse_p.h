@@ -27,7 +27,7 @@ namespace Glue {
 
 class StopCrawlerResponse;
 
-class QTAWS_EXPORT StopCrawlerResponsePrivate : public GlueResponsePrivate {
+class StopCrawlerResponsePrivate : public GlueResponsePrivate {
 
 public:
 

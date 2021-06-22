@@ -29,7 +29,7 @@ namespace NetworkFirewall {
 
 class NetworkFirewallClient;
 
-class QTAWS_EXPORT NetworkFirewallClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class NetworkFirewallClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     NetworkFirewallClientPrivate(NetworkFirewallClient * const q);

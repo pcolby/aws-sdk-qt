@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class CreateFirewallResponse;
 
-class QTAWS_EXPORT CreateFirewallResponsePrivate : public NetworkFirewallResponsePrivate {
+class CreateFirewallResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 

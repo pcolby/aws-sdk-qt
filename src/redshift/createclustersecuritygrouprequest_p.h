@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateClusterSecurityGroupRequest;
 
-class QTAWS_EXPORT CreateClusterSecurityGroupRequestPrivate : public RedshiftRequestPrivate {
+class CreateClusterSecurityGroupRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     CreateClusterSecurityGroupRequestPrivate(const RedshiftRequest::Action action,

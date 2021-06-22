@@ -27,7 +27,7 @@ namespace MTurk {
 
 class DisassociateQualificationFromWorkerResponse;
 
-class QTAWS_EXPORT DisassociateQualificationFromWorkerResponsePrivate : public MTurkResponsePrivate {
+class DisassociateQualificationFromWorkerResponsePrivate : public MTurkResponsePrivate {
 
 public:
 

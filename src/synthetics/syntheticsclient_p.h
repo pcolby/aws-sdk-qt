@@ -29,7 +29,7 @@ namespace Synthetics {
 
 class SyntheticsClient;
 
-class QTAWS_EXPORT SyntheticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SyntheticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SyntheticsClientPrivate(SyntheticsClient * const q);

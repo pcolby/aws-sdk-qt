@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetEmailTemplateRequest;
 
-class QTAWS_EXPORT GetEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
+class GetEmailTemplateRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     GetEmailTemplateRequestPrivate(const Sesv2Request::Action action,

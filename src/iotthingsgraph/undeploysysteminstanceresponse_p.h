@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class UndeploySystemInstanceResponse;
 
-class QTAWS_EXPORT UndeploySystemInstanceResponsePrivate : public IoTThingsGraphResponsePrivate {
+class UndeploySystemInstanceResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 

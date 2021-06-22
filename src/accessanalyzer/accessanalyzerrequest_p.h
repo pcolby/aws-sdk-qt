@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class AccessAnalyzerRequest;
 
-class QTAWS_EXPORT AccessAnalyzerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AccessAnalyzerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AccessAnalyzerRequest::Action action; ///< AccessAnalyzer action to be performed.

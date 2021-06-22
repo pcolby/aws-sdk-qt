@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class SetSMBGuestPasswordRequest;
 
-class QTAWS_EXPORT SetSMBGuestPasswordRequestPrivate : public StorageGatewayRequestPrivate {
+class SetSMBGuestPasswordRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     SetSMBGuestPasswordRequestPrivate(const StorageGatewayRequest::Action action,

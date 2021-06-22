@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class DeleteFirewallRequest;
 
-class QTAWS_EXPORT DeleteFirewallRequestPrivate : public NetworkFirewallRequestPrivate {
+class DeleteFirewallRequestPrivate : public NetworkFirewallRequestPrivate {
 
 public:
     DeleteFirewallRequestPrivate(const NetworkFirewallRequest::Action action,

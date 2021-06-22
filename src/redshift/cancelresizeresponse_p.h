@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CancelResizeResponse;
 
-class QTAWS_EXPORT CancelResizeResponsePrivate : public RedshiftResponsePrivate {
+class CancelResizeResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace kendra {
 
 class UpdateThesaurusRequest;
 
-class QTAWS_EXPORT UpdateThesaurusRequestPrivate : public kendraRequestPrivate {
+class UpdateThesaurusRequestPrivate : public kendraRequestPrivate {
 
 public:
     UpdateThesaurusRequestPrivate(const kendraRequest::Action action,

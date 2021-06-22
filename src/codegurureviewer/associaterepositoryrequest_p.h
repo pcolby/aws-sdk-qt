@@ -28,7 +28,7 @@ namespace CodeGuruReviewer {
 
 class AssociateRepositoryRequest;
 
-class QTAWS_EXPORT AssociateRepositoryRequestPrivate : public CodeGuruReviewerRequestPrivate {
+class AssociateRepositoryRequestPrivate : public CodeGuruReviewerRequestPrivate {
 
 public:
     AssociateRepositoryRequestPrivate(const CodeGuruReviewerRequest::Action action,

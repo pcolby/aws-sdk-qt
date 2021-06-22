@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetConnectionsResponse;
 
-class QTAWS_EXPORT GetConnectionsResponsePrivate : public GlueResponsePrivate {
+class GetConnectionsResponsePrivate : public GlueResponsePrivate {
 
 public:
 

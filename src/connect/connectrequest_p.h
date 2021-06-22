@@ -28,7 +28,7 @@ namespace Connect {
 
 class ConnectRequest;
 
-class QTAWS_EXPORT ConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ConnectRequest::Action action; ///< Connect action to be performed.

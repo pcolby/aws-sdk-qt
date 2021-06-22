@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketIntelligentTieringConfigurationResponse;
 
-class QTAWS_EXPORT GetBucketIntelligentTieringConfigurationResponsePrivate : public S3ResponsePrivate {
+class GetBucketIntelligentTieringConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 

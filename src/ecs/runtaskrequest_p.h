@@ -28,7 +28,7 @@ namespace ECS {
 
 class RunTaskRequest;
 
-class QTAWS_EXPORT RunTaskRequestPrivate : public EcsRequestPrivate {
+class RunTaskRequestPrivate : public EcsRequestPrivate {
 
 public:
     RunTaskRequestPrivate(const EcsRequest::Action action,

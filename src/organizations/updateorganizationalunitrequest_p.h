@@ -28,7 +28,7 @@ namespace Organizations {
 
 class UpdateOrganizationalUnitRequest;
 
-class QTAWS_EXPORT UpdateOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
+class UpdateOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     UpdateOrganizationalUnitRequestPrivate(const OrganizationsRequest::Action action,

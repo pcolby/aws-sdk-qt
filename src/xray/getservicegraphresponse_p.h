@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetServiceGraphResponse;
 
-class QTAWS_EXPORT GetServiceGraphResponsePrivate : public XRayResponsePrivate {
+class GetServiceGraphResponsePrivate : public XRayResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace IoT {
 
 class CancelJobExecutionRequest;
 
-class QTAWS_EXPORT CancelJobExecutionRequestPrivate : public IoTRequestPrivate {
+class CancelJobExecutionRequestPrivate : public IoTRequestPrivate {
 
 public:
     CancelJobExecutionRequestPrivate(const IoTRequest::Action action,

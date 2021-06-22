@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetSchemaAsJsonRequest;
 
-class QTAWS_EXPORT GetSchemaAsJsonRequestPrivate : public CloudDirectoryRequestPrivate {
+class GetSchemaAsJsonRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     GetSchemaAsJsonRequestPrivate(const CloudDirectoryRequest::Action action,

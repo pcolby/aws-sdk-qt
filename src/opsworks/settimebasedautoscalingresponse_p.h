@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class SetTimeBasedAutoScalingResponse;
 
-class QTAWS_EXPORT SetTimeBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
+class SetTimeBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

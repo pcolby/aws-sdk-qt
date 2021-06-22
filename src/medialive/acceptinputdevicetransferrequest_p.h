@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class AcceptInputDeviceTransferRequest;
 
-class QTAWS_EXPORT AcceptInputDeviceTransferRequestPrivate : public MediaLiveRequestPrivate {
+class AcceptInputDeviceTransferRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     AcceptInputDeviceTransferRequestPrivate(const MediaLiveRequest::Action action,

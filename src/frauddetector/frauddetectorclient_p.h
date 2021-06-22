@@ -29,7 +29,7 @@ namespace FraudDetector {
 
 class FraudDetectorClient;
 
-class QTAWS_EXPORT FraudDetectorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FraudDetectorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     FraudDetectorClientPrivate(FraudDetectorClient * const q);

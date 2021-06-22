@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetVoiceConnectorTerminationRequest;
 
-class QTAWS_EXPORT GetVoiceConnectorTerminationRequestPrivate : public ChimeRequestPrivate {
+class GetVoiceConnectorTerminationRequestPrivate : public ChimeRequestPrivate {
 
 public:
     GetVoiceConnectorTerminationRequestPrivate(const ChimeRequest::Action action,

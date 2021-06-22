@@ -28,7 +28,7 @@ namespace Athena {
 
 class StopQueryExecutionRequest;
 
-class QTAWS_EXPORT StopQueryExecutionRequestPrivate : public AthenaRequestPrivate {
+class StopQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
     StopQueryExecutionRequestPrivate(const AthenaRequest::Action action,

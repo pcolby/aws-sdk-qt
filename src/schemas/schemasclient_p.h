@@ -29,7 +29,7 @@ namespace Schemas {
 
 class SchemasClient;
 
-class QTAWS_EXPORT SchemasClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SchemasClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SchemasClientPrivate(SchemasClient * const q);

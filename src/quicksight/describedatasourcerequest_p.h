@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DescribeDataSourceRequest;
 
-class QTAWS_EXPORT DescribeDataSourceRequestPrivate : public QuickSightRequestPrivate {
+class DescribeDataSourceRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DescribeDataSourceRequestPrivate(const QuickSightRequest::Action action,

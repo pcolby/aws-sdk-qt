@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListBusinessReportSchedulesRequest;
 
-class QTAWS_EXPORT ListBusinessReportSchedulesRequestPrivate : public AlexaForBusinessRequestPrivate {
+class ListBusinessReportSchedulesRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     ListBusinessReportSchedulesRequestPrivate(const AlexaForBusinessRequest::Action action,

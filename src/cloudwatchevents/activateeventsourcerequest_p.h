@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class ActivateEventSourceRequest;
 
-class QTAWS_EXPORT ActivateEventSourceRequestPrivate : public CloudWatchEventsRequestPrivate {
+class ActivateEventSourceRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     ActivateEventSourceRequestPrivate(const CloudWatchEventsRequest::Action action,

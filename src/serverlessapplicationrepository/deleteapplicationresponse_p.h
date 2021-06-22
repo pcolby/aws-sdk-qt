@@ -27,7 +27,7 @@ namespace ServerlessApplicationRepository {
 
 class DeleteApplicationResponse;
 
-class QTAWS_EXPORT DeleteApplicationResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+class DeleteApplicationResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
 
 public:
 

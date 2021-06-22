@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class FraudDetectorRequest;
 
-class QTAWS_EXPORT FraudDetectorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FraudDetectorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FraudDetectorRequest::Action action; ///< FraudDetector action to be performed.

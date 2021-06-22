@@ -28,7 +28,7 @@ namespace LocationService {
 
 class BatchUpdateDevicePositionRequest;
 
-class QTAWS_EXPORT BatchUpdateDevicePositionRequestPrivate : public LocationServiceRequestPrivate {
+class BatchUpdateDevicePositionRequestPrivate : public LocationServiceRequestPrivate {
 
 public:
     BatchUpdateDevicePositionRequestPrivate(const LocationServiceRequest::Action action,

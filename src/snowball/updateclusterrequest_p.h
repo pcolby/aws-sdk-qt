@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateClusterRequest;
 
-class QTAWS_EXPORT UpdateClusterRequestPrivate : public SnowballRequestPrivate {
+class UpdateClusterRequestPrivate : public SnowballRequestPrivate {
 
 public:
     UpdateClusterRequestPrivate(const SnowballRequest::Action action,

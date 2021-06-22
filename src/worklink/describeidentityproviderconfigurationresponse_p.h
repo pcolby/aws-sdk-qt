@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class DescribeIdentityProviderConfigurationResponse;
 
-class QTAWS_EXPORT DescribeIdentityProviderConfigurationResponsePrivate : public WorkLinkResponsePrivate {
+class DescribeIdentityProviderConfigurationResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 

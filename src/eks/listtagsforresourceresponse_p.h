@@ -27,7 +27,7 @@ namespace EKS {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public EksResponsePrivate {
+class ListTagsForResourceResponsePrivate : public EksResponsePrivate {
 
 public:
 

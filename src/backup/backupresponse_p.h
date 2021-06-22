@@ -27,7 +27,7 @@ namespace Backup {
 
 class BackupResponse;
 
-class QTAWS_EXPORT BackupResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class BackupResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

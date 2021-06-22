@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetAccountAuthorizationDetailsRequest;
 
-class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IamRequestPrivate {
+class GetAccountAuthorizationDetailsRequestPrivate : public IamRequestPrivate {
 
 public:
     GetAccountAuthorizationDetailsRequestPrivate(const IamRequest::Action action,

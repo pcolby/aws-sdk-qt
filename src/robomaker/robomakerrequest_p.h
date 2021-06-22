@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class RoboMakerRequest;
 
-class QTAWS_EXPORT RoboMakerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RoboMakerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RoboMakerRequest::Action action; ///< RoboMaker action to be performed.

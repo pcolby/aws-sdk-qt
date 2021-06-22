@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateTemplateActiveVersionRequest;
 
-class QTAWS_EXPORT UpdateTemplateActiveVersionRequestPrivate : public PinpointRequestPrivate {
+class UpdateTemplateActiveVersionRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateTemplateActiveVersionRequestPrivate(const PinpointRequest::Action action,

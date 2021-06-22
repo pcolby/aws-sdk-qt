@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class UpdateAssessmentResponse;
 
-class QTAWS_EXPORT UpdateAssessmentResponsePrivate : public AuditManagerResponsePrivate {
+class UpdateAssessmentResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

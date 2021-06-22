@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteProvisioningTemplateResponse;
 
-class QTAWS_EXPORT DeleteProvisioningTemplateResponsePrivate : public IoTResponsePrivate {
+class DeleteProvisioningTemplateResponsePrivate : public IoTResponsePrivate {
 
 public:
 

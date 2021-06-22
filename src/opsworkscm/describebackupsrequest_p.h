@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeBackupsRequest;
 
-class QTAWS_EXPORT DescribeBackupsRequestPrivate : public OpsWorksCMRequestPrivate {
+class DescribeBackupsRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DescribeBackupsRequestPrivate(const OpsWorksCMRequest::Action action,

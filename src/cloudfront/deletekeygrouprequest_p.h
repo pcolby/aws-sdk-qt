@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteKeyGroupRequest;
 
-class QTAWS_EXPORT DeleteKeyGroupRequestPrivate : public CloudFrontRequestPrivate {
+class DeleteKeyGroupRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     DeleteKeyGroupRequestPrivate(const CloudFrontRequest::Action action,

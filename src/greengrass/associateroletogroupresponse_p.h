@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class AssociateRoleToGroupResponse;
 
-class QTAWS_EXPORT AssociateRoleToGroupResponsePrivate : public GreengrassResponsePrivate {
+class AssociateRoleToGroupResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

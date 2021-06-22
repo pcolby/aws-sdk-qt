@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DescribeRuleResponse;
 
-class QTAWS_EXPORT DescribeRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
+class DescribeRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteReceiptFilterRequest;
 
-class QTAWS_EXPORT DeleteReceiptFilterRequestPrivate : public SesRequestPrivate {
+class DeleteReceiptFilterRequestPrivate : public SesRequestPrivate {
 
 public:
     DeleteReceiptFilterRequestPrivate(const SesRequest::Action action,

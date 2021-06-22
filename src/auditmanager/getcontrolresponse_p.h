@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetControlResponse;
 
-class QTAWS_EXPORT GetControlResponsePrivate : public AuditManagerResponsePrivate {
+class GetControlResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 

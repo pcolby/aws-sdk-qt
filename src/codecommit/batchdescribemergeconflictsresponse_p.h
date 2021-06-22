@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class BatchDescribeMergeConflictsResponse;
 
-class QTAWS_EXPORT BatchDescribeMergeConflictsResponsePrivate : public CodeCommitResponsePrivate {
+class BatchDescribeMergeConflictsResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

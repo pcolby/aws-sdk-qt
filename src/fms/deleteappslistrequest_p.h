@@ -28,7 +28,7 @@ namespace FMS {
 
 class DeleteAppsListRequest;
 
-class QTAWS_EXPORT DeleteAppsListRequestPrivate : public FmsRequestPrivate {
+class DeleteAppsListRequestPrivate : public FmsRequestPrivate {
 
 public:
     DeleteAppsListRequestPrivate(const FmsRequest::Action action,

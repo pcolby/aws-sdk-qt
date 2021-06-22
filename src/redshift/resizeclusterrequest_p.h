@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ResizeClusterRequest;
 
-class QTAWS_EXPORT ResizeClusterRequestPrivate : public RedshiftRequestPrivate {
+class ResizeClusterRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ResizeClusterRequestPrivate(const RedshiftRequest::Action action,

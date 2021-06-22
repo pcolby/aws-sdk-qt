@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteMatchmakingConfigurationRequest;
 
-class QTAWS_EXPORT DeleteMatchmakingConfigurationRequestPrivate : public GameLiftRequestPrivate {
+class DeleteMatchmakingConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DeleteMatchmakingConfigurationRequestPrivate(const GameLiftRequest::Action action,

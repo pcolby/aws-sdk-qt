@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class StartIncidentRequest;
 
-class QTAWS_EXPORT StartIncidentRequestPrivate : public SSMIncidentsRequestPrivate {
+class StartIncidentRequestPrivate : public SSMIncidentsRequestPrivate {
 
 public:
     StartIncidentRequestPrivate(const SSMIncidentsRequest::Action action,

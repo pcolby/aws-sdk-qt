@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class DescribeRepositoriesResponse;
 
-class QTAWS_EXPORT DescribeRepositoriesResponsePrivate : public ECRPublicResponsePrivate {
+class DescribeRepositoriesResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 

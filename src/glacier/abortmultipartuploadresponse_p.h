@@ -27,7 +27,7 @@ namespace Glacier {
 
 class AbortMultipartUploadResponse;
 
-class QTAWS_EXPORT AbortMultipartUploadResponsePrivate : public GlacierResponsePrivate {
+class AbortMultipartUploadResponsePrivate : public GlacierResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class DisassociateWebACLRequest;
 
-class QTAWS_EXPORT DisassociateWebACLRequestPrivate : public Wafv2RequestPrivate {
+class DisassociateWebACLRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     DisassociateWebACLRequestPrivate(const Wafv2Request::Action action,

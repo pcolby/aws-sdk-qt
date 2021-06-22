@@ -27,7 +27,7 @@ namespace ElasticInference {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ElasticInferenceResponsePrivate {
+class UntagResourceResponsePrivate : public ElasticInferenceResponsePrivate {
 
 public:
 

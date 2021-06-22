@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateCloudFormationStackRequest;
 
-class QTAWS_EXPORT CreateCloudFormationStackRequestPrivate : public LightsailRequestPrivate {
+class CreateCloudFormationStackRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CreateCloudFormationStackRequestPrivate(const LightsailRequest::Action action,

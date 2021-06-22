@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class CreateUnreferencedMergeCommitRequest;
 
-class QTAWS_EXPORT CreateUnreferencedMergeCommitRequestPrivate : public CodeCommitRequestPrivate {
+class CreateUnreferencedMergeCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     CreateUnreferencedMergeCommitRequestPrivate(const CodeCommitRequest::Action action,

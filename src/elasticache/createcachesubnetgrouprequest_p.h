@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class CreateCacheSubnetGroupRequest;
 
-class QTAWS_EXPORT CreateCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
+class CreateCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     CreateCacheSubnetGroupRequestPrivate(const ElastiCacheRequest::Action action,

@@ -29,7 +29,7 @@ namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeClient;
 
-class QTAWS_EXPORT PersonalizeRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PersonalizeRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     PersonalizeRuntimeClientPrivate(PersonalizeRuntimeClient * const q);

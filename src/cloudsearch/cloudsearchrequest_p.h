@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class CloudSearchRequest;
 
-class QTAWS_EXPORT CloudSearchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudSearchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudSearchRequest::Action action; ///< CloudSearch action to be performed.

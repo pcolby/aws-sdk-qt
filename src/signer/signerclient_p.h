@@ -29,7 +29,7 @@ namespace signer {
 
 class signerClient;
 
-class QTAWS_EXPORT signerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class signerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     signerClientPrivate(signerClient * const q);

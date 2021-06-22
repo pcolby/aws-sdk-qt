@@ -27,7 +27,7 @@ namespace S3Control {
 
 class GetBucketLifecycleConfigurationResponse;
 
-class QTAWS_EXPORT GetBucketLifecycleConfigurationResponsePrivate : public S3ControlResponsePrivate {
+class GetBucketLifecycleConfigurationResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 

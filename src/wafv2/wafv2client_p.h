@@ -29,7 +29,7 @@ namespace WAFV2 {
 
 class Wafv2Client;
 
-class QTAWS_EXPORT Wafv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class Wafv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     Wafv2ClientPrivate(Wafv2Client * const q);

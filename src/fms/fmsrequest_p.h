@@ -28,7 +28,7 @@ namespace FMS {
 
 class FmsRequest;
 
-class QTAWS_EXPORT FmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FmsRequest::Action action; ///< FMS action to be performed.

@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListGroupsResponse;
 
-class QTAWS_EXPORT ListGroupsResponsePrivate : public GreengrassResponsePrivate {
+class ListGroupsResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

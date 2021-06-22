@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class PutInsightSelectorsResponse;
 
-class QTAWS_EXPORT PutInsightSelectorsResponsePrivate : public CloudTrailResponsePrivate {
+class PutInsightSelectorsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 

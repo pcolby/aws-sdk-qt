@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeNotebookInstanceLifecycleConfigRequest;
 
-class QTAWS_EXPORT DescribeNotebookInstanceLifecycleConfigRequestPrivate : public SageMakerRequestPrivate {
+class DescribeNotebookInstanceLifecycleConfigRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeNotebookInstanceLifecycleConfigRequestPrivate(const SageMakerRequest::Action action,

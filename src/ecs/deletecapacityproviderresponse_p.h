@@ -27,7 +27,7 @@ namespace ECS {
 
 class DeleteCapacityProviderResponse;
 
-class QTAWS_EXPORT DeleteCapacityProviderResponsePrivate : public EcsResponsePrivate {
+class DeleteCapacityProviderResponsePrivate : public EcsResponsePrivate {
 
 public:
 

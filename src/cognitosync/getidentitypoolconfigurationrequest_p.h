@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class GetIdentityPoolConfigurationRequest;
 
-class QTAWS_EXPORT GetIdentityPoolConfigurationRequestPrivate : public CognitoSyncRequestPrivate {
+class GetIdentityPoolConfigurationRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     GetIdentityPoolConfigurationRequestPrivate(const CognitoSyncRequest::Action action,

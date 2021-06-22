@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DescribeCertificatesResponse;
 
-class QTAWS_EXPORT DescribeCertificatesResponsePrivate : public DocDBResponsePrivate {
+class DescribeCertificatesResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

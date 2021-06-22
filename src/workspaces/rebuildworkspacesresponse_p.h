@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class RebuildWorkspacesResponse;
 
-class QTAWS_EXPORT RebuildWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
+class RebuildWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

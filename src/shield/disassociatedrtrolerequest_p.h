@@ -28,7 +28,7 @@ namespace Shield {
 
 class DisassociateDRTRoleRequest;
 
-class QTAWS_EXPORT DisassociateDRTRoleRequestPrivate : public ShieldRequestPrivate {
+class DisassociateDRTRoleRequestPrivate : public ShieldRequestPrivate {
 
 public:
     DisassociateDRTRoleRequestPrivate(const ShieldRequest::Action action,

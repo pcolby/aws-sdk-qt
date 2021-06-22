@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public AccessAnalyzerResponsePrivate {
+class ListTagsForResourceResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class CancelElasticsearchServiceSoftwareUpdateResponse;
 
-class QTAWS_EXPORT CancelElasticsearchServiceSoftwareUpdateResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class CancelElasticsearchServiceSoftwareUpdateResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

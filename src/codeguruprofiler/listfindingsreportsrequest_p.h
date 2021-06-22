@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class ListFindingsReportsRequest;
 
-class QTAWS_EXPORT ListFindingsReportsRequestPrivate : public CodeGuruProfilerRequestPrivate {
+class ListFindingsReportsRequestPrivate : public CodeGuruProfilerRequestPrivate {
 
 public:
     ListFindingsReportsRequestPrivate(const CodeGuruProfilerRequest::Action action,

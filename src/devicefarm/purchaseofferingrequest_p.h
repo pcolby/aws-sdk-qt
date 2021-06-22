@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class PurchaseOfferingRequest;
 
-class QTAWS_EXPORT PurchaseOfferingRequestPrivate : public DeviceFarmRequestPrivate {
+class PurchaseOfferingRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     PurchaseOfferingRequestPrivate(const DeviceFarmRequest::Action action,

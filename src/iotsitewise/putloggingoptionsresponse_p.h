@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class PutLoggingOptionsResponse;
 
-class QTAWS_EXPORT PutLoggingOptionsResponsePrivate : public IoTSiteWiseResponsePrivate {
+class PutLoggingOptionsResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 

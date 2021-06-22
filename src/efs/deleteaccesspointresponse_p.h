@@ -27,7 +27,7 @@ namespace EFS {
 
 class DeleteAccessPointResponse;
 
-class QTAWS_EXPORT DeleteAccessPointResponsePrivate : public EfsResponsePrivate {
+class DeleteAccessPointResponsePrivate : public EfsResponsePrivate {
 
 public:
 

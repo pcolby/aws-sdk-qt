@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateInstanceStorageConfigResponse;
 
-class QTAWS_EXPORT UpdateInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate {
+class UpdateInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

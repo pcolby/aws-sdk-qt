@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DescribeReplayRequest;
 
-class QTAWS_EXPORT DescribeReplayRequestPrivate : public EventBridgeRequestPrivate {
+class DescribeReplayRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DescribeReplayRequestPrivate(const EventBridgeRequest::Action action,

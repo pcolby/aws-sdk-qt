@@ -27,7 +27,7 @@ namespace PersonalizeEvents {
 
 class PersonalizeEventsResponse;
 
-class QTAWS_EXPORT PersonalizeEventsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PersonalizeEventsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace IAM {
 
 class SetSecurityTokenServicePreferencesResponse;
 
-class QTAWS_EXPORT SetSecurityTokenServicePreferencesResponsePrivate : public IamResponsePrivate {
+class SetSecurityTokenServicePreferencesResponsePrivate : public IamResponsePrivate {
 
 public:
 

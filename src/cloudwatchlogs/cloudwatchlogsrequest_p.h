@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class CloudWatchLogsRequest;
 
-class QTAWS_EXPORT CloudWatchLogsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudWatchLogsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudWatchLogsRequest::Action action; ///< CloudWatchLogs action to be performed.

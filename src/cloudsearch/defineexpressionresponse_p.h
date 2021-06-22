@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DefineExpressionResponse;
 
-class QTAWS_EXPORT DefineExpressionResponsePrivate : public CloudSearchResponsePrivate {
+class DefineExpressionResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 

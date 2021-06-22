@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class PutSkillAuthorizationRequest;
 
-class QTAWS_EXPORT PutSkillAuthorizationRequestPrivate : public AlexaForBusinessRequestPrivate {
+class PutSkillAuthorizationRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     PutSkillAuthorizationRequestPrivate(const AlexaForBusinessRequest::Action action,

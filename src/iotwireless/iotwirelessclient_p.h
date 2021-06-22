@@ -29,7 +29,7 @@ namespace IoTWireless {
 
 class IoTWirelessClient;
 
-class QTAWS_EXPORT IoTWirelessClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTWirelessClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     IoTWirelessClientPrivate(IoTWirelessClient * const q);

@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class ElasticBeanstalkClient;
 
-class QTAWS_EXPORT ElasticBeanstalkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ElasticBeanstalkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ElasticBeanstalkClientPrivate(ElasticBeanstalkClient * const q);

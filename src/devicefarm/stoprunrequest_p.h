@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class StopRunRequest;
 
-class QTAWS_EXPORT StopRunRequestPrivate : public DeviceFarmRequestPrivate {
+class StopRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     StopRunRequestPrivate(const DeviceFarmRequest::Action action,

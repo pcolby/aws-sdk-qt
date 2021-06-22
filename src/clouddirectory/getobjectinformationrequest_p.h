@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetObjectInformationRequest;
 
-class QTAWS_EXPORT GetObjectInformationRequestPrivate : public CloudDirectoryRequestPrivate {
+class GetObjectInformationRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     GetObjectInformationRequestPrivate(const CloudDirectoryRequest::Action action,

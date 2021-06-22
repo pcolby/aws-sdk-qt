@@ -28,7 +28,7 @@ namespace RAM {
 
 class DeleteResourceShareRequest;
 
-class QTAWS_EXPORT DeleteResourceShareRequestPrivate : public RamRequestPrivate {
+class DeleteResourceShareRequestPrivate : public RamRequestPrivate {
 
 public:
     DeleteResourceShareRequestPrivate(const RamRequest::Action action,

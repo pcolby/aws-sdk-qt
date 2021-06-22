@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class CreateDistributionResponse;
 
-class QTAWS_EXPORT CreateDistributionResponsePrivate : public CloudFrontResponsePrivate {
+class CreateDistributionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 

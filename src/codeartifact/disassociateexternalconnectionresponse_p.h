@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DisassociateExternalConnectionResponse;
 
-class QTAWS_EXPORT DisassociateExternalConnectionResponsePrivate : public CodeArtifactResponsePrivate {
+class DisassociateExternalConnectionResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 

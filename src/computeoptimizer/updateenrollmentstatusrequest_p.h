@@ -28,7 +28,7 @@ namespace ComputeOptimizer {
 
 class UpdateEnrollmentStatusRequest;
 
-class QTAWS_EXPORT UpdateEnrollmentStatusRequestPrivate : public ComputeOptimizerRequestPrivate {
+class UpdateEnrollmentStatusRequestPrivate : public ComputeOptimizerRequestPrivate {
 
 public:
     UpdateEnrollmentStatusRequestPrivate(const ComputeOptimizerRequest::Action action,

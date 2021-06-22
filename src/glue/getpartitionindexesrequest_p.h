@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetPartitionIndexesRequest;
 
-class QTAWS_EXPORT GetPartitionIndexesRequestPrivate : public GlueRequestPrivate {
+class GetPartitionIndexesRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetPartitionIndexesRequestPrivate(const GlueRequest::Action action,

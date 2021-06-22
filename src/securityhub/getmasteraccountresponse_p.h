@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetMasterAccountResponse;
 
-class QTAWS_EXPORT GetMasterAccountResponsePrivate : public SecurityHubResponsePrivate {
+class GetMasterAccountResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

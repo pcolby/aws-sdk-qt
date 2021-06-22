@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DeleteIndexFieldRequest;
 
-class QTAWS_EXPORT DeleteIndexFieldRequestPrivate : public CloudSearchRequestPrivate {
+class DeleteIndexFieldRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DeleteIndexFieldRequestPrivate(const CloudSearchRequest::Action action,

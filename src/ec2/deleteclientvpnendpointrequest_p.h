@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteClientVpnEndpointRequest;
 
-class QTAWS_EXPORT DeleteClientVpnEndpointRequestPrivate : public Ec2RequestPrivate {
+class DeleteClientVpnEndpointRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteClientVpnEndpointRequestPrivate(const Ec2Request::Action action,

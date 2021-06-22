@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CreateAliasRequest;
 
-class QTAWS_EXPORT CreateAliasRequestPrivate : public WorkMailRequestPrivate {
+class CreateAliasRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     CreateAliasRequestPrivate(const WorkMailRequest::Action action,

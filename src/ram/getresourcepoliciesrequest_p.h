@@ -28,7 +28,7 @@ namespace RAM {
 
 class GetResourcePoliciesRequest;
 
-class QTAWS_EXPORT GetResourcePoliciesRequestPrivate : public RamRequestPrivate {
+class GetResourcePoliciesRequestPrivate : public RamRequestPrivate {
 
 public:
     GetResourcePoliciesRequestPrivate(const RamRequest::Action action,

@@ -28,7 +28,7 @@ namespace S3 {
 
 class WriteGetObjectResponseRequest;
 
-class QTAWS_EXPORT WriteGetObjectResponseRequestPrivate : public S3RequestPrivate {
+class WriteGetObjectResponseRequestPrivate : public S3RequestPrivate {
 
 public:
     WriteGetObjectResponseRequestPrivate(const S3Request::Action action,

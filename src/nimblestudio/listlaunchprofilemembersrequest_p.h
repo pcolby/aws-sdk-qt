@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class ListLaunchProfileMembersRequest;
 
-class QTAWS_EXPORT ListLaunchProfileMembersRequestPrivate : public NimbleStudioRequestPrivate {
+class ListLaunchProfileMembersRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     ListLaunchProfileMembersRequestPrivate(const NimbleStudioRequest::Action action,

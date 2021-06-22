@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class GetDataEndpointResponse;
 
-class QTAWS_EXPORT GetDataEndpointResponsePrivate : public KinesisVideoResponsePrivate {
+class GetDataEndpointResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 

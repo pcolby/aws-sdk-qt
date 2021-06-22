@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class CreateIntentVersionRequest;
 
-class QTAWS_EXPORT CreateIntentVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
+class CreateIntentVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     CreateIntentVersionRequestPrivate(const LexModelBuildingServiceRequest::Action action,

@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class GetDocumentVersionRequest;
 
-class QTAWS_EXPORT GetDocumentVersionRequestPrivate : public WorkDocsRequestPrivate {
+class GetDocumentVersionRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     GetDocumentVersionRequestPrivate(const WorkDocsRequest::Action action,

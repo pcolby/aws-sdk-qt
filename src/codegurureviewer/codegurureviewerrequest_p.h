@@ -28,7 +28,7 @@ namespace CodeGuruReviewer {
 
 class CodeGuruReviewerRequest;
 
-class QTAWS_EXPORT CodeGuruReviewerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeGuruReviewerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeGuruReviewerRequest::Action action; ///< CodeGuruReviewer action to be performed.

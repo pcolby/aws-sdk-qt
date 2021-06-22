@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListHapgsRequest;
 
-class QTAWS_EXPORT ListHapgsRequestPrivate : public CloudHSMRequestPrivate {
+class ListHapgsRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListHapgsRequestPrivate(const CloudHSMRequest::Action action,

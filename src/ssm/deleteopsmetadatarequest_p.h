@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteOpsMetadataRequest;
 
-class QTAWS_EXPORT DeleteOpsMetadataRequestPrivate : public SsmRequestPrivate {
+class DeleteOpsMetadataRequestPrivate : public SsmRequestPrivate {
 
 public:
     DeleteOpsMetadataRequestPrivate(const SsmRequest::Action action,

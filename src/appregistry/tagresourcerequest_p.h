@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AppRegistryRequestPrivate {
+class TagResourceRequestPrivate : public AppRegistryRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AppRegistryRequest::Action action,

@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutRetentionSettingsRequest;
 
-class QTAWS_EXPORT PutRetentionSettingsRequestPrivate : public ChimeRequestPrivate {
+class PutRetentionSettingsRequestPrivate : public ChimeRequestPrivate {
 
 public:
     PutRetentionSettingsRequestPrivate(const ChimeRequest::Action action,

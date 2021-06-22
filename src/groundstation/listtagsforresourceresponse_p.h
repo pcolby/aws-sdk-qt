@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public GroundStationResponsePrivate {
+class ListTagsForResourceResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 

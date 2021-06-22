@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class ListSizeConstraintSetsResponse;
 
-class QTAWS_EXPORT ListSizeConstraintSetsResponsePrivate : public WAFRegionalResponsePrivate {
+class ListSizeConstraintSetsResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

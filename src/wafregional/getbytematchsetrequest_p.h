@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetByteMatchSetRequest;
 
-class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
+class GetByteMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetByteMatchSetRequestPrivate(const WAFRegionalRequest::Action action,

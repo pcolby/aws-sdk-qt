@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class DeleteApplicationSnapshotRequest;
 
-class QTAWS_EXPORT DeleteApplicationSnapshotRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
+class DeleteApplicationSnapshotRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
 
 public:
     DeleteApplicationSnapshotRequestPrivate(const KinesisAnalyticsV2Request::Action action,

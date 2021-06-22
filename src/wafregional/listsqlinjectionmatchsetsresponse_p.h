@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class ListSqlInjectionMatchSetsResponse;
 
-class QTAWS_EXPORT ListSqlInjectionMatchSetsResponsePrivate : public WAFRegionalResponsePrivate {
+class ListSqlInjectionMatchSetsResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

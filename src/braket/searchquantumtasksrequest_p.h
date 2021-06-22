@@ -28,7 +28,7 @@ namespace Braket {
 
 class SearchQuantumTasksRequest;
 
-class QTAWS_EXPORT SearchQuantumTasksRequestPrivate : public BraketRequestPrivate {
+class SearchQuantumTasksRequestPrivate : public BraketRequestPrivate {
 
 public:
     SearchQuantumTasksRequestPrivate(const BraketRequest::Action action,

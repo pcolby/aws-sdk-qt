@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class DeleteDomainRequest;
 
-class QTAWS_EXPORT DeleteDomainRequestPrivate : public CustomerProfilesRequestPrivate {
+class DeleteDomainRequestPrivate : public CustomerProfilesRequestPrivate {
 
 public:
     DeleteDomainRequestPrivate(const CustomerProfilesRequest::Action action,

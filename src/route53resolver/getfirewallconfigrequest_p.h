@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class GetFirewallConfigRequest;
 
-class QTAWS_EXPORT GetFirewallConfigRequestPrivate : public Route53ResolverRequestPrivate {
+class GetFirewallConfigRequestPrivate : public Route53ResolverRequestPrivate {
 
 public:
     GetFirewallConfigRequestPrivate(const Route53ResolverRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DeleteAssetModelRequest;
 
-class QTAWS_EXPORT DeleteAssetModelRequestPrivate : public IoTSiteWiseRequestPrivate {
+class DeleteAssetModelRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     DeleteAssetModelRequestPrivate(const IoTSiteWiseRequest::Action action,

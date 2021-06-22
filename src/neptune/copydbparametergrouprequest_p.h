@@ -28,7 +28,7 @@ namespace Neptune {
 
 class CopyDBParameterGroupRequest;
 
-class QTAWS_EXPORT CopyDBParameterGroupRequestPrivate : public NeptuneRequestPrivate {
+class CopyDBParameterGroupRequestPrivate : public NeptuneRequestPrivate {
 
 public:
     CopyDBParameterGroupRequestPrivate(const NeptuneRequest::Action action,

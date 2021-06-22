@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class ElastiCacheClient;
 
-class QTAWS_EXPORT ElastiCacheClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ElastiCacheClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ElastiCacheClientPrivate(ElastiCacheClient * const q);

@@ -28,7 +28,7 @@ namespace RDSDataService {
 
 class CommitTransactionRequest;
 
-class QTAWS_EXPORT CommitTransactionRequestPrivate : public RDSDataServiceRequestPrivate {
+class CommitTransactionRequestPrivate : public RDSDataServiceRequestPrivate {
 
 public:
     CommitTransactionRequestPrivate(const RDSDataServiceRequest::Action action,

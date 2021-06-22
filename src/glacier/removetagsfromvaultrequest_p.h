@@ -28,7 +28,7 @@ namespace Glacier {
 
 class RemoveTagsFromVaultRequest;
 
-class QTAWS_EXPORT RemoveTagsFromVaultRequestPrivate : public GlacierRequestPrivate {
+class RemoveTagsFromVaultRequestPrivate : public GlacierRequestPrivate {
 
 public:
     RemoveTagsFromVaultRequestPrivate(const GlacierRequest::Action action,

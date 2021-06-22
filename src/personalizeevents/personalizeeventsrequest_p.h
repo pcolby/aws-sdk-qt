@@ -28,7 +28,7 @@ namespace PersonalizeEvents {
 
 class PersonalizeEventsRequest;
 
-class QTAWS_EXPORT PersonalizeEventsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PersonalizeEventsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PersonalizeEventsRequest::Action action; ///< PersonalizeEvents action to be performed.

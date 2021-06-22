@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public DeviceFarmRequestPrivate {
+class TagResourceRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const DeviceFarmRequest::Action action,

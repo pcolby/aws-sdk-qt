@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class GetImagePipelineRequest;
 
-class QTAWS_EXPORT GetImagePipelineRequestPrivate : public imagebuilderRequestPrivate {
+class GetImagePipelineRequestPrivate : public imagebuilderRequestPrivate {
 
 public:
     GetImagePipelineRequestPrivate(const imagebuilderRequest::Action action,

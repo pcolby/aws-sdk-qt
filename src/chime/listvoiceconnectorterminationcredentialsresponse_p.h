@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListVoiceConnectorTerminationCredentialsResponse;
 
-class QTAWS_EXPORT ListVoiceConnectorTerminationCredentialsResponsePrivate : public ChimeResponsePrivate {
+class ListVoiceConnectorTerminationCredentialsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

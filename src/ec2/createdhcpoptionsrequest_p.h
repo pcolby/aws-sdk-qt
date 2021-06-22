@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateDhcpOptionsRequest;
 
-class QTAWS_EXPORT CreateDhcpOptionsRequestPrivate : public Ec2RequestPrivate {
+class CreateDhcpOptionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     CreateDhcpOptionsRequestPrivate(const Ec2Request::Action action,

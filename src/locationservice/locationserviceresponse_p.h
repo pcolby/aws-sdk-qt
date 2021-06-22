@@ -27,7 +27,7 @@ namespace LocationService {
 
 class LocationServiceResponse;
 
-class QTAWS_EXPORT LocationServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LocationServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

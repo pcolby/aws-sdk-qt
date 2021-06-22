@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateBandwidthRateLimitResponse;
 
-class QTAWS_EXPORT UpdateBandwidthRateLimitResponsePrivate : public StorageGatewayResponsePrivate {
+class UpdateBandwidthRateLimitResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

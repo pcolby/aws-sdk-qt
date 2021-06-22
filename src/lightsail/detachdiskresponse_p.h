@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DetachDiskResponse;
 
-class QTAWS_EXPORT DetachDiskResponsePrivate : public LightsailResponsePrivate {
+class DetachDiskResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

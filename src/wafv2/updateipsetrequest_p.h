@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class UpdateIPSetRequest;
 
-class QTAWS_EXPORT UpdateIPSetRequestPrivate : public Wafv2RequestPrivate {
+class UpdateIPSetRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     UpdateIPSetRequestPrivate(const Wafv2Request::Action action,

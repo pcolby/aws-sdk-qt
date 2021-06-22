@@ -28,7 +28,7 @@ namespace PI {
 
 class PiRequest;
 
-class QTAWS_EXPORT PiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PiRequest::Action action; ///< PI action to be performed.

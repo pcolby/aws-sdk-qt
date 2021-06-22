@@ -28,7 +28,7 @@ namespace Chime {
 
 class RedactConversationMessageRequest;
 
-class QTAWS_EXPORT RedactConversationMessageRequestPrivate : public ChimeRequestPrivate {
+class RedactConversationMessageRequestPrivate : public ChimeRequestPrivate {
 
 public:
     RedactConversationMessageRequestPrivate(const ChimeRequest::Action action,

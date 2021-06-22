@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListSupportedPhoneNumberCountriesResponse;
 
-class QTAWS_EXPORT ListSupportedPhoneNumberCountriesResponsePrivate : public ChimeResponsePrivate {
+class ListSupportedPhoneNumberCountriesResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

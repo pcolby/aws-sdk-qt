@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class DeleteMetricPolicyRequest;
 
-class QTAWS_EXPORT DeleteMetricPolicyRequestPrivate : public MediaStoreRequestPrivate {
+class DeleteMetricPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     DeleteMetricPolicyRequestPrivate(const MediaStoreRequest::Action action,

@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public SavingsPlansResponsePrivate {
+class TagResourceResponsePrivate : public SavingsPlansResponsePrivate {
 
 public:
 

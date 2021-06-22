@@ -28,7 +28,7 @@ namespace ApiGatewayManagementApi {
 
 class GetConnectionRequest;
 
-class QTAWS_EXPORT GetConnectionRequestPrivate : public ApiGatewayManagementApiRequestPrivate {
+class GetConnectionRequestPrivate : public ApiGatewayManagementApiRequestPrivate {
 
 public:
     GetConnectionRequestPrivate(const ApiGatewayManagementApiRequest::Action action,

@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class StartPipelineReprocessingRequest;
 
-class QTAWS_EXPORT StartPipelineReprocessingRequestPrivate : public IoTAnalyticsRequestPrivate {
+class StartPipelineReprocessingRequestPrivate : public IoTAnalyticsRequestPrivate {
 
 public:
     StartPipelineReprocessingRequestPrivate(const IoTAnalyticsRequest::Action action,

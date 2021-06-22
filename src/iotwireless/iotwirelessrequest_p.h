@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class IoTWirelessRequest;
 
-class QTAWS_EXPORT IoTWirelessRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTWirelessRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTWirelessRequest::Action action; ///< IoTWireless action to be performed.

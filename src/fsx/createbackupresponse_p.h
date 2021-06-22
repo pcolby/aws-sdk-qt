@@ -27,7 +27,7 @@ namespace FSx {
 
 class CreateBackupResponse;
 
-class QTAWS_EXPORT CreateBackupResponsePrivate : public FSxResponsePrivate {
+class CreateBackupResponsePrivate : public FSxResponsePrivate {
 
 public:
 

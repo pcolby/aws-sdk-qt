@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeUsageReportSubscriptionsRequest;
 
-class QTAWS_EXPORT DescribeUsageReportSubscriptionsRequestPrivate : public AppStreamRequestPrivate {
+class DescribeUsageReportSubscriptionsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DescribeUsageReportSubscriptionsRequestPrivate(const AppStreamRequest::Action action,

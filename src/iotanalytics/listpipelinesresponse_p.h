@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class ListPipelinesResponse;
 
-class QTAWS_EXPORT ListPipelinesResponsePrivate : public IoTAnalyticsResponsePrivate {
+class ListPipelinesResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 

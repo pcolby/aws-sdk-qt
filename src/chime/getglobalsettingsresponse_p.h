@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetGlobalSettingsResponse;
 
-class QTAWS_EXPORT GetGlobalSettingsResponsePrivate : public ChimeResponsePrivate {
+class GetGlobalSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

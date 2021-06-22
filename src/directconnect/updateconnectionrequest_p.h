@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class UpdateConnectionRequest;
 
-class QTAWS_EXPORT UpdateConnectionRequestPrivate : public DirectConnectRequestPrivate {
+class UpdateConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     UpdateConnectionRequestPrivate(const DirectConnectRequest::Action action,

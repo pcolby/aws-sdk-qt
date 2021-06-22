@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class DeleteManagedEndpointResponse;
 
-class QTAWS_EXPORT DeleteManagedEndpointResponsePrivate : public EMRContainersResponsePrivate {
+class DeleteManagedEndpointResponsePrivate : public EMRContainersResponsePrivate {
 
 public:
 

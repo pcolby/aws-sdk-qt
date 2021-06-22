@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class DisableDomainTransferLockRequest;
 
-class QTAWS_EXPORT DisableDomainTransferLockRequestPrivate : public Route53DomainsRequestPrivate {
+class DisableDomainTransferLockRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     DisableDomainTransferLockRequestPrivate(const Route53DomainsRequest::Action action,

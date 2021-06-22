@@ -28,7 +28,7 @@ namespace EKS {
 
 class AssociateIdentityProviderConfigRequest;
 
-class QTAWS_EXPORT AssociateIdentityProviderConfigRequestPrivate : public EksRequestPrivate {
+class AssociateIdentityProviderConfigRequestPrivate : public EksRequestPrivate {
 
 public:
     AssociateIdentityProviderConfigRequestPrivate(const EksRequest::Action action,

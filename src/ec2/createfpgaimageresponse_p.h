@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateFpgaImageResponse;
 
-class QTAWS_EXPORT CreateFpgaImageResponsePrivate : public Ec2ResponsePrivate {
+class CreateFpgaImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

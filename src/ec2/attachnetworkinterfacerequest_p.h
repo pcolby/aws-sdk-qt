@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AttachNetworkInterfaceRequest;
 
-class QTAWS_EXPORT AttachNetworkInterfaceRequestPrivate : public Ec2RequestPrivate {
+class AttachNetworkInterfaceRequestPrivate : public Ec2RequestPrivate {
 
 public:
     AttachNetworkInterfaceRequestPrivate(const Ec2Request::Action action,

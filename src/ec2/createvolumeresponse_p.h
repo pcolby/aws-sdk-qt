@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateVolumeResponse;
 
-class QTAWS_EXPORT CreateVolumeResponsePrivate : public Ec2ResponsePrivate {
+class CreateVolumeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

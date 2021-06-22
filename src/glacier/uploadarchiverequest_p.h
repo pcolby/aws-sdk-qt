@@ -28,7 +28,7 @@ namespace Glacier {
 
 class UploadArchiveRequest;
 
-class QTAWS_EXPORT UploadArchiveRequestPrivate : public GlacierRequestPrivate {
+class UploadArchiveRequestPrivate : public GlacierRequestPrivate {
 
 public:
     UploadArchiveRequestPrivate(const GlacierRequest::Action action,

@@ -28,7 +28,7 @@ namespace Glacier {
 
 class AbortVaultLockRequest;
 
-class QTAWS_EXPORT AbortVaultLockRequestPrivate : public GlacierRequestPrivate {
+class AbortVaultLockRequestPrivate : public GlacierRequestPrivate {
 
 public:
     AbortVaultLockRequestPrivate(const GlacierRequest::Action action,

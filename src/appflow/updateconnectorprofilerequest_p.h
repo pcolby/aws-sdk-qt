@@ -28,7 +28,7 @@ namespace Appflow {
 
 class UpdateConnectorProfileRequest;
 
-class QTAWS_EXPORT UpdateConnectorProfileRequestPrivate : public AppflowRequestPrivate {
+class UpdateConnectorProfileRequestPrivate : public AppflowRequestPrivate {
 
 public:
     UpdateConnectorProfileRequestPrivate(const AppflowRequest::Action action,

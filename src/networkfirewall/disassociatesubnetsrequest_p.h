@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class DisassociateSubnetsRequest;
 
-class QTAWS_EXPORT DisassociateSubnetsRequestPrivate : public NetworkFirewallRequestPrivate {
+class DisassociateSubnetsRequestPrivate : public NetworkFirewallRequestPrivate {
 
 public:
     DisassociateSubnetsRequestPrivate(const NetworkFirewallRequest::Action action,

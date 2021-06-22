@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class CreateResourceDefinitionVersionResponse;
 
-class QTAWS_EXPORT CreateResourceDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
+class CreateResourceDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

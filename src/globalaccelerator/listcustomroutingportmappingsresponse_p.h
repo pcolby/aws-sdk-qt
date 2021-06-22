@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class ListCustomRoutingPortMappingsResponse;
 
-class QTAWS_EXPORT ListCustomRoutingPortMappingsResponsePrivate : public GlobalAcceleratorResponsePrivate {
+class ListCustomRoutingPortMappingsResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 

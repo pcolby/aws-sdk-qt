@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public MediaTailorRequestPrivate {
+class TagResourceRequestPrivate : public MediaTailorRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const MediaTailorRequest::Action action,

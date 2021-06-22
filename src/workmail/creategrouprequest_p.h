@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CreateGroupRequest;
 
-class QTAWS_EXPORT CreateGroupRequestPrivate : public WorkMailRequestPrivate {
+class CreateGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     CreateGroupRequestPrivate(const WorkMailRequest::Action action,

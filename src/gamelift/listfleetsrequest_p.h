@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListFleetsRequest;
 
-class QTAWS_EXPORT ListFleetsRequestPrivate : public GameLiftRequestPrivate {
+class ListFleetsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     ListFleetsRequestPrivate(const GameLiftRequest::Action action,

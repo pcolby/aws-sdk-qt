@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DissociatePackageRequest;
 
-class QTAWS_EXPORT DissociatePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DissociatePackageRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     DissociatePackageRequestPrivate(const ElasticsearchServiceRequest::Action action,

@@ -28,7 +28,7 @@ namespace Connect {
 
 class UpdateContactFlowContentRequest;
 
-class QTAWS_EXPORT UpdateContactFlowContentRequestPrivate : public ConnectRequestPrivate {
+class UpdateContactFlowContentRequestPrivate : public ConnectRequestPrivate {
 
 public:
     UpdateContactFlowContentRequestPrivate(const ConnectRequest::Action action,

@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetCatalogImportStatusRequest;
 
-class QTAWS_EXPORT GetCatalogImportStatusRequestPrivate : public GlueRequestPrivate {
+class GetCatalogImportStatusRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetCatalogImportStatusRequestPrivate(const GlueRequest::Action action,

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DescribeNamespaceRequest;
 
-class QTAWS_EXPORT DescribeNamespaceRequestPrivate : public QuickSightRequestPrivate {
+class DescribeNamespaceRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DescribeNamespaceRequestPrivate(const QuickSightRequest::Action action,

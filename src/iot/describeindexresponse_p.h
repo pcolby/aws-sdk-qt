@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeIndexResponse;
 
-class QTAWS_EXPORT DescribeIndexResponsePrivate : public IoTResponsePrivate {
+class DescribeIndexResponsePrivate : public IoTResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class ListJobsRequest;
 
-class QTAWS_EXPORT ListJobsRequestPrivate : public ImportExportRequestPrivate {
+class ListJobsRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     ListJobsRequestPrivate(const ImportExportRequest::Action action,

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListFacetAttributesRequest;
 
-class QTAWS_EXPORT ListFacetAttributesRequestPrivate : public CloudDirectoryRequestPrivate {
+class ListFacetAttributesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListFacetAttributesRequestPrivate(const CloudDirectoryRequest::Action action,

@@ -28,7 +28,7 @@ namespace Chime {
 
 class AssociateSigninDelegateGroupsWithAccountRequest;
 
-class QTAWS_EXPORT AssociateSigninDelegateGroupsWithAccountRequestPrivate : public ChimeRequestPrivate {
+class AssociateSigninDelegateGroupsWithAccountRequestPrivate : public ChimeRequestPrivate {
 
 public:
     AssociateSigninDelegateGroupsWithAccountRequestPrivate(const ChimeRequest::Action action,

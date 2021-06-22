@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeConfigurationRecordersRequest;
 
-class QTAWS_EXPORT DescribeConfigurationRecordersRequestPrivate : public ConfigServiceRequestPrivate {
+class DescribeConfigurationRecordersRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeConfigurationRecordersRequestPrivate(const ConfigServiceRequest::Action action,

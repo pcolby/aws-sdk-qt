@@ -28,7 +28,7 @@ namespace SFN {
 
 class DescribeStateMachineRequest;
 
-class QTAWS_EXPORT DescribeStateMachineRequestPrivate : public SfnRequestPrivate {
+class DescribeStateMachineRequestPrivate : public SfnRequestPrivate {
 
 public:
     DescribeStateMachineRequestPrivate(const SfnRequest::Action action,

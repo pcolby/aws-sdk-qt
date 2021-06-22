@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListOpsItemRelatedItemsRequest;
 
-class QTAWS_EXPORT ListOpsItemRelatedItemsRequestPrivate : public SsmRequestPrivate {
+class ListOpsItemRelatedItemsRequestPrivate : public SsmRequestPrivate {
 
 public:
     ListOpsItemRelatedItemsRequestPrivate(const SsmRequest::Action action,

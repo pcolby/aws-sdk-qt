@@ -28,7 +28,7 @@ namespace TimestreamWrite {
 
 class TimestreamWriteRequest;
 
-class QTAWS_EXPORT TimestreamWriteRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TimestreamWriteRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TimestreamWriteRequest::Action action; ///< TimestreamWrite action to be performed.

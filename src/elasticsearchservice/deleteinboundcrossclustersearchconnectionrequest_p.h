@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DeleteInboundCrossClusterSearchConnectionRequest;
 
-class QTAWS_EXPORT DeleteInboundCrossClusterSearchConnectionRequestPrivate : public ElasticsearchServiceRequestPrivate {
+class DeleteInboundCrossClusterSearchConnectionRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     DeleteInboundCrossClusterSearchConnectionRequestPrivate(const ElasticsearchServiceRequest::Action action,

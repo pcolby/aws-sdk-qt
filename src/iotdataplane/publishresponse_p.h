@@ -27,7 +27,7 @@ namespace IoTDataPlane {
 
 class PublishResponse;
 
-class QTAWS_EXPORT PublishResponsePrivate : public IoTDataPlaneResponsePrivate {
+class PublishResponsePrivate : public IoTDataPlaneResponsePrivate {
 
 public:
 

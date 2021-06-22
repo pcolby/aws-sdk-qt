@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListServicesRequest;
 
-class QTAWS_EXPORT ListServicesRequestPrivate : public EcsRequestPrivate {
+class ListServicesRequestPrivate : public EcsRequestPrivate {
 
 public:
     ListServicesRequestPrivate(const EcsRequest::Action action,

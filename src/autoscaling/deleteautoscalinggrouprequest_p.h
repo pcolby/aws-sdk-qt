@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeleteAutoScalingGroupRequest;
 
-class QTAWS_EXPORT DeleteAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
+class DeleteAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeleteAutoScalingGroupRequestPrivate(const AutoScalingRequest::Action action,

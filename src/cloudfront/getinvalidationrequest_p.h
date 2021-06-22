@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetInvalidationRequest;
 
-class QTAWS_EXPORT GetInvalidationRequestPrivate : public CloudFrontRequestPrivate {
+class GetInvalidationRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     GetInvalidationRequestPrivate(const CloudFrontRequest::Action action,

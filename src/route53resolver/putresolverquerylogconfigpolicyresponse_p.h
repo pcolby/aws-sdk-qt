@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class PutResolverQueryLogConfigPolicyResponse;
 
-class QTAWS_EXPORT PutResolverQueryLogConfigPolicyResponsePrivate : public Route53ResolverResponsePrivate {
+class PutResolverQueryLogConfigPolicyResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 

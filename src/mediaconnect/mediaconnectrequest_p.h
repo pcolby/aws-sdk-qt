@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class MediaConnectRequest;
 
-class QTAWS_EXPORT MediaConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaConnectRequest::Action action; ///< MediaConnect action to be performed.

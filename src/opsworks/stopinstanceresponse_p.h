@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class StopInstanceResponse;
 
-class QTAWS_EXPORT StopInstanceResponsePrivate : public OpsWorksResponsePrivate {
+class StopInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 

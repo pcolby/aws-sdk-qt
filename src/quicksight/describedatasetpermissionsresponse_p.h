@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DescribeDataSetPermissionsResponse;
 
-class QTAWS_EXPORT DescribeDataSetPermissionsResponsePrivate : public QuickSightResponsePrivate {
+class DescribeDataSetPermissionsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceResponse;
 
-class QTAWS_EXPORT DatabaseMigrationServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DatabaseMigrationServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EKS {
 
 class DeleteClusterResponse;
 
-class QTAWS_EXPORT DeleteClusterResponsePrivate : public EksResponsePrivate {
+class DeleteClusterResponsePrivate : public EksResponsePrivate {
 
 public:
 

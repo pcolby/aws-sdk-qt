@@ -27,7 +27,7 @@ namespace SFN {
 
 class StopExecutionResponse;
 
-class QTAWS_EXPORT StopExecutionResponsePrivate : public SfnResponsePrivate {
+class StopExecutionResponsePrivate : public SfnResponsePrivate {
 
 public:
 

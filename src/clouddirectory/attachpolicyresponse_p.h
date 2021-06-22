@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class AttachPolicyResponse;
 
-class QTAWS_EXPORT AttachPolicyResponsePrivate : public CloudDirectoryResponsePrivate {
+class AttachPolicyResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 

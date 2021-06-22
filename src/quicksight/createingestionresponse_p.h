@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class CreateIngestionResponse;
 
-class QTAWS_EXPORT CreateIngestionResponsePrivate : public QuickSightResponsePrivate {
+class CreateIngestionResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CancelSchemaExtensionRequest;
 
-class QTAWS_EXPORT CancelSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
+class CancelSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CancelSchemaExtensionRequestPrivate(const DirectoryServiceRequest::Action action,

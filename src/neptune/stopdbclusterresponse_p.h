@@ -27,7 +27,7 @@ namespace Neptune {
 
 class StopDBClusterResponse;
 
-class QTAWS_EXPORT StopDBClusterResponsePrivate : public NeptuneResponsePrivate {
+class StopDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

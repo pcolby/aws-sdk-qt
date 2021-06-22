@@ -28,7 +28,7 @@ namespace MigrationHubConfig {
 
 class MigrationHubConfigRequest;
 
-class QTAWS_EXPORT MigrationHubConfigRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MigrationHubConfigRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MigrationHubConfigRequest::Action action; ///< MigrationHubConfig action to be performed.

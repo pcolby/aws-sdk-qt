@@ -27,7 +27,7 @@ namespace Neptune {
 
 class FailoverDBClusterResponse;
 
-class QTAWS_EXPORT FailoverDBClusterResponsePrivate : public NeptuneResponsePrivate {
+class FailoverDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchCreatePartitionRequest;
 
-class QTAWS_EXPORT BatchCreatePartitionRequestPrivate : public GlueRequestPrivate {
+class BatchCreatePartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchCreatePartitionRequestPrivate(const GlueRequest::Action action,

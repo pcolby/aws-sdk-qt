@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class DisassociateLinkResponse;
 
-class QTAWS_EXPORT DisassociateLinkResponsePrivate : public NetworkManagerResponsePrivate {
+class DisassociateLinkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 

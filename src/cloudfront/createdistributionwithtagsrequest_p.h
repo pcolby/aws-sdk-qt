@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreateDistributionWithTagsRequest;
 
-class QTAWS_EXPORT CreateDistributionWithTagsRequestPrivate : public CloudFrontRequestPrivate {
+class CreateDistributionWithTagsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     CreateDistributionWithTagsRequestPrivate(const CloudFrontRequest::Action action,

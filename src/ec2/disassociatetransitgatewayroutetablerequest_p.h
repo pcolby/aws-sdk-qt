@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisassociateTransitGatewayRouteTableRequest;
 
-class QTAWS_EXPORT DisassociateTransitGatewayRouteTableRequestPrivate : public Ec2RequestPrivate {
+class DisassociateTransitGatewayRouteTableRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisassociateTransitGatewayRouteTableRequestPrivate(const Ec2Request::Action action,

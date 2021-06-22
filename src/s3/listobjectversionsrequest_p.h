@@ -28,7 +28,7 @@ namespace S3 {
 
 class ListObjectVersionsRequest;
 
-class QTAWS_EXPORT ListObjectVersionsRequestPrivate : public S3RequestPrivate {
+class ListObjectVersionsRequestPrivate : public S3RequestPrivate {
 
 public:
     ListObjectVersionsRequestPrivate(const S3Request::Action action,

@@ -27,7 +27,7 @@ namespace SageMakerRuntime {
 
 class InvokeEndpointResponse;
 
-class QTAWS_EXPORT InvokeEndpointResponsePrivate : public SageMakerRuntimeResponsePrivate {
+class InvokeEndpointResponsePrivate : public SageMakerRuntimeResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace SqsOld {
 
 class SqsRemovePermissionRequest;
 
-class QTAWS_EXPORT SqsRemovePermissionRequestPrivate : public SqsRequestPrivate {
+class SqsRemovePermissionRequestPrivate : public SqsRequestPrivate {
 
 public:
     SqsRemovePermissionRequestPrivate(const SqsRequest::Action action,

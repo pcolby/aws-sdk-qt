@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeAutomationStepExecutionsResponse;
 
-class QTAWS_EXPORT DescribeAutomationStepExecutionsResponsePrivate : public SsmResponsePrivate {
+class DescribeAutomationStepExecutionsResponsePrivate : public SsmResponsePrivate {
 
 public:
 

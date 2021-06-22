@@ -28,7 +28,7 @@ namespace MigrationHubConfig {
 
 class GetHomeRegionRequest;
 
-class QTAWS_EXPORT GetHomeRegionRequestPrivate : public MigrationHubConfigRequestPrivate {
+class GetHomeRegionRequestPrivate : public MigrationHubConfigRequestPrivate {
 
 public:
     GetHomeRegionRequestPrivate(const MigrationHubConfigRequest::Action action,

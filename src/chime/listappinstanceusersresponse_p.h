@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListAppInstanceUsersResponse;
 
-class QTAWS_EXPORT ListAppInstanceUsersResponsePrivate : public ChimeResponsePrivate {
+class ListAppInstanceUsersResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

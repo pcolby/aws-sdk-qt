@@ -28,7 +28,7 @@ namespace S3 {
 
 class RestoreObjectRequest;
 
-class QTAWS_EXPORT RestoreObjectRequestPrivate : public S3RequestPrivate {
+class RestoreObjectRequestPrivate : public S3RequestPrivate {
 
 public:
     RestoreObjectRequestPrivate(const S3Request::Action action,

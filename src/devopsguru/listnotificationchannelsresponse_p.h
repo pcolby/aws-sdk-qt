@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class ListNotificationChannelsResponse;
 
-class QTAWS_EXPORT ListNotificationChannelsResponsePrivate : public DevOpsGuruResponsePrivate {
+class ListNotificationChannelsResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 

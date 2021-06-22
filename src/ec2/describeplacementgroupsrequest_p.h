@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribePlacementGroupsRequest;
 
-class QTAWS_EXPORT DescribePlacementGroupsRequestPrivate : public Ec2RequestPrivate {
+class DescribePlacementGroupsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribePlacementGroupsRequestPrivate(const Ec2Request::Action action,

@@ -29,7 +29,7 @@ namespace MTurk {
 
 class MTurkClient;
 
-class QTAWS_EXPORT MTurkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MTurkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     MTurkClientPrivate(MTurkClient * const q);

@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartTriggerRequest;
 
-class QTAWS_EXPORT StartTriggerRequestPrivate : public GlueRequestPrivate {
+class StartTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartTriggerRequestPrivate(const GlueRequest::Action action,

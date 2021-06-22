@@ -29,7 +29,7 @@ namespace LookoutforVision {
 
 class LookoutforVisionClient;
 
-class QTAWS_EXPORT LookoutforVisionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LookoutforVisionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LookoutforVisionClientPrivate(LookoutforVisionClient * const q);

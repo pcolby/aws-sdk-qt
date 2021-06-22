@@ -27,7 +27,7 @@ namespace HealthLake {
 
 class DescribeFHIRDatastoreResponse;
 
-class QTAWS_EXPORT DescribeFHIRDatastoreResponsePrivate : public HealthLakeResponsePrivate {
+class DescribeFHIRDatastoreResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 

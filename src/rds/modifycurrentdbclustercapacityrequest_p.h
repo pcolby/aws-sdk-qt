@@ -28,7 +28,7 @@ namespace RDS {
 
 class ModifyCurrentDBClusterCapacityRequest;
 
-class QTAWS_EXPORT ModifyCurrentDBClusterCapacityRequestPrivate : public RdsRequestPrivate {
+class ModifyCurrentDBClusterCapacityRequestPrivate : public RdsRequestPrivate {
 
 public:
     ModifyCurrentDBClusterCapacityRequestPrivate(const RdsRequest::Action action,

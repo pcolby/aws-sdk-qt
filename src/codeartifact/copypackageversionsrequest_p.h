@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class CopyPackageVersionsRequest;
 
-class QTAWS_EXPORT CopyPackageVersionsRequestPrivate : public CodeArtifactRequestPrivate {
+class CopyPackageVersionsRequestPrivate : public CodeArtifactRequestPrivate {
 
 public:
     CopyPackageVersionsRequestPrivate(const CodeArtifactRequest::Action action,

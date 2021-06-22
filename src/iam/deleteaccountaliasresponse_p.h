@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteAccountAliasResponse;
 
-class QTAWS_EXPORT DeleteAccountAliasResponsePrivate : public IamResponsePrivate {
+class DeleteAccountAliasResponsePrivate : public IamResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Athena {
 
 class AthenaResponse;
 
-class QTAWS_EXPORT AthenaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AthenaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

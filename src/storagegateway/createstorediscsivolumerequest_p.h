@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CreateStorediSCSIVolumeRequest;
 
-class QTAWS_EXPORT CreateStorediSCSIVolumeRequestPrivate : public StorageGatewayRequestPrivate {
+class CreateStorediSCSIVolumeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CreateStorediSCSIVolumeRequestPrivate(const StorageGatewayRequest::Action action,

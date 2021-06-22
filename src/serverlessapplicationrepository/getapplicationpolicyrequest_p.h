@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class GetApplicationPolicyRequest;
 
-class QTAWS_EXPORT GetApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
+class GetApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     GetApplicationPolicyRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action,

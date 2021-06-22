@@ -28,7 +28,7 @@ namespace Amplify {
 
 class AmplifyRequest;
 
-class QTAWS_EXPORT AmplifyRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AmplifyRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AmplifyRequest::Action action; ///< Amplify action to be performed.

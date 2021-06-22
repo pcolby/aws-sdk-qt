@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class GetNetworkProfileResponse;
 
-class QTAWS_EXPORT GetNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
+class GetNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 

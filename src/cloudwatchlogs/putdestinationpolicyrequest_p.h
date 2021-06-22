@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class PutDestinationPolicyRequest;
 
-class QTAWS_EXPORT PutDestinationPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
+class PutDestinationPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     PutDestinationPolicyRequestPrivate(const CloudWatchLogsRequest::Action action,

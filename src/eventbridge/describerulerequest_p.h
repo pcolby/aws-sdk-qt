@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DescribeRuleRequest;
 
-class QTAWS_EXPORT DescribeRuleRequestPrivate : public EventBridgeRequestPrivate {
+class DescribeRuleRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DescribeRuleRequestPrivate(const EventBridgeRequest::Action action,

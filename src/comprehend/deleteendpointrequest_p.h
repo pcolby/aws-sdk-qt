@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DeleteEndpointRequest;
 
-class QTAWS_EXPORT DeleteEndpointRequestPrivate : public ComprehendRequestPrivate {
+class DeleteEndpointRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     DeleteEndpointRequestPrivate(const ComprehendRequest::Action action,

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class VerifySoftwareTokenRequest;
 
-class QTAWS_EXPORT VerifySoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class VerifySoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     VerifySoftwareTokenRequestPrivate(const CognitoIdentityProviderRequest::Action action,

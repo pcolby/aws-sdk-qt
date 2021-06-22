@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteApiCacheRequest;
 
-class QTAWS_EXPORT DeleteApiCacheRequestPrivate : public AppSyncRequestPrivate {
+class DeleteApiCacheRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     DeleteApiCacheRequestPrivate(const AppSyncRequest::Action action,

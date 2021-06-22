@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DisableOrganizationAdminAccountResponse;
 
-class QTAWS_EXPORT DisableOrganizationAdminAccountResponsePrivate : public SecurityHubResponsePrivate {
+class DisableOrganizationAdminAccountResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

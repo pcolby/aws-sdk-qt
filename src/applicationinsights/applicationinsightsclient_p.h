@@ -29,7 +29,7 @@ namespace ApplicationInsights {
 
 class ApplicationInsightsClient;
 
-class QTAWS_EXPORT ApplicationInsightsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApplicationInsightsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     ApplicationInsightsClientPrivate(ApplicationInsightsClient * const q);

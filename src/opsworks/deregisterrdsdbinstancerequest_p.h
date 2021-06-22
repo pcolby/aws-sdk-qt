@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeregisterRdsDbInstanceRequest;
 
-class QTAWS_EXPORT DeregisterRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
+class DeregisterRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeregisterRdsDbInstanceRequestPrivate(const OpsWorksRequest::Action action,

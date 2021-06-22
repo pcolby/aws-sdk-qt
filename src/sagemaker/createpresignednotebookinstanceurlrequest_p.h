@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreatePresignedNotebookInstanceUrlRequest;
 
-class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlRequestPrivate : public SageMakerRequestPrivate {
+class CreatePresignedNotebookInstanceUrlRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreatePresignedNotebookInstanceUrlRequestPrivate(const SageMakerRequest::Action action,

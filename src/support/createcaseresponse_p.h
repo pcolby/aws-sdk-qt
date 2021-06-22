@@ -27,7 +27,7 @@ namespace Support {
 
 class CreateCaseResponse;
 
-class QTAWS_EXPORT CreateCaseResponsePrivate : public SupportResponsePrivate {
+class CreateCaseResponsePrivate : public SupportResponsePrivate {
 
 public:
 

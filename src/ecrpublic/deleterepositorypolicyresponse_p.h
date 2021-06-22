@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class DeleteRepositoryPolicyResponse;
 
-class QTAWS_EXPORT DeleteRepositoryPolicyResponsePrivate : public ECRPublicResponsePrivate {
+class DeleteRepositoryPolicyResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 

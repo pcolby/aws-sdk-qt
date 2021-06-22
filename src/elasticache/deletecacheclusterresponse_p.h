@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DeleteCacheClusterResponse;
 
-class QTAWS_EXPORT DeleteCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
+class DeleteCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

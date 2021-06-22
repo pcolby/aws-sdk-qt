@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class StartApplicationRequest;
 
-class QTAWS_EXPORT StartApplicationRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
+class StartApplicationRequestPrivate : public KinesisAnalyticsV2RequestPrivate {
 
 public:
     StartApplicationRequestPrivate(const KinesisAnalyticsV2Request::Action action,

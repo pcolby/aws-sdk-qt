@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListRoutingProfileQueuesRequest;
 
-class QTAWS_EXPORT ListRoutingProfileQueuesRequestPrivate : public ConnectRequestPrivate {
+class ListRoutingProfileQueuesRequestPrivate : public ConnectRequestPrivate {
 
 public:
     ListRoutingProfileQueuesRequestPrivate(const ConnectRequest::Action action,

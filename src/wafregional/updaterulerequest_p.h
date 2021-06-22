@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateRuleRequest;
 
-class QTAWS_EXPORT UpdateRuleRequestPrivate : public WAFRegionalRequestPrivate {
+class UpdateRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateRuleRequestPrivate(const WAFRegionalRequest::Action action,

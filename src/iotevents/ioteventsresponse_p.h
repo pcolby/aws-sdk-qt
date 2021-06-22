@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class IoTEventsResponse;
 
-class QTAWS_EXPORT IoTEventsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTEventsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

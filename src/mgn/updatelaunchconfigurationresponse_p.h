@@ -27,7 +27,7 @@ namespace mgn {
 
 class UpdateLaunchConfigurationResponse;
 
-class QTAWS_EXPORT UpdateLaunchConfigurationResponsePrivate : public mgnResponsePrivate {
+class UpdateLaunchConfigurationResponsePrivate : public mgnResponsePrivate {
 
 public:
 

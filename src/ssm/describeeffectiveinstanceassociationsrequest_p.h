@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeEffectiveInstanceAssociationsRequest;
 
-class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsRequestPrivate : public SsmRequestPrivate {
+class DescribeEffectiveInstanceAssociationsRequestPrivate : public SsmRequestPrivate {
 
 public:
     DescribeEffectiveInstanceAssociationsRequestPrivate(const SsmRequest::Action action,

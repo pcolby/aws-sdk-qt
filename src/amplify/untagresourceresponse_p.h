@@ -27,7 +27,7 @@ namespace Amplify {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public AmplifyResponsePrivate {
+class UntagResourceResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

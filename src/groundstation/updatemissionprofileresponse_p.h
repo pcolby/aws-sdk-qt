@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class UpdateMissionProfileResponse;
 
-class QTAWS_EXPORT UpdateMissionProfileResponsePrivate : public GroundStationResponsePrivate {
+class UpdateMissionProfileResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 

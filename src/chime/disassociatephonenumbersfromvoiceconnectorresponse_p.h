@@ -27,7 +27,7 @@ namespace Chime {
 
 class DisassociatePhoneNumbersFromVoiceConnectorResponse;
 
-class QTAWS_EXPORT DisassociatePhoneNumbersFromVoiceConnectorResponsePrivate : public ChimeResponsePrivate {
+class DisassociatePhoneNumbersFromVoiceConnectorResponsePrivate : public ChimeResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class CreateRealtimeEndpointResponse;
 
-class QTAWS_EXPORT CreateRealtimeEndpointResponsePrivate : public MachineLearningResponsePrivate {
+class CreateRealtimeEndpointResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 

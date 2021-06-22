@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class DeleteProfilingGroupResponse;
 
-class QTAWS_EXPORT DeleteProfilingGroupResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class DeleteProfilingGroupResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

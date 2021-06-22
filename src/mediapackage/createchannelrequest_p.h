@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class CreateChannelRequest;
 
-class QTAWS_EXPORT CreateChannelRequestPrivate : public MediaPackageRequestPrivate {
+class CreateChannelRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     CreateChannelRequestPrivate(const MediaPackageRequest::Action action,

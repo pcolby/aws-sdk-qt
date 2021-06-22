@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteConfigurationSetRequest;
 
-class QTAWS_EXPORT DeleteConfigurationSetRequestPrivate : public SesRequestPrivate {
+class DeleteConfigurationSetRequestPrivate : public SesRequestPrivate {
 
 public:
     DeleteConfigurationSetRequestPrivate(const SesRequest::Action action,

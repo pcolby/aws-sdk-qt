@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class UpdateActionTargetRequest;
 
-class QTAWS_EXPORT UpdateActionTargetRequestPrivate : public SecurityHubRequestPrivate {
+class UpdateActionTargetRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     UpdateActionTargetRequestPrivate(const SecurityHubRequest::Action action,

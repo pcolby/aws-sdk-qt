@@ -27,7 +27,7 @@ namespace Redshift {
 
 class ModifyClusterSubnetGroupResponse;
 
-class QTAWS_EXPORT ModifyClusterSubnetGroupResponsePrivate : public RedshiftResponsePrivate {
+class ModifyClusterSubnetGroupResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

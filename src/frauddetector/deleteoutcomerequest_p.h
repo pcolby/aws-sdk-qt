@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class DeleteOutcomeRequest;
 
-class QTAWS_EXPORT DeleteOutcomeRequestPrivate : public FraudDetectorRequestPrivate {
+class DeleteOutcomeRequestPrivate : public FraudDetectorRequestPrivate {
 
 public:
     DeleteOutcomeRequestPrivate(const FraudDetectorRequest::Action action,

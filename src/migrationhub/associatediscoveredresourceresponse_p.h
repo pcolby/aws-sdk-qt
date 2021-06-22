@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class AssociateDiscoveredResourceResponse;
 
-class QTAWS_EXPORT AssociateDiscoveredResourceResponsePrivate : public MigrationHubResponsePrivate {
+class AssociateDiscoveredResourceResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 

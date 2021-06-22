@@ -28,7 +28,7 @@ namespace QLDB {
 
 class GetBlockRequest;
 
-class QTAWS_EXPORT GetBlockRequestPrivate : public QldbRequestPrivate {
+class GetBlockRequestPrivate : public QldbRequestPrivate {
 
 public:
     GetBlockRequestPrivate(const QldbRequest::Action action,

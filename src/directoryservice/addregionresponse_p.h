@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class AddRegionResponse;
 
-class QTAWS_EXPORT AddRegionResponsePrivate : public DirectoryServiceResponsePrivate {
+class AddRegionResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

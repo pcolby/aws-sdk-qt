@@ -28,7 +28,7 @@ namespace Lambda {
 
 class PutFunctionCodeSigningConfigRequest;
 
-class QTAWS_EXPORT PutFunctionCodeSigningConfigRequestPrivate : public LambdaRequestPrivate {
+class PutFunctionCodeSigningConfigRequestPrivate : public LambdaRequestPrivate {
 
 public:
     PutFunctionCodeSigningConfigRequestPrivate(const LambdaRequest::Action action,

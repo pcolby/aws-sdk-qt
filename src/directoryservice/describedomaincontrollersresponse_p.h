@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeDomainControllersResponse;
 
-class QTAWS_EXPORT DescribeDomainControllersResponsePrivate : public DirectoryServiceResponsePrivate {
+class DescribeDomainControllersResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

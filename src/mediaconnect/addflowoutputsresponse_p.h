@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class AddFlowOutputsResponse;
 
-class QTAWS_EXPORT AddFlowOutputsResponsePrivate : public MediaConnectResponsePrivate {
+class AddFlowOutputsResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 

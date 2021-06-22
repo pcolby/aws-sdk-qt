@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteContainerImageResponse;
 
-class QTAWS_EXPORT DeleteContainerImageResponsePrivate : public LightsailResponsePrivate {
+class DeleteContainerImageResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

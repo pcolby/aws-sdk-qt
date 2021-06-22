@@ -28,7 +28,7 @@ namespace SWF {
 
 class TerminateWorkflowExecutionRequest;
 
-class QTAWS_EXPORT TerminateWorkflowExecutionRequestPrivate : public SwfRequestPrivate {
+class TerminateWorkflowExecutionRequestPrivate : public SwfRequestPrivate {
 
 public:
     TerminateWorkflowExecutionRequestPrivate(const SwfRequest::Action action,

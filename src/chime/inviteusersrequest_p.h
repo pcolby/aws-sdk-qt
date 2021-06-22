@@ -28,7 +28,7 @@ namespace Chime {
 
 class InviteUsersRequest;
 
-class QTAWS_EXPORT InviteUsersRequestPrivate : public ChimeRequestPrivate {
+class InviteUsersRequestPrivate : public ChimeRequestPrivate {
 
 public:
     InviteUsersRequestPrivate(const ChimeRequest::Action action,

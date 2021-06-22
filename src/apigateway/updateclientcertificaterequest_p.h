@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateClientCertificateRequest;
 
-class QTAWS_EXPORT UpdateClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
+class UpdateClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UpdateClientCertificateRequestPrivate(const APIGatewayRequest::Action action,

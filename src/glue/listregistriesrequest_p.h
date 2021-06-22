@@ -28,7 +28,7 @@ namespace Glue {
 
 class ListRegistriesRequest;
 
-class QTAWS_EXPORT ListRegistriesRequestPrivate : public GlueRequestPrivate {
+class ListRegistriesRequestPrivate : public GlueRequestPrivate {
 
 public:
     ListRegistriesRequestPrivate(const GlueRequest::Action action,

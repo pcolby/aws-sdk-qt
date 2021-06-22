@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class DeleteConfigResponse;
 
-class QTAWS_EXPORT DeleteConfigResponsePrivate : public GroundStationResponsePrivate {
+class DeleteConfigResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 

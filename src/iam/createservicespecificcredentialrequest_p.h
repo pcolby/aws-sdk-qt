@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateServiceSpecificCredentialRequest;
 
-class QTAWS_EXPORT CreateServiceSpecificCredentialRequestPrivate : public IamRequestPrivate {
+class CreateServiceSpecificCredentialRequestPrivate : public IamRequestPrivate {
 
 public:
     CreateServiceSpecificCredentialRequestPrivate(const IamRequest::Action action,

@@ -28,7 +28,7 @@ namespace Outposts {
 
 class DeleteSiteRequest;
 
-class QTAWS_EXPORT DeleteSiteRequestPrivate : public OutpostsRequestPrivate {
+class DeleteSiteRequestPrivate : public OutpostsRequestPrivate {
 
 public:
     DeleteSiteRequestPrivate(const OutpostsRequest::Action action,

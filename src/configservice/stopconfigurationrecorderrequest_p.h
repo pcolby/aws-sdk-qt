@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class StopConfigurationRecorderRequest;
 
-class QTAWS_EXPORT StopConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
+class StopConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     StopConfigurationRecorderRequestPrivate(const ConfigServiceRequest::Action action,

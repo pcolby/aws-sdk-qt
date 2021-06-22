@@ -27,7 +27,7 @@ namespace LocationService {
 
 class GetMapSpritesResponse;
 
-class QTAWS_EXPORT GetMapSpritesResponsePrivate : public LocationServiceResponsePrivate {
+class GetMapSpritesResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class ListStreamsRequest;
 
-class QTAWS_EXPORT ListStreamsRequestPrivate : public KinesisVideoRequestPrivate {
+class ListStreamsRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     ListStreamsRequestPrivate(const KinesisVideoRequest::Action action,

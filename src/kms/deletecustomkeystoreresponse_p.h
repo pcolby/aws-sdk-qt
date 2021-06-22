@@ -27,7 +27,7 @@ namespace KMS {
 
 class DeleteCustomKeyStoreResponse;
 
-class QTAWS_EXPORT DeleteCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
+class DeleteCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
 
 public:
 

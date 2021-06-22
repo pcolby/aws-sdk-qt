@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class PutRetentionConfigurationRequest;
 
-class QTAWS_EXPORT PutRetentionConfigurationRequestPrivate : public ConfigServiceRequestPrivate {
+class PutRetentionConfigurationRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     PutRetentionConfigurationRequestPrivate(const ConfigServiceRequest::Action action,

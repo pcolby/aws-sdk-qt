@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateTrafficMirrorFilterRuleResponse;
 
-class QTAWS_EXPORT CreateTrafficMirrorFilterRuleResponsePrivate : public Ec2ResponsePrivate {
+class CreateTrafficMirrorFilterRuleResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace DAX {
 
 class DeleteClusterRequest;
 
-class QTAWS_EXPORT DeleteClusterRequestPrivate : public DaxRequestPrivate {
+class DeleteClusterRequestPrivate : public DaxRequestPrivate {
 
 public:
     DeleteClusterRequestPrivate(const DaxRequest::Action action,

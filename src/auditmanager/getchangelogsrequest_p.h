@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetChangeLogsRequest;
 
-class QTAWS_EXPORT GetChangeLogsRequestPrivate : public AuditManagerRequestPrivate {
+class GetChangeLogsRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     GetChangeLogsRequestPrivate(const AuditManagerRequest::Action action,

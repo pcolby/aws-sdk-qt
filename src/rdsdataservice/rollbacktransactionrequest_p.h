@@ -28,7 +28,7 @@ namespace RDSDataService {
 
 class RollbackTransactionRequest;
 
-class QTAWS_EXPORT RollbackTransactionRequestPrivate : public RDSDataServiceRequestPrivate {
+class RollbackTransactionRequestPrivate : public RDSDataServiceRequestPrivate {
 
 public:
     RollbackTransactionRequestPrivate(const RDSDataServiceRequest::Action action,

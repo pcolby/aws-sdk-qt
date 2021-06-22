@@ -28,7 +28,7 @@ namespace Organizations {
 
 class RemoveAccountFromOrganizationRequest;
 
-class QTAWS_EXPORT RemoveAccountFromOrganizationRequestPrivate : public OrganizationsRequestPrivate {
+class RemoveAccountFromOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     RemoveAccountFromOrganizationRequestPrivate(const OrganizationsRequest::Action action,

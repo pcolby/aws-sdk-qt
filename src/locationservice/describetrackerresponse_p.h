@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DescribeTrackerResponse;
 
-class QTAWS_EXPORT DescribeTrackerResponsePrivate : public LocationServiceResponsePrivate {
+class DescribeTrackerResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 

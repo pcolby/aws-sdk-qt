@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
+class DescribeTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const ElasticLoadBalancingRequest::Action action,

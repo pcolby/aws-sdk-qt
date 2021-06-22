@@ -27,7 +27,7 @@ namespace kendra {
 
 class kendraResponse;
 
-class QTAWS_EXPORT kendraResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class kendraResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace EKS {
 
 class EksClient;
 
-class QTAWS_EXPORT EksClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EksClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     EksClientPrivate(EksClient * const q);

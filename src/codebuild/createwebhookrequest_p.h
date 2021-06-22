@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class CreateWebhookRequest;
 
-class QTAWS_EXPORT CreateWebhookRequestPrivate : public CodeBuildRequestPrivate {
+class CreateWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     CreateWebhookRequestPrivate(const CodeBuildRequest::Action action,

@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateOpenIDConnectProviderRequest;
 
-class QTAWS_EXPORT CreateOpenIDConnectProviderRequestPrivate : public IamRequestPrivate {
+class CreateOpenIDConnectProviderRequestPrivate : public IamRequestPrivate {
 
 public:
     CreateOpenIDConnectProviderRequestPrivate(const IamRequest::Action action,

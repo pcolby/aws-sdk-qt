@@ -27,7 +27,7 @@ namespace MediaStoreData {
 
 class GetObjectResponse;
 
-class QTAWS_EXPORT GetObjectResponsePrivate : public MediaStoreDataResponsePrivate {
+class GetObjectResponsePrivate : public MediaStoreDataResponsePrivate {
 
 public:
 

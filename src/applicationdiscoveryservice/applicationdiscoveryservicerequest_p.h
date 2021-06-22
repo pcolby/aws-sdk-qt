@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceRequest;
 
-class QTAWS_EXPORT ApplicationDiscoveryServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApplicationDiscoveryServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApplicationDiscoveryServiceRequest::Action action; ///< ApplicationDiscoveryService action to be performed.

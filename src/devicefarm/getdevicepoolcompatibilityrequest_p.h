@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetDevicePoolCompatibilityRequest;
 
-class QTAWS_EXPORT GetDevicePoolCompatibilityRequestPrivate : public DeviceFarmRequestPrivate {
+class GetDevicePoolCompatibilityRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetDevicePoolCompatibilityRequestPrivate(const DeviceFarmRequest::Action action,

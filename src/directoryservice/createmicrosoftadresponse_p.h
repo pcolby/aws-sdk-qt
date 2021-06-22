@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class CreateMicrosoftADResponse;
 
-class QTAWS_EXPORT CreateMicrosoftADResponsePrivate : public DirectoryServiceResponsePrivate {
+class CreateMicrosoftADResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

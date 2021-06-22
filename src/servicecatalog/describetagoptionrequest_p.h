@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeTagOptionRequest;
 
-class QTAWS_EXPORT DescribeTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
+class DescribeTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeTagOptionRequestPrivate(const ServiceCatalogRequest::Action action,

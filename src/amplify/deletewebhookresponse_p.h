@@ -27,7 +27,7 @@ namespace Amplify {
 
 class DeleteWebhookResponse;
 
-class QTAWS_EXPORT DeleteWebhookResponsePrivate : public AmplifyResponsePrivate {
+class DeleteWebhookResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

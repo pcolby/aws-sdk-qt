@@ -28,7 +28,7 @@ namespace Connect {
 
 class AssociateRoutingProfileQueuesRequest;
 
-class QTAWS_EXPORT AssociateRoutingProfileQueuesRequestPrivate : public ConnectRequestPrivate {
+class AssociateRoutingProfileQueuesRequestPrivate : public ConnectRequestPrivate {
 
 public:
     AssociateRoutingProfileQueuesRequestPrivate(const ConnectRequest::Action action,

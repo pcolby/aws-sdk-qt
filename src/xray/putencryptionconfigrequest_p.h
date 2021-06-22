@@ -28,7 +28,7 @@ namespace XRay {
 
 class PutEncryptionConfigRequest;
 
-class QTAWS_EXPORT PutEncryptionConfigRequestPrivate : public XRayRequestPrivate {
+class PutEncryptionConfigRequestPrivate : public XRayRequestPrivate {
 
 public:
     PutEncryptionConfigRequestPrivate(const XRayRequest::Action action,

@@ -27,7 +27,7 @@ namespace Amplify {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public AmplifyResponsePrivate {
+class TagResourceResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

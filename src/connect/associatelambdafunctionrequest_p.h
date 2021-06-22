@@ -28,7 +28,7 @@ namespace Connect {
 
 class AssociateLambdaFunctionRequest;
 
-class QTAWS_EXPORT AssociateLambdaFunctionRequestPrivate : public ConnectRequestPrivate {
+class AssociateLambdaFunctionRequestPrivate : public ConnectRequestPrivate {
 
 public:
     AssociateLambdaFunctionRequestPrivate(const ConnectRequest::Action action,

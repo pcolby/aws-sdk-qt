@@ -28,7 +28,7 @@ namespace IAM {
 
 class UntagMFADeviceRequest;
 
-class QTAWS_EXPORT UntagMFADeviceRequestPrivate : public IamRequestPrivate {
+class UntagMFADeviceRequestPrivate : public IamRequestPrivate {
 
 public:
     UntagMFADeviceRequestPrivate(const IamRequest::Action action,

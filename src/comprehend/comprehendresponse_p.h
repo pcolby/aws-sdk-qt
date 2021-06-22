@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class ComprehendResponse;
 
-class QTAWS_EXPORT ComprehendResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ComprehendResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

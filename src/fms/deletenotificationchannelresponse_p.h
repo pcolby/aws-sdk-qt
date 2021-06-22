@@ -27,7 +27,7 @@ namespace FMS {
 
 class DeleteNotificationChannelResponse;
 
-class QTAWS_EXPORT DeleteNotificationChannelResponsePrivate : public FmsResponsePrivate {
+class DeleteNotificationChannelResponsePrivate : public FmsResponsePrivate {
 
 public:
 

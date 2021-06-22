@@ -27,7 +27,7 @@ namespace Connect {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public ConnectResponsePrivate {
+class UntagResourceResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

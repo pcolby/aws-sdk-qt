@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DeleteBranchResponse;
 
-class QTAWS_EXPORT DeleteBranchResponsePrivate : public CodeCommitResponsePrivate {
+class DeleteBranchResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 

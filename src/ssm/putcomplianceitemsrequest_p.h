@@ -28,7 +28,7 @@ namespace SSM {
 
 class PutComplianceItemsRequest;
 
-class QTAWS_EXPORT PutComplianceItemsRequestPrivate : public SsmRequestPrivate {
+class PutComplianceItemsRequestPrivate : public SsmRequestPrivate {
 
 public:
     PutComplianceItemsRequestPrivate(const SsmRequest::Action action,

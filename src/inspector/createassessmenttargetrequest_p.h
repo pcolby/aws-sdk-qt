@@ -28,7 +28,7 @@ namespace Inspector {
 
 class CreateAssessmentTargetRequest;
 
-class QTAWS_EXPORT CreateAssessmentTargetRequestPrivate : public InspectorRequestPrivate {
+class CreateAssessmentTargetRequestPrivate : public InspectorRequestPrivate {
 
 public:
     CreateAssessmentTargetRequestPrivate(const InspectorRequest::Action action,

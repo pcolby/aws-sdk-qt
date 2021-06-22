@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteConfigurationSetTrackingOptionsRequest;
 
-class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsRequestPrivate : public SesRequestPrivate {
+class DeleteConfigurationSetTrackingOptionsRequestPrivate : public SesRequestPrivate {
 
 public:
     DeleteConfigurationSetTrackingOptionsRequestPrivate(const SesRequest::Action action,

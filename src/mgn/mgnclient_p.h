@@ -29,7 +29,7 @@ namespace mgn {
 
 class mgnClient;
 
-class QTAWS_EXPORT mgnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class mgnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     mgnClientPrivate(mgnClient * const q);

@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateAliasRequest;
 
-class QTAWS_EXPORT UpdateAliasRequestPrivate : public GameLiftRequestPrivate {
+class UpdateAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateAliasRequestPrivate(const GameLiftRequest::Action action,

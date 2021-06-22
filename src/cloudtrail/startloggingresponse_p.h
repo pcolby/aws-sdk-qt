@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class StartLoggingResponse;
 
-class QTAWS_EXPORT StartLoggingResponsePrivate : public CloudTrailResponsePrivate {
+class StartLoggingResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 

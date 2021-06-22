@@ -27,7 +27,7 @@ namespace Health {
 
 class DisableHealthServiceAccessForOrganizationResponse;
 
-class QTAWS_EXPORT DisableHealthServiceAccessForOrganizationResponsePrivate : public HealthResponsePrivate {
+class DisableHealthServiceAccessForOrganizationResponsePrivate : public HealthResponsePrivate {
 
 public:
 

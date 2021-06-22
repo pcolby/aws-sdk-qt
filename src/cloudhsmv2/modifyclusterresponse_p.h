@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class ModifyClusterResponse;
 
-class QTAWS_EXPORT ModifyClusterResponsePrivate : public CloudHSMV2ResponsePrivate {
+class ModifyClusterResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 

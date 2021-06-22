@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class CreateDeploymentRequest;
 
-class QTAWS_EXPORT CreateDeploymentRequestPrivate : public GreengrassV2RequestPrivate {
+class CreateDeploymentRequestPrivate : public GreengrassV2RequestPrivate {
 
 public:
     CreateDeploymentRequestPrivate(const GreengrassV2Request::Action action,

@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteVoiceConnectorRequest;
 
-class QTAWS_EXPORT DeleteVoiceConnectorRequestPrivate : public ChimeRequestPrivate {
+class DeleteVoiceConnectorRequestPrivate : public ChimeRequestPrivate {
 
 public:
     DeleteVoiceConnectorRequestPrivate(const ChimeRequest::Action action,

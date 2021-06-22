@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteDeliveryChannelRequest;
 
-class QTAWS_EXPORT DeleteDeliveryChannelRequestPrivate : public ConfigServiceRequestPrivate {
+class DeleteDeliveryChannelRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteDeliveryChannelRequestPrivate(const ConfigServiceRequest::Action action,

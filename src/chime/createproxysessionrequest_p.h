@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateProxySessionRequest;
 
-class QTAWS_EXPORT CreateProxySessionRequestPrivate : public ChimeRequestPrivate {
+class CreateProxySessionRequestPrivate : public ChimeRequestPrivate {
 
 public:
     CreateProxySessionRequestPrivate(const ChimeRequest::Action action,

@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class UpdateRulesOfIpGroupRequest;
 
-class QTAWS_EXPORT UpdateRulesOfIpGroupRequestPrivate : public WorkSpacesRequestPrivate {
+class UpdateRulesOfIpGroupRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     UpdateRulesOfIpGroupRequestPrivate(const WorkSpacesRequest::Action action,

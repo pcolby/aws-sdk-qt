@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteCarrierGatewayRequest;
 
-class QTAWS_EXPORT DeleteCarrierGatewayRequestPrivate : public Ec2RequestPrivate {
+class DeleteCarrierGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteCarrierGatewayRequestPrivate(const Ec2Request::Action action,

@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 
 class LexModelBuildingServiceClient;
 
-class QTAWS_EXPORT LexModelBuildingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LexModelBuildingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q);

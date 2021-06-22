@@ -27,7 +27,7 @@ namespace Transfer {
 
 class TransferResponse;
 
-class QTAWS_EXPORT TransferResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TransferResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

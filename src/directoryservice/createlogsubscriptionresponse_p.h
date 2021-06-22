@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class CreateLogSubscriptionResponse;
 
-class QTAWS_EXPORT CreateLogSubscriptionResponsePrivate : public DirectoryServiceResponsePrivate {
+class CreateLogSubscriptionResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

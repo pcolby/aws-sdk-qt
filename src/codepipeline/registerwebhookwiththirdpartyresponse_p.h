@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class RegisterWebhookWithThirdPartyResponse;
 
-class QTAWS_EXPORT RegisterWebhookWithThirdPartyResponsePrivate : public CodePipelineResponsePrivate {
+class RegisterWebhookWithThirdPartyResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 

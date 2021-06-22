@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class DescribeBucketsRequest;
 
-class QTAWS_EXPORT DescribeBucketsRequestPrivate : public Macie2RequestPrivate {
+class DescribeBucketsRequestPrivate : public Macie2RequestPrivate {
 
 public:
     DescribeBucketsRequestPrivate(const Macie2Request::Action action,

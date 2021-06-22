@@ -28,7 +28,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class SageMakerFeatureStoreRuntimeRequest;
 
-class QTAWS_EXPORT SageMakerFeatureStoreRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SageMakerFeatureStoreRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SageMakerFeatureStoreRuntimeRequest::Action action; ///< SageMakerFeatureStoreRuntime action to be performed.

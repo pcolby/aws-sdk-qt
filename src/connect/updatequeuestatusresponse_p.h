@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateQueueStatusResponse;
 
-class QTAWS_EXPORT UpdateQueueStatusResponsePrivate : public ConnectResponsePrivate {
+class UpdateQueueStatusResponsePrivate : public ConnectResponsePrivate {
 
 public:
 

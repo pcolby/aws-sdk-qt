@@ -28,7 +28,7 @@ namespace XRay {
 
 class XRayRequest;
 
-class QTAWS_EXPORT XRayRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class XRayRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     XRayRequest::Action action; ///< XRay action to be performed.

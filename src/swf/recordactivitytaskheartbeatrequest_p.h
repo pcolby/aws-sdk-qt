@@ -28,7 +28,7 @@ namespace SWF {
 
 class RecordActivityTaskHeartbeatRequest;
 
-class QTAWS_EXPORT RecordActivityTaskHeartbeatRequestPrivate : public SwfRequestPrivate {
+class RecordActivityTaskHeartbeatRequestPrivate : public SwfRequestPrivate {
 
 public:
     RecordActivityTaskHeartbeatRequestPrivate(const SwfRequest::Action action,

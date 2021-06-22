@@ -27,7 +27,7 @@ namespace Route53 {
 
 class ListHealthChecksResponse;
 
-class QTAWS_EXPORT ListHealthChecksResponsePrivate : public Route53ResponsePrivate {
+class ListHealthChecksResponsePrivate : public Route53ResponsePrivate {
 
 public:
 

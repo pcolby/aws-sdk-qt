@@ -28,7 +28,7 @@ namespace EMR {
 
 class GetBlockPublicAccessConfigurationRequest;
 
-class QTAWS_EXPORT GetBlockPublicAccessConfigurationRequestPrivate : public EmrRequestPrivate {
+class GetBlockPublicAccessConfigurationRequestPrivate : public EmrRequestPrivate {
 
 public:
     GetBlockPublicAccessConfigurationRequestPrivate(const EmrRequest::Action action,

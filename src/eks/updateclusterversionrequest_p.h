@@ -28,7 +28,7 @@ namespace EKS {
 
 class UpdateClusterVersionRequest;
 
-class QTAWS_EXPORT UpdateClusterVersionRequestPrivate : public EksRequestPrivate {
+class UpdateClusterVersionRequestPrivate : public EksRequestPrivate {
 
 public:
     UpdateClusterVersionRequestPrivate(const EksRequest::Action action,

@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class CreateGatewayRouteResponse;
 
-class QTAWS_EXPORT CreateGatewayRouteResponsePrivate : public AppMeshResponsePrivate {
+class CreateGatewayRouteResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 

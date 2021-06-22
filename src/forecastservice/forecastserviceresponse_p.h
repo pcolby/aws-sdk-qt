@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class ForecastServiceResponse;
 
-class QTAWS_EXPORT ForecastServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ForecastServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

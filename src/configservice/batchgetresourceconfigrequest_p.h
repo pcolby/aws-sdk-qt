@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class BatchGetResourceConfigRequest;
 
-class QTAWS_EXPORT BatchGetResourceConfigRequestPrivate : public ConfigServiceRequestPrivate {
+class BatchGetResourceConfigRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     BatchGetResourceConfigRequestPrivate(const ConfigServiceRequest::Action action,

@@ -29,7 +29,7 @@ namespace AutoScalingPlans {
 
 class AutoScalingPlansClient;
 
-class QTAWS_EXPORT AutoScalingPlansClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AutoScalingPlansClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q);

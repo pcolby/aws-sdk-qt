@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class DeleteModelRequest;
 
-class QTAWS_EXPORT DeleteModelRequestPrivate : public LookoutEquipmentRequestPrivate {
+class DeleteModelRequestPrivate : public LookoutEquipmentRequestPrivate {
 
 public:
     DeleteModelRequestPrivate(const LookoutEquipmentRequest::Action action,

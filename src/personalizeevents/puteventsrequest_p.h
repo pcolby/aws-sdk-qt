@@ -28,7 +28,7 @@ namespace PersonalizeEvents {
 
 class PutEventsRequest;
 
-class QTAWS_EXPORT PutEventsRequestPrivate : public PersonalizeEventsRequestPrivate {
+class PutEventsRequestPrivate : public PersonalizeEventsRequestPrivate {
 
 public:
     PutEventsRequestPrivate(const PersonalizeEventsRequest::Action action,

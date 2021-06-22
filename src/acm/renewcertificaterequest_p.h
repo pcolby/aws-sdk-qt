@@ -28,7 +28,7 @@ namespace ACM {
 
 class RenewCertificateRequest;
 
-class QTAWS_EXPORT RenewCertificateRequestPrivate : public AcmRequestPrivate {
+class RenewCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
     RenewCertificateRequestPrivate(const AcmRequest::Action action,

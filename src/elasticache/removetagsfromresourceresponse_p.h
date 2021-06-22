@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class RemoveTagsFromResourceResponse;
 
-class QTAWS_EXPORT RemoveTagsFromResourceResponsePrivate : public ElastiCacheResponsePrivate {
+class RemoveTagsFromResourceResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 

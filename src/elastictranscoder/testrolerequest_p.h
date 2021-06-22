@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class TestRoleRequest;
 
-class QTAWS_EXPORT TestRoleRequestPrivate : public ElasticTranscoderRequestPrivate {
+class TestRoleRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     TestRoleRequestPrivate(const ElasticTranscoderRequest::Action action,

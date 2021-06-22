@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetProtectionStatusResponse;
 
-class QTAWS_EXPORT GetProtectionStatusResponsePrivate : public FmsResponsePrivate {
+class GetProtectionStatusResponsePrivate : public FmsResponsePrivate {
 
 public:
 

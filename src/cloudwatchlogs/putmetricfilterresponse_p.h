@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class PutMetricFilterResponse;
 
-class QTAWS_EXPORT PutMetricFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
+class PutMetricFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 

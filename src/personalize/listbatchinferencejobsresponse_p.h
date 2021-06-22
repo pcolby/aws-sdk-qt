@@ -27,7 +27,7 @@ namespace Personalize {
 
 class ListBatchInferenceJobsResponse;
 
-class QTAWS_EXPORT ListBatchInferenceJobsResponsePrivate : public PersonalizeResponsePrivate {
+class ListBatchInferenceJobsResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

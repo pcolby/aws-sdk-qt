@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class InviteMembersResponse;
 
-class QTAWS_EXPORT InviteMembersResponsePrivate : public GuardDutyResponsePrivate {
+class InviteMembersResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 

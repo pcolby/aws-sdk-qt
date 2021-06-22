@@ -28,7 +28,7 @@ namespace EC2InstanceConnect {
 
 class EC2InstanceConnectRequest;
 
-class QTAWS_EXPORT EC2InstanceConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EC2InstanceConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EC2InstanceConnectRequest::Action action; ///< EC2InstanceConnect action to be performed.

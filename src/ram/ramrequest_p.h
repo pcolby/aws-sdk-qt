@@ -28,7 +28,7 @@ namespace RAM {
 
 class RamRequest;
 
-class QTAWS_EXPORT RamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RamRequest::Action action; ///< RAM action to be performed.

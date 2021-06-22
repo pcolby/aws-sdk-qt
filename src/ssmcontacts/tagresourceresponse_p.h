@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class TagResourceResponse;
 
-class QTAWS_EXPORT TagResourceResponsePrivate : public SSMContactsResponsePrivate {
+class TagResourceResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 

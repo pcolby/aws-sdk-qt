@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DisassociateFileSystemRequest;
 
-class QTAWS_EXPORT DisassociateFileSystemRequestPrivate : public StorageGatewayRequestPrivate {
+class DisassociateFileSystemRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DisassociateFileSystemRequestPrivate(const StorageGatewayRequest::Action action,

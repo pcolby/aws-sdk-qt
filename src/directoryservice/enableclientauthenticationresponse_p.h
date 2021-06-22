@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class EnableClientAuthenticationResponse;
 
-class QTAWS_EXPORT EnableClientAuthenticationResponsePrivate : public DirectoryServiceResponsePrivate {
+class EnableClientAuthenticationResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 

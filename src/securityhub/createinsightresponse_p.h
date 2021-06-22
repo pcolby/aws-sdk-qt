@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class CreateInsightResponse;
 
-class QTAWS_EXPORT CreateInsightResponsePrivate : public SecurityHubResponsePrivate {
+class CreateInsightResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeletePushTemplateResponse;
 
-class QTAWS_EXPORT DeletePushTemplateResponsePrivate : public PinpointResponsePrivate {
+class DeletePushTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 

@@ -29,7 +29,7 @@ namespace SES {
 
 class SesClient;
 
-class QTAWS_EXPORT SesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     SesClientPrivate(SesClient * const q);

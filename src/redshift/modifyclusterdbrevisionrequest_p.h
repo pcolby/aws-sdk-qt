@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyClusterDbRevisionRequest;
 
-class QTAWS_EXPORT ModifyClusterDbRevisionRequestPrivate : public RedshiftRequestPrivate {
+class ModifyClusterDbRevisionRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifyClusterDbRevisionRequestPrivate(const RedshiftRequest::Action action,

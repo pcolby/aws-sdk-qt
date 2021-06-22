@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteDhcpOptionsResponse;
 
-class QTAWS_EXPORT DeleteDhcpOptionsResponsePrivate : public Ec2ResponsePrivate {
+class DeleteDhcpOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

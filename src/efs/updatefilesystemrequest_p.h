@@ -28,7 +28,7 @@ namespace EFS {
 
 class UpdateFileSystemRequest;
 
-class QTAWS_EXPORT UpdateFileSystemRequestPrivate : public EfsRequestPrivate {
+class UpdateFileSystemRequestPrivate : public EfsRequestPrivate {
 
 public:
     UpdateFileSystemRequestPrivate(const EfsRequest::Action action,

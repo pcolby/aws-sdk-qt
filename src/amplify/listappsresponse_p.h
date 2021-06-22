@@ -27,7 +27,7 @@ namespace Amplify {
 
 class ListAppsResponse;
 
-class QTAWS_EXPORT ListAppsResponsePrivate : public AmplifyResponsePrivate {
+class ListAppsResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

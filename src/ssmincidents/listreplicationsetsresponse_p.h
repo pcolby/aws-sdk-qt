@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class ListReplicationSetsResponse;
 
-class QTAWS_EXPORT ListReplicationSetsResponsePrivate : public SSMIncidentsResponsePrivate {
+class ListReplicationSetsResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

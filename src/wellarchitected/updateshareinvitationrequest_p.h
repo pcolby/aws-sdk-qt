@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class UpdateShareInvitationRequest;
 
-class QTAWS_EXPORT UpdateShareInvitationRequestPrivate : public WellArchitectedRequestPrivate {
+class UpdateShareInvitationRequestPrivate : public WellArchitectedRequestPrivate {
 
 public:
     UpdateShareInvitationRequestPrivate(const WellArchitectedRequest::Action action,

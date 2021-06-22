@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeregisterDevicesRequest;
 
-class QTAWS_EXPORT DeregisterDevicesRequestPrivate : public SageMakerRequestPrivate {
+class DeregisterDevicesRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeregisterDevicesRequestPrivate(const SageMakerRequest::Action action,

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeByoipCidrsRequest;
 
-class QTAWS_EXPORT DescribeByoipCidrsRequestPrivate : public Ec2RequestPrivate {
+class DescribeByoipCidrsRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DescribeByoipCidrsRequestPrivate(const Ec2Request::Action action,

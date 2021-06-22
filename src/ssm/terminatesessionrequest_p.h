@@ -28,7 +28,7 @@ namespace SSM {
 
 class TerminateSessionRequest;
 
-class QTAWS_EXPORT TerminateSessionRequestPrivate : public SsmRequestPrivate {
+class TerminateSessionRequestPrivate : public SsmRequestPrivate {
 
 public:
     TerminateSessionRequestPrivate(const SsmRequest::Action action,

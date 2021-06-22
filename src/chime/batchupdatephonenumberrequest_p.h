@@ -28,7 +28,7 @@ namespace Chime {
 
 class BatchUpdatePhoneNumberRequest;
 
-class QTAWS_EXPORT BatchUpdatePhoneNumberRequestPrivate : public ChimeRequestPrivate {
+class BatchUpdatePhoneNumberRequestPrivate : public ChimeRequestPrivate {
 
 public:
     BatchUpdatePhoneNumberRequestPrivate(const ChimeRequest::Action action,

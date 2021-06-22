@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetReputationMetricsEnabledRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SesRequestPrivate {
+class UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SesRequestPrivate {
 
 public:
     UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SesRequest::Action action,

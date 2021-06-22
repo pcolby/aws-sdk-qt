@@ -28,7 +28,7 @@ namespace S3Outposts {
 
 class S3OutpostsRequest;
 
-class QTAWS_EXPORT S3OutpostsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class S3OutpostsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     S3OutpostsRequest::Action action; ///< S3Outposts action to be performed.

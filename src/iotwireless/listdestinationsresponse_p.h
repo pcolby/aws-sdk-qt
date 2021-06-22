@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class ListDestinationsResponse;
 
-class QTAWS_EXPORT ListDestinationsResponsePrivate : public IoTWirelessResponsePrivate {
+class ListDestinationsResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 

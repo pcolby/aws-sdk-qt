@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class DeleteLFTagRequest;
 
-class QTAWS_EXPORT DeleteLFTagRequestPrivate : public LakeFormationRequestPrivate {
+class DeleteLFTagRequestPrivate : public LakeFormationRequestPrivate {
 
 public:
     DeleteLFTagRequestPrivate(const LakeFormationRequest::Action action,

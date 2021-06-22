@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeTrafficMirrorTargetsResponse;
 
-class QTAWS_EXPORT DescribeTrafficMirrorTargetsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeTrafficMirrorTargetsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetObjectTorrentResponse;
 
-class QTAWS_EXPORT GetObjectTorrentResponsePrivate : public S3ResponsePrivate {
+class GetObjectTorrentResponsePrivate : public S3ResponsePrivate {
 
 public:
 

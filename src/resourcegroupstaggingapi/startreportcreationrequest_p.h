@@ -28,7 +28,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class StartReportCreationRequest;
 
-class QTAWS_EXPORT StartReportCreationRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
+class StartReportCreationRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
 
 public:
     StartReportCreationRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action,

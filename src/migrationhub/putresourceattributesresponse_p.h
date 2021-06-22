@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class PutResourceAttributesResponse;
 
-class QTAWS_EXPORT PutResourceAttributesResponsePrivate : public MigrationHubResponsePrivate {
+class PutResourceAttributesResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 

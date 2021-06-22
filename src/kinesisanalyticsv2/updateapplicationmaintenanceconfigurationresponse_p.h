@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class UpdateApplicationMaintenanceConfigurationResponse;
 
-class QTAWS_EXPORT UpdateApplicationMaintenanceConfigurationResponsePrivate : public KinesisAnalyticsV2ResponsePrivate {
+class UpdateApplicationMaintenanceConfigurationResponsePrivate : public KinesisAnalyticsV2ResponsePrivate {
 
 public:
 

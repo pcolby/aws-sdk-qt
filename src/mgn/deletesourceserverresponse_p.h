@@ -27,7 +27,7 @@ namespace mgn {
 
 class DeleteSourceServerResponse;
 
-class QTAWS_EXPORT DeleteSourceServerResponsePrivate : public mgnResponsePrivate {
+class DeleteSourceServerResponsePrivate : public mgnResponsePrivate {
 
 public:
 

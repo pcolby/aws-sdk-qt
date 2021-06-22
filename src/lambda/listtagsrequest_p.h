@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public LambdaRequestPrivate {
+class ListTagsRequestPrivate : public LambdaRequestPrivate {
 
 public:
     ListTagsRequestPrivate(const LambdaRequest::Action action,

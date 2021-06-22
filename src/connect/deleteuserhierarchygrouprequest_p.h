@@ -28,7 +28,7 @@ namespace Connect {
 
 class DeleteUserHierarchyGroupRequest;
 
-class QTAWS_EXPORT DeleteUserHierarchyGroupRequestPrivate : public ConnectRequestPrivate {
+class DeleteUserHierarchyGroupRequestPrivate : public ConnectRequestPrivate {
 
 public:
     DeleteUserHierarchyGroupRequestPrivate(const ConnectRequest::Action action,

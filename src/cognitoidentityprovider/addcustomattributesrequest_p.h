@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AddCustomAttributesRequest;
 
-class QTAWS_EXPORT AddCustomAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class AddCustomAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AddCustomAttributesRequestPrivate(const CognitoIdentityProviderRequest::Action action,

@@ -29,7 +29,7 @@ namespace Appflow {
 
 class AppflowClient;
 
-class QTAWS_EXPORT AppflowClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppflowClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     AppflowClientPrivate(AppflowClient * const q);

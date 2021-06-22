@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public OrganizationsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const OrganizationsRequest::Action action,

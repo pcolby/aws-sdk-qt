@@ -27,7 +27,7 @@ namespace Personalize {
 
 class ListDatasetGroupsResponse;
 
-class QTAWS_EXPORT ListDatasetGroupsResponsePrivate : public PersonalizeResponsePrivate {
+class ListDatasetGroupsResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 

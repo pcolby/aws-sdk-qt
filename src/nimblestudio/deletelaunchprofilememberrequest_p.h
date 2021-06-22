@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class DeleteLaunchProfileMemberRequest;
 
-class QTAWS_EXPORT DeleteLaunchProfileMemberRequestPrivate : public NimbleStudioRequestPrivate {
+class DeleteLaunchProfileMemberRequestPrivate : public NimbleStudioRequestPrivate {
 
 public:
     DeleteLaunchProfileMemberRequestPrivate(const NimbleStudioRequest::Action action,

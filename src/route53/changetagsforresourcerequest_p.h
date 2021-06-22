@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ChangeTagsForResourceRequest;
 
-class QTAWS_EXPORT ChangeTagsForResourceRequestPrivate : public Route53RequestPrivate {
+class ChangeTagsForResourceRequestPrivate : public Route53RequestPrivate {
 
 public:
     ChangeTagsForResourceRequestPrivate(const Route53Request::Action action,

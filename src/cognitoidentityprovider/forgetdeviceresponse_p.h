@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class ForgetDeviceResponse;
 
-class QTAWS_EXPORT ForgetDeviceResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+class ForgetDeviceResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 

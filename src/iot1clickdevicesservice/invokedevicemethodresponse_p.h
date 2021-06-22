@@ -27,7 +27,7 @@ namespace IoT1ClickDevicesService {
 
 class InvokeDeviceMethodResponse;
 
-class QTAWS_EXPORT InvokeDeviceMethodResponsePrivate : public IoT1ClickDevicesServiceResponsePrivate {
+class InvokeDeviceMethodResponsePrivate : public IoT1ClickDevicesServiceResponsePrivate {
 
 public:
 

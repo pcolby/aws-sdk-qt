@@ -28,7 +28,7 @@ namespace Proton {
 
 class CreateEnvironmentTemplateRequest;
 
-class QTAWS_EXPORT CreateEnvironmentTemplateRequestPrivate : public ProtonRequestPrivate {
+class CreateEnvironmentTemplateRequestPrivate : public ProtonRequestPrivate {
 
 public:
     CreateEnvironmentTemplateRequestPrivate(const ProtonRequest::Action action,

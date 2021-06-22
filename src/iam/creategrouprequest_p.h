@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateGroupRequest;
 
-class QTAWS_EXPORT CreateGroupRequestPrivate : public IamRequestPrivate {
+class CreateGroupRequestPrivate : public IamRequestPrivate {
 
 public:
     CreateGroupRequestPrivate(const IamRequest::Action action,

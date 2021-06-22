@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeEventTopicsRequest;
 
-class QTAWS_EXPORT DescribeEventTopicsRequestPrivate : public DirectoryServiceRequestPrivate {
+class DescribeEventTopicsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DescribeEventTopicsRequestPrivate(const DirectoryServiceRequest::Action action,

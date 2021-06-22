@@ -27,7 +27,7 @@ namespace PrometheusService {
 
 class CreateWorkspaceResponse;
 
-class QTAWS_EXPORT CreateWorkspaceResponsePrivate : public PrometheusServiceResponsePrivate {
+class CreateWorkspaceResponsePrivate : public PrometheusServiceResponsePrivate {
 
 public:
 

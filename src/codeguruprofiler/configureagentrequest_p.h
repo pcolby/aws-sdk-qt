@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class ConfigureAgentRequest;
 
-class QTAWS_EXPORT ConfigureAgentRequestPrivate : public CodeGuruProfilerRequestPrivate {
+class ConfigureAgentRequestPrivate : public CodeGuruProfilerRequestPrivate {
 
 public:
     ConfigureAgentRequestPrivate(const CodeGuruProfilerRequest::Action action,

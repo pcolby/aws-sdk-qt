@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeCoipPoolsResponse;
 
-class QTAWS_EXPORT DescribeCoipPoolsResponsePrivate : public Ec2ResponsePrivate {
+class DescribeCoipPoolsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

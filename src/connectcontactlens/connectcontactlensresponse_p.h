@@ -27,7 +27,7 @@ namespace ConnectContactLens {
 
 class ConnectContactLensResponse;
 
-class QTAWS_EXPORT ConnectContactLensResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ConnectContactLensResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

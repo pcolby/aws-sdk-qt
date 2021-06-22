@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DescribeEventBusRequest;
 
-class QTAWS_EXPORT DescribeEventBusRequestPrivate : public EventBridgeRequestPrivate {
+class DescribeEventBusRequestPrivate : public EventBridgeRequestPrivate {
 
 public:
     DescribeEventBusRequestPrivate(const EventBridgeRequest::Action action,

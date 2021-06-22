@@ -27,7 +27,7 @@ namespace ResourceGroups {
 
 class UngroupResourcesResponse;
 
-class QTAWS_EXPORT UngroupResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
+class UngroupResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 

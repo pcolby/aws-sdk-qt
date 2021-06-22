@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DeclineInvitationsRequest;
 
-class QTAWS_EXPORT DeclineInvitationsRequestPrivate : public SecurityHubRequestPrivate {
+class DeclineInvitationsRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     DeclineInvitationsRequestPrivate(const SecurityHubRequest::Action action,

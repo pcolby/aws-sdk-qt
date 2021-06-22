@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class Sesv2Request;
 
-class QTAWS_EXPORT Sesv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Sesv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Sesv2Request::Action action; ///< SESV2 action to be performed.

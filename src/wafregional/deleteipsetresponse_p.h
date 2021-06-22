@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DeleteIPSetResponse;
 
-class QTAWS_EXPORT DeleteIPSetResponsePrivate : public WAFRegionalResponsePrivate {
+class DeleteIPSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 

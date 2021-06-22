@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DescribeAnalysisRequest;
 
-class QTAWS_EXPORT DescribeAnalysisRequestPrivate : public QuickSightRequestPrivate {
+class DescribeAnalysisRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     DescribeAnalysisRequestPrivate(const QuickSightRequest::Action action,

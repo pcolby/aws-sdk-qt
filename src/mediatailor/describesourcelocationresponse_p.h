@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class DescribeSourceLocationResponse;
 
-class QTAWS_EXPORT DescribeSourceLocationResponsePrivate : public MediaTailorResponsePrivate {
+class DescribeSourceLocationResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 

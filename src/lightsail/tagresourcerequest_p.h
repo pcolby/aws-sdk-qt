@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public LightsailRequestPrivate {
+class TagResourceRequestPrivate : public LightsailRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const LightsailRequest::Action action,

@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DescribeHubResponse;
 
-class QTAWS_EXPORT DescribeHubResponsePrivate : public SecurityHubResponsePrivate {
+class DescribeHubResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 

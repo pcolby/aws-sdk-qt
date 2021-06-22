@@ -28,7 +28,7 @@ namespace EKS {
 
 class DeleteNodegroupRequest;
 
-class QTAWS_EXPORT DeleteNodegroupRequestPrivate : public EksRequestPrivate {
+class DeleteNodegroupRequestPrivate : public EksRequestPrivate {
 
 public:
     DeleteNodegroupRequestPrivate(const EksRequest::Action action,

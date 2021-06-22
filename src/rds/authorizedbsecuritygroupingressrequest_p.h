@@ -28,7 +28,7 @@ namespace RDS {
 
 class AuthorizeDBSecurityGroupIngressRequest;
 
-class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressRequestPrivate : public RdsRequestPrivate {
+class AuthorizeDBSecurityGroupIngressRequestPrivate : public RdsRequestPrivate {
 
 public:
     AuthorizeDBSecurityGroupIngressRequestPrivate(const RdsRequest::Action action,

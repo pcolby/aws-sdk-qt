@@ -28,7 +28,7 @@ namespace WAF {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public WafRequestPrivate {
+class UntagResourceRequestPrivate : public WafRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const WafRequest::Action action,

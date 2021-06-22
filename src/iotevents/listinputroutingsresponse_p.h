@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class ListInputRoutingsResponse;
 
-class QTAWS_EXPORT ListInputRoutingsResponsePrivate : public IoTEventsResponsePrivate {
+class ListInputRoutingsResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 

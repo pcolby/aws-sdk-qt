@@ -27,7 +27,7 @@ namespace DocDB {
 
 class RebootDBInstanceResponse;
 
-class QTAWS_EXPORT RebootDBInstanceResponsePrivate : public DocDBResponsePrivate {
+class RebootDBInstanceResponsePrivate : public DocDBResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class PostCommentReplyRequest;
 
-class QTAWS_EXPORT PostCommentReplyRequestPrivate : public CodeCommitRequestPrivate {
+class PostCommentReplyRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     PostCommentReplyRequestPrivate(const CodeCommitRequest::Action action,

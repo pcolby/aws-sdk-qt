@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class PutTargetsResponse;
 
-class QTAWS_EXPORT PutTargetsResponsePrivate : public EventBridgeResponsePrivate {
+class PutTargetsResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 

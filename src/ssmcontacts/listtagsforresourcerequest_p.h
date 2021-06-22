@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSMContactsRequestPrivate {
+class ListTagsForResourceRequestPrivate : public SSMContactsRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SSMContactsRequest::Action action,

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
+class UntagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const AlexaForBusinessRequest::Action action,

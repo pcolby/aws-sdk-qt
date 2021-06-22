@@ -28,7 +28,7 @@ namespace Outposts {
 
 class ListSitesRequest;
 
-class QTAWS_EXPORT ListSitesRequestPrivate : public OutpostsRequestPrivate {
+class ListSitesRequestPrivate : public OutpostsRequestPrivate {
 
 public:
     ListSitesRequestPrivate(const OutpostsRequest::Action action,

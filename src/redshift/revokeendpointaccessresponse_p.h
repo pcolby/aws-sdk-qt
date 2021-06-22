@@ -27,7 +27,7 @@ namespace Redshift {
 
 class RevokeEndpointAccessResponse;
 
-class QTAWS_EXPORT RevokeEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
+class RevokeEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 

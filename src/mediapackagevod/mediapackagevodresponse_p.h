@@ -27,7 +27,7 @@ namespace MediaPackageVod {
 
 class MediaPackageVodResponse;
 
-class QTAWS_EXPORT MediaPackageVodResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MediaPackageVodResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

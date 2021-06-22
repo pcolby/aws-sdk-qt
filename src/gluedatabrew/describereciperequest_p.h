@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class DescribeRecipeRequest;
 
-class QTAWS_EXPORT DescribeRecipeRequestPrivate : public GlueDataBrewRequestPrivate {
+class DescribeRecipeRequestPrivate : public GlueDataBrewRequestPrivate {
 
 public:
     DescribeRecipeRequestPrivate(const GlueDataBrewRequest::Action action,

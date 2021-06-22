@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class UpdateVirtualInterfaceAttributesResponse;
 
-class QTAWS_EXPORT UpdateVirtualInterfaceAttributesResponsePrivate : public DirectConnectResponsePrivate {
+class UpdateVirtualInterfaceAttributesResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 

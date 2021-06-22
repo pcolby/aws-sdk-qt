@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteBuildRequest;
 
-class QTAWS_EXPORT DeleteBuildRequestPrivate : public GameLiftRequestPrivate {
+class DeleteBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DeleteBuildRequestPrivate(const GameLiftRequest::Action action,

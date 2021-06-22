@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public IoT1ClickProjectsResponsePrivate {
+class ListTagsForResourceResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class ListTemplatesRequest;
 
-class QTAWS_EXPORT ListTemplatesRequestPrivate : public PinpointRequestPrivate {
+class ListTemplatesRequestPrivate : public PinpointRequestPrivate {
 
 public:
     ListTemplatesRequestPrivate(const PinpointRequest::Action action,

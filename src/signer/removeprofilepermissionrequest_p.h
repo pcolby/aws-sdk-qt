@@ -28,7 +28,7 @@ namespace signer {
 
 class RemoveProfilePermissionRequest;
 
-class QTAWS_EXPORT RemoveProfilePermissionRequestPrivate : public signerRequestPrivate {
+class RemoveProfilePermissionRequestPrivate : public signerRequestPrivate {
 
 public:
     RemoveProfilePermissionRequestPrivate(const signerRequest::Action action,

@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class AssociateCustomDomainRequest;
 
-class QTAWS_EXPORT AssociateCustomDomainRequestPrivate : public AppRunnerRequestPrivate {
+class AssociateCustomDomainRequestPrivate : public AppRunnerRequestPrivate {
 
 public:
     AssociateCustomDomainRequestPrivate(const AppRunnerRequest::Action action,

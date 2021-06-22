@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBSubnetGroupRequest;
 
-class QTAWS_EXPORT DeleteDBSubnetGroupRequestPrivate : public RdsRequestPrivate {
+class DeleteDBSubnetGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
     DeleteDBSubnetGroupRequestPrivate(const RdsRequest::Action action,

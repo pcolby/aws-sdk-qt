@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public GreengrassResponsePrivate {
+class ListTagsForResourceResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 

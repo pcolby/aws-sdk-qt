@@ -27,7 +27,7 @@ namespace QLDB {
 
 class GetBlockResponse;
 
-class QTAWS_EXPORT GetBlockResponsePrivate : public QldbResponsePrivate {
+class GetBlockResponsePrivate : public QldbResponsePrivate {
 
 public:
 

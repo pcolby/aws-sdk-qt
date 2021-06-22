@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeMaintenanceStartTimeRequest;
 
-class QTAWS_EXPORT DescribeMaintenanceStartTimeRequestPrivate : public StorageGatewayRequestPrivate {
+class DescribeMaintenanceStartTimeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeMaintenanceStartTimeRequestPrivate(const StorageGatewayRequest::Action action,

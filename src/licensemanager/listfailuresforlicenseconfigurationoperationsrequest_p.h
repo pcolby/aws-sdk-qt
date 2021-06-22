@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class ListFailuresForLicenseConfigurationOperationsRequest;
 
-class QTAWS_EXPORT ListFailuresForLicenseConfigurationOperationsRequestPrivate : public LicenseManagerRequestPrivate {
+class ListFailuresForLicenseConfigurationOperationsRequestPrivate : public LicenseManagerRequestPrivate {
 
 public:
     ListFailuresForLicenseConfigurationOperationsRequestPrivate(const LicenseManagerRequest::Action action,

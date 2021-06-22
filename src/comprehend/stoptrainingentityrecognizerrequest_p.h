@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class StopTrainingEntityRecognizerRequest;
 
-class QTAWS_EXPORT StopTrainingEntityRecognizerRequestPrivate : public ComprehendRequestPrivate {
+class StopTrainingEntityRecognizerRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     StopTrainingEntityRecognizerRequestPrivate(const ComprehendRequest::Action action,

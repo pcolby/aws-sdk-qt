@@ -28,7 +28,7 @@ namespace Glacier {
 
 class ListVaultsRequest;
 
-class QTAWS_EXPORT ListVaultsRequestPrivate : public GlacierRequestPrivate {
+class ListVaultsRequestPrivate : public GlacierRequestPrivate {
 
 public:
     ListVaultsRequestPrivate(const GlacierRequest::Action action,

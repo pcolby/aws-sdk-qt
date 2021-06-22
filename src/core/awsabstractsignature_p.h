@@ -30,7 +30,7 @@ namespace Core {
 
 class AwsAbstractSignature;
 
-class QTAWS_EXPORT AwsAbstractSignaturePrivate {
+class AwsAbstractSignaturePrivate {
 
 public:
     virtual ~AwsAbstractSignaturePrivate();

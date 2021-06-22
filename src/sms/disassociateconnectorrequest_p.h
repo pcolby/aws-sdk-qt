@@ -28,7 +28,7 @@ namespace SMS {
 
 class DisassociateConnectorRequest;
 
-class QTAWS_EXPORT DisassociateConnectorRequestPrivate : public SmsRequestPrivate {
+class DisassociateConnectorRequestPrivate : public SmsRequestPrivate {
 
 public:
     DisassociateConnectorRequestPrivate(const SmsRequest::Action action,

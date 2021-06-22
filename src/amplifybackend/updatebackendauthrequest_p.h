@@ -28,7 +28,7 @@ namespace AmplifyBackend {
 
 class UpdateBackendAuthRequest;
 
-class QTAWS_EXPORT UpdateBackendAuthRequestPrivate : public AmplifyBackendRequestPrivate {
+class UpdateBackendAuthRequestPrivate : public AmplifyBackendRequestPrivate {
 
 public:
     UpdateBackendAuthRequestPrivate(const AmplifyBackendRequest::Action action,

@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class GetUpgradeStatusResponse;
 
-class QTAWS_EXPORT GetUpgradeStatusResponsePrivate : public ElasticsearchServiceResponsePrivate {
+class GetUpgradeStatusResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 

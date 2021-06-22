@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DisassociateVpcCidrBlockResponse;
 
-class QTAWS_EXPORT DisassociateVpcCidrBlockResponsePrivate : public Ec2ResponsePrivate {
+class DisassociateVpcCidrBlockResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

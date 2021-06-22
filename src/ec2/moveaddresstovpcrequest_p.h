@@ -28,7 +28,7 @@ namespace EC2 {
 
 class MoveAddressToVpcRequest;
 
-class QTAWS_EXPORT MoveAddressToVpcRequestPrivate : public Ec2RequestPrivate {
+class MoveAddressToVpcRequestPrivate : public Ec2RequestPrivate {
 
 public:
     MoveAddressToVpcRequestPrivate(const Ec2Request::Action action,

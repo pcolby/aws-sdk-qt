@@ -27,7 +27,7 @@ namespace ACM {
 
 class PutAccountConfigurationResponse;
 
-class QTAWS_EXPORT PutAccountConfigurationResponsePrivate : public AcmResponsePrivate {
+class PutAccountConfigurationResponsePrivate : public AcmResponsePrivate {
 
 public:
 

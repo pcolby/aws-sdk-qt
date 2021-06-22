@@ -28,7 +28,7 @@ namespace ElasticInference {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public ElasticInferenceRequestPrivate {
+class TagResourceRequestPrivate : public ElasticInferenceRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const ElasticInferenceRequest::Action action,

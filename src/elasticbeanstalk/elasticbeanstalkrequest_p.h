@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class ElasticBeanstalkRequest;
 
-class QTAWS_EXPORT ElasticBeanstalkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticBeanstalkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticBeanstalkRequest::Action action; ///< ElasticBeanstalk action to be performed.

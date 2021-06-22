@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class UpdateDeletionProtectionResponse;
 
-class QTAWS_EXPORT UpdateDeletionProtectionResponsePrivate : public SSMIncidentsResponsePrivate {
+class UpdateDeletionProtectionResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 

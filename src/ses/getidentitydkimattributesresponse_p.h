@@ -27,7 +27,7 @@ namespace SES {
 
 class GetIdentityDkimAttributesResponse;
 
-class QTAWS_EXPORT GetIdentityDkimAttributesResponsePrivate : public SesResponsePrivate {
+class GetIdentityDkimAttributesResponsePrivate : public SesResponsePrivate {
 
 public:
 

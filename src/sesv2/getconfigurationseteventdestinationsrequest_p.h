@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetConfigurationSetEventDestinationsRequest;
 
-class QTAWS_EXPORT GetConfigurationSetEventDestinationsRequestPrivate : public Sesv2RequestPrivate {
+class GetConfigurationSetEventDestinationsRequestPrivate : public Sesv2RequestPrivate {
 
 public:
     GetConfigurationSetEventDestinationsRequestPrivate(const Sesv2Request::Action action,

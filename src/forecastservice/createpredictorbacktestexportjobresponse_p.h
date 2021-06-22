@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class CreatePredictorBacktestExportJobResponse;
 
-class QTAWS_EXPORT CreatePredictorBacktestExportJobResponsePrivate : public ForecastServiceResponsePrivate {
+class CreatePredictorBacktestExportJobResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 

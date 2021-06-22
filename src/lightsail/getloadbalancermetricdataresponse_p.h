@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetLoadBalancerMetricDataResponse;
 
-class QTAWS_EXPORT GetLoadBalancerMetricDataResponsePrivate : public LightsailResponsePrivate {
+class GetLoadBalancerMetricDataResponsePrivate : public LightsailResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteOrganizationConformancePackRequest;
 
-class QTAWS_EXPORT DeleteOrganizationConformancePackRequestPrivate : public ConfigServiceRequestPrivate {
+class DeleteOrganizationConformancePackRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteOrganizationConformancePackRequestPrivate(const ConfigServiceRequest::Action action,

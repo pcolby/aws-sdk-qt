@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateDomainConfigurationRequest;
 
-class QTAWS_EXPORT CreateDomainConfigurationRequestPrivate : public IoTRequestPrivate {
+class CreateDomainConfigurationRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateDomainConfigurationRequestPrivate(const IoTRequest::Action action,

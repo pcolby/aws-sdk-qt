@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class SampleChannelDataRequest;
 
-class QTAWS_EXPORT SampleChannelDataRequestPrivate : public IoTAnalyticsRequestPrivate {
+class SampleChannelDataRequestPrivate : public IoTAnalyticsRequestPrivate {
 
 public:
     SampleChannelDataRequestPrivate(const IoTAnalyticsRequest::Action action,

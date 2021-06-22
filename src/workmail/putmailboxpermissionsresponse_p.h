@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class PutMailboxPermissionsResponse;
 
-class QTAWS_EXPORT PutMailboxPermissionsResponsePrivate : public WorkMailResponsePrivate {
+class PutMailboxPermissionsResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class GetQueryResultsRequest;
 
-class QTAWS_EXPORT GetQueryResultsRequestPrivate : public CloudWatchLogsRequestPrivate {
+class GetQueryResultsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     GetQueryResultsRequestPrivate(const CloudWatchLogsRequest::Action action,

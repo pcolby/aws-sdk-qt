@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class UpdateStreamRequest;
 
-class QTAWS_EXPORT UpdateStreamRequestPrivate : public KinesisVideoRequestPrivate {
+class UpdateStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     UpdateStreamRequestPrivate(const KinesisVideoRequest::Action action,

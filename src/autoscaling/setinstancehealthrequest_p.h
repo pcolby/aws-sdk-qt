@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class SetInstanceHealthRequest;
 
-class QTAWS_EXPORT SetInstanceHealthRequestPrivate : public AutoScalingRequestPrivate {
+class SetInstanceHealthRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     SetInstanceHealthRequestPrivate(const AutoScalingRequest::Action action,

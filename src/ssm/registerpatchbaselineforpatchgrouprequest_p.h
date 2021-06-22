@@ -28,7 +28,7 @@ namespace SSM {
 
 class RegisterPatchBaselineForPatchGroupRequest;
 
-class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupRequestPrivate : public SsmRequestPrivate {
+class RegisterPatchBaselineForPatchGroupRequestPrivate : public SsmRequestPrivate {
 
 public:
     RegisterPatchBaselineForPatchGroupRequestPrivate(const SsmRequest::Action action,

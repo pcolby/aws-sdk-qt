@@ -27,7 +27,7 @@ namespace DataSync {
 
 class DataSyncResponse;
 
-class QTAWS_EXPORT DataSyncResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DataSyncResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

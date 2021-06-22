@@ -27,7 +27,7 @@ namespace FMS {
 
 class DeleteProtocolsListResponse;
 
-class QTAWS_EXPORT DeleteProtocolsListResponsePrivate : public FmsResponsePrivate {
+class DeleteProtocolsListResponsePrivate : public FmsResponsePrivate {
 
 public:
 

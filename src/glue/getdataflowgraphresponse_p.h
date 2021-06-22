@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetDataflowGraphResponse;
 
-class QTAWS_EXPORT GetDataflowGraphResponsePrivate : public GlueResponsePrivate {
+class GetDataflowGraphResponsePrivate : public GlueResponsePrivate {
 
 public:
 

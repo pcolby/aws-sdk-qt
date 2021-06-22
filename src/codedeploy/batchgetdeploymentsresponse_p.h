@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class BatchGetDeploymentsResponse;
 
-class QTAWS_EXPORT BatchGetDeploymentsResponsePrivate : public CodeDeployResponsePrivate {
+class BatchGetDeploymentsResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 

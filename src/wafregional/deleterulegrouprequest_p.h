@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteRuleGroupRequest;
 
-class QTAWS_EXPORT DeleteRuleGroupRequestPrivate : public WAFRegionalRequestPrivate {
+class DeleteRuleGroupRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeleteRuleGroupRequestPrivate(const WAFRegionalRequest::Action action,

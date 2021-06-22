@@ -27,7 +27,7 @@ namespace ElasticInference {
 
 class ElasticInferenceResponse;
 
-class QTAWS_EXPORT ElasticInferenceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ElasticInferenceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 

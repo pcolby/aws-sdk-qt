@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class GetFindingsRequest;
 
-class QTAWS_EXPORT GetFindingsRequestPrivate : public SecurityHubRequestPrivate {
+class GetFindingsRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     GetFindingsRequestPrivate(const SecurityHubRequest::Action action,

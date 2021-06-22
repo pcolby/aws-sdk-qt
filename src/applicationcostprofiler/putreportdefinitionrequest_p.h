@@ -28,7 +28,7 @@ namespace ApplicationCostProfiler {
 
 class PutReportDefinitionRequest;
 
-class QTAWS_EXPORT PutReportDefinitionRequestPrivate : public ApplicationCostProfilerRequestPrivate {
+class PutReportDefinitionRequestPrivate : public ApplicationCostProfilerRequestPrivate {
 
 public:
     PutReportDefinitionRequestPrivate(const ApplicationCostProfilerRequest::Action action,

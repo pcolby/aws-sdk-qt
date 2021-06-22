@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DeletePortalRequest;
 
-class QTAWS_EXPORT DeletePortalRequestPrivate : public IoTSiteWiseRequestPrivate {
+class DeletePortalRequestPrivate : public IoTSiteWiseRequestPrivate {
 
 public:
     DeletePortalRequestPrivate(const IoTSiteWiseRequest::Action action,

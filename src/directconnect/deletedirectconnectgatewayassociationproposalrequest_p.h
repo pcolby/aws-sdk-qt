@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteDirectConnectGatewayAssociationProposalRequest;
 
-class QTAWS_EXPORT DeleteDirectConnectGatewayAssociationProposalRequestPrivate : public DirectConnectRequestPrivate {
+class DeleteDirectConnectGatewayAssociationProposalRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DeleteDirectConnectGatewayAssociationProposalRequestPrivate(const DirectConnectRequest::Action action,

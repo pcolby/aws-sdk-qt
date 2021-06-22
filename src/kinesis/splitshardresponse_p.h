@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class SplitShardResponse;
 
-class QTAWS_EXPORT SplitShardResponsePrivate : public KinesisResponsePrivate {
+class SplitShardResponsePrivate : public KinesisResponsePrivate {
 
 public:
 

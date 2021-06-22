@@ -28,7 +28,7 @@ namespace CloudSearchDomain {
 
 class SuggestRequest;
 
-class QTAWS_EXPORT SuggestRequestPrivate : public CloudSearchDomainRequestPrivate {
+class SuggestRequestPrivate : public CloudSearchDomainRequestPrivate {
 
 public:
     SuggestRequestPrivate(const CloudSearchDomainRequest::Action action,

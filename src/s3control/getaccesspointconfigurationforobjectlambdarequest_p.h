@@ -28,7 +28,7 @@ namespace S3Control {
 
 class GetAccessPointConfigurationForObjectLambdaRequest;
 
-class QTAWS_EXPORT GetAccessPointConfigurationForObjectLambdaRequestPrivate : public S3ControlRequestPrivate {
+class GetAccessPointConfigurationForObjectLambdaRequestPrivate : public S3ControlRequestPrivate {
 
 public:
     GetAccessPointConfigurationForObjectLambdaRequestPrivate(const S3ControlRequest::Action action,

@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class CreateControlRequest;
 
-class QTAWS_EXPORT CreateControlRequestPrivate : public AuditManagerRequestPrivate {
+class CreateControlRequestPrivate : public AuditManagerRequestPrivate {
 
 public:
     CreateControlRequestPrivate(const AuditManagerRequest::Action action,

@@ -27,7 +27,7 @@ namespace WAF {
 
 class GetSizeConstraintSetResponse;
 
-class QTAWS_EXPORT GetSizeConstraintSetResponsePrivate : public WafResponsePrivate {
+class GetSizeConstraintSetResponsePrivate : public WafResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class SendAnnouncementRequest;
 
-class QTAWS_EXPORT SendAnnouncementRequestPrivate : public AlexaForBusinessRequestPrivate {
+class SendAnnouncementRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     SendAnnouncementRequestPrivate(const AlexaForBusinessRequest::Action action,

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class BatchGetOnPremisesInstancesRequest;
 
-class QTAWS_EXPORT BatchGetOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
+class BatchGetOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     BatchGetOnPremisesInstancesRequestPrivate(const CodeDeployRequest::Action action,

@@ -27,7 +27,7 @@ namespace TimestreamQuery {
 
 class QueryResponse;
 
-class QTAWS_EXPORT QueryResponsePrivate : public TimestreamQueryResponsePrivate {
+class QueryResponsePrivate : public TimestreamQueryResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetSerialConsoleAccessStatusResponse;
 
-class QTAWS_EXPORT GetSerialConsoleAccessStatusResponsePrivate : public Ec2ResponsePrivate {
+class GetSerialConsoleAccessStatusResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 

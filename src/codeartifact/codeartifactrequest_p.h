@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class CodeArtifactRequest;
 
-class QTAWS_EXPORT CodeArtifactRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeArtifactRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeArtifactRequest::Action action; ///< CodeArtifact action to be performed.

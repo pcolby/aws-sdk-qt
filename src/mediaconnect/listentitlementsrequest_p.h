@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class ListEntitlementsRequest;
 
-class QTAWS_EXPORT ListEntitlementsRequestPrivate : public MediaConnectRequestPrivate {
+class ListEntitlementsRequestPrivate : public MediaConnectRequestPrivate {
 
 public:
     ListEntitlementsRequestPrivate(const MediaConnectRequest::Action action,

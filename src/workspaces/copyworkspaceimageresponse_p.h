@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class CopyWorkspaceImageResponse;
 
-class QTAWS_EXPORT CopyWorkspaceImageResponsePrivate : public WorkSpacesResponsePrivate {
+class CopyWorkspaceImageResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace PersonalizeRuntime {
 
 class GetPersonalizedRankingResponse;
 
-class QTAWS_EXPORT GetPersonalizedRankingResponsePrivate : public PersonalizeRuntimeResponsePrivate {
+class GetPersonalizedRankingResponsePrivate : public PersonalizeRuntimeResponsePrivate {
 
 public:
 

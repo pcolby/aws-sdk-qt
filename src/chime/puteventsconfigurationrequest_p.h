@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutEventsConfigurationRequest;
 
-class QTAWS_EXPORT PutEventsConfigurationRequestPrivate : public ChimeRequestPrivate {
+class PutEventsConfigurationRequestPrivate : public ChimeRequestPrivate {
 
 public:
     PutEventsConfigurationRequestPrivate(const ChimeRequest::Action action,

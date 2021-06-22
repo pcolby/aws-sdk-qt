@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public ElasticBeanstalkResponsePrivate {
+class ListTagsForResourceResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 

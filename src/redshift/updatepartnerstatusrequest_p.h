@@ -28,7 +28,7 @@ namespace Redshift {
 
 class UpdatePartnerStatusRequest;
 
-class QTAWS_EXPORT UpdatePartnerStatusRequestPrivate : public RedshiftRequestPrivate {
+class UpdatePartnerStatusRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     UpdatePartnerStatusRequestPrivate(const RedshiftRequest::Action action,

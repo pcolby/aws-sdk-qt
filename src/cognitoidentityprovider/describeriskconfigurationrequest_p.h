@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DescribeRiskConfigurationRequest;
 
-class QTAWS_EXPORT DescribeRiskConfigurationRequestPrivate : public CognitoIdentityProviderRequestPrivate {
+class DescribeRiskConfigurationRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DescribeRiskConfigurationRequestPrivate(const CognitoIdentityProviderRequest::Action action,

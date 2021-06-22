@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class UpdateDeviceRequest;
 
-class QTAWS_EXPORT UpdateDeviceRequestPrivate : public NetworkManagerRequestPrivate {
+class UpdateDeviceRequestPrivate : public NetworkManagerRequestPrivate {
 
 public:
     UpdateDeviceRequestPrivate(const NetworkManagerRequest::Action action,

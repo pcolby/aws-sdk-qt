@@ -27,7 +27,7 @@ namespace CodeStar {
 
 class DisassociateTeamMemberResponse;
 
-class QTAWS_EXPORT DisassociateTeamMemberResponsePrivate : public CodeStarResponsePrivate {
+class DisassociateTeamMemberResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 

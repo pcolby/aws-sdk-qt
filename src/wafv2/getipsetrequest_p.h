@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class GetIPSetRequest;
 
-class QTAWS_EXPORT GetIPSetRequestPrivate : public Wafv2RequestPrivate {
+class GetIPSetRequestPrivate : public Wafv2RequestPrivate {
 
 public:
     GetIPSetRequestPrivate(const Wafv2Request::Action action,

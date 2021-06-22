@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableImageDeprecationRequest;
 
-class QTAWS_EXPORT DisableImageDeprecationRequestPrivate : public Ec2RequestPrivate {
+class DisableImageDeprecationRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DisableImageDeprecationRequestPrivate(const Ec2Request::Action action,

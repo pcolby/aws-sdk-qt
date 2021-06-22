@@ -28,7 +28,7 @@ namespace Inspector {
 
 class UnsubscribeFromEventRequest;
 
-class QTAWS_EXPORT UnsubscribeFromEventRequestPrivate : public InspectorRequestPrivate {
+class UnsubscribeFromEventRequestPrivate : public InspectorRequestPrivate {
 
 public:
     UnsubscribeFromEventRequestPrivate(const InspectorRequest::Action action,

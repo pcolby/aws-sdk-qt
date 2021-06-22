@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteSecurityGroupRequest;
 
-class QTAWS_EXPORT DeleteSecurityGroupRequestPrivate : public Ec2RequestPrivate {
+class DeleteSecurityGroupRequestPrivate : public Ec2RequestPrivate {
 
 public:
     DeleteSecurityGroupRequestPrivate(const Ec2Request::Action action,

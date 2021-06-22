@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class EnableOrganizationAdminAccountResponse;
 
-class QTAWS_EXPORT EnableOrganizationAdminAccountResponsePrivate : public Macie2ResponsePrivate {
+class EnableOrganizationAdminAccountResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 

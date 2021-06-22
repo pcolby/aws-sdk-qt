@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetInsightSummariesResponse;
 
-class QTAWS_EXPORT GetInsightSummariesResponsePrivate : public XRayResponsePrivate {
+class GetInsightSummariesResponsePrivate : public XRayResponsePrivate {
 
 public:
 

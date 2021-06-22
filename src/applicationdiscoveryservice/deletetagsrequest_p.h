@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
+class DeleteTagsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action,

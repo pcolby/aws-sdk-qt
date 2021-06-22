@@ -28,7 +28,7 @@ namespace Personalize {
 
 class CreateFilterRequest;
 
-class QTAWS_EXPORT CreateFilterRequestPrivate : public PersonalizeRequestPrivate {
+class CreateFilterRequestPrivate : public PersonalizeRequestPrivate {
 
 public:
     CreateFilterRequestPrivate(const PersonalizeRequest::Action action,

@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class LakeFormationRequest;
 
-class QTAWS_EXPORT LakeFormationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LakeFormationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LakeFormationRequest::Action action; ///< LakeFormation action to be performed.

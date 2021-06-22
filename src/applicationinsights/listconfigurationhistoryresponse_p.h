@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class ListConfigurationHistoryResponse;
 
-class QTAWS_EXPORT ListConfigurationHistoryResponsePrivate : public ApplicationInsightsResponsePrivate {
+class ListConfigurationHistoryResponsePrivate : public ApplicationInsightsResponsePrivate {
 
 public:
 

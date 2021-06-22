@@ -28,7 +28,7 @@ namespace Detective {
 
 class StartMonitoringMemberRequest;
 
-class QTAWS_EXPORT StartMonitoringMemberRequestPrivate : public DetectiveRequestPrivate {
+class StartMonitoringMemberRequestPrivate : public DetectiveRequestPrivate {
 
 public:
     StartMonitoringMemberRequestPrivate(const DetectiveRequest::Action action,

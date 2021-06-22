@@ -28,7 +28,7 @@ namespace FMS {
 
 class GetAdminAccountRequest;
 
-class QTAWS_EXPORT GetAdminAccountRequestPrivate : public FmsRequestPrivate {
+class GetAdminAccountRequestPrivate : public FmsRequestPrivate {
 
 public:
     GetAdminAccountRequestPrivate(const FmsRequest::Action action,

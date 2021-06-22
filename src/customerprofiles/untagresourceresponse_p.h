@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public CustomerProfilesResponsePrivate {
+class UntagResourceResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 

@@ -27,7 +27,7 @@ namespace Outposts {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public OutpostsResponsePrivate {
+class UntagResourceResponsePrivate : public OutpostsResponsePrivate {
 
 public:
 

@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateWebACLRequest;
 
-class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
+class UpdateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateWebACLRequestPrivate(const WAFRegionalRequest::Action action,

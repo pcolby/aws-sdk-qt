@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
+class TagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AlexaForBusinessRequest::Action action,

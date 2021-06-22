@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateContactRequest;
 
-class QTAWS_EXPORT UpdateContactRequestPrivate : public AlexaForBusinessRequestPrivate {
+class UpdateContactRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     UpdateContactRequestPrivate(const AlexaForBusinessRequest::Action action,

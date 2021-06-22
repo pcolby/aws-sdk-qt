@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DescribeCodeBindingRequest;
 
-class QTAWS_EXPORT DescribeCodeBindingRequestPrivate : public SchemasRequestPrivate {
+class DescribeCodeBindingRequestPrivate : public SchemasRequestPrivate {
 
 public:
     DescribeCodeBindingRequestPrivate(const SchemasRequest::Action action,

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UpdateTemplateAliasRequest;
 
-class QTAWS_EXPORT UpdateTemplateAliasRequestPrivate : public QuickSightRequestPrivate {
+class UpdateTemplateAliasRequestPrivate : public QuickSightRequestPrivate {
 
 public:
     UpdateTemplateAliasRequestPrivate(const QuickSightRequest::Action action,

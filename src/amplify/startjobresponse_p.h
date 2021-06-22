@@ -27,7 +27,7 @@ namespace Amplify {
 
 class StartJobResponse;
 
-class QTAWS_EXPORT StartJobResponsePrivate : public AmplifyResponsePrivate {
+class StartJobResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 

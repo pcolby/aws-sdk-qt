@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class GrantPermissionsRequest;
 
-class QTAWS_EXPORT GrantPermissionsRequestPrivate : public LakeFormationRequestPrivate {
+class GrantPermissionsRequestPrivate : public LakeFormationRequestPrivate {
 
 public:
     GrantPermissionsRequestPrivate(const LakeFormationRequest::Action action,

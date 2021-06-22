@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListGroupMembersResponse;
 
-class QTAWS_EXPORT ListGroupMembersResponsePrivate : public WorkMailResponsePrivate {
+class ListGroupMembersResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 

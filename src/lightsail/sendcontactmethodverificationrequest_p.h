@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class SendContactMethodVerificationRequest;
 
-class QTAWS_EXPORT SendContactMethodVerificationRequestPrivate : public LightsailRequestPrivate {
+class SendContactMethodVerificationRequestPrivate : public LightsailRequestPrivate {
 
 public:
     SendContactMethodVerificationRequestPrivate(const LightsailRequest::Action action,

@@ -27,7 +27,7 @@ namespace DynamoDBStreams {
 
 class GetRecordsResponse;
 
-class QTAWS_EXPORT GetRecordsResponsePrivate : public DynamoDBStreamsResponsePrivate {
+class GetRecordsResponsePrivate : public DynamoDBStreamsResponsePrivate {
 
 public:
 

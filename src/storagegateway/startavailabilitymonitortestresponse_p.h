@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class StartAvailabilityMonitorTestResponse;
 
-class QTAWS_EXPORT StartAvailabilityMonitorTestResponsePrivate : public StorageGatewayResponsePrivate {
+class StartAvailabilityMonitorTestResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 

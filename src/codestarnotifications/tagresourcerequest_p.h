@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public CodeStarNotificationsRequestPrivate {
+class TagResourceRequestPrivate : public CodeStarNotificationsRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const CodeStarNotificationsRequest::Action action,

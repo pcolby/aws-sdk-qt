@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public ManagedBlockchainResponsePrivate {
+class ListTagsForResourceResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 

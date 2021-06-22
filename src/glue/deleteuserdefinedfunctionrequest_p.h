@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteUserDefinedFunctionRequest;
 
-class QTAWS_EXPORT DeleteUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
+class DeleteUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteUserDefinedFunctionRequestPrivate(const GlueRequest::Action action,

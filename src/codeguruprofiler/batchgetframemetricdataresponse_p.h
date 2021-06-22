@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class BatchGetFrameMetricDataResponse;
 
-class QTAWS_EXPORT BatchGetFrameMetricDataResponsePrivate : public CodeGuruProfilerResponsePrivate {
+class BatchGetFrameMetricDataResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 

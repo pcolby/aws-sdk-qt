@@ -28,7 +28,7 @@ namespace SMS {
 
 class GetAppRequest;
 
-class QTAWS_EXPORT GetAppRequestPrivate : public SmsRequestPrivate {
+class GetAppRequestPrivate : public SmsRequestPrivate {
 
 public:
     GetAppRequestPrivate(const SmsRequest::Action action,

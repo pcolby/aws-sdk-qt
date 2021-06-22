@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteGroupRequest;
 
-class QTAWS_EXPORT DeleteGroupRequestPrivate : public IamRequestPrivate {
+class DeleteGroupRequestPrivate : public IamRequestPrivate {
 
 public:
     DeleteGroupRequestPrivate(const IamRequest::Action action,

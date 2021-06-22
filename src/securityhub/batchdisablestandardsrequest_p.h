@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class BatchDisableStandardsRequest;
 
-class QTAWS_EXPORT BatchDisableStandardsRequestPrivate : public SecurityHubRequestPrivate {
+class BatchDisableStandardsRequestPrivate : public SecurityHubRequestPrivate {
 
 public:
     BatchDisableStandardsRequestPrivate(const SecurityHubRequest::Action action,

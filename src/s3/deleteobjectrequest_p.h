@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteObjectRequest;
 
-class QTAWS_EXPORT DeleteObjectRequestPrivate : public S3RequestPrivate {
+class DeleteObjectRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteObjectRequestPrivate(const S3Request::Action action,
