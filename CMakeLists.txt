@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
-message("cmake version ${CMAKE_VERSION}")
+message("-- CMake version is ${CMAKE_VERSION}")
+if (DEFINED CMAKE_BUILD_TYPE)
+  message("-- CMake build type is ${CMAKE_BUILD_TYPE}")
+endif()
 
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -13,19 +16,11 @@ project(
 # Disable automatic ASCII conversions.
 add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
-# Enable (and stop on) compiler warnings.
-include(CheckCXXCompilerFlag)
-check_cxx_compiler_flag(-Wall   HAVE_WALL)
-check_cxx_compiler_flag(-Werror HAVE_WERROR)
-check_cxx_compiler_flag(-Wextra HAVE_WEXTRA)
-if (HAVE_WALL)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
-endif()
-if (HAVE_WERROR)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
-endif()
-if (HAVE_WEXTRA)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
+# Enable most compiler warnings, and treat as errors.
+if (MSVC)
+  add_compile_options(/Wall /WX)
+else()
+  add_compile_options(-Wall -Wextra -Werror)
 endif()
 
 # See if we have Grantlee available.

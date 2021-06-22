@@ -57,10 +57,10 @@ for development of the SDK itself, not for developers that use the SDK.
 This library supports out-of-source builds (highly recommended), for example:
 
 ~~~{.sh}
-mkdir -p <tmp-build-dir>
-cmake -B <tmp-build-dir> -S <path-to-cloned-repo>
-make -C <tmp-build-dir> # or `nmake` on Windows
-make check
+cmake -E make_directory <tmp-build-dir>
+cmake -D CMAKE_BUILD_TYPE=Release -S <path-to-cloned-repo> -B <tmp-build-dir>
+cmake --build <tmp-build-dir>
+#make check
 ~~~
 
 ## API Documentation
