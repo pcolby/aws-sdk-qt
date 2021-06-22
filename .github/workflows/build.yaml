@@ -37,6 +37,8 @@ jobs:
 
   macos-clang:
     runs-on: macOS-latest
+    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+    steps:
     - uses: actions/checkout@v2
     - name: Install Tools
       run: brew install clang
@@ -51,6 +53,8 @@ jobs:
 
   macos-gcc:
     runs-on: macOS-latest
+    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+    steps:
     - uses: actions/checkout@v2
     - name: Install Tools
       run: brew install gcc
