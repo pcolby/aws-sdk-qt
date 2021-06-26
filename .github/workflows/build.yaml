@@ -3,24 +3,37 @@ name: Build
 on: [push]
 
 jobs:
-  codegen:
+  linux-clang:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install Grantlee
-      run: sudo apt install libgrantlee5-dev
+      run: sudo apt install clang libgrantlee5-dev
     - name: Build
+      env: { CC: clang, CXX: clang++ }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target codegen
+        cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
-  linux-clang:
+  linux-gcc:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Grantlee
+      run: sudo apt install gcc libgrantlee5-dev
+    - name: Build
+      env: { CC: gcc, CXX: g++ }
+      run: |
+        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+
+  linux-clang-qts:
     runs-on: ubuntu-latest
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
-      run: sudo apt install clang libgrantlee5-dev
+      run: sudo apt install clang
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
@@ -28,16 +41,18 @@ jobs:
     - name: Build
       env: { CC: clang, CXX: clang++ }
       run: |
-        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
+        #  pulls in Ubuntu's own Qt5 libraries, which is not ideal.
+        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
-  linux-gcc:
+  linux-gcc:-qts
     runs-on: ubuntu-latest
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
-      run: sudo apt install gcc libgrantlee5-dev
+      run: sudo apt install gcc
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
@@ -45,7 +60,9 @@ jobs:
     - name: Build
       env: { CC: gcc, CXX: g++ }
       run: |
-        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
+        #  pulls in Ubuntu's own Qt5 libraries, which is not ideal.
+        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   macos-clang:
@@ -60,7 +77,8 @@ jobs:
     - name: Build
       env: { CC: clang, CXX: clang++ }
       run: |
-        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        # @todo Enable codegen builds too, when we have Grantlee available on MacOS.
+        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   macos-gcc:
@@ -77,7 +95,8 @@ jobs:
     - name: Build
       env: { CC: gcc, CXX: g++ }
       run: |
-        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        # @todo Enable codegen builds too, when we have Grantlee available on MacOS.
+        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   # @todo windows-mingw
