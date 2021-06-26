@@ -86,17 +86,14 @@ jobs:
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
     - uses: actions/checkout@v2
-    - name: Install GCC
-      run: brew install gcc
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt }}
     - name: Build
-      env: { CC: gcc, CXX: g++ }
       run: |
         # @todo Enable codegen builds too, when we have Grantlee available on MacOS.
-        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        cmake -D BUILD_CODEGEN=NO -D CMAKE_C_COMPILER=gcc -D CMAKE_CXX_COMPILER=g++ -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   # @todo windows-mingw
