@@ -91,9 +91,10 @@ jobs:
       with:
         version: ${{ matrix.qt }}
     - name: Build
+      env: { CC: gcc-11, CXX: g++-11 }
       run: |
         # @todo Enable codegen builds too, when we have Grantlee available on MacOS.
-        cmake -D BUILD_CODEGEN=NO -D CMAKE_C_COMPILER=gcc -D CMAKE_CXX_COMPILER=g++ -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   # @todo windows-mingw
