@@ -1,28 +1,22 @@
 name: Build
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  linux-clang:
-    runs-on: ubuntu-latest
+  linux:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest]
+        env:
+          - { cc: clang, cxx: clang++ }
+          - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
     - name: Install Grantlee
       run: sudo apt install clang libgrantlee5-dev
     - name: Build
-      env: { CC: clang, CXX: clang++ }
-      run: |
-        cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
-
-  linux-gcc:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install Grantlee
-      run: sudo apt install gcc libgrantlee5-dev
-    - name: Build
-      env: { CC: gcc, CXX: g++ }
+      env: { CC: ${{ matrix.env.cc }}, CXX: ${{ maxtrix.env.cxx }} }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
