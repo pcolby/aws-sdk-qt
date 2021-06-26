@@ -9,8 +9,8 @@ jobs:
       matrix:
         os: [ ubuntu-latest ]
         env:
-          - { cc: clang, cxx: clang++ }
-          - { cc: gcc, cxx: g++ }
+        - { cc: clang, cxx: clang++ }
+        - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
     - name: Install Grantlee
@@ -30,8 +30,8 @@ jobs:
         os: [ ubuntu-latest ]
         qt: [ '5.12.10', '5.15.2' ]
         env:
-          - { cc: clang, cxx: clang++ }
-          - { cc: gcc, cxx: g++ }
+        - { cc: clang, cxx: clang++ }
+        - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
@@ -46,19 +46,19 @@ jobs:
         CXX: ${{ matrix.env.cxx }}
       run: |
         # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
-        #  pulls in Ubuntu's own Qt5 libraries, which is not ideal.
+        # pulls in Ubuntu's own Qt5 libraries, which is not ideal.
         cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   mac:
-    runs-on: macOS-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ macOs-latest ]
         qt: [ '5.12.10', '5.15.2' ]
         env:
-          - { cc: clang, cxx: clang++ }
-          - { cc: gcc-11, cxx: g++-11 }
+        - { cc: clang, cxx: clang++ }
+        - { cc: gcc-11, cxx: g++-11 }
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt
@@ -74,6 +74,21 @@ jobs:
         cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
-  # @todo windows-mingw
-
-  # @todo windows-msvc
+  win:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ windows-latest ]
+        qt: [ '5.12.10', '5.15.2' ]
+        generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: ${{ matrix.qt }}
+    - name: Build
+      run: |
+        # @todo Enable codegen builds too?
+        cmake -D BUILD_CODEGEN=NO -G "${{ matrix.generator }}" -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
