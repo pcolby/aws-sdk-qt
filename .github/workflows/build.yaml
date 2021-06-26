@@ -19,8 +19,8 @@ jobs:
     - name: Build
       env:
         #CXX: ${{ maxtrix.cxx }}
-        CC:  ${{ maxtrix.env.cc }}
-        CXX: ${{ maxtrix.env.cxx }}
+        CC:  ${{ matrix.env.cc }}
+        CXX: ${{ matrix.env.cxx }}
       #env: { CC: ${{ matrix.env.cc }}, CXX: ${{ maxtrix.env.cxx }} }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
