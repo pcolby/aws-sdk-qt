@@ -17,7 +17,7 @@ jobs:
     - name: Install Grantlee
       run: sudo apt install clang libgrantlee5-dev
     - name: Build
-      env: { CXX: ${{ maxtrix.env.cxx }} }
+      env: { CXX: ${{ maxtrix.cxx }} }
       #env: { CC: ${{ matrix.env.cc }}, CXX: ${{ maxtrix.env.cxx }} }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
