@@ -9,16 +9,18 @@ jobs:
       matrix:
         os: [ ubuntu-latest ]
         cxx: [ clang++, g++ ]
-        #env:
-        #  - { cc: clang, cxx: clang++ }
-        #  - { cc: gcc, cxx: g++ }
+        env:
+          - { cc: clang, cxx: clang++ }
+          - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
     - name: Install Grantlee
       run: sudo apt install libgrantlee5-dev
     - name: Build
       env:
-        CXX: ${{ maxtrix.cxx }}
+        #CXX: ${{ maxtrix.cxx }}
+        CC:  ${{ maxtrix.env.cc }}
+        CXX: ${{ maxtrix.env.cxx }}
       #env: { CC: ${{ matrix.env.cc }}, CXX: ${{ maxtrix.env.cxx }} }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
