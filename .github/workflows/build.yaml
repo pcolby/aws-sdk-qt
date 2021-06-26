@@ -52,7 +52,7 @@ jobs:
 
   mac:
     runs-on: macOS-latest
-    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+    strategy:
       matrix:
         os: [ macOs-latest ]
         qt: [ '5.12.10', '5.15.2' ]
