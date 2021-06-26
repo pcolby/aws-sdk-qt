@@ -8,7 +8,6 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        cxx: [ clang++, g++ ]
         env:
           - { cc: clang, cxx: clang++ }
           - { cc: gcc, cxx: g++ }
@@ -17,11 +16,10 @@ jobs:
     - name: Install Grantlee
       run: sudo apt install libgrantlee5-dev
     - name: Build
-      env:
-        #CXX: ${{ maxtrix.cxx }}
-        CC:  ${{ matrix.env.cc }}
-        CXX: ${{ matrix.env.cxx }}
-      #env: { CC: ${{ matrix.env.cc }}, CXX: ${{ maxtrix.env.cxx }} }
+      #env:
+      #  CC:  ${{ matrix.env.cc }}
+      #  CXX: ${{ matrix.env.cxx }}
+      env: { CC: ${{ matrix.env.cc }}, CXX: ${{ matrix.env.cxx }} }
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
