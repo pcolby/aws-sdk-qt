@@ -16,17 +16,22 @@ jobs:
     - name: Install Grantlee
       run: sudo apt install libgrantlee5-dev
     - name: Build
-      #env:
-      #  CC:  ${{ matrix.env.cc }}
-      #  CXX: ${{ matrix.env.cxx }}
-      env: { CC: ${{ matrix.env.cc }}, CXX: ${{ matrix.env.cxx }} }
+      env:
+        CC:  ${{ matrix.env.cc }}
+        CXX: ${{ matrix.env.cxx }}
       run: |
         cmake -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
-  linux-clang-qts:
-    runs-on: ubuntu-latest
-    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+  linux-qts:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        qt: [ '5.12.10', '5.15.2' ]
+        env:
+          - { cc: clang, cxx: clang++ }
+          - { cc: gcc, cxx: g++ }
     steps:
     - uses: actions/checkout@v2
     - name: Install Tools
@@ -36,35 +41,24 @@ jobs:
       with:
         version: ${{ matrix.qt }}
     - name: Build
-      env: { CC: clang, CXX: clang++ }
+      env:
+        CC:  ${{ matrix.env.cc }}
+        CXX: ${{ matrix.env.cxx }}
       run: |
         # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
         #  pulls in Ubuntu's own Qt5 libraries, which is not ideal.
         cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
-  linux-gcc-qts:
-    runs-on: ubuntu-latest
-    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install Tools
-      run: sudo apt install gcc
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: ${{ matrix.qt }}
-    - name: Build
-      env: { CC: gcc, CXX: g++ }
-      run: |
-        # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
-        #  pulls in Ubuntu's own Qt5 libraries, which is not ideal.
-        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
-
-  macos-clang:
+  mac:
     runs-on: macOS-latest
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
+      matrix:
+        os: [ macOs-latest ]
+        qt: [ '5.12.10', '5.15.2' ]
+        env:
+          - { cc: clang, cxx: clang++ }
+          - { cc: gcc-11, cxx: g++-11 }
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt
@@ -72,23 +66,9 @@ jobs:
       with:
         version: ${{ matrix.qt }}
     - name: Build
-      env: { CC: clang, CXX: clang++ }
-      run: |
-        # @todo Enable codegen builds too, when we have Grantlee available on MacOS.
-        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
-
-  macos-gcc:
-    runs-on: macOS-latest
-    strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: ${{ matrix.qt }}
-    - name: Build
-      env: { CC: gcc-11, CXX: g++-11 }
+      env:
+        CC:  ${{ matrix.env.cc }}
+        CXX: ${{ matrix.env.cxx }}
       run: |
         # @todo Enable codegen builds too, when we have Grantlee available on MacOS.
         cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
