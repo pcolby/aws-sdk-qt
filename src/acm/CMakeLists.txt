@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsAcm
   acmclient.h
   acmclient_p.h
@@ -104,4 +102,8 @@ add_library(QtAwsAcm
   updatecertificateoptionsrequest.cpp
   updatecertificateoptionsresponse.cpp)
 
-target_link_libraries(QtAwsAcm PRIVATE QtAwsCore Qt5::Core Qt5::Network)
+add_dependencies(QtAwsAcm QtAwsCore)
+
+target_link_libraries(QtAwsAcm
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsLexRuntimeV2
   deletesessionrequest.h
   deletesessionrequest_p.h
@@ -52,4 +50,6 @@ add_library(QtAwsLexRuntimeV2
 
 add_dependencies(QtAwsLexRuntimeV2 QtAwsCore)
 
-target_link_libraries(QtAwsLexRuntimeV2 PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsLexRuntimeV2
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

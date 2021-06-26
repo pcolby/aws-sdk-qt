@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsLicenseManager
   acceptgrantrequest.h
   acceptgrantrequest_p.h
@@ -286,4 +284,6 @@ add_library(QtAwsLicenseManager
 
 add_dependencies(QtAwsLicenseManager QtAwsCore)
 
-target_link_libraries(QtAwsLicenseManager PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsLicenseManager
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

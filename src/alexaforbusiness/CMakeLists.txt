@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsAlexaForBusiness
   alexaforbusinessclient.h
   alexaforbusinessclient_p.h
@@ -574,4 +572,6 @@ add_library(QtAwsAlexaForBusiness
 
 add_dependencies(QtAwsAlexaForBusiness QtAwsCore)
 
-target_link_libraries(QtAwsAlexaForBusiness PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsAlexaForBusiness
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

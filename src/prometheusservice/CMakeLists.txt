@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsPrometheusService
   createworkspacerequest.h
   createworkspacerequest_p.h
@@ -46,4 +44,6 @@ add_library(QtAwsPrometheusService
 
 add_dependencies(QtAwsPrometheusService QtAwsCore)
 
-target_link_libraries(QtAwsPrometheusService PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsPrometheusService
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsRoute53
   activatekeysigningkeyrequest.h
   activatekeysigningkeyrequest_p.h
@@ -400,4 +398,6 @@ add_library(QtAwsRoute53
 
 add_dependencies(QtAwsRoute53 QtAwsCore)
 
-target_link_libraries(QtAwsRoute53 PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsRoute53
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

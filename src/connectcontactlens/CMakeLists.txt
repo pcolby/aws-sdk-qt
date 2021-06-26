@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsConnectContactLens
   connectcontactlensclient.h
   connectcontactlensclient_p.h
@@ -22,4 +20,6 @@ add_library(QtAwsConnectContactLens
 
 add_dependencies(QtAwsConnectContactLens QtAwsCore)
 
-target_link_libraries(QtAwsConnectContactLens PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsConnectContactLens
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

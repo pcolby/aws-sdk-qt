@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsRds
   addroletodbclusterrequest.h
   addroletodbclusterrequest_p.h
@@ -838,4 +836,6 @@ add_library(QtAwsRds
 
 add_dependencies(QtAwsRds QtAwsCore)
 
-target_link_libraries(QtAwsRds PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsRds
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

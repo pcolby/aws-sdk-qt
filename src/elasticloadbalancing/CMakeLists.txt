@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsElasticLoadBalancing
   addtagsrequest.h
   addtagsrequest_p.h
@@ -190,4 +188,6 @@ add_library(QtAwsElasticLoadBalancing
 
 add_dependencies(QtAwsElasticLoadBalancing QtAwsCore)
 
-target_link_libraries(QtAwsElasticLoadBalancing PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsElasticLoadBalancing
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

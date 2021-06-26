@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsSavingsPlans
   createsavingsplanrequest.h
   createsavingsplanrequest_p.h
@@ -70,4 +68,6 @@ add_library(QtAwsSavingsPlans
 
 add_dependencies(QtAwsSavingsPlans QtAwsCore)
 
-target_link_libraries(QtAwsSavingsPlans PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsSavingsPlans
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsSsooidc
   createtokenrequest.h
   createtokenrequest_p.h
@@ -34,4 +32,6 @@ add_library(QtAwsSsooidc
 
 add_dependencies(QtAwsSsooidc QtAwsCore)
 
-target_link_libraries(QtAwsSsooidc PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsSsooidc
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

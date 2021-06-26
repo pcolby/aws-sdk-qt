@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsSqs
   addpermissionrequest.h
   addpermissionrequest_p.h
@@ -136,4 +134,6 @@ add_library(QtAwsSqs
 
 add_dependencies(QtAwsSqs QtAwsCore)
 
-target_link_libraries(QtAwsSqs PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsSqs
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsNetworkManager
   associatecustomergatewayrequest.h
   associatecustomergatewayrequest_p.h
@@ -226,4 +224,6 @@ add_library(QtAwsNetworkManager
 
 add_dependencies(QtAwsNetworkManager QtAwsCore)
 
-target_link_libraries(QtAwsNetworkManager PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsNetworkManager
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

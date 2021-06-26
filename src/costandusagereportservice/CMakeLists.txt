@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsCostandUsageReportService
   costandusagereportserviceclient.h
   costandusagereportserviceclient_p.h
@@ -40,4 +38,6 @@ add_library(QtAwsCostandUsageReportService
 
 add_dependencies(QtAwsCostandUsageReportService QtAwsCore)
 
-target_link_libraries(QtAwsCostandUsageReportService PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsCostandUsageReportService
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

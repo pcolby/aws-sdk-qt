@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsTimestreamWrite
   createdatabaserequest.h
   createdatabaserequest_p.h
@@ -106,4 +104,6 @@ add_library(QtAwsTimestreamWrite
 
 add_dependencies(QtAwsTimestreamWrite QtAwsCore)
 
-target_link_libraries(QtAwsTimestreamWrite PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsTimestreamWrite
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

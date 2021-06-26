@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsAPIGateway
   apigatewayclient.h
   apigatewayclient_p.h
@@ -736,4 +734,6 @@ add_library(QtAwsAPIGateway
 
 add_dependencies(QtAwsAPIGateway QtAwsCore)
 
-target_link_libraries(QtAwsAPIGateway PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsAPIGateway
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -1,8 +1,6 @@
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt5 COMPONENTS Core Network REQUIRED)
-
 add_library(QtAwsimagebuilder
   cancelimagecreationrequest.h
   cancelimagecreationrequest_p.h
@@ -310,4 +308,6 @@ add_library(QtAwsimagebuilder
 
 add_dependencies(QtAwsimagebuilder QtAwsCore)
 
-target_link_libraries(QtAwsimagebuilder PRIVATE Qt5::Core Qt5::Network)
+target_link_libraries(QtAwsimagebuilder
+  PRIVATE Qt${QT_VERSION_MAJOR}::Core
+  PRIVATE Qt${QT_VERSION_MAJOR}::Network)
