@@ -46,7 +46,7 @@ jobs:
         cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
-  linux-gcc:-qts
+  linux-gcc-qts:
     runs-on: ubuntu-latest
     strategy: { matrix: { qt: [ '5.12.10', '5.15.0' ] } }
     steps:
