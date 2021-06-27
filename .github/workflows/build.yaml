@@ -79,6 +79,7 @@ jobs:
 
   win:
     runs-on: ${{ matrix.os }}
+    defaults: { run: { shell: cmd } }
     strategy:
       matrix:
         os: [ windows-latest ]
