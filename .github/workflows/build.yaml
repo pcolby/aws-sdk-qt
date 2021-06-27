@@ -91,6 +91,9 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt }}
+    - name: Configure MSVC
+      if: ${{ contains(matrix.generator, 'nmake') }}
+      uses: ilammy/msvc-dev-cmd@v1
     - name: Build
       run: |
         cmake -D BUILD_CODEGEN=NO -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%"  -B "%RUNNER_TEMP%"
