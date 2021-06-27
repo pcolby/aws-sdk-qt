@@ -1,12 +1,8 @@
 # QtAws
-[![Build Status](https://img.shields.io/travis/pcolby/aws-sdk-qt/master.svg "Linux (Travis CI)")](https://travis-ci.org/pcolby/aws-sdk-qt)
-[![Build Status](https://img.shields.io/appveyor/ci/pcolby/aws-sdk-qt/master.svg "Windows (AppVeyor)")](https://ci.appveyor.com/project/pcolby/aws-sdk-qt)
-[![Coverage Status](https://img.shields.io/codecov/c/github/pcolby/aws-sdk-qt.svg?label=codecov)](https://codecov.io/github/pcolby/aws-sdk-qt)
-[![Coverage Status](https://img.shields.io/coveralls/pcolby/aws-sdk-qt.svg?label=coveralls)](https://coveralls.io/r/pcolby/aws-sdk-qt)
-[![Coverity Scan Status](https://img.shields.io/coverity/scan/5528.svg "Coverity Scan")](https://scan.coverity.com/projects/5528)
-[![GitHub Issues](http://img.shields.io/github/issues-raw/pcolby/aws-sdk-qt.svg)](https://github.com/pcolby/aws-sdk-qt/issues)
-[![GitHub Release](http://img.shields.io/github/release/pcolby/aws-sdk-qt.svg)](https://github.com/pcolby/aws-sdk-qt/releases/latest)
-[![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
+
+[![Build Status](https://github.com/pcolby/aws-sdk-qt/actions/workflows/build.yaml/badge.svg)](https://github.com/pcolby/aws-sdk-qt/actions/workflows/build.yaml)
+[![GitHub Release](https://img.shields.io/github/v/release/pcolby/aws-sdk-qt?include_prereleases)](https://github.com/pcolby/aws-sdk-qt/releases/latest)
+[![LGPLv3 License](https://img.shields.io/badge/license-LGPLv3-informational.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
 
 QtAws is an *unnoficial* [AWS] SDK for [Qt].
 
